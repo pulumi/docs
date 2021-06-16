@@ -515,7 +515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossseriesreducer_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Series<wbr>Reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#aggregationcrossseriesreducer">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer</a></span>
     </dt>
     <dd>{{% md %}}The reduction operation to be used to combine time series into a single time series, where the value of each data point in the resulting series is a function of all the already aligned values in the input time series.Not all reducer operations can be applied to all time series. The valid choices depend on the metric_kind and the value_type of the original time series. Reduction can yield a time series with a different metric_kind or value_type than the input time series.Time series data must first be aligned (see per_series_aligner) in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -531,7 +531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perseriesaligner_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Series<wbr>Aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#aggregationperseriesaligner">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Aggregation<wbr>Per<wbr>Series<wbr>Aligner</a></span>
     </dt>
     <dd>{{% md %}}An Aligner describes how to bring the data points in a single time series into temporal alignment. Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be mathematically grouped together, resulting in a single data point for each alignment_period with end timestamp at the end of the period.Not all alignment operations may be applied to all time series. The valid choices depend on the metric_kind and value_type of the original time series. Alignment can change the metric_kind or the value_type of the time series.Time series data must be aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be specified; otherwise, an error is returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -551,7 +551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossseriesreducer_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Series<wbr>Reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#aggregationcrossseriesreducer">Aggregation<wbr>Cross<wbr>Series<wbr>Reducer</a></span>
     </dt>
     <dd>{{% md %}}The reduction operation to be used to combine time series into a single time series, where the value of each data point in the resulting series is a function of all the already aligned values in the input time series.Not all reducer operations can be applied to all time series. The valid choices depend on the metric_kind and the value_type of the original time series. Reduction can yield a time series with a different metric_kind or value_type than the input time series.Time series data must first be aligned (see per_series_aligner) in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -567,7 +567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perseriesaligner_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Series<wbr>Aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#aggregationperseriesaligner">Aggregation<wbr>Per<wbr>Series<wbr>Aligner</a></span>
     </dt>
     <dd>{{% md %}}An Aligner describes how to bring the data points in a single time series into temporal alignment. Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be mathematically grouped together, resulting in a single data point for each alignment_period with end timestamp at the end of the period.Not all alignment operations may be applied to all time series. The valid choices depend on the metric_kind and value_type of the original time series. Alignment can change the metric_kind or the value_type of the time series.Time series data must be aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be specified; otherwise, an error is returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -587,7 +587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossseriesreducer_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Series<wbr>Reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#aggregationcrossseriesreducer">Aggregation<wbr>Cross<wbr>Series<wbr>Reducer</a></span>
     </dt>
     <dd>{{% md %}}The reduction operation to be used to combine time series into a single time series, where the value of each data point in the resulting series is a function of all the already aligned values in the input time series.Not all reducer operations can be applied to all time series. The valid choices depend on the metric_kind and the value_type of the original time series. Reduction can yield a time series with a different metric_kind or value_type than the input time series.Time series data must first be aligned (see per_series_aligner) in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -603,7 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perseriesaligner_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Series<wbr>Aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#aggregationperseriesaligner">Aggregation<wbr>Per<wbr>Series<wbr>Aligner</a></span>
     </dt>
     <dd>{{% md %}}An Aligner describes how to bring the data points in a single time series into temporal alignment. Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be mathematically grouped together, resulting in a single data point for each alignment_period with end timestamp at the end of the period.Not all alignment operations may be applied to all time series. The valid choices depend on the metric_kind and value_type of the original time series. Alignment can change the metric_kind or the value_type of the time series.Time series data must be aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be specified; otherwise, an error is returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -623,7 +623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cross_series_reducer_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>series_<wbr>reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#aggregationcrossseriesreducer">Aggregation<wbr>Cross<wbr>Series<wbr>Reducer</a></span>
     </dt>
     <dd>{{% md %}}The reduction operation to be used to combine time series into a single time series, where the value of each data point in the resulting series is a function of all the already aligned values in the input time series.Not all reducer operations can be applied to all time series. The valid choices depend on the metric_kind and the value_type of the original time series. Reduction can yield a time series with a different metric_kind or value_type than the input time series.Time series data must first be aligned (see per_series_aligner) in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -639,9 +639,177 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#per_series_aligner_python" style="color: inherit; text-decoration: inherit;">per_<wbr>series_<wbr>aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#aggregationperseriesaligner">Aggregation<wbr>Per<wbr>Series<wbr>Aligner</a></span>
     </dt>
     <dd>{{% md %}}An Aligner describes how to bring the data points in a single time series into temporal alignment. Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be mathematically grouped together, resulting in a single data point for each alignment_period with end timestamp at the end of the period.Not all alignment operations may be applied to all time series. The valid choices depend on the metric_kind and value_type of the original time series. Alignment can change the metric_kind or the value_type of the time series.Time series data must be aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be specified; otherwise, an error is returned.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="aggregationcrossseriesreducer">Aggregation<wbr>Cross<wbr>Series<wbr>Reducer</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Reduce<wbr>None</dt>
+    <dd>REDUCE_NONE{{% md %}}No cross-time series reduction. The output of the Aligner is returned.{{% /md %}}</dd><dt>Reduce<wbr>Mean</dt>
+    <dd>REDUCE_MEAN{{% md %}}Reduce by computing the mean value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric or distribution values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Min</dt>
+    <dd>REDUCE_MIN{{% md %}}Reduce by computing the minimum value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>Reduce<wbr>Max</dt>
+    <dd>REDUCE_MAX{{% md %}}Reduce by computing the maximum value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>Reduce<wbr>Sum</dt>
+    <dd>REDUCE_SUM{{% md %}}Reduce by computing the sum across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric and distribution values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>Reduce<wbr>Stddev</dt>
+    <dd>REDUCE_STDDEV{{% md %}}Reduce by computing the standard deviation across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric or distribution values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Count</dt>
+    <dd>REDUCE_COUNT{{% md %}}Reduce by computing the number of data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of numeric, Boolean, distribution, and string value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>Reduce<wbr>Count<wbr>True</dt>
+    <dd>REDUCE_COUNT_TRUE{{% md %}}Reduce by computing the number of True-valued data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>Reduce<wbr>Count<wbr>False</dt>
+    <dd>REDUCE_COUNT_FALSE{{% md %}}Reduce by computing the number of False-valued data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>Reduce<wbr>Fraction<wbr>True</dt>
+    <dd>REDUCE_FRACTION_TRUE{{% md %}}Reduce by computing the ratio of the number of True-valued data points to the total number of data points for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The output value is in the range 0.0, 1.0 and has value_type DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Percentile99</dt>
+    <dd>REDUCE_PERCENTILE_99{{% md %}}Reduce by computing the 99th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Percentile95</dt>
+    <dd>REDUCE_PERCENTILE_95{{% md %}}Reduce by computing the 95th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Percentile50</dt>
+    <dd>REDUCE_PERCENTILE_50{{% md %}}Reduce by computing the 50th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Percentile05</dt>
+    <dd>REDUCE_PERCENTILE_05{{% md %}}Reduce by computing the 5th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>None</dt>
+    <dd>REDUCE_NONE{{% md %}}No cross-time series reduction. The output of the Aligner is returned.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Mean</dt>
+    <dd>REDUCE_MEAN{{% md %}}Reduce by computing the mean value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric or distribution values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Min</dt>
+    <dd>REDUCE_MIN{{% md %}}Reduce by computing the minimum value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Max</dt>
+    <dd>REDUCE_MAX{{% md %}}Reduce by computing the maximum value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Sum</dt>
+    <dd>REDUCE_SUM{{% md %}}Reduce by computing the sum across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric and distribution values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Stddev</dt>
+    <dd>REDUCE_STDDEV{{% md %}}Reduce by computing the standard deviation across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric or distribution values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Count</dt>
+    <dd>REDUCE_COUNT{{% md %}}Reduce by computing the number of data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of numeric, Boolean, distribution, and string value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Count<wbr>True</dt>
+    <dd>REDUCE_COUNT_TRUE{{% md %}}Reduce by computing the number of True-valued data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Count<wbr>False</dt>
+    <dd>REDUCE_COUNT_FALSE{{% md %}}Reduce by computing the number of False-valued data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Fraction<wbr>True</dt>
+    <dd>REDUCE_FRACTION_TRUE{{% md %}}Reduce by computing the ratio of the number of True-valued data points to the total number of data points for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The output value is in the range 0.0, 1.0 and has value_type DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Percentile99</dt>
+    <dd>REDUCE_PERCENTILE_99{{% md %}}Reduce by computing the 99th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Percentile95</dt>
+    <dd>REDUCE_PERCENTILE_95{{% md %}}Reduce by computing the 95th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Percentile50</dt>
+    <dd>REDUCE_PERCENTILE_50{{% md %}}Reduce by computing the 50th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Percentile05</dt>
+    <dd>REDUCE_PERCENTILE_05{{% md %}}Reduce by computing the 5th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Reduce<wbr>None</dt>
+    <dd>REDUCE_NONE{{% md %}}No cross-time series reduction. The output of the Aligner is returned.{{% /md %}}</dd><dt>Reduce<wbr>Mean</dt>
+    <dd>REDUCE_MEAN{{% md %}}Reduce by computing the mean value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric or distribution values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Min</dt>
+    <dd>REDUCE_MIN{{% md %}}Reduce by computing the minimum value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>Reduce<wbr>Max</dt>
+    <dd>REDUCE_MAX{{% md %}}Reduce by computing the maximum value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>Reduce<wbr>Sum</dt>
+    <dd>REDUCE_SUM{{% md %}}Reduce by computing the sum across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric and distribution values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>Reduce<wbr>Stddev</dt>
+    <dd>REDUCE_STDDEV{{% md %}}Reduce by computing the standard deviation across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric or distribution values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Count</dt>
+    <dd>REDUCE_COUNT{{% md %}}Reduce by computing the number of data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of numeric, Boolean, distribution, and string value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>Reduce<wbr>Count<wbr>True</dt>
+    <dd>REDUCE_COUNT_TRUE{{% md %}}Reduce by computing the number of True-valued data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>Reduce<wbr>Count<wbr>False</dt>
+    <dd>REDUCE_COUNT_FALSE{{% md %}}Reduce by computing the number of False-valued data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>Reduce<wbr>Fraction<wbr>True</dt>
+    <dd>REDUCE_FRACTION_TRUE{{% md %}}Reduce by computing the ratio of the number of True-valued data points to the total number of data points for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The output value is in the range 0.0, 1.0 and has value_type DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Percentile99</dt>
+    <dd>REDUCE_PERCENTILE_99{{% md %}}Reduce by computing the 99th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Percentile95</dt>
+    <dd>REDUCE_PERCENTILE_95{{% md %}}Reduce by computing the 95th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Percentile50</dt>
+    <dd>REDUCE_PERCENTILE_50{{% md %}}Reduce by computing the 50th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Percentile05</dt>
+    <dd>REDUCE_PERCENTILE_05{{% md %}}Reduce by computing the 5th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>REDUCE_NONE</dt>
+    <dd>REDUCE_NONE{{% md %}}No cross-time series reduction. The output of the Aligner is returned.{{% /md %}}</dd><dt>REDUCE_MEAN</dt>
+    <dd>REDUCE_MEAN{{% md %}}Reduce by computing the mean value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric or distribution values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>REDUCE_MIN</dt>
+    <dd>REDUCE_MIN{{% md %}}Reduce by computing the minimum value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>REDUCE_MAX</dt>
+    <dd>REDUCE_MAX{{% md %}}Reduce by computing the maximum value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>REDUCE_SUM</dt>
+    <dd>REDUCE_SUM{{% md %}}Reduce by computing the sum across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric and distribution values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>REDUCE_STDDEV</dt>
+    <dd>REDUCE_STDDEV{{% md %}}Reduce by computing the standard deviation across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric or distribution values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>REDUCE_COUNT</dt>
+    <dd>REDUCE_COUNT{{% md %}}Reduce by computing the number of data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of numeric, Boolean, distribution, and string value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>REDUCE_COUNT_TRUE</dt>
+    <dd>REDUCE_COUNT_TRUE{{% md %}}Reduce by computing the number of True-valued data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>REDUCE_COUNT_FALSE</dt>
+    <dd>REDUCE_COUNT_FALSE{{% md %}}Reduce by computing the number of False-valued data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>REDUCE_FRACTION_TRUE</dt>
+    <dd>REDUCE_FRACTION_TRUE{{% md %}}Reduce by computing the ratio of the number of True-valued data points to the total number of data points for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The output value is in the range 0.0, 1.0 and has value_type DOUBLE.{{% /md %}}</dd><dt>REDUCE_PERCENTILE99</dt>
+    <dd>REDUCE_PERCENTILE_99{{% md %}}Reduce by computing the 99th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>REDUCE_PERCENTILE95</dt>
+    <dd>REDUCE_PERCENTILE_95{{% md %}}Reduce by computing the 95th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>REDUCE_PERCENTILE50</dt>
+    <dd>REDUCE_PERCENTILE_50{{% md %}}Reduce by computing the 50th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>REDUCE_PERCENTILE05</dt>
+    <dd>REDUCE_PERCENTILE_05{{% md %}}Reduce by computing the 5th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="aggregationperseriesaligner">Aggregation<wbr>Per<wbr>Series<wbr>Aligner</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Align<wbr>None</dt>
+    <dd>ALIGN_NONE{{% md %}}No alignment. Raw data is returned. Not valid if cross-series reduction is requested. The value_type of the result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Delta</dt>
+    <dd>ALIGN_DELTA{{% md %}}Align and convert to DELTA. The output is delta = y1 - y0.This alignment is valid for CUMULATIVE and DELTA metrics. If the selected alignment period results in periods with no data, then the aligned value for such a period is created by interpolation. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Rate</dt>
+    <dd>ALIGN_RATE{{% md %}}Align and convert to a rate. The result is computed as rate = (y1 - y0)/(t1 - t0), or "delta over time". Think of this aligner as providing the slope of the line that passes through the value at the start and at the end of the alignment_period.This aligner is valid for CUMULATIVE and DELTA metrics with numeric values. If the selected alignment period results in periods with no data, then the aligned value for such a period is created by interpolation. The output is a GAUGE metric with value_type DOUBLE.If, by "rate", you mean "percentage change", see the ALIGN_PERCENT_CHANGE aligner instead.{{% /md %}}</dd><dt>Align<wbr>Interpolate</dt>
+    <dd>ALIGN_INTERPOLATE{{% md %}}Align by interpolating between adjacent points around the alignment period boundary. This aligner is valid for GAUGE metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Next<wbr>Older</dt>
+    <dd>ALIGN_NEXT_OLDER{{% md %}}Align by moving the most recent data point before the end of the alignment period to the boundary at the end of the alignment period. This aligner is valid for GAUGE metrics. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Min</dt>
+    <dd>ALIGN_MIN{{% md %}}Align the time series by returning the minimum value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Max</dt>
+    <dd>ALIGN_MAX{{% md %}}Align the time series by returning the maximum value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Mean</dt>
+    <dd>ALIGN_MEAN{{% md %}}Align the time series by returning the mean value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Count</dt>
+    <dd>ALIGN_COUNT{{% md %}}Align the time series by returning the number of values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric or Boolean values. The value_type of the aligned result is INT64.{{% /md %}}</dd><dt>Align<wbr>Sum</dt>
+    <dd>ALIGN_SUM{{% md %}}Align the time series by returning the sum of the values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric and distribution values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Stddev</dt>
+    <dd>ALIGN_STDDEV{{% md %}}Align the time series by returning the standard deviation of the values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Count<wbr>True</dt>
+    <dd>ALIGN_COUNT_TRUE{{% md %}}Align the time series by returning the number of True values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The value_type of the output is INT64.{{% /md %}}</dd><dt>Align<wbr>Count<wbr>False</dt>
+    <dd>ALIGN_COUNT_FALSE{{% md %}}Align the time series by returning the number of False values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The value_type of the output is INT64.{{% /md %}}</dd><dt>Align<wbr>Fraction<wbr>True</dt>
+    <dd>ALIGN_FRACTION_TRUE{{% md %}}Align the time series by returning the ratio of the number of True values to the total number of values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The output value is in the range 0.0, 1.0 and has value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percentile99</dt>
+    <dd>ALIGN_PERCENTILE_99{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 99th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percentile95</dt>
+    <dd>ALIGN_PERCENTILE_95{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 95th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percentile50</dt>
+    <dd>ALIGN_PERCENTILE_50{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 50th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percentile05</dt>
+    <dd>ALIGN_PERCENTILE_05{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 5th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percent<wbr>Change</dt>
+    <dd>ALIGN_PERCENT_CHANGE{{% md %}}Align and convert to a percentage change. This aligner is valid for GAUGE and DELTA metrics with numeric values. This alignment returns ((current - previous)/previous) * 100, where the value of previous is determined based on the alignment_period.If the values of current and previous are both 0, then the returned value is 0. If only previous is 0, the returned value is infinity.A 10-minute moving mean is computed at each point of the alignment period prior to the above calculation to smooth the metric and prevent false positives from very short-lived spikes. The moving mean is only applicable for data whose values are >= 0. Any values < 0 are treated as a missing datapoint, and are ignored. While DELTA metrics are accepted by this alignment, special care should be taken that the values for the metric will always be positive. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>None</dt>
+    <dd>ALIGN_NONE{{% md %}}No alignment. Raw data is returned. Not valid if cross-series reduction is requested. The value_type of the result is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Delta</dt>
+    <dd>ALIGN_DELTA{{% md %}}Align and convert to DELTA. The output is delta = y1 - y0.This alignment is valid for CUMULATIVE and DELTA metrics. If the selected alignment period results in periods with no data, then the aligned value for such a period is created by interpolation. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Rate</dt>
+    <dd>ALIGN_RATE{{% md %}}Align and convert to a rate. The result is computed as rate = (y1 - y0)/(t1 - t0), or "delta over time". Think of this aligner as providing the slope of the line that passes through the value at the start and at the end of the alignment_period.This aligner is valid for CUMULATIVE and DELTA metrics with numeric values. If the selected alignment period results in periods with no data, then the aligned value for such a period is created by interpolation. The output is a GAUGE metric with value_type DOUBLE.If, by "rate", you mean "percentage change", see the ALIGN_PERCENT_CHANGE aligner instead.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Interpolate</dt>
+    <dd>ALIGN_INTERPOLATE{{% md %}}Align by interpolating between adjacent points around the alignment period boundary. This aligner is valid for GAUGE metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Next<wbr>Older</dt>
+    <dd>ALIGN_NEXT_OLDER{{% md %}}Align by moving the most recent data point before the end of the alignment period to the boundary at the end of the alignment period. This aligner is valid for GAUGE metrics. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Min</dt>
+    <dd>ALIGN_MIN{{% md %}}Align the time series by returning the minimum value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Max</dt>
+    <dd>ALIGN_MAX{{% md %}}Align the time series by returning the maximum value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Mean</dt>
+    <dd>ALIGN_MEAN{{% md %}}Align the time series by returning the mean value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Count</dt>
+    <dd>ALIGN_COUNT{{% md %}}Align the time series by returning the number of values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric or Boolean values. The value_type of the aligned result is INT64.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Sum</dt>
+    <dd>ALIGN_SUM{{% md %}}Align the time series by returning the sum of the values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric and distribution values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Stddev</dt>
+    <dd>ALIGN_STDDEV{{% md %}}Align the time series by returning the standard deviation of the values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Count<wbr>True</dt>
+    <dd>ALIGN_COUNT_TRUE{{% md %}}Align the time series by returning the number of True values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The value_type of the output is INT64.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Count<wbr>False</dt>
+    <dd>ALIGN_COUNT_FALSE{{% md %}}Align the time series by returning the number of False values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The value_type of the output is INT64.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Fraction<wbr>True</dt>
+    <dd>ALIGN_FRACTION_TRUE{{% md %}}Align the time series by returning the ratio of the number of True values to the total number of values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The output value is in the range 0.0, 1.0 and has value_type DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Percentile99</dt>
+    <dd>ALIGN_PERCENTILE_99{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 99th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Percentile95</dt>
+    <dd>ALIGN_PERCENTILE_95{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 95th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Percentile50</dt>
+    <dd>ALIGN_PERCENTILE_50{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 50th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Percentile05</dt>
+    <dd>ALIGN_PERCENTILE_05{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 5th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Percent<wbr>Change</dt>
+    <dd>ALIGN_PERCENT_CHANGE{{% md %}}Align and convert to a percentage change. This aligner is valid for GAUGE and DELTA metrics with numeric values. This alignment returns ((current - previous)/previous) * 100, where the value of previous is determined based on the alignment_period.If the values of current and previous are both 0, then the returned value is 0. If only previous is 0, the returned value is infinity.A 10-minute moving mean is computed at each point of the alignment period prior to the above calculation to smooth the metric and prevent false positives from very short-lived spikes. The moving mean is only applicable for data whose values are >= 0. Any values < 0 are treated as a missing datapoint, and are ignored. While DELTA metrics are accepted by this alignment, special care should be taken that the values for the metric will always be positive. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Align<wbr>None</dt>
+    <dd>ALIGN_NONE{{% md %}}No alignment. Raw data is returned. Not valid if cross-series reduction is requested. The value_type of the result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Delta</dt>
+    <dd>ALIGN_DELTA{{% md %}}Align and convert to DELTA. The output is delta = y1 - y0.This alignment is valid for CUMULATIVE and DELTA metrics. If the selected alignment period results in periods with no data, then the aligned value for such a period is created by interpolation. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Rate</dt>
+    <dd>ALIGN_RATE{{% md %}}Align and convert to a rate. The result is computed as rate = (y1 - y0)/(t1 - t0), or "delta over time". Think of this aligner as providing the slope of the line that passes through the value at the start and at the end of the alignment_period.This aligner is valid for CUMULATIVE and DELTA metrics with numeric values. If the selected alignment period results in periods with no data, then the aligned value for such a period is created by interpolation. The output is a GAUGE metric with value_type DOUBLE.If, by "rate", you mean "percentage change", see the ALIGN_PERCENT_CHANGE aligner instead.{{% /md %}}</dd><dt>Align<wbr>Interpolate</dt>
+    <dd>ALIGN_INTERPOLATE{{% md %}}Align by interpolating between adjacent points around the alignment period boundary. This aligner is valid for GAUGE metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Next<wbr>Older</dt>
+    <dd>ALIGN_NEXT_OLDER{{% md %}}Align by moving the most recent data point before the end of the alignment period to the boundary at the end of the alignment period. This aligner is valid for GAUGE metrics. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Min</dt>
+    <dd>ALIGN_MIN{{% md %}}Align the time series by returning the minimum value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Max</dt>
+    <dd>ALIGN_MAX{{% md %}}Align the time series by returning the maximum value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Mean</dt>
+    <dd>ALIGN_MEAN{{% md %}}Align the time series by returning the mean value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Count</dt>
+    <dd>ALIGN_COUNT{{% md %}}Align the time series by returning the number of values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric or Boolean values. The value_type of the aligned result is INT64.{{% /md %}}</dd><dt>Align<wbr>Sum</dt>
+    <dd>ALIGN_SUM{{% md %}}Align the time series by returning the sum of the values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric and distribution values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Stddev</dt>
+    <dd>ALIGN_STDDEV{{% md %}}Align the time series by returning the standard deviation of the values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Count<wbr>True</dt>
+    <dd>ALIGN_COUNT_TRUE{{% md %}}Align the time series by returning the number of True values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The value_type of the output is INT64.{{% /md %}}</dd><dt>Align<wbr>Count<wbr>False</dt>
+    <dd>ALIGN_COUNT_FALSE{{% md %}}Align the time series by returning the number of False values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The value_type of the output is INT64.{{% /md %}}</dd><dt>Align<wbr>Fraction<wbr>True</dt>
+    <dd>ALIGN_FRACTION_TRUE{{% md %}}Align the time series by returning the ratio of the number of True values to the total number of values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The output value is in the range 0.0, 1.0 and has value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percentile99</dt>
+    <dd>ALIGN_PERCENTILE_99{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 99th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percentile95</dt>
+    <dd>ALIGN_PERCENTILE_95{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 95th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percentile50</dt>
+    <dd>ALIGN_PERCENTILE_50{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 50th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percentile05</dt>
+    <dd>ALIGN_PERCENTILE_05{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 5th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percent<wbr>Change</dt>
+    <dd>ALIGN_PERCENT_CHANGE{{% md %}}Align and convert to a percentage change. This aligner is valid for GAUGE and DELTA metrics with numeric values. This alignment returns ((current - previous)/previous) * 100, where the value of previous is determined based on the alignment_period.If the values of current and previous are both 0, then the returned value is 0. If only previous is 0, the returned value is infinity.A 10-minute moving mean is computed at each point of the alignment period prior to the above calculation to smooth the metric and prevent false positives from very short-lived spikes. The moving mean is only applicable for data whose values are >= 0. Any values < 0 are treated as a missing datapoint, and are ignored. While DELTA metrics are accepted by this alignment, special care should be taken that the values for the metric will always be positive. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALIGN_NONE</dt>
+    <dd>ALIGN_NONE{{% md %}}No alignment. Raw data is returned. Not valid if cross-series reduction is requested. The value_type of the result is the same as the value_type of the input.{{% /md %}}</dd><dt>ALIGN_DELTA</dt>
+    <dd>ALIGN_DELTA{{% md %}}Align and convert to DELTA. The output is delta = y1 - y0.This alignment is valid for CUMULATIVE and DELTA metrics. If the selected alignment period results in periods with no data, then the aligned value for such a period is created by interpolation. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>ALIGN_RATE</dt>
+    <dd>ALIGN_RATE{{% md %}}Align and convert to a rate. The result is computed as rate = (y1 - y0)/(t1 - t0), or "delta over time". Think of this aligner as providing the slope of the line that passes through the value at the start and at the end of the alignment_period.This aligner is valid for CUMULATIVE and DELTA metrics with numeric values. If the selected alignment period results in periods with no data, then the aligned value for such a period is created by interpolation. The output is a GAUGE metric with value_type DOUBLE.If, by "rate", you mean "percentage change", see the ALIGN_PERCENT_CHANGE aligner instead.{{% /md %}}</dd><dt>ALIGN_INTERPOLATE</dt>
+    <dd>ALIGN_INTERPOLATE{{% md %}}Align by interpolating between adjacent points around the alignment period boundary. This aligner is valid for GAUGE metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>ALIGN_NEXT_OLDER</dt>
+    <dd>ALIGN_NEXT_OLDER{{% md %}}Align by moving the most recent data point before the end of the alignment period to the boundary at the end of the alignment period. This aligner is valid for GAUGE metrics. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>ALIGN_MIN</dt>
+    <dd>ALIGN_MIN{{% md %}}Align the time series by returning the minimum value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>ALIGN_MAX</dt>
+    <dd>ALIGN_MAX{{% md %}}Align the time series by returning the maximum value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>ALIGN_MEAN</dt>
+    <dd>ALIGN_MEAN{{% md %}}Align the time series by returning the mean value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is DOUBLE.{{% /md %}}</dd><dt>ALIGN_COUNT</dt>
+    <dd>ALIGN_COUNT{{% md %}}Align the time series by returning the number of values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric or Boolean values. The value_type of the aligned result is INT64.{{% /md %}}</dd><dt>ALIGN_SUM</dt>
+    <dd>ALIGN_SUM{{% md %}}Align the time series by returning the sum of the values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric and distribution values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>ALIGN_STDDEV</dt>
+    <dd>ALIGN_STDDEV{{% md %}}Align the time series by returning the standard deviation of the values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>ALIGN_COUNT_TRUE</dt>
+    <dd>ALIGN_COUNT_TRUE{{% md %}}Align the time series by returning the number of True values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The value_type of the output is INT64.{{% /md %}}</dd><dt>ALIGN_COUNT_FALSE</dt>
+    <dd>ALIGN_COUNT_FALSE{{% md %}}Align the time series by returning the number of False values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The value_type of the output is INT64.{{% /md %}}</dd><dt>ALIGN_FRACTION_TRUE</dt>
+    <dd>ALIGN_FRACTION_TRUE{{% md %}}Align the time series by returning the ratio of the number of True values to the total number of values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The output value is in the range 0.0, 1.0 and has value_type DOUBLE.{{% /md %}}</dd><dt>ALIGN_PERCENTILE99</dt>
+    <dd>ALIGN_PERCENTILE_99{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 99th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>ALIGN_PERCENTILE95</dt>
+    <dd>ALIGN_PERCENTILE_95{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 95th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>ALIGN_PERCENTILE50</dt>
+    <dd>ALIGN_PERCENTILE_50{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 50th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>ALIGN_PERCENTILE05</dt>
+    <dd>ALIGN_PERCENTILE_05{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 5th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>ALIGN_PERCENT_CHANGE</dt>
+    <dd>ALIGN_PERCENT_CHANGE{{% md %}}Align and convert to a percentage change. This aligner is valid for GAUGE and DELTA metrics with numeric values. This alignment returns ((current - previous)/previous) * 100, where the value of previous is determined based on the alignment_period.If the values of current and previous are both 0, then the returned value is 0. If only previous is 0, the returned value is infinity.A 10-minute moving mean is computed at each point of the alignment period prior to the above calculation to smooth the metric and prevent false positives from very short-lived spikes. The moving mean is only applicable for data whose values are >= 0. Any values < 0 are treated as a missing datapoint, and are ignored. While DELTA metrics are accepted by this alignment, special care should be taken that the values for the metric will always be positive. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="aggregationresponse">Aggregation<wbr>Response</h4>
@@ -807,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_csharp" style="color: inherit; text-decoration: inherit;">Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#axisscale">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Axis<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}The axis scale. By default, a linear scale is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -827,7 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_go" style="color: inherit; text-decoration: inherit;">Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#axisscale">Axis<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}The axis scale. By default, a linear scale is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -847,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_nodejs" style="color: inherit; text-decoration: inherit;">scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#axisscale">Axis<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}The axis scale. By default, a linear scale is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -867,7 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_python" style="color: inherit; text-decoration: inherit;">scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#axisscale">Axis<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}The axis scale. By default, a linear scale is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -954,6 +1122,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The axis scale. By default, a linear scale is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="axisscale">Axis<wbr>Scale</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Scale<wbr>Unspecified</dt>
+    <dd>SCALE_UNSPECIFIED{{% md %}}Scale is unspecified. The view will default to LINEAR.{{% /md %}}</dd><dt>Linear</dt>
+    <dd>LINEAR{{% md %}}Linear scale.{{% /md %}}</dd><dt>Log10</dt>
+    <dd>LOG10{{% md %}}Logarithmic scale (base 10).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Axis<wbr>Scale<wbr>Scale<wbr>Unspecified</dt>
+    <dd>SCALE_UNSPECIFIED{{% md %}}Scale is unspecified. The view will default to LINEAR.{{% /md %}}</dd><dt>Axis<wbr>Scale<wbr>Linear</dt>
+    <dd>LINEAR{{% md %}}Linear scale.{{% /md %}}</dd><dt>Axis<wbr>Scale<wbr>Log10</dt>
+    <dd>LOG10{{% md %}}Logarithmic scale (base 10).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Scale<wbr>Unspecified</dt>
+    <dd>SCALE_UNSPECIFIED{{% md %}}Scale is unspecified. The view will default to LINEAR.{{% /md %}}</dd><dt>Linear</dt>
+    <dd>LINEAR{{% md %}}Linear scale.{{% /md %}}</dd><dt>Log10</dt>
+    <dd>LOG10{{% md %}}Logarithmic scale (base 10).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SCALE_UNSPECIFIED</dt>
+    <dd>SCALE_UNSPECIFIED{{% md %}}Scale is unspecified. The view will default to LINEAR.{{% /md %}}</dd><dt>LINEAR</dt>
+    <dd>LINEAR{{% md %}}Linear scale.{{% /md %}}</dd><dt>LOG10</dt>
+    <dd>LOG10{{% md %}}Logarithmic scale (base 10).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="chartoptions">Chart<wbr>Options</h4>
 
 {{% choosable language csharp %}}
@@ -963,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#chartoptionsmode">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Chart<wbr>Options<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The chart mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -975,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#chartoptionsmode">Chart<wbr>Options<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The chart mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -987,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#chartoptionsmode">Chart<wbr>Options<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The chart mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -999,9 +1197,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#chartoptionsmode">Chart<wbr>Options<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The chart mode.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="chartoptionsmode">Chart<wbr>Options<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}Mode is unspecified. The view will default to COLOR.{{% /md %}}</dd><dt>Color</dt>
+    <dd>COLOR{{% md %}}The chart distinguishes data series using different color. Line colors may get reused when there are many lines in the chart.{{% /md %}}</dd><dt>XRay</dt>
+    <dd>X_RAY{{% md %}}The chart uses the Stackdriver x-ray mode, in which each data set is plotted using the same semi-transparent color.{{% /md %}}</dd><dt>Stats</dt>
+    <dd>STATS{{% md %}}The chart displays statistics such as average, median, 95th percentile, and more.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Chart<wbr>Options<wbr>Mode<wbr>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}Mode is unspecified. The view will default to COLOR.{{% /md %}}</dd><dt>Chart<wbr>Options<wbr>Mode<wbr>Color</dt>
+    <dd>COLOR{{% md %}}The chart distinguishes data series using different color. Line colors may get reused when there are many lines in the chart.{{% /md %}}</dd><dt>Chart<wbr>Options<wbr>Mode<wbr>XRay</dt>
+    <dd>X_RAY{{% md %}}The chart uses the Stackdriver x-ray mode, in which each data set is plotted using the same semi-transparent color.{{% /md %}}</dd><dt>Chart<wbr>Options<wbr>Mode<wbr>Stats</dt>
+    <dd>STATS{{% md %}}The chart displays statistics such as average, median, 95th percentile, and more.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}Mode is unspecified. The view will default to COLOR.{{% /md %}}</dd><dt>Color</dt>
+    <dd>COLOR{{% md %}}The chart distinguishes data series using different color. Line colors may get reused when there are many lines in the chart.{{% /md %}}</dd><dt>XRay</dt>
+    <dd>X_RAY{{% md %}}The chart uses the Stackdriver x-ray mode, in which each data set is plotted using the same semi-transparent color.{{% /md %}}</dd><dt>Stats</dt>
+    <dd>STATS{{% md %}}The chart displays statistics such as average, median, 95th percentile, and more.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MODE_UNSPECIFIED</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}Mode is unspecified. The view will default to COLOR.{{% /md %}}</dd><dt>COLOR</dt>
+    <dd>COLOR{{% md %}}The chart distinguishes data series using different color. Line colors may get reused when there are many lines in the chart.{{% /md %}}</dd><dt>X_RAY</dt>
+    <dd>X_RAY{{% md %}}The chart uses the Stackdriver x-ray mode, in which each data set is plotted using the same semi-transparent color.{{% /md %}}</dd><dt>STATS</dt>
+    <dd>STATS{{% md %}}The chart displays statistics such as average, median, 95th percentile, and more.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="chartoptionsresponse">Chart<wbr>Options<wbr>Response</h4>
@@ -1343,7 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plottype_csharp" style="color: inherit; text-decoration: inherit;">Plot<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#datasetplottype">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Data<wbr>Set<wbr>Plot<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1379,7 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plottype_go" style="color: inherit; text-decoration: inherit;">Plot<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#datasetplottype">Data<wbr>Set<wbr>Plot<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1415,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plottype_nodejs" style="color: inherit; text-decoration: inherit;">plot<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#datasetplottype">Data<wbr>Set<wbr>Plot<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1451,7 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plot_type_python" style="color: inherit; text-decoration: inherit;">plot_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#datasetplottype">Data<wbr>Set<wbr>Plot<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1462,6 +1694,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#timeseriesquery">Time<wbr>Series<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Fields for querying time series data from the Stackdriver metrics API.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datasetplottype">Data<wbr>Set<wbr>Plot<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Plot<wbr>Type<wbr>Unspecified</dt>
+    <dd>PLOT_TYPE_UNSPECIFIED{{% md %}}Plot type is unspecified. The view will default to LINE.{{% /md %}}</dd><dt>Line</dt>
+    <dd>LINE{{% md %}}The data is plotted as a set of lines (one line per series).{{% /md %}}</dd><dt>Stacked<wbr>Area</dt>
+    <dd>STACKED_AREA{{% md %}}The data is plotted as a set of filled areas (one area per series), with the areas stacked vertically (the base of each area is the top of its predecessor, and the base of the first area is the X axis). Since the areas do not overlap, each is filled with a different opaque color.{{% /md %}}</dd><dt>Stacked<wbr>Bar</dt>
+    <dd>STACKED_BAR{{% md %}}The data is plotted as a set of rectangular boxes (one box per series), with the boxes stacked vertically (the base of each box is the top of its predecessor, and the base of the first box is the X axis). Since the boxes do not overlap, each is filled with a different opaque color.{{% /md %}}</dd><dt>Heatmap</dt>
+    <dd>HEATMAP{{% md %}}The data is plotted as a heatmap. The series being plotted must have a DISTRIBUTION value type. The value of each bucket in the distribution is displayed as a color. This type is not currently available in the Stackdriver Monitoring application.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Data<wbr>Set<wbr>Plot<wbr>Type<wbr>Plot<wbr>Type<wbr>Unspecified</dt>
+    <dd>PLOT_TYPE_UNSPECIFIED{{% md %}}Plot type is unspecified. The view will default to LINE.{{% /md %}}</dd><dt>Data<wbr>Set<wbr>Plot<wbr>Type<wbr>Line</dt>
+    <dd>LINE{{% md %}}The data is plotted as a set of lines (one line per series).{{% /md %}}</dd><dt>Data<wbr>Set<wbr>Plot<wbr>Type<wbr>Stacked<wbr>Area</dt>
+    <dd>STACKED_AREA{{% md %}}The data is plotted as a set of filled areas (one area per series), with the areas stacked vertically (the base of each area is the top of its predecessor, and the base of the first area is the X axis). Since the areas do not overlap, each is filled with a different opaque color.{{% /md %}}</dd><dt>Data<wbr>Set<wbr>Plot<wbr>Type<wbr>Stacked<wbr>Bar</dt>
+    <dd>STACKED_BAR{{% md %}}The data is plotted as a set of rectangular boxes (one box per series), with the boxes stacked vertically (the base of each box is the top of its predecessor, and the base of the first box is the X axis). Since the boxes do not overlap, each is filled with a different opaque color.{{% /md %}}</dd><dt>Data<wbr>Set<wbr>Plot<wbr>Type<wbr>Heatmap</dt>
+    <dd>HEATMAP{{% md %}}The data is plotted as a heatmap. The series being plotted must have a DISTRIBUTION value type. The value of each bucket in the distribution is displayed as a color. This type is not currently available in the Stackdriver Monitoring application.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Plot<wbr>Type<wbr>Unspecified</dt>
+    <dd>PLOT_TYPE_UNSPECIFIED{{% md %}}Plot type is unspecified. The view will default to LINE.{{% /md %}}</dd><dt>Line</dt>
+    <dd>LINE{{% md %}}The data is plotted as a set of lines (one line per series).{{% /md %}}</dd><dt>Stacked<wbr>Area</dt>
+    <dd>STACKED_AREA{{% md %}}The data is plotted as a set of filled areas (one area per series), with the areas stacked vertically (the base of each area is the top of its predecessor, and the base of the first area is the X axis). Since the areas do not overlap, each is filled with a different opaque color.{{% /md %}}</dd><dt>Stacked<wbr>Bar</dt>
+    <dd>STACKED_BAR{{% md %}}The data is plotted as a set of rectangular boxes (one box per series), with the boxes stacked vertically (the base of each box is the top of its predecessor, and the base of the first box is the X axis). Since the boxes do not overlap, each is filled with a different opaque color.{{% /md %}}</dd><dt>Heatmap</dt>
+    <dd>HEATMAP{{% md %}}The data is plotted as a heatmap. The series being plotted must have a DISTRIBUTION value type. The value of each bucket in the distribution is displayed as a color. This type is not currently available in the Stackdriver Monitoring application.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PLOT_TYPE_UNSPECIFIED</dt>
+    <dd>PLOT_TYPE_UNSPECIFIED{{% md %}}Plot type is unspecified. The view will default to LINE.{{% /md %}}</dd><dt>LINE</dt>
+    <dd>LINE{{% md %}}The data is plotted as a set of lines (one line per series).{{% /md %}}</dd><dt>STACKED_AREA</dt>
+    <dd>STACKED_AREA{{% md %}}The data is plotted as a set of filled areas (one area per series), with the areas stacked vertically (the base of each area is the top of its predecessor, and the base of the first area is the X axis). Since the areas do not overlap, each is filled with a different opaque color.{{% /md %}}</dd><dt>STACKED_BAR</dt>
+    <dd>STACKED_BAR{{% md %}}The data is plotted as a set of rectangular boxes (one box per series), with the boxes stacked vertically (the base of each box is the top of its predecessor, and the base of the first box is the X axis). Since the boxes do not overlap, each is filled with a different opaque color.{{% /md %}}</dd><dt>HEATMAP</dt>
+    <dd>HEATMAP{{% md %}}The data is plotted as a heatmap. The series being plotted must have a DISTRIBUTION value type. The value of each bucket in the distribution is displayed as a color. This type is not currently available in the Stackdriver Monitoring application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasetresponse">Data<wbr>Set<wbr>Response</h4>
@@ -2111,7 +2381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#picktimeseriesfilterdirection">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}How to use the ranking to select time series that pass through the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2127,7 +2397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rankingmethod_csharp" style="color: inherit; text-decoration: inherit;">Ranking<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#picktimeseriesfilterrankingmethod">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Ranking<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}ranking_method is applied to each time series independently to produce the value which will be used to compare the time series to other time series.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2139,7 +2409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#picktimeseriesfilterdirection">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}How to use the ranking to select time series that pass through the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2155,7 +2425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rankingmethod_go" style="color: inherit; text-decoration: inherit;">Ranking<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#picktimeseriesfilterrankingmethod">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Ranking<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}ranking_method is applied to each time series independently to produce the value which will be used to compare the time series to other time series.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2167,7 +2437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#picktimeseriesfilterdirection">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}How to use the ranking to select time series that pass through the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2183,7 +2453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rankingmethod_nodejs" style="color: inherit; text-decoration: inherit;">ranking<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#picktimeseriesfilterrankingmethod">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Ranking<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}ranking_method is applied to each time series independently to produce the value which will be used to compare the time series to other time series.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2195,7 +2465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#picktimeseriesfilterdirection">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}How to use the ranking to select time series that pass through the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2211,9 +2481,81 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ranking_method_python" style="color: inherit; text-decoration: inherit;">ranking_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#picktimeseriesfilterrankingmethod">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Ranking<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}ranking_method is applied to each time series independently to produce the value which will be used to compare the time series to other time series.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="picktimeseriesfilterdirection">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Direction</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Direction<wbr>Unspecified</dt>
+    <dd>DIRECTION_UNSPECIFIED{{% md %}}Not allowed. You must specify a different Direction if you specify a PickTimeSeriesFilter.{{% /md %}}</dd><dt>Top</dt>
+    <dd>TOP{{% md %}}Pass the highest num_time_series ranking inputs.{{% /md %}}</dd><dt>Bottom</dt>
+    <dd>BOTTOM{{% md %}}Pass the lowest num_time_series ranking inputs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Direction<wbr>Direction<wbr>Unspecified</dt>
+    <dd>DIRECTION_UNSPECIFIED{{% md %}}Not allowed. You must specify a different Direction if you specify a PickTimeSeriesFilter.{{% /md %}}</dd><dt>Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Direction<wbr>Top</dt>
+    <dd>TOP{{% md %}}Pass the highest num_time_series ranking inputs.{{% /md %}}</dd><dt>Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Direction<wbr>Bottom</dt>
+    <dd>BOTTOM{{% md %}}Pass the lowest num_time_series ranking inputs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Direction<wbr>Unspecified</dt>
+    <dd>DIRECTION_UNSPECIFIED{{% md %}}Not allowed. You must specify a different Direction if you specify a PickTimeSeriesFilter.{{% /md %}}</dd><dt>Top</dt>
+    <dd>TOP{{% md %}}Pass the highest num_time_series ranking inputs.{{% /md %}}</dd><dt>Bottom</dt>
+    <dd>BOTTOM{{% md %}}Pass the lowest num_time_series ranking inputs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DIRECTION_UNSPECIFIED</dt>
+    <dd>DIRECTION_UNSPECIFIED{{% md %}}Not allowed. You must specify a different Direction if you specify a PickTimeSeriesFilter.{{% /md %}}</dd><dt>TOP</dt>
+    <dd>TOP{{% md %}}Pass the highest num_time_series ranking inputs.{{% /md %}}</dd><dt>BOTTOM</dt>
+    <dd>BOTTOM{{% md %}}Pass the lowest num_time_series ranking inputs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="picktimeseriesfilterrankingmethod">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Ranking<wbr>Method</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Method<wbr>Unspecified</dt>
+    <dd>METHOD_UNSPECIFIED{{% md %}}Not allowed. You must specify a different Method if you specify a PickTimeSeriesFilter.{{% /md %}}</dd><dt>Method<wbr>Mean</dt>
+    <dd>METHOD_MEAN{{% md %}}Select the mean of all values.{{% /md %}}</dd><dt>Method<wbr>Max</dt>
+    <dd>METHOD_MAX{{% md %}}Select the maximum value.{{% /md %}}</dd><dt>Method<wbr>Min</dt>
+    <dd>METHOD_MIN{{% md %}}Select the minimum value.{{% /md %}}</dd><dt>Method<wbr>Sum</dt>
+    <dd>METHOD_SUM{{% md %}}Compute the sum of all values.{{% /md %}}</dd><dt>Method<wbr>Latest</dt>
+    <dd>METHOD_LATEST{{% md %}}Select the most recent value.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Ranking<wbr>Method<wbr>Method<wbr>Unspecified</dt>
+    <dd>METHOD_UNSPECIFIED{{% md %}}Not allowed. You must specify a different Method if you specify a PickTimeSeriesFilter.{{% /md %}}</dd><dt>Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Ranking<wbr>Method<wbr>Method<wbr>Mean</dt>
+    <dd>METHOD_MEAN{{% md %}}Select the mean of all values.{{% /md %}}</dd><dt>Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Ranking<wbr>Method<wbr>Method<wbr>Max</dt>
+    <dd>METHOD_MAX{{% md %}}Select the maximum value.{{% /md %}}</dd><dt>Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Ranking<wbr>Method<wbr>Method<wbr>Min</dt>
+    <dd>METHOD_MIN{{% md %}}Select the minimum value.{{% /md %}}</dd><dt>Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Ranking<wbr>Method<wbr>Method<wbr>Sum</dt>
+    <dd>METHOD_SUM{{% md %}}Compute the sum of all values.{{% /md %}}</dd><dt>Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Ranking<wbr>Method<wbr>Method<wbr>Latest</dt>
+    <dd>METHOD_LATEST{{% md %}}Select the most recent value.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Method<wbr>Unspecified</dt>
+    <dd>METHOD_UNSPECIFIED{{% md %}}Not allowed. You must specify a different Method if you specify a PickTimeSeriesFilter.{{% /md %}}</dd><dt>Method<wbr>Mean</dt>
+    <dd>METHOD_MEAN{{% md %}}Select the mean of all values.{{% /md %}}</dd><dt>Method<wbr>Max</dt>
+    <dd>METHOD_MAX{{% md %}}Select the maximum value.{{% /md %}}</dd><dt>Method<wbr>Min</dt>
+    <dd>METHOD_MIN{{% md %}}Select the minimum value.{{% /md %}}</dd><dt>Method<wbr>Sum</dt>
+    <dd>METHOD_SUM{{% md %}}Compute the sum of all values.{{% /md %}}</dd><dt>Method<wbr>Latest</dt>
+    <dd>METHOD_LATEST{{% md %}}Select the most recent value.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>METHOD_UNSPECIFIED</dt>
+    <dd>METHOD_UNSPECIFIED{{% md %}}Not allowed. You must specify a different Method if you specify a PickTimeSeriesFilter.{{% /md %}}</dd><dt>METHOD_MEAN</dt>
+    <dd>METHOD_MEAN{{% md %}}Select the mean of all values.{{% /md %}}</dd><dt>METHOD_MAX</dt>
+    <dd>METHOD_MAX{{% md %}}Select the maximum value.{{% /md %}}</dd><dt>METHOD_MIN</dt>
+    <dd>METHOD_MIN{{% md %}}Select the minimum value.{{% /md %}}</dd><dt>METHOD_SUM</dt>
+    <dd>METHOD_SUM{{% md %}}Compute the sum of all values.{{% /md %}}</dd><dt>METHOD_LATEST</dt>
+    <dd>METHOD_LATEST{{% md %}}Select the most recent value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="picktimeseriesfilterresponse">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Response</h4>
@@ -3067,7 +3409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sparkcharttype_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Chart<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sparkchartviewsparkcharttype">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Spark<wbr>Chart<wbr>View<wbr>Spark<wbr>Chart<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of sparkchart to show in this chartView.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3087,7 +3429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sparkcharttype_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Chart<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sparkchartviewsparkcharttype">Spark<wbr>Chart<wbr>View<wbr>Spark<wbr>Chart<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of sparkchart to show in this chartView.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3107,7 +3449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sparkcharttype_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Chart<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sparkchartviewsparkcharttype">Spark<wbr>Chart<wbr>View<wbr>Spark<wbr>Chart<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of sparkchart to show in this chartView.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3127,7 +3469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spark_chart_type_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>chart_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#sparkchartviewsparkcharttype">Spark<wbr>Chart<wbr>View<wbr>Spark<wbr>Chart<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of sparkchart to show in this chartView.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3214,6 +3556,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Required. The type of sparkchart to show in this chartView.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="sparkchartviewsparkcharttype">Spark<wbr>Chart<wbr>View<wbr>Spark<wbr>Chart<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Spark<wbr>Chart<wbr>Type<wbr>Unspecified</dt>
+    <dd>SPARK_CHART_TYPE_UNSPECIFIED{{% md %}}Not allowed in well-formed requests.{{% /md %}}</dd><dt>Spark<wbr>Line</dt>
+    <dd>SPARK_LINE{{% md %}}The sparkline will be rendered as a small line chart.{{% /md %}}</dd><dt>Spark<wbr>Bar</dt>
+    <dd>SPARK_BAR{{% md %}}The sparkbar will be rendered as a small bar chart.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Spark<wbr>Chart<wbr>View<wbr>Spark<wbr>Chart<wbr>Type<wbr>Spark<wbr>Chart<wbr>Type<wbr>Unspecified</dt>
+    <dd>SPARK_CHART_TYPE_UNSPECIFIED{{% md %}}Not allowed in well-formed requests.{{% /md %}}</dd><dt>Spark<wbr>Chart<wbr>View<wbr>Spark<wbr>Chart<wbr>Type<wbr>Spark<wbr>Line</dt>
+    <dd>SPARK_LINE{{% md %}}The sparkline will be rendered as a small line chart.{{% /md %}}</dd><dt>Spark<wbr>Chart<wbr>View<wbr>Spark<wbr>Chart<wbr>Type<wbr>Spark<wbr>Bar</dt>
+    <dd>SPARK_BAR{{% md %}}The sparkbar will be rendered as a small bar chart.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Spark<wbr>Chart<wbr>Type<wbr>Unspecified</dt>
+    <dd>SPARK_CHART_TYPE_UNSPECIFIED{{% md %}}Not allowed in well-formed requests.{{% /md %}}</dd><dt>Spark<wbr>Line</dt>
+    <dd>SPARK_LINE{{% md %}}The sparkline will be rendered as a small line chart.{{% /md %}}</dd><dt>Spark<wbr>Bar</dt>
+    <dd>SPARK_BAR{{% md %}}The sparkbar will be rendered as a small bar chart.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SPARK_CHART_TYPE_UNSPECIFIED</dt>
+    <dd>SPARK_CHART_TYPE_UNSPECIFIED{{% md %}}Not allowed in well-formed requests.{{% /md %}}</dd><dt>SPARK_LINE</dt>
+    <dd>SPARK_LINE{{% md %}}The sparkline will be rendered as a small line chart.{{% /md %}}</dd><dt>SPARK_BAR</dt>
+    <dd>SPARK_BAR{{% md %}}The sparkbar will be rendered as a small bar chart.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="text">Text</h4>
 
 {{% choosable language csharp %}}
@@ -3231,7 +3603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#textformat">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Text<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}How the text content is formatted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3251,7 +3623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#textformat">Text<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}How the text content is formatted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3271,7 +3643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#textformat">Text<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}How the text content is formatted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3291,9 +3663,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#textformat">Text<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}How the text content is formatted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="textformat">Text<wbr>Format</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Format<wbr>Unspecified</dt>
+    <dd>FORMAT_UNSPECIFIED{{% md %}}Format is unspecified. Defaults to MARKDOWN.{{% /md %}}</dd><dt>Markdown</dt>
+    <dd>MARKDOWN{{% md %}}The text contains Markdown formatting.{{% /md %}}</dd><dt>Raw</dt>
+    <dd>RAW{{% md %}}The text contains no special formatting.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Text<wbr>Format<wbr>Format<wbr>Unspecified</dt>
+    <dd>FORMAT_UNSPECIFIED{{% md %}}Format is unspecified. Defaults to MARKDOWN.{{% /md %}}</dd><dt>Text<wbr>Format<wbr>Markdown</dt>
+    <dd>MARKDOWN{{% md %}}The text contains Markdown formatting.{{% /md %}}</dd><dt>Text<wbr>Format<wbr>Raw</dt>
+    <dd>RAW{{% md %}}The text contains no special formatting.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Format<wbr>Unspecified</dt>
+    <dd>FORMAT_UNSPECIFIED{{% md %}}Format is unspecified. Defaults to MARKDOWN.{{% /md %}}</dd><dt>Markdown</dt>
+    <dd>MARKDOWN{{% md %}}The text contains Markdown formatting.{{% /md %}}</dd><dt>Raw</dt>
+    <dd>RAW{{% md %}}The text contains no special formatting.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FORMAT_UNSPECIFIED</dt>
+    <dd>FORMAT_UNSPECIFIED{{% md %}}Format is unspecified. Defaults to MARKDOWN.{{% /md %}}</dd><dt>MARKDOWN</dt>
+    <dd>MARKDOWN{{% md %}}The text contains Markdown formatting.{{% /md %}}</dd><dt>RAW</dt>
+    <dd>RAW{{% md %}}The text contains no special formatting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="textresponse">Text<wbr>Response</h4>
@@ -3387,7 +3789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#color_csharp" style="color: inherit; text-decoration: inherit;">Color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#thresholdcolor">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Threshold<wbr>Color</a></span>
     </dt>
     <dd>{{% md %}}The state color for this threshold. Color is not allowed in a XyChart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3395,7 +3797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#thresholddirection">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V1.<wbr>Threshold<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}The direction for the current threshold. Direction is not allowed in a XyChart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3423,7 +3825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#color_go" style="color: inherit; text-decoration: inherit;">Color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#thresholdcolor">Threshold<wbr>Color</a></span>
     </dt>
     <dd>{{% md %}}The state color for this threshold. Color is not allowed in a XyChart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3431,7 +3833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#thresholddirection">Threshold<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}The direction for the current threshold. Direction is not allowed in a XyChart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3459,7 +3861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#thresholdcolor">Threshold<wbr>Color</a></span>
     </dt>
     <dd>{{% md %}}The state color for this threshold. Color is not allowed in a XyChart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3467,7 +3869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#thresholddirection">Threshold<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}The direction for the current threshold. Direction is not allowed in a XyChart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3495,7 +3897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#thresholdcolor">Threshold<wbr>Color</a></span>
     </dt>
     <dd>{{% md %}}The state color for this threshold. Color is not allowed in a XyChart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3503,7 +3905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#thresholddirection">Threshold<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}The direction for the current threshold. Direction is not allowed in a XyChart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3522,6 +3924,66 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The value of the threshold. The value should be defined in the native scale of the metric.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="thresholdcolor">Threshold<wbr>Color</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Color<wbr>Unspecified</dt>
+    <dd>COLOR_UNSPECIFIED{{% md %}}Color is unspecified. Not allowed in well-formed requests.{{% /md %}}</dd><dt>Yellow</dt>
+    <dd>YELLOW{{% md %}}Crossing the threshold is "concerning" behavior.{{% /md %}}</dd><dt>Red</dt>
+    <dd>RED{{% md %}}Crossing the threshold is "emergency" behavior.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Threshold<wbr>Color<wbr>Color<wbr>Unspecified</dt>
+    <dd>COLOR_UNSPECIFIED{{% md %}}Color is unspecified. Not allowed in well-formed requests.{{% /md %}}</dd><dt>Threshold<wbr>Color<wbr>Yellow</dt>
+    <dd>YELLOW{{% md %}}Crossing the threshold is "concerning" behavior.{{% /md %}}</dd><dt>Threshold<wbr>Color<wbr>Red</dt>
+    <dd>RED{{% md %}}Crossing the threshold is "emergency" behavior.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Color<wbr>Unspecified</dt>
+    <dd>COLOR_UNSPECIFIED{{% md %}}Color is unspecified. Not allowed in well-formed requests.{{% /md %}}</dd><dt>Yellow</dt>
+    <dd>YELLOW{{% md %}}Crossing the threshold is "concerning" behavior.{{% /md %}}</dd><dt>Red</dt>
+    <dd>RED{{% md %}}Crossing the threshold is "emergency" behavior.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>COLOR_UNSPECIFIED</dt>
+    <dd>COLOR_UNSPECIFIED{{% md %}}Color is unspecified. Not allowed in well-formed requests.{{% /md %}}</dd><dt>YELLOW</dt>
+    <dd>YELLOW{{% md %}}Crossing the threshold is "concerning" behavior.{{% /md %}}</dd><dt>RED</dt>
+    <dd>RED{{% md %}}Crossing the threshold is "emergency" behavior.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="thresholddirection">Threshold<wbr>Direction</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Direction<wbr>Unspecified</dt>
+    <dd>DIRECTION_UNSPECIFIED{{% md %}}Not allowed in well-formed requests.{{% /md %}}</dd><dt>Above</dt>
+    <dd>ABOVE{{% md %}}The threshold will be considered crossed if the actual value is above the threshold value.{{% /md %}}</dd><dt>Below</dt>
+    <dd>BELOW{{% md %}}The threshold will be considered crossed if the actual value is below the threshold value.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Threshold<wbr>Direction<wbr>Direction<wbr>Unspecified</dt>
+    <dd>DIRECTION_UNSPECIFIED{{% md %}}Not allowed in well-formed requests.{{% /md %}}</dd><dt>Threshold<wbr>Direction<wbr>Above</dt>
+    <dd>ABOVE{{% md %}}The threshold will be considered crossed if the actual value is above the threshold value.{{% /md %}}</dd><dt>Threshold<wbr>Direction<wbr>Below</dt>
+    <dd>BELOW{{% md %}}The threshold will be considered crossed if the actual value is below the threshold value.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Direction<wbr>Unspecified</dt>
+    <dd>DIRECTION_UNSPECIFIED{{% md %}}Not allowed in well-formed requests.{{% /md %}}</dd><dt>Above</dt>
+    <dd>ABOVE{{% md %}}The threshold will be considered crossed if the actual value is above the threshold value.{{% /md %}}</dd><dt>Below</dt>
+    <dd>BELOW{{% md %}}The threshold will be considered crossed if the actual value is below the threshold value.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DIRECTION_UNSPECIFIED</dt>
+    <dd>DIRECTION_UNSPECIFIED{{% md %}}Not allowed in well-formed requests.{{% /md %}}</dd><dt>ABOVE</dt>
+    <dd>ABOVE{{% md %}}The threshold will be considered crossed if the actual value is above the threshold value.{{% /md %}}</dd><dt>BELOW</dt>
+    <dd>BELOW{{% md %}}The threshold will be considered crossed if the actual value is below the threshold value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="thresholdresponse">Threshold<wbr>Response</h4>

@@ -441,7 +441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#combiningfunction_csharp" style="color: inherit; text-decoration: inherit;">Combining<wbr>Function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#basiclevelcombiningfunction">Pulumi.<wbr>Google<wbr>Native.<wbr>Access<wbr>Context<wbr>Manager.<wbr>V1.<wbr>Basic<wbr>Level<wbr>Combining<wbr>Function</a></span>
     </dt>
     <dd>{{% md %}}How the `conditions` list should be combined to determine if a request is granted this `AccessLevel`. If AND is used, each `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. If OR is used, at least one `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. Default behavior is AND.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -461,7 +461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#combiningfunction_go" style="color: inherit; text-decoration: inherit;">Combining<wbr>Function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#basiclevelcombiningfunction">Basic<wbr>Level<wbr>Combining<wbr>Function</a></span>
     </dt>
     <dd>{{% md %}}How the `conditions` list should be combined to determine if a request is granted this `AccessLevel`. If AND is used, each `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. If OR is used, at least one `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. Default behavior is AND.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -481,7 +481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#combiningfunction_nodejs" style="color: inherit; text-decoration: inherit;">combining<wbr>Function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#basiclevelcombiningfunction">Basic<wbr>Level<wbr>Combining<wbr>Function</a></span>
     </dt>
     <dd>{{% md %}}How the `conditions` list should be combined to determine if a request is granted this `AccessLevel`. If AND is used, each `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. If OR is used, at least one `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. Default behavior is AND.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -501,7 +501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#combining_function_python" style="color: inherit; text-decoration: inherit;">combining_<wbr>function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#basiclevelcombiningfunction">Basic<wbr>Level<wbr>Combining<wbr>Function</a></span>
     </dt>
     <dd>{{% md %}}How the `conditions` list should be combined to determine if a request is granted this `AccessLevel`. If AND is used, each `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. If OR is used, at least one `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. Default behavior is AND.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -512,6 +512,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#condition">Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. A list of requirements for the `AccessLevel` to be granted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="basiclevelcombiningfunction">Basic<wbr>Level<wbr>Combining<wbr>Function</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>And</dt>
+    <dd>AND{{% md %}}All `Conditions` must be true for the `BasicLevel` to be true.{{% /md %}}</dd><dt>Or</dt>
+    <dd>OR{{% md %}}If at least one `Condition` is true, then the `BasicLevel` is true.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Basic<wbr>Level<wbr>Combining<wbr>Function<wbr>And</dt>
+    <dd>AND{{% md %}}All `Conditions` must be true for the `BasicLevel` to be true.{{% /md %}}</dd><dt>Basic<wbr>Level<wbr>Combining<wbr>Function<wbr>Or</dt>
+    <dd>OR{{% md %}}If at least one `Condition` is true, then the `BasicLevel` is true.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>And</dt>
+    <dd>AND{{% md %}}All `Conditions` must be true for the `BasicLevel` to be true.{{% /md %}}</dd><dt>Or</dt>
+    <dd>OR{{% md %}}If at least one `Condition` is true, then the `BasicLevel` is true.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>AND_</dt>
+    <dd>AND{{% md %}}All `Conditions` must be true for the `BasicLevel` to be true.{{% /md %}}</dd><dt>OR_</dt>
+    <dd>OR{{% md %}}If at least one `Condition` is true, then the `BasicLevel` is true.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="basiclevelresponse">Basic<wbr>Level<wbr>Response</h4>
@@ -1125,7 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alloweddevicemanagementlevels_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Device<wbr>Management<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#devicepolicyalloweddevicemanagementlevelsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Access<wbr>Context<wbr>Manager.<wbr>V1.<wbr>Device<wbr>Policy<wbr>Allowed<wbr>Device<wbr>Management<wbr>Levels<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}Allowed device management levels, an empty list allows all management levels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1133,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedencryptionstatuses_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Encryption<wbr>Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#devicepolicyallowedencryptionstatusesitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Access<wbr>Context<wbr>Manager.<wbr>V1.<wbr>Device<wbr>Policy<wbr>Allowed<wbr>Encryption<wbr>Statuses<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}Allowed encryptions statuses, an empty list allows all statuses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1177,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alloweddevicemanagementlevels_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Device<wbr>Management<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#devicepolicyalloweddevicemanagementlevelsitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}Allowed device management levels, an empty list allows all management levels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedencryptionstatuses_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Encryption<wbr>Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#devicepolicyallowedencryptionstatusesitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}Allowed encryptions statuses, an empty list allows all statuses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alloweddevicemanagementlevels_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Device<wbr>Management<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#devicepolicyalloweddevicemanagementlevelsitem">Device<wbr>Policy<wbr>Allowed<wbr>Device<wbr>Management<wbr>Levels<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}Allowed device management levels, an empty list allows all management levels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1237,7 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedencryptionstatuses_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Encryption<wbr>Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#devicepolicyallowedencryptionstatusesitem">Device<wbr>Policy<wbr>Allowed<wbr>Encryption<wbr>Statuses<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}Allowed encryptions statuses, an empty list allows all statuses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1281,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_device_management_levels_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>device_<wbr>management_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#devicepolicyalloweddevicemanagementlevelsitem">Device<wbr>Policy<wbr>Allowed<wbr>Device<wbr>Management<wbr>Levels<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}Allowed device management levels, an empty list allows all management levels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1289,7 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_encryption_statuses_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>encryption_<wbr>statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#devicepolicyallowedencryptionstatusesitem">Device<wbr>Policy<wbr>Allowed<wbr>Encryption<wbr>Statuses<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}Allowed encryptions statuses, an empty list allows all statuses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1324,6 +1350,74 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="devicepolicyalloweddevicemanagementlevelsitem">Device<wbr>Policy<wbr>Allowed<wbr>Device<wbr>Management<wbr>Levels<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Management<wbr>Unspecified</dt>
+    <dd>MANAGEMENT_UNSPECIFIED{{% md %}}The device's management level is not specified or not known.{{% /md %}}</dd><dt>None</dt>
+    <dd>NONE{{% md %}}The device is not managed.{{% /md %}}</dd><dt>Basic</dt>
+    <dd>BASIC{{% md %}}Basic management is enabled, which is generally limited to monitoring and wiping the corporate account.{{% /md %}}</dd><dt>Complete</dt>
+    <dd>COMPLETE{{% md %}}Complete device management. This includes more thorough monitoring and the ability to directly manage the device (such as remote wiping). This can be enabled through the Android Enterprise Platform.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Device<wbr>Policy<wbr>Allowed<wbr>Device<wbr>Management<wbr>Levels<wbr>Item<wbr>Management<wbr>Unspecified</dt>
+    <dd>MANAGEMENT_UNSPECIFIED{{% md %}}The device's management level is not specified or not known.{{% /md %}}</dd><dt>Device<wbr>Policy<wbr>Allowed<wbr>Device<wbr>Management<wbr>Levels<wbr>Item<wbr>None</dt>
+    <dd>NONE{{% md %}}The device is not managed.{{% /md %}}</dd><dt>Device<wbr>Policy<wbr>Allowed<wbr>Device<wbr>Management<wbr>Levels<wbr>Item<wbr>Basic</dt>
+    <dd>BASIC{{% md %}}Basic management is enabled, which is generally limited to monitoring and wiping the corporate account.{{% /md %}}</dd><dt>Device<wbr>Policy<wbr>Allowed<wbr>Device<wbr>Management<wbr>Levels<wbr>Item<wbr>Complete</dt>
+    <dd>COMPLETE{{% md %}}Complete device management. This includes more thorough monitoring and the ability to directly manage the device (such as remote wiping). This can be enabled through the Android Enterprise Platform.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Management<wbr>Unspecified</dt>
+    <dd>MANAGEMENT_UNSPECIFIED{{% md %}}The device's management level is not specified or not known.{{% /md %}}</dd><dt>None</dt>
+    <dd>NONE{{% md %}}The device is not managed.{{% /md %}}</dd><dt>Basic</dt>
+    <dd>BASIC{{% md %}}Basic management is enabled, which is generally limited to monitoring and wiping the corporate account.{{% /md %}}</dd><dt>Complete</dt>
+    <dd>COMPLETE{{% md %}}Complete device management. This includes more thorough monitoring and the ability to directly manage the device (such as remote wiping). This can be enabled through the Android Enterprise Platform.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MANAGEMENT_UNSPECIFIED</dt>
+    <dd>MANAGEMENT_UNSPECIFIED{{% md %}}The device's management level is not specified or not known.{{% /md %}}</dd><dt>NONE</dt>
+    <dd>NONE{{% md %}}The device is not managed.{{% /md %}}</dd><dt>BASIC</dt>
+    <dd>BASIC{{% md %}}Basic management is enabled, which is generally limited to monitoring and wiping the corporate account.{{% /md %}}</dd><dt>COMPLETE</dt>
+    <dd>COMPLETE{{% md %}}Complete device management. This includes more thorough monitoring and the ability to directly manage the device (such as remote wiping). This can be enabled through the Android Enterprise Platform.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="devicepolicyallowedencryptionstatusesitem">Device<wbr>Policy<wbr>Allowed<wbr>Encryption<wbr>Statuses<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Encryption<wbr>Unspecified</dt>
+    <dd>ENCRYPTION_UNSPECIFIED{{% md %}}The encryption status of the device is not specified or not known.{{% /md %}}</dd><dt>Encryption<wbr>Unsupported</dt>
+    <dd>ENCRYPTION_UNSUPPORTED{{% md %}}The device does not support encryption.{{% /md %}}</dd><dt>Unencrypted</dt>
+    <dd>UNENCRYPTED{{% md %}}The device supports encryption, but is currently unencrypted.{{% /md %}}</dd><dt>Encrypted</dt>
+    <dd>ENCRYPTED{{% md %}}The device is encrypted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Device<wbr>Policy<wbr>Allowed<wbr>Encryption<wbr>Statuses<wbr>Item<wbr>Encryption<wbr>Unspecified</dt>
+    <dd>ENCRYPTION_UNSPECIFIED{{% md %}}The encryption status of the device is not specified or not known.{{% /md %}}</dd><dt>Device<wbr>Policy<wbr>Allowed<wbr>Encryption<wbr>Statuses<wbr>Item<wbr>Encryption<wbr>Unsupported</dt>
+    <dd>ENCRYPTION_UNSUPPORTED{{% md %}}The device does not support encryption.{{% /md %}}</dd><dt>Device<wbr>Policy<wbr>Allowed<wbr>Encryption<wbr>Statuses<wbr>Item<wbr>Unencrypted</dt>
+    <dd>UNENCRYPTED{{% md %}}The device supports encryption, but is currently unencrypted.{{% /md %}}</dd><dt>Device<wbr>Policy<wbr>Allowed<wbr>Encryption<wbr>Statuses<wbr>Item<wbr>Encrypted</dt>
+    <dd>ENCRYPTED{{% md %}}The device is encrypted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Encryption<wbr>Unspecified</dt>
+    <dd>ENCRYPTION_UNSPECIFIED{{% md %}}The encryption status of the device is not specified or not known.{{% /md %}}</dd><dt>Encryption<wbr>Unsupported</dt>
+    <dd>ENCRYPTION_UNSUPPORTED{{% md %}}The device does not support encryption.{{% /md %}}</dd><dt>Unencrypted</dt>
+    <dd>UNENCRYPTED{{% md %}}The device supports encryption, but is currently unencrypted.{{% /md %}}</dd><dt>Encrypted</dt>
+    <dd>ENCRYPTED{{% md %}}The device is encrypted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ENCRYPTION_UNSPECIFIED</dt>
+    <dd>ENCRYPTION_UNSPECIFIED{{% md %}}The encryption status of the device is not specified or not known.{{% /md %}}</dd><dt>ENCRYPTION_UNSUPPORTED</dt>
+    <dd>ENCRYPTION_UNSUPPORTED{{% md %}}The device does not support encryption.{{% /md %}}</dd><dt>UNENCRYPTED</dt>
+    <dd>UNENCRYPTED{{% md %}}The device supports encryption, but is currently unencrypted.{{% /md %}}</dd><dt>ENCRYPTED</dt>
+    <dd>ENCRYPTED{{% md %}}The device is encrypted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="devicepolicyresponse">Device<wbr>Policy<wbr>Response</h4>
@@ -1845,7 +1939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#osconstraintostype">Pulumi.<wbr>Google<wbr>Native.<wbr>Access<wbr>Context<wbr>Manager.<wbr>V1.<wbr>Os<wbr>Constraint<wbr>Os<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The allowed OS type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1873,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#osconstraintostype">Os<wbr>Constraint<wbr>Os<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The allowed OS type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1901,7 +1995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#osconstraintostype">Os<wbr>Constraint<wbr>Os<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The allowed OS type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1929,7 +2023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#osconstraintostype">Os<wbr>Constraint<wbr>Os<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The allowed OS type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1940,6 +2034,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only allows requests from devices with a verified Chrome OS. Verifications includes requirements that the device is enterprise-managed, conformant to domain policies, and the caller has permission to call the API targeted by the request.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="osconstraintostype">Os<wbr>Constraint<wbr>Os<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Os<wbr>Unspecified</dt>
+    <dd>OS_UNSPECIFIED{{% md %}}The operating system of the device is not specified or not known.{{% /md %}}</dd><dt>Desktop<wbr>Mac</dt>
+    <dd>DESKTOP_MAC{{% md %}}A desktop Mac operating system.{{% /md %}}</dd><dt>Desktop<wbr>Windows</dt>
+    <dd>DESKTOP_WINDOWS{{% md %}}A desktop Windows operating system.{{% /md %}}</dd><dt>Desktop<wbr>Linux</dt>
+    <dd>DESKTOP_LINUX{{% md %}}A desktop Linux operating system.{{% /md %}}</dd><dt>Desktop<wbr>Chrome<wbr>Os</dt>
+    <dd>DESKTOP_CHROME_OS{{% md %}}A desktop ChromeOS operating system.{{% /md %}}</dd><dt>Android</dt>
+    <dd>ANDROID{{% md %}}An Android operating system.{{% /md %}}</dd><dt>Ios</dt>
+    <dd>IOS{{% md %}}An iOS operating system.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Os<wbr>Constraint<wbr>Os<wbr>Type<wbr>Os<wbr>Unspecified</dt>
+    <dd>OS_UNSPECIFIED{{% md %}}The operating system of the device is not specified or not known.{{% /md %}}</dd><dt>Os<wbr>Constraint<wbr>Os<wbr>Type<wbr>Desktop<wbr>Mac</dt>
+    <dd>DESKTOP_MAC{{% md %}}A desktop Mac operating system.{{% /md %}}</dd><dt>Os<wbr>Constraint<wbr>Os<wbr>Type<wbr>Desktop<wbr>Windows</dt>
+    <dd>DESKTOP_WINDOWS{{% md %}}A desktop Windows operating system.{{% /md %}}</dd><dt>Os<wbr>Constraint<wbr>Os<wbr>Type<wbr>Desktop<wbr>Linux</dt>
+    <dd>DESKTOP_LINUX{{% md %}}A desktop Linux operating system.{{% /md %}}</dd><dt>Os<wbr>Constraint<wbr>Os<wbr>Type<wbr>Desktop<wbr>Chrome<wbr>Os</dt>
+    <dd>DESKTOP_CHROME_OS{{% md %}}A desktop ChromeOS operating system.{{% /md %}}</dd><dt>Os<wbr>Constraint<wbr>Os<wbr>Type<wbr>Android</dt>
+    <dd>ANDROID{{% md %}}An Android operating system.{{% /md %}}</dd><dt>Os<wbr>Constraint<wbr>Os<wbr>Type<wbr>Ios</dt>
+    <dd>IOS{{% md %}}An iOS operating system.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Os<wbr>Unspecified</dt>
+    <dd>OS_UNSPECIFIED{{% md %}}The operating system of the device is not specified or not known.{{% /md %}}</dd><dt>Desktop<wbr>Mac</dt>
+    <dd>DESKTOP_MAC{{% md %}}A desktop Mac operating system.{{% /md %}}</dd><dt>Desktop<wbr>Windows</dt>
+    <dd>DESKTOP_WINDOWS{{% md %}}A desktop Windows operating system.{{% /md %}}</dd><dt>Desktop<wbr>Linux</dt>
+    <dd>DESKTOP_LINUX{{% md %}}A desktop Linux operating system.{{% /md %}}</dd><dt>Desktop<wbr>Chrome<wbr>Os</dt>
+    <dd>DESKTOP_CHROME_OS{{% md %}}A desktop ChromeOS operating system.{{% /md %}}</dd><dt>Android</dt>
+    <dd>ANDROID{{% md %}}An Android operating system.{{% /md %}}</dd><dt>Ios</dt>
+    <dd>IOS{{% md %}}An iOS operating system.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>OS_UNSPECIFIED</dt>
+    <dd>OS_UNSPECIFIED{{% md %}}The operating system of the device is not specified or not known.{{% /md %}}</dd><dt>DESKTOP_MAC</dt>
+    <dd>DESKTOP_MAC{{% md %}}A desktop Mac operating system.{{% /md %}}</dd><dt>DESKTOP_WINDOWS</dt>
+    <dd>DESKTOP_WINDOWS{{% md %}}A desktop Windows operating system.{{% /md %}}</dd><dt>DESKTOP_LINUX</dt>
+    <dd>DESKTOP_LINUX{{% md %}}A desktop Linux operating system.{{% /md %}}</dd><dt>DESKTOP_CHROME_OS</dt>
+    <dd>DESKTOP_CHROME_OS{{% md %}}A desktop ChromeOS operating system.{{% /md %}}</dd><dt>ANDROID</dt>
+    <dd>ANDROID{{% md %}}An Android operating system.{{% /md %}}</dd><dt>IOS</dt>
+    <dd>IOS{{% md %}}An iOS operating system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="osconstraintresponse">Os<wbr>Constraint<wbr>Response</h4>

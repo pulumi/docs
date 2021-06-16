@@ -38,7 +38,7 @@ Creates a network endpoint group in the specified project using the parameters t
                                <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                               <span class="nx">network_endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">network_endpoint_type</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.RegionNetworkEndpointGroupNetworkEndpointType]</span> = None<span class="p">,</span>
                                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">psc_target_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -48,7 +48,7 @@ Creates a network endpoint group in the specified project using the parameters t
                                <span class="nx">serverless_deployment</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.NetworkEndpointGroupServerlessDeploymentArgs]</span> = None<span class="p">,</span>
                                <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                                <span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                               <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.RegionNetworkEndpointGroupType]</span> = None<span class="p">,</span>
                                <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">RegionNetworkEndpointGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -287,7 +287,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#networkendpointtype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoint<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionnetworkendpointgroupnetworkendpointtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, or SERVERLESS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -351,7 +351,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionnetworkendpointgrouptype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specify the type of this network endpoint group. Only LOAD_BALANCING is valid for now.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -475,7 +475,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#networkendpointtype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoint<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionnetworkendpointgroupnetworkendpointtype">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, or SERVERLESS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -539,7 +539,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionnetworkendpointgrouptype">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specify the type of this network endpoint group. Only LOAD_BALANCING is valid for now.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -663,7 +663,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#networkendpointtype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Endpoint<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionnetworkendpointgroupnetworkendpointtype">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, or SERVERLESS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -727,7 +727,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionnetworkendpointgrouptype">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specify the type of this network endpoint group. Only LOAD_BALANCING is valid for now.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -851,7 +851,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#network_endpoint_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>endpoint_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#regionnetworkendpointgroupnetworkendpointtype">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, or SERVERLESS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -915,7 +915,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#regionnetworkendpointgrouptype">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specify the type of this network endpoint group. Only LOAD_BALANCING is valid for now.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2303,6 +2303,78 @@ For example, request URLs "foo1.domain.com/bar1" and "foo1.domain.com/bar2" can 
 - AppEngine: The service version 
 - Cloud Functions: Unused 
 - Cloud Run: The service tag{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="regionnetworkendpointgroupnetworkendpointtype">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Gce<wbr>Vm<wbr>Ip</dt>
+    <dd>GCE_VM_IP</dd><dt>Gce<wbr>Vm<wbr>Ip<wbr>Port</dt>
+    <dd>GCE_VM_IP_PORT</dd><dt>Gce<wbr>Vm<wbr>Primary<wbr>Ip</dt>
+    <dd>GCE_VM_PRIMARY_IP</dd><dt>Internet<wbr>Fqdn<wbr>Port</dt>
+    <dd>INTERNET_FQDN_PORT</dd><dt>Internet<wbr>Ip<wbr>Port</dt>
+    <dd>INTERNET_IP_PORT</dd><dt>Non<wbr>Gcp<wbr>Private<wbr>Ip<wbr>Port</dt>
+    <dd>NON_GCP_PRIVATE_IP_PORT</dd><dt>Private<wbr>Service<wbr>Connect</dt>
+    <dd>PRIVATE_SERVICE_CONNECT</dd><dt>Serverless</dt>
+    <dd>SERVERLESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type<wbr>Gce<wbr>Vm<wbr>Ip</dt>
+    <dd>GCE_VM_IP</dd><dt>Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type<wbr>Gce<wbr>Vm<wbr>Ip<wbr>Port</dt>
+    <dd>GCE_VM_IP_PORT</dd><dt>Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type<wbr>Gce<wbr>Vm<wbr>Primary<wbr>Ip</dt>
+    <dd>GCE_VM_PRIMARY_IP</dd><dt>Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type<wbr>Internet<wbr>Fqdn<wbr>Port</dt>
+    <dd>INTERNET_FQDN_PORT</dd><dt>Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type<wbr>Internet<wbr>Ip<wbr>Port</dt>
+    <dd>INTERNET_IP_PORT</dd><dt>Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type<wbr>Non<wbr>Gcp<wbr>Private<wbr>Ip<wbr>Port</dt>
+    <dd>NON_GCP_PRIVATE_IP_PORT</dd><dt>Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type<wbr>Private<wbr>Service<wbr>Connect</dt>
+    <dd>PRIVATE_SERVICE_CONNECT</dd><dt>Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type<wbr>Serverless</dt>
+    <dd>SERVERLESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Gce<wbr>Vm<wbr>Ip</dt>
+    <dd>GCE_VM_IP</dd><dt>Gce<wbr>Vm<wbr>Ip<wbr>Port</dt>
+    <dd>GCE_VM_IP_PORT</dd><dt>Gce<wbr>Vm<wbr>Primary<wbr>Ip</dt>
+    <dd>GCE_VM_PRIMARY_IP</dd><dt>Internet<wbr>Fqdn<wbr>Port</dt>
+    <dd>INTERNET_FQDN_PORT</dd><dt>Internet<wbr>Ip<wbr>Port</dt>
+    <dd>INTERNET_IP_PORT</dd><dt>Non<wbr>Gcp<wbr>Private<wbr>Ip<wbr>Port</dt>
+    <dd>NON_GCP_PRIVATE_IP_PORT</dd><dt>Private<wbr>Service<wbr>Connect</dt>
+    <dd>PRIVATE_SERVICE_CONNECT</dd><dt>Serverless</dt>
+    <dd>SERVERLESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>GCE_VM_IP</dt>
+    <dd>GCE_VM_IP</dd><dt>GCE_VM_IP_PORT</dt>
+    <dd>GCE_VM_IP_PORT</dd><dt>GCE_VM_PRIMARY_IP</dt>
+    <dd>GCE_VM_PRIMARY_IP</dd><dt>INTERNET_FQDN_PORT</dt>
+    <dd>INTERNET_FQDN_PORT</dd><dt>INTERNET_IP_PORT</dt>
+    <dd>INTERNET_IP_PORT</dd><dt>NON_GCP_PRIVATE_IP_PORT</dt>
+    <dd>NON_GCP_PRIVATE_IP_PORT</dd><dt>PRIVATE_SERVICE_CONNECT</dt>
+    <dd>PRIVATE_SERVICE_CONNECT</dd><dt>SERVERLESS</dt>
+    <dd>SERVERLESS</dd></dl>
+{{% /choosable %}}
+
+<h4 id="regionnetworkendpointgrouptype">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Load<wbr>Balancing</dt>
+    <dd>LOAD_BALANCING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Type<wbr>Load<wbr>Balancing</dt>
+    <dd>LOAD_BALANCING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Load<wbr>Balancing</dt>
+    <dd>LOAD_BALANCING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LOAD_BALANCING</dt>
+    <dd>LOAD_BALANCING</dd></dl>
 {{% /choosable %}}
 
 

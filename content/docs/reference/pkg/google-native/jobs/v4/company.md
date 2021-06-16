@@ -37,7 +37,7 @@ Creates a new company entity.
             <span class="nx">keyword_searchable_job_custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[_jobs_v4.CompanySize]</span> = None<span class="p">,</span>
             <span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">website_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -261,7 +261,7 @@ The Company resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#companysize">Pulumi.<wbr>Google<wbr>Native.<wbr>Jobs.<wbr>V4.<wbr>Company<wbr>Size</a></span>
     </dt>
     <dd>{{% md %}}The employer's company size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -369,7 +369,7 @@ The Company resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#companysize">Company<wbr>Size</a></span>
     </dt>
     <dd>{{% md %}}The employer's company size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -477,7 +477,7 @@ The Company resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#companysize">Company<wbr>Size</a></span>
     </dt>
     <dd>{{% md %}}The employer's company size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -585,7 +585,7 @@ The Company resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#companysize">Company<wbr>Size</a></span>
     </dt>
     <dd>{{% md %}}The employer's company size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -775,6 +775,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#locationresponse">Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A structured headquarters location of the company, resolved from Company.headquarters_address if provided.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="companysize">Company<wbr>Size</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Company<wbr>Size<wbr>Unspecified</dt>
+    <dd>COMPANY_SIZE_UNSPECIFIED{{% md %}}Default value if the size isn't specified.{{% /md %}}</dd><dt>Mini</dt>
+    <dd>MINI{{% md %}}The company has less than 50 employees.{{% /md %}}</dd><dt>Small</dt>
+    <dd>SMALL{{% md %}}The company has between 50 and 99 employees.{{% /md %}}</dd><dt>Smedium</dt>
+    <dd>SMEDIUM{{% md %}}The company has between 100 and 499 employees.{{% /md %}}</dd><dt>Medium</dt>
+    <dd>MEDIUM{{% md %}}The company has between 500 and 999 employees.{{% /md %}}</dd><dt>Big</dt>
+    <dd>BIG{{% md %}}The company has between 1,000 and 4,999 employees.{{% /md %}}</dd><dt>Bigger</dt>
+    <dd>BIGGER{{% md %}}The company has between 5,000 and 9,999 employees.{{% /md %}}</dd><dt>Giant</dt>
+    <dd>GIANT{{% md %}}The company has 10,000 or more employees.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Company<wbr>Size<wbr>Company<wbr>Size<wbr>Unspecified</dt>
+    <dd>COMPANY_SIZE_UNSPECIFIED{{% md %}}Default value if the size isn't specified.{{% /md %}}</dd><dt>Company<wbr>Size<wbr>Mini</dt>
+    <dd>MINI{{% md %}}The company has less than 50 employees.{{% /md %}}</dd><dt>Company<wbr>Size<wbr>Small</dt>
+    <dd>SMALL{{% md %}}The company has between 50 and 99 employees.{{% /md %}}</dd><dt>Company<wbr>Size<wbr>Smedium</dt>
+    <dd>SMEDIUM{{% md %}}The company has between 100 and 499 employees.{{% /md %}}</dd><dt>Company<wbr>Size<wbr>Medium</dt>
+    <dd>MEDIUM{{% md %}}The company has between 500 and 999 employees.{{% /md %}}</dd><dt>Company<wbr>Size<wbr>Big</dt>
+    <dd>BIG{{% md %}}The company has between 1,000 and 4,999 employees.{{% /md %}}</dd><dt>Company<wbr>Size<wbr>Bigger</dt>
+    <dd>BIGGER{{% md %}}The company has between 5,000 and 9,999 employees.{{% /md %}}</dd><dt>Company<wbr>Size<wbr>Giant</dt>
+    <dd>GIANT{{% md %}}The company has 10,000 or more employees.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Company<wbr>Size<wbr>Unspecified</dt>
+    <dd>COMPANY_SIZE_UNSPECIFIED{{% md %}}Default value if the size isn't specified.{{% /md %}}</dd><dt>Mini</dt>
+    <dd>MINI{{% md %}}The company has less than 50 employees.{{% /md %}}</dd><dt>Small</dt>
+    <dd>SMALL{{% md %}}The company has between 50 and 99 employees.{{% /md %}}</dd><dt>Smedium</dt>
+    <dd>SMEDIUM{{% md %}}The company has between 100 and 499 employees.{{% /md %}}</dd><dt>Medium</dt>
+    <dd>MEDIUM{{% md %}}The company has between 500 and 999 employees.{{% /md %}}</dd><dt>Big</dt>
+    <dd>BIG{{% md %}}The company has between 1,000 and 4,999 employees.{{% /md %}}</dd><dt>Bigger</dt>
+    <dd>BIGGER{{% md %}}The company has between 5,000 and 9,999 employees.{{% /md %}}</dd><dt>Giant</dt>
+    <dd>GIANT{{% md %}}The company has 10,000 or more employees.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>COMPANY_SIZE_UNSPECIFIED</dt>
+    <dd>COMPANY_SIZE_UNSPECIFIED{{% md %}}Default value if the size isn't specified.{{% /md %}}</dd><dt>MINI</dt>
+    <dd>MINI{{% md %}}The company has less than 50 employees.{{% /md %}}</dd><dt>SMALL</dt>
+    <dd>SMALL{{% md %}}The company has between 50 and 99 employees.{{% /md %}}</dd><dt>SMEDIUM</dt>
+    <dd>SMEDIUM{{% md %}}The company has between 100 and 499 employees.{{% /md %}}</dd><dt>MEDIUM</dt>
+    <dd>MEDIUM{{% md %}}The company has between 500 and 999 employees.{{% /md %}}</dd><dt>BIG</dt>
+    <dd>BIG{{% md %}}The company has between 1,000 and 4,999 employees.{{% /md %}}</dd><dt>BIGGER</dt>
+    <dd>BIGGER{{% md %}}The company has between 5,000 and 9,999 employees.{{% /md %}}</dd><dt>GIANT</dt>
+    <dd>GIANT{{% md %}}The company has 10,000 or more employees.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="latlngresponse">Lat<wbr>Lng<wbr>Response</h4>

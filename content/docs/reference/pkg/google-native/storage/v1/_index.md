@@ -22,6 +22,19 @@ Explore the resources and functions of the google-native.storage/v1 module.
     <li><a href="objectiampolicy" title="ObjectIamPolicy"><span class="symbol resource"></span>ObjectIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getbucket" title="GetBucket"><span class="symbol function"></span>GetBucket</a></li>
+    <li><a href="getbucketaccesscontrol" title="GetBucketAccessControl"><span class="symbol function"></span>GetBucketAccessControl</a></li>
+    <li><a href="getbucketiampolicy" title="GetBucketIamPolicy"><span class="symbol function"></span>GetBucketIamPolicy</a></li>
+    <li><a href="getdefaultobjectaccesscontrol" title="GetDefaultObjectAccessControl"><span class="symbol function"></span>GetDefaultObjectAccessControl</a></li>
+    <li><a href="gethmackey" title="GetHmacKey"><span class="symbol function"></span>GetHmacKey</a></li>
+    <li><a href="getnotification" title="GetNotification"><span class="symbol function"></span>GetNotification</a></li>
+    <li><a href="getobject" title="GetObject"><span class="symbol function"></span>GetObject</a></li>
+    <li><a href="getobjectaccesscontrol" title="GetObjectAccessControl"><span class="symbol function"></span>GetObjectAccessControl</a></li>
+    <li><a href="getobjectiampolicy" title="GetObjectIamPolicy"><span class="symbol function"></span>GetObjectIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -29,6 +42,6 @@ Explore the resources and functions of the google-native.storage/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

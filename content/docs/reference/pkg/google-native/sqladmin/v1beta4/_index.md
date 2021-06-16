@@ -17,6 +17,14 @@ Explore the resources and functions of the google-native.sqladmin/v1beta4 module
     <li><a href="sslcert" title="SslCert"><span class="symbol resource"></span>SslCert</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getbackuprun" title="GetBackupRun"><span class="symbol function"></span>GetBackupRun</a></li>
+    <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
+    <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+    <li><a href="getsslcert" title="GetSslCert"><span class="symbol function"></span>GetSslCert</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -24,6 +32,6 @@ Explore the resources and functions of the google-native.sqladmin/v1beta4 module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

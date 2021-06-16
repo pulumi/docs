@@ -2898,7 +2898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publickeytype">Pulumi.<wbr>Google<wbr>Native.<wbr>Privateca.<wbr>V1Beta1.<wbr>Public<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of public key. If specified, it must match the public key used for the`key` field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2918,7 +2918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publickeytype">Public<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of public key. If specified, it must match the public key used for the`key` field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2938,7 +2938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publickeytype">Public<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of public key. If specified, it must match the public key used for the`key` field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2958,7 +2958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#publickeytype">Public<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of public key. If specified, it must match the public key used for the`key` field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3043,6 +3043,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The type of public key. If specified, it must match the public key used for the`key` field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="publickeytype">Public<wbr>Key<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Key<wbr>Type<wbr>Unspecified</dt>
+    <dd>KEY_TYPE_UNSPECIFIED{{% md %}}Default unspecified value.{{% /md %}}</dd><dt>Pem<wbr>Rsa<wbr>Key</dt>
+    <dd>PEM_RSA_KEY{{% md %}}A PEM-encoded PKCS#1/RFC 3447 RSAPublicKey structure, or an RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing the former.{{% /md %}}</dd><dt>Pem<wbr>Ec<wbr>Key</dt>
+    <dd>PEM_EC_KEY{{% md %}}An RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing a PEM-encoded compressed NIST P-256/secp256r1/prime256v1 or P-384 key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Public<wbr>Key<wbr>Type<wbr>Key<wbr>Type<wbr>Unspecified</dt>
+    <dd>KEY_TYPE_UNSPECIFIED{{% md %}}Default unspecified value.{{% /md %}}</dd><dt>Public<wbr>Key<wbr>Type<wbr>Pem<wbr>Rsa<wbr>Key</dt>
+    <dd>PEM_RSA_KEY{{% md %}}A PEM-encoded PKCS#1/RFC 3447 RSAPublicKey structure, or an RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing the former.{{% /md %}}</dd><dt>Public<wbr>Key<wbr>Type<wbr>Pem<wbr>Ec<wbr>Key</dt>
+    <dd>PEM_EC_KEY{{% md %}}An RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing a PEM-encoded compressed NIST P-256/secp256r1/prime256v1 or P-384 key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Key<wbr>Type<wbr>Unspecified</dt>
+    <dd>KEY_TYPE_UNSPECIFIED{{% md %}}Default unspecified value.{{% /md %}}</dd><dt>Pem<wbr>Rsa<wbr>Key</dt>
+    <dd>PEM_RSA_KEY{{% md %}}A PEM-encoded PKCS#1/RFC 3447 RSAPublicKey structure, or an RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing the former.{{% /md %}}</dd><dt>Pem<wbr>Ec<wbr>Key</dt>
+    <dd>PEM_EC_KEY{{% md %}}An RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing a PEM-encoded compressed NIST P-256/secp256r1/prime256v1 or P-384 key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>KEY_TYPE_UNSPECIFIED</dt>
+    <dd>KEY_TYPE_UNSPECIFIED{{% md %}}Default unspecified value.{{% /md %}}</dd><dt>PEM_RSA_KEY</dt>
+    <dd>PEM_RSA_KEY{{% md %}}A PEM-encoded PKCS#1/RFC 3447 RSAPublicKey structure, or an RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing the former.{{% /md %}}</dd><dt>PEM_EC_KEY</dt>
+    <dd>PEM_EC_KEY{{% md %}}An RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing a PEM-encoded compressed NIST P-256/secp256r1/prime256v1 or P-384 key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reusableconfigvalues">Reusable<wbr>Config<wbr>Values</h4>

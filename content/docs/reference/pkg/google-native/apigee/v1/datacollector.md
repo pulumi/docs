@@ -31,7 +31,7 @@ Creates a new data collector.
                   <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">organization_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                  <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                  <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[_apigee_v1.DataCollectorType]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">DataCollector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DataCollectorArgs</a></span><span class="p">,</span>
@@ -197,7 +197,7 @@ The DataCollector resource accepts the following [input]({{< relref "/docs/intro
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#datacollectortype">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Data<wbr>Collector<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The type of data this data collector will collect.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -241,7 +241,7 @@ The DataCollector resource accepts the following [input]({{< relref "/docs/intro
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#datacollectortype">Data<wbr>Collector<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The type of data this data collector will collect.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -285,7 +285,7 @@ The DataCollector resource accepts the following [input]({{< relref "/docs/intro
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#datacollectortype">Data<wbr>Collector<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The type of data this data collector will collect.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -329,7 +329,7 @@ The DataCollector resource accepts the following [input]({{< relref "/docs/intro
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#datacollectortype">Data<wbr>Collector<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The type of data this data collector will collect.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -458,6 +458,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="datacollectortype">Data<wbr>Collector<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}For future compatibility.{{% /md %}}</dd><dt>Integer</dt>
+    <dd>INTEGER{{% md %}}For integer values.{{% /md %}}</dd><dt>Float</dt>
+    <dd>FLOAT{{% md %}}For float values.{{% /md %}}</dd><dt>String</dt>
+    <dd>STRING{{% md %}}For string values.{{% /md %}}</dd><dt>Boolean</dt>
+    <dd>BOOLEAN{{% md %}}For boolean values.{{% /md %}}</dd><dt>Datetime</dt>
+    <dd>DATETIME{{% md %}}For datetime values.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Data<wbr>Collector<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}For future compatibility.{{% /md %}}</dd><dt>Data<wbr>Collector<wbr>Type<wbr>Integer</dt>
+    <dd>INTEGER{{% md %}}For integer values.{{% /md %}}</dd><dt>Data<wbr>Collector<wbr>Type<wbr>Float</dt>
+    <dd>FLOAT{{% md %}}For float values.{{% /md %}}</dd><dt>Data<wbr>Collector<wbr>Type<wbr>String</dt>
+    <dd>STRING{{% md %}}For string values.{{% /md %}}</dd><dt>Data<wbr>Collector<wbr>Type<wbr>Boolean</dt>
+    <dd>BOOLEAN{{% md %}}For boolean values.{{% /md %}}</dd><dt>Data<wbr>Collector<wbr>Type<wbr>Datetime</dt>
+    <dd>DATETIME{{% md %}}For datetime values.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}For future compatibility.{{% /md %}}</dd><dt>Integer</dt>
+    <dd>INTEGER{{% md %}}For integer values.{{% /md %}}</dd><dt>Float</dt>
+    <dd>FLOAT{{% md %}}For float values.{{% /md %}}</dd><dt>String</dt>
+    <dd>STRING{{% md %}}For string values.{{% /md %}}</dd><dt>Boolean</dt>
+    <dd>BOOLEAN{{% md %}}For boolean values.{{% /md %}}</dd><dt>Datetime</dt>
+    <dd>DATETIME{{% md %}}For datetime values.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}For future compatibility.{{% /md %}}</dd><dt>INTEGER</dt>
+    <dd>INTEGER{{% md %}}For integer values.{{% /md %}}</dd><dt>FLOAT</dt>
+    <dd>FLOAT{{% md %}}For float values.{{% /md %}}</dd><dt>STRING</dt>
+    <dd>STRING{{% md %}}For string values.{{% /md %}}</dd><dt>BOOLEAN</dt>
+    <dd>BOOLEAN{{% md %}}For boolean values.{{% /md %}}</dd><dt>DATETIME</dt>
+    <dd>DATETIME{{% md %}}For datetime values.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

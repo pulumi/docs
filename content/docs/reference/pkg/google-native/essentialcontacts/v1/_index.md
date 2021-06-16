@@ -16,6 +16,13 @@ Explore the resources and functions of the google-native.essentialcontacts/v1 mo
     <li><a href="organizationcontact" title="OrganizationContact"><span class="symbol resource"></span>OrganizationContact</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getcontact" title="GetContact"><span class="symbol function"></span>GetContact</a></li>
+    <li><a href="getfoldercontact" title="GetFolderContact"><span class="symbol function"></span>GetFolderContact</a></li>
+    <li><a href="getorganizationcontact" title="GetOrganizationContact"><span class="symbol function"></span>GetOrganizationContact</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -23,6 +30,6 @@ Explore the resources and functions of the google-native.essentialcontacts/v1 mo
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

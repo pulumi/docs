@@ -32,7 +32,7 @@ Creates a firewall rule in the specified project using the data included in the 
              <span class="nx">denied</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.FirewallDeniedItemArgs]]</span> = None<span class="p">,</span>
              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">destination_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-             <span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.FirewallDirection]</span> = None<span class="p">,</span>
              <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -229,7 +229,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#firewalldirection">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Firewall<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}Direction of traffic to which this firewall applies, either `INGRESS` or `EGRESS`. The default is `INGRESS`. For `INGRESS` traffic, you cannot specify the destinationRanges field, and for `EGRESS` traffic, you cannot specify the sourceRanges or sourceTags fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -406,7 +406,7 @@ If you choose to specify this field, you can specify the network as a full or pa
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#firewalldirection">Firewall<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}Direction of traffic to which this firewall applies, either `INGRESS` or `EGRESS`. The default is `INGRESS`. For `INGRESS` traffic, you cannot specify the destinationRanges field, and for `EGRESS` traffic, you cannot specify the sourceRanges or sourceTags fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -583,7 +583,7 @@ If you choose to specify this field, you can specify the network as a full or pa
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#firewalldirection">Firewall<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}Direction of traffic to which this firewall applies, either `INGRESS` or `EGRESS`. The default is `INGRESS`. For `INGRESS` traffic, you cannot specify the destinationRanges field, and for `EGRESS` traffic, you cannot specify the sourceRanges or sourceTags fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -760,7 +760,7 @@ If you choose to specify this field, you can specify the network as a full or pa
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#firewalldirection">Firewall<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}Direction of traffic to which this firewall applies, either `INGRESS` or `EGRESS`. The default is `INGRESS`. For `INGRESS` traffic, you cannot specify the destinationRanges field, and for `EGRESS` traffic, you cannot specify the sourceRanges or sourceTags fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1307,6 +1307,32 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="firewalldirection">Firewall<wbr>Direction</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Egress</dt>
+    <dd>EGRESS</dd><dt>Ingress</dt>
+    <dd>INGRESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Firewall<wbr>Direction<wbr>Egress</dt>
+    <dd>EGRESS</dd><dt>Firewall<wbr>Direction<wbr>Ingress</dt>
+    <dd>INGRESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Egress</dt>
+    <dd>EGRESS</dd><dt>Ingress</dt>
+    <dd>INGRESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EGRESS</dt>
+    <dd>EGRESS</dd><dt>INGRESS</dt>
+    <dd>INGRESS</dd></dl>
+{{% /choosable %}}
+
 <h4 id="firewalllogconfig">Firewall<wbr>Log<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -1324,7 +1350,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#firewalllogconfigmetadata">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Firewall<wbr>Log<wbr>Config<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1344,7 +1370,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#firewalllogconfigmetadata">Firewall<wbr>Log<wbr>Config<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1364,7 +1390,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#firewalllogconfigmetadata">Firewall<wbr>Log<wbr>Config<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1384,9 +1410,35 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#firewalllogconfigmetadata">Firewall<wbr>Log<wbr>Config<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="firewalllogconfigmetadata">Firewall<wbr>Log<wbr>Config<wbr>Metadata</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Exclude<wbr>All<wbr>Metadata</dt>
+    <dd>EXCLUDE_ALL_METADATA</dd><dt>Include<wbr>All<wbr>Metadata</dt>
+    <dd>INCLUDE_ALL_METADATA</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Firewall<wbr>Log<wbr>Config<wbr>Metadata<wbr>Exclude<wbr>All<wbr>Metadata</dt>
+    <dd>EXCLUDE_ALL_METADATA</dd><dt>Firewall<wbr>Log<wbr>Config<wbr>Metadata<wbr>Include<wbr>All<wbr>Metadata</dt>
+    <dd>INCLUDE_ALL_METADATA</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Exclude<wbr>All<wbr>Metadata</dt>
+    <dd>EXCLUDE_ALL_METADATA</dd><dt>Include<wbr>All<wbr>Metadata</dt>
+    <dd>INCLUDE_ALL_METADATA</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EXCLUDE_ALL_METADATA</dt>
+    <dd>EXCLUDE_ALL_METADATA</dd><dt>INCLUDE_ALL_METADATA</dt>
+    <dd>INCLUDE_ALL_METADATA</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewalllogconfigresponse">Firewall<wbr>Log<wbr>Config<wbr>Response</h4>

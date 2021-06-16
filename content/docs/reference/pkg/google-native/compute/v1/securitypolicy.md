@@ -1099,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versionedexpr_csharp" style="color: inherit; text-decoration: inherit;">Versioned<wbr>Expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitypolicyrulematcherversionedexpr">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Versioned<wbr>Expr</a></span>
     </dt>
     <dd>{{% md %}}Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1127,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versionedexpr_go" style="color: inherit; text-decoration: inherit;">Versioned<wbr>Expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitypolicyrulematcherversionedexpr">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Versioned<wbr>Expr</a></span>
     </dt>
     <dd>{{% md %}}Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1155,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versionedexpr_nodejs" style="color: inherit; text-decoration: inherit;">versioned<wbr>Expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitypolicyrulematcherversionedexpr">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Versioned<wbr>Expr</a></span>
     </dt>
     <dd>{{% md %}}Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1183,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versioned_expr_python" style="color: inherit; text-decoration: inherit;">versioned_<wbr>expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#securitypolicyrulematcherversionedexpr">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Versioned<wbr>Expr</a></span>
     </dt>
     <dd>{{% md %}}Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1400,6 +1400,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="securitypolicyrulematcherversionedexpr">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Versioned<wbr>Expr</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Src<wbr>Ips<wbr>V1</dt>
+    <dd>SRC_IPS_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Versioned<wbr>Expr<wbr>Src<wbr>Ips<wbr>V1</dt>
+    <dd>SRC_IPS_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Src<wbr>Ips<wbr>V1</dt>
+    <dd>SRC_IPS_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SRC_IPS_V1</dt>
+    <dd>SRC_IPS_V1</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securitypolicyruleresponse">Security<wbr>Policy<wbr>Rule<wbr>Response</h4>

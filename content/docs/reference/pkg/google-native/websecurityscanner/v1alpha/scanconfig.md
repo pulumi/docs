@@ -36,8 +36,8 @@ Creates a new ScanConfig.
                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[_websecurityscanner_v1alpha.ScheduleArgs]</span> = None<span class="p">,</span>
                <span class="nx">starting_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-               <span class="nx">target_platforms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-               <span class="nx">user_agent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+               <span class="nx">target_platforms</span><span class="p">:</span> <span class="nx">Optional[Sequence[_websecurityscanner_v1alpha.ScanConfigTargetPlatformsItem]]</span> = None<span class="p">,</span>
+               <span class="nx">user_agent</span><span class="p">:</span> <span class="nx">Optional[_websecurityscanner_v1alpha.ScanConfigUserAgent]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ScanConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScanConfigArgs</a></span><span class="p">,</span>
@@ -243,7 +243,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#targetplatforms_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Platforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#scanconfigtargetplatformsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Web<wbr>Security<wbr>Scanner.<wbr>V1Alpha.<wbr>Scan<wbr>Config<wbr>Target<wbr>Platforms<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of Google Cloud platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -251,7 +251,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#useragent_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfiguseragent">Pulumi.<wbr>Google<wbr>Native.<wbr>Web<wbr>Security<wbr>Scanner.<wbr>V1Alpha.<wbr>Scan<wbr>Config<wbr>User<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}The user agent used during scanning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -335,7 +335,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#targetplatforms_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Platforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#scanconfigtargetplatformsitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}Set of Google Cloud platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -343,7 +343,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#useragent_go" style="color: inherit; text-decoration: inherit;">User<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfiguseragent">Scan<wbr>Config<wbr>User<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}The user agent used during scanning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -427,7 +427,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#targetplatforms_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Platforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#scanconfigtargetplatformsitem">Scan<wbr>Config<wbr>Target<wbr>Platforms<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}Set of Google Cloud platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -435,7 +435,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#useragent_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfiguseragent">Scan<wbr>Config<wbr>User<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}The user agent used during scanning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -519,7 +519,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#target_platforms_python" style="color: inherit; text-decoration: inherit;">target_<wbr>platforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#scanconfigtargetplatformsitem">Scan<wbr>Config<wbr>Target<wbr>Platforms<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}Set of Google Cloud platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -527,7 +527,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#user_agent_python" style="color: inherit; text-decoration: inherit;">user_<wbr>agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#scanconfiguseragent">Scan<wbr>Config<wbr>User<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}The user agent used during scanning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1153,6 +1153,70 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Required. The user name of the Google account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="scanconfigtargetplatformsitem">Scan<wbr>Config<wbr>Target<wbr>Platforms<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Target<wbr>Platform<wbr>Unspecified</dt>
+    <dd>TARGET_PLATFORM_UNSPECIFIED{{% md %}}The target platform is unknown. Requests with this enum value will be rejected with INVALID_ARGUMENT error.{{% /md %}}</dd><dt>App<wbr>Engine</dt>
+    <dd>APP_ENGINE{{% md %}}Google App Engine service.{{% /md %}}</dd><dt>Compute</dt>
+    <dd>COMPUTE{{% md %}}Google Compute Engine service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Scan<wbr>Config<wbr>Target<wbr>Platforms<wbr>Item<wbr>Target<wbr>Platform<wbr>Unspecified</dt>
+    <dd>TARGET_PLATFORM_UNSPECIFIED{{% md %}}The target platform is unknown. Requests with this enum value will be rejected with INVALID_ARGUMENT error.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Target<wbr>Platforms<wbr>Item<wbr>App<wbr>Engine</dt>
+    <dd>APP_ENGINE{{% md %}}Google App Engine service.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Target<wbr>Platforms<wbr>Item<wbr>Compute</dt>
+    <dd>COMPUTE{{% md %}}Google Compute Engine service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Target<wbr>Platform<wbr>Unspecified</dt>
+    <dd>TARGET_PLATFORM_UNSPECIFIED{{% md %}}The target platform is unknown. Requests with this enum value will be rejected with INVALID_ARGUMENT error.{{% /md %}}</dd><dt>App<wbr>Engine</dt>
+    <dd>APP_ENGINE{{% md %}}Google App Engine service.{{% /md %}}</dd><dt>Compute</dt>
+    <dd>COMPUTE{{% md %}}Google Compute Engine service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TARGET_PLATFORM_UNSPECIFIED</dt>
+    <dd>TARGET_PLATFORM_UNSPECIFIED{{% md %}}The target platform is unknown. Requests with this enum value will be rejected with INVALID_ARGUMENT error.{{% /md %}}</dd><dt>APP_ENGINE</dt>
+    <dd>APP_ENGINE{{% md %}}Google App Engine service.{{% /md %}}</dd><dt>COMPUTE</dt>
+    <dd>COMPUTE{{% md %}}Google Compute Engine service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="scanconfiguseragent">Scan<wbr>Config<wbr>User<wbr>Agent</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>User<wbr>Agent<wbr>Unspecified</dt>
+    <dd>USER_AGENT_UNSPECIFIED{{% md %}}The user agent is unknown. Service will default to CHROME_LINUX.{{% /md %}}</dd><dt>Chrome<wbr>Linux</dt>
+    <dd>CHROME_LINUX{{% md %}}Chrome on Linux. This is the service default if unspecified.{{% /md %}}</dd><dt>Chrome<wbr>Android</dt>
+    <dd>CHROME_ANDROID{{% md %}}Chrome on Android.{{% /md %}}</dd><dt>Safari<wbr>Iphone</dt>
+    <dd>SAFARI_IPHONE{{% md %}}Safari on IPhone.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Scan<wbr>Config<wbr>User<wbr>Agent<wbr>User<wbr>Agent<wbr>Unspecified</dt>
+    <dd>USER_AGENT_UNSPECIFIED{{% md %}}The user agent is unknown. Service will default to CHROME_LINUX.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>User<wbr>Agent<wbr>Chrome<wbr>Linux</dt>
+    <dd>CHROME_LINUX{{% md %}}Chrome on Linux. This is the service default if unspecified.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>User<wbr>Agent<wbr>Chrome<wbr>Android</dt>
+    <dd>CHROME_ANDROID{{% md %}}Chrome on Android.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>User<wbr>Agent<wbr>Safari<wbr>Iphone</dt>
+    <dd>SAFARI_IPHONE{{% md %}}Safari on IPhone.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>User<wbr>Agent<wbr>Unspecified</dt>
+    <dd>USER_AGENT_UNSPECIFIED{{% md %}}The user agent is unknown. Service will default to CHROME_LINUX.{{% /md %}}</dd><dt>Chrome<wbr>Linux</dt>
+    <dd>CHROME_LINUX{{% md %}}Chrome on Linux. This is the service default if unspecified.{{% /md %}}</dd><dt>Chrome<wbr>Android</dt>
+    <dd>CHROME_ANDROID{{% md %}}Chrome on Android.{{% /md %}}</dd><dt>Safari<wbr>Iphone</dt>
+    <dd>SAFARI_IPHONE{{% md %}}Safari on IPhone.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>USER_AGENT_UNSPECIFIED</dt>
+    <dd>USER_AGENT_UNSPECIFIED{{% md %}}The user agent is unknown. Service will default to CHROME_LINUX.{{% /md %}}</dd><dt>CHROME_LINUX</dt>
+    <dd>CHROME_LINUX{{% md %}}Chrome on Linux. This is the service default if unspecified.{{% /md %}}</dd><dt>CHROME_ANDROID</dt>
+    <dd>CHROME_ANDROID{{% md %}}Chrome on Android.{{% /md %}}</dd><dt>SAFARI_IPHONE</dt>
+    <dd>SAFARI_IPHONE{{% md %}}Safari on IPhone.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="scanrun">Scan<wbr>Run</h4>
 
 {{% choosable language csharp %}}
@@ -1170,7 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executionstate_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanrunexecutionstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Web<wbr>Security<wbr>Scanner.<wbr>V1Alpha.<wbr>Scan<wbr>Run<wbr>Execution<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The execution state of the ScanRun.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1202,7 +1266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resultstate_csharp" style="color: inherit; text-decoration: inherit;">Result<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanrunresultstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Web<wbr>Security<wbr>Scanner.<wbr>V1Alpha.<wbr>Scan<wbr>Run<wbr>Result<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The result state of the ScanRun. This field is only available after the execution state reaches "FINISHED".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1246,7 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executionstate_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanrunexecutionstate">Scan<wbr>Run<wbr>Execution<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The execution state of the ScanRun.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1278,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resultstate_go" style="color: inherit; text-decoration: inherit;">Result<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanrunresultstate">Scan<wbr>Run<wbr>Result<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The result state of the ScanRun. This field is only available after the execution state reaches "FINISHED".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1322,7 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executionstate_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanrunexecutionstate">Scan<wbr>Run<wbr>Execution<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The execution state of the ScanRun.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1354,7 +1418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resultstate_nodejs" style="color: inherit; text-decoration: inherit;">result<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanrunresultstate">Scan<wbr>Run<wbr>Result<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The result state of the ScanRun. This field is only available after the execution state reaches "FINISHED".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1398,7 +1462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#execution_state_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#scanrunexecutionstate">Scan<wbr>Run<wbr>Execution<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The execution state of the ScanRun.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1430,7 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#result_state_python" style="color: inherit; text-decoration: inherit;">result_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#scanrunresultstate">Scan<wbr>Run<wbr>Result<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The result state of the ScanRun. This field is only available after the execution state reaches "FINISHED".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1457,6 +1521,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of URLs tested during this ScanRun. If the scan is in progress, the value represents the number of URLs tested up to now. The number of URLs tested is usually larger than the number URLS crawled because typically a crawled URL is tested with multiple test payloads.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="scanrunexecutionstate">Scan<wbr>Run<wbr>Execution<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Execution<wbr>State<wbr>Unspecified</dt>
+    <dd>EXECUTION_STATE_UNSPECIFIED{{% md %}}Represents an invalid state caused by internal server error. This value should never be returned.{{% /md %}}</dd><dt>Queued</dt>
+    <dd>QUEUED{{% md %}}The scan is waiting in the queue.{{% /md %}}</dd><dt>Scanning</dt>
+    <dd>SCANNING{{% md %}}The scan is in progress.{{% /md %}}</dd><dt>Finished</dt>
+    <dd>FINISHED{{% md %}}The scan is either finished or stopped by user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Scan<wbr>Run<wbr>Execution<wbr>State<wbr>Execution<wbr>State<wbr>Unspecified</dt>
+    <dd>EXECUTION_STATE_UNSPECIFIED{{% md %}}Represents an invalid state caused by internal server error. This value should never be returned.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Execution<wbr>State<wbr>Queued</dt>
+    <dd>QUEUED{{% md %}}The scan is waiting in the queue.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Execution<wbr>State<wbr>Scanning</dt>
+    <dd>SCANNING{{% md %}}The scan is in progress.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Execution<wbr>State<wbr>Finished</dt>
+    <dd>FINISHED{{% md %}}The scan is either finished or stopped by user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Execution<wbr>State<wbr>Unspecified</dt>
+    <dd>EXECUTION_STATE_UNSPECIFIED{{% md %}}Represents an invalid state caused by internal server error. This value should never be returned.{{% /md %}}</dd><dt>Queued</dt>
+    <dd>QUEUED{{% md %}}The scan is waiting in the queue.{{% /md %}}</dd><dt>Scanning</dt>
+    <dd>SCANNING{{% md %}}The scan is in progress.{{% /md %}}</dd><dt>Finished</dt>
+    <dd>FINISHED{{% md %}}The scan is either finished or stopped by user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EXECUTION_STATE_UNSPECIFIED</dt>
+    <dd>EXECUTION_STATE_UNSPECIFIED{{% md %}}Represents an invalid state caused by internal server error. This value should never be returned.{{% /md %}}</dd><dt>QUEUED</dt>
+    <dd>QUEUED{{% md %}}The scan is waiting in the queue.{{% /md %}}</dd><dt>SCANNING</dt>
+    <dd>SCANNING{{% md %}}The scan is in progress.{{% /md %}}</dd><dt>FINISHED</dt>
+    <dd>FINISHED{{% md %}}The scan is either finished or stopped by user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scanrunresponse">Scan<wbr>Run<wbr>Response</h4>
@@ -1763,6 +1861,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of URLs tested during this ScanRun. If the scan is in progress, the value represents the number of URLs tested up to now. The number of URLs tested is usually larger than the number URLS crawled because typically a crawled URL is tested with multiple test payloads.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="scanrunresultstate">Scan<wbr>Run<wbr>Result<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Result<wbr>State<wbr>Unspecified</dt>
+    <dd>RESULT_STATE_UNSPECIFIED{{% md %}}Default value. This value is returned when the ScanRun is not yet finished.{{% /md %}}</dd><dt>Success</dt>
+    <dd>SUCCESS{{% md %}}The scan finished without errors.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}The scan finished with errors.{{% /md %}}</dd><dt>Killed</dt>
+    <dd>KILLED{{% md %}}The scan was terminated by user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Scan<wbr>Run<wbr>Result<wbr>State<wbr>Result<wbr>State<wbr>Unspecified</dt>
+    <dd>RESULT_STATE_UNSPECIFIED{{% md %}}Default value. This value is returned when the ScanRun is not yet finished.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Result<wbr>State<wbr>Success</dt>
+    <dd>SUCCESS{{% md %}}The scan finished without errors.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Result<wbr>State<wbr>Error</dt>
+    <dd>ERROR{{% md %}}The scan finished with errors.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Result<wbr>State<wbr>Killed</dt>
+    <dd>KILLED{{% md %}}The scan was terminated by user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Result<wbr>State<wbr>Unspecified</dt>
+    <dd>RESULT_STATE_UNSPECIFIED{{% md %}}Default value. This value is returned when the ScanRun is not yet finished.{{% /md %}}</dd><dt>Success</dt>
+    <dd>SUCCESS{{% md %}}The scan finished without errors.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}The scan finished with errors.{{% /md %}}</dd><dt>Killed</dt>
+    <dd>KILLED{{% md %}}The scan was terminated by user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RESULT_STATE_UNSPECIFIED</dt>
+    <dd>RESULT_STATE_UNSPECIFIED{{% md %}}Default value. This value is returned when the ScanRun is not yet finished.{{% /md %}}</dd><dt>SUCCESS</dt>
+    <dd>SUCCESS{{% md %}}The scan finished without errors.{{% /md %}}</dd><dt>ERROR</dt>
+    <dd>ERROR{{% md %}}The scan finished with errors.{{% /md %}}</dd><dt>KILLED</dt>
+    <dd>KILLED{{% md %}}The scan was terminated by user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="schedule">Schedule</h4>

@@ -35,9 +35,9 @@ Creates a new connection profile in a given project and location.
                       <span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[_datamigration_v1beta1.MySqlConnectionProfileArgs]</span> = None<span class="p">,</span>
                       <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                      <span class="nx">provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">provider</span><span class="p">:</span> <span class="nx">Optional[_datamigration_v1beta1.ConnectionProfileProvider]</span> = None<span class="p">,</span>
                       <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                      <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                      <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_datamigration_v1beta1.ConnectionProfileState]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ConnectionProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionProfileArgs</a></span><span class="p">,</span>
@@ -235,7 +235,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#connectionprofileprovider">Pulumi.<wbr>Google<wbr>Native.<wbr>Datamigration.<wbr>V1Beta1.<wbr>Connection<wbr>Profile<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The database provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -251,7 +251,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#connectionprofilestate">Pulumi.<wbr>Google<wbr>Native.<wbr>Datamigration.<wbr>V1Beta1.<wbr>Connection<wbr>Profile<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current connection profile state (e.g. DRAFT, READY, or FAILED).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -327,7 +327,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#provider_go" style="color: inherit; text-decoration: inherit;">Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#connectionprofileprovider">Connection<wbr>Profile<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The database provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -343,7 +343,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#connectionprofilestate">Connection<wbr>Profile<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The current connection profile state (e.g. DRAFT, READY, or FAILED).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -419,7 +419,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#connectionprofileprovider">Connection<wbr>Profile<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The database provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -435,7 +435,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#connectionprofilestate">Connection<wbr>Profile<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current connection profile state (e.g. DRAFT, READY, or FAILED).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -511,7 +511,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#connectionprofileprovider">Connection<wbr>Profile<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The database provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -527,7 +527,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#connectionprofilestate">Connection<wbr>Profile<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current connection profile state (e.g. DRAFT, READY, or FAILED).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -898,7 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Activation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cloudsqlsettingsactivationpolicy">Pulumi.<wbr>Google<wbr>Native.<wbr>Datamigration.<wbr>V1Beta1.<wbr>Cloud<wbr>Sql<wbr>Settings<wbr>Activation<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is 'RUNNABLE'. Valid values: 'ALWAYS': The instance is on, and remains so even in the absence of connection requests. `NEVER`: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -922,7 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisktype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cloudsqlsettingsdatadisktype">Pulumi.<wbr>Google<wbr>Native.<wbr>Datamigration.<wbr>V1Beta1.<wbr>Cloud<wbr>Sql<wbr>Settings<wbr>Data<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of storage: `PD_SSD` (default) or `PD_HDD`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -938,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databaseversion_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cloudsqlsettingsdatabaseversion">Pulumi.<wbr>Google<wbr>Native.<wbr>Datamigration.<wbr>V1Beta1.<wbr>Cloud<wbr>Sql<wbr>Settings<wbr>Database<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The database engine type and version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1006,7 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activationpolicy_go" style="color: inherit; text-decoration: inherit;">Activation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cloudsqlsettingsactivationpolicy">Cloud<wbr>Sql<wbr>Settings<wbr>Activation<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is 'RUNNABLE'. Valid values: 'ALWAYS': The instance is on, and remains so even in the absence of connection requests. `NEVER`: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1030,7 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisktype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cloudsqlsettingsdatadisktype">Cloud<wbr>Sql<wbr>Settings<wbr>Data<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of storage: `PD_SSD` (default) or `PD_HDD`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1046,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databaseversion_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cloudsqlsettingsdatabaseversion">Cloud<wbr>Sql<wbr>Settings<wbr>Database<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The database engine type and version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1114,7 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">activation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cloudsqlsettingsactivationpolicy">Cloud<wbr>Sql<wbr>Settings<wbr>Activation<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is 'RUNNABLE'. Valid values: 'ALWAYS': The instance is on, and remains so even in the absence of connection requests. `NEVER`: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1138,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisktype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cloudsqlsettingsdatadisktype">Cloud<wbr>Sql<wbr>Settings<wbr>Data<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of storage: `PD_SSD` (default) or `PD_HDD`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1154,7 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databaseversion_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cloudsqlsettingsdatabaseversion">Cloud<wbr>Sql<wbr>Settings<wbr>Database<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The database engine type and version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1222,7 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activation_policy_python" style="color: inherit; text-decoration: inherit;">activation_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#cloudsqlsettingsactivationpolicy">Cloud<wbr>Sql<wbr>Settings<wbr>Activation<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is 'RUNNABLE'. Valid values: 'ALWAYS': The instance is on, and remains so even in the absence of connection requests. `NEVER`: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1246,7 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#cloudsqlsettingsdatadisktype">Cloud<wbr>Sql<wbr>Settings<wbr>Data<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of storage: `PD_SSD` (default) or `PD_HDD`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1262,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_version_python" style="color: inherit; text-decoration: inherit;">database_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#cloudsqlsettingsdatabaseversion">Cloud<wbr>Sql<wbr>Settings<wbr>Database<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The database engine type and version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1321,6 +1321,100 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform zone where your Cloud SQL datdabse instance is located.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cloudsqlsettingsactivationpolicy">Cloud<wbr>Sql<wbr>Settings<wbr>Activation<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sql<wbr>Activation<wbr>Policy<wbr>Unspecified</dt>
+    <dd>SQL_ACTIVATION_POLICY_UNSPECIFIED{{% md %}}unspecified policy.{{% /md %}}</dd><dt>Always</dt>
+    <dd>ALWAYS{{% md %}}The instance is always up and running.{{% /md %}}</dd><dt>Never</dt>
+    <dd>NEVER{{% md %}}The instance should never spin up.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Cloud<wbr>Sql<wbr>Settings<wbr>Activation<wbr>Policy<wbr>Sql<wbr>Activation<wbr>Policy<wbr>Unspecified</dt>
+    <dd>SQL_ACTIVATION_POLICY_UNSPECIFIED{{% md %}}unspecified policy.{{% /md %}}</dd><dt>Cloud<wbr>Sql<wbr>Settings<wbr>Activation<wbr>Policy<wbr>Always</dt>
+    <dd>ALWAYS{{% md %}}The instance is always up and running.{{% /md %}}</dd><dt>Cloud<wbr>Sql<wbr>Settings<wbr>Activation<wbr>Policy<wbr>Never</dt>
+    <dd>NEVER{{% md %}}The instance should never spin up.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sql<wbr>Activation<wbr>Policy<wbr>Unspecified</dt>
+    <dd>SQL_ACTIVATION_POLICY_UNSPECIFIED{{% md %}}unspecified policy.{{% /md %}}</dd><dt>Always</dt>
+    <dd>ALWAYS{{% md %}}The instance is always up and running.{{% /md %}}</dd><dt>Never</dt>
+    <dd>NEVER{{% md %}}The instance should never spin up.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQL_ACTIVATION_POLICY_UNSPECIFIED</dt>
+    <dd>SQL_ACTIVATION_POLICY_UNSPECIFIED{{% md %}}unspecified policy.{{% /md %}}</dd><dt>ALWAYS</dt>
+    <dd>ALWAYS{{% md %}}The instance is always up and running.{{% /md %}}</dd><dt>NEVER</dt>
+    <dd>NEVER{{% md %}}The instance should never spin up.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cloudsqlsettingsdatadisktype">Cloud<wbr>Sql<wbr>Settings<wbr>Data<wbr>Disk<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sql<wbr>Data<wbr>Disk<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_DATA_DISK_TYPE_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>Pd<wbr>Ssd</dt>
+    <dd>PD_SSD{{% md %}}SSD disk.{{% /md %}}</dd><dt>Pd<wbr>Hdd</dt>
+    <dd>PD_HDD{{% md %}}HDD disk.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Cloud<wbr>Sql<wbr>Settings<wbr>Data<wbr>Disk<wbr>Type<wbr>Sql<wbr>Data<wbr>Disk<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_DATA_DISK_TYPE_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>Cloud<wbr>Sql<wbr>Settings<wbr>Data<wbr>Disk<wbr>Type<wbr>Pd<wbr>Ssd</dt>
+    <dd>PD_SSD{{% md %}}SSD disk.{{% /md %}}</dd><dt>Cloud<wbr>Sql<wbr>Settings<wbr>Data<wbr>Disk<wbr>Type<wbr>Pd<wbr>Hdd</dt>
+    <dd>PD_HDD{{% md %}}HDD disk.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sql<wbr>Data<wbr>Disk<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_DATA_DISK_TYPE_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>Pd<wbr>Ssd</dt>
+    <dd>PD_SSD{{% md %}}SSD disk.{{% /md %}}</dd><dt>Pd<wbr>Hdd</dt>
+    <dd>PD_HDD{{% md %}}HDD disk.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQL_DATA_DISK_TYPE_UNSPECIFIED</dt>
+    <dd>SQL_DATA_DISK_TYPE_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>PD_SSD</dt>
+    <dd>PD_SSD{{% md %}}SSD disk.{{% /md %}}</dd><dt>PD_HDD</dt>
+    <dd>PD_HDD{{% md %}}HDD disk.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cloudsqlsettingsdatabaseversion">Cloud<wbr>Sql<wbr>Settings<wbr>Database<wbr>Version</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sql<wbr>Database<wbr>Version<wbr>Unspecified</dt>
+    <dd>SQL_DATABASE_VERSION_UNSPECIFIED{{% md %}}Unspecified version.{{% /md %}}</dd><dt>Mysql56</dt>
+    <dd>MYSQL_5_6{{% md %}}MySQL 5.6.{{% /md %}}</dd><dt>Mysql57</dt>
+    <dd>MYSQL_5_7{{% md %}}MySQL 5.7.{{% /md %}}</dd><dt>Mysql80</dt>
+    <dd>MYSQL_8_0{{% md %}}MySQL 8.0.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Cloud<wbr>Sql<wbr>Settings<wbr>Database<wbr>Version<wbr>Sql<wbr>Database<wbr>Version<wbr>Unspecified</dt>
+    <dd>SQL_DATABASE_VERSION_UNSPECIFIED{{% md %}}Unspecified version.{{% /md %}}</dd><dt>Cloud<wbr>Sql<wbr>Settings<wbr>Database<wbr>Version<wbr>Mysql56</dt>
+    <dd>MYSQL_5_6{{% md %}}MySQL 5.6.{{% /md %}}</dd><dt>Cloud<wbr>Sql<wbr>Settings<wbr>Database<wbr>Version<wbr>Mysql57</dt>
+    <dd>MYSQL_5_7{{% md %}}MySQL 5.7.{{% /md %}}</dd><dt>Cloud<wbr>Sql<wbr>Settings<wbr>Database<wbr>Version<wbr>Mysql80</dt>
+    <dd>MYSQL_8_0{{% md %}}MySQL 8.0.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sql<wbr>Database<wbr>Version<wbr>Unspecified</dt>
+    <dd>SQL_DATABASE_VERSION_UNSPECIFIED{{% md %}}Unspecified version.{{% /md %}}</dd><dt>Mysql56</dt>
+    <dd>MYSQL_5_6{{% md %}}MySQL 5.6.{{% /md %}}</dd><dt>Mysql57</dt>
+    <dd>MYSQL_5_7{{% md %}}MySQL 5.7.{{% /md %}}</dd><dt>Mysql80</dt>
+    <dd>MYSQL_8_0{{% md %}}MySQL 8.0.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQL_DATABASE_VERSION_UNSPECIFIED</dt>
+    <dd>SQL_DATABASE_VERSION_UNSPECIFIED{{% md %}}Unspecified version.{{% /md %}}</dd><dt>MYSQL56</dt>
+    <dd>MYSQL_5_6{{% md %}}MySQL 5.6.{{% /md %}}</dd><dt>MYSQL57</dt>
+    <dd>MYSQL_5_7{{% md %}}MySQL 5.7.{{% /md %}}</dd><dt>MYSQL80</dt>
+    <dd>MYSQL_8_0{{% md %}}MySQL 8.0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cloudsqlsettingsresponse">Cloud<wbr>Sql<wbr>Settings<wbr>Response</h4>
@@ -1787,6 +1881,86 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform zone where your Cloud SQL datdabse instance is located.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="connectionprofileprovider">Connection<wbr>Profile<wbr>Provider</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Database<wbr>Provider<wbr>Unspecified</dt>
+    <dd>DATABASE_PROVIDER_UNSPECIFIED{{% md %}}The database provider is unknown.{{% /md %}}</dd><dt>Cloudsql</dt>
+    <dd>CLOUDSQL{{% md %}}CloudSQL runs the database.{{% /md %}}</dd><dt>Rds</dt>
+    <dd>RDS{{% md %}}RDS runs the database.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Connection<wbr>Profile<wbr>Provider<wbr>Database<wbr>Provider<wbr>Unspecified</dt>
+    <dd>DATABASE_PROVIDER_UNSPECIFIED{{% md %}}The database provider is unknown.{{% /md %}}</dd><dt>Connection<wbr>Profile<wbr>Provider<wbr>Cloudsql</dt>
+    <dd>CLOUDSQL{{% md %}}CloudSQL runs the database.{{% /md %}}</dd><dt>Connection<wbr>Profile<wbr>Provider<wbr>Rds</dt>
+    <dd>RDS{{% md %}}RDS runs the database.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Database<wbr>Provider<wbr>Unspecified</dt>
+    <dd>DATABASE_PROVIDER_UNSPECIFIED{{% md %}}The database provider is unknown.{{% /md %}}</dd><dt>Cloudsql</dt>
+    <dd>CLOUDSQL{{% md %}}CloudSQL runs the database.{{% /md %}}</dd><dt>Rds</dt>
+    <dd>RDS{{% md %}}RDS runs the database.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DATABASE_PROVIDER_UNSPECIFIED</dt>
+    <dd>DATABASE_PROVIDER_UNSPECIFIED{{% md %}}The database provider is unknown.{{% /md %}}</dd><dt>CLOUDSQL</dt>
+    <dd>CLOUDSQL{{% md %}}CloudSQL runs the database.{{% /md %}}</dd><dt>RDS</dt>
+    <dd>RDS{{% md %}}RDS runs the database.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="connectionprofilestate">Connection<wbr>Profile<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state of the connection profile is unknown.{{% /md %}}</dd><dt>Draft</dt>
+    <dd>DRAFT{{% md %}}The connection profile is in draft mode and fully editable.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}The connection profile is being created.{{% /md %}}</dd><dt>Ready</dt>
+    <dd>READY{{% md %}}The connection profile is ready.{{% /md %}}</dd><dt>Updating</dt>
+    <dd>UPDATING{{% md %}}The connection profile is being updated.{{% /md %}}</dd><dt>Deleting</dt>
+    <dd>DELETING{{% md %}}The connection profile is being deleted.{{% /md %}}</dd><dt>Deleted</dt>
+    <dd>DELETED{{% md %}}The connection profile has been deleted.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The last action on the connection profile failed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Connection<wbr>Profile<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state of the connection profile is unknown.{{% /md %}}</dd><dt>Connection<wbr>Profile<wbr>State<wbr>Draft</dt>
+    <dd>DRAFT{{% md %}}The connection profile is in draft mode and fully editable.{{% /md %}}</dd><dt>Connection<wbr>Profile<wbr>State<wbr>Creating</dt>
+    <dd>CREATING{{% md %}}The connection profile is being created.{{% /md %}}</dd><dt>Connection<wbr>Profile<wbr>State<wbr>Ready</dt>
+    <dd>READY{{% md %}}The connection profile is ready.{{% /md %}}</dd><dt>Connection<wbr>Profile<wbr>State<wbr>Updating</dt>
+    <dd>UPDATING{{% md %}}The connection profile is being updated.{{% /md %}}</dd><dt>Connection<wbr>Profile<wbr>State<wbr>Deleting</dt>
+    <dd>DELETING{{% md %}}The connection profile is being deleted.{{% /md %}}</dd><dt>Connection<wbr>Profile<wbr>State<wbr>Deleted</dt>
+    <dd>DELETED{{% md %}}The connection profile has been deleted.{{% /md %}}</dd><dt>Connection<wbr>Profile<wbr>State<wbr>Failed</dt>
+    <dd>FAILED{{% md %}}The last action on the connection profile failed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state of the connection profile is unknown.{{% /md %}}</dd><dt>Draft</dt>
+    <dd>DRAFT{{% md %}}The connection profile is in draft mode and fully editable.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}The connection profile is being created.{{% /md %}}</dd><dt>Ready</dt>
+    <dd>READY{{% md %}}The connection profile is ready.{{% /md %}}</dd><dt>Updating</dt>
+    <dd>UPDATING{{% md %}}The connection profile is being updated.{{% /md %}}</dd><dt>Deleting</dt>
+    <dd>DELETING{{% md %}}The connection profile is being deleted.{{% /md %}}</dd><dt>Deleted</dt>
+    <dd>DELETED{{% md %}}The connection profile has been deleted.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The last action on the connection profile failed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state of the connection profile is unknown.{{% /md %}}</dd><dt>DRAFT</dt>
+    <dd>DRAFT{{% md %}}The connection profile is in draft mode and fully editable.{{% /md %}}</dd><dt>CREATING</dt>
+    <dd>CREATING{{% md %}}The connection profile is being created.{{% /md %}}</dd><dt>READY</dt>
+    <dd>READY{{% md %}}The connection profile is ready.{{% /md %}}</dd><dt>UPDATING</dt>
+    <dd>UPDATING{{% md %}}The connection profile is being updated.{{% /md %}}</dd><dt>DELETING</dt>
+    <dd>DELETING{{% md %}}The connection profile is being deleted.{{% /md %}}</dd><dt>DELETED</dt>
+    <dd>DELETED{{% md %}}The connection profile has been deleted.{{% /md %}}</dd><dt>FAILED</dt>
+    <dd>FAILED{{% md %}}The last action on the connection profile failed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mysqlconnectionprofile">My<wbr>Sql<wbr>Connection<wbr>Profile</h4>

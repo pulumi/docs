@@ -30,10 +30,10 @@ Adds a new contact for a resource.
                         <span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">language_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">notification_category_subscriptions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">notification_category_subscriptions</span><span class="p">:</span> <span class="nx">Optional[Sequence[_essentialcontacts_v1.OrganizationContactNotificationCategorySubscriptionsItem]]</span> = None<span class="p">,</span>
                         <span class="nx">organization_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">validate_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">validation_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                        <span class="nx">validation_state</span><span class="p">:</span> <span class="nx">Optional[_essentialcontacts_v1.OrganizationContactValidationState]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">OrganizationContact</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationContactArgs</a></span><span class="p">,</span>
@@ -199,7 +199,7 @@ The OrganizationContact resource accepts the following [input]({{< relref "/docs
 <a href="#notificationcategorysubscriptions_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Category<wbr>Subscriptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#organizationcontactnotificationcategorysubscriptionsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Essential<wbr>Contacts.<wbr>V1.<wbr>Organization<wbr>Contact<wbr>Notification<wbr>Category<wbr>Subscriptions<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}The categories of notifications that the contact will receive communications for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -215,7 +215,7 @@ The OrganizationContact resource accepts the following [input]({{< relref "/docs
 <a href="#validationstate_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#organizationcontactvalidationstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Essential<wbr>Contacts.<wbr>V1.<wbr>Organization<wbr>Contact<wbr>Validation<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The validity of the contact. A contact is considered valid if it is the correct recipient for notifications for a particular resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -259,7 +259,7 @@ The OrganizationContact resource accepts the following [input]({{< relref "/docs
 <a href="#notificationcategorysubscriptions_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Category<wbr>Subscriptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#organizationcontactnotificationcategorysubscriptionsitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}The categories of notifications that the contact will receive communications for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -275,7 +275,7 @@ The OrganizationContact resource accepts the following [input]({{< relref "/docs
 <a href="#validationstate_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#organizationcontactvalidationstate">Organization<wbr>Contact<wbr>Validation<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The validity of the contact. A contact is considered valid if it is the correct recipient for notifications for a particular resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -319,7 +319,7 @@ The OrganizationContact resource accepts the following [input]({{< relref "/docs
 <a href="#notificationcategorysubscriptions_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Category<wbr>Subscriptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#organizationcontactnotificationcategorysubscriptionsitem">Organization<wbr>Contact<wbr>Notification<wbr>Category<wbr>Subscriptions<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}The categories of notifications that the contact will receive communications for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -335,7 +335,7 @@ The OrganizationContact resource accepts the following [input]({{< relref "/docs
 <a href="#validationstate_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#organizationcontactvalidationstate">Organization<wbr>Contact<wbr>Validation<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The validity of the contact. A contact is considered valid if it is the correct recipient for notifications for a particular resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -379,7 +379,7 @@ The OrganizationContact resource accepts the following [input]({{< relref "/docs
 <a href="#notification_category_subscriptions_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>category_<wbr>subscriptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#organizationcontactnotificationcategorysubscriptionsitem">Organization<wbr>Contact<wbr>Notification<wbr>Category<wbr>Subscriptions<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}The categories of notifications that the contact will receive communications for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -395,7 +395,7 @@ The OrganizationContact resource accepts the following [input]({{< relref "/docs
 <a href="#validation_state_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#organizationcontactvalidationstate">Organization<wbr>Contact<wbr>Validation<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The validity of the contact. A contact is considered valid if it is the correct recipient for notifications for a particular resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -460,6 +460,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="organizationcontactnotificationcategorysubscriptionsitem">Organization<wbr>Contact<wbr>Notification<wbr>Category<wbr>Subscriptions<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Notification<wbr>Category<wbr>Unspecified</dt>
+    <dd>NOTIFICATION_CATEGORY_UNSPECIFIED{{% md %}}Notification category is unrecognized or unspecified.{{% /md %}}</dd><dt>All</dt>
+    <dd>ALL{{% md %}}All notifications related to the resource, including notifications pertaining to categories added in the future.{{% /md %}}</dd><dt>Suspension</dt>
+    <dd>SUSPENSION{{% md %}}Notifications related to imminent account suspension.{{% /md %}}</dd><dt>Security</dt>
+    <dd>SECURITY{{% md %}}Notifications related to security/privacy incidents, notifications, and vulnerabilities.{{% /md %}}</dd><dt>Technical</dt>
+    <dd>TECHNICAL{{% md %}}Notifications related to technical events and issues such as outages, errors, or bugs.{{% /md %}}</dd><dt>Billing</dt>
+    <dd>BILLING{{% md %}}Notifications related to billing and payments notifications, price updates, errors, or credits.{{% /md %}}</dd><dt>Legal</dt>
+    <dd>LEGAL{{% md %}}Notifications related to enforcement actions, regulatory compliance, or government notices.{{% /md %}}</dd><dt>Product<wbr>Updates</dt>
+    <dd>PRODUCT_UPDATES{{% md %}}Notifications related to new versions, product terms updates, or deprecations.{{% /md %}}</dd><dt>Technical<wbr>Incidents</dt>
+    <dd>TECHNICAL_INCIDENTS{{% md %}}Child category of TECHNICAL. If assigned, technical incident notifications will go to these contacts instead of TECHNICAL.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Organization<wbr>Contact<wbr>Notification<wbr>Category<wbr>Subscriptions<wbr>Item<wbr>Notification<wbr>Category<wbr>Unspecified</dt>
+    <dd>NOTIFICATION_CATEGORY_UNSPECIFIED{{% md %}}Notification category is unrecognized or unspecified.{{% /md %}}</dd><dt>Organization<wbr>Contact<wbr>Notification<wbr>Category<wbr>Subscriptions<wbr>Item<wbr>All</dt>
+    <dd>ALL{{% md %}}All notifications related to the resource, including notifications pertaining to categories added in the future.{{% /md %}}</dd><dt>Organization<wbr>Contact<wbr>Notification<wbr>Category<wbr>Subscriptions<wbr>Item<wbr>Suspension</dt>
+    <dd>SUSPENSION{{% md %}}Notifications related to imminent account suspension.{{% /md %}}</dd><dt>Organization<wbr>Contact<wbr>Notification<wbr>Category<wbr>Subscriptions<wbr>Item<wbr>Security</dt>
+    <dd>SECURITY{{% md %}}Notifications related to security/privacy incidents, notifications, and vulnerabilities.{{% /md %}}</dd><dt>Organization<wbr>Contact<wbr>Notification<wbr>Category<wbr>Subscriptions<wbr>Item<wbr>Technical</dt>
+    <dd>TECHNICAL{{% md %}}Notifications related to technical events and issues such as outages, errors, or bugs.{{% /md %}}</dd><dt>Organization<wbr>Contact<wbr>Notification<wbr>Category<wbr>Subscriptions<wbr>Item<wbr>Billing</dt>
+    <dd>BILLING{{% md %}}Notifications related to billing and payments notifications, price updates, errors, or credits.{{% /md %}}</dd><dt>Organization<wbr>Contact<wbr>Notification<wbr>Category<wbr>Subscriptions<wbr>Item<wbr>Legal</dt>
+    <dd>LEGAL{{% md %}}Notifications related to enforcement actions, regulatory compliance, or government notices.{{% /md %}}</dd><dt>Organization<wbr>Contact<wbr>Notification<wbr>Category<wbr>Subscriptions<wbr>Item<wbr>Product<wbr>Updates</dt>
+    <dd>PRODUCT_UPDATES{{% md %}}Notifications related to new versions, product terms updates, or deprecations.{{% /md %}}</dd><dt>Organization<wbr>Contact<wbr>Notification<wbr>Category<wbr>Subscriptions<wbr>Item<wbr>Technical<wbr>Incidents</dt>
+    <dd>TECHNICAL_INCIDENTS{{% md %}}Child category of TECHNICAL. If assigned, technical incident notifications will go to these contacts instead of TECHNICAL.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Notification<wbr>Category<wbr>Unspecified</dt>
+    <dd>NOTIFICATION_CATEGORY_UNSPECIFIED{{% md %}}Notification category is unrecognized or unspecified.{{% /md %}}</dd><dt>All</dt>
+    <dd>ALL{{% md %}}All notifications related to the resource, including notifications pertaining to categories added in the future.{{% /md %}}</dd><dt>Suspension</dt>
+    <dd>SUSPENSION{{% md %}}Notifications related to imminent account suspension.{{% /md %}}</dd><dt>Security</dt>
+    <dd>SECURITY{{% md %}}Notifications related to security/privacy incidents, notifications, and vulnerabilities.{{% /md %}}</dd><dt>Technical</dt>
+    <dd>TECHNICAL{{% md %}}Notifications related to technical events and issues such as outages, errors, or bugs.{{% /md %}}</dd><dt>Billing</dt>
+    <dd>BILLING{{% md %}}Notifications related to billing and payments notifications, price updates, errors, or credits.{{% /md %}}</dd><dt>Legal</dt>
+    <dd>LEGAL{{% md %}}Notifications related to enforcement actions, regulatory compliance, or government notices.{{% /md %}}</dd><dt>Product<wbr>Updates</dt>
+    <dd>PRODUCT_UPDATES{{% md %}}Notifications related to new versions, product terms updates, or deprecations.{{% /md %}}</dd><dt>Technical<wbr>Incidents</dt>
+    <dd>TECHNICAL_INCIDENTS{{% md %}}Child category of TECHNICAL. If assigned, technical incident notifications will go to these contacts instead of TECHNICAL.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NOTIFICATION_CATEGORY_UNSPECIFIED</dt>
+    <dd>NOTIFICATION_CATEGORY_UNSPECIFIED{{% md %}}Notification category is unrecognized or unspecified.{{% /md %}}</dd><dt>ALL</dt>
+    <dd>ALL{{% md %}}All notifications related to the resource, including notifications pertaining to categories added in the future.{{% /md %}}</dd><dt>SUSPENSION</dt>
+    <dd>SUSPENSION{{% md %}}Notifications related to imminent account suspension.{{% /md %}}</dd><dt>SECURITY</dt>
+    <dd>SECURITY{{% md %}}Notifications related to security/privacy incidents, notifications, and vulnerabilities.{{% /md %}}</dd><dt>TECHNICAL</dt>
+    <dd>TECHNICAL{{% md %}}Notifications related to technical events and issues such as outages, errors, or bugs.{{% /md %}}</dd><dt>BILLING</dt>
+    <dd>BILLING{{% md %}}Notifications related to billing and payments notifications, price updates, errors, or credits.{{% /md %}}</dd><dt>LEGAL</dt>
+    <dd>LEGAL{{% md %}}Notifications related to enforcement actions, regulatory compliance, or government notices.{{% /md %}}</dd><dt>PRODUCT_UPDATES</dt>
+    <dd>PRODUCT_UPDATES{{% md %}}Notifications related to new versions, product terms updates, or deprecations.{{% /md %}}</dd><dt>TECHNICAL_INCIDENTS</dt>
+    <dd>TECHNICAL_INCIDENTS{{% md %}}Child category of TECHNICAL. If assigned, technical incident notifications will go to these contacts instead of TECHNICAL.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="organizationcontactvalidationstate">Organization<wbr>Contact<wbr>Validation<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Validation<wbr>State<wbr>Unspecified</dt>
+    <dd>VALIDATION_STATE_UNSPECIFIED{{% md %}}The validation state is unknown or unspecified.{{% /md %}}</dd><dt>Valid</dt>
+    <dd>VALID{{% md %}}The contact is marked as valid. This is usually done manually by the contact admin. All new contacts begin in the valid state.{{% /md %}}</dd><dt>Invalid</dt>
+    <dd>INVALID{{% md %}}The contact is considered invalid. This may become the state if the contact's email is found to be unreachable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Organization<wbr>Contact<wbr>Validation<wbr>State<wbr>Validation<wbr>State<wbr>Unspecified</dt>
+    <dd>VALIDATION_STATE_UNSPECIFIED{{% md %}}The validation state is unknown or unspecified.{{% /md %}}</dd><dt>Organization<wbr>Contact<wbr>Validation<wbr>State<wbr>Valid</dt>
+    <dd>VALID{{% md %}}The contact is marked as valid. This is usually done manually by the contact admin. All new contacts begin in the valid state.{{% /md %}}</dd><dt>Organization<wbr>Contact<wbr>Validation<wbr>State<wbr>Invalid</dt>
+    <dd>INVALID{{% md %}}The contact is considered invalid. This may become the state if the contact's email is found to be unreachable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Validation<wbr>State<wbr>Unspecified</dt>
+    <dd>VALIDATION_STATE_UNSPECIFIED{{% md %}}The validation state is unknown or unspecified.{{% /md %}}</dd><dt>Valid</dt>
+    <dd>VALID{{% md %}}The contact is marked as valid. This is usually done manually by the contact admin. All new contacts begin in the valid state.{{% /md %}}</dd><dt>Invalid</dt>
+    <dd>INVALID{{% md %}}The contact is considered invalid. This may become the state if the contact's email is found to be unreachable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>VALIDATION_STATE_UNSPECIFIED</dt>
+    <dd>VALIDATION_STATE_UNSPECIFIED{{% md %}}The validation state is unknown or unspecified.{{% /md %}}</dd><dt>VALID</dt>
+    <dd>VALID{{% md %}}The contact is marked as valid. This is usually done manually by the contact admin. All new contacts begin in the valid state.{{% /md %}}</dd><dt>INVALID</dt>
+    <dd>INVALID{{% md %}}The contact is considered invalid. This may become the state if the contact's email is found to be unreachable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

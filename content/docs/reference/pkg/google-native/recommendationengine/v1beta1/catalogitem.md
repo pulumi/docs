@@ -1154,7 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stockstate_csharp" style="color: inherit; text-decoration: inherit;">Stock<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitemstockstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Recommendationengine.<wbr>V1Beta1.<wbr>Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Stock<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Optional. Online stock state of the catalog item. Default is `IN_STOCK`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1222,7 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stockstate_go" style="color: inherit; text-decoration: inherit;">Stock<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitemstockstate">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Stock<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Optional. Online stock state of the catalog item. Default is `IN_STOCK`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1290,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stockstate_nodejs" style="color: inherit; text-decoration: inherit;">stock<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitemstockstate">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Stock<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Optional. Online stock state of the catalog item. Default is `IN_STOCK`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1358,7 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stock_state_python" style="color: inherit; text-decoration: inherit;">stock_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitemstockstate">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Stock<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Optional. Online stock state of the catalog item. Default is `IN_STOCK`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1963,6 +1963,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Online stock state of the catalog item. Default is `IN_STOCK`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudrecommendationenginev1beta1productcatalogitemstockstate">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Stock<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Stock<wbr>State<wbr>Unspecified</dt>
+    <dd>STOCK_STATE_UNSPECIFIED{{% md %}}Default item stock status. Should never be used.{{% /md %}}</dd><dt>In<wbr>Stock</dt>
+    <dd>IN_STOCK{{% md %}}Item in stock.{{% /md %}}</dd><dt>Out<wbr>Of<wbr>Stock</dt>
+    <dd>OUT_OF_STOCK{{% md %}}Item out of stock.{{% /md %}}</dd><dt>Preorder</dt>
+    <dd>PREORDER{{% md %}}Item that is in pre-order state.{{% /md %}}</dd><dt>Backorder</dt>
+    <dd>BACKORDER{{% md %}}Item that is back-ordered (i.e. temporarily out of stock).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Stock<wbr>State<wbr>Stock<wbr>State<wbr>Unspecified</dt>
+    <dd>STOCK_STATE_UNSPECIFIED{{% md %}}Default item stock status. Should never be used.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Stock<wbr>State<wbr>In<wbr>Stock</dt>
+    <dd>IN_STOCK{{% md %}}Item in stock.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Stock<wbr>State<wbr>Out<wbr>Of<wbr>Stock</dt>
+    <dd>OUT_OF_STOCK{{% md %}}Item out of stock.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Stock<wbr>State<wbr>Preorder</dt>
+    <dd>PREORDER{{% md %}}Item that is in pre-order state.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Stock<wbr>State<wbr>Backorder</dt>
+    <dd>BACKORDER{{% md %}}Item that is back-ordered (i.e. temporarily out of stock).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Stock<wbr>State<wbr>Unspecified</dt>
+    <dd>STOCK_STATE_UNSPECIFIED{{% md %}}Default item stock status. Should never be used.{{% /md %}}</dd><dt>In<wbr>Stock</dt>
+    <dd>IN_STOCK{{% md %}}Item in stock.{{% /md %}}</dd><dt>Out<wbr>Of<wbr>Stock</dt>
+    <dd>OUT_OF_STOCK{{% md %}}Item out of stock.{{% /md %}}</dd><dt>Preorder</dt>
+    <dd>PREORDER{{% md %}}Item that is in pre-order state.{{% /md %}}</dd><dt>Backorder</dt>
+    <dd>BACKORDER{{% md %}}Item that is back-ordered (i.e. temporarily out of stock).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STOCK_STATE_UNSPECIFIED</dt>
+    <dd>STOCK_STATE_UNSPECIFIED{{% md %}}Default item stock status. Should never be used.{{% /md %}}</dd><dt>IN_STOCK</dt>
+    <dd>IN_STOCK{{% md %}}Item in stock.{{% /md %}}</dd><dt>OUT_OF_STOCK</dt>
+    <dd>OUT_OF_STOCK{{% md %}}Item out of stock.{{% /md %}}</dd><dt>PREORDER</dt>
+    <dd>PREORDER{{% md %}}Item that is in pre-order state.{{% /md %}}</dd><dt>BACKORDER</dt>
+    <dd>BACKORDER{{% md %}}Item that is back-ordered (i.e. temporarily out of stock).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

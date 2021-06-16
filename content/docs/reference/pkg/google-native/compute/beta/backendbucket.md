@@ -647,7 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachemode_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backendbucketcdnpolicycachemode">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies the cache setting for all responses from this backend. The possible values are:
 
@@ -745,7 +745,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#cachemode_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backendbucketcdnpolicycachemode">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies the cache setting for all responses from this backend. The possible values are:
 
@@ -843,7 +843,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#cachemode_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backendbucketcdnpolicycachemode">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies the cache setting for all responses from this backend. The possible values are:
 
@@ -941,7 +941,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#cache_mode_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#backendbucketcdnpolicycachemode">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies the cache setting for all responses from this backend. The possible values are:
 
@@ -1122,6 +1122,40 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The header field name to match on when bypassing cache. Values are case-insensitive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="backendbucketcdnpolicycachemode">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Cache<wbr>All<wbr>Static</dt>
+    <dd>CACHE_ALL_STATIC</dd><dt>Force<wbr>Cache<wbr>All</dt>
+    <dd>FORCE_CACHE_ALL</dd><dt>Invalid<wbr>Cache<wbr>Mode</dt>
+    <dd>INVALID_CACHE_MODE</dd><dt>Use<wbr>Origin<wbr>Headers</dt>
+    <dd>USE_ORIGIN_HEADERS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Mode<wbr>Cache<wbr>All<wbr>Static</dt>
+    <dd>CACHE_ALL_STATIC</dd><dt>Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Mode<wbr>Force<wbr>Cache<wbr>All</dt>
+    <dd>FORCE_CACHE_ALL</dd><dt>Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Mode<wbr>Invalid<wbr>Cache<wbr>Mode</dt>
+    <dd>INVALID_CACHE_MODE</dd><dt>Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Mode<wbr>Use<wbr>Origin<wbr>Headers</dt>
+    <dd>USE_ORIGIN_HEADERS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Cache<wbr>All<wbr>Static</dt>
+    <dd>CACHE_ALL_STATIC</dd><dt>Force<wbr>Cache<wbr>All</dt>
+    <dd>FORCE_CACHE_ALL</dd><dt>Invalid<wbr>Cache<wbr>Mode</dt>
+    <dd>INVALID_CACHE_MODE</dd><dt>Use<wbr>Origin<wbr>Headers</dt>
+    <dd>USE_ORIGIN_HEADERS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CACHE_ALL_STATIC</dt>
+    <dd>CACHE_ALL_STATIC</dd><dt>FORCE_CACHE_ALL</dt>
+    <dd>FORCE_CACHE_ALL</dd><dt>INVALID_CACHE_MODE</dt>
+    <dd>INVALID_CACHE_MODE</dd><dt>USE_ORIGIN_HEADERS</dt>
+    <dd>USE_ORIGIN_HEADERS</dd></dl>
 {{% /choosable %}}
 
 <h4 id="backendbucketcdnpolicynegativecachingpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy</h4>

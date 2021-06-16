@@ -33,7 +33,7 @@ Create a new environment.
                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_composer_v1.EnvironmentState]</span> = None<span class="p">,</span>
                 <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -217,7 +217,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#environmentstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Composer.<wbr>V1.<wbr>Environment<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -293,7 +293,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#environmentstate">Environment<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The current state of the environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -369,7 +369,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#environmentstate">Environment<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -445,7 +445,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#environmentstate">Environment<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1633,6 +1633,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#webservernetworkaccesscontrolresponse">Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="environmentstate">Environment<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state of the environment is unknown.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}The environment is in the process of being created.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The environment is currently running and healthy. It is ready for use.{{% /md %}}</dd><dt>Updating</dt>
+    <dd>UPDATING{{% md %}}The environment is being updated. It remains usable but cannot receive additional update requests or be deleted at this time.{{% /md %}}</dd><dt>Deleting</dt>
+    <dd>DELETING{{% md %}}The environment is undergoing deletion. It cannot be used.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}The environment has encountered an error and cannot be used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Environment<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state of the environment is unknown.{{% /md %}}</dd><dt>Environment<wbr>State<wbr>Creating</dt>
+    <dd>CREATING{{% md %}}The environment is in the process of being created.{{% /md %}}</dd><dt>Environment<wbr>State<wbr>Running</dt>
+    <dd>RUNNING{{% md %}}The environment is currently running and healthy. It is ready for use.{{% /md %}}</dd><dt>Environment<wbr>State<wbr>Updating</dt>
+    <dd>UPDATING{{% md %}}The environment is being updated. It remains usable but cannot receive additional update requests or be deleted at this time.{{% /md %}}</dd><dt>Environment<wbr>State<wbr>Deleting</dt>
+    <dd>DELETING{{% md %}}The environment is undergoing deletion. It cannot be used.{{% /md %}}</dd><dt>Environment<wbr>State<wbr>Error</dt>
+    <dd>ERROR{{% md %}}The environment has encountered an error and cannot be used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state of the environment is unknown.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}The environment is in the process of being created.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The environment is currently running and healthy. It is ready for use.{{% /md %}}</dd><dt>Updating</dt>
+    <dd>UPDATING{{% md %}}The environment is being updated. It remains usable but cannot receive additional update requests or be deleted at this time.{{% /md %}}</dd><dt>Deleting</dt>
+    <dd>DELETING{{% md %}}The environment is undergoing deletion. It cannot be used.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}The environment has encountered an error and cannot be used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state of the environment is unknown.{{% /md %}}</dd><dt>CREATING</dt>
+    <dd>CREATING{{% md %}}The environment is in the process of being created.{{% /md %}}</dd><dt>RUNNING</dt>
+    <dd>RUNNING{{% md %}}The environment is currently running and healthy. It is ready for use.{{% /md %}}</dd><dt>UPDATING</dt>
+    <dd>UPDATING{{% md %}}The environment is being updated. It remains usable but cannot receive additional update requests or be deleted at this time.{{% /md %}}</dd><dt>DELETING</dt>
+    <dd>DELETING{{% md %}}The environment is undergoing deletion. It cannot be used.{{% /md %}}</dd><dt>ERROR</dt>
+    <dd>ERROR{{% md %}}The environment has encountered an error and cannot be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ipallocationpolicy">IPAllocation<wbr>Policy</h4>

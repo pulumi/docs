@@ -31,7 +31,7 @@ Creates a regional HealthCheckService resource in the specified project and regi
                              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                              <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                              <span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">health_status_aggregation_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">health_status_aggregation_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.RegionHealthCheckServiceHealthStatusAggregationPolicy]</span> = None<span class="p">,</span>
                              <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                              <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -223,7 +223,7 @@ The RegionHealthCheckService resource accepts the following [input]({{< relref "
 <a href="#healthstatusaggregationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Status<wbr>Aggregation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionhealthcheckservicehealthstatusaggregationpolicy">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Region<wbr>Health<wbr>Check<wbr>Service<wbr>Health<wbr>Status<wbr>Aggregation<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Optional. Policy for how the results from multiple health checks for the same endpoint are aggregated. Defaults to NO_AGGREGATION if unspecified.  
 - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. 
@@ -349,7 +349,7 @@ The RegionHealthCheckService resource accepts the following [input]({{< relref "
 <a href="#healthstatusaggregationpolicy_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Status<wbr>Aggregation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionhealthcheckservicehealthstatusaggregationpolicy">Region<wbr>Health<wbr>Check<wbr>Service<wbr>Health<wbr>Status<wbr>Aggregation<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Optional. Policy for how the results from multiple health checks for the same endpoint are aggregated. Defaults to NO_AGGREGATION if unspecified.  
 - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. 
@@ -475,7 +475,7 @@ The RegionHealthCheckService resource accepts the following [input]({{< relref "
 <a href="#healthstatusaggregationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status<wbr>Aggregation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionhealthcheckservicehealthstatusaggregationpolicy">Region<wbr>Health<wbr>Check<wbr>Service<wbr>Health<wbr>Status<wbr>Aggregation<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Optional. Policy for how the results from multiple health checks for the same endpoint are aggregated. Defaults to NO_AGGREGATION if unspecified.  
 - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. 
@@ -601,7 +601,7 @@ The RegionHealthCheckService resource accepts the following [input]({{< relref "
 <a href="#health_status_aggregation_policy_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status_<wbr>aggregation_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#regionhealthcheckservicehealthstatusaggregationpolicy">Region<wbr>Health<wbr>Check<wbr>Service<wbr>Health<wbr>Status<wbr>Aggregation<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Optional. Policy for how the results from multiple health checks for the same endpoint are aggregated. Defaults to NO_AGGREGATION if unspecified.  
 - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. 
@@ -732,6 +732,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="regionhealthcheckservicehealthstatusaggregationpolicy">Region<wbr>Health<wbr>Check<wbr>Service<wbr>Health<wbr>Status<wbr>Aggregation<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>And</dt>
+    <dd>AND</dd><dt>No<wbr>Aggregation</dt>
+    <dd>NO_AGGREGATION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Region<wbr>Health<wbr>Check<wbr>Service<wbr>Health<wbr>Status<wbr>Aggregation<wbr>Policy<wbr>And</dt>
+    <dd>AND</dd><dt>Region<wbr>Health<wbr>Check<wbr>Service<wbr>Health<wbr>Status<wbr>Aggregation<wbr>Policy<wbr>No<wbr>Aggregation</dt>
+    <dd>NO_AGGREGATION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>And</dt>
+    <dd>AND</dd><dt>No<wbr>Aggregation</dt>
+    <dd>NO_AGGREGATION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>AND_</dt>
+    <dd>AND</dd><dt>NO_AGGREGATION</dt>
+    <dd>NO_AGGREGATION</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

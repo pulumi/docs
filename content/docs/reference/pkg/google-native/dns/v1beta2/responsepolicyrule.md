@@ -27,7 +27,7 @@ Creates a new Response Policy Rule.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ResponsePolicyRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                       <span class="nx">behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">behavior</span><span class="p">:</span> <span class="nx">Optional[_dns_v1beta2.ResponsePolicyRuleBehavior]</span> = None<span class="p">,</span>
                        <span class="nx">client_operation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -184,7 +184,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#behavior_csharp" style="color: inherit; text-decoration: inherit;">Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#responsepolicyrulebehavior">Pulumi.<wbr>Google<wbr>Native.<wbr>DNS.<wbr>V1Beta2.<wbr>Response<wbr>Policy<wbr>Rule<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}Answer this query with a behavior rather than DNS data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -252,7 +252,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#behavior_go" style="color: inherit; text-decoration: inherit;">Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#responsepolicyrulebehavior">Response<wbr>Policy<wbr>Rule<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}Answer this query with a behavior rather than DNS data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -320,7 +320,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#behavior_nodejs" style="color: inherit; text-decoration: inherit;">behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#responsepolicyrulebehavior">Response<wbr>Policy<wbr>Rule<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}Answer this query with a behavior rather than DNS data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -388,7 +388,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#behavior_python" style="color: inherit; text-decoration: inherit;">behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#responsepolicyrulebehavior">Response<wbr>Policy<wbr>Rule<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}Answer this query with a behavior rather than DNS data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -916,6 +916,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of a supported record type. See the list of Supported DNS record types.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="responsepolicyrulebehavior">Response<wbr>Policy<wbr>Rule<wbr>Behavior</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Behavior<wbr>Unspecified</dt>
+    <dd>behaviorUnspecified</dd><dt>Bypass<wbr>Response<wbr>Policy</dt>
+    <dd>bypassResponsePolicy{{% md %}}Skip a less-specific ResponsePolicyRule and continue normal query logic. This can be used in conjunction with a wildcard to exempt a subset of the wildcard ResponsePolicyRule from the ResponsePolicy behavior and e.g., query the public internet instead. For instance, if these rules exist: *.example.com -> 1.2.3.4 foo.example.com -> PASSTHRU Then a query for 'foo.example.com' skips the wildcard.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Response<wbr>Policy<wbr>Rule<wbr>Behavior<wbr>Behavior<wbr>Unspecified</dt>
+    <dd>behaviorUnspecified</dd><dt>Response<wbr>Policy<wbr>Rule<wbr>Behavior<wbr>Bypass<wbr>Response<wbr>Policy</dt>
+    <dd>bypassResponsePolicy{{% md %}}Skip a less-specific ResponsePolicyRule and continue normal query logic. This can be used in conjunction with a wildcard to exempt a subset of the wildcard ResponsePolicyRule from the ResponsePolicy behavior and e.g., query the public internet instead. For instance, if these rules exist: *.example.com -> 1.2.3.4 foo.example.com -> PASSTHRU Then a query for 'foo.example.com' skips the wildcard.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Behavior<wbr>Unspecified</dt>
+    <dd>behaviorUnspecified</dd><dt>Bypass<wbr>Response<wbr>Policy</dt>
+    <dd>bypassResponsePolicy{{% md %}}Skip a less-specific ResponsePolicyRule and continue normal query logic. This can be used in conjunction with a wildcard to exempt a subset of the wildcard ResponsePolicyRule from the ResponsePolicy behavior and e.g., query the public internet instead. For instance, if these rules exist: *.example.com -> 1.2.3.4 foo.example.com -> PASSTHRU Then a query for 'foo.example.com' skips the wildcard.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>BEHAVIOR_UNSPECIFIED</dt>
+    <dd>behaviorUnspecified</dd><dt>BYPASS_RESPONSE_POLICY</dt>
+    <dd>bypassResponsePolicy{{% md %}}Skip a less-specific ResponsePolicyRule and continue normal query logic. This can be used in conjunction with a wildcard to exempt a subset of the wildcard ResponsePolicyRule from the ResponsePolicy behavior and e.g., query the public internet instead. For instance, if these rules exist: *.example.com -> 1.2.3.4 foo.example.com -> PASSTHRU Then a query for 'foo.example.com' skips the wildcard.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="responsepolicyrulelocaldata">Response<wbr>Policy<wbr>Rule<wbr>Local<wbr>Data</h4>

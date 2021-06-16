@@ -31,14 +31,14 @@ Creates a new routine in the dataset.
             <span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">definition_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">determinism_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">determinism_level</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.RoutineDeterminismLevel]</span> = None<span class="p">,</span>
             <span class="nx">imported_libraries</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-            <span class="nx">language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">language</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.RoutineLanguage]</span> = None<span class="p">,</span>
             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">return_table_type</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.StandardSqlTableTypeArgs]</span> = None<span class="p">,</span>
             <span class="nx">return_type</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.StandardSqlDataTypeArgs]</span> = None<span class="p">,</span>
             <span class="nx">routine_reference</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.RoutineReferenceArgs]</span> = None<span class="p">,</span>
-            <span class="nx">routine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+            <span class="nx">routine_type</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.RoutineRoutineType]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Routine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RoutineArgs</a></span><span class="p">,</span>
@@ -212,7 +212,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#determinismlevel_csharp" style="color: inherit; text-decoration: inherit;">Determinism<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routinedeterminismlevel">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Routine<wbr>Determinism<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Optional. [Experimental] The determinism level of the JavaScript UDF if defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -228,7 +228,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#language_csharp" style="color: inherit; text-decoration: inherit;">Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routinelanguage">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Routine<wbr>Language</a></span>
     </dt>
     <dd>{{% md %}}Optional. Defaults to "SQL".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -260,7 +260,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#routinetype_csharp" style="color: inherit; text-decoration: inherit;">Routine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routineroutinetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Routine<wbr>Routine<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of routine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -312,7 +312,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#determinismlevel_go" style="color: inherit; text-decoration: inherit;">Determinism<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routinedeterminismlevel">Routine<wbr>Determinism<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Optional. [Experimental] The determinism level of the JavaScript UDF if defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -328,7 +328,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#language_go" style="color: inherit; text-decoration: inherit;">Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routinelanguage">Routine<wbr>Language</a></span>
     </dt>
     <dd>{{% md %}}Optional. Defaults to "SQL".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -360,7 +360,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#routinetype_go" style="color: inherit; text-decoration: inherit;">Routine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routineroutinetype">Routine<wbr>Routine<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of routine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -412,7 +412,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#determinismlevel_nodejs" style="color: inherit; text-decoration: inherit;">determinism<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routinedeterminismlevel">Routine<wbr>Determinism<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Optional. [Experimental] The determinism level of the JavaScript UDF if defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -428,7 +428,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#language_nodejs" style="color: inherit; text-decoration: inherit;">language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routinelanguage">Routine<wbr>Language</a></span>
     </dt>
     <dd>{{% md %}}Optional. Defaults to "SQL".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -460,7 +460,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#routinetype_nodejs" style="color: inherit; text-decoration: inherit;">routine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routineroutinetype">Routine<wbr>Routine<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of routine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -512,7 +512,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#determinism_level_python" style="color: inherit; text-decoration: inherit;">determinism_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#routinedeterminismlevel">Routine<wbr>Determinism<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Optional. [Experimental] The determinism level of the JavaScript UDF if defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -528,7 +528,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#language_python" style="color: inherit; text-decoration: inherit;">language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#routinelanguage">Routine<wbr>Language</a></span>
     </dt>
     <dd>{{% md %}}Optional. Defaults to "SQL".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -560,7 +560,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#routine_type_python" style="color: inherit; text-decoration: inherit;">routine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#routineroutinetype">Routine<wbr>Routine<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of routine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -735,7 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#argumentkind_csharp" style="color: inherit; text-decoration: inherit;">Argument<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#argumentargumentkind">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Argument<wbr>Argument<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Optional. Defaults to FIXED_TYPE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -751,7 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#argumentmode">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Argument<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Optional. Specifies whether the argument is input or output. Can be set for procedures only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -771,7 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#argumentkind_go" style="color: inherit; text-decoration: inherit;">Argument<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#argumentargumentkind">Argument<wbr>Argument<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Optional. Defaults to FIXED_TYPE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -787,7 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#argumentmode">Argument<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Optional. Specifies whether the argument is input or output. Can be set for procedures only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -807,7 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#argumentkind_nodejs" style="color: inherit; text-decoration: inherit;">argument<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#argumentargumentkind">Argument<wbr>Argument<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Optional. Defaults to FIXED_TYPE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -823,7 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#argumentmode">Argument<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Optional. Specifies whether the argument is input or output. Can be set for procedures only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -843,7 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#argument_kind_python" style="color: inherit; text-decoration: inherit;">argument_<wbr>kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#argumentargumentkind">Argument<wbr>Argument<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Optional. Defaults to FIXED_TYPE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -859,7 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#argumentmode">Argument<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Optional. Specifies whether the argument is input or output. Can be set for procedures only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -870,6 +870,70 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of this argument. Can be absent for function return argument.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="argumentargumentkind">Argument<wbr>Argument<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Argument<wbr>Kind<wbr>Unspecified</dt>
+    <dd>ARGUMENT_KIND_UNSPECIFIED</dd><dt>Fixed<wbr>Type</dt>
+    <dd>FIXED_TYPE{{% md %}}The argument is a variable with fully specified type, which can be a struct or an array, but not a table.{{% /md %}}</dd><dt>Any<wbr>Type</dt>
+    <dd>ANY_TYPE{{% md %}}The argument is any type, including struct or array, but not a table. To be added: FIXED_TABLE, ANY_TABLE{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Argument<wbr>Argument<wbr>Kind<wbr>Argument<wbr>Kind<wbr>Unspecified</dt>
+    <dd>ARGUMENT_KIND_UNSPECIFIED</dd><dt>Argument<wbr>Argument<wbr>Kind<wbr>Fixed<wbr>Type</dt>
+    <dd>FIXED_TYPE{{% md %}}The argument is a variable with fully specified type, which can be a struct or an array, but not a table.{{% /md %}}</dd><dt>Argument<wbr>Argument<wbr>Kind<wbr>Any<wbr>Type</dt>
+    <dd>ANY_TYPE{{% md %}}The argument is any type, including struct or array, but not a table. To be added: FIXED_TABLE, ANY_TABLE{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Argument<wbr>Kind<wbr>Unspecified</dt>
+    <dd>ARGUMENT_KIND_UNSPECIFIED</dd><dt>Fixed<wbr>Type</dt>
+    <dd>FIXED_TYPE{{% md %}}The argument is a variable with fully specified type, which can be a struct or an array, but not a table.{{% /md %}}</dd><dt>Any<wbr>Type</dt>
+    <dd>ANY_TYPE{{% md %}}The argument is any type, including struct or array, but not a table. To be added: FIXED_TABLE, ANY_TABLE{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ARGUMENT_KIND_UNSPECIFIED</dt>
+    <dd>ARGUMENT_KIND_UNSPECIFIED</dd><dt>FIXED_TYPE</dt>
+    <dd>FIXED_TYPE{{% md %}}The argument is a variable with fully specified type, which can be a struct or an array, but not a table.{{% /md %}}</dd><dt>ANY_TYPE</dt>
+    <dd>ANY_TYPE{{% md %}}The argument is any type, including struct or array, but not a table. To be added: FIXED_TABLE, ANY_TABLE{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="argumentmode">Argument<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED</dd><dt>In</dt>
+    <dd>IN{{% md %}}The argument is input-only.{{% /md %}}</dd><dt>Out</dt>
+    <dd>OUT{{% md %}}The argument is output-only.{{% /md %}}</dd><dt>Inout</dt>
+    <dd>INOUT{{% md %}}The argument is both an input and an output.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Argument<wbr>Mode<wbr>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED</dd><dt>Argument<wbr>Mode<wbr>In</dt>
+    <dd>IN{{% md %}}The argument is input-only.{{% /md %}}</dd><dt>Argument<wbr>Mode<wbr>Out</dt>
+    <dd>OUT{{% md %}}The argument is output-only.{{% /md %}}</dd><dt>Argument<wbr>Mode<wbr>Inout</dt>
+    <dd>INOUT{{% md %}}The argument is both an input and an output.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED</dd><dt>In</dt>
+    <dd>IN{{% md %}}The argument is input-only.{{% /md %}}</dd><dt>Out</dt>
+    <dd>OUT{{% md %}}The argument is output-only.{{% /md %}}</dd><dt>Inout</dt>
+    <dd>INOUT{{% md %}}The argument is both an input and an output.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MODE_UNSPECIFIED</dt>
+    <dd>MODE_UNSPECIFIED</dd><dt>IN_</dt>
+    <dd>IN{{% md %}}The argument is input-only.{{% /md %}}</dd><dt>OUT</dt>
+    <dd>OUT{{% md %}}The argument is output-only.{{% /md %}}</dd><dt>INOUT</dt>
+    <dd>INOUT{{% md %}}The argument is both an input and an output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="argumentresponse">Argument<wbr>Response</h4>
@@ -1016,6 +1080,66 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of this argument. Can be absent for function return argument.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="routinedeterminismlevel">Routine<wbr>Determinism<wbr>Level</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Determinism<wbr>Level<wbr>Unspecified</dt>
+    <dd>DETERMINISM_LEVEL_UNSPECIFIED{{% md %}}The determinism of the UDF is unspecified.{{% /md %}}</dd><dt>Deterministic</dt>
+    <dd>DETERMINISTIC{{% md %}}The UDF is deterministic, meaning that 2 function calls with the same inputs always produce the same result, even across 2 query runs.{{% /md %}}</dd><dt>Not<wbr>Deterministic</dt>
+    <dd>NOT_DETERMINISTIC{{% md %}}The UDF is not deterministic.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Routine<wbr>Determinism<wbr>Level<wbr>Determinism<wbr>Level<wbr>Unspecified</dt>
+    <dd>DETERMINISM_LEVEL_UNSPECIFIED{{% md %}}The determinism of the UDF is unspecified.{{% /md %}}</dd><dt>Routine<wbr>Determinism<wbr>Level<wbr>Deterministic</dt>
+    <dd>DETERMINISTIC{{% md %}}The UDF is deterministic, meaning that 2 function calls with the same inputs always produce the same result, even across 2 query runs.{{% /md %}}</dd><dt>Routine<wbr>Determinism<wbr>Level<wbr>Not<wbr>Deterministic</dt>
+    <dd>NOT_DETERMINISTIC{{% md %}}The UDF is not deterministic.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Determinism<wbr>Level<wbr>Unspecified</dt>
+    <dd>DETERMINISM_LEVEL_UNSPECIFIED{{% md %}}The determinism of the UDF is unspecified.{{% /md %}}</dd><dt>Deterministic</dt>
+    <dd>DETERMINISTIC{{% md %}}The UDF is deterministic, meaning that 2 function calls with the same inputs always produce the same result, even across 2 query runs.{{% /md %}}</dd><dt>Not<wbr>Deterministic</dt>
+    <dd>NOT_DETERMINISTIC{{% md %}}The UDF is not deterministic.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DETERMINISM_LEVEL_UNSPECIFIED</dt>
+    <dd>DETERMINISM_LEVEL_UNSPECIFIED{{% md %}}The determinism of the UDF is unspecified.{{% /md %}}</dd><dt>DETERMINISTIC</dt>
+    <dd>DETERMINISTIC{{% md %}}The UDF is deterministic, meaning that 2 function calls with the same inputs always produce the same result, even across 2 query runs.{{% /md %}}</dd><dt>NOT_DETERMINISTIC</dt>
+    <dd>NOT_DETERMINISTIC{{% md %}}The UDF is not deterministic.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="routinelanguage">Routine<wbr>Language</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Language<wbr>Unspecified</dt>
+    <dd>LANGUAGE_UNSPECIFIED</dd><dt>Sql</dt>
+    <dd>SQL{{% md %}}SQL language.{{% /md %}}</dd><dt>Javascript</dt>
+    <dd>JAVASCRIPT{{% md %}}JavaScript language.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Routine<wbr>Language<wbr>Language<wbr>Unspecified</dt>
+    <dd>LANGUAGE_UNSPECIFIED</dd><dt>Routine<wbr>Language<wbr>Sql</dt>
+    <dd>SQL{{% md %}}SQL language.{{% /md %}}</dd><dt>Routine<wbr>Language<wbr>Javascript</dt>
+    <dd>JAVASCRIPT{{% md %}}JavaScript language.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Language<wbr>Unspecified</dt>
+    <dd>LANGUAGE_UNSPECIFIED</dd><dt>Sql</dt>
+    <dd>SQL{{% md %}}SQL language.{{% /md %}}</dd><dt>Javascript</dt>
+    <dd>JAVASCRIPT{{% md %}}JavaScript language.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LANGUAGE_UNSPECIFIED</dt>
+    <dd>LANGUAGE_UNSPECIFIED</dd><dt>SQL</dt>
+    <dd>SQL{{% md %}}SQL language.{{% /md %}}</dd><dt>JAVASCRIPT</dt>
+    <dd>JAVASCRIPT{{% md %}}JavaScript language.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routinereference">Routine<wbr>Reference</h4>
@@ -1246,6 +1370,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}[Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="routineroutinetype">Routine<wbr>Routine<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Routine<wbr>Type<wbr>Unspecified</dt>
+    <dd>ROUTINE_TYPE_UNSPECIFIED</dd><dt>Scalar<wbr>Function</dt>
+    <dd>SCALAR_FUNCTION{{% md %}}Non-builtin permanent scalar function.{{% /md %}}</dd><dt>Procedure</dt>
+    <dd>PROCEDURE{{% md %}}Stored procedure.{{% /md %}}</dd><dt>Table<wbr>Valued<wbr>Function</dt>
+    <dd>TABLE_VALUED_FUNCTION{{% md %}}Non-builtin permanent TVF.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Routine<wbr>Routine<wbr>Type<wbr>Routine<wbr>Type<wbr>Unspecified</dt>
+    <dd>ROUTINE_TYPE_UNSPECIFIED</dd><dt>Routine<wbr>Routine<wbr>Type<wbr>Scalar<wbr>Function</dt>
+    <dd>SCALAR_FUNCTION{{% md %}}Non-builtin permanent scalar function.{{% /md %}}</dd><dt>Routine<wbr>Routine<wbr>Type<wbr>Procedure</dt>
+    <dd>PROCEDURE{{% md %}}Stored procedure.{{% /md %}}</dd><dt>Routine<wbr>Routine<wbr>Type<wbr>Table<wbr>Valued<wbr>Function</dt>
+    <dd>TABLE_VALUED_FUNCTION{{% md %}}Non-builtin permanent TVF.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Routine<wbr>Type<wbr>Unspecified</dt>
+    <dd>ROUTINE_TYPE_UNSPECIFIED</dd><dt>Scalar<wbr>Function</dt>
+    <dd>SCALAR_FUNCTION{{% md %}}Non-builtin permanent scalar function.{{% /md %}}</dd><dt>Procedure</dt>
+    <dd>PROCEDURE{{% md %}}Stored procedure.{{% /md %}}</dd><dt>Table<wbr>Valued<wbr>Function</dt>
+    <dd>TABLE_VALUED_FUNCTION{{% md %}}Non-builtin permanent TVF.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ROUTINE_TYPE_UNSPECIFIED</dt>
+    <dd>ROUTINE_TYPE_UNSPECIFIED</dd><dt>SCALAR_FUNCTION</dt>
+    <dd>SCALAR_FUNCTION{{% md %}}Non-builtin permanent scalar function.{{% /md %}}</dd><dt>PROCEDURE</dt>
+    <dd>PROCEDURE{{% md %}}Stored procedure.{{% /md %}}</dd><dt>TABLE_VALUED_FUNCTION</dt>
+    <dd>TABLE_VALUED_FUNCTION{{% md %}}Non-builtin permanent TVF.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="standardsqldatatype">Standard<wbr>Sql<wbr>Data<wbr>Type</h4>
 
 {{% choosable language csharp %}}
@@ -1271,7 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#typekind_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#standardsqldatatypetypekind">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1299,7 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#typekind_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#standardsqldatatypetypekind">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1327,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#typekind_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#standardsqldatatypetypekind">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1355,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_kind_python" style="color: inherit; text-decoration: inherit;">type_<wbr>kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#standardsqldatatypetypekind">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1472,6 +1630,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="standardsqldatatypetypekind">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Kind<wbr>Unspecified</dt>
+    <dd>TYPE_KIND_UNSPECIFIED{{% md %}}Invalid type.{{% /md %}}</dd><dt>Int64</dt>
+    <dd>INT64{{% md %}}Encoded as a string in decimal format.{{% /md %}}</dd><dt>Bool</dt>
+    <dd>BOOL{{% md %}}Encoded as a boolean "false" or "true".{{% /md %}}</dd><dt>Float64</dt>
+    <dd>FLOAT64{{% md %}}Encoded as a number, or string "NaN", "Infinity" or "-Infinity".{{% /md %}}</dd><dt>String</dt>
+    <dd>STRING{{% md %}}Encoded as a string value.{{% /md %}}</dd><dt>Bytes</dt>
+    <dd>BYTES{{% md %}}Encoded as a base64 string per RFC 4648, section 4.{{% /md %}}</dd><dt>Timestamp</dt>
+    <dd>TIMESTAMP{{% md %}}Encoded as an RFC 3339 timestamp with mandatory "Z" time zone string: 1985-04-12T23:20:50.52Z{{% /md %}}</dd><dt>Date</dt>
+    <dd>DATE{{% md %}}Encoded as RFC 3339 full-date format string: 1985-04-12{{% /md %}}</dd><dt>Time</dt>
+    <dd>TIME{{% md %}}Encoded as RFC 3339 partial-time format string: 23:20:50.52{{% /md %}}</dd><dt>Datetime</dt>
+    <dd>DATETIME{{% md %}}Encoded as RFC 3339 full-date "T" partial-time: 1985-04-12T23:20:50.52{{% /md %}}</dd><dt>Interval</dt>
+    <dd>INTERVAL{{% md %}}Encoded as fully qualified 3 part: 0-5 15 2:30:45.6{{% /md %}}</dd><dt>Geography</dt>
+    <dd>GEOGRAPHY{{% md %}}Encoded as WKT{{% /md %}}</dd><dt>Numeric</dt>
+    <dd>NUMERIC{{% md %}}Encoded as a decimal string.{{% /md %}}</dd><dt>Bignumeric</dt>
+    <dd>BIGNUMERIC{{% md %}}Encoded as a decimal string.{{% /md %}}</dd><dt>Json</dt>
+    <dd>JSON{{% md %}}Encoded as a string.{{% /md %}}</dd><dt>Array</dt>
+    <dd>ARRAY{{% md %}}Encoded as a list with types matching Type.array_type.{{% /md %}}</dd><dt>Struct</dt>
+    <dd>STRUCT{{% md %}}Encoded as a list with fields of type Type.struct_type[i]. List is used because a JSON object cannot have duplicate field names.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind<wbr>Type<wbr>Kind<wbr>Unspecified</dt>
+    <dd>TYPE_KIND_UNSPECIFIED{{% md %}}Invalid type.{{% /md %}}</dd><dt>Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind<wbr>Int64</dt>
+    <dd>INT64{{% md %}}Encoded as a string in decimal format.{{% /md %}}</dd><dt>Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind<wbr>Bool</dt>
+    <dd>BOOL{{% md %}}Encoded as a boolean "false" or "true".{{% /md %}}</dd><dt>Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind<wbr>Float64</dt>
+    <dd>FLOAT64{{% md %}}Encoded as a number, or string "NaN", "Infinity" or "-Infinity".{{% /md %}}</dd><dt>Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind<wbr>String</dt>
+    <dd>STRING{{% md %}}Encoded as a string value.{{% /md %}}</dd><dt>Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind<wbr>Bytes</dt>
+    <dd>BYTES{{% md %}}Encoded as a base64 string per RFC 4648, section 4.{{% /md %}}</dd><dt>Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind<wbr>Timestamp</dt>
+    <dd>TIMESTAMP{{% md %}}Encoded as an RFC 3339 timestamp with mandatory "Z" time zone string: 1985-04-12T23:20:50.52Z{{% /md %}}</dd><dt>Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind<wbr>Date</dt>
+    <dd>DATE{{% md %}}Encoded as RFC 3339 full-date format string: 1985-04-12{{% /md %}}</dd><dt>Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind<wbr>Time</dt>
+    <dd>TIME{{% md %}}Encoded as RFC 3339 partial-time format string: 23:20:50.52{{% /md %}}</dd><dt>Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind<wbr>Datetime</dt>
+    <dd>DATETIME{{% md %}}Encoded as RFC 3339 full-date "T" partial-time: 1985-04-12T23:20:50.52{{% /md %}}</dd><dt>Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind<wbr>Interval</dt>
+    <dd>INTERVAL{{% md %}}Encoded as fully qualified 3 part: 0-5 15 2:30:45.6{{% /md %}}</dd><dt>Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind<wbr>Geography</dt>
+    <dd>GEOGRAPHY{{% md %}}Encoded as WKT{{% /md %}}</dd><dt>Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind<wbr>Numeric</dt>
+    <dd>NUMERIC{{% md %}}Encoded as a decimal string.{{% /md %}}</dd><dt>Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind<wbr>Bignumeric</dt>
+    <dd>BIGNUMERIC{{% md %}}Encoded as a decimal string.{{% /md %}}</dd><dt>Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind<wbr>Json</dt>
+    <dd>JSON{{% md %}}Encoded as a string.{{% /md %}}</dd><dt>Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind<wbr>Array</dt>
+    <dd>ARRAY{{% md %}}Encoded as a list with types matching Type.array_type.{{% /md %}}</dd><dt>Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Type<wbr>Kind<wbr>Struct</dt>
+    <dd>STRUCT{{% md %}}Encoded as a list with fields of type Type.struct_type[i]. List is used because a JSON object cannot have duplicate field names.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Kind<wbr>Unspecified</dt>
+    <dd>TYPE_KIND_UNSPECIFIED{{% md %}}Invalid type.{{% /md %}}</dd><dt>Int64</dt>
+    <dd>INT64{{% md %}}Encoded as a string in decimal format.{{% /md %}}</dd><dt>Bool</dt>
+    <dd>BOOL{{% md %}}Encoded as a boolean "false" or "true".{{% /md %}}</dd><dt>Float64</dt>
+    <dd>FLOAT64{{% md %}}Encoded as a number, or string "NaN", "Infinity" or "-Infinity".{{% /md %}}</dd><dt>String</dt>
+    <dd>STRING{{% md %}}Encoded as a string value.{{% /md %}}</dd><dt>Bytes</dt>
+    <dd>BYTES{{% md %}}Encoded as a base64 string per RFC 4648, section 4.{{% /md %}}</dd><dt>Timestamp</dt>
+    <dd>TIMESTAMP{{% md %}}Encoded as an RFC 3339 timestamp with mandatory "Z" time zone string: 1985-04-12T23:20:50.52Z{{% /md %}}</dd><dt>Date</dt>
+    <dd>DATE{{% md %}}Encoded as RFC 3339 full-date format string: 1985-04-12{{% /md %}}</dd><dt>Time</dt>
+    <dd>TIME{{% md %}}Encoded as RFC 3339 partial-time format string: 23:20:50.52{{% /md %}}</dd><dt>Datetime</dt>
+    <dd>DATETIME{{% md %}}Encoded as RFC 3339 full-date "T" partial-time: 1985-04-12T23:20:50.52{{% /md %}}</dd><dt>Interval</dt>
+    <dd>INTERVAL{{% md %}}Encoded as fully qualified 3 part: 0-5 15 2:30:45.6{{% /md %}}</dd><dt>Geography</dt>
+    <dd>GEOGRAPHY{{% md %}}Encoded as WKT{{% /md %}}</dd><dt>Numeric</dt>
+    <dd>NUMERIC{{% md %}}Encoded as a decimal string.{{% /md %}}</dd><dt>Bignumeric</dt>
+    <dd>BIGNUMERIC{{% md %}}Encoded as a decimal string.{{% /md %}}</dd><dt>Json</dt>
+    <dd>JSON{{% md %}}Encoded as a string.{{% /md %}}</dd><dt>Array</dt>
+    <dd>ARRAY{{% md %}}Encoded as a list with types matching Type.array_type.{{% /md %}}</dd><dt>Struct</dt>
+    <dd>STRUCT{{% md %}}Encoded as a list with fields of type Type.struct_type[i]. List is used because a JSON object cannot have duplicate field names.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_KIND_UNSPECIFIED</dt>
+    <dd>TYPE_KIND_UNSPECIFIED{{% md %}}Invalid type.{{% /md %}}</dd><dt>INT64</dt>
+    <dd>INT64{{% md %}}Encoded as a string in decimal format.{{% /md %}}</dd><dt>BOOL</dt>
+    <dd>BOOL{{% md %}}Encoded as a boolean "false" or "true".{{% /md %}}</dd><dt>FLOAT64</dt>
+    <dd>FLOAT64{{% md %}}Encoded as a number, or string "NaN", "Infinity" or "-Infinity".{{% /md %}}</dd><dt>STRING</dt>
+    <dd>STRING{{% md %}}Encoded as a string value.{{% /md %}}</dd><dt>BYTES</dt>
+    <dd>BYTES{{% md %}}Encoded as a base64 string per RFC 4648, section 4.{{% /md %}}</dd><dt>TIMESTAMP</dt>
+    <dd>TIMESTAMP{{% md %}}Encoded as an RFC 3339 timestamp with mandatory "Z" time zone string: 1985-04-12T23:20:50.52Z{{% /md %}}</dd><dt>DATE</dt>
+    <dd>DATE{{% md %}}Encoded as RFC 3339 full-date format string: 1985-04-12{{% /md %}}</dd><dt>TIME</dt>
+    <dd>TIME{{% md %}}Encoded as RFC 3339 partial-time format string: 23:20:50.52{{% /md %}}</dd><dt>DATETIME</dt>
+    <dd>DATETIME{{% md %}}Encoded as RFC 3339 full-date "T" partial-time: 1985-04-12T23:20:50.52{{% /md %}}</dd><dt>INTERVAL</dt>
+    <dd>INTERVAL{{% md %}}Encoded as fully qualified 3 part: 0-5 15 2:30:45.6{{% /md %}}</dd><dt>GEOGRAPHY</dt>
+    <dd>GEOGRAPHY{{% md %}}Encoded as WKT{{% /md %}}</dd><dt>NUMERIC</dt>
+    <dd>NUMERIC{{% md %}}Encoded as a decimal string.{{% /md %}}</dd><dt>BIGNUMERIC</dt>
+    <dd>BIGNUMERIC{{% md %}}Encoded as a decimal string.{{% /md %}}</dd><dt>JSON</dt>
+    <dd>JSON{{% md %}}Encoded as a string.{{% /md %}}</dd><dt>ARRAY</dt>
+    <dd>ARRAY{{% md %}}Encoded as a list with types matching Type.array_type.{{% /md %}}</dd><dt>STRUCT</dt>
+    <dd>STRUCT{{% md %}}Encoded as a list with fields of type Type.struct_type[i]. List is used because a JSON object cannot have duplicate field names.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="standardsqlfield">Standard<wbr>Sql<wbr>Field</h4>

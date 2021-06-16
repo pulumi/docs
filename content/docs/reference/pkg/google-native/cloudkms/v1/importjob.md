@@ -28,11 +28,11 @@ Create a new ImportJob within a KeyRing. ImportJob.import_method is required.
 <span class="k">def </span><span class="nx">ImportJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
               <span class="nx">import_job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">import_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">import_method</span><span class="p">:</span> <span class="nx">Optional[_cloudkms_v1.ImportJobImportMethod]</span> = None<span class="p">,</span>
               <span class="nx">key_ring_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">protection_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+              <span class="nx">protection_level</span><span class="p">:</span> <span class="nx">Optional[_cloudkms_v1.ImportJobProtectionLevel]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ImportJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImportJobArgs</a></span><span class="p">,</span>
@@ -198,7 +198,7 @@ The ImportJob resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#importmethod_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#importjobimportmethod">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloudkms.<wbr>V1.<wbr>Import<wbr>Job<wbr>Import<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The wrapping method to be used for incoming key material.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -206,7 +206,7 @@ The ImportJob resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#protectionlevel_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#importjobprotectionlevel">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloudkms.<wbr>V1.<wbr>Import<wbr>Job<wbr>Protection<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The protection level of the ImportJob. This must match the protection_level of the version_template on the CryptoKey you attempt to import into.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -250,7 +250,7 @@ The ImportJob resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#importmethod_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#importjobimportmethod">Import<wbr>Job<wbr>Import<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The wrapping method to be used for incoming key material.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -258,7 +258,7 @@ The ImportJob resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#protectionlevel_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#importjobprotectionlevel">Import<wbr>Job<wbr>Protection<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The protection level of the ImportJob. This must match the protection_level of the version_template on the CryptoKey you attempt to import into.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -302,7 +302,7 @@ The ImportJob resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#importmethod_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#importjobimportmethod">Import<wbr>Job<wbr>Import<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The wrapping method to be used for incoming key material.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -310,7 +310,7 @@ The ImportJob resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#protectionlevel_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#importjobprotectionlevel">Import<wbr>Job<wbr>Protection<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The protection level of the ImportJob. This must match the protection_level of the version_template on the CryptoKey you attempt to import into.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -354,7 +354,7 @@ The ImportJob resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#import_method_python" style="color: inherit; text-decoration: inherit;">import_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#importjobimportmethod">Import<wbr>Job<wbr>Import<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The wrapping method to be used for incoming key material.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +362,7 @@ The ImportJob resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#protection_level_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#importjobprotectionlevel">Import<wbr>Job<wbr>Protection<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The protection level of the ImportJob. This must match the protection_level of the version_template on the CryptoKey you attempt to import into.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -800,6 +800,70 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Google partition certificate chain corresponding to the attestation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="importjobimportmethod">Import<wbr>Job<wbr>Import<wbr>Method</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Import<wbr>Method<wbr>Unspecified</dt>
+    <dd>IMPORT_METHOD_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Rsa<wbr>Oaep3072Sha1Aes256</dt>
+    <dd>RSA_OAEP_3072_SHA1_AES_256{{% md %}}This ImportMethod represents the CKM_RSA_AES_KEY_WRAP key wrapping scheme defined in the PKCS #11 standard. In summary, this involves wrapping the raw key with an ephemeral AES key, and wrapping the ephemeral AES key with a 3072 bit RSA key. For more details, see [RSA AES key wrap mechanism](http://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/cos01/pkcs11-curr-v2.40-cos01.html#_Toc408226908).{{% /md %}}</dd><dt>Rsa<wbr>Oaep4096Sha1Aes256</dt>
+    <dd>RSA_OAEP_4096_SHA1_AES_256{{% md %}}This ImportMethod represents the CKM_RSA_AES_KEY_WRAP key wrapping scheme defined in the PKCS #11 standard. In summary, this involves wrapping the raw key with an ephemeral AES key, and wrapping the ephemeral AES key with a 4096 bit RSA key. For more details, see [RSA AES key wrap mechanism](http://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/cos01/pkcs11-curr-v2.40-cos01.html#_Toc408226908).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Import<wbr>Job<wbr>Import<wbr>Method<wbr>Import<wbr>Method<wbr>Unspecified</dt>
+    <dd>IMPORT_METHOD_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Import<wbr>Job<wbr>Import<wbr>Method<wbr>Rsa<wbr>Oaep3072Sha1Aes256</dt>
+    <dd>RSA_OAEP_3072_SHA1_AES_256{{% md %}}This ImportMethod represents the CKM_RSA_AES_KEY_WRAP key wrapping scheme defined in the PKCS #11 standard. In summary, this involves wrapping the raw key with an ephemeral AES key, and wrapping the ephemeral AES key with a 3072 bit RSA key. For more details, see [RSA AES key wrap mechanism](http://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/cos01/pkcs11-curr-v2.40-cos01.html#_Toc408226908).{{% /md %}}</dd><dt>Import<wbr>Job<wbr>Import<wbr>Method<wbr>Rsa<wbr>Oaep4096Sha1Aes256</dt>
+    <dd>RSA_OAEP_4096_SHA1_AES_256{{% md %}}This ImportMethod represents the CKM_RSA_AES_KEY_WRAP key wrapping scheme defined in the PKCS #11 standard. In summary, this involves wrapping the raw key with an ephemeral AES key, and wrapping the ephemeral AES key with a 4096 bit RSA key. For more details, see [RSA AES key wrap mechanism](http://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/cos01/pkcs11-curr-v2.40-cos01.html#_Toc408226908).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Import<wbr>Method<wbr>Unspecified</dt>
+    <dd>IMPORT_METHOD_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Rsa<wbr>Oaep3072Sha1Aes256</dt>
+    <dd>RSA_OAEP_3072_SHA1_AES_256{{% md %}}This ImportMethod represents the CKM_RSA_AES_KEY_WRAP key wrapping scheme defined in the PKCS #11 standard. In summary, this involves wrapping the raw key with an ephemeral AES key, and wrapping the ephemeral AES key with a 3072 bit RSA key. For more details, see [RSA AES key wrap mechanism](http://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/cos01/pkcs11-curr-v2.40-cos01.html#_Toc408226908).{{% /md %}}</dd><dt>Rsa<wbr>Oaep4096Sha1Aes256</dt>
+    <dd>RSA_OAEP_4096_SHA1_AES_256{{% md %}}This ImportMethod represents the CKM_RSA_AES_KEY_WRAP key wrapping scheme defined in the PKCS #11 standard. In summary, this involves wrapping the raw key with an ephemeral AES key, and wrapping the ephemeral AES key with a 4096 bit RSA key. For more details, see [RSA AES key wrap mechanism](http://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/cos01/pkcs11-curr-v2.40-cos01.html#_Toc408226908).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>IMPORT_METHOD_UNSPECIFIED</dt>
+    <dd>IMPORT_METHOD_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>RSA_OAEP3072_SHA1_AES256</dt>
+    <dd>RSA_OAEP_3072_SHA1_AES_256{{% md %}}This ImportMethod represents the CKM_RSA_AES_KEY_WRAP key wrapping scheme defined in the PKCS #11 standard. In summary, this involves wrapping the raw key with an ephemeral AES key, and wrapping the ephemeral AES key with a 3072 bit RSA key. For more details, see [RSA AES key wrap mechanism](http://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/cos01/pkcs11-curr-v2.40-cos01.html#_Toc408226908).{{% /md %}}</dd><dt>RSA_OAEP4096_SHA1_AES256</dt>
+    <dd>RSA_OAEP_4096_SHA1_AES_256{{% md %}}This ImportMethod represents the CKM_RSA_AES_KEY_WRAP key wrapping scheme defined in the PKCS #11 standard. In summary, this involves wrapping the raw key with an ephemeral AES key, and wrapping the ephemeral AES key with a 4096 bit RSA key. For more details, see [RSA AES key wrap mechanism](http://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/cos01/pkcs11-curr-v2.40-cos01.html#_Toc408226908).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="importjobprotectionlevel">Import<wbr>Job<wbr>Protection<wbr>Level</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Protection<wbr>Level<wbr>Unspecified</dt>
+    <dd>PROTECTION_LEVEL_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Software</dt>
+    <dd>SOFTWARE{{% md %}}Crypto operations are performed in software.{{% /md %}}</dd><dt>Hsm</dt>
+    <dd>HSM{{% md %}}Crypto operations are performed in a Hardware Security Module.{{% /md %}}</dd><dt>External</dt>
+    <dd>EXTERNAL{{% md %}}Crypto operations are performed by an external key manager.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Import<wbr>Job<wbr>Protection<wbr>Level<wbr>Protection<wbr>Level<wbr>Unspecified</dt>
+    <dd>PROTECTION_LEVEL_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Import<wbr>Job<wbr>Protection<wbr>Level<wbr>Software</dt>
+    <dd>SOFTWARE{{% md %}}Crypto operations are performed in software.{{% /md %}}</dd><dt>Import<wbr>Job<wbr>Protection<wbr>Level<wbr>Hsm</dt>
+    <dd>HSM{{% md %}}Crypto operations are performed in a Hardware Security Module.{{% /md %}}</dd><dt>Import<wbr>Job<wbr>Protection<wbr>Level<wbr>External</dt>
+    <dd>EXTERNAL{{% md %}}Crypto operations are performed by an external key manager.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Protection<wbr>Level<wbr>Unspecified</dt>
+    <dd>PROTECTION_LEVEL_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Software</dt>
+    <dd>SOFTWARE{{% md %}}Crypto operations are performed in software.{{% /md %}}</dd><dt>Hsm</dt>
+    <dd>HSM{{% md %}}Crypto operations are performed in a Hardware Security Module.{{% /md %}}</dd><dt>External</dt>
+    <dd>EXTERNAL{{% md %}}Crypto operations are performed by an external key manager.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PROTECTION_LEVEL_UNSPECIFIED</dt>
+    <dd>PROTECTION_LEVEL_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>SOFTWARE</dt>
+    <dd>SOFTWARE{{% md %}}Crypto operations are performed in software.{{% /md %}}</dd><dt>HSM</dt>
+    <dd>HSM{{% md %}}Crypto operations are performed in a Hardware Security Module.{{% /md %}}</dd><dt>EXTERNAL</dt>
+    <dd>EXTERNAL{{% md %}}Crypto operations are performed by an external key manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="keyoperationattestationresponse">Key<wbr>Operation<wbr>Attestation<wbr>Response</h4>

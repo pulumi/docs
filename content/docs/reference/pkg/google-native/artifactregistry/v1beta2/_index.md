@@ -16,6 +16,13 @@ Explore the resources and functions of the google-native.artifactregistry/v1beta
     <li><a href="tag" title="Tag"><span class="symbol resource"></span>Tag</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getrepository" title="GetRepository"><span class="symbol function"></span>GetRepository</a></li>
+    <li><a href="getrepositoryiampolicy" title="GetRepositoryIamPolicy"><span class="symbol function"></span>GetRepositoryIamPolicy</a></li>
+    <li><a href="gettag" title="GetTag"><span class="symbol function"></span>GetTag</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -23,6 +30,6 @@ Explore the resources and functions of the google-native.artifactregistry/v1beta
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

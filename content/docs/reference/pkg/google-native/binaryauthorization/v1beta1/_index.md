@@ -16,6 +16,13 @@ Explore the resources and functions of the google-native.binaryauthorization/v1b
     <li><a href="policyiampolicy" title="PolicyIamPolicy"><span class="symbol resource"></span>PolicyIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getattestor" title="GetAttestor"><span class="symbol function"></span>GetAttestor</a></li>
+    <li><a href="getattestoriampolicy" title="GetAttestorIamPolicy"><span class="symbol function"></span>GetAttestorIamPolicy</a></li>
+    <li><a href="getpolicyiampolicy" title="GetPolicyIamPolicy"><span class="symbol function"></span>GetPolicyIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -23,6 +30,6 @@ Explore the resources and functions of the google-native.binaryauthorization/v1b
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

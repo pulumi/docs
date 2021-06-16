@@ -31,7 +31,7 @@ Creates a new service configuration rollout. Based on rollout, the Google Servic
             <span class="nx">delete_service_strategy</span><span class="p">:</span> <span class="nx">Optional[_servicemanagement_v1.DeleteServiceStrategyArgs]</span> = None<span class="p">,</span>
             <span class="nx">rollout_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_servicemanagement_v1.RolloutStatus]</span> = None<span class="p">,</span>
             <span class="nx">traffic_percent_strategy</span><span class="p">:</span> <span class="nx">Optional[_servicemanagement_v1.TrafficPercentStrategyArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Rollout</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -198,7 +198,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#rolloutstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Service<wbr>Management.<wbr>V1.<wbr>Rollout<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -250,7 +250,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#rolloutstatus">Rollout<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -302,7 +302,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#rolloutstatus">Rollout<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +354,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#rolloutstatus">Rollout<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -431,6 +431,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="rolloutstatus">Rollout<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Rollout<wbr>Status<wbr>Unspecified</dt>
+    <dd>ROLLOUT_STATUS_UNSPECIFIED{{% md %}}No status specified.{{% /md %}}</dd><dt>In<wbr>Progress</dt>
+    <dd>IN_PROGRESS{{% md %}}The Rollout is in progress.{{% /md %}}</dd><dt>Success</dt>
+    <dd>SUCCESS{{% md %}}The Rollout has completed successfully.{{% /md %}}</dd><dt>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The Rollout has been cancelled. This can happen if you have overlapping Rollout pushes, and the previous ones will be cancelled.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The Rollout has failed and the rollback attempt has failed too.{{% /md %}}</dd><dt>Pending</dt>
+    <dd>PENDING{{% md %}}The Rollout has not started yet and is pending for execution.{{% /md %}}</dd><dt>Failed<wbr>Rolled<wbr>Back</dt>
+    <dd>FAILED_ROLLED_BACK{{% md %}}The Rollout has failed and rolled back to the previous successful Rollout.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Rollout<wbr>Status<wbr>Rollout<wbr>Status<wbr>Unspecified</dt>
+    <dd>ROLLOUT_STATUS_UNSPECIFIED{{% md %}}No status specified.{{% /md %}}</dd><dt>Rollout<wbr>Status<wbr>In<wbr>Progress</dt>
+    <dd>IN_PROGRESS{{% md %}}The Rollout is in progress.{{% /md %}}</dd><dt>Rollout<wbr>Status<wbr>Success</dt>
+    <dd>SUCCESS{{% md %}}The Rollout has completed successfully.{{% /md %}}</dd><dt>Rollout<wbr>Status<wbr>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The Rollout has been cancelled. This can happen if you have overlapping Rollout pushes, and the previous ones will be cancelled.{{% /md %}}</dd><dt>Rollout<wbr>Status<wbr>Failed</dt>
+    <dd>FAILED{{% md %}}The Rollout has failed and the rollback attempt has failed too.{{% /md %}}</dd><dt>Rollout<wbr>Status<wbr>Pending</dt>
+    <dd>PENDING{{% md %}}The Rollout has not started yet and is pending for execution.{{% /md %}}</dd><dt>Rollout<wbr>Status<wbr>Failed<wbr>Rolled<wbr>Back</dt>
+    <dd>FAILED_ROLLED_BACK{{% md %}}The Rollout has failed and rolled back to the previous successful Rollout.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Rollout<wbr>Status<wbr>Unspecified</dt>
+    <dd>ROLLOUT_STATUS_UNSPECIFIED{{% md %}}No status specified.{{% /md %}}</dd><dt>In<wbr>Progress</dt>
+    <dd>IN_PROGRESS{{% md %}}The Rollout is in progress.{{% /md %}}</dd><dt>Success</dt>
+    <dd>SUCCESS{{% md %}}The Rollout has completed successfully.{{% /md %}}</dd><dt>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The Rollout has been cancelled. This can happen if you have overlapping Rollout pushes, and the previous ones will be cancelled.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The Rollout has failed and the rollback attempt has failed too.{{% /md %}}</dd><dt>Pending</dt>
+    <dd>PENDING{{% md %}}The Rollout has not started yet and is pending for execution.{{% /md %}}</dd><dt>Failed<wbr>Rolled<wbr>Back</dt>
+    <dd>FAILED_ROLLED_BACK{{% md %}}The Rollout has failed and rolled back to the previous successful Rollout.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ROLLOUT_STATUS_UNSPECIFIED</dt>
+    <dd>ROLLOUT_STATUS_UNSPECIFIED{{% md %}}No status specified.{{% /md %}}</dd><dt>IN_PROGRESS</dt>
+    <dd>IN_PROGRESS{{% md %}}The Rollout is in progress.{{% /md %}}</dd><dt>SUCCESS</dt>
+    <dd>SUCCESS{{% md %}}The Rollout has completed successfully.{{% /md %}}</dd><dt>CANCELLED</dt>
+    <dd>CANCELLED{{% md %}}The Rollout has been cancelled. This can happen if you have overlapping Rollout pushes, and the previous ones will be cancelled.{{% /md %}}</dd><dt>FAILED</dt>
+    <dd>FAILED{{% md %}}The Rollout has failed and the rollback attempt has failed too.{{% /md %}}</dd><dt>PENDING</dt>
+    <dd>PENDING{{% md %}}The Rollout has not started yet and is pending for execution.{{% /md %}}</dd><dt>FAILED_ROLLED_BACK</dt>
+    <dd>FAILED_ROLLED_BACK{{% md %}}The Rollout has failed and rolled back to the previous successful Rollout.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="trafficpercentstrategy">Traffic<wbr>Percent<wbr>Strategy</h4>
 

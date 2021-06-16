@@ -41,7 +41,7 @@ Creates an Experiment in the specified Environment.
                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">result</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v3beta1.GoogleCloudDialogflowCxV3beta1ExperimentResultArgs]</span> = None<span class="p">,</span>
                <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v3beta1.ExperimentState]</span> = None<span class="p">,</span>
                <span class="nx">variants_history</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dialogflow_v3beta1.GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Experiment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -288,7 +288,7 @@ The Experiment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#experimentstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3Beta1.<wbr>Experiment<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the experiment. Transition triggered by Expriments.StartExperiment: PENDING->RUNNING. Transition triggered by Expriments.CancelExperiment: PENDING->CANCELLED or RUNNING->CANCELLED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -420,7 +420,7 @@ The Experiment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#experimentstate">Experiment<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The current state of the experiment. Transition triggered by Expriments.StartExperiment: PENDING->RUNNING. Transition triggered by Expriments.CancelExperiment: PENDING->CANCELLED or RUNNING->CANCELLED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -552,7 +552,7 @@ The Experiment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#experimentstate">Experiment<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the experiment. Transition triggered by Expriments.StartExperiment: PENDING->RUNNING. Transition triggered by Expriments.CancelExperiment: PENDING->CANCELLED or RUNNING->CANCELLED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -684,7 +684,7 @@ The Experiment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#experimentstate">Experiment<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the experiment. Transition triggered by Expriments.StartExperiment: PENDING->RUNNING. Transition triggered by Expriments.CancelExperiment: PENDING->CANCELLED or RUNNING->CANCELLED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -761,6 +761,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="experimentstate">Experiment<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}State unspecified.{{% /md %}}</dd><dt>Draft</dt>
+    <dd>DRAFT{{% md %}}The experiment is created but not started yet.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The experiment is running.{{% /md %}}</dd><dt>Done</dt>
+    <dd>DONE{{% md %}}The experiment is done.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Experiment<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}State unspecified.{{% /md %}}</dd><dt>Experiment<wbr>State<wbr>Draft</dt>
+    <dd>DRAFT{{% md %}}The experiment is created but not started yet.{{% /md %}}</dd><dt>Experiment<wbr>State<wbr>Running</dt>
+    <dd>RUNNING{{% md %}}The experiment is running.{{% /md %}}</dd><dt>Experiment<wbr>State<wbr>Done</dt>
+    <dd>DONE{{% md %}}The experiment is done.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}State unspecified.{{% /md %}}</dd><dt>Draft</dt>
+    <dd>DRAFT{{% md %}}The experiment is created but not started yet.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The experiment is running.{{% /md %}}</dd><dt>Done</dt>
+    <dd>DONE{{% md %}}The experiment is done.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}State unspecified.{{% /md %}}</dd><dt>DRAFT</dt>
+    <dd>DRAFT{{% md %}}The experiment is created but not started yet.{{% /md %}}</dd><dt>RUNNING</dt>
+    <dd>RUNNING{{% md %}}The experiment is running.{{% /md %}}</dd><dt>DONE</dt>
+    <dd>DONE{{% md %}}The experiment is done.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="googleclouddialogflowcxv3beta1experimentdefinition">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Definition</h4>
 
@@ -1325,7 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#counttype_csharp" style="color: inherit; text-decoration: inherit;">Count<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultmetriccounttype">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3Beta1.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Count<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Count-based metric type. Only one of type or count_type is specified in each Metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1341,7 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultmetrictype">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3Beta1.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Ratio-based metric type. Only one of type or count_type is specified in each Metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1369,7 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#counttype_go" style="color: inherit; text-decoration: inherit;">Count<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultmetriccounttype">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Count<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Count-based metric type. Only one of type or count_type is specified in each Metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1385,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultmetrictype">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Ratio-based metric type. Only one of type or count_type is specified in each Metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1413,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#counttype_nodejs" style="color: inherit; text-decoration: inherit;">count<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultmetriccounttype">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Count<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Count-based metric type. Only one of type or count_type is specified in each Metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1429,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultmetrictype">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Ratio-based metric type. Only one of type or count_type is specified in each Metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1457,7 +1491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_type_python" style="color: inherit; text-decoration: inherit;">count_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultmetriccounttype">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Count<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Count-based metric type. Only one of type or count_type is specified in each Metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1473,9 +1507,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultmetrictype">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Ratio-based metric type. Only one of type or count_type is specified in each Metric.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowcxv3beta1experimentresultmetriccounttype">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Count<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Count<wbr>Type<wbr>Unspecified</dt>
+    <dd>COUNT_TYPE_UNSPECIFIED{{% md %}}Count type unspecified.{{% /md %}}</dd><dt>Total<wbr>No<wbr>Match<wbr>Count</dt>
+    <dd>TOTAL_NO_MATCH_COUNT{{% md %}}Total number of occurrences of a 'NO_MATCH'.{{% /md %}}</dd><dt>Total<wbr>Turn<wbr>Count</dt>
+    <dd>TOTAL_TURN_COUNT{{% md %}}Total number of turn counts.{{% /md %}}</dd><dt>Average<wbr>Turn<wbr>Count</dt>
+    <dd>AVERAGE_TURN_COUNT{{% md %}}Average turn count in a session.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Count<wbr>Type<wbr>Count<wbr>Type<wbr>Unspecified</dt>
+    <dd>COUNT_TYPE_UNSPECIFIED{{% md %}}Count type unspecified.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Count<wbr>Type<wbr>Total<wbr>No<wbr>Match<wbr>Count</dt>
+    <dd>TOTAL_NO_MATCH_COUNT{{% md %}}Total number of occurrences of a 'NO_MATCH'.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Count<wbr>Type<wbr>Total<wbr>Turn<wbr>Count</dt>
+    <dd>TOTAL_TURN_COUNT{{% md %}}Total number of turn counts.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Count<wbr>Type<wbr>Average<wbr>Turn<wbr>Count</dt>
+    <dd>AVERAGE_TURN_COUNT{{% md %}}Average turn count in a session.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Count<wbr>Type<wbr>Unspecified</dt>
+    <dd>COUNT_TYPE_UNSPECIFIED{{% md %}}Count type unspecified.{{% /md %}}</dd><dt>Total<wbr>No<wbr>Match<wbr>Count</dt>
+    <dd>TOTAL_NO_MATCH_COUNT{{% md %}}Total number of occurrences of a 'NO_MATCH'.{{% /md %}}</dd><dt>Total<wbr>Turn<wbr>Count</dt>
+    <dd>TOTAL_TURN_COUNT{{% md %}}Total number of turn counts.{{% /md %}}</dd><dt>Average<wbr>Turn<wbr>Count</dt>
+    <dd>AVERAGE_TURN_COUNT{{% md %}}Average turn count in a session.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>COUNT_TYPE_UNSPECIFIED</dt>
+    <dd>COUNT_TYPE_UNSPECIFIED{{% md %}}Count type unspecified.{{% /md %}}</dd><dt>TOTAL_NO_MATCH_COUNT</dt>
+    <dd>TOTAL_NO_MATCH_COUNT{{% md %}}Total number of occurrences of a 'NO_MATCH'.{{% /md %}}</dd><dt>TOTAL_TURN_COUNT</dt>
+    <dd>TOTAL_TURN_COUNT{{% md %}}Total number of turn counts.{{% /md %}}</dd><dt>AVERAGE_TURN_COUNT</dt>
+    <dd>AVERAGE_TURN_COUNT{{% md %}}Average turn count in a session.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddialogflowcxv3beta1experimentresultmetricresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Response</h4>
@@ -1654,6 +1722,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Ratio-based metric type. Only one of type or count_type is specified in each Metric.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowcxv3beta1experimentresultmetrictype">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Metric<wbr>Unspecified</dt>
+    <dd>METRIC_UNSPECIFIED{{% md %}}Metric unspecified.{{% /md %}}</dd><dt>Contained<wbr>Session<wbr>No<wbr>Callback<wbr>Rate</dt>
+    <dd>CONTAINED_SESSION_NO_CALLBACK_RATE{{% md %}}Percentage of contained sessions without user calling back in 24 hours.{{% /md %}}</dd><dt>Live<wbr>Agent<wbr>Handoff<wbr>Rate</dt>
+    <dd>LIVE_AGENT_HANDOFF_RATE{{% md %}}Percentage of sessions that were handed to a human agent.{{% /md %}}</dd><dt>Callback<wbr>Session<wbr>Rate</dt>
+    <dd>CALLBACK_SESSION_RATE{{% md %}}Percentage of sessions with the same user calling back.{{% /md %}}</dd><dt>Abandoned<wbr>Session<wbr>Rate</dt>
+    <dd>ABANDONED_SESSION_RATE{{% md %}}Percentage of sessions where user hung up.{{% /md %}}</dd><dt>Session<wbr>End<wbr>Rate</dt>
+    <dd>SESSION_END_RATE{{% md %}}Percentage of sessions reached Dialogflow 'END_PAGE' or 'END_SESSION'.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Type<wbr>Metric<wbr>Unspecified</dt>
+    <dd>METRIC_UNSPECIFIED{{% md %}}Metric unspecified.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Type<wbr>Contained<wbr>Session<wbr>No<wbr>Callback<wbr>Rate</dt>
+    <dd>CONTAINED_SESSION_NO_CALLBACK_RATE{{% md %}}Percentage of contained sessions without user calling back in 24 hours.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Type<wbr>Live<wbr>Agent<wbr>Handoff<wbr>Rate</dt>
+    <dd>LIVE_AGENT_HANDOFF_RATE{{% md %}}Percentage of sessions that were handed to a human agent.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Type<wbr>Callback<wbr>Session<wbr>Rate</dt>
+    <dd>CALLBACK_SESSION_RATE{{% md %}}Percentage of sessions with the same user calling back.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Type<wbr>Abandoned<wbr>Session<wbr>Rate</dt>
+    <dd>ABANDONED_SESSION_RATE{{% md %}}Percentage of sessions where user hung up.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Type<wbr>Session<wbr>End<wbr>Rate</dt>
+    <dd>SESSION_END_RATE{{% md %}}Percentage of sessions reached Dialogflow 'END_PAGE' or 'END_SESSION'.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Metric<wbr>Unspecified</dt>
+    <dd>METRIC_UNSPECIFIED{{% md %}}Metric unspecified.{{% /md %}}</dd><dt>Contained<wbr>Session<wbr>No<wbr>Callback<wbr>Rate</dt>
+    <dd>CONTAINED_SESSION_NO_CALLBACK_RATE{{% md %}}Percentage of contained sessions without user calling back in 24 hours.{{% /md %}}</dd><dt>Live<wbr>Agent<wbr>Handoff<wbr>Rate</dt>
+    <dd>LIVE_AGENT_HANDOFF_RATE{{% md %}}Percentage of sessions that were handed to a human agent.{{% /md %}}</dd><dt>Callback<wbr>Session<wbr>Rate</dt>
+    <dd>CALLBACK_SESSION_RATE{{% md %}}Percentage of sessions with the same user calling back.{{% /md %}}</dd><dt>Abandoned<wbr>Session<wbr>Rate</dt>
+    <dd>ABANDONED_SESSION_RATE{{% md %}}Percentage of sessions where user hung up.{{% /md %}}</dd><dt>Session<wbr>End<wbr>Rate</dt>
+    <dd>SESSION_END_RATE{{% md %}}Percentage of sessions reached Dialogflow 'END_PAGE' or 'END_SESSION'.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>METRIC_UNSPECIFIED</dt>
+    <dd>METRIC_UNSPECIFIED{{% md %}}Metric unspecified.{{% /md %}}</dd><dt>CONTAINED_SESSION_NO_CALLBACK_RATE</dt>
+    <dd>CONTAINED_SESSION_NO_CALLBACK_RATE{{% md %}}Percentage of contained sessions without user calling back in 24 hours.{{% /md %}}</dd><dt>LIVE_AGENT_HANDOFF_RATE</dt>
+    <dd>LIVE_AGENT_HANDOFF_RATE{{% md %}}Percentage of sessions that were handed to a human agent.{{% /md %}}</dd><dt>CALLBACK_SESSION_RATE</dt>
+    <dd>CALLBACK_SESSION_RATE{{% md %}}Percentage of sessions with the same user calling back.{{% /md %}}</dd><dt>ABANDONED_SESSION_RATE</dt>
+    <dd>ABANDONED_SESSION_RATE{{% md %}}Percentage of sessions where user hung up.{{% /md %}}</dd><dt>SESSION_END_RATE</dt>
+    <dd>SESSION_END_RATE{{% md %}}Percentage of sessions reached Dialogflow 'END_PAGE' or 'END_SESSION'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddialogflowcxv3beta1experimentresultresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Response</h4>

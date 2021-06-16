@@ -16,6 +16,13 @@ Explore the resources and functions of the google-native.cloudidentity/v1beta1 m
     <li><a href="membership" title="Membership"><span class="symbol resource"></span>Membership</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getdevice" title="GetDevice"><span class="symbol function"></span>GetDevice</a></li>
+    <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
+    <li><a href="getmembership" title="GetMembership"><span class="symbol function"></span>GetMembership</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -23,6 +30,6 @@ Explore the resources and functions of the google-native.cloudidentity/v1beta1 m
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

@@ -910,170 +910,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="routedataitem">Route<wbr>Data<wbr>Item</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="routedataitemresponse">Route<wbr>Data<wbr>Item<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="routewarningsitem">Route<wbr>Warnings<wbr>Item</h4>
 
 {{% choosable language csharp %}}
@@ -1083,7 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routewarningsitemcode">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Route<wbr>Warnings<wbr>Item<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1091,7 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routedataitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Inputs.<wbr>Route<wbr>Data<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routewarningsitemdataitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Inputs.<wbr>Route<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
 "data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
@@ -1112,7 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routewarningsitemcode">Route<wbr>Warnings<wbr>Item<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1120,7 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routedataitem">[]Route<wbr>Data<wbr>Item</a></span>
+        <span class="property-type"><a href="#routewarningsitemdataitem">[]Route<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
 "data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
@@ -1141,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routewarningsitemcode">Route<wbr>Warnings<wbr>Item<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1149,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routedataitem">Route<wbr>Data<wbr>Item<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#routewarningsitemdataitem">Route<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
 "data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
@@ -1170,7 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#routewarningsitemcode">Route<wbr>Warnings<wbr>Item<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1178,7 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routedataitem">Route<wbr>Data<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routewarningsitemdataitem">Route<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
 "data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
@@ -1190,6 +1026,288 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="routewarningsitemcode">Route<wbr>Warnings<wbr>Item<wbr>Code</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Cleanup<wbr>Failed</dt>
+    <dd>CLEANUP_FAILED</dd><dt>Deprecated<wbr>Resource<wbr>Used</dt>
+    <dd>DEPRECATED_RESOURCE_USED</dd><dt>Deprecated<wbr>Type<wbr>Used</dt>
+    <dd>DEPRECATED_TYPE_USED</dd><dt>Disk<wbr>Size<wbr>Larger<wbr>Than<wbr>Image<wbr>Size</dt>
+    <dd>DISK_SIZE_LARGER_THAN_IMAGE_SIZE</dd><dt>Experimental<wbr>Type<wbr>Used</dt>
+    <dd>EXPERIMENTAL_TYPE_USED</dd><dt>External<wbr>Api<wbr>Warning</dt>
+    <dd>EXTERNAL_API_WARNING</dd><dt>Field<wbr>Value<wbr>Overriden</dt>
+    <dd>FIELD_VALUE_OVERRIDEN</dd><dt>Injected<wbr>Kernels<wbr>Deprecated</dt>
+    <dd>INJECTED_KERNELS_DEPRECATED</dd><dt>Large<wbr>Deployment<wbr>Warning</dt>
+    <dd>LARGE_DEPLOYMENT_WARNING</dd><dt>Missing<wbr>Type<wbr>Dependency</dt>
+    <dd>MISSING_TYPE_DEPENDENCY</dd><dt>Next<wbr>Hop<wbr>Address<wbr>Not<wbr>Assigned</dt>
+    <dd>NEXT_HOP_ADDRESS_NOT_ASSIGNED</dd><dt>Next<wbr>Hop<wbr>Cannot<wbr>Ip<wbr>Forward</dt>
+    <dd>NEXT_HOP_CANNOT_IP_FORWARD</dd><dt>Next<wbr>Hop<wbr>Instance<wbr>Not<wbr>Found</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_FOUND</dd><dt>Next<wbr>Hop<wbr>Instance<wbr>Not<wbr>On<wbr>Network</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_ON_NETWORK</dd><dt>Next<wbr>Hop<wbr>Not<wbr>Running</dt>
+    <dd>NEXT_HOP_NOT_RUNNING</dd><dt>Not<wbr>Critical<wbr>Error</dt>
+    <dd>NOT_CRITICAL_ERROR</dd><dt>No<wbr>Results<wbr>On<wbr>Page</dt>
+    <dd>NO_RESULTS_ON_PAGE</dd><dt>Partial<wbr>Success</dt>
+    <dd>PARTIAL_SUCCESS</dd><dt>Required<wbr>Tos<wbr>Agreement</dt>
+    <dd>REQUIRED_TOS_AGREEMENT</dd><dt>Resource<wbr>In<wbr>Use<wbr>By<wbr>Other<wbr>Resource<wbr>Warning</dt>
+    <dd>RESOURCE_IN_USE_BY_OTHER_RESOURCE_WARNING</dd><dt>Resource<wbr>Not<wbr>Deleted</dt>
+    <dd>RESOURCE_NOT_DELETED</dd><dt>Schema<wbr>Validation<wbr>Ignored</dt>
+    <dd>SCHEMA_VALIDATION_IGNORED</dd><dt>Single<wbr>Instance<wbr>Property<wbr>Template</dt>
+    <dd>SINGLE_INSTANCE_PROPERTY_TEMPLATE</dd><dt>Undeclared<wbr>Properties</dt>
+    <dd>UNDECLARED_PROPERTIES</dd><dt>Unreachable</dt>
+    <dd>UNREACHABLE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Cleanup<wbr>Failed</dt>
+    <dd>CLEANUP_FAILED</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Deprecated<wbr>Resource<wbr>Used</dt>
+    <dd>DEPRECATED_RESOURCE_USED</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Deprecated<wbr>Type<wbr>Used</dt>
+    <dd>DEPRECATED_TYPE_USED</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Disk<wbr>Size<wbr>Larger<wbr>Than<wbr>Image<wbr>Size</dt>
+    <dd>DISK_SIZE_LARGER_THAN_IMAGE_SIZE</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Experimental<wbr>Type<wbr>Used</dt>
+    <dd>EXPERIMENTAL_TYPE_USED</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>External<wbr>Api<wbr>Warning</dt>
+    <dd>EXTERNAL_API_WARNING</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Field<wbr>Value<wbr>Overriden</dt>
+    <dd>FIELD_VALUE_OVERRIDEN</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Injected<wbr>Kernels<wbr>Deprecated</dt>
+    <dd>INJECTED_KERNELS_DEPRECATED</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Large<wbr>Deployment<wbr>Warning</dt>
+    <dd>LARGE_DEPLOYMENT_WARNING</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Missing<wbr>Type<wbr>Dependency</dt>
+    <dd>MISSING_TYPE_DEPENDENCY</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Next<wbr>Hop<wbr>Address<wbr>Not<wbr>Assigned</dt>
+    <dd>NEXT_HOP_ADDRESS_NOT_ASSIGNED</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Next<wbr>Hop<wbr>Cannot<wbr>Ip<wbr>Forward</dt>
+    <dd>NEXT_HOP_CANNOT_IP_FORWARD</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Next<wbr>Hop<wbr>Instance<wbr>Not<wbr>Found</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_FOUND</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Next<wbr>Hop<wbr>Instance<wbr>Not<wbr>On<wbr>Network</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_ON_NETWORK</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Next<wbr>Hop<wbr>Not<wbr>Running</dt>
+    <dd>NEXT_HOP_NOT_RUNNING</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Not<wbr>Critical<wbr>Error</dt>
+    <dd>NOT_CRITICAL_ERROR</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>No<wbr>Results<wbr>On<wbr>Page</dt>
+    <dd>NO_RESULTS_ON_PAGE</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Partial<wbr>Success</dt>
+    <dd>PARTIAL_SUCCESS</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Required<wbr>Tos<wbr>Agreement</dt>
+    <dd>REQUIRED_TOS_AGREEMENT</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Resource<wbr>In<wbr>Use<wbr>By<wbr>Other<wbr>Resource<wbr>Warning</dt>
+    <dd>RESOURCE_IN_USE_BY_OTHER_RESOURCE_WARNING</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Resource<wbr>Not<wbr>Deleted</dt>
+    <dd>RESOURCE_NOT_DELETED</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Schema<wbr>Validation<wbr>Ignored</dt>
+    <dd>SCHEMA_VALIDATION_IGNORED</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Single<wbr>Instance<wbr>Property<wbr>Template</dt>
+    <dd>SINGLE_INSTANCE_PROPERTY_TEMPLATE</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Undeclared<wbr>Properties</dt>
+    <dd>UNDECLARED_PROPERTIES</dd><dt>Route<wbr>Warnings<wbr>Item<wbr>Code<wbr>Unreachable</dt>
+    <dd>UNREACHABLE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Cleanup<wbr>Failed</dt>
+    <dd>CLEANUP_FAILED</dd><dt>Deprecated<wbr>Resource<wbr>Used</dt>
+    <dd>DEPRECATED_RESOURCE_USED</dd><dt>Deprecated<wbr>Type<wbr>Used</dt>
+    <dd>DEPRECATED_TYPE_USED</dd><dt>Disk<wbr>Size<wbr>Larger<wbr>Than<wbr>Image<wbr>Size</dt>
+    <dd>DISK_SIZE_LARGER_THAN_IMAGE_SIZE</dd><dt>Experimental<wbr>Type<wbr>Used</dt>
+    <dd>EXPERIMENTAL_TYPE_USED</dd><dt>External<wbr>Api<wbr>Warning</dt>
+    <dd>EXTERNAL_API_WARNING</dd><dt>Field<wbr>Value<wbr>Overriden</dt>
+    <dd>FIELD_VALUE_OVERRIDEN</dd><dt>Injected<wbr>Kernels<wbr>Deprecated</dt>
+    <dd>INJECTED_KERNELS_DEPRECATED</dd><dt>Large<wbr>Deployment<wbr>Warning</dt>
+    <dd>LARGE_DEPLOYMENT_WARNING</dd><dt>Missing<wbr>Type<wbr>Dependency</dt>
+    <dd>MISSING_TYPE_DEPENDENCY</dd><dt>Next<wbr>Hop<wbr>Address<wbr>Not<wbr>Assigned</dt>
+    <dd>NEXT_HOP_ADDRESS_NOT_ASSIGNED</dd><dt>Next<wbr>Hop<wbr>Cannot<wbr>Ip<wbr>Forward</dt>
+    <dd>NEXT_HOP_CANNOT_IP_FORWARD</dd><dt>Next<wbr>Hop<wbr>Instance<wbr>Not<wbr>Found</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_FOUND</dd><dt>Next<wbr>Hop<wbr>Instance<wbr>Not<wbr>On<wbr>Network</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_ON_NETWORK</dd><dt>Next<wbr>Hop<wbr>Not<wbr>Running</dt>
+    <dd>NEXT_HOP_NOT_RUNNING</dd><dt>Not<wbr>Critical<wbr>Error</dt>
+    <dd>NOT_CRITICAL_ERROR</dd><dt>No<wbr>Results<wbr>On<wbr>Page</dt>
+    <dd>NO_RESULTS_ON_PAGE</dd><dt>Partial<wbr>Success</dt>
+    <dd>PARTIAL_SUCCESS</dd><dt>Required<wbr>Tos<wbr>Agreement</dt>
+    <dd>REQUIRED_TOS_AGREEMENT</dd><dt>Resource<wbr>In<wbr>Use<wbr>By<wbr>Other<wbr>Resource<wbr>Warning</dt>
+    <dd>RESOURCE_IN_USE_BY_OTHER_RESOURCE_WARNING</dd><dt>Resource<wbr>Not<wbr>Deleted</dt>
+    <dd>RESOURCE_NOT_DELETED</dd><dt>Schema<wbr>Validation<wbr>Ignored</dt>
+    <dd>SCHEMA_VALIDATION_IGNORED</dd><dt>Single<wbr>Instance<wbr>Property<wbr>Template</dt>
+    <dd>SINGLE_INSTANCE_PROPERTY_TEMPLATE</dd><dt>Undeclared<wbr>Properties</dt>
+    <dd>UNDECLARED_PROPERTIES</dd><dt>Unreachable</dt>
+    <dd>UNREACHABLE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CLEANUP_FAILED</dt>
+    <dd>CLEANUP_FAILED</dd><dt>DEPRECATED_RESOURCE_USED</dt>
+    <dd>DEPRECATED_RESOURCE_USED</dd><dt>DEPRECATED_TYPE_USED</dt>
+    <dd>DEPRECATED_TYPE_USED</dd><dt>DISK_SIZE_LARGER_THAN_IMAGE_SIZE</dt>
+    <dd>DISK_SIZE_LARGER_THAN_IMAGE_SIZE</dd><dt>EXPERIMENTAL_TYPE_USED</dt>
+    <dd>EXPERIMENTAL_TYPE_USED</dd><dt>EXTERNAL_API_WARNING</dt>
+    <dd>EXTERNAL_API_WARNING</dd><dt>FIELD_VALUE_OVERRIDEN</dt>
+    <dd>FIELD_VALUE_OVERRIDEN</dd><dt>INJECTED_KERNELS_DEPRECATED</dt>
+    <dd>INJECTED_KERNELS_DEPRECATED</dd><dt>LARGE_DEPLOYMENT_WARNING</dt>
+    <dd>LARGE_DEPLOYMENT_WARNING</dd><dt>MISSING_TYPE_DEPENDENCY</dt>
+    <dd>MISSING_TYPE_DEPENDENCY</dd><dt>NEXT_HOP_ADDRESS_NOT_ASSIGNED</dt>
+    <dd>NEXT_HOP_ADDRESS_NOT_ASSIGNED</dd><dt>NEXT_HOP_CANNOT_IP_FORWARD</dt>
+    <dd>NEXT_HOP_CANNOT_IP_FORWARD</dd><dt>NEXT_HOP_INSTANCE_NOT_FOUND</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_FOUND</dd><dt>NEXT_HOP_INSTANCE_NOT_ON_NETWORK</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_ON_NETWORK</dd><dt>NEXT_HOP_NOT_RUNNING</dt>
+    <dd>NEXT_HOP_NOT_RUNNING</dd><dt>NOT_CRITICAL_ERROR</dt>
+    <dd>NOT_CRITICAL_ERROR</dd><dt>NO_RESULTS_ON_PAGE</dt>
+    <dd>NO_RESULTS_ON_PAGE</dd><dt>PARTIAL_SUCCESS</dt>
+    <dd>PARTIAL_SUCCESS</dd><dt>REQUIRED_TOS_AGREEMENT</dt>
+    <dd>REQUIRED_TOS_AGREEMENT</dd><dt>RESOURCE_IN_USE_BY_OTHER_RESOURCE_WARNING</dt>
+    <dd>RESOURCE_IN_USE_BY_OTHER_RESOURCE_WARNING</dd><dt>RESOURCE_NOT_DELETED</dt>
+    <dd>RESOURCE_NOT_DELETED</dd><dt>SCHEMA_VALIDATION_IGNORED</dt>
+    <dd>SCHEMA_VALIDATION_IGNORED</dd><dt>SINGLE_INSTANCE_PROPERTY_TEMPLATE</dt>
+    <dd>SINGLE_INSTANCE_PROPERTY_TEMPLATE</dd><dt>UNDECLARED_PROPERTIES</dt>
+    <dd>UNDECLARED_PROPERTIES</dd><dt>UNREACHABLE</dt>
+    <dd>UNREACHABLE</dd></dl>
+{{% /choosable %}}
+
+<h4 id="routewarningsitemdataitem">Route<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="routewarningsitemdataitemresponse">Route<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routewarningsitemresponse">Route<wbr>Warnings<wbr>Item<wbr>Response</h4>
@@ -1209,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routedataitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Inputs.<wbr>Route<wbr>Data<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routewarningsitemdataitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Inputs.<wbr>Route<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
 "data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"
@@ -1238,7 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routedataitemresponse">[]Route<wbr>Data<wbr>Item<wbr>Response</a></span>
+        <span class="property-type"><a href="#routewarningsitemdataitemresponse">[]Route<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
 "data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"
@@ -1267,7 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routedataitemresponse">Route<wbr>Data<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#routewarningsitemdataitemresponse">Route<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
 "data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"
@@ -1296,7 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routedataitemresponse">Route<wbr>Data<wbr>Item<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routewarningsitemdataitemresponse">Route<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
 "data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"

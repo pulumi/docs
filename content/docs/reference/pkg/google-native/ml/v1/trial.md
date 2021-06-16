@@ -32,7 +32,7 @@ Adds a user provided trial to a study.
           <span class="nx">measurements</span><span class="p">:</span> <span class="nx">Optional[Sequence[_ml_v1.GoogleCloudMlV1__MeasurementArgs]]</span> = None<span class="p">,</span>
           <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[_ml_v1.GoogleCloudMlV1_Trial_ParameterArgs]]</span> = None<span class="p">,</span>
           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-          <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.TrialState]</span> = None<span class="p">,</span>
           <span class="nx">study_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Trial</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -215,7 +215,7 @@ The Trial resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#trialstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Ml.<wbr>V1.<wbr>Trial<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The detailed state of a trial.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -275,7 +275,7 @@ The Trial resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#trialstate">Trial<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The detailed state of a trial.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -335,7 +335,7 @@ The Trial resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#trialstate">Trial<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The detailed state of a trial.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -395,7 +395,7 @@ The Trial resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#trialstate">Trial<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The detailed state of a trial.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1339,6 +1339,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of steps a machine learning model has been trained for. Must be non-negative.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="trialstate">Trial<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The trial state is unspecified.{{% /md %}}</dd><dt>Requested</dt>
+    <dd>REQUESTED{{% md %}}Indicates that a specific trial has been requested, but it has not yet been suggested by the service.{{% /md %}}</dd><dt>Active</dt>
+    <dd>ACTIVE{{% md %}}Indicates that the trial has been suggested.{{% /md %}}</dd><dt>Completed</dt>
+    <dd>COMPLETED{{% md %}}Indicates that the trial is done, and either has a final_measurement set, or is marked as trial_infeasible.{{% /md %}}</dd><dt>Stopping</dt>
+    <dd>STOPPING{{% md %}}Indicates that the trial should stop according to the service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Trial<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The trial state is unspecified.{{% /md %}}</dd><dt>Trial<wbr>State<wbr>Requested</dt>
+    <dd>REQUESTED{{% md %}}Indicates that a specific trial has been requested, but it has not yet been suggested by the service.{{% /md %}}</dd><dt>Trial<wbr>State<wbr>Active</dt>
+    <dd>ACTIVE{{% md %}}Indicates that the trial has been suggested.{{% /md %}}</dd><dt>Trial<wbr>State<wbr>Completed</dt>
+    <dd>COMPLETED{{% md %}}Indicates that the trial is done, and either has a final_measurement set, or is marked as trial_infeasible.{{% /md %}}</dd><dt>Trial<wbr>State<wbr>Stopping</dt>
+    <dd>STOPPING{{% md %}}Indicates that the trial should stop according to the service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The trial state is unspecified.{{% /md %}}</dd><dt>Requested</dt>
+    <dd>REQUESTED{{% md %}}Indicates that a specific trial has been requested, but it has not yet been suggested by the service.{{% /md %}}</dd><dt>Active</dt>
+    <dd>ACTIVE{{% md %}}Indicates that the trial has been suggested.{{% /md %}}</dd><dt>Completed</dt>
+    <dd>COMPLETED{{% md %}}Indicates that the trial is done, and either has a final_measurement set, or is marked as trial_infeasible.{{% /md %}}</dd><dt>Stopping</dt>
+    <dd>STOPPING{{% md %}}Indicates that the trial should stop according to the service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The trial state is unspecified.{{% /md %}}</dd><dt>REQUESTED</dt>
+    <dd>REQUESTED{{% md %}}Indicates that a specific trial has been requested, but it has not yet been suggested by the service.{{% /md %}}</dd><dt>ACTIVE</dt>
+    <dd>ACTIVE{{% md %}}Indicates that the trial has been suggested.{{% /md %}}</dd><dt>COMPLETED</dt>
+    <dd>COMPLETED{{% md %}}Indicates that the trial is done, and either has a final_measurement set, or is marked as trial_infeasible.{{% /md %}}</dd><dt>STOPPING</dt>
+    <dd>STOPPING{{% md %}}Indicates that the trial should stop according to the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -35,7 +35,7 @@ Creates an instance. When creating from a backup, the capacity of the new instan
              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[_file_v1.NetworkConfigArgs]]</span> = None<span class="p">,</span>
              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+             <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[_file_v1.InstanceTier]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span>
@@ -233,7 +233,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancetier">Pulumi.<wbr>Google<wbr>Native.<wbr>File.<wbr>V1.<wbr>Instance<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -309,7 +309,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancetier">Instance<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -385,7 +385,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancetier">Instance<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -461,7 +461,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancetier">Instance<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -983,6 +983,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The resource name of the backup, in the format projects/{project_number}/locations/{location_id}/backups/{backup_id}, that this file share has been restored from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="instancetier">Instance<wbr>Tier</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Tier<wbr>Unspecified</dt>
+    <dd>TIER_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Standard</dt>
+    <dd>STANDARD{{% md %}}STANDARD tier.{{% /md %}}</dd><dt>Premium</dt>
+    <dd>PREMIUM{{% md %}}PREMIUM tier.{{% /md %}}</dd><dt>Basic<wbr>Hdd</dt>
+    <dd>BASIC_HDD{{% md %}}BASIC instances offer a maximum capacity of 63.9 TB. BASIC_HDD is an alias for STANDARD Tier, offering economical performance backed by HDD.{{% /md %}}</dd><dt>Basic<wbr>Ssd</dt>
+    <dd>BASIC_SSD{{% md %}}BASIC instances offer a maximum capacity of 63.9 TB. BASIC_SSD is an alias for PREMIUM Tier, and offers improved performance backed by SSD.{{% /md %}}</dd><dt>High<wbr>Scale<wbr>Ssd</dt>
+    <dd>HIGH_SCALE_SSD{{% md %}}HIGH_SCALE instances offer expanded capacity and performance scaling capabilities.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Tier<wbr>Tier<wbr>Unspecified</dt>
+    <dd>TIER_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Instance<wbr>Tier<wbr>Standard</dt>
+    <dd>STANDARD{{% md %}}STANDARD tier.{{% /md %}}</dd><dt>Instance<wbr>Tier<wbr>Premium</dt>
+    <dd>PREMIUM{{% md %}}PREMIUM tier.{{% /md %}}</dd><dt>Instance<wbr>Tier<wbr>Basic<wbr>Hdd</dt>
+    <dd>BASIC_HDD{{% md %}}BASIC instances offer a maximum capacity of 63.9 TB. BASIC_HDD is an alias for STANDARD Tier, offering economical performance backed by HDD.{{% /md %}}</dd><dt>Instance<wbr>Tier<wbr>Basic<wbr>Ssd</dt>
+    <dd>BASIC_SSD{{% md %}}BASIC instances offer a maximum capacity of 63.9 TB. BASIC_SSD is an alias for PREMIUM Tier, and offers improved performance backed by SSD.{{% /md %}}</dd><dt>Instance<wbr>Tier<wbr>High<wbr>Scale<wbr>Ssd</dt>
+    <dd>HIGH_SCALE_SSD{{% md %}}HIGH_SCALE instances offer expanded capacity and performance scaling capabilities.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Tier<wbr>Unspecified</dt>
+    <dd>TIER_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Standard</dt>
+    <dd>STANDARD{{% md %}}STANDARD tier.{{% /md %}}</dd><dt>Premium</dt>
+    <dd>PREMIUM{{% md %}}PREMIUM tier.{{% /md %}}</dd><dt>Basic<wbr>Hdd</dt>
+    <dd>BASIC_HDD{{% md %}}BASIC instances offer a maximum capacity of 63.9 TB. BASIC_HDD is an alias for STANDARD Tier, offering economical performance backed by HDD.{{% /md %}}</dd><dt>Basic<wbr>Ssd</dt>
+    <dd>BASIC_SSD{{% md %}}BASIC instances offer a maximum capacity of 63.9 TB. BASIC_SSD is an alias for PREMIUM Tier, and offers improved performance backed by SSD.{{% /md %}}</dd><dt>High<wbr>Scale<wbr>Ssd</dt>
+    <dd>HIGH_SCALE_SSD{{% md %}}HIGH_SCALE instances offer expanded capacity and performance scaling capabilities.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TIER_UNSPECIFIED</dt>
+    <dd>TIER_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>STANDARD</dt>
+    <dd>STANDARD{{% md %}}STANDARD tier.{{% /md %}}</dd><dt>PREMIUM</dt>
+    <dd>PREMIUM{{% md %}}PREMIUM tier.{{% /md %}}</dd><dt>BASIC_HDD</dt>
+    <dd>BASIC_HDD{{% md %}}BASIC instances offer a maximum capacity of 63.9 TB. BASIC_HDD is an alias for STANDARD Tier, offering economical performance backed by HDD.{{% /md %}}</dd><dt>BASIC_SSD</dt>
+    <dd>BASIC_SSD{{% md %}}BASIC instances offer a maximum capacity of 63.9 TB. BASIC_SSD is an alias for PREMIUM Tier, and offers improved performance backed by SSD.{{% /md %}}</dd><dt>HIGH_SCALE_SSD</dt>
+    <dd>HIGH_SCALE_SSD{{% md %}}HIGH_SCALE instances offer expanded capacity and performance scaling capabilities.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="networkconfig">Network<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -992,7 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modes_csharp" style="color: inherit; text-decoration: inherit;">Modes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#networkconfigmodesitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>File.<wbr>V1.<wbr>Network<wbr>Config<wbr>Modes<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}Internet protocol versions for which the instance has IP addresses assigned. For this version, only MODE_IPV4 is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1020,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modes_go" style="color: inherit; text-decoration: inherit;">Modes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#networkconfigmodesitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}Internet protocol versions for which the instance has IP addresses assigned. For this version, only MODE_IPV4 is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1048,7 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modes_nodejs" style="color: inherit; text-decoration: inherit;">modes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#networkconfigmodesitem">Network<wbr>Config<wbr>Modes<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}Internet protocol versions for which the instance has IP addresses assigned. For this version, only MODE_IPV4 is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1076,7 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modes_python" style="color: inherit; text-decoration: inherit;">modes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#networkconfigmodesitem">Network<wbr>Config<wbr>Modes<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}Internet protocol versions for which the instance has IP addresses assigned. For this version, only MODE_IPV4 is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1095,6 +1137,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A /29 CIDR block in one of the [internal IP address ranges](https://www.arin.net/knowledge/address_filters.html) that identifies the range of IP addresses reserved for this instance. For example, 10.0.0.0/29 or 192.168.0.0/29. The range you specify can't overlap with either existing subnets or assigned IP address ranges for other Cloud Filestore instances in the selected VPC network.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="networkconfigmodesitem">Network<wbr>Config<wbr>Modes<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Address<wbr>Mode<wbr>Unspecified</dt>
+    <dd>ADDRESS_MODE_UNSPECIFIED{{% md %}}Internet protocol not set.{{% /md %}}</dd><dt>Mode<wbr>Ipv4</dt>
+    <dd>MODE_IPV4{{% md %}}Use the IPv4 internet protocol.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Network<wbr>Config<wbr>Modes<wbr>Item<wbr>Address<wbr>Mode<wbr>Unspecified</dt>
+    <dd>ADDRESS_MODE_UNSPECIFIED{{% md %}}Internet protocol not set.{{% /md %}}</dd><dt>Network<wbr>Config<wbr>Modes<wbr>Item<wbr>Mode<wbr>Ipv4</dt>
+    <dd>MODE_IPV4{{% md %}}Use the IPv4 internet protocol.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Address<wbr>Mode<wbr>Unspecified</dt>
+    <dd>ADDRESS_MODE_UNSPECIFIED{{% md %}}Internet protocol not set.{{% /md %}}</dd><dt>Mode<wbr>Ipv4</dt>
+    <dd>MODE_IPV4{{% md %}}Use the IPv4 internet protocol.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ADDRESS_MODE_UNSPECIFIED</dt>
+    <dd>ADDRESS_MODE_UNSPECIFIED{{% md %}}Internet protocol not set.{{% /md %}}</dd><dt>MODE_IPV4</dt>
+    <dd>MODE_IPV4{{% md %}}Use the IPv4 internet protocol.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkconfigresponse">Network<wbr>Config<wbr>Response</h4>
@@ -1252,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessmode_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nfsexportoptionsaccessmode">Pulumi.<wbr>Google<wbr>Native.<wbr>File.<wbr>V1.<wbr>Nfs<wbr>Export<wbr>Options<wbr>Access<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Either READ_ONLY, for allowing only read requests on the exported directory, or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1284,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#squashmode_csharp" style="color: inherit; text-decoration: inherit;">Squash<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nfsexportoptionssquashmode">Pulumi.<wbr>Google<wbr>Native.<wbr>File.<wbr>V1.<wbr>Nfs<wbr>Export<wbr>Options<wbr>Squash<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH, for not allowing root access. The default is NO_ROOT_SQUASH.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1296,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessmode_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nfsexportoptionsaccessmode">Nfs<wbr>Export<wbr>Options<wbr>Access<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Either READ_ONLY, for allowing only read requests on the exported directory, or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1328,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#squashmode_go" style="color: inherit; text-decoration: inherit;">Squash<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nfsexportoptionssquashmode">Nfs<wbr>Export<wbr>Options<wbr>Squash<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH, for not allowing root access. The default is NO_ROOT_SQUASH.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1340,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessmode_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nfsexportoptionsaccessmode">Nfs<wbr>Export<wbr>Options<wbr>Access<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Either READ_ONLY, for allowing only read requests on the exported directory, or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1372,7 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#squashmode_nodejs" style="color: inherit; text-decoration: inherit;">squash<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nfsexportoptionssquashmode">Nfs<wbr>Export<wbr>Options<wbr>Squash<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH, for not allowing root access. The default is NO_ROOT_SQUASH.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1384,7 +1452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_mode_python" style="color: inherit; text-decoration: inherit;">access_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#nfsexportoptionsaccessmode">Nfs<wbr>Export<wbr>Options<wbr>Access<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Either READ_ONLY, for allowing only read requests on the exported directory, or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1416,9 +1484,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#squash_mode_python" style="color: inherit; text-decoration: inherit;">squash_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#nfsexportoptionssquashmode">Nfs<wbr>Export<wbr>Options<wbr>Squash<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH, for not allowing root access. The default is NO_ROOT_SQUASH.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="nfsexportoptionsaccessmode">Nfs<wbr>Export<wbr>Options<wbr>Access<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Access<wbr>Mode<wbr>Unspecified</dt>
+    <dd>ACCESS_MODE_UNSPECIFIED{{% md %}}AccessMode not set.{{% /md %}}</dd><dt>Read<wbr>Only</dt>
+    <dd>READ_ONLY{{% md %}}The client can only read the file share.{{% /md %}}</dd><dt>Read<wbr>Write</dt>
+    <dd>READ_WRITE{{% md %}}The client can read and write the file share (default).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Nfs<wbr>Export<wbr>Options<wbr>Access<wbr>Mode<wbr>Access<wbr>Mode<wbr>Unspecified</dt>
+    <dd>ACCESS_MODE_UNSPECIFIED{{% md %}}AccessMode not set.{{% /md %}}</dd><dt>Nfs<wbr>Export<wbr>Options<wbr>Access<wbr>Mode<wbr>Read<wbr>Only</dt>
+    <dd>READ_ONLY{{% md %}}The client can only read the file share.{{% /md %}}</dd><dt>Nfs<wbr>Export<wbr>Options<wbr>Access<wbr>Mode<wbr>Read<wbr>Write</dt>
+    <dd>READ_WRITE{{% md %}}The client can read and write the file share (default).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Access<wbr>Mode<wbr>Unspecified</dt>
+    <dd>ACCESS_MODE_UNSPECIFIED{{% md %}}AccessMode not set.{{% /md %}}</dd><dt>Read<wbr>Only</dt>
+    <dd>READ_ONLY{{% md %}}The client can only read the file share.{{% /md %}}</dd><dt>Read<wbr>Write</dt>
+    <dd>READ_WRITE{{% md %}}The client can read and write the file share (default).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACCESS_MODE_UNSPECIFIED</dt>
+    <dd>ACCESS_MODE_UNSPECIFIED{{% md %}}AccessMode not set.{{% /md %}}</dd><dt>READ_ONLY</dt>
+    <dd>READ_ONLY{{% md %}}The client can only read the file share.{{% /md %}}</dd><dt>READ_WRITE</dt>
+    <dd>READ_WRITE{{% md %}}The client can read and write the file share (default).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nfsexportoptionsresponse">Nfs<wbr>Export<wbr>Options<wbr>Response</h4>
@@ -1597,6 +1695,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH, for not allowing root access. The default is NO_ROOT_SQUASH.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="nfsexportoptionssquashmode">Nfs<wbr>Export<wbr>Options<wbr>Squash<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Squash<wbr>Mode<wbr>Unspecified</dt>
+    <dd>SQUASH_MODE_UNSPECIFIED{{% md %}}SquashMode not set.{{% /md %}}</dd><dt>No<wbr>Root<wbr>Squash</dt>
+    <dd>NO_ROOT_SQUASH{{% md %}}The Root user has root access to the file share (default).{{% /md %}}</dd><dt>Root<wbr>Squash</dt>
+    <dd>ROOT_SQUASH{{% md %}}The Root user has squashed access to the anonymous uid/gid.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Nfs<wbr>Export<wbr>Options<wbr>Squash<wbr>Mode<wbr>Squash<wbr>Mode<wbr>Unspecified</dt>
+    <dd>SQUASH_MODE_UNSPECIFIED{{% md %}}SquashMode not set.{{% /md %}}</dd><dt>Nfs<wbr>Export<wbr>Options<wbr>Squash<wbr>Mode<wbr>No<wbr>Root<wbr>Squash</dt>
+    <dd>NO_ROOT_SQUASH{{% md %}}The Root user has root access to the file share (default).{{% /md %}}</dd><dt>Nfs<wbr>Export<wbr>Options<wbr>Squash<wbr>Mode<wbr>Root<wbr>Squash</dt>
+    <dd>ROOT_SQUASH{{% md %}}The Root user has squashed access to the anonymous uid/gid.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Squash<wbr>Mode<wbr>Unspecified</dt>
+    <dd>SQUASH_MODE_UNSPECIFIED{{% md %}}SquashMode not set.{{% /md %}}</dd><dt>No<wbr>Root<wbr>Squash</dt>
+    <dd>NO_ROOT_SQUASH{{% md %}}The Root user has root access to the file share (default).{{% /md %}}</dd><dt>Root<wbr>Squash</dt>
+    <dd>ROOT_SQUASH{{% md %}}The Root user has squashed access to the anonymous uid/gid.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQUASH_MODE_UNSPECIFIED</dt>
+    <dd>SQUASH_MODE_UNSPECIFIED{{% md %}}SquashMode not set.{{% /md %}}</dd><dt>NO_ROOT_SQUASH</dt>
+    <dd>NO_ROOT_SQUASH{{% md %}}The Root user has root access to the file share (default).{{% /md %}}</dd><dt>ROOT_SQUASH</dt>
+    <dd>ROOT_SQUASH{{% md %}}The Root user has squashed access to the anonymous uid/gid.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

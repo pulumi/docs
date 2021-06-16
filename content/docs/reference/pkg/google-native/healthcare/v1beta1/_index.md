@@ -31,6 +31,29 @@ Explore the resources and functions of the google-native.healthcare/v1beta1 modu
     <li><a href="userdatamapping" title="UserDataMapping"><span class="symbol resource"></span>UserDataMapping</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getannotation" title="GetAnnotation"><span class="symbol function"></span>GetAnnotation</a></li>
+    <li><a href="getannotationstore" title="GetAnnotationStore"><span class="symbol function"></span>GetAnnotationStore</a></li>
+    <li><a href="getattributedefinition" title="GetAttributeDefinition"><span class="symbol function"></span>GetAttributeDefinition</a></li>
+    <li><a href="getconsent" title="GetConsent"><span class="symbol function"></span>GetConsent</a></li>
+    <li><a href="getconsentartifact" title="GetConsentArtifact"><span class="symbol function"></span>GetConsentArtifact</a></li>
+    <li><a href="getconsentstore" title="GetConsentStore"><span class="symbol function"></span>GetConsentStore</a></li>
+    <li><a href="getdataset" title="GetDataset"><span class="symbol function"></span>GetDataset</a></li>
+    <li><a href="getdatasetannotationstoreiampolicy" title="GetDatasetAnnotationStoreIamPolicy"><span class="symbol function"></span>GetDatasetAnnotationStoreIamPolicy</a></li>
+    <li><a href="getdatasetconsentstoreiampolicy" title="GetDatasetConsentStoreIamPolicy"><span class="symbol function"></span>GetDatasetConsentStoreIamPolicy</a></li>
+    <li><a href="getdatasetdicomstoreiampolicy" title="GetDatasetDicomStoreIamPolicy"><span class="symbol function"></span>GetDatasetDicomStoreIamPolicy</a></li>
+    <li><a href="getdatasetfhirstoreiampolicy" title="GetDatasetFhirStoreIamPolicy"><span class="symbol function"></span>GetDatasetFhirStoreIamPolicy</a></li>
+    <li><a href="getdatasethl7v2storeiampolicy" title="GetDatasetHl7V2StoreIamPolicy"><span class="symbol function"></span>GetDatasetHl7V2StoreIamPolicy</a></li>
+    <li><a href="getdatasetiampolicy" title="GetDatasetIamPolicy"><span class="symbol function"></span>GetDatasetIamPolicy</a></li>
+    <li><a href="getdicomstore" title="GetDicomStore"><span class="symbol function"></span>GetDicomStore</a></li>
+    <li><a href="getfhir" title="GetFhir"><span class="symbol function"></span>GetFhir</a></li>
+    <li><a href="getfhirstore" title="GetFhirStore"><span class="symbol function"></span>GetFhirStore</a></li>
+    <li><a href="gethl7v2store" title="GetHl7V2Store"><span class="symbol function"></span>GetHl7V2Store</a></li>
+    <li><a href="getmessage" title="GetMessage"><span class="symbol function"></span>GetMessage</a></li>
+    <li><a href="getuserdatamapping" title="GetUserDataMapping"><span class="symbol function"></span>GetUserDataMapping</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -38,6 +61,6 @@ Explore the resources and functions of the google-native.healthcare/v1beta1 modu
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

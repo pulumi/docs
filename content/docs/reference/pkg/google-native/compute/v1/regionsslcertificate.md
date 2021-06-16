@@ -42,7 +42,7 @@ Creates a SslCertificate resource in the specified project and region using the 
                          <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">self_managed</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.SslCertificateSelfManagedSslCertificateArgs]</span> = None<span class="p">,</span>
                          <span class="nx">subject_alternative_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                         <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.RegionSslCertificateType]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">RegionSslCertificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegionSslCertificateArgs</a></span><span class="p">,</span>
@@ -296,7 +296,7 @@ The RegionSslCertificate resource accepts the following [input]({{< relref "/doc
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionsslcertificatetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Region<wbr>Ssl<wbr>Certificate<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not specified, the certificate is self-managed and the fields certificate and private_key are used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -428,7 +428,7 @@ The RegionSslCertificate resource accepts the following [input]({{< relref "/doc
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionsslcertificatetype">Region<wbr>Ssl<wbr>Certificate<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not specified, the certificate is self-managed and the fields certificate and private_key are used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -560,7 +560,7 @@ The RegionSslCertificate resource accepts the following [input]({{< relref "/doc
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionsslcertificatetype">Region<wbr>Ssl<wbr>Certificate<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not specified, the certificate is self-managed and the fields certificate and private_key are used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -692,7 +692,7 @@ The RegionSslCertificate resource accepts the following [input]({{< relref "/doc
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#regionsslcertificatetype">Region<wbr>Ssl<wbr>Certificate<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not specified, the certificate is self-managed and the fields certificate and private_key are used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -762,6 +762,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="regionsslcertificatetype">Region<wbr>Ssl<wbr>Certificate<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Managed</dt>
+    <dd>MANAGED</dd><dt>Self<wbr>Managed</dt>
+    <dd>SELF_MANAGED</dd><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Region<wbr>Ssl<wbr>Certificate<wbr>Type<wbr>Managed</dt>
+    <dd>MANAGED</dd><dt>Region<wbr>Ssl<wbr>Certificate<wbr>Type<wbr>Self<wbr>Managed</dt>
+    <dd>SELF_MANAGED</dd><dt>Region<wbr>Ssl<wbr>Certificate<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Managed</dt>
+    <dd>MANAGED</dd><dt>Self<wbr>Managed</dt>
+    <dd>SELF_MANAGED</dd><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MANAGED</dt>
+    <dd>MANAGED</dd><dt>SELF_MANAGED</dt>
+    <dd>SELF_MANAGED</dd><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
 <h4 id="sslcertificatemanagedsslcertificate">Ssl<wbr>Certificate<wbr>Managed<wbr>Ssl<wbr>Certificate</h4>
 
 {{% choosable language csharp %}}
@@ -787,7 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslcertificatemanagedsslcertificatestatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Ssl<wbr>Certificate<wbr>Managed<wbr>Ssl<wbr>Certificate<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output only] Status of the managed certificate resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -815,7 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslcertificatemanagedsslcertificatestatus">Ssl<wbr>Certificate<wbr>Managed<wbr>Ssl<wbr>Certificate<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output only] Status of the managed certificate resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -843,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslcertificatemanagedsslcertificatestatus">Ssl<wbr>Certificate<wbr>Managed<wbr>Ssl<wbr>Certificate<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output only] Status of the managed certificate resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -871,7 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#sslcertificatemanagedsslcertificatestatus">Ssl<wbr>Certificate<wbr>Managed<wbr>Ssl<wbr>Certificate<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output only] Status of the managed certificate resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -988,6 +1018,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] Status of the managed certificate resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sslcertificatemanagedsslcertificatestatus">Ssl<wbr>Certificate<wbr>Managed<wbr>Ssl<wbr>Certificate<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Managed<wbr>Certificate<wbr>Status<wbr>Unspecified</dt>
+    <dd>MANAGED_CERTIFICATE_STATUS_UNSPECIFIED</dd><dt>Provisioning</dt>
+    <dd>PROVISIONING</dd><dt>Provisioning<wbr>Failed</dt>
+    <dd>PROVISIONING_FAILED</dd><dt>Provisioning<wbr>Failed<wbr>Permanently</dt>
+    <dd>PROVISIONING_FAILED_PERMANENTLY</dd><dt>Renewal<wbr>Failed</dt>
+    <dd>RENEWAL_FAILED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Ssl<wbr>Certificate<wbr>Managed<wbr>Ssl<wbr>Certificate<wbr>Status<wbr>Active</dt>
+    <dd>ACTIVE</dd><dt>Ssl<wbr>Certificate<wbr>Managed<wbr>Ssl<wbr>Certificate<wbr>Status<wbr>Managed<wbr>Certificate<wbr>Status<wbr>Unspecified</dt>
+    <dd>MANAGED_CERTIFICATE_STATUS_UNSPECIFIED</dd><dt>Ssl<wbr>Certificate<wbr>Managed<wbr>Ssl<wbr>Certificate<wbr>Status<wbr>Provisioning</dt>
+    <dd>PROVISIONING</dd><dt>Ssl<wbr>Certificate<wbr>Managed<wbr>Ssl<wbr>Certificate<wbr>Status<wbr>Provisioning<wbr>Failed</dt>
+    <dd>PROVISIONING_FAILED</dd><dt>Ssl<wbr>Certificate<wbr>Managed<wbr>Ssl<wbr>Certificate<wbr>Status<wbr>Provisioning<wbr>Failed<wbr>Permanently</dt>
+    <dd>PROVISIONING_FAILED_PERMANENTLY</dd><dt>Ssl<wbr>Certificate<wbr>Managed<wbr>Ssl<wbr>Certificate<wbr>Status<wbr>Renewal<wbr>Failed</dt>
+    <dd>RENEWAL_FAILED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Managed<wbr>Certificate<wbr>Status<wbr>Unspecified</dt>
+    <dd>MANAGED_CERTIFICATE_STATUS_UNSPECIFIED</dd><dt>Provisioning</dt>
+    <dd>PROVISIONING</dd><dt>Provisioning<wbr>Failed</dt>
+    <dd>PROVISIONING_FAILED</dd><dt>Provisioning<wbr>Failed<wbr>Permanently</dt>
+    <dd>PROVISIONING_FAILED_PERMANENTLY</dd><dt>Renewal<wbr>Failed</dt>
+    <dd>RENEWAL_FAILED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACTIVE</dt>
+    <dd>ACTIVE</dd><dt>MANAGED_CERTIFICATE_STATUS_UNSPECIFIED</dt>
+    <dd>MANAGED_CERTIFICATE_STATUS_UNSPECIFIED</dd><dt>PROVISIONING</dt>
+    <dd>PROVISIONING</dd><dt>PROVISIONING_FAILED</dt>
+    <dd>PROVISIONING_FAILED</dd><dt>PROVISIONING_FAILED_PERMANENTLY</dt>
+    <dd>PROVISIONING_FAILED_PERMANENTLY</dd><dt>RENEWAL_FAILED</dt>
+    <dd>RENEWAL_FAILED</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sslcertificateselfmanagedsslcertificate">Ssl<wbr>Certificate<wbr>Self<wbr>Managed<wbr>Ssl<wbr>Certificate</h4>

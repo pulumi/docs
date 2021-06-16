@@ -22,6 +22,19 @@ Explore the resources and functions of the google-native.datacatalog/v1beta1 mod
     <li><a href="taxonomypolicytagiampolicy" title="TaxonomyPolicyTagIamPolicy"><span class="symbol resource"></span>TaxonomyPolicyTagIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getentry" title="GetEntry"><span class="symbol function"></span>GetEntry</a></li>
+    <li><a href="getentrygroup" title="GetEntryGroup"><span class="symbol function"></span>GetEntryGroup</a></li>
+    <li><a href="getentrygroupiampolicy" title="GetEntryGroupIamPolicy"><span class="symbol function"></span>GetEntryGroupIamPolicy</a></li>
+    <li><a href="getpolicytag" title="GetPolicyTag"><span class="symbol function"></span>GetPolicyTag</a></li>
+    <li><a href="gettagtemplate" title="GetTagTemplate"><span class="symbol function"></span>GetTagTemplate</a></li>
+    <li><a href="gettagtemplateiampolicy" title="GetTagTemplateIamPolicy"><span class="symbol function"></span>GetTagTemplateIamPolicy</a></li>
+    <li><a href="gettaxonomy" title="GetTaxonomy"><span class="symbol function"></span>GetTaxonomy</a></li>
+    <li><a href="gettaxonomyiampolicy" title="GetTaxonomyIamPolicy"><span class="symbol function"></span>GetTaxonomyIamPolicy</a></li>
+    <li><a href="gettaxonomypolicytagiampolicy" title="GetTaxonomyPolicyTagIamPolicy"><span class="symbol function"></span>GetTaxonomyPolicyTagIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -29,6 +42,6 @@ Explore the resources and functions of the google-native.datacatalog/v1beta1 mod
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

@@ -646,7 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logtype_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#auditlogconfiglogtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Network<wbr>Management.<wbr>V1.<wbr>Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The log type that this config enables.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -666,7 +666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logtype_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#auditlogconfiglogtype">Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The log type that this config enables.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -686,7 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logtype_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#auditlogconfiglogtype">Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The log type that this config enables.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -706,9 +706,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#auditlogconfiglogtype">Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The log type that this config enables.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="auditlogconfiglogtype">Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Log<wbr>Type<wbr>Unspecified</dt>
+    <dd>LOG_TYPE_UNSPECIFIED{{% md %}}Default case. Should never be this.{{% /md %}}</dd><dt>Admin<wbr>Read</dt>
+    <dd>ADMIN_READ{{% md %}}Admin reads. Example: CloudIAM getIamPolicy{{% /md %}}</dd><dt>Data<wbr>Write</dt>
+    <dd>DATA_WRITE{{% md %}}Data writes. Example: CloudSQL Users create{{% /md %}}</dd><dt>Data<wbr>Read</dt>
+    <dd>DATA_READ{{% md %}}Data reads. Example: CloudSQL Users list{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type<wbr>Log<wbr>Type<wbr>Unspecified</dt>
+    <dd>LOG_TYPE_UNSPECIFIED{{% md %}}Default case. Should never be this.{{% /md %}}</dd><dt>Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type<wbr>Admin<wbr>Read</dt>
+    <dd>ADMIN_READ{{% md %}}Admin reads. Example: CloudIAM getIamPolicy{{% /md %}}</dd><dt>Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type<wbr>Data<wbr>Write</dt>
+    <dd>DATA_WRITE{{% md %}}Data writes. Example: CloudSQL Users create{{% /md %}}</dd><dt>Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type<wbr>Data<wbr>Read</dt>
+    <dd>DATA_READ{{% md %}}Data reads. Example: CloudSQL Users list{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Log<wbr>Type<wbr>Unspecified</dt>
+    <dd>LOG_TYPE_UNSPECIFIED{{% md %}}Default case. Should never be this.{{% /md %}}</dd><dt>Admin<wbr>Read</dt>
+    <dd>ADMIN_READ{{% md %}}Admin reads. Example: CloudIAM getIamPolicy{{% /md %}}</dd><dt>Data<wbr>Write</dt>
+    <dd>DATA_WRITE{{% md %}}Data writes. Example: CloudSQL Users create{{% /md %}}</dd><dt>Data<wbr>Read</dt>
+    <dd>DATA_READ{{% md %}}Data reads. Example: CloudSQL Users list{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LOG_TYPE_UNSPECIFIED</dt>
+    <dd>LOG_TYPE_UNSPECIFIED{{% md %}}Default case. Should never be this.{{% /md %}}</dd><dt>ADMIN_READ</dt>
+    <dd>ADMIN_READ{{% md %}}Admin reads. Example: CloudIAM getIamPolicy{{% /md %}}</dd><dt>DATA_WRITE</dt>
+    <dd>DATA_WRITE{{% md %}}Data writes. Example: CloudSQL Users create{{% /md %}}</dd><dt>DATA_READ</dt>
+    <dd>DATA_READ{{% md %}}Data reads. Example: CloudSQL Users list{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="auditlogconfigresponse">Audit<wbr>Log<wbr>Config<wbr>Response</h4>

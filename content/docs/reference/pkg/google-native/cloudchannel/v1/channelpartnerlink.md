@@ -28,7 +28,7 @@ Initiates a channel partner link between a distributor and a reseller, or betwee
 <span class="k">def </span><span class="nx">ChannelPartnerLink</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                        <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">link_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">link_state</span><span class="p">:</span> <span class="nx">Optional[_cloudchannel_v1.ChannelPartnerLinkLinkState]</span> = None<span class="p">,</span>
                        <span class="nx">reseller_cloud_identity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ChannelPartnerLink</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -171,7 +171,7 @@ The ChannelPartnerLink resource accepts the following [input]({{< relref "/docs/
 <a href="#linkstate_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#channelpartnerlinklinkstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Channel.<wbr>V1.<wbr>Channel<wbr>Partner<wbr>Link<wbr>Link<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Required. State of the channel partner link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -199,7 +199,7 @@ The ChannelPartnerLink resource accepts the following [input]({{< relref "/docs/
 <a href="#linkstate_go" style="color: inherit; text-decoration: inherit;">Link<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#channelpartnerlinklinkstate">Channel<wbr>Partner<wbr>Link<wbr>Link<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Required. State of the channel partner link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -227,7 +227,7 @@ The ChannelPartnerLink resource accepts the following [input]({{< relref "/docs/
 <a href="#linkstate_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#channelpartnerlinklinkstate">Channel<wbr>Partner<wbr>Link<wbr>Link<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Required. State of the channel partner link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -255,7 +255,7 @@ The ChannelPartnerLink resource accepts the following [input]({{< relref "/docs/
 <a href="#link_state_python" style="color: inherit; text-decoration: inherit;">link_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#channelpartnerlinklinkstate">Channel<wbr>Partner<wbr>Link<wbr>Link<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Required. State of the channel partner link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -524,6 +524,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="channelpartnerlinklinkstate">Channel<wbr>Partner<wbr>Link<wbr>Link<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Channel<wbr>Partner<wbr>Link<wbr>State<wbr>Unspecified</dt>
+    <dd>CHANNEL_PARTNER_LINK_STATE_UNSPECIFIED{{% md %}}The state is not specified.{{% /md %}}</dd><dt>Invited</dt>
+    <dd>INVITED{{% md %}}An invitation has been sent to the reseller to create a channel partner link.{{% /md %}}</dd><dt>Active</dt>
+    <dd>ACTIVE{{% md %}}Status when the reseller is active.{{% /md %}}</dd><dt>Revoked</dt>
+    <dd>REVOKED{{% md %}}Status when the reseller has been revoked by the distributor.{{% /md %}}</dd><dt>Suspended</dt>
+    <dd>SUSPENDED{{% md %}}Status when the reseller is suspended by Google or distributor.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Channel<wbr>Partner<wbr>Link<wbr>Link<wbr>State<wbr>Channel<wbr>Partner<wbr>Link<wbr>State<wbr>Unspecified</dt>
+    <dd>CHANNEL_PARTNER_LINK_STATE_UNSPECIFIED{{% md %}}The state is not specified.{{% /md %}}</dd><dt>Channel<wbr>Partner<wbr>Link<wbr>Link<wbr>State<wbr>Invited</dt>
+    <dd>INVITED{{% md %}}An invitation has been sent to the reseller to create a channel partner link.{{% /md %}}</dd><dt>Channel<wbr>Partner<wbr>Link<wbr>Link<wbr>State<wbr>Active</dt>
+    <dd>ACTIVE{{% md %}}Status when the reseller is active.{{% /md %}}</dd><dt>Channel<wbr>Partner<wbr>Link<wbr>Link<wbr>State<wbr>Revoked</dt>
+    <dd>REVOKED{{% md %}}Status when the reseller has been revoked by the distributor.{{% /md %}}</dd><dt>Channel<wbr>Partner<wbr>Link<wbr>Link<wbr>State<wbr>Suspended</dt>
+    <dd>SUSPENDED{{% md %}}Status when the reseller is suspended by Google or distributor.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Channel<wbr>Partner<wbr>Link<wbr>State<wbr>Unspecified</dt>
+    <dd>CHANNEL_PARTNER_LINK_STATE_UNSPECIFIED{{% md %}}The state is not specified.{{% /md %}}</dd><dt>Invited</dt>
+    <dd>INVITED{{% md %}}An invitation has been sent to the reseller to create a channel partner link.{{% /md %}}</dd><dt>Active</dt>
+    <dd>ACTIVE{{% md %}}Status when the reseller is active.{{% /md %}}</dd><dt>Revoked</dt>
+    <dd>REVOKED{{% md %}}Status when the reseller has been revoked by the distributor.{{% /md %}}</dd><dt>Suspended</dt>
+    <dd>SUSPENDED{{% md %}}Status when the reseller is suspended by Google or distributor.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CHANNEL_PARTNER_LINK_STATE_UNSPECIFIED</dt>
+    <dd>CHANNEL_PARTNER_LINK_STATE_UNSPECIFIED{{% md %}}The state is not specified.{{% /md %}}</dd><dt>INVITED</dt>
+    <dd>INVITED{{% md %}}An invitation has been sent to the reseller to create a channel partner link.{{% /md %}}</dd><dt>ACTIVE</dt>
+    <dd>ACTIVE{{% md %}}Status when the reseller is active.{{% /md %}}</dd><dt>REVOKED</dt>
+    <dd>REVOKED{{% md %}}Status when the reseller has been revoked by the distributor.{{% /md %}}</dd><dt>SUSPENDED</dt>
+    <dd>SUSPENDED{{% md %}}Status when the reseller is suspended by Google or distributor.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="googlecloudchannelv1cloudidentityinforesponse">Google<wbr>Cloud<wbr>Channel<wbr>V1Cloud<wbr>Identity<wbr>Info<wbr>Response</h4>
 

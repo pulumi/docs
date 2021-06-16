@@ -457,7 +457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcerecordtype">Pulumi.<wbr>Google<wbr>Native.<wbr>App<wbr>Engine.<wbr>V1.<wbr>Resource<wbr>Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Resource record type. Example: AAAA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -485,7 +485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcerecordtype">Resource<wbr>Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Resource record type. Example: AAAA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -513,7 +513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcerecordtype">Resource<wbr>Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Resource record type. Example: AAAA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -541,7 +541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#resourcerecordtype">Resource<wbr>Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Resource record type. Example: AAAA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -660,6 +660,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource record type. Example: AAAA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="resourcerecordtype">Resource<wbr>Record<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Record<wbr>Type<wbr>Unspecified</dt>
+    <dd>RECORD_TYPE_UNSPECIFIED{{% md %}}An unknown resource record.{{% /md %}}</dd><dt>A</dt>
+    <dd>A{{% md %}}An A resource record. Data is an IPv4 address.{{% /md %}}</dd><dt>Aaaa</dt>
+    <dd>AAAA{{% md %}}An AAAA resource record. Data is an IPv6 address.{{% /md %}}</dd><dt>Cname</dt>
+    <dd>CNAME{{% md %}}A CNAME resource record. Data is a domain name to be aliased.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Resource<wbr>Record<wbr>Type<wbr>Record<wbr>Type<wbr>Unspecified</dt>
+    <dd>RECORD_TYPE_UNSPECIFIED{{% md %}}An unknown resource record.{{% /md %}}</dd><dt>Resource<wbr>Record<wbr>Type<wbr>A</dt>
+    <dd>A{{% md %}}An A resource record. Data is an IPv4 address.{{% /md %}}</dd><dt>Resource<wbr>Record<wbr>Type<wbr>Aaaa</dt>
+    <dd>AAAA{{% md %}}An AAAA resource record. Data is an IPv6 address.{{% /md %}}</dd><dt>Resource<wbr>Record<wbr>Type<wbr>Cname</dt>
+    <dd>CNAME{{% md %}}A CNAME resource record. Data is a domain name to be aliased.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Record<wbr>Type<wbr>Unspecified</dt>
+    <dd>RECORD_TYPE_UNSPECIFIED{{% md %}}An unknown resource record.{{% /md %}}</dd><dt>A</dt>
+    <dd>A{{% md %}}An A resource record. Data is an IPv4 address.{{% /md %}}</dd><dt>Aaaa</dt>
+    <dd>AAAA{{% md %}}An AAAA resource record. Data is an IPv6 address.{{% /md %}}</dd><dt>Cname</dt>
+    <dd>CNAME{{% md %}}A CNAME resource record. Data is a domain name to be aliased.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RECORD_TYPE_UNSPECIFIED</dt>
+    <dd>RECORD_TYPE_UNSPECIFIED{{% md %}}An unknown resource record.{{% /md %}}</dd><dt>A</dt>
+    <dd>A{{% md %}}An A resource record. Data is an IPv4 address.{{% /md %}}</dd><dt>AAAA</dt>
+    <dd>AAAA{{% md %}}An AAAA resource record. Data is an IPv6 address.{{% /md %}}</dd><dt>CNAME</dt>
+    <dd>CNAME{{% md %}}A CNAME resource record. Data is a domain name to be aliased.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="sslsettings">Ssl<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
@@ -685,7 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslsettingssslmanagementtype">Pulumi.<wbr>Google<wbr>Native.<wbr>App<wbr>Engine.<wbr>V1.<wbr>Ssl<wbr>Settings<wbr>Ssl<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}SSL management type for this domain. If AUTOMATIC, a managed certificate is automatically provisioned. If MANUAL, certificate_id must be manually specified in order to configure SSL for this domain.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -713,7 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslmanagementtype_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslsettingssslmanagementtype">Ssl<wbr>Settings<wbr>Ssl<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}SSL management type for this domain. If AUTOMATIC, a managed certificate is automatically provisioned. If MANUAL, certificate_id must be manually specified in order to configure SSL for this domain.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -741,7 +775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslsettingssslmanagementtype">Ssl<wbr>Settings<wbr>Ssl<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}SSL management type for this domain. If AUTOMATIC, a managed certificate is automatically provisioned. If MANUAL, certificate_id must be manually specified in order to configure SSL for this domain.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -769,7 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_management_type_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#sslsettingssslmanagementtype">Ssl<wbr>Settings<wbr>Ssl<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}SSL management type for this domain. If AUTOMATIC, a managed certificate is automatically provisioned. If MANUAL, certificate_id must be manually specified in order to configure SSL for this domain.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -886,6 +920,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SSL management type for this domain. If AUTOMATIC, a managed certificate is automatically provisioned. If MANUAL, certificate_id must be manually specified in order to configure SSL for this domain.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sslsettingssslmanagementtype">Ssl<wbr>Settings<wbr>Ssl<wbr>Management<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Ssl<wbr>Management<wbr>Type<wbr>Unspecified</dt>
+    <dd>SSL_MANAGEMENT_TYPE_UNSPECIFIED{{% md %}}Defaults to AUTOMATIC.{{% /md %}}</dd><dt>Automatic</dt>
+    <dd>AUTOMATIC{{% md %}}SSL support for this domain is configured automatically. The mapped SSL certificate will be automatically renewed.{{% /md %}}</dd><dt>Manual</dt>
+    <dd>MANUAL{{% md %}}SSL support for this domain is configured manually by the user. Either the domain has no SSL support or a user-obtained SSL certificate has been explictly mapped to this domain.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Ssl<wbr>Settings<wbr>Ssl<wbr>Management<wbr>Type<wbr>Ssl<wbr>Management<wbr>Type<wbr>Unspecified</dt>
+    <dd>SSL_MANAGEMENT_TYPE_UNSPECIFIED{{% md %}}Defaults to AUTOMATIC.{{% /md %}}</dd><dt>Ssl<wbr>Settings<wbr>Ssl<wbr>Management<wbr>Type<wbr>Automatic</dt>
+    <dd>AUTOMATIC{{% md %}}SSL support for this domain is configured automatically. The mapped SSL certificate will be automatically renewed.{{% /md %}}</dd><dt>Ssl<wbr>Settings<wbr>Ssl<wbr>Management<wbr>Type<wbr>Manual</dt>
+    <dd>MANUAL{{% md %}}SSL support for this domain is configured manually by the user. Either the domain has no SSL support or a user-obtained SSL certificate has been explictly mapped to this domain.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Ssl<wbr>Management<wbr>Type<wbr>Unspecified</dt>
+    <dd>SSL_MANAGEMENT_TYPE_UNSPECIFIED{{% md %}}Defaults to AUTOMATIC.{{% /md %}}</dd><dt>Automatic</dt>
+    <dd>AUTOMATIC{{% md %}}SSL support for this domain is configured automatically. The mapped SSL certificate will be automatically renewed.{{% /md %}}</dd><dt>Manual</dt>
+    <dd>MANUAL{{% md %}}SSL support for this domain is configured manually by the user. Either the domain has no SSL support or a user-obtained SSL certificate has been explictly mapped to this domain.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SSL_MANAGEMENT_TYPE_UNSPECIFIED</dt>
+    <dd>SSL_MANAGEMENT_TYPE_UNSPECIFIED{{% md %}}Defaults to AUTOMATIC.{{% /md %}}</dd><dt>AUTOMATIC</dt>
+    <dd>AUTOMATIC{{% md %}}SSL support for this domain is configured automatically. The mapped SSL certificate will be automatically renewed.{{% /md %}}</dd><dt>MANUAL</dt>
+    <dd>MANUAL{{% md %}}SSL support for this domain is configured manually by the user. Either the domain has no SSL support or a user-obtained SSL certificate has been explictly mapped to this domain.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

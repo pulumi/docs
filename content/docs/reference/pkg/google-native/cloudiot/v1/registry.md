@@ -32,7 +32,7 @@ Creates a device registry that contains devices.
              <span class="nx">http_config</span><span class="p">:</span> <span class="nx">Optional[_cloudiot_v1.HttpConfigArgs]</span> = None<span class="p">,</span>
              <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[_cloudiot_v1.RegistryLogLevel]</span> = None<span class="p">,</span>
              <span class="nx">mqtt_config</span><span class="p">:</span> <span class="nx">Optional[_cloudiot_v1.MqttConfigArgs]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -218,7 +218,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#loglevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#registryloglevel">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Io<wbr>T.<wbr>V1.<wbr>Registry<wbr>Log<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}**Beta Feature** The default logging verbosity for activity from devices in this registry. The verbosity level can be overridden by Device.log_level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -302,7 +302,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#loglevel_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#registryloglevel">Registry<wbr>Log<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}**Beta Feature** The default logging verbosity for activity from devices in this registry. The verbosity level can be overridden by Device.log_level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +386,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#registryloglevel">Registry<wbr>Log<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}**Beta Feature** The default logging verbosity for activity from devices in this registry. The verbosity level can be overridden by Device.log_level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +470,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#registryloglevel">Registry<wbr>Log<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}**Beta Feature** The default logging verbosity for activity from devices in this registry. The verbosity level can be overridden by Device.log_level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -737,7 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpenabledstate_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpconfighttpenabledstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Io<wbr>T.<wbr>V1.<wbr>Http<wbr>Config<wbr>Http<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -749,7 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpenabledstate_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpconfighttpenabledstate">Http<wbr>Config<wbr>Http<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -761,7 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpenabledstate_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpconfighttpenabledstate">Http<wbr>Config<wbr>Http<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -773,9 +773,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_enabled_state_python" style="color: inherit; text-decoration: inherit;">http_<wbr>enabled_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#httpconfighttpenabledstate">Http<wbr>Config<wbr>Http<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="httpconfighttpenabledstate">Http<wbr>Config<wbr>Http<wbr>Enabled<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Http<wbr>State<wbr>Unspecified</dt>
+    <dd>HTTP_STATE_UNSPECIFIED{{% md %}}No HTTP state specified. If not specified, DeviceService will be enabled by default.{{% /md %}}</dd><dt>Http<wbr>Enabled</dt>
+    <dd>HTTP_ENABLED{{% md %}}Enables DeviceService (HTTP) service for the registry.{{% /md %}}</dd><dt>Http<wbr>Disabled</dt>
+    <dd>HTTP_DISABLED{{% md %}}Disables DeviceService (HTTP) service for the registry.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Http<wbr>Config<wbr>Http<wbr>Enabled<wbr>State<wbr>Http<wbr>State<wbr>Unspecified</dt>
+    <dd>HTTP_STATE_UNSPECIFIED{{% md %}}No HTTP state specified. If not specified, DeviceService will be enabled by default.{{% /md %}}</dd><dt>Http<wbr>Config<wbr>Http<wbr>Enabled<wbr>State<wbr>Http<wbr>Enabled</dt>
+    <dd>HTTP_ENABLED{{% md %}}Enables DeviceService (HTTP) service for the registry.{{% /md %}}</dd><dt>Http<wbr>Config<wbr>Http<wbr>Enabled<wbr>State<wbr>Http<wbr>Disabled</dt>
+    <dd>HTTP_DISABLED{{% md %}}Disables DeviceService (HTTP) service for the registry.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Http<wbr>State<wbr>Unspecified</dt>
+    <dd>HTTP_STATE_UNSPECIFIED{{% md %}}No HTTP state specified. If not specified, DeviceService will be enabled by default.{{% /md %}}</dd><dt>Http<wbr>Enabled</dt>
+    <dd>HTTP_ENABLED{{% md %}}Enables DeviceService (HTTP) service for the registry.{{% /md %}}</dd><dt>Http<wbr>Disabled</dt>
+    <dd>HTTP_DISABLED{{% md %}}Disables DeviceService (HTTP) service for the registry.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>HTTP_STATE_UNSPECIFIED</dt>
+    <dd>HTTP_STATE_UNSPECIFIED{{% md %}}No HTTP state specified. If not specified, DeviceService will be enabled by default.{{% /md %}}</dd><dt>HTTP_ENABLED</dt>
+    <dd>HTTP_ENABLED{{% md %}}Enables DeviceService (HTTP) service for the registry.{{% /md %}}</dd><dt>HTTP_DISABLED</dt>
+    <dd>HTTP_DISABLED{{% md %}}Disables DeviceService (HTTP) service for the registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httpconfigresponse">Http<wbr>Config<wbr>Response</h4>
@@ -837,7 +867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mqttenabledstate_csharp" style="color: inherit; text-decoration: inherit;">Mqtt<wbr>Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#mqttconfigmqttenabledstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Io<wbr>T.<wbr>V1.<wbr>Mqtt<wbr>Config<wbr>Mqtt<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -849,7 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mqttenabledstate_go" style="color: inherit; text-decoration: inherit;">Mqtt<wbr>Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#mqttconfigmqttenabledstate">Mqtt<wbr>Config<wbr>Mqtt<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -861,7 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mqttenabledstate_nodejs" style="color: inherit; text-decoration: inherit;">mqtt<wbr>Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#mqttconfigmqttenabledstate">Mqtt<wbr>Config<wbr>Mqtt<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -873,9 +903,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mqtt_enabled_state_python" style="color: inherit; text-decoration: inherit;">mqtt_<wbr>enabled_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#mqttconfigmqttenabledstate">Mqtt<wbr>Config<wbr>Mqtt<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="mqttconfigmqttenabledstate">Mqtt<wbr>Config<wbr>Mqtt<wbr>Enabled<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Mqtt<wbr>State<wbr>Unspecified</dt>
+    <dd>MQTT_STATE_UNSPECIFIED{{% md %}}No MQTT state specified. If not specified, MQTT will be enabled by default.{{% /md %}}</dd><dt>Mqtt<wbr>Enabled</dt>
+    <dd>MQTT_ENABLED{{% md %}}Enables a MQTT connection.{{% /md %}}</dd><dt>Mqtt<wbr>Disabled</dt>
+    <dd>MQTT_DISABLED{{% md %}}Disables a MQTT connection.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Mqtt<wbr>Config<wbr>Mqtt<wbr>Enabled<wbr>State<wbr>Mqtt<wbr>State<wbr>Unspecified</dt>
+    <dd>MQTT_STATE_UNSPECIFIED{{% md %}}No MQTT state specified. If not specified, MQTT will be enabled by default.{{% /md %}}</dd><dt>Mqtt<wbr>Config<wbr>Mqtt<wbr>Enabled<wbr>State<wbr>Mqtt<wbr>Enabled</dt>
+    <dd>MQTT_ENABLED{{% md %}}Enables a MQTT connection.{{% /md %}}</dd><dt>Mqtt<wbr>Config<wbr>Mqtt<wbr>Enabled<wbr>State<wbr>Mqtt<wbr>Disabled</dt>
+    <dd>MQTT_DISABLED{{% md %}}Disables a MQTT connection.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Mqtt<wbr>State<wbr>Unspecified</dt>
+    <dd>MQTT_STATE_UNSPECIFIED{{% md %}}No MQTT state specified. If not specified, MQTT will be enabled by default.{{% /md %}}</dd><dt>Mqtt<wbr>Enabled</dt>
+    <dd>MQTT_ENABLED{{% md %}}Enables a MQTT connection.{{% /md %}}</dd><dt>Mqtt<wbr>Disabled</dt>
+    <dd>MQTT_DISABLED{{% md %}}Disables a MQTT connection.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MQTT_STATE_UNSPECIFIED</dt>
+    <dd>MQTT_STATE_UNSPECIFIED{{% md %}}No MQTT state specified. If not specified, MQTT will be enabled by default.{{% /md %}}</dd><dt>MQTT_ENABLED</dt>
+    <dd>MQTT_ENABLED{{% md %}}Enables a MQTT connection.{{% /md %}}</dd><dt>MQTT_DISABLED</dt>
+    <dd>MQTT_DISABLED{{% md %}}Disables a MQTT connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mqttconfigresponse">Mqtt<wbr>Config<wbr>Response</h4>
@@ -945,7 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publickeycertificateformat">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Io<wbr>T.<wbr>V1.<wbr>Public<wbr>Key<wbr>Certificate<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The certificate format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -973,7 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publickeycertificateformat">Public<wbr>Key<wbr>Certificate<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The certificate format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1001,7 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publickeycertificateformat">Public<wbr>Key<wbr>Certificate<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The certificate format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#publickeycertificateformat">Public<wbr>Key<wbr>Certificate<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The certificate format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1040,6 +1100,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#x509certificatedetails">X509Certificate<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The certificate details. Used only for X.509 certificates.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="publickeycertificateformat">Public<wbr>Key<wbr>Certificate<wbr>Format</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified<wbr>Public<wbr>Key<wbr>Certificate<wbr>Format</dt>
+    <dd>UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT{{% md %}}The format has not been specified. This is an invalid default value and must not be used.{{% /md %}}</dd><dt>X509Certificate<wbr>Pem</dt>
+    <dd>X509_CERTIFICATE_PEM{{% md %}}An X.509v3 certificate ([RFC5280](https://www.ietf.org/rfc/rfc5280.txt)), encoded in base64, and wrapped by `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Public<wbr>Key<wbr>Certificate<wbr>Format<wbr>Unspecified<wbr>Public<wbr>Key<wbr>Certificate<wbr>Format</dt>
+    <dd>UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT{{% md %}}The format has not been specified. This is an invalid default value and must not be used.{{% /md %}}</dd><dt>Public<wbr>Key<wbr>Certificate<wbr>Format<wbr>X509Certificate<wbr>Pem</dt>
+    <dd>X509_CERTIFICATE_PEM{{% md %}}An X.509v3 certificate ([RFC5280](https://www.ietf.org/rfc/rfc5280.txt)), encoded in base64, and wrapped by `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified<wbr>Public<wbr>Key<wbr>Certificate<wbr>Format</dt>
+    <dd>UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT{{% md %}}The format has not been specified. This is an invalid default value and must not be used.{{% /md %}}</dd><dt>X509Certificate<wbr>Pem</dt>
+    <dd>X509_CERTIFICATE_PEM{{% md %}}An X.509v3 certificate ([RFC5280](https://www.ietf.org/rfc/rfc5280.txt)), encoded in base64, and wrapped by `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT</dt>
+    <dd>UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT{{% md %}}The format has not been specified. This is an invalid default value and must not be used.{{% /md %}}</dd><dt>X509_CERTIFICATE_PEM</dt>
+    <dd>X509_CERTIFICATE_PEM{{% md %}}An X.509v3 certificate ([RFC5280](https://www.ietf.org/rfc/rfc5280.txt)), encoded in base64, and wrapped by `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="publickeycertificateresponse">Public<wbr>Key<wbr>Certificate<wbr>Response</h4>
@@ -1254,6 +1340,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#publickeycertificateresponse">Public<wbr>Key<wbr>Certificate<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A public key certificate used to verify the device credentials.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="registryloglevel">Registry<wbr>Log<wbr>Level</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Log<wbr>Level<wbr>Unspecified</dt>
+    <dd>LOG_LEVEL_UNSPECIFIED{{% md %}}No logging specified. If not specified, logging will be disabled.{{% /md %}}</dd><dt>None</dt>
+    <dd>NONE{{% md %}}Disables logging.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}Error events will be logged.{{% /md %}}</dd><dt>Info</dt>
+    <dd>INFO{{% md %}}Informational events will be logged, such as connections and disconnections.{{% /md %}}</dd><dt>Debug</dt>
+    <dd>DEBUG{{% md %}}All events will be logged.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Registry<wbr>Log<wbr>Level<wbr>Log<wbr>Level<wbr>Unspecified</dt>
+    <dd>LOG_LEVEL_UNSPECIFIED{{% md %}}No logging specified. If not specified, logging will be disabled.{{% /md %}}</dd><dt>Registry<wbr>Log<wbr>Level<wbr>None</dt>
+    <dd>NONE{{% md %}}Disables logging.{{% /md %}}</dd><dt>Registry<wbr>Log<wbr>Level<wbr>Error</dt>
+    <dd>ERROR{{% md %}}Error events will be logged.{{% /md %}}</dd><dt>Registry<wbr>Log<wbr>Level<wbr>Info</dt>
+    <dd>INFO{{% md %}}Informational events will be logged, such as connections and disconnections.{{% /md %}}</dd><dt>Registry<wbr>Log<wbr>Level<wbr>Debug</dt>
+    <dd>DEBUG{{% md %}}All events will be logged.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Log<wbr>Level<wbr>Unspecified</dt>
+    <dd>LOG_LEVEL_UNSPECIFIED{{% md %}}No logging specified. If not specified, logging will be disabled.{{% /md %}}</dd><dt>None</dt>
+    <dd>NONE{{% md %}}Disables logging.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}Error events will be logged.{{% /md %}}</dd><dt>Info</dt>
+    <dd>INFO{{% md %}}Informational events will be logged, such as connections and disconnections.{{% /md %}}</dd><dt>Debug</dt>
+    <dd>DEBUG{{% md %}}All events will be logged.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LOG_LEVEL_UNSPECIFIED</dt>
+    <dd>LOG_LEVEL_UNSPECIFIED{{% md %}}No logging specified. If not specified, logging will be disabled.{{% /md %}}</dd><dt>NONE</dt>
+    <dd>NONE{{% md %}}Disables logging.{{% /md %}}</dd><dt>ERROR</dt>
+    <dd>ERROR{{% md %}}Error events will be logged.{{% /md %}}</dd><dt>INFO</dt>
+    <dd>INFO{{% md %}}Informational events will be logged, such as connections and disconnections.{{% /md %}}</dd><dt>DEBUG</dt>
+    <dd>DEBUG{{% md %}}All events will be logged.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="statenotificationconfig">State<wbr>Notification<wbr>Config</h4>

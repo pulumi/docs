@@ -24,6 +24,21 @@ Explore the resources and functions of the google-native.dialogflow/v2beta1 modu
     <li><a href="version" title="Version"><span class="symbol resource"></span>Version</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getcontext" title="GetContext"><span class="symbol function"></span>GetContext</a></li>
+    <li><a href="getconversation" title="GetConversation"><span class="symbol function"></span>GetConversation</a></li>
+    <li><a href="getconversationprofile" title="GetConversationProfile"><span class="symbol function"></span>GetConversationProfile</a></li>
+    <li><a href="getdocument" title="GetDocument"><span class="symbol function"></span>GetDocument</a></li>
+    <li><a href="getentitytype" title="GetEntityType"><span class="symbol function"></span>GetEntityType</a></li>
+    <li><a href="getenvironment" title="GetEnvironment"><span class="symbol function"></span>GetEnvironment</a></li>
+    <li><a href="getintent" title="GetIntent"><span class="symbol function"></span>GetIntent</a></li>
+    <li><a href="getknowledgebase" title="GetKnowledgeBase"><span class="symbol function"></span>GetKnowledgeBase</a></li>
+    <li><a href="getparticipant" title="GetParticipant"><span class="symbol function"></span>GetParticipant</a></li>
+    <li><a href="getsessionentitytype" title="GetSessionEntityType"><span class="symbol function"></span>GetSessionEntityType</a></li>
+    <li><a href="getversion" title="GetVersion"><span class="symbol function"></span>GetVersion</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -31,6 +46,6 @@ Explore the resources and functions of the google-native.dialogflow/v2beta1 modu
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

@@ -1632,7 +1632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schematizedparsingtype_csharp" style="color: inherit; text-decoration: inherit;">Schematized<wbr>Parsing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schemapackageschematizedparsingtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Healthcare.<wbr>V1.<wbr>Schema<wbr>Package<wbr>Schematized<wbr>Parsing<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Determines how messages that fail to parse are handled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1668,7 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schematizedparsingtype_go" style="color: inherit; text-decoration: inherit;">Schematized<wbr>Parsing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schemapackageschematizedparsingtype">Schema<wbr>Package<wbr>Schematized<wbr>Parsing<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Determines how messages that fail to parse are handled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1704,7 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schematizedparsingtype_nodejs" style="color: inherit; text-decoration: inherit;">schematized<wbr>Parsing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schemapackageschematizedparsingtype">Schema<wbr>Package<wbr>Schematized<wbr>Parsing<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Determines how messages that fail to parse are handled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1740,7 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schematized_parsing_type_python" style="color: inherit; text-decoration: inherit;">schematized_<wbr>parsing_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#schemapackageschematizedparsingtype">Schema<wbr>Package<wbr>Schematized<wbr>Parsing<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Determines how messages that fail to parse are handled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1899,6 +1899,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="schemapackageschematizedparsingtype">Schema<wbr>Package<wbr>Schematized<wbr>Parsing<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Schematized<wbr>Parsing<wbr>Type<wbr>Unspecified</dt>
+    <dd>SCHEMATIZED_PARSING_TYPE_UNSPECIFIED{{% md %}}Unspecified schematized parsing type, equivalent to `SOFT_FAIL`.{{% /md %}}</dd><dt>Soft<wbr>Fail</dt>
+    <dd>SOFT_FAIL{{% md %}}Messages that fail to parse are still stored and ACKed but a parser error is stored in place of the schematized data.{{% /md %}}</dd><dt>Hard<wbr>Fail</dt>
+    <dd>HARD_FAIL{{% md %}}Messages that fail to parse are rejected from ingestion/insertion and return an error code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Schema<wbr>Package<wbr>Schematized<wbr>Parsing<wbr>Type<wbr>Schematized<wbr>Parsing<wbr>Type<wbr>Unspecified</dt>
+    <dd>SCHEMATIZED_PARSING_TYPE_UNSPECIFIED{{% md %}}Unspecified schematized parsing type, equivalent to `SOFT_FAIL`.{{% /md %}}</dd><dt>Schema<wbr>Package<wbr>Schematized<wbr>Parsing<wbr>Type<wbr>Soft<wbr>Fail</dt>
+    <dd>SOFT_FAIL{{% md %}}Messages that fail to parse are still stored and ACKed but a parser error is stored in place of the schematized data.{{% /md %}}</dd><dt>Schema<wbr>Package<wbr>Schematized<wbr>Parsing<wbr>Type<wbr>Hard<wbr>Fail</dt>
+    <dd>HARD_FAIL{{% md %}}Messages that fail to parse are rejected from ingestion/insertion and return an error code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Schematized<wbr>Parsing<wbr>Type<wbr>Unspecified</dt>
+    <dd>SCHEMATIZED_PARSING_TYPE_UNSPECIFIED{{% md %}}Unspecified schematized parsing type, equivalent to `SOFT_FAIL`.{{% /md %}}</dd><dt>Soft<wbr>Fail</dt>
+    <dd>SOFT_FAIL{{% md %}}Messages that fail to parse are still stored and ACKed but a parser error is stored in place of the schematized data.{{% /md %}}</dd><dt>Hard<wbr>Fail</dt>
+    <dd>HARD_FAIL{{% md %}}Messages that fail to parse are rejected from ingestion/insertion and return an error code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SCHEMATIZED_PARSING_TYPE_UNSPECIFIED</dt>
+    <dd>SCHEMATIZED_PARSING_TYPE_UNSPECIFIED{{% md %}}Unspecified schematized parsing type, equivalent to `SOFT_FAIL`.{{% /md %}}</dd><dt>SOFT_FAIL</dt>
+    <dd>SOFT_FAIL{{% md %}}Messages that fail to parse are still stored and ACKed but a parser error is stored in place of the schematized data.{{% /md %}}</dd><dt>HARD_FAIL</dt>
+    <dd>HARD_FAIL{{% md %}}Messages that fail to parse are rejected from ingestion/insertion and return an error code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="type">Type</h4>
 
 {{% choosable language csharp %}}
@@ -1924,7 +1954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primitive_csharp" style="color: inherit; text-decoration: inherit;">Primitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#typeprimitive">Pulumi.<wbr>Google<wbr>Native.<wbr>Healthcare.<wbr>V1.<wbr>Type<wbr>Primitive</a></span>
     </dt>
     <dd>{{% md %}}If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1952,7 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primitive_go" style="color: inherit; text-decoration: inherit;">Primitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#typeprimitive">Type<wbr>Primitive</a></span>
     </dt>
     <dd>{{% md %}}If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1980,7 +2010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primitive_nodejs" style="color: inherit; text-decoration: inherit;">primitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#typeprimitive">Type<wbr>Primitive</a></span>
     </dt>
     <dd>{{% md %}}If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2008,9 +2038,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primitive_python" style="color: inherit; text-decoration: inherit;">primitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#typeprimitive">Type<wbr>Primitive</a></span>
     </dt>
     <dd>{{% md %}}If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="typeprimitive">Type<wbr>Primitive</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Primitive<wbr>Unspecified</dt>
+    <dd>PRIMITIVE_UNSPECIFIED{{% md %}}Not a primitive.{{% /md %}}</dd><dt>String</dt>
+    <dd>STRING{{% md %}}String primitive.{{% /md %}}</dd><dt>Varies</dt>
+    <dd>VARIES{{% md %}}Element that can have unschematized children.{{% /md %}}</dd><dt>Unescaped<wbr>String</dt>
+    <dd>UNESCAPED_STRING{{% md %}}Like STRING, but all delimiters below this element are ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Type<wbr>Primitive<wbr>Primitive<wbr>Unspecified</dt>
+    <dd>PRIMITIVE_UNSPECIFIED{{% md %}}Not a primitive.{{% /md %}}</dd><dt>Type<wbr>Primitive<wbr>String</dt>
+    <dd>STRING{{% md %}}String primitive.{{% /md %}}</dd><dt>Type<wbr>Primitive<wbr>Varies</dt>
+    <dd>VARIES{{% md %}}Element that can have unschematized children.{{% /md %}}</dd><dt>Type<wbr>Primitive<wbr>Unescaped<wbr>String</dt>
+    <dd>UNESCAPED_STRING{{% md %}}Like STRING, but all delimiters below this element are ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Primitive<wbr>Unspecified</dt>
+    <dd>PRIMITIVE_UNSPECIFIED{{% md %}}Not a primitive.{{% /md %}}</dd><dt>String</dt>
+    <dd>STRING{{% md %}}String primitive.{{% /md %}}</dd><dt>Varies</dt>
+    <dd>VARIES{{% md %}}Element that can have unschematized children.{{% /md %}}</dd><dt>Unescaped<wbr>String</dt>
+    <dd>UNESCAPED_STRING{{% md %}}Like STRING, but all delimiters below this element are ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PRIMITIVE_UNSPECIFIED</dt>
+    <dd>PRIMITIVE_UNSPECIFIED{{% md %}}Not a primitive.{{% /md %}}</dd><dt>STRING</dt>
+    <dd>STRING{{% md %}}String primitive.{{% /md %}}</dd><dt>VARIES</dt>
+    <dd>VARIES{{% md %}}Element that can have unschematized children.{{% /md %}}</dd><dt>UNESCAPED_STRING</dt>
+    <dd>UNESCAPED_STRING{{% md %}}Like STRING, but all delimiters below this element are ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="typeresponse">Type<wbr>Response</h4>

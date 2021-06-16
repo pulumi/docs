@@ -665,7 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletier_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#executiontemplatescaletier">Pulumi.<wbr>Google<wbr>Native.<wbr>Notebooks.<wbr>V1.<wbr>Execution<wbr>Template<wbr>Scale<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -749,7 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletier_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#executiontemplatescaletier">Execution<wbr>Template<wbr>Scale<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -833,7 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletier_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#executiontemplatescaletier">Execution<wbr>Template<wbr>Scale<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -917,7 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_tier_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#executiontemplatescaletier">Execution<wbr>Template<wbr>Scale<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1268,6 +1268,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="executiontemplatescaletier">Execution<wbr>Template<wbr>Scale<wbr>Tier</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Scale<wbr>Tier<wbr>Unspecified</dt>
+    <dd>SCALE_TIER_UNSPECIFIED{{% md %}}Unspecified Scale Tier.{{% /md %}}</dd><dt>Basic</dt>
+    <dd>BASIC{{% md %}}A single worker instance. This tier is suitable for learning how to use Cloud ML, and for experimenting with new models using small datasets.{{% /md %}}</dd><dt>Standard1</dt>
+    <dd>STANDARD_1{{% md %}}Many workers and a few parameter servers.{{% /md %}}</dd><dt>Premium1</dt>
+    <dd>PREMIUM_1{{% md %}}A large number of workers with many parameter servers.{{% /md %}}</dd><dt>Basic<wbr>Gpu</dt>
+    <dd>BASIC_GPU{{% md %}}A single worker instance with a K80 GPU.{{% /md %}}</dd><dt>Basic<wbr>Tpu</dt>
+    <dd>BASIC_TPU{{% md %}}A single worker instance with a Cloud TPU.{{% /md %}}</dd><dt>Custom</dt>
+    <dd>CUSTOM{{% md %}}The CUSTOM tier is not a set tier, but rather enables you to use your own cluster specification. When you use this tier, set values to configure your processing cluster according to these guidelines: * You _must_ set `TrainingInput.masterType` to specify the type of machine to use for your master node. This is the only required setting. * You _may_ set `TrainingInput.workerCount` to specify the number of workers to use. If you specify one or more workers, you _must_ also set `TrainingInput.workerType` to specify the type of machine to use for your worker nodes. * You _may_ set `TrainingInput.parameterServerCount` to specify the number of parameter servers to use. If you specify one or more parameter servers, you _must_ also set `TrainingInput.parameterServerType` to specify the type of machine to use for your parameter servers. Note that all of your workers must use the same machine type, which can be different from your parameter server type and master type. Your parameter servers must likewise use the same machine type, which can be different from your worker type and master type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Execution<wbr>Template<wbr>Scale<wbr>Tier<wbr>Scale<wbr>Tier<wbr>Unspecified</dt>
+    <dd>SCALE_TIER_UNSPECIFIED{{% md %}}Unspecified Scale Tier.{{% /md %}}</dd><dt>Execution<wbr>Template<wbr>Scale<wbr>Tier<wbr>Basic</dt>
+    <dd>BASIC{{% md %}}A single worker instance. This tier is suitable for learning how to use Cloud ML, and for experimenting with new models using small datasets.{{% /md %}}</dd><dt>Execution<wbr>Template<wbr>Scale<wbr>Tier<wbr>Standard1</dt>
+    <dd>STANDARD_1{{% md %}}Many workers and a few parameter servers.{{% /md %}}</dd><dt>Execution<wbr>Template<wbr>Scale<wbr>Tier<wbr>Premium1</dt>
+    <dd>PREMIUM_1{{% md %}}A large number of workers with many parameter servers.{{% /md %}}</dd><dt>Execution<wbr>Template<wbr>Scale<wbr>Tier<wbr>Basic<wbr>Gpu</dt>
+    <dd>BASIC_GPU{{% md %}}A single worker instance with a K80 GPU.{{% /md %}}</dd><dt>Execution<wbr>Template<wbr>Scale<wbr>Tier<wbr>Basic<wbr>Tpu</dt>
+    <dd>BASIC_TPU{{% md %}}A single worker instance with a Cloud TPU.{{% /md %}}</dd><dt>Execution<wbr>Template<wbr>Scale<wbr>Tier<wbr>Custom</dt>
+    <dd>CUSTOM{{% md %}}The CUSTOM tier is not a set tier, but rather enables you to use your own cluster specification. When you use this tier, set values to configure your processing cluster according to these guidelines: * You _must_ set `TrainingInput.masterType` to specify the type of machine to use for your master node. This is the only required setting. * You _may_ set `TrainingInput.workerCount` to specify the number of workers to use. If you specify one or more workers, you _must_ also set `TrainingInput.workerType` to specify the type of machine to use for your worker nodes. * You _may_ set `TrainingInput.parameterServerCount` to specify the number of parameter servers to use. If you specify one or more parameter servers, you _must_ also set `TrainingInput.parameterServerType` to specify the type of machine to use for your parameter servers. Note that all of your workers must use the same machine type, which can be different from your parameter server type and master type. Your parameter servers must likewise use the same machine type, which can be different from your worker type and master type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Scale<wbr>Tier<wbr>Unspecified</dt>
+    <dd>SCALE_TIER_UNSPECIFIED{{% md %}}Unspecified Scale Tier.{{% /md %}}</dd><dt>Basic</dt>
+    <dd>BASIC{{% md %}}A single worker instance. This tier is suitable for learning how to use Cloud ML, and for experimenting with new models using small datasets.{{% /md %}}</dd><dt>Standard1</dt>
+    <dd>STANDARD_1{{% md %}}Many workers and a few parameter servers.{{% /md %}}</dd><dt>Premium1</dt>
+    <dd>PREMIUM_1{{% md %}}A large number of workers with many parameter servers.{{% /md %}}</dd><dt>Basic<wbr>Gpu</dt>
+    <dd>BASIC_GPU{{% md %}}A single worker instance with a K80 GPU.{{% /md %}}</dd><dt>Basic<wbr>Tpu</dt>
+    <dd>BASIC_TPU{{% md %}}A single worker instance with a Cloud TPU.{{% /md %}}</dd><dt>Custom</dt>
+    <dd>CUSTOM{{% md %}}The CUSTOM tier is not a set tier, but rather enables you to use your own cluster specification. When you use this tier, set values to configure your processing cluster according to these guidelines: * You _must_ set `TrainingInput.masterType` to specify the type of machine to use for your master node. This is the only required setting. * You _may_ set `TrainingInput.workerCount` to specify the number of workers to use. If you specify one or more workers, you _must_ also set `TrainingInput.workerType` to specify the type of machine to use for your worker nodes. * You _may_ set `TrainingInput.parameterServerCount` to specify the number of parameter servers to use. If you specify one or more parameter servers, you _must_ also set `TrainingInput.parameterServerType` to specify the type of machine to use for your parameter servers. Note that all of your workers must use the same machine type, which can be different from your parameter server type and master type. Your parameter servers must likewise use the same machine type, which can be different from your worker type and master type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SCALE_TIER_UNSPECIFIED</dt>
+    <dd>SCALE_TIER_UNSPECIFIED{{% md %}}Unspecified Scale Tier.{{% /md %}}</dd><dt>BASIC</dt>
+    <dd>BASIC{{% md %}}A single worker instance. This tier is suitable for learning how to use Cloud ML, and for experimenting with new models using small datasets.{{% /md %}}</dd><dt>STANDARD1</dt>
+    <dd>STANDARD_1{{% md %}}Many workers and a few parameter servers.{{% /md %}}</dd><dt>PREMIUM1</dt>
+    <dd>PREMIUM_1{{% md %}}A large number of workers with many parameter servers.{{% /md %}}</dd><dt>BASIC_GPU</dt>
+    <dd>BASIC_GPU{{% md %}}A single worker instance with a K80 GPU.{{% /md %}}</dd><dt>BASIC_TPU</dt>
+    <dd>BASIC_TPU{{% md %}}A single worker instance with a Cloud TPU.{{% /md %}}</dd><dt>CUSTOM</dt>
+    <dd>CUSTOM{{% md %}}The CUSTOM tier is not a set tier, but rather enables you to use your own cluster specification. When you use this tier, set values to configure your processing cluster according to these guidelines: * You _must_ set `TrainingInput.masterType` to specify the type of machine to use for your master node. This is the only required setting. * You _may_ set `TrainingInput.workerCount` to specify the number of workers to use. If you specify one or more workers, you _must_ also set `TrainingInput.workerType` to specify the type of machine to use for your worker nodes. * You _may_ set `TrainingInput.parameterServerCount` to specify the number of parameter servers to use. If you specify one or more parameter servers, you _must_ also set `TrainingInput.parameterServerType` to specify the type of machine to use for your parameter servers. Note that all of your workers must use the same machine type, which can be different from your parameter server type and master type. Your parameter servers must likewise use the same machine type, which can be different from your worker type and master type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="scheduleracceleratorconfig">Scheduler<wbr>Accelerator<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -1285,7 +1331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scheduleracceleratorconfigtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Notebooks.<wbr>V1.<wbr>Scheduler<wbr>Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1305,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scheduleracceleratorconfigtype">Scheduler<wbr>Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1325,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scheduleracceleratorconfigtype">Scheduler<wbr>Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1345,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#scheduleracceleratorconfigtype">Scheduler<wbr>Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1430,6 +1476,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="scheduleracceleratorconfigtype">Scheduler<wbr>Accelerator<wbr>Config<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Scheduler<wbr>Accelerator<wbr>Type<wbr>Unspecified</dt>
+    <dd>SCHEDULER_ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Unspecified accelerator type. Default to no GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Nvidia Tesla K80 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Nvidia Tesla P100 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Nvidia Tesla V100 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Nvidia Tesla P4 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Nvidia Tesla T4 GPU.{{% /md %}}</dd><dt>Tpu<wbr>V2</dt>
+    <dd>TPU_V2{{% md %}}TPU v2.{{% /md %}}</dd><dt>Tpu<wbr>V3</dt>
+    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Scheduler<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Scheduler<wbr>Accelerator<wbr>Type<wbr>Unspecified</dt>
+    <dd>SCHEDULER_ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Unspecified accelerator type. Default to no GPU.{{% /md %}}</dd><dt>Scheduler<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Nvidia Tesla K80 GPU.{{% /md %}}</dd><dt>Scheduler<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Nvidia Tesla P100 GPU.{{% /md %}}</dd><dt>Scheduler<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Nvidia Tesla V100 GPU.{{% /md %}}</dd><dt>Scheduler<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Nvidia Tesla P4 GPU.{{% /md %}}</dd><dt>Scheduler<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Nvidia Tesla T4 GPU.{{% /md %}}</dd><dt>Scheduler<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Tpu<wbr>V2</dt>
+    <dd>TPU_V2{{% md %}}TPU v2.{{% /md %}}</dd><dt>Scheduler<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Tpu<wbr>V3</dt>
+    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Scheduler<wbr>Accelerator<wbr>Type<wbr>Unspecified</dt>
+    <dd>SCHEDULER_ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Unspecified accelerator type. Default to no GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Nvidia Tesla K80 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Nvidia Tesla P100 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Nvidia Tesla V100 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Nvidia Tesla P4 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Nvidia Tesla T4 GPU.{{% /md %}}</dd><dt>Tpu<wbr>V2</dt>
+    <dd>TPU_V2{{% md %}}TPU v2.{{% /md %}}</dd><dt>Tpu<wbr>V3</dt>
+    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SCHEDULER_ACCELERATOR_TYPE_UNSPECIFIED</dt>
+    <dd>SCHEDULER_ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Unspecified accelerator type. Default to no GPU.{{% /md %}}</dd><dt>NVIDIA_TESLA_K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Nvidia Tesla K80 GPU.{{% /md %}}</dd><dt>NVIDIA_TESLA_P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Nvidia Tesla P100 GPU.{{% /md %}}</dd><dt>NVIDIA_TESLA_V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Nvidia Tesla V100 GPU.{{% /md %}}</dd><dt>NVIDIA_TESLA_P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Nvidia Tesla P4 GPU.{{% /md %}}</dd><dt>NVIDIA_TESLA_T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Nvidia Tesla T4 GPU.{{% /md %}}</dd><dt>TPU_V2</dt>
+    <dd>TPU_V2{{% md %}}TPU v2.{{% /md %}}</dd><dt>TPU_V3</dt>
+    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -28,7 +28,7 @@ Creates an intent in the specified agent.
 <span class="k">def </span><span class="nx">Intent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
            <span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-           <span class="nx">default_response_platforms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+           <span class="nx">default_response_platforms</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dialogflow_v2beta1.IntentDefaultResponsePlatformsItem]]</span> = None<span class="p">,</span>
            <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">end_interaction</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">events</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -48,7 +48,7 @@ Creates an intent in the specified agent.
            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">reset_contexts</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">training_phrases</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dialogflow_v2beta1.GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">webhook_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+           <span class="nx">webhook_state</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v2beta1.IntentWebhookState]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Intent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntentArgs</a></span><span class="p">,</span>
@@ -206,7 +206,7 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#defaultresponseplatforms_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Response<wbr>Platforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#intentdefaultresponseplatformsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2Beta1.<wbr>Intent<wbr>Default<wbr>Response<wbr>Platforms<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional. The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED (i.e. default platform).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -350,7 +350,7 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#webhookstate_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#intentwebhookstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2Beta1.<wbr>Intent<wbr>Webhook<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Optional. Indicates whether webhooks are enabled for the intent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -386,7 +386,7 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#defaultresponseplatforms_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Response<wbr>Platforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#intentdefaultresponseplatformsitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}Optional. The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED (i.e. default platform).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +530,7 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#webhookstate_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#intentwebhookstate">Intent<wbr>Webhook<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Optional. Indicates whether webhooks are enabled for the intent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -566,7 +566,7 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#defaultresponseplatforms_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Response<wbr>Platforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#intentdefaultresponseplatformsitem">Intent<wbr>Default<wbr>Response<wbr>Platforms<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED (i.e. default platform).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +710,7 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#webhookstate_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#intentwebhookstate">Intent<wbr>Webhook<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Optional. Indicates whether webhooks are enabled for the intent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -746,7 +746,7 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#default_response_platforms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>response_<wbr>platforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#intentdefaultresponseplatformsitem">Intent<wbr>Default<wbr>Response<wbr>Platforms<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED (i.e. default platform).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -890,7 +890,7 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#webhook_state_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#intentwebhookstate">Intent<wbr>Webhook<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Optional. Indicates whether webhooks are enabled for the intent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1415,7 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessageplatform">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2Beta1.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}Optional. The platform that this message is intended for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1587,7 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessageplatform">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}Optional. The platform that this message is intended for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1759,7 +1759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessageplatform">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}Optional. The platform that this message is intended for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1931,7 +1931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessageplatform">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}Optional. The platform that this message is intended for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2653,7 +2653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagedisplayoptions_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Display<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagebrowsecarouselcardimagedisplayoptions">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2Beta1.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Image<wbr>Display<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Optional. Settings for displaying the image. Applies to every image in items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2673,7 +2673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagedisplayoptions_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Display<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagebrowsecarouselcardimagedisplayoptions">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Image<wbr>Display<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Optional. Settings for displaying the image. Applies to every image in items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2693,7 +2693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagedisplayoptions_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Display<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagebrowsecarouselcardimagedisplayoptions">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Image<wbr>Display<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Optional. Settings for displaying the image. Applies to every image in items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2713,7 +2713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_display_options_python" style="color: inherit; text-decoration: inherit;">image_<wbr>display_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagebrowsecarouselcardimagedisplayoptions">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Image<wbr>Display<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Optional. Settings for displaying the image. Applies to every image in items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2921,7 +2921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#urltypehint_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Type<wbr>Hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagebrowsecarouselcardbrowsecarouselcarditemopenurlactionurltypehint">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2Beta1.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Item<wbr>Open<wbr>Url<wbr>Action<wbr>Url<wbr>Type<wbr>Hint</a></span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2941,7 +2941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#urltypehint_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Type<wbr>Hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagebrowsecarouselcardbrowsecarouselcarditemopenurlactionurltypehint">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Item<wbr>Open<wbr>Url<wbr>Action<wbr>Url<wbr>Type<wbr>Hint</a></span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2961,7 +2961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#urltypehint_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Type<wbr>Hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagebrowsecarouselcardbrowsecarouselcarditemopenurlactionurltypehint">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Item<wbr>Open<wbr>Url<wbr>Action<wbr>Url<wbr>Type<wbr>Hint</a></span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2981,7 +2981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_type_hint_python" style="color: inherit; text-decoration: inherit;">url_<wbr>type_<wbr>hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagebrowsecarouselcardbrowsecarouselcarditemopenurlactionurltypehint">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Item<wbr>Open<wbr>Url<wbr>Action<wbr>Url<wbr>Type<wbr>Hint</a></span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3066,6 +3066,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowv2beta1intentmessagebrowsecarouselcardbrowsecarouselcarditemopenurlactionurltypehint">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Item<wbr>Open<wbr>Url<wbr>Action<wbr>Url<wbr>Type<wbr>Hint</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Url<wbr>Type<wbr>Hint<wbr>Unspecified</dt>
+    <dd>URL_TYPE_HINT_UNSPECIFIED{{% md %}}Unspecified{{% /md %}}</dd><dt>Amp<wbr>Action</dt>
+    <dd>AMP_ACTION{{% md %}}Url would be an amp action{{% /md %}}</dd><dt>Amp<wbr>Content</dt>
+    <dd>AMP_CONTENT{{% md %}}URL that points directly to AMP content, or to a canonical URL which refers to AMP content via .{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Item<wbr>Open<wbr>Url<wbr>Action<wbr>Url<wbr>Type<wbr>Hint<wbr>Url<wbr>Type<wbr>Hint<wbr>Unspecified</dt>
+    <dd>URL_TYPE_HINT_UNSPECIFIED{{% md %}}Unspecified{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Item<wbr>Open<wbr>Url<wbr>Action<wbr>Url<wbr>Type<wbr>Hint<wbr>Amp<wbr>Action</dt>
+    <dd>AMP_ACTION{{% md %}}Url would be an amp action{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Item<wbr>Open<wbr>Url<wbr>Action<wbr>Url<wbr>Type<wbr>Hint<wbr>Amp<wbr>Content</dt>
+    <dd>AMP_CONTENT{{% md %}}URL that points directly to AMP content, or to a canonical URL which refers to AMP content via .{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Url<wbr>Type<wbr>Hint<wbr>Unspecified</dt>
+    <dd>URL_TYPE_HINT_UNSPECIFIED{{% md %}}Unspecified{{% /md %}}</dd><dt>Amp<wbr>Action</dt>
+    <dd>AMP_ACTION{{% md %}}Url would be an amp action{{% /md %}}</dd><dt>Amp<wbr>Content</dt>
+    <dd>AMP_CONTENT{{% md %}}URL that points directly to AMP content, or to a canonical URL which refers to AMP content via .{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>URL_TYPE_HINT_UNSPECIFIED</dt>
+    <dd>URL_TYPE_HINT_UNSPECIFIED{{% md %}}Unspecified{{% /md %}}</dd><dt>AMP_ACTION</dt>
+    <dd>AMP_ACTION{{% md %}}Url would be an amp action{{% /md %}}</dd><dt>AMP_CONTENT</dt>
+    <dd>AMP_CONTENT{{% md %}}URL that points directly to AMP content, or to a canonical URL which refers to AMP content via .{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddialogflowv2beta1intentmessagebrowsecarouselcardbrowsecarouselcarditemresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Item<wbr>Response</h4>
@@ -3244,6 +3274,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Title of the carousel item. Maximum of two lines of text.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowv2beta1intentmessagebrowsecarouselcardimagedisplayoptions">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Image<wbr>Display<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Image<wbr>Display<wbr>Options<wbr>Unspecified</dt>
+    <dd>IMAGE_DISPLAY_OPTIONS_UNSPECIFIED{{% md %}}Fill the gaps between the image and the image container with gray bars.{{% /md %}}</dd><dt>Gray</dt>
+    <dd>GRAY{{% md %}}Fill the gaps between the image and the image container with gray bars.{{% /md %}}</dd><dt>White</dt>
+    <dd>WHITE{{% md %}}Fill the gaps between the image and the image container with white bars.{{% /md %}}</dd><dt>Cropped</dt>
+    <dd>CROPPED{{% md %}}Image is scaled such that the image width and height match or exceed the container dimensions. This may crop the top and bottom of the image if the scaled image height is greater than the container height, or crop the left and right of the image if the scaled image width is greater than the container width. This is similar to "Zoom Mode" on a widescreen TV when playing a 4:3 video.{{% /md %}}</dd><dt>Blurred<wbr>Background</dt>
+    <dd>BLURRED_BACKGROUND{{% md %}}Pad the gaps between image and image frame with a blurred copy of the same image.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Image<wbr>Display<wbr>Options<wbr>Image<wbr>Display<wbr>Options<wbr>Unspecified</dt>
+    <dd>IMAGE_DISPLAY_OPTIONS_UNSPECIFIED{{% md %}}Fill the gaps between the image and the image container with gray bars.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Image<wbr>Display<wbr>Options<wbr>Gray</dt>
+    <dd>GRAY{{% md %}}Fill the gaps between the image and the image container with gray bars.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Image<wbr>Display<wbr>Options<wbr>White</dt>
+    <dd>WHITE{{% md %}}Fill the gaps between the image and the image container with white bars.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Image<wbr>Display<wbr>Options<wbr>Cropped</dt>
+    <dd>CROPPED{{% md %}}Image is scaled such that the image width and height match or exceed the container dimensions. This may crop the top and bottom of the image if the scaled image height is greater than the container height, or crop the left and right of the image if the scaled image width is greater than the container width. This is similar to "Zoom Mode" on a widescreen TV when playing a 4:3 video.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Image<wbr>Display<wbr>Options<wbr>Blurred<wbr>Background</dt>
+    <dd>BLURRED_BACKGROUND{{% md %}}Pad the gaps between image and image frame with a blurred copy of the same image.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Image<wbr>Display<wbr>Options<wbr>Unspecified</dt>
+    <dd>IMAGE_DISPLAY_OPTIONS_UNSPECIFIED{{% md %}}Fill the gaps between the image and the image container with gray bars.{{% /md %}}</dd><dt>Gray</dt>
+    <dd>GRAY{{% md %}}Fill the gaps between the image and the image container with gray bars.{{% /md %}}</dd><dt>White</dt>
+    <dd>WHITE{{% md %}}Fill the gaps between the image and the image container with white bars.{{% /md %}}</dd><dt>Cropped</dt>
+    <dd>CROPPED{{% md %}}Image is scaled such that the image width and height match or exceed the container dimensions. This may crop the top and bottom of the image if the scaled image height is greater than the container height, or crop the left and right of the image if the scaled image width is greater than the container width. This is similar to "Zoom Mode" on a widescreen TV when playing a 4:3 video.{{% /md %}}</dd><dt>Blurred<wbr>Background</dt>
+    <dd>BLURRED_BACKGROUND{{% md %}}Pad the gaps between image and image frame with a blurred copy of the same image.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>IMAGE_DISPLAY_OPTIONS_UNSPECIFIED</dt>
+    <dd>IMAGE_DISPLAY_OPTIONS_UNSPECIFIED{{% md %}}Fill the gaps between the image and the image container with gray bars.{{% /md %}}</dd><dt>GRAY</dt>
+    <dd>GRAY{{% md %}}Fill the gaps between the image and the image container with gray bars.{{% /md %}}</dd><dt>WHITE</dt>
+    <dd>WHITE{{% md %}}Fill the gaps between the image and the image container with white bars.{{% /md %}}</dd><dt>CROPPED</dt>
+    <dd>CROPPED{{% md %}}Image is scaled such that the image width and height match or exceed the container dimensions. This may crop the top and bottom of the image if the scaled image height is greater than the container height, or crop the left and right of the image if the scaled image width is greater than the container width. This is similar to "Zoom Mode" on a widescreen TV when playing a 4:3 video.{{% /md %}}</dd><dt>BLURRED_BACKGROUND</dt>
+    <dd>BLURRED_BACKGROUND{{% md %}}Pad the gaps between image and image frame with a blurred copy of the same image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddialogflowv2beta1intentmessagebrowsecarouselcardresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Browse<wbr>Carousel<wbr>Card<wbr>Response</h4>
@@ -4193,7 +4261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#horizontalalignment_csharp" style="color: inherit; text-decoration: inherit;">Horizontal<wbr>Alignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagecolumnpropertieshorizontalalignment">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2Beta1.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Column<wbr>Properties<wbr>Horizontal<wbr>Alignment</a></span>
     </dt>
     <dd>{{% md %}}Optional. Defines text alignment for all cells in this column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4213,7 +4281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#horizontalalignment_go" style="color: inherit; text-decoration: inherit;">Horizontal<wbr>Alignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagecolumnpropertieshorizontalalignment">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Column<wbr>Properties<wbr>Horizontal<wbr>Alignment</a></span>
     </dt>
     <dd>{{% md %}}Optional. Defines text alignment for all cells in this column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4233,7 +4301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#horizontalalignment_nodejs" style="color: inherit; text-decoration: inherit;">horizontal<wbr>Alignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagecolumnpropertieshorizontalalignment">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Column<wbr>Properties<wbr>Horizontal<wbr>Alignment</a></span>
     </dt>
     <dd>{{% md %}}Optional. Defines text alignment for all cells in this column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4253,9 +4321,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#horizontal_alignment_python" style="color: inherit; text-decoration: inherit;">horizontal_<wbr>alignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagecolumnpropertieshorizontalalignment">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Column<wbr>Properties<wbr>Horizontal<wbr>Alignment</a></span>
     </dt>
     <dd>{{% md %}}Optional. Defines text alignment for all cells in this column.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowv2beta1intentmessagecolumnpropertieshorizontalalignment">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Column<wbr>Properties<wbr>Horizontal<wbr>Alignment</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Horizontal<wbr>Alignment<wbr>Unspecified</dt>
+    <dd>HORIZONTAL_ALIGNMENT_UNSPECIFIED{{% md %}}Text is aligned to the leading edge of the column.{{% /md %}}</dd><dt>Leading</dt>
+    <dd>LEADING{{% md %}}Text is aligned to the leading edge of the column.{{% /md %}}</dd><dt>Center</dt>
+    <dd>CENTER{{% md %}}Text is centered in the column.{{% /md %}}</dd><dt>Trailing</dt>
+    <dd>TRAILING{{% md %}}Text is aligned to the trailing edge of the column.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Column<wbr>Properties<wbr>Horizontal<wbr>Alignment<wbr>Horizontal<wbr>Alignment<wbr>Unspecified</dt>
+    <dd>HORIZONTAL_ALIGNMENT_UNSPECIFIED{{% md %}}Text is aligned to the leading edge of the column.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Column<wbr>Properties<wbr>Horizontal<wbr>Alignment<wbr>Leading</dt>
+    <dd>LEADING{{% md %}}Text is aligned to the leading edge of the column.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Column<wbr>Properties<wbr>Horizontal<wbr>Alignment<wbr>Center</dt>
+    <dd>CENTER{{% md %}}Text is centered in the column.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Column<wbr>Properties<wbr>Horizontal<wbr>Alignment<wbr>Trailing</dt>
+    <dd>TRAILING{{% md %}}Text is aligned to the trailing edge of the column.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Horizontal<wbr>Alignment<wbr>Unspecified</dt>
+    <dd>HORIZONTAL_ALIGNMENT_UNSPECIFIED{{% md %}}Text is aligned to the leading edge of the column.{{% /md %}}</dd><dt>Leading</dt>
+    <dd>LEADING{{% md %}}Text is aligned to the leading edge of the column.{{% /md %}}</dd><dt>Center</dt>
+    <dd>CENTER{{% md %}}Text is centered in the column.{{% /md %}}</dd><dt>Trailing</dt>
+    <dd>TRAILING{{% md %}}Text is aligned to the trailing edge of the column.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>HORIZONTAL_ALIGNMENT_UNSPECIFIED</dt>
+    <dd>HORIZONTAL_ALIGNMENT_UNSPECIFIED{{% md %}}Text is aligned to the leading edge of the column.{{% /md %}}</dd><dt>LEADING</dt>
+    <dd>LEADING{{% md %}}Text is aligned to the leading edge of the column.{{% /md %}}</dd><dt>CENTER</dt>
+    <dd>CENTER{{% md %}}Text is centered in the column.{{% /md %}}</dd><dt>TRAILING</dt>
+    <dd>TRAILING{{% md %}}Text is aligned to the trailing edge of the column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddialogflowv2beta1intentmessagecolumnpropertiesresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Column<wbr>Properties<wbr>Response</h4>
@@ -5205,7 +5307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mediatype_csharp" style="color: inherit; text-decoration: inherit;">Media<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagemediacontentmediatype">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2Beta1.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Media<wbr>Content<wbr>Media<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. What type of media is the content (ie "audio").{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5225,7 +5327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mediatype_go" style="color: inherit; text-decoration: inherit;">Media<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagemediacontentmediatype">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Media<wbr>Content<wbr>Media<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. What type of media is the content (ie "audio").{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5245,7 +5347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mediatype_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagemediacontentmediatype">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Media<wbr>Content<wbr>Media<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. What type of media is the content (ie "audio").{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5265,9 +5367,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#media_type_python" style="color: inherit; text-decoration: inherit;">media_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagemediacontentmediatype">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Media<wbr>Content<wbr>Media<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. What type of media is the content (ie "audio").{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowv2beta1intentmessagemediacontentmediatype">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Media<wbr>Content<wbr>Media<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Response<wbr>Media<wbr>Type<wbr>Unspecified</dt>
+    <dd>RESPONSE_MEDIA_TYPE_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>Audio</dt>
+    <dd>AUDIO{{% md %}}Response media type is audio.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Media<wbr>Content<wbr>Media<wbr>Type<wbr>Response<wbr>Media<wbr>Type<wbr>Unspecified</dt>
+    <dd>RESPONSE_MEDIA_TYPE_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Media<wbr>Content<wbr>Media<wbr>Type<wbr>Audio</dt>
+    <dd>AUDIO{{% md %}}Response media type is audio.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Response<wbr>Media<wbr>Type<wbr>Unspecified</dt>
+    <dd>RESPONSE_MEDIA_TYPE_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>Audio</dt>
+    <dd>AUDIO{{% md %}}Response media type is audio.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RESPONSE_MEDIA_TYPE_UNSPECIFIED</dt>
+    <dd>RESPONSE_MEDIA_TYPE_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>AUDIO</dt>
+    <dd>AUDIO{{% md %}}Response media type is audio.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddialogflowv2beta1intentmessagemediacontentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Media<wbr>Content<wbr>Response</h4>
@@ -5708,6 +5836,68 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Required. Name of media card.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="googleclouddialogflowv2beta1intentmessageplatform">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Platform</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Platform<wbr>Unspecified</dt>
+    <dd>PLATFORM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Facebook</dt>
+    <dd>FACEBOOK{{% md %}}Facebook.{{% /md %}}</dd><dt>Slack</dt>
+    <dd>SLACK{{% md %}}Slack.{{% /md %}}</dd><dt>Telegram</dt>
+    <dd>TELEGRAM{{% md %}}Telegram.{{% /md %}}</dd><dt>Kik</dt>
+    <dd>KIK{{% md %}}Kik.{{% /md %}}</dd><dt>Skype</dt>
+    <dd>SKYPE{{% md %}}Skype.{{% /md %}}</dd><dt>Line</dt>
+    <dd>LINE{{% md %}}Line.{{% /md %}}</dd><dt>Viber</dt>
+    <dd>VIBER{{% md %}}Viber.{{% /md %}}</dd><dt>Actions<wbr>On<wbr>Google</dt>
+    <dd>ACTIONS_ON_GOOGLE{{% md %}}Google Assistant See [Dialogflow webhook format](https://developers.google.com/assistant/actions/build/json/dialogflow-webhook-json){{% /md %}}</dd><dt>Telephony</dt>
+    <dd>TELEPHONY{{% md %}}Telephony Gateway.{{% /md %}}</dd><dt>Google<wbr>Hangouts</dt>
+    <dd>GOOGLE_HANGOUTS{{% md %}}Google Hangouts.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Platform<wbr>Platform<wbr>Unspecified</dt>
+    <dd>PLATFORM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Platform<wbr>Facebook</dt>
+    <dd>FACEBOOK{{% md %}}Facebook.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Platform<wbr>Slack</dt>
+    <dd>SLACK{{% md %}}Slack.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Platform<wbr>Telegram</dt>
+    <dd>TELEGRAM{{% md %}}Telegram.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Platform<wbr>Kik</dt>
+    <dd>KIK{{% md %}}Kik.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Platform<wbr>Skype</dt>
+    <dd>SKYPE{{% md %}}Skype.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Platform<wbr>Line</dt>
+    <dd>LINE{{% md %}}Line.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Platform<wbr>Viber</dt>
+    <dd>VIBER{{% md %}}Viber.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Platform<wbr>Actions<wbr>On<wbr>Google</dt>
+    <dd>ACTIONS_ON_GOOGLE{{% md %}}Google Assistant See [Dialogflow webhook format](https://developers.google.com/assistant/actions/build/json/dialogflow-webhook-json){{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Platform<wbr>Telephony</dt>
+    <dd>TELEPHONY{{% md %}}Telephony Gateway.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Platform<wbr>Google<wbr>Hangouts</dt>
+    <dd>GOOGLE_HANGOUTS{{% md %}}Google Hangouts.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Platform<wbr>Unspecified</dt>
+    <dd>PLATFORM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Facebook</dt>
+    <dd>FACEBOOK{{% md %}}Facebook.{{% /md %}}</dd><dt>Slack</dt>
+    <dd>SLACK{{% md %}}Slack.{{% /md %}}</dd><dt>Telegram</dt>
+    <dd>TELEGRAM{{% md %}}Telegram.{{% /md %}}</dd><dt>Kik</dt>
+    <dd>KIK{{% md %}}Kik.{{% /md %}}</dd><dt>Skype</dt>
+    <dd>SKYPE{{% md %}}Skype.{{% /md %}}</dd><dt>Line</dt>
+    <dd>LINE{{% md %}}Line.{{% /md %}}</dd><dt>Viber</dt>
+    <dd>VIBER{{% md %}}Viber.{{% /md %}}</dd><dt>Actions<wbr>On<wbr>Google</dt>
+    <dd>ACTIONS_ON_GOOGLE{{% md %}}Google Assistant See [Dialogflow webhook format](https://developers.google.com/assistant/actions/build/json/dialogflow-webhook-json){{% /md %}}</dd><dt>Telephony</dt>
+    <dd>TELEPHONY{{% md %}}Telephony Gateway.{{% /md %}}</dd><dt>Google<wbr>Hangouts</dt>
+    <dd>GOOGLE_HANGOUTS{{% md %}}Google Hangouts.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PLATFORM_UNSPECIFIED</dt>
+    <dd>PLATFORM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>FACEBOOK</dt>
+    <dd>FACEBOOK{{% md %}}Facebook.{{% /md %}}</dd><dt>SLACK</dt>
+    <dd>SLACK{{% md %}}Slack.{{% /md %}}</dd><dt>TELEGRAM</dt>
+    <dd>TELEGRAM{{% md %}}Telegram.{{% /md %}}</dd><dt>KIK</dt>
+    <dd>KIK{{% md %}}Kik.{{% /md %}}</dd><dt>SKYPE</dt>
+    <dd>SKYPE{{% md %}}Skype.{{% /md %}}</dd><dt>LINE</dt>
+    <dd>LINE{{% md %}}Line.{{% /md %}}</dd><dt>VIBER</dt>
+    <dd>VIBER{{% md %}}Viber.{{% /md %}}</dd><dt>ACTIONS_ON_GOOGLE</dt>
+    <dd>ACTIONS_ON_GOOGLE{{% md %}}Google Assistant See [Dialogflow webhook format](https://developers.google.com/assistant/actions/build/json/dialogflow-webhook-json){{% /md %}}</dd><dt>TELEPHONY</dt>
+    <dd>TELEPHONY{{% md %}}Telephony Gateway.{{% /md %}}</dd><dt>GOOGLE_HANGOUTS</dt>
+    <dd>GOOGLE_HANGOUTS{{% md %}}Google Hangouts.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="googleclouddialogflowv2beta1intentmessagequickreplies">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Quick<wbr>Replies</h4>
 
 {{% choosable language csharp %}}
@@ -6035,7 +6225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_csharp" style="color: inherit; text-decoration: inherit;">Height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagerbmcardcontentrbmmediaheight">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2Beta1.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Card<wbr>Content<wbr>Rbm<wbr>Media<wbr>Height</a></span>
     </dt>
     <dd>{{% md %}}Required for cards with vertical orientation. The height of the media within a rich card with a vertical layout. For a standalone card with horizontal layout, height is not customizable, and this field is ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6063,7 +6253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_go" style="color: inherit; text-decoration: inherit;">Height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagerbmcardcontentrbmmediaheight">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Card<wbr>Content<wbr>Rbm<wbr>Media<wbr>Height</a></span>
     </dt>
     <dd>{{% md %}}Required for cards with vertical orientation. The height of the media within a rich card with a vertical layout. For a standalone card with horizontal layout, height is not customizable, and this field is ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6091,7 +6281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagerbmcardcontentrbmmediaheight">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Card<wbr>Content<wbr>Rbm<wbr>Media<wbr>Height</a></span>
     </dt>
     <dd>{{% md %}}Required for cards with vertical orientation. The height of the media within a rich card with a vertical layout. For a standalone card with horizontal layout, height is not customizable, and this field is ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6119,7 +6309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagerbmcardcontentrbmmediaheight">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Card<wbr>Content<wbr>Rbm<wbr>Media<wbr>Height</a></span>
     </dt>
     <dd>{{% md %}}Required for cards with vertical orientation. The height of the media within a rich card with a vertical layout. For a standalone card with horizontal layout, height is not customizable, and this field is ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6130,6 +6320,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Publicly reachable URI of the thumbnail.If you don't provide a thumbnail URI, the RBM platform displays a blank placeholder thumbnail until the user's device downloads the file. Depending on the user's setting, the file may not download automatically and may require the user to tap a download button.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowv2beta1intentmessagerbmcardcontentrbmmediaheight">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Card<wbr>Content<wbr>Rbm<wbr>Media<wbr>Height</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Height<wbr>Unspecified</dt>
+    <dd>HEIGHT_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Short</dt>
+    <dd>SHORT{{% md %}}112 DP.{{% /md %}}</dd><dt>Medium</dt>
+    <dd>MEDIUM{{% md %}}168 DP.{{% /md %}}</dd><dt>Tall</dt>
+    <dd>TALL{{% md %}}264 DP. Not available for rich card carousels when the card width is set to small.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Card<wbr>Content<wbr>Rbm<wbr>Media<wbr>Height<wbr>Height<wbr>Unspecified</dt>
+    <dd>HEIGHT_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Card<wbr>Content<wbr>Rbm<wbr>Media<wbr>Height<wbr>Short</dt>
+    <dd>SHORT{{% md %}}112 DP.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Card<wbr>Content<wbr>Rbm<wbr>Media<wbr>Height<wbr>Medium</dt>
+    <dd>MEDIUM{{% md %}}168 DP.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Card<wbr>Content<wbr>Rbm<wbr>Media<wbr>Height<wbr>Tall</dt>
+    <dd>TALL{{% md %}}264 DP. Not available for rich card carousels when the card width is set to small.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Height<wbr>Unspecified</dt>
+    <dd>HEIGHT_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Short</dt>
+    <dd>SHORT{{% md %}}112 DP.{{% /md %}}</dd><dt>Medium</dt>
+    <dd>MEDIUM{{% md %}}168 DP.{{% /md %}}</dd><dt>Tall</dt>
+    <dd>TALL{{% md %}}264 DP. Not available for rich card carousels when the card width is set to small.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>HEIGHT_UNSPECIFIED</dt>
+    <dd>HEIGHT_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>SHORT</dt>
+    <dd>SHORT{{% md %}}112 DP.{{% /md %}}</dd><dt>MEDIUM</dt>
+    <dd>MEDIUM{{% md %}}168 DP.{{% /md %}}</dd><dt>TALL</dt>
+    <dd>TALL{{% md %}}264 DP. Not available for rich card carousels when the card width is set to small.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddialogflowv2beta1intentmessagerbmcardcontentrbmmediaresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Card<wbr>Content<wbr>Rbm<wbr>Media<wbr>Response</h4>
@@ -6409,7 +6633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cardwidth_csharp" style="color: inherit; text-decoration: inherit;">Card<wbr>Width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagerbmcarouselcardcardwidth">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2Beta1.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Carousel<wbr>Card<wbr>Card<wbr>Width</a></span>
     </dt>
     <dd>{{% md %}}Required. The width of the cards in the carousel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6429,7 +6653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cardwidth_go" style="color: inherit; text-decoration: inherit;">Card<wbr>Width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagerbmcarouselcardcardwidth">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Carousel<wbr>Card<wbr>Card<wbr>Width</a></span>
     </dt>
     <dd>{{% md %}}Required. The width of the cards in the carousel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6449,7 +6673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cardwidth_nodejs" style="color: inherit; text-decoration: inherit;">card<wbr>Width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagerbmcarouselcardcardwidth">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Carousel<wbr>Card<wbr>Card<wbr>Width</a></span>
     </dt>
     <dd>{{% md %}}Required. The width of the cards in the carousel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6469,9 +6693,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#card_width_python" style="color: inherit; text-decoration: inherit;">card_<wbr>width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagerbmcarouselcardcardwidth">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Carousel<wbr>Card<wbr>Card<wbr>Width</a></span>
     </dt>
     <dd>{{% md %}}Required. The width of the cards in the carousel.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowv2beta1intentmessagerbmcarouselcardcardwidth">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Carousel<wbr>Card<wbr>Card<wbr>Width</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Card<wbr>Width<wbr>Unspecified</dt>
+    <dd>CARD_WIDTH_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Small</dt>
+    <dd>SMALL{{% md %}}120 DP. Note that tall media cannot be used.{{% /md %}}</dd><dt>Medium</dt>
+    <dd>MEDIUM{{% md %}}232 DP.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Carousel<wbr>Card<wbr>Card<wbr>Width<wbr>Card<wbr>Width<wbr>Unspecified</dt>
+    <dd>CARD_WIDTH_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Carousel<wbr>Card<wbr>Card<wbr>Width<wbr>Small</dt>
+    <dd>SMALL{{% md %}}120 DP. Note that tall media cannot be used.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Carousel<wbr>Card<wbr>Card<wbr>Width<wbr>Medium</dt>
+    <dd>MEDIUM{{% md %}}232 DP.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Card<wbr>Width<wbr>Unspecified</dt>
+    <dd>CARD_WIDTH_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Small</dt>
+    <dd>SMALL{{% md %}}120 DP. Note that tall media cannot be used.{{% /md %}}</dd><dt>Medium</dt>
+    <dd>MEDIUM{{% md %}}232 DP.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CARD_WIDTH_UNSPECIFIED</dt>
+    <dd>CARD_WIDTH_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>SMALL</dt>
+    <dd>SMALL{{% md %}}120 DP. Note that tall media cannot be used.{{% /md %}}</dd><dt>MEDIUM</dt>
+    <dd>MEDIUM{{% md %}}232 DP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddialogflowv2beta1intentmessagerbmcarouselcardresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Carousel<wbr>Card<wbr>Response</h4>
@@ -6573,7 +6827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cardorientation_csharp" style="color: inherit; text-decoration: inherit;">Card<wbr>Orientation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagerbmstandalonecardcardorientation">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2Beta1.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Standalone<wbr>Card<wbr>Card<wbr>Orientation</a></span>
     </dt>
     <dd>{{% md %}}Required. Orientation of the card.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6581,7 +6835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbnailimagealignment_csharp" style="color: inherit; text-decoration: inherit;">Thumbnail<wbr>Image<wbr>Alignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagerbmstandalonecardthumbnailimagealignment">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2Beta1.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Standalone<wbr>Card<wbr>Thumbnail<wbr>Image<wbr>Alignment</a></span>
     </dt>
     <dd>{{% md %}}Required if orientation is horizontal. Image preview alignment for standalone cards with horizontal layout.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6601,7 +6855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cardorientation_go" style="color: inherit; text-decoration: inherit;">Card<wbr>Orientation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagerbmstandalonecardcardorientation">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Standalone<wbr>Card<wbr>Card<wbr>Orientation</a></span>
     </dt>
     <dd>{{% md %}}Required. Orientation of the card.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6609,7 +6863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbnailimagealignment_go" style="color: inherit; text-decoration: inherit;">Thumbnail<wbr>Image<wbr>Alignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagerbmstandalonecardthumbnailimagealignment">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Standalone<wbr>Card<wbr>Thumbnail<wbr>Image<wbr>Alignment</a></span>
     </dt>
     <dd>{{% md %}}Required if orientation is horizontal. Image preview alignment for standalone cards with horizontal layout.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6629,7 +6883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cardorientation_nodejs" style="color: inherit; text-decoration: inherit;">card<wbr>Orientation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagerbmstandalonecardcardorientation">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Standalone<wbr>Card<wbr>Card<wbr>Orientation</a></span>
     </dt>
     <dd>{{% md %}}Required. Orientation of the card.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6637,7 +6891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbnailimagealignment_nodejs" style="color: inherit; text-decoration: inherit;">thumbnail<wbr>Image<wbr>Alignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagerbmstandalonecardthumbnailimagealignment">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Standalone<wbr>Card<wbr>Thumbnail<wbr>Image<wbr>Alignment</a></span>
     </dt>
     <dd>{{% md %}}Required if orientation is horizontal. Image preview alignment for standalone cards with horizontal layout.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6657,7 +6911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#card_orientation_python" style="color: inherit; text-decoration: inherit;">card_<wbr>orientation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagerbmstandalonecardcardorientation">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Standalone<wbr>Card<wbr>Card<wbr>Orientation</a></span>
     </dt>
     <dd>{{% md %}}Required. Orientation of the card.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6665,9 +6919,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbnail_image_alignment_python" style="color: inherit; text-decoration: inherit;">thumbnail_<wbr>image_<wbr>alignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intentmessagerbmstandalonecardthumbnailimagealignment">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Standalone<wbr>Card<wbr>Thumbnail<wbr>Image<wbr>Alignment</a></span>
     </dt>
     <dd>{{% md %}}Required if orientation is horizontal. Image preview alignment for standalone cards with horizontal layout.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowv2beta1intentmessagerbmstandalonecardcardorientation">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Standalone<wbr>Card<wbr>Card<wbr>Orientation</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Card<wbr>Orientation<wbr>Unspecified</dt>
+    <dd>CARD_ORIENTATION_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Horizontal</dt>
+    <dd>HORIZONTAL{{% md %}}Horizontal layout.{{% /md %}}</dd><dt>Vertical</dt>
+    <dd>VERTICAL{{% md %}}Vertical layout.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Standalone<wbr>Card<wbr>Card<wbr>Orientation<wbr>Card<wbr>Orientation<wbr>Unspecified</dt>
+    <dd>CARD_ORIENTATION_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Standalone<wbr>Card<wbr>Card<wbr>Orientation<wbr>Horizontal</dt>
+    <dd>HORIZONTAL{{% md %}}Horizontal layout.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Standalone<wbr>Card<wbr>Card<wbr>Orientation<wbr>Vertical</dt>
+    <dd>VERTICAL{{% md %}}Vertical layout.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Card<wbr>Orientation<wbr>Unspecified</dt>
+    <dd>CARD_ORIENTATION_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Horizontal</dt>
+    <dd>HORIZONTAL{{% md %}}Horizontal layout.{{% /md %}}</dd><dt>Vertical</dt>
+    <dd>VERTICAL{{% md %}}Vertical layout.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CARD_ORIENTATION_UNSPECIFIED</dt>
+    <dd>CARD_ORIENTATION_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>HORIZONTAL</dt>
+    <dd>HORIZONTAL{{% md %}}Horizontal layout.{{% /md %}}</dd><dt>VERTICAL</dt>
+    <dd>VERTICAL{{% md %}}Vertical layout.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddialogflowv2beta1intentmessagerbmstandalonecardresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Standalone<wbr>Card<wbr>Response</h4>
@@ -6782,6 +7066,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required if orientation is horizontal. Image preview alignment for standalone cards with horizontal layout.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowv2beta1intentmessagerbmstandalonecardthumbnailimagealignment">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Standalone<wbr>Card<wbr>Thumbnail<wbr>Image<wbr>Alignment</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Thumbnail<wbr>Image<wbr>Alignment<wbr>Unspecified</dt>
+    <dd>THUMBNAIL_IMAGE_ALIGNMENT_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Left</dt>
+    <dd>LEFT{{% md %}}Thumbnail preview is left-aligned.{{% /md %}}</dd><dt>Right</dt>
+    <dd>RIGHT{{% md %}}Thumbnail preview is right-aligned.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Standalone<wbr>Card<wbr>Thumbnail<wbr>Image<wbr>Alignment<wbr>Thumbnail<wbr>Image<wbr>Alignment<wbr>Unspecified</dt>
+    <dd>THUMBNAIL_IMAGE_ALIGNMENT_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Standalone<wbr>Card<wbr>Thumbnail<wbr>Image<wbr>Alignment<wbr>Left</dt>
+    <dd>LEFT{{% md %}}Thumbnail preview is left-aligned.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Standalone<wbr>Card<wbr>Thumbnail<wbr>Image<wbr>Alignment<wbr>Right</dt>
+    <dd>RIGHT{{% md %}}Thumbnail preview is right-aligned.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Thumbnail<wbr>Image<wbr>Alignment<wbr>Unspecified</dt>
+    <dd>THUMBNAIL_IMAGE_ALIGNMENT_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Left</dt>
+    <dd>LEFT{{% md %}}Thumbnail preview is left-aligned.{{% /md %}}</dd><dt>Right</dt>
+    <dd>RIGHT{{% md %}}Thumbnail preview is right-aligned.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>THUMBNAIL_IMAGE_ALIGNMENT_UNSPECIFIED</dt>
+    <dd>THUMBNAIL_IMAGE_ALIGNMENT_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>LEFT</dt>
+    <dd>LEFT{{% md %}}Thumbnail preview is left-aligned.{{% /md %}}</dd><dt>RIGHT</dt>
+    <dd>RIGHT{{% md %}}Thumbnail preview is right-aligned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddialogflowv2beta1intentmessagerbmsuggestedaction">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Message<wbr>Rbm<wbr>Suggested<wbr>Action</h4>
@@ -10943,7 +11257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intenttrainingphrasetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2Beta1.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Training<wbr>Phrase<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the training phrase.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10979,7 +11293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intenttrainingphrasetype">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Training<wbr>Phrase<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the training phrase.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11015,7 +11329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intenttrainingphrasetype">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Training<wbr>Phrase<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the training phrase.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11051,7 +11365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2beta1intenttrainingphrasetype">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Training<wbr>Phrase<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the training phrase.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11492,6 +11806,128 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The type of the training phrase.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowv2beta1intenttrainingphrasetype">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Training<wbr>Phrase<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Not specified. This value should never be used.{{% /md %}}</dd><dt>Example</dt>
+    <dd>EXAMPLE{{% md %}}Examples do not contain @-prefixed entity type names, but example parts can be annotated with entity types.{{% /md %}}</dd><dt>Template</dt>
+    <dd>TEMPLATE{{% md %}}Templates are not annotated with entity types, but they can contain @-prefixed entity type names as substrings. Template mode has been deprecated. Example mode is the only supported way to create new training phrases. If you have existing training phrases that you've created in template mode, those will continue to work.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Training<wbr>Phrase<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Not specified. This value should never be used.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Training<wbr>Phrase<wbr>Type<wbr>Example</dt>
+    <dd>EXAMPLE{{% md %}}Examples do not contain @-prefixed entity type names, but example parts can be annotated with entity types.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Intent<wbr>Training<wbr>Phrase<wbr>Type<wbr>Template</dt>
+    <dd>TEMPLATE{{% md %}}Templates are not annotated with entity types, but they can contain @-prefixed entity type names as substrings. Template mode has been deprecated. Example mode is the only supported way to create new training phrases. If you have existing training phrases that you've created in template mode, those will continue to work.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Not specified. This value should never be used.{{% /md %}}</dd><dt>Example</dt>
+    <dd>EXAMPLE{{% md %}}Examples do not contain @-prefixed entity type names, but example parts can be annotated with entity types.{{% /md %}}</dd><dt>Template</dt>
+    <dd>TEMPLATE{{% md %}}Templates are not annotated with entity types, but they can contain @-prefixed entity type names as substrings. Template mode has been deprecated. Example mode is the only supported way to create new training phrases. If you have existing training phrases that you've created in template mode, those will continue to work.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Not specified. This value should never be used.{{% /md %}}</dd><dt>EXAMPLE</dt>
+    <dd>EXAMPLE{{% md %}}Examples do not contain @-prefixed entity type names, but example parts can be annotated with entity types.{{% /md %}}</dd><dt>TEMPLATE</dt>
+    <dd>TEMPLATE{{% md %}}Templates are not annotated with entity types, but they can contain @-prefixed entity type names as substrings. Template mode has been deprecated. Example mode is the only supported way to create new training phrases. If you have existing training phrases that you've created in template mode, those will continue to work.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="intentdefaultresponseplatformsitem">Intent<wbr>Default<wbr>Response<wbr>Platforms<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Platform<wbr>Unspecified</dt>
+    <dd>PLATFORM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Facebook</dt>
+    <dd>FACEBOOK{{% md %}}Facebook.{{% /md %}}</dd><dt>Slack</dt>
+    <dd>SLACK{{% md %}}Slack.{{% /md %}}</dd><dt>Telegram</dt>
+    <dd>TELEGRAM{{% md %}}Telegram.{{% /md %}}</dd><dt>Kik</dt>
+    <dd>KIK{{% md %}}Kik.{{% /md %}}</dd><dt>Skype</dt>
+    <dd>SKYPE{{% md %}}Skype.{{% /md %}}</dd><dt>Line</dt>
+    <dd>LINE{{% md %}}Line.{{% /md %}}</dd><dt>Viber</dt>
+    <dd>VIBER{{% md %}}Viber.{{% /md %}}</dd><dt>Actions<wbr>On<wbr>Google</dt>
+    <dd>ACTIONS_ON_GOOGLE{{% md %}}Google Assistant See [Dialogflow webhook format](https://developers.google.com/assistant/actions/build/json/dialogflow-webhook-json){{% /md %}}</dd><dt>Telephony</dt>
+    <dd>TELEPHONY{{% md %}}Telephony Gateway.{{% /md %}}</dd><dt>Google<wbr>Hangouts</dt>
+    <dd>GOOGLE_HANGOUTS{{% md %}}Google Hangouts.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Intent<wbr>Default<wbr>Response<wbr>Platforms<wbr>Item<wbr>Platform<wbr>Unspecified</dt>
+    <dd>PLATFORM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Intent<wbr>Default<wbr>Response<wbr>Platforms<wbr>Item<wbr>Facebook</dt>
+    <dd>FACEBOOK{{% md %}}Facebook.{{% /md %}}</dd><dt>Intent<wbr>Default<wbr>Response<wbr>Platforms<wbr>Item<wbr>Slack</dt>
+    <dd>SLACK{{% md %}}Slack.{{% /md %}}</dd><dt>Intent<wbr>Default<wbr>Response<wbr>Platforms<wbr>Item<wbr>Telegram</dt>
+    <dd>TELEGRAM{{% md %}}Telegram.{{% /md %}}</dd><dt>Intent<wbr>Default<wbr>Response<wbr>Platforms<wbr>Item<wbr>Kik</dt>
+    <dd>KIK{{% md %}}Kik.{{% /md %}}</dd><dt>Intent<wbr>Default<wbr>Response<wbr>Platforms<wbr>Item<wbr>Skype</dt>
+    <dd>SKYPE{{% md %}}Skype.{{% /md %}}</dd><dt>Intent<wbr>Default<wbr>Response<wbr>Platforms<wbr>Item<wbr>Line</dt>
+    <dd>LINE{{% md %}}Line.{{% /md %}}</dd><dt>Intent<wbr>Default<wbr>Response<wbr>Platforms<wbr>Item<wbr>Viber</dt>
+    <dd>VIBER{{% md %}}Viber.{{% /md %}}</dd><dt>Intent<wbr>Default<wbr>Response<wbr>Platforms<wbr>Item<wbr>Actions<wbr>On<wbr>Google</dt>
+    <dd>ACTIONS_ON_GOOGLE{{% md %}}Google Assistant See [Dialogflow webhook format](https://developers.google.com/assistant/actions/build/json/dialogflow-webhook-json){{% /md %}}</dd><dt>Intent<wbr>Default<wbr>Response<wbr>Platforms<wbr>Item<wbr>Telephony</dt>
+    <dd>TELEPHONY{{% md %}}Telephony Gateway.{{% /md %}}</dd><dt>Intent<wbr>Default<wbr>Response<wbr>Platforms<wbr>Item<wbr>Google<wbr>Hangouts</dt>
+    <dd>GOOGLE_HANGOUTS{{% md %}}Google Hangouts.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Platform<wbr>Unspecified</dt>
+    <dd>PLATFORM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Facebook</dt>
+    <dd>FACEBOOK{{% md %}}Facebook.{{% /md %}}</dd><dt>Slack</dt>
+    <dd>SLACK{{% md %}}Slack.{{% /md %}}</dd><dt>Telegram</dt>
+    <dd>TELEGRAM{{% md %}}Telegram.{{% /md %}}</dd><dt>Kik</dt>
+    <dd>KIK{{% md %}}Kik.{{% /md %}}</dd><dt>Skype</dt>
+    <dd>SKYPE{{% md %}}Skype.{{% /md %}}</dd><dt>Line</dt>
+    <dd>LINE{{% md %}}Line.{{% /md %}}</dd><dt>Viber</dt>
+    <dd>VIBER{{% md %}}Viber.{{% /md %}}</dd><dt>Actions<wbr>On<wbr>Google</dt>
+    <dd>ACTIONS_ON_GOOGLE{{% md %}}Google Assistant See [Dialogflow webhook format](https://developers.google.com/assistant/actions/build/json/dialogflow-webhook-json){{% /md %}}</dd><dt>Telephony</dt>
+    <dd>TELEPHONY{{% md %}}Telephony Gateway.{{% /md %}}</dd><dt>Google<wbr>Hangouts</dt>
+    <dd>GOOGLE_HANGOUTS{{% md %}}Google Hangouts.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PLATFORM_UNSPECIFIED</dt>
+    <dd>PLATFORM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>FACEBOOK</dt>
+    <dd>FACEBOOK{{% md %}}Facebook.{{% /md %}}</dd><dt>SLACK</dt>
+    <dd>SLACK{{% md %}}Slack.{{% /md %}}</dd><dt>TELEGRAM</dt>
+    <dd>TELEGRAM{{% md %}}Telegram.{{% /md %}}</dd><dt>KIK</dt>
+    <dd>KIK{{% md %}}Kik.{{% /md %}}</dd><dt>SKYPE</dt>
+    <dd>SKYPE{{% md %}}Skype.{{% /md %}}</dd><dt>LINE</dt>
+    <dd>LINE{{% md %}}Line.{{% /md %}}</dd><dt>VIBER</dt>
+    <dd>VIBER{{% md %}}Viber.{{% /md %}}</dd><dt>ACTIONS_ON_GOOGLE</dt>
+    <dd>ACTIONS_ON_GOOGLE{{% md %}}Google Assistant See [Dialogflow webhook format](https://developers.google.com/assistant/actions/build/json/dialogflow-webhook-json){{% /md %}}</dd><dt>TELEPHONY</dt>
+    <dd>TELEPHONY{{% md %}}Telephony Gateway.{{% /md %}}</dd><dt>GOOGLE_HANGOUTS</dt>
+    <dd>GOOGLE_HANGOUTS{{% md %}}Google Hangouts.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="intentwebhookstate">Intent<wbr>Webhook<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Webhook<wbr>State<wbr>Unspecified</dt>
+    <dd>WEBHOOK_STATE_UNSPECIFIED{{% md %}}Webhook is disabled in the agent and in the intent.{{% /md %}}</dd><dt>Webhook<wbr>State<wbr>Enabled</dt>
+    <dd>WEBHOOK_STATE_ENABLED{{% md %}}Webhook is enabled in the agent and in the intent.{{% /md %}}</dd><dt>Webhook<wbr>State<wbr>Enabled<wbr>For<wbr>Slot<wbr>Filling</dt>
+    <dd>WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING{{% md %}}Webhook is enabled in the agent and in the intent. Also, each slot filling prompt is forwarded to the webhook.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Intent<wbr>Webhook<wbr>State<wbr>Webhook<wbr>State<wbr>Unspecified</dt>
+    <dd>WEBHOOK_STATE_UNSPECIFIED{{% md %}}Webhook is disabled in the agent and in the intent.{{% /md %}}</dd><dt>Intent<wbr>Webhook<wbr>State<wbr>Webhook<wbr>State<wbr>Enabled</dt>
+    <dd>WEBHOOK_STATE_ENABLED{{% md %}}Webhook is enabled in the agent and in the intent.{{% /md %}}</dd><dt>Intent<wbr>Webhook<wbr>State<wbr>Webhook<wbr>State<wbr>Enabled<wbr>For<wbr>Slot<wbr>Filling</dt>
+    <dd>WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING{{% md %}}Webhook is enabled in the agent and in the intent. Also, each slot filling prompt is forwarded to the webhook.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Webhook<wbr>State<wbr>Unspecified</dt>
+    <dd>WEBHOOK_STATE_UNSPECIFIED{{% md %}}Webhook is disabled in the agent and in the intent.{{% /md %}}</dd><dt>Webhook<wbr>State<wbr>Enabled</dt>
+    <dd>WEBHOOK_STATE_ENABLED{{% md %}}Webhook is enabled in the agent and in the intent.{{% /md %}}</dd><dt>Webhook<wbr>State<wbr>Enabled<wbr>For<wbr>Slot<wbr>Filling</dt>
+    <dd>WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING{{% md %}}Webhook is enabled in the agent and in the intent. Also, each slot filling prompt is forwarded to the webhook.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>WEBHOOK_STATE_UNSPECIFIED</dt>
+    <dd>WEBHOOK_STATE_UNSPECIFIED{{% md %}}Webhook is disabled in the agent and in the intent.{{% /md %}}</dd><dt>WEBHOOK_STATE_ENABLED</dt>
+    <dd>WEBHOOK_STATE_ENABLED{{% md %}}Webhook is enabled in the agent and in the intent.{{% /md %}}</dd><dt>WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING</dt>
+    <dd>WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING{{% md %}}Webhook is enabled in the agent and in the intent. Also, each slot filling prompt is forwarded to the webhook.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -737,7 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardingpath_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#policyalternativenameserverconfigtargetnameserverforwardingpath">Pulumi.<wbr>Google<wbr>Native.<wbr>DNS.<wbr>V1.<wbr>Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Forwarding<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -765,7 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardingpath_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#policyalternativenameserverconfigtargetnameserverforwardingpath">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Forwarding<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -793,7 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardingpath_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#policyalternativenameserverconfigtargetnameserverforwardingpath">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Forwarding<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -821,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwarding_path_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#policyalternativenameserverconfigtargetnameserverforwardingpath">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Forwarding<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -840,6 +840,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="policyalternativenameserverconfigtargetnameserverforwardingpath">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Forwarding<wbr>Path</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Default</dt>
+    <dd>default{{% md %}}Cloud DNS makes forwarding decision based on IP address ranges; that is, RFC1918 addresses forward to the target through the VPC and non-RFC1918 addresses forward to the target through the internet{{% /md %}}</dd><dt>Private</dt>
+    <dd>private{{% md %}}Cloud DNS always forwards to this target through the VPC.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Forwarding<wbr>Path<wbr>Default</dt>
+    <dd>default{{% md %}}Cloud DNS makes forwarding decision based on IP address ranges; that is, RFC1918 addresses forward to the target through the VPC and non-RFC1918 addresses forward to the target through the internet{{% /md %}}</dd><dt>Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Forwarding<wbr>Path<wbr>Private</dt>
+    <dd>private{{% md %}}Cloud DNS always forwards to this target through the VPC.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Default</dt>
+    <dd>default{{% md %}}Cloud DNS makes forwarding decision based on IP address ranges; that is, RFC1918 addresses forward to the target through the VPC and non-RFC1918 addresses forward to the target through the internet{{% /md %}}</dd><dt>Private</dt>
+    <dd>private{{% md %}}Cloud DNS always forwards to this target through the VPC.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DEFAULT</dt>
+    <dd>default{{% md %}}Cloud DNS makes forwarding decision based on IP address ranges; that is, RFC1918 addresses forward to the target through the VPC and non-RFC1918 addresses forward to the target through the internet{{% /md %}}</dd><dt>PRIVATE</dt>
+    <dd>private{{% md %}}Cloud DNS always forwards to this target through the VPC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policyalternativenameserverconfigtargetnameserverresponse">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Response</h4>

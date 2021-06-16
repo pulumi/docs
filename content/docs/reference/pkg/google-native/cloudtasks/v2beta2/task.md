@@ -34,10 +34,10 @@ Creates a task and adds it to a queue. Tasks cannot be updated after creation; t
          <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">pull_message</span><span class="p">:</span> <span class="nx">Optional[_cloudtasks_v2beta2.PullMessageArgs]</span> = None<span class="p">,</span>
          <span class="nx">queue_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-         <span class="nx">response_view</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">response_view</span><span class="p">:</span> <span class="nx">Optional[_cloudtasks_v2beta2.TaskResponseView]</span> = None<span class="p">,</span>
          <span class="nx">schedule_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_cloudtasks_v2beta2.TaskStatusArgs]</span> = None<span class="p">,</span>
-         <span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+         <span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[_cloudtasks_v2beta2.TaskView]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Task</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TaskArgs</a></span><span class="p">,</span>
@@ -227,7 +227,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#responseview_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#taskresponseview">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Tasks.<wbr>V2Beta2.<wbr>Task<wbr>Response<wbr>View</a></span>
     </dt>
     <dd>{{% md %}}The response_view specifies which subset of the Task will be returned. By default response_view is BASIC; not all information is retrieved by default because some data, such as payloads, might be desirable to return only when needed because of its large size or because of the sensitivity of data that it contains. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Task resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -251,7 +251,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#view_csharp" style="color: inherit; text-decoration: inherit;">View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#taskview">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Tasks.<wbr>V2Beta2.<wbr>Task<wbr>View</a></span>
     </dt>
     <dd>{{% md %}}The view specifies which subset of the Task has been returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -319,7 +319,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#responseview_go" style="color: inherit; text-decoration: inherit;">Response<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#taskresponseview">Task<wbr>Response<wbr>View</a></span>
     </dt>
     <dd>{{% md %}}The response_view specifies which subset of the Task will be returned. By default response_view is BASIC; not all information is retrieved by default because some data, such as payloads, might be desirable to return only when needed because of its large size or because of the sensitivity of data that it contains. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Task resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -343,7 +343,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#view_go" style="color: inherit; text-decoration: inherit;">View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#taskview">Task<wbr>View</a></span>
     </dt>
     <dd>{{% md %}}The view specifies which subset of the Task has been returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -411,7 +411,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#responseview_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#taskresponseview">Task<wbr>Response<wbr>View</a></span>
     </dt>
     <dd>{{% md %}}The response_view specifies which subset of the Task will be returned. By default response_view is BASIC; not all information is retrieved by default because some data, such as payloads, might be desirable to return only when needed because of its large size or because of the sensitivity of data that it contains. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Task resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -435,7 +435,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#view_nodejs" style="color: inherit; text-decoration: inherit;">view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#taskview">Task<wbr>View</a></span>
     </dt>
     <dd>{{% md %}}The view specifies which subset of the Task has been returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -503,7 +503,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#response_view_python" style="color: inherit; text-decoration: inherit;">response_<wbr>view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#taskresponseview">Task<wbr>Response<wbr>View</a></span>
     </dt>
     <dd>{{% md %}}The response_view specifies which subset of the Task will be returned. By default response_view is BASIC; not all information is retrieved by default because some data, such as payloads, might be desirable to return only when needed because of its large size or because of the sensitivity of data that it contains. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Task resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -527,7 +527,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#view_python" style="color: inherit; text-decoration: inherit;">view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#taskview">Task<wbr>View</a></span>
     </dt>
     <dd>{{% md %}}The view specifies which subset of the Task has been returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -622,7 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#appenginehttprequesthttpmethod">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Tasks.<wbr>V2Beta2.<wbr>App<wbr>Engine<wbr>Http<wbr>Request<wbr>Http<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request. The default is POST. The app's request handler for the task's target URL must be able to handle HTTP requests with this http_method, otherwise the task attempt fails with error code 405 (Method Not Allowed). See [Writing a push task request handler](https://cloud.google.com/appengine/docs/java/taskqueue/push/creating-handlers#writing_a_push_task_request_handler) and the App Engine documentation for your runtime on [How Requests are Handled](https://cloud.google.com/appengine/docs/standard/python3/how-requests-are-handled).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -666,7 +666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#appenginehttprequesthttpmethod">App<wbr>Engine<wbr>Http<wbr>Request<wbr>Http<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request. The default is POST. The app's request handler for the task's target URL must be able to handle HTTP requests with this http_method, otherwise the task attempt fails with error code 405 (Method Not Allowed). See [Writing a push task request handler](https://cloud.google.com/appengine/docs/java/taskqueue/push/creating-handlers#writing_a_push_task_request_handler) and the App Engine documentation for your runtime on [How Requests are Handled](https://cloud.google.com/appengine/docs/standard/python3/how-requests-are-handled).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#appenginehttprequesthttpmethod">App<wbr>Engine<wbr>Http<wbr>Request<wbr>Http<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request. The default is POST. The app's request handler for the task's target URL must be able to handle HTTP requests with this http_method, otherwise the task attempt fails with error code 405 (Method Not Allowed). See [Writing a push task request handler](https://cloud.google.com/appengine/docs/java/taskqueue/push/creating-handlers#writing_a_push_task_request_handler) and the App Engine documentation for your runtime on [How Requests are Handled](https://cloud.google.com/appengine/docs/standard/python3/how-requests-are-handled).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -754,7 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#appenginehttprequesthttpmethod">App<wbr>Engine<wbr>Http<wbr>Request<wbr>Http<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request. The default is POST. The app's request handler for the task's target URL must be able to handle HTTP requests with this http_method, otherwise the task attempt fails with error code 405 (Method Not Allowed). See [Writing a push task request handler](https://cloud.google.com/appengine/docs/java/taskqueue/push/creating-handlers#writing_a_push_task_request_handler) and the App Engine documentation for your runtime on [How Requests are Handled](https://cloud.google.com/appengine/docs/standard/python3/how-requests-are-handled).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -773,6 +773,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative URL. The relative URL must begin with "/" and must be a valid HTTP relative URL. It can contain a path and query string arguments. If the relative URL is empty, then the root path "/" will be used. No spaces are allowed, and the maximum length allowed is 2083 characters.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="appenginehttprequesthttpmethod">App<wbr>Engine<wbr>Http<wbr>Request<wbr>Http<wbr>Method</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Http<wbr>Method<wbr>Unspecified</dt>
+    <dd>HTTP_METHOD_UNSPECIFIED{{% md %}}HTTP method unspecified{{% /md %}}</dd><dt>Post</dt>
+    <dd>POST{{% md %}}HTTP POST{{% /md %}}</dd><dt>Get</dt>
+    <dd>GET{{% md %}}HTTP GET{{% /md %}}</dd><dt>Head</dt>
+    <dd>HEAD{{% md %}}HTTP HEAD{{% /md %}}</dd><dt>Put</dt>
+    <dd>PUT{{% md %}}HTTP PUT{{% /md %}}</dd><dt>Delete</dt>
+    <dd>DELETE{{% md %}}HTTP DELETE{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>App<wbr>Engine<wbr>Http<wbr>Request<wbr>Http<wbr>Method<wbr>Http<wbr>Method<wbr>Unspecified</dt>
+    <dd>HTTP_METHOD_UNSPECIFIED{{% md %}}HTTP method unspecified{{% /md %}}</dd><dt>App<wbr>Engine<wbr>Http<wbr>Request<wbr>Http<wbr>Method<wbr>Post</dt>
+    <dd>POST{{% md %}}HTTP POST{{% /md %}}</dd><dt>App<wbr>Engine<wbr>Http<wbr>Request<wbr>Http<wbr>Method<wbr>Get</dt>
+    <dd>GET{{% md %}}HTTP GET{{% /md %}}</dd><dt>App<wbr>Engine<wbr>Http<wbr>Request<wbr>Http<wbr>Method<wbr>Head</dt>
+    <dd>HEAD{{% md %}}HTTP HEAD{{% /md %}}</dd><dt>App<wbr>Engine<wbr>Http<wbr>Request<wbr>Http<wbr>Method<wbr>Put</dt>
+    <dd>PUT{{% md %}}HTTP PUT{{% /md %}}</dd><dt>App<wbr>Engine<wbr>Http<wbr>Request<wbr>Http<wbr>Method<wbr>Delete</dt>
+    <dd>DELETE{{% md %}}HTTP DELETE{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Http<wbr>Method<wbr>Unspecified</dt>
+    <dd>HTTP_METHOD_UNSPECIFIED{{% md %}}HTTP method unspecified{{% /md %}}</dd><dt>Post</dt>
+    <dd>POST{{% md %}}HTTP POST{{% /md %}}</dd><dt>Get</dt>
+    <dd>GET{{% md %}}HTTP GET{{% /md %}}</dd><dt>Head</dt>
+    <dd>HEAD{{% md %}}HTTP HEAD{{% /md %}}</dd><dt>Put</dt>
+    <dd>PUT{{% md %}}HTTP PUT{{% /md %}}</dd><dt>Delete</dt>
+    <dd>DELETE{{% md %}}HTTP DELETE{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>HTTP_METHOD_UNSPECIFIED</dt>
+    <dd>HTTP_METHOD_UNSPECIFIED{{% md %}}HTTP method unspecified{{% /md %}}</dd><dt>POST</dt>
+    <dd>POST{{% md %}}HTTP POST{{% /md %}}</dd><dt>GET</dt>
+    <dd>GET{{% md %}}HTTP GET{{% /md %}}</dd><dt>HEAD</dt>
+    <dd>HEAD{{% md %}}HTTP HEAD{{% /md %}}</dd><dt>PUT</dt>
+    <dd>PUT{{% md %}}HTTP PUT{{% /md %}}</dd><dt>DELETE</dt>
+    <dd>DELETE{{% md %}}HTTP DELETE{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="appenginehttprequestresponse">App<wbr>Engine<wbr>Http<wbr>Request<wbr>Response</h4>
@@ -1929,6 +1971,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="taskresponseview">Task<wbr>Response<wbr>View</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>View<wbr>Unspecified</dt>
+    <dd>VIEW_UNSPECIFIED{{% md %}}Unspecified. Defaults to BASIC.{{% /md %}}</dd><dt>Basic</dt>
+    <dd>BASIC{{% md %}}The basic view omits fields which can be large or can contain sensitive data. This view does not include the (payload in AppEngineHttpRequest and payload in PullMessage). These payloads are desirable to return only when needed, because they can be large and because of the sensitivity of the data that you choose to store in it.{{% /md %}}</dd><dt>Full</dt>
+    <dd>FULL{{% md %}}All information is returned. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Queue resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Task<wbr>Response<wbr>View<wbr>View<wbr>Unspecified</dt>
+    <dd>VIEW_UNSPECIFIED{{% md %}}Unspecified. Defaults to BASIC.{{% /md %}}</dd><dt>Task<wbr>Response<wbr>View<wbr>Basic</dt>
+    <dd>BASIC{{% md %}}The basic view omits fields which can be large or can contain sensitive data. This view does not include the (payload in AppEngineHttpRequest and payload in PullMessage). These payloads are desirable to return only when needed, because they can be large and because of the sensitivity of the data that you choose to store in it.{{% /md %}}</dd><dt>Task<wbr>Response<wbr>View<wbr>Full</dt>
+    <dd>FULL{{% md %}}All information is returned. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Queue resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>View<wbr>Unspecified</dt>
+    <dd>VIEW_UNSPECIFIED{{% md %}}Unspecified. Defaults to BASIC.{{% /md %}}</dd><dt>Basic</dt>
+    <dd>BASIC{{% md %}}The basic view omits fields which can be large or can contain sensitive data. This view does not include the (payload in AppEngineHttpRequest and payload in PullMessage). These payloads are desirable to return only when needed, because they can be large and because of the sensitivity of the data that you choose to store in it.{{% /md %}}</dd><dt>Full</dt>
+    <dd>FULL{{% md %}}All information is returned. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Queue resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>VIEW_UNSPECIFIED</dt>
+    <dd>VIEW_UNSPECIFIED{{% md %}}Unspecified. Defaults to BASIC.{{% /md %}}</dd><dt>BASIC</dt>
+    <dd>BASIC{{% md %}}The basic view omits fields which can be large or can contain sensitive data. This view does not include the (payload in AppEngineHttpRequest and payload in PullMessage). These payloads are desirable to return only when needed, because they can be large and because of the sensitivity of the data that you choose to store in it.{{% /md %}}</dd><dt>FULL</dt>
+    <dd>FULL{{% md %}}All information is returned. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Queue resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="taskstatus">Task<wbr>Status</h4>
 
 {{% choosable language csharp %}}
@@ -2219,6 +2291,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#attemptstatusresponse">Attempt<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The status of the task's last attempt. This field is not calculated for pull tasks.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="taskview">Task<wbr>View</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>View<wbr>Unspecified</dt>
+    <dd>VIEW_UNSPECIFIED{{% md %}}Unspecified. Defaults to BASIC.{{% /md %}}</dd><dt>Basic</dt>
+    <dd>BASIC{{% md %}}The basic view omits fields which can be large or can contain sensitive data. This view does not include the (payload in AppEngineHttpRequest and payload in PullMessage). These payloads are desirable to return only when needed, because they can be large and because of the sensitivity of the data that you choose to store in it.{{% /md %}}</dd><dt>Full</dt>
+    <dd>FULL{{% md %}}All information is returned. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Queue resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Task<wbr>View<wbr>View<wbr>Unspecified</dt>
+    <dd>VIEW_UNSPECIFIED{{% md %}}Unspecified. Defaults to BASIC.{{% /md %}}</dd><dt>Task<wbr>View<wbr>Basic</dt>
+    <dd>BASIC{{% md %}}The basic view omits fields which can be large or can contain sensitive data. This view does not include the (payload in AppEngineHttpRequest and payload in PullMessage). These payloads are desirable to return only when needed, because they can be large and because of the sensitivity of the data that you choose to store in it.{{% /md %}}</dd><dt>Task<wbr>View<wbr>Full</dt>
+    <dd>FULL{{% md %}}All information is returned. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Queue resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>View<wbr>Unspecified</dt>
+    <dd>VIEW_UNSPECIFIED{{% md %}}Unspecified. Defaults to BASIC.{{% /md %}}</dd><dt>Basic</dt>
+    <dd>BASIC{{% md %}}The basic view omits fields which can be large or can contain sensitive data. This view does not include the (payload in AppEngineHttpRequest and payload in PullMessage). These payloads are desirable to return only when needed, because they can be large and because of the sensitivity of the data that you choose to store in it.{{% /md %}}</dd><dt>Full</dt>
+    <dd>FULL{{% md %}}All information is returned. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Queue resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>VIEW_UNSPECIFIED</dt>
+    <dd>VIEW_UNSPECIFIED{{% md %}}Unspecified. Defaults to BASIC.{{% /md %}}</dd><dt>BASIC</dt>
+    <dd>BASIC{{% md %}}The basic view omits fields which can be large or can contain sensitive data. This view does not include the (payload in AppEngineHttpRequest and payload in PullMessage). These payloads are desirable to return only when needed, because they can be large and because of the sensitivity of the data that you choose to store in it.{{% /md %}}</dd><dt>FULL</dt>
+    <dd>FULL{{% md %}}All information is returned. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Queue resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

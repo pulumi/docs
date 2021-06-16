@@ -58,8 +58,8 @@ Creates an image in the specified project using the data included in the request
           <span class="nx">source_snapshot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">source_snapshot_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
           <span class="nx">source_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-          <span class="nx">source_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-          <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">source_type</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.ImageSourceType]</span> = None<span class="p">,</span>
+          <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.ImageStatus]</span> = None<span class="p">,</span>
           <span class="nx">storage_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -466,7 +466,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#sourcetype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#imagesourcetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Image<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the image used to create this disk. The default and only value is RAW{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +474,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#imagestatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Image<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the image. An image can be used to create other resources, such as instances, only after the image has been successfully created and the status is set to READY. Possible values are FAILED, PENDING, or READY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -766,7 +766,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#sourcetype_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#imagesourcetype">Image<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the image used to create this disk. The default and only value is RAW{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -774,7 +774,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#imagestatus">Image<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the image. An image can be used to create other resources, such as instances, only after the image has been successfully created and the status is set to READY. Possible values are FAILED, PENDING, or READY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1066,7 +1066,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#imagesourcetype">Image<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the image used to create this disk. The default and only value is RAW{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1074,7 +1074,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#imagestatus">Image<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the image. An image can be used to create other resources, such as instances, only after the image has been successfully created and the status is set to READY. Possible values are FAILED, PENDING, or READY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1366,7 +1366,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#source_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#imagesourcetype">Image<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the image used to create this disk. The default and only value is RAW{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1374,7 +1374,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#imagestatus">Image<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the image. An image can be used to create other resources, such as instances, only after the image has been successfully created and the status is set to READY. Possible values are FAILED, PENDING, or READY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1785,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#deprecationstatusstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Deprecation<wbr>Status<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1829,7 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#deprecationstatusstate">Deprecation<wbr>Status<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1873,7 +1873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#deprecationstatusstate">Deprecation<wbr>Status<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1917,7 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#deprecationstatusstate">Deprecation<wbr>Status<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2100,6 +2100,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="deprecationstatusstate">Deprecation<wbr>Status<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Deleted</dt>
+    <dd>DELETED</dd><dt>Deprecated</dt>
+    <dd>DEPRECATED</dd><dt>Obsolete</dt>
+    <dd>OBSOLETE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Deprecation<wbr>Status<wbr>State<wbr>Active</dt>
+    <dd>ACTIVE</dd><dt>Deprecation<wbr>Status<wbr>State<wbr>Deleted</dt>
+    <dd>DELETED</dd><dt>Deprecation<wbr>Status<wbr>State<wbr>Deprecated</dt>
+    <dd>DEPRECATED</dd><dt>Deprecation<wbr>Status<wbr>State<wbr>Obsolete</dt>
+    <dd>OBSOLETE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Deleted</dt>
+    <dd>DELETED</dd><dt>Deprecated</dt>
+    <dd>DEPRECATED</dd><dt>Obsolete</dt>
+    <dd>OBSOLETE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACTIVE</dt>
+    <dd>ACTIVE</dd><dt>DELETED</dt>
+    <dd>DELETED</dd><dt>DEPRECATED</dt>
+    <dd>DEPRECATED</dd><dt>OBSOLETE</dt>
+    <dd>OBSOLETE</dd></dl>
+{{% /choosable %}}
+
 <h4 id="filecontentbuffer">File<wbr>Content<wbr>Buffer</h4>
 
 {{% choosable language csharp %}}
@@ -2117,7 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filetype_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#filecontentbufferfiletype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>File<wbr>Content<wbr>Buffer<wbr>File<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The file type of source file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2137,7 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filetype_go" style="color: inherit; text-decoration: inherit;">File<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#filecontentbufferfiletype">File<wbr>Content<wbr>Buffer<wbr>File<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The file type of source file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2157,7 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filetype_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#filecontentbufferfiletype">File<wbr>Content<wbr>Buffer<wbr>File<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The file type of source file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2177,9 +2211,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_type_python" style="color: inherit; text-decoration: inherit;">file_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#filecontentbufferfiletype">File<wbr>Content<wbr>Buffer<wbr>File<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The file type of source file.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="filecontentbufferfiletype">File<wbr>Content<wbr>Buffer<wbr>File<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Bin</dt>
+    <dd>BIN</dd><dt>Undefined</dt>
+    <dd>UNDEFINED</dd><dt>X509</dt>
+    <dd>X509</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>File<wbr>Content<wbr>Buffer<wbr>File<wbr>Type<wbr>Bin</dt>
+    <dd>BIN</dd><dt>File<wbr>Content<wbr>Buffer<wbr>File<wbr>Type<wbr>Undefined</dt>
+    <dd>UNDEFINED</dd><dt>File<wbr>Content<wbr>Buffer<wbr>File<wbr>Type<wbr>X509</dt>
+    <dd>X509</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Bin</dt>
+    <dd>BIN</dd><dt>Undefined</dt>
+    <dd>UNDEFINED</dd><dt>X509</dt>
+    <dd>X509</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>BIN</dt>
+    <dd>BIN</dd><dt>UNDEFINED</dt>
+    <dd>UNDEFINED</dd><dt>X509</dt>
+    <dd>X509</dd></dl>
 {{% /choosable %}}
 
 <h4 id="filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response</h4>
@@ -2273,7 +2337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2285,7 +2349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2297,7 +2361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2309,7 +2373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2364,6 +2428,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Feature<wbr>Type<wbr>Unspecified</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>Gvnic</dt>
+    <dd>GVNIC</dd><dt>Multi<wbr>Ip<wbr>Subnet</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>Secure<wbr>Boot</dt>
+    <dd>SECURE_BOOT</dd><dt>Sev<wbr>Capable</dt>
+    <dd>SEV_CAPABLE</dd><dt>Uefi<wbr>Compatible</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>Virtio<wbr>Scsi<wbr>Multiqueue</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>Windows</dt>
+    <dd>WINDOWS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Feature<wbr>Type<wbr>Unspecified</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Gvnic</dt>
+    <dd>GVNIC</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Multi<wbr>Ip<wbr>Subnet</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Secure<wbr>Boot</dt>
+    <dd>SECURE_BOOT</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Sev<wbr>Capable</dt>
+    <dd>SEV_CAPABLE</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Uefi<wbr>Compatible</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Virtio<wbr>Scsi<wbr>Multiqueue</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Windows</dt>
+    <dd>WINDOWS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Feature<wbr>Type<wbr>Unspecified</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>Gvnic</dt>
+    <dd>GVNIC</dd><dt>Multi<wbr>Ip<wbr>Subnet</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>Secure<wbr>Boot</dt>
+    <dd>SECURE_BOOT</dd><dt>Sev<wbr>Capable</dt>
+    <dd>SEV_CAPABLE</dd><dt>Uefi<wbr>Compatible</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>Virtio<wbr>Scsi<wbr>Multiqueue</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>Windows</dt>
+    <dd>WINDOWS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FEATURE_TYPE_UNSPECIFIED</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>GVNIC</dt>
+    <dd>GVNIC</dd><dt>MULTI_IP_SUBNET</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>SECURE_BOOT</dt>
+    <dd>SECURE_BOOT</dd><dt>SEV_CAPABLE</dt>
+    <dd>SEV_CAPABLE</dd><dt>UEFI_COMPATIBLE</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>VIRTIO_SCSI_MULTIQUEUE</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>WINDOWS</dt>
+    <dd>WINDOWS</dd></dl>
+{{% /choosable %}}
+
 <h4 id="imagerawdisk">Image<wbr>Raw<wbr>Disk</h4>
 
 {{% choosable language csharp %}}
@@ -2373,7 +2487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containertype_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#imagerawdiskcontainertype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Image<wbr>Raw<wbr>Disk<wbr>Container<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2393,7 +2507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containertype_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#imagerawdiskcontainertype">Image<wbr>Raw<wbr>Disk<wbr>Container<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2413,7 +2527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containertype_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#imagerawdiskcontainertype">Image<wbr>Raw<wbr>Disk<wbr>Container<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2433,7 +2547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_type_python" style="color: inherit; text-decoration: inherit;">container_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#imagerawdiskcontainertype">Image<wbr>Raw<wbr>Disk<wbr>Container<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2444,6 +2558,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full Google Cloud Storage URL where the disk image is stored. You must provide either this property or the sourceDisk property but not both.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="imagerawdiskcontainertype">Image<wbr>Raw<wbr>Disk<wbr>Container<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Tar</dt>
+    <dd>TAR</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Image<wbr>Raw<wbr>Disk<wbr>Container<wbr>Type<wbr>Tar</dt>
+    <dd>TAR</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Tar</dt>
+    <dd>TAR</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TAR</dt>
+    <dd>TAR</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagerawdiskresponse">Image<wbr>Raw<wbr>Disk<wbr>Response</h4>
@@ -2526,6 +2662,62 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full Google Cloud Storage URL where the disk image is stored. You must provide either this property or the sourceDisk property but not both.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="imagesourcetype">Image<wbr>Source<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Raw</dt>
+    <dd>RAW</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Image<wbr>Source<wbr>Type<wbr>Raw</dt>
+    <dd>RAW</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Raw</dt>
+    <dd>RAW</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RAW</dt>
+    <dd>RAW</dd></dl>
+{{% /choosable %}}
+
+<h4 id="imagestatus">Image<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Failed</dt>
+    <dd>FAILED</dd><dt>Pending</dt>
+    <dd>PENDING</dd><dt>Ready</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Image<wbr>Status<wbr>Deleting</dt>
+    <dd>DELETING</dd><dt>Image<wbr>Status<wbr>Failed</dt>
+    <dd>FAILED</dd><dt>Image<wbr>Status<wbr>Pending</dt>
+    <dd>PENDING</dd><dt>Image<wbr>Status<wbr>Ready</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Failed</dt>
+    <dd>FAILED</dd><dt>Pending</dt>
+    <dd>PENDING</dd><dt>Ready</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DELETING</dt>
+    <dd>DELETING</dd><dt>FAILED</dt>
+    <dd>FAILED</dd><dt>PENDING</dt>
+    <dd>PENDING</dd><dt>READY</dt>
+    <dd>READY</dd></dl>
 {{% /choosable %}}
 
 <h4 id="initialstateconfig">Initial<wbr>State<wbr>Config</h4>

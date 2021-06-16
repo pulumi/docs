@@ -1886,7 +1886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modeltrainingmode_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Training<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1nlusettingsmodeltrainingmode">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3Beta1.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Nlu<wbr>Settings<wbr>Model<wbr>Training<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Indicates NLU model training mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1894,7 +1894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modeltype_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1nlusettingsmodeltype">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3Beta1.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Nlu<wbr>Settings<wbr>Model<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of NLU model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1914,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modeltrainingmode_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Training<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1nlusettingsmodeltrainingmode">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Nlu<wbr>Settings<wbr>Model<wbr>Training<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Indicates NLU model training mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1922,7 +1922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modeltype_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1nlusettingsmodeltype">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Nlu<wbr>Settings<wbr>Model<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of NLU model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1942,7 +1942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modeltrainingmode_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Training<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1nlusettingsmodeltrainingmode">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Nlu<wbr>Settings<wbr>Model<wbr>Training<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Indicates NLU model training mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1950,7 +1950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modeltype_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1nlusettingsmodeltype">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Nlu<wbr>Settings<wbr>Model<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of NLU model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1970,7 +1970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_training_mode_python" style="color: inherit; text-decoration: inherit;">model_<wbr>training_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1nlusettingsmodeltrainingmode">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Nlu<wbr>Settings<wbr>Model<wbr>Training<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Indicates NLU model training mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1978,9 +1978,69 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_type_python" style="color: inherit; text-decoration: inherit;">model_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1nlusettingsmodeltype">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Nlu<wbr>Settings<wbr>Model<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of NLU model.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowcxv3beta1nlusettingsmodeltrainingmode">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Nlu<wbr>Settings<wbr>Model<wbr>Training<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Model<wbr>Training<wbr>Mode<wbr>Unspecified</dt>
+    <dd>MODEL_TRAINING_MODE_UNSPECIFIED{{% md %}}Not specified. `MODEL_TRAINING_MODE_AUTOMATIC` will be used.{{% /md %}}</dd><dt>Model<wbr>Training<wbr>Mode<wbr>Automatic</dt>
+    <dd>MODEL_TRAINING_MODE_AUTOMATIC{{% md %}}NLU model training is automatically triggered when a flow gets modified. User can also manually trigger model training in this mode.{{% /md %}}</dd><dt>Model<wbr>Training<wbr>Mode<wbr>Manual</dt>
+    <dd>MODEL_TRAINING_MODE_MANUAL{{% md %}}User needs to manually trigger NLU model training. Best for large flows whose models take long time to train.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Nlu<wbr>Settings<wbr>Model<wbr>Training<wbr>Mode<wbr>Model<wbr>Training<wbr>Mode<wbr>Unspecified</dt>
+    <dd>MODEL_TRAINING_MODE_UNSPECIFIED{{% md %}}Not specified. `MODEL_TRAINING_MODE_AUTOMATIC` will be used.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Nlu<wbr>Settings<wbr>Model<wbr>Training<wbr>Mode<wbr>Model<wbr>Training<wbr>Mode<wbr>Automatic</dt>
+    <dd>MODEL_TRAINING_MODE_AUTOMATIC{{% md %}}NLU model training is automatically triggered when a flow gets modified. User can also manually trigger model training in this mode.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Nlu<wbr>Settings<wbr>Model<wbr>Training<wbr>Mode<wbr>Model<wbr>Training<wbr>Mode<wbr>Manual</dt>
+    <dd>MODEL_TRAINING_MODE_MANUAL{{% md %}}User needs to manually trigger NLU model training. Best for large flows whose models take long time to train.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Model<wbr>Training<wbr>Mode<wbr>Unspecified</dt>
+    <dd>MODEL_TRAINING_MODE_UNSPECIFIED{{% md %}}Not specified. `MODEL_TRAINING_MODE_AUTOMATIC` will be used.{{% /md %}}</dd><dt>Model<wbr>Training<wbr>Mode<wbr>Automatic</dt>
+    <dd>MODEL_TRAINING_MODE_AUTOMATIC{{% md %}}NLU model training is automatically triggered when a flow gets modified. User can also manually trigger model training in this mode.{{% /md %}}</dd><dt>Model<wbr>Training<wbr>Mode<wbr>Manual</dt>
+    <dd>MODEL_TRAINING_MODE_MANUAL{{% md %}}User needs to manually trigger NLU model training. Best for large flows whose models take long time to train.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MODEL_TRAINING_MODE_UNSPECIFIED</dt>
+    <dd>MODEL_TRAINING_MODE_UNSPECIFIED{{% md %}}Not specified. `MODEL_TRAINING_MODE_AUTOMATIC` will be used.{{% /md %}}</dd><dt>MODEL_TRAINING_MODE_AUTOMATIC</dt>
+    <dd>MODEL_TRAINING_MODE_AUTOMATIC{{% md %}}NLU model training is automatically triggered when a flow gets modified. User can also manually trigger model training in this mode.{{% /md %}}</dd><dt>MODEL_TRAINING_MODE_MANUAL</dt>
+    <dd>MODEL_TRAINING_MODE_MANUAL{{% md %}}User needs to manually trigger NLU model training. Best for large flows whose models take long time to train.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowcxv3beta1nlusettingsmodeltype">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Nlu<wbr>Settings<wbr>Model<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Model<wbr>Type<wbr>Unspecified</dt>
+    <dd>MODEL_TYPE_UNSPECIFIED{{% md %}}Not specified. `MODEL_TYPE_STANDARD` will be used.{{% /md %}}</dd><dt>Model<wbr>Type<wbr>Standard</dt>
+    <dd>MODEL_TYPE_STANDARD{{% md %}}Use standard NLU model.{{% /md %}}</dd><dt>Model<wbr>Type<wbr>Advanced</dt>
+    <dd>MODEL_TYPE_ADVANCED{{% md %}}Use advanced NLU model.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Nlu<wbr>Settings<wbr>Model<wbr>Type<wbr>Model<wbr>Type<wbr>Unspecified</dt>
+    <dd>MODEL_TYPE_UNSPECIFIED{{% md %}}Not specified. `MODEL_TYPE_STANDARD` will be used.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Nlu<wbr>Settings<wbr>Model<wbr>Type<wbr>Model<wbr>Type<wbr>Standard</dt>
+    <dd>MODEL_TYPE_STANDARD{{% md %}}Use standard NLU model.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Nlu<wbr>Settings<wbr>Model<wbr>Type<wbr>Model<wbr>Type<wbr>Advanced</dt>
+    <dd>MODEL_TYPE_ADVANCED{{% md %}}Use advanced NLU model.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Model<wbr>Type<wbr>Unspecified</dt>
+    <dd>MODEL_TYPE_UNSPECIFIED{{% md %}}Not specified. `MODEL_TYPE_STANDARD` will be used.{{% /md %}}</dd><dt>Model<wbr>Type<wbr>Standard</dt>
+    <dd>MODEL_TYPE_STANDARD{{% md %}}Use standard NLU model.{{% /md %}}</dd><dt>Model<wbr>Type<wbr>Advanced</dt>
+    <dd>MODEL_TYPE_ADVANCED{{% md %}}Use advanced NLU model.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MODEL_TYPE_UNSPECIFIED</dt>
+    <dd>MODEL_TYPE_UNSPECIFIED{{% md %}}Not specified. `MODEL_TYPE_STANDARD` will be used.{{% /md %}}</dd><dt>MODEL_TYPE_STANDARD</dt>
+    <dd>MODEL_TYPE_STANDARD{{% md %}}Use standard NLU model.{{% /md %}}</dd><dt>MODEL_TYPE_ADVANCED</dt>
+    <dd>MODEL_TYPE_ADVANCED{{% md %}}Use advanced NLU model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddialogflowcxv3beta1nlusettingsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Nlu<wbr>Settings<wbr>Response</h4>

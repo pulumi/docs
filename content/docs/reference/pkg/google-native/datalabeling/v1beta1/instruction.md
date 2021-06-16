@@ -29,7 +29,7 @@ Creates an instruction for how data should be labeled.
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                 <span class="nx">blocking_resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                 <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">data_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">data_type</span><span class="p">:</span> <span class="nx">Optional[_datalabeling_v1beta1.InstructionDataType]</span> = None<span class="p">,</span>
                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -193,7 +193,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#datatype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instructiondatatype">Pulumi.<wbr>Google<wbr>Native.<wbr>Data<wbr>Labeling.<wbr>V1Beta1.<wbr>Instruction<wbr>Data<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The data type of this instruction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -269,7 +269,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#datatype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instructiondatatype">Instruction<wbr>Data<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The data type of this instruction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -345,7 +345,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instructiondatatype">Instruction<wbr>Data<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The data type of this instruction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -421,7 +421,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instructiondatatype">Instruction<wbr>Data<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The data type of this instruction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -629,6 +629,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PDF file for the instruction. Only gcs path is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instructiondatatype">Instruction<wbr>Data<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Data<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATA_TYPE_UNSPECIFIED{{% md %}}Data type is unspecified.{{% /md %}}</dd><dt>Image</dt>
+    <dd>IMAGE{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>Video</dt>
+    <dd>VIDEO{{% md %}}Video data type.{{% /md %}}</dd><dt>Text</dt>
+    <dd>TEXT{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>General<wbr>Data</dt>
+    <dd>GENERAL_DATA{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instruction<wbr>Data<wbr>Type<wbr>Data<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATA_TYPE_UNSPECIFIED{{% md %}}Data type is unspecified.{{% /md %}}</dd><dt>Instruction<wbr>Data<wbr>Type<wbr>Image</dt>
+    <dd>IMAGE{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>Instruction<wbr>Data<wbr>Type<wbr>Video</dt>
+    <dd>VIDEO{{% md %}}Video data type.{{% /md %}}</dd><dt>Instruction<wbr>Data<wbr>Type<wbr>Text</dt>
+    <dd>TEXT{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>Instruction<wbr>Data<wbr>Type<wbr>General<wbr>Data</dt>
+    <dd>GENERAL_DATA{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Data<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATA_TYPE_UNSPECIFIED{{% md %}}Data type is unspecified.{{% /md %}}</dd><dt>Image</dt>
+    <dd>IMAGE{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>Video</dt>
+    <dd>VIDEO{{% md %}}Video data type.{{% /md %}}</dd><dt>Text</dt>
+    <dd>TEXT{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>General<wbr>Data</dt>
+    <dd>GENERAL_DATA{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DATA_TYPE_UNSPECIFIED</dt>
+    <dd>DATA_TYPE_UNSPECIFIED{{% md %}}Data type is unspecified.{{% /md %}}</dd><dt>IMAGE</dt>
+    <dd>IMAGE{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>VIDEO</dt>
+    <dd>VIDEO{{% md %}}Video data type.{{% /md %}}</dd><dt>TEXT</dt>
+    <dd>TEXT{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>GENERAL_DATA</dt>
+    <dd>GENERAL_DATA{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

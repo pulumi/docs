@@ -35,7 +35,7 @@ Creates a new note.
          <span class="nx">discovery</span><span class="p">:</span> <span class="nx">Optional[_containeranalysis_v1beta1.DiscoveryArgs]</span> = None<span class="p">,</span>
          <span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">intoto</span><span class="p">:</span> <span class="nx">Optional[_containeranalysis_v1beta1.InTotoArgs]</span> = None<span class="p">,</span>
-         <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[_containeranalysis_v1beta1.NoteKind]</span> = None<span class="p">,</span>
          <span class="nx">long_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">note_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -259,7 +259,7 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#notekind">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Beta1.<wbr>Note<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The type of analysis. This field can be used as a filter in list requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -415,7 +415,7 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#notekind">Note<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The type of analysis. This field can be used as a filter in list requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -571,7 +571,7 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#notekind">Note<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The type of analysis. This field can be used as a filter in list requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -727,7 +727,7 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#notekind">Note<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The type of analysis. This field can be used as a filter in list requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1406,7 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytype_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildsignaturekeytype">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Beta1.<wbr>Build<wbr>Signature<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the key, either stored in `public_key` or referenced in `key_id`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1442,7 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytype_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildsignaturekeytype">Build<wbr>Signature<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the key, either stored in `public_key` or referenced in `key_id`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1478,7 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildsignaturekeytype">Build<wbr>Signature<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the key, either stored in `public_key` or referenced in `key_id`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1514,7 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#buildsignaturekeytype">Build<wbr>Signature<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the key, either stored in `public_key` or referenced in `key_id`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1533,6 +1533,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Signature of the related `BuildProvenance`. In JSON, this is base-64 encoded.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="buildsignaturekeytype">Build<wbr>Signature<wbr>Key<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Key<wbr>Type<wbr>Unspecified</dt>
+    <dd>KEY_TYPE_UNSPECIFIED{{% md %}}`KeyType` is not set.{{% /md %}}</dd><dt>Pgp<wbr>Ascii<wbr>Armored</dt>
+    <dd>PGP_ASCII_ARMORED{{% md %}}`PGP ASCII Armored` public key.{{% /md %}}</dd><dt>Pkix<wbr>Pem</dt>
+    <dd>PKIX_PEM{{% md %}}`PKIX PEM` public key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Build<wbr>Signature<wbr>Key<wbr>Type<wbr>Key<wbr>Type<wbr>Unspecified</dt>
+    <dd>KEY_TYPE_UNSPECIFIED{{% md %}}`KeyType` is not set.{{% /md %}}</dd><dt>Build<wbr>Signature<wbr>Key<wbr>Type<wbr>Pgp<wbr>Ascii<wbr>Armored</dt>
+    <dd>PGP_ASCII_ARMORED{{% md %}}`PGP ASCII Armored` public key.{{% /md %}}</dd><dt>Build<wbr>Signature<wbr>Key<wbr>Type<wbr>Pkix<wbr>Pem</dt>
+    <dd>PKIX_PEM{{% md %}}`PKIX PEM` public key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Key<wbr>Type<wbr>Unspecified</dt>
+    <dd>KEY_TYPE_UNSPECIFIED{{% md %}}`KeyType` is not set.{{% /md %}}</dd><dt>Pgp<wbr>Ascii<wbr>Armored</dt>
+    <dd>PGP_ASCII_ARMORED{{% md %}}`PGP ASCII Armored` public key.{{% /md %}}</dd><dt>Pkix<wbr>Pem</dt>
+    <dd>PKIX_PEM{{% md %}}`PKIX PEM` public key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>KEY_TYPE_UNSPECIFIED</dt>
+    <dd>KEY_TYPE_UNSPECIFIED{{% md %}}`KeyType` is not set.{{% /md %}}</dd><dt>PGP_ASCII_ARMORED</dt>
+    <dd>PGP_ASCII_ARMORED{{% md %}}`PGP ASCII Armored` public key.{{% /md %}}</dd><dt>PKIX_PEM</dt>
+    <dd>PKIX_PEM{{% md %}}`PKIX PEM` public key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="buildsignatureresponse">Build<wbr>Signature<wbr>Response</h4>
@@ -1690,7 +1720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attackcomplexity_csharp" style="color: inherit; text-decoration: inherit;">Attack<wbr>Complexity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3attackcomplexity">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Beta1.<wbr>CVSSv3Attack<wbr>Complexity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1698,7 +1728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attackvector_csharp" style="color: inherit; text-decoration: inherit;">Attack<wbr>Vector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3attackvector">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Beta1.<wbr>CVSSv3Attack<wbr>Vector</a></span>
     </dt>
     <dd>{{% md %}}Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1706,7 +1736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availabilityimpact_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3availabilityimpact">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Beta1.<wbr>CVSSv3Availability<wbr>Impact</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1722,7 +1752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#confidentialityimpact_csharp" style="color: inherit; text-decoration: inherit;">Confidentiality<wbr>Impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3confidentialityimpact">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Beta1.<wbr>CVSSv3Confidentiality<wbr>Impact</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1746,7 +1776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integrityimpact_csharp" style="color: inherit; text-decoration: inherit;">Integrity<wbr>Impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3integrityimpact">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Beta1.<wbr>CVSSv3Integrity<wbr>Impact</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1754,7 +1784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privilegesrequired_csharp" style="color: inherit; text-decoration: inherit;">Privileges<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3privilegesrequired">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Beta1.<wbr>CVSSv3Privileges<wbr>Required</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1762,7 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3scope">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Beta1.<wbr>CVSSv3Scope</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1770,7 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userinteraction_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Interaction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3userinteraction">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Beta1.<wbr>CVSSv3User<wbr>Interaction</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1782,7 +1812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attackcomplexity_go" style="color: inherit; text-decoration: inherit;">Attack<wbr>Complexity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3attackcomplexity">CVSSv3Attack<wbr>Complexity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1790,7 +1820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attackvector_go" style="color: inherit; text-decoration: inherit;">Attack<wbr>Vector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3attackvector">CVSSv3Attack<wbr>Vector</a></span>
     </dt>
     <dd>{{% md %}}Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1798,7 +1828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availabilityimpact_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3availabilityimpact">CVSSv3Availability<wbr>Impact</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1814,7 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#confidentialityimpact_go" style="color: inherit; text-decoration: inherit;">Confidentiality<wbr>Impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3confidentialityimpact">CVSSv3Confidentiality<wbr>Impact</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1838,7 +1868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integrityimpact_go" style="color: inherit; text-decoration: inherit;">Integrity<wbr>Impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3integrityimpact">CVSSv3Integrity<wbr>Impact</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1846,7 +1876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privilegesrequired_go" style="color: inherit; text-decoration: inherit;">Privileges<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3privilegesrequired">CVSSv3Privileges<wbr>Required</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1854,7 +1884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3scope">CVSSv3Scope</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1862,7 +1892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userinteraction_go" style="color: inherit; text-decoration: inherit;">User<wbr>Interaction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3userinteraction">CVSSv3User<wbr>Interaction</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1874,7 +1904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attackcomplexity_nodejs" style="color: inherit; text-decoration: inherit;">attack<wbr>Complexity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3attackcomplexity">CVSSv3Attack<wbr>Complexity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1882,7 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attackvector_nodejs" style="color: inherit; text-decoration: inherit;">attack<wbr>Vector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3attackvector">CVSSv3Attack<wbr>Vector</a></span>
     </dt>
     <dd>{{% md %}}Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1890,7 +1920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availabilityimpact_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3availabilityimpact">CVSSv3Availability<wbr>Impact</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1906,7 +1936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#confidentialityimpact_nodejs" style="color: inherit; text-decoration: inherit;">confidentiality<wbr>Impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3confidentialityimpact">CVSSv3Confidentiality<wbr>Impact</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1930,7 +1960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integrityimpact_nodejs" style="color: inherit; text-decoration: inherit;">integrity<wbr>Impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3integrityimpact">CVSSv3Integrity<wbr>Impact</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1938,7 +1968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privilegesrequired_nodejs" style="color: inherit; text-decoration: inherit;">privileges<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3privilegesrequired">CVSSv3Privileges<wbr>Required</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1946,7 +1976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3scope">CVSSv3Scope</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1954,7 +1984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userinteraction_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Interaction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cvssv3userinteraction">CVSSv3User<wbr>Interaction</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1966,7 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attack_complexity_python" style="color: inherit; text-decoration: inherit;">attack_<wbr>complexity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#cvssv3attackcomplexity">CVSSv3Attack<wbr>Complexity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1974,7 +2004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attack_vector_python" style="color: inherit; text-decoration: inherit;">attack_<wbr>vector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#cvssv3attackvector">CVSSv3Attack<wbr>Vector</a></span>
     </dt>
     <dd>{{% md %}}Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1982,7 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_impact_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#cvssv3availabilityimpact">CVSSv3Availability<wbr>Impact</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1998,7 +2028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#confidentiality_impact_python" style="color: inherit; text-decoration: inherit;">confidentiality_<wbr>impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#cvssv3confidentialityimpact">CVSSv3Confidentiality<wbr>Impact</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2022,7 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integrity_impact_python" style="color: inherit; text-decoration: inherit;">integrity_<wbr>impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#cvssv3integrityimpact">CVSSv3Integrity<wbr>Impact</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2030,7 +2060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privileges_required_python" style="color: inherit; text-decoration: inherit;">privileges_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#cvssv3privilegesrequired">CVSSv3Privileges<wbr>Required</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2038,7 +2068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#cvssv3scope">CVSSv3Scope</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2046,9 +2076,213 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_interaction_python" style="color: inherit; text-decoration: inherit;">user_<wbr>interaction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#cvssv3userinteraction">CVSSv3User<wbr>Interaction</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cvssv3attackcomplexity">CVSSv3Attack<wbr>Complexity</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Attack<wbr>Complexity<wbr>Unspecified</dt>
+    <dd>ATTACK_COMPLEXITY_UNSPECIFIED</dd><dt>Attack<wbr>Complexity<wbr>Low</dt>
+    <dd>ATTACK_COMPLEXITY_LOW</dd><dt>Attack<wbr>Complexity<wbr>High</dt>
+    <dd>ATTACK_COMPLEXITY_HIGH</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>CVSSv3Attack<wbr>Complexity<wbr>Attack<wbr>Complexity<wbr>Unspecified</dt>
+    <dd>ATTACK_COMPLEXITY_UNSPECIFIED</dd><dt>CVSSv3Attack<wbr>Complexity<wbr>Attack<wbr>Complexity<wbr>Low</dt>
+    <dd>ATTACK_COMPLEXITY_LOW</dd><dt>CVSSv3Attack<wbr>Complexity<wbr>Attack<wbr>Complexity<wbr>High</dt>
+    <dd>ATTACK_COMPLEXITY_HIGH</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Attack<wbr>Complexity<wbr>Unspecified</dt>
+    <dd>ATTACK_COMPLEXITY_UNSPECIFIED</dd><dt>Attack<wbr>Complexity<wbr>Low</dt>
+    <dd>ATTACK_COMPLEXITY_LOW</dd><dt>Attack<wbr>Complexity<wbr>High</dt>
+    <dd>ATTACK_COMPLEXITY_HIGH</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ATTACK_COMPLEXITY_UNSPECIFIED</dt>
+    <dd>ATTACK_COMPLEXITY_UNSPECIFIED</dd><dt>ATTACK_COMPLEXITY_LOW</dt>
+    <dd>ATTACK_COMPLEXITY_LOW</dd><dt>ATTACK_COMPLEXITY_HIGH</dt>
+    <dd>ATTACK_COMPLEXITY_HIGH</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cvssv3attackvector">CVSSv3Attack<wbr>Vector</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Attack<wbr>Vector<wbr>Unspecified</dt>
+    <dd>ATTACK_VECTOR_UNSPECIFIED</dd><dt>Attack<wbr>Vector<wbr>Network</dt>
+    <dd>ATTACK_VECTOR_NETWORK</dd><dt>Attack<wbr>Vector<wbr>Adjacent</dt>
+    <dd>ATTACK_VECTOR_ADJACENT</dd><dt>Attack<wbr>Vector<wbr>Local</dt>
+    <dd>ATTACK_VECTOR_LOCAL</dd><dt>Attack<wbr>Vector<wbr>Physical</dt>
+    <dd>ATTACK_VECTOR_PHYSICAL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>CVSSv3Attack<wbr>Vector<wbr>Attack<wbr>Vector<wbr>Unspecified</dt>
+    <dd>ATTACK_VECTOR_UNSPECIFIED</dd><dt>CVSSv3Attack<wbr>Vector<wbr>Attack<wbr>Vector<wbr>Network</dt>
+    <dd>ATTACK_VECTOR_NETWORK</dd><dt>CVSSv3Attack<wbr>Vector<wbr>Attack<wbr>Vector<wbr>Adjacent</dt>
+    <dd>ATTACK_VECTOR_ADJACENT</dd><dt>CVSSv3Attack<wbr>Vector<wbr>Attack<wbr>Vector<wbr>Local</dt>
+    <dd>ATTACK_VECTOR_LOCAL</dd><dt>CVSSv3Attack<wbr>Vector<wbr>Attack<wbr>Vector<wbr>Physical</dt>
+    <dd>ATTACK_VECTOR_PHYSICAL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Attack<wbr>Vector<wbr>Unspecified</dt>
+    <dd>ATTACK_VECTOR_UNSPECIFIED</dd><dt>Attack<wbr>Vector<wbr>Network</dt>
+    <dd>ATTACK_VECTOR_NETWORK</dd><dt>Attack<wbr>Vector<wbr>Adjacent</dt>
+    <dd>ATTACK_VECTOR_ADJACENT</dd><dt>Attack<wbr>Vector<wbr>Local</dt>
+    <dd>ATTACK_VECTOR_LOCAL</dd><dt>Attack<wbr>Vector<wbr>Physical</dt>
+    <dd>ATTACK_VECTOR_PHYSICAL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ATTACK_VECTOR_UNSPECIFIED</dt>
+    <dd>ATTACK_VECTOR_UNSPECIFIED</dd><dt>ATTACK_VECTOR_NETWORK</dt>
+    <dd>ATTACK_VECTOR_NETWORK</dd><dt>ATTACK_VECTOR_ADJACENT</dt>
+    <dd>ATTACK_VECTOR_ADJACENT</dd><dt>ATTACK_VECTOR_LOCAL</dt>
+    <dd>ATTACK_VECTOR_LOCAL</dd><dt>ATTACK_VECTOR_PHYSICAL</dt>
+    <dd>ATTACK_VECTOR_PHYSICAL</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cvssv3availabilityimpact">CVSSv3Availability<wbr>Impact</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Impact<wbr>Unspecified</dt>
+    <dd>IMPACT_UNSPECIFIED</dd><dt>Impact<wbr>High</dt>
+    <dd>IMPACT_HIGH</dd><dt>Impact<wbr>Low</dt>
+    <dd>IMPACT_LOW</dd><dt>Impact<wbr>None</dt>
+    <dd>IMPACT_NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>CVSSv3Availability<wbr>Impact<wbr>Impact<wbr>Unspecified</dt>
+    <dd>IMPACT_UNSPECIFIED</dd><dt>CVSSv3Availability<wbr>Impact<wbr>Impact<wbr>High</dt>
+    <dd>IMPACT_HIGH</dd><dt>CVSSv3Availability<wbr>Impact<wbr>Impact<wbr>Low</dt>
+    <dd>IMPACT_LOW</dd><dt>CVSSv3Availability<wbr>Impact<wbr>Impact<wbr>None</dt>
+    <dd>IMPACT_NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Impact<wbr>Unspecified</dt>
+    <dd>IMPACT_UNSPECIFIED</dd><dt>Impact<wbr>High</dt>
+    <dd>IMPACT_HIGH</dd><dt>Impact<wbr>Low</dt>
+    <dd>IMPACT_LOW</dd><dt>Impact<wbr>None</dt>
+    <dd>IMPACT_NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>IMPACT_UNSPECIFIED</dt>
+    <dd>IMPACT_UNSPECIFIED</dd><dt>IMPACT_HIGH</dt>
+    <dd>IMPACT_HIGH</dd><dt>IMPACT_LOW</dt>
+    <dd>IMPACT_LOW</dd><dt>IMPACT_NONE</dt>
+    <dd>IMPACT_NONE</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cvssv3confidentialityimpact">CVSSv3Confidentiality<wbr>Impact</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Impact<wbr>Unspecified</dt>
+    <dd>IMPACT_UNSPECIFIED</dd><dt>Impact<wbr>High</dt>
+    <dd>IMPACT_HIGH</dd><dt>Impact<wbr>Low</dt>
+    <dd>IMPACT_LOW</dd><dt>Impact<wbr>None</dt>
+    <dd>IMPACT_NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>CVSSv3Confidentiality<wbr>Impact<wbr>Impact<wbr>Unspecified</dt>
+    <dd>IMPACT_UNSPECIFIED</dd><dt>CVSSv3Confidentiality<wbr>Impact<wbr>Impact<wbr>High</dt>
+    <dd>IMPACT_HIGH</dd><dt>CVSSv3Confidentiality<wbr>Impact<wbr>Impact<wbr>Low</dt>
+    <dd>IMPACT_LOW</dd><dt>CVSSv3Confidentiality<wbr>Impact<wbr>Impact<wbr>None</dt>
+    <dd>IMPACT_NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Impact<wbr>Unspecified</dt>
+    <dd>IMPACT_UNSPECIFIED</dd><dt>Impact<wbr>High</dt>
+    <dd>IMPACT_HIGH</dd><dt>Impact<wbr>Low</dt>
+    <dd>IMPACT_LOW</dd><dt>Impact<wbr>None</dt>
+    <dd>IMPACT_NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>IMPACT_UNSPECIFIED</dt>
+    <dd>IMPACT_UNSPECIFIED</dd><dt>IMPACT_HIGH</dt>
+    <dd>IMPACT_HIGH</dd><dt>IMPACT_LOW</dt>
+    <dd>IMPACT_LOW</dd><dt>IMPACT_NONE</dt>
+    <dd>IMPACT_NONE</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cvssv3integrityimpact">CVSSv3Integrity<wbr>Impact</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Impact<wbr>Unspecified</dt>
+    <dd>IMPACT_UNSPECIFIED</dd><dt>Impact<wbr>High</dt>
+    <dd>IMPACT_HIGH</dd><dt>Impact<wbr>Low</dt>
+    <dd>IMPACT_LOW</dd><dt>Impact<wbr>None</dt>
+    <dd>IMPACT_NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>CVSSv3Integrity<wbr>Impact<wbr>Impact<wbr>Unspecified</dt>
+    <dd>IMPACT_UNSPECIFIED</dd><dt>CVSSv3Integrity<wbr>Impact<wbr>Impact<wbr>High</dt>
+    <dd>IMPACT_HIGH</dd><dt>CVSSv3Integrity<wbr>Impact<wbr>Impact<wbr>Low</dt>
+    <dd>IMPACT_LOW</dd><dt>CVSSv3Integrity<wbr>Impact<wbr>Impact<wbr>None</dt>
+    <dd>IMPACT_NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Impact<wbr>Unspecified</dt>
+    <dd>IMPACT_UNSPECIFIED</dd><dt>Impact<wbr>High</dt>
+    <dd>IMPACT_HIGH</dd><dt>Impact<wbr>Low</dt>
+    <dd>IMPACT_LOW</dd><dt>Impact<wbr>None</dt>
+    <dd>IMPACT_NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>IMPACT_UNSPECIFIED</dt>
+    <dd>IMPACT_UNSPECIFIED</dd><dt>IMPACT_HIGH</dt>
+    <dd>IMPACT_HIGH</dd><dt>IMPACT_LOW</dt>
+    <dd>IMPACT_LOW</dd><dt>IMPACT_NONE</dt>
+    <dd>IMPACT_NONE</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cvssv3privilegesrequired">CVSSv3Privileges<wbr>Required</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Privileges<wbr>Required<wbr>Unspecified</dt>
+    <dd>PRIVILEGES_REQUIRED_UNSPECIFIED</dd><dt>Privileges<wbr>Required<wbr>None</dt>
+    <dd>PRIVILEGES_REQUIRED_NONE</dd><dt>Privileges<wbr>Required<wbr>Low</dt>
+    <dd>PRIVILEGES_REQUIRED_LOW</dd><dt>Privileges<wbr>Required<wbr>High</dt>
+    <dd>PRIVILEGES_REQUIRED_HIGH</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>CVSSv3Privileges<wbr>Required<wbr>Privileges<wbr>Required<wbr>Unspecified</dt>
+    <dd>PRIVILEGES_REQUIRED_UNSPECIFIED</dd><dt>CVSSv3Privileges<wbr>Required<wbr>Privileges<wbr>Required<wbr>None</dt>
+    <dd>PRIVILEGES_REQUIRED_NONE</dd><dt>CVSSv3Privileges<wbr>Required<wbr>Privileges<wbr>Required<wbr>Low</dt>
+    <dd>PRIVILEGES_REQUIRED_LOW</dd><dt>CVSSv3Privileges<wbr>Required<wbr>Privileges<wbr>Required<wbr>High</dt>
+    <dd>PRIVILEGES_REQUIRED_HIGH</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Privileges<wbr>Required<wbr>Unspecified</dt>
+    <dd>PRIVILEGES_REQUIRED_UNSPECIFIED</dd><dt>Privileges<wbr>Required<wbr>None</dt>
+    <dd>PRIVILEGES_REQUIRED_NONE</dd><dt>Privileges<wbr>Required<wbr>Low</dt>
+    <dd>PRIVILEGES_REQUIRED_LOW</dd><dt>Privileges<wbr>Required<wbr>High</dt>
+    <dd>PRIVILEGES_REQUIRED_HIGH</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PRIVILEGES_REQUIRED_UNSPECIFIED</dt>
+    <dd>PRIVILEGES_REQUIRED_UNSPECIFIED</dd><dt>PRIVILEGES_REQUIRED_NONE</dt>
+    <dd>PRIVILEGES_REQUIRED_NONE</dd><dt>PRIVILEGES_REQUIRED_LOW</dt>
+    <dd>PRIVILEGES_REQUIRED_LOW</dd><dt>PRIVILEGES_REQUIRED_HIGH</dt>
+    <dd>PRIVILEGES_REQUIRED_HIGH</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cvssv3response">CVSSv3Response</h4>
@@ -2419,6 +2653,66 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cvssv3scope">CVSSv3Scope</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Scope<wbr>Unspecified</dt>
+    <dd>SCOPE_UNSPECIFIED</dd><dt>Scope<wbr>Unchanged</dt>
+    <dd>SCOPE_UNCHANGED</dd><dt>Scope<wbr>Changed</dt>
+    <dd>SCOPE_CHANGED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>CVSSv3Scope<wbr>Scope<wbr>Unspecified</dt>
+    <dd>SCOPE_UNSPECIFIED</dd><dt>CVSSv3Scope<wbr>Scope<wbr>Unchanged</dt>
+    <dd>SCOPE_UNCHANGED</dd><dt>CVSSv3Scope<wbr>Scope<wbr>Changed</dt>
+    <dd>SCOPE_CHANGED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Scope<wbr>Unspecified</dt>
+    <dd>SCOPE_UNSPECIFIED</dd><dt>Scope<wbr>Unchanged</dt>
+    <dd>SCOPE_UNCHANGED</dd><dt>Scope<wbr>Changed</dt>
+    <dd>SCOPE_CHANGED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SCOPE_UNSPECIFIED</dt>
+    <dd>SCOPE_UNSPECIFIED</dd><dt>SCOPE_UNCHANGED</dt>
+    <dd>SCOPE_UNCHANGED</dd><dt>SCOPE_CHANGED</dt>
+    <dd>SCOPE_CHANGED</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cvssv3userinteraction">CVSSv3User<wbr>Interaction</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>User<wbr>Interaction<wbr>Unspecified</dt>
+    <dd>USER_INTERACTION_UNSPECIFIED</dd><dt>User<wbr>Interaction<wbr>None</dt>
+    <dd>USER_INTERACTION_NONE</dd><dt>User<wbr>Interaction<wbr>Required</dt>
+    <dd>USER_INTERACTION_REQUIRED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>CVSSv3User<wbr>Interaction<wbr>User<wbr>Interaction<wbr>Unspecified</dt>
+    <dd>USER_INTERACTION_UNSPECIFIED</dd><dt>CVSSv3User<wbr>Interaction<wbr>User<wbr>Interaction<wbr>None</dt>
+    <dd>USER_INTERACTION_NONE</dd><dt>CVSSv3User<wbr>Interaction<wbr>User<wbr>Interaction<wbr>Required</dt>
+    <dd>USER_INTERACTION_REQUIRED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>User<wbr>Interaction<wbr>Unspecified</dt>
+    <dd>USER_INTERACTION_UNSPECIFIED</dd><dt>User<wbr>Interaction<wbr>None</dt>
+    <dd>USER_INTERACTION_NONE</dd><dt>User<wbr>Interaction<wbr>Required</dt>
+    <dd>USER_INTERACTION_REQUIRED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>USER_INTERACTION_UNSPECIFIED</dt>
+    <dd>USER_INTERACTION_UNSPECIFIED</dd><dt>USER_INTERACTION_NONE</dt>
+    <dd>USER_INTERACTION_NONE</dd><dt>USER_INTERACTION_REQUIRED</dt>
+    <dd>USER_INTERACTION_REQUIRED</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deployable">Deployable</h4>
@@ -3334,7 +3628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analysiskind_csharp" style="color: inherit; text-decoration: inherit;">Analysis<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#discoveryanalysiskind">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Beta1.<wbr>Discovery<wbr>Analysis<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The kind of analysis that is handled by this discovery.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3346,7 +3640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analysiskind_go" style="color: inherit; text-decoration: inherit;">Analysis<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#discoveryanalysiskind">Discovery<wbr>Analysis<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The kind of analysis that is handled by this discovery.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3358,7 +3652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analysiskind_nodejs" style="color: inherit; text-decoration: inherit;">analysis<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#discoveryanalysiskind">Discovery<wbr>Analysis<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The kind of analysis that is handled by this discovery.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3370,9 +3664,63 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analysis_kind_python" style="color: inherit; text-decoration: inherit;">analysis_<wbr>kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#discoveryanalysiskind">Discovery<wbr>Analysis<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The kind of analysis that is handled by this discovery.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="discoveryanalysiskind">Discovery<wbr>Analysis<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Note<wbr>Kind<wbr>Unspecified</dt>
+    <dd>NOTE_KIND_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>Vulnerability</dt>
+    <dd>VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>Build</dt>
+    <dd>BUILD{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>Image</dt>
+    <dd>IMAGE{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>Package</dt>
+    <dd>PACKAGE{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>Deployment</dt>
+    <dd>DEPLOYMENT{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>Discovery</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>Attestation</dt>
+    <dd>ATTESTATION{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>Intoto</dt>
+    <dd>INTOTO{{% md %}}This represents an in-toto link.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Note<wbr>Kind<wbr>Unspecified</dt>
+    <dd>NOTE_KIND_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Vulnerability</dt>
+    <dd>VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Build</dt>
+    <dd>BUILD{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Image</dt>
+    <dd>IMAGE{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Package</dt>
+    <dd>PACKAGE{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Deployment</dt>
+    <dd>DEPLOYMENT{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Discovery</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Attestation</dt>
+    <dd>ATTESTATION{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Intoto</dt>
+    <dd>INTOTO{{% md %}}This represents an in-toto link.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Note<wbr>Kind<wbr>Unspecified</dt>
+    <dd>NOTE_KIND_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>Vulnerability</dt>
+    <dd>VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>Build</dt>
+    <dd>BUILD{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>Image</dt>
+    <dd>IMAGE{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>Package</dt>
+    <dd>PACKAGE{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>Deployment</dt>
+    <dd>DEPLOYMENT{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>Discovery</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>Attestation</dt>
+    <dd>ATTESTATION{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>Intoto</dt>
+    <dd>INTOTO{{% md %}}This represents an in-toto link.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NOTE_KIND_UNSPECIFIED</dt>
+    <dd>NOTE_KIND_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>VULNERABILITY</dt>
+    <dd>VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>BUILD</dt>
+    <dd>BUILD{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>IMAGE</dt>
+    <dd>IMAGE{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>PACKAGE</dt>
+    <dd>PACKAGE{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>DEPLOYMENT</dt>
+    <dd>DEPLOYMENT{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>DISCOVERY</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>ATTESTATION</dt>
+    <dd>ATTESTATION{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>INTOTO</dt>
+    <dd>INTOTO{{% md %}}This represents an in-toto link.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="discoveryresponse">Discovery<wbr>Response</h4>
@@ -3434,7 +3782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#architecture_csharp" style="color: inherit; text-decoration: inherit;">Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#distributionarchitecture">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Beta1.<wbr>Distribution<wbr>Architecture</a></span>
     </dt>
     <dd>{{% md %}}The CPU architecture for which packages in this distribution channel were built.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3486,7 +3834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#architecture_go" style="color: inherit; text-decoration: inherit;">Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#distributionarchitecture">Distribution<wbr>Architecture</a></span>
     </dt>
     <dd>{{% md %}}The CPU architecture for which packages in this distribution channel were built.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3538,7 +3886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#distributionarchitecture">Distribution<wbr>Architecture</a></span>
     </dt>
     <dd>{{% md %}}The CPU architecture for which packages in this distribution channel were built.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3590,7 +3938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#distributionarchitecture">Distribution<wbr>Architecture</a></span>
     </dt>
     <dd>{{% md %}}The CPU architecture for which packages in this distribution channel were built.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3633,6 +3981,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The distribution channel-specific homepage for this package.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="distributionarchitecture">Distribution<wbr>Architecture</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Architecture<wbr>Unspecified</dt>
+    <dd>ARCHITECTURE_UNSPECIFIED{{% md %}}Unknown architecture.{{% /md %}}</dd><dt>X86</dt>
+    <dd>X86{{% md %}}X86 architecture.{{% /md %}}</dd><dt>X64</dt>
+    <dd>X64{{% md %}}X64 architecture.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Distribution<wbr>Architecture<wbr>Architecture<wbr>Unspecified</dt>
+    <dd>ARCHITECTURE_UNSPECIFIED{{% md %}}Unknown architecture.{{% /md %}}</dd><dt>Distribution<wbr>Architecture<wbr>X86</dt>
+    <dd>X86{{% md %}}X86 architecture.{{% /md %}}</dd><dt>Distribution<wbr>Architecture<wbr>X64</dt>
+    <dd>X64{{% md %}}X64 architecture.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Architecture<wbr>Unspecified</dt>
+    <dd>ARCHITECTURE_UNSPECIFIED{{% md %}}Unknown architecture.{{% /md %}}</dd><dt>X86</dt>
+    <dd>X86{{% md %}}X86 architecture.{{% /md %}}</dd><dt>X64</dt>
+    <dd>X64{{% md %}}X64 architecture.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ARCHITECTURE_UNSPECIFIED</dt>
+    <dd>ARCHITECTURE_UNSPECIFIED{{% md %}}Unknown architecture.{{% /md %}}</dd><dt>X86</dt>
+    <dd>X86{{% md %}}X86 architecture.{{% /md %}}</dd><dt>X64</dt>
+    <dd>X64{{% md %}}X64 architecture.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributionresponse">Distribution<wbr>Response</h4>
@@ -4757,6 +5135,60 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A link to the KB in the Windows update catalog - https://www.catalog.update.microsoft.com/{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="notekind">Note<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Note<wbr>Kind<wbr>Unspecified</dt>
+    <dd>NOTE_KIND_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>Vulnerability</dt>
+    <dd>VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>Build</dt>
+    <dd>BUILD{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>Image</dt>
+    <dd>IMAGE{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>Package</dt>
+    <dd>PACKAGE{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>Deployment</dt>
+    <dd>DEPLOYMENT{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>Discovery</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>Attestation</dt>
+    <dd>ATTESTATION{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>Intoto</dt>
+    <dd>INTOTO{{% md %}}This represents an in-toto link.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Note<wbr>Kind<wbr>Note<wbr>Kind<wbr>Unspecified</dt>
+    <dd>NOTE_KIND_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>Note<wbr>Kind<wbr>Vulnerability</dt>
+    <dd>VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>Note<wbr>Kind<wbr>Build</dt>
+    <dd>BUILD{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>Note<wbr>Kind<wbr>Image</dt>
+    <dd>IMAGE{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>Note<wbr>Kind<wbr>Package</dt>
+    <dd>PACKAGE{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>Note<wbr>Kind<wbr>Deployment</dt>
+    <dd>DEPLOYMENT{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>Note<wbr>Kind<wbr>Discovery</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>Note<wbr>Kind<wbr>Attestation</dt>
+    <dd>ATTESTATION{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>Note<wbr>Kind<wbr>Intoto</dt>
+    <dd>INTOTO{{% md %}}This represents an in-toto link.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Note<wbr>Kind<wbr>Unspecified</dt>
+    <dd>NOTE_KIND_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>Vulnerability</dt>
+    <dd>VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>Build</dt>
+    <dd>BUILD{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>Image</dt>
+    <dd>IMAGE{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>Package</dt>
+    <dd>PACKAGE{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>Deployment</dt>
+    <dd>DEPLOYMENT{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>Discovery</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>Attestation</dt>
+    <dd>ATTESTATION{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>Intoto</dt>
+    <dd>INTOTO{{% md %}}This represents an in-toto link.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NOTE_KIND_UNSPECIFIED</dt>
+    <dd>NOTE_KIND_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>VULNERABILITY</dt>
+    <dd>VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>BUILD</dt>
+    <dd>BUILD{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>IMAGE</dt>
+    <dd>IMAGE{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>PACKAGE</dt>
+    <dd>PACKAGE{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>DEPLOYMENT</dt>
+    <dd>DEPLOYMENT{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>DISCOVERY</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>ATTESTATION</dt>
+    <dd>ATTESTATION{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>INTOTO</dt>
+    <dd>INTOTO{{% md %}}This represents an in-toto link.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="package">Package</h4>
 
 {{% choosable language csharp %}}
@@ -5402,7 +5834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#versionkind">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Beta1.<wbr>Version<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Distinguishes between sentinel MIN/MAX versions and normal versions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5446,7 +5878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#versionkind">Version<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Distinguishes between sentinel MIN/MAX versions and normal versions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5490,7 +5922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#versionkind">Version<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Distinguishes between sentinel MIN/MAX versions and normal versions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5534,7 +5966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#versionkind">Version<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Distinguishes between sentinel MIN/MAX versions and normal versions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5553,6 +5985,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The iteration of the package build from the above version.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="versionkind">Version<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Version<wbr>Kind<wbr>Unspecified</dt>
+    <dd>VERSION_KIND_UNSPECIFIED{{% md %}}Unknown.{{% /md %}}</dd><dt>Normal</dt>
+    <dd>NORMAL{{% md %}}A standard package version.{{% /md %}}</dd><dt>Minimum</dt>
+    <dd>MINIMUM{{% md %}}A special version representing negative infinity.{{% /md %}}</dd><dt>Maximum</dt>
+    <dd>MAXIMUM{{% md %}}A special version representing positive infinity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Version<wbr>Kind<wbr>Version<wbr>Kind<wbr>Unspecified</dt>
+    <dd>VERSION_KIND_UNSPECIFIED{{% md %}}Unknown.{{% /md %}}</dd><dt>Version<wbr>Kind<wbr>Normal</dt>
+    <dd>NORMAL{{% md %}}A standard package version.{{% /md %}}</dd><dt>Version<wbr>Kind<wbr>Minimum</dt>
+    <dd>MINIMUM{{% md %}}A special version representing negative infinity.{{% /md %}}</dd><dt>Version<wbr>Kind<wbr>Maximum</dt>
+    <dd>MAXIMUM{{% md %}}A special version representing positive infinity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Version<wbr>Kind<wbr>Unspecified</dt>
+    <dd>VERSION_KIND_UNSPECIFIED{{% md %}}Unknown.{{% /md %}}</dd><dt>Normal</dt>
+    <dd>NORMAL{{% md %}}A standard package version.{{% /md %}}</dd><dt>Minimum</dt>
+    <dd>MINIMUM{{% md %}}A special version representing negative infinity.{{% /md %}}</dd><dt>Maximum</dt>
+    <dd>MAXIMUM{{% md %}}A special version representing positive infinity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>VERSION_KIND_UNSPECIFIED</dt>
+    <dd>VERSION_KIND_UNSPECIFIED{{% md %}}Unknown.{{% /md %}}</dd><dt>NORMAL</dt>
+    <dd>NORMAL{{% md %}}A standard package version.{{% /md %}}</dd><dt>MINIMUM</dt>
+    <dd>MINIMUM{{% md %}}A special version representing negative infinity.{{% /md %}}</dd><dt>MAXIMUM</dt>
+    <dd>MAXIMUM{{% md %}}A special version representing positive infinity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="versionresponse">Version<wbr>Response</h4>
@@ -5766,7 +6232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#vulnerabilityseverity">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Beta1.<wbr>Vulnerability<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}Note provider assigned impact of the vulnerability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5818,7 +6284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#vulnerabilityseverity">Vulnerability<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}Note provider assigned impact of the vulnerability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5870,7 +6336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#vulnerabilityseverity">Vulnerability<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}Note provider assigned impact of the vulnerability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5922,7 +6388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#vulnerabilityseverity">Vulnerability<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}Note provider assigned impact of the vulnerability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6379,6 +6845,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#windowsdetailresponse">Windows<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Windows details get their own format because the information format and model don't match a normal detail. Specifically Windows updates are done as patches, thus Windows vulnerabilities really are a missing package, rather than a package being at an incorrect version.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="vulnerabilityseverity">Vulnerability<wbr>Severity</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Severity<wbr>Unspecified</dt>
+    <dd>SEVERITY_UNSPECIFIED{{% md %}}Unknown.{{% /md %}}</dd><dt>Minimal</dt>
+    <dd>MINIMAL{{% md %}}Minimal severity.{{% /md %}}</dd><dt>Low</dt>
+    <dd>LOW{{% md %}}Low severity.{{% /md %}}</dd><dt>Medium</dt>
+    <dd>MEDIUM{{% md %}}Medium severity.{{% /md %}}</dd><dt>High</dt>
+    <dd>HIGH{{% md %}}High severity.{{% /md %}}</dd><dt>Critical</dt>
+    <dd>CRITICAL{{% md %}}Critical severity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Vulnerability<wbr>Severity<wbr>Severity<wbr>Unspecified</dt>
+    <dd>SEVERITY_UNSPECIFIED{{% md %}}Unknown.{{% /md %}}</dd><dt>Vulnerability<wbr>Severity<wbr>Minimal</dt>
+    <dd>MINIMAL{{% md %}}Minimal severity.{{% /md %}}</dd><dt>Vulnerability<wbr>Severity<wbr>Low</dt>
+    <dd>LOW{{% md %}}Low severity.{{% /md %}}</dd><dt>Vulnerability<wbr>Severity<wbr>Medium</dt>
+    <dd>MEDIUM{{% md %}}Medium severity.{{% /md %}}</dd><dt>Vulnerability<wbr>Severity<wbr>High</dt>
+    <dd>HIGH{{% md %}}High severity.{{% /md %}}</dd><dt>Vulnerability<wbr>Severity<wbr>Critical</dt>
+    <dd>CRITICAL{{% md %}}Critical severity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Severity<wbr>Unspecified</dt>
+    <dd>SEVERITY_UNSPECIFIED{{% md %}}Unknown.{{% /md %}}</dd><dt>Minimal</dt>
+    <dd>MINIMAL{{% md %}}Minimal severity.{{% /md %}}</dd><dt>Low</dt>
+    <dd>LOW{{% md %}}Low severity.{{% /md %}}</dd><dt>Medium</dt>
+    <dd>MEDIUM{{% md %}}Medium severity.{{% /md %}}</dd><dt>High</dt>
+    <dd>HIGH{{% md %}}High severity.{{% /md %}}</dd><dt>Critical</dt>
+    <dd>CRITICAL{{% md %}}Critical severity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SEVERITY_UNSPECIFIED</dt>
+    <dd>SEVERITY_UNSPECIFIED{{% md %}}Unknown.{{% /md %}}</dd><dt>MINIMAL</dt>
+    <dd>MINIMAL{{% md %}}Minimal severity.{{% /md %}}</dd><dt>LOW</dt>
+    <dd>LOW{{% md %}}Low severity.{{% /md %}}</dd><dt>MEDIUM</dt>
+    <dd>MEDIUM{{% md %}}Medium severity.{{% /md %}}</dd><dt>HIGH</dt>
+    <dd>HIGH{{% md %}}High severity.{{% /md %}}</dd><dt>CRITICAL</dt>
+    <dd>CRITICAL{{% md %}}Critical severity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="windowsdetail">Windows<wbr>Detail</h4>

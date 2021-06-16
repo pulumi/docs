@@ -31,9 +31,9 @@ Creates a `WorkerPool` to run the builds, and returns the new worker pool.
                <span class="nx">delete_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+               <span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[_cloudbuild_v1alpha1.WorkerPoolRegionsItem]]</span> = None<span class="p">,</span>
                <span class="nx">service_account_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_cloudbuild_v1alpha1.WorkerPoolStatus]</span> = None<span class="p">,</span>
                <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">worker_config</span><span class="p">:</span> <span class="nx">Optional[_cloudbuild_v1alpha1.WorkerConfigArgs]</span> = None<span class="p">,</span>
                <span class="nx">worker_count</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -202,7 +202,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#workerpoolregionsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1Alpha1.<wbr>Worker<wbr>Pool<wbr>Regions<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of regions to create the `WorkerPool`. Regions can't be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -218,7 +218,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workerpoolstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1Alpha1.<wbr>Worker<wbr>Pool<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}WorkerPool Status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -286,7 +286,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#workerpoolregionsitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of regions to create the `WorkerPool`. Regions can't be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -302,7 +302,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workerpoolstatus">Worker<wbr>Pool<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}WorkerPool Status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +370,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#workerpoolregionsitem">Worker<wbr>Pool<wbr>Regions<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}List of regions to create the `WorkerPool`. Regions can't be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +386,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workerpoolstatus">Worker<wbr>Pool<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}WorkerPool Status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +454,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#workerpoolregionsitem">Worker<wbr>Pool<wbr>Regions<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}List of regions to create the `WorkerPool`. Regions can't be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +470,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#workerpoolstatus">Worker<wbr>Pool<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}WorkerPool Status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1082,6 +1082,82 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tag applied to the worker, and the same tag used by the firewall rule. It is used to identify the Cloud Build workers among other VMs. The default value for tag is `worker`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="workerpoolregionsitem">Worker<wbr>Pool<wbr>Regions<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Region<wbr>Unspecified</dt>
+    <dd>REGION_UNSPECIFIED{{% md %}}no region{{% /md %}}</dd><dt>Us<wbr>Central1</dt>
+    <dd>us-central1{{% md %}}us-central1 region{{% /md %}}</dd><dt>Us<wbr>West1</dt>
+    <dd>us-west1{{% md %}}us-west1 region{{% /md %}}</dd><dt>Us<wbr>East1</dt>
+    <dd>us-east1{{% md %}}us-east1 region{{% /md %}}</dd><dt>Us<wbr>East4</dt>
+    <dd>us-east4{{% md %}}us-east4 region{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Worker<wbr>Pool<wbr>Regions<wbr>Item<wbr>Region<wbr>Unspecified</dt>
+    <dd>REGION_UNSPECIFIED{{% md %}}no region{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>Regions<wbr>Item<wbr>Us<wbr>Central1</dt>
+    <dd>us-central1{{% md %}}us-central1 region{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>Regions<wbr>Item<wbr>Us<wbr>West1</dt>
+    <dd>us-west1{{% md %}}us-west1 region{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>Regions<wbr>Item<wbr>Us<wbr>East1</dt>
+    <dd>us-east1{{% md %}}us-east1 region{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>Regions<wbr>Item<wbr>Us<wbr>East4</dt>
+    <dd>us-east4{{% md %}}us-east4 region{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Region<wbr>Unspecified</dt>
+    <dd>REGION_UNSPECIFIED{{% md %}}no region{{% /md %}}</dd><dt>Us<wbr>Central1</dt>
+    <dd>us-central1{{% md %}}us-central1 region{{% /md %}}</dd><dt>Us<wbr>West1</dt>
+    <dd>us-west1{{% md %}}us-west1 region{{% /md %}}</dd><dt>Us<wbr>East1</dt>
+    <dd>us-east1{{% md %}}us-east1 region{{% /md %}}</dd><dt>Us<wbr>East4</dt>
+    <dd>us-east4{{% md %}}us-east4 region{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>REGION_UNSPECIFIED</dt>
+    <dd>REGION_UNSPECIFIED{{% md %}}no region{{% /md %}}</dd><dt>US_CENTRAL1</dt>
+    <dd>us-central1{{% md %}}us-central1 region{{% /md %}}</dd><dt>US_WEST1</dt>
+    <dd>us-west1{{% md %}}us-west1 region{{% /md %}}</dd><dt>US_EAST1</dt>
+    <dd>us-east1{{% md %}}us-east1 region{{% /md %}}</dd><dt>US_EAST4</dt>
+    <dd>us-east4{{% md %}}us-east4 region{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="workerpoolstatus">Worker<wbr>Pool<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Status of the `WorkerPool` is unknown.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}`WorkerPool` is being created.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}`WorkerPool` is running.{{% /md %}}</dd><dt>Deleting</dt>
+    <dd>DELETING{{% md %}}`WorkerPool` is being deleted: cancelling builds and draining workers.{{% /md %}}</dd><dt>Deleted</dt>
+    <dd>DELETED{{% md %}}`WorkerPool` is deleted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Worker<wbr>Pool<wbr>Status<wbr>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Status of the `WorkerPool` is unknown.{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>Status<wbr>Creating</dt>
+    <dd>CREATING{{% md %}}`WorkerPool` is being created.{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>Status<wbr>Running</dt>
+    <dd>RUNNING{{% md %}}`WorkerPool` is running.{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>Status<wbr>Deleting</dt>
+    <dd>DELETING{{% md %}}`WorkerPool` is being deleted: cancelling builds and draining workers.{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>Status<wbr>Deleted</dt>
+    <dd>DELETED{{% md %}}`WorkerPool` is deleted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Status of the `WorkerPool` is unknown.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}`WorkerPool` is being created.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}`WorkerPool` is running.{{% /md %}}</dd><dt>Deleting</dt>
+    <dd>DELETING{{% md %}}`WorkerPool` is being deleted: cancelling builds and draining workers.{{% /md %}}</dd><dt>Deleted</dt>
+    <dd>DELETED{{% md %}}`WorkerPool` is deleted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATUS_UNSPECIFIED</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Status of the `WorkerPool` is unknown.{{% /md %}}</dd><dt>CREATING</dt>
+    <dd>CREATING{{% md %}}`WorkerPool` is being created.{{% /md %}}</dd><dt>RUNNING</dt>
+    <dd>RUNNING{{% md %}}`WorkerPool` is running.{{% /md %}}</dd><dt>DELETING</dt>
+    <dd>DELETING{{% md %}}`WorkerPool` is being deleted: cancelling builds and draining workers.{{% /md %}}</dd><dt>DELETED</dt>
+    <dd>DELETED{{% md %}}`WorkerPool` is deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

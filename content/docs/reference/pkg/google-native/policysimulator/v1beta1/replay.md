@@ -438,7 +438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logsource_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudpolicysimulatorv1beta1replayconfiglogsource">Pulumi.<wbr>Google<wbr>Native.<wbr>Policy<wbr>Simulator.<wbr>V1Beta1.<wbr>Google<wbr>Cloud<wbr>Policysimulator<wbr>V1beta1Replay<wbr>Config<wbr>Log<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The logs to use as input for the Replay.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logsource_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudpolicysimulatorv1beta1replayconfiglogsource">Google<wbr>Cloud<wbr>Policysimulator<wbr>V1beta1Replay<wbr>Config<wbr>Log<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The logs to use as input for the Replay.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logsource_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudpolicysimulatorv1beta1replayconfiglogsource">Google<wbr>Cloud<wbr>Policysimulator<wbr>V1beta1Replay<wbr>Config<wbr>Log<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The logs to use as input for the Replay.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_source_python" style="color: inherit; text-decoration: inherit;">log_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudpolicysimulatorv1beta1replayconfiglogsource">Google<wbr>Cloud<wbr>Policysimulator<wbr>V1beta1Replay<wbr>Config<wbr>Log<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The logs to use as input for the Replay.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -509,6 +509,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of the resources that you want to simulate policies for and the policies that you want to simulate. Keys are the full resource names for the resources. For example, `//cloudresourcemanager.googleapis.com/projects/my-project`. For examples of full resource names for Google Cloud services, see https://cloud.google.com/iam/help/troubleshooter/full-resource-names. Values are Policy objects representing the policies that you want to simulate. Replays automatically take into account any IAM policies inherited through the resource hierarchy, and any policies set on descendant resources. You do not need to include these policies in the policy overlay.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudpolicysimulatorv1beta1replayconfiglogsource">Google<wbr>Cloud<wbr>Policysimulator<wbr>V1beta1Replay<wbr>Config<wbr>Log<wbr>Source</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Log<wbr>Source<wbr>Unspecified</dt>
+    <dd>LOG_SOURCE_UNSPECIFIED{{% md %}}An unspecified log source. If the log source is unspecified, the Replay defaults to using `RECENT_ACCESSES`.{{% /md %}}</dd><dt>Recent<wbr>Accesses</dt>
+    <dd>RECENT_ACCESSES{{% md %}}All access logs from the last 90 days. These logs may not include logs from the most recent 7 days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Policysimulator<wbr>V1beta1Replay<wbr>Config<wbr>Log<wbr>Source<wbr>Log<wbr>Source<wbr>Unspecified</dt>
+    <dd>LOG_SOURCE_UNSPECIFIED{{% md %}}An unspecified log source. If the log source is unspecified, the Replay defaults to using `RECENT_ACCESSES`.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Policysimulator<wbr>V1beta1Replay<wbr>Config<wbr>Log<wbr>Source<wbr>Recent<wbr>Accesses</dt>
+    <dd>RECENT_ACCESSES{{% md %}}All access logs from the last 90 days. These logs may not include logs from the most recent 7 days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Log<wbr>Source<wbr>Unspecified</dt>
+    <dd>LOG_SOURCE_UNSPECIFIED{{% md %}}An unspecified log source. If the log source is unspecified, the Replay defaults to using `RECENT_ACCESSES`.{{% /md %}}</dd><dt>Recent<wbr>Accesses</dt>
+    <dd>RECENT_ACCESSES{{% md %}}All access logs from the last 90 days. These logs may not include logs from the most recent 7 days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LOG_SOURCE_UNSPECIFIED</dt>
+    <dd>LOG_SOURCE_UNSPECIFIED{{% md %}}An unspecified log source. If the log source is unspecified, the Replay defaults to using `RECENT_ACCESSES`.{{% /md %}}</dd><dt>RECENT_ACCESSES</dt>
+    <dd>RECENT_ACCESSES{{% md %}}All access logs from the last 90 days. These logs may not include logs from the most recent 7 days.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googlecloudpolicysimulatorv1beta1replayconfigresponse">Google<wbr>Cloud<wbr>Policysimulator<wbr>V1beta1Replay<wbr>Config<wbr>Response</h4>

@@ -28,22 +28,22 @@ Creates an address resource in the specified project by using the data included 
 <span class="k">def </span><span class="nx">Address</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">address_type</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.AddressAddressType]</span> = None<span class="p">,</span>
             <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.AddressIpVersion]</span> = None<span class="p">,</span>
             <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">network_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">network_tier</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.AddressNetworkTier]</span> = None<span class="p">,</span>
             <span class="nx">prefix_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.AddressPurpose]</span> = None<span class="p">,</span>
             <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.AddressStatus]</span> = None<span class="p">,</span>
             <span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -203,7 +203,7 @@ The Address resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#addresstype_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#addressaddresstype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Address<wbr>Address<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of address to reserve, either INTERNAL or EXTERNAL. If unspecified, defaults to EXTERNAL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -235,7 +235,7 @@ The Address resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#addressipversion">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Address<wbr>Ip<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The IP version that will be used by this address. Valid options are IPV4 or IPV6. This can only be specified for a global address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -267,7 +267,7 @@ The Address resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#networktier_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#addressnetworktier">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Address<wbr>Network<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}This signifies the networking tier used for configuring this address and can only take the following values: PREMIUM or STANDARD. Global forwarding rules can only be Premium Tier. Regional forwarding rules can be either Premium or Standard Tier. Standard Tier addresses applied to regional forwarding rules can be used with any external load balancer. Regional forwarding rules in Premium Tier can only be used with a network load balancer.
 
@@ -285,7 +285,7 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 <a href="#purpose_csharp" style="color: inherit; text-decoration: inherit;">Purpose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#addresspurpose">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Address<wbr>Purpose</a></span>
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:  
 - `GCE_ENDPOINT` for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources. 
@@ -314,7 +314,7 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#addressstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Address<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the address, which can be one of RESERVING, RESERVED, or IN_USE. An address that is RESERVING is currently in the process of being reserved. A RESERVED address is currently reserved and available to use. An IN_USE address is currently being used by another resource and is not available.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -366,7 +366,7 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 <a href="#addresstype_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#addressaddresstype">Address<wbr>Address<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of address to reserve, either INTERNAL or EXTERNAL. If unspecified, defaults to EXTERNAL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +398,7 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 <a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#addressipversion">Address<wbr>Ip<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The IP version that will be used by this address. Valid options are IPV4 or IPV6. This can only be specified for a global address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +430,7 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 <a href="#networktier_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#addressnetworktier">Address<wbr>Network<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}This signifies the networking tier used for configuring this address and can only take the following values: PREMIUM or STANDARD. Global forwarding rules can only be Premium Tier. Regional forwarding rules can be either Premium or Standard Tier. Standard Tier addresses applied to regional forwarding rules can be used with any external load balancer. Regional forwarding rules in Premium Tier can only be used with a network load balancer.
 
@@ -448,7 +448,7 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 <a href="#purpose_go" style="color: inherit; text-decoration: inherit;">Purpose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#addresspurpose">Address<wbr>Purpose</a></span>
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:  
 - `GCE_ENDPOINT` for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources. 
@@ -477,7 +477,7 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#addressstatus">Address<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the address, which can be one of RESERVING, RESERVED, or IN_USE. An address that is RESERVING is currently in the process of being reserved. A RESERVED address is currently reserved and available to use. An IN_USE address is currently being used by another resource and is not available.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -529,7 +529,7 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 <a href="#addresstype_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#addressaddresstype">Address<wbr>Address<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of address to reserve, either INTERNAL or EXTERNAL. If unspecified, defaults to EXTERNAL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -561,7 +561,7 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#addressipversion">Address<wbr>Ip<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The IP version that will be used by this address. Valid options are IPV4 or IPV6. This can only be specified for a global address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -593,7 +593,7 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 <a href="#networktier_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#addressnetworktier">Address<wbr>Network<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}This signifies the networking tier used for configuring this address and can only take the following values: PREMIUM or STANDARD. Global forwarding rules can only be Premium Tier. Regional forwarding rules can be either Premium or Standard Tier. Standard Tier addresses applied to regional forwarding rules can be used with any external load balancer. Regional forwarding rules in Premium Tier can only be used with a network load balancer.
 
@@ -611,7 +611,7 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 <a href="#purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#addresspurpose">Address<wbr>Purpose</a></span>
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:  
 - `GCE_ENDPOINT` for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources. 
@@ -640,7 +640,7 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#addressstatus">Address<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the address, which can be one of RESERVING, RESERVED, or IN_USE. An address that is RESERVING is currently in the process of being reserved. A RESERVED address is currently reserved and available to use. An IN_USE address is currently being used by another resource and is not available.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -692,7 +692,7 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 <a href="#address_type_python" style="color: inherit; text-decoration: inherit;">address_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#addressaddresstype">Address<wbr>Address<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of address to reserve, either INTERNAL or EXTERNAL. If unspecified, defaults to EXTERNAL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -724,7 +724,7 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#addressipversion">Address<wbr>Ip<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The IP version that will be used by this address. Valid options are IPV4 or IPV6. This can only be specified for a global address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -756,7 +756,7 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 <a href="#network_tier_python" style="color: inherit; text-decoration: inherit;">network_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#addressnetworktier">Address<wbr>Network<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}This signifies the networking tier used for configuring this address and can only take the following values: PREMIUM or STANDARD. Global forwarding rules can only be Premium Tier. Regional forwarding rules can be either Premium or Standard Tier. Standard Tier addresses applied to regional forwarding rules can be used with any external load balancer. Regional forwarding rules in Premium Tier can only be used with a network load balancer.
 
@@ -774,7 +774,7 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 <a href="#purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#addresspurpose">Address<wbr>Purpose</a></span>
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:  
 - `GCE_ENDPOINT` for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources. 
@@ -803,7 +803,7 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#addressstatus">Address<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the address, which can be one of RESERVING, RESERVED, or IN_USE. An address that is RESERVING is currently in the process of being reserved. A RESERVED address is currently reserved and available to use. An IN_USE address is currently being used by another resource and is not available.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -884,6 +884,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="addressaddresstype">Address<wbr>Address<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>External</dt>
+    <dd>EXTERNAL</dd><dt>Internal</dt>
+    <dd>INTERNAL</dd><dt>Unspecified<wbr>Type</dt>
+    <dd>UNSPECIFIED_TYPE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Address<wbr>Address<wbr>Type<wbr>External</dt>
+    <dd>EXTERNAL</dd><dt>Address<wbr>Address<wbr>Type<wbr>Internal</dt>
+    <dd>INTERNAL</dd><dt>Address<wbr>Address<wbr>Type<wbr>Unspecified<wbr>Type</dt>
+    <dd>UNSPECIFIED_TYPE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>External</dt>
+    <dd>EXTERNAL</dd><dt>Internal</dt>
+    <dd>INTERNAL</dd><dt>Unspecified<wbr>Type</dt>
+    <dd>UNSPECIFIED_TYPE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EXTERNAL</dt>
+    <dd>EXTERNAL</dd><dt>INTERNAL</dt>
+    <dd>INTERNAL</dd><dt>UNSPECIFIED_TYPE</dt>
+    <dd>UNSPECIFIED_TYPE</dd></dl>
+{{% /choosable %}}
+
+<h4 id="addressipversion">Address<wbr>Ip<wbr>Version</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Ipv4</dt>
+    <dd>IPV4</dd><dt>Ipv6</dt>
+    <dd>IPV6</dd><dt>Unspecified<wbr>Version</dt>
+    <dd>UNSPECIFIED_VERSION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Address<wbr>Ip<wbr>Version<wbr>Ipv4</dt>
+    <dd>IPV4</dd><dt>Address<wbr>Ip<wbr>Version<wbr>Ipv6</dt>
+    <dd>IPV6</dd><dt>Address<wbr>Ip<wbr>Version<wbr>Unspecified<wbr>Version</dt>
+    <dd>UNSPECIFIED_VERSION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Ipv4</dt>
+    <dd>IPV4</dd><dt>Ipv6</dt>
+    <dd>IPV6</dd><dt>Unspecified<wbr>Version</dt>
+    <dd>UNSPECIFIED_VERSION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>IPV4</dt>
+    <dd>IPV4</dd><dt>IPV6</dt>
+    <dd>IPV6</dd><dt>UNSPECIFIED_VERSION</dt>
+    <dd>UNSPECIFIED_VERSION</dd></dl>
+{{% /choosable %}}
+
+<h4 id="addressnetworktier">Address<wbr>Network<wbr>Tier</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Premium</dt>
+    <dd>PREMIUM</dd><dt>Standard</dt>
+    <dd>STANDARD</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Address<wbr>Network<wbr>Tier<wbr>Premium</dt>
+    <dd>PREMIUM</dd><dt>Address<wbr>Network<wbr>Tier<wbr>Standard</dt>
+    <dd>STANDARD</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Premium</dt>
+    <dd>PREMIUM</dd><dt>Standard</dt>
+    <dd>STANDARD</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PREMIUM</dt>
+    <dd>PREMIUM</dd><dt>STANDARD</dt>
+    <dd>STANDARD</dd></dl>
+{{% /choosable %}}
+
+<h4 id="addresspurpose">Address<wbr>Purpose</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Dns<wbr>Resolver</dt>
+    <dd>DNS_RESOLVER</dd><dt>Gce<wbr>Endpoint</dt>
+    <dd>GCE_ENDPOINT</dd><dt>Ipsec<wbr>Interconnect</dt>
+    <dd>IPSEC_INTERCONNECT</dd><dt>Nat<wbr>Auto</dt>
+    <dd>NAT_AUTO</dd><dt>Private<wbr>Service<wbr>Connect</dt>
+    <dd>PRIVATE_SERVICE_CONNECT</dd><dt>Shared<wbr>Loadbalancer<wbr>Vip</dt>
+    <dd>SHARED_LOADBALANCER_VIP</dd><dt>Vpc<wbr>Peering</dt>
+    <dd>VPC_PEERING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Address<wbr>Purpose<wbr>Dns<wbr>Resolver</dt>
+    <dd>DNS_RESOLVER</dd><dt>Address<wbr>Purpose<wbr>Gce<wbr>Endpoint</dt>
+    <dd>GCE_ENDPOINT</dd><dt>Address<wbr>Purpose<wbr>Ipsec<wbr>Interconnect</dt>
+    <dd>IPSEC_INTERCONNECT</dd><dt>Address<wbr>Purpose<wbr>Nat<wbr>Auto</dt>
+    <dd>NAT_AUTO</dd><dt>Address<wbr>Purpose<wbr>Private<wbr>Service<wbr>Connect</dt>
+    <dd>PRIVATE_SERVICE_CONNECT</dd><dt>Address<wbr>Purpose<wbr>Shared<wbr>Loadbalancer<wbr>Vip</dt>
+    <dd>SHARED_LOADBALANCER_VIP</dd><dt>Address<wbr>Purpose<wbr>Vpc<wbr>Peering</dt>
+    <dd>VPC_PEERING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Dns<wbr>Resolver</dt>
+    <dd>DNS_RESOLVER</dd><dt>Gce<wbr>Endpoint</dt>
+    <dd>GCE_ENDPOINT</dd><dt>Ipsec<wbr>Interconnect</dt>
+    <dd>IPSEC_INTERCONNECT</dd><dt>Nat<wbr>Auto</dt>
+    <dd>NAT_AUTO</dd><dt>Private<wbr>Service<wbr>Connect</dt>
+    <dd>PRIVATE_SERVICE_CONNECT</dd><dt>Shared<wbr>Loadbalancer<wbr>Vip</dt>
+    <dd>SHARED_LOADBALANCER_VIP</dd><dt>Vpc<wbr>Peering</dt>
+    <dd>VPC_PEERING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DNS_RESOLVER</dt>
+    <dd>DNS_RESOLVER</dd><dt>GCE_ENDPOINT</dt>
+    <dd>GCE_ENDPOINT</dd><dt>IPSEC_INTERCONNECT</dt>
+    <dd>IPSEC_INTERCONNECT</dd><dt>NAT_AUTO</dt>
+    <dd>NAT_AUTO</dd><dt>PRIVATE_SERVICE_CONNECT</dt>
+    <dd>PRIVATE_SERVICE_CONNECT</dd><dt>SHARED_LOADBALANCER_VIP</dt>
+    <dd>SHARED_LOADBALANCER_VIP</dd><dt>VPC_PEERING</dt>
+    <dd>VPC_PEERING</dd></dl>
+{{% /choosable %}}
+
+<h4 id="addressstatus">Address<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>In<wbr>Use</dt>
+    <dd>IN_USE</dd><dt>Reserved</dt>
+    <dd>RESERVED</dd><dt>Reserving</dt>
+    <dd>RESERVING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Address<wbr>Status<wbr>In<wbr>Use</dt>
+    <dd>IN_USE</dd><dt>Address<wbr>Status<wbr>Reserved</dt>
+    <dd>RESERVED</dd><dt>Address<wbr>Status<wbr>Reserving</dt>
+    <dd>RESERVING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>In<wbr>Use</dt>
+    <dd>IN_USE</dd><dt>Reserved</dt>
+    <dd>RESERVED</dd><dt>Reserving</dt>
+    <dd>RESERVING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>IN_USE</dt>
+    <dd>IN_USE</dd><dt>RESERVED</dt>
+    <dd>RESERVED</dd><dt>RESERVING</dt>
+    <dd>RESERVING</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

@@ -523,7 +523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#writedisposition_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudhealthcarev1beta1dicombigquerydestinationwritedisposition">Pulumi.<wbr>Google<wbr>Native.<wbr>Healthcare.<wbr>V1Beta1.<wbr>Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Dicom<wbr>Big<wbr>Query<wbr>Destination<wbr>Write<wbr>Disposition</a></span>
     </dt>
     <dd>{{% md %}}Determines whether the existing table in the destination is to be overwritten or appended to. If a write_disposition is specified, the `force` parameter is ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -551,7 +551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#writedisposition_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudhealthcarev1beta1dicombigquerydestinationwritedisposition">Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Dicom<wbr>Big<wbr>Query<wbr>Destination<wbr>Write<wbr>Disposition</a></span>
     </dt>
     <dd>{{% md %}}Determines whether the existing table in the destination is to be overwritten or appended to. If a write_disposition is specified, the `force` parameter is ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -579,7 +579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#writedisposition_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudhealthcarev1beta1dicombigquerydestinationwritedisposition">Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Dicom<wbr>Big<wbr>Query<wbr>Destination<wbr>Write<wbr>Disposition</a></span>
     </dt>
     <dd>{{% md %}}Determines whether the existing table in the destination is to be overwritten or appended to. If a write_disposition is specified, the `force` parameter is ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -607,7 +607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#write_disposition_python" style="color: inherit; text-decoration: inherit;">write_<wbr>disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudhealthcarev1beta1dicombigquerydestinationwritedisposition">Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Dicom<wbr>Big<wbr>Query<wbr>Destination<wbr>Write<wbr>Disposition</a></span>
     </dt>
     <dd>{{% md %}}Determines whether the existing table in the destination is to be overwritten or appended to. If a write_disposition is specified, the `force` parameter is ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -724,6 +724,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines whether the existing table in the destination is to be overwritten or appended to. If a write_disposition is specified, the `force` parameter is ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudhealthcarev1beta1dicombigquerydestinationwritedisposition">Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Dicom<wbr>Big<wbr>Query<wbr>Destination<wbr>Write<wbr>Disposition</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Write<wbr>Disposition<wbr>Unspecified</dt>
+    <dd>WRITE_DISPOSITION_UNSPECIFIED{{% md %}}Default behavior is the same as WRITE_EMPTY.{{% /md %}}</dd><dt>Write<wbr>Empty</dt>
+    <dd>WRITE_EMPTY{{% md %}}Only export data if the destination table is empty.{{% /md %}}</dd><dt>Write<wbr>Truncate</dt>
+    <dd>WRITE_TRUNCATE{{% md %}}Erase all existing data in a table before writing the instances.{{% /md %}}</dd><dt>Write<wbr>Append</dt>
+    <dd>WRITE_APPEND{{% md %}}Append data to the existing table.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Dicom<wbr>Big<wbr>Query<wbr>Destination<wbr>Write<wbr>Disposition<wbr>Write<wbr>Disposition<wbr>Unspecified</dt>
+    <dd>WRITE_DISPOSITION_UNSPECIFIED{{% md %}}Default behavior is the same as WRITE_EMPTY.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Dicom<wbr>Big<wbr>Query<wbr>Destination<wbr>Write<wbr>Disposition<wbr>Write<wbr>Empty</dt>
+    <dd>WRITE_EMPTY{{% md %}}Only export data if the destination table is empty.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Dicom<wbr>Big<wbr>Query<wbr>Destination<wbr>Write<wbr>Disposition<wbr>Write<wbr>Truncate</dt>
+    <dd>WRITE_TRUNCATE{{% md %}}Erase all existing data in a table before writing the instances.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Dicom<wbr>Big<wbr>Query<wbr>Destination<wbr>Write<wbr>Disposition<wbr>Write<wbr>Append</dt>
+    <dd>WRITE_APPEND{{% md %}}Append data to the existing table.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Write<wbr>Disposition<wbr>Unspecified</dt>
+    <dd>WRITE_DISPOSITION_UNSPECIFIED{{% md %}}Default behavior is the same as WRITE_EMPTY.{{% /md %}}</dd><dt>Write<wbr>Empty</dt>
+    <dd>WRITE_EMPTY{{% md %}}Only export data if the destination table is empty.{{% /md %}}</dd><dt>Write<wbr>Truncate</dt>
+    <dd>WRITE_TRUNCATE{{% md %}}Erase all existing data in a table before writing the instances.{{% /md %}}</dd><dt>Write<wbr>Append</dt>
+    <dd>WRITE_APPEND{{% md %}}Append data to the existing table.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>WRITE_DISPOSITION_UNSPECIFIED</dt>
+    <dd>WRITE_DISPOSITION_UNSPECIFIED{{% md %}}Default behavior is the same as WRITE_EMPTY.{{% /md %}}</dd><dt>WRITE_EMPTY</dt>
+    <dd>WRITE_EMPTY{{% md %}}Only export data if the destination table is empty.{{% /md %}}</dd><dt>WRITE_TRUNCATE</dt>
+    <dd>WRITE_TRUNCATE{{% md %}}Erase all existing data in a table before writing the instances.{{% /md %}}</dd><dt>WRITE_APPEND</dt>
+    <dd>WRITE_APPEND{{% md %}}Append data to the existing table.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googlecloudhealthcarev1beta1dicomstreamconfig">Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Dicom<wbr>Stream<wbr>Config</h4>

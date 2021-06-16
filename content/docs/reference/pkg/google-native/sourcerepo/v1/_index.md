@@ -15,6 +15,12 @@ Explore the resources and functions of the google-native.sourcerepo/v1 module.
     <li><a href="repoiampolicy" title="RepoIamPolicy"><span class="symbol resource"></span>RepoIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getrepo" title="GetRepo"><span class="symbol function"></span>GetRepo</a></li>
+    <li><a href="getrepoiampolicy" title="GetRepoIamPolicy"><span class="symbol function"></span>GetRepoIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -22,6 +28,6 @@ Explore the resources and functions of the google-native.sourcerepo/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

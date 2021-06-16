@@ -27,7 +27,7 @@ Creates a new alerting policy.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">combiner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">combiner</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.AlertPolicyCombiner]</span> = None<span class="p">,</span>
                 <span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[_monitoring_v3.ConditionArgs]]</span> = None<span class="p">,</span>
                 <span class="nx">creation_record</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.MutationRecordArgs]</span> = None<span class="p">,</span>
                 <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -180,7 +180,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#combiner_csharp" style="color: inherit; text-decoration: inherit;">Combiner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#alertpolicycombiner">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V3.<wbr>Alert<wbr>Policy<wbr>Combiner</a></span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened. If condition_time_series_query_language is present, this must be COMBINE_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -280,7 +280,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#combiner_go" style="color: inherit; text-decoration: inherit;">Combiner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#alertpolicycombiner">Alert<wbr>Policy<wbr>Combiner</a></span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened. If condition_time_series_query_language is present, this must be COMBINE_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -380,7 +380,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#combiner_nodejs" style="color: inherit; text-decoration: inherit;">combiner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#alertpolicycombiner">Alert<wbr>Policy<wbr>Combiner</a></span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened. If condition_time_series_query_language is present, this must be COMBINE_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -480,7 +480,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#combiner_python" style="color: inherit; text-decoration: inherit;">combiner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#alertpolicycombiner">Alert<wbr>Policy<wbr>Combiner</a></span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened. If condition_time_series_query_language is present, this must be COMBINE_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -647,7 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossseriesreducer_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Series<wbr>Reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#aggregationcrossseriesreducer">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V3.<wbr>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer</a></span>
     </dt>
     <dd>{{% md %}}The reduction operation to be used to combine time series into a single time series, where the value of each data point in the resulting series is a function of all the already aligned values in the input time series.Not all reducer operations can be applied to all time series. The valid choices depend on the metric_kind and the value_type of the original time series. Reduction can yield a time series with a different metric_kind or value_type than the input time series.Time series data must first be aligned (see per_series_aligner) in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -663,7 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perseriesaligner_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Series<wbr>Aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#aggregationperseriesaligner">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V3.<wbr>Aggregation<wbr>Per<wbr>Series<wbr>Aligner</a></span>
     </dt>
     <dd>{{% md %}}An Aligner describes how to bring the data points in a single time series into temporal alignment. Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be mathematically grouped together, resulting in a single data point for each alignment_period with end timestamp at the end of the period.Not all alignment operations may be applied to all time series. The valid choices depend on the metric_kind and value_type of the original time series. Alignment can change the metric_kind or the value_type of the time series.Time series data must be aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be specified; otherwise, an error is returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -683,7 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossseriesreducer_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Series<wbr>Reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#aggregationcrossseriesreducer">Aggregation<wbr>Cross<wbr>Series<wbr>Reducer</a></span>
     </dt>
     <dd>{{% md %}}The reduction operation to be used to combine time series into a single time series, where the value of each data point in the resulting series is a function of all the already aligned values in the input time series.Not all reducer operations can be applied to all time series. The valid choices depend on the metric_kind and the value_type of the original time series. Reduction can yield a time series with a different metric_kind or value_type than the input time series.Time series data must first be aligned (see per_series_aligner) in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -699,7 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perseriesaligner_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Series<wbr>Aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#aggregationperseriesaligner">Aggregation<wbr>Per<wbr>Series<wbr>Aligner</a></span>
     </dt>
     <dd>{{% md %}}An Aligner describes how to bring the data points in a single time series into temporal alignment. Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be mathematically grouped together, resulting in a single data point for each alignment_period with end timestamp at the end of the period.Not all alignment operations may be applied to all time series. The valid choices depend on the metric_kind and value_type of the original time series. Alignment can change the metric_kind or the value_type of the time series.Time series data must be aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be specified; otherwise, an error is returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -719,7 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossseriesreducer_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Series<wbr>Reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#aggregationcrossseriesreducer">Aggregation<wbr>Cross<wbr>Series<wbr>Reducer</a></span>
     </dt>
     <dd>{{% md %}}The reduction operation to be used to combine time series into a single time series, where the value of each data point in the resulting series is a function of all the already aligned values in the input time series.Not all reducer operations can be applied to all time series. The valid choices depend on the metric_kind and the value_type of the original time series. Reduction can yield a time series with a different metric_kind or value_type than the input time series.Time series data must first be aligned (see per_series_aligner) in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -735,7 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perseriesaligner_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Series<wbr>Aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#aggregationperseriesaligner">Aggregation<wbr>Per<wbr>Series<wbr>Aligner</a></span>
     </dt>
     <dd>{{% md %}}An Aligner describes how to bring the data points in a single time series into temporal alignment. Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be mathematically grouped together, resulting in a single data point for each alignment_period with end timestamp at the end of the period.Not all alignment operations may be applied to all time series. The valid choices depend on the metric_kind and value_type of the original time series. Alignment can change the metric_kind or the value_type of the time series.Time series data must be aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be specified; otherwise, an error is returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -755,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cross_series_reducer_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>series_<wbr>reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#aggregationcrossseriesreducer">Aggregation<wbr>Cross<wbr>Series<wbr>Reducer</a></span>
     </dt>
     <dd>{{% md %}}The reduction operation to be used to combine time series into a single time series, where the value of each data point in the resulting series is a function of all the already aligned values in the input time series.Not all reducer operations can be applied to all time series. The valid choices depend on the metric_kind and the value_type of the original time series. Reduction can yield a time series with a different metric_kind or value_type than the input time series.Time series data must first be aligned (see per_series_aligner) in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -771,9 +771,177 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#per_series_aligner_python" style="color: inherit; text-decoration: inherit;">per_<wbr>series_<wbr>aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#aggregationperseriesaligner">Aggregation<wbr>Per<wbr>Series<wbr>Aligner</a></span>
     </dt>
     <dd>{{% md %}}An Aligner describes how to bring the data points in a single time series into temporal alignment. Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be mathematically grouped together, resulting in a single data point for each alignment_period with end timestamp at the end of the period.Not all alignment operations may be applied to all time series. The valid choices depend on the metric_kind and value_type of the original time series. Alignment can change the metric_kind or the value_type of the time series.Time series data must be aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be specified; otherwise, an error is returned.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="aggregationcrossseriesreducer">Aggregation<wbr>Cross<wbr>Series<wbr>Reducer</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Reduce<wbr>None</dt>
+    <dd>REDUCE_NONE{{% md %}}No cross-time series reduction. The output of the Aligner is returned.{{% /md %}}</dd><dt>Reduce<wbr>Mean</dt>
+    <dd>REDUCE_MEAN{{% md %}}Reduce by computing the mean value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric or distribution values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Min</dt>
+    <dd>REDUCE_MIN{{% md %}}Reduce by computing the minimum value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>Reduce<wbr>Max</dt>
+    <dd>REDUCE_MAX{{% md %}}Reduce by computing the maximum value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>Reduce<wbr>Sum</dt>
+    <dd>REDUCE_SUM{{% md %}}Reduce by computing the sum across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric and distribution values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>Reduce<wbr>Stddev</dt>
+    <dd>REDUCE_STDDEV{{% md %}}Reduce by computing the standard deviation across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric or distribution values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Count</dt>
+    <dd>REDUCE_COUNT{{% md %}}Reduce by computing the number of data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of numeric, Boolean, distribution, and string value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>Reduce<wbr>Count<wbr>True</dt>
+    <dd>REDUCE_COUNT_TRUE{{% md %}}Reduce by computing the number of True-valued data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>Reduce<wbr>Count<wbr>False</dt>
+    <dd>REDUCE_COUNT_FALSE{{% md %}}Reduce by computing the number of False-valued data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>Reduce<wbr>Fraction<wbr>True</dt>
+    <dd>REDUCE_FRACTION_TRUE{{% md %}}Reduce by computing the ratio of the number of True-valued data points to the total number of data points for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The output value is in the range 0.0, 1.0 and has value_type DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Percentile99</dt>
+    <dd>REDUCE_PERCENTILE_99{{% md %}}Reduce by computing the 99th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Percentile95</dt>
+    <dd>REDUCE_PERCENTILE_95{{% md %}}Reduce by computing the 95th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Percentile50</dt>
+    <dd>REDUCE_PERCENTILE_50{{% md %}}Reduce by computing the 50th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Percentile05</dt>
+    <dd>REDUCE_PERCENTILE_05{{% md %}}Reduce by computing the 5th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>None</dt>
+    <dd>REDUCE_NONE{{% md %}}No cross-time series reduction. The output of the Aligner is returned.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Mean</dt>
+    <dd>REDUCE_MEAN{{% md %}}Reduce by computing the mean value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric or distribution values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Min</dt>
+    <dd>REDUCE_MIN{{% md %}}Reduce by computing the minimum value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Max</dt>
+    <dd>REDUCE_MAX{{% md %}}Reduce by computing the maximum value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Sum</dt>
+    <dd>REDUCE_SUM{{% md %}}Reduce by computing the sum across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric and distribution values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Stddev</dt>
+    <dd>REDUCE_STDDEV{{% md %}}Reduce by computing the standard deviation across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric or distribution values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Count</dt>
+    <dd>REDUCE_COUNT{{% md %}}Reduce by computing the number of data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of numeric, Boolean, distribution, and string value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Count<wbr>True</dt>
+    <dd>REDUCE_COUNT_TRUE{{% md %}}Reduce by computing the number of True-valued data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Count<wbr>False</dt>
+    <dd>REDUCE_COUNT_FALSE{{% md %}}Reduce by computing the number of False-valued data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Fraction<wbr>True</dt>
+    <dd>REDUCE_FRACTION_TRUE{{% md %}}Reduce by computing the ratio of the number of True-valued data points to the total number of data points for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The output value is in the range 0.0, 1.0 and has value_type DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Percentile99</dt>
+    <dd>REDUCE_PERCENTILE_99{{% md %}}Reduce by computing the 99th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Percentile95</dt>
+    <dd>REDUCE_PERCENTILE_95{{% md %}}Reduce by computing the 95th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Percentile50</dt>
+    <dd>REDUCE_PERCENTILE_50{{% md %}}Reduce by computing the 50th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Cross<wbr>Series<wbr>Reducer<wbr>Reduce<wbr>Percentile05</dt>
+    <dd>REDUCE_PERCENTILE_05{{% md %}}Reduce by computing the 5th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Reduce<wbr>None</dt>
+    <dd>REDUCE_NONE{{% md %}}No cross-time series reduction. The output of the Aligner is returned.{{% /md %}}</dd><dt>Reduce<wbr>Mean</dt>
+    <dd>REDUCE_MEAN{{% md %}}Reduce by computing the mean value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric or distribution values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Min</dt>
+    <dd>REDUCE_MIN{{% md %}}Reduce by computing the minimum value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>Reduce<wbr>Max</dt>
+    <dd>REDUCE_MAX{{% md %}}Reduce by computing the maximum value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>Reduce<wbr>Sum</dt>
+    <dd>REDUCE_SUM{{% md %}}Reduce by computing the sum across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric and distribution values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>Reduce<wbr>Stddev</dt>
+    <dd>REDUCE_STDDEV{{% md %}}Reduce by computing the standard deviation across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric or distribution values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Count</dt>
+    <dd>REDUCE_COUNT{{% md %}}Reduce by computing the number of data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of numeric, Boolean, distribution, and string value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>Reduce<wbr>Count<wbr>True</dt>
+    <dd>REDUCE_COUNT_TRUE{{% md %}}Reduce by computing the number of True-valued data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>Reduce<wbr>Count<wbr>False</dt>
+    <dd>REDUCE_COUNT_FALSE{{% md %}}Reduce by computing the number of False-valued data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>Reduce<wbr>Fraction<wbr>True</dt>
+    <dd>REDUCE_FRACTION_TRUE{{% md %}}Reduce by computing the ratio of the number of True-valued data points to the total number of data points for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The output value is in the range 0.0, 1.0 and has value_type DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Percentile99</dt>
+    <dd>REDUCE_PERCENTILE_99{{% md %}}Reduce by computing the 99th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Percentile95</dt>
+    <dd>REDUCE_PERCENTILE_95{{% md %}}Reduce by computing the 95th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Percentile50</dt>
+    <dd>REDUCE_PERCENTILE_50{{% md %}}Reduce by computing the 50th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>Reduce<wbr>Percentile05</dt>
+    <dd>REDUCE_PERCENTILE_05{{% md %}}Reduce by computing the 5th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>REDUCE_NONE</dt>
+    <dd>REDUCE_NONE{{% md %}}No cross-time series reduction. The output of the Aligner is returned.{{% /md %}}</dd><dt>REDUCE_MEAN</dt>
+    <dd>REDUCE_MEAN{{% md %}}Reduce by computing the mean value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric or distribution values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>REDUCE_MIN</dt>
+    <dd>REDUCE_MIN{{% md %}}Reduce by computing the minimum value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>REDUCE_MAX</dt>
+    <dd>REDUCE_MAX{{% md %}}Reduce by computing the maximum value across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>REDUCE_SUM</dt>
+    <dd>REDUCE_SUM{{% md %}}Reduce by computing the sum across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric and distribution values. The value_type of the output is the same as the value_type of the input.{{% /md %}}</dd><dt>REDUCE_STDDEV</dt>
+    <dd>REDUCE_STDDEV{{% md %}}Reduce by computing the standard deviation across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics with numeric or distribution values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>REDUCE_COUNT</dt>
+    <dd>REDUCE_COUNT{{% md %}}Reduce by computing the number of data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of numeric, Boolean, distribution, and string value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>REDUCE_COUNT_TRUE</dt>
+    <dd>REDUCE_COUNT_TRUE{{% md %}}Reduce by computing the number of True-valued data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>REDUCE_COUNT_FALSE</dt>
+    <dd>REDUCE_COUNT_FALSE{{% md %}}Reduce by computing the number of False-valued data points across time series for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The value_type of the output is INT64.{{% /md %}}</dd><dt>REDUCE_FRACTION_TRUE</dt>
+    <dd>REDUCE_FRACTION_TRUE{{% md %}}Reduce by computing the ratio of the number of True-valued data points to the total number of data points for each alignment period. This reducer is valid for DELTA and GAUGE metrics of Boolean value_type. The output value is in the range 0.0, 1.0 and has value_type DOUBLE.{{% /md %}}</dd><dt>REDUCE_PERCENTILE99</dt>
+    <dd>REDUCE_PERCENTILE_99{{% md %}}Reduce by computing the 99th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>REDUCE_PERCENTILE95</dt>
+    <dd>REDUCE_PERCENTILE_95{{% md %}}Reduce by computing the 95th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>REDUCE_PERCENTILE50</dt>
+    <dd>REDUCE_PERCENTILE_50{{% md %}}Reduce by computing the 50th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd><dt>REDUCE_PERCENTILE05</dt>
+    <dd>REDUCE_PERCENTILE_05{{% md %}}Reduce by computing the 5th percentile (https://en.wikipedia.org/wiki/Percentile) of data points across time series for each alignment period. This reducer is valid for GAUGE and DELTA metrics of numeric and distribution type. The value of the output is DOUBLE.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="aggregationperseriesaligner">Aggregation<wbr>Per<wbr>Series<wbr>Aligner</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Align<wbr>None</dt>
+    <dd>ALIGN_NONE{{% md %}}No alignment. Raw data is returned. Not valid if cross-series reduction is requested. The value_type of the result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Delta</dt>
+    <dd>ALIGN_DELTA{{% md %}}Align and convert to DELTA. The output is delta = y1 - y0.This alignment is valid for CUMULATIVE and DELTA metrics. If the selected alignment period results in periods with no data, then the aligned value for such a period is created by interpolation. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Rate</dt>
+    <dd>ALIGN_RATE{{% md %}}Align and convert to a rate. The result is computed as rate = (y1 - y0)/(t1 - t0), or "delta over time". Think of this aligner as providing the slope of the line that passes through the value at the start and at the end of the alignment_period.This aligner is valid for CUMULATIVE and DELTA metrics with numeric values. If the selected alignment period results in periods with no data, then the aligned value for such a period is created by interpolation. The output is a GAUGE metric with value_type DOUBLE.If, by "rate", you mean "percentage change", see the ALIGN_PERCENT_CHANGE aligner instead.{{% /md %}}</dd><dt>Align<wbr>Interpolate</dt>
+    <dd>ALIGN_INTERPOLATE{{% md %}}Align by interpolating between adjacent points around the alignment period boundary. This aligner is valid for GAUGE metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Next<wbr>Older</dt>
+    <dd>ALIGN_NEXT_OLDER{{% md %}}Align by moving the most recent data point before the end of the alignment period to the boundary at the end of the alignment period. This aligner is valid for GAUGE metrics. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Min</dt>
+    <dd>ALIGN_MIN{{% md %}}Align the time series by returning the minimum value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Max</dt>
+    <dd>ALIGN_MAX{{% md %}}Align the time series by returning the maximum value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Mean</dt>
+    <dd>ALIGN_MEAN{{% md %}}Align the time series by returning the mean value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Count</dt>
+    <dd>ALIGN_COUNT{{% md %}}Align the time series by returning the number of values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric or Boolean values. The value_type of the aligned result is INT64.{{% /md %}}</dd><dt>Align<wbr>Sum</dt>
+    <dd>ALIGN_SUM{{% md %}}Align the time series by returning the sum of the values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric and distribution values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Stddev</dt>
+    <dd>ALIGN_STDDEV{{% md %}}Align the time series by returning the standard deviation of the values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Count<wbr>True</dt>
+    <dd>ALIGN_COUNT_TRUE{{% md %}}Align the time series by returning the number of True values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The value_type of the output is INT64.{{% /md %}}</dd><dt>Align<wbr>Count<wbr>False</dt>
+    <dd>ALIGN_COUNT_FALSE{{% md %}}Align the time series by returning the number of False values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The value_type of the output is INT64.{{% /md %}}</dd><dt>Align<wbr>Fraction<wbr>True</dt>
+    <dd>ALIGN_FRACTION_TRUE{{% md %}}Align the time series by returning the ratio of the number of True values to the total number of values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The output value is in the range 0.0, 1.0 and has value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percentile99</dt>
+    <dd>ALIGN_PERCENTILE_99{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 99th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percentile95</dt>
+    <dd>ALIGN_PERCENTILE_95{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 95th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percentile50</dt>
+    <dd>ALIGN_PERCENTILE_50{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 50th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percentile05</dt>
+    <dd>ALIGN_PERCENTILE_05{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 5th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percent<wbr>Change</dt>
+    <dd>ALIGN_PERCENT_CHANGE{{% md %}}Align and convert to a percentage change. This aligner is valid for GAUGE and DELTA metrics with numeric values. This alignment returns ((current - previous)/previous) * 100, where the value of previous is determined based on the alignment_period.If the values of current and previous are both 0, then the returned value is 0. If only previous is 0, the returned value is infinity.A 10-minute moving mean is computed at each point of the alignment period prior to the above calculation to smooth the metric and prevent false positives from very short-lived spikes. The moving mean is only applicable for data whose values are >= 0. Any values < 0 are treated as a missing datapoint, and are ignored. While DELTA metrics are accepted by this alignment, special care should be taken that the values for the metric will always be positive. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>None</dt>
+    <dd>ALIGN_NONE{{% md %}}No alignment. Raw data is returned. Not valid if cross-series reduction is requested. The value_type of the result is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Delta</dt>
+    <dd>ALIGN_DELTA{{% md %}}Align and convert to DELTA. The output is delta = y1 - y0.This alignment is valid for CUMULATIVE and DELTA metrics. If the selected alignment period results in periods with no data, then the aligned value for such a period is created by interpolation. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Rate</dt>
+    <dd>ALIGN_RATE{{% md %}}Align and convert to a rate. The result is computed as rate = (y1 - y0)/(t1 - t0), or "delta over time". Think of this aligner as providing the slope of the line that passes through the value at the start and at the end of the alignment_period.This aligner is valid for CUMULATIVE and DELTA metrics with numeric values. If the selected alignment period results in periods with no data, then the aligned value for such a period is created by interpolation. The output is a GAUGE metric with value_type DOUBLE.If, by "rate", you mean "percentage change", see the ALIGN_PERCENT_CHANGE aligner instead.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Interpolate</dt>
+    <dd>ALIGN_INTERPOLATE{{% md %}}Align by interpolating between adjacent points around the alignment period boundary. This aligner is valid for GAUGE metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Next<wbr>Older</dt>
+    <dd>ALIGN_NEXT_OLDER{{% md %}}Align by moving the most recent data point before the end of the alignment period to the boundary at the end of the alignment period. This aligner is valid for GAUGE metrics. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Min</dt>
+    <dd>ALIGN_MIN{{% md %}}Align the time series by returning the minimum value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Max</dt>
+    <dd>ALIGN_MAX{{% md %}}Align the time series by returning the maximum value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Mean</dt>
+    <dd>ALIGN_MEAN{{% md %}}Align the time series by returning the mean value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Count</dt>
+    <dd>ALIGN_COUNT{{% md %}}Align the time series by returning the number of values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric or Boolean values. The value_type of the aligned result is INT64.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Sum</dt>
+    <dd>ALIGN_SUM{{% md %}}Align the time series by returning the sum of the values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric and distribution values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Stddev</dt>
+    <dd>ALIGN_STDDEV{{% md %}}Align the time series by returning the standard deviation of the values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Count<wbr>True</dt>
+    <dd>ALIGN_COUNT_TRUE{{% md %}}Align the time series by returning the number of True values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The value_type of the output is INT64.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Count<wbr>False</dt>
+    <dd>ALIGN_COUNT_FALSE{{% md %}}Align the time series by returning the number of False values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The value_type of the output is INT64.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Fraction<wbr>True</dt>
+    <dd>ALIGN_FRACTION_TRUE{{% md %}}Align the time series by returning the ratio of the number of True values to the total number of values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The output value is in the range 0.0, 1.0 and has value_type DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Percentile99</dt>
+    <dd>ALIGN_PERCENTILE_99{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 99th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Percentile95</dt>
+    <dd>ALIGN_PERCENTILE_95{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 95th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Percentile50</dt>
+    <dd>ALIGN_PERCENTILE_50{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 50th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Percentile05</dt>
+    <dd>ALIGN_PERCENTILE_05{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 5th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Aggregation<wbr>Per<wbr>Series<wbr>Aligner<wbr>Align<wbr>Percent<wbr>Change</dt>
+    <dd>ALIGN_PERCENT_CHANGE{{% md %}}Align and convert to a percentage change. This aligner is valid for GAUGE and DELTA metrics with numeric values. This alignment returns ((current - previous)/previous) * 100, where the value of previous is determined based on the alignment_period.If the values of current and previous are both 0, then the returned value is 0. If only previous is 0, the returned value is infinity.A 10-minute moving mean is computed at each point of the alignment period prior to the above calculation to smooth the metric and prevent false positives from very short-lived spikes. The moving mean is only applicable for data whose values are >= 0. Any values < 0 are treated as a missing datapoint, and are ignored. While DELTA metrics are accepted by this alignment, special care should be taken that the values for the metric will always be positive. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Align<wbr>None</dt>
+    <dd>ALIGN_NONE{{% md %}}No alignment. Raw data is returned. Not valid if cross-series reduction is requested. The value_type of the result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Delta</dt>
+    <dd>ALIGN_DELTA{{% md %}}Align and convert to DELTA. The output is delta = y1 - y0.This alignment is valid for CUMULATIVE and DELTA metrics. If the selected alignment period results in periods with no data, then the aligned value for such a period is created by interpolation. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Rate</dt>
+    <dd>ALIGN_RATE{{% md %}}Align and convert to a rate. The result is computed as rate = (y1 - y0)/(t1 - t0), or "delta over time". Think of this aligner as providing the slope of the line that passes through the value at the start and at the end of the alignment_period.This aligner is valid for CUMULATIVE and DELTA metrics with numeric values. If the selected alignment period results in periods with no data, then the aligned value for such a period is created by interpolation. The output is a GAUGE metric with value_type DOUBLE.If, by "rate", you mean "percentage change", see the ALIGN_PERCENT_CHANGE aligner instead.{{% /md %}}</dd><dt>Align<wbr>Interpolate</dt>
+    <dd>ALIGN_INTERPOLATE{{% md %}}Align by interpolating between adjacent points around the alignment period boundary. This aligner is valid for GAUGE metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Next<wbr>Older</dt>
+    <dd>ALIGN_NEXT_OLDER{{% md %}}Align by moving the most recent data point before the end of the alignment period to the boundary at the end of the alignment period. This aligner is valid for GAUGE metrics. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Min</dt>
+    <dd>ALIGN_MIN{{% md %}}Align the time series by returning the minimum value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Max</dt>
+    <dd>ALIGN_MAX{{% md %}}Align the time series by returning the maximum value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Mean</dt>
+    <dd>ALIGN_MEAN{{% md %}}Align the time series by returning the mean value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Count</dt>
+    <dd>ALIGN_COUNT{{% md %}}Align the time series by returning the number of values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric or Boolean values. The value_type of the aligned result is INT64.{{% /md %}}</dd><dt>Align<wbr>Sum</dt>
+    <dd>ALIGN_SUM{{% md %}}Align the time series by returning the sum of the values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric and distribution values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>Align<wbr>Stddev</dt>
+    <dd>ALIGN_STDDEV{{% md %}}Align the time series by returning the standard deviation of the values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Count<wbr>True</dt>
+    <dd>ALIGN_COUNT_TRUE{{% md %}}Align the time series by returning the number of True values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The value_type of the output is INT64.{{% /md %}}</dd><dt>Align<wbr>Count<wbr>False</dt>
+    <dd>ALIGN_COUNT_FALSE{{% md %}}Align the time series by returning the number of False values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The value_type of the output is INT64.{{% /md %}}</dd><dt>Align<wbr>Fraction<wbr>True</dt>
+    <dd>ALIGN_FRACTION_TRUE{{% md %}}Align the time series by returning the ratio of the number of True values to the total number of values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The output value is in the range 0.0, 1.0 and has value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percentile99</dt>
+    <dd>ALIGN_PERCENTILE_99{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 99th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percentile95</dt>
+    <dd>ALIGN_PERCENTILE_95{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 95th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percentile50</dt>
+    <dd>ALIGN_PERCENTILE_50{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 50th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percentile05</dt>
+    <dd>ALIGN_PERCENTILE_05{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 5th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>Align<wbr>Percent<wbr>Change</dt>
+    <dd>ALIGN_PERCENT_CHANGE{{% md %}}Align and convert to a percentage change. This aligner is valid for GAUGE and DELTA metrics with numeric values. This alignment returns ((current - previous)/previous) * 100, where the value of previous is determined based on the alignment_period.If the values of current and previous are both 0, then the returned value is 0. If only previous is 0, the returned value is infinity.A 10-minute moving mean is computed at each point of the alignment period prior to the above calculation to smooth the metric and prevent false positives from very short-lived spikes. The moving mean is only applicable for data whose values are >= 0. Any values < 0 are treated as a missing datapoint, and are ignored. While DELTA metrics are accepted by this alignment, special care should be taken that the values for the metric will always be positive. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALIGN_NONE</dt>
+    <dd>ALIGN_NONE{{% md %}}No alignment. Raw data is returned. Not valid if cross-series reduction is requested. The value_type of the result is the same as the value_type of the input.{{% /md %}}</dd><dt>ALIGN_DELTA</dt>
+    <dd>ALIGN_DELTA{{% md %}}Align and convert to DELTA. The output is delta = y1 - y0.This alignment is valid for CUMULATIVE and DELTA metrics. If the selected alignment period results in periods with no data, then the aligned value for such a period is created by interpolation. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>ALIGN_RATE</dt>
+    <dd>ALIGN_RATE{{% md %}}Align and convert to a rate. The result is computed as rate = (y1 - y0)/(t1 - t0), or "delta over time". Think of this aligner as providing the slope of the line that passes through the value at the start and at the end of the alignment_period.This aligner is valid for CUMULATIVE and DELTA metrics with numeric values. If the selected alignment period results in periods with no data, then the aligned value for such a period is created by interpolation. The output is a GAUGE metric with value_type DOUBLE.If, by "rate", you mean "percentage change", see the ALIGN_PERCENT_CHANGE aligner instead.{{% /md %}}</dd><dt>ALIGN_INTERPOLATE</dt>
+    <dd>ALIGN_INTERPOLATE{{% md %}}Align by interpolating between adjacent points around the alignment period boundary. This aligner is valid for GAUGE metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>ALIGN_NEXT_OLDER</dt>
+    <dd>ALIGN_NEXT_OLDER{{% md %}}Align by moving the most recent data point before the end of the alignment period to the boundary at the end of the alignment period. This aligner is valid for GAUGE metrics. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>ALIGN_MIN</dt>
+    <dd>ALIGN_MIN{{% md %}}Align the time series by returning the minimum value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>ALIGN_MAX</dt>
+    <dd>ALIGN_MAX{{% md %}}Align the time series by returning the maximum value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>ALIGN_MEAN</dt>
+    <dd>ALIGN_MEAN{{% md %}}Align the time series by returning the mean value in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the aligned result is DOUBLE.{{% /md %}}</dd><dt>ALIGN_COUNT</dt>
+    <dd>ALIGN_COUNT{{% md %}}Align the time series by returning the number of values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric or Boolean values. The value_type of the aligned result is INT64.{{% /md %}}</dd><dt>ALIGN_SUM</dt>
+    <dd>ALIGN_SUM{{% md %}}Align the time series by returning the sum of the values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric and distribution values. The value_type of the aligned result is the same as the value_type of the input.{{% /md %}}</dd><dt>ALIGN_STDDEV</dt>
+    <dd>ALIGN_STDDEV{{% md %}}Align the time series by returning the standard deviation of the values in each alignment period. This aligner is valid for GAUGE and DELTA metrics with numeric values. The value_type of the output is DOUBLE.{{% /md %}}</dd><dt>ALIGN_COUNT_TRUE</dt>
+    <dd>ALIGN_COUNT_TRUE{{% md %}}Align the time series by returning the number of True values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The value_type of the output is INT64.{{% /md %}}</dd><dt>ALIGN_COUNT_FALSE</dt>
+    <dd>ALIGN_COUNT_FALSE{{% md %}}Align the time series by returning the number of False values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The value_type of the output is INT64.{{% /md %}}</dd><dt>ALIGN_FRACTION_TRUE</dt>
+    <dd>ALIGN_FRACTION_TRUE{{% md %}}Align the time series by returning the ratio of the number of True values to the total number of values in each alignment period. This aligner is valid for GAUGE metrics with Boolean values. The output value is in the range 0.0, 1.0 and has value_type DOUBLE.{{% /md %}}</dd><dt>ALIGN_PERCENTILE99</dt>
+    <dd>ALIGN_PERCENTILE_99{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 99th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>ALIGN_PERCENTILE95</dt>
+    <dd>ALIGN_PERCENTILE_95{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 95th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>ALIGN_PERCENTILE50</dt>
+    <dd>ALIGN_PERCENTILE_50{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 50th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>ALIGN_PERCENTILE05</dt>
+    <dd>ALIGN_PERCENTILE_05{{% md %}}Align the time series by using percentile aggregation (https://en.wikipedia.org/wiki/Percentile). The resulting data point in each alignment period is the 5th percentile of all data points in the period. This aligner is valid for GAUGE and DELTA metrics with distribution values. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd><dt>ALIGN_PERCENT_CHANGE</dt>
+    <dd>ALIGN_PERCENT_CHANGE{{% md %}}Align and convert to a percentage change. This aligner is valid for GAUGE and DELTA metrics with numeric values. This alignment returns ((current - previous)/previous) * 100, where the value of previous is determined based on the alignment_period.If the values of current and previous are both 0, then the returned value is 0. If only previous is 0, the returned value is infinity.A 10-minute moving mean is computed at each point of the alignment period prior to the above calculation to smooth the metric and prevent false positives from very short-lived spikes. The moving mean is only applicable for data whose values are >= 0. Any values < 0 are treated as a missing datapoint, and are ignored. While DELTA metrics are accepted by this alignment, special care should be taken that the values for the metric will always be positive. The output is a GAUGE metric with value_type DOUBLE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="aggregationresponse">Aggregation<wbr>Response</h4>
@@ -920,6 +1088,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An Aligner describes how to bring the data points in a single time series into temporal alignment. Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be mathematically grouped together, resulting in a single data point for each alignment_period with end timestamp at the end of the period.Not all alignment operations may be applied to all time series. The valid choices depend on the metric_kind and value_type of the original time series. Alignment can change the metric_kind or the value_type of the time series.Time series data must be aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be specified; otherwise, an error is returned.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="alertpolicycombiner">Alert<wbr>Policy<wbr>Combiner</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Combine<wbr>Unspecified</dt>
+    <dd>COMBINE_UNSPECIFIED{{% md %}}An unspecified combiner.{{% /md %}}</dd><dt>And</dt>
+    <dd>AND{{% md %}}Combine conditions using the logical AND operator. An incident is created only if all the conditions are met simultaneously. This combiner is satisfied if all conditions are met, even if they are met on completely different resources.{{% /md %}}</dd><dt>Or</dt>
+    <dd>OR{{% md %}}Combine conditions using the logical OR operator. An incident is created if any of the listed conditions is met.{{% /md %}}</dd><dt>And<wbr>With<wbr>Matching<wbr>Resource</dt>
+    <dd>AND_WITH_MATCHING_RESOURCE{{% md %}}Combine conditions using logical AND operator, but unlike the regular AND option, an incident is created only if all conditions are met simultaneously on at least one resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Alert<wbr>Policy<wbr>Combiner<wbr>Combine<wbr>Unspecified</dt>
+    <dd>COMBINE_UNSPECIFIED{{% md %}}An unspecified combiner.{{% /md %}}</dd><dt>Alert<wbr>Policy<wbr>Combiner<wbr>And</dt>
+    <dd>AND{{% md %}}Combine conditions using the logical AND operator. An incident is created only if all the conditions are met simultaneously. This combiner is satisfied if all conditions are met, even if they are met on completely different resources.{{% /md %}}</dd><dt>Alert<wbr>Policy<wbr>Combiner<wbr>Or</dt>
+    <dd>OR{{% md %}}Combine conditions using the logical OR operator. An incident is created if any of the listed conditions is met.{{% /md %}}</dd><dt>Alert<wbr>Policy<wbr>Combiner<wbr>And<wbr>With<wbr>Matching<wbr>Resource</dt>
+    <dd>AND_WITH_MATCHING_RESOURCE{{% md %}}Combine conditions using logical AND operator, but unlike the regular AND option, an incident is created only if all conditions are met simultaneously on at least one resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Combine<wbr>Unspecified</dt>
+    <dd>COMBINE_UNSPECIFIED{{% md %}}An unspecified combiner.{{% /md %}}</dd><dt>And</dt>
+    <dd>AND{{% md %}}Combine conditions using the logical AND operator. An incident is created only if all the conditions are met simultaneously. This combiner is satisfied if all conditions are met, even if they are met on completely different resources.{{% /md %}}</dd><dt>Or</dt>
+    <dd>OR{{% md %}}Combine conditions using the logical OR operator. An incident is created if any of the listed conditions is met.{{% /md %}}</dd><dt>And<wbr>With<wbr>Matching<wbr>Resource</dt>
+    <dd>AND_WITH_MATCHING_RESOURCE{{% md %}}Combine conditions using logical AND operator, but unlike the regular AND option, an incident is created only if all conditions are met simultaneously on at least one resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>COMBINE_UNSPECIFIED</dt>
+    <dd>COMBINE_UNSPECIFIED{{% md %}}An unspecified combiner.{{% /md %}}</dd><dt>AND_</dt>
+    <dd>AND{{% md %}}Combine conditions using the logical AND operator. An incident is created only if all the conditions are met simultaneously. This combiner is satisfied if all conditions are met, even if they are met on completely different resources.{{% /md %}}</dd><dt>OR_</dt>
+    <dd>OR{{% md %}}Combine conditions using the logical OR operator. An incident is created if any of the listed conditions is met.{{% /md %}}</dd><dt>AND_WITH_MATCHING_RESOURCE</dt>
+    <dd>AND_WITH_MATCHING_RESOURCE{{% md %}}Combine conditions using logical AND operator, but unlike the regular AND option, an incident is created only if all conditions are met simultaneously on at least one resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="condition">Condition</h4>
@@ -1751,7 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#comparison_csharp" style="color: inherit; text-decoration: inherit;">Comparison</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricthresholdcomparison">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V3.<wbr>Metric<wbr>Threshold<wbr>Comparison</a></span>
     </dt>
     <dd>{{% md %}}The comparison to apply between the time series (indicated by filter and aggregation) and the threshold (indicated by threshold_value). The comparison is applied on each time series, with the time series on the left-hand side and the threshold on the right-hand side.Only COMPARISON_LT and COMPARISON_GT are supported currently.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1819,7 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#comparison_go" style="color: inherit; text-decoration: inherit;">Comparison</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricthresholdcomparison">Metric<wbr>Threshold<wbr>Comparison</a></span>
     </dt>
     <dd>{{% md %}}The comparison to apply between the time series (indicated by filter and aggregation) and the threshold (indicated by threshold_value). The comparison is applied on each time series, with the time series on the left-hand side and the threshold on the right-hand side.Only COMPARISON_LT and COMPARISON_GT are supported currently.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1887,7 +2089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#comparison_nodejs" style="color: inherit; text-decoration: inherit;">comparison</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricthresholdcomparison">Metric<wbr>Threshold<wbr>Comparison</a></span>
     </dt>
     <dd>{{% md %}}The comparison to apply between the time series (indicated by filter and aggregation) and the threshold (indicated by threshold_value). The comparison is applied on each time series, with the time series on the left-hand side and the threshold on the right-hand side.Only COMPARISON_LT and COMPARISON_GT are supported currently.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1955,7 +2157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#comparison_python" style="color: inherit; text-decoration: inherit;">comparison</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#metricthresholdcomparison">Metric<wbr>Threshold<wbr>Comparison</a></span>
     </dt>
     <dd>{{% md %}}The comparison to apply between the time series (indicated by filter and aggregation) and the threshold (indicated by threshold_value). The comparison is applied on each time series, with the time series on the left-hand side and the threshold on the right-hand side.Only COMPARISON_LT and COMPARISON_GT are supported currently.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2006,6 +2208,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#trigger">Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="metricthresholdcomparison">Metric<wbr>Threshold<wbr>Comparison</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Comparison<wbr>Unspecified</dt>
+    <dd>COMPARISON_UNSPECIFIED{{% md %}}No ordering relationship is specified.{{% /md %}}</dd><dt>Comparison<wbr>Gt</dt>
+    <dd>COMPARISON_GT{{% md %}}True if the left argument is greater than the right argument.{{% /md %}}</dd><dt>Comparison<wbr>Ge</dt>
+    <dd>COMPARISON_GE{{% md %}}True if the left argument is greater than or equal to the right argument.{{% /md %}}</dd><dt>Comparison<wbr>Lt</dt>
+    <dd>COMPARISON_LT{{% md %}}True if the left argument is less than the right argument.{{% /md %}}</dd><dt>Comparison<wbr>Le</dt>
+    <dd>COMPARISON_LE{{% md %}}True if the left argument is less than or equal to the right argument.{{% /md %}}</dd><dt>Comparison<wbr>Eq</dt>
+    <dd>COMPARISON_EQ{{% md %}}True if the left argument is equal to the right argument.{{% /md %}}</dd><dt>Comparison<wbr>Ne</dt>
+    <dd>COMPARISON_NE{{% md %}}True if the left argument is not equal to the right argument.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Metric<wbr>Threshold<wbr>Comparison<wbr>Comparison<wbr>Unspecified</dt>
+    <dd>COMPARISON_UNSPECIFIED{{% md %}}No ordering relationship is specified.{{% /md %}}</dd><dt>Metric<wbr>Threshold<wbr>Comparison<wbr>Comparison<wbr>Gt</dt>
+    <dd>COMPARISON_GT{{% md %}}True if the left argument is greater than the right argument.{{% /md %}}</dd><dt>Metric<wbr>Threshold<wbr>Comparison<wbr>Comparison<wbr>Ge</dt>
+    <dd>COMPARISON_GE{{% md %}}True if the left argument is greater than or equal to the right argument.{{% /md %}}</dd><dt>Metric<wbr>Threshold<wbr>Comparison<wbr>Comparison<wbr>Lt</dt>
+    <dd>COMPARISON_LT{{% md %}}True if the left argument is less than the right argument.{{% /md %}}</dd><dt>Metric<wbr>Threshold<wbr>Comparison<wbr>Comparison<wbr>Le</dt>
+    <dd>COMPARISON_LE{{% md %}}True if the left argument is less than or equal to the right argument.{{% /md %}}</dd><dt>Metric<wbr>Threshold<wbr>Comparison<wbr>Comparison<wbr>Eq</dt>
+    <dd>COMPARISON_EQ{{% md %}}True if the left argument is equal to the right argument.{{% /md %}}</dd><dt>Metric<wbr>Threshold<wbr>Comparison<wbr>Comparison<wbr>Ne</dt>
+    <dd>COMPARISON_NE{{% md %}}True if the left argument is not equal to the right argument.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Comparison<wbr>Unspecified</dt>
+    <dd>COMPARISON_UNSPECIFIED{{% md %}}No ordering relationship is specified.{{% /md %}}</dd><dt>Comparison<wbr>Gt</dt>
+    <dd>COMPARISON_GT{{% md %}}True if the left argument is greater than the right argument.{{% /md %}}</dd><dt>Comparison<wbr>Ge</dt>
+    <dd>COMPARISON_GE{{% md %}}True if the left argument is greater than or equal to the right argument.{{% /md %}}</dd><dt>Comparison<wbr>Lt</dt>
+    <dd>COMPARISON_LT{{% md %}}True if the left argument is less than the right argument.{{% /md %}}</dd><dt>Comparison<wbr>Le</dt>
+    <dd>COMPARISON_LE{{% md %}}True if the left argument is less than or equal to the right argument.{{% /md %}}</dd><dt>Comparison<wbr>Eq</dt>
+    <dd>COMPARISON_EQ{{% md %}}True if the left argument is equal to the right argument.{{% /md %}}</dd><dt>Comparison<wbr>Ne</dt>
+    <dd>COMPARISON_NE{{% md %}}True if the left argument is not equal to the right argument.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>COMPARISON_UNSPECIFIED</dt>
+    <dd>COMPARISON_UNSPECIFIED{{% md %}}No ordering relationship is specified.{{% /md %}}</dd><dt>COMPARISON_GT</dt>
+    <dd>COMPARISON_GT{{% md %}}True if the left argument is greater than the right argument.{{% /md %}}</dd><dt>COMPARISON_GE</dt>
+    <dd>COMPARISON_GE{{% md %}}True if the left argument is greater than or equal to the right argument.{{% /md %}}</dd><dt>COMPARISON_LT</dt>
+    <dd>COMPARISON_LT{{% md %}}True if the left argument is less than the right argument.{{% /md %}}</dd><dt>COMPARISON_LE</dt>
+    <dd>COMPARISON_LE{{% md %}}True if the left argument is less than or equal to the right argument.{{% /md %}}</dd><dt>COMPARISON_EQ</dt>
+    <dd>COMPARISON_EQ{{% md %}}True if the left argument is equal to the right argument.{{% /md %}}</dd><dt>COMPARISON_NE</dt>
+    <dd>COMPARISON_NE{{% md %}}True if the left argument is not equal to the right argument.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metricthresholdresponse">Metric<wbr>Threshold<wbr>Response</h4>

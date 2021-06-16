@@ -16,6 +16,13 @@ Explore the resources and functions of the google-native.policysimulator/v1beta1
     <li><a href="replay" title="Replay"><span class="symbol resource"></span>Replay</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getfolderreplay" title="GetFolderReplay"><span class="symbol function"></span>GetFolderReplay</a></li>
+    <li><a href="getorganizationreplay" title="GetOrganizationReplay"><span class="symbol function"></span>GetOrganizationReplay</a></li>
+    <li><a href="getreplay" title="GetReplay"><span class="symbol function"></span>GetReplay</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -23,6 +30,6 @@ Explore the resources and functions of the google-native.policysimulator/v1beta1
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

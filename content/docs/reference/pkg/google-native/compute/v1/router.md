@@ -906,7 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertisemode_csharp" style="color: inherit; text-decoration: inherit;">Advertise<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routerbgpadvertisemode">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Router<wbr>Bgp<wbr>Advertise<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. The options are DEFAULT or CUSTOM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertisedgroups_csharp" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#routerbgpadvertisedgroupsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Router<wbr>Bgp<wbr>Advertised<wbr>Groups<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These groups will be advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -942,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertisemode_go" style="color: inherit; text-decoration: inherit;">Advertise<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routerbgpadvertisemode">Router<wbr>Bgp<wbr>Advertise<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. The options are DEFAULT or CUSTOM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -950,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertisedgroups_go" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#routerbgpadvertisedgroupsitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These groups will be advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -978,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertisemode_nodejs" style="color: inherit; text-decoration: inherit;">advertise<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routerbgpadvertisemode">Router<wbr>Bgp<wbr>Advertise<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. The options are DEFAULT or CUSTOM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -986,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertisedgroups_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#routerbgpadvertisedgroupsitem">Router<wbr>Bgp<wbr>Advertised<wbr>Groups<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These groups will be advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1014,7 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertise_mode_python" style="color: inherit; text-decoration: inherit;">advertise_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#routerbgpadvertisemode">Router<wbr>Bgp<wbr>Advertise<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. The options are DEFAULT or CUSTOM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1022,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertised_groups_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#routerbgpadvertisedgroupsitem">Router<wbr>Bgp<wbr>Advertised<wbr>Groups<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These groups will be advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1043,6 +1043,54 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Local BGP Autonomous System Number (ASN). Must be an RFC6996 private ASN, either 16-bit or 32-bit. The value will be fixed for this router resource. All VPN tunnels that link to this router will have the same local ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="routerbgpadvertisemode">Router<wbr>Bgp<wbr>Advertise<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Custom</dt>
+    <dd>CUSTOM</dd><dt>Default</dt>
+    <dd>DEFAULT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Router<wbr>Bgp<wbr>Advertise<wbr>Mode<wbr>Custom</dt>
+    <dd>CUSTOM</dd><dt>Router<wbr>Bgp<wbr>Advertise<wbr>Mode<wbr>Default</dt>
+    <dd>DEFAULT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Custom</dt>
+    <dd>CUSTOM</dd><dt>Default</dt>
+    <dd>DEFAULT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CUSTOM</dt>
+    <dd>CUSTOM</dd><dt>DEFAULT</dt>
+    <dd>DEFAULT</dd></dl>
+{{% /choosable %}}
+
+<h4 id="routerbgpadvertisedgroupsitem">Router<wbr>Bgp<wbr>Advertised<wbr>Groups<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>All<wbr>Subnets</dt>
+    <dd>ALL_SUBNETS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Router<wbr>Bgp<wbr>Advertised<wbr>Groups<wbr>Item<wbr>All<wbr>Subnets</dt>
+    <dd>ALL_SUBNETS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>All<wbr>Subnets</dt>
+    <dd>ALL_SUBNETS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALL_SUBNETS</dt>
+    <dd>ALL_SUBNETS</dd></dl>
+{{% /choosable %}}
+
 <h4 id="routerbgppeer">Router<wbr>Bgp<wbr>Peer</h4>
 
 {{% choosable language csharp %}}
@@ -1052,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertisemode_csharp" style="color: inherit; text-decoration: inherit;">Advertise<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routerbgppeeradvertisemode">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Router<wbr>Bgp<wbr>Peer<wbr>Advertise<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1060,7 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertisedgroups_csharp" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#routerbgppeeradvertisedgroupsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Router<wbr>Bgp<wbr>Peer<wbr>Advertised<wbr>Groups<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: 
 - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. 
@@ -1102,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managementtype_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routerbgppeermanagementtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Router<wbr>Bgp<wbr>Peer<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource that configures and manages this BGP peer. 
 - MANAGED_BY_USER is the default value and can be managed by you or other users 
@@ -1140,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertisemode_go" style="color: inherit; text-decoration: inherit;">Advertise<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routerbgppeeradvertisemode">Router<wbr>Bgp<wbr>Peer<wbr>Advertise<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1148,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertisedgroups_go" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#routerbgppeeradvertisedgroupsitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: 
 - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. 
@@ -1190,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managementtype_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routerbgppeermanagementtype">Router<wbr>Bgp<wbr>Peer<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource that configures and manages this BGP peer. 
 - MANAGED_BY_USER is the default value and can be managed by you or other users 
@@ -1228,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertisemode_nodejs" style="color: inherit; text-decoration: inherit;">advertise<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routerbgppeeradvertisemode">Router<wbr>Bgp<wbr>Peer<wbr>Advertise<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1236,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertisedgroups_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#routerbgppeeradvertisedgroupsitem">Router<wbr>Bgp<wbr>Peer<wbr>Advertised<wbr>Groups<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: 
 - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. 
@@ -1278,7 +1326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managementtype_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routerbgppeermanagementtype">Router<wbr>Bgp<wbr>Peer<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource that configures and manages this BGP peer. 
 - MANAGED_BY_USER is the default value and can be managed by you or other users 
@@ -1316,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertise_mode_python" style="color: inherit; text-decoration: inherit;">advertise_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#routerbgppeeradvertisemode">Router<wbr>Bgp<wbr>Peer<wbr>Advertise<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1324,7 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertised_groups_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#routerbgppeeradvertisedgroupsitem">Router<wbr>Bgp<wbr>Peer<wbr>Advertised<wbr>Groups<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: 
 - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. 
@@ -1366,7 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#management_type_python" style="color: inherit; text-decoration: inherit;">management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#routerbgppeermanagementtype">Router<wbr>Bgp<wbr>Peer<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource that configures and manages this BGP peer. 
 - MANAGED_BY_USER is the default value and can be managed by you or other users 
@@ -1395,6 +1443,80 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="routerbgppeeradvertisemode">Router<wbr>Bgp<wbr>Peer<wbr>Advertise<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Custom</dt>
+    <dd>CUSTOM</dd><dt>Default</dt>
+    <dd>DEFAULT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Router<wbr>Bgp<wbr>Peer<wbr>Advertise<wbr>Mode<wbr>Custom</dt>
+    <dd>CUSTOM</dd><dt>Router<wbr>Bgp<wbr>Peer<wbr>Advertise<wbr>Mode<wbr>Default</dt>
+    <dd>DEFAULT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Custom</dt>
+    <dd>CUSTOM</dd><dt>Default</dt>
+    <dd>DEFAULT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CUSTOM</dt>
+    <dd>CUSTOM</dd><dt>DEFAULT</dt>
+    <dd>DEFAULT</dd></dl>
+{{% /choosable %}}
+
+<h4 id="routerbgppeeradvertisedgroupsitem">Router<wbr>Bgp<wbr>Peer<wbr>Advertised<wbr>Groups<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>All<wbr>Subnets</dt>
+    <dd>ALL_SUBNETS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Router<wbr>Bgp<wbr>Peer<wbr>Advertised<wbr>Groups<wbr>Item<wbr>All<wbr>Subnets</dt>
+    <dd>ALL_SUBNETS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>All<wbr>Subnets</dt>
+    <dd>ALL_SUBNETS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALL_SUBNETS</dt>
+    <dd>ALL_SUBNETS</dd></dl>
+{{% /choosable %}}
+
+<h4 id="routerbgppeermanagementtype">Router<wbr>Bgp<wbr>Peer<wbr>Management<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Managed<wbr>By<wbr>Attachment</dt>
+    <dd>MANAGED_BY_ATTACHMENT</dd><dt>Managed<wbr>By<wbr>User</dt>
+    <dd>MANAGED_BY_USER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Router<wbr>Bgp<wbr>Peer<wbr>Management<wbr>Type<wbr>Managed<wbr>By<wbr>Attachment</dt>
+    <dd>MANAGED_BY_ATTACHMENT</dd><dt>Router<wbr>Bgp<wbr>Peer<wbr>Management<wbr>Type<wbr>Managed<wbr>By<wbr>User</dt>
+    <dd>MANAGED_BY_USER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Managed<wbr>By<wbr>Attachment</dt>
+    <dd>MANAGED_BY_ATTACHMENT</dd><dt>Managed<wbr>By<wbr>User</dt>
+    <dd>MANAGED_BY_USER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MANAGED_BY_ATTACHMENT</dt>
+    <dd>MANAGED_BY_ATTACHMENT</dd><dt>MANAGED_BY_USER</dt>
+    <dd>MANAGED_BY_USER</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routerbgppeerresponse">Router<wbr>Bgp<wbr>Peer<wbr>Response</h4>
@@ -1930,7 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managementtype_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routerinterfacemanagementtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Router<wbr>Interface<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource that configures and manages this interface. 
 - MANAGED_BY_USER is the default value and can be managed directly by users. 
@@ -1976,7 +2098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managementtype_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routerinterfacemanagementtype">Router<wbr>Interface<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource that configures and manages this interface. 
 - MANAGED_BY_USER is the default value and can be managed directly by users. 
@@ -2022,7 +2144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managementtype_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routerinterfacemanagementtype">Router<wbr>Interface<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource that configures and manages this interface. 
 - MANAGED_BY_USER is the default value and can be managed directly by users. 
@@ -2068,7 +2190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#management_type_python" style="color: inherit; text-decoration: inherit;">management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#routerinterfacemanagementtype">Router<wbr>Interface<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource that configures and manages this interface. 
 - MANAGED_BY_USER is the default value and can be managed directly by users. 
@@ -2081,6 +2203,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of this interface entry. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="routerinterfacemanagementtype">Router<wbr>Interface<wbr>Management<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Managed<wbr>By<wbr>Attachment</dt>
+    <dd>MANAGED_BY_ATTACHMENT</dd><dt>Managed<wbr>By<wbr>User</dt>
+    <dd>MANAGED_BY_USER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Router<wbr>Interface<wbr>Management<wbr>Type<wbr>Managed<wbr>By<wbr>Attachment</dt>
+    <dd>MANAGED_BY_ATTACHMENT</dd><dt>Router<wbr>Interface<wbr>Management<wbr>Type<wbr>Managed<wbr>By<wbr>User</dt>
+    <dd>MANAGED_BY_USER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Managed<wbr>By<wbr>Attachment</dt>
+    <dd>MANAGED_BY_ATTACHMENT</dd><dt>Managed<wbr>By<wbr>User</dt>
+    <dd>MANAGED_BY_USER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MANAGED_BY_ATTACHMENT</dt>
+    <dd>MANAGED_BY_ATTACHMENT</dd><dt>MANAGED_BY_USER</dt>
+    <dd>MANAGED_BY_USER</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routerinterfaceresponse">Router<wbr>Interface<wbr>Response</h4>
@@ -2326,7 +2474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#natipallocateoption_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip<wbr>Allocate<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routernatnatipallocateoption">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Router<wbr>Nat<wbr>Nat<wbr>Ip<wbr>Allocate<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Specify the NatIpAllocateOption, which can take one of the following values: 
 - MANUAL_ONLY: Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs, the Nat service fails for new VMs. 
@@ -2344,7 +2492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcesubnetworkiprangestonat_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routernatsourcesubnetworkiprangestonat">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Router<wbr>Nat<wbr>Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a></span>
     </dt>
     <dd>{{% md %}}Specify the Nat option, which can take one of the following values: 
 - ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. 
@@ -2439,7 +2587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#natipallocateoption_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip<wbr>Allocate<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routernatnatipallocateoption">Router<wbr>Nat<wbr>Nat<wbr>Ip<wbr>Allocate<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Specify the NatIpAllocateOption, which can take one of the following values: 
 - MANUAL_ONLY: Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs, the Nat service fails for new VMs. 
@@ -2457,7 +2605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcesubnetworkiprangestonat_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routernatsourcesubnetworkiprangestonat">Router<wbr>Nat<wbr>Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a></span>
     </dt>
     <dd>{{% md %}}Specify the Nat option, which can take one of the following values: 
 - ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. 
@@ -2552,7 +2700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#natipallocateoption_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ip<wbr>Allocate<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routernatnatipallocateoption">Router<wbr>Nat<wbr>Nat<wbr>Ip<wbr>Allocate<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Specify the NatIpAllocateOption, which can take one of the following values: 
 - MANUAL_ONLY: Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs, the Nat service fails for new VMs. 
@@ -2570,7 +2718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcesubnetworkiprangestonat_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routernatsourcesubnetworkiprangestonat">Router<wbr>Nat<wbr>Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a></span>
     </dt>
     <dd>{{% md %}}Specify the Nat option, which can take one of the following values: 
 - ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. 
@@ -2665,7 +2813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nat_ip_allocate_option_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip_<wbr>allocate_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#routernatnatipallocateoption">Router<wbr>Nat<wbr>Nat<wbr>Ip<wbr>Allocate<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Specify the NatIpAllocateOption, which can take one of the following values: 
 - MANUAL_ONLY: Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs, the Nat service fails for new VMs. 
@@ -2683,7 +2831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_subnetwork_ip_ranges_to_nat_python" style="color: inherit; text-decoration: inherit;">source_<wbr>subnetwork_<wbr>ip_<wbr>ranges_<wbr>to_<wbr>nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#routernatsourcesubnetworkiprangestonat">Router<wbr>Nat<wbr>Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a></span>
     </dt>
     <dd>{{% md %}}Specify the Nat option, which can take one of the following values: 
 - ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. 
@@ -2740,7 +2888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routernatlogconfigfilter">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: 
 - ERRORS_ONLY: Export logs only for connection failures. 
@@ -2763,7 +2911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routernatlogconfigfilter">Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: 
 - ERRORS_ONLY: Export logs only for connection failures. 
@@ -2786,7 +2934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#routernatlogconfigfilter">Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: 
 - ERRORS_ONLY: Export logs only for connection failures. 
@@ -2809,12 +2957,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#routernatlogconfigfilter">Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: 
 - ERRORS_ONLY: Export logs only for connection failures. 
 - TRANSLATIONS_ONLY: Export logs only for successful connections. 
 - ALL: Export logs for all connections, successful and unsuccessful.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="routernatlogconfigfilter">Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Filter</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>All</dt>
+    <dd>ALL</dd><dt>Errors<wbr>Only</dt>
+    <dd>ERRORS_ONLY</dd><dt>Translations<wbr>Only</dt>
+    <dd>TRANSLATIONS_ONLY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Filter<wbr>All</dt>
+    <dd>ALL</dd><dt>Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Filter<wbr>Errors<wbr>Only</dt>
+    <dd>ERRORS_ONLY</dd><dt>Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Filter<wbr>Translations<wbr>Only</dt>
+    <dd>TRANSLATIONS_ONLY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>All</dt>
+    <dd>ALL</dd><dt>Errors<wbr>Only</dt>
+    <dd>ERRORS_ONLY</dd><dt>Translations<wbr>Only</dt>
+    <dd>TRANSLATIONS_ONLY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALL</dt>
+    <dd>ALL</dd><dt>ERRORS_ONLY</dt>
+    <dd>ERRORS_ONLY</dd><dt>TRANSLATIONS_ONLY</dt>
+    <dd>TRANSLATIONS_ONLY</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routernatlogconfigresponse">Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Response</h4>
@@ -2909,6 +3087,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
 - ERRORS_ONLY: Export logs only for connection failures. 
 - TRANSLATIONS_ONLY: Export logs only for successful connections. 
 - ALL: Export logs for all connections, successful and unsuccessful.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="routernatnatipallocateoption">Router<wbr>Nat<wbr>Nat<wbr>Ip<wbr>Allocate<wbr>Option</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Auto<wbr>Only</dt>
+    <dd>AUTO_ONLY</dd><dt>Manual<wbr>Only</dt>
+    <dd>MANUAL_ONLY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Router<wbr>Nat<wbr>Nat<wbr>Ip<wbr>Allocate<wbr>Option<wbr>Auto<wbr>Only</dt>
+    <dd>AUTO_ONLY</dd><dt>Router<wbr>Nat<wbr>Nat<wbr>Ip<wbr>Allocate<wbr>Option<wbr>Manual<wbr>Only</dt>
+    <dd>MANUAL_ONLY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Auto<wbr>Only</dt>
+    <dd>AUTO_ONLY</dd><dt>Manual<wbr>Only</dt>
+    <dd>MANUAL_ONLY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>AUTO_ONLY</dt>
+    <dd>AUTO_ONLY</dd><dt>MANUAL_ONLY</dt>
+    <dd>MANUAL_ONLY</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routernatresponse">Router<wbr>Nat<wbr>Response</h4>
@@ -3365,6 +3569,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Timeout (in seconds) for UDP connections. Defaults to 30s if not set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="routernatsourcesubnetworkiprangestonat">Router<wbr>Nat<wbr>Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>All<wbr>Subnetworks<wbr>All<wbr>Ip<wbr>Ranges</dt>
+    <dd>ALL_SUBNETWORKS_ALL_IP_RANGES</dd><dt>All<wbr>Subnetworks<wbr>All<wbr>Primary<wbr>Ip<wbr>Ranges</dt>
+    <dd>ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES</dd><dt>List<wbr>Of<wbr>Subnetworks</dt>
+    <dd>LIST_OF_SUBNETWORKS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Router<wbr>Nat<wbr>Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat<wbr>All<wbr>Subnetworks<wbr>All<wbr>Ip<wbr>Ranges</dt>
+    <dd>ALL_SUBNETWORKS_ALL_IP_RANGES</dd><dt>Router<wbr>Nat<wbr>Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat<wbr>All<wbr>Subnetworks<wbr>All<wbr>Primary<wbr>Ip<wbr>Ranges</dt>
+    <dd>ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES</dd><dt>Router<wbr>Nat<wbr>Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat<wbr>List<wbr>Of<wbr>Subnetworks</dt>
+    <dd>LIST_OF_SUBNETWORKS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>All<wbr>Subnetworks<wbr>All<wbr>Ip<wbr>Ranges</dt>
+    <dd>ALL_SUBNETWORKS_ALL_IP_RANGES</dd><dt>All<wbr>Subnetworks<wbr>All<wbr>Primary<wbr>Ip<wbr>Ranges</dt>
+    <dd>ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES</dd><dt>List<wbr>Of<wbr>Subnetworks</dt>
+    <dd>LIST_OF_SUBNETWORKS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALL_SUBNETWORKS_ALL_IP_RANGES</dt>
+    <dd>ALL_SUBNETWORKS_ALL_IP_RANGES</dd><dt>ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES</dt>
+    <dd>ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES</dd><dt>LIST_OF_SUBNETWORKS</dt>
+    <dd>LIST_OF_SUBNETWORKS</dd></dl>
+{{% /choosable %}}
+
 <h4 id="routernatsubnetworktonat">Router<wbr>Nat<wbr>Subnetwork<wbr>To<wbr>Nat</h4>
 
 {{% choosable language csharp %}}
@@ -3390,7 +3624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceiprangestonat_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#routernatsubnetworktonatsourceiprangestonatitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Router<wbr>Nat<wbr>Subnetwork<wbr>To<wbr>Nat<wbr>Source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: ["PRIMARY_IP_RANGE", "LIST_OF_SECONDARY_IP_RANGES"] Default: [ALL_IP_RANGES]{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3418,7 +3652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceiprangestonat_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#routernatsubnetworktonatsourceiprangestonatitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: ["PRIMARY_IP_RANGE", "LIST_OF_SECONDARY_IP_RANGES"] Default: [ALL_IP_RANGES]{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3446,7 +3680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceiprangestonat_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#routernatsubnetworktonatsourceiprangestonatitem">Router<wbr>Nat<wbr>Subnetwork<wbr>To<wbr>Nat<wbr>Source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: ["PRIMARY_IP_RANGE", "LIST_OF_SECONDARY_IP_RANGES"] Default: [ALL_IP_RANGES]{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3474,7 +3708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_ip_ranges_to_nat_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>ranges_<wbr>to_<wbr>nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#routernatsubnetworktonatsourceiprangestonatitem">Router<wbr>Nat<wbr>Subnetwork<wbr>To<wbr>Nat<wbr>Source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: ["PRIMARY_IP_RANGE", "LIST_OF_SECONDARY_IP_RANGES"] Default: [ALL_IP_RANGES]{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3591,6 +3825,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: ["PRIMARY_IP_RANGE", "LIST_OF_SECONDARY_IP_RANGES"] Default: [ALL_IP_RANGES]{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="routernatsubnetworktonatsourceiprangestonatitem">Router<wbr>Nat<wbr>Subnetwork<wbr>To<wbr>Nat<wbr>Source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>All<wbr>Ip<wbr>Ranges</dt>
+    <dd>ALL_IP_RANGES</dd><dt>List<wbr>Of<wbr>Secondary<wbr>Ip<wbr>Ranges</dt>
+    <dd>LIST_OF_SECONDARY_IP_RANGES</dd><dt>Primary<wbr>Ip<wbr>Range</dt>
+    <dd>PRIMARY_IP_RANGE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Router<wbr>Nat<wbr>Subnetwork<wbr>To<wbr>Nat<wbr>Source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat<wbr>Item<wbr>All<wbr>Ip<wbr>Ranges</dt>
+    <dd>ALL_IP_RANGES</dd><dt>Router<wbr>Nat<wbr>Subnetwork<wbr>To<wbr>Nat<wbr>Source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat<wbr>Item<wbr>List<wbr>Of<wbr>Secondary<wbr>Ip<wbr>Ranges</dt>
+    <dd>LIST_OF_SECONDARY_IP_RANGES</dd><dt>Router<wbr>Nat<wbr>Subnetwork<wbr>To<wbr>Nat<wbr>Source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat<wbr>Item<wbr>Primary<wbr>Ip<wbr>Range</dt>
+    <dd>PRIMARY_IP_RANGE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>All<wbr>Ip<wbr>Ranges</dt>
+    <dd>ALL_IP_RANGES</dd><dt>List<wbr>Of<wbr>Secondary<wbr>Ip<wbr>Ranges</dt>
+    <dd>LIST_OF_SECONDARY_IP_RANGES</dd><dt>Primary<wbr>Ip<wbr>Range</dt>
+    <dd>PRIMARY_IP_RANGE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALL_IP_RANGES</dt>
+    <dd>ALL_IP_RANGES</dd><dt>LIST_OF_SECONDARY_IP_RANGES</dt>
+    <dd>LIST_OF_SECONDARY_IP_RANGES</dd><dt>PRIMARY_IP_RANGE</dt>
+    <dd>PRIMARY_IP_RANGE</dd></dl>
 {{% /choosable %}}
 
 

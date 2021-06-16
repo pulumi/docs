@@ -30,15 +30,15 @@ Creates a new metric descriptor. User-created metric descriptors define custom m
                      <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[_monitoring_v3.LabelDescriptorArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">launch_stage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">launch_stage</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.MetricDescriptorLaunchStage]</span> = None<span class="p">,</span>
                      <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.MetricDescriptorMetadataArgs]</span> = None<span class="p">,</span>
-                     <span class="nx">metric_kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">metric_kind</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.MetricDescriptorMetricKind]</span> = None<span class="p">,</span>
                      <span class="nx">monitored_resource_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">value_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                     <span class="nx">value_type</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.MetricDescriptorValueType]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">MetricDescriptor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MetricDescriptorArgs</a></span><span class="p">,</span>
@@ -204,7 +204,7 @@ The MetricDescriptor resource accepts the following [input]({{< relref "/docs/in
 <a href="#launchstage_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricdescriptorlaunchstage">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V3.<wbr>Metric<wbr>Descriptor<wbr>Launch<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}Optional. The launch stage of the metric definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -220,7 +220,7 @@ The MetricDescriptor resource accepts the following [input]({{< relref "/docs/in
 <a href="#metrickind_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricdescriptormetrickind">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V3.<wbr>Metric<wbr>Descriptor<wbr>Metric<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Whether the metric records instantaneous values, changes to a value, etc. Some combinations of metric_kind and value_type might not be supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -260,7 +260,7 @@ The MetricDescriptor resource accepts the following [input]({{< relref "/docs/in
 <a href="#valuetype_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricdescriptorvaluetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V3.<wbr>Metric<wbr>Descriptor<wbr>Value<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Whether the measurement is an integer, a floating-point number, etc. Some combinations of metric_kind and value_type might not be supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -304,7 +304,7 @@ The MetricDescriptor resource accepts the following [input]({{< relref "/docs/in
 <a href="#launchstage_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricdescriptorlaunchstage">Metric<wbr>Descriptor<wbr>Launch<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}Optional. The launch stage of the metric definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -320,7 +320,7 @@ The MetricDescriptor resource accepts the following [input]({{< relref "/docs/in
 <a href="#metrickind_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricdescriptormetrickind">Metric<wbr>Descriptor<wbr>Metric<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Whether the metric records instantaneous values, changes to a value, etc. Some combinations of metric_kind and value_type might not be supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -360,7 +360,7 @@ The MetricDescriptor resource accepts the following [input]({{< relref "/docs/in
 <a href="#valuetype_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricdescriptorvaluetype">Metric<wbr>Descriptor<wbr>Value<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Whether the measurement is an integer, a floating-point number, etc. Some combinations of metric_kind and value_type might not be supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -404,7 +404,7 @@ The MetricDescriptor resource accepts the following [input]({{< relref "/docs/in
 <a href="#launchstage_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricdescriptorlaunchstage">Metric<wbr>Descriptor<wbr>Launch<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}Optional. The launch stage of the metric definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -420,7 +420,7 @@ The MetricDescriptor resource accepts the following [input]({{< relref "/docs/in
 <a href="#metrickind_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricdescriptormetrickind">Metric<wbr>Descriptor<wbr>Metric<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Whether the metric records instantaneous values, changes to a value, etc. Some combinations of metric_kind and value_type might not be supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -460,7 +460,7 @@ The MetricDescriptor resource accepts the following [input]({{< relref "/docs/in
 <a href="#valuetype_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricdescriptorvaluetype">Metric<wbr>Descriptor<wbr>Value<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Whether the measurement is an integer, a floating-point number, etc. Some combinations of metric_kind and value_type might not be supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -504,7 +504,7 @@ The MetricDescriptor resource accepts the following [input]({{< relref "/docs/in
 <a href="#launch_stage_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#metricdescriptorlaunchstage">Metric<wbr>Descriptor<wbr>Launch<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}Optional. The launch stage of the metric definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -520,7 +520,7 @@ The MetricDescriptor resource accepts the following [input]({{< relref "/docs/in
 <a href="#metric_kind_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#metricdescriptormetrickind">Metric<wbr>Descriptor<wbr>Metric<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Whether the metric records instantaneous values, changes to a value, etc. Some combinations of metric_kind and value_type might not be supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -560,7 +560,7 @@ The MetricDescriptor resource accepts the following [input]({{< relref "/docs/in
 <a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#metricdescriptorvaluetype">Metric<wbr>Descriptor<wbr>Value<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Whether the measurement is an integer, a floating-point number, etc. Some combinations of metric_kind and value_type might not be supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -655,7 +655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuetype_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#labeldescriptorvaluetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V3.<wbr>Label<wbr>Descriptor<wbr>Value<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -683,7 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuetype_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#labeldescriptorvaluetype">Label<wbr>Descriptor<wbr>Value<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -711,7 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuetype_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#labeldescriptorvaluetype">Label<wbr>Descriptor<wbr>Value<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -739,7 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#labeldescriptorvaluetype">Label<wbr>Descriptor<wbr>Value<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -856,6 +856,86 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="labeldescriptorvaluetype">Label<wbr>Descriptor<wbr>Value<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>String</dt>
+    <dd>STRING{{% md %}}A variable-length string, not to exceed 1,024 characters. This is the default value type.{{% /md %}}</dd><dt>Bool</dt>
+    <dd>BOOL{{% md %}}Boolean; true or false.{{% /md %}}</dd><dt>Int64</dt>
+    <dd>INT64{{% md %}}A 64-bit signed integer.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Label<wbr>Descriptor<wbr>Value<wbr>Type<wbr>String</dt>
+    <dd>STRING{{% md %}}A variable-length string, not to exceed 1,024 characters. This is the default value type.{{% /md %}}</dd><dt>Label<wbr>Descriptor<wbr>Value<wbr>Type<wbr>Bool</dt>
+    <dd>BOOL{{% md %}}Boolean; true or false.{{% /md %}}</dd><dt>Label<wbr>Descriptor<wbr>Value<wbr>Type<wbr>Int64</dt>
+    <dd>INT64{{% md %}}A 64-bit signed integer.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>String</dt>
+    <dd>STRING{{% md %}}A variable-length string, not to exceed 1,024 characters. This is the default value type.{{% /md %}}</dd><dt>Bool</dt>
+    <dd>BOOL{{% md %}}Boolean; true or false.{{% /md %}}</dd><dt>Int64</dt>
+    <dd>INT64{{% md %}}A 64-bit signed integer.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STRING</dt>
+    <dd>STRING{{% md %}}A variable-length string, not to exceed 1,024 characters. This is the default value type.{{% /md %}}</dd><dt>BOOL</dt>
+    <dd>BOOL{{% md %}}Boolean; true or false.{{% /md %}}</dd><dt>INT64</dt>
+    <dd>INT64{{% md %}}A 64-bit signed integer.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="metricdescriptorlaunchstage">Metric<wbr>Descriptor<wbr>Launch<wbr>Stage</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Launch<wbr>Stage<wbr>Unspecified</dt>
+    <dd>LAUNCH_STAGE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Unimplemented</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The feature is not yet implemented. Users can not use it.{{% /md %}}</dd><dt>Prelaunch</dt>
+    <dd>PRELAUNCH{{% md %}}Prelaunch features are hidden from users and are only visible internally.{{% /md %}}</dd><dt>Early<wbr>Access</dt>
+    <dd>EARLY_ACCESS{{% md %}}Early Access features are limited to a closed group of testers. To use these features, you must sign up in advance and sign a Trusted Tester agreement (which includes confidentiality provisions). These features may be unstable, changed in backward-incompatible ways, and are not guaranteed to be released.{{% /md %}}</dd><dt>Alpha</dt>
+    <dd>ALPHA{{% md %}}Alpha is a limited availability test for releases before they are cleared for widespread use. By Alpha, all significant design issues are resolved and we are in the process of verifying functionality. Alpha customers need to apply for access, agree to applicable terms, and have their projects allowlisted. Alpha releases don’t have to be feature complete, no SLAs are provided, and there are no technical support obligations, but they will be far enough along that customers can actually use them in test environments or for limited-use tests -- just like they would in normal production cases.{{% /md %}}</dd><dt>Beta</dt>
+    <dd>BETA{{% md %}}Beta is the point at which we are ready to open a release for any customer to use. There are no SLA or technical support obligations in a Beta release. Products will be complete from a feature perspective, but may have some open outstanding issues. Beta releases are suitable for limited production use cases.{{% /md %}}</dd><dt>Ga</dt>
+    <dd>GA{{% md %}}GA features are open to all developers and are considered stable and fully qualified for production use.{{% /md %}}</dd><dt>Deprecated</dt>
+    <dd>DEPRECATED{{% md %}}Deprecated features are scheduled to be shut down and removed. For more information, see the “Deprecation Policy” section of our Terms of Service (https://cloud.google.com/terms/) and the Google Cloud Platform Subject to the Deprecation Policy (https://cloud.google.com/terms/deprecation) documentation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Metric<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Launch<wbr>Stage<wbr>Unspecified</dt>
+    <dd>LAUNCH_STAGE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Unimplemented</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The feature is not yet implemented. Users can not use it.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Prelaunch</dt>
+    <dd>PRELAUNCH{{% md %}}Prelaunch features are hidden from users and are only visible internally.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Early<wbr>Access</dt>
+    <dd>EARLY_ACCESS{{% md %}}Early Access features are limited to a closed group of testers. To use these features, you must sign up in advance and sign a Trusted Tester agreement (which includes confidentiality provisions). These features may be unstable, changed in backward-incompatible ways, and are not guaranteed to be released.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Alpha</dt>
+    <dd>ALPHA{{% md %}}Alpha is a limited availability test for releases before they are cleared for widespread use. By Alpha, all significant design issues are resolved and we are in the process of verifying functionality. Alpha customers need to apply for access, agree to applicable terms, and have their projects allowlisted. Alpha releases don’t have to be feature complete, no SLAs are provided, and there are no technical support obligations, but they will be far enough along that customers can actually use them in test environments or for limited-use tests -- just like they would in normal production cases.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Beta</dt>
+    <dd>BETA{{% md %}}Beta is the point at which we are ready to open a release for any customer to use. There are no SLA or technical support obligations in a Beta release. Products will be complete from a feature perspective, but may have some open outstanding issues. Beta releases are suitable for limited production use cases.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Ga</dt>
+    <dd>GA{{% md %}}GA features are open to all developers and are considered stable and fully qualified for production use.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Deprecated</dt>
+    <dd>DEPRECATED{{% md %}}Deprecated features are scheduled to be shut down and removed. For more information, see the “Deprecation Policy” section of our Terms of Service (https://cloud.google.com/terms/) and the Google Cloud Platform Subject to the Deprecation Policy (https://cloud.google.com/terms/deprecation) documentation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Launch<wbr>Stage<wbr>Unspecified</dt>
+    <dd>LAUNCH_STAGE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Unimplemented</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The feature is not yet implemented. Users can not use it.{{% /md %}}</dd><dt>Prelaunch</dt>
+    <dd>PRELAUNCH{{% md %}}Prelaunch features are hidden from users and are only visible internally.{{% /md %}}</dd><dt>Early<wbr>Access</dt>
+    <dd>EARLY_ACCESS{{% md %}}Early Access features are limited to a closed group of testers. To use these features, you must sign up in advance and sign a Trusted Tester agreement (which includes confidentiality provisions). These features may be unstable, changed in backward-incompatible ways, and are not guaranteed to be released.{{% /md %}}</dd><dt>Alpha</dt>
+    <dd>ALPHA{{% md %}}Alpha is a limited availability test for releases before they are cleared for widespread use. By Alpha, all significant design issues are resolved and we are in the process of verifying functionality. Alpha customers need to apply for access, agree to applicable terms, and have their projects allowlisted. Alpha releases don’t have to be feature complete, no SLAs are provided, and there are no technical support obligations, but they will be far enough along that customers can actually use them in test environments or for limited-use tests -- just like they would in normal production cases.{{% /md %}}</dd><dt>Beta</dt>
+    <dd>BETA{{% md %}}Beta is the point at which we are ready to open a release for any customer to use. There are no SLA or technical support obligations in a Beta release. Products will be complete from a feature perspective, but may have some open outstanding issues. Beta releases are suitable for limited production use cases.{{% /md %}}</dd><dt>Ga</dt>
+    <dd>GA{{% md %}}GA features are open to all developers and are considered stable and fully qualified for production use.{{% /md %}}</dd><dt>Deprecated</dt>
+    <dd>DEPRECATED{{% md %}}Deprecated features are scheduled to be shut down and removed. For more information, see the “Deprecation Policy” section of our Terms of Service (https://cloud.google.com/terms/) and the Google Cloud Platform Subject to the Deprecation Policy (https://cloud.google.com/terms/deprecation) documentation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LAUNCH_STAGE_UNSPECIFIED</dt>
+    <dd>LAUNCH_STAGE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>UNIMPLEMENTED</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The feature is not yet implemented. Users can not use it.{{% /md %}}</dd><dt>PRELAUNCH</dt>
+    <dd>PRELAUNCH{{% md %}}Prelaunch features are hidden from users and are only visible internally.{{% /md %}}</dd><dt>EARLY_ACCESS</dt>
+    <dd>EARLY_ACCESS{{% md %}}Early Access features are limited to a closed group of testers. To use these features, you must sign up in advance and sign a Trusted Tester agreement (which includes confidentiality provisions). These features may be unstable, changed in backward-incompatible ways, and are not guaranteed to be released.{{% /md %}}</dd><dt>ALPHA</dt>
+    <dd>ALPHA{{% md %}}Alpha is a limited availability test for releases before they are cleared for widespread use. By Alpha, all significant design issues are resolved and we are in the process of verifying functionality. Alpha customers need to apply for access, agree to applicable terms, and have their projects allowlisted. Alpha releases don’t have to be feature complete, no SLAs are provided, and there are no technical support obligations, but they will be far enough along that customers can actually use them in test environments or for limited-use tests -- just like they would in normal production cases.{{% /md %}}</dd><dt>BETA</dt>
+    <dd>BETA{{% md %}}Beta is the point at which we are ready to open a release for any customer to use. There are no SLA or technical support obligations in a Beta release. Products will be complete from a feature perspective, but may have some open outstanding issues. Beta releases are suitable for limited production use cases.{{% /md %}}</dd><dt>GA</dt>
+    <dd>GA{{% md %}}GA features are open to all developers and are considered stable and fully qualified for production use.{{% /md %}}</dd><dt>DEPRECATED</dt>
+    <dd>DEPRECATED{{% md %}}Deprecated features are scheduled to be shut down and removed. For more information, see the “Deprecation Policy” section of our Terms of Service (https://cloud.google.com/terms/) and the Google Cloud Platform Subject to the Deprecation Policy (https://cloud.google.com/terms/deprecation) documentation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metricdescriptormetadata">Metric<wbr>Descriptor<wbr>Metadata</h4>
@@ -1020,6 +1100,86 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sampling period of metric data points. For metrics which are written periodically, consecutive data points are stored at this time interval, excluding data loss due to errors. Metrics with a higher granularity have a smaller sampling period.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="metricdescriptormetrickind">Metric<wbr>Descriptor<wbr>Metric<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Metric<wbr>Kind<wbr>Unspecified</dt>
+    <dd>METRIC_KIND_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Gauge</dt>
+    <dd>GAUGE{{% md %}}An instantaneous measurement of a value.{{% /md %}}</dd><dt>Delta</dt>
+    <dd>DELTA{{% md %}}The change in a value during a time interval.{{% /md %}}</dd><dt>Cumulative</dt>
+    <dd>CUMULATIVE{{% md %}}A value accumulated over a time interval. Cumulative measurements in a time series should have the same start time and increasing end times, until an event resets the cumulative value to zero and sets a new start time for the following points.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Metric<wbr>Descriptor<wbr>Metric<wbr>Kind<wbr>Metric<wbr>Kind<wbr>Unspecified</dt>
+    <dd>METRIC_KIND_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Metric<wbr>Kind<wbr>Gauge</dt>
+    <dd>GAUGE{{% md %}}An instantaneous measurement of a value.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Metric<wbr>Kind<wbr>Delta</dt>
+    <dd>DELTA{{% md %}}The change in a value during a time interval.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Metric<wbr>Kind<wbr>Cumulative</dt>
+    <dd>CUMULATIVE{{% md %}}A value accumulated over a time interval. Cumulative measurements in a time series should have the same start time and increasing end times, until an event resets the cumulative value to zero and sets a new start time for the following points.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Metric<wbr>Kind<wbr>Unspecified</dt>
+    <dd>METRIC_KIND_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Gauge</dt>
+    <dd>GAUGE{{% md %}}An instantaneous measurement of a value.{{% /md %}}</dd><dt>Delta</dt>
+    <dd>DELTA{{% md %}}The change in a value during a time interval.{{% /md %}}</dd><dt>Cumulative</dt>
+    <dd>CUMULATIVE{{% md %}}A value accumulated over a time interval. Cumulative measurements in a time series should have the same start time and increasing end times, until an event resets the cumulative value to zero and sets a new start time for the following points.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>METRIC_KIND_UNSPECIFIED</dt>
+    <dd>METRIC_KIND_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>GAUGE</dt>
+    <dd>GAUGE{{% md %}}An instantaneous measurement of a value.{{% /md %}}</dd><dt>DELTA</dt>
+    <dd>DELTA{{% md %}}The change in a value during a time interval.{{% /md %}}</dd><dt>CUMULATIVE</dt>
+    <dd>CUMULATIVE{{% md %}}A value accumulated over a time interval. Cumulative measurements in a time series should have the same start time and increasing end times, until an event resets the cumulative value to zero and sets a new start time for the following points.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="metricdescriptorvaluetype">Metric<wbr>Descriptor<wbr>Value<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Value<wbr>Type<wbr>Unspecified</dt>
+    <dd>VALUE_TYPE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Bool</dt>
+    <dd>BOOL{{% md %}}The value is a boolean. This value type can be used only if the metric kind is GAUGE.{{% /md %}}</dd><dt>Int64</dt>
+    <dd>INT64{{% md %}}The value is a signed 64-bit integer.{{% /md %}}</dd><dt>Double</dt>
+    <dd>DOUBLE{{% md %}}The value is a double precision floating point number.{{% /md %}}</dd><dt>String</dt>
+    <dd>STRING{{% md %}}The value is a text string. This value type can be used only if the metric kind is GAUGE.{{% /md %}}</dd><dt>Distribution</dt>
+    <dd>DISTRIBUTION{{% md %}}The value is a Distribution.{{% /md %}}</dd><dt>Money</dt>
+    <dd>MONEY{{% md %}}The value is money.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Metric<wbr>Descriptor<wbr>Value<wbr>Type<wbr>Value<wbr>Type<wbr>Unspecified</dt>
+    <dd>VALUE_TYPE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Value<wbr>Type<wbr>Bool</dt>
+    <dd>BOOL{{% md %}}The value is a boolean. This value type can be used only if the metric kind is GAUGE.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Value<wbr>Type<wbr>Int64</dt>
+    <dd>INT64{{% md %}}The value is a signed 64-bit integer.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Value<wbr>Type<wbr>Double</dt>
+    <dd>DOUBLE{{% md %}}The value is a double precision floating point number.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Value<wbr>Type<wbr>String</dt>
+    <dd>STRING{{% md %}}The value is a text string. This value type can be used only if the metric kind is GAUGE.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Value<wbr>Type<wbr>Distribution</dt>
+    <dd>DISTRIBUTION{{% md %}}The value is a Distribution.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Value<wbr>Type<wbr>Money</dt>
+    <dd>MONEY{{% md %}}The value is money.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Value<wbr>Type<wbr>Unspecified</dt>
+    <dd>VALUE_TYPE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Bool</dt>
+    <dd>BOOL{{% md %}}The value is a boolean. This value type can be used only if the metric kind is GAUGE.{{% /md %}}</dd><dt>Int64</dt>
+    <dd>INT64{{% md %}}The value is a signed 64-bit integer.{{% /md %}}</dd><dt>Double</dt>
+    <dd>DOUBLE{{% md %}}The value is a double precision floating point number.{{% /md %}}</dd><dt>String</dt>
+    <dd>STRING{{% md %}}The value is a text string. This value type can be used only if the metric kind is GAUGE.{{% /md %}}</dd><dt>Distribution</dt>
+    <dd>DISTRIBUTION{{% md %}}The value is a Distribution.{{% /md %}}</dd><dt>Money</dt>
+    <dd>MONEY{{% md %}}The value is money.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>VALUE_TYPE_UNSPECIFIED</dt>
+    <dd>VALUE_TYPE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>BOOL</dt>
+    <dd>BOOL{{% md %}}The value is a boolean. This value type can be used only if the metric kind is GAUGE.{{% /md %}}</dd><dt>INT64</dt>
+    <dd>INT64{{% md %}}The value is a signed 64-bit integer.{{% /md %}}</dd><dt>DOUBLE</dt>
+    <dd>DOUBLE{{% md %}}The value is a double precision floating point number.{{% /md %}}</dd><dt>STRING</dt>
+    <dd>STRING{{% md %}}The value is a text string. This value type can be used only if the metric kind is GAUGE.{{% /md %}}</dd><dt>DISTRIBUTION</dt>
+    <dd>DISTRIBUTION{{% md %}}The value is a Distribution.{{% /md %}}</dd><dt>MONEY</dt>
+    <dd>MONEY{{% md %}}The value is money.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

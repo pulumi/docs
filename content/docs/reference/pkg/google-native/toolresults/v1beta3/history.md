@@ -32,7 +32,7 @@ Creates a History. The returned History will have the id set. May return any of 
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">test_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+            <span class="nx">test_platform</span><span class="p">:</span> <span class="nx">Optional[_toolresults_v1beta3.HistoryTestPlatform]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">History</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HistoryArgs</a></span><span class="p">,</span>
@@ -206,7 +206,7 @@ The History resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#testplatform_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#historytestplatform">Pulumi.<wbr>Google<wbr>Native.<wbr>Tool<wbr>Results.<wbr>V1Beta3.<wbr>History<wbr>Test<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -258,7 +258,7 @@ The History resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#testplatform_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#historytestplatform">History<wbr>Test<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -310,7 +310,7 @@ The History resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#testplatform_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#historytestplatform">History<wbr>Test<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -362,7 +362,7 @@ The History resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#test_platform_python" style="color: inherit; text-decoration: inherit;">test_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#historytestplatform">History<wbr>Test<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -427,6 +427,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="historytestplatform">History<wbr>Test<wbr>Platform</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unknown<wbr>Platform</dt>
+    <dd>unknownPlatform</dd><dt>Android</dt>
+    <dd>android</dd><dt>Ios</dt>
+    <dd>ios</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>History<wbr>Test<wbr>Platform<wbr>Unknown<wbr>Platform</dt>
+    <dd>unknownPlatform</dd><dt>History<wbr>Test<wbr>Platform<wbr>Android</dt>
+    <dd>android</dd><dt>History<wbr>Test<wbr>Platform<wbr>Ios</dt>
+    <dd>ios</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unknown<wbr>Platform</dt>
+    <dd>unknownPlatform</dd><dt>Android</dt>
+    <dd>android</dd><dt>Ios</dt>
+    <dd>ios</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNKNOWN_PLATFORM</dt>
+    <dd>unknownPlatform</dd><dt>ANDROID</dt>
+    <dd>android</dd><dt>IOS</dt>
+    <dd>ios</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

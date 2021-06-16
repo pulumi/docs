@@ -44,7 +44,7 @@ Creates an instant snapshot in the specified region.
                           <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">source_disk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">source_disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                          <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.RegionInstantSnapshotStatus]</span> = None<span class="p">,</span>
                           <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">RegionInstantSnapshot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -323,7 +323,7 @@ To see the latest fingerprint, make a get() request to retrieve a InstantSnapsho
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regioninstantsnapshotstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Region<wbr>Instant<wbr>Snapshot<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the instantSnapshot. This can be CREATING, DELETING, FAILED, or READY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -487,7 +487,7 @@ To see the latest fingerprint, make a get() request to retrieve a InstantSnapsho
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regioninstantsnapshotstatus">Region<wbr>Instant<wbr>Snapshot<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the instantSnapshot. This can be CREATING, DELETING, FAILED, or READY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -651,7 +651,7 @@ To see the latest fingerprint, make a get() request to retrieve a InstantSnapsho
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regioninstantsnapshotstatus">Region<wbr>Instant<wbr>Snapshot<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the instantSnapshot. This can be CREATING, DELETING, FAILED, or READY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -815,7 +815,7 @@ To see the latest fingerprint, make a get() request to retrieve a InstantSnapsho
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#regioninstantsnapshotstatus">Region<wbr>Instant<wbr>Snapshot<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the instantSnapshot. This can be CREATING, DELETING, FAILED, or READY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -888,6 +888,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="regioninstantsnapshotstatus">Region<wbr>Instant<wbr>Snapshot<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Failed</dt>
+    <dd>FAILED</dd><dt>Ready</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Region<wbr>Instant<wbr>Snapshot<wbr>Status<wbr>Creating</dt>
+    <dd>CREATING</dd><dt>Region<wbr>Instant<wbr>Snapshot<wbr>Status<wbr>Deleting</dt>
+    <dd>DELETING</dd><dt>Region<wbr>Instant<wbr>Snapshot<wbr>Status<wbr>Failed</dt>
+    <dd>FAILED</dd><dt>Region<wbr>Instant<wbr>Snapshot<wbr>Status<wbr>Ready</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Failed</dt>
+    <dd>FAILED</dd><dt>Ready</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CREATING</dt>
+    <dd>CREATING</dd><dt>DELETING</dt>
+    <dd>DELETING</dd><dt>FAILED</dt>
+    <dd>FAILED</dd><dt>READY</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

@@ -28,7 +28,7 @@ Creates a NodeTemplate resource in the specified project using the data included
 <span class="k">def </span><span class="nx">NodeTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                  <span class="nx">accelerators</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.AcceleratorConfigArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">cpu_overcommit_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">cpu_overcommit_type</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.NodeTemplateCpuOvercommitType]</span> = None<span class="p">,</span>
                  <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.LocalDiskArgs]]</span> = None<span class="p">,</span>
@@ -44,7 +44,7 @@ Creates a NodeTemplate resource in the specified project using the data included
                  <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">server_binding</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.ServerBindingArgs]</span> = None<span class="p">,</span>
-                 <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.NodeTemplateStatus]</span> = None<span class="p">,</span>
                  <span class="nx">status_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">NodeTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -203,7 +203,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#cpuovercommittype_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Overcommit<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodetemplatecpuovercommittype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Node<wbr>Template<wbr>Cpu<wbr>Overcommit<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}CPU overcommit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -321,7 +321,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodetemplatestatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Node<wbr>Template<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the node template. One of the following values: CREATING, READY, and DELETING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -365,7 +365,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#cpuovercommittype_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Overcommit<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodetemplatecpuovercommittype">Node<wbr>Template<wbr>Cpu<wbr>Overcommit<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}CPU overcommit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -483,7 +483,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodetemplatestatus">Node<wbr>Template<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the node template. One of the following values: CREATING, READY, and DELETING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -527,7 +527,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#cpuovercommittype_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Overcommit<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodetemplatecpuovercommittype">Node<wbr>Template<wbr>Cpu<wbr>Overcommit<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}CPU overcommit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -645,7 +645,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodetemplatestatus">Node<wbr>Template<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the node template. One of the following values: CREATING, READY, and DELETING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -689,7 +689,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#cpu_overcommit_type_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>overcommit_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#nodetemplatecpuovercommittype">Node<wbr>Template<wbr>Cpu<wbr>Overcommit<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}CPU overcommit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -807,7 +807,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#nodetemplatestatus">Node<wbr>Template<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the node template. One of the following values: CREATING, READY, and DELETING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1277,6 +1277,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="nodetemplatecpuovercommittype">Node<wbr>Template<wbr>Cpu<wbr>Overcommit<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Cpu<wbr>Overcommit<wbr>Type<wbr>Unspecified</dt>
+    <dd>CPU_OVERCOMMIT_TYPE_UNSPECIFIED</dd><dt>Enabled</dt>
+    <dd>ENABLED</dd><dt>None</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Node<wbr>Template<wbr>Cpu<wbr>Overcommit<wbr>Type<wbr>Cpu<wbr>Overcommit<wbr>Type<wbr>Unspecified</dt>
+    <dd>CPU_OVERCOMMIT_TYPE_UNSPECIFIED</dd><dt>Node<wbr>Template<wbr>Cpu<wbr>Overcommit<wbr>Type<wbr>Enabled</dt>
+    <dd>ENABLED</dd><dt>Node<wbr>Template<wbr>Cpu<wbr>Overcommit<wbr>Type<wbr>None</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Cpu<wbr>Overcommit<wbr>Type<wbr>Unspecified</dt>
+    <dd>CPU_OVERCOMMIT_TYPE_UNSPECIFIED</dd><dt>Enabled</dt>
+    <dd>ENABLED</dd><dt>None</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CPU_OVERCOMMIT_TYPE_UNSPECIFIED</dt>
+    <dd>CPU_OVERCOMMIT_TYPE_UNSPECIFIED</dd><dt>ENABLED</dt>
+    <dd>ENABLED</dd><dt>NONE</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
 <h4 id="nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility</h4>
 
 {{% choosable language csharp %}}
@@ -1505,6 +1535,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="nodetemplatestatus">Node<wbr>Template<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Invalid</dt>
+    <dd>INVALID</dd><dt>Ready</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Node<wbr>Template<wbr>Status<wbr>Creating</dt>
+    <dd>CREATING</dd><dt>Node<wbr>Template<wbr>Status<wbr>Deleting</dt>
+    <dd>DELETING</dd><dt>Node<wbr>Template<wbr>Status<wbr>Invalid</dt>
+    <dd>INVALID</dd><dt>Node<wbr>Template<wbr>Status<wbr>Ready</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Invalid</dt>
+    <dd>INVALID</dd><dt>Ready</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CREATING</dt>
+    <dd>CREATING</dd><dt>DELETING</dt>
+    <dd>DELETING</dd><dt>INVALID</dt>
+    <dd>INVALID</dd><dt>READY</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
 <h4 id="serverbinding">Server<wbr>Binding</h4>
 
 {{% choosable language csharp %}}
@@ -1514,7 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#serverbindingtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Server<wbr>Binding<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1526,7 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#serverbindingtype">Server<wbr>Binding<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1538,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#serverbindingtype">Server<wbr>Binding<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1550,7 +1614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#serverbindingtype">Server<wbr>Binding<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1603,6 +1667,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serverbindingtype">Server<wbr>Binding<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Restart<wbr>Node<wbr>On<wbr>Any<wbr>Server</dt>
+    <dd>RESTART_NODE_ON_ANY_SERVER</dd><dt>Restart<wbr>Node<wbr>On<wbr>Minimal<wbr>Servers</dt>
+    <dd>RESTART_NODE_ON_MINIMAL_SERVERS</dd><dt>Server<wbr>Binding<wbr>Type<wbr>Unspecified</dt>
+    <dd>SERVER_BINDING_TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Server<wbr>Binding<wbr>Type<wbr>Restart<wbr>Node<wbr>On<wbr>Any<wbr>Server</dt>
+    <dd>RESTART_NODE_ON_ANY_SERVER</dd><dt>Server<wbr>Binding<wbr>Type<wbr>Restart<wbr>Node<wbr>On<wbr>Minimal<wbr>Servers</dt>
+    <dd>RESTART_NODE_ON_MINIMAL_SERVERS</dd><dt>Server<wbr>Binding<wbr>Type<wbr>Server<wbr>Binding<wbr>Type<wbr>Unspecified</dt>
+    <dd>SERVER_BINDING_TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Restart<wbr>Node<wbr>On<wbr>Any<wbr>Server</dt>
+    <dd>RESTART_NODE_ON_ANY_SERVER</dd><dt>Restart<wbr>Node<wbr>On<wbr>Minimal<wbr>Servers</dt>
+    <dd>RESTART_NODE_ON_MINIMAL_SERVERS</dd><dt>Server<wbr>Binding<wbr>Type<wbr>Unspecified</dt>
+    <dd>SERVER_BINDING_TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RESTART_NODE_ON_ANY_SERVER</dt>
+    <dd>RESTART_NODE_ON_ANY_SERVER</dd><dt>RESTART_NODE_ON_MINIMAL_SERVERS</dt>
+    <dd>RESTART_NODE_ON_MINIMAL_SERVERS</dd><dt>SERVER_BINDING_TYPE_UNSPECIFIED</dt>
+    <dd>SERVER_BINDING_TYPE_UNSPECIFIED</dd></dl>
 {{% /choosable %}}
 
 

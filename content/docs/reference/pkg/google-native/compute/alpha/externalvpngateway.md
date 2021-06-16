@@ -36,7 +36,7 @@ Creates a ExternalVpnGateway in the specified project using the data included in
                        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">redundancy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">redundancy_type</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.ExternalVpnGatewayRedundancyType]</span> = None<span class="p">,</span>
                        <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -246,7 +246,7 @@ To see the latest fingerprint, make a get() request to retrieve an ExternalVpnGa
 <a href="#redundancytype_csharp" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#externalvpngatewayredundancytype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>External<wbr>Vpn<wbr>Gateway<wbr>Redundancy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates the user-supplied redundancy type of this external VPN gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -348,7 +348,7 @@ To see the latest fingerprint, make a get() request to retrieve an ExternalVpnGa
 <a href="#redundancytype_go" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#externalvpngatewayredundancytype">External<wbr>Vpn<wbr>Gateway<wbr>Redundancy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates the user-supplied redundancy type of this external VPN gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +450,7 @@ To see the latest fingerprint, make a get() request to retrieve an ExternalVpnGa
 <a href="#redundancytype_nodejs" style="color: inherit; text-decoration: inherit;">redundancy<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#externalvpngatewayredundancytype">External<wbr>Vpn<wbr>Gateway<wbr>Redundancy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates the user-supplied redundancy type of this external VPN gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -552,7 +552,7 @@ To see the latest fingerprint, make a get() request to retrieve an ExternalVpnGa
 <a href="#redundancy_type_python" style="color: inherit; text-decoration: inherit;">redundancy_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#externalvpngatewayredundancytype">External<wbr>Vpn<wbr>Gateway<wbr>Redundancy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates the user-supplied redundancy type of this external VPN gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -768,6 +768,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of the interface in the external VPN gateway. Only IPv4 is supported. This IP address can be either from your on-premise gateway or another Cloud provider's VPN gateway, it cannot be an IP address from Google Compute Engine.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="externalvpngatewayredundancytype">External<wbr>Vpn<wbr>Gateway<wbr>Redundancy<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Four<wbr>Ips<wbr>Redundancy</dt>
+    <dd>FOUR_IPS_REDUNDANCY</dd><dt>Single<wbr>Ip<wbr>Internally<wbr>Redundant</dt>
+    <dd>SINGLE_IP_INTERNALLY_REDUNDANT</dd><dt>Two<wbr>Ips<wbr>Redundancy</dt>
+    <dd>TWO_IPS_REDUNDANCY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>External<wbr>Vpn<wbr>Gateway<wbr>Redundancy<wbr>Type<wbr>Four<wbr>Ips<wbr>Redundancy</dt>
+    <dd>FOUR_IPS_REDUNDANCY</dd><dt>External<wbr>Vpn<wbr>Gateway<wbr>Redundancy<wbr>Type<wbr>Single<wbr>Ip<wbr>Internally<wbr>Redundant</dt>
+    <dd>SINGLE_IP_INTERNALLY_REDUNDANT</dd><dt>External<wbr>Vpn<wbr>Gateway<wbr>Redundancy<wbr>Type<wbr>Two<wbr>Ips<wbr>Redundancy</dt>
+    <dd>TWO_IPS_REDUNDANCY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Four<wbr>Ips<wbr>Redundancy</dt>
+    <dd>FOUR_IPS_REDUNDANCY</dd><dt>Single<wbr>Ip<wbr>Internally<wbr>Redundant</dt>
+    <dd>SINGLE_IP_INTERNALLY_REDUNDANT</dd><dt>Two<wbr>Ips<wbr>Redundancy</dt>
+    <dd>TWO_IPS_REDUNDANCY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FOUR_IPS_REDUNDANCY</dt>
+    <dd>FOUR_IPS_REDUNDANCY</dd><dt>SINGLE_IP_INTERNALLY_REDUNDANT</dt>
+    <dd>SINGLE_IP_INTERNALLY_REDUNDANT</dd><dt>TWO_IPS_REDUNDANCY</dt>
+    <dd>TWO_IPS_REDUNDANCY</dd></dl>
 {{% /choosable %}}
 
 

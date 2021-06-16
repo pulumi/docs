@@ -2657,7 +2657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipv6googleaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#gceclusterconfigprivateipv6googleaccess">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataproc.<wbr>V1.<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Private<wbr>Ipv6Google<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of IPv6 access for a cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2765,7 +2765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipv6googleaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#gceclusterconfigprivateipv6googleaccess">Gce<wbr>Cluster<wbr>Config<wbr>Private<wbr>Ipv6Google<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of IPv6 access for a cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2873,7 +2873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipv6googleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv6Google<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#gceclusterconfigprivateipv6googleaccess">Gce<wbr>Cluster<wbr>Config<wbr>Private<wbr>Ipv6Google<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of IPv6 access for a cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2981,7 +2981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_ipv6_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv6_<wbr>google_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#gceclusterconfigprivateipv6googleaccess">Gce<wbr>Cluster<wbr>Config<wbr>Private<wbr>Ipv6Google<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of IPv6 access for a cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3040,6 +3040,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone] projects/[project_id]/zones/[zone] us-central1-f{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="gceclusterconfigprivateipv6googleaccess">Gce<wbr>Cluster<wbr>Config<wbr>Private<wbr>Ipv6Google<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Private<wbr>Ipv6Google<wbr>Access<wbr>Unspecified</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED{{% md %}}If unspecified, Compute Engine default behavior will apply, which is the same as INHERIT_FROM_SUBNETWORK.{{% /md %}}</dd><dt>Inherit<wbr>From<wbr>Subnetwork</dt>
+    <dd>INHERIT_FROM_SUBNETWORK{{% md %}}Private access to and from Google Services configuration inherited from the subnetwork configuration. This is the default Compute Engine behavior.{{% /md %}}</dd><dt>Outbound</dt>
+    <dd>OUTBOUND{{% md %}}Enables outbound private IPv6 access to Google Services from the Dataproc cluster.{{% /md %}}</dd><dt>Bidirectional</dt>
+    <dd>BIDIRECTIONAL{{% md %}}Enables bidirectional private IPv6 access between Google Services and the Dataproc cluster.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Gce<wbr>Cluster<wbr>Config<wbr>Private<wbr>Ipv6Google<wbr>Access<wbr>Private<wbr>Ipv6Google<wbr>Access<wbr>Unspecified</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED{{% md %}}If unspecified, Compute Engine default behavior will apply, which is the same as INHERIT_FROM_SUBNETWORK.{{% /md %}}</dd><dt>Gce<wbr>Cluster<wbr>Config<wbr>Private<wbr>Ipv6Google<wbr>Access<wbr>Inherit<wbr>From<wbr>Subnetwork</dt>
+    <dd>INHERIT_FROM_SUBNETWORK{{% md %}}Private access to and from Google Services configuration inherited from the subnetwork configuration. This is the default Compute Engine behavior.{{% /md %}}</dd><dt>Gce<wbr>Cluster<wbr>Config<wbr>Private<wbr>Ipv6Google<wbr>Access<wbr>Outbound</dt>
+    <dd>OUTBOUND{{% md %}}Enables outbound private IPv6 access to Google Services from the Dataproc cluster.{{% /md %}}</dd><dt>Gce<wbr>Cluster<wbr>Config<wbr>Private<wbr>Ipv6Google<wbr>Access<wbr>Bidirectional</dt>
+    <dd>BIDIRECTIONAL{{% md %}}Enables bidirectional private IPv6 access between Google Services and the Dataproc cluster.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Private<wbr>Ipv6Google<wbr>Access<wbr>Unspecified</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED{{% md %}}If unspecified, Compute Engine default behavior will apply, which is the same as INHERIT_FROM_SUBNETWORK.{{% /md %}}</dd><dt>Inherit<wbr>From<wbr>Subnetwork</dt>
+    <dd>INHERIT_FROM_SUBNETWORK{{% md %}}Private access to and from Google Services configuration inherited from the subnetwork configuration. This is the default Compute Engine behavior.{{% /md %}}</dd><dt>Outbound</dt>
+    <dd>OUTBOUND{{% md %}}Enables outbound private IPv6 access to Google Services from the Dataproc cluster.{{% /md %}}</dd><dt>Bidirectional</dt>
+    <dd>BIDIRECTIONAL{{% md %}}Enables bidirectional private IPv6 access between Google Services and the Dataproc cluster.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED{{% md %}}If unspecified, Compute Engine default behavior will apply, which is the same as INHERIT_FROM_SUBNETWORK.{{% /md %}}</dd><dt>INHERIT_FROM_SUBNETWORK</dt>
+    <dd>INHERIT_FROM_SUBNETWORK{{% md %}}Private access to and from Google Services configuration inherited from the subnetwork configuration. This is the default Compute Engine behavior.{{% /md %}}</dd><dt>OUTBOUND</dt>
+    <dd>OUTBOUND{{% md %}}Enables outbound private IPv6 access to Google Services from the Dataproc cluster.{{% /md %}}</dd><dt>BIDIRECTIONAL</dt>
+    <dd>BIDIRECTIONAL{{% md %}}Enables bidirectional private IPv6 access between Google Services and the Dataproc cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="gceclusterconfigresponse">Gce<wbr>Cluster<wbr>Config<wbr>Response</h4>
@@ -3733,7 +3767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptibility_csharp" style="color: inherit; text-decoration: inherit;">Preemptibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupconfigpreemptibility">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataproc.<wbr>V1.<wbr>Instance<wbr>Group<wbr>Config<wbr>Preemptibility</a></span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the preemptibility of the instance group.The default value for master and worker groups is NON_PREEMPTIBLE. This default cannot be changed.The default value for secondary instances is PREEMPTIBLE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3793,7 +3827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptibility_go" style="color: inherit; text-decoration: inherit;">Preemptibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupconfigpreemptibility">Instance<wbr>Group<wbr>Config<wbr>Preemptibility</a></span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the preemptibility of the instance group.The default value for master and worker groups is NON_PREEMPTIBLE. This default cannot be changed.The default value for secondary instances is PREEMPTIBLE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3853,7 +3887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptibility_nodejs" style="color: inherit; text-decoration: inherit;">preemptibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupconfigpreemptibility">Instance<wbr>Group<wbr>Config<wbr>Preemptibility</a></span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the preemptibility of the instance group.The default value for master and worker groups is NON_PREEMPTIBLE. This default cannot be changed.The default value for secondary instances is PREEMPTIBLE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3913,9 +3947,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptibility_python" style="color: inherit; text-decoration: inherit;">preemptibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancegroupconfigpreemptibility">Instance<wbr>Group<wbr>Config<wbr>Preemptibility</a></span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the preemptibility of the instance group.The default value for master and worker groups is NON_PREEMPTIBLE. This default cannot be changed.The default value for secondary instances is PREEMPTIBLE.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancegroupconfigpreemptibility">Instance<wbr>Group<wbr>Config<wbr>Preemptibility</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Preemptibility<wbr>Unspecified</dt>
+    <dd>PREEMPTIBILITY_UNSPECIFIED{{% md %}}Preemptibility is unspecified, the system will choose the appropriate setting for each instance group.{{% /md %}}</dd><dt>Non<wbr>Preemptible</dt>
+    <dd>NON_PREEMPTIBLE{{% md %}}Instances are non-preemptible.This option is allowed for all instance groups and is the only valid value for Master and Worker instance groups.{{% /md %}}</dd><dt>Preemptible</dt>
+    <dd>PREEMPTIBLE{{% md %}}Instances are preemptible.This option is allowed only for secondary worker groups.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Group<wbr>Config<wbr>Preemptibility<wbr>Preemptibility<wbr>Unspecified</dt>
+    <dd>PREEMPTIBILITY_UNSPECIFIED{{% md %}}Preemptibility is unspecified, the system will choose the appropriate setting for each instance group.{{% /md %}}</dd><dt>Instance<wbr>Group<wbr>Config<wbr>Preemptibility<wbr>Non<wbr>Preemptible</dt>
+    <dd>NON_PREEMPTIBLE{{% md %}}Instances are non-preemptible.This option is allowed for all instance groups and is the only valid value for Master and Worker instance groups.{{% /md %}}</dd><dt>Instance<wbr>Group<wbr>Config<wbr>Preemptibility<wbr>Preemptible</dt>
+    <dd>PREEMPTIBLE{{% md %}}Instances are preemptible.This option is allowed only for secondary worker groups.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Preemptibility<wbr>Unspecified</dt>
+    <dd>PREEMPTIBILITY_UNSPECIFIED{{% md %}}Preemptibility is unspecified, the system will choose the appropriate setting for each instance group.{{% /md %}}</dd><dt>Non<wbr>Preemptible</dt>
+    <dd>NON_PREEMPTIBLE{{% md %}}Instances are non-preemptible.This option is allowed for all instance groups and is the only valid value for Master and Worker instance groups.{{% /md %}}</dd><dt>Preemptible</dt>
+    <dd>PREEMPTIBLE{{% md %}}Instances are preemptible.This option is allowed only for secondary worker groups.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PREEMPTIBILITY_UNSPECIFIED</dt>
+    <dd>PREEMPTIBILITY_UNSPECIFIED{{% md %}}Preemptibility is unspecified, the system will choose the appropriate setting for each instance group.{{% /md %}}</dd><dt>NON_PREEMPTIBLE</dt>
+    <dd>NON_PREEMPTIBLE{{% md %}}Instances are non-preemptible.This option is allowed for all instance groups and is the only valid value for Master and Worker instance groups.{{% /md %}}</dd><dt>PREEMPTIBLE</dt>
+    <dd>PREEMPTIBLE{{% md %}}Instances are preemptible.This option is allowed only for secondary worker groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancegroupconfigresponse">Instance<wbr>Group<wbr>Config<wbr>Response</h4>
@@ -6277,7 +6341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumereservationtype_csharp" style="color: inherit; text-decoration: inherit;">Consume<wbr>Reservation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#reservationaffinityconsumereservationtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataproc.<wbr>V1.<wbr>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. Type of reservation to consume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6305,7 +6369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumereservationtype_go" style="color: inherit; text-decoration: inherit;">Consume<wbr>Reservation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#reservationaffinityconsumereservationtype">Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. Type of reservation to consume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6333,7 +6397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumereservationtype_nodejs" style="color: inherit; text-decoration: inherit;">consume<wbr>Reservation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#reservationaffinityconsumereservationtype">Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. Type of reservation to consume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6361,7 +6425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consume_reservation_type_python" style="color: inherit; text-decoration: inherit;">consume_<wbr>reservation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#reservationaffinityconsumereservationtype">Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. Type of reservation to consume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6380,6 +6444,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="reservationaffinityconsumereservationtype">Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED</dd><dt>No<wbr>Reservation</dt>
+    <dd>NO_RESERVATION{{% md %}}Do not consume from any allocated capacity.{{% /md %}}</dd><dt>Any<wbr>Reservation</dt>
+    <dd>ANY_RESERVATION{{% md %}}Consume any reservation available.{{% /md %}}</dd><dt>Specific<wbr>Reservation</dt>
+    <dd>SPECIFIC_RESERVATION{{% md %}}Must consume from a specific reservation. Must specify key value fields for specifying the reservations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED</dd><dt>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type<wbr>No<wbr>Reservation</dt>
+    <dd>NO_RESERVATION{{% md %}}Do not consume from any allocated capacity.{{% /md %}}</dd><dt>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type<wbr>Any<wbr>Reservation</dt>
+    <dd>ANY_RESERVATION{{% md %}}Consume any reservation available.{{% /md %}}</dd><dt>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type<wbr>Specific<wbr>Reservation</dt>
+    <dd>SPECIFIC_RESERVATION{{% md %}}Must consume from a specific reservation. Must specify key value fields for specifying the reservations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED</dd><dt>No<wbr>Reservation</dt>
+    <dd>NO_RESERVATION{{% md %}}Do not consume from any allocated capacity.{{% /md %}}</dd><dt>Any<wbr>Reservation</dt>
+    <dd>ANY_RESERVATION{{% md %}}Consume any reservation available.{{% /md %}}</dd><dt>Specific<wbr>Reservation</dt>
+    <dd>SPECIFIC_RESERVATION{{% md %}}Must consume from a specific reservation. Must specify key value fields for specifying the reservations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED</dd><dt>NO_RESERVATION</dt>
+    <dd>NO_RESERVATION{{% md %}}Do not consume from any allocated capacity.{{% /md %}}</dd><dt>ANY_RESERVATION</dt>
+    <dd>ANY_RESERVATION{{% md %}}Consume any reservation available.{{% /md %}}</dd><dt>SPECIFIC_RESERVATION</dt>
+    <dd>SPECIFIC_RESERVATION{{% md %}}Must consume from a specific reservation. Must specify key value fields for specifying the reservations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reservationaffinityresponse">Reservation<wbr>Affinity<wbr>Response</h4>
@@ -6905,7 +7003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optionalcomponents_csharp" style="color: inherit; text-decoration: inherit;">Optional<wbr>Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#softwareconfigoptionalcomponentsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Dataproc.<wbr>V1.<wbr>Software<wbr>Config<wbr>Optional<wbr>Components<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional. The set of components to activate on the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6933,7 +7031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optionalcomponents_go" style="color: inherit; text-decoration: inherit;">Optional<wbr>Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#softwareconfigoptionalcomponentsitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}Optional. The set of components to activate on the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6961,7 +7059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optionalcomponents_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#softwareconfigoptionalcomponentsitem">Software<wbr>Config<wbr>Optional<wbr>Components<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The set of components to activate on the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6989,7 +7087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_components_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#softwareconfigoptionalcomponentsitem">Software<wbr>Config<wbr>Optional<wbr>Components<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The set of components to activate on the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7000,6 +7098,76 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. The properties to set on daemon config files.Property keys are specified in prefix:property format, for example core:hadoop.tmp.dir. The following are supported prefixes and their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp: distcp-default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig: pig.properties spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster properties (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="softwareconfigoptionalcomponentsitem">Software<wbr>Config<wbr>Optional<wbr>Components<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Component<wbr>Unspecified</dt>
+    <dd>COMPONENT_UNSPECIFIED{{% md %}}Unspecified component. Specifying this will cause Cluster creation to fail.{{% /md %}}</dd><dt>Anaconda</dt>
+    <dd>ANACONDA{{% md %}}The Anaconda python distribution. The Anaconda component is not supported in the Dataproc 2.0 image. The 2.0 image is pre-installed with Miniconda.{{% /md %}}</dd><dt>Docker</dt>
+    <dd>DOCKER{{% md %}}Docker{{% /md %}}</dd><dt>Druid</dt>
+    <dd>DRUID{{% md %}}The Druid query engine. (alpha){{% /md %}}</dd><dt>Flink</dt>
+    <dd>FLINK{{% md %}}Flink{{% /md %}}</dd><dt>Hbase</dt>
+    <dd>HBASE{{% md %}}HBase. (beta){{% /md %}}</dd><dt>Hive<wbr>Webhcat</dt>
+    <dd>HIVE_WEBHCAT{{% md %}}The Hive Web HCatalog (the REST service for accessing HCatalog).{{% /md %}}</dd><dt>Jupyter</dt>
+    <dd>JUPYTER{{% md %}}The Jupyter Notebook.{{% /md %}}</dd><dt>Presto</dt>
+    <dd>PRESTO{{% md %}}The Presto query engine.{{% /md %}}</dd><dt>Ranger</dt>
+    <dd>RANGER{{% md %}}The Ranger service.{{% /md %}}</dd><dt>Solr</dt>
+    <dd>SOLR{{% md %}}The Solr service.{{% /md %}}</dd><dt>Zeppelin</dt>
+    <dd>ZEPPELIN{{% md %}}The Zeppelin notebook.{{% /md %}}</dd><dt>Zookeeper</dt>
+    <dd>ZOOKEEPER{{% md %}}The Zookeeper service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Software<wbr>Config<wbr>Optional<wbr>Components<wbr>Item<wbr>Component<wbr>Unspecified</dt>
+    <dd>COMPONENT_UNSPECIFIED{{% md %}}Unspecified component. Specifying this will cause Cluster creation to fail.{{% /md %}}</dd><dt>Software<wbr>Config<wbr>Optional<wbr>Components<wbr>Item<wbr>Anaconda</dt>
+    <dd>ANACONDA{{% md %}}The Anaconda python distribution. The Anaconda component is not supported in the Dataproc 2.0 image. The 2.0 image is pre-installed with Miniconda.{{% /md %}}</dd><dt>Software<wbr>Config<wbr>Optional<wbr>Components<wbr>Item<wbr>Docker</dt>
+    <dd>DOCKER{{% md %}}Docker{{% /md %}}</dd><dt>Software<wbr>Config<wbr>Optional<wbr>Components<wbr>Item<wbr>Druid</dt>
+    <dd>DRUID{{% md %}}The Druid query engine. (alpha){{% /md %}}</dd><dt>Software<wbr>Config<wbr>Optional<wbr>Components<wbr>Item<wbr>Flink</dt>
+    <dd>FLINK{{% md %}}Flink{{% /md %}}</dd><dt>Software<wbr>Config<wbr>Optional<wbr>Components<wbr>Item<wbr>Hbase</dt>
+    <dd>HBASE{{% md %}}HBase. (beta){{% /md %}}</dd><dt>Software<wbr>Config<wbr>Optional<wbr>Components<wbr>Item<wbr>Hive<wbr>Webhcat</dt>
+    <dd>HIVE_WEBHCAT{{% md %}}The Hive Web HCatalog (the REST service for accessing HCatalog).{{% /md %}}</dd><dt>Software<wbr>Config<wbr>Optional<wbr>Components<wbr>Item<wbr>Jupyter</dt>
+    <dd>JUPYTER{{% md %}}The Jupyter Notebook.{{% /md %}}</dd><dt>Software<wbr>Config<wbr>Optional<wbr>Components<wbr>Item<wbr>Presto</dt>
+    <dd>PRESTO{{% md %}}The Presto query engine.{{% /md %}}</dd><dt>Software<wbr>Config<wbr>Optional<wbr>Components<wbr>Item<wbr>Ranger</dt>
+    <dd>RANGER{{% md %}}The Ranger service.{{% /md %}}</dd><dt>Software<wbr>Config<wbr>Optional<wbr>Components<wbr>Item<wbr>Solr</dt>
+    <dd>SOLR{{% md %}}The Solr service.{{% /md %}}</dd><dt>Software<wbr>Config<wbr>Optional<wbr>Components<wbr>Item<wbr>Zeppelin</dt>
+    <dd>ZEPPELIN{{% md %}}The Zeppelin notebook.{{% /md %}}</dd><dt>Software<wbr>Config<wbr>Optional<wbr>Components<wbr>Item<wbr>Zookeeper</dt>
+    <dd>ZOOKEEPER{{% md %}}The Zookeeper service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Component<wbr>Unspecified</dt>
+    <dd>COMPONENT_UNSPECIFIED{{% md %}}Unspecified component. Specifying this will cause Cluster creation to fail.{{% /md %}}</dd><dt>Anaconda</dt>
+    <dd>ANACONDA{{% md %}}The Anaconda python distribution. The Anaconda component is not supported in the Dataproc 2.0 image. The 2.0 image is pre-installed with Miniconda.{{% /md %}}</dd><dt>Docker</dt>
+    <dd>DOCKER{{% md %}}Docker{{% /md %}}</dd><dt>Druid</dt>
+    <dd>DRUID{{% md %}}The Druid query engine. (alpha){{% /md %}}</dd><dt>Flink</dt>
+    <dd>FLINK{{% md %}}Flink{{% /md %}}</dd><dt>Hbase</dt>
+    <dd>HBASE{{% md %}}HBase. (beta){{% /md %}}</dd><dt>Hive<wbr>Webhcat</dt>
+    <dd>HIVE_WEBHCAT{{% md %}}The Hive Web HCatalog (the REST service for accessing HCatalog).{{% /md %}}</dd><dt>Jupyter</dt>
+    <dd>JUPYTER{{% md %}}The Jupyter Notebook.{{% /md %}}</dd><dt>Presto</dt>
+    <dd>PRESTO{{% md %}}The Presto query engine.{{% /md %}}</dd><dt>Ranger</dt>
+    <dd>RANGER{{% md %}}The Ranger service.{{% /md %}}</dd><dt>Solr</dt>
+    <dd>SOLR{{% md %}}The Solr service.{{% /md %}}</dd><dt>Zeppelin</dt>
+    <dd>ZEPPELIN{{% md %}}The Zeppelin notebook.{{% /md %}}</dd><dt>Zookeeper</dt>
+    <dd>ZOOKEEPER{{% md %}}The Zookeeper service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>COMPONENT_UNSPECIFIED</dt>
+    <dd>COMPONENT_UNSPECIFIED{{% md %}}Unspecified component. Specifying this will cause Cluster creation to fail.{{% /md %}}</dd><dt>ANACONDA</dt>
+    <dd>ANACONDA{{% md %}}The Anaconda python distribution. The Anaconda component is not supported in the Dataproc 2.0 image. The 2.0 image is pre-installed with Miniconda.{{% /md %}}</dd><dt>DOCKER</dt>
+    <dd>DOCKER{{% md %}}Docker{{% /md %}}</dd><dt>DRUID</dt>
+    <dd>DRUID{{% md %}}The Druid query engine. (alpha){{% /md %}}</dd><dt>FLINK</dt>
+    <dd>FLINK{{% md %}}Flink{{% /md %}}</dd><dt>HBASE</dt>
+    <dd>HBASE{{% md %}}HBase. (beta){{% /md %}}</dd><dt>HIVE_WEBHCAT</dt>
+    <dd>HIVE_WEBHCAT{{% md %}}The Hive Web HCatalog (the REST service for accessing HCatalog).{{% /md %}}</dd><dt>JUPYTER</dt>
+    <dd>JUPYTER{{% md %}}The Jupyter Notebook.{{% /md %}}</dd><dt>PRESTO</dt>
+    <dd>PRESTO{{% md %}}The Presto query engine.{{% /md %}}</dd><dt>RANGER</dt>
+    <dd>RANGER{{% md %}}The Ranger service.{{% /md %}}</dd><dt>SOLR</dt>
+    <dd>SOLR{{% md %}}The Solr service.{{% /md %}}</dd><dt>ZEPPELIN</dt>
+    <dd>ZEPPELIN{{% md %}}The Zeppelin notebook.{{% /md %}}</dd><dt>ZOOKEEPER</dt>
+    <dd>ZOOKEEPER{{% md %}}The Zookeeper service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="softwareconfigresponse">Software<wbr>Config<wbr>Response</h4>

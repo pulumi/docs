@@ -45,7 +45,7 @@ Starts a build with the specified configuration. This method returns a long-runn
           <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Build</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BuildArgs</a></span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BuildInitArgs</a></span><span class="p">,</span>
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -93,7 +93,7 @@ Starts a build with the specified configuration. This method returns a long-runn
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">BuildArgs</a></span>
+        <span class="property-type"><a href="#inputs">BuildInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -1507,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logstreamingoption_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Streaming<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildoptionslogstreamingoption">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Build<wbr>Options<wbr>Log<wbr>Streaming<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Option to define build log streaming behavior to Google Cloud Storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1515,7 +1515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_csharp" style="color: inherit; text-decoration: inherit;">Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildoptionslogging">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Build<wbr>Options<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}Option to specify the logging mode, which determines if and where build logs are stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1523,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildoptionsmachinetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Build<wbr>Options<wbr>Machine<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Compute Engine machine type on which to run the build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1531,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestedverifyoption_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>Verify<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildoptionsrequestedverifyoption">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Build<wbr>Options<wbr>Requested<wbr>Verify<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Requested verifiability options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1547,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceprovenancehash_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Provenance<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#buildoptionssourceprovenancehashitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Build<wbr>Options<wbr>Source<wbr>Provenance<wbr>Hash<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}Requested hash for SourceProvenance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1555,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#substitutionoption_csharp" style="color: inherit; text-decoration: inherit;">Substitution<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildoptionssubstitutionoption">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Build<wbr>Options<wbr>Substitution<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Option to specify behavior when there is an error in the substitution checks. NOTE: this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the build configuration file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1607,7 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logstreamingoption_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Streaming<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildoptionslogstreamingoption">Build<wbr>Options<wbr>Log<wbr>Streaming<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Option to define build log streaming behavior to Google Cloud Storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1615,7 +1615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildoptionslogging">Build<wbr>Options<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}Option to specify the logging mode, which determines if and where build logs are stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1623,7 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildoptionsmachinetype">Build<wbr>Options<wbr>Machine<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Compute Engine machine type on which to run the build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1631,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestedverifyoption_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>Verify<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildoptionsrequestedverifyoption">Build<wbr>Options<wbr>Requested<wbr>Verify<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Requested verifiability options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1647,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceprovenancehash_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Provenance<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#buildoptionssourceprovenancehashitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}Requested hash for SourceProvenance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1655,7 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#substitutionoption_go" style="color: inherit; text-decoration: inherit;">Substitution<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildoptionssubstitutionoption">Build<wbr>Options<wbr>Substitution<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Option to specify behavior when there is an error in the substitution checks. NOTE: this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the build configuration file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1707,7 +1707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logstreamingoption_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Streaming<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildoptionslogstreamingoption">Build<wbr>Options<wbr>Log<wbr>Streaming<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Option to define build log streaming behavior to Google Cloud Storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1715,7 +1715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildoptionslogging">Build<wbr>Options<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}Option to specify the logging mode, which determines if and where build logs are stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1723,7 +1723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildoptionsmachinetype">Build<wbr>Options<wbr>Machine<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Compute Engine machine type on which to run the build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1731,7 +1731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestedverifyoption_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Verify<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildoptionsrequestedverifyoption">Build<wbr>Options<wbr>Requested<wbr>Verify<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Requested verifiability options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1747,7 +1747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceprovenancehash_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Provenance<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#buildoptionssourceprovenancehashitem">Build<wbr>Options<wbr>Source<wbr>Provenance<wbr>Hash<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}Requested hash for SourceProvenance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1755,7 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#substitutionoption_nodejs" style="color: inherit; text-decoration: inherit;">substitution<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildoptionssubstitutionoption">Build<wbr>Options<wbr>Substitution<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Option to specify behavior when there is an error in the substitution checks. NOTE: this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the build configuration file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1807,7 +1807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_streaming_option_python" style="color: inherit; text-decoration: inherit;">log_<wbr>streaming_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#buildoptionslogstreamingoption">Build<wbr>Options<wbr>Log<wbr>Streaming<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Option to define build log streaming behavior to Google Cloud Storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1815,7 +1815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#buildoptionslogging">Build<wbr>Options<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}Option to specify the logging mode, which determines if and where build logs are stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1823,7 +1823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#buildoptionsmachinetype">Build<wbr>Options<wbr>Machine<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Compute Engine machine type on which to run the build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1831,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requested_verify_option_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>verify_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#buildoptionsrequestedverifyoption">Build<wbr>Options<wbr>Requested<wbr>Verify<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Requested verifiability options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1847,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_provenance_hash_python" style="color: inherit; text-decoration: inherit;">source_<wbr>provenance_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#buildoptionssourceprovenancehashitem">Build<wbr>Options<wbr>Source<wbr>Provenance<wbr>Hash<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}Requested hash for SourceProvenance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1855,7 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#substitution_option_python" style="color: inherit; text-decoration: inherit;">substitution_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#buildoptionssubstitutionoption">Build<wbr>Options<wbr>Substitution<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Option to specify behavior when there is an error in the substitution checks. NOTE: this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the build configuration file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1874,6 +1874,142 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option to specify a `WorkerPool` for the build. Format: projects/{project}/locations/{location}/workerPools/{workerPool} This field is in beta and is available only to restricted users.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="buildoptionslogstreamingoption">Build<wbr>Options<wbr>Log<wbr>Streaming<wbr>Option</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Stream<wbr>Default</dt>
+    <dd>STREAM_DEFAULT{{% md %}}Service may automatically determine build log streaming behavior.{{% /md %}}</dd><dt>Stream<wbr>On</dt>
+    <dd>STREAM_ON{{% md %}}Build logs should be streamed to Google Cloud Storage.{{% /md %}}</dd><dt>Stream<wbr>Off</dt>
+    <dd>STREAM_OFF{{% md %}}Build logs should not be streamed to Google Cloud Storage; they will be written when the build is completed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Build<wbr>Options<wbr>Log<wbr>Streaming<wbr>Option<wbr>Stream<wbr>Default</dt>
+    <dd>STREAM_DEFAULT{{% md %}}Service may automatically determine build log streaming behavior.{{% /md %}}</dd><dt>Build<wbr>Options<wbr>Log<wbr>Streaming<wbr>Option<wbr>Stream<wbr>On</dt>
+    <dd>STREAM_ON{{% md %}}Build logs should be streamed to Google Cloud Storage.{{% /md %}}</dd><dt>Build<wbr>Options<wbr>Log<wbr>Streaming<wbr>Option<wbr>Stream<wbr>Off</dt>
+    <dd>STREAM_OFF{{% md %}}Build logs should not be streamed to Google Cloud Storage; they will be written when the build is completed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Stream<wbr>Default</dt>
+    <dd>STREAM_DEFAULT{{% md %}}Service may automatically determine build log streaming behavior.{{% /md %}}</dd><dt>Stream<wbr>On</dt>
+    <dd>STREAM_ON{{% md %}}Build logs should be streamed to Google Cloud Storage.{{% /md %}}</dd><dt>Stream<wbr>Off</dt>
+    <dd>STREAM_OFF{{% md %}}Build logs should not be streamed to Google Cloud Storage; they will be written when the build is completed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STREAM_DEFAULT</dt>
+    <dd>STREAM_DEFAULT{{% md %}}Service may automatically determine build log streaming behavior.{{% /md %}}</dd><dt>STREAM_ON</dt>
+    <dd>STREAM_ON{{% md %}}Build logs should be streamed to Google Cloud Storage.{{% /md %}}</dd><dt>STREAM_OFF</dt>
+    <dd>STREAM_OFF{{% md %}}Build logs should not be streamed to Google Cloud Storage; they will be written when the build is completed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="buildoptionslogging">Build<wbr>Options<wbr>Logging</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Logging<wbr>Unspecified</dt>
+    <dd>LOGGING_UNSPECIFIED{{% md %}}The service determines the logging mode. The default is `LEGACY`. Do not rely on the default logging behavior as it may change in the future.{{% /md %}}</dd><dt>Legacy</dt>
+    <dd>LEGACY{{% md %}}Cloud Logging and Cloud Storage logging are enabled.{{% /md %}}</dd><dt>Gcs<wbr>Only</dt>
+    <dd>GCS_ONLY{{% md %}}Only Cloud Storage logging is enabled.{{% /md %}}</dd><dt>Stackdriver<wbr>Only</dt>
+    <dd>STACKDRIVER_ONLY{{% md %}}This option is the same as CLOUD_LOGGING_ONLY.{{% /md %}}</dd><dt>Cloud<wbr>Logging<wbr>Only</dt>
+    <dd>CLOUD_LOGGING_ONLY{{% md %}}Only Cloud Logging is enabled. Note that logs for both the Cloud Console UI and Cloud SDK are based on Cloud Storage logs, so neither will provide logs if this option is chosen.{{% /md %}}</dd><dt>None</dt>
+    <dd>NONE{{% md %}}Turn off all logging. No build logs will be captured.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Build<wbr>Options<wbr>Logging<wbr>Logging<wbr>Unspecified</dt>
+    <dd>LOGGING_UNSPECIFIED{{% md %}}The service determines the logging mode. The default is `LEGACY`. Do not rely on the default logging behavior as it may change in the future.{{% /md %}}</dd><dt>Build<wbr>Options<wbr>Logging<wbr>Legacy</dt>
+    <dd>LEGACY{{% md %}}Cloud Logging and Cloud Storage logging are enabled.{{% /md %}}</dd><dt>Build<wbr>Options<wbr>Logging<wbr>Gcs<wbr>Only</dt>
+    <dd>GCS_ONLY{{% md %}}Only Cloud Storage logging is enabled.{{% /md %}}</dd><dt>Build<wbr>Options<wbr>Logging<wbr>Stackdriver<wbr>Only</dt>
+    <dd>STACKDRIVER_ONLY{{% md %}}This option is the same as CLOUD_LOGGING_ONLY.{{% /md %}}</dd><dt>Build<wbr>Options<wbr>Logging<wbr>Cloud<wbr>Logging<wbr>Only</dt>
+    <dd>CLOUD_LOGGING_ONLY{{% md %}}Only Cloud Logging is enabled. Note that logs for both the Cloud Console UI and Cloud SDK are based on Cloud Storage logs, so neither will provide logs if this option is chosen.{{% /md %}}</dd><dt>Build<wbr>Options<wbr>Logging<wbr>None</dt>
+    <dd>NONE{{% md %}}Turn off all logging. No build logs will be captured.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Logging<wbr>Unspecified</dt>
+    <dd>LOGGING_UNSPECIFIED{{% md %}}The service determines the logging mode. The default is `LEGACY`. Do not rely on the default logging behavior as it may change in the future.{{% /md %}}</dd><dt>Legacy</dt>
+    <dd>LEGACY{{% md %}}Cloud Logging and Cloud Storage logging are enabled.{{% /md %}}</dd><dt>Gcs<wbr>Only</dt>
+    <dd>GCS_ONLY{{% md %}}Only Cloud Storage logging is enabled.{{% /md %}}</dd><dt>Stackdriver<wbr>Only</dt>
+    <dd>STACKDRIVER_ONLY{{% md %}}This option is the same as CLOUD_LOGGING_ONLY.{{% /md %}}</dd><dt>Cloud<wbr>Logging<wbr>Only</dt>
+    <dd>CLOUD_LOGGING_ONLY{{% md %}}Only Cloud Logging is enabled. Note that logs for both the Cloud Console UI and Cloud SDK are based on Cloud Storage logs, so neither will provide logs if this option is chosen.{{% /md %}}</dd><dt>None</dt>
+    <dd>NONE{{% md %}}Turn off all logging. No build logs will be captured.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LOGGING_UNSPECIFIED</dt>
+    <dd>LOGGING_UNSPECIFIED{{% md %}}The service determines the logging mode. The default is `LEGACY`. Do not rely on the default logging behavior as it may change in the future.{{% /md %}}</dd><dt>LEGACY</dt>
+    <dd>LEGACY{{% md %}}Cloud Logging and Cloud Storage logging are enabled.{{% /md %}}</dd><dt>GCS_ONLY</dt>
+    <dd>GCS_ONLY{{% md %}}Only Cloud Storage logging is enabled.{{% /md %}}</dd><dt>STACKDRIVER_ONLY</dt>
+    <dd>STACKDRIVER_ONLY{{% md %}}This option is the same as CLOUD_LOGGING_ONLY.{{% /md %}}</dd><dt>CLOUD_LOGGING_ONLY</dt>
+    <dd>CLOUD_LOGGING_ONLY{{% md %}}Only Cloud Logging is enabled. Note that logs for both the Cloud Console UI and Cloud SDK are based on Cloud Storage logs, so neither will provide logs if this option is chosen.{{% /md %}}</dd><dt>NONE</dt>
+    <dd>NONE{{% md %}}Turn off all logging. No build logs will be captured.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="buildoptionsmachinetype">Build<wbr>Options<wbr>Machine<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Standard machine type.{{% /md %}}</dd><dt>N1Highcpu8</dt>
+    <dd>N1_HIGHCPU_8{{% md %}}Highcpu machine with 8 CPUs.{{% /md %}}</dd><dt>N1Highcpu32</dt>
+    <dd>N1_HIGHCPU_32{{% md %}}Highcpu machine with 32 CPUs.{{% /md %}}</dd><dt>E2Highcpu8</dt>
+    <dd>E2_HIGHCPU_8{{% md %}}Highcpu e2 machine with 8 CPUs.{{% /md %}}</dd><dt>E2Highcpu32</dt>
+    <dd>E2_HIGHCPU_32{{% md %}}Highcpu e2 machine with 32 CPUs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Build<wbr>Options<wbr>Machine<wbr>Type<wbr>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Standard machine type.{{% /md %}}</dd><dt>Build<wbr>Options<wbr>Machine<wbr>Type<wbr>N1Highcpu8</dt>
+    <dd>N1_HIGHCPU_8{{% md %}}Highcpu machine with 8 CPUs.{{% /md %}}</dd><dt>Build<wbr>Options<wbr>Machine<wbr>Type<wbr>N1Highcpu32</dt>
+    <dd>N1_HIGHCPU_32{{% md %}}Highcpu machine with 32 CPUs.{{% /md %}}</dd><dt>Build<wbr>Options<wbr>Machine<wbr>Type<wbr>E2Highcpu8</dt>
+    <dd>E2_HIGHCPU_8{{% md %}}Highcpu e2 machine with 8 CPUs.{{% /md %}}</dd><dt>Build<wbr>Options<wbr>Machine<wbr>Type<wbr>E2Highcpu32</dt>
+    <dd>E2_HIGHCPU_32{{% md %}}Highcpu e2 machine with 32 CPUs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Standard machine type.{{% /md %}}</dd><dt>N1Highcpu8</dt>
+    <dd>N1_HIGHCPU_8{{% md %}}Highcpu machine with 8 CPUs.{{% /md %}}</dd><dt>N1Highcpu32</dt>
+    <dd>N1_HIGHCPU_32{{% md %}}Highcpu machine with 32 CPUs.{{% /md %}}</dd><dt>E2Highcpu8</dt>
+    <dd>E2_HIGHCPU_8{{% md %}}Highcpu e2 machine with 8 CPUs.{{% /md %}}</dd><dt>E2Highcpu32</dt>
+    <dd>E2_HIGHCPU_32{{% md %}}Highcpu e2 machine with 32 CPUs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED</dt>
+    <dd>UNSPECIFIED{{% md %}}Standard machine type.{{% /md %}}</dd><dt>N1_HIGHCPU8</dt>
+    <dd>N1_HIGHCPU_8{{% md %}}Highcpu machine with 8 CPUs.{{% /md %}}</dd><dt>N1_HIGHCPU32</dt>
+    <dd>N1_HIGHCPU_32{{% md %}}Highcpu machine with 32 CPUs.{{% /md %}}</dd><dt>E2_HIGHCPU8</dt>
+    <dd>E2_HIGHCPU_8{{% md %}}Highcpu e2 machine with 8 CPUs.{{% /md %}}</dd><dt>E2_HIGHCPU32</dt>
+    <dd>E2_HIGHCPU_32{{% md %}}Highcpu e2 machine with 32 CPUs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="buildoptionsrequestedverifyoption">Build<wbr>Options<wbr>Requested<wbr>Verify<wbr>Option</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Not<wbr>Verified</dt>
+    <dd>NOT_VERIFIED{{% md %}}Not a verifiable build. (default){{% /md %}}</dd><dt>Verified</dt>
+    <dd>VERIFIED{{% md %}}Verified build.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Build<wbr>Options<wbr>Requested<wbr>Verify<wbr>Option<wbr>Not<wbr>Verified</dt>
+    <dd>NOT_VERIFIED{{% md %}}Not a verifiable build. (default){{% /md %}}</dd><dt>Build<wbr>Options<wbr>Requested<wbr>Verify<wbr>Option<wbr>Verified</dt>
+    <dd>VERIFIED{{% md %}}Verified build.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Not<wbr>Verified</dt>
+    <dd>NOT_VERIFIED{{% md %}}Not a verifiable build. (default){{% /md %}}</dd><dt>Verified</dt>
+    <dd>VERIFIED{{% md %}}Verified build.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NOT_VERIFIED</dt>
+    <dd>NOT_VERIFIED{{% md %}}Not a verifiable build. (default){{% /md %}}</dd><dt>VERIFIED</dt>
+    <dd>VERIFIED{{% md %}}Verified build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="buildoptionsresponse">Build<wbr>Options<wbr>Response</h4>
@@ -2276,6 +2412,62 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option to specify a `WorkerPool` for the build. Format: projects/{project}/locations/{location}/workerPools/{workerPool} This field is in beta and is available only to restricted users.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="buildoptionssourceprovenancehashitem">Build<wbr>Options<wbr>Source<wbr>Provenance<wbr>Hash<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE{{% md %}}No hash requested.{{% /md %}}</dd><dt>Sha256</dt>
+    <dd>SHA256{{% md %}}Use a sha256 hash.{{% /md %}}</dd><dt>Md5</dt>
+    <dd>MD5{{% md %}}Use a md5 hash.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Build<wbr>Options<wbr>Source<wbr>Provenance<wbr>Hash<wbr>Item<wbr>None</dt>
+    <dd>NONE{{% md %}}No hash requested.{{% /md %}}</dd><dt>Build<wbr>Options<wbr>Source<wbr>Provenance<wbr>Hash<wbr>Item<wbr>Sha256</dt>
+    <dd>SHA256{{% md %}}Use a sha256 hash.{{% /md %}}</dd><dt>Build<wbr>Options<wbr>Source<wbr>Provenance<wbr>Hash<wbr>Item<wbr>Md5</dt>
+    <dd>MD5{{% md %}}Use a md5 hash.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE{{% md %}}No hash requested.{{% /md %}}</dd><dt>Sha256</dt>
+    <dd>SHA256{{% md %}}Use a sha256 hash.{{% /md %}}</dd><dt>Md5</dt>
+    <dd>MD5{{% md %}}Use a md5 hash.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NONE</dt>
+    <dd>NONE{{% md %}}No hash requested.{{% /md %}}</dd><dt>SHA256</dt>
+    <dd>SHA256{{% md %}}Use a sha256 hash.{{% /md %}}</dd><dt>MD5</dt>
+    <dd>MD5{{% md %}}Use a md5 hash.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="buildoptionssubstitutionoption">Build<wbr>Options<wbr>Substitution<wbr>Option</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Must<wbr>Match</dt>
+    <dd>MUST_MATCH{{% md %}}Fails the build if error in substitutions checks, like missing a substitution in the template or in the map.{{% /md %}}</dd><dt>Allow<wbr>Loose</dt>
+    <dd>ALLOW_LOOSE{{% md %}}Do not fail the build if error in substitutions checks.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Build<wbr>Options<wbr>Substitution<wbr>Option<wbr>Must<wbr>Match</dt>
+    <dd>MUST_MATCH{{% md %}}Fails the build if error in substitutions checks, like missing a substitution in the template or in the map.{{% /md %}}</dd><dt>Build<wbr>Options<wbr>Substitution<wbr>Option<wbr>Allow<wbr>Loose</dt>
+    <dd>ALLOW_LOOSE{{% md %}}Do not fail the build if error in substitutions checks.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Must<wbr>Match</dt>
+    <dd>MUST_MATCH{{% md %}}Fails the build if error in substitutions checks, like missing a substitution in the template or in the map.{{% /md %}}</dd><dt>Allow<wbr>Loose</dt>
+    <dd>ALLOW_LOOSE{{% md %}}Do not fail the build if error in substitutions checks.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MUST_MATCH</dt>
+    <dd>MUST_MATCH{{% md %}}Fails the build if error in substitutions checks, like missing a substitution in the template or in the map.{{% /md %}}</dd><dt>ALLOW_LOOSE</dt>
+    <dd>ALLOW_LOOSE{{% md %}}Do not fail the build if error in substitutions checks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="buildstep">Build<wbr>Step</h4>

@@ -34,7 +34,7 @@ Creates a new `Note`.
          <span class="nx">deployable</span><span class="p">:</span> <span class="nx">Optional[_containeranalysis_v1alpha1.DeployableArgs]</span> = None<span class="p">,</span>
          <span class="nx">discovery</span><span class="p">:</span> <span class="nx">Optional[_containeranalysis_v1alpha1.DiscoveryArgs]</span> = None<span class="p">,</span>
          <span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-         <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[_containeranalysis_v1alpha1.NoteKind]</span> = None<span class="p">,</span>
          <span class="nx">long_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">note_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -242,7 +242,7 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#notekind">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Note<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}This explicitly denotes which kind of note is specified. This field can be used as a filter in list requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +390,7 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#notekind">Note<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}This explicitly denotes which kind of note is specified. This field can be used as a filter in list requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +538,7 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#notekind">Note<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}This explicitly denotes which kind of note is specified. This field can be used as a filter in list requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +686,7 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#notekind">Note<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}This explicitly denotes which kind of note is specified. This field can be used as a filter in list requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1209,7 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytype_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildsignaturekeytype">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Build<wbr>Signature<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the key, either stored in `public_key` or referenced in `key_id`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1245,7 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytype_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildsignaturekeytype">Build<wbr>Signature<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the key, either stored in `public_key` or referenced in `key_id`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1281,7 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#buildsignaturekeytype">Build<wbr>Signature<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the key, either stored in `public_key` or referenced in `key_id`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1317,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#buildsignaturekeytype">Build<wbr>Signature<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the key, either stored in `public_key` or referenced in `key_id`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1336,6 +1336,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Signature of the related `BuildProvenance`, encoded in a base64 string.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="buildsignaturekeytype">Build<wbr>Signature<wbr>Key<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Key<wbr>Type<wbr>Unspecified</dt>
+    <dd>KEY_TYPE_UNSPECIFIED{{% md %}}`KeyType` is not set.{{% /md %}}</dd><dt>Pgp<wbr>Ascii<wbr>Armored</dt>
+    <dd>PGP_ASCII_ARMORED{{% md %}}`PGP ASCII Armored` public key.{{% /md %}}</dd><dt>Pkix<wbr>Pem</dt>
+    <dd>PKIX_PEM{{% md %}}`PKIX PEM` public key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Build<wbr>Signature<wbr>Key<wbr>Type<wbr>Key<wbr>Type<wbr>Unspecified</dt>
+    <dd>KEY_TYPE_UNSPECIFIED{{% md %}}`KeyType` is not set.{{% /md %}}</dd><dt>Build<wbr>Signature<wbr>Key<wbr>Type<wbr>Pgp<wbr>Ascii<wbr>Armored</dt>
+    <dd>PGP_ASCII_ARMORED{{% md %}}`PGP ASCII Armored` public key.{{% /md %}}</dd><dt>Build<wbr>Signature<wbr>Key<wbr>Type<wbr>Pkix<wbr>Pem</dt>
+    <dd>PKIX_PEM{{% md %}}`PKIX PEM` public key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Key<wbr>Type<wbr>Unspecified</dt>
+    <dd>KEY_TYPE_UNSPECIFIED{{% md %}}`KeyType` is not set.{{% /md %}}</dd><dt>Pgp<wbr>Ascii<wbr>Armored</dt>
+    <dd>PGP_ASCII_ARMORED{{% md %}}`PGP ASCII Armored` public key.{{% /md %}}</dd><dt>Pkix<wbr>Pem</dt>
+    <dd>PKIX_PEM{{% md %}}`PKIX PEM` public key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>KEY_TYPE_UNSPECIFIED</dt>
+    <dd>KEY_TYPE_UNSPECIFIED{{% md %}}`KeyType` is not set.{{% /md %}}</dd><dt>PGP_ASCII_ARMORED</dt>
+    <dd>PGP_ASCII_ARMORED{{% md %}}`PGP ASCII Armored` public key.{{% /md %}}</dd><dt>PKIX_PEM</dt>
+    <dd>PKIX_PEM{{% md %}}`PKIX PEM` public key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="buildsignatureresponse">Build<wbr>Signature<wbr>Response</h4>
@@ -2497,7 +2527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analysiskind_csharp" style="color: inherit; text-decoration: inherit;">Analysis<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#discoveryanalysiskind">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Discovery<wbr>Analysis<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of analysis that is handled by this discovery.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2509,7 +2539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analysiskind_go" style="color: inherit; text-decoration: inherit;">Analysis<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#discoveryanalysiskind">Discovery<wbr>Analysis<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of analysis that is handled by this discovery.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2521,7 +2551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analysiskind_nodejs" style="color: inherit; text-decoration: inherit;">analysis<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#discoveryanalysiskind">Discovery<wbr>Analysis<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of analysis that is handled by this discovery.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2533,9 +2563,63 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analysis_kind_python" style="color: inherit; text-decoration: inherit;">analysis_<wbr>kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#discoveryanalysiskind">Discovery<wbr>Analysis<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of analysis that is handled by this discovery.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="discoveryanalysiskind">Discovery<wbr>Analysis<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Kind<wbr>Unspecified</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Package<wbr>Vulnerability</dt>
+    <dd>PACKAGE_VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>Build<wbr>Details</dt>
+    <dd>BUILD_DETAILS{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>Image<wbr>Basis</dt>
+    <dd>IMAGE_BASIS{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>Package<wbr>Manager</dt>
+    <dd>PACKAGE_MANAGER{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>Deployable</dt>
+    <dd>DEPLOYABLE{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>Discovery</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>Attestation<wbr>Authority</dt>
+    <dd>ATTESTATION_AUTHORITY{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>Upgrade</dt>
+    <dd>UPGRADE{{% md %}}This represents an available software upgrade.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Kind<wbr>Unspecified</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Package<wbr>Vulnerability</dt>
+    <dd>PACKAGE_VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Build<wbr>Details</dt>
+    <dd>BUILD_DETAILS{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Image<wbr>Basis</dt>
+    <dd>IMAGE_BASIS{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Package<wbr>Manager</dt>
+    <dd>PACKAGE_MANAGER{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Deployable</dt>
+    <dd>DEPLOYABLE{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Discovery</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Attestation<wbr>Authority</dt>
+    <dd>ATTESTATION_AUTHORITY{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>Discovery<wbr>Analysis<wbr>Kind<wbr>Upgrade</dt>
+    <dd>UPGRADE{{% md %}}This represents an available software upgrade.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Kind<wbr>Unspecified</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Package<wbr>Vulnerability</dt>
+    <dd>PACKAGE_VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>Build<wbr>Details</dt>
+    <dd>BUILD_DETAILS{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>Image<wbr>Basis</dt>
+    <dd>IMAGE_BASIS{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>Package<wbr>Manager</dt>
+    <dd>PACKAGE_MANAGER{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>Deployable</dt>
+    <dd>DEPLOYABLE{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>Discovery</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>Attestation<wbr>Authority</dt>
+    <dd>ATTESTATION_AUTHORITY{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>Upgrade</dt>
+    <dd>UPGRADE{{% md %}}This represents an available software upgrade.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>KIND_UNSPECIFIED</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>PACKAGE_VULNERABILITY</dt>
+    <dd>PACKAGE_VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>BUILD_DETAILS</dt>
+    <dd>BUILD_DETAILS{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>IMAGE_BASIS</dt>
+    <dd>IMAGE_BASIS{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>PACKAGE_MANAGER</dt>
+    <dd>PACKAGE_MANAGER{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>DEPLOYABLE</dt>
+    <dd>DEPLOYABLE{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>DISCOVERY</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>ATTESTATION_AUTHORITY</dt>
+    <dd>ATTESTATION_AUTHORITY{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>UPGRADE</dt>
+    <dd>UPGRADE{{% md %}}This represents an available software upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="discoveryresponse">Discovery<wbr>Response</h4>
@@ -2597,7 +2681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#architecture_csharp" style="color: inherit; text-decoration: inherit;">Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#distributionarchitecture">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Distribution<wbr>Architecture</a></span>
     </dt>
     <dd>{{% md %}}The CPU architecture for which packages in this distribution channel were built{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2649,7 +2733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#architecture_go" style="color: inherit; text-decoration: inherit;">Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#distributionarchitecture">Distribution<wbr>Architecture</a></span>
     </dt>
     <dd>{{% md %}}The CPU architecture for which packages in this distribution channel were built{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2701,7 +2785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#distributionarchitecture">Distribution<wbr>Architecture</a></span>
     </dt>
     <dd>{{% md %}}The CPU architecture for which packages in this distribution channel were built{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2753,7 +2837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#distributionarchitecture">Distribution<wbr>Architecture</a></span>
     </dt>
     <dd>{{% md %}}The CPU architecture for which packages in this distribution channel were built{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2796,6 +2880,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The distribution channel-specific homepage for this package.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="distributionarchitecture">Distribution<wbr>Architecture</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Architecture<wbr>Unspecified</dt>
+    <dd>ARCHITECTURE_UNSPECIFIED{{% md %}}Unknown architecture{{% /md %}}</dd><dt>X86</dt>
+    <dd>X86{{% md %}}X86 architecture{{% /md %}}</dd><dt>X64</dt>
+    <dd>X64{{% md %}}X64 architecture{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Distribution<wbr>Architecture<wbr>Architecture<wbr>Unspecified</dt>
+    <dd>ARCHITECTURE_UNSPECIFIED{{% md %}}Unknown architecture{{% /md %}}</dd><dt>Distribution<wbr>Architecture<wbr>X86</dt>
+    <dd>X86{{% md %}}X86 architecture{{% /md %}}</dd><dt>Distribution<wbr>Architecture<wbr>X64</dt>
+    <dd>X64{{% md %}}X64 architecture{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Architecture<wbr>Unspecified</dt>
+    <dd>ARCHITECTURE_UNSPECIFIED{{% md %}}Unknown architecture{{% /md %}}</dd><dt>X86</dt>
+    <dd>X86{{% md %}}X86 architecture{{% /md %}}</dd><dt>X64</dt>
+    <dd>X64{{% md %}}X64 architecture{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ARCHITECTURE_UNSPECIFIED</dt>
+    <dd>ARCHITECTURE_UNSPECIFIED{{% md %}}Unknown architecture{{% /md %}}</dd><dt>X86</dt>
+    <dd>X86{{% md %}}X86 architecture{{% /md %}}</dd><dt>X64</dt>
+    <dd>X64{{% md %}}X64 architecture{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributionresponse">Distribution<wbr>Response</h4>
@@ -3234,6 +3348,60 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the image's v2 blobs computed via: [bottom] := v2_blobbottom := sha256(v2_blob[N] + " " + v2_name[N+1]) Only the name of the final blob is kept. This field can be used as a filter in list requests.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="notekind">Note<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Kind<wbr>Unspecified</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Package<wbr>Vulnerability</dt>
+    <dd>PACKAGE_VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>Build<wbr>Details</dt>
+    <dd>BUILD_DETAILS{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>Image<wbr>Basis</dt>
+    <dd>IMAGE_BASIS{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>Package<wbr>Manager</dt>
+    <dd>PACKAGE_MANAGER{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>Deployable</dt>
+    <dd>DEPLOYABLE{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>Discovery</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>Attestation<wbr>Authority</dt>
+    <dd>ATTESTATION_AUTHORITY{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>Upgrade</dt>
+    <dd>UPGRADE{{% md %}}This represents an available software upgrade.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Note<wbr>Kind<wbr>Kind<wbr>Unspecified</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Note<wbr>Kind<wbr>Package<wbr>Vulnerability</dt>
+    <dd>PACKAGE_VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>Note<wbr>Kind<wbr>Build<wbr>Details</dt>
+    <dd>BUILD_DETAILS{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>Note<wbr>Kind<wbr>Image<wbr>Basis</dt>
+    <dd>IMAGE_BASIS{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>Note<wbr>Kind<wbr>Package<wbr>Manager</dt>
+    <dd>PACKAGE_MANAGER{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>Note<wbr>Kind<wbr>Deployable</dt>
+    <dd>DEPLOYABLE{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>Note<wbr>Kind<wbr>Discovery</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>Note<wbr>Kind<wbr>Attestation<wbr>Authority</dt>
+    <dd>ATTESTATION_AUTHORITY{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>Note<wbr>Kind<wbr>Upgrade</dt>
+    <dd>UPGRADE{{% md %}}This represents an available software upgrade.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Kind<wbr>Unspecified</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Package<wbr>Vulnerability</dt>
+    <dd>PACKAGE_VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>Build<wbr>Details</dt>
+    <dd>BUILD_DETAILS{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>Image<wbr>Basis</dt>
+    <dd>IMAGE_BASIS{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>Package<wbr>Manager</dt>
+    <dd>PACKAGE_MANAGER{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>Deployable</dt>
+    <dd>DEPLOYABLE{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>Discovery</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>Attestation<wbr>Authority</dt>
+    <dd>ATTESTATION_AUTHORITY{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>Upgrade</dt>
+    <dd>UPGRADE{{% md %}}This represents an available software upgrade.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>KIND_UNSPECIFIED</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>PACKAGE_VULNERABILITY</dt>
+    <dd>PACKAGE_VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>BUILD_DETAILS</dt>
+    <dd>BUILD_DETAILS{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>IMAGE_BASIS</dt>
+    <dd>IMAGE_BASIS{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>PACKAGE_MANAGER</dt>
+    <dd>PACKAGE_MANAGER{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>DEPLOYABLE</dt>
+    <dd>DEPLOYABLE{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>DISCOVERY</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>ATTESTATION_AUTHORITY</dt>
+    <dd>ATTESTATION_AUTHORITY{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>UPGRADE</dt>
+    <dd>UPGRADE{{% md %}}This represents an available software upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="package">Package</h4>
@@ -4109,7 +4277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#versionkind">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Version<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4153,7 +4321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#versionkind">Version<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4197,7 +4365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#versionkind">Version<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4241,7 +4409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#versionkind">Version<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4260,6 +4428,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The iteration of the package build from the above version.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="versionkind">Version<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Normal</dt>
+    <dd>NORMAL{{% md %}}A standard package version, defined by the other fields.{{% /md %}}</dd><dt>Minimum</dt>
+    <dd>MINIMUM{{% md %}}A special version representing negative infinity, other fields are ignored.{{% /md %}}</dd><dt>Maximum</dt>
+    <dd>MAXIMUM{{% md %}}A special version representing positive infinity, other fields are ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Version<wbr>Kind<wbr>Normal</dt>
+    <dd>NORMAL{{% md %}}A standard package version, defined by the other fields.{{% /md %}}</dd><dt>Version<wbr>Kind<wbr>Minimum</dt>
+    <dd>MINIMUM{{% md %}}A special version representing negative infinity, other fields are ignored.{{% /md %}}</dd><dt>Version<wbr>Kind<wbr>Maximum</dt>
+    <dd>MAXIMUM{{% md %}}A special version representing positive infinity, other fields are ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Normal</dt>
+    <dd>NORMAL{{% md %}}A standard package version, defined by the other fields.{{% /md %}}</dd><dt>Minimum</dt>
+    <dd>MINIMUM{{% md %}}A special version representing negative infinity, other fields are ignored.{{% /md %}}</dd><dt>Maximum</dt>
+    <dd>MAXIMUM{{% md %}}A special version representing positive infinity, other fields are ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NORMAL</dt>
+    <dd>NORMAL{{% md %}}A standard package version, defined by the other fields.{{% /md %}}</dd><dt>MINIMUM</dt>
+    <dd>MINIMUM{{% md %}}A special version representing negative infinity, other fields are ignored.{{% /md %}}</dd><dt>MAXIMUM</dt>
+    <dd>MAXIMUM{{% md %}}A special version representing positive infinity, other fields are ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="versionresponse">Version<wbr>Response</h4>
@@ -4693,7 +4891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#vulnerabilitytypeseverity">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Vulnerability<wbr>Type<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}Note provider assigned impact of the vulnerability{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4721,7 +4919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#vulnerabilitytypeseverity">Vulnerability<wbr>Type<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}Note provider assigned impact of the vulnerability{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4749,7 +4947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#vulnerabilitytypeseverity">Vulnerability<wbr>Type<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}Note provider assigned impact of the vulnerability{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4777,7 +4975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#vulnerabilitytypeseverity">Vulnerability<wbr>Type<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}Note provider assigned impact of the vulnerability{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4894,6 +5092,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Note provider assigned impact of the vulnerability{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="vulnerabilitytypeseverity">Vulnerability<wbr>Type<wbr>Severity</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Severity<wbr>Unspecified</dt>
+    <dd>SEVERITY_UNSPECIFIED{{% md %}}Unknown Impact{{% /md %}}</dd><dt>Minimal</dt>
+    <dd>MINIMAL{{% md %}}Minimal Impact{{% /md %}}</dd><dt>Low</dt>
+    <dd>LOW{{% md %}}Low Impact{{% /md %}}</dd><dt>Medium</dt>
+    <dd>MEDIUM{{% md %}}Medium Impact{{% /md %}}</dd><dt>High</dt>
+    <dd>HIGH{{% md %}}High Impact{{% /md %}}</dd><dt>Critical</dt>
+    <dd>CRITICAL{{% md %}}Critical Impact{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Vulnerability<wbr>Type<wbr>Severity<wbr>Severity<wbr>Unspecified</dt>
+    <dd>SEVERITY_UNSPECIFIED{{% md %}}Unknown Impact{{% /md %}}</dd><dt>Vulnerability<wbr>Type<wbr>Severity<wbr>Minimal</dt>
+    <dd>MINIMAL{{% md %}}Minimal Impact{{% /md %}}</dd><dt>Vulnerability<wbr>Type<wbr>Severity<wbr>Low</dt>
+    <dd>LOW{{% md %}}Low Impact{{% /md %}}</dd><dt>Vulnerability<wbr>Type<wbr>Severity<wbr>Medium</dt>
+    <dd>MEDIUM{{% md %}}Medium Impact{{% /md %}}</dd><dt>Vulnerability<wbr>Type<wbr>Severity<wbr>High</dt>
+    <dd>HIGH{{% md %}}High Impact{{% /md %}}</dd><dt>Vulnerability<wbr>Type<wbr>Severity<wbr>Critical</dt>
+    <dd>CRITICAL{{% md %}}Critical Impact{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Severity<wbr>Unspecified</dt>
+    <dd>SEVERITY_UNSPECIFIED{{% md %}}Unknown Impact{{% /md %}}</dd><dt>Minimal</dt>
+    <dd>MINIMAL{{% md %}}Minimal Impact{{% /md %}}</dd><dt>Low</dt>
+    <dd>LOW{{% md %}}Low Impact{{% /md %}}</dd><dt>Medium</dt>
+    <dd>MEDIUM{{% md %}}Medium Impact{{% /md %}}</dd><dt>High</dt>
+    <dd>HIGH{{% md %}}High Impact{{% /md %}}</dd><dt>Critical</dt>
+    <dd>CRITICAL{{% md %}}Critical Impact{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SEVERITY_UNSPECIFIED</dt>
+    <dd>SEVERITY_UNSPECIFIED{{% md %}}Unknown Impact{{% /md %}}</dd><dt>MINIMAL</dt>
+    <dd>MINIMAL{{% md %}}Minimal Impact{{% /md %}}</dd><dt>LOW</dt>
+    <dd>LOW{{% md %}}Low Impact{{% /md %}}</dd><dt>MEDIUM</dt>
+    <dd>MEDIUM{{% md %}}Medium Impact{{% /md %}}</dd><dt>HIGH</dt>
+    <dd>HIGH{{% md %}}High Impact{{% /md %}}</dd><dt>CRITICAL</dt>
+    <dd>CRITICAL{{% md %}}Critical Impact{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

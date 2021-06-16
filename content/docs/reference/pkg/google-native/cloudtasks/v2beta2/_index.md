@@ -16,6 +16,13 @@ Explore the resources and functions of the google-native.cloudtasks/v2beta2 modu
     <li><a href="task" title="Task"><span class="symbol resource"></span>Task</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getqueue" title="GetQueue"><span class="symbol function"></span>GetQueue</a></li>
+    <li><a href="getqueueiampolicy" title="GetQueueIamPolicy"><span class="symbol function"></span>GetQueueIamPolicy</a></li>
+    <li><a href="gettask" title="GetTask"><span class="symbol function"></span>GetTask</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -23,6 +30,6 @@ Explore the resources and functions of the google-native.cloudtasks/v2beta2 modu
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

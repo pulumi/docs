@@ -29,7 +29,7 @@ Creates an App Engine application for a Google Cloud Platform project. Required 
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">auth_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">code_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">database_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">database_type</span><span class="p">:</span> <span class="nx">Optional[_appengine_v1beta.AppDatabaseType]</span> = None<span class="p">,</span>
         <span class="nx">default_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">default_cookie_expiration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">default_hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -40,7 +40,7 @@ Creates an App Engine application for a Google Cloud Platform project. Required 
         <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+        <span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[_appengine_v1beta.AppServingStatus]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">App</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[AppArgs]</a></span> = None<span class="p">,</span>
@@ -190,7 +190,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#databasetype_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#appdatabasetype">Pulumi.<wbr>Google<wbr>Native.<wbr>App<wbr>Engine.<wbr>V1Beta.<wbr>App<wbr>Database<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the Cloud Firestore or Cloud Datastore database associated with this application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -278,7 +278,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#servingstatus_csharp" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#appservingstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>App<wbr>Engine.<wbr>V1Beta.<wbr>App<wbr>Serving<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Serving status of this application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -306,7 +306,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#databasetype_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#appdatabasetype">App<wbr>Database<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the Cloud Firestore or Cloud Datastore database associated with this application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +394,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#servingstatus_go" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#appservingstatus">App<wbr>Serving<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Serving status of this application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -422,7 +422,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#databasetype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#appdatabasetype">App<wbr>Database<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the Cloud Firestore or Cloud Datastore database associated with this application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +510,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#servingstatus_nodejs" style="color: inherit; text-decoration: inherit;">serving<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#appservingstatus">App<wbr>Serving<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Serving status of this application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -538,7 +538,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#appdatabasetype">App<wbr>Database<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the Cloud Firestore or Cloud Datastore database associated with this application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +626,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#serving_status_python" style="color: inherit; text-decoration: inherit;">serving_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#appservingstatus">App<wbr>Serving<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Serving status of this application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -695,6 +695,74 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="appdatabasetype">App<wbr>Database<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Database<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATABASE_TYPE_UNSPECIFIED{{% md %}}Database type is unspecified.{{% /md %}}</dd><dt>Cloud<wbr>Datastore</dt>
+    <dd>CLOUD_DATASTORE{{% md %}}Cloud Datastore{{% /md %}}</dd><dt>Cloud<wbr>Firestore</dt>
+    <dd>CLOUD_FIRESTORE{{% md %}}Cloud Firestore Native{{% /md %}}</dd><dt>Cloud<wbr>Datastore<wbr>Compatibility</dt>
+    <dd>CLOUD_DATASTORE_COMPATIBILITY{{% md %}}Cloud Firestore in Datastore Mode{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>App<wbr>Database<wbr>Type<wbr>Database<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATABASE_TYPE_UNSPECIFIED{{% md %}}Database type is unspecified.{{% /md %}}</dd><dt>App<wbr>Database<wbr>Type<wbr>Cloud<wbr>Datastore</dt>
+    <dd>CLOUD_DATASTORE{{% md %}}Cloud Datastore{{% /md %}}</dd><dt>App<wbr>Database<wbr>Type<wbr>Cloud<wbr>Firestore</dt>
+    <dd>CLOUD_FIRESTORE{{% md %}}Cloud Firestore Native{{% /md %}}</dd><dt>App<wbr>Database<wbr>Type<wbr>Cloud<wbr>Datastore<wbr>Compatibility</dt>
+    <dd>CLOUD_DATASTORE_COMPATIBILITY{{% md %}}Cloud Firestore in Datastore Mode{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Database<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATABASE_TYPE_UNSPECIFIED{{% md %}}Database type is unspecified.{{% /md %}}</dd><dt>Cloud<wbr>Datastore</dt>
+    <dd>CLOUD_DATASTORE{{% md %}}Cloud Datastore{{% /md %}}</dd><dt>Cloud<wbr>Firestore</dt>
+    <dd>CLOUD_FIRESTORE{{% md %}}Cloud Firestore Native{{% /md %}}</dd><dt>Cloud<wbr>Datastore<wbr>Compatibility</dt>
+    <dd>CLOUD_DATASTORE_COMPATIBILITY{{% md %}}Cloud Firestore in Datastore Mode{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DATABASE_TYPE_UNSPECIFIED</dt>
+    <dd>DATABASE_TYPE_UNSPECIFIED{{% md %}}Database type is unspecified.{{% /md %}}</dd><dt>CLOUD_DATASTORE</dt>
+    <dd>CLOUD_DATASTORE{{% md %}}Cloud Datastore{{% /md %}}</dd><dt>CLOUD_FIRESTORE</dt>
+    <dd>CLOUD_FIRESTORE{{% md %}}Cloud Firestore Native{{% /md %}}</dd><dt>CLOUD_DATASTORE_COMPATIBILITY</dt>
+    <dd>CLOUD_DATASTORE_COMPATIBILITY{{% md %}}Cloud Firestore in Datastore Mode{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="appservingstatus">App<wbr>Serving<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Serving status is unspecified.{{% /md %}}</dd><dt>Serving</dt>
+    <dd>SERVING{{% md %}}Application is serving.{{% /md %}}</dd><dt>User<wbr>Disabled</dt>
+    <dd>USER_DISABLED{{% md %}}Application has been disabled by the user.{{% /md %}}</dd><dt>System<wbr>Disabled</dt>
+    <dd>SYSTEM_DISABLED{{% md %}}Application has been disabled by the system.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>App<wbr>Serving<wbr>Status<wbr>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Serving status is unspecified.{{% /md %}}</dd><dt>App<wbr>Serving<wbr>Status<wbr>Serving</dt>
+    <dd>SERVING{{% md %}}Application is serving.{{% /md %}}</dd><dt>App<wbr>Serving<wbr>Status<wbr>User<wbr>Disabled</dt>
+    <dd>USER_DISABLED{{% md %}}Application has been disabled by the user.{{% /md %}}</dd><dt>App<wbr>Serving<wbr>Status<wbr>System<wbr>Disabled</dt>
+    <dd>SYSTEM_DISABLED{{% md %}}Application has been disabled by the system.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Serving status is unspecified.{{% /md %}}</dd><dt>Serving</dt>
+    <dd>SERVING{{% md %}}Application is serving.{{% /md %}}</dd><dt>User<wbr>Disabled</dt>
+    <dd>USER_DISABLED{{% md %}}Application has been disabled by the user.{{% /md %}}</dd><dt>System<wbr>Disabled</dt>
+    <dd>SYSTEM_DISABLED{{% md %}}Application has been disabled by the system.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED</dt>
+    <dd>UNSPECIFIED{{% md %}}Serving status is unspecified.{{% /md %}}</dd><dt>SERVING</dt>
+    <dd>SERVING{{% md %}}Application is serving.{{% /md %}}</dd><dt>USER_DISABLED</dt>
+    <dd>USER_DISABLED{{% md %}}Application has been disabled by the user.{{% /md %}}</dd><dt>SYSTEM_DISABLED</dt>
+    <dd>SYSTEM_DISABLED{{% md %}}Application has been disabled by the system.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="featuresettings">Feature<wbr>Settings</h4>
 

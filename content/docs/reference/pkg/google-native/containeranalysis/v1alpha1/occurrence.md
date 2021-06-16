@@ -34,7 +34,7 @@ Creates a new `Occurrence`. Use this method to create `Occurrences` for a resour
                <span class="nx">derived_image</span><span class="p">:</span> <span class="nx">Optional[_containeranalysis_v1alpha1.DerivedArgs]</span> = None<span class="p">,</span>
                <span class="nx">discovered</span><span class="p">:</span> <span class="nx">Optional[_containeranalysis_v1alpha1.DiscoveredArgs]</span> = None<span class="p">,</span>
                <span class="nx">installation</span><span class="p">:</span> <span class="nx">Optional[_containeranalysis_v1alpha1.InstallationArgs]</span> = None<span class="p">,</span>
-               <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[_containeranalysis_v1alpha1.OccurrenceKind]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">note_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -241,7 +241,7 @@ The Occurrence resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#occurrencekind">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Occurrence<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}This explicitly denotes which of the `Occurrence` details are specified. This field can be used as a filter in list requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -381,7 +381,7 @@ The Occurrence resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#occurrencekind">Occurrence<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}This explicitly denotes which of the `Occurrence` details are specified. This field can be used as a filter in list requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -521,7 +521,7 @@ The Occurrence resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#occurrencekind">Occurrence<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}This explicitly denotes which of the `Occurrence` details are specified. This field can be used as a filter in list requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -661,7 +661,7 @@ The Occurrence resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#occurrencekind">Occurrence<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}This explicitly denotes which of the `Occurrence` details are specified. This field can be used as a filter in list requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2512,7 +2512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#deploymentplatform">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Deployment<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}Platform hosting this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2572,7 +2572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#deploymentplatform">Deployment<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}Platform hosting this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2632,7 +2632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#deploymentplatform">Deployment<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}Platform hosting this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2692,7 +2692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#deploymentplatform">Deployment<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}Platform hosting this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2719,6 +2719,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identity of the user that triggered this deployment.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="deploymentplatform">Deployment<wbr>Platform</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Platform<wbr>Unspecified</dt>
+    <dd>PLATFORM_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Gke</dt>
+    <dd>GKE{{% md %}}Google Container Engine{{% /md %}}</dd><dt>Flex</dt>
+    <dd>FLEX{{% md %}}Google App Engine: Flexible Environment{{% /md %}}</dd><dt>Custom</dt>
+    <dd>CUSTOM{{% md %}}Custom user-defined platform{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Deployment<wbr>Platform<wbr>Platform<wbr>Unspecified</dt>
+    <dd>PLATFORM_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Deployment<wbr>Platform<wbr>Gke</dt>
+    <dd>GKE{{% md %}}Google Container Engine{{% /md %}}</dd><dt>Deployment<wbr>Platform<wbr>Flex</dt>
+    <dd>FLEX{{% md %}}Google App Engine: Flexible Environment{{% /md %}}</dd><dt>Deployment<wbr>Platform<wbr>Custom</dt>
+    <dd>CUSTOM{{% md %}}Custom user-defined platform{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Platform<wbr>Unspecified</dt>
+    <dd>PLATFORM_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Gke</dt>
+    <dd>GKE{{% md %}}Google Container Engine{{% /md %}}</dd><dt>Flex</dt>
+    <dd>FLEX{{% md %}}Google App Engine: Flexible Environment{{% /md %}}</dd><dt>Custom</dt>
+    <dd>CUSTOM{{% md %}}Custom user-defined platform{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PLATFORM_UNSPECIFIED</dt>
+    <dd>PLATFORM_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>GKE</dt>
+    <dd>GKE{{% md %}}Google Container Engine{{% /md %}}</dd><dt>FLEX</dt>
+    <dd>FLEX{{% md %}}Google App Engine: Flexible Environment{{% /md %}}</dd><dt>CUSTOM</dt>
+    <dd>CUSTOM{{% md %}}Custom user-defined platform{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentresponse">Deployment<wbr>Response</h4>
@@ -3264,7 +3298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analysisstatus_csharp" style="color: inherit; text-decoration: inherit;">Analysis<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#discoveredanalysisstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Discovered<wbr>Analysis<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of discovery for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3280,7 +3314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continuousanalysis_csharp" style="color: inherit; text-decoration: inherit;">Continuous<wbr>Analysis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#discoveredcontinuousanalysis">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Discovered<wbr>Continuous<wbr>Analysis</a></span>
     </dt>
     <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3300,7 +3334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analysisstatus_go" style="color: inherit; text-decoration: inherit;">Analysis<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#discoveredanalysisstatus">Discovered<wbr>Analysis<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of discovery for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3316,7 +3350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continuousanalysis_go" style="color: inherit; text-decoration: inherit;">Continuous<wbr>Analysis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#discoveredcontinuousanalysis">Discovered<wbr>Continuous<wbr>Analysis</a></span>
     </dt>
     <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3336,7 +3370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analysisstatus_nodejs" style="color: inherit; text-decoration: inherit;">analysis<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#discoveredanalysisstatus">Discovered<wbr>Analysis<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of discovery for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3352,7 +3386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continuousanalysis_nodejs" style="color: inherit; text-decoration: inherit;">continuous<wbr>Analysis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#discoveredcontinuousanalysis">Discovered<wbr>Continuous<wbr>Analysis</a></span>
     </dt>
     <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3372,7 +3406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analysis_status_python" style="color: inherit; text-decoration: inherit;">analysis_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#discoveredanalysisstatus">Discovered<wbr>Analysis<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of discovery for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3388,7 +3422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continuous_analysis_python" style="color: inherit; text-decoration: inherit;">continuous_<wbr>analysis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#discoveredcontinuousanalysis">Discovered<wbr>Continuous<wbr>Analysis</a></span>
     </dt>
     <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3399,6 +3433,78 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CPE of the resource being scanned.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="discoveredanalysisstatus">Discovered<wbr>Analysis<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Analysis<wbr>Status<wbr>Unspecified</dt>
+    <dd>ANALYSIS_STATUS_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Pending</dt>
+    <dd>PENDING{{% md %}}Resource is known but no action has been taken yet.{{% /md %}}</dd><dt>Scanning</dt>
+    <dd>SCANNING{{% md %}}Resource is being analyzed.{{% /md %}}</dd><dt>Finished<wbr>Success</dt>
+    <dd>FINISHED_SUCCESS{{% md %}}Analysis has finished successfully.{{% /md %}}</dd><dt>Finished<wbr>Failed</dt>
+    <dd>FINISHED_FAILED{{% md %}}Analysis has finished unsuccessfully, the analysis itself is in a bad state.{{% /md %}}</dd><dt>Finished<wbr>Unsupported</dt>
+    <dd>FINISHED_UNSUPPORTED{{% md %}}The resource is known not to be supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Discovered<wbr>Analysis<wbr>Status<wbr>Analysis<wbr>Status<wbr>Unspecified</dt>
+    <dd>ANALYSIS_STATUS_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Discovered<wbr>Analysis<wbr>Status<wbr>Pending</dt>
+    <dd>PENDING{{% md %}}Resource is known but no action has been taken yet.{{% /md %}}</dd><dt>Discovered<wbr>Analysis<wbr>Status<wbr>Scanning</dt>
+    <dd>SCANNING{{% md %}}Resource is being analyzed.{{% /md %}}</dd><dt>Discovered<wbr>Analysis<wbr>Status<wbr>Finished<wbr>Success</dt>
+    <dd>FINISHED_SUCCESS{{% md %}}Analysis has finished successfully.{{% /md %}}</dd><dt>Discovered<wbr>Analysis<wbr>Status<wbr>Finished<wbr>Failed</dt>
+    <dd>FINISHED_FAILED{{% md %}}Analysis has finished unsuccessfully, the analysis itself is in a bad state.{{% /md %}}</dd><dt>Discovered<wbr>Analysis<wbr>Status<wbr>Finished<wbr>Unsupported</dt>
+    <dd>FINISHED_UNSUPPORTED{{% md %}}The resource is known not to be supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Analysis<wbr>Status<wbr>Unspecified</dt>
+    <dd>ANALYSIS_STATUS_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Pending</dt>
+    <dd>PENDING{{% md %}}Resource is known but no action has been taken yet.{{% /md %}}</dd><dt>Scanning</dt>
+    <dd>SCANNING{{% md %}}Resource is being analyzed.{{% /md %}}</dd><dt>Finished<wbr>Success</dt>
+    <dd>FINISHED_SUCCESS{{% md %}}Analysis has finished successfully.{{% /md %}}</dd><dt>Finished<wbr>Failed</dt>
+    <dd>FINISHED_FAILED{{% md %}}Analysis has finished unsuccessfully, the analysis itself is in a bad state.{{% /md %}}</dd><dt>Finished<wbr>Unsupported</dt>
+    <dd>FINISHED_UNSUPPORTED{{% md %}}The resource is known not to be supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ANALYSIS_STATUS_UNSPECIFIED</dt>
+    <dd>ANALYSIS_STATUS_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>PENDING</dt>
+    <dd>PENDING{{% md %}}Resource is known but no action has been taken yet.{{% /md %}}</dd><dt>SCANNING</dt>
+    <dd>SCANNING{{% md %}}Resource is being analyzed.{{% /md %}}</dd><dt>FINISHED_SUCCESS</dt>
+    <dd>FINISHED_SUCCESS{{% md %}}Analysis has finished successfully.{{% /md %}}</dd><dt>FINISHED_FAILED</dt>
+    <dd>FINISHED_FAILED{{% md %}}Analysis has finished unsuccessfully, the analysis itself is in a bad state.{{% /md %}}</dd><dt>FINISHED_UNSUPPORTED</dt>
+    <dd>FINISHED_UNSUPPORTED{{% md %}}The resource is known not to be supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="discoveredcontinuousanalysis">Discovered<wbr>Continuous<wbr>Analysis</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Continuous<wbr>Analysis<wbr>Unspecified</dt>
+    <dd>CONTINUOUS_ANALYSIS_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Active</dt>
+    <dd>ACTIVE{{% md %}}The resource is continuously analyzed.{{% /md %}}</dd><dt>Inactive</dt>
+    <dd>INACTIVE{{% md %}}The resource is ignored for continuous analysis.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Discovered<wbr>Continuous<wbr>Analysis<wbr>Continuous<wbr>Analysis<wbr>Unspecified</dt>
+    <dd>CONTINUOUS_ANALYSIS_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Discovered<wbr>Continuous<wbr>Analysis<wbr>Active</dt>
+    <dd>ACTIVE{{% md %}}The resource is continuously analyzed.{{% /md %}}</dd><dt>Discovered<wbr>Continuous<wbr>Analysis<wbr>Inactive</dt>
+    <dd>INACTIVE{{% md %}}The resource is ignored for continuous analysis.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Continuous<wbr>Analysis<wbr>Unspecified</dt>
+    <dd>CONTINUOUS_ANALYSIS_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Active</dt>
+    <dd>ACTIVE{{% md %}}The resource is continuously analyzed.{{% /md %}}</dd><dt>Inactive</dt>
+    <dd>INACTIVE{{% md %}}The resource is ignored for continuous analysis.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CONTINUOUS_ANALYSIS_UNSPECIFIED</dt>
+    <dd>CONTINUOUS_ANALYSIS_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>ACTIVE</dt>
+    <dd>ACTIVE{{% md %}}The resource is continuously analyzed.{{% /md %}}</dd><dt>INACTIVE</dt>
+    <dd>INACTIVE{{% md %}}The resource is ignored for continuous analysis.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="discoveredresponse">Discovered<wbr>Response</h4>
@@ -3784,7 +3890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googledevtoolscontaineranalysisv1alpha1aliascontextkind">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Google<wbr>Devtools<wbr>Containeranalysis<wbr>V1alpha1Alias<wbr>Context<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The alias kind.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3804,7 +3910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googledevtoolscontaineranalysisv1alpha1aliascontextkind">Google<wbr>Devtools<wbr>Containeranalysis<wbr>V1alpha1Alias<wbr>Context<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The alias kind.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3824,7 +3930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googledevtoolscontaineranalysisv1alpha1aliascontextkind">Google<wbr>Devtools<wbr>Containeranalysis<wbr>V1alpha1Alias<wbr>Context<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The alias kind.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3844,7 +3950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googledevtoolscontaineranalysisv1alpha1aliascontextkind">Google<wbr>Devtools<wbr>Containeranalysis<wbr>V1alpha1Alias<wbr>Context<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The alias kind.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3855,6 +3961,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alias name.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googledevtoolscontaineranalysisv1alpha1aliascontextkind">Google<wbr>Devtools<wbr>Containeranalysis<wbr>V1alpha1Alias<wbr>Context<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Kind<wbr>Unspecified</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Unknown.{{% /md %}}</dd><dt>Fixed</dt>
+    <dd>FIXED{{% md %}}Git tag.{{% /md %}}</dd><dt>Movable</dt>
+    <dd>MOVABLE{{% md %}}Git branch.{{% /md %}}</dd><dt>Other</dt>
+    <dd>OTHER{{% md %}}Used to specify non-standard aliases. For example, if a Git repo has a ref named "refs/foo/bar".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Devtools<wbr>Containeranalysis<wbr>V1alpha1Alias<wbr>Context<wbr>Kind<wbr>Kind<wbr>Unspecified</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Unknown.{{% /md %}}</dd><dt>Google<wbr>Devtools<wbr>Containeranalysis<wbr>V1alpha1Alias<wbr>Context<wbr>Kind<wbr>Fixed</dt>
+    <dd>FIXED{{% md %}}Git tag.{{% /md %}}</dd><dt>Google<wbr>Devtools<wbr>Containeranalysis<wbr>V1alpha1Alias<wbr>Context<wbr>Kind<wbr>Movable</dt>
+    <dd>MOVABLE{{% md %}}Git branch.{{% /md %}}</dd><dt>Google<wbr>Devtools<wbr>Containeranalysis<wbr>V1alpha1Alias<wbr>Context<wbr>Kind<wbr>Other</dt>
+    <dd>OTHER{{% md %}}Used to specify non-standard aliases. For example, if a Git repo has a ref named "refs/foo/bar".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Kind<wbr>Unspecified</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Unknown.{{% /md %}}</dd><dt>Fixed</dt>
+    <dd>FIXED{{% md %}}Git tag.{{% /md %}}</dd><dt>Movable</dt>
+    <dd>MOVABLE{{% md %}}Git branch.{{% /md %}}</dd><dt>Other</dt>
+    <dd>OTHER{{% md %}}Used to specify non-standard aliases. For example, if a Git repo has a ref named "refs/foo/bar".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>KIND_UNSPECIFIED</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Unknown.{{% /md %}}</dd><dt>FIXED</dt>
+    <dd>FIXED{{% md %}}Git tag.{{% /md %}}</dd><dt>MOVABLE</dt>
+    <dd>MOVABLE{{% md %}}Git branch.{{% /md %}}</dd><dt>OTHER</dt>
+    <dd>OTHER{{% md %}}Used to specify non-standard aliases. For example, if a Git repo has a ref named "refs/foo/bar".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googledevtoolscontaineranalysisv1alpha1aliascontextresponse">Google<wbr>Devtools<wbr>Containeranalysis<wbr>V1alpha1Alias<wbr>Context<wbr>Response</h4>
@@ -5252,7 +5392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#hashtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Hash<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of hash that was performed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5272,7 +5412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#hashtype">Hash<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of hash that was performed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5292,7 +5432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#hashtype">Hash<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of hash that was performed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5312,7 +5452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#hashtype">Hash<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of hash that was performed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5405,6 +5545,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hash value.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="hashtype">Hash<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE{{% md %}}No hash requested.{{% /md %}}</dd><dt>Sha256</dt>
+    <dd>SHA256{{% md %}}A sha256 hash.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Hash<wbr>Type<wbr>None</dt>
+    <dd>NONE{{% md %}}No hash requested.{{% /md %}}</dd><dt>Hash<wbr>Type<wbr>Sha256</dt>
+    <dd>SHA256{{% md %}}A sha256 hash.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE{{% md %}}No hash requested.{{% /md %}}</dd><dt>Sha256</dt>
+    <dd>SHA256{{% md %}}A sha256 hash.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NONE</dt>
+    <dd>NONE{{% md %}}No hash requested.{{% /md %}}</dd><dt>SHA256</dt>
+    <dd>SHA256{{% md %}}A sha256 hash.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="installation">Installation</h4>
@@ -5588,7 +5754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directive_csharp" style="color: inherit; text-decoration: inherit;">Directive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#layerdirective">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Layer<wbr>Directive</a></span>
     </dt>
     <dd>{{% md %}}The recovered Dockerfile directive used to construct this layer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5608,7 +5774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directive_go" style="color: inherit; text-decoration: inherit;">Directive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#layerdirective">Layer<wbr>Directive</a></span>
     </dt>
     <dd>{{% md %}}The recovered Dockerfile directive used to construct this layer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5628,7 +5794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directive_nodejs" style="color: inherit; text-decoration: inherit;">directive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#layerdirective">Layer<wbr>Directive</a></span>
     </dt>
     <dd>{{% md %}}The recovered Dockerfile directive used to construct this layer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5648,9 +5814,99 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directive_python" style="color: inherit; text-decoration: inherit;">directive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#layerdirective">Layer<wbr>Directive</a></span>
     </dt>
     <dd>{{% md %}}The recovered Dockerfile directive used to construct this layer.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="layerdirective">Layer<wbr>Directive</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Directive<wbr>Unspecified</dt>
+    <dd>DIRECTIVE_UNSPECIFIED{{% md %}}Default value for unsupported/missing directive{{% /md %}}</dd><dt>Maintainer</dt>
+    <dd>MAINTAINER{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Run</dt>
+    <dd>RUN{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Cmd</dt>
+    <dd>CMD{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Label</dt>
+    <dd>LABEL{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Expose</dt>
+    <dd>EXPOSE{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Env</dt>
+    <dd>ENV{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Add</dt>
+    <dd>ADD{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Copy</dt>
+    <dd>COPY{{% md %}}https://docs.docker.com/reference/builder/#copy{{% /md %}}</dd><dt>Entrypoint</dt>
+    <dd>ENTRYPOINT{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Volume</dt>
+    <dd>VOLUME{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>User</dt>
+    <dd>USER{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Workdir</dt>
+    <dd>WORKDIR{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Arg</dt>
+    <dd>ARG{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Onbuild</dt>
+    <dd>ONBUILD{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Stopsignal</dt>
+    <dd>STOPSIGNAL{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Healthcheck</dt>
+    <dd>HEALTHCHECK{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Shell</dt>
+    <dd>SHELL{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Layer<wbr>Directive<wbr>Directive<wbr>Unspecified</dt>
+    <dd>DIRECTIVE_UNSPECIFIED{{% md %}}Default value for unsupported/missing directive{{% /md %}}</dd><dt>Layer<wbr>Directive<wbr>Maintainer</dt>
+    <dd>MAINTAINER{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Layer<wbr>Directive<wbr>Run</dt>
+    <dd>RUN{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Layer<wbr>Directive<wbr>Cmd</dt>
+    <dd>CMD{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Layer<wbr>Directive<wbr>Label</dt>
+    <dd>LABEL{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Layer<wbr>Directive<wbr>Expose</dt>
+    <dd>EXPOSE{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Layer<wbr>Directive<wbr>Env</dt>
+    <dd>ENV{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Layer<wbr>Directive<wbr>Add</dt>
+    <dd>ADD{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Layer<wbr>Directive<wbr>Copy</dt>
+    <dd>COPY{{% md %}}https://docs.docker.com/reference/builder/#copy{{% /md %}}</dd><dt>Layer<wbr>Directive<wbr>Entrypoint</dt>
+    <dd>ENTRYPOINT{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Layer<wbr>Directive<wbr>Volume</dt>
+    <dd>VOLUME{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Layer<wbr>Directive<wbr>User</dt>
+    <dd>USER{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Layer<wbr>Directive<wbr>Workdir</dt>
+    <dd>WORKDIR{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Layer<wbr>Directive<wbr>Arg</dt>
+    <dd>ARG{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Layer<wbr>Directive<wbr>Onbuild</dt>
+    <dd>ONBUILD{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Layer<wbr>Directive<wbr>Stopsignal</dt>
+    <dd>STOPSIGNAL{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Layer<wbr>Directive<wbr>Healthcheck</dt>
+    <dd>HEALTHCHECK{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Layer<wbr>Directive<wbr>Shell</dt>
+    <dd>SHELL{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Directive<wbr>Unspecified</dt>
+    <dd>DIRECTIVE_UNSPECIFIED{{% md %}}Default value for unsupported/missing directive{{% /md %}}</dd><dt>Maintainer</dt>
+    <dd>MAINTAINER{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Run</dt>
+    <dd>RUN{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Cmd</dt>
+    <dd>CMD{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Label</dt>
+    <dd>LABEL{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Expose</dt>
+    <dd>EXPOSE{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Env</dt>
+    <dd>ENV{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Add</dt>
+    <dd>ADD{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Copy</dt>
+    <dd>COPY{{% md %}}https://docs.docker.com/reference/builder/#copy{{% /md %}}</dd><dt>Entrypoint</dt>
+    <dd>ENTRYPOINT{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Volume</dt>
+    <dd>VOLUME{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>User</dt>
+    <dd>USER{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Workdir</dt>
+    <dd>WORKDIR{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Arg</dt>
+    <dd>ARG{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Onbuild</dt>
+    <dd>ONBUILD{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Stopsignal</dt>
+    <dd>STOPSIGNAL{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Healthcheck</dt>
+    <dd>HEALTHCHECK{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>Shell</dt>
+    <dd>SHELL{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DIRECTIVE_UNSPECIFIED</dt>
+    <dd>DIRECTIVE_UNSPECIFIED{{% md %}}Default value for unsupported/missing directive{{% /md %}}</dd><dt>MAINTAINER</dt>
+    <dd>MAINTAINER{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>RUN</dt>
+    <dd>RUN{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>CMD</dt>
+    <dd>CMD{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>LABEL</dt>
+    <dd>LABEL{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>EXPOSE</dt>
+    <dd>EXPOSE{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>ENV</dt>
+    <dd>ENV{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>ADD</dt>
+    <dd>ADD{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>COPY</dt>
+    <dd>COPY{{% md %}}https://docs.docker.com/reference/builder/#copy{{% /md %}}</dd><dt>ENTRYPOINT</dt>
+    <dd>ENTRYPOINT{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>VOLUME</dt>
+    <dd>VOLUME{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>USER</dt>
+    <dd>USER{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>WORKDIR</dt>
+    <dd>WORKDIR{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>ARG</dt>
+    <dd>ARG{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>ONBUILD</dt>
+    <dd>ONBUILD{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>STOPSIGNAL</dt>
+    <dd>STOPSIGNAL{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>HEALTHCHECK</dt>
+    <dd>HEALTHCHECK{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd><dt>SHELL</dt>
+    <dd>SHELL{{% md %}}https://docs.docker.com/engine/reference/builder/{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="layerresponse">Layer<wbr>Response</h4>
@@ -5963,6 +6219,60 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The version installed at this location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="occurrencekind">Occurrence<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Kind<wbr>Unspecified</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Package<wbr>Vulnerability</dt>
+    <dd>PACKAGE_VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>Build<wbr>Details</dt>
+    <dd>BUILD_DETAILS{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>Image<wbr>Basis</dt>
+    <dd>IMAGE_BASIS{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>Package<wbr>Manager</dt>
+    <dd>PACKAGE_MANAGER{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>Deployable</dt>
+    <dd>DEPLOYABLE{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>Discovery</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>Attestation<wbr>Authority</dt>
+    <dd>ATTESTATION_AUTHORITY{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>Upgrade</dt>
+    <dd>UPGRADE{{% md %}}This represents an available software upgrade.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Occurrence<wbr>Kind<wbr>Kind<wbr>Unspecified</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Occurrence<wbr>Kind<wbr>Package<wbr>Vulnerability</dt>
+    <dd>PACKAGE_VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>Occurrence<wbr>Kind<wbr>Build<wbr>Details</dt>
+    <dd>BUILD_DETAILS{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>Occurrence<wbr>Kind<wbr>Image<wbr>Basis</dt>
+    <dd>IMAGE_BASIS{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>Occurrence<wbr>Kind<wbr>Package<wbr>Manager</dt>
+    <dd>PACKAGE_MANAGER{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>Occurrence<wbr>Kind<wbr>Deployable</dt>
+    <dd>DEPLOYABLE{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>Occurrence<wbr>Kind<wbr>Discovery</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>Occurrence<wbr>Kind<wbr>Attestation<wbr>Authority</dt>
+    <dd>ATTESTATION_AUTHORITY{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>Occurrence<wbr>Kind<wbr>Upgrade</dt>
+    <dd>UPGRADE{{% md %}}This represents an available software upgrade.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Kind<wbr>Unspecified</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Package<wbr>Vulnerability</dt>
+    <dd>PACKAGE_VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>Build<wbr>Details</dt>
+    <dd>BUILD_DETAILS{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>Image<wbr>Basis</dt>
+    <dd>IMAGE_BASIS{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>Package<wbr>Manager</dt>
+    <dd>PACKAGE_MANAGER{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>Deployable</dt>
+    <dd>DEPLOYABLE{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>Discovery</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>Attestation<wbr>Authority</dt>
+    <dd>ATTESTATION_AUTHORITY{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>Upgrade</dt>
+    <dd>UPGRADE{{% md %}}This represents an available software upgrade.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>KIND_UNSPECIFIED</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>PACKAGE_VULNERABILITY</dt>
+    <dd>PACKAGE_VULNERABILITY{{% md %}}The note and occurrence represent a package vulnerability.{{% /md %}}</dd><dt>BUILD_DETAILS</dt>
+    <dd>BUILD_DETAILS{{% md %}}The note and occurrence assert build provenance.{{% /md %}}</dd><dt>IMAGE_BASIS</dt>
+    <dd>IMAGE_BASIS{{% md %}}This represents an image basis relationship.{{% /md %}}</dd><dt>PACKAGE_MANAGER</dt>
+    <dd>PACKAGE_MANAGER{{% md %}}This represents a package installed via a package manager.{{% /md %}}</dd><dt>DEPLOYABLE</dt>
+    <dd>DEPLOYABLE{{% md %}}The note and occurrence track deployment events.{{% /md %}}</dd><dt>DISCOVERY</dt>
+    <dd>DISCOVERY{{% md %}}The note and occurrence track the initial discovery status of a resource.{{% /md %}}</dd><dt>ATTESTATION_AUTHORITY</dt>
+    <dd>ATTESTATION_AUTHORITY{{% md %}}This represents a logical "role" that can attest to artifacts.{{% /md %}}</dd><dt>UPGRADE</dt>
+    <dd>UPGRADE{{% md %}}This represents an available software upgrade.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="packageissue">Package<wbr>Issue</h4>
 
 {{% choosable language csharp %}}
@@ -6200,7 +6510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#pgpsignedattestationcontenttype">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Pgp<wbr>Signed<wbr>Attestation<wbr>Content<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type (for example schema) of the attestation payload that was signed. The verifier must ensure that the provided type is one that the verifier supports, and that the attestation payload is a valid instantiation of that type (for example by validating a JSON schema).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6228,7 +6538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#pgpsignedattestationcontenttype">Pgp<wbr>Signed<wbr>Attestation<wbr>Content<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type (for example schema) of the attestation payload that was signed. The verifier must ensure that the provided type is one that the verifier supports, and that the attestation payload is a valid instantiation of that type (for example by validating a JSON schema).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6256,7 +6566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#pgpsignedattestationcontenttype">Pgp<wbr>Signed<wbr>Attestation<wbr>Content<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type (for example schema) of the attestation payload that was signed. The verifier must ensure that the provided type is one that the verifier supports, and that the attestation payload is a valid instantiation of that type (for example by validating a JSON schema).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6284,7 +6594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#pgpsignedattestationcontenttype">Pgp<wbr>Signed<wbr>Attestation<wbr>Content<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type (for example schema) of the attestation payload that was signed. The verifier must ensure that the provided type is one that the verifier supports, and that the attestation payload is a valid instantiation of that type (for example by validating a JSON schema).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6303,6 +6613,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The raw content of the signature, as output by GNU Privacy Guard (GPG) or equivalent. Since this message only supports attached signatures, the payload that was signed must be attached. While the signature format supported is dependent on the verification implementation, currently only ASCII-armored (`--armor` to gpg), non-clearsigned (`--sign` rather than `--clearsign` to gpg) are supported. Concretely, `gpg --sign --armor --output=signature.gpg payload.json` will create the signature content expected in this field in `signature.gpg` for the `payload.json` attestation payload.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="pgpsignedattestationcontenttype">Pgp<wbr>Signed<wbr>Attestation<wbr>Content<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Content<wbr>Type<wbr>Unspecified</dt>
+    <dd>CONTENT_TYPE_UNSPECIFIED{{% md %}}`ContentType` is not set.{{% /md %}}</dd><dt>Simple<wbr>Signing<wbr>Json</dt>
+    <dd>SIMPLE_SIGNING_JSON{{% md %}}Atomic format attestation signature. See https://github.com/containers/image/blob/8a5d2f82a6e3263290c8e0276c3e0f64e77723e7/docs/atomic-signature.md The payload extracted from `signature` is a JSON blob conforming to the linked schema.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Pgp<wbr>Signed<wbr>Attestation<wbr>Content<wbr>Type<wbr>Content<wbr>Type<wbr>Unspecified</dt>
+    <dd>CONTENT_TYPE_UNSPECIFIED{{% md %}}`ContentType` is not set.{{% /md %}}</dd><dt>Pgp<wbr>Signed<wbr>Attestation<wbr>Content<wbr>Type<wbr>Simple<wbr>Signing<wbr>Json</dt>
+    <dd>SIMPLE_SIGNING_JSON{{% md %}}Atomic format attestation signature. See https://github.com/containers/image/blob/8a5d2f82a6e3263290c8e0276c3e0f64e77723e7/docs/atomic-signature.md The payload extracted from `signature` is a JSON blob conforming to the linked schema.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Content<wbr>Type<wbr>Unspecified</dt>
+    <dd>CONTENT_TYPE_UNSPECIFIED{{% md %}}`ContentType` is not set.{{% /md %}}</dd><dt>Simple<wbr>Signing<wbr>Json</dt>
+    <dd>SIMPLE_SIGNING_JSON{{% md %}}Atomic format attestation signature. See https://github.com/containers/image/blob/8a5d2f82a6e3263290c8e0276c3e0f64e77723e7/docs/atomic-signature.md The payload extracted from `signature` is a JSON blob conforming to the linked schema.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CONTENT_TYPE_UNSPECIFIED</dt>
+    <dd>CONTENT_TYPE_UNSPECIFIED{{% md %}}`ContentType` is not set.{{% /md %}}</dd><dt>SIMPLE_SIGNING_JSON</dt>
+    <dd>SIMPLE_SIGNING_JSON{{% md %}}Atomic format attestation signature. See https://github.com/containers/image/blob/8a5d2f82a6e3263290c8e0276c3e0f64e77723e7/docs/atomic-signature.md The payload extracted from `signature` is a JSON blob conforming to the linked schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pgpsignedattestationresponse">Pgp<wbr>Signed<wbr>Attestation<wbr>Response</h4>
@@ -8424,7 +8760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#versionkind">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Version<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8468,7 +8804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#versionkind">Version<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8512,7 +8848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#versionkind">Version<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8556,7 +8892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#versionkind">Version<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8575,6 +8911,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The iteration of the package build from the above version.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="versionkind">Version<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Normal</dt>
+    <dd>NORMAL{{% md %}}A standard package version, defined by the other fields.{{% /md %}}</dd><dt>Minimum</dt>
+    <dd>MINIMUM{{% md %}}A special version representing negative infinity, other fields are ignored.{{% /md %}}</dd><dt>Maximum</dt>
+    <dd>MAXIMUM{{% md %}}A special version representing positive infinity, other fields are ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Version<wbr>Kind<wbr>Normal</dt>
+    <dd>NORMAL{{% md %}}A standard package version, defined by the other fields.{{% /md %}}</dd><dt>Version<wbr>Kind<wbr>Minimum</dt>
+    <dd>MINIMUM{{% md %}}A special version representing negative infinity, other fields are ignored.{{% /md %}}</dd><dt>Version<wbr>Kind<wbr>Maximum</dt>
+    <dd>MAXIMUM{{% md %}}A special version representing positive infinity, other fields are ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Normal</dt>
+    <dd>NORMAL{{% md %}}A standard package version, defined by the other fields.{{% /md %}}</dd><dt>Minimum</dt>
+    <dd>MINIMUM{{% md %}}A special version representing negative infinity, other fields are ignored.{{% /md %}}</dd><dt>Maximum</dt>
+    <dd>MAXIMUM{{% md %}}A special version representing positive infinity, other fields are ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NORMAL</dt>
+    <dd>NORMAL{{% md %}}A standard package version, defined by the other fields.{{% /md %}}</dd><dt>MINIMUM</dt>
+    <dd>MINIMUM{{% md %}}A special version representing negative infinity, other fields are ignored.{{% /md %}}</dd><dt>MAXIMUM</dt>
+    <dd>MAXIMUM{{% md %}}A special version representing positive infinity, other fields are ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="versionresponse">Version<wbr>Response</h4>
@@ -8772,7 +9138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effectiveseverity_csharp" style="color: inherit; text-decoration: inherit;">Effective<wbr>Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#vulnerabilitydetailseffectiveseverity">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Vulnerability<wbr>Details<wbr>Effective<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The distro assigned severity for this vulnerability when that is available and note provider assigned severity when distro has not yet assigned a severity for this vulnerability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8788,7 +9154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#vulnerabilitydetailsseverity">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Alpha1.<wbr>Vulnerability<wbr>Details<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The note provider assigned Severity of the vulnerability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8816,7 +9182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effectiveseverity_go" style="color: inherit; text-decoration: inherit;">Effective<wbr>Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#vulnerabilitydetailseffectiveseverity">Vulnerability<wbr>Details<wbr>Effective<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The distro assigned severity for this vulnerability when that is available and note provider assigned severity when distro has not yet assigned a severity for this vulnerability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8832,7 +9198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#vulnerabilitydetailsseverity">Vulnerability<wbr>Details<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The note provider assigned Severity of the vulnerability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8860,7 +9226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effectiveseverity_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#vulnerabilitydetailseffectiveseverity">Vulnerability<wbr>Details<wbr>Effective<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The distro assigned severity for this vulnerability when that is available and note provider assigned severity when distro has not yet assigned a severity for this vulnerability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8876,7 +9242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#vulnerabilitydetailsseverity">Vulnerability<wbr>Details<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The note provider assigned Severity of the vulnerability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8904,7 +9270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effective_severity_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#vulnerabilitydetailseffectiveseverity">Vulnerability<wbr>Details<wbr>Effective<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The distro assigned severity for this vulnerability when that is available and note provider assigned severity when distro has not yet assigned a severity for this vulnerability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8920,7 +9286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#vulnerabilitydetailsseverity">Vulnerability<wbr>Details<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The note provider assigned Severity of the vulnerability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8931,6 +9297,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of package; whether native or non native(ruby gems, node.js packages etc){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="vulnerabilitydetailseffectiveseverity">Vulnerability<wbr>Details<wbr>Effective<wbr>Severity</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Severity<wbr>Unspecified</dt>
+    <dd>SEVERITY_UNSPECIFIED{{% md %}}Unknown Impact{{% /md %}}</dd><dt>Minimal</dt>
+    <dd>MINIMAL{{% md %}}Minimal Impact{{% /md %}}</dd><dt>Low</dt>
+    <dd>LOW{{% md %}}Low Impact{{% /md %}}</dd><dt>Medium</dt>
+    <dd>MEDIUM{{% md %}}Medium Impact{{% /md %}}</dd><dt>High</dt>
+    <dd>HIGH{{% md %}}High Impact{{% /md %}}</dd><dt>Critical</dt>
+    <dd>CRITICAL{{% md %}}Critical Impact{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Vulnerability<wbr>Details<wbr>Effective<wbr>Severity<wbr>Severity<wbr>Unspecified</dt>
+    <dd>SEVERITY_UNSPECIFIED{{% md %}}Unknown Impact{{% /md %}}</dd><dt>Vulnerability<wbr>Details<wbr>Effective<wbr>Severity<wbr>Minimal</dt>
+    <dd>MINIMAL{{% md %}}Minimal Impact{{% /md %}}</dd><dt>Vulnerability<wbr>Details<wbr>Effective<wbr>Severity<wbr>Low</dt>
+    <dd>LOW{{% md %}}Low Impact{{% /md %}}</dd><dt>Vulnerability<wbr>Details<wbr>Effective<wbr>Severity<wbr>Medium</dt>
+    <dd>MEDIUM{{% md %}}Medium Impact{{% /md %}}</dd><dt>Vulnerability<wbr>Details<wbr>Effective<wbr>Severity<wbr>High</dt>
+    <dd>HIGH{{% md %}}High Impact{{% /md %}}</dd><dt>Vulnerability<wbr>Details<wbr>Effective<wbr>Severity<wbr>Critical</dt>
+    <dd>CRITICAL{{% md %}}Critical Impact{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Severity<wbr>Unspecified</dt>
+    <dd>SEVERITY_UNSPECIFIED{{% md %}}Unknown Impact{{% /md %}}</dd><dt>Minimal</dt>
+    <dd>MINIMAL{{% md %}}Minimal Impact{{% /md %}}</dd><dt>Low</dt>
+    <dd>LOW{{% md %}}Low Impact{{% /md %}}</dd><dt>Medium</dt>
+    <dd>MEDIUM{{% md %}}Medium Impact{{% /md %}}</dd><dt>High</dt>
+    <dd>HIGH{{% md %}}High Impact{{% /md %}}</dd><dt>Critical</dt>
+    <dd>CRITICAL{{% md %}}Critical Impact{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SEVERITY_UNSPECIFIED</dt>
+    <dd>SEVERITY_UNSPECIFIED{{% md %}}Unknown Impact{{% /md %}}</dd><dt>MINIMAL</dt>
+    <dd>MINIMAL{{% md %}}Minimal Impact{{% /md %}}</dd><dt>LOW</dt>
+    <dd>LOW{{% md %}}Low Impact{{% /md %}}</dd><dt>MEDIUM</dt>
+    <dd>MEDIUM{{% md %}}Medium Impact{{% /md %}}</dd><dt>HIGH</dt>
+    <dd>HIGH{{% md %}}High Impact{{% /md %}}</dd><dt>CRITICAL</dt>
+    <dd>CRITICAL{{% md %}}Critical Impact{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vulnerabilitydetailsresponse">Vulnerability<wbr>Details<wbr>Response</h4>
@@ -9109,6 +9517,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of package; whether native or non native(ruby gems, node.js packages etc){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="vulnerabilitydetailsseverity">Vulnerability<wbr>Details<wbr>Severity</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Severity<wbr>Unspecified</dt>
+    <dd>SEVERITY_UNSPECIFIED{{% md %}}Unknown Impact{{% /md %}}</dd><dt>Minimal</dt>
+    <dd>MINIMAL{{% md %}}Minimal Impact{{% /md %}}</dd><dt>Low</dt>
+    <dd>LOW{{% md %}}Low Impact{{% /md %}}</dd><dt>Medium</dt>
+    <dd>MEDIUM{{% md %}}Medium Impact{{% /md %}}</dd><dt>High</dt>
+    <dd>HIGH{{% md %}}High Impact{{% /md %}}</dd><dt>Critical</dt>
+    <dd>CRITICAL{{% md %}}Critical Impact{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Vulnerability<wbr>Details<wbr>Severity<wbr>Severity<wbr>Unspecified</dt>
+    <dd>SEVERITY_UNSPECIFIED{{% md %}}Unknown Impact{{% /md %}}</dd><dt>Vulnerability<wbr>Details<wbr>Severity<wbr>Minimal</dt>
+    <dd>MINIMAL{{% md %}}Minimal Impact{{% /md %}}</dd><dt>Vulnerability<wbr>Details<wbr>Severity<wbr>Low</dt>
+    <dd>LOW{{% md %}}Low Impact{{% /md %}}</dd><dt>Vulnerability<wbr>Details<wbr>Severity<wbr>Medium</dt>
+    <dd>MEDIUM{{% md %}}Medium Impact{{% /md %}}</dd><dt>Vulnerability<wbr>Details<wbr>Severity<wbr>High</dt>
+    <dd>HIGH{{% md %}}High Impact{{% /md %}}</dd><dt>Vulnerability<wbr>Details<wbr>Severity<wbr>Critical</dt>
+    <dd>CRITICAL{{% md %}}Critical Impact{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Severity<wbr>Unspecified</dt>
+    <dd>SEVERITY_UNSPECIFIED{{% md %}}Unknown Impact{{% /md %}}</dd><dt>Minimal</dt>
+    <dd>MINIMAL{{% md %}}Minimal Impact{{% /md %}}</dd><dt>Low</dt>
+    <dd>LOW{{% md %}}Low Impact{{% /md %}}</dd><dt>Medium</dt>
+    <dd>MEDIUM{{% md %}}Medium Impact{{% /md %}}</dd><dt>High</dt>
+    <dd>HIGH{{% md %}}High Impact{{% /md %}}</dd><dt>Critical</dt>
+    <dd>CRITICAL{{% md %}}Critical Impact{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SEVERITY_UNSPECIFIED</dt>
+    <dd>SEVERITY_UNSPECIFIED{{% md %}}Unknown Impact{{% /md %}}</dd><dt>MINIMAL</dt>
+    <dd>MINIMAL{{% md %}}Minimal Impact{{% /md %}}</dd><dt>LOW</dt>
+    <dd>LOW{{% md %}}Low Impact{{% /md %}}</dd><dt>MEDIUM</dt>
+    <dd>MEDIUM{{% md %}}Medium Impact{{% /md %}}</dd><dt>HIGH</dt>
+    <dd>HIGH{{% md %}}High Impact{{% /md %}}</dd><dt>CRITICAL</dt>
+    <dd>CRITICAL{{% md %}}Critical Impact{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vulnerabilitylocation">Vulnerability<wbr>Location</h4>

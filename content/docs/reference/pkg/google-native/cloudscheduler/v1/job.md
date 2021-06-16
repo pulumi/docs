@@ -39,7 +39,7 @@ Creates a job.
         <span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[_cloudscheduler_v1.RetryConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">schedule_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_cloudscheduler_v1.JobState]</span> = None<span class="p">,</span>
         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_cloudscheduler_v1.StatusArgs]</span> = None<span class="p">,</span>
         <span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">user_update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -272,7 +272,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Scheduler.<wbr>V1.<wbr>Job<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}State of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -404,7 +404,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobstate">Job<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}State of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -536,7 +536,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobstate">Job<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}State of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -668,7 +668,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#jobstate">Job<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}State of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -795,7 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#appenginehttptargethttpmethod">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Scheduler.<wbr>V1.<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Http<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request. PATCH and OPTIONS are not permitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -839,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#appenginehttptargethttpmethod">App<wbr>Engine<wbr>Http<wbr>Target<wbr>Http<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request. PATCH and OPTIONS are not permitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -883,7 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#appenginehttptargethttpmethod">App<wbr>Engine<wbr>Http<wbr>Target<wbr>Http<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request. PATCH and OPTIONS are not permitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -927,7 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#appenginehttptargethttpmethod">App<wbr>Engine<wbr>Http<wbr>Target<wbr>Http<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request. PATCH and OPTIONS are not permitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -938,6 +938,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative URI. The relative URL must begin with "/" and must be a valid HTTP relative URL. It can contain a path, query string arguments, and `#` fragments. If the relative URL is empty, then the root path "/" will be used. No spaces are allowed, and the maximum length allowed is 2083 characters.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="appenginehttptargethttpmethod">App<wbr>Engine<wbr>Http<wbr>Target<wbr>Http<wbr>Method</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Http<wbr>Method<wbr>Unspecified</dt>
+    <dd>HTTP_METHOD_UNSPECIFIED{{% md %}}HTTP method unspecified. Defaults to POST.{{% /md %}}</dd><dt>Post</dt>
+    <dd>POST{{% md %}}HTTP POST{{% /md %}}</dd><dt>Get</dt>
+    <dd>GET{{% md %}}HTTP GET{{% /md %}}</dd><dt>Head</dt>
+    <dd>HEAD{{% md %}}HTTP HEAD{{% /md %}}</dd><dt>Put</dt>
+    <dd>PUT{{% md %}}HTTP PUT{{% /md %}}</dd><dt>Delete</dt>
+    <dd>DELETE{{% md %}}HTTP DELETE{{% /md %}}</dd><dt>Patch</dt>
+    <dd>PATCH{{% md %}}HTTP PATCH{{% /md %}}</dd><dt>Options</dt>
+    <dd>OPTIONS{{% md %}}HTTP OPTIONS{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Http<wbr>Method<wbr>Http<wbr>Method<wbr>Unspecified</dt>
+    <dd>HTTP_METHOD_UNSPECIFIED{{% md %}}HTTP method unspecified. Defaults to POST.{{% /md %}}</dd><dt>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Http<wbr>Method<wbr>Post</dt>
+    <dd>POST{{% md %}}HTTP POST{{% /md %}}</dd><dt>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Http<wbr>Method<wbr>Get</dt>
+    <dd>GET{{% md %}}HTTP GET{{% /md %}}</dd><dt>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Http<wbr>Method<wbr>Head</dt>
+    <dd>HEAD{{% md %}}HTTP HEAD{{% /md %}}</dd><dt>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Http<wbr>Method<wbr>Put</dt>
+    <dd>PUT{{% md %}}HTTP PUT{{% /md %}}</dd><dt>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Http<wbr>Method<wbr>Delete</dt>
+    <dd>DELETE{{% md %}}HTTP DELETE{{% /md %}}</dd><dt>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Http<wbr>Method<wbr>Patch</dt>
+    <dd>PATCH{{% md %}}HTTP PATCH{{% /md %}}</dd><dt>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Http<wbr>Method<wbr>Options</dt>
+    <dd>OPTIONS{{% md %}}HTTP OPTIONS{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Http<wbr>Method<wbr>Unspecified</dt>
+    <dd>HTTP_METHOD_UNSPECIFIED{{% md %}}HTTP method unspecified. Defaults to POST.{{% /md %}}</dd><dt>Post</dt>
+    <dd>POST{{% md %}}HTTP POST{{% /md %}}</dd><dt>Get</dt>
+    <dd>GET{{% md %}}HTTP GET{{% /md %}}</dd><dt>Head</dt>
+    <dd>HEAD{{% md %}}HTTP HEAD{{% /md %}}</dd><dt>Put</dt>
+    <dd>PUT{{% md %}}HTTP PUT{{% /md %}}</dd><dt>Delete</dt>
+    <dd>DELETE{{% md %}}HTTP DELETE{{% /md %}}</dd><dt>Patch</dt>
+    <dd>PATCH{{% md %}}HTTP PATCH{{% /md %}}</dd><dt>Options</dt>
+    <dd>OPTIONS{{% md %}}HTTP OPTIONS{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>HTTP_METHOD_UNSPECIFIED</dt>
+    <dd>HTTP_METHOD_UNSPECIFIED{{% md %}}HTTP method unspecified. Defaults to POST.{{% /md %}}</dd><dt>POST</dt>
+    <dd>POST{{% md %}}HTTP POST{{% /md %}}</dd><dt>GET</dt>
+    <dd>GET{{% md %}}HTTP GET{{% /md %}}</dd><dt>HEAD</dt>
+    <dd>HEAD{{% md %}}HTTP HEAD{{% /md %}}</dd><dt>PUT</dt>
+    <dd>PUT{{% md %}}HTTP PUT{{% /md %}}</dd><dt>DELETE</dt>
+    <dd>DELETE{{% md %}}HTTP DELETE{{% /md %}}</dd><dt>PATCH</dt>
+    <dd>PATCH{{% md %}}HTTP PATCH{{% /md %}}</dd><dt>OPTIONS</dt>
+    <dd>OPTIONS{{% md %}}HTTP OPTIONS{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="appenginehttptargetresponse">App<wbr>Engine<wbr>Http<wbr>Target<wbr>Response</h4>
@@ -1435,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httptargethttpmethod">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Scheduler.<wbr>V1.<wbr>Http<wbr>Target<wbr>Http<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Which HTTP method to use for the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1487,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httptargethttpmethod">Http<wbr>Target<wbr>Http<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Which HTTP method to use for the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1539,7 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httptargethttpmethod">Http<wbr>Target<wbr>Http<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Which HTTP method to use for the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1591,7 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#httptargethttpmethod">Http<wbr>Target<wbr>Http<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Which HTTP method to use for the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1618,6 +1668,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The full URI path that the request will be sent to. This string must begin with either "http://" or "https://". Some examples of valid values for uri are: `http://acme.com` and `https://acme.com/sales:8080`. Cloud Scheduler will encode some characters for safety and compatibility. The maximum allowed URL length is 2083 characters after encoding.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="httptargethttpmethod">Http<wbr>Target<wbr>Http<wbr>Method</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Http<wbr>Method<wbr>Unspecified</dt>
+    <dd>HTTP_METHOD_UNSPECIFIED{{% md %}}HTTP method unspecified. Defaults to POST.{{% /md %}}</dd><dt>Post</dt>
+    <dd>POST{{% md %}}HTTP POST{{% /md %}}</dd><dt>Get</dt>
+    <dd>GET{{% md %}}HTTP GET{{% /md %}}</dd><dt>Head</dt>
+    <dd>HEAD{{% md %}}HTTP HEAD{{% /md %}}</dd><dt>Put</dt>
+    <dd>PUT{{% md %}}HTTP PUT{{% /md %}}</dd><dt>Delete</dt>
+    <dd>DELETE{{% md %}}HTTP DELETE{{% /md %}}</dd><dt>Patch</dt>
+    <dd>PATCH{{% md %}}HTTP PATCH{{% /md %}}</dd><dt>Options</dt>
+    <dd>OPTIONS{{% md %}}HTTP OPTIONS{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Http<wbr>Target<wbr>Http<wbr>Method<wbr>Http<wbr>Method<wbr>Unspecified</dt>
+    <dd>HTTP_METHOD_UNSPECIFIED{{% md %}}HTTP method unspecified. Defaults to POST.{{% /md %}}</dd><dt>Http<wbr>Target<wbr>Http<wbr>Method<wbr>Post</dt>
+    <dd>POST{{% md %}}HTTP POST{{% /md %}}</dd><dt>Http<wbr>Target<wbr>Http<wbr>Method<wbr>Get</dt>
+    <dd>GET{{% md %}}HTTP GET{{% /md %}}</dd><dt>Http<wbr>Target<wbr>Http<wbr>Method<wbr>Head</dt>
+    <dd>HEAD{{% md %}}HTTP HEAD{{% /md %}}</dd><dt>Http<wbr>Target<wbr>Http<wbr>Method<wbr>Put</dt>
+    <dd>PUT{{% md %}}HTTP PUT{{% /md %}}</dd><dt>Http<wbr>Target<wbr>Http<wbr>Method<wbr>Delete</dt>
+    <dd>DELETE{{% md %}}HTTP DELETE{{% /md %}}</dd><dt>Http<wbr>Target<wbr>Http<wbr>Method<wbr>Patch</dt>
+    <dd>PATCH{{% md %}}HTTP PATCH{{% /md %}}</dd><dt>Http<wbr>Target<wbr>Http<wbr>Method<wbr>Options</dt>
+    <dd>OPTIONS{{% md %}}HTTP OPTIONS{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Http<wbr>Method<wbr>Unspecified</dt>
+    <dd>HTTP_METHOD_UNSPECIFIED{{% md %}}HTTP method unspecified. Defaults to POST.{{% /md %}}</dd><dt>Post</dt>
+    <dd>POST{{% md %}}HTTP POST{{% /md %}}</dd><dt>Get</dt>
+    <dd>GET{{% md %}}HTTP GET{{% /md %}}</dd><dt>Head</dt>
+    <dd>HEAD{{% md %}}HTTP HEAD{{% /md %}}</dd><dt>Put</dt>
+    <dd>PUT{{% md %}}HTTP PUT{{% /md %}}</dd><dt>Delete</dt>
+    <dd>DELETE{{% md %}}HTTP DELETE{{% /md %}}</dd><dt>Patch</dt>
+    <dd>PATCH{{% md %}}HTTP PATCH{{% /md %}}</dd><dt>Options</dt>
+    <dd>OPTIONS{{% md %}}HTTP OPTIONS{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>HTTP_METHOD_UNSPECIFIED</dt>
+    <dd>HTTP_METHOD_UNSPECIFIED{{% md %}}HTTP method unspecified. Defaults to POST.{{% /md %}}</dd><dt>POST</dt>
+    <dd>POST{{% md %}}HTTP POST{{% /md %}}</dd><dt>GET</dt>
+    <dd>GET{{% md %}}HTTP GET{{% /md %}}</dd><dt>HEAD</dt>
+    <dd>HEAD{{% md %}}HTTP HEAD{{% /md %}}</dd><dt>PUT</dt>
+    <dd>PUT{{% md %}}HTTP PUT{{% /md %}}</dd><dt>DELETE</dt>
+    <dd>DELETE{{% md %}}HTTP DELETE{{% /md %}}</dd><dt>PATCH</dt>
+    <dd>PATCH{{% md %}}HTTP PATCH{{% /md %}}</dd><dt>OPTIONS</dt>
+    <dd>OPTIONS{{% md %}}HTTP OPTIONS{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httptargetresponse">Http<wbr>Target<wbr>Response</h4>
@@ -1828,6 +1928,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The full URI path that the request will be sent to. This string must begin with either "http://" or "https://". Some examples of valid values for uri are: `http://acme.com` and `https://acme.com/sales:8080`. Cloud Scheduler will encode some characters for safety and compatibility. The maximum allowed URL length is 2083 characters after encoding.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobstate">Job<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Unspecified state.{{% /md %}}</dd><dt>Enabled</dt>
+    <dd>ENABLED{{% md %}}The job is executing normally.{{% /md %}}</dd><dt>Paused</dt>
+    <dd>PAUSED{{% md %}}The job is paused by the user. It will not execute. A user can intentionally pause the job using PauseJobRequest.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}The job is disabled by the system due to error. The user cannot directly set a job to be disabled.{{% /md %}}</dd><dt>Update<wbr>Failed</dt>
+    <dd>UPDATE_FAILED{{% md %}}The job state resulting from a failed CloudScheduler.UpdateJob operation. To recover a job from this state, retry CloudScheduler.UpdateJob until a successful response is received.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Job<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Unspecified state.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Enabled</dt>
+    <dd>ENABLED{{% md %}}The job is executing normally.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Paused</dt>
+    <dd>PAUSED{{% md %}}The job is paused by the user. It will not execute. A user can intentionally pause the job using PauseJobRequest.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Disabled</dt>
+    <dd>DISABLED{{% md %}}The job is disabled by the system due to error. The user cannot directly set a job to be disabled.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Update<wbr>Failed</dt>
+    <dd>UPDATE_FAILED{{% md %}}The job state resulting from a failed CloudScheduler.UpdateJob operation. To recover a job from this state, retry CloudScheduler.UpdateJob until a successful response is received.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Unspecified state.{{% /md %}}</dd><dt>Enabled</dt>
+    <dd>ENABLED{{% md %}}The job is executing normally.{{% /md %}}</dd><dt>Paused</dt>
+    <dd>PAUSED{{% md %}}The job is paused by the user. It will not execute. A user can intentionally pause the job using PauseJobRequest.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}The job is disabled by the system due to error. The user cannot directly set a job to be disabled.{{% /md %}}</dd><dt>Update<wbr>Failed</dt>
+    <dd>UPDATE_FAILED{{% md %}}The job state resulting from a failed CloudScheduler.UpdateJob operation. To recover a job from this state, retry CloudScheduler.UpdateJob until a successful response is received.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Unspecified state.{{% /md %}}</dd><dt>ENABLED</dt>
+    <dd>ENABLED{{% md %}}The job is executing normally.{{% /md %}}</dd><dt>PAUSED</dt>
+    <dd>PAUSED{{% md %}}The job is paused by the user. It will not execute. A user can intentionally pause the job using PauseJobRequest.{{% /md %}}</dd><dt>DISABLED</dt>
+    <dd>DISABLED{{% md %}}The job is disabled by the system due to error. The user cannot directly set a job to be disabled.{{% /md %}}</dd><dt>UPDATE_FAILED</dt>
+    <dd>UPDATE_FAILED{{% md %}}The job state resulting from a failed CloudScheduler.UpdateJob operation. To recover a job from this state, retry CloudScheduler.UpdateJob until a successful response is received.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="oauthtoken">OAuth<wbr>Token</h4>

@@ -28,22 +28,22 @@ Creates an InterconnectAttachment in the specified project using the data includ
 <span class="k">def </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                            <span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-                           <span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.InterconnectAttachmentBandwidth]</span> = None<span class="p">,</span>
                            <span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                            <span class="nx">cloud_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">customer_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">dataplane_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.InterconnectAttachmentEdgeAvailabilityDomain]</span> = None<span class="p">,</span>
+                           <span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.InterconnectAttachmentEncryption]</span> = None<span class="p">,</span>
                            <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">ipsec_internal_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                            <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">operational_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">operational_status</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.InterconnectAttachmentOperationalStatus]</span> = None<span class="p">,</span>
                            <span class="nx">pairing_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">partner_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">partner_metadata</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.InterconnectAttachmentPartnerMetadataArgs]</span> = None<span class="p">,</span>
@@ -53,8 +53,8 @@ Creates an InterconnectAttachment in the specified project using the data includ
                            <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.InterconnectAttachmentState]</span> = None<span class="p">,</span>
+                           <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.InterconnectAttachmentType]</span> = None<span class="p">,</span>
                            <span class="nx">validate_only</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -214,7 +214,7 @@ The InterconnectAttachment resource accepts the following [input]({{< relref "/d
 <a href="#bandwidth_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectattachmentbandwidth">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Interconnect<wbr>Attachment<wbr>Bandwidth</a></span>
     </dt>
     <dd>{{% md %}}Provisioned bandwidth capacity for the interconnect attachment. For attachments of type DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth. Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values: 
 - BPS_50M: 50 Mbit/s 
@@ -282,7 +282,7 @@ The InterconnectAttachment resource accepts the following [input]({{< relref "/d
 <a href="#edgeavailabilitydomain_csharp" style="color: inherit; text-decoration: inherit;">Edge<wbr>Availability<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectattachmentedgeavailabilitydomain">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Interconnect<wbr>Attachment<wbr>Edge<wbr>Availability<wbr>Domain</a></span>
     </dt>
     <dd>{{% md %}}Desired availability domain for the attachment. Only available for type PARTNER, at creation time, and can take one of the following values: 
 - AVAILABILITY_DOMAIN_ANY 
@@ -293,7 +293,7 @@ The InterconnectAttachment resource accepts the following [input]({{< relref "/d
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectattachmentencryption">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Interconnect<wbr>Attachment<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: 
 - NONE is the default value, which means that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of attachment. 
@@ -353,7 +353,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#operationalstatus_csharp" style="color: inherit; text-decoration: inherit;">Operational<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectattachmentoperationalstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Interconnect<wbr>Attachment<wbr>Operational<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The current status of whether or not this interconnect attachment is functional, which can take one of the following values: 
 - OS_ACTIVE: The attachment has been turned up and is ready to use. 
@@ -419,7 +419,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectattachmentstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Interconnect<wbr>Attachment<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of this attachment's functionality. Enum values ACTIVE and UNPROVISIONED are shared by DEDICATED/PRIVATE, PARTNER, and PARTNER_PROVIDER interconnect attachments, while enum values PENDING_PARTNER, PARTNER_REQUEST_RECEIVED, and PENDING_CUSTOMER are used for only PARTNER and PARTNER_PROVIDER interconnect attachments. This state can take one of the following values: 
 - ACTIVE: The attachment has been turned up and is ready to use. 
@@ -433,7 +433,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectattachmenttype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Interconnect<wbr>Attachment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of interconnect attachment this is, which can take one of the following values: 
 - DEDICATED: an attachment to a Dedicated Interconnect. 
@@ -488,7 +488,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#bandwidth_go" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectattachmentbandwidth">Interconnect<wbr>Attachment<wbr>Bandwidth</a></span>
     </dt>
     <dd>{{% md %}}Provisioned bandwidth capacity for the interconnect attachment. For attachments of type DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth. Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values: 
 - BPS_50M: 50 Mbit/s 
@@ -556,7 +556,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#edgeavailabilitydomain_go" style="color: inherit; text-decoration: inherit;">Edge<wbr>Availability<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectattachmentedgeavailabilitydomain">Interconnect<wbr>Attachment<wbr>Edge<wbr>Availability<wbr>Domain</a></span>
     </dt>
     <dd>{{% md %}}Desired availability domain for the attachment. Only available for type PARTNER, at creation time, and can take one of the following values: 
 - AVAILABILITY_DOMAIN_ANY 
@@ -567,7 +567,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectattachmentencryption">Interconnect<wbr>Attachment<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: 
 - NONE is the default value, which means that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of attachment. 
@@ -627,7 +627,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#operationalstatus_go" style="color: inherit; text-decoration: inherit;">Operational<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectattachmentoperationalstatus">Interconnect<wbr>Attachment<wbr>Operational<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The current status of whether or not this interconnect attachment is functional, which can take one of the following values: 
 - OS_ACTIVE: The attachment has been turned up and is ready to use. 
@@ -693,7 +693,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectattachmentstate">Interconnect<wbr>Attachment<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of this attachment's functionality. Enum values ACTIVE and UNPROVISIONED are shared by DEDICATED/PRIVATE, PARTNER, and PARTNER_PROVIDER interconnect attachments, while enum values PENDING_PARTNER, PARTNER_REQUEST_RECEIVED, and PENDING_CUSTOMER are used for only PARTNER and PARTNER_PROVIDER interconnect attachments. This state can take one of the following values: 
 - ACTIVE: The attachment has been turned up and is ready to use. 
@@ -707,7 +707,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectattachmenttype">Interconnect<wbr>Attachment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of interconnect attachment this is, which can take one of the following values: 
 - DEDICATED: an attachment to a Dedicated Interconnect. 
@@ -762,7 +762,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#bandwidth_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectattachmentbandwidth">Interconnect<wbr>Attachment<wbr>Bandwidth</a></span>
     </dt>
     <dd>{{% md %}}Provisioned bandwidth capacity for the interconnect attachment. For attachments of type DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth. Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values: 
 - BPS_50M: 50 Mbit/s 
@@ -830,7 +830,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#edgeavailabilitydomain_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Availability<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectattachmentedgeavailabilitydomain">Interconnect<wbr>Attachment<wbr>Edge<wbr>Availability<wbr>Domain</a></span>
     </dt>
     <dd>{{% md %}}Desired availability domain for the attachment. Only available for type PARTNER, at creation time, and can take one of the following values: 
 - AVAILABILITY_DOMAIN_ANY 
@@ -841,7 +841,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectattachmentencryption">Interconnect<wbr>Attachment<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: 
 - NONE is the default value, which means that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of attachment. 
@@ -901,7 +901,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#operationalstatus_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectattachmentoperationalstatus">Interconnect<wbr>Attachment<wbr>Operational<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The current status of whether or not this interconnect attachment is functional, which can take one of the following values: 
 - OS_ACTIVE: The attachment has been turned up and is ready to use. 
@@ -967,7 +967,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectattachmentstate">Interconnect<wbr>Attachment<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of this attachment's functionality. Enum values ACTIVE and UNPROVISIONED are shared by DEDICATED/PRIVATE, PARTNER, and PARTNER_PROVIDER interconnect attachments, while enum values PENDING_PARTNER, PARTNER_REQUEST_RECEIVED, and PENDING_CUSTOMER are used for only PARTNER and PARTNER_PROVIDER interconnect attachments. This state can take one of the following values: 
 - ACTIVE: The attachment has been turned up and is ready to use. 
@@ -981,7 +981,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectattachmenttype">Interconnect<wbr>Attachment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of interconnect attachment this is, which can take one of the following values: 
 - DEDICATED: an attachment to a Dedicated Interconnect. 
@@ -1036,7 +1036,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#bandwidth_python" style="color: inherit; text-decoration: inherit;">bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#interconnectattachmentbandwidth">Interconnect<wbr>Attachment<wbr>Bandwidth</a></span>
     </dt>
     <dd>{{% md %}}Provisioned bandwidth capacity for the interconnect attachment. For attachments of type DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth. Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values: 
 - BPS_50M: 50 Mbit/s 
@@ -1104,7 +1104,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#edge_availability_domain_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>availability_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#interconnectattachmentedgeavailabilitydomain">Interconnect<wbr>Attachment<wbr>Edge<wbr>Availability<wbr>Domain</a></span>
     </dt>
     <dd>{{% md %}}Desired availability domain for the attachment. Only available for type PARTNER, at creation time, and can take one of the following values: 
 - AVAILABILITY_DOMAIN_ANY 
@@ -1115,7 +1115,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#interconnectattachmentencryption">Interconnect<wbr>Attachment<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: 
 - NONE is the default value, which means that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of attachment. 
@@ -1175,7 +1175,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#operational_status_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#interconnectattachmentoperationalstatus">Interconnect<wbr>Attachment<wbr>Operational<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The current status of whether or not this interconnect attachment is functional, which can take one of the following values: 
 - OS_ACTIVE: The attachment has been turned up and is ready to use. 
@@ -1241,7 +1241,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#interconnectattachmentstate">Interconnect<wbr>Attachment<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of this attachment's functionality. Enum values ACTIVE and UNPROVISIONED are shared by DEDICATED/PRIVATE, PARTNER, and PARTNER_PROVIDER interconnect attachments, while enum values PENDING_PARTNER, PARTNER_REQUEST_RECEIVED, and PENDING_CUSTOMER are used for only PARTNER and PARTNER_PROVIDER interconnect attachments. This state can take one of the following values: 
 - ACTIVE: The attachment has been turned up and is ready to use. 
@@ -1255,7 +1255,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#interconnectattachmenttype">Interconnect<wbr>Attachment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of interconnect attachment this is, which can take one of the following values: 
 - DEDICATED: an attachment to a Dedicated Interconnect. 
@@ -1343,6 +1343,154 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="interconnectattachmentbandwidth">Interconnect<wbr>Attachment<wbr>Bandwidth</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Bps100m</dt>
+    <dd>BPS_100M</dd><dt>Bps10g</dt>
+    <dd>BPS_10G</dd><dt>Bps1g</dt>
+    <dd>BPS_1G</dd><dt>Bps200m</dt>
+    <dd>BPS_200M</dd><dt>Bps20g</dt>
+    <dd>BPS_20G</dd><dt>Bps2g</dt>
+    <dd>BPS_2G</dd><dt>Bps300m</dt>
+    <dd>BPS_300M</dd><dt>Bps400m</dt>
+    <dd>BPS_400M</dd><dt>Bps500m</dt>
+    <dd>BPS_500M</dd><dt>Bps50g</dt>
+    <dd>BPS_50G</dd><dt>Bps50m</dt>
+    <dd>BPS_50M</dd><dt>Bps5g</dt>
+    <dd>BPS_5G</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Interconnect<wbr>Attachment<wbr>Bandwidth<wbr>Bps100m</dt>
+    <dd>BPS_100M</dd><dt>Interconnect<wbr>Attachment<wbr>Bandwidth<wbr>Bps10g</dt>
+    <dd>BPS_10G</dd><dt>Interconnect<wbr>Attachment<wbr>Bandwidth<wbr>Bps1g</dt>
+    <dd>BPS_1G</dd><dt>Interconnect<wbr>Attachment<wbr>Bandwidth<wbr>Bps200m</dt>
+    <dd>BPS_200M</dd><dt>Interconnect<wbr>Attachment<wbr>Bandwidth<wbr>Bps20g</dt>
+    <dd>BPS_20G</dd><dt>Interconnect<wbr>Attachment<wbr>Bandwidth<wbr>Bps2g</dt>
+    <dd>BPS_2G</dd><dt>Interconnect<wbr>Attachment<wbr>Bandwidth<wbr>Bps300m</dt>
+    <dd>BPS_300M</dd><dt>Interconnect<wbr>Attachment<wbr>Bandwidth<wbr>Bps400m</dt>
+    <dd>BPS_400M</dd><dt>Interconnect<wbr>Attachment<wbr>Bandwidth<wbr>Bps500m</dt>
+    <dd>BPS_500M</dd><dt>Interconnect<wbr>Attachment<wbr>Bandwidth<wbr>Bps50g</dt>
+    <dd>BPS_50G</dd><dt>Interconnect<wbr>Attachment<wbr>Bandwidth<wbr>Bps50m</dt>
+    <dd>BPS_50M</dd><dt>Interconnect<wbr>Attachment<wbr>Bandwidth<wbr>Bps5g</dt>
+    <dd>BPS_5G</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Bps100m</dt>
+    <dd>BPS_100M</dd><dt>Bps10g</dt>
+    <dd>BPS_10G</dd><dt>Bps1g</dt>
+    <dd>BPS_1G</dd><dt>Bps200m</dt>
+    <dd>BPS_200M</dd><dt>Bps20g</dt>
+    <dd>BPS_20G</dd><dt>Bps2g</dt>
+    <dd>BPS_2G</dd><dt>Bps300m</dt>
+    <dd>BPS_300M</dd><dt>Bps400m</dt>
+    <dd>BPS_400M</dd><dt>Bps500m</dt>
+    <dd>BPS_500M</dd><dt>Bps50g</dt>
+    <dd>BPS_50G</dd><dt>Bps50m</dt>
+    <dd>BPS_50M</dd><dt>Bps5g</dt>
+    <dd>BPS_5G</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>BPS100M</dt>
+    <dd>BPS_100M</dd><dt>BPS10G</dt>
+    <dd>BPS_10G</dd><dt>BPS1G</dt>
+    <dd>BPS_1G</dd><dt>BPS200M</dt>
+    <dd>BPS_200M</dd><dt>BPS20G</dt>
+    <dd>BPS_20G</dd><dt>BPS2G</dt>
+    <dd>BPS_2G</dd><dt>BPS300M</dt>
+    <dd>BPS_300M</dd><dt>BPS400M</dt>
+    <dd>BPS_400M</dd><dt>BPS500M</dt>
+    <dd>BPS_500M</dd><dt>BPS50G</dt>
+    <dd>BPS_50G</dd><dt>BPS50M</dt>
+    <dd>BPS_50M</dd><dt>BPS5G</dt>
+    <dd>BPS_5G</dd></dl>
+{{% /choosable %}}
+
+<h4 id="interconnectattachmentedgeavailabilitydomain">Interconnect<wbr>Attachment<wbr>Edge<wbr>Availability<wbr>Domain</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Availability<wbr>Domain1</dt>
+    <dd>AVAILABILITY_DOMAIN_1</dd><dt>Availability<wbr>Domain2</dt>
+    <dd>AVAILABILITY_DOMAIN_2</dd><dt>Availability<wbr>Domain<wbr>Any</dt>
+    <dd>AVAILABILITY_DOMAIN_ANY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Interconnect<wbr>Attachment<wbr>Edge<wbr>Availability<wbr>Domain<wbr>Availability<wbr>Domain1</dt>
+    <dd>AVAILABILITY_DOMAIN_1</dd><dt>Interconnect<wbr>Attachment<wbr>Edge<wbr>Availability<wbr>Domain<wbr>Availability<wbr>Domain2</dt>
+    <dd>AVAILABILITY_DOMAIN_2</dd><dt>Interconnect<wbr>Attachment<wbr>Edge<wbr>Availability<wbr>Domain<wbr>Availability<wbr>Domain<wbr>Any</dt>
+    <dd>AVAILABILITY_DOMAIN_ANY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Availability<wbr>Domain1</dt>
+    <dd>AVAILABILITY_DOMAIN_1</dd><dt>Availability<wbr>Domain2</dt>
+    <dd>AVAILABILITY_DOMAIN_2</dd><dt>Availability<wbr>Domain<wbr>Any</dt>
+    <dd>AVAILABILITY_DOMAIN_ANY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>AVAILABILITY_DOMAIN1</dt>
+    <dd>AVAILABILITY_DOMAIN_1</dd><dt>AVAILABILITY_DOMAIN2</dt>
+    <dd>AVAILABILITY_DOMAIN_2</dd><dt>AVAILABILITY_DOMAIN_ANY</dt>
+    <dd>AVAILABILITY_DOMAIN_ANY</dd></dl>
+{{% /choosable %}}
+
+<h4 id="interconnectattachmentencryption">Interconnect<wbr>Attachment<wbr>Encryption</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Ipsec</dt>
+    <dd>IPSEC</dd><dt>None</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Interconnect<wbr>Attachment<wbr>Encryption<wbr>Ipsec</dt>
+    <dd>IPSEC</dd><dt>Interconnect<wbr>Attachment<wbr>Encryption<wbr>None</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Ipsec</dt>
+    <dd>IPSEC</dd><dt>None</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>IPSEC</dt>
+    <dd>IPSEC</dd><dt>NONE</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
+<h4 id="interconnectattachmentoperationalstatus">Interconnect<wbr>Attachment<wbr>Operational<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Os<wbr>Active</dt>
+    <dd>OS_ACTIVE</dd><dt>Os<wbr>Unprovisioned</dt>
+    <dd>OS_UNPROVISIONED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Interconnect<wbr>Attachment<wbr>Operational<wbr>Status<wbr>Os<wbr>Active</dt>
+    <dd>OS_ACTIVE</dd><dt>Interconnect<wbr>Attachment<wbr>Operational<wbr>Status<wbr>Os<wbr>Unprovisioned</dt>
+    <dd>OS_UNPROVISIONED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Os<wbr>Active</dt>
+    <dd>OS_ACTIVE</dd><dt>Os<wbr>Unprovisioned</dt>
+    <dd>OS_UNPROVISIONED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>OS_ACTIVE</dt>
+    <dd>OS_ACTIVE</dd><dt>OS_UNPROVISIONED</dt>
+    <dd>OS_UNPROVISIONED</dd></dl>
+{{% /choosable %}}
 
 <h4 id="interconnectattachmentpartnermetadata">Interconnect<wbr>Attachment<wbr>Partner<wbr>Metadata</h4>
 
@@ -1670,6 +1818,82 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] 802.1q encapsulation tag to be used for traffic between Google and the customer, going to and from this network and region.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="interconnectattachmentstate">Interconnect<wbr>Attachment<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Defunct</dt>
+    <dd>DEFUNCT</dd><dt>Partner<wbr>Request<wbr>Received</dt>
+    <dd>PARTNER_REQUEST_RECEIVED</dd><dt>Pending<wbr>Customer</dt>
+    <dd>PENDING_CUSTOMER</dd><dt>Pending<wbr>Partner</dt>
+    <dd>PENDING_PARTNER</dd><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED</dd><dt>Unprovisioned</dt>
+    <dd>UNPROVISIONED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Interconnect<wbr>Attachment<wbr>State<wbr>Active</dt>
+    <dd>ACTIVE</dd><dt>Interconnect<wbr>Attachment<wbr>State<wbr>Defunct</dt>
+    <dd>DEFUNCT</dd><dt>Interconnect<wbr>Attachment<wbr>State<wbr>Partner<wbr>Request<wbr>Received</dt>
+    <dd>PARTNER_REQUEST_RECEIVED</dd><dt>Interconnect<wbr>Attachment<wbr>State<wbr>Pending<wbr>Customer</dt>
+    <dd>PENDING_CUSTOMER</dd><dt>Interconnect<wbr>Attachment<wbr>State<wbr>Pending<wbr>Partner</dt>
+    <dd>PENDING_PARTNER</dd><dt>Interconnect<wbr>Attachment<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED</dd><dt>Interconnect<wbr>Attachment<wbr>State<wbr>Unprovisioned</dt>
+    <dd>UNPROVISIONED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Defunct</dt>
+    <dd>DEFUNCT</dd><dt>Partner<wbr>Request<wbr>Received</dt>
+    <dd>PARTNER_REQUEST_RECEIVED</dd><dt>Pending<wbr>Customer</dt>
+    <dd>PENDING_CUSTOMER</dd><dt>Pending<wbr>Partner</dt>
+    <dd>PENDING_PARTNER</dd><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED</dd><dt>Unprovisioned</dt>
+    <dd>UNPROVISIONED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACTIVE</dt>
+    <dd>ACTIVE</dd><dt>DEFUNCT</dt>
+    <dd>DEFUNCT</dd><dt>PARTNER_REQUEST_RECEIVED</dt>
+    <dd>PARTNER_REQUEST_RECEIVED</dd><dt>PENDING_CUSTOMER</dt>
+    <dd>PENDING_CUSTOMER</dd><dt>PENDING_PARTNER</dt>
+    <dd>PENDING_PARTNER</dd><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED</dd><dt>UNPROVISIONED</dt>
+    <dd>UNPROVISIONED</dd></dl>
+{{% /choosable %}}
+
+<h4 id="interconnectattachmenttype">Interconnect<wbr>Attachment<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Dedicated</dt>
+    <dd>DEDICATED</dd><dt>Partner</dt>
+    <dd>PARTNER</dd><dt>Partner<wbr>Provider</dt>
+    <dd>PARTNER_PROVIDER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Interconnect<wbr>Attachment<wbr>Type<wbr>Dedicated</dt>
+    <dd>DEDICATED</dd><dt>Interconnect<wbr>Attachment<wbr>Type<wbr>Partner</dt>
+    <dd>PARTNER</dd><dt>Interconnect<wbr>Attachment<wbr>Type<wbr>Partner<wbr>Provider</dt>
+    <dd>PARTNER_PROVIDER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Dedicated</dt>
+    <dd>DEDICATED</dd><dt>Partner</dt>
+    <dd>PARTNER</dd><dt>Partner<wbr>Provider</dt>
+    <dd>PARTNER_PROVIDER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DEDICATED</dt>
+    <dd>DEDICATED</dd><dt>PARTNER</dt>
+    <dd>PARTNER</dd><dt>PARTNER_PROVIDER</dt>
+    <dd>PARTNER_PROVIDER</dd></dl>
 {{% /choosable %}}
 
 

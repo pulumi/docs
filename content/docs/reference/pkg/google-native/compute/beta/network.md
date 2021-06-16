@@ -801,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#networkpeeringstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Network<wbr>Peering<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE` when there's a matching configuration in the peer network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -893,7 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#networkpeeringstate">Network<wbr>Peering<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE` when there's a matching configuration in the peer network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -985,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#networkpeeringstate">Network<wbr>Peering<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE` when there's a matching configuration in the peer network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1077,7 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#networkpeeringstate">Network<wbr>Peering<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE` when there's a matching configuration in the peer network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1460,6 +1460,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}[Output Only] Details about the current state of the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="networkpeeringstate">Network<wbr>Peering<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Inactive</dt>
+    <dd>INACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Network<wbr>Peering<wbr>State<wbr>Active</dt>
+    <dd>ACTIVE</dd><dt>Network<wbr>Peering<wbr>State<wbr>Inactive</dt>
+    <dd>INACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Inactive</dt>
+    <dd>INACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACTIVE</dt>
+    <dd>ACTIVE</dd><dt>INACTIVE</dt>
+    <dd>INACTIVE</dd></dl>
+{{% /choosable %}}
+
 <h4 id="networkroutingconfig">Network<wbr>Routing<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -1469,7 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingmode_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#networkroutingconfigroutingmode">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Network<wbr>Routing<wbr>Config<wbr>Routing<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The network-wide routing mode to use. If set to REGIONAL, this network's Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network's Cloud Routers will advertise routes with all subnets of this network, across regions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1481,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingmode_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#networkroutingconfigroutingmode">Network<wbr>Routing<wbr>Config<wbr>Routing<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The network-wide routing mode to use. If set to REGIONAL, this network's Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network's Cloud Routers will advertise routes with all subnets of this network, across regions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1493,7 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingmode_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#networkroutingconfigroutingmode">Network<wbr>Routing<wbr>Config<wbr>Routing<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The network-wide routing mode to use. If set to REGIONAL, this network's Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network's Cloud Routers will advertise routes with all subnets of this network, across regions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1505,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_mode_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#networkroutingconfigroutingmode">Network<wbr>Routing<wbr>Config<wbr>Routing<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The network-wide routing mode to use. If set to REGIONAL, this network's Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network's Cloud Routers will advertise routes with all subnets of this network, across regions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1558,6 +1584,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network-wide routing mode to use. If set to REGIONAL, this network's Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network's Cloud Routers will advertise routes with all subnets of this network, across regions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="networkroutingconfigroutingmode">Network<wbr>Routing<wbr>Config<wbr>Routing<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Global</dt>
+    <dd>GLOBAL</dd><dt>Regional</dt>
+    <dd>REGIONAL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Network<wbr>Routing<wbr>Config<wbr>Routing<wbr>Mode<wbr>Global</dt>
+    <dd>GLOBAL</dd><dt>Network<wbr>Routing<wbr>Config<wbr>Routing<wbr>Mode<wbr>Regional</dt>
+    <dd>REGIONAL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Global</dt>
+    <dd>GLOBAL</dd><dt>Regional</dt>
+    <dd>REGIONAL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>GLOBAL_</dt>
+    <dd>GLOBAL</dd><dt>REGIONAL</dt>
+    <dd>REGIONAL</dd></dl>
 {{% /choosable %}}
 
 

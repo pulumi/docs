@@ -408,7 +408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampler_csharp" style="color: inherit; text-decoration: inherit;">Sampler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudapigeev1tracesamplingconfigsampler">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Google<wbr>Cloud<wbr>Apigee<wbr>V1Trace<wbr>Sampling<wbr>Config<wbr>Sampler</a></span>
     </dt>
     <dd>{{% md %}}Sampler of distributed tracing. OFF is the default value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -428,7 +428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampler_go" style="color: inherit; text-decoration: inherit;">Sampler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudapigeev1tracesamplingconfigsampler">Google<wbr>Cloud<wbr>Apigee<wbr>V1Trace<wbr>Sampling<wbr>Config<wbr>Sampler</a></span>
     </dt>
     <dd>{{% md %}}Sampler of distributed tracing. OFF is the default value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -448,7 +448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampler_nodejs" style="color: inherit; text-decoration: inherit;">sampler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudapigeev1tracesamplingconfigsampler">Google<wbr>Cloud<wbr>Apigee<wbr>V1Trace<wbr>Sampling<wbr>Config<wbr>Sampler</a></span>
     </dt>
     <dd>{{% md %}}Sampler of distributed tracing. OFF is the default value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -468,7 +468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampler_python" style="color: inherit; text-decoration: inherit;">sampler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudapigeev1tracesamplingconfigsampler">Google<wbr>Cloud<wbr>Apigee<wbr>V1Trace<wbr>Sampling<wbr>Config<wbr>Sampler</a></span>
     </dt>
     <dd>{{% md %}}Sampler of distributed tracing. OFF is the default value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -561,6 +561,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Field sampling rate. This value is only applicable when using the PROBABILITY sampler. The supported values are > 0 and <= 0.5.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudapigeev1tracesamplingconfigsampler">Google<wbr>Cloud<wbr>Apigee<wbr>V1Trace<wbr>Sampling<wbr>Config<wbr>Sampler</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sampler<wbr>Unspecified</dt>
+    <dd>SAMPLER_UNSPECIFIED{{% md %}}Sampler unspecified.{{% /md %}}</dd><dt>Off</dt>
+    <dd>OFF{{% md %}}OFF means distributed trace is disabled, or the sampling probability is 0.{{% /md %}}</dd><dt>Probability</dt>
+    <dd>PROBABILITY{{% md %}}PROBABILITY means traces are captured on a probability that defined by sampling_rate. The sampling rate is limited to 0 to 0.5 when this is set.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Apigee<wbr>V1Trace<wbr>Sampling<wbr>Config<wbr>Sampler<wbr>Sampler<wbr>Unspecified</dt>
+    <dd>SAMPLER_UNSPECIFIED{{% md %}}Sampler unspecified.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Apigee<wbr>V1Trace<wbr>Sampling<wbr>Config<wbr>Sampler<wbr>Off</dt>
+    <dd>OFF{{% md %}}OFF means distributed trace is disabled, or the sampling probability is 0.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Apigee<wbr>V1Trace<wbr>Sampling<wbr>Config<wbr>Sampler<wbr>Probability</dt>
+    <dd>PROBABILITY{{% md %}}PROBABILITY means traces are captured on a probability that defined by sampling_rate. The sampling rate is limited to 0 to 0.5 when this is set.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sampler<wbr>Unspecified</dt>
+    <dd>SAMPLER_UNSPECIFIED{{% md %}}Sampler unspecified.{{% /md %}}</dd><dt>Off</dt>
+    <dd>OFF{{% md %}}OFF means distributed trace is disabled, or the sampling probability is 0.{{% /md %}}</dd><dt>Probability</dt>
+    <dd>PROBABILITY{{% md %}}PROBABILITY means traces are captured on a probability that defined by sampling_rate. The sampling rate is limited to 0 to 0.5 when this is set.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SAMPLER_UNSPECIFIED</dt>
+    <dd>SAMPLER_UNSPECIFIED{{% md %}}Sampler unspecified.{{% /md %}}</dd><dt>OFF</dt>
+    <dd>OFF{{% md %}}OFF means distributed trace is disabled, or the sampling probability is 0.{{% /md %}}</dd><dt>PROBABILITY</dt>
+    <dd>PROBABILITY{{% md %}}PROBABILITY means traces are captured on a probability that defined by sampling_rate. The sampling rate is limited to 0 to 0.5 when this is set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

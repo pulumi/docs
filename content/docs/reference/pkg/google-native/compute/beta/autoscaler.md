@@ -39,7 +39,7 @@ Creates an autoscaler in the specified project using the data included in the re
                <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">scaling_schedule_status</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.AutoscalerStatus]</span> = None<span class="p">,</span>
                <span class="nx">status_details</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.AutoscalerStatusDetailsArgs]]</span> = None<span class="p">,</span>
                <span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -282,7 +282,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#autoscalerstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Autoscaler<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the autoscaler configuration. Current set of possible values:  
 - PENDING: Autoscaler backend hasn't read new/updated configuration. 
@@ -420,7 +420,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#autoscalerstatus">Autoscaler<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the autoscaler configuration. Current set of possible values:  
 - PENDING: Autoscaler backend hasn't read new/updated configuration. 
@@ -558,7 +558,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#autoscalerstatus">Autoscaler<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the autoscaler configuration. Current set of possible values:  
 - PENDING: Autoscaler backend hasn't read new/updated configuration. 
@@ -696,7 +696,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#autoscalerstatus">Autoscaler<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the autoscaler configuration. Current set of possible values:  
 - PENDING: Autoscaler backend hasn't read new/updated configuration. 
@@ -786,6 +786,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="autoscalerstatus">Autoscaler<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Error</dt>
+    <dd>ERROR</dd><dt>Pending</dt>
+    <dd>PENDING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Autoscaler<wbr>Status<wbr>Active</dt>
+    <dd>ACTIVE</dd><dt>Autoscaler<wbr>Status<wbr>Deleting</dt>
+    <dd>DELETING</dd><dt>Autoscaler<wbr>Status<wbr>Error</dt>
+    <dd>ERROR</dd><dt>Autoscaler<wbr>Status<wbr>Pending</dt>
+    <dd>PENDING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Error</dt>
+    <dd>ERROR</dd><dt>Pending</dt>
+    <dd>PENDING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACTIVE</dt>
+    <dd>ACTIVE</dd><dt>DELETING</dt>
+    <dd>DELETING</dd><dt>ERROR</dt>
+    <dd>ERROR</dd><dt>PENDING</dt>
+    <dd>PENDING</dd></dl>
+{{% /choosable %}}
+
 <h4 id="autoscalerstatusdetails">Autoscaler<wbr>Status<wbr>Details</h4>
 
 {{% choosable language csharp %}}
@@ -803,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#autoscalerstatusdetailstype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Autoscaler<wbr>Status<wbr>Details<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of error, warning, or notice returned. Current set of possible values:  
 - ALL_INSTANCES_UNHEALTHY (WARNING): All instances in the instance group are unhealthy (not in RUNNING state). 
@@ -839,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#autoscalerstatusdetailstype">Autoscaler<wbr>Status<wbr>Details<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of error, warning, or notice returned. Current set of possible values:  
 - ALL_INSTANCES_UNHEALTHY (WARNING): All instances in the instance group are unhealthy (not in RUNNING state). 
@@ -875,7 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#autoscalerstatusdetailstype">Autoscaler<wbr>Status<wbr>Details<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of error, warning, or notice returned. Current set of possible values:  
 - ALL_INSTANCES_UNHEALTHY (WARNING): All instances in the instance group are unhealthy (not in RUNNING state). 
@@ -911,7 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#autoscalerstatusdetailstype">Autoscaler<wbr>Status<wbr>Details<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of error, warning, or notice returned. Current set of possible values:  
 - ALL_INSTANCES_UNHEALTHY (WARNING): All instances in the instance group are unhealthy (not in RUNNING state). 
@@ -1078,6 +1112,104 @@ All [input](#inputs) properties are implicitly available as output properties. A
 - ZONE_RESOURCE_STOCKOUT (ERROR): For zonal autoscalers: there is a resource stockout in the chosen zone. For regional autoscalers: in at least one of the zones you're using there is a resource stockout.  New values might be added in the future. Some of the values might not be available in all API versions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="autoscalerstatusdetailstype">Autoscaler<wbr>Status<wbr>Details<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>All<wbr>Instances<wbr>Unhealthy</dt>
+    <dd>ALL_INSTANCES_UNHEALTHY</dd><dt>Backend<wbr>Service<wbr>Does<wbr>Not<wbr>Exist</dt>
+    <dd>BACKEND_SERVICE_DOES_NOT_EXIST</dd><dt>Capped<wbr>At<wbr>Max<wbr>Num<wbr>Replicas</dt>
+    <dd>CAPPED_AT_MAX_NUM_REPLICAS</dd><dt>Custom<wbr>Metric<wbr>Data<wbr>Points<wbr>Too<wbr>Sparse</dt>
+    <dd>CUSTOM_METRIC_DATA_POINTS_TOO_SPARSE</dd><dt>Custom<wbr>Metric<wbr>Invalid</dt>
+    <dd>CUSTOM_METRIC_INVALID</dd><dt>Min<wbr>Equals<wbr>Max</dt>
+    <dd>MIN_EQUALS_MAX</dd><dt>Missing<wbr>Custom<wbr>Metric<wbr>Data<wbr>Points</dt>
+    <dd>MISSING_CUSTOM_METRIC_DATA_POINTS</dd><dt>Missing<wbr>Load<wbr>Balancing<wbr>Data<wbr>Points</dt>
+    <dd>MISSING_LOAD_BALANCING_DATA_POINTS</dd><dt>Mode<wbr>Off</dt>
+    <dd>MODE_OFF</dd><dt>Mode<wbr>Only<wbr>Scale<wbr>Out</dt>
+    <dd>MODE_ONLY_SCALE_OUT</dd><dt>Mode<wbr>Only<wbr>Up</dt>
+    <dd>MODE_ONLY_UP</dd><dt>More<wbr>Than<wbr>One<wbr>Backend<wbr>Service</dt>
+    <dd>MORE_THAN_ONE_BACKEND_SERVICE</dd><dt>Not<wbr>Enough<wbr>Quota<wbr>Available</dt>
+    <dd>NOT_ENOUGH_QUOTA_AVAILABLE</dd><dt>Region<wbr>Resource<wbr>Stockout</dt>
+    <dd>REGION_RESOURCE_STOCKOUT</dd><dt>Scaling<wbr>Target<wbr>Does<wbr>Not<wbr>Exist</dt>
+    <dd>SCALING_TARGET_DOES_NOT_EXIST</dd><dt>Scheduled<wbr>Instances<wbr>Greater<wbr>Than<wbr>Autoscaler<wbr>Max</dt>
+    <dd>SCHEDULED_INSTANCES_GREATER_THAN_AUTOSCALER_MAX</dd><dt>Scheduled<wbr>Instances<wbr>Less<wbr>Than<wbr>Autoscaler<wbr>Min</dt>
+    <dd>SCHEDULED_INSTANCES_LESS_THAN_AUTOSCALER_MIN</dd><dt>Unknown</dt>
+    <dd>UNKNOWN</dd><dt>Unsupported<wbr>Max<wbr>Rate<wbr>Load<wbr>Balancing<wbr>Configuration</dt>
+    <dd>UNSUPPORTED_MAX_RATE_LOAD_BALANCING_CONFIGURATION</dd><dt>Zone<wbr>Resource<wbr>Stockout</dt>
+    <dd>ZONE_RESOURCE_STOCKOUT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>All<wbr>Instances<wbr>Unhealthy</dt>
+    <dd>ALL_INSTANCES_UNHEALTHY</dd><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>Backend<wbr>Service<wbr>Does<wbr>Not<wbr>Exist</dt>
+    <dd>BACKEND_SERVICE_DOES_NOT_EXIST</dd><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>Capped<wbr>At<wbr>Max<wbr>Num<wbr>Replicas</dt>
+    <dd>CAPPED_AT_MAX_NUM_REPLICAS</dd><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>Custom<wbr>Metric<wbr>Data<wbr>Points<wbr>Too<wbr>Sparse</dt>
+    <dd>CUSTOM_METRIC_DATA_POINTS_TOO_SPARSE</dd><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>Custom<wbr>Metric<wbr>Invalid</dt>
+    <dd>CUSTOM_METRIC_INVALID</dd><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>Min<wbr>Equals<wbr>Max</dt>
+    <dd>MIN_EQUALS_MAX</dd><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>Missing<wbr>Custom<wbr>Metric<wbr>Data<wbr>Points</dt>
+    <dd>MISSING_CUSTOM_METRIC_DATA_POINTS</dd><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>Missing<wbr>Load<wbr>Balancing<wbr>Data<wbr>Points</dt>
+    <dd>MISSING_LOAD_BALANCING_DATA_POINTS</dd><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>Mode<wbr>Off</dt>
+    <dd>MODE_OFF</dd><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>Mode<wbr>Only<wbr>Scale<wbr>Out</dt>
+    <dd>MODE_ONLY_SCALE_OUT</dd><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>Mode<wbr>Only<wbr>Up</dt>
+    <dd>MODE_ONLY_UP</dd><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>More<wbr>Than<wbr>One<wbr>Backend<wbr>Service</dt>
+    <dd>MORE_THAN_ONE_BACKEND_SERVICE</dd><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>Not<wbr>Enough<wbr>Quota<wbr>Available</dt>
+    <dd>NOT_ENOUGH_QUOTA_AVAILABLE</dd><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>Region<wbr>Resource<wbr>Stockout</dt>
+    <dd>REGION_RESOURCE_STOCKOUT</dd><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>Scaling<wbr>Target<wbr>Does<wbr>Not<wbr>Exist</dt>
+    <dd>SCALING_TARGET_DOES_NOT_EXIST</dd><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>Scheduled<wbr>Instances<wbr>Greater<wbr>Than<wbr>Autoscaler<wbr>Max</dt>
+    <dd>SCHEDULED_INSTANCES_GREATER_THAN_AUTOSCALER_MAX</dd><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>Scheduled<wbr>Instances<wbr>Less<wbr>Than<wbr>Autoscaler<wbr>Min</dt>
+    <dd>SCHEDULED_INSTANCES_LESS_THAN_AUTOSCALER_MIN</dd><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>Unknown</dt>
+    <dd>UNKNOWN</dd><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>Unsupported<wbr>Max<wbr>Rate<wbr>Load<wbr>Balancing<wbr>Configuration</dt>
+    <dd>UNSUPPORTED_MAX_RATE_LOAD_BALANCING_CONFIGURATION</dd><dt>Autoscaler<wbr>Status<wbr>Details<wbr>Type<wbr>Zone<wbr>Resource<wbr>Stockout</dt>
+    <dd>ZONE_RESOURCE_STOCKOUT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>All<wbr>Instances<wbr>Unhealthy</dt>
+    <dd>ALL_INSTANCES_UNHEALTHY</dd><dt>Backend<wbr>Service<wbr>Does<wbr>Not<wbr>Exist</dt>
+    <dd>BACKEND_SERVICE_DOES_NOT_EXIST</dd><dt>Capped<wbr>At<wbr>Max<wbr>Num<wbr>Replicas</dt>
+    <dd>CAPPED_AT_MAX_NUM_REPLICAS</dd><dt>Custom<wbr>Metric<wbr>Data<wbr>Points<wbr>Too<wbr>Sparse</dt>
+    <dd>CUSTOM_METRIC_DATA_POINTS_TOO_SPARSE</dd><dt>Custom<wbr>Metric<wbr>Invalid</dt>
+    <dd>CUSTOM_METRIC_INVALID</dd><dt>Min<wbr>Equals<wbr>Max</dt>
+    <dd>MIN_EQUALS_MAX</dd><dt>Missing<wbr>Custom<wbr>Metric<wbr>Data<wbr>Points</dt>
+    <dd>MISSING_CUSTOM_METRIC_DATA_POINTS</dd><dt>Missing<wbr>Load<wbr>Balancing<wbr>Data<wbr>Points</dt>
+    <dd>MISSING_LOAD_BALANCING_DATA_POINTS</dd><dt>Mode<wbr>Off</dt>
+    <dd>MODE_OFF</dd><dt>Mode<wbr>Only<wbr>Scale<wbr>Out</dt>
+    <dd>MODE_ONLY_SCALE_OUT</dd><dt>Mode<wbr>Only<wbr>Up</dt>
+    <dd>MODE_ONLY_UP</dd><dt>More<wbr>Than<wbr>One<wbr>Backend<wbr>Service</dt>
+    <dd>MORE_THAN_ONE_BACKEND_SERVICE</dd><dt>Not<wbr>Enough<wbr>Quota<wbr>Available</dt>
+    <dd>NOT_ENOUGH_QUOTA_AVAILABLE</dd><dt>Region<wbr>Resource<wbr>Stockout</dt>
+    <dd>REGION_RESOURCE_STOCKOUT</dd><dt>Scaling<wbr>Target<wbr>Does<wbr>Not<wbr>Exist</dt>
+    <dd>SCALING_TARGET_DOES_NOT_EXIST</dd><dt>Scheduled<wbr>Instances<wbr>Greater<wbr>Than<wbr>Autoscaler<wbr>Max</dt>
+    <dd>SCHEDULED_INSTANCES_GREATER_THAN_AUTOSCALER_MAX</dd><dt>Scheduled<wbr>Instances<wbr>Less<wbr>Than<wbr>Autoscaler<wbr>Min</dt>
+    <dd>SCHEDULED_INSTANCES_LESS_THAN_AUTOSCALER_MIN</dd><dt>Unknown</dt>
+    <dd>UNKNOWN</dd><dt>Unsupported<wbr>Max<wbr>Rate<wbr>Load<wbr>Balancing<wbr>Configuration</dt>
+    <dd>UNSUPPORTED_MAX_RATE_LOAD_BALANCING_CONFIGURATION</dd><dt>Zone<wbr>Resource<wbr>Stockout</dt>
+    <dd>ZONE_RESOURCE_STOCKOUT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALL_INSTANCES_UNHEALTHY</dt>
+    <dd>ALL_INSTANCES_UNHEALTHY</dd><dt>BACKEND_SERVICE_DOES_NOT_EXIST</dt>
+    <dd>BACKEND_SERVICE_DOES_NOT_EXIST</dd><dt>CAPPED_AT_MAX_NUM_REPLICAS</dt>
+    <dd>CAPPED_AT_MAX_NUM_REPLICAS</dd><dt>CUSTOM_METRIC_DATA_POINTS_TOO_SPARSE</dt>
+    <dd>CUSTOM_METRIC_DATA_POINTS_TOO_SPARSE</dd><dt>CUSTOM_METRIC_INVALID</dt>
+    <dd>CUSTOM_METRIC_INVALID</dd><dt>MIN_EQUALS_MAX</dt>
+    <dd>MIN_EQUALS_MAX</dd><dt>MISSING_CUSTOM_METRIC_DATA_POINTS</dt>
+    <dd>MISSING_CUSTOM_METRIC_DATA_POINTS</dd><dt>MISSING_LOAD_BALANCING_DATA_POINTS</dt>
+    <dd>MISSING_LOAD_BALANCING_DATA_POINTS</dd><dt>MODE_OFF</dt>
+    <dd>MODE_OFF</dd><dt>MODE_ONLY_SCALE_OUT</dt>
+    <dd>MODE_ONLY_SCALE_OUT</dd><dt>MODE_ONLY_UP</dt>
+    <dd>MODE_ONLY_UP</dd><dt>MORE_THAN_ONE_BACKEND_SERVICE</dt>
+    <dd>MORE_THAN_ONE_BACKEND_SERVICE</dd><dt>NOT_ENOUGH_QUOTA_AVAILABLE</dt>
+    <dd>NOT_ENOUGH_QUOTA_AVAILABLE</dd><dt>REGION_RESOURCE_STOCKOUT</dt>
+    <dd>REGION_RESOURCE_STOCKOUT</dd><dt>SCALING_TARGET_DOES_NOT_EXIST</dt>
+    <dd>SCALING_TARGET_DOES_NOT_EXIST</dd><dt>SCHEDULED_INSTANCES_GREATER_THAN_AUTOSCALER_MAX</dt>
+    <dd>SCHEDULED_INSTANCES_GREATER_THAN_AUTOSCALER_MAX</dd><dt>SCHEDULED_INSTANCES_LESS_THAN_AUTOSCALER_MIN</dt>
+    <dd>SCHEDULED_INSTANCES_LESS_THAN_AUTOSCALER_MIN</dd><dt>UNKNOWN</dt>
+    <dd>UNKNOWN</dd><dt>UNSUPPORTED_MAX_RATE_LOAD_BALANCING_CONFIGURATION</dt>
+    <dd>UNSUPPORTED_MAX_RATE_LOAD_BALANCING_CONFIGURATION</dd><dt>ZONE_RESOURCE_STOCKOUT</dt>
+    <dd>ZONE_RESOURCE_STOCKOUT</dd></dl>
+{{% /choosable %}}
+
 <h4 id="autoscalingpolicy">Autoscaling<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
@@ -1137,7 +1269,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#autoscalingpolicymode">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Autoscaling<wbr>Policy<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Defines operating mode for this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1223,7 +1355,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#autoscalingpolicymode">Autoscaling<wbr>Policy<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Defines operating mode for this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1309,7 +1441,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#autoscalingpolicymode">Autoscaling<wbr>Policy<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Defines operating mode for this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1395,7 +1527,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#autoscalingpolicymode">Autoscaling<wbr>Policy<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Defines operating mode for this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1433,7 +1565,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#predictivemethod_csharp" style="color: inherit; text-decoration: inherit;">Predictive<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#autoscalingpolicycpuutilizationpredictivemethod">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Predictive<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
 
@@ -1459,7 +1591,7 @@ If the average CPU is above the target utilization, the autoscaler scales out un
 <a href="#predictivemethod_go" style="color: inherit; text-decoration: inherit;">Predictive<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#autoscalingpolicycpuutilizationpredictivemethod">Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Predictive<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
 
@@ -1485,7 +1617,7 @@ If the average CPU is above the target utilization, the autoscaler scales out un
 <a href="#predictivemethod_nodejs" style="color: inherit; text-decoration: inherit;">predictive<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#autoscalingpolicycpuutilizationpredictivemethod">Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Predictive<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
 
@@ -1511,7 +1643,7 @@ If the average CPU is above the target utilization, the autoscaler scales out un
 <a href="#predictive_method_python" style="color: inherit; text-decoration: inherit;">predictive_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#autoscalingpolicycpuutilizationpredictivemethod">Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Predictive<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
 
@@ -1528,6 +1660,36 @@ If the average CPU is above the target utilization, the autoscaler scales out un
 If the CPU level is below the target utilization, the autoscaler scales in the number of instances until it reaches the minimum number of instances you specified or until the average CPU of your instances reaches the target utilization.
 
 If the average CPU is above the target utilization, the autoscaler scales out until it reaches the maximum number of instances you specified or until the average utilization reaches the target utilization.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="autoscalingpolicycpuutilizationpredictivemethod">Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Predictive<wbr>Method</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Optimize<wbr>Availability</dt>
+    <dd>OPTIMIZE_AVAILABILITY</dd><dt>Predictive<wbr>Method<wbr>Unspecified</dt>
+    <dd>PREDICTIVE_METHOD_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Predictive<wbr>Method<wbr>None</dt>
+    <dd>NONE</dd><dt>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Predictive<wbr>Method<wbr>Optimize<wbr>Availability</dt>
+    <dd>OPTIMIZE_AVAILABILITY</dd><dt>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Predictive<wbr>Method<wbr>Predictive<wbr>Method<wbr>Unspecified</dt>
+    <dd>PREDICTIVE_METHOD_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Optimize<wbr>Availability</dt>
+    <dd>OPTIMIZE_AVAILABILITY</dd><dt>Predictive<wbr>Method<wbr>Unspecified</dt>
+    <dd>PREDICTIVE_METHOD_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NONE</dt>
+    <dd>NONE</dd><dt>OPTIMIZE_AVAILABILITY</dt>
+    <dd>OPTIMIZE_AVAILABILITY</dd><dt>PREDICTIVE_METHOD_UNSPECIFIED</dt>
+    <dd>PREDICTIVE_METHOD_UNSPECIFIED</dd></dl>
 {{% /choosable %}}
 
 <h4 id="autoscalingpolicycpuutilizationresponse">Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Response</h4>
@@ -1696,7 +1858,7 @@ For example, a good metric to use as a utilization_target is https://www.googlea
 <a href="#utilizationtargettype_csharp" style="color: inherit; text-decoration: inherit;">Utilization<wbr>Target<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#autoscalingpolicycustommetricutilizationutilizationtargettype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Autoscaling<wbr>Policy<wbr>Custom<wbr>Metric<wbr>Utilization<wbr>Utilization<wbr>Target<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND, or DELTA_PER_MINUTE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1759,7 +1921,7 @@ For example, a good metric to use as a utilization_target is https://www.googlea
 <a href="#utilizationtargettype_go" style="color: inherit; text-decoration: inherit;">Utilization<wbr>Target<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#autoscalingpolicycustommetricutilizationutilizationtargettype">Autoscaling<wbr>Policy<wbr>Custom<wbr>Metric<wbr>Utilization<wbr>Utilization<wbr>Target<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND, or DELTA_PER_MINUTE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1822,7 +1984,7 @@ For example, a good metric to use as a utilization_target is https://www.googlea
 <a href="#utilizationtargettype_nodejs" style="color: inherit; text-decoration: inherit;">utilization<wbr>Target<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#autoscalingpolicycustommetricutilizationutilizationtargettype">Autoscaling<wbr>Policy<wbr>Custom<wbr>Metric<wbr>Utilization<wbr>Utilization<wbr>Target<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND, or DELTA_PER_MINUTE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1885,7 +2047,7 @@ For example, a good metric to use as a utilization_target is https://www.googlea
 <a href="#utilization_target_type_python" style="color: inherit; text-decoration: inherit;">utilization_<wbr>target_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#autoscalingpolicycustommetricutilizationutilizationtargettype">Autoscaling<wbr>Policy<wbr>Custom<wbr>Metric<wbr>Utilization<wbr>Utilization<wbr>Target<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND, or DELTA_PER_MINUTE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2144,6 +2306,36 @@ For example, a good metric to use as a utilization_target is https://www.googlea
     <dd>{{% md %}}Defines how target utilization value is expressed for a Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND, or DELTA_PER_MINUTE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="autoscalingpolicycustommetricutilizationutilizationtargettype">Autoscaling<wbr>Policy<wbr>Custom<wbr>Metric<wbr>Utilization<wbr>Utilization<wbr>Target<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Delta<wbr>Per<wbr>Minute</dt>
+    <dd>DELTA_PER_MINUTE</dd><dt>Delta<wbr>Per<wbr>Second</dt>
+    <dd>DELTA_PER_SECOND</dd><dt>Gauge</dt>
+    <dd>GAUGE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Autoscaling<wbr>Policy<wbr>Custom<wbr>Metric<wbr>Utilization<wbr>Utilization<wbr>Target<wbr>Type<wbr>Delta<wbr>Per<wbr>Minute</dt>
+    <dd>DELTA_PER_MINUTE</dd><dt>Autoscaling<wbr>Policy<wbr>Custom<wbr>Metric<wbr>Utilization<wbr>Utilization<wbr>Target<wbr>Type<wbr>Delta<wbr>Per<wbr>Second</dt>
+    <dd>DELTA_PER_SECOND</dd><dt>Autoscaling<wbr>Policy<wbr>Custom<wbr>Metric<wbr>Utilization<wbr>Utilization<wbr>Target<wbr>Type<wbr>Gauge</dt>
+    <dd>GAUGE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Delta<wbr>Per<wbr>Minute</dt>
+    <dd>DELTA_PER_MINUTE</dd><dt>Delta<wbr>Per<wbr>Second</dt>
+    <dd>DELTA_PER_SECOND</dd><dt>Gauge</dt>
+    <dd>GAUGE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DELTA_PER_MINUTE</dt>
+    <dd>DELTA_PER_MINUTE</dd><dt>DELTA_PER_SECOND</dt>
+    <dd>DELTA_PER_SECOND</dd><dt>GAUGE</dt>
+    <dd>GAUGE</dd></dl>
+{{% /choosable %}}
+
 <h4 id="autoscalingpolicyloadbalancingutilization">Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization</h4>
 
 {{% choosable language csharp %}}
@@ -2242,6 +2434,40 @@ For example, a good metric to use as a utilization_target is https://www.googlea
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(S) load balancing configuration) that the autoscaler maintains. Must be a positive float value. If not defined, the default is 0.8.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="autoscalingpolicymode">Autoscaling<wbr>Policy<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Off</dt>
+    <dd>OFF</dd><dt>On</dt>
+    <dd>ON</dd><dt>Only<wbr>Scale<wbr>Out</dt>
+    <dd>ONLY_SCALE_OUT</dd><dt>Only<wbr>Up</dt>
+    <dd>ONLY_UP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Autoscaling<wbr>Policy<wbr>Mode<wbr>Off</dt>
+    <dd>OFF</dd><dt>Autoscaling<wbr>Policy<wbr>Mode<wbr>On</dt>
+    <dd>ON</dd><dt>Autoscaling<wbr>Policy<wbr>Mode<wbr>Only<wbr>Scale<wbr>Out</dt>
+    <dd>ONLY_SCALE_OUT</dd><dt>Autoscaling<wbr>Policy<wbr>Mode<wbr>Only<wbr>Up</dt>
+    <dd>ONLY_UP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Off</dt>
+    <dd>OFF</dd><dt>On</dt>
+    <dd>ON</dd><dt>Only<wbr>Scale<wbr>Out</dt>
+    <dd>ONLY_SCALE_OUT</dd><dt>Only<wbr>Up</dt>
+    <dd>ONLY_UP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>OFF</dt>
+    <dd>OFF</dd><dt>ON</dt>
+    <dd>ON</dd><dt>ONLY_SCALE_OUT</dt>
+    <dd>ONLY_SCALE_OUT</dd><dt>ONLY_UP</dt>
+    <dd>ONLY_UP</dd></dl>
 {{% /choosable %}}
 
 <h4 id="autoscalingpolicyresponse">Autoscaling<wbr>Policy<wbr>Response</h4>

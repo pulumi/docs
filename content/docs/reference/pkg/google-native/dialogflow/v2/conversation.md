@@ -29,7 +29,7 @@ Creates a new conversation. Conversations are auto-completed after 24 hours. Con
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                  <span class="nx">conversation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">conversation_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">conversation_stage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">conversation_stage</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v2.ConversationConversationStage]</span> = None<span class="p">,</span>
                  <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -197,7 +197,7 @@ The Conversation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#conversationstage_csharp" style="color: inherit; text-decoration: inherit;">Conversation<wbr>Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conversationconversationstage">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2.<wbr>Conversation<wbr>Conversation<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}The stage of a conversation. It indicates whether the virtual agent or a human agent is handling the conversation. If the conversation is created with the conversation profile that has Dialogflow config set, defaults to ConversationStage.VIRTUAL_AGENT_STAGE; Otherwise, defaults to ConversationStage.HUMAN_ASSIST_STAGE. If the conversation is created with the conversation profile that has Dialogflow config set but explicitly sets conversation_stage to ConversationStage.HUMAN_ASSIST_STAGE, it skips ConversationStage.VIRTUAL_AGENT_STAGE stage and directly goes to ConversationStage.HUMAN_ASSIST_STAGE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -241,7 +241,7 @@ The Conversation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#conversationstage_go" style="color: inherit; text-decoration: inherit;">Conversation<wbr>Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conversationconversationstage">Conversation<wbr>Conversation<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}The stage of a conversation. It indicates whether the virtual agent or a human agent is handling the conversation. If the conversation is created with the conversation profile that has Dialogflow config set, defaults to ConversationStage.VIRTUAL_AGENT_STAGE; Otherwise, defaults to ConversationStage.HUMAN_ASSIST_STAGE. If the conversation is created with the conversation profile that has Dialogflow config set but explicitly sets conversation_stage to ConversationStage.HUMAN_ASSIST_STAGE, it skips ConversationStage.VIRTUAL_AGENT_STAGE stage and directly goes to ConversationStage.HUMAN_ASSIST_STAGE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -285,7 +285,7 @@ The Conversation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#conversationstage_nodejs" style="color: inherit; text-decoration: inherit;">conversation<wbr>Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conversationconversationstage">Conversation<wbr>Conversation<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}The stage of a conversation. It indicates whether the virtual agent or a human agent is handling the conversation. If the conversation is created with the conversation profile that has Dialogflow config set, defaults to ConversationStage.VIRTUAL_AGENT_STAGE; Otherwise, defaults to ConversationStage.HUMAN_ASSIST_STAGE. If the conversation is created with the conversation profile that has Dialogflow config set but explicitly sets conversation_stage to ConversationStage.HUMAN_ASSIST_STAGE, it skips ConversationStage.VIRTUAL_AGENT_STAGE stage and directly goes to ConversationStage.HUMAN_ASSIST_STAGE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -329,7 +329,7 @@ The Conversation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#conversation_stage_python" style="color: inherit; text-decoration: inherit;">conversation_<wbr>stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#conversationconversationstage">Conversation<wbr>Conversation<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}The stage of a conversation. It indicates whether the virtual agent or a human agent is handling the conversation. If the conversation is created with the conversation profile that has Dialogflow config set, defaults to ConversationStage.VIRTUAL_AGENT_STAGE; Otherwise, defaults to ConversationStage.HUMAN_ASSIST_STAGE. If the conversation is created with the conversation profile that has Dialogflow config set but explicitly sets conversation_stage to ConversationStage.HUMAN_ASSIST_STAGE, it skips ConversationStage.VIRTUAL_AGENT_STAGE stage and directly goes to ConversationStage.HUMAN_ASSIST_STAGE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -558,6 +558,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="conversationconversationstage">Conversation<wbr>Conversation<wbr>Stage</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Conversation<wbr>Stage<wbr>Unspecified</dt>
+    <dd>CONVERSATION_STAGE_UNSPECIFIED{{% md %}}Unknown. Should never be used after a conversation is successfully created.{{% /md %}}</dd><dt>Virtual<wbr>Agent<wbr>Stage</dt>
+    <dd>VIRTUAL_AGENT_STAGE{{% md %}}The conversation should return virtual agent responses into the conversation.{{% /md %}}</dd><dt>Human<wbr>Assist<wbr>Stage</dt>
+    <dd>HUMAN_ASSIST_STAGE{{% md %}}The conversation should not provide responses, just listen and provide suggestions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Conversation<wbr>Conversation<wbr>Stage<wbr>Conversation<wbr>Stage<wbr>Unspecified</dt>
+    <dd>CONVERSATION_STAGE_UNSPECIFIED{{% md %}}Unknown. Should never be used after a conversation is successfully created.{{% /md %}}</dd><dt>Conversation<wbr>Conversation<wbr>Stage<wbr>Virtual<wbr>Agent<wbr>Stage</dt>
+    <dd>VIRTUAL_AGENT_STAGE{{% md %}}The conversation should return virtual agent responses into the conversation.{{% /md %}}</dd><dt>Conversation<wbr>Conversation<wbr>Stage<wbr>Human<wbr>Assist<wbr>Stage</dt>
+    <dd>HUMAN_ASSIST_STAGE{{% md %}}The conversation should not provide responses, just listen and provide suggestions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Conversation<wbr>Stage<wbr>Unspecified</dt>
+    <dd>CONVERSATION_STAGE_UNSPECIFIED{{% md %}}Unknown. Should never be used after a conversation is successfully created.{{% /md %}}</dd><dt>Virtual<wbr>Agent<wbr>Stage</dt>
+    <dd>VIRTUAL_AGENT_STAGE{{% md %}}The conversation should return virtual agent responses into the conversation.{{% /md %}}</dd><dt>Human<wbr>Assist<wbr>Stage</dt>
+    <dd>HUMAN_ASSIST_STAGE{{% md %}}The conversation should not provide responses, just listen and provide suggestions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CONVERSATION_STAGE_UNSPECIFIED</dt>
+    <dd>CONVERSATION_STAGE_UNSPECIFIED{{% md %}}Unknown. Should never be used after a conversation is successfully created.{{% /md %}}</dd><dt>VIRTUAL_AGENT_STAGE</dt>
+    <dd>VIRTUAL_AGENT_STAGE{{% md %}}The conversation should return virtual agent responses into the conversation.{{% /md %}}</dd><dt>HUMAN_ASSIST_STAGE</dt>
+    <dd>HUMAN_ASSIST_STAGE{{% md %}}The conversation should not provide responses, just listen and provide suggestions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="googleclouddialogflowv2conversationphonenumberresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Conversation<wbr>Phone<wbr>Number<wbr>Response</h4>
 

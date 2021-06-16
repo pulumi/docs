@@ -30,7 +30,7 @@ Adds a new Membership.
                <span class="nx">authority</span><span class="p">:</span> <span class="nx">Optional[_gkehub_v1alpha2.AuthorityArgs]</span> = None<span class="p">,</span>
                <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[_gkehub_v1alpha2.MembershipEndpointArgs]</span> = None<span class="p">,</span>
                <span class="nx">external_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">infrastructure_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">infrastructure_type</span><span class="p">:</span> <span class="nx">Optional[_gkehub_v1alpha2.MembershipInfrastructureType]</span> = None<span class="p">,</span>
                <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">membership_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -216,7 +216,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#infrastructuretype_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#membershipinfrastructuretype">Pulumi.<wbr>Google<wbr>Native.<wbr>GKEHub.<wbr>V1Alpha2.<wbr>Membership<wbr>Infrastructure<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The infrastructure type this Membership is running on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -284,7 +284,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#infrastructuretype_go" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#membershipinfrastructuretype">Membership<wbr>Infrastructure<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The infrastructure type this Membership is running on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -352,7 +352,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#infrastructuretype_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#membershipinfrastructuretype">Membership<wbr>Infrastructure<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The infrastructure type this Membership is running on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -420,7 +420,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#infrastructure_type_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#membershipinfrastructuretype">Membership<wbr>Infrastructure<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The infrastructure type this Membership is running on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1714,6 +1714,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kubernetesresourceresponse">Kubernetes<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="membershipinfrastructuretype">Membership<wbr>Infrastructure<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Infrastructure<wbr>Type<wbr>Unspecified</dt>
+    <dd>INFRASTRUCTURE_TYPE_UNSPECIFIED{{% md %}}No type was specified. Some Hub functionality may require a type be specified, and will not support Memberships with this value.{{% /md %}}</dd><dt>On<wbr>Prem</dt>
+    <dd>ON_PREM{{% md %}}Private infrastructure that is owned or operated by customer. This includes GKE distributions such as GKE-OnPrem and GKE-OnBareMetal.{{% /md %}}</dd><dt>Multi<wbr>Cloud</dt>
+    <dd>MULTI_CLOUD{{% md %}}Public cloud infrastructure.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Membership<wbr>Infrastructure<wbr>Type<wbr>Infrastructure<wbr>Type<wbr>Unspecified</dt>
+    <dd>INFRASTRUCTURE_TYPE_UNSPECIFIED{{% md %}}No type was specified. Some Hub functionality may require a type be specified, and will not support Memberships with this value.{{% /md %}}</dd><dt>Membership<wbr>Infrastructure<wbr>Type<wbr>On<wbr>Prem</dt>
+    <dd>ON_PREM{{% md %}}Private infrastructure that is owned or operated by customer. This includes GKE distributions such as GKE-OnPrem and GKE-OnBareMetal.{{% /md %}}</dd><dt>Membership<wbr>Infrastructure<wbr>Type<wbr>Multi<wbr>Cloud</dt>
+    <dd>MULTI_CLOUD{{% md %}}Public cloud infrastructure.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Infrastructure<wbr>Type<wbr>Unspecified</dt>
+    <dd>INFRASTRUCTURE_TYPE_UNSPECIFIED{{% md %}}No type was specified. Some Hub functionality may require a type be specified, and will not support Memberships with this value.{{% /md %}}</dd><dt>On<wbr>Prem</dt>
+    <dd>ON_PREM{{% md %}}Private infrastructure that is owned or operated by customer. This includes GKE distributions such as GKE-OnPrem and GKE-OnBareMetal.{{% /md %}}</dd><dt>Multi<wbr>Cloud</dt>
+    <dd>MULTI_CLOUD{{% md %}}Public cloud infrastructure.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>INFRASTRUCTURE_TYPE_UNSPECIFIED</dt>
+    <dd>INFRASTRUCTURE_TYPE_UNSPECIFIED{{% md %}}No type was specified. Some Hub functionality may require a type be specified, and will not support Memberships with this value.{{% /md %}}</dd><dt>ON_PREM</dt>
+    <dd>ON_PREM{{% md %}}Private infrastructure that is owned or operated by customer. This includes GKE distributions such as GKE-OnPrem and GKE-OnBareMetal.{{% /md %}}</dd><dt>MULTI_CLOUD</dt>
+    <dd>MULTI_CLOUD{{% md %}}Public cloud infrastructure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="membershipstateresponse">Membership<wbr>State<wbr>Response</h4>

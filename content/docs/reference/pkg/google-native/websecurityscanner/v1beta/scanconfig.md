@@ -30,19 +30,19 @@ Creates a new ScanConfig.
                <span class="nx">authentication</span><span class="p">:</span> <span class="nx">Optional[_websecurityscanner_v1beta.AuthenticationArgs]</span> = None<span class="p">,</span>
                <span class="nx">blacklist_patterns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">export_to_security_command_center</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">export_to_security_command_center</span><span class="p">:</span> <span class="nx">Optional[_websecurityscanner_v1beta.ScanConfigExportToSecurityCommandCenter]</span> = None<span class="p">,</span>
                <span class="nx">ignore_http_status_errors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">latest_run</span><span class="p">:</span> <span class="nx">Optional[_websecurityscanner_v1beta.ScanRunArgs]</span> = None<span class="p">,</span>
                <span class="nx">managed_scan</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">max_qps</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">risk_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">risk_level</span><span class="p">:</span> <span class="nx">Optional[_websecurityscanner_v1beta.ScanConfigRiskLevel]</span> = None<span class="p">,</span>
                <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[_websecurityscanner_v1beta.ScheduleArgs]</span> = None<span class="p">,</span>
                <span class="nx">starting_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                <span class="nx">static_ip_scan</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-               <span class="nx">target_platforms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-               <span class="nx">user_agent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+               <span class="nx">target_platforms</span><span class="p">:</span> <span class="nx">Optional[Sequence[_websecurityscanner_v1beta.ScanConfigTargetPlatformsItem]]</span> = None<span class="p">,</span>
+               <span class="nx">user_agent</span><span class="p">:</span> <span class="nx">Optional[_websecurityscanner_v1beta.ScanConfigUserAgent]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ScanConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScanConfigArgs</a></span><span class="p">,</span>
@@ -208,7 +208,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#exporttosecuritycommandcenter_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfigexporttosecuritycommandcenter">Pulumi.<wbr>Google<wbr>Native.<wbr>Web<wbr>Security<wbr>Scanner.<wbr>V1Beta.<wbr>Scan<wbr>Config<wbr>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a></span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Security Command Center.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -256,7 +256,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#risklevel_csharp" style="color: inherit; text-decoration: inherit;">Risk<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfigrisklevel">Pulumi.<wbr>Google<wbr>Native.<wbr>Web<wbr>Security<wbr>Scanner.<wbr>V1Beta.<wbr>Scan<wbr>Config<wbr>Risk<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The risk level selected for the scan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -288,7 +288,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#targetplatforms_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Platforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#scanconfigtargetplatformsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Web<wbr>Security<wbr>Scanner.<wbr>V1Beta.<wbr>Scan<wbr>Config<wbr>Target<wbr>Platforms<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of Google Cloud platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -296,7 +296,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#useragent_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfiguseragent">Pulumi.<wbr>Google<wbr>Native.<wbr>Web<wbr>Security<wbr>Scanner.<wbr>V1Beta.<wbr>Scan<wbr>Config<wbr>User<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}The user agent used during scanning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -340,7 +340,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#exporttosecuritycommandcenter_go" style="color: inherit; text-decoration: inherit;">Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfigexporttosecuritycommandcenter">Scan<wbr>Config<wbr>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a></span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Security Command Center.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -388,7 +388,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#risklevel_go" style="color: inherit; text-decoration: inherit;">Risk<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfigrisklevel">Scan<wbr>Config<wbr>Risk<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The risk level selected for the scan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -420,7 +420,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#targetplatforms_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Platforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#scanconfigtargetplatformsitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}Set of Google Cloud platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -428,7 +428,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#useragent_go" style="color: inherit; text-decoration: inherit;">User<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfiguseragent">Scan<wbr>Config<wbr>User<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}The user agent used during scanning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -472,7 +472,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#exporttosecuritycommandcenter_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfigexporttosecuritycommandcenter">Scan<wbr>Config<wbr>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a></span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Security Command Center.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -520,7 +520,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#risklevel_nodejs" style="color: inherit; text-decoration: inherit;">risk<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfigrisklevel">Scan<wbr>Config<wbr>Risk<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The risk level selected for the scan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -552,7 +552,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#targetplatforms_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Platforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#scanconfigtargetplatformsitem">Scan<wbr>Config<wbr>Target<wbr>Platforms<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}Set of Google Cloud platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -560,7 +560,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#useragent_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfiguseragent">Scan<wbr>Config<wbr>User<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}The user agent used during scanning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -604,7 +604,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#export_to_security_command_center_python" style="color: inherit; text-decoration: inherit;">export_<wbr>to_<wbr>security_<wbr>command_<wbr>center</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#scanconfigexporttosecuritycommandcenter">Scan<wbr>Config<wbr>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a></span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Security Command Center.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -652,7 +652,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#risk_level_python" style="color: inherit; text-decoration: inherit;">risk_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#scanconfigrisklevel">Scan<wbr>Config<wbr>Risk<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The risk level selected for the scan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -684,7 +684,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#target_platforms_python" style="color: inherit; text-decoration: inherit;">target_<wbr>platforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#scanconfigtargetplatformsitem">Scan<wbr>Config<wbr>Target<wbr>Platforms<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}Set of Google Cloud platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -692,7 +692,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#user_agent_python" style="color: inherit; text-decoration: inherit;">user_<wbr>agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#scanconfiguseragent">Scan<wbr>Config<wbr>User<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}The user agent used during scanning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1591,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfigerrorcode">Pulumi.<wbr>Google<wbr>Native.<wbr>Web<wbr>Security<wbr>Scanner.<wbr>V1Beta.<wbr>Scan<wbr>Config<wbr>Error<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Indicates the reason code for a configuration failure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1611,7 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfigerrorcode">Scan<wbr>Config<wbr>Error<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Indicates the reason code for a configuration failure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1631,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfigerrorcode">Scan<wbr>Config<wbr>Error<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Indicates the reason code for a configuration failure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1651,7 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#scanconfigerrorcode">Scan<wbr>Config<wbr>Error<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Indicates the reason code for a configuration failure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1662,6 +1662,192 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the full name of the ScanConfig field that triggers this error, for example "scan_config.max_qps". This field is provided for troubleshooting purposes only and its actual value can change in the future.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="scanconfigerrorcode">Scan<wbr>Config<wbr>Error<wbr>Code</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Code<wbr>Unspecified</dt>
+    <dd>CODE_UNSPECIFIED{{% md %}}There is no error.{{% /md %}}</dd><dt>Ok</dt>
+    <dd>OK{{% md %}}There is no error.{{% /md %}}</dd><dt>Internal<wbr>Error</dt>
+    <dd>INTERNAL_ERROR{{% md %}}Indicates an internal server error. Please DO NOT USE THIS ERROR CODE unless the root cause is truly unknown.{{% /md %}}</dd><dt>Appengine<wbr>Api<wbr>Backend<wbr>Error</dt>
+    <dd>APPENGINE_API_BACKEND_ERROR{{% md %}}One of the seed URLs is an App Engine URL but we cannot validate the scan settings due to an App Engine API backend error.{{% /md %}}</dd><dt>Appengine<wbr>Api<wbr>Not<wbr>Accessible</dt>
+    <dd>APPENGINE_API_NOT_ACCESSIBLE{{% md %}}One of the seed URLs is an App Engine URL but we cannot access the App Engine API to validate scan settings.{{% /md %}}</dd><dt>Appengine<wbr>Default<wbr>Host<wbr>Missing</dt>
+    <dd>APPENGINE_DEFAULT_HOST_MISSING{{% md %}}One of the seed URLs is an App Engine URL but the Default Host of the App Engine is not set.{{% /md %}}</dd><dt>Cannot<wbr>Use<wbr>Google<wbr>Com<wbr>Account</dt>
+    <dd>CANNOT_USE_GOOGLE_COM_ACCOUNT{{% md %}}Google corporate accounts can not be used for scanning.{{% /md %}}</dd><dt>Cannot<wbr>Use<wbr>Owner<wbr>Account</dt>
+    <dd>CANNOT_USE_OWNER_ACCOUNT{{% md %}}The account of the scan creator can not be used for scanning.{{% /md %}}</dd><dt>Compute<wbr>Api<wbr>Backend<wbr>Error</dt>
+    <dd>COMPUTE_API_BACKEND_ERROR{{% md %}}This scan targets Compute Engine, but we cannot validate scan settings due to a Compute Engine API backend error.{{% /md %}}</dd><dt>Compute<wbr>Api<wbr>Not<wbr>Accessible</dt>
+    <dd>COMPUTE_API_NOT_ACCESSIBLE{{% md %}}This scan targets Compute Engine, but we cannot access the Compute Engine API to validate the scan settings.{{% /md %}}</dd><dt>Custom<wbr>Login<wbr>Url<wbr>Does<wbr>Not<wbr>Belong<wbr>To<wbr>Current<wbr>Project</dt>
+    <dd>CUSTOM_LOGIN_URL_DOES_NOT_BELONG_TO_CURRENT_PROJECT{{% md %}}The Custom Login URL does not belong to the current project.{{% /md %}}</dd><dt>Custom<wbr>Login<wbr>Url<wbr>Malformed</dt>
+    <dd>CUSTOM_LOGIN_URL_MALFORMED{{% md %}}The Custom Login URL is malformed (can not be parsed).{{% /md %}}</dd><dt>Custom<wbr>Login<wbr>Url<wbr>Mapped<wbr>To<wbr>Non<wbr>Routable<wbr>Address</dt>
+    <dd>CUSTOM_LOGIN_URL_MAPPED_TO_NON_ROUTABLE_ADDRESS{{% md %}}The Custom Login URL is mapped to a non-routable IP address in DNS.{{% /md %}}</dd><dt>Custom<wbr>Login<wbr>Url<wbr>Mapped<wbr>To<wbr>Unreserved<wbr>Address</dt>
+    <dd>CUSTOM_LOGIN_URL_MAPPED_TO_UNRESERVED_ADDRESS{{% md %}}The Custom Login URL is mapped to an IP address which is not reserved for the current project.{{% /md %}}</dd><dt>Custom<wbr>Login<wbr>Url<wbr>Has<wbr>Non<wbr>Routable<wbr>Ip<wbr>Address</dt>
+    <dd>CUSTOM_LOGIN_URL_HAS_NON_ROUTABLE_IP_ADDRESS{{% md %}}The Custom Login URL has a non-routable IP address.{{% /md %}}</dd><dt>Custom<wbr>Login<wbr>Url<wbr>Has<wbr>Unreserved<wbr>Ip<wbr>Address</dt>
+    <dd>CUSTOM_LOGIN_URL_HAS_UNRESERVED_IP_ADDRESS{{% md %}}The Custom Login URL has an IP address which is not reserved for the current project.{{% /md %}}</dd><dt>Duplicate<wbr>Scan<wbr>Name</dt>
+    <dd>DUPLICATE_SCAN_NAME{{% md %}}Another scan with the same name (case-sensitive) already exists.{{% /md %}}</dd><dt>Invalid<wbr>Field<wbr>Value</dt>
+    <dd>INVALID_FIELD_VALUE{{% md %}}A field is set to an invalid value.{{% /md %}}</dd><dt>Failed<wbr>To<wbr>Authenticate<wbr>To<wbr>Target</dt>
+    <dd>FAILED_TO_AUTHENTICATE_TO_TARGET{{% md %}}There was an error trying to authenticate to the scan target.{{% /md %}}</dd><dt>Finding<wbr>Type<wbr>Unspecified</dt>
+    <dd>FINDING_TYPE_UNSPECIFIED{{% md %}}Finding type value is not specified in the list findings request.{{% /md %}}</dd><dt>Forbidden<wbr>To<wbr>Scan<wbr>Compute</dt>
+    <dd>FORBIDDEN_TO_SCAN_COMPUTE{{% md %}}Scan targets Compute Engine, yet current project was not whitelisted for Google Compute Engine Scanning Alpha access.{{% /md %}}</dd><dt>Forbidden<wbr>Update<wbr>To<wbr>Managed<wbr>Scan</dt>
+    <dd>FORBIDDEN_UPDATE_TO_MANAGED_SCAN{{% md %}}User tries to update managed scan{{% /md %}}</dd><dt>Malformed<wbr>Filter</dt>
+    <dd>MALFORMED_FILTER{{% md %}}The supplied filter is malformed. For example, it can not be parsed, does not have a filter type in expression, or the same filter type appears more than once.{{% /md %}}</dd><dt>Malformed<wbr>Resource<wbr>Name</dt>
+    <dd>MALFORMED_RESOURCE_NAME{{% md %}}The supplied resource name is malformed (can not be parsed).{{% /md %}}</dd><dt>Project<wbr>Inactive</dt>
+    <dd>PROJECT_INACTIVE{{% md %}}The current project is not in an active state.{{% /md %}}</dd><dt>Required<wbr>Field</dt>
+    <dd>REQUIRED_FIELD{{% md %}}A required field is not set.{{% /md %}}</dd><dt>Resource<wbr>Name<wbr>Inconsistent</dt>
+    <dd>RESOURCE_NAME_INCONSISTENT{{% md %}}Project id, scanconfig id, scanrun id, or finding id are not consistent with each other in resource name.{{% /md %}}</dd><dt>Scan<wbr>Already<wbr>Running</dt>
+    <dd>SCAN_ALREADY_RUNNING{{% md %}}The scan being requested to start is already running.{{% /md %}}</dd><dt>Scan<wbr>Not<wbr>Running</dt>
+    <dd>SCAN_NOT_RUNNING{{% md %}}The scan that was requested to be stopped is not running.{{% /md %}}</dd><dt>Seed<wbr>Url<wbr>Does<wbr>Not<wbr>Belong<wbr>To<wbr>Current<wbr>Project</dt>
+    <dd>SEED_URL_DOES_NOT_BELONG_TO_CURRENT_PROJECT{{% md %}}One of the seed URLs does not belong to the current project.{{% /md %}}</dd><dt>Seed<wbr>Url<wbr>Malformed</dt>
+    <dd>SEED_URL_MALFORMED{{% md %}}One of the seed URLs is malformed (can not be parsed).{{% /md %}}</dd><dt>Seed<wbr>Url<wbr>Mapped<wbr>To<wbr>Non<wbr>Routable<wbr>Address</dt>
+    <dd>SEED_URL_MAPPED_TO_NON_ROUTABLE_ADDRESS{{% md %}}One of the seed URLs is mapped to a non-routable IP address in DNS.{{% /md %}}</dd><dt>Seed<wbr>Url<wbr>Mapped<wbr>To<wbr>Unreserved<wbr>Address</dt>
+    <dd>SEED_URL_MAPPED_TO_UNRESERVED_ADDRESS{{% md %}}One of the seed URLs is mapped to an IP address which is not reserved for the current project.{{% /md %}}</dd><dt>Seed<wbr>Url<wbr>Has<wbr>Non<wbr>Routable<wbr>Ip<wbr>Address</dt>
+    <dd>SEED_URL_HAS_NON_ROUTABLE_IP_ADDRESS{{% md %}}One of the seed URLs has on-routable IP address.{{% /md %}}</dd><dt>Seed<wbr>Url<wbr>Has<wbr>Unreserved<wbr>Ip<wbr>Address</dt>
+    <dd>SEED_URL_HAS_UNRESERVED_IP_ADDRESS{{% md %}}One of the seed URLs has an IP address that is not reserved for the current project.{{% /md %}}</dd><dt>Service<wbr>Account<wbr>Not<wbr>Configured</dt>
+    <dd>SERVICE_ACCOUNT_NOT_CONFIGURED{{% md %}}The Web Security Scanner service account is not configured under the project.{{% /md %}}</dd><dt>Too<wbr>Many<wbr>Scans</dt>
+    <dd>TOO_MANY_SCANS{{% md %}}A project has reached the maximum number of scans.{{% /md %}}</dd><dt>Unable<wbr>To<wbr>Resolve<wbr>Project<wbr>Info</dt>
+    <dd>UNABLE_TO_RESOLVE_PROJECT_INFO{{% md %}}Resolving the details of the current project fails.{{% /md %}}</dd><dt>Unsupported<wbr>Blacklist<wbr>Pattern<wbr>Format</dt>
+    <dd>UNSUPPORTED_BLACKLIST_PATTERN_FORMAT{{% md %}}One or more blacklist patterns were in the wrong format.{{% /md %}}</dd><dt>Unsupported<wbr>Filter</dt>
+    <dd>UNSUPPORTED_FILTER{{% md %}}The supplied filter is not supported.{{% /md %}}</dd><dt>Unsupported<wbr>Finding<wbr>Type</dt>
+    <dd>UNSUPPORTED_FINDING_TYPE{{% md %}}The supplied finding type is not supported. For example, we do not provide findings of the given finding type.{{% /md %}}</dd><dt>Unsupported<wbr>Url<wbr>Scheme</dt>
+    <dd>UNSUPPORTED_URL_SCHEME{{% md %}}The URL scheme of one or more of the supplied URLs is not supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Code<wbr>Unspecified</dt>
+    <dd>CODE_UNSPECIFIED{{% md %}}There is no error.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Ok</dt>
+    <dd>OK{{% md %}}There is no error.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Internal<wbr>Error</dt>
+    <dd>INTERNAL_ERROR{{% md %}}Indicates an internal server error. Please DO NOT USE THIS ERROR CODE unless the root cause is truly unknown.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Appengine<wbr>Api<wbr>Backend<wbr>Error</dt>
+    <dd>APPENGINE_API_BACKEND_ERROR{{% md %}}One of the seed URLs is an App Engine URL but we cannot validate the scan settings due to an App Engine API backend error.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Appengine<wbr>Api<wbr>Not<wbr>Accessible</dt>
+    <dd>APPENGINE_API_NOT_ACCESSIBLE{{% md %}}One of the seed URLs is an App Engine URL but we cannot access the App Engine API to validate scan settings.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Appengine<wbr>Default<wbr>Host<wbr>Missing</dt>
+    <dd>APPENGINE_DEFAULT_HOST_MISSING{{% md %}}One of the seed URLs is an App Engine URL but the Default Host of the App Engine is not set.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Cannot<wbr>Use<wbr>Google<wbr>Com<wbr>Account</dt>
+    <dd>CANNOT_USE_GOOGLE_COM_ACCOUNT{{% md %}}Google corporate accounts can not be used for scanning.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Cannot<wbr>Use<wbr>Owner<wbr>Account</dt>
+    <dd>CANNOT_USE_OWNER_ACCOUNT{{% md %}}The account of the scan creator can not be used for scanning.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Compute<wbr>Api<wbr>Backend<wbr>Error</dt>
+    <dd>COMPUTE_API_BACKEND_ERROR{{% md %}}This scan targets Compute Engine, but we cannot validate scan settings due to a Compute Engine API backend error.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Compute<wbr>Api<wbr>Not<wbr>Accessible</dt>
+    <dd>COMPUTE_API_NOT_ACCESSIBLE{{% md %}}This scan targets Compute Engine, but we cannot access the Compute Engine API to validate the scan settings.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Custom<wbr>Login<wbr>Url<wbr>Does<wbr>Not<wbr>Belong<wbr>To<wbr>Current<wbr>Project</dt>
+    <dd>CUSTOM_LOGIN_URL_DOES_NOT_BELONG_TO_CURRENT_PROJECT{{% md %}}The Custom Login URL does not belong to the current project.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Custom<wbr>Login<wbr>Url<wbr>Malformed</dt>
+    <dd>CUSTOM_LOGIN_URL_MALFORMED{{% md %}}The Custom Login URL is malformed (can not be parsed).{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Custom<wbr>Login<wbr>Url<wbr>Mapped<wbr>To<wbr>Non<wbr>Routable<wbr>Address</dt>
+    <dd>CUSTOM_LOGIN_URL_MAPPED_TO_NON_ROUTABLE_ADDRESS{{% md %}}The Custom Login URL is mapped to a non-routable IP address in DNS.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Custom<wbr>Login<wbr>Url<wbr>Mapped<wbr>To<wbr>Unreserved<wbr>Address</dt>
+    <dd>CUSTOM_LOGIN_URL_MAPPED_TO_UNRESERVED_ADDRESS{{% md %}}The Custom Login URL is mapped to an IP address which is not reserved for the current project.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Custom<wbr>Login<wbr>Url<wbr>Has<wbr>Non<wbr>Routable<wbr>Ip<wbr>Address</dt>
+    <dd>CUSTOM_LOGIN_URL_HAS_NON_ROUTABLE_IP_ADDRESS{{% md %}}The Custom Login URL has a non-routable IP address.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Custom<wbr>Login<wbr>Url<wbr>Has<wbr>Unreserved<wbr>Ip<wbr>Address</dt>
+    <dd>CUSTOM_LOGIN_URL_HAS_UNRESERVED_IP_ADDRESS{{% md %}}The Custom Login URL has an IP address which is not reserved for the current project.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Duplicate<wbr>Scan<wbr>Name</dt>
+    <dd>DUPLICATE_SCAN_NAME{{% md %}}Another scan with the same name (case-sensitive) already exists.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Invalid<wbr>Field<wbr>Value</dt>
+    <dd>INVALID_FIELD_VALUE{{% md %}}A field is set to an invalid value.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Failed<wbr>To<wbr>Authenticate<wbr>To<wbr>Target</dt>
+    <dd>FAILED_TO_AUTHENTICATE_TO_TARGET{{% md %}}There was an error trying to authenticate to the scan target.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Finding<wbr>Type<wbr>Unspecified</dt>
+    <dd>FINDING_TYPE_UNSPECIFIED{{% md %}}Finding type value is not specified in the list findings request.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Forbidden<wbr>To<wbr>Scan<wbr>Compute</dt>
+    <dd>FORBIDDEN_TO_SCAN_COMPUTE{{% md %}}Scan targets Compute Engine, yet current project was not whitelisted for Google Compute Engine Scanning Alpha access.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Forbidden<wbr>Update<wbr>To<wbr>Managed<wbr>Scan</dt>
+    <dd>FORBIDDEN_UPDATE_TO_MANAGED_SCAN{{% md %}}User tries to update managed scan{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Malformed<wbr>Filter</dt>
+    <dd>MALFORMED_FILTER{{% md %}}The supplied filter is malformed. For example, it can not be parsed, does not have a filter type in expression, or the same filter type appears more than once.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Malformed<wbr>Resource<wbr>Name</dt>
+    <dd>MALFORMED_RESOURCE_NAME{{% md %}}The supplied resource name is malformed (can not be parsed).{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Project<wbr>Inactive</dt>
+    <dd>PROJECT_INACTIVE{{% md %}}The current project is not in an active state.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Required<wbr>Field</dt>
+    <dd>REQUIRED_FIELD{{% md %}}A required field is not set.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Resource<wbr>Name<wbr>Inconsistent</dt>
+    <dd>RESOURCE_NAME_INCONSISTENT{{% md %}}Project id, scanconfig id, scanrun id, or finding id are not consistent with each other in resource name.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Scan<wbr>Already<wbr>Running</dt>
+    <dd>SCAN_ALREADY_RUNNING{{% md %}}The scan being requested to start is already running.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Scan<wbr>Not<wbr>Running</dt>
+    <dd>SCAN_NOT_RUNNING{{% md %}}The scan that was requested to be stopped is not running.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Seed<wbr>Url<wbr>Does<wbr>Not<wbr>Belong<wbr>To<wbr>Current<wbr>Project</dt>
+    <dd>SEED_URL_DOES_NOT_BELONG_TO_CURRENT_PROJECT{{% md %}}One of the seed URLs does not belong to the current project.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Seed<wbr>Url<wbr>Malformed</dt>
+    <dd>SEED_URL_MALFORMED{{% md %}}One of the seed URLs is malformed (can not be parsed).{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Seed<wbr>Url<wbr>Mapped<wbr>To<wbr>Non<wbr>Routable<wbr>Address</dt>
+    <dd>SEED_URL_MAPPED_TO_NON_ROUTABLE_ADDRESS{{% md %}}One of the seed URLs is mapped to a non-routable IP address in DNS.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Seed<wbr>Url<wbr>Mapped<wbr>To<wbr>Unreserved<wbr>Address</dt>
+    <dd>SEED_URL_MAPPED_TO_UNRESERVED_ADDRESS{{% md %}}One of the seed URLs is mapped to an IP address which is not reserved for the current project.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Seed<wbr>Url<wbr>Has<wbr>Non<wbr>Routable<wbr>Ip<wbr>Address</dt>
+    <dd>SEED_URL_HAS_NON_ROUTABLE_IP_ADDRESS{{% md %}}One of the seed URLs has on-routable IP address.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Seed<wbr>Url<wbr>Has<wbr>Unreserved<wbr>Ip<wbr>Address</dt>
+    <dd>SEED_URL_HAS_UNRESERVED_IP_ADDRESS{{% md %}}One of the seed URLs has an IP address that is not reserved for the current project.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Service<wbr>Account<wbr>Not<wbr>Configured</dt>
+    <dd>SERVICE_ACCOUNT_NOT_CONFIGURED{{% md %}}The Web Security Scanner service account is not configured under the project.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Too<wbr>Many<wbr>Scans</dt>
+    <dd>TOO_MANY_SCANS{{% md %}}A project has reached the maximum number of scans.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Unable<wbr>To<wbr>Resolve<wbr>Project<wbr>Info</dt>
+    <dd>UNABLE_TO_RESOLVE_PROJECT_INFO{{% md %}}Resolving the details of the current project fails.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Unsupported<wbr>Blacklist<wbr>Pattern<wbr>Format</dt>
+    <dd>UNSUPPORTED_BLACKLIST_PATTERN_FORMAT{{% md %}}One or more blacklist patterns were in the wrong format.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Unsupported<wbr>Filter</dt>
+    <dd>UNSUPPORTED_FILTER{{% md %}}The supplied filter is not supported.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Unsupported<wbr>Finding<wbr>Type</dt>
+    <dd>UNSUPPORTED_FINDING_TYPE{{% md %}}The supplied finding type is not supported. For example, we do not provide findings of the given finding type.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Error<wbr>Code<wbr>Unsupported<wbr>Url<wbr>Scheme</dt>
+    <dd>UNSUPPORTED_URL_SCHEME{{% md %}}The URL scheme of one or more of the supplied URLs is not supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Code<wbr>Unspecified</dt>
+    <dd>CODE_UNSPECIFIED{{% md %}}There is no error.{{% /md %}}</dd><dt>Ok</dt>
+    <dd>OK{{% md %}}There is no error.{{% /md %}}</dd><dt>Internal<wbr>Error</dt>
+    <dd>INTERNAL_ERROR{{% md %}}Indicates an internal server error. Please DO NOT USE THIS ERROR CODE unless the root cause is truly unknown.{{% /md %}}</dd><dt>Appengine<wbr>Api<wbr>Backend<wbr>Error</dt>
+    <dd>APPENGINE_API_BACKEND_ERROR{{% md %}}One of the seed URLs is an App Engine URL but we cannot validate the scan settings due to an App Engine API backend error.{{% /md %}}</dd><dt>Appengine<wbr>Api<wbr>Not<wbr>Accessible</dt>
+    <dd>APPENGINE_API_NOT_ACCESSIBLE{{% md %}}One of the seed URLs is an App Engine URL but we cannot access the App Engine API to validate scan settings.{{% /md %}}</dd><dt>Appengine<wbr>Default<wbr>Host<wbr>Missing</dt>
+    <dd>APPENGINE_DEFAULT_HOST_MISSING{{% md %}}One of the seed URLs is an App Engine URL but the Default Host of the App Engine is not set.{{% /md %}}</dd><dt>Cannot<wbr>Use<wbr>Google<wbr>Com<wbr>Account</dt>
+    <dd>CANNOT_USE_GOOGLE_COM_ACCOUNT{{% md %}}Google corporate accounts can not be used for scanning.{{% /md %}}</dd><dt>Cannot<wbr>Use<wbr>Owner<wbr>Account</dt>
+    <dd>CANNOT_USE_OWNER_ACCOUNT{{% md %}}The account of the scan creator can not be used for scanning.{{% /md %}}</dd><dt>Compute<wbr>Api<wbr>Backend<wbr>Error</dt>
+    <dd>COMPUTE_API_BACKEND_ERROR{{% md %}}This scan targets Compute Engine, but we cannot validate scan settings due to a Compute Engine API backend error.{{% /md %}}</dd><dt>Compute<wbr>Api<wbr>Not<wbr>Accessible</dt>
+    <dd>COMPUTE_API_NOT_ACCESSIBLE{{% md %}}This scan targets Compute Engine, but we cannot access the Compute Engine API to validate the scan settings.{{% /md %}}</dd><dt>Custom<wbr>Login<wbr>Url<wbr>Does<wbr>Not<wbr>Belong<wbr>To<wbr>Current<wbr>Project</dt>
+    <dd>CUSTOM_LOGIN_URL_DOES_NOT_BELONG_TO_CURRENT_PROJECT{{% md %}}The Custom Login URL does not belong to the current project.{{% /md %}}</dd><dt>Custom<wbr>Login<wbr>Url<wbr>Malformed</dt>
+    <dd>CUSTOM_LOGIN_URL_MALFORMED{{% md %}}The Custom Login URL is malformed (can not be parsed).{{% /md %}}</dd><dt>Custom<wbr>Login<wbr>Url<wbr>Mapped<wbr>To<wbr>Non<wbr>Routable<wbr>Address</dt>
+    <dd>CUSTOM_LOGIN_URL_MAPPED_TO_NON_ROUTABLE_ADDRESS{{% md %}}The Custom Login URL is mapped to a non-routable IP address in DNS.{{% /md %}}</dd><dt>Custom<wbr>Login<wbr>Url<wbr>Mapped<wbr>To<wbr>Unreserved<wbr>Address</dt>
+    <dd>CUSTOM_LOGIN_URL_MAPPED_TO_UNRESERVED_ADDRESS{{% md %}}The Custom Login URL is mapped to an IP address which is not reserved for the current project.{{% /md %}}</dd><dt>Custom<wbr>Login<wbr>Url<wbr>Has<wbr>Non<wbr>Routable<wbr>Ip<wbr>Address</dt>
+    <dd>CUSTOM_LOGIN_URL_HAS_NON_ROUTABLE_IP_ADDRESS{{% md %}}The Custom Login URL has a non-routable IP address.{{% /md %}}</dd><dt>Custom<wbr>Login<wbr>Url<wbr>Has<wbr>Unreserved<wbr>Ip<wbr>Address</dt>
+    <dd>CUSTOM_LOGIN_URL_HAS_UNRESERVED_IP_ADDRESS{{% md %}}The Custom Login URL has an IP address which is not reserved for the current project.{{% /md %}}</dd><dt>Duplicate<wbr>Scan<wbr>Name</dt>
+    <dd>DUPLICATE_SCAN_NAME{{% md %}}Another scan with the same name (case-sensitive) already exists.{{% /md %}}</dd><dt>Invalid<wbr>Field<wbr>Value</dt>
+    <dd>INVALID_FIELD_VALUE{{% md %}}A field is set to an invalid value.{{% /md %}}</dd><dt>Failed<wbr>To<wbr>Authenticate<wbr>To<wbr>Target</dt>
+    <dd>FAILED_TO_AUTHENTICATE_TO_TARGET{{% md %}}There was an error trying to authenticate to the scan target.{{% /md %}}</dd><dt>Finding<wbr>Type<wbr>Unspecified</dt>
+    <dd>FINDING_TYPE_UNSPECIFIED{{% md %}}Finding type value is not specified in the list findings request.{{% /md %}}</dd><dt>Forbidden<wbr>To<wbr>Scan<wbr>Compute</dt>
+    <dd>FORBIDDEN_TO_SCAN_COMPUTE{{% md %}}Scan targets Compute Engine, yet current project was not whitelisted for Google Compute Engine Scanning Alpha access.{{% /md %}}</dd><dt>Forbidden<wbr>Update<wbr>To<wbr>Managed<wbr>Scan</dt>
+    <dd>FORBIDDEN_UPDATE_TO_MANAGED_SCAN{{% md %}}User tries to update managed scan{{% /md %}}</dd><dt>Malformed<wbr>Filter</dt>
+    <dd>MALFORMED_FILTER{{% md %}}The supplied filter is malformed. For example, it can not be parsed, does not have a filter type in expression, or the same filter type appears more than once.{{% /md %}}</dd><dt>Malformed<wbr>Resource<wbr>Name</dt>
+    <dd>MALFORMED_RESOURCE_NAME{{% md %}}The supplied resource name is malformed (can not be parsed).{{% /md %}}</dd><dt>Project<wbr>Inactive</dt>
+    <dd>PROJECT_INACTIVE{{% md %}}The current project is not in an active state.{{% /md %}}</dd><dt>Required<wbr>Field</dt>
+    <dd>REQUIRED_FIELD{{% md %}}A required field is not set.{{% /md %}}</dd><dt>Resource<wbr>Name<wbr>Inconsistent</dt>
+    <dd>RESOURCE_NAME_INCONSISTENT{{% md %}}Project id, scanconfig id, scanrun id, or finding id are not consistent with each other in resource name.{{% /md %}}</dd><dt>Scan<wbr>Already<wbr>Running</dt>
+    <dd>SCAN_ALREADY_RUNNING{{% md %}}The scan being requested to start is already running.{{% /md %}}</dd><dt>Scan<wbr>Not<wbr>Running</dt>
+    <dd>SCAN_NOT_RUNNING{{% md %}}The scan that was requested to be stopped is not running.{{% /md %}}</dd><dt>Seed<wbr>Url<wbr>Does<wbr>Not<wbr>Belong<wbr>To<wbr>Current<wbr>Project</dt>
+    <dd>SEED_URL_DOES_NOT_BELONG_TO_CURRENT_PROJECT{{% md %}}One of the seed URLs does not belong to the current project.{{% /md %}}</dd><dt>Seed<wbr>Url<wbr>Malformed</dt>
+    <dd>SEED_URL_MALFORMED{{% md %}}One of the seed URLs is malformed (can not be parsed).{{% /md %}}</dd><dt>Seed<wbr>Url<wbr>Mapped<wbr>To<wbr>Non<wbr>Routable<wbr>Address</dt>
+    <dd>SEED_URL_MAPPED_TO_NON_ROUTABLE_ADDRESS{{% md %}}One of the seed URLs is mapped to a non-routable IP address in DNS.{{% /md %}}</dd><dt>Seed<wbr>Url<wbr>Mapped<wbr>To<wbr>Unreserved<wbr>Address</dt>
+    <dd>SEED_URL_MAPPED_TO_UNRESERVED_ADDRESS{{% md %}}One of the seed URLs is mapped to an IP address which is not reserved for the current project.{{% /md %}}</dd><dt>Seed<wbr>Url<wbr>Has<wbr>Non<wbr>Routable<wbr>Ip<wbr>Address</dt>
+    <dd>SEED_URL_HAS_NON_ROUTABLE_IP_ADDRESS{{% md %}}One of the seed URLs has on-routable IP address.{{% /md %}}</dd><dt>Seed<wbr>Url<wbr>Has<wbr>Unreserved<wbr>Ip<wbr>Address</dt>
+    <dd>SEED_URL_HAS_UNRESERVED_IP_ADDRESS{{% md %}}One of the seed URLs has an IP address that is not reserved for the current project.{{% /md %}}</dd><dt>Service<wbr>Account<wbr>Not<wbr>Configured</dt>
+    <dd>SERVICE_ACCOUNT_NOT_CONFIGURED{{% md %}}The Web Security Scanner service account is not configured under the project.{{% /md %}}</dd><dt>Too<wbr>Many<wbr>Scans</dt>
+    <dd>TOO_MANY_SCANS{{% md %}}A project has reached the maximum number of scans.{{% /md %}}</dd><dt>Unable<wbr>To<wbr>Resolve<wbr>Project<wbr>Info</dt>
+    <dd>UNABLE_TO_RESOLVE_PROJECT_INFO{{% md %}}Resolving the details of the current project fails.{{% /md %}}</dd><dt>Unsupported<wbr>Blacklist<wbr>Pattern<wbr>Format</dt>
+    <dd>UNSUPPORTED_BLACKLIST_PATTERN_FORMAT{{% md %}}One or more blacklist patterns were in the wrong format.{{% /md %}}</dd><dt>Unsupported<wbr>Filter</dt>
+    <dd>UNSUPPORTED_FILTER{{% md %}}The supplied filter is not supported.{{% /md %}}</dd><dt>Unsupported<wbr>Finding<wbr>Type</dt>
+    <dd>UNSUPPORTED_FINDING_TYPE{{% md %}}The supplied finding type is not supported. For example, we do not provide findings of the given finding type.{{% /md %}}</dd><dt>Unsupported<wbr>Url<wbr>Scheme</dt>
+    <dd>UNSUPPORTED_URL_SCHEME{{% md %}}The URL scheme of one or more of the supplied URLs is not supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CODE_UNSPECIFIED</dt>
+    <dd>CODE_UNSPECIFIED{{% md %}}There is no error.{{% /md %}}</dd><dt>OK</dt>
+    <dd>OK{{% md %}}There is no error.{{% /md %}}</dd><dt>INTERNAL_ERROR</dt>
+    <dd>INTERNAL_ERROR{{% md %}}Indicates an internal server error. Please DO NOT USE THIS ERROR CODE unless the root cause is truly unknown.{{% /md %}}</dd><dt>APPENGINE_API_BACKEND_ERROR</dt>
+    <dd>APPENGINE_API_BACKEND_ERROR{{% md %}}One of the seed URLs is an App Engine URL but we cannot validate the scan settings due to an App Engine API backend error.{{% /md %}}</dd><dt>APPENGINE_API_NOT_ACCESSIBLE</dt>
+    <dd>APPENGINE_API_NOT_ACCESSIBLE{{% md %}}One of the seed URLs is an App Engine URL but we cannot access the App Engine API to validate scan settings.{{% /md %}}</dd><dt>APPENGINE_DEFAULT_HOST_MISSING</dt>
+    <dd>APPENGINE_DEFAULT_HOST_MISSING{{% md %}}One of the seed URLs is an App Engine URL but the Default Host of the App Engine is not set.{{% /md %}}</dd><dt>CANNOT_USE_GOOGLE_COM_ACCOUNT</dt>
+    <dd>CANNOT_USE_GOOGLE_COM_ACCOUNT{{% md %}}Google corporate accounts can not be used for scanning.{{% /md %}}</dd><dt>CANNOT_USE_OWNER_ACCOUNT</dt>
+    <dd>CANNOT_USE_OWNER_ACCOUNT{{% md %}}The account of the scan creator can not be used for scanning.{{% /md %}}</dd><dt>COMPUTE_API_BACKEND_ERROR</dt>
+    <dd>COMPUTE_API_BACKEND_ERROR{{% md %}}This scan targets Compute Engine, but we cannot validate scan settings due to a Compute Engine API backend error.{{% /md %}}</dd><dt>COMPUTE_API_NOT_ACCESSIBLE</dt>
+    <dd>COMPUTE_API_NOT_ACCESSIBLE{{% md %}}This scan targets Compute Engine, but we cannot access the Compute Engine API to validate the scan settings.{{% /md %}}</dd><dt>CUSTOM_LOGIN_URL_DOES_NOT_BELONG_TO_CURRENT_PROJECT</dt>
+    <dd>CUSTOM_LOGIN_URL_DOES_NOT_BELONG_TO_CURRENT_PROJECT{{% md %}}The Custom Login URL does not belong to the current project.{{% /md %}}</dd><dt>CUSTOM_LOGIN_URL_MALFORMED</dt>
+    <dd>CUSTOM_LOGIN_URL_MALFORMED{{% md %}}The Custom Login URL is malformed (can not be parsed).{{% /md %}}</dd><dt>CUSTOM_LOGIN_URL_MAPPED_TO_NON_ROUTABLE_ADDRESS</dt>
+    <dd>CUSTOM_LOGIN_URL_MAPPED_TO_NON_ROUTABLE_ADDRESS{{% md %}}The Custom Login URL is mapped to a non-routable IP address in DNS.{{% /md %}}</dd><dt>CUSTOM_LOGIN_URL_MAPPED_TO_UNRESERVED_ADDRESS</dt>
+    <dd>CUSTOM_LOGIN_URL_MAPPED_TO_UNRESERVED_ADDRESS{{% md %}}The Custom Login URL is mapped to an IP address which is not reserved for the current project.{{% /md %}}</dd><dt>CUSTOM_LOGIN_URL_HAS_NON_ROUTABLE_IP_ADDRESS</dt>
+    <dd>CUSTOM_LOGIN_URL_HAS_NON_ROUTABLE_IP_ADDRESS{{% md %}}The Custom Login URL has a non-routable IP address.{{% /md %}}</dd><dt>CUSTOM_LOGIN_URL_HAS_UNRESERVED_IP_ADDRESS</dt>
+    <dd>CUSTOM_LOGIN_URL_HAS_UNRESERVED_IP_ADDRESS{{% md %}}The Custom Login URL has an IP address which is not reserved for the current project.{{% /md %}}</dd><dt>DUPLICATE_SCAN_NAME</dt>
+    <dd>DUPLICATE_SCAN_NAME{{% md %}}Another scan with the same name (case-sensitive) already exists.{{% /md %}}</dd><dt>INVALID_FIELD_VALUE</dt>
+    <dd>INVALID_FIELD_VALUE{{% md %}}A field is set to an invalid value.{{% /md %}}</dd><dt>FAILED_TO_AUTHENTICATE_TO_TARGET</dt>
+    <dd>FAILED_TO_AUTHENTICATE_TO_TARGET{{% md %}}There was an error trying to authenticate to the scan target.{{% /md %}}</dd><dt>FINDING_TYPE_UNSPECIFIED</dt>
+    <dd>FINDING_TYPE_UNSPECIFIED{{% md %}}Finding type value is not specified in the list findings request.{{% /md %}}</dd><dt>FORBIDDEN_TO_SCAN_COMPUTE</dt>
+    <dd>FORBIDDEN_TO_SCAN_COMPUTE{{% md %}}Scan targets Compute Engine, yet current project was not whitelisted for Google Compute Engine Scanning Alpha access.{{% /md %}}</dd><dt>FORBIDDEN_UPDATE_TO_MANAGED_SCAN</dt>
+    <dd>FORBIDDEN_UPDATE_TO_MANAGED_SCAN{{% md %}}User tries to update managed scan{{% /md %}}</dd><dt>MALFORMED_FILTER</dt>
+    <dd>MALFORMED_FILTER{{% md %}}The supplied filter is malformed. For example, it can not be parsed, does not have a filter type in expression, or the same filter type appears more than once.{{% /md %}}</dd><dt>MALFORMED_RESOURCE_NAME</dt>
+    <dd>MALFORMED_RESOURCE_NAME{{% md %}}The supplied resource name is malformed (can not be parsed).{{% /md %}}</dd><dt>PROJECT_INACTIVE</dt>
+    <dd>PROJECT_INACTIVE{{% md %}}The current project is not in an active state.{{% /md %}}</dd><dt>REQUIRED_FIELD</dt>
+    <dd>REQUIRED_FIELD{{% md %}}A required field is not set.{{% /md %}}</dd><dt>RESOURCE_NAME_INCONSISTENT</dt>
+    <dd>RESOURCE_NAME_INCONSISTENT{{% md %}}Project id, scanconfig id, scanrun id, or finding id are not consistent with each other in resource name.{{% /md %}}</dd><dt>SCAN_ALREADY_RUNNING</dt>
+    <dd>SCAN_ALREADY_RUNNING{{% md %}}The scan being requested to start is already running.{{% /md %}}</dd><dt>SCAN_NOT_RUNNING</dt>
+    <dd>SCAN_NOT_RUNNING{{% md %}}The scan that was requested to be stopped is not running.{{% /md %}}</dd><dt>SEED_URL_DOES_NOT_BELONG_TO_CURRENT_PROJECT</dt>
+    <dd>SEED_URL_DOES_NOT_BELONG_TO_CURRENT_PROJECT{{% md %}}One of the seed URLs does not belong to the current project.{{% /md %}}</dd><dt>SEED_URL_MALFORMED</dt>
+    <dd>SEED_URL_MALFORMED{{% md %}}One of the seed URLs is malformed (can not be parsed).{{% /md %}}</dd><dt>SEED_URL_MAPPED_TO_NON_ROUTABLE_ADDRESS</dt>
+    <dd>SEED_URL_MAPPED_TO_NON_ROUTABLE_ADDRESS{{% md %}}One of the seed URLs is mapped to a non-routable IP address in DNS.{{% /md %}}</dd><dt>SEED_URL_MAPPED_TO_UNRESERVED_ADDRESS</dt>
+    <dd>SEED_URL_MAPPED_TO_UNRESERVED_ADDRESS{{% md %}}One of the seed URLs is mapped to an IP address which is not reserved for the current project.{{% /md %}}</dd><dt>SEED_URL_HAS_NON_ROUTABLE_IP_ADDRESS</dt>
+    <dd>SEED_URL_HAS_NON_ROUTABLE_IP_ADDRESS{{% md %}}One of the seed URLs has on-routable IP address.{{% /md %}}</dd><dt>SEED_URL_HAS_UNRESERVED_IP_ADDRESS</dt>
+    <dd>SEED_URL_HAS_UNRESERVED_IP_ADDRESS{{% md %}}One of the seed URLs has an IP address that is not reserved for the current project.{{% /md %}}</dd><dt>SERVICE_ACCOUNT_NOT_CONFIGURED</dt>
+    <dd>SERVICE_ACCOUNT_NOT_CONFIGURED{{% md %}}The Web Security Scanner service account is not configured under the project.{{% /md %}}</dd><dt>TOO_MANY_SCANS</dt>
+    <dd>TOO_MANY_SCANS{{% md %}}A project has reached the maximum number of scans.{{% /md %}}</dd><dt>UNABLE_TO_RESOLVE_PROJECT_INFO</dt>
+    <dd>UNABLE_TO_RESOLVE_PROJECT_INFO{{% md %}}Resolving the details of the current project fails.{{% /md %}}</dd><dt>UNSUPPORTED_BLACKLIST_PATTERN_FORMAT</dt>
+    <dd>UNSUPPORTED_BLACKLIST_PATTERN_FORMAT{{% md %}}One or more blacklist patterns were in the wrong format.{{% /md %}}</dd><dt>UNSUPPORTED_FILTER</dt>
+    <dd>UNSUPPORTED_FILTER{{% md %}}The supplied filter is not supported.{{% /md %}}</dd><dt>UNSUPPORTED_FINDING_TYPE</dt>
+    <dd>UNSUPPORTED_FINDING_TYPE{{% md %}}The supplied finding type is not supported. For example, we do not provide findings of the given finding type.{{% /md %}}</dd><dt>UNSUPPORTED_URL_SCHEME</dt>
+    <dd>UNSUPPORTED_URL_SCHEME{{% md %}}The URL scheme of one or more of the supplied URLs is not supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scanconfigerrorresponse">Scan<wbr>Config<wbr>Error<wbr>Response</h4>
@@ -1746,6 +1932,130 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Indicates the full name of the ScanConfig field that triggers this error, for example "scan_config.max_qps". This field is provided for troubleshooting purposes only and its actual value can change in the future.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="scanconfigexporttosecuritycommandcenter">Scan<wbr>Config<wbr>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center<wbr>Unspecified</dt>
+    <dd>EXPORT_TO_SECURITY_COMMAND_CENTER_UNSPECIFIED{{% md %}}Use default, which is ENABLED.{{% /md %}}</dd><dt>Enabled</dt>
+    <dd>ENABLED{{% md %}}Export results of this scan to Security Command Center.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}Do not export results of this scan to Security Command Center.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Scan<wbr>Config<wbr>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center<wbr>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center<wbr>Unspecified</dt>
+    <dd>EXPORT_TO_SECURITY_COMMAND_CENTER_UNSPECIFIED{{% md %}}Use default, which is ENABLED.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center<wbr>Enabled</dt>
+    <dd>ENABLED{{% md %}}Export results of this scan to Security Command Center.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center<wbr>Disabled</dt>
+    <dd>DISABLED{{% md %}}Do not export results of this scan to Security Command Center.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center<wbr>Unspecified</dt>
+    <dd>EXPORT_TO_SECURITY_COMMAND_CENTER_UNSPECIFIED{{% md %}}Use default, which is ENABLED.{{% /md %}}</dd><dt>Enabled</dt>
+    <dd>ENABLED{{% md %}}Export results of this scan to Security Command Center.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}Do not export results of this scan to Security Command Center.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EXPORT_TO_SECURITY_COMMAND_CENTER_UNSPECIFIED</dt>
+    <dd>EXPORT_TO_SECURITY_COMMAND_CENTER_UNSPECIFIED{{% md %}}Use default, which is ENABLED.{{% /md %}}</dd><dt>ENABLED</dt>
+    <dd>ENABLED{{% md %}}Export results of this scan to Security Command Center.{{% /md %}}</dd><dt>DISABLED</dt>
+    <dd>DISABLED{{% md %}}Do not export results of this scan to Security Command Center.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="scanconfigrisklevel">Scan<wbr>Config<wbr>Risk<wbr>Level</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Risk<wbr>Level<wbr>Unspecified</dt>
+    <dd>RISK_LEVEL_UNSPECIFIED{{% md %}}Use default, which is NORMAL.{{% /md %}}</dd><dt>Normal</dt>
+    <dd>NORMAL{{% md %}}Normal scanning (Recommended){{% /md %}}</dd><dt>Low</dt>
+    <dd>LOW{{% md %}}Lower impact scanning{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Scan<wbr>Config<wbr>Risk<wbr>Level<wbr>Risk<wbr>Level<wbr>Unspecified</dt>
+    <dd>RISK_LEVEL_UNSPECIFIED{{% md %}}Use default, which is NORMAL.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Risk<wbr>Level<wbr>Normal</dt>
+    <dd>NORMAL{{% md %}}Normal scanning (Recommended){{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Risk<wbr>Level<wbr>Low</dt>
+    <dd>LOW{{% md %}}Lower impact scanning{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Risk<wbr>Level<wbr>Unspecified</dt>
+    <dd>RISK_LEVEL_UNSPECIFIED{{% md %}}Use default, which is NORMAL.{{% /md %}}</dd><dt>Normal</dt>
+    <dd>NORMAL{{% md %}}Normal scanning (Recommended){{% /md %}}</dd><dt>Low</dt>
+    <dd>LOW{{% md %}}Lower impact scanning{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RISK_LEVEL_UNSPECIFIED</dt>
+    <dd>RISK_LEVEL_UNSPECIFIED{{% md %}}Use default, which is NORMAL.{{% /md %}}</dd><dt>NORMAL</dt>
+    <dd>NORMAL{{% md %}}Normal scanning (Recommended){{% /md %}}</dd><dt>LOW</dt>
+    <dd>LOW{{% md %}}Lower impact scanning{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="scanconfigtargetplatformsitem">Scan<wbr>Config<wbr>Target<wbr>Platforms<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Target<wbr>Platform<wbr>Unspecified</dt>
+    <dd>TARGET_PLATFORM_UNSPECIFIED{{% md %}}The target platform is unknown. Requests with this enum value will be rejected with INVALID_ARGUMENT error.{{% /md %}}</dd><dt>App<wbr>Engine</dt>
+    <dd>APP_ENGINE{{% md %}}Google App Engine service.{{% /md %}}</dd><dt>Compute</dt>
+    <dd>COMPUTE{{% md %}}Google Compute Engine service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Scan<wbr>Config<wbr>Target<wbr>Platforms<wbr>Item<wbr>Target<wbr>Platform<wbr>Unspecified</dt>
+    <dd>TARGET_PLATFORM_UNSPECIFIED{{% md %}}The target platform is unknown. Requests with this enum value will be rejected with INVALID_ARGUMENT error.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Target<wbr>Platforms<wbr>Item<wbr>App<wbr>Engine</dt>
+    <dd>APP_ENGINE{{% md %}}Google App Engine service.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Target<wbr>Platforms<wbr>Item<wbr>Compute</dt>
+    <dd>COMPUTE{{% md %}}Google Compute Engine service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Target<wbr>Platform<wbr>Unspecified</dt>
+    <dd>TARGET_PLATFORM_UNSPECIFIED{{% md %}}The target platform is unknown. Requests with this enum value will be rejected with INVALID_ARGUMENT error.{{% /md %}}</dd><dt>App<wbr>Engine</dt>
+    <dd>APP_ENGINE{{% md %}}Google App Engine service.{{% /md %}}</dd><dt>Compute</dt>
+    <dd>COMPUTE{{% md %}}Google Compute Engine service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TARGET_PLATFORM_UNSPECIFIED</dt>
+    <dd>TARGET_PLATFORM_UNSPECIFIED{{% md %}}The target platform is unknown. Requests with this enum value will be rejected with INVALID_ARGUMENT error.{{% /md %}}</dd><dt>APP_ENGINE</dt>
+    <dd>APP_ENGINE{{% md %}}Google App Engine service.{{% /md %}}</dd><dt>COMPUTE</dt>
+    <dd>COMPUTE{{% md %}}Google Compute Engine service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="scanconfiguseragent">Scan<wbr>Config<wbr>User<wbr>Agent</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>User<wbr>Agent<wbr>Unspecified</dt>
+    <dd>USER_AGENT_UNSPECIFIED{{% md %}}The user agent is unknown. Service will default to CHROME_LINUX.{{% /md %}}</dd><dt>Chrome<wbr>Linux</dt>
+    <dd>CHROME_LINUX{{% md %}}Chrome on Linux. This is the service default if unspecified.{{% /md %}}</dd><dt>Chrome<wbr>Android</dt>
+    <dd>CHROME_ANDROID{{% md %}}Chrome on Android.{{% /md %}}</dd><dt>Safari<wbr>Iphone</dt>
+    <dd>SAFARI_IPHONE{{% md %}}Safari on IPhone.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Scan<wbr>Config<wbr>User<wbr>Agent<wbr>User<wbr>Agent<wbr>Unspecified</dt>
+    <dd>USER_AGENT_UNSPECIFIED{{% md %}}The user agent is unknown. Service will default to CHROME_LINUX.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>User<wbr>Agent<wbr>Chrome<wbr>Linux</dt>
+    <dd>CHROME_LINUX{{% md %}}Chrome on Linux. This is the service default if unspecified.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>User<wbr>Agent<wbr>Chrome<wbr>Android</dt>
+    <dd>CHROME_ANDROID{{% md %}}Chrome on Android.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>User<wbr>Agent<wbr>Safari<wbr>Iphone</dt>
+    <dd>SAFARI_IPHONE{{% md %}}Safari on IPhone.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>User<wbr>Agent<wbr>Unspecified</dt>
+    <dd>USER_AGENT_UNSPECIFIED{{% md %}}The user agent is unknown. Service will default to CHROME_LINUX.{{% /md %}}</dd><dt>Chrome<wbr>Linux</dt>
+    <dd>CHROME_LINUX{{% md %}}Chrome on Linux. This is the service default if unspecified.{{% /md %}}</dd><dt>Chrome<wbr>Android</dt>
+    <dd>CHROME_ANDROID{{% md %}}Chrome on Android.{{% /md %}}</dd><dt>Safari<wbr>Iphone</dt>
+    <dd>SAFARI_IPHONE{{% md %}}Safari on IPhone.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>USER_AGENT_UNSPECIFIED</dt>
+    <dd>USER_AGENT_UNSPECIFIED{{% md %}}The user agent is unknown. Service will default to CHROME_LINUX.{{% /md %}}</dd><dt>CHROME_LINUX</dt>
+    <dd>CHROME_LINUX{{% md %}}Chrome on Linux. This is the service default if unspecified.{{% /md %}}</dd><dt>CHROME_ANDROID</dt>
+    <dd>CHROME_ANDROID{{% md %}}Chrome on Android.{{% /md %}}</dd><dt>SAFARI_IPHONE</dt>
+    <dd>SAFARI_IPHONE{{% md %}}Safari on IPhone.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="scanrun">Scan<wbr>Run</h4>
 
 {{% choosable language csharp %}}
@@ -1771,7 +2081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executionstate_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanrunexecutionstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Web<wbr>Security<wbr>Scanner.<wbr>V1Beta.<wbr>Scan<wbr>Run<wbr>Execution<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The execution state of the ScanRun.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1803,7 +2113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resultstate_csharp" style="color: inherit; text-decoration: inherit;">Result<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanrunresultstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Web<wbr>Security<wbr>Scanner.<wbr>V1Beta.<wbr>Scan<wbr>Run<wbr>Result<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The result state of the ScanRun. This field is only available after the execution state reaches "FINISHED".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1863,7 +2173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executionstate_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanrunexecutionstate">Scan<wbr>Run<wbr>Execution<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The execution state of the ScanRun.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1895,7 +2205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resultstate_go" style="color: inherit; text-decoration: inherit;">Result<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanrunresultstate">Scan<wbr>Run<wbr>Result<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The result state of the ScanRun. This field is only available after the execution state reaches "FINISHED".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1955,7 +2265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executionstate_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanrunexecutionstate">Scan<wbr>Run<wbr>Execution<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The execution state of the ScanRun.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1987,7 +2297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resultstate_nodejs" style="color: inherit; text-decoration: inherit;">result<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanrunresultstate">Scan<wbr>Run<wbr>Result<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The result state of the ScanRun. This field is only available after the execution state reaches "FINISHED".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2047,7 +2357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#execution_state_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#scanrunexecutionstate">Scan<wbr>Run<wbr>Execution<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The execution state of the ScanRun.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2079,7 +2389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#result_state_python" style="color: inherit; text-decoration: inherit;">result_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#scanrunresultstate">Scan<wbr>Run<wbr>Result<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The result state of the ScanRun. This field is only available after the execution state reaches "FINISHED".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2125,7 +2435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanrunerrortracecode">Pulumi.<wbr>Google<wbr>Native.<wbr>Web<wbr>Security<wbr>Scanner.<wbr>V1Beta.<wbr>Scan<wbr>Run<wbr>Error<wbr>Trace<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Indicates the error reason code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2153,7 +2463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanrunerrortracecode">Scan<wbr>Run<wbr>Error<wbr>Trace<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Indicates the error reason code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2181,7 +2491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanrunerrortracecode">Scan<wbr>Run<wbr>Error<wbr>Trace<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Indicates the error reason code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2209,7 +2519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#scanrunerrortracecode">Scan<wbr>Run<wbr>Error<wbr>Trace<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Indicates the error reason code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2228,6 +2538,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#scanconfigerror">Scan<wbr>Config<wbr>Error<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message encountered during scan configuration validation that is performed before each scan run.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="scanrunerrortracecode">Scan<wbr>Run<wbr>Error<wbr>Trace<wbr>Code</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Code<wbr>Unspecified</dt>
+    <dd>CODE_UNSPECIFIED{{% md %}}Default value is never used.{{% /md %}}</dd><dt>Internal<wbr>Error</dt>
+    <dd>INTERNAL_ERROR{{% md %}}Indicates that the scan run failed due to an internal server error.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Issue</dt>
+    <dd>SCAN_CONFIG_ISSUE{{% md %}}Indicates a scan configuration error, usually due to outdated ScanConfig settings, such as starting_urls or the DNS configuration.{{% /md %}}</dd><dt>Authentication<wbr>Config<wbr>Issue</dt>
+    <dd>AUTHENTICATION_CONFIG_ISSUE{{% md %}}Indicates an authentication error, usually due to outdated ScanConfig authentication settings.{{% /md %}}</dd><dt>Timed<wbr>Out<wbr>While<wbr>Scanning</dt>
+    <dd>TIMED_OUT_WHILE_SCANNING{{% md %}}Indicates a scan operation timeout, usually caused by a very large site.{{% /md %}}</dd><dt>Too<wbr>Many<wbr>Redirects</dt>
+    <dd>TOO_MANY_REDIRECTS{{% md %}}Indicates that a scan encountered excessive redirects, either to authentication or some other page outside of the scan scope.{{% /md %}}</dd><dt>Too<wbr>Many<wbr>Http<wbr>Errors</dt>
+    <dd>TOO_MANY_HTTP_ERRORS{{% md %}}Indicates that a scan encountered numerous errors from the web site pages. When available, most_common_http_error_code field indicates the most common HTTP error code encountered during the scan.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Scan<wbr>Run<wbr>Error<wbr>Trace<wbr>Code<wbr>Code<wbr>Unspecified</dt>
+    <dd>CODE_UNSPECIFIED{{% md %}}Default value is never used.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Error<wbr>Trace<wbr>Code<wbr>Internal<wbr>Error</dt>
+    <dd>INTERNAL_ERROR{{% md %}}Indicates that the scan run failed due to an internal server error.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Error<wbr>Trace<wbr>Code<wbr>Scan<wbr>Config<wbr>Issue</dt>
+    <dd>SCAN_CONFIG_ISSUE{{% md %}}Indicates a scan configuration error, usually due to outdated ScanConfig settings, such as starting_urls or the DNS configuration.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Error<wbr>Trace<wbr>Code<wbr>Authentication<wbr>Config<wbr>Issue</dt>
+    <dd>AUTHENTICATION_CONFIG_ISSUE{{% md %}}Indicates an authentication error, usually due to outdated ScanConfig authentication settings.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Error<wbr>Trace<wbr>Code<wbr>Timed<wbr>Out<wbr>While<wbr>Scanning</dt>
+    <dd>TIMED_OUT_WHILE_SCANNING{{% md %}}Indicates a scan operation timeout, usually caused by a very large site.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Error<wbr>Trace<wbr>Code<wbr>Too<wbr>Many<wbr>Redirects</dt>
+    <dd>TOO_MANY_REDIRECTS{{% md %}}Indicates that a scan encountered excessive redirects, either to authentication or some other page outside of the scan scope.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Error<wbr>Trace<wbr>Code<wbr>Too<wbr>Many<wbr>Http<wbr>Errors</dt>
+    <dd>TOO_MANY_HTTP_ERRORS{{% md %}}Indicates that a scan encountered numerous errors from the web site pages. When available, most_common_http_error_code field indicates the most common HTTP error code encountered during the scan.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Code<wbr>Unspecified</dt>
+    <dd>CODE_UNSPECIFIED{{% md %}}Default value is never used.{{% /md %}}</dd><dt>Internal<wbr>Error</dt>
+    <dd>INTERNAL_ERROR{{% md %}}Indicates that the scan run failed due to an internal server error.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Issue</dt>
+    <dd>SCAN_CONFIG_ISSUE{{% md %}}Indicates a scan configuration error, usually due to outdated ScanConfig settings, such as starting_urls or the DNS configuration.{{% /md %}}</dd><dt>Authentication<wbr>Config<wbr>Issue</dt>
+    <dd>AUTHENTICATION_CONFIG_ISSUE{{% md %}}Indicates an authentication error, usually due to outdated ScanConfig authentication settings.{{% /md %}}</dd><dt>Timed<wbr>Out<wbr>While<wbr>Scanning</dt>
+    <dd>TIMED_OUT_WHILE_SCANNING{{% md %}}Indicates a scan operation timeout, usually caused by a very large site.{{% /md %}}</dd><dt>Too<wbr>Many<wbr>Redirects</dt>
+    <dd>TOO_MANY_REDIRECTS{{% md %}}Indicates that a scan encountered excessive redirects, either to authentication or some other page outside of the scan scope.{{% /md %}}</dd><dt>Too<wbr>Many<wbr>Http<wbr>Errors</dt>
+    <dd>TOO_MANY_HTTP_ERRORS{{% md %}}Indicates that a scan encountered numerous errors from the web site pages. When available, most_common_http_error_code field indicates the most common HTTP error code encountered during the scan.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CODE_UNSPECIFIED</dt>
+    <dd>CODE_UNSPECIFIED{{% md %}}Default value is never used.{{% /md %}}</dd><dt>INTERNAL_ERROR</dt>
+    <dd>INTERNAL_ERROR{{% md %}}Indicates that the scan run failed due to an internal server error.{{% /md %}}</dd><dt>SCAN_CONFIG_ISSUE</dt>
+    <dd>SCAN_CONFIG_ISSUE{{% md %}}Indicates a scan configuration error, usually due to outdated ScanConfig settings, such as starting_urls or the DNS configuration.{{% /md %}}</dd><dt>AUTHENTICATION_CONFIG_ISSUE</dt>
+    <dd>AUTHENTICATION_CONFIG_ISSUE{{% md %}}Indicates an authentication error, usually due to outdated ScanConfig authentication settings.{{% /md %}}</dd><dt>TIMED_OUT_WHILE_SCANNING</dt>
+    <dd>TIMED_OUT_WHILE_SCANNING{{% md %}}Indicates a scan operation timeout, usually caused by a very large site.{{% /md %}}</dd><dt>TOO_MANY_REDIRECTS</dt>
+    <dd>TOO_MANY_REDIRECTS{{% md %}}Indicates that a scan encountered excessive redirects, either to authentication or some other page outside of the scan scope.{{% /md %}}</dd><dt>TOO_MANY_HTTP_ERRORS</dt>
+    <dd>TOO_MANY_HTTP_ERRORS{{% md %}}Indicates that a scan encountered numerous errors from the web site pages. When available, most_common_http_error_code field indicates the most common HTTP error code encountered during the scan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scanrunerrortraceresponse">Scan<wbr>Run<wbr>Error<wbr>Trace<wbr>Response</h4>
@@ -2342,6 +2698,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#scanconfigerrorresponse">Scan<wbr>Config<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message encountered during scan configuration validation that is performed before each scan run.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="scanrunexecutionstate">Scan<wbr>Run<wbr>Execution<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Execution<wbr>State<wbr>Unspecified</dt>
+    <dd>EXECUTION_STATE_UNSPECIFIED{{% md %}}Represents an invalid state caused by internal server error. This value should never be returned.{{% /md %}}</dd><dt>Queued</dt>
+    <dd>QUEUED{{% md %}}The scan is waiting in the queue.{{% /md %}}</dd><dt>Scanning</dt>
+    <dd>SCANNING{{% md %}}The scan is in progress.{{% /md %}}</dd><dt>Finished</dt>
+    <dd>FINISHED{{% md %}}The scan is either finished or stopped by user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Scan<wbr>Run<wbr>Execution<wbr>State<wbr>Execution<wbr>State<wbr>Unspecified</dt>
+    <dd>EXECUTION_STATE_UNSPECIFIED{{% md %}}Represents an invalid state caused by internal server error. This value should never be returned.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Execution<wbr>State<wbr>Queued</dt>
+    <dd>QUEUED{{% md %}}The scan is waiting in the queue.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Execution<wbr>State<wbr>Scanning</dt>
+    <dd>SCANNING{{% md %}}The scan is in progress.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Execution<wbr>State<wbr>Finished</dt>
+    <dd>FINISHED{{% md %}}The scan is either finished or stopped by user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Execution<wbr>State<wbr>Unspecified</dt>
+    <dd>EXECUTION_STATE_UNSPECIFIED{{% md %}}Represents an invalid state caused by internal server error. This value should never be returned.{{% /md %}}</dd><dt>Queued</dt>
+    <dd>QUEUED{{% md %}}The scan is waiting in the queue.{{% /md %}}</dd><dt>Scanning</dt>
+    <dd>SCANNING{{% md %}}The scan is in progress.{{% /md %}}</dd><dt>Finished</dt>
+    <dd>FINISHED{{% md %}}The scan is either finished or stopped by user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EXECUTION_STATE_UNSPECIFIED</dt>
+    <dd>EXECUTION_STATE_UNSPECIFIED{{% md %}}Represents an invalid state caused by internal server error. This value should never be returned.{{% /md %}}</dd><dt>QUEUED</dt>
+    <dd>QUEUED{{% md %}}The scan is waiting in the queue.{{% /md %}}</dd><dt>SCANNING</dt>
+    <dd>SCANNING{{% md %}}The scan is in progress.{{% /md %}}</dd><dt>FINISHED</dt>
+    <dd>FINISHED{{% md %}}The scan is either finished or stopped by user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scanrunresponse">Scan<wbr>Run<wbr>Response</h4>
@@ -2714,6 +3104,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A list of warnings, if such are encountered during this scan run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="scanrunresultstate">Scan<wbr>Run<wbr>Result<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Result<wbr>State<wbr>Unspecified</dt>
+    <dd>RESULT_STATE_UNSPECIFIED{{% md %}}Default value. This value is returned when the ScanRun is not yet finished.{{% /md %}}</dd><dt>Success</dt>
+    <dd>SUCCESS{{% md %}}The scan finished without errors.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}The scan finished with errors.{{% /md %}}</dd><dt>Killed</dt>
+    <dd>KILLED{{% md %}}The scan was terminated by user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Scan<wbr>Run<wbr>Result<wbr>State<wbr>Result<wbr>State<wbr>Unspecified</dt>
+    <dd>RESULT_STATE_UNSPECIFIED{{% md %}}Default value. This value is returned when the ScanRun is not yet finished.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Result<wbr>State<wbr>Success</dt>
+    <dd>SUCCESS{{% md %}}The scan finished without errors.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Result<wbr>State<wbr>Error</dt>
+    <dd>ERROR{{% md %}}The scan finished with errors.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Result<wbr>State<wbr>Killed</dt>
+    <dd>KILLED{{% md %}}The scan was terminated by user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Result<wbr>State<wbr>Unspecified</dt>
+    <dd>RESULT_STATE_UNSPECIFIED{{% md %}}Default value. This value is returned when the ScanRun is not yet finished.{{% /md %}}</dd><dt>Success</dt>
+    <dd>SUCCESS{{% md %}}The scan finished without errors.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}The scan finished with errors.{{% /md %}}</dd><dt>Killed</dt>
+    <dd>KILLED{{% md %}}The scan was terminated by user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RESULT_STATE_UNSPECIFIED</dt>
+    <dd>RESULT_STATE_UNSPECIFIED{{% md %}}Default value. This value is returned when the ScanRun is not yet finished.{{% /md %}}</dd><dt>SUCCESS</dt>
+    <dd>SUCCESS{{% md %}}The scan finished without errors.{{% /md %}}</dd><dt>ERROR</dt>
+    <dd>ERROR{{% md %}}The scan finished with errors.{{% /md %}}</dd><dt>KILLED</dt>
+    <dd>KILLED{{% md %}}The scan was terminated by user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="scanrunwarningtrace">Scan<wbr>Run<wbr>Warning<wbr>Trace</h4>
 
 {{% choosable language csharp %}}
@@ -2723,7 +3147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanrunwarningtracecode">Pulumi.<wbr>Google<wbr>Native.<wbr>Web<wbr>Security<wbr>Scanner.<wbr>V1Beta.<wbr>Scan<wbr>Run<wbr>Warning<wbr>Trace<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Indicates the warning code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2735,7 +3159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanrunwarningtracecode">Scan<wbr>Run<wbr>Warning<wbr>Trace<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Indicates the warning code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2747,7 +3171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanrunwarningtracecode">Scan<wbr>Run<wbr>Warning<wbr>Trace<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Indicates the warning code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2759,9 +3183,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#scanrunwarningtracecode">Scan<wbr>Run<wbr>Warning<wbr>Trace<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Indicates the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="scanrunwarningtracecode">Scan<wbr>Run<wbr>Warning<wbr>Trace<wbr>Code</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Code<wbr>Unspecified</dt>
+    <dd>CODE_UNSPECIFIED{{% md %}}Default value is never used.{{% /md %}}</dd><dt>Insufficient<wbr>Crawl<wbr>Results</dt>
+    <dd>INSUFFICIENT_CRAWL_RESULTS{{% md %}}Indicates that a scan discovered an unexpectedly low number of URLs. This is sometimes caused by complex navigation features or by using a single URL for numerous pages.{{% /md %}}</dd><dt>Too<wbr>Many<wbr>Crawl<wbr>Results</dt>
+    <dd>TOO_MANY_CRAWL_RESULTS{{% md %}}Indicates that a scan discovered too many URLs to test, or excessive redundant URLs.{{% /md %}}</dd><dt>Too<wbr>Many<wbr>Fuzz<wbr>Tasks</dt>
+    <dd>TOO_MANY_FUZZ_TASKS{{% md %}}Indicates that too many tests have been generated for the scan. Customer should try reducing the number of starting URLs, increasing the QPS rate, or narrowing down the scope of the scan using the excluded patterns.{{% /md %}}</dd><dt>Blocked<wbr>By<wbr>Iap</dt>
+    <dd>BLOCKED_BY_IAP{{% md %}}Indicates that a scan is blocked by IAP.{{% /md %}}</dd><dt>No<wbr>Starting<wbr>Url<wbr>Found<wbr>For<wbr>Managed<wbr>Scan</dt>
+    <dd>NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN{{% md %}}Indicates that no seed is found for a scan{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Scan<wbr>Run<wbr>Warning<wbr>Trace<wbr>Code<wbr>Code<wbr>Unspecified</dt>
+    <dd>CODE_UNSPECIFIED{{% md %}}Default value is never used.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Warning<wbr>Trace<wbr>Code<wbr>Insufficient<wbr>Crawl<wbr>Results</dt>
+    <dd>INSUFFICIENT_CRAWL_RESULTS{{% md %}}Indicates that a scan discovered an unexpectedly low number of URLs. This is sometimes caused by complex navigation features or by using a single URL for numerous pages.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Warning<wbr>Trace<wbr>Code<wbr>Too<wbr>Many<wbr>Crawl<wbr>Results</dt>
+    <dd>TOO_MANY_CRAWL_RESULTS{{% md %}}Indicates that a scan discovered too many URLs to test, or excessive redundant URLs.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Warning<wbr>Trace<wbr>Code<wbr>Too<wbr>Many<wbr>Fuzz<wbr>Tasks</dt>
+    <dd>TOO_MANY_FUZZ_TASKS{{% md %}}Indicates that too many tests have been generated for the scan. Customer should try reducing the number of starting URLs, increasing the QPS rate, or narrowing down the scope of the scan using the excluded patterns.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Warning<wbr>Trace<wbr>Code<wbr>Blocked<wbr>By<wbr>Iap</dt>
+    <dd>BLOCKED_BY_IAP{{% md %}}Indicates that a scan is blocked by IAP.{{% /md %}}</dd><dt>Scan<wbr>Run<wbr>Warning<wbr>Trace<wbr>Code<wbr>No<wbr>Starting<wbr>Url<wbr>Found<wbr>For<wbr>Managed<wbr>Scan</dt>
+    <dd>NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN{{% md %}}Indicates that no seed is found for a scan{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Code<wbr>Unspecified</dt>
+    <dd>CODE_UNSPECIFIED{{% md %}}Default value is never used.{{% /md %}}</dd><dt>Insufficient<wbr>Crawl<wbr>Results</dt>
+    <dd>INSUFFICIENT_CRAWL_RESULTS{{% md %}}Indicates that a scan discovered an unexpectedly low number of URLs. This is sometimes caused by complex navigation features or by using a single URL for numerous pages.{{% /md %}}</dd><dt>Too<wbr>Many<wbr>Crawl<wbr>Results</dt>
+    <dd>TOO_MANY_CRAWL_RESULTS{{% md %}}Indicates that a scan discovered too many URLs to test, or excessive redundant URLs.{{% /md %}}</dd><dt>Too<wbr>Many<wbr>Fuzz<wbr>Tasks</dt>
+    <dd>TOO_MANY_FUZZ_TASKS{{% md %}}Indicates that too many tests have been generated for the scan. Customer should try reducing the number of starting URLs, increasing the QPS rate, or narrowing down the scope of the scan using the excluded patterns.{{% /md %}}</dd><dt>Blocked<wbr>By<wbr>Iap</dt>
+    <dd>BLOCKED_BY_IAP{{% md %}}Indicates that a scan is blocked by IAP.{{% /md %}}</dd><dt>No<wbr>Starting<wbr>Url<wbr>Found<wbr>For<wbr>Managed<wbr>Scan</dt>
+    <dd>NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN{{% md %}}Indicates that no seed is found for a scan{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CODE_UNSPECIFIED</dt>
+    <dd>CODE_UNSPECIFIED{{% md %}}Default value is never used.{{% /md %}}</dd><dt>INSUFFICIENT_CRAWL_RESULTS</dt>
+    <dd>INSUFFICIENT_CRAWL_RESULTS{{% md %}}Indicates that a scan discovered an unexpectedly low number of URLs. This is sometimes caused by complex navigation features or by using a single URL for numerous pages.{{% /md %}}</dd><dt>TOO_MANY_CRAWL_RESULTS</dt>
+    <dd>TOO_MANY_CRAWL_RESULTS{{% md %}}Indicates that a scan discovered too many URLs to test, or excessive redundant URLs.{{% /md %}}</dd><dt>TOO_MANY_FUZZ_TASKS</dt>
+    <dd>TOO_MANY_FUZZ_TASKS{{% md %}}Indicates that too many tests have been generated for the scan. Customer should try reducing the number of starting URLs, increasing the QPS rate, or narrowing down the scope of the scan using the excluded patterns.{{% /md %}}</dd><dt>BLOCKED_BY_IAP</dt>
+    <dd>BLOCKED_BY_IAP{{% md %}}Indicates that a scan is blocked by IAP.{{% /md %}}</dd><dt>NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN</dt>
+    <dd>NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN{{% md %}}Indicates that no seed is found for a scan{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scanrunwarningtraceresponse">Scan<wbr>Run<wbr>Warning<wbr>Trace<wbr>Response</h4>

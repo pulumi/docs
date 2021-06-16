@@ -36,10 +36,10 @@ Creates a metastore service in a project and location.
             <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[_metastore_v1alpha.ServiceReleaseChannel]</span> = None<span class="p">,</span>
             <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+            <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[_metastore_v1alpha.ServiceTier]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span>
@@ -253,7 +253,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#releasechannel_csharp" style="color: inherit; text-decoration: inherit;">Release<wbr>Channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#servicereleasechannel">Pulumi.<wbr>Google<wbr>Native.<wbr>Metastore.<wbr>V1Alpha.<wbr>Service<wbr>Release<wbr>Channel</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The release channel of the service. If unspecified, defaults to STABLE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -269,7 +269,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#servicetier">Pulumi.<wbr>Google<wbr>Native.<wbr>Metastore.<wbr>V1Alpha.<wbr>Service<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The tier of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -361,7 +361,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#releasechannel_go" style="color: inherit; text-decoration: inherit;">Release<wbr>Channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#servicereleasechannel">Service<wbr>Release<wbr>Channel</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The release channel of the service. If unspecified, defaults to STABLE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -377,7 +377,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#servicetier">Service<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The tier of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -469,7 +469,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#releasechannel_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#servicereleasechannel">Service<wbr>Release<wbr>Channel</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The release channel of the service. If unspecified, defaults to STABLE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -485,7 +485,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#servicetier">Service<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The tier of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -577,7 +577,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#release_channel_python" style="color: inherit; text-decoration: inherit;">release_<wbr>channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#servicereleasechannel">Service<wbr>Release<wbr>Channel</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The release channel of the service. If unspecified, defaults to STABLE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -593,7 +593,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#servicetier">Service<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The tier of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1484,7 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#maintenancewindowdayofweek">Pulumi.<wbr>Google<wbr>Native.<wbr>Metastore.<wbr>V1Alpha.<wbr>Maintenance<wbr>Window<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}The day of week, when the window starts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1504,7 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#maintenancewindowdayofweek">Maintenance<wbr>Window<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}The day of week, when the window starts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1524,7 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#maintenancewindowdayofweek">Maintenance<wbr>Window<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}The day of week, when the window starts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1544,7 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#maintenancewindowdayofweek">Maintenance<wbr>Window<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}The day of week, when the window starts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1555,6 +1555,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The hour of day (0-23) when the window starts.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="maintenancewindowdayofweek">Maintenance<wbr>Window<wbr>Day<wbr>Of<wbr>Week</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Day<wbr>Of<wbr>Week<wbr>Unspecified</dt>
+    <dd>DAY_OF_WEEK_UNSPECIFIED{{% md %}}The day of the week is unspecified.{{% /md %}}</dd><dt>Monday</dt>
+    <dd>MONDAY{{% md %}}Monday{{% /md %}}</dd><dt>Tuesday</dt>
+    <dd>TUESDAY{{% md %}}Tuesday{{% /md %}}</dd><dt>Wednesday</dt>
+    <dd>WEDNESDAY{{% md %}}Wednesday{{% /md %}}</dd><dt>Thursday</dt>
+    <dd>THURSDAY{{% md %}}Thursday{{% /md %}}</dd><dt>Friday</dt>
+    <dd>FRIDAY{{% md %}}Friday{{% /md %}}</dd><dt>Saturday</dt>
+    <dd>SATURDAY{{% md %}}Saturday{{% /md %}}</dd><dt>Sunday</dt>
+    <dd>SUNDAY{{% md %}}Sunday{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Maintenance<wbr>Window<wbr>Day<wbr>Of<wbr>Week<wbr>Day<wbr>Of<wbr>Week<wbr>Unspecified</dt>
+    <dd>DAY_OF_WEEK_UNSPECIFIED{{% md %}}The day of the week is unspecified.{{% /md %}}</dd><dt>Maintenance<wbr>Window<wbr>Day<wbr>Of<wbr>Week<wbr>Monday</dt>
+    <dd>MONDAY{{% md %}}Monday{{% /md %}}</dd><dt>Maintenance<wbr>Window<wbr>Day<wbr>Of<wbr>Week<wbr>Tuesday</dt>
+    <dd>TUESDAY{{% md %}}Tuesday{{% /md %}}</dd><dt>Maintenance<wbr>Window<wbr>Day<wbr>Of<wbr>Week<wbr>Wednesday</dt>
+    <dd>WEDNESDAY{{% md %}}Wednesday{{% /md %}}</dd><dt>Maintenance<wbr>Window<wbr>Day<wbr>Of<wbr>Week<wbr>Thursday</dt>
+    <dd>THURSDAY{{% md %}}Thursday{{% /md %}}</dd><dt>Maintenance<wbr>Window<wbr>Day<wbr>Of<wbr>Week<wbr>Friday</dt>
+    <dd>FRIDAY{{% md %}}Friday{{% /md %}}</dd><dt>Maintenance<wbr>Window<wbr>Day<wbr>Of<wbr>Week<wbr>Saturday</dt>
+    <dd>SATURDAY{{% md %}}Saturday{{% /md %}}</dd><dt>Maintenance<wbr>Window<wbr>Day<wbr>Of<wbr>Week<wbr>Sunday</dt>
+    <dd>SUNDAY{{% md %}}Sunday{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Day<wbr>Of<wbr>Week<wbr>Unspecified</dt>
+    <dd>DAY_OF_WEEK_UNSPECIFIED{{% md %}}The day of the week is unspecified.{{% /md %}}</dd><dt>Monday</dt>
+    <dd>MONDAY{{% md %}}Monday{{% /md %}}</dd><dt>Tuesday</dt>
+    <dd>TUESDAY{{% md %}}Tuesday{{% /md %}}</dd><dt>Wednesday</dt>
+    <dd>WEDNESDAY{{% md %}}Wednesday{{% /md %}}</dd><dt>Thursday</dt>
+    <dd>THURSDAY{{% md %}}Thursday{{% /md %}}</dd><dt>Friday</dt>
+    <dd>FRIDAY{{% md %}}Friday{{% /md %}}</dd><dt>Saturday</dt>
+    <dd>SATURDAY{{% md %}}Saturday{{% /md %}}</dd><dt>Sunday</dt>
+    <dd>SUNDAY{{% md %}}Sunday{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DAY_OF_WEEK_UNSPECIFIED</dt>
+    <dd>DAY_OF_WEEK_UNSPECIFIED{{% md %}}The day of the week is unspecified.{{% /md %}}</dd><dt>MONDAY</dt>
+    <dd>MONDAY{{% md %}}Monday{{% /md %}}</dd><dt>TUESDAY</dt>
+    <dd>TUESDAY{{% md %}}Tuesday{{% /md %}}</dd><dt>WEDNESDAY</dt>
+    <dd>WEDNESDAY{{% md %}}Wednesday{{% /md %}}</dd><dt>THURSDAY</dt>
+    <dd>THURSDAY{{% md %}}Thursday{{% /md %}}</dd><dt>FRIDAY</dt>
+    <dd>FRIDAY{{% md %}}Friday{{% /md %}}</dd><dt>SATURDAY</dt>
+    <dd>SATURDAY{{% md %}}Saturday{{% /md %}}</dd><dt>SUNDAY</dt>
+    <dd>SUNDAY{{% md %}}Sunday{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="maintenancewindowresponse">Maintenance<wbr>Window<wbr>Response</h4>
@@ -2307,6 +2357,66 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="servicereleasechannel">Service<wbr>Release<wbr>Channel</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Release<wbr>Channel<wbr>Unspecified</dt>
+    <dd>RELEASE_CHANNEL_UNSPECIFIED{{% md %}}Release channel is not specified.{{% /md %}}</dd><dt>Canary</dt>
+    <dd>CANARY{{% md %}}The CANARY release channel contains the newest features, which may be unstable and subject to unresolved issues with no known workarounds. Services using the CANARY release channel are not subject to any SLAs.{{% /md %}}</dd><dt>Stable</dt>
+    <dd>STABLE{{% md %}}The STABLE release channel contains features that are considered stable and have been validated for production use.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Service<wbr>Release<wbr>Channel<wbr>Release<wbr>Channel<wbr>Unspecified</dt>
+    <dd>RELEASE_CHANNEL_UNSPECIFIED{{% md %}}Release channel is not specified.{{% /md %}}</dd><dt>Service<wbr>Release<wbr>Channel<wbr>Canary</dt>
+    <dd>CANARY{{% md %}}The CANARY release channel contains the newest features, which may be unstable and subject to unresolved issues with no known workarounds. Services using the CANARY release channel are not subject to any SLAs.{{% /md %}}</dd><dt>Service<wbr>Release<wbr>Channel<wbr>Stable</dt>
+    <dd>STABLE{{% md %}}The STABLE release channel contains features that are considered stable and have been validated for production use.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Release<wbr>Channel<wbr>Unspecified</dt>
+    <dd>RELEASE_CHANNEL_UNSPECIFIED{{% md %}}Release channel is not specified.{{% /md %}}</dd><dt>Canary</dt>
+    <dd>CANARY{{% md %}}The CANARY release channel contains the newest features, which may be unstable and subject to unresolved issues with no known workarounds. Services using the CANARY release channel are not subject to any SLAs.{{% /md %}}</dd><dt>Stable</dt>
+    <dd>STABLE{{% md %}}The STABLE release channel contains features that are considered stable and have been validated for production use.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RELEASE_CHANNEL_UNSPECIFIED</dt>
+    <dd>RELEASE_CHANNEL_UNSPECIFIED{{% md %}}Release channel is not specified.{{% /md %}}</dd><dt>CANARY</dt>
+    <dd>CANARY{{% md %}}The CANARY release channel contains the newest features, which may be unstable and subject to unresolved issues with no known workarounds. Services using the CANARY release channel are not subject to any SLAs.{{% /md %}}</dd><dt>STABLE</dt>
+    <dd>STABLE{{% md %}}The STABLE release channel contains features that are considered stable and have been validated for production use.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="servicetier">Service<wbr>Tier</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Tier<wbr>Unspecified</dt>
+    <dd>TIER_UNSPECIFIED{{% md %}}The tier is not set.{{% /md %}}</dd><dt>Developer</dt>
+    <dd>DEVELOPER{{% md %}}The developer tier provides limited scalability and no fault tolerance. Good for low-cost proof-of-concept.{{% /md %}}</dd><dt>Enterprise</dt>
+    <dd>ENTERPRISE{{% md %}}The enterprise tier provides multi-zone high availability, and sufficient scalability for enterprise-level Dataproc Metastore workloads.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Service<wbr>Tier<wbr>Tier<wbr>Unspecified</dt>
+    <dd>TIER_UNSPECIFIED{{% md %}}The tier is not set.{{% /md %}}</dd><dt>Service<wbr>Tier<wbr>Developer</dt>
+    <dd>DEVELOPER{{% md %}}The developer tier provides limited scalability and no fault tolerance. Good for low-cost proof-of-concept.{{% /md %}}</dd><dt>Service<wbr>Tier<wbr>Enterprise</dt>
+    <dd>ENTERPRISE{{% md %}}The enterprise tier provides multi-zone high availability, and sufficient scalability for enterprise-level Dataproc Metastore workloads.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Tier<wbr>Unspecified</dt>
+    <dd>TIER_UNSPECIFIED{{% md %}}The tier is not set.{{% /md %}}</dd><dt>Developer</dt>
+    <dd>DEVELOPER{{% md %}}The developer tier provides limited scalability and no fault tolerance. Good for low-cost proof-of-concept.{{% /md %}}</dd><dt>Enterprise</dt>
+    <dd>ENTERPRISE{{% md %}}The enterprise tier provides multi-zone high availability, and sufficient scalability for enterprise-level Dataproc Metastore workloads.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TIER_UNSPECIFIED</dt>
+    <dd>TIER_UNSPECIFIED{{% md %}}The tier is not set.{{% /md %}}</dd><dt>DEVELOPER</dt>
+    <dd>DEVELOPER{{% md %}}The developer tier provides limited scalability and no fault tolerance. Good for low-cost proof-of-concept.{{% /md %}}</dd><dt>ENTERPRISE</dt>
+    <dd>ENTERPRISE{{% md %}}The enterprise tier provides multi-zone high availability, and sufficient scalability for enterprise-level Dataproc Metastore workloads.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

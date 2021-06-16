@@ -32,8 +32,8 @@ Requests that a new DatabaseInstance be created. The state of a successfully cre
              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_firebasedatabase_v1beta.InstanceState]</span> = None<span class="p">,</span>
+             <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[_firebasedatabase_v1beta.InstanceType]</span> = None<span class="p">,</span>
              <span class="nx">validate_only</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -208,7 +208,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancestate">Pulumi.<wbr>Google<wbr>Native.<wbr>Firebasedatabase.<wbr>V1Beta.<wbr>Instance<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The database's lifecycle state. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -216,7 +216,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Firebasedatabase.<wbr>V1Beta.<wbr>Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -276,7 +276,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancestate">Instance<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The database's lifecycle state. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -284,7 +284,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -344,7 +344,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancestate">Instance<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The database's lifecycle state. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -352,7 +352,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -412,7 +412,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancestate">Instance<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The database's lifecycle state. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -420,7 +420,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -493,6 +493,74 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="instancestate">Instance<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Lifecycle<wbr>State<wbr>Unspecified</dt>
+    <dd>LIFECYCLE_STATE_UNSPECIFIED{{% md %}}Unspecified state, likely the result of an error on the backend. This is only used for distinguishing unset values.{{% /md %}}</dd><dt>Active</dt>
+    <dd>ACTIVE{{% md %}}The normal and active state.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}The database is in a disabled state. It can be re-enabled later.{{% /md %}}</dd><dt>Deleted</dt>
+    <dd>DELETED{{% md %}}The database is in a deleted state.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>State<wbr>Lifecycle<wbr>State<wbr>Unspecified</dt>
+    <dd>LIFECYCLE_STATE_UNSPECIFIED{{% md %}}Unspecified state, likely the result of an error on the backend. This is only used for distinguishing unset values.{{% /md %}}</dd><dt>Instance<wbr>State<wbr>Active</dt>
+    <dd>ACTIVE{{% md %}}The normal and active state.{{% /md %}}</dd><dt>Instance<wbr>State<wbr>Disabled</dt>
+    <dd>DISABLED{{% md %}}The database is in a disabled state. It can be re-enabled later.{{% /md %}}</dd><dt>Instance<wbr>State<wbr>Deleted</dt>
+    <dd>DELETED{{% md %}}The database is in a deleted state.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Lifecycle<wbr>State<wbr>Unspecified</dt>
+    <dd>LIFECYCLE_STATE_UNSPECIFIED{{% md %}}Unspecified state, likely the result of an error on the backend. This is only used for distinguishing unset values.{{% /md %}}</dd><dt>Active</dt>
+    <dd>ACTIVE{{% md %}}The normal and active state.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}The database is in a disabled state. It can be re-enabled later.{{% /md %}}</dd><dt>Deleted</dt>
+    <dd>DELETED{{% md %}}The database is in a deleted state.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LIFECYCLE_STATE_UNSPECIFIED</dt>
+    <dd>LIFECYCLE_STATE_UNSPECIFIED{{% md %}}Unspecified state, likely the result of an error on the backend. This is only used for distinguishing unset values.{{% /md %}}</dd><dt>ACTIVE</dt>
+    <dd>ACTIVE{{% md %}}The normal and active state.{{% /md %}}</dd><dt>DISABLED</dt>
+    <dd>DISABLED{{% md %}}The database is in a disabled state. It can be re-enabled later.{{% /md %}}</dd><dt>DELETED</dt>
+    <dd>DELETED{{% md %}}The database is in a deleted state.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancetype">Instance<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Database<wbr>Instance<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATABASE_INSTANCE_TYPE_UNSPECIFIED{{% md %}}Unknown state, likely the result of an error on the backend. This is only used for distinguishing unset values.{{% /md %}}</dd><dt>Default<wbr>Database</dt>
+    <dd>DEFAULT_DATABASE{{% md %}}The default database that is provisioned when a project is created.{{% /md %}}</dd><dt>User<wbr>Database</dt>
+    <dd>USER_DATABASE{{% md %}}A database that the user created.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Type<wbr>Database<wbr>Instance<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATABASE_INSTANCE_TYPE_UNSPECIFIED{{% md %}}Unknown state, likely the result of an error on the backend. This is only used for distinguishing unset values.{{% /md %}}</dd><dt>Instance<wbr>Type<wbr>Default<wbr>Database</dt>
+    <dd>DEFAULT_DATABASE{{% md %}}The default database that is provisioned when a project is created.{{% /md %}}</dd><dt>Instance<wbr>Type<wbr>User<wbr>Database</dt>
+    <dd>USER_DATABASE{{% md %}}A database that the user created.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Database<wbr>Instance<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATABASE_INSTANCE_TYPE_UNSPECIFIED{{% md %}}Unknown state, likely the result of an error on the backend. This is only used for distinguishing unset values.{{% /md %}}</dd><dt>Default<wbr>Database</dt>
+    <dd>DEFAULT_DATABASE{{% md %}}The default database that is provisioned when a project is created.{{% /md %}}</dd><dt>User<wbr>Database</dt>
+    <dd>USER_DATABASE{{% md %}}A database that the user created.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DATABASE_INSTANCE_TYPE_UNSPECIFIED</dt>
+    <dd>DATABASE_INSTANCE_TYPE_UNSPECIFIED{{% md %}}Unknown state, likely the result of an error on the backend. This is only used for distinguishing unset values.{{% /md %}}</dd><dt>DEFAULT_DATABASE</dt>
+    <dd>DEFAULT_DATABASE{{% md %}}The default database that is provisioned when a project is created.{{% /md %}}</dd><dt>USER_DATABASE</dt>
+    <dd>USER_DATABASE{{% md %}}A database that the user created.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

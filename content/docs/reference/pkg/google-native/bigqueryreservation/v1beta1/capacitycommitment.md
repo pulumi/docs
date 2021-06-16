@@ -30,9 +30,9 @@ Creates a new capacity commitment resource.
                        <span class="nx">capacity_commitment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">enforce_single_admin_project_per_org</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[_bigqueryreservation_v1beta1.CapacityCommitmentPlan]</span> = None<span class="p">,</span>
                        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">renewal_plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">renewal_plan</span><span class="p">:</span> <span class="nx">Optional[_bigqueryreservation_v1beta1.CapacityCommitmentRenewalPlan]</span> = None<span class="p">,</span>
                        <span class="nx">slot_count</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">CapacityCommitment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -199,7 +199,7 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#capacitycommitmentplan">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query<wbr>Reservation.<wbr>V1Beta1.<wbr>Capacity<wbr>Commitment<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}Capacity commitment commitment plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -207,7 +207,7 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
 <a href="#renewalplan_csharp" style="color: inherit; text-decoration: inherit;">Renewal<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#capacitycommitmentrenewalplan">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query<wbr>Reservation.<wbr>V1Beta1.<wbr>Capacity<wbr>Commitment<wbr>Renewal<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL commitments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -259,7 +259,7 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#capacitycommitmentplan">Capacity<wbr>Commitment<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}Capacity commitment commitment plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -267,7 +267,7 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
 <a href="#renewalplan_go" style="color: inherit; text-decoration: inherit;">Renewal<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#capacitycommitmentrenewalplan">Capacity<wbr>Commitment<wbr>Renewal<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL commitments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -319,7 +319,7 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#capacitycommitmentplan">Capacity<wbr>Commitment<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}Capacity commitment commitment plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -327,7 +327,7 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
 <a href="#renewalplan_nodejs" style="color: inherit; text-decoration: inherit;">renewal<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#capacitycommitmentrenewalplan">Capacity<wbr>Commitment<wbr>Renewal<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL commitments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -379,7 +379,7 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#capacitycommitmentplan">Capacity<wbr>Commitment<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}Capacity commitment commitment plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -387,7 +387,7 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
 <a href="#renewal_plan_python" style="color: inherit; text-decoration: inherit;">renewal_<wbr>plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#capacitycommitmentrenewalplan">Capacity<wbr>Commitment<wbr>Renewal<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL commitments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -624,6 +624,82 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="capacitycommitmentplan">Capacity<wbr>Commitment<wbr>Plan</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Commitment<wbr>Plan<wbr>Unspecified</dt>
+    <dd>COMMITMENT_PLAN_UNSPECIFIED{{% md %}}Invalid plan value. Requests with this value will be rejected with error code `google.rpc.Code.INVALID_ARGUMENT`.{{% /md %}}</dd><dt>Flex</dt>
+    <dd>FLEX{{% md %}}Flex commitments have committed period of 1 minute after becoming ACTIVE. After that, they are not in a committed period anymore and can be removed any time.{{% /md %}}</dd><dt>Trial</dt>
+    <dd>TRIAL{{% md %}}Trial commitments have a committed period of 182 days after becoming ACTIVE. After that, they are converted to a new commitment based on the `renewal_plan`. Default `renewal_plan` for Trial commitment is Flex so that it can be deleted right after committed period ends.{{% /md %}}</dd><dt>Monthly</dt>
+    <dd>MONTHLY{{% md %}}Monthly commitments have a committed period of 30 days after becoming ACTIVE. After that, they are not in a committed period anymore and can be removed any time.{{% /md %}}</dd><dt>Annual</dt>
+    <dd>ANNUAL{{% md %}}Annual commitments have a committed period of 365 days after becoming ACTIVE. After that they are converted to a new commitment based on the renewal_plan.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Capacity<wbr>Commitment<wbr>Plan<wbr>Commitment<wbr>Plan<wbr>Unspecified</dt>
+    <dd>COMMITMENT_PLAN_UNSPECIFIED{{% md %}}Invalid plan value. Requests with this value will be rejected with error code `google.rpc.Code.INVALID_ARGUMENT`.{{% /md %}}</dd><dt>Capacity<wbr>Commitment<wbr>Plan<wbr>Flex</dt>
+    <dd>FLEX{{% md %}}Flex commitments have committed period of 1 minute after becoming ACTIVE. After that, they are not in a committed period anymore and can be removed any time.{{% /md %}}</dd><dt>Capacity<wbr>Commitment<wbr>Plan<wbr>Trial</dt>
+    <dd>TRIAL{{% md %}}Trial commitments have a committed period of 182 days after becoming ACTIVE. After that, they are converted to a new commitment based on the `renewal_plan`. Default `renewal_plan` for Trial commitment is Flex so that it can be deleted right after committed period ends.{{% /md %}}</dd><dt>Capacity<wbr>Commitment<wbr>Plan<wbr>Monthly</dt>
+    <dd>MONTHLY{{% md %}}Monthly commitments have a committed period of 30 days after becoming ACTIVE. After that, they are not in a committed period anymore and can be removed any time.{{% /md %}}</dd><dt>Capacity<wbr>Commitment<wbr>Plan<wbr>Annual</dt>
+    <dd>ANNUAL{{% md %}}Annual commitments have a committed period of 365 days after becoming ACTIVE. After that they are converted to a new commitment based on the renewal_plan.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Commitment<wbr>Plan<wbr>Unspecified</dt>
+    <dd>COMMITMENT_PLAN_UNSPECIFIED{{% md %}}Invalid plan value. Requests with this value will be rejected with error code `google.rpc.Code.INVALID_ARGUMENT`.{{% /md %}}</dd><dt>Flex</dt>
+    <dd>FLEX{{% md %}}Flex commitments have committed period of 1 minute after becoming ACTIVE. After that, they are not in a committed period anymore and can be removed any time.{{% /md %}}</dd><dt>Trial</dt>
+    <dd>TRIAL{{% md %}}Trial commitments have a committed period of 182 days after becoming ACTIVE. After that, they are converted to a new commitment based on the `renewal_plan`. Default `renewal_plan` for Trial commitment is Flex so that it can be deleted right after committed period ends.{{% /md %}}</dd><dt>Monthly</dt>
+    <dd>MONTHLY{{% md %}}Monthly commitments have a committed period of 30 days after becoming ACTIVE. After that, they are not in a committed period anymore and can be removed any time.{{% /md %}}</dd><dt>Annual</dt>
+    <dd>ANNUAL{{% md %}}Annual commitments have a committed period of 365 days after becoming ACTIVE. After that they are converted to a new commitment based on the renewal_plan.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>COMMITMENT_PLAN_UNSPECIFIED</dt>
+    <dd>COMMITMENT_PLAN_UNSPECIFIED{{% md %}}Invalid plan value. Requests with this value will be rejected with error code `google.rpc.Code.INVALID_ARGUMENT`.{{% /md %}}</dd><dt>FLEX</dt>
+    <dd>FLEX{{% md %}}Flex commitments have committed period of 1 minute after becoming ACTIVE. After that, they are not in a committed period anymore and can be removed any time.{{% /md %}}</dd><dt>TRIAL</dt>
+    <dd>TRIAL{{% md %}}Trial commitments have a committed period of 182 days after becoming ACTIVE. After that, they are converted to a new commitment based on the `renewal_plan`. Default `renewal_plan` for Trial commitment is Flex so that it can be deleted right after committed period ends.{{% /md %}}</dd><dt>MONTHLY</dt>
+    <dd>MONTHLY{{% md %}}Monthly commitments have a committed period of 30 days after becoming ACTIVE. After that, they are not in a committed period anymore and can be removed any time.{{% /md %}}</dd><dt>ANNUAL</dt>
+    <dd>ANNUAL{{% md %}}Annual commitments have a committed period of 365 days after becoming ACTIVE. After that they are converted to a new commitment based on the renewal_plan.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="capacitycommitmentrenewalplan">Capacity<wbr>Commitment<wbr>Renewal<wbr>Plan</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Commitment<wbr>Plan<wbr>Unspecified</dt>
+    <dd>COMMITMENT_PLAN_UNSPECIFIED{{% md %}}Invalid plan value. Requests with this value will be rejected with error code `google.rpc.Code.INVALID_ARGUMENT`.{{% /md %}}</dd><dt>Flex</dt>
+    <dd>FLEX{{% md %}}Flex commitments have committed period of 1 minute after becoming ACTIVE. After that, they are not in a committed period anymore and can be removed any time.{{% /md %}}</dd><dt>Trial</dt>
+    <dd>TRIAL{{% md %}}Trial commitments have a committed period of 182 days after becoming ACTIVE. After that, they are converted to a new commitment based on the `renewal_plan`. Default `renewal_plan` for Trial commitment is Flex so that it can be deleted right after committed period ends.{{% /md %}}</dd><dt>Monthly</dt>
+    <dd>MONTHLY{{% md %}}Monthly commitments have a committed period of 30 days after becoming ACTIVE. After that, they are not in a committed period anymore and can be removed any time.{{% /md %}}</dd><dt>Annual</dt>
+    <dd>ANNUAL{{% md %}}Annual commitments have a committed period of 365 days after becoming ACTIVE. After that they are converted to a new commitment based on the renewal_plan.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Capacity<wbr>Commitment<wbr>Renewal<wbr>Plan<wbr>Commitment<wbr>Plan<wbr>Unspecified</dt>
+    <dd>COMMITMENT_PLAN_UNSPECIFIED{{% md %}}Invalid plan value. Requests with this value will be rejected with error code `google.rpc.Code.INVALID_ARGUMENT`.{{% /md %}}</dd><dt>Capacity<wbr>Commitment<wbr>Renewal<wbr>Plan<wbr>Flex</dt>
+    <dd>FLEX{{% md %}}Flex commitments have committed period of 1 minute after becoming ACTIVE. After that, they are not in a committed period anymore and can be removed any time.{{% /md %}}</dd><dt>Capacity<wbr>Commitment<wbr>Renewal<wbr>Plan<wbr>Trial</dt>
+    <dd>TRIAL{{% md %}}Trial commitments have a committed period of 182 days after becoming ACTIVE. After that, they are converted to a new commitment based on the `renewal_plan`. Default `renewal_plan` for Trial commitment is Flex so that it can be deleted right after committed period ends.{{% /md %}}</dd><dt>Capacity<wbr>Commitment<wbr>Renewal<wbr>Plan<wbr>Monthly</dt>
+    <dd>MONTHLY{{% md %}}Monthly commitments have a committed period of 30 days after becoming ACTIVE. After that, they are not in a committed period anymore and can be removed any time.{{% /md %}}</dd><dt>Capacity<wbr>Commitment<wbr>Renewal<wbr>Plan<wbr>Annual</dt>
+    <dd>ANNUAL{{% md %}}Annual commitments have a committed period of 365 days after becoming ACTIVE. After that they are converted to a new commitment based on the renewal_plan.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Commitment<wbr>Plan<wbr>Unspecified</dt>
+    <dd>COMMITMENT_PLAN_UNSPECIFIED{{% md %}}Invalid plan value. Requests with this value will be rejected with error code `google.rpc.Code.INVALID_ARGUMENT`.{{% /md %}}</dd><dt>Flex</dt>
+    <dd>FLEX{{% md %}}Flex commitments have committed period of 1 minute after becoming ACTIVE. After that, they are not in a committed period anymore and can be removed any time.{{% /md %}}</dd><dt>Trial</dt>
+    <dd>TRIAL{{% md %}}Trial commitments have a committed period of 182 days after becoming ACTIVE. After that, they are converted to a new commitment based on the `renewal_plan`. Default `renewal_plan` for Trial commitment is Flex so that it can be deleted right after committed period ends.{{% /md %}}</dd><dt>Monthly</dt>
+    <dd>MONTHLY{{% md %}}Monthly commitments have a committed period of 30 days after becoming ACTIVE. After that, they are not in a committed period anymore and can be removed any time.{{% /md %}}</dd><dt>Annual</dt>
+    <dd>ANNUAL{{% md %}}Annual commitments have a committed period of 365 days after becoming ACTIVE. After that they are converted to a new commitment based on the renewal_plan.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>COMMITMENT_PLAN_UNSPECIFIED</dt>
+    <dd>COMMITMENT_PLAN_UNSPECIFIED{{% md %}}Invalid plan value. Requests with this value will be rejected with error code `google.rpc.Code.INVALID_ARGUMENT`.{{% /md %}}</dd><dt>FLEX</dt>
+    <dd>FLEX{{% md %}}Flex commitments have committed period of 1 minute after becoming ACTIVE. After that, they are not in a committed period anymore and can be removed any time.{{% /md %}}</dd><dt>TRIAL</dt>
+    <dd>TRIAL{{% md %}}Trial commitments have a committed period of 182 days after becoming ACTIVE. After that, they are converted to a new commitment based on the `renewal_plan`. Default `renewal_plan` for Trial commitment is Flex so that it can be deleted right after committed period ends.{{% /md %}}</dd><dt>MONTHLY</dt>
+    <dd>MONTHLY{{% md %}}Monthly commitments have a committed period of 30 days after becoming ACTIVE. After that, they are not in a committed period anymore and can be removed any time.{{% /md %}}</dd><dt>ANNUAL</dt>
+    <dd>ANNUAL{{% md %}}Annual commitments have a committed period of 365 days after becoming ACTIVE. After that they are converted to a new commitment based on the renewal_plan.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="statusresponse">Status<wbr>Response</h4>
 

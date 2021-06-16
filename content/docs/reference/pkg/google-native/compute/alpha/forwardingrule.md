@@ -28,7 +28,7 @@ Creates a ForwardingRule resource in the specified project and region using the 
 <span class="k">def </span><span class="nx">ForwardingRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                    <span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.ForwardingRuleIPProtocol]</span> = None<span class="p">,</span>
                    <span class="nx">all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                    <span class="nx">allow_global_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                    <span class="nx">backend_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -36,21 +36,21 @@ Creates a ForwardingRule resource in the specified project and region using the 
                    <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.ForwardingRuleIpVersion]</span> = None<span class="p">,</span>
                    <span class="nx">is_mirroring_collector</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                    <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-                   <span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.ForwardingRuleLoadBalancingScheme]</span> = None<span class="p">,</span>
                    <span class="nx">metadata_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.MetadataFilterArgs]]</span> = None<span class="p">,</span>
                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">network_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">network_tier</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.ForwardingRuleNetworkTier]</span> = None<span class="p">,</span>
                    <span class="nx">port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                    <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">psc_connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">psc_connection_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">psc_connection_status</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.ForwardingRulePscConnectionStatus]</span> = None<span class="p">,</span>
                    <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -283,7 +283,7 @@ For Private Service Connect forwarding rules that forward traffic to Google APIs
 <a href="#ipprotocol_csharp" style="color: inherit; text-decoration: inherit;">IPProtocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#forwardingruleipprotocol">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Forwarding<wbr>Rule<wbr>IPProtocol</a></span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies.
 
@@ -308,7 +308,7 @@ The valid IP protocols are different for different load balancing products:
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#forwardingruleipversion">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Forwarding<wbr>Rule<wbr>Ip<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this forwarding rule. Valid options are IPV4 or IPV6. This can only be specified for an external global forwarding rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -350,7 +350,7 @@ To see the latest fingerprint, make a get() request to retrieve a ForwardingRule
 <a href="#loadbalancingscheme_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#forwardingruleloadbalancingscheme">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme</a></span>
     </dt>
     <dd>{{% md %}}Specifies the forwarding rule type.
 
@@ -404,7 +404,7 @@ For Private Service Connect forwarding rules that forward traffic to Google APIs
 <a href="#networktier_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#forwardingrulenetworktier">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Forwarding<wbr>Rule<wbr>Network<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}This signifies the networking tier used for configuring this load balancer and can only take the following values: PREMIUM, STANDARD.
 
@@ -458,7 +458,7 @@ For more information, see [Port specifications](/load-balancing/docs/forwarding-
 <a href="#pscconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Psc<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#forwardingrulepscconnectionstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Forwarding<wbr>Rule<wbr>Psc<wbr>Connection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -636,7 +636,7 @@ For Private Service Connect forwarding rules that forward traffic to Google APIs
 <a href="#ipprotocol_go" style="color: inherit; text-decoration: inherit;">IPProtocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#forwardingruleipprotocol">Forwarding<wbr>Rule<wbr>IPProtocol</a></span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies.
 
@@ -661,7 +661,7 @@ The valid IP protocols are different for different load balancing products:
 <a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#forwardingruleipversion">Forwarding<wbr>Rule<wbr>Ip<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this forwarding rule. Valid options are IPV4 or IPV6. This can only be specified for an external global forwarding rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -703,7 +703,7 @@ To see the latest fingerprint, make a get() request to retrieve a ForwardingRule
 <a href="#loadbalancingscheme_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#forwardingruleloadbalancingscheme">Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme</a></span>
     </dt>
     <dd>{{% md %}}Specifies the forwarding rule type.
 
@@ -757,7 +757,7 @@ For Private Service Connect forwarding rules that forward traffic to Google APIs
 <a href="#networktier_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#forwardingrulenetworktier">Forwarding<wbr>Rule<wbr>Network<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}This signifies the networking tier used for configuring this load balancer and can only take the following values: PREMIUM, STANDARD.
 
@@ -811,7 +811,7 @@ For more information, see [Port specifications](/load-balancing/docs/forwarding-
 <a href="#pscconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Psc<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#forwardingrulepscconnectionstatus">Forwarding<wbr>Rule<wbr>Psc<wbr>Connection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -937,7 +937,7 @@ For Private Service Connect forwarding rules that forward traffic to Google APIs
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">IPProtocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#forwardingruleipprotocol">Forwarding<wbr>Rule<wbr>IPProtocol</a></span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies.
 
@@ -1014,7 +1014,7 @@ To see the latest fingerprint, make a get() request to retrieve a ForwardingRule
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#forwardingruleipversion">Forwarding<wbr>Rule<wbr>Ip<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this forwarding rule. Valid options are IPV4 or IPV6. This can only be specified for an external global forwarding rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1056,7 +1056,7 @@ To see the latest fingerprint, make a get() request to retrieve a ForwardingRule
 <a href="#loadbalancingscheme_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#forwardingruleloadbalancingscheme">Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme</a></span>
     </dt>
     <dd>{{% md %}}Specifies the forwarding rule type.
 
@@ -1110,7 +1110,7 @@ For Private Service Connect forwarding rules that forward traffic to Google APIs
 <a href="#networktier_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#forwardingrulenetworktier">Forwarding<wbr>Rule<wbr>Network<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}This signifies the networking tier used for configuring this load balancer and can only take the following values: PREMIUM, STANDARD.
 
@@ -1164,7 +1164,7 @@ For more information, see [Port specifications](/load-balancing/docs/forwarding-
 <a href="#pscconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">psc<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#forwardingrulepscconnectionstatus">Forwarding<wbr>Rule<wbr>Psc<wbr>Connection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1350,7 +1350,7 @@ For Private Service Connect forwarding rules that forward traffic to Google APIs
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#forwardingruleipprotocol">Forwarding<wbr>Rule<wbr>IPProtocol</a></span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies.
 
@@ -1367,7 +1367,7 @@ The valid IP protocols are different for different load balancing products:
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#forwardingruleipversion">Forwarding<wbr>Rule<wbr>Ip<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this forwarding rule. Valid options are IPV4 or IPV6. This can only be specified for an external global forwarding rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1409,7 +1409,7 @@ To see the latest fingerprint, make a get() request to retrieve a ForwardingRule
 <a href="#load_balancing_scheme_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#forwardingruleloadbalancingscheme">Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme</a></span>
     </dt>
     <dd>{{% md %}}Specifies the forwarding rule type.
 
@@ -1463,7 +1463,7 @@ For Private Service Connect forwarding rules that forward traffic to Google APIs
 <a href="#network_tier_python" style="color: inherit; text-decoration: inherit;">network_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#forwardingrulenetworktier">Forwarding<wbr>Rule<wbr>Network<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}This signifies the networking tier used for configuring this load balancer and can only take the following values: PREMIUM, STANDARD.
 
@@ -1517,7 +1517,7 @@ For more information, see [Port specifications](/load-balancing/docs/forwarding-
 <a href="#psc_connection_status_python" style="color: inherit; text-decoration: inherit;">psc_<wbr>connection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#forwardingrulepscconnectionstatus">Forwarding<wbr>Rule<wbr>Psc<wbr>Connection<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1662,6 +1662,200 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="forwardingruleipprotocol">Forwarding<wbr>Rule<wbr>IPProtocol</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Ah</dt>
+    <dd>AH</dd><dt>All</dt>
+    <dd>ALL</dd><dt>Esp</dt>
+    <dd>ESP</dd><dt>Icmp</dt>
+    <dd>ICMP</dd><dt>Sctp</dt>
+    <dd>SCTP</dd><dt>Tcp</dt>
+    <dd>TCP</dd><dt>Udp</dt>
+    <dd>UDP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Forwarding<wbr>Rule<wbr>IPProtocol<wbr>Ah</dt>
+    <dd>AH</dd><dt>Forwarding<wbr>Rule<wbr>IPProtocol<wbr>All</dt>
+    <dd>ALL</dd><dt>Forwarding<wbr>Rule<wbr>IPProtocol<wbr>Esp</dt>
+    <dd>ESP</dd><dt>Forwarding<wbr>Rule<wbr>IPProtocol<wbr>Icmp</dt>
+    <dd>ICMP</dd><dt>Forwarding<wbr>Rule<wbr>IPProtocol<wbr>Sctp</dt>
+    <dd>SCTP</dd><dt>Forwarding<wbr>Rule<wbr>IPProtocol<wbr>Tcp</dt>
+    <dd>TCP</dd><dt>Forwarding<wbr>Rule<wbr>IPProtocol<wbr>Udp</dt>
+    <dd>UDP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Ah</dt>
+    <dd>AH</dd><dt>All</dt>
+    <dd>ALL</dd><dt>Esp</dt>
+    <dd>ESP</dd><dt>Icmp</dt>
+    <dd>ICMP</dd><dt>Sctp</dt>
+    <dd>SCTP</dd><dt>Tcp</dt>
+    <dd>TCP</dd><dt>Udp</dt>
+    <dd>UDP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>AH</dt>
+    <dd>AH</dd><dt>ALL</dt>
+    <dd>ALL</dd><dt>ESP</dt>
+    <dd>ESP</dd><dt>ICMP</dt>
+    <dd>ICMP</dd><dt>SCTP</dt>
+    <dd>SCTP</dd><dt>TCP</dt>
+    <dd>TCP</dd><dt>UDP</dt>
+    <dd>UDP</dd></dl>
+{{% /choosable %}}
+
+<h4 id="forwardingruleipversion">Forwarding<wbr>Rule<wbr>Ip<wbr>Version</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Ipv4</dt>
+    <dd>IPV4</dd><dt>Ipv6</dt>
+    <dd>IPV6</dd><dt>Unspecified<wbr>Version</dt>
+    <dd>UNSPECIFIED_VERSION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Forwarding<wbr>Rule<wbr>Ip<wbr>Version<wbr>Ipv4</dt>
+    <dd>IPV4</dd><dt>Forwarding<wbr>Rule<wbr>Ip<wbr>Version<wbr>Ipv6</dt>
+    <dd>IPV6</dd><dt>Forwarding<wbr>Rule<wbr>Ip<wbr>Version<wbr>Unspecified<wbr>Version</dt>
+    <dd>UNSPECIFIED_VERSION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Ipv4</dt>
+    <dd>IPV4</dd><dt>Ipv6</dt>
+    <dd>IPV6</dd><dt>Unspecified<wbr>Version</dt>
+    <dd>UNSPECIFIED_VERSION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>IPV4</dt>
+    <dd>IPV4</dd><dt>IPV6</dt>
+    <dd>IPV6</dd><dt>UNSPECIFIED_VERSION</dt>
+    <dd>UNSPECIFIED_VERSION</dd></dl>
+{{% /choosable %}}
+
+<h4 id="forwardingruleloadbalancingscheme">Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>External</dt>
+    <dd>EXTERNAL</dd><dt>External<wbr>Managed</dt>
+    <dd>EXTERNAL_MANAGED</dd><dt>Internal</dt>
+    <dd>INTERNAL</dd><dt>Internal<wbr>Managed</dt>
+    <dd>INTERNAL_MANAGED</dd><dt>Internal<wbr>Self<wbr>Managed</dt>
+    <dd>INTERNAL_SELF_MANAGED</dd><dt>Invalid</dt>
+    <dd>INVALID</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>External</dt>
+    <dd>EXTERNAL</dd><dt>Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>External<wbr>Managed</dt>
+    <dd>EXTERNAL_MANAGED</dd><dt>Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>Internal</dt>
+    <dd>INTERNAL</dd><dt>Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>Internal<wbr>Managed</dt>
+    <dd>INTERNAL_MANAGED</dd><dt>Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>Internal<wbr>Self<wbr>Managed</dt>
+    <dd>INTERNAL_SELF_MANAGED</dd><dt>Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>Invalid</dt>
+    <dd>INVALID</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>External</dt>
+    <dd>EXTERNAL</dd><dt>External<wbr>Managed</dt>
+    <dd>EXTERNAL_MANAGED</dd><dt>Internal</dt>
+    <dd>INTERNAL</dd><dt>Internal<wbr>Managed</dt>
+    <dd>INTERNAL_MANAGED</dd><dt>Internal<wbr>Self<wbr>Managed</dt>
+    <dd>INTERNAL_SELF_MANAGED</dd><dt>Invalid</dt>
+    <dd>INVALID</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EXTERNAL</dt>
+    <dd>EXTERNAL</dd><dt>EXTERNAL_MANAGED</dt>
+    <dd>EXTERNAL_MANAGED</dd><dt>INTERNAL</dt>
+    <dd>INTERNAL</dd><dt>INTERNAL_MANAGED</dt>
+    <dd>INTERNAL_MANAGED</dd><dt>INTERNAL_SELF_MANAGED</dt>
+    <dd>INTERNAL_SELF_MANAGED</dd><dt>INVALID</dt>
+    <dd>INVALID</dd></dl>
+{{% /choosable %}}
+
+<h4 id="forwardingrulenetworktier">Forwarding<wbr>Rule<wbr>Network<wbr>Tier</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Fixed<wbr>Standard</dt>
+    <dd>FIXED_STANDARD</dd><dt>Premium</dt>
+    <dd>PREMIUM</dd><dt>Select</dt>
+    <dd>SELECT</dd><dt>Standard</dt>
+    <dd>STANDARD</dd><dt>Standard<wbr>Overrides<wbr>Fixed<wbr>Standard</dt>
+    <dd>STANDARD_OVERRIDES_FIXED_STANDARD</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Forwarding<wbr>Rule<wbr>Network<wbr>Tier<wbr>Fixed<wbr>Standard</dt>
+    <dd>FIXED_STANDARD</dd><dt>Forwarding<wbr>Rule<wbr>Network<wbr>Tier<wbr>Premium</dt>
+    <dd>PREMIUM</dd><dt>Forwarding<wbr>Rule<wbr>Network<wbr>Tier<wbr>Select</dt>
+    <dd>SELECT</dd><dt>Forwarding<wbr>Rule<wbr>Network<wbr>Tier<wbr>Standard</dt>
+    <dd>STANDARD</dd><dt>Forwarding<wbr>Rule<wbr>Network<wbr>Tier<wbr>Standard<wbr>Overrides<wbr>Fixed<wbr>Standard</dt>
+    <dd>STANDARD_OVERRIDES_FIXED_STANDARD</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Fixed<wbr>Standard</dt>
+    <dd>FIXED_STANDARD</dd><dt>Premium</dt>
+    <dd>PREMIUM</dd><dt>Select</dt>
+    <dd>SELECT</dd><dt>Standard</dt>
+    <dd>STANDARD</dd><dt>Standard<wbr>Overrides<wbr>Fixed<wbr>Standard</dt>
+    <dd>STANDARD_OVERRIDES_FIXED_STANDARD</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FIXED_STANDARD</dt>
+    <dd>FIXED_STANDARD</dd><dt>PREMIUM</dt>
+    <dd>PREMIUM</dd><dt>SELECT</dt>
+    <dd>SELECT</dd><dt>STANDARD</dt>
+    <dd>STANDARD</dd><dt>STANDARD_OVERRIDES_FIXED_STANDARD</dt>
+    <dd>STANDARD_OVERRIDES_FIXED_STANDARD</dd></dl>
+{{% /choosable %}}
+
+<h4 id="forwardingrulepscconnectionstatus">Forwarding<wbr>Rule<wbr>Psc<wbr>Connection<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Accepted</dt>
+    <dd>ACCEPTED</dd><dt>Closed</dt>
+    <dd>CLOSED</dd><dt>Pending</dt>
+    <dd>PENDING</dd><dt>Rejected</dt>
+    <dd>REJECTED</dd><dt>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Forwarding<wbr>Rule<wbr>Psc<wbr>Connection<wbr>Status<wbr>Accepted</dt>
+    <dd>ACCEPTED</dd><dt>Forwarding<wbr>Rule<wbr>Psc<wbr>Connection<wbr>Status<wbr>Closed</dt>
+    <dd>CLOSED</dd><dt>Forwarding<wbr>Rule<wbr>Psc<wbr>Connection<wbr>Status<wbr>Pending</dt>
+    <dd>PENDING</dd><dt>Forwarding<wbr>Rule<wbr>Psc<wbr>Connection<wbr>Status<wbr>Rejected</dt>
+    <dd>REJECTED</dd><dt>Forwarding<wbr>Rule<wbr>Psc<wbr>Connection<wbr>Status<wbr>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Accepted</dt>
+    <dd>ACCEPTED</dd><dt>Closed</dt>
+    <dd>CLOSED</dd><dt>Pending</dt>
+    <dd>PENDING</dd><dt>Rejected</dt>
+    <dd>REJECTED</dd><dt>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACCEPTED</dt>
+    <dd>ACCEPTED</dd><dt>CLOSED</dt>
+    <dd>CLOSED</dd><dt>PENDING</dt>
+    <dd>PENDING</dd><dt>REJECTED</dt>
+    <dd>REJECTED</dd><dt>STATUS_UNSPECIFIED</dt>
+    <dd>STATUS_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
 
 <h4 id="forwardingruleservicedirectoryregistration">Forwarding<wbr>Rule<wbr>Service<wbr>Directory<wbr>Registration</h4>
 
@@ -1909,7 +2103,7 @@ This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd>
 <a href="#filtermatchcriteria_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Match<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metadatafilterfiltermatchcriteria">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Match<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels contribute towards the overall metadataFilter match.
 Supported values are:  
@@ -1933,7 +2127,7 @@ This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd>
 <a href="#filtermatchcriteria_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Match<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metadatafilterfiltermatchcriteria">Metadata<wbr>Filter<wbr>Filter<wbr>Match<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels contribute towards the overall metadataFilter match.
 Supported values are:  
@@ -1957,7 +2151,7 @@ This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd>
 <a href="#filtermatchcriteria_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Match<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metadatafilterfiltermatchcriteria">Metadata<wbr>Filter<wbr>Filter<wbr>Match<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels contribute towards the overall metadataFilter match.
 Supported values are:  
@@ -1981,12 +2175,42 @@ This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd>
 <a href="#filter_match_criteria_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>match_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#metadatafilterfiltermatchcriteria">Metadata<wbr>Filter<wbr>Filter<wbr>Match<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels contribute towards the overall metadataFilter match.
 Supported values are:  
 - MATCH_ANY: At least one of the filterLabels must have a matching label in the provided metadata. 
 - MATCH_ALL: All filterLabels must have matching labels in the provided metadata.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="metadatafilterfiltermatchcriteria">Metadata<wbr>Filter<wbr>Filter<wbr>Match<wbr>Criteria</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Match<wbr>All</dt>
+    <dd>MATCH_ALL</dd><dt>Match<wbr>Any</dt>
+    <dd>MATCH_ANY</dd><dt>Not<wbr>Set</dt>
+    <dd>NOT_SET</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Metadata<wbr>Filter<wbr>Filter<wbr>Match<wbr>Criteria<wbr>Match<wbr>All</dt>
+    <dd>MATCH_ALL</dd><dt>Metadata<wbr>Filter<wbr>Filter<wbr>Match<wbr>Criteria<wbr>Match<wbr>Any</dt>
+    <dd>MATCH_ANY</dd><dt>Metadata<wbr>Filter<wbr>Filter<wbr>Match<wbr>Criteria<wbr>Not<wbr>Set</dt>
+    <dd>NOT_SET</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Match<wbr>All</dt>
+    <dd>MATCH_ALL</dd><dt>Match<wbr>Any</dt>
+    <dd>MATCH_ANY</dd><dt>Not<wbr>Set</dt>
+    <dd>NOT_SET</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MATCH_ALL</dt>
+    <dd>MATCH_ALL</dd><dt>MATCH_ANY</dt>
+    <dd>MATCH_ANY</dd><dt>NOT_SET</dt>
+    <dd>NOT_SET</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metadatafilterlabelmatch">Metadata<wbr>Filter<wbr>Label<wbr>Match</h4>

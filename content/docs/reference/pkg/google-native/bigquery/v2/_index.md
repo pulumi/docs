@@ -19,6 +19,16 @@ Explore the resources and functions of the google-native.bigquery/v2 module.
     <li><a href="tableiampolicy" title="TableIamPolicy"><span class="symbol resource"></span>TableIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getdataset" title="GetDataset"><span class="symbol function"></span>GetDataset</a></li>
+    <li><a href="getjob" title="GetJob"><span class="symbol function"></span>GetJob</a></li>
+    <li><a href="getroutine" title="GetRoutine"><span class="symbol function"></span>GetRoutine</a></li>
+    <li><a href="getrowaccesspolicyiampolicy" title="GetRowAccessPolicyIamPolicy"><span class="symbol function"></span>GetRowAccessPolicyIamPolicy</a></li>
+    <li><a href="gettable" title="GetTable"><span class="symbol function"></span>GetTable</a></li>
+    <li><a href="gettableiampolicy" title="GetTableIamPolicy"><span class="symbol function"></span>GetTableIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -26,6 +36,6 @@ Explore the resources and functions of the google-native.bigquery/v2 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

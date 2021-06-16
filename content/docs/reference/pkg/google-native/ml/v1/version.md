@@ -36,7 +36,7 @@ Creates a new version of a model from a trained TensorFlow model. If the version
             <span class="nx">error_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">explanation_config</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.GoogleCloudMlV1__ExplanationConfigArgs]</span> = None<span class="p">,</span>
-            <span class="nx">framework</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">framework</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.VersionFramework]</span> = None<span class="p">,</span>
             <span class="nx">is_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
             <span class="nx">last_use_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -52,7 +52,7 @@ Creates a new version of a model from a trained TensorFlow model. If the version
             <span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.GoogleCloudMlV1__RouteMapArgs]</span> = None<span class="p">,</span>
             <span class="nx">runtime_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+            <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.VersionState]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Version</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VersionArgs</a></span><span class="p">,</span>
@@ -274,7 +274,7 @@ The Version resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#framework_csharp" style="color: inherit; text-decoration: inherit;">Framework</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#versionframework">Pulumi.<wbr>Google<wbr>Native.<wbr>Ml.<wbr>V1.<wbr>Version<wbr>Framework</a></span>
     </dt>
     <dd>{{% md %}}Optional. The machine learning framework AI Platform uses to train this version of the model. Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a framework, AI Platform will analyze files in the deployment_uri to determine a framework. If you choose `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model to 1.4 or greater. Do **not** specify a framework if you're deploying a [custom prediction routine](/ai-platform/prediction/docs/custom-prediction-routines) or if you're using a [custom container](/ai-platform/prediction/docs/use-custom-container).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +386,7 @@ The Version resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#versionstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Ml.<wbr>V1.<wbr>Version<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of a version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -486,7 +486,7 @@ The Version resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#framework_go" style="color: inherit; text-decoration: inherit;">Framework</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#versionframework">Version<wbr>Framework</a></span>
     </dt>
     <dd>{{% md %}}Optional. The machine learning framework AI Platform uses to train this version of the model. Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a framework, AI Platform will analyze files in the deployment_uri to determine a framework. If you choose `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model to 1.4 or greater. Do **not** specify a framework if you're deploying a [custom prediction routine](/ai-platform/prediction/docs/custom-prediction-routines) or if you're using a [custom container](/ai-platform/prediction/docs/use-custom-container).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +598,7 @@ The Version resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#versionstate">Version<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The state of a version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -698,7 +698,7 @@ The Version resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#framework_nodejs" style="color: inherit; text-decoration: inherit;">framework</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#versionframework">Version<wbr>Framework</a></span>
     </dt>
     <dd>{{% md %}}Optional. The machine learning framework AI Platform uses to train this version of the model. Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a framework, AI Platform will analyze files in the deployment_uri to determine a framework. If you choose `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model to 1.4 or greater. Do **not** specify a framework if you're deploying a [custom prediction routine](/ai-platform/prediction/docs/custom-prediction-routines) or if you're using a [custom container](/ai-platform/prediction/docs/use-custom-container).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -810,7 +810,7 @@ The Version resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#versionstate">Version<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of a version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -910,7 +910,7 @@ The Version resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#framework_python" style="color: inherit; text-decoration: inherit;">framework</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#versionframework">Version<wbr>Framework</a></span>
     </dt>
     <dd>{{% md %}}Optional. The machine learning framework AI Platform uses to train this version of the model. Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a framework, AI Platform will analyze files in the deployment_uri to determine a framework. If you choose `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model to 1.4 or greater. Do **not** specify a framework if you're deploying a [custom prediction routine](/ai-platform/prediction/docs/custom-prediction-routines) or if you're using a [custom container](/ai-platform/prediction/docs/use-custom-container).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1022,7 +1022,7 @@ The Version resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#versionstate">Version<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of a version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1173,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfigtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Ml.<wbr>V1.<wbr>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of accelerator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1193,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfigtype">Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of accelerator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1213,7 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfigtype">Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of accelerator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1233,7 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfigtype">Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of accelerator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1318,6 +1318,60 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of accelerator to use.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudmlv1__acceleratorconfigtype">Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Accelerator<wbr>Type<wbr>Unspecified</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Unspecified accelerator type. Default to no GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Nvidia Tesla K80 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Nvidia Tesla P100 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Nvidia V100 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Nvidia Tesla P4 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Nvidia T4 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>A100</dt>
+    <dd>NVIDIA_TESLA_A100{{% md %}}Nvidia A100 GPU.{{% /md %}}</dd><dt>Tpu<wbr>V2</dt>
+    <dd>TPU_V2{{% md %}}TPU v2.{{% /md %}}</dd><dt>Tpu<wbr>V3</dt>
+    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Accelerator<wbr>Type<wbr>Unspecified</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Unspecified accelerator type. Default to no GPU.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Nvidia Tesla K80 GPU.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Nvidia Tesla P100 GPU.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Nvidia V100 GPU.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Nvidia Tesla P4 GPU.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Nvidia T4 GPU.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>A100</dt>
+    <dd>NVIDIA_TESLA_A100{{% md %}}Nvidia A100 GPU.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Tpu<wbr>V2</dt>
+    <dd>TPU_V2{{% md %}}TPU v2.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Tpu<wbr>V3</dt>
+    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Accelerator<wbr>Type<wbr>Unspecified</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Unspecified accelerator type. Default to no GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Nvidia Tesla K80 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Nvidia Tesla P100 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Nvidia V100 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Nvidia Tesla P4 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Nvidia T4 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>A100</dt>
+    <dd>NVIDIA_TESLA_A100{{% md %}}Nvidia A100 GPU.{{% /md %}}</dd><dt>Tpu<wbr>V2</dt>
+    <dd>TPU_V2{{% md %}}TPU v2.{{% /md %}}</dd><dt>Tpu<wbr>V3</dt>
+    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACCELERATOR_TYPE_UNSPECIFIED</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Unspecified accelerator type. Default to no GPU.{{% /md %}}</dd><dt>NVIDIA_TESLA_K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Nvidia Tesla K80 GPU.{{% /md %}}</dd><dt>NVIDIA_TESLA_P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Nvidia Tesla P100 GPU.{{% /md %}}</dd><dt>NVIDIA_TESLA_V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Nvidia V100 GPU.{{% /md %}}</dd><dt>NVIDIA_TESLA_P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Nvidia Tesla P4 GPU.{{% /md %}}</dd><dt>NVIDIA_TESLA_T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Nvidia T4 GPU.{{% /md %}}</dd><dt>NVIDIA_TESLA_A100</dt>
+    <dd>NVIDIA_TESLA_A100{{% md %}}Nvidia A100 GPU.{{% /md %}}</dd><dt>TPU_V2</dt>
+    <dd>TPU_V2{{% md %}}TPU v2.{{% /md %}}</dd><dt>TPU_V3</dt>
+    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googlecloudmlv1__autoscaling">Google<wbr>Cloud<wbr>Ml<wbr>V1__Auto<wbr>Scaling</h4>
@@ -2605,7 +2659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__metricspecname">Pulumi.<wbr>Google<wbr>Native.<wbr>Ml.<wbr>V1.<wbr>Google<wbr>Cloud<wbr>Ml<wbr>V1__Metric<wbr>Spec<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}metric name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2625,7 +2679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__metricspecname">Google<wbr>Cloud<wbr>Ml<wbr>V1__Metric<wbr>Spec<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}metric name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2645,7 +2699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__metricspecname">Google<wbr>Cloud<wbr>Ml<wbr>V1__Metric<wbr>Spec<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}metric name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2665,7 +2719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudmlv1__metricspecname">Google<wbr>Cloud<wbr>Ml<wbr>V1__Metric<wbr>Spec<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}metric name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2676,6 +2730,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target specifies the target value for the given metric; once real metric deviates from the threshold by a certain percentage, the node count changes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudmlv1__metricspecname">Google<wbr>Cloud<wbr>Ml<wbr>V1__Metric<wbr>Spec<wbr>Name</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Metric<wbr>Name<wbr>Unspecified</dt>
+    <dd>METRIC_NAME_UNSPECIFIED{{% md %}}Unspecified MetricName.{{% /md %}}</dd><dt>Cpu<wbr>Usage</dt>
+    <dd>CPU_USAGE{{% md %}}CPU usage.{{% /md %}}</dd><dt>Gpu<wbr>Duty<wbr>Cycle</dt>
+    <dd>GPU_DUTY_CYCLE{{% md %}}GPU duty cycle.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Metric<wbr>Spec<wbr>Name<wbr>Metric<wbr>Name<wbr>Unspecified</dt>
+    <dd>METRIC_NAME_UNSPECIFIED{{% md %}}Unspecified MetricName.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Metric<wbr>Spec<wbr>Name<wbr>Cpu<wbr>Usage</dt>
+    <dd>CPU_USAGE{{% md %}}CPU usage.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Metric<wbr>Spec<wbr>Name<wbr>Gpu<wbr>Duty<wbr>Cycle</dt>
+    <dd>GPU_DUTY_CYCLE{{% md %}}GPU duty cycle.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Metric<wbr>Name<wbr>Unspecified</dt>
+    <dd>METRIC_NAME_UNSPECIFIED{{% md %}}Unspecified MetricName.{{% /md %}}</dd><dt>Cpu<wbr>Usage</dt>
+    <dd>CPU_USAGE{{% md %}}CPU usage.{{% /md %}}</dd><dt>Gpu<wbr>Duty<wbr>Cycle</dt>
+    <dd>GPU_DUTY_CYCLE{{% md %}}GPU duty cycle.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>METRIC_NAME_UNSPECIFIED</dt>
+    <dd>METRIC_NAME_UNSPECIFIED{{% md %}}Unspecified MetricName.{{% /md %}}</dd><dt>CPU_USAGE</dt>
+    <dd>CPU_USAGE{{% md %}}CPU usage.{{% /md %}}</dd><dt>GPU_DUTY_CYCLE</dt>
+    <dd>GPU_DUTY_CYCLE{{% md %}}GPU duty cycle.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googlecloudmlv1__metricspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Metric<wbr>Spec<wbr>Response</h4>
@@ -3286,6 +3370,82 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="versionframework">Version<wbr>Framework</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Framework<wbr>Unspecified</dt>
+    <dd>FRAMEWORK_UNSPECIFIED{{% md %}}Unspecified framework. Assigns a value based on the file suffix.{{% /md %}}</dd><dt>Tensorflow</dt>
+    <dd>TENSORFLOW{{% md %}}Tensorflow framework.{{% /md %}}</dd><dt>Scikit<wbr>Learn</dt>
+    <dd>SCIKIT_LEARN{{% md %}}Scikit-learn framework.{{% /md %}}</dd><dt>Xgboost</dt>
+    <dd>XGBOOST{{% md %}}XGBoost framework.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Version<wbr>Framework<wbr>Framework<wbr>Unspecified</dt>
+    <dd>FRAMEWORK_UNSPECIFIED{{% md %}}Unspecified framework. Assigns a value based on the file suffix.{{% /md %}}</dd><dt>Version<wbr>Framework<wbr>Tensorflow</dt>
+    <dd>TENSORFLOW{{% md %}}Tensorflow framework.{{% /md %}}</dd><dt>Version<wbr>Framework<wbr>Scikit<wbr>Learn</dt>
+    <dd>SCIKIT_LEARN{{% md %}}Scikit-learn framework.{{% /md %}}</dd><dt>Version<wbr>Framework<wbr>Xgboost</dt>
+    <dd>XGBOOST{{% md %}}XGBoost framework.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Framework<wbr>Unspecified</dt>
+    <dd>FRAMEWORK_UNSPECIFIED{{% md %}}Unspecified framework. Assigns a value based on the file suffix.{{% /md %}}</dd><dt>Tensorflow</dt>
+    <dd>TENSORFLOW{{% md %}}Tensorflow framework.{{% /md %}}</dd><dt>Scikit<wbr>Learn</dt>
+    <dd>SCIKIT_LEARN{{% md %}}Scikit-learn framework.{{% /md %}}</dd><dt>Xgboost</dt>
+    <dd>XGBOOST{{% md %}}XGBoost framework.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FRAMEWORK_UNSPECIFIED</dt>
+    <dd>FRAMEWORK_UNSPECIFIED{{% md %}}Unspecified framework. Assigns a value based on the file suffix.{{% /md %}}</dd><dt>TENSORFLOW</dt>
+    <dd>TENSORFLOW{{% md %}}Tensorflow framework.{{% /md %}}</dd><dt>SCIKIT_LEARN</dt>
+    <dd>SCIKIT_LEARN{{% md %}}Scikit-learn framework.{{% /md %}}</dd><dt>XGBOOST</dt>
+    <dd>XGBOOST{{% md %}}XGBoost framework.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="versionstate">Version<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}The version state is unspecified.{{% /md %}}</dd><dt>Ready</dt>
+    <dd>READY{{% md %}}The version is ready for prediction.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}The version is being created. New UpdateVersion and DeleteVersion requests will fail if a version is in the CREATING state.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The version failed to be created, possibly cancelled. `error_message` should contain the details of the failure.{{% /md %}}</dd><dt>Deleting</dt>
+    <dd>DELETING{{% md %}}The version is being deleted. New UpdateVersion and DeleteVersion requests will fail if a version is in the DELETING state.{{% /md %}}</dd><dt>Updating</dt>
+    <dd>UPDATING{{% md %}}The version is being updated. New UpdateVersion and DeleteVersion requests will fail if a version is in the UPDATING state.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Version<wbr>State<wbr>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}The version state is unspecified.{{% /md %}}</dd><dt>Version<wbr>State<wbr>Ready</dt>
+    <dd>READY{{% md %}}The version is ready for prediction.{{% /md %}}</dd><dt>Version<wbr>State<wbr>Creating</dt>
+    <dd>CREATING{{% md %}}The version is being created. New UpdateVersion and DeleteVersion requests will fail if a version is in the CREATING state.{{% /md %}}</dd><dt>Version<wbr>State<wbr>Failed</dt>
+    <dd>FAILED{{% md %}}The version failed to be created, possibly cancelled. `error_message` should contain the details of the failure.{{% /md %}}</dd><dt>Version<wbr>State<wbr>Deleting</dt>
+    <dd>DELETING{{% md %}}The version is being deleted. New UpdateVersion and DeleteVersion requests will fail if a version is in the DELETING state.{{% /md %}}</dd><dt>Version<wbr>State<wbr>Updating</dt>
+    <dd>UPDATING{{% md %}}The version is being updated. New UpdateVersion and DeleteVersion requests will fail if a version is in the UPDATING state.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}The version state is unspecified.{{% /md %}}</dd><dt>Ready</dt>
+    <dd>READY{{% md %}}The version is ready for prediction.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}The version is being created. New UpdateVersion and DeleteVersion requests will fail if a version is in the CREATING state.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The version failed to be created, possibly cancelled. `error_message` should contain the details of the failure.{{% /md %}}</dd><dt>Deleting</dt>
+    <dd>DELETING{{% md %}}The version is being deleted. New UpdateVersion and DeleteVersion requests will fail if a version is in the DELETING state.{{% /md %}}</dd><dt>Updating</dt>
+    <dd>UPDATING{{% md %}}The version is being updated. New UpdateVersion and DeleteVersion requests will fail if a version is in the UPDATING state.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNKNOWN</dt>
+    <dd>UNKNOWN{{% md %}}The version state is unspecified.{{% /md %}}</dd><dt>READY</dt>
+    <dd>READY{{% md %}}The version is ready for prediction.{{% /md %}}</dd><dt>CREATING</dt>
+    <dd>CREATING{{% md %}}The version is being created. New UpdateVersion and DeleteVersion requests will fail if a version is in the CREATING state.{{% /md %}}</dd><dt>FAILED</dt>
+    <dd>FAILED{{% md %}}The version failed to be created, possibly cancelled. `error_message` should contain the details of the failure.{{% /md %}}</dd><dt>DELETING</dt>
+    <dd>DELETING{{% md %}}The version is being deleted. New UpdateVersion and DeleteVersion requests will fail if a version is in the DELETING state.{{% /md %}}</dd><dt>UPDATING</dt>
+    <dd>UPDATING{{% md %}}The version is being updated. New UpdateVersion and DeleteVersion requests will fail if a version is in the UPDATING state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

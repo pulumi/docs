@@ -31,7 +31,7 @@ Creates a schema.
            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">schema_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-           <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+           <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[_pubsub_v1.SchemaType]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Schema</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SchemaArgs</a></span><span class="p">,</span>
@@ -197,7 +197,7 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schematype">Pulumi.<wbr>Google<wbr>Native.<wbr>Pubsub.<wbr>V1.<wbr>Schema<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the schema definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -241,7 +241,7 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schematype">Schema<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the schema definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -285,7 +285,7 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schematype">Schema<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the schema definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -329,7 +329,7 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#schematype">Schema<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the schema definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -394,6 +394,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="schematype">Schema<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>Protocol<wbr>Buffer</dt>
+    <dd>PROTOCOL_BUFFER{{% md %}}A Protocol Buffer schema definition.{{% /md %}}</dd><dt>Avro</dt>
+    <dd>AVRO{{% md %}}An Avro schema definition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Schema<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>Schema<wbr>Type<wbr>Protocol<wbr>Buffer</dt>
+    <dd>PROTOCOL_BUFFER{{% md %}}A Protocol Buffer schema definition.{{% /md %}}</dd><dt>Schema<wbr>Type<wbr>Avro</dt>
+    <dd>AVRO{{% md %}}An Avro schema definition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>Protocol<wbr>Buffer</dt>
+    <dd>PROTOCOL_BUFFER{{% md %}}A Protocol Buffer schema definition.{{% /md %}}</dd><dt>Avro</dt>
+    <dd>AVRO{{% md %}}An Avro schema definition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>PROTOCOL_BUFFER</dt>
+    <dd>PROTOCOL_BUFFER{{% md %}}A Protocol Buffer schema definition.{{% /md %}}</dd><dt>AVRO</dt>
+    <dd>AVRO{{% md %}}An Avro schema definition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

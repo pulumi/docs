@@ -29,12 +29,12 @@ Creates a new Instance in a given project and location.
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
              <span class="nx">accelerator_config</span><span class="p">:</span> <span class="nx">Optional[_notebooks_v1.AcceleratorConfigArgs]</span> = None<span class="p">,</span>
              <span class="nx">boot_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">boot_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">boot_disk_type</span><span class="p">:</span> <span class="nx">Optional[_notebooks_v1.InstanceBootDiskType]</span> = None<span class="p">,</span>
              <span class="nx">container_image</span><span class="p">:</span> <span class="nx">Optional[_notebooks_v1.ContainerImageArgs]</span> = None<span class="p">,</span>
              <span class="nx">custom_gpu_driver_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">data_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">data_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">disk_encryption</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">data_disk_type</span><span class="p">:</span> <span class="nx">Optional[_notebooks_v1.InstanceDataDiskType]</span> = None<span class="p">,</span>
+             <span class="nx">disk_encryption</span><span class="p">:</span> <span class="nx">Optional[_notebooks_v1.InstanceDiskEncryption]</span> = None<span class="p">,</span>
              <span class="nx">install_gpu_driver</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">instance_owners</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -44,7 +44,7 @@ Creates a new Instance in a given project and location.
              <span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
              <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">nic_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">nic_type</span><span class="p">:</span> <span class="nx">Optional[_notebooks_v1.InstanceNicType]</span> = None<span class="p">,</span>
              <span class="nx">no_proxy_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">no_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">no_remove_data_disk</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -230,7 +230,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#bootdisktype_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancebootdisktype">Pulumi.<wbr>Google<wbr>Native.<wbr>Notebooks.<wbr>V1.<wbr>Instance<wbr>Boot<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -262,7 +262,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#datadisktype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancedatadisktype">Pulumi.<wbr>Google<wbr>Native.<wbr>Notebooks.<wbr>V1.<wbr>Instance<wbr>Data<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Input only. The type of the data disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -270,7 +270,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#diskencryption_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancediskencryption">Pulumi.<wbr>Google<wbr>Native.<wbr>Notebooks.<wbr>V1.<wbr>Instance<wbr>Disk<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Input only. Disk encryption method used on the boot and data disks, defaults to GMEK.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -334,7 +334,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancenictype">Pulumi.<wbr>Google<wbr>Native.<wbr>Notebooks.<wbr>V1.<wbr>Instance<wbr>Nic<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +474,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#bootdisktype_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancebootdisktype">Instance<wbr>Boot<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +506,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#datadisktype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancedatadisktype">Instance<wbr>Data<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Input only. The type of the data disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +514,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#diskencryption_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancediskencryption">Instance<wbr>Disk<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Input only. Disk encryption method used on the boot and data disks, defaults to GMEK.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +578,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancenictype">Instance<wbr>Nic<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +718,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#bootdisktype_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancebootdisktype">Instance<wbr>Boot<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +750,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#datadisktype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancedatadisktype">Instance<wbr>Data<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Input only. The type of the data disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +758,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#diskencryption_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancediskencryption">Instance<wbr>Disk<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Input only. Disk encryption method used on the boot and data disks, defaults to GMEK.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -822,7 +822,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancenictype">Instance<wbr>Nic<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -962,7 +962,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#boot_disk_type_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancebootdisktype">Instance<wbr>Boot<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -994,7 +994,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#data_disk_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancedatadisktype">Instance<wbr>Data<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Input only. The type of the data disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1002,7 +1002,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#disk_encryption_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancediskencryption">Instance<wbr>Disk<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Input only. Disk encryption method used on the boot and data disks, defaults to GMEK.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1066,7 +1066,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancenictype">Instance<wbr>Nic<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1433,7 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#acceleratorconfigtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Notebooks.<wbr>V1.<wbr>Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1453,7 +1453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#acceleratorconfigtype">Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1473,7 +1473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#acceleratorconfigtype">Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1493,7 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#acceleratorconfigtype">Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1578,6 +1578,72 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="acceleratorconfigtype">Accelerator<wbr>Config<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Accelerator<wbr>Type<wbr>Unspecified</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Accelerator type is not specified.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Accelerator type is Nvidia Tesla K80.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Accelerator type is Nvidia Tesla P100.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Accelerator type is Nvidia Tesla V100.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Accelerator type is Nvidia Tesla P4.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Accelerator type is Nvidia Tesla T4.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>A100</dt>
+    <dd>NVIDIA_TESLA_A100{{% md %}}Accelerator type is Nvidia Tesla A100.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>T4Vws</dt>
+    <dd>NVIDIA_TESLA_T4_VWS{{% md %}}Accelerator type is NVIDIA Tesla T4 Virtual Workstations.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P100Vws</dt>
+    <dd>NVIDIA_TESLA_P100_VWS{{% md %}}Accelerator type is NVIDIA Tesla P100 Virtual Workstations.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P4Vws</dt>
+    <dd>NVIDIA_TESLA_P4_VWS{{% md %}}Accelerator type is NVIDIA Tesla P4 Virtual Workstations.{{% /md %}}</dd><dt>Tpu<wbr>V2</dt>
+    <dd>TPU_V2{{% md %}}(Coming soon) Accelerator type is TPU V2.{{% /md %}}</dd><dt>Tpu<wbr>V3</dt>
+    <dd>TPU_V3{{% md %}}(Coming soon) Accelerator type is TPU V3.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Accelerator<wbr>Config<wbr>Type<wbr>Accelerator<wbr>Type<wbr>Unspecified</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Accelerator type is not specified.{{% /md %}}</dd><dt>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Accelerator type is Nvidia Tesla K80.{{% /md %}}</dd><dt>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Accelerator type is Nvidia Tesla P100.{{% /md %}}</dd><dt>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Accelerator type is Nvidia Tesla V100.{{% /md %}}</dd><dt>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Accelerator type is Nvidia Tesla P4.{{% /md %}}</dd><dt>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Accelerator type is Nvidia Tesla T4.{{% /md %}}</dd><dt>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>A100</dt>
+    <dd>NVIDIA_TESLA_A100{{% md %}}Accelerator type is Nvidia Tesla A100.{{% /md %}}</dd><dt>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>T4Vws</dt>
+    <dd>NVIDIA_TESLA_T4_VWS{{% md %}}Accelerator type is NVIDIA Tesla T4 Virtual Workstations.{{% /md %}}</dd><dt>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>P100Vws</dt>
+    <dd>NVIDIA_TESLA_P100_VWS{{% md %}}Accelerator type is NVIDIA Tesla P100 Virtual Workstations.{{% /md %}}</dd><dt>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>P4Vws</dt>
+    <dd>NVIDIA_TESLA_P4_VWS{{% md %}}Accelerator type is NVIDIA Tesla P4 Virtual Workstations.{{% /md %}}</dd><dt>Accelerator<wbr>Config<wbr>Type<wbr>Tpu<wbr>V2</dt>
+    <dd>TPU_V2{{% md %}}(Coming soon) Accelerator type is TPU V2.{{% /md %}}</dd><dt>Accelerator<wbr>Config<wbr>Type<wbr>Tpu<wbr>V3</dt>
+    <dd>TPU_V3{{% md %}}(Coming soon) Accelerator type is TPU V3.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Accelerator<wbr>Type<wbr>Unspecified</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Accelerator type is not specified.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Accelerator type is Nvidia Tesla K80.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Accelerator type is Nvidia Tesla P100.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Accelerator type is Nvidia Tesla V100.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Accelerator type is Nvidia Tesla P4.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Accelerator type is Nvidia Tesla T4.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>A100</dt>
+    <dd>NVIDIA_TESLA_A100{{% md %}}Accelerator type is Nvidia Tesla A100.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>T4Vws</dt>
+    <dd>NVIDIA_TESLA_T4_VWS{{% md %}}Accelerator type is NVIDIA Tesla T4 Virtual Workstations.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P100Vws</dt>
+    <dd>NVIDIA_TESLA_P100_VWS{{% md %}}Accelerator type is NVIDIA Tesla P100 Virtual Workstations.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P4Vws</dt>
+    <dd>NVIDIA_TESLA_P4_VWS{{% md %}}Accelerator type is NVIDIA Tesla P4 Virtual Workstations.{{% /md %}}</dd><dt>Tpu<wbr>V2</dt>
+    <dd>TPU_V2{{% md %}}(Coming soon) Accelerator type is TPU V2.{{% /md %}}</dd><dt>Tpu<wbr>V3</dt>
+    <dd>TPU_V3{{% md %}}(Coming soon) Accelerator type is TPU V3.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACCELERATOR_TYPE_UNSPECIFIED</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Accelerator type is not specified.{{% /md %}}</dd><dt>NVIDIA_TESLA_K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Accelerator type is Nvidia Tesla K80.{{% /md %}}</dd><dt>NVIDIA_TESLA_P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Accelerator type is Nvidia Tesla P100.{{% /md %}}</dd><dt>NVIDIA_TESLA_V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Accelerator type is Nvidia Tesla V100.{{% /md %}}</dd><dt>NVIDIA_TESLA_P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Accelerator type is Nvidia Tesla P4.{{% /md %}}</dd><dt>NVIDIA_TESLA_T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Accelerator type is Nvidia Tesla T4.{{% /md %}}</dd><dt>NVIDIA_TESLA_A100</dt>
+    <dd>NVIDIA_TESLA_A100{{% md %}}Accelerator type is Nvidia Tesla A100.{{% /md %}}</dd><dt>NVIDIA_TESLA_T4_VWS</dt>
+    <dd>NVIDIA_TESLA_T4_VWS{{% md %}}Accelerator type is NVIDIA Tesla T4 Virtual Workstations.{{% /md %}}</dd><dt>NVIDIA_TESLA_P100_VWS</dt>
+    <dd>NVIDIA_TESLA_P100_VWS{{% md %}}Accelerator type is NVIDIA Tesla P100 Virtual Workstations.{{% /md %}}</dd><dt>NVIDIA_TESLA_P4_VWS</dt>
+    <dd>NVIDIA_TESLA_P4_VWS{{% md %}}Accelerator type is NVIDIA Tesla P4 Virtual Workstations.{{% /md %}}</dd><dt>TPU_V2</dt>
+    <dd>TPU_V2{{% md %}}(Coming soon) Accelerator type is TPU V2.{{% /md %}}</dd><dt>TPU_V3</dt>
+    <dd>TPU_V3{{% md %}}(Coming soon) Accelerator type is TPU V3.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerimage">Container<wbr>Image</h4>
@@ -2196,6 +2262,134 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The ID of a supported feature. Read Enabling guest operating system features to see a list of available options. Valid values: FEATURE_TYPE_UNSPECIFIED MULTI_IP_SUBNET SECURE_BOOT UEFI_COMPATIBLE VIRTIO_SCSI_MULTIQUEUE WINDOWS{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="instancebootdisktype">Instance<wbr>Boot<wbr>Disk<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Disk<wbr>Type<wbr>Unspecified</dt>
+    <dd>DISK_TYPE_UNSPECIFIED{{% md %}}Disk type not set.{{% /md %}}</dd><dt>Pd<wbr>Standard</dt>
+    <dd>PD_STANDARD{{% md %}}Standard persistent disk type.{{% /md %}}</dd><dt>Pd<wbr>Ssd</dt>
+    <dd>PD_SSD{{% md %}}SSD persistent disk type.{{% /md %}}</dd><dt>Pd<wbr>Balanced</dt>
+    <dd>PD_BALANCED{{% md %}}Balanced persistent disk type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Boot<wbr>Disk<wbr>Type<wbr>Disk<wbr>Type<wbr>Unspecified</dt>
+    <dd>DISK_TYPE_UNSPECIFIED{{% md %}}Disk type not set.{{% /md %}}</dd><dt>Instance<wbr>Boot<wbr>Disk<wbr>Type<wbr>Pd<wbr>Standard</dt>
+    <dd>PD_STANDARD{{% md %}}Standard persistent disk type.{{% /md %}}</dd><dt>Instance<wbr>Boot<wbr>Disk<wbr>Type<wbr>Pd<wbr>Ssd</dt>
+    <dd>PD_SSD{{% md %}}SSD persistent disk type.{{% /md %}}</dd><dt>Instance<wbr>Boot<wbr>Disk<wbr>Type<wbr>Pd<wbr>Balanced</dt>
+    <dd>PD_BALANCED{{% md %}}Balanced persistent disk type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Disk<wbr>Type<wbr>Unspecified</dt>
+    <dd>DISK_TYPE_UNSPECIFIED{{% md %}}Disk type not set.{{% /md %}}</dd><dt>Pd<wbr>Standard</dt>
+    <dd>PD_STANDARD{{% md %}}Standard persistent disk type.{{% /md %}}</dd><dt>Pd<wbr>Ssd</dt>
+    <dd>PD_SSD{{% md %}}SSD persistent disk type.{{% /md %}}</dd><dt>Pd<wbr>Balanced</dt>
+    <dd>PD_BALANCED{{% md %}}Balanced persistent disk type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DISK_TYPE_UNSPECIFIED</dt>
+    <dd>DISK_TYPE_UNSPECIFIED{{% md %}}Disk type not set.{{% /md %}}</dd><dt>PD_STANDARD</dt>
+    <dd>PD_STANDARD{{% md %}}Standard persistent disk type.{{% /md %}}</dd><dt>PD_SSD</dt>
+    <dd>PD_SSD{{% md %}}SSD persistent disk type.{{% /md %}}</dd><dt>PD_BALANCED</dt>
+    <dd>PD_BALANCED{{% md %}}Balanced persistent disk type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancedatadisktype">Instance<wbr>Data<wbr>Disk<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Disk<wbr>Type<wbr>Unspecified</dt>
+    <dd>DISK_TYPE_UNSPECIFIED{{% md %}}Disk type not set.{{% /md %}}</dd><dt>Pd<wbr>Standard</dt>
+    <dd>PD_STANDARD{{% md %}}Standard persistent disk type.{{% /md %}}</dd><dt>Pd<wbr>Ssd</dt>
+    <dd>PD_SSD{{% md %}}SSD persistent disk type.{{% /md %}}</dd><dt>Pd<wbr>Balanced</dt>
+    <dd>PD_BALANCED{{% md %}}Balanced persistent disk type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Data<wbr>Disk<wbr>Type<wbr>Disk<wbr>Type<wbr>Unspecified</dt>
+    <dd>DISK_TYPE_UNSPECIFIED{{% md %}}Disk type not set.{{% /md %}}</dd><dt>Instance<wbr>Data<wbr>Disk<wbr>Type<wbr>Pd<wbr>Standard</dt>
+    <dd>PD_STANDARD{{% md %}}Standard persistent disk type.{{% /md %}}</dd><dt>Instance<wbr>Data<wbr>Disk<wbr>Type<wbr>Pd<wbr>Ssd</dt>
+    <dd>PD_SSD{{% md %}}SSD persistent disk type.{{% /md %}}</dd><dt>Instance<wbr>Data<wbr>Disk<wbr>Type<wbr>Pd<wbr>Balanced</dt>
+    <dd>PD_BALANCED{{% md %}}Balanced persistent disk type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Disk<wbr>Type<wbr>Unspecified</dt>
+    <dd>DISK_TYPE_UNSPECIFIED{{% md %}}Disk type not set.{{% /md %}}</dd><dt>Pd<wbr>Standard</dt>
+    <dd>PD_STANDARD{{% md %}}Standard persistent disk type.{{% /md %}}</dd><dt>Pd<wbr>Ssd</dt>
+    <dd>PD_SSD{{% md %}}SSD persistent disk type.{{% /md %}}</dd><dt>Pd<wbr>Balanced</dt>
+    <dd>PD_BALANCED{{% md %}}Balanced persistent disk type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DISK_TYPE_UNSPECIFIED</dt>
+    <dd>DISK_TYPE_UNSPECIFIED{{% md %}}Disk type not set.{{% /md %}}</dd><dt>PD_STANDARD</dt>
+    <dd>PD_STANDARD{{% md %}}Standard persistent disk type.{{% /md %}}</dd><dt>PD_SSD</dt>
+    <dd>PD_SSD{{% md %}}SSD persistent disk type.{{% /md %}}</dd><dt>PD_BALANCED</dt>
+    <dd>PD_BALANCED{{% md %}}Balanced persistent disk type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancediskencryption">Instance<wbr>Disk<wbr>Encryption</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Disk<wbr>Encryption<wbr>Unspecified</dt>
+    <dd>DISK_ENCRYPTION_UNSPECIFIED{{% md %}}Disk encryption is not specified.{{% /md %}}</dd><dt>Gmek</dt>
+    <dd>GMEK{{% md %}}Use Google managed encryption keys to encrypt the boot disk.{{% /md %}}</dd><dt>Cmek</dt>
+    <dd>CMEK{{% md %}}Use customer managed encryption keys to encrypt the boot disk.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Disk<wbr>Encryption<wbr>Disk<wbr>Encryption<wbr>Unspecified</dt>
+    <dd>DISK_ENCRYPTION_UNSPECIFIED{{% md %}}Disk encryption is not specified.{{% /md %}}</dd><dt>Instance<wbr>Disk<wbr>Encryption<wbr>Gmek</dt>
+    <dd>GMEK{{% md %}}Use Google managed encryption keys to encrypt the boot disk.{{% /md %}}</dd><dt>Instance<wbr>Disk<wbr>Encryption<wbr>Cmek</dt>
+    <dd>CMEK{{% md %}}Use customer managed encryption keys to encrypt the boot disk.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Disk<wbr>Encryption<wbr>Unspecified</dt>
+    <dd>DISK_ENCRYPTION_UNSPECIFIED{{% md %}}Disk encryption is not specified.{{% /md %}}</dd><dt>Gmek</dt>
+    <dd>GMEK{{% md %}}Use Google managed encryption keys to encrypt the boot disk.{{% /md %}}</dd><dt>Cmek</dt>
+    <dd>CMEK{{% md %}}Use customer managed encryption keys to encrypt the boot disk.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DISK_ENCRYPTION_UNSPECIFIED</dt>
+    <dd>DISK_ENCRYPTION_UNSPECIFIED{{% md %}}Disk encryption is not specified.{{% /md %}}</dd><dt>GMEK</dt>
+    <dd>GMEK{{% md %}}Use Google managed encryption keys to encrypt the boot disk.{{% /md %}}</dd><dt>CMEK</dt>
+    <dd>CMEK{{% md %}}Use customer managed encryption keys to encrypt the boot disk.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancenictype">Instance<wbr>Nic<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified<wbr>Nic<wbr>Type</dt>
+    <dd>UNSPECIFIED_NIC_TYPE{{% md %}}No type specified.{{% /md %}}</dd><dt>Virtio<wbr>Net</dt>
+    <dd>VIRTIO_NET{{% md %}}VIRTIO{{% /md %}}</dd><dt>Gvnic</dt>
+    <dd>GVNIC{{% md %}}GVNIC{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Nic<wbr>Type<wbr>Unspecified<wbr>Nic<wbr>Type</dt>
+    <dd>UNSPECIFIED_NIC_TYPE{{% md %}}No type specified.{{% /md %}}</dd><dt>Instance<wbr>Nic<wbr>Type<wbr>Virtio<wbr>Net</dt>
+    <dd>VIRTIO_NET{{% md %}}VIRTIO{{% /md %}}</dd><dt>Instance<wbr>Nic<wbr>Type<wbr>Gvnic</dt>
+    <dd>GVNIC{{% md %}}GVNIC{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified<wbr>Nic<wbr>Type</dt>
+    <dd>UNSPECIFIED_NIC_TYPE{{% md %}}No type specified.{{% /md %}}</dd><dt>Virtio<wbr>Net</dt>
+    <dd>VIRTIO_NET{{% md %}}VIRTIO{{% /md %}}</dd><dt>Gvnic</dt>
+    <dd>GVNIC{{% md %}}GVNIC{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED_NIC_TYPE</dt>
+    <dd>UNSPECIFIED_NIC_TYPE{{% md %}}No type specified.{{% /md %}}</dd><dt>VIRTIO_NET</dt>
+    <dd>VIRTIO_NET{{% md %}}VIRTIO{{% /md %}}</dd><dt>GVNIC</dt>
+    <dd>GVNIC{{% md %}}GVNIC{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="shieldedinstanceconfig">Shielded<wbr>Instance<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -2433,7 +2627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#upgradehistoryentryaction">Pulumi.<wbr>Google<wbr>Native.<wbr>Notebooks.<wbr>V1.<wbr>Upgrade<wbr>History<wbr>Entry<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action. Rolloback or Upgrade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2473,7 +2667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#upgradehistoryentrystate">Pulumi.<wbr>Google<wbr>Native.<wbr>Notebooks.<wbr>V1.<wbr>Upgrade<wbr>History<wbr>Entry<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of this instance upgrade history entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2517,7 +2711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#upgradehistoryentryaction">Upgrade<wbr>History<wbr>Entry<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action. Rolloback or Upgrade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2557,7 +2751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#upgradehistoryentrystate">Upgrade<wbr>History<wbr>Entry<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of this instance upgrade history entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2601,7 +2795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#upgradehistoryentryaction">Upgrade<wbr>History<wbr>Entry<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action. Rolloback or Upgrade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2641,7 +2835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#upgradehistoryentrystate">Upgrade<wbr>History<wbr>Entry<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of this instance upgrade history entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2685,7 +2879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#upgradehistoryentryaction">Upgrade<wbr>History<wbr>Entry<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action. Rolloback or Upgrade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2725,7 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#upgradehistoryentrystate">Upgrade<wbr>History<wbr>Entry<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of this instance upgrade history entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2760,6 +2954,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VM image before this instance upgrade.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="upgradehistoryentryaction">Upgrade<wbr>History<wbr>Entry<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Action<wbr>Unspecified</dt>
+    <dd>ACTION_UNSPECIFIED{{% md %}}Operation is not specified.{{% /md %}}</dd><dt>Upgrade</dt>
+    <dd>UPGRADE{{% md %}}Upgrade.{{% /md %}}</dd><dt>Rollback</dt>
+    <dd>ROLLBACK{{% md %}}Rollback.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Upgrade<wbr>History<wbr>Entry<wbr>Action<wbr>Action<wbr>Unspecified</dt>
+    <dd>ACTION_UNSPECIFIED{{% md %}}Operation is not specified.{{% /md %}}</dd><dt>Upgrade<wbr>History<wbr>Entry<wbr>Action<wbr>Upgrade</dt>
+    <dd>UPGRADE{{% md %}}Upgrade.{{% /md %}}</dd><dt>Upgrade<wbr>History<wbr>Entry<wbr>Action<wbr>Rollback</dt>
+    <dd>ROLLBACK{{% md %}}Rollback.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Action<wbr>Unspecified</dt>
+    <dd>ACTION_UNSPECIFIED{{% md %}}Operation is not specified.{{% /md %}}</dd><dt>Upgrade</dt>
+    <dd>UPGRADE{{% md %}}Upgrade.{{% /md %}}</dd><dt>Rollback</dt>
+    <dd>ROLLBACK{{% md %}}Rollback.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACTION_UNSPECIFIED</dt>
+    <dd>ACTION_UNSPECIFIED{{% md %}}Operation is not specified.{{% /md %}}</dd><dt>UPGRADE</dt>
+    <dd>UPGRADE{{% md %}}Upgrade.{{% /md %}}</dd><dt>ROLLBACK</dt>
+    <dd>ROLLBACK{{% md %}}Rollback.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="upgradehistoryentryresponse">Upgrade<wbr>History<wbr>Entry<wbr>Response</h4>
@@ -3098,6 +3322,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VM image before this instance upgrade.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="upgradehistoryentrystate">Upgrade<wbr>History<wbr>Entry<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}State is not specified.{{% /md %}}</dd><dt>Started</dt>
+    <dd>STARTED{{% md %}}The instance upgrade is started.{{% /md %}}</dd><dt>Succeeded</dt>
+    <dd>SUCCEEDED{{% md %}}The instance upgrade is succeeded.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The instance upgrade is failed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Upgrade<wbr>History<wbr>Entry<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}State is not specified.{{% /md %}}</dd><dt>Upgrade<wbr>History<wbr>Entry<wbr>State<wbr>Started</dt>
+    <dd>STARTED{{% md %}}The instance upgrade is started.{{% /md %}}</dd><dt>Upgrade<wbr>History<wbr>Entry<wbr>State<wbr>Succeeded</dt>
+    <dd>SUCCEEDED{{% md %}}The instance upgrade is succeeded.{{% /md %}}</dd><dt>Upgrade<wbr>History<wbr>Entry<wbr>State<wbr>Failed</dt>
+    <dd>FAILED{{% md %}}The instance upgrade is failed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}State is not specified.{{% /md %}}</dd><dt>Started</dt>
+    <dd>STARTED{{% md %}}The instance upgrade is started.{{% /md %}}</dd><dt>Succeeded</dt>
+    <dd>SUCCEEDED{{% md %}}The instance upgrade is succeeded.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The instance upgrade is failed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}State is not specified.{{% /md %}}</dd><dt>STARTED</dt>
+    <dd>STARTED{{% md %}}The instance upgrade is started.{{% /md %}}</dd><dt>SUCCEEDED</dt>
+    <dd>SUCCEEDED{{% md %}}The instance upgrade is succeeded.{{% /md %}}</dd><dt>FAILED</dt>
+    <dd>FAILED{{% md %}}The instance upgrade is failed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vmimage">Vm<wbr>Image</h4>

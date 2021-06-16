@@ -19,6 +19,16 @@ Explore the resources and functions of the google-native.networkconnectivity/v1a
     <li><a href="spokeiampolicy" title="SpokeIamPolicy"><span class="symbol resource"></span>SpokeIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="gethub" title="GetHub"><span class="symbol function"></span>GetHub</a></li>
+    <li><a href="gethubiampolicy" title="GetHubIamPolicy"><span class="symbol function"></span>GetHubIamPolicy</a></li>
+    <li><a href="getinternalrangeiampolicy" title="GetInternalRangeIamPolicy"><span class="symbol function"></span>GetInternalRangeIamPolicy</a></li>
+    <li><a href="getpolicybasedrouteiampolicy" title="GetPolicyBasedRouteIamPolicy"><span class="symbol function"></span>GetPolicyBasedRouteIamPolicy</a></li>
+    <li><a href="getspoke" title="GetSpoke"><span class="symbol function"></span>GetSpoke</a></li>
+    <li><a href="getspokeiampolicy" title="GetSpokeIamPolicy"><span class="symbol function"></span>GetSpokeIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -26,6 +36,6 @@ Explore the resources and functions of the google-native.networkconnectivity/v1a
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

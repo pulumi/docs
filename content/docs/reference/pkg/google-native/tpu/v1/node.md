@@ -30,7 +30,7 @@ Creates a node.
          <span class="nx">accelerator_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-         <span class="nx">health</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">health</span><span class="p">:</span> <span class="nx">Optional[_tpu_v1.NodeHealth]</span> = None<span class="p">,</span>
          <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
          <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -212,7 +212,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#health_csharp" style="color: inherit; text-decoration: inherit;">Health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodehealth">Pulumi.<wbr>Google<wbr>Native.<wbr>TPU.<wbr>V1.<wbr>Node<wbr>Health</a></span>
     </dt>
     <dd>{{% md %}}The health status of the TPU node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -312,7 +312,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#health_go" style="color: inherit; text-decoration: inherit;">Health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodehealth">Node<wbr>Health</a></span>
     </dt>
     <dd>{{% md %}}The health status of the TPU node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -412,7 +412,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#health_nodejs" style="color: inherit; text-decoration: inherit;">health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodehealth">Node<wbr>Health</a></span>
     </dt>
     <dd>{{% md %}}The health status of the TPU node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -512,7 +512,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#health_python" style="color: inherit; text-decoration: inherit;">health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#nodehealth">Node<wbr>Health</a></span>
     </dt>
     <dd>{{% md %}}The health status of the TPU node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -966,6 +966,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of this network endpoint.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="nodehealth">Node<wbr>Health</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Health<wbr>Unspecified</dt>
+    <dd>HEALTH_UNSPECIFIED{{% md %}}Health status is unknown: not initialized or failed to retrieve.{{% /md %}}</dd><dt>Healthy</dt>
+    <dd>HEALTHY{{% md %}}The resource is healthy.{{% /md %}}</dd><dt>Deprecated<wbr>Unhealthy</dt>
+    <dd>DEPRECATED_UNHEALTHY{{% md %}}The resource is unhealthy.{{% /md %}}</dd><dt>Timeout</dt>
+    <dd>TIMEOUT{{% md %}}The resource is unresponsive.{{% /md %}}</dd><dt>Unhealthy<wbr>Tensorflow</dt>
+    <dd>UNHEALTHY_TENSORFLOW{{% md %}}The in-guest ML stack is unhealthy.{{% /md %}}</dd><dt>Unhealthy<wbr>Maintenance</dt>
+    <dd>UNHEALTHY_MAINTENANCE{{% md %}}The node is under maintenance/priority boost caused rescheduling and will resume running once rescheduled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Node<wbr>Health<wbr>Health<wbr>Unspecified</dt>
+    <dd>HEALTH_UNSPECIFIED{{% md %}}Health status is unknown: not initialized or failed to retrieve.{{% /md %}}</dd><dt>Node<wbr>Health<wbr>Healthy</dt>
+    <dd>HEALTHY{{% md %}}The resource is healthy.{{% /md %}}</dd><dt>Node<wbr>Health<wbr>Deprecated<wbr>Unhealthy</dt>
+    <dd>DEPRECATED_UNHEALTHY{{% md %}}The resource is unhealthy.{{% /md %}}</dd><dt>Node<wbr>Health<wbr>Timeout</dt>
+    <dd>TIMEOUT{{% md %}}The resource is unresponsive.{{% /md %}}</dd><dt>Node<wbr>Health<wbr>Unhealthy<wbr>Tensorflow</dt>
+    <dd>UNHEALTHY_TENSORFLOW{{% md %}}The in-guest ML stack is unhealthy.{{% /md %}}</dd><dt>Node<wbr>Health<wbr>Unhealthy<wbr>Maintenance</dt>
+    <dd>UNHEALTHY_MAINTENANCE{{% md %}}The node is under maintenance/priority boost caused rescheduling and will resume running once rescheduled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Health<wbr>Unspecified</dt>
+    <dd>HEALTH_UNSPECIFIED{{% md %}}Health status is unknown: not initialized or failed to retrieve.{{% /md %}}</dd><dt>Healthy</dt>
+    <dd>HEALTHY{{% md %}}The resource is healthy.{{% /md %}}</dd><dt>Deprecated<wbr>Unhealthy</dt>
+    <dd>DEPRECATED_UNHEALTHY{{% md %}}The resource is unhealthy.{{% /md %}}</dd><dt>Timeout</dt>
+    <dd>TIMEOUT{{% md %}}The resource is unresponsive.{{% /md %}}</dd><dt>Unhealthy<wbr>Tensorflow</dt>
+    <dd>UNHEALTHY_TENSORFLOW{{% md %}}The in-guest ML stack is unhealthy.{{% /md %}}</dd><dt>Unhealthy<wbr>Maintenance</dt>
+    <dd>UNHEALTHY_MAINTENANCE{{% md %}}The node is under maintenance/priority boost caused rescheduling and will resume running once rescheduled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>HEALTH_UNSPECIFIED</dt>
+    <dd>HEALTH_UNSPECIFIED{{% md %}}Health status is unknown: not initialized or failed to retrieve.{{% /md %}}</dd><dt>HEALTHY</dt>
+    <dd>HEALTHY{{% md %}}The resource is healthy.{{% /md %}}</dd><dt>DEPRECATED_UNHEALTHY</dt>
+    <dd>DEPRECATED_UNHEALTHY{{% md %}}The resource is unhealthy.{{% /md %}}</dd><dt>TIMEOUT</dt>
+    <dd>TIMEOUT{{% md %}}The resource is unresponsive.{{% /md %}}</dd><dt>UNHEALTHY_TENSORFLOW</dt>
+    <dd>UNHEALTHY_TENSORFLOW{{% md %}}The in-guest ML stack is unhealthy.{{% /md %}}</dd><dt>UNHEALTHY_MAINTENANCE</dt>
+    <dd>UNHEALTHY_MAINTENANCE{{% md %}}The node is under maintenance/priority boost caused rescheduling and will resume running once rescheduled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="schedulingconfig">Scheduling<wbr>Config</h4>

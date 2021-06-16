@@ -904,7 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotationtype_csharp" style="color: inherit; text-decoration: inherit;">Annotation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigannotationtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Data<wbr>Labeling.<wbr>V1Beta1.<wbr>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -928,7 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigdatatype">Pulumi.<wbr>Google<wbr>Native.<wbr>Data<wbr>Labeling.<wbr>V1Beta1.<wbr>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Data type must be specifed when user tries to import data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -956,7 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotationtype_go" style="color: inherit; text-decoration: inherit;">Annotation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigannotationtype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -980,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigdatatype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Data type must be specifed when user tries to import data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1008,7 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotationtype_nodejs" style="color: inherit; text-decoration: inherit;">annotation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigannotationtype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1032,7 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigdatatype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Data type must be specifed when user tries to import data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1060,7 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotation_type_python" style="color: inherit; text-decoration: inherit;">annotation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigannotationtype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1084,7 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigdatatype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Data type must be specifed when user tries to import data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1103,6 +1103,118 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#googleclouddatalabelingv1beta1textmetadata">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required for text import, as language code must be specified.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddatalabelingv1beta1inputconfigannotationtype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Annotation<wbr>Type<wbr>Unspecified</dt>
+    <dd>ANNOTATION_TYPE_UNSPECIFIED</dd><dt>Image<wbr>Classification<wbr>Annotation</dt>
+    <dd>IMAGE_CLASSIFICATION_ANNOTATION{{% md %}}Classification annotations in an image. Allowed for continuous evaluation.{{% /md %}}</dd><dt>Image<wbr>Bounding<wbr>Box<wbr>Annotation</dt>
+    <dd>IMAGE_BOUNDING_BOX_ANNOTATION{{% md %}}Bounding box annotations in an image. A form of image object detection. Allowed for continuous evaluation.{{% /md %}}</dd><dt>Image<wbr>Oriented<wbr>Bounding<wbr>Box<wbr>Annotation</dt>
+    <dd>IMAGE_ORIENTED_BOUNDING_BOX_ANNOTATION{{% md %}}Oriented bounding box. The box does not have to be parallel to horizontal line.{{% /md %}}</dd><dt>Image<wbr>Bounding<wbr>Poly<wbr>Annotation</dt>
+    <dd>IMAGE_BOUNDING_POLY_ANNOTATION{{% md %}}Bounding poly annotations in an image.{{% /md %}}</dd><dt>Image<wbr>Polyline<wbr>Annotation</dt>
+    <dd>IMAGE_POLYLINE_ANNOTATION{{% md %}}Polyline annotations in an image.{{% /md %}}</dd><dt>Image<wbr>Segmentation<wbr>Annotation</dt>
+    <dd>IMAGE_SEGMENTATION_ANNOTATION{{% md %}}Segmentation annotations in an image.{{% /md %}}</dd><dt>Video<wbr>Shots<wbr>Classification<wbr>Annotation</dt>
+    <dd>VIDEO_SHOTS_CLASSIFICATION_ANNOTATION{{% md %}}Classification annotations in video shots.{{% /md %}}</dd><dt>Video<wbr>Object<wbr>Tracking<wbr>Annotation</dt>
+    <dd>VIDEO_OBJECT_TRACKING_ANNOTATION{{% md %}}Video object tracking annotation.{{% /md %}}</dd><dt>Video<wbr>Object<wbr>Detection<wbr>Annotation</dt>
+    <dd>VIDEO_OBJECT_DETECTION_ANNOTATION{{% md %}}Video object detection annotation.{{% /md %}}</dd><dt>Video<wbr>Event<wbr>Annotation</dt>
+    <dd>VIDEO_EVENT_ANNOTATION{{% md %}}Video event annotation.{{% /md %}}</dd><dt>Text<wbr>Classification<wbr>Annotation</dt>
+    <dd>TEXT_CLASSIFICATION_ANNOTATION{{% md %}}Classification for text. Allowed for continuous evaluation.{{% /md %}}</dd><dt>Text<wbr>Entity<wbr>Extraction<wbr>Annotation</dt>
+    <dd>TEXT_ENTITY_EXTRACTION_ANNOTATION{{% md %}}Entity extraction for text.{{% /md %}}</dd><dt>General<wbr>Classification<wbr>Annotation</dt>
+    <dd>GENERAL_CLASSIFICATION_ANNOTATION{{% md %}}General classification. Allowed for continuous evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Annotation<wbr>Type<wbr>Unspecified</dt>
+    <dd>ANNOTATION_TYPE_UNSPECIFIED</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Image<wbr>Classification<wbr>Annotation</dt>
+    <dd>IMAGE_CLASSIFICATION_ANNOTATION{{% md %}}Classification annotations in an image. Allowed for continuous evaluation.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Image<wbr>Bounding<wbr>Box<wbr>Annotation</dt>
+    <dd>IMAGE_BOUNDING_BOX_ANNOTATION{{% md %}}Bounding box annotations in an image. A form of image object detection. Allowed for continuous evaluation.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Image<wbr>Oriented<wbr>Bounding<wbr>Box<wbr>Annotation</dt>
+    <dd>IMAGE_ORIENTED_BOUNDING_BOX_ANNOTATION{{% md %}}Oriented bounding box. The box does not have to be parallel to horizontal line.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Image<wbr>Bounding<wbr>Poly<wbr>Annotation</dt>
+    <dd>IMAGE_BOUNDING_POLY_ANNOTATION{{% md %}}Bounding poly annotations in an image.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Image<wbr>Polyline<wbr>Annotation</dt>
+    <dd>IMAGE_POLYLINE_ANNOTATION{{% md %}}Polyline annotations in an image.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Image<wbr>Segmentation<wbr>Annotation</dt>
+    <dd>IMAGE_SEGMENTATION_ANNOTATION{{% md %}}Segmentation annotations in an image.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Video<wbr>Shots<wbr>Classification<wbr>Annotation</dt>
+    <dd>VIDEO_SHOTS_CLASSIFICATION_ANNOTATION{{% md %}}Classification annotations in video shots.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Video<wbr>Object<wbr>Tracking<wbr>Annotation</dt>
+    <dd>VIDEO_OBJECT_TRACKING_ANNOTATION{{% md %}}Video object tracking annotation.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Video<wbr>Object<wbr>Detection<wbr>Annotation</dt>
+    <dd>VIDEO_OBJECT_DETECTION_ANNOTATION{{% md %}}Video object detection annotation.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Video<wbr>Event<wbr>Annotation</dt>
+    <dd>VIDEO_EVENT_ANNOTATION{{% md %}}Video event annotation.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Text<wbr>Classification<wbr>Annotation</dt>
+    <dd>TEXT_CLASSIFICATION_ANNOTATION{{% md %}}Classification for text. Allowed for continuous evaluation.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Text<wbr>Entity<wbr>Extraction<wbr>Annotation</dt>
+    <dd>TEXT_ENTITY_EXTRACTION_ANNOTATION{{% md %}}Entity extraction for text.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>General<wbr>Classification<wbr>Annotation</dt>
+    <dd>GENERAL_CLASSIFICATION_ANNOTATION{{% md %}}General classification. Allowed for continuous evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Annotation<wbr>Type<wbr>Unspecified</dt>
+    <dd>ANNOTATION_TYPE_UNSPECIFIED</dd><dt>Image<wbr>Classification<wbr>Annotation</dt>
+    <dd>IMAGE_CLASSIFICATION_ANNOTATION{{% md %}}Classification annotations in an image. Allowed for continuous evaluation.{{% /md %}}</dd><dt>Image<wbr>Bounding<wbr>Box<wbr>Annotation</dt>
+    <dd>IMAGE_BOUNDING_BOX_ANNOTATION{{% md %}}Bounding box annotations in an image. A form of image object detection. Allowed for continuous evaluation.{{% /md %}}</dd><dt>Image<wbr>Oriented<wbr>Bounding<wbr>Box<wbr>Annotation</dt>
+    <dd>IMAGE_ORIENTED_BOUNDING_BOX_ANNOTATION{{% md %}}Oriented bounding box. The box does not have to be parallel to horizontal line.{{% /md %}}</dd><dt>Image<wbr>Bounding<wbr>Poly<wbr>Annotation</dt>
+    <dd>IMAGE_BOUNDING_POLY_ANNOTATION{{% md %}}Bounding poly annotations in an image.{{% /md %}}</dd><dt>Image<wbr>Polyline<wbr>Annotation</dt>
+    <dd>IMAGE_POLYLINE_ANNOTATION{{% md %}}Polyline annotations in an image.{{% /md %}}</dd><dt>Image<wbr>Segmentation<wbr>Annotation</dt>
+    <dd>IMAGE_SEGMENTATION_ANNOTATION{{% md %}}Segmentation annotations in an image.{{% /md %}}</dd><dt>Video<wbr>Shots<wbr>Classification<wbr>Annotation</dt>
+    <dd>VIDEO_SHOTS_CLASSIFICATION_ANNOTATION{{% md %}}Classification annotations in video shots.{{% /md %}}</dd><dt>Video<wbr>Object<wbr>Tracking<wbr>Annotation</dt>
+    <dd>VIDEO_OBJECT_TRACKING_ANNOTATION{{% md %}}Video object tracking annotation.{{% /md %}}</dd><dt>Video<wbr>Object<wbr>Detection<wbr>Annotation</dt>
+    <dd>VIDEO_OBJECT_DETECTION_ANNOTATION{{% md %}}Video object detection annotation.{{% /md %}}</dd><dt>Video<wbr>Event<wbr>Annotation</dt>
+    <dd>VIDEO_EVENT_ANNOTATION{{% md %}}Video event annotation.{{% /md %}}</dd><dt>Text<wbr>Classification<wbr>Annotation</dt>
+    <dd>TEXT_CLASSIFICATION_ANNOTATION{{% md %}}Classification for text. Allowed for continuous evaluation.{{% /md %}}</dd><dt>Text<wbr>Entity<wbr>Extraction<wbr>Annotation</dt>
+    <dd>TEXT_ENTITY_EXTRACTION_ANNOTATION{{% md %}}Entity extraction for text.{{% /md %}}</dd><dt>General<wbr>Classification<wbr>Annotation</dt>
+    <dd>GENERAL_CLASSIFICATION_ANNOTATION{{% md %}}General classification. Allowed for continuous evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ANNOTATION_TYPE_UNSPECIFIED</dt>
+    <dd>ANNOTATION_TYPE_UNSPECIFIED</dd><dt>IMAGE_CLASSIFICATION_ANNOTATION</dt>
+    <dd>IMAGE_CLASSIFICATION_ANNOTATION{{% md %}}Classification annotations in an image. Allowed for continuous evaluation.{{% /md %}}</dd><dt>IMAGE_BOUNDING_BOX_ANNOTATION</dt>
+    <dd>IMAGE_BOUNDING_BOX_ANNOTATION{{% md %}}Bounding box annotations in an image. A form of image object detection. Allowed for continuous evaluation.{{% /md %}}</dd><dt>IMAGE_ORIENTED_BOUNDING_BOX_ANNOTATION</dt>
+    <dd>IMAGE_ORIENTED_BOUNDING_BOX_ANNOTATION{{% md %}}Oriented bounding box. The box does not have to be parallel to horizontal line.{{% /md %}}</dd><dt>IMAGE_BOUNDING_POLY_ANNOTATION</dt>
+    <dd>IMAGE_BOUNDING_POLY_ANNOTATION{{% md %}}Bounding poly annotations in an image.{{% /md %}}</dd><dt>IMAGE_POLYLINE_ANNOTATION</dt>
+    <dd>IMAGE_POLYLINE_ANNOTATION{{% md %}}Polyline annotations in an image.{{% /md %}}</dd><dt>IMAGE_SEGMENTATION_ANNOTATION</dt>
+    <dd>IMAGE_SEGMENTATION_ANNOTATION{{% md %}}Segmentation annotations in an image.{{% /md %}}</dd><dt>VIDEO_SHOTS_CLASSIFICATION_ANNOTATION</dt>
+    <dd>VIDEO_SHOTS_CLASSIFICATION_ANNOTATION{{% md %}}Classification annotations in video shots.{{% /md %}}</dd><dt>VIDEO_OBJECT_TRACKING_ANNOTATION</dt>
+    <dd>VIDEO_OBJECT_TRACKING_ANNOTATION{{% md %}}Video object tracking annotation.{{% /md %}}</dd><dt>VIDEO_OBJECT_DETECTION_ANNOTATION</dt>
+    <dd>VIDEO_OBJECT_DETECTION_ANNOTATION{{% md %}}Video object detection annotation.{{% /md %}}</dd><dt>VIDEO_EVENT_ANNOTATION</dt>
+    <dd>VIDEO_EVENT_ANNOTATION{{% md %}}Video event annotation.{{% /md %}}</dd><dt>TEXT_CLASSIFICATION_ANNOTATION</dt>
+    <dd>TEXT_CLASSIFICATION_ANNOTATION{{% md %}}Classification for text. Allowed for continuous evaluation.{{% /md %}}</dd><dt>TEXT_ENTITY_EXTRACTION_ANNOTATION</dt>
+    <dd>TEXT_ENTITY_EXTRACTION_ANNOTATION{{% md %}}Entity extraction for text.{{% /md %}}</dd><dt>GENERAL_CLASSIFICATION_ANNOTATION</dt>
+    <dd>GENERAL_CLASSIFICATION_ANNOTATION{{% md %}}General classification. Allowed for continuous evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddatalabelingv1beta1inputconfigdatatype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Data<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATA_TYPE_UNSPECIFIED{{% md %}}Data type is unspecified.{{% /md %}}</dd><dt>Image</dt>
+    <dd>IMAGE{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>Video</dt>
+    <dd>VIDEO{{% md %}}Video data type.{{% /md %}}</dd><dt>Text</dt>
+    <dd>TEXT{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>General<wbr>Data</dt>
+    <dd>GENERAL_DATA{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type<wbr>Data<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATA_TYPE_UNSPECIFIED{{% md %}}Data type is unspecified.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type<wbr>Image</dt>
+    <dd>IMAGE{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type<wbr>Video</dt>
+    <dd>VIDEO{{% md %}}Video data type.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type<wbr>Text</dt>
+    <dd>TEXT{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type<wbr>General<wbr>Data</dt>
+    <dd>GENERAL_DATA{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Data<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATA_TYPE_UNSPECIFIED{{% md %}}Data type is unspecified.{{% /md %}}</dd><dt>Image</dt>
+    <dd>IMAGE{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>Video</dt>
+    <dd>VIDEO{{% md %}}Video data type.{{% /md %}}</dd><dt>Text</dt>
+    <dd>TEXT{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>General<wbr>Data</dt>
+    <dd>GENERAL_DATA{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DATA_TYPE_UNSPECIFIED</dt>
+    <dd>DATA_TYPE_UNSPECIFIED{{% md %}}Data type is unspecified.{{% /md %}}</dd><dt>IMAGE</dt>
+    <dd>IMAGE{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>VIDEO</dt>
+    <dd>VIDEO{{% md %}}Video data type.{{% /md %}}</dd><dt>TEXT</dt>
+    <dd>TEXT{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>GENERAL_DATA</dt>
+    <dd>GENERAL_DATA{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddatalabelingv1beta1inputconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Response</h4>

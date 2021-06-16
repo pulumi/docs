@@ -35,7 +35,7 @@ A managed instance group can have up to 1000 VM instances per group. Please cont
                          <span class="nx">current_actions</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.InstanceGroupManagerActionsSummaryArgs]</span> = None<span class="p">,</span>
                          <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">distribution_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.DistributionPolicyArgs]</span> = None<span class="p">,</span>
-                         <span class="nx">failover_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">failover_action</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.InstanceGroupManagerFailoverAction]</span> = None<span class="p">,</span>
                          <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">instance_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -252,7 +252,7 @@ The InstanceGroupManager resource accepts the following [input]({{< relref "/doc
 <a href="#failoveraction_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupmanagerfailoveraction">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Instance<wbr>Group<wbr>Manager<wbr>Failover<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to perform in case of zone failure. Only one value is supported, NO_FAILOVER. The default is NO_FAILOVER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -468,7 +468,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#failoveraction_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupmanagerfailoveraction">Instance<wbr>Group<wbr>Manager<wbr>Failover<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to perform in case of zone failure. Only one value is supported, NO_FAILOVER. The default is NO_FAILOVER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -684,7 +684,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#failoveraction_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupmanagerfailoveraction">Instance<wbr>Group<wbr>Manager<wbr>Failover<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to perform in case of zone failure. Only one value is supported, NO_FAILOVER. The default is NO_FAILOVER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -900,7 +900,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#failover_action_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancegroupmanagerfailoveraction">Instance<wbr>Group<wbr>Manager<wbr>Failover<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to perform in case of zone failure. Only one value is supported, NO_FAILOVER. The default is NO_FAILOVER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1119,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetshape_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Shape</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#distributionpolicytargetshape">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Distribution<wbr>Policy<wbr>Target<wbr>Shape</a></span>
     </dt>
     <dd>{{% md %}}The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1139,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetshape_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Shape</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#distributionpolicytargetshape">Distribution<wbr>Policy<wbr>Target<wbr>Shape</a></span>
     </dt>
     <dd>{{% md %}}The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1159,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetshape_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Shape</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#distributionpolicytargetshape">Distribution<wbr>Policy<wbr>Target<wbr>Shape</a></span>
     </dt>
     <dd>{{% md %}}The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1179,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_shape_python" style="color: inherit; text-decoration: inherit;">target_<wbr>shape</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#distributionpolicytargetshape">Distribution<wbr>Policy<wbr>Target<wbr>Shape</a></span>
     </dt>
     <dd>{{% md %}}The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1272,6 +1272,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#distributionpolicyzoneconfigurationresponse">Distribution<wbr>Policy<wbr>Zone<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Zones where the regional managed instance group will create and manage its instances.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="distributionpolicytargetshape">Distribution<wbr>Policy<wbr>Target<wbr>Shape</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Any</dt>
+    <dd>ANY</dd><dt>Balanced</dt>
+    <dd>BALANCED</dd><dt>Even</dt>
+    <dd>EVEN</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Distribution<wbr>Policy<wbr>Target<wbr>Shape<wbr>Any</dt>
+    <dd>ANY</dd><dt>Distribution<wbr>Policy<wbr>Target<wbr>Shape<wbr>Balanced</dt>
+    <dd>BALANCED</dd><dt>Distribution<wbr>Policy<wbr>Target<wbr>Shape<wbr>Even</dt>
+    <dd>EVEN</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Any</dt>
+    <dd>ANY</dd><dt>Balanced</dt>
+    <dd>BALANCED</dd><dt>Even</dt>
+    <dd>EVEN</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ANY</dt>
+    <dd>ANY</dd><dt>BALANCED</dt>
+    <dd>BALANCED</dd><dt>EVEN</dt>
+    <dd>EVEN</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributionpolicyzoneconfiguration">Distribution<wbr>Policy<wbr>Zone<wbr>Configuration</h4>
@@ -2426,6 +2456,32 @@ If you have disabled creation retries, this field will not be populated; instead
     <dd>{{% md %}}The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. This initial delay allows instances to initialize and run their startup scripts before the instance group determines that they are UNHEALTHY. This prevents the managed instance group from recreating its instances prematurely. This value must be from range [0, 3600].{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="instancegroupmanagerfailoveraction">Instance<wbr>Group<wbr>Manager<wbr>Failover<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>No<wbr>Failover</dt>
+    <dd>NO_FAILOVER</dd><dt>Unknown</dt>
+    <dd>UNKNOWN</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Group<wbr>Manager<wbr>Failover<wbr>Action<wbr>No<wbr>Failover</dt>
+    <dd>NO_FAILOVER</dd><dt>Instance<wbr>Group<wbr>Manager<wbr>Failover<wbr>Action<wbr>Unknown</dt>
+    <dd>UNKNOWN</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>No<wbr>Failover</dt>
+    <dd>NO_FAILOVER</dd><dt>Unknown</dt>
+    <dd>UNKNOWN</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NO_FAILOVER</dt>
+    <dd>NO_FAILOVER</dd><dt>UNKNOWN</dt>
+    <dd>UNKNOWN</dd></dl>
+{{% /choosable %}}
+
 <h4 id="instancegroupmanagerstatus">Instance<wbr>Group<wbr>Manager<wbr>Status</h4>
 
 {{% choosable language csharp %}}
@@ -3091,7 +3147,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#instanceredistributiontype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Redistribution<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicyinstanceredistributiontype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Instance<wbr>Redistribution<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The  instance redistribution policy for regional managed instance groups. Valid values are:  
 - PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across zones in the region. 
@@ -3133,7 +3189,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#minimalaction_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicyminimalaction">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Minimal<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3141,7 +3197,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#mostdisruptiveallowedaction_csharp" style="color: inherit; text-decoration: inherit;">Most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicymostdisruptiveallowedaction">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Most<wbr>Disruptive<wbr>Allowed<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Most disruptive action that is allowed to be taken on an instance. You can specify either NONE to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to allow actions that can be applied without instance replacing or REPLACE to allow all possible actions. If the Updater determines that the minimal update action needed is more disruptive than most disruptive allowed action you specify it will not perform the update at all.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3149,7 +3205,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#replacementmethod_csharp" style="color: inherit; text-decoration: inherit;">Replacement<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicyreplacementmethod">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Replacement<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}What action should be used to replace instances. See minimal_action.REPLACE{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3157,7 +3213,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicytype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3169,7 +3225,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#instanceredistributiontype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Redistribution<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicyinstanceredistributiontype">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Instance<wbr>Redistribution<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The  instance redistribution policy for regional managed instance groups. Valid values are:  
 - PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across zones in the region. 
@@ -3211,7 +3267,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#minimalaction_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicyminimalaction">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Minimal<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3219,7 +3275,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#mostdisruptiveallowedaction_go" style="color: inherit; text-decoration: inherit;">Most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicymostdisruptiveallowedaction">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Most<wbr>Disruptive<wbr>Allowed<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Most disruptive action that is allowed to be taken on an instance. You can specify either NONE to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to allow actions that can be applied without instance replacing or REPLACE to allow all possible actions. If the Updater determines that the minimal update action needed is more disruptive than most disruptive allowed action you specify it will not perform the update at all.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3227,7 +3283,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#replacementmethod_go" style="color: inherit; text-decoration: inherit;">Replacement<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicyreplacementmethod">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Replacement<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}What action should be used to replace instances. See minimal_action.REPLACE{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3235,7 +3291,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicytype">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3247,7 +3303,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#instanceredistributiontype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Redistribution<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicyinstanceredistributiontype">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Instance<wbr>Redistribution<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The  instance redistribution policy for regional managed instance groups. Valid values are:  
 - PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across zones in the region. 
@@ -3289,7 +3345,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#minimalaction_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicyminimalaction">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Minimal<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3297,7 +3353,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#mostdisruptiveallowedaction_nodejs" style="color: inherit; text-decoration: inherit;">most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicymostdisruptiveallowedaction">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Most<wbr>Disruptive<wbr>Allowed<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Most disruptive action that is allowed to be taken on an instance. You can specify either NONE to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to allow actions that can be applied without instance replacing or REPLACE to allow all possible actions. If the Updater determines that the minimal update action needed is more disruptive than most disruptive allowed action you specify it will not perform the update at all.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3305,7 +3361,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#replacementmethod_nodejs" style="color: inherit; text-decoration: inherit;">replacement<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicyreplacementmethod">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Replacement<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}What action should be used to replace instances. See minimal_action.REPLACE{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3313,7 +3369,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicytype">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3325,7 +3381,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#instance_redistribution_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>redistribution_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicyinstanceredistributiontype">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Instance<wbr>Redistribution<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The  instance redistribution policy for regional managed instance groups. Valid values are:  
 - PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across zones in the region. 
@@ -3367,7 +3423,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#minimal_action_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicyminimalaction">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Minimal<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3375,7 +3431,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#most_disruptive_allowed_action_python" style="color: inherit; text-decoration: inherit;">most_<wbr>disruptive_<wbr>allowed_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicymostdisruptiveallowedaction">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Most<wbr>Disruptive<wbr>Allowed<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Most disruptive action that is allowed to be taken on an instance. You can specify either NONE to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to allow actions that can be applied without instance replacing or REPLACE to allow all possible actions. If the Updater determines that the minimal update action needed is more disruptive than most disruptive allowed action you specify it will not perform the update at all.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3383,7 +3439,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#replacement_method_python" style="color: inherit; text-decoration: inherit;">replacement_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicyreplacementmethod">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Replacement<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}What action should be used to replace instances. See minimal_action.REPLACE{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3391,9 +3447,129 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicytype">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancegroupmanagerupdatepolicyinstanceredistributiontype">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Instance<wbr>Redistribution<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Proactive</dt>
+    <dd>PROACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Instance<wbr>Redistribution<wbr>Type<wbr>None</dt>
+    <dd>NONE</dd><dt>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Instance<wbr>Redistribution<wbr>Type<wbr>Proactive</dt>
+    <dd>PROACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Proactive</dt>
+    <dd>PROACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NONE</dt>
+    <dd>NONE</dd><dt>PROACTIVE</dt>
+    <dd>PROACTIVE</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancegroupmanagerupdatepolicyminimalaction">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Minimal<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Refresh</dt>
+    <dd>REFRESH</dd><dt>Replace</dt>
+    <dd>REPLACE</dd><dt>Restart</dt>
+    <dd>RESTART</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Minimal<wbr>Action<wbr>None</dt>
+    <dd>NONE</dd><dt>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Minimal<wbr>Action<wbr>Refresh</dt>
+    <dd>REFRESH</dd><dt>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Minimal<wbr>Action<wbr>Replace</dt>
+    <dd>REPLACE</dd><dt>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Minimal<wbr>Action<wbr>Restart</dt>
+    <dd>RESTART</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Refresh</dt>
+    <dd>REFRESH</dd><dt>Replace</dt>
+    <dd>REPLACE</dd><dt>Restart</dt>
+    <dd>RESTART</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NONE</dt>
+    <dd>NONE</dd><dt>REFRESH</dt>
+    <dd>REFRESH</dd><dt>REPLACE</dt>
+    <dd>REPLACE</dd><dt>RESTART</dt>
+    <dd>RESTART</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancegroupmanagerupdatepolicymostdisruptiveallowedaction">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Most<wbr>Disruptive<wbr>Allowed<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Refresh</dt>
+    <dd>REFRESH</dd><dt>Replace</dt>
+    <dd>REPLACE</dd><dt>Restart</dt>
+    <dd>RESTART</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Most<wbr>Disruptive<wbr>Allowed<wbr>Action<wbr>None</dt>
+    <dd>NONE</dd><dt>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Most<wbr>Disruptive<wbr>Allowed<wbr>Action<wbr>Refresh</dt>
+    <dd>REFRESH</dd><dt>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Most<wbr>Disruptive<wbr>Allowed<wbr>Action<wbr>Replace</dt>
+    <dd>REPLACE</dd><dt>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Most<wbr>Disruptive<wbr>Allowed<wbr>Action<wbr>Restart</dt>
+    <dd>RESTART</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Refresh</dt>
+    <dd>REFRESH</dd><dt>Replace</dt>
+    <dd>REPLACE</dd><dt>Restart</dt>
+    <dd>RESTART</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NONE</dt>
+    <dd>NONE</dd><dt>REFRESH</dt>
+    <dd>REFRESH</dd><dt>REPLACE</dt>
+    <dd>REPLACE</dd><dt>RESTART</dt>
+    <dd>RESTART</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancegroupmanagerupdatepolicyreplacementmethod">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Replacement<wbr>Method</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Recreate</dt>
+    <dd>RECREATE</dd><dt>Substitute</dt>
+    <dd>SUBSTITUTE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Replacement<wbr>Method<wbr>Recreate</dt>
+    <dd>RECREATE</dd><dt>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Replacement<wbr>Method<wbr>Substitute</dt>
+    <dd>SUBSTITUTE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Recreate</dt>
+    <dd>RECREATE</dd><dt>Substitute</dt>
+    <dd>SUBSTITUTE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RECREATE</dt>
+    <dd>RECREATE</dd><dt>SUBSTITUTE</dt>
+    <dd>SUBSTITUTE</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancegroupmanagerupdatepolicyresponse">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Response</h4>
@@ -3708,6 +3884,32 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancegroupmanagerupdatepolicytype">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Opportunistic</dt>
+    <dd>OPPORTUNISTIC</dd><dt>Proactive</dt>
+    <dd>PROACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Type<wbr>Opportunistic</dt>
+    <dd>OPPORTUNISTIC</dd><dt>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Type<wbr>Proactive</dt>
+    <dd>PROACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Opportunistic</dt>
+    <dd>OPPORTUNISTIC</dd><dt>Proactive</dt>
+    <dd>PROACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>OPPORTUNISTIC</dt>
+    <dd>OPPORTUNISTIC</dd><dt>PROACTIVE</dt>
+    <dd>PROACTIVE</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancegroupmanagerversion">Instance<wbr>Group<wbr>Manager<wbr>Version</h4>

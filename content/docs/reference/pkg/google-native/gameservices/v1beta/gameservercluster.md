@@ -27,7 +27,7 @@ Creates a new game server cluster in a given project and location.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">GameServerCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                      <span class="nx">allocation_priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">allocation_priority</span><span class="p">:</span> <span class="nx">Optional[_gameservices_v1beta.GameServerClusterAllocationPriority]</span> = None<span class="p">,</span>
                       <span class="nx">connection_info</span><span class="p">:</span> <span class="nx">Optional[_gameservices_v1beta.GameServerClusterConnectionInfoArgs]</span> = None<span class="p">,</span>
                       <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -202,7 +202,7 @@ The GameServerCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#allocationpriority_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#gameserverclusterallocationpriority">Pulumi.<wbr>Google<wbr>Native.<wbr>Game<wbr>Services.<wbr>V1Beta.<wbr>Game<wbr>Server<wbr>Cluster<wbr>Allocation<wbr>Priority</a></span>
     </dt>
     <dd>{{% md %}}Optional. The allocation priority assigned to the game server cluster. Game server clusters receive new game server allocations based on the relative allocation priorites set for each cluster, if the realm is configured for multicluster allocation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -286,7 +286,7 @@ The GameServerCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#allocationpriority_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#gameserverclusterallocationpriority">Game<wbr>Server<wbr>Cluster<wbr>Allocation<wbr>Priority</a></span>
     </dt>
     <dd>{{% md %}}Optional. The allocation priority assigned to the game server cluster. Game server clusters receive new game server allocations based on the relative allocation priorites set for each cluster, if the realm is configured for multicluster allocation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +370,7 @@ The GameServerCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#allocationpriority_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#gameserverclusterallocationpriority">Game<wbr>Server<wbr>Cluster<wbr>Allocation<wbr>Priority</a></span>
     </dt>
     <dd>{{% md %}}Optional. The allocation priority assigned to the game server cluster. Game server clusters receive new game server allocations based on the relative allocation priorites set for each cluster, if the realm is configured for multicluster allocation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +454,7 @@ The GameServerCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#allocation_priority_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#gameserverclusterallocationpriority">Game<wbr>Server<wbr>Cluster<wbr>Allocation<wbr>Priority</a></span>
     </dt>
     <dd>{{% md %}}Optional. The allocation priority assigned to the game server cluster. Game server clusters receive new game server allocations based on the relative allocation priorites set for each cluster, if the realm is configured for multicluster allocation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -627,6 +627,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="gameserverclusterallocationpriority">Game<wbr>Server<wbr>Cluster<wbr>Allocation<wbr>Priority</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Priority<wbr>Unspecified</dt>
+    <dd>PRIORITY_UNSPECIFIED{{% md %}}The default allocation priority. `PRIORITY_UNSPECIFIED` is the lowest possible priority.{{% /md %}}</dd><dt>P1</dt>
+    <dd>P1{{% md %}}Priority 1, the highest priority.{{% /md %}}</dd><dt>P2</dt>
+    <dd>P2{{% md %}}Priority 2.{{% /md %}}</dd><dt>P3</dt>
+    <dd>P3{{% md %}}Priority 3.{{% /md %}}</dd><dt>P4</dt>
+    <dd>P4{{% md %}}Priority 4.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Game<wbr>Server<wbr>Cluster<wbr>Allocation<wbr>Priority<wbr>Priority<wbr>Unspecified</dt>
+    <dd>PRIORITY_UNSPECIFIED{{% md %}}The default allocation priority. `PRIORITY_UNSPECIFIED` is the lowest possible priority.{{% /md %}}</dd><dt>Game<wbr>Server<wbr>Cluster<wbr>Allocation<wbr>Priority<wbr>P1</dt>
+    <dd>P1{{% md %}}Priority 1, the highest priority.{{% /md %}}</dd><dt>Game<wbr>Server<wbr>Cluster<wbr>Allocation<wbr>Priority<wbr>P2</dt>
+    <dd>P2{{% md %}}Priority 2.{{% /md %}}</dd><dt>Game<wbr>Server<wbr>Cluster<wbr>Allocation<wbr>Priority<wbr>P3</dt>
+    <dd>P3{{% md %}}Priority 3.{{% /md %}}</dd><dt>Game<wbr>Server<wbr>Cluster<wbr>Allocation<wbr>Priority<wbr>P4</dt>
+    <dd>P4{{% md %}}Priority 4.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Priority<wbr>Unspecified</dt>
+    <dd>PRIORITY_UNSPECIFIED{{% md %}}The default allocation priority. `PRIORITY_UNSPECIFIED` is the lowest possible priority.{{% /md %}}</dd><dt>P1</dt>
+    <dd>P1{{% md %}}Priority 1, the highest priority.{{% /md %}}</dd><dt>P2</dt>
+    <dd>P2{{% md %}}Priority 2.{{% /md %}}</dd><dt>P3</dt>
+    <dd>P3{{% md %}}Priority 3.{{% /md %}}</dd><dt>P4</dt>
+    <dd>P4{{% md %}}Priority 4.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PRIORITY_UNSPECIFIED</dt>
+    <dd>PRIORITY_UNSPECIFIED{{% md %}}The default allocation priority. `PRIORITY_UNSPECIFIED` is the lowest possible priority.{{% /md %}}</dd><dt>P1</dt>
+    <dd>P1{{% md %}}Priority 1, the highest priority.{{% /md %}}</dd><dt>P2</dt>
+    <dd>P2{{% md %}}Priority 2.{{% /md %}}</dd><dt>P3</dt>
+    <dd>P3{{% md %}}Priority 3.{{% /md %}}</dd><dt>P4</dt>
+    <dd>P4{{% md %}}Priority 4.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info</h4>
 

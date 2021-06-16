@@ -61,7 +61,7 @@ Creates a persistent regional disk in the specified project using the data inclu
                <span class="nx">source_snapshot_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
                <span class="nx">source_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">source_storage_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.RegionDiskStatus]</span> = None<span class="p">,</span>
                <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -504,7 +504,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regiondiskstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Region<wbr>Disk<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of disk creation.  
 - CREATING: Disk is provisioning. 
@@ -851,7 +851,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regiondiskstatus">Region<wbr>Disk<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of disk creation.  
 - CREATING: Disk is provisioning. 
@@ -1198,7 +1198,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regiondiskstatus">Region<wbr>Disk<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of disk creation.  
 - CREATING: Disk is provisioning. 
@@ -1545,7 +1545,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#regiondiskstatus">Region<wbr>Disk<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of disk creation.  
 - CREATING: Disk is provisioning. 
@@ -1945,7 +1945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1957,7 +1957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1969,7 +1969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1981,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2034,6 +2034,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Feature<wbr>Type<wbr>Unspecified</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>Gvnic</dt>
+    <dd>GVNIC</dd><dt>Multi<wbr>Ip<wbr>Subnet</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>Secure<wbr>Boot</dt>
+    <dd>SECURE_BOOT</dd><dt>Sev<wbr>Capable</dt>
+    <dd>SEV_CAPABLE</dd><dt>Uefi<wbr>Compatible</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>Virtio<wbr>Scsi<wbr>Multiqueue</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>Windows</dt>
+    <dd>WINDOWS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Feature<wbr>Type<wbr>Unspecified</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Gvnic</dt>
+    <dd>GVNIC</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Multi<wbr>Ip<wbr>Subnet</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Secure<wbr>Boot</dt>
+    <dd>SECURE_BOOT</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Sev<wbr>Capable</dt>
+    <dd>SEV_CAPABLE</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Uefi<wbr>Compatible</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Virtio<wbr>Scsi<wbr>Multiqueue</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Windows</dt>
+    <dd>WINDOWS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Feature<wbr>Type<wbr>Unspecified</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>Gvnic</dt>
+    <dd>GVNIC</dd><dt>Multi<wbr>Ip<wbr>Subnet</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>Secure<wbr>Boot</dt>
+    <dd>SECURE_BOOT</dd><dt>Sev<wbr>Capable</dt>
+    <dd>SEV_CAPABLE</dd><dt>Uefi<wbr>Compatible</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>Virtio<wbr>Scsi<wbr>Multiqueue</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>Windows</dt>
+    <dd>WINDOWS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FEATURE_TYPE_UNSPECIFIED</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>GVNIC</dt>
+    <dd>GVNIC</dd><dt>MULTI_IP_SUBNET</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>SECURE_BOOT</dt>
+    <dd>SECURE_BOOT</dd><dt>SEV_CAPABLE</dt>
+    <dd>SEV_CAPABLE</dd><dt>UEFI_COMPATIBLE</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>VIRTIO_SCSI_MULTIQUEUE</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>WINDOWS</dt>
+    <dd>WINDOWS</dd></dl>
+{{% /choosable %}}
+
+<h4 id="regiondiskstatus">Region<wbr>Disk<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Failed</dt>
+    <dd>FAILED</dd><dt>Ready</dt>
+    <dd>READY</dd><dt>Restoring</dt>
+    <dd>RESTORING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Region<wbr>Disk<wbr>Status<wbr>Creating</dt>
+    <dd>CREATING</dd><dt>Region<wbr>Disk<wbr>Status<wbr>Deleting</dt>
+    <dd>DELETING</dd><dt>Region<wbr>Disk<wbr>Status<wbr>Failed</dt>
+    <dd>FAILED</dd><dt>Region<wbr>Disk<wbr>Status<wbr>Ready</dt>
+    <dd>READY</dd><dt>Region<wbr>Disk<wbr>Status<wbr>Restoring</dt>
+    <dd>RESTORING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Failed</dt>
+    <dd>FAILED</dd><dt>Ready</dt>
+    <dd>READY</dd><dt>Restoring</dt>
+    <dd>RESTORING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CREATING</dt>
+    <dd>CREATING</dd><dt>DELETING</dt>
+    <dd>DELETING</dd><dt>FAILED</dt>
+    <dd>FAILED</dd><dt>READY</dt>
+    <dd>READY</dd><dt>RESTORING</dt>
+    <dd>RESTORING</dd></dl>
 {{% /choosable %}}
 
 

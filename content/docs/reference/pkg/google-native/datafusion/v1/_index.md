@@ -15,6 +15,12 @@ Explore the resources and functions of the google-native.datafusion/v1 module.
     <li><a href="instanceiampolicy" title="InstanceIamPolicy"><span class="symbol resource"></span>InstanceIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+    <li><a href="getinstanceiampolicy" title="GetInstanceIamPolicy"><span class="symbol function"></span>GetInstanceIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -22,6 +28,6 @@ Explore the resources and functions of the google-native.datafusion/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

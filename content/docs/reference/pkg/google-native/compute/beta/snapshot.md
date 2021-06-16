@@ -50,9 +50,9 @@ Creates a snapshot in the specified project using the data included in the reque
              <span class="nx">source_disk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">source_disk_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
              <span class="nx">source_disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.SnapshotStatus]</span> = None<span class="p">,</span>
              <span class="nx">storage_bytes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">storage_bytes_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">storage_bytes_status</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.SnapshotStorageBytesStatus]</span> = None<span class="p">,</span>
              <span class="nx">storage_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Snapshot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -379,7 +379,7 @@ If you do not provide an encryption key when creating the snapshot, then the sna
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#snapshotstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Snapshot<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the snapshot. This can be CREATING, DELETING, FAILED, READY, or UPLOADING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -395,7 +395,7 @@ If you do not provide an encryption key when creating the snapshot, then the sna
 <a href="#storagebytesstatus_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Bytes<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#snapshotstoragebytesstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Snapshot<wbr>Storage<wbr>Bytes<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -607,7 +607,7 @@ If you do not provide an encryption key when creating the snapshot, then the sna
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#snapshotstatus">Snapshot<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the snapshot. This can be CREATING, DELETING, FAILED, READY, or UPLOADING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -623,7 +623,7 @@ If you do not provide an encryption key when creating the snapshot, then the sna
 <a href="#storagebytesstatus_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Bytes<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#snapshotstoragebytesstatus">Snapshot<wbr>Storage<wbr>Bytes<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -835,7 +835,7 @@ If you do not provide an encryption key when creating the snapshot, then the sna
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#snapshotstatus">Snapshot<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the snapshot. This can be CREATING, DELETING, FAILED, READY, or UPLOADING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -851,7 +851,7 @@ If you do not provide an encryption key when creating the snapshot, then the sna
 <a href="#storagebytesstatus_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Bytes<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#snapshotstoragebytesstatus">Snapshot<wbr>Storage<wbr>Bytes<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1063,7 +1063,7 @@ If you do not provide an encryption key when creating the snapshot, then the sna
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#snapshotstatus">Snapshot<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the snapshot. This can be CREATING, DELETING, FAILED, READY, or UPLOADING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1079,7 +1079,7 @@ If you do not provide an encryption key when creating the snapshot, then the sna
 <a href="#storage_bytes_status_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>bytes_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#snapshotstoragebytesstatus">Snapshot<wbr>Storage<wbr>Bytes<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1551,6 +1551,70 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="snapshotstatus">Snapshot<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Failed</dt>
+    <dd>FAILED</dd><dt>Ready</dt>
+    <dd>READY</dd><dt>Uploading</dt>
+    <dd>UPLOADING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Snapshot<wbr>Status<wbr>Creating</dt>
+    <dd>CREATING</dd><dt>Snapshot<wbr>Status<wbr>Deleting</dt>
+    <dd>DELETING</dd><dt>Snapshot<wbr>Status<wbr>Failed</dt>
+    <dd>FAILED</dd><dt>Snapshot<wbr>Status<wbr>Ready</dt>
+    <dd>READY</dd><dt>Snapshot<wbr>Status<wbr>Uploading</dt>
+    <dd>UPLOADING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Failed</dt>
+    <dd>FAILED</dd><dt>Ready</dt>
+    <dd>READY</dd><dt>Uploading</dt>
+    <dd>UPLOADING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CREATING</dt>
+    <dd>CREATING</dd><dt>DELETING</dt>
+    <dd>DELETING</dd><dt>FAILED</dt>
+    <dd>FAILED</dd><dt>READY</dt>
+    <dd>READY</dd><dt>UPLOADING</dt>
+    <dd>UPLOADING</dd></dl>
+{{% /choosable %}}
+
+<h4 id="snapshotstoragebytesstatus">Snapshot<wbr>Storage<wbr>Bytes<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Updating</dt>
+    <dd>UPDATING</dd><dt>Up<wbr>To<wbr>Date</dt>
+    <dd>UP_TO_DATE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Snapshot<wbr>Storage<wbr>Bytes<wbr>Status<wbr>Updating</dt>
+    <dd>UPDATING</dd><dt>Snapshot<wbr>Storage<wbr>Bytes<wbr>Status<wbr>Up<wbr>To<wbr>Date</dt>
+    <dd>UP_TO_DATE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Updating</dt>
+    <dd>UPDATING</dd><dt>Up<wbr>To<wbr>Date</dt>
+    <dd>UP_TO_DATE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UPDATING</dt>
+    <dd>UPDATING</dd><dt>UP_TO_DATE</dt>
+    <dd>UP_TO_DATE</dd></dl>
 {{% /choosable %}}
 
 

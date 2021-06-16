@@ -758,7 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cloudsqlpropertiestype">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query<wbr>Connection.<wbr>V1Beta1.<wbr>Cloud<wbr>Sql<wbr>Properties<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the Cloud SQL database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -794,7 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cloudsqlpropertiestype">Cloud<wbr>Sql<wbr>Properties<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the Cloud SQL database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -830,7 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cloudsqlpropertiestype">Cloud<wbr>Sql<wbr>Properties<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the Cloud SQL database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -866,7 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#cloudsqlpropertiestype">Cloud<wbr>Sql<wbr>Properties<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the Cloud SQL database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1015,6 +1015,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the Cloud SQL database.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cloudsqlpropertiestype">Cloud<wbr>Sql<wbr>Properties<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Database<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATABASE_TYPE_UNSPECIFIED{{% md %}}Unspecified database type.{{% /md %}}</dd><dt>Postgres</dt>
+    <dd>POSTGRES{{% md %}}Cloud SQL for PostgreSQL.{{% /md %}}</dd><dt>Mysql</dt>
+    <dd>MYSQL{{% md %}}Cloud SQL for MySQL.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Cloud<wbr>Sql<wbr>Properties<wbr>Type<wbr>Database<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATABASE_TYPE_UNSPECIFIED{{% md %}}Unspecified database type.{{% /md %}}</dd><dt>Cloud<wbr>Sql<wbr>Properties<wbr>Type<wbr>Postgres</dt>
+    <dd>POSTGRES{{% md %}}Cloud SQL for PostgreSQL.{{% /md %}}</dd><dt>Cloud<wbr>Sql<wbr>Properties<wbr>Type<wbr>Mysql</dt>
+    <dd>MYSQL{{% md %}}Cloud SQL for MySQL.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Database<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATABASE_TYPE_UNSPECIFIED{{% md %}}Unspecified database type.{{% /md %}}</dd><dt>Postgres</dt>
+    <dd>POSTGRES{{% md %}}Cloud SQL for PostgreSQL.{{% /md %}}</dd><dt>Mysql</dt>
+    <dd>MYSQL{{% md %}}Cloud SQL for MySQL.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DATABASE_TYPE_UNSPECIFIED</dt>
+    <dd>DATABASE_TYPE_UNSPECIFIED{{% md %}}Unspecified database type.{{% /md %}}</dd><dt>POSTGRES</dt>
+    <dd>POSTGRES{{% md %}}Cloud SQL for PostgreSQL.{{% /md %}}</dd><dt>MYSQL</dt>
+    <dd>MYSQL{{% md %}}Cloud SQL for MySQL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

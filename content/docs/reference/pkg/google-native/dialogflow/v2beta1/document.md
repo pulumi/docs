@@ -33,7 +33,7 @@ Creates a new document. Note: The `projects.agent.knowledgeBases.documents` reso
              <span class="nx">enable_auto_reload</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">import_gcs_custom_metadata</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">knowledge_base_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">knowledge_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">knowledge_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dialogflow_v2beta1.DocumentKnowledgeTypesItem]]</span> = None<span class="p">,</span>
              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
              <span class="nx">mime_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -237,7 +237,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#knowledgetypes_csharp" style="color: inherit; text-decoration: inherit;">Knowledge<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#documentknowledgetypesitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2Beta1.<wbr>Document<wbr>Knowledge<wbr>Types<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}Required. The knowledge type of document content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -345,7 +345,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#knowledgetypes_go" style="color: inherit; text-decoration: inherit;">Knowledge<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#documentknowledgetypesitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}Required. The knowledge type of document content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -453,7 +453,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#knowledgetypes_nodejs" style="color: inherit; text-decoration: inherit;">knowledge<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#documentknowledgetypesitem">Document<wbr>Knowledge<wbr>Types<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}Required. The knowledge type of document content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -561,7 +561,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#knowledge_types_python" style="color: inherit; text-decoration: inherit;">knowledge_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#documentknowledgetypesitem">Document<wbr>Knowledge<wbr>Types<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}Required. The knowledge type of document content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,6 +694,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="documentknowledgetypesitem">Document<wbr>Knowledge<wbr>Types<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Knowledge<wbr>Type<wbr>Unspecified</dt>
+    <dd>KNOWLEDGE_TYPE_UNSPECIFIED{{% md %}}The type is unspecified or arbitrary.{{% /md %}}</dd><dt>Faq</dt>
+    <dd>FAQ{{% md %}}The document content contains question and answer pairs as either HTML or CSV. Typical FAQ HTML formats are parsed accurately, but unusual formats may fail to be parsed. CSV must have questions in the first column and answers in the second, with no header. Because of this explicit format, they are always parsed accurately.{{% /md %}}</dd><dt>Extractive<wbr>Qa</dt>
+    <dd>EXTRACTIVE_QA{{% md %}}Documents for which unstructured text is extracted and used for question answering.{{% /md %}}</dd><dt>Article<wbr>Suggestion</dt>
+    <dd>ARTICLE_SUGGESTION{{% md %}}The entire document content as a whole can be used for query results. Only for Contact Center Solutions on Dialogflow.{{% /md %}}</dd><dt>Smart<wbr>Reply</dt>
+    <dd>SMART_REPLY{{% md %}}The legacy enum for agent-facing smart reply feature.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Document<wbr>Knowledge<wbr>Types<wbr>Item<wbr>Knowledge<wbr>Type<wbr>Unspecified</dt>
+    <dd>KNOWLEDGE_TYPE_UNSPECIFIED{{% md %}}The type is unspecified or arbitrary.{{% /md %}}</dd><dt>Document<wbr>Knowledge<wbr>Types<wbr>Item<wbr>Faq</dt>
+    <dd>FAQ{{% md %}}The document content contains question and answer pairs as either HTML or CSV. Typical FAQ HTML formats are parsed accurately, but unusual formats may fail to be parsed. CSV must have questions in the first column and answers in the second, with no header. Because of this explicit format, they are always parsed accurately.{{% /md %}}</dd><dt>Document<wbr>Knowledge<wbr>Types<wbr>Item<wbr>Extractive<wbr>Qa</dt>
+    <dd>EXTRACTIVE_QA{{% md %}}Documents for which unstructured text is extracted and used for question answering.{{% /md %}}</dd><dt>Document<wbr>Knowledge<wbr>Types<wbr>Item<wbr>Article<wbr>Suggestion</dt>
+    <dd>ARTICLE_SUGGESTION{{% md %}}The entire document content as a whole can be used for query results. Only for Contact Center Solutions on Dialogflow.{{% /md %}}</dd><dt>Document<wbr>Knowledge<wbr>Types<wbr>Item<wbr>Smart<wbr>Reply</dt>
+    <dd>SMART_REPLY{{% md %}}The legacy enum for agent-facing smart reply feature.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Knowledge<wbr>Type<wbr>Unspecified</dt>
+    <dd>KNOWLEDGE_TYPE_UNSPECIFIED{{% md %}}The type is unspecified or arbitrary.{{% /md %}}</dd><dt>Faq</dt>
+    <dd>FAQ{{% md %}}The document content contains question and answer pairs as either HTML or CSV. Typical FAQ HTML formats are parsed accurately, but unusual formats may fail to be parsed. CSV must have questions in the first column and answers in the second, with no header. Because of this explicit format, they are always parsed accurately.{{% /md %}}</dd><dt>Extractive<wbr>Qa</dt>
+    <dd>EXTRACTIVE_QA{{% md %}}Documents for which unstructured text is extracted and used for question answering.{{% /md %}}</dd><dt>Article<wbr>Suggestion</dt>
+    <dd>ARTICLE_SUGGESTION{{% md %}}The entire document content as a whole can be used for query results. Only for Contact Center Solutions on Dialogflow.{{% /md %}}</dd><dt>Smart<wbr>Reply</dt>
+    <dd>SMART_REPLY{{% md %}}The legacy enum for agent-facing smart reply feature.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>KNOWLEDGE_TYPE_UNSPECIFIED</dt>
+    <dd>KNOWLEDGE_TYPE_UNSPECIFIED{{% md %}}The type is unspecified or arbitrary.{{% /md %}}</dd><dt>FAQ</dt>
+    <dd>FAQ{{% md %}}The document content contains question and answer pairs as either HTML or CSV. Typical FAQ HTML formats are parsed accurately, but unusual formats may fail to be parsed. CSV must have questions in the first column and answers in the second, with no header. Because of this explicit format, they are always parsed accurately.{{% /md %}}</dd><dt>EXTRACTIVE_QA</dt>
+    <dd>EXTRACTIVE_QA{{% md %}}Documents for which unstructured text is extracted and used for question answering.{{% /md %}}</dd><dt>ARTICLE_SUGGESTION</dt>
+    <dd>ARTICLE_SUGGESTION{{% md %}}The entire document content as a whole can be used for query results. Only for Contact Center Solutions on Dialogflow.{{% /md %}}</dd><dt>SMART_REPLY</dt>
+    <dd>SMART_REPLY{{% md %}}The legacy enum for agent-facing smart reply feature.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="googleclouddialogflowv2beta1documentreloadstatusresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2beta1Document<wbr>Reload<wbr>Status<wbr>Response</h4>
 

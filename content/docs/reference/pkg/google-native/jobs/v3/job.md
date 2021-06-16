@@ -33,22 +33,22 @@ Creates a new job. Typically, the job becomes searchable within 10 seconds, but 
         <span class="nx">company_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">compensation_info</span><span class="p">:</span> <span class="nx">Optional[_jobs_v3.CompensationInfoArgs]</span> = None<span class="p">,</span>
         <span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-        <span class="nx">degree_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">degree_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[_jobs_v3.JobDegreeTypesItem]]</span> = None<span class="p">,</span>
         <span class="nx">department</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">derived_info</span><span class="p">:</span> <span class="nx">Optional[_jobs_v3.JobDerivedInfoArgs]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">employment_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">employment_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[_jobs_v3.JobEmploymentTypesItem]]</span> = None<span class="p">,</span>
         <span class="nx">incentives</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">job_benefits</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">job_benefits</span><span class="p">:</span> <span class="nx">Optional[Sequence[_jobs_v3.JobJobBenefitsItem]]</span> = None<span class="p">,</span>
         <span class="nx">job_end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">job_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">job_level</span><span class="p">:</span> <span class="nx">Optional[_jobs_v3.JobJobLevel]</span> = None<span class="p">,</span>
         <span class="nx">job_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">language_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">posting_create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">posting_expire_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">posting_publish_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">posting_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">posting_region</span><span class="p">:</span> <span class="nx">Optional[_jobs_v3.JobPostingRegion]</span> = None<span class="p">,</span>
         <span class="nx">posting_update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">processing_options</span><span class="p">:</span> <span class="nx">Optional[_jobs_v3.ProcessingOptionsArgs]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -246,7 +246,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#degreetypes_csharp" style="color: inherit; text-decoration: inherit;">Degree<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#jobdegreetypesitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Jobs.<wbr>V3.<wbr>Job<wbr>Degree<wbr>Types<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional. The desired education degrees for the job, such as Bachelors, Masters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -278,7 +278,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#employmenttypes_csharp" style="color: inherit; text-decoration: inherit;">Employment<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#jobemploymenttypesitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Jobs.<wbr>V3.<wbr>Job<wbr>Employment<wbr>Types<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional. The employment type(s) of a job, for example, full time or part time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -294,7 +294,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobbenefits_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Benefits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#jobjobbenefitsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Jobs.<wbr>V3.<wbr>Job<wbr>Job<wbr>Benefits<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional. The benefits included with the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -310,7 +310,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#joblevel_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobjoblevel">Pulumi.<wbr>Google<wbr>Native.<wbr>Jobs.<wbr>V3.<wbr>Job<wbr>Job<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Optional. The experience level associated with the job, such as "Entry Level".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -366,7 +366,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#postingregion_csharp" style="color: inherit; text-decoration: inherit;">Posting<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobpostingregion">Pulumi.<wbr>Google<wbr>Native.<wbr>Jobs.<wbr>V3.<wbr>Job<wbr>Posting<wbr>Region</a></span>
     </dt>
     <dd>{{% md %}}Optional. The job PostingRegion (for example, state, country) throughout which the job is available. If this field is set, a LocationFilter in a search query within the job region finds this job posting if an exact location match isn't specified. If this field is set to PostingRegion.NATION or PostingRegion.ADMINISTRATIVE_AREA, setting job Job.addresses to the same location level as this field is strongly recommended.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +490,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#degreetypes_go" style="color: inherit; text-decoration: inherit;">Degree<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#jobdegreetypesitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}Optional. The desired education degrees for the job, such as Bachelors, Masters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +522,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#employmenttypes_go" style="color: inherit; text-decoration: inherit;">Employment<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#jobemploymenttypesitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}Optional. The employment type(s) of a job, for example, full time or part time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +538,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobbenefits_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Benefits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#jobjobbenefitsitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}Optional. The benefits included with the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +554,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#joblevel_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobjoblevel">Job<wbr>Job<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Optional. The experience level associated with the job, such as "Entry Level".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +610,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#postingregion_go" style="color: inherit; text-decoration: inherit;">Posting<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobpostingregion">Job<wbr>Posting<wbr>Region</a></span>
     </dt>
     <dd>{{% md %}}Optional. The job PostingRegion (for example, state, country) throughout which the job is available. If this field is set, a LocationFilter in a search query within the job region finds this job posting if an exact location match isn't specified. If this field is set to PostingRegion.NATION or PostingRegion.ADMINISTRATIVE_AREA, setting job Job.addresses to the same location level as this field is strongly recommended.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +734,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#degreetypes_nodejs" style="color: inherit; text-decoration: inherit;">degree<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#jobdegreetypesitem">Job<wbr>Degree<wbr>Types<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The desired education degrees for the job, such as Bachelors, Masters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -766,7 +766,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#employmenttypes_nodejs" style="color: inherit; text-decoration: inherit;">employment<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#jobemploymenttypesitem">Job<wbr>Employment<wbr>Types<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The employment type(s) of a job, for example, full time or part time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -782,7 +782,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobbenefits_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Benefits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#jobjobbenefitsitem">Job<wbr>Job<wbr>Benefits<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The benefits included with the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -798,7 +798,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#joblevel_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobjoblevel">Job<wbr>Job<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Optional. The experience level associated with the job, such as "Entry Level".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -854,7 +854,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#postingregion_nodejs" style="color: inherit; text-decoration: inherit;">posting<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobpostingregion">Job<wbr>Posting<wbr>Region</a></span>
     </dt>
     <dd>{{% md %}}Optional. The job PostingRegion (for example, state, country) throughout which the job is available. If this field is set, a LocationFilter in a search query within the job region finds this job posting if an exact location match isn't specified. If this field is set to PostingRegion.NATION or PostingRegion.ADMINISTRATIVE_AREA, setting job Job.addresses to the same location level as this field is strongly recommended.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -978,7 +978,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#degree_types_python" style="color: inherit; text-decoration: inherit;">degree_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#jobdegreetypesitem">Job<wbr>Degree<wbr>Types<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The desired education degrees for the job, such as Bachelors, Masters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1010,7 +1010,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#employment_types_python" style="color: inherit; text-decoration: inherit;">employment_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#jobemploymenttypesitem">Job<wbr>Employment<wbr>Types<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The employment type(s) of a job, for example, full time or part time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1026,7 +1026,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#job_benefits_python" style="color: inherit; text-decoration: inherit;">job_<wbr>benefits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#jobjobbenefitsitem">Job<wbr>Job<wbr>Benefits<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The benefits included with the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1042,7 +1042,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#job_level_python" style="color: inherit; text-decoration: inherit;">job_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#jobjoblevel">Job<wbr>Job<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Optional. The experience level associated with the job, such as "Entry Level".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1098,7 +1098,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#posting_region_python" style="color: inherit; text-decoration: inherit;">posting_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#jobpostingregion">Job<wbr>Posting<wbr>Region</a></span>
     </dt>
     <dd>{{% md %}}Optional. The job PostingRegion (for example, state, country) throughout which the job is available. If this field is set, a LocationFilter in a search query within the job region finds this job posting if an exact location match isn't specified. If this field is set to PostingRegion.NATION or PostingRegion.ADMINISTRATIVE_AREA, setting job Job.addresses to the same location level as this field is strongly recommended.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1493,7 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#compensationentrytype">Pulumi.<wbr>Google<wbr>Native.<wbr>Jobs.<wbr>V3.<wbr>Compensation<wbr>Entry<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1501,7 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#compensationentryunit">Pulumi.<wbr>Google<wbr>Native.<wbr>Jobs.<wbr>V3.<wbr>Compensation<wbr>Entry<wbr>Unit</a></span>
     </dt>
     <dd>{{% md %}}Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1545,7 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#compensationentrytype">Compensation<wbr>Entry<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1553,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#compensationentryunit">Compensation<wbr>Entry<wbr>Unit</a></span>
     </dt>
     <dd>{{% md %}}Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1597,7 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#compensationentrytype">Compensation<wbr>Entry<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1605,7 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#compensationentryunit">Compensation<wbr>Entry<wbr>Unit</a></span>
     </dt>
     <dd>{{% md %}}Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1649,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#compensationentrytype">Compensation<wbr>Entry<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1657,7 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#compensationentryunit">Compensation<wbr>Entry<wbr>Unit</a></span>
     </dt>
     <dd>{{% md %}}Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1870,6 +1870,110 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="compensationentrytype">Compensation<wbr>Entry<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Compensation<wbr>Type<wbr>Unspecified</dt>
+    <dd>COMPENSATION_TYPE_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>Base</dt>
+    <dd>BASE{{% md %}}Base compensation: Refers to the fixed amount of money paid to an employee by an employer in return for work performed. Base compensation does not include benefits, bonuses or any other potential compensation from an employer.{{% /md %}}</dd><dt>Bonus</dt>
+    <dd>BONUS{{% md %}}Bonus.{{% /md %}}</dd><dt>Signing<wbr>Bonus</dt>
+    <dd>SIGNING_BONUS{{% md %}}Signing bonus.{{% /md %}}</dd><dt>Equity</dt>
+    <dd>EQUITY{{% md %}}Equity.{{% /md %}}</dd><dt>Profit<wbr>Sharing</dt>
+    <dd>PROFIT_SHARING{{% md %}}Profit sharing.{{% /md %}}</dd><dt>Commissions</dt>
+    <dd>COMMISSIONS{{% md %}}Commission.{{% /md %}}</dd><dt>Tips</dt>
+    <dd>TIPS{{% md %}}Tips.{{% /md %}}</dd><dt>Other<wbr>Compensation<wbr>Type</dt>
+    <dd>OTHER_COMPENSATION_TYPE{{% md %}}Other compensation type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Compensation<wbr>Entry<wbr>Type<wbr>Compensation<wbr>Type<wbr>Unspecified</dt>
+    <dd>COMPENSATION_TYPE_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>Compensation<wbr>Entry<wbr>Type<wbr>Base</dt>
+    <dd>BASE{{% md %}}Base compensation: Refers to the fixed amount of money paid to an employee by an employer in return for work performed. Base compensation does not include benefits, bonuses or any other potential compensation from an employer.{{% /md %}}</dd><dt>Compensation<wbr>Entry<wbr>Type<wbr>Bonus</dt>
+    <dd>BONUS{{% md %}}Bonus.{{% /md %}}</dd><dt>Compensation<wbr>Entry<wbr>Type<wbr>Signing<wbr>Bonus</dt>
+    <dd>SIGNING_BONUS{{% md %}}Signing bonus.{{% /md %}}</dd><dt>Compensation<wbr>Entry<wbr>Type<wbr>Equity</dt>
+    <dd>EQUITY{{% md %}}Equity.{{% /md %}}</dd><dt>Compensation<wbr>Entry<wbr>Type<wbr>Profit<wbr>Sharing</dt>
+    <dd>PROFIT_SHARING{{% md %}}Profit sharing.{{% /md %}}</dd><dt>Compensation<wbr>Entry<wbr>Type<wbr>Commissions</dt>
+    <dd>COMMISSIONS{{% md %}}Commission.{{% /md %}}</dd><dt>Compensation<wbr>Entry<wbr>Type<wbr>Tips</dt>
+    <dd>TIPS{{% md %}}Tips.{{% /md %}}</dd><dt>Compensation<wbr>Entry<wbr>Type<wbr>Other<wbr>Compensation<wbr>Type</dt>
+    <dd>OTHER_COMPENSATION_TYPE{{% md %}}Other compensation type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Compensation<wbr>Type<wbr>Unspecified</dt>
+    <dd>COMPENSATION_TYPE_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>Base</dt>
+    <dd>BASE{{% md %}}Base compensation: Refers to the fixed amount of money paid to an employee by an employer in return for work performed. Base compensation does not include benefits, bonuses or any other potential compensation from an employer.{{% /md %}}</dd><dt>Bonus</dt>
+    <dd>BONUS{{% md %}}Bonus.{{% /md %}}</dd><dt>Signing<wbr>Bonus</dt>
+    <dd>SIGNING_BONUS{{% md %}}Signing bonus.{{% /md %}}</dd><dt>Equity</dt>
+    <dd>EQUITY{{% md %}}Equity.{{% /md %}}</dd><dt>Profit<wbr>Sharing</dt>
+    <dd>PROFIT_SHARING{{% md %}}Profit sharing.{{% /md %}}</dd><dt>Commissions</dt>
+    <dd>COMMISSIONS{{% md %}}Commission.{{% /md %}}</dd><dt>Tips</dt>
+    <dd>TIPS{{% md %}}Tips.{{% /md %}}</dd><dt>Other<wbr>Compensation<wbr>Type</dt>
+    <dd>OTHER_COMPENSATION_TYPE{{% md %}}Other compensation type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>COMPENSATION_TYPE_UNSPECIFIED</dt>
+    <dd>COMPENSATION_TYPE_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>BASE</dt>
+    <dd>BASE{{% md %}}Base compensation: Refers to the fixed amount of money paid to an employee by an employer in return for work performed. Base compensation does not include benefits, bonuses or any other potential compensation from an employer.{{% /md %}}</dd><dt>BONUS</dt>
+    <dd>BONUS{{% md %}}Bonus.{{% /md %}}</dd><dt>SIGNING_BONUS</dt>
+    <dd>SIGNING_BONUS{{% md %}}Signing bonus.{{% /md %}}</dd><dt>EQUITY</dt>
+    <dd>EQUITY{{% md %}}Equity.{{% /md %}}</dd><dt>PROFIT_SHARING</dt>
+    <dd>PROFIT_SHARING{{% md %}}Profit sharing.{{% /md %}}</dd><dt>COMMISSIONS</dt>
+    <dd>COMMISSIONS{{% md %}}Commission.{{% /md %}}</dd><dt>TIPS</dt>
+    <dd>TIPS{{% md %}}Tips.{{% /md %}}</dd><dt>OTHER_COMPENSATION_TYPE</dt>
+    <dd>OTHER_COMPENSATION_TYPE{{% md %}}Other compensation type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="compensationentryunit">Compensation<wbr>Entry<wbr>Unit</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Compensation<wbr>Unit<wbr>Unspecified</dt>
+    <dd>COMPENSATION_UNIT_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>Hourly</dt>
+    <dd>HOURLY{{% md %}}Hourly.{{% /md %}}</dd><dt>Daily</dt>
+    <dd>DAILY{{% md %}}Daily.{{% /md %}}</dd><dt>Weekly</dt>
+    <dd>WEEKLY{{% md %}}Weekly{{% /md %}}</dd><dt>Monthly</dt>
+    <dd>MONTHLY{{% md %}}Monthly.{{% /md %}}</dd><dt>Yearly</dt>
+    <dd>YEARLY{{% md %}}Yearly.{{% /md %}}</dd><dt>One<wbr>Time</dt>
+    <dd>ONE_TIME{{% md %}}One time.{{% /md %}}</dd><dt>Other<wbr>Compensation<wbr>Unit</dt>
+    <dd>OTHER_COMPENSATION_UNIT{{% md %}}Other compensation units.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Compensation<wbr>Entry<wbr>Unit<wbr>Compensation<wbr>Unit<wbr>Unspecified</dt>
+    <dd>COMPENSATION_UNIT_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>Compensation<wbr>Entry<wbr>Unit<wbr>Hourly</dt>
+    <dd>HOURLY{{% md %}}Hourly.{{% /md %}}</dd><dt>Compensation<wbr>Entry<wbr>Unit<wbr>Daily</dt>
+    <dd>DAILY{{% md %}}Daily.{{% /md %}}</dd><dt>Compensation<wbr>Entry<wbr>Unit<wbr>Weekly</dt>
+    <dd>WEEKLY{{% md %}}Weekly{{% /md %}}</dd><dt>Compensation<wbr>Entry<wbr>Unit<wbr>Monthly</dt>
+    <dd>MONTHLY{{% md %}}Monthly.{{% /md %}}</dd><dt>Compensation<wbr>Entry<wbr>Unit<wbr>Yearly</dt>
+    <dd>YEARLY{{% md %}}Yearly.{{% /md %}}</dd><dt>Compensation<wbr>Entry<wbr>Unit<wbr>One<wbr>Time</dt>
+    <dd>ONE_TIME{{% md %}}One time.{{% /md %}}</dd><dt>Compensation<wbr>Entry<wbr>Unit<wbr>Other<wbr>Compensation<wbr>Unit</dt>
+    <dd>OTHER_COMPENSATION_UNIT{{% md %}}Other compensation units.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Compensation<wbr>Unit<wbr>Unspecified</dt>
+    <dd>COMPENSATION_UNIT_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>Hourly</dt>
+    <dd>HOURLY{{% md %}}Hourly.{{% /md %}}</dd><dt>Daily</dt>
+    <dd>DAILY{{% md %}}Daily.{{% /md %}}</dd><dt>Weekly</dt>
+    <dd>WEEKLY{{% md %}}Weekly{{% /md %}}</dd><dt>Monthly</dt>
+    <dd>MONTHLY{{% md %}}Monthly.{{% /md %}}</dd><dt>Yearly</dt>
+    <dd>YEARLY{{% md %}}Yearly.{{% /md %}}</dd><dt>One<wbr>Time</dt>
+    <dd>ONE_TIME{{% md %}}One time.{{% /md %}}</dd><dt>Other<wbr>Compensation<wbr>Unit</dt>
+    <dd>OTHER_COMPENSATION_UNIT{{% md %}}Other compensation units.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>COMPENSATION_UNIT_UNSPECIFIED</dt>
+    <dd>COMPENSATION_UNIT_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>HOURLY</dt>
+    <dd>HOURLY{{% md %}}Hourly.{{% /md %}}</dd><dt>DAILY</dt>
+    <dd>DAILY{{% md %}}Daily.{{% /md %}}</dd><dt>WEEKLY</dt>
+    <dd>WEEKLY{{% md %}}Weekly{{% /md %}}</dd><dt>MONTHLY</dt>
+    <dd>MONTHLY{{% md %}}Monthly.{{% /md %}}</dd><dt>YEARLY</dt>
+    <dd>YEARLY{{% md %}}Yearly.{{% /md %}}</dd><dt>ONE_TIME</dt>
+    <dd>ONE_TIME{{% md %}}One time.{{% /md %}}</dd><dt>OTHER_COMPENSATION_UNIT</dt>
+    <dd>OTHER_COMPENSATION_UNIT{{% md %}}Other compensation units.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="compensationinfo">Compensation<wbr>Info</h4>
@@ -2264,6 +2368,60 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Optional. The minimum amount of compensation. If left empty, the value is set to zero and the currency code is set to match the currency code of max_compensation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="jobdegreetypesitem">Job<wbr>Degree<wbr>Types<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Degree<wbr>Type<wbr>Unspecified</dt>
+    <dd>DEGREE_TYPE_UNSPECIFIED{{% md %}}Default value. Represents no degree, or early childhood education. Maps to ISCED code 0. Ex) Kindergarten{{% /md %}}</dd><dt>Primary<wbr>Education</dt>
+    <dd>PRIMARY_EDUCATION{{% md %}}Primary education which is typically the first stage of compulsory education. ISCED code 1. Ex) Elementary school{{% /md %}}</dd><dt>Lower<wbr>Secondary<wbr>Education</dt>
+    <dd>LOWER_SECONDARY_EDUCATION{{% md %}}Lower secondary education; First stage of secondary education building on primary education, typically with a more subject-oriented curriculum. ISCED code 2. Ex) Middle school{{% /md %}}</dd><dt>Upper<wbr>Secondary<wbr>Education</dt>
+    <dd>UPPER_SECONDARY_EDUCATION{{% md %}}Middle education; Second/final stage of secondary education preparing for tertiary education and/or providing skills relevant to employment. Usually with an increased range of subject options and streams. ISCED code 3. Ex) High school{{% /md %}}</dd><dt>Adult<wbr>Remedial<wbr>Education</dt>
+    <dd>ADULT_REMEDIAL_EDUCATION{{% md %}}Adult Remedial Education; Programmes providing learning experiences that build on secondary education and prepare for labour market entry and/or tertiary education. The content is broader than secondary but not as complex as tertiary education. ISCED code 4.{{% /md %}}</dd><dt>Associates<wbr>Or<wbr>Equivalent</dt>
+    <dd>ASSOCIATES_OR_EQUIVALENT{{% md %}}Associate's or equivalent; Short first tertiary programmes that are typically practically-based, occupationally-specific and prepare for labour market entry. These programmes may also provide a pathway to other tertiary programmes. ISCED code 5.{{% /md %}}</dd><dt>Bachelors<wbr>Or<wbr>Equivalent</dt>
+    <dd>BACHELORS_OR_EQUIVALENT{{% md %}}Bachelor's or equivalent; Programmes designed to provide intermediate academic and/or professional knowledge, skills and competencies leading to a first tertiary degree or equivalent qualification. ISCED code 6.{{% /md %}}</dd><dt>Masters<wbr>Or<wbr>Equivalent</dt>
+    <dd>MASTERS_OR_EQUIVALENT{{% md %}}Master's or equivalent; Programmes designed to provide advanced academic and/or professional knowledge, skills and competencies leading to a second tertiary degree or equivalent qualification. ISCED code 7.{{% /md %}}</dd><dt>Doctoral<wbr>Or<wbr>Equivalent</dt>
+    <dd>DOCTORAL_OR_EQUIVALENT{{% md %}}Doctoral or equivalent; Programmes designed primarily to lead to an advanced research qualification, usually concluding with the submission and defense of a substantive dissertation of publishable quality based on original research. ISCED code 8.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Job<wbr>Degree<wbr>Types<wbr>Item<wbr>Degree<wbr>Type<wbr>Unspecified</dt>
+    <dd>DEGREE_TYPE_UNSPECIFIED{{% md %}}Default value. Represents no degree, or early childhood education. Maps to ISCED code 0. Ex) Kindergarten{{% /md %}}</dd><dt>Job<wbr>Degree<wbr>Types<wbr>Item<wbr>Primary<wbr>Education</dt>
+    <dd>PRIMARY_EDUCATION{{% md %}}Primary education which is typically the first stage of compulsory education. ISCED code 1. Ex) Elementary school{{% /md %}}</dd><dt>Job<wbr>Degree<wbr>Types<wbr>Item<wbr>Lower<wbr>Secondary<wbr>Education</dt>
+    <dd>LOWER_SECONDARY_EDUCATION{{% md %}}Lower secondary education; First stage of secondary education building on primary education, typically with a more subject-oriented curriculum. ISCED code 2. Ex) Middle school{{% /md %}}</dd><dt>Job<wbr>Degree<wbr>Types<wbr>Item<wbr>Upper<wbr>Secondary<wbr>Education</dt>
+    <dd>UPPER_SECONDARY_EDUCATION{{% md %}}Middle education; Second/final stage of secondary education preparing for tertiary education and/or providing skills relevant to employment. Usually with an increased range of subject options and streams. ISCED code 3. Ex) High school{{% /md %}}</dd><dt>Job<wbr>Degree<wbr>Types<wbr>Item<wbr>Adult<wbr>Remedial<wbr>Education</dt>
+    <dd>ADULT_REMEDIAL_EDUCATION{{% md %}}Adult Remedial Education; Programmes providing learning experiences that build on secondary education and prepare for labour market entry and/or tertiary education. The content is broader than secondary but not as complex as tertiary education. ISCED code 4.{{% /md %}}</dd><dt>Job<wbr>Degree<wbr>Types<wbr>Item<wbr>Associates<wbr>Or<wbr>Equivalent</dt>
+    <dd>ASSOCIATES_OR_EQUIVALENT{{% md %}}Associate's or equivalent; Short first tertiary programmes that are typically practically-based, occupationally-specific and prepare for labour market entry. These programmes may also provide a pathway to other tertiary programmes. ISCED code 5.{{% /md %}}</dd><dt>Job<wbr>Degree<wbr>Types<wbr>Item<wbr>Bachelors<wbr>Or<wbr>Equivalent</dt>
+    <dd>BACHELORS_OR_EQUIVALENT{{% md %}}Bachelor's or equivalent; Programmes designed to provide intermediate academic and/or professional knowledge, skills and competencies leading to a first tertiary degree or equivalent qualification. ISCED code 6.{{% /md %}}</dd><dt>Job<wbr>Degree<wbr>Types<wbr>Item<wbr>Masters<wbr>Or<wbr>Equivalent</dt>
+    <dd>MASTERS_OR_EQUIVALENT{{% md %}}Master's or equivalent; Programmes designed to provide advanced academic and/or professional knowledge, skills and competencies leading to a second tertiary degree or equivalent qualification. ISCED code 7.{{% /md %}}</dd><dt>Job<wbr>Degree<wbr>Types<wbr>Item<wbr>Doctoral<wbr>Or<wbr>Equivalent</dt>
+    <dd>DOCTORAL_OR_EQUIVALENT{{% md %}}Doctoral or equivalent; Programmes designed primarily to lead to an advanced research qualification, usually concluding with the submission and defense of a substantive dissertation of publishable quality based on original research. ISCED code 8.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Degree<wbr>Type<wbr>Unspecified</dt>
+    <dd>DEGREE_TYPE_UNSPECIFIED{{% md %}}Default value. Represents no degree, or early childhood education. Maps to ISCED code 0. Ex) Kindergarten{{% /md %}}</dd><dt>Primary<wbr>Education</dt>
+    <dd>PRIMARY_EDUCATION{{% md %}}Primary education which is typically the first stage of compulsory education. ISCED code 1. Ex) Elementary school{{% /md %}}</dd><dt>Lower<wbr>Secondary<wbr>Education</dt>
+    <dd>LOWER_SECONDARY_EDUCATION{{% md %}}Lower secondary education; First stage of secondary education building on primary education, typically with a more subject-oriented curriculum. ISCED code 2. Ex) Middle school{{% /md %}}</dd><dt>Upper<wbr>Secondary<wbr>Education</dt>
+    <dd>UPPER_SECONDARY_EDUCATION{{% md %}}Middle education; Second/final stage of secondary education preparing for tertiary education and/or providing skills relevant to employment. Usually with an increased range of subject options and streams. ISCED code 3. Ex) High school{{% /md %}}</dd><dt>Adult<wbr>Remedial<wbr>Education</dt>
+    <dd>ADULT_REMEDIAL_EDUCATION{{% md %}}Adult Remedial Education; Programmes providing learning experiences that build on secondary education and prepare for labour market entry and/or tertiary education. The content is broader than secondary but not as complex as tertiary education. ISCED code 4.{{% /md %}}</dd><dt>Associates<wbr>Or<wbr>Equivalent</dt>
+    <dd>ASSOCIATES_OR_EQUIVALENT{{% md %}}Associate's or equivalent; Short first tertiary programmes that are typically practically-based, occupationally-specific and prepare for labour market entry. These programmes may also provide a pathway to other tertiary programmes. ISCED code 5.{{% /md %}}</dd><dt>Bachelors<wbr>Or<wbr>Equivalent</dt>
+    <dd>BACHELORS_OR_EQUIVALENT{{% md %}}Bachelor's or equivalent; Programmes designed to provide intermediate academic and/or professional knowledge, skills and competencies leading to a first tertiary degree or equivalent qualification. ISCED code 6.{{% /md %}}</dd><dt>Masters<wbr>Or<wbr>Equivalent</dt>
+    <dd>MASTERS_OR_EQUIVALENT{{% md %}}Master's or equivalent; Programmes designed to provide advanced academic and/or professional knowledge, skills and competencies leading to a second tertiary degree or equivalent qualification. ISCED code 7.{{% /md %}}</dd><dt>Doctoral<wbr>Or<wbr>Equivalent</dt>
+    <dd>DOCTORAL_OR_EQUIVALENT{{% md %}}Doctoral or equivalent; Programmes designed primarily to lead to an advanced research qualification, usually concluding with the submission and defense of a substantive dissertation of publishable quality based on original research. ISCED code 8.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DEGREE_TYPE_UNSPECIFIED</dt>
+    <dd>DEGREE_TYPE_UNSPECIFIED{{% md %}}Default value. Represents no degree, or early childhood education. Maps to ISCED code 0. Ex) Kindergarten{{% /md %}}</dd><dt>PRIMARY_EDUCATION</dt>
+    <dd>PRIMARY_EDUCATION{{% md %}}Primary education which is typically the first stage of compulsory education. ISCED code 1. Ex) Elementary school{{% /md %}}</dd><dt>LOWER_SECONDARY_EDUCATION</dt>
+    <dd>LOWER_SECONDARY_EDUCATION{{% md %}}Lower secondary education; First stage of secondary education building on primary education, typically with a more subject-oriented curriculum. ISCED code 2. Ex) Middle school{{% /md %}}</dd><dt>UPPER_SECONDARY_EDUCATION</dt>
+    <dd>UPPER_SECONDARY_EDUCATION{{% md %}}Middle education; Second/final stage of secondary education preparing for tertiary education and/or providing skills relevant to employment. Usually with an increased range of subject options and streams. ISCED code 3. Ex) High school{{% /md %}}</dd><dt>ADULT_REMEDIAL_EDUCATION</dt>
+    <dd>ADULT_REMEDIAL_EDUCATION{{% md %}}Adult Remedial Education; Programmes providing learning experiences that build on secondary education and prepare for labour market entry and/or tertiary education. The content is broader than secondary but not as complex as tertiary education. ISCED code 4.{{% /md %}}</dd><dt>ASSOCIATES_OR_EQUIVALENT</dt>
+    <dd>ASSOCIATES_OR_EQUIVALENT{{% md %}}Associate's or equivalent; Short first tertiary programmes that are typically practically-based, occupationally-specific and prepare for labour market entry. These programmes may also provide a pathway to other tertiary programmes. ISCED code 5.{{% /md %}}</dd><dt>BACHELORS_OR_EQUIVALENT</dt>
+    <dd>BACHELORS_OR_EQUIVALENT{{% md %}}Bachelor's or equivalent; Programmes designed to provide intermediate academic and/or professional knowledge, skills and competencies leading to a first tertiary degree or equivalent qualification. ISCED code 6.{{% /md %}}</dd><dt>MASTERS_OR_EQUIVALENT</dt>
+    <dd>MASTERS_OR_EQUIVALENT{{% md %}}Master's or equivalent; Programmes designed to provide advanced academic and/or professional knowledge, skills and competencies leading to a second tertiary degree or equivalent qualification. ISCED code 7.{{% /md %}}</dd><dt>DOCTORAL_OR_EQUIVALENT</dt>
+    <dd>DOCTORAL_OR_EQUIVALENT{{% md %}}Doctoral or equivalent; Programmes designed primarily to lead to an advanced research qualification, usually concluding with the submission and defense of a substantive dissertation of publishable quality based on original research. ISCED code 8.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="jobderivedinfo">Job<wbr>Derived<wbr>Info</h4>
 
 {{% choosable language csharp %}}
@@ -2273,7 +2431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jobcategories_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#jobderivedinfojobcategoriesitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Jobs.<wbr>V3.<wbr>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}Job categories derived from Job.title and Job.description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2293,7 +2451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jobcategories_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#jobderivedinfojobcategoriesitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}Job categories derived from Job.title and Job.description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2313,7 +2471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jobcategories_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#jobderivedinfojobcategoriesitem">Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}Job categories derived from Job.title and Job.description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2333,7 +2491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#job_categories_python" style="color: inherit; text-decoration: inherit;">job_<wbr>categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#jobderivedinfojobcategoriesitem">Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}Job categories derived from Job.title and Job.description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2344,6 +2502,148 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#location">Location<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Structured locations of the job, resolved from Job.addresses. locations are exactly matched to Job.addresses in the same order.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobderivedinfojobcategoriesitem">Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Job<wbr>Category<wbr>Unspecified</dt>
+    <dd>JOB_CATEGORY_UNSPECIFIED{{% md %}}The default value if the category isn't specified.{{% /md %}}</dd><dt>Accounting<wbr>And<wbr>Finance</dt>
+    <dd>ACCOUNTING_AND_FINANCE{{% md %}}An accounting and finance job, such as an Accountant.{{% /md %}}</dd><dt>Administrative<wbr>And<wbr>Office</dt>
+    <dd>ADMINISTRATIVE_AND_OFFICE{{% md %}}An administrative and office job, such as an Administrative Assistant.{{% /md %}}</dd><dt>Advertising<wbr>And<wbr>Marketing</dt>
+    <dd>ADVERTISING_AND_MARKETING{{% md %}}An advertising and marketing job, such as Marketing Manager.{{% /md %}}</dd><dt>Animal<wbr>Care</dt>
+    <dd>ANIMAL_CARE{{% md %}}An animal care job, such as Veterinarian.{{% /md %}}</dd><dt>Art<wbr>Fashion<wbr>And<wbr>Design</dt>
+    <dd>ART_FASHION_AND_DESIGN{{% md %}}An art, fashion, or design job, such as Designer.{{% /md %}}</dd><dt>Business<wbr>Operations</dt>
+    <dd>BUSINESS_OPERATIONS{{% md %}}A business operations job, such as Business Operations Manager.{{% /md %}}</dd><dt>Cleaning<wbr>And<wbr>Facilities</dt>
+    <dd>CLEANING_AND_FACILITIES{{% md %}}A cleaning and facilities job, such as Custodial Staff.{{% /md %}}</dd><dt>Computer<wbr>And<wbr>It</dt>
+    <dd>COMPUTER_AND_IT{{% md %}}A computer and IT job, such as Systems Administrator.{{% /md %}}</dd><dt>Construction</dt>
+    <dd>CONSTRUCTION{{% md %}}A construction job, such as General Laborer.{{% /md %}}</dd><dt>Customer<wbr>Service</dt>
+    <dd>CUSTOMER_SERVICE{{% md %}}A customer service job, such s Cashier.{{% /md %}}</dd><dt>Education</dt>
+    <dd>EDUCATION{{% md %}}An education job, such as School Teacher.{{% /md %}}</dd><dt>Entertainment<wbr>And<wbr>Travel</dt>
+    <dd>ENTERTAINMENT_AND_TRAVEL{{% md %}}An entertainment and travel job, such as Flight Attendant.{{% /md %}}</dd><dt>Farming<wbr>And<wbr>Outdoors</dt>
+    <dd>FARMING_AND_OUTDOORS{{% md %}}A farming or outdoor job, such as Park Ranger.{{% /md %}}</dd><dt>Healthcare</dt>
+    <dd>HEALTHCARE{{% md %}}A healthcare job, such as Registered Nurse.{{% /md %}}</dd><dt>Human<wbr>Resources</dt>
+    <dd>HUMAN_RESOURCES{{% md %}}A human resources job, such as Human Resources Director.{{% /md %}}</dd><dt>Installation<wbr>Maintenance<wbr>And<wbr>Repair</dt>
+    <dd>INSTALLATION_MAINTENANCE_AND_REPAIR{{% md %}}An installation, maintenance, or repair job, such as Electrician.{{% /md %}}</dd><dt>Legal</dt>
+    <dd>LEGAL{{% md %}}A legal job, such as Law Clerk.{{% /md %}}</dd><dt>Management</dt>
+    <dd>MANAGEMENT{{% md %}}A management job, often used in conjunction with another category, such as Store Manager.{{% /md %}}</dd><dt>Manufacturing<wbr>And<wbr>Warehouse</dt>
+    <dd>MANUFACTURING_AND_WAREHOUSE{{% md %}}A manufacturing or warehouse job, such as Assembly Technician.{{% /md %}}</dd><dt>Media<wbr>Communications<wbr>And<wbr>Writing</dt>
+    <dd>MEDIA_COMMUNICATIONS_AND_WRITING{{% md %}}A media, communications, or writing job, such as Media Relations.{{% /md %}}</dd><dt>Oil<wbr>Gas<wbr>And<wbr>Mining</dt>
+    <dd>OIL_GAS_AND_MINING{{% md %}}An oil, gas or mining job, such as Offshore Driller.{{% /md %}}</dd><dt>Personal<wbr>Care<wbr>And<wbr>Services</dt>
+    <dd>PERSONAL_CARE_AND_SERVICES{{% md %}}A personal care and services job, such as Hair Stylist.{{% /md %}}</dd><dt>Protective<wbr>Services</dt>
+    <dd>PROTECTIVE_SERVICES{{% md %}}A protective services job, such as Security Guard.{{% /md %}}</dd><dt>Real<wbr>Estate</dt>
+    <dd>REAL_ESTATE{{% md %}}A real estate job, such as Buyer's Agent.{{% /md %}}</dd><dt>Restaurant<wbr>And<wbr>Hospitality</dt>
+    <dd>RESTAURANT_AND_HOSPITALITY{{% md %}}A restaurant and hospitality job, such as Restaurant Server.{{% /md %}}</dd><dt>Sales<wbr>And<wbr>Retail</dt>
+    <dd>SALES_AND_RETAIL{{% md %}}A sales and/or retail job, such Sales Associate.{{% /md %}}</dd><dt>Science<wbr>And<wbr>Engineering</dt>
+    <dd>SCIENCE_AND_ENGINEERING{{% md %}}A science and engineering job, such as Lab Technician.{{% /md %}}</dd><dt>Social<wbr>Services<wbr>And<wbr>Non<wbr>Profit</dt>
+    <dd>SOCIAL_SERVICES_AND_NON_PROFIT{{% md %}}A social services or non-profit job, such as Case Worker.{{% /md %}}</dd><dt>Sports<wbr>Fitness<wbr>And<wbr>Recreation</dt>
+    <dd>SPORTS_FITNESS_AND_RECREATION{{% md %}}A sports, fitness, or recreation job, such as Personal Trainer.{{% /md %}}</dd><dt>Transportation<wbr>And<wbr>Logistics</dt>
+    <dd>TRANSPORTATION_AND_LOGISTICS{{% md %}}A transportation or logistics job, such as Truck Driver.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Job<wbr>Category<wbr>Unspecified</dt>
+    <dd>JOB_CATEGORY_UNSPECIFIED{{% md %}}The default value if the category isn't specified.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Accounting<wbr>And<wbr>Finance</dt>
+    <dd>ACCOUNTING_AND_FINANCE{{% md %}}An accounting and finance job, such as an Accountant.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Administrative<wbr>And<wbr>Office</dt>
+    <dd>ADMINISTRATIVE_AND_OFFICE{{% md %}}An administrative and office job, such as an Administrative Assistant.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Advertising<wbr>And<wbr>Marketing</dt>
+    <dd>ADVERTISING_AND_MARKETING{{% md %}}An advertising and marketing job, such as Marketing Manager.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Animal<wbr>Care</dt>
+    <dd>ANIMAL_CARE{{% md %}}An animal care job, such as Veterinarian.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Art<wbr>Fashion<wbr>And<wbr>Design</dt>
+    <dd>ART_FASHION_AND_DESIGN{{% md %}}An art, fashion, or design job, such as Designer.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Business<wbr>Operations</dt>
+    <dd>BUSINESS_OPERATIONS{{% md %}}A business operations job, such as Business Operations Manager.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Cleaning<wbr>And<wbr>Facilities</dt>
+    <dd>CLEANING_AND_FACILITIES{{% md %}}A cleaning and facilities job, such as Custodial Staff.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Computer<wbr>And<wbr>It</dt>
+    <dd>COMPUTER_AND_IT{{% md %}}A computer and IT job, such as Systems Administrator.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Construction</dt>
+    <dd>CONSTRUCTION{{% md %}}A construction job, such as General Laborer.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Customer<wbr>Service</dt>
+    <dd>CUSTOMER_SERVICE{{% md %}}A customer service job, such s Cashier.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Education</dt>
+    <dd>EDUCATION{{% md %}}An education job, such as School Teacher.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Entertainment<wbr>And<wbr>Travel</dt>
+    <dd>ENTERTAINMENT_AND_TRAVEL{{% md %}}An entertainment and travel job, such as Flight Attendant.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Farming<wbr>And<wbr>Outdoors</dt>
+    <dd>FARMING_AND_OUTDOORS{{% md %}}A farming or outdoor job, such as Park Ranger.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Healthcare</dt>
+    <dd>HEALTHCARE{{% md %}}A healthcare job, such as Registered Nurse.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Human<wbr>Resources</dt>
+    <dd>HUMAN_RESOURCES{{% md %}}A human resources job, such as Human Resources Director.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Installation<wbr>Maintenance<wbr>And<wbr>Repair</dt>
+    <dd>INSTALLATION_MAINTENANCE_AND_REPAIR{{% md %}}An installation, maintenance, or repair job, such as Electrician.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Legal</dt>
+    <dd>LEGAL{{% md %}}A legal job, such as Law Clerk.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Management</dt>
+    <dd>MANAGEMENT{{% md %}}A management job, often used in conjunction with another category, such as Store Manager.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Manufacturing<wbr>And<wbr>Warehouse</dt>
+    <dd>MANUFACTURING_AND_WAREHOUSE{{% md %}}A manufacturing or warehouse job, such as Assembly Technician.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Media<wbr>Communications<wbr>And<wbr>Writing</dt>
+    <dd>MEDIA_COMMUNICATIONS_AND_WRITING{{% md %}}A media, communications, or writing job, such as Media Relations.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Oil<wbr>Gas<wbr>And<wbr>Mining</dt>
+    <dd>OIL_GAS_AND_MINING{{% md %}}An oil, gas or mining job, such as Offshore Driller.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Personal<wbr>Care<wbr>And<wbr>Services</dt>
+    <dd>PERSONAL_CARE_AND_SERVICES{{% md %}}A personal care and services job, such as Hair Stylist.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Protective<wbr>Services</dt>
+    <dd>PROTECTIVE_SERVICES{{% md %}}A protective services job, such as Security Guard.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Real<wbr>Estate</dt>
+    <dd>REAL_ESTATE{{% md %}}A real estate job, such as Buyer's Agent.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Restaurant<wbr>And<wbr>Hospitality</dt>
+    <dd>RESTAURANT_AND_HOSPITALITY{{% md %}}A restaurant and hospitality job, such as Restaurant Server.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Sales<wbr>And<wbr>Retail</dt>
+    <dd>SALES_AND_RETAIL{{% md %}}A sales and/or retail job, such Sales Associate.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Science<wbr>And<wbr>Engineering</dt>
+    <dd>SCIENCE_AND_ENGINEERING{{% md %}}A science and engineering job, such as Lab Technician.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Social<wbr>Services<wbr>And<wbr>Non<wbr>Profit</dt>
+    <dd>SOCIAL_SERVICES_AND_NON_PROFIT{{% md %}}A social services or non-profit job, such as Case Worker.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Sports<wbr>Fitness<wbr>And<wbr>Recreation</dt>
+    <dd>SPORTS_FITNESS_AND_RECREATION{{% md %}}A sports, fitness, or recreation job, such as Personal Trainer.{{% /md %}}</dd><dt>Job<wbr>Derived<wbr>Info<wbr>Job<wbr>Categories<wbr>Item<wbr>Transportation<wbr>And<wbr>Logistics</dt>
+    <dd>TRANSPORTATION_AND_LOGISTICS{{% md %}}A transportation or logistics job, such as Truck Driver.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Job<wbr>Category<wbr>Unspecified</dt>
+    <dd>JOB_CATEGORY_UNSPECIFIED{{% md %}}The default value if the category isn't specified.{{% /md %}}</dd><dt>Accounting<wbr>And<wbr>Finance</dt>
+    <dd>ACCOUNTING_AND_FINANCE{{% md %}}An accounting and finance job, such as an Accountant.{{% /md %}}</dd><dt>Administrative<wbr>And<wbr>Office</dt>
+    <dd>ADMINISTRATIVE_AND_OFFICE{{% md %}}An administrative and office job, such as an Administrative Assistant.{{% /md %}}</dd><dt>Advertising<wbr>And<wbr>Marketing</dt>
+    <dd>ADVERTISING_AND_MARKETING{{% md %}}An advertising and marketing job, such as Marketing Manager.{{% /md %}}</dd><dt>Animal<wbr>Care</dt>
+    <dd>ANIMAL_CARE{{% md %}}An animal care job, such as Veterinarian.{{% /md %}}</dd><dt>Art<wbr>Fashion<wbr>And<wbr>Design</dt>
+    <dd>ART_FASHION_AND_DESIGN{{% md %}}An art, fashion, or design job, such as Designer.{{% /md %}}</dd><dt>Business<wbr>Operations</dt>
+    <dd>BUSINESS_OPERATIONS{{% md %}}A business operations job, such as Business Operations Manager.{{% /md %}}</dd><dt>Cleaning<wbr>And<wbr>Facilities</dt>
+    <dd>CLEANING_AND_FACILITIES{{% md %}}A cleaning and facilities job, such as Custodial Staff.{{% /md %}}</dd><dt>Computer<wbr>And<wbr>It</dt>
+    <dd>COMPUTER_AND_IT{{% md %}}A computer and IT job, such as Systems Administrator.{{% /md %}}</dd><dt>Construction</dt>
+    <dd>CONSTRUCTION{{% md %}}A construction job, such as General Laborer.{{% /md %}}</dd><dt>Customer<wbr>Service</dt>
+    <dd>CUSTOMER_SERVICE{{% md %}}A customer service job, such s Cashier.{{% /md %}}</dd><dt>Education</dt>
+    <dd>EDUCATION{{% md %}}An education job, such as School Teacher.{{% /md %}}</dd><dt>Entertainment<wbr>And<wbr>Travel</dt>
+    <dd>ENTERTAINMENT_AND_TRAVEL{{% md %}}An entertainment and travel job, such as Flight Attendant.{{% /md %}}</dd><dt>Farming<wbr>And<wbr>Outdoors</dt>
+    <dd>FARMING_AND_OUTDOORS{{% md %}}A farming or outdoor job, such as Park Ranger.{{% /md %}}</dd><dt>Healthcare</dt>
+    <dd>HEALTHCARE{{% md %}}A healthcare job, such as Registered Nurse.{{% /md %}}</dd><dt>Human<wbr>Resources</dt>
+    <dd>HUMAN_RESOURCES{{% md %}}A human resources job, such as Human Resources Director.{{% /md %}}</dd><dt>Installation<wbr>Maintenance<wbr>And<wbr>Repair</dt>
+    <dd>INSTALLATION_MAINTENANCE_AND_REPAIR{{% md %}}An installation, maintenance, or repair job, such as Electrician.{{% /md %}}</dd><dt>Legal</dt>
+    <dd>LEGAL{{% md %}}A legal job, such as Law Clerk.{{% /md %}}</dd><dt>Management</dt>
+    <dd>MANAGEMENT{{% md %}}A management job, often used in conjunction with another category, such as Store Manager.{{% /md %}}</dd><dt>Manufacturing<wbr>And<wbr>Warehouse</dt>
+    <dd>MANUFACTURING_AND_WAREHOUSE{{% md %}}A manufacturing or warehouse job, such as Assembly Technician.{{% /md %}}</dd><dt>Media<wbr>Communications<wbr>And<wbr>Writing</dt>
+    <dd>MEDIA_COMMUNICATIONS_AND_WRITING{{% md %}}A media, communications, or writing job, such as Media Relations.{{% /md %}}</dd><dt>Oil<wbr>Gas<wbr>And<wbr>Mining</dt>
+    <dd>OIL_GAS_AND_MINING{{% md %}}An oil, gas or mining job, such as Offshore Driller.{{% /md %}}</dd><dt>Personal<wbr>Care<wbr>And<wbr>Services</dt>
+    <dd>PERSONAL_CARE_AND_SERVICES{{% md %}}A personal care and services job, such as Hair Stylist.{{% /md %}}</dd><dt>Protective<wbr>Services</dt>
+    <dd>PROTECTIVE_SERVICES{{% md %}}A protective services job, such as Security Guard.{{% /md %}}</dd><dt>Real<wbr>Estate</dt>
+    <dd>REAL_ESTATE{{% md %}}A real estate job, such as Buyer's Agent.{{% /md %}}</dd><dt>Restaurant<wbr>And<wbr>Hospitality</dt>
+    <dd>RESTAURANT_AND_HOSPITALITY{{% md %}}A restaurant and hospitality job, such as Restaurant Server.{{% /md %}}</dd><dt>Sales<wbr>And<wbr>Retail</dt>
+    <dd>SALES_AND_RETAIL{{% md %}}A sales and/or retail job, such Sales Associate.{{% /md %}}</dd><dt>Science<wbr>And<wbr>Engineering</dt>
+    <dd>SCIENCE_AND_ENGINEERING{{% md %}}A science and engineering job, such as Lab Technician.{{% /md %}}</dd><dt>Social<wbr>Services<wbr>And<wbr>Non<wbr>Profit</dt>
+    <dd>SOCIAL_SERVICES_AND_NON_PROFIT{{% md %}}A social services or non-profit job, such as Case Worker.{{% /md %}}</dd><dt>Sports<wbr>Fitness<wbr>And<wbr>Recreation</dt>
+    <dd>SPORTS_FITNESS_AND_RECREATION{{% md %}}A sports, fitness, or recreation job, such as Personal Trainer.{{% /md %}}</dd><dt>Transportation<wbr>And<wbr>Logistics</dt>
+    <dd>TRANSPORTATION_AND_LOGISTICS{{% md %}}A transportation or logistics job, such as Truck Driver.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>JOB_CATEGORY_UNSPECIFIED</dt>
+    <dd>JOB_CATEGORY_UNSPECIFIED{{% md %}}The default value if the category isn't specified.{{% /md %}}</dd><dt>ACCOUNTING_AND_FINANCE</dt>
+    <dd>ACCOUNTING_AND_FINANCE{{% md %}}An accounting and finance job, such as an Accountant.{{% /md %}}</dd><dt>ADMINISTRATIVE_AND_OFFICE</dt>
+    <dd>ADMINISTRATIVE_AND_OFFICE{{% md %}}An administrative and office job, such as an Administrative Assistant.{{% /md %}}</dd><dt>ADVERTISING_AND_MARKETING</dt>
+    <dd>ADVERTISING_AND_MARKETING{{% md %}}An advertising and marketing job, such as Marketing Manager.{{% /md %}}</dd><dt>ANIMAL_CARE</dt>
+    <dd>ANIMAL_CARE{{% md %}}An animal care job, such as Veterinarian.{{% /md %}}</dd><dt>ART_FASHION_AND_DESIGN</dt>
+    <dd>ART_FASHION_AND_DESIGN{{% md %}}An art, fashion, or design job, such as Designer.{{% /md %}}</dd><dt>BUSINESS_OPERATIONS</dt>
+    <dd>BUSINESS_OPERATIONS{{% md %}}A business operations job, such as Business Operations Manager.{{% /md %}}</dd><dt>CLEANING_AND_FACILITIES</dt>
+    <dd>CLEANING_AND_FACILITIES{{% md %}}A cleaning and facilities job, such as Custodial Staff.{{% /md %}}</dd><dt>COMPUTER_AND_IT</dt>
+    <dd>COMPUTER_AND_IT{{% md %}}A computer and IT job, such as Systems Administrator.{{% /md %}}</dd><dt>CONSTRUCTION</dt>
+    <dd>CONSTRUCTION{{% md %}}A construction job, such as General Laborer.{{% /md %}}</dd><dt>CUSTOMER_SERVICE</dt>
+    <dd>CUSTOMER_SERVICE{{% md %}}A customer service job, such s Cashier.{{% /md %}}</dd><dt>EDUCATION</dt>
+    <dd>EDUCATION{{% md %}}An education job, such as School Teacher.{{% /md %}}</dd><dt>ENTERTAINMENT_AND_TRAVEL</dt>
+    <dd>ENTERTAINMENT_AND_TRAVEL{{% md %}}An entertainment and travel job, such as Flight Attendant.{{% /md %}}</dd><dt>FARMING_AND_OUTDOORS</dt>
+    <dd>FARMING_AND_OUTDOORS{{% md %}}A farming or outdoor job, such as Park Ranger.{{% /md %}}</dd><dt>HEALTHCARE</dt>
+    <dd>HEALTHCARE{{% md %}}A healthcare job, such as Registered Nurse.{{% /md %}}</dd><dt>HUMAN_RESOURCES</dt>
+    <dd>HUMAN_RESOURCES{{% md %}}A human resources job, such as Human Resources Director.{{% /md %}}</dd><dt>INSTALLATION_MAINTENANCE_AND_REPAIR</dt>
+    <dd>INSTALLATION_MAINTENANCE_AND_REPAIR{{% md %}}An installation, maintenance, or repair job, such as Electrician.{{% /md %}}</dd><dt>LEGAL</dt>
+    <dd>LEGAL{{% md %}}A legal job, such as Law Clerk.{{% /md %}}</dd><dt>MANAGEMENT</dt>
+    <dd>MANAGEMENT{{% md %}}A management job, often used in conjunction with another category, such as Store Manager.{{% /md %}}</dd><dt>MANUFACTURING_AND_WAREHOUSE</dt>
+    <dd>MANUFACTURING_AND_WAREHOUSE{{% md %}}A manufacturing or warehouse job, such as Assembly Technician.{{% /md %}}</dd><dt>MEDIA_COMMUNICATIONS_AND_WRITING</dt>
+    <dd>MEDIA_COMMUNICATIONS_AND_WRITING{{% md %}}A media, communications, or writing job, such as Media Relations.{{% /md %}}</dd><dt>OIL_GAS_AND_MINING</dt>
+    <dd>OIL_GAS_AND_MINING{{% md %}}An oil, gas or mining job, such as Offshore Driller.{{% /md %}}</dd><dt>PERSONAL_CARE_AND_SERVICES</dt>
+    <dd>PERSONAL_CARE_AND_SERVICES{{% md %}}A personal care and services job, such as Hair Stylist.{{% /md %}}</dd><dt>PROTECTIVE_SERVICES</dt>
+    <dd>PROTECTIVE_SERVICES{{% md %}}A protective services job, such as Security Guard.{{% /md %}}</dd><dt>REAL_ESTATE</dt>
+    <dd>REAL_ESTATE{{% md %}}A real estate job, such as Buyer's Agent.{{% /md %}}</dd><dt>RESTAURANT_AND_HOSPITALITY</dt>
+    <dd>RESTAURANT_AND_HOSPITALITY{{% md %}}A restaurant and hospitality job, such as Restaurant Server.{{% /md %}}</dd><dt>SALES_AND_RETAIL</dt>
+    <dd>SALES_AND_RETAIL{{% md %}}A sales and/or retail job, such Sales Associate.{{% /md %}}</dd><dt>SCIENCE_AND_ENGINEERING</dt>
+    <dd>SCIENCE_AND_ENGINEERING{{% md %}}A science and engineering job, such as Lab Technician.{{% /md %}}</dd><dt>SOCIAL_SERVICES_AND_NON_PROFIT</dt>
+    <dd>SOCIAL_SERVICES_AND_NON_PROFIT{{% md %}}A social services or non-profit job, such as Case Worker.{{% /md %}}</dd><dt>SPORTS_FITNESS_AND_RECREATION</dt>
+    <dd>SPORTS_FITNESS_AND_RECREATION{{% md %}}A sports, fitness, or recreation job, such as Personal Trainer.{{% /md %}}</dd><dt>TRANSPORTATION_AND_LOGISTICS</dt>
+    <dd>TRANSPORTATION_AND_LOGISTICS{{% md %}}A transportation or logistics job, such as Truck Driver.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobderivedinforesponse">Job<wbr>Derived<wbr>Info<wbr>Response</h4>
@@ -2426,6 +2726,210 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#locationresponse">Location<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Structured locations of the job, resolved from Job.addresses. locations are exactly matched to Job.addresses in the same order.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobemploymenttypesitem">Job<wbr>Employment<wbr>Types<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Employment<wbr>Type<wbr>Unspecified</dt>
+    <dd>EMPLOYMENT_TYPE_UNSPECIFIED{{% md %}}The default value if the employment type is not specified.{{% /md %}}</dd><dt>Full<wbr>Time</dt>
+    <dd>FULL_TIME{{% md %}}The job requires working a number of hours that constitute full time employment, typically 40 or more hours per week.{{% /md %}}</dd><dt>Part<wbr>Time</dt>
+    <dd>PART_TIME{{% md %}}The job entails working fewer hours than a full time job, typically less than 40 hours a week.{{% /md %}}</dd><dt>Contractor</dt>
+    <dd>CONTRACTOR{{% md %}}The job is offered as a contracted, as opposed to a salaried employee, position.{{% /md %}}</dd><dt>Contract<wbr>To<wbr>Hire</dt>
+    <dd>CONTRACT_TO_HIRE{{% md %}}The job is offered as a contracted position with the understanding that it's converted into a full-time position at the end of the contract. Jobs of this type are also returned by a search for EmploymentType.CONTRACTOR jobs.{{% /md %}}</dd><dt>Temporary</dt>
+    <dd>TEMPORARY{{% md %}}The job is offered as a temporary employment opportunity, usually a short-term engagement.{{% /md %}}</dd><dt>Intern</dt>
+    <dd>INTERN{{% md %}}The job is a fixed-term opportunity for students or entry-level job seekers to obtain on-the-job training, typically offered as a summer position.{{% /md %}}</dd><dt>Volunteer</dt>
+    <dd>VOLUNTEER{{% md %}}The is an opportunity for an individual to volunteer, where there's no expectation of compensation for the provided services.{{% /md %}}</dd><dt>Per<wbr>Diem</dt>
+    <dd>PER_DIEM{{% md %}}The job requires an employee to work on an as-needed basis with a flexible schedule.{{% /md %}}</dd><dt>Fly<wbr>In<wbr>Fly<wbr>Out</dt>
+    <dd>FLY_IN_FLY_OUT{{% md %}}The job involves employing people in remote areas and flying them temporarily to the work site instead of relocating employees and their families permanently.{{% /md %}}</dd><dt>Other<wbr>Employment<wbr>Type</dt>
+    <dd>OTHER_EMPLOYMENT_TYPE{{% md %}}The job does not fit any of the other listed types.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Job<wbr>Employment<wbr>Types<wbr>Item<wbr>Employment<wbr>Type<wbr>Unspecified</dt>
+    <dd>EMPLOYMENT_TYPE_UNSPECIFIED{{% md %}}The default value if the employment type is not specified.{{% /md %}}</dd><dt>Job<wbr>Employment<wbr>Types<wbr>Item<wbr>Full<wbr>Time</dt>
+    <dd>FULL_TIME{{% md %}}The job requires working a number of hours that constitute full time employment, typically 40 or more hours per week.{{% /md %}}</dd><dt>Job<wbr>Employment<wbr>Types<wbr>Item<wbr>Part<wbr>Time</dt>
+    <dd>PART_TIME{{% md %}}The job entails working fewer hours than a full time job, typically less than 40 hours a week.{{% /md %}}</dd><dt>Job<wbr>Employment<wbr>Types<wbr>Item<wbr>Contractor</dt>
+    <dd>CONTRACTOR{{% md %}}The job is offered as a contracted, as opposed to a salaried employee, position.{{% /md %}}</dd><dt>Job<wbr>Employment<wbr>Types<wbr>Item<wbr>Contract<wbr>To<wbr>Hire</dt>
+    <dd>CONTRACT_TO_HIRE{{% md %}}The job is offered as a contracted position with the understanding that it's converted into a full-time position at the end of the contract. Jobs of this type are also returned by a search for EmploymentType.CONTRACTOR jobs.{{% /md %}}</dd><dt>Job<wbr>Employment<wbr>Types<wbr>Item<wbr>Temporary</dt>
+    <dd>TEMPORARY{{% md %}}The job is offered as a temporary employment opportunity, usually a short-term engagement.{{% /md %}}</dd><dt>Job<wbr>Employment<wbr>Types<wbr>Item<wbr>Intern</dt>
+    <dd>INTERN{{% md %}}The job is a fixed-term opportunity for students or entry-level job seekers to obtain on-the-job training, typically offered as a summer position.{{% /md %}}</dd><dt>Job<wbr>Employment<wbr>Types<wbr>Item<wbr>Volunteer</dt>
+    <dd>VOLUNTEER{{% md %}}The is an opportunity for an individual to volunteer, where there's no expectation of compensation for the provided services.{{% /md %}}</dd><dt>Job<wbr>Employment<wbr>Types<wbr>Item<wbr>Per<wbr>Diem</dt>
+    <dd>PER_DIEM{{% md %}}The job requires an employee to work on an as-needed basis with a flexible schedule.{{% /md %}}</dd><dt>Job<wbr>Employment<wbr>Types<wbr>Item<wbr>Fly<wbr>In<wbr>Fly<wbr>Out</dt>
+    <dd>FLY_IN_FLY_OUT{{% md %}}The job involves employing people in remote areas and flying them temporarily to the work site instead of relocating employees and their families permanently.{{% /md %}}</dd><dt>Job<wbr>Employment<wbr>Types<wbr>Item<wbr>Other<wbr>Employment<wbr>Type</dt>
+    <dd>OTHER_EMPLOYMENT_TYPE{{% md %}}The job does not fit any of the other listed types.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Employment<wbr>Type<wbr>Unspecified</dt>
+    <dd>EMPLOYMENT_TYPE_UNSPECIFIED{{% md %}}The default value if the employment type is not specified.{{% /md %}}</dd><dt>Full<wbr>Time</dt>
+    <dd>FULL_TIME{{% md %}}The job requires working a number of hours that constitute full time employment, typically 40 or more hours per week.{{% /md %}}</dd><dt>Part<wbr>Time</dt>
+    <dd>PART_TIME{{% md %}}The job entails working fewer hours than a full time job, typically less than 40 hours a week.{{% /md %}}</dd><dt>Contractor</dt>
+    <dd>CONTRACTOR{{% md %}}The job is offered as a contracted, as opposed to a salaried employee, position.{{% /md %}}</dd><dt>Contract<wbr>To<wbr>Hire</dt>
+    <dd>CONTRACT_TO_HIRE{{% md %}}The job is offered as a contracted position with the understanding that it's converted into a full-time position at the end of the contract. Jobs of this type are also returned by a search for EmploymentType.CONTRACTOR jobs.{{% /md %}}</dd><dt>Temporary</dt>
+    <dd>TEMPORARY{{% md %}}The job is offered as a temporary employment opportunity, usually a short-term engagement.{{% /md %}}</dd><dt>Intern</dt>
+    <dd>INTERN{{% md %}}The job is a fixed-term opportunity for students or entry-level job seekers to obtain on-the-job training, typically offered as a summer position.{{% /md %}}</dd><dt>Volunteer</dt>
+    <dd>VOLUNTEER{{% md %}}The is an opportunity for an individual to volunteer, where there's no expectation of compensation for the provided services.{{% /md %}}</dd><dt>Per<wbr>Diem</dt>
+    <dd>PER_DIEM{{% md %}}The job requires an employee to work on an as-needed basis with a flexible schedule.{{% /md %}}</dd><dt>Fly<wbr>In<wbr>Fly<wbr>Out</dt>
+    <dd>FLY_IN_FLY_OUT{{% md %}}The job involves employing people in remote areas and flying them temporarily to the work site instead of relocating employees and their families permanently.{{% /md %}}</dd><dt>Other<wbr>Employment<wbr>Type</dt>
+    <dd>OTHER_EMPLOYMENT_TYPE{{% md %}}The job does not fit any of the other listed types.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EMPLOYMENT_TYPE_UNSPECIFIED</dt>
+    <dd>EMPLOYMENT_TYPE_UNSPECIFIED{{% md %}}The default value if the employment type is not specified.{{% /md %}}</dd><dt>FULL_TIME</dt>
+    <dd>FULL_TIME{{% md %}}The job requires working a number of hours that constitute full time employment, typically 40 or more hours per week.{{% /md %}}</dd><dt>PART_TIME</dt>
+    <dd>PART_TIME{{% md %}}The job entails working fewer hours than a full time job, typically less than 40 hours a week.{{% /md %}}</dd><dt>CONTRACTOR</dt>
+    <dd>CONTRACTOR{{% md %}}The job is offered as a contracted, as opposed to a salaried employee, position.{{% /md %}}</dd><dt>CONTRACT_TO_HIRE</dt>
+    <dd>CONTRACT_TO_HIRE{{% md %}}The job is offered as a contracted position with the understanding that it's converted into a full-time position at the end of the contract. Jobs of this type are also returned by a search for EmploymentType.CONTRACTOR jobs.{{% /md %}}</dd><dt>TEMPORARY</dt>
+    <dd>TEMPORARY{{% md %}}The job is offered as a temporary employment opportunity, usually a short-term engagement.{{% /md %}}</dd><dt>INTERN</dt>
+    <dd>INTERN{{% md %}}The job is a fixed-term opportunity for students or entry-level job seekers to obtain on-the-job training, typically offered as a summer position.{{% /md %}}</dd><dt>VOLUNTEER</dt>
+    <dd>VOLUNTEER{{% md %}}The is an opportunity for an individual to volunteer, where there's no expectation of compensation for the provided services.{{% /md %}}</dd><dt>PER_DIEM</dt>
+    <dd>PER_DIEM{{% md %}}The job requires an employee to work on an as-needed basis with a flexible schedule.{{% /md %}}</dd><dt>FLY_IN_FLY_OUT</dt>
+    <dd>FLY_IN_FLY_OUT{{% md %}}The job involves employing people in remote areas and flying them temporarily to the work site instead of relocating employees and their families permanently.{{% /md %}}</dd><dt>OTHER_EMPLOYMENT_TYPE</dt>
+    <dd>OTHER_EMPLOYMENT_TYPE{{% md %}}The job does not fit any of the other listed types.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobjobbenefitsitem">Job<wbr>Job<wbr>Benefits<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Job<wbr>Benefit<wbr>Unspecified</dt>
+    <dd>JOB_BENEFIT_UNSPECIFIED{{% md %}}Default value if the type is not specified.{{% /md %}}</dd><dt>Child<wbr>Care</dt>
+    <dd>CHILD_CARE{{% md %}}The job includes access to programs that support child care, such as daycare.{{% /md %}}</dd><dt>Dental</dt>
+    <dd>DENTAL{{% md %}}The job includes dental services covered by a dental insurance plan.{{% /md %}}</dd><dt>Domestic<wbr>Partner</dt>
+    <dd>DOMESTIC_PARTNER{{% md %}}The job offers specific benefits to domestic partners.{{% /md %}}</dd><dt>Flexible<wbr>Hours</dt>
+    <dd>FLEXIBLE_HOURS{{% md %}}The job allows for a flexible work schedule.{{% /md %}}</dd><dt>Medical</dt>
+    <dd>MEDICAL{{% md %}}The job includes health services covered by a medical insurance plan.{{% /md %}}</dd><dt>Life<wbr>Insurance</dt>
+    <dd>LIFE_INSURANCE{{% md %}}The job includes a life insurance plan provided by the employer or available for purchase by the employee.{{% /md %}}</dd><dt>Parental<wbr>Leave</dt>
+    <dd>PARENTAL_LEAVE{{% md %}}The job allows for a leave of absence to a parent to care for a newborn child.{{% /md %}}</dd><dt>Retirement<wbr>Plan</dt>
+    <dd>RETIREMENT_PLAN{{% md %}}The job includes a workplace retirement plan provided by the employer or available for purchase by the employee.{{% /md %}}</dd><dt>Sick<wbr>Days</dt>
+    <dd>SICK_DAYS{{% md %}}The job allows for paid time off due to illness.{{% /md %}}</dd><dt>Vacation</dt>
+    <dd>VACATION{{% md %}}The job includes paid time off for vacation.{{% /md %}}</dd><dt>Vision</dt>
+    <dd>VISION{{% md %}}The job includes vision services covered by a vision insurance plan.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Job<wbr>Job<wbr>Benefits<wbr>Item<wbr>Job<wbr>Benefit<wbr>Unspecified</dt>
+    <dd>JOB_BENEFIT_UNSPECIFIED{{% md %}}Default value if the type is not specified.{{% /md %}}</dd><dt>Job<wbr>Job<wbr>Benefits<wbr>Item<wbr>Child<wbr>Care</dt>
+    <dd>CHILD_CARE{{% md %}}The job includes access to programs that support child care, such as daycare.{{% /md %}}</dd><dt>Job<wbr>Job<wbr>Benefits<wbr>Item<wbr>Dental</dt>
+    <dd>DENTAL{{% md %}}The job includes dental services covered by a dental insurance plan.{{% /md %}}</dd><dt>Job<wbr>Job<wbr>Benefits<wbr>Item<wbr>Domestic<wbr>Partner</dt>
+    <dd>DOMESTIC_PARTNER{{% md %}}The job offers specific benefits to domestic partners.{{% /md %}}</dd><dt>Job<wbr>Job<wbr>Benefits<wbr>Item<wbr>Flexible<wbr>Hours</dt>
+    <dd>FLEXIBLE_HOURS{{% md %}}The job allows for a flexible work schedule.{{% /md %}}</dd><dt>Job<wbr>Job<wbr>Benefits<wbr>Item<wbr>Medical</dt>
+    <dd>MEDICAL{{% md %}}The job includes health services covered by a medical insurance plan.{{% /md %}}</dd><dt>Job<wbr>Job<wbr>Benefits<wbr>Item<wbr>Life<wbr>Insurance</dt>
+    <dd>LIFE_INSURANCE{{% md %}}The job includes a life insurance plan provided by the employer or available for purchase by the employee.{{% /md %}}</dd><dt>Job<wbr>Job<wbr>Benefits<wbr>Item<wbr>Parental<wbr>Leave</dt>
+    <dd>PARENTAL_LEAVE{{% md %}}The job allows for a leave of absence to a parent to care for a newborn child.{{% /md %}}</dd><dt>Job<wbr>Job<wbr>Benefits<wbr>Item<wbr>Retirement<wbr>Plan</dt>
+    <dd>RETIREMENT_PLAN{{% md %}}The job includes a workplace retirement plan provided by the employer or available for purchase by the employee.{{% /md %}}</dd><dt>Job<wbr>Job<wbr>Benefits<wbr>Item<wbr>Sick<wbr>Days</dt>
+    <dd>SICK_DAYS{{% md %}}The job allows for paid time off due to illness.{{% /md %}}</dd><dt>Job<wbr>Job<wbr>Benefits<wbr>Item<wbr>Vacation</dt>
+    <dd>VACATION{{% md %}}The job includes paid time off for vacation.{{% /md %}}</dd><dt>Job<wbr>Job<wbr>Benefits<wbr>Item<wbr>Vision</dt>
+    <dd>VISION{{% md %}}The job includes vision services covered by a vision insurance plan.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Job<wbr>Benefit<wbr>Unspecified</dt>
+    <dd>JOB_BENEFIT_UNSPECIFIED{{% md %}}Default value if the type is not specified.{{% /md %}}</dd><dt>Child<wbr>Care</dt>
+    <dd>CHILD_CARE{{% md %}}The job includes access to programs that support child care, such as daycare.{{% /md %}}</dd><dt>Dental</dt>
+    <dd>DENTAL{{% md %}}The job includes dental services covered by a dental insurance plan.{{% /md %}}</dd><dt>Domestic<wbr>Partner</dt>
+    <dd>DOMESTIC_PARTNER{{% md %}}The job offers specific benefits to domestic partners.{{% /md %}}</dd><dt>Flexible<wbr>Hours</dt>
+    <dd>FLEXIBLE_HOURS{{% md %}}The job allows for a flexible work schedule.{{% /md %}}</dd><dt>Medical</dt>
+    <dd>MEDICAL{{% md %}}The job includes health services covered by a medical insurance plan.{{% /md %}}</dd><dt>Life<wbr>Insurance</dt>
+    <dd>LIFE_INSURANCE{{% md %}}The job includes a life insurance plan provided by the employer or available for purchase by the employee.{{% /md %}}</dd><dt>Parental<wbr>Leave</dt>
+    <dd>PARENTAL_LEAVE{{% md %}}The job allows for a leave of absence to a parent to care for a newborn child.{{% /md %}}</dd><dt>Retirement<wbr>Plan</dt>
+    <dd>RETIREMENT_PLAN{{% md %}}The job includes a workplace retirement plan provided by the employer or available for purchase by the employee.{{% /md %}}</dd><dt>Sick<wbr>Days</dt>
+    <dd>SICK_DAYS{{% md %}}The job allows for paid time off due to illness.{{% /md %}}</dd><dt>Vacation</dt>
+    <dd>VACATION{{% md %}}The job includes paid time off for vacation.{{% /md %}}</dd><dt>Vision</dt>
+    <dd>VISION{{% md %}}The job includes vision services covered by a vision insurance plan.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>JOB_BENEFIT_UNSPECIFIED</dt>
+    <dd>JOB_BENEFIT_UNSPECIFIED{{% md %}}Default value if the type is not specified.{{% /md %}}</dd><dt>CHILD_CARE</dt>
+    <dd>CHILD_CARE{{% md %}}The job includes access to programs that support child care, such as daycare.{{% /md %}}</dd><dt>DENTAL</dt>
+    <dd>DENTAL{{% md %}}The job includes dental services covered by a dental insurance plan.{{% /md %}}</dd><dt>DOMESTIC_PARTNER</dt>
+    <dd>DOMESTIC_PARTNER{{% md %}}The job offers specific benefits to domestic partners.{{% /md %}}</dd><dt>FLEXIBLE_HOURS</dt>
+    <dd>FLEXIBLE_HOURS{{% md %}}The job allows for a flexible work schedule.{{% /md %}}</dd><dt>MEDICAL</dt>
+    <dd>MEDICAL{{% md %}}The job includes health services covered by a medical insurance plan.{{% /md %}}</dd><dt>LIFE_INSURANCE</dt>
+    <dd>LIFE_INSURANCE{{% md %}}The job includes a life insurance plan provided by the employer or available for purchase by the employee.{{% /md %}}</dd><dt>PARENTAL_LEAVE</dt>
+    <dd>PARENTAL_LEAVE{{% md %}}The job allows for a leave of absence to a parent to care for a newborn child.{{% /md %}}</dd><dt>RETIREMENT_PLAN</dt>
+    <dd>RETIREMENT_PLAN{{% md %}}The job includes a workplace retirement plan provided by the employer or available for purchase by the employee.{{% /md %}}</dd><dt>SICK_DAYS</dt>
+    <dd>SICK_DAYS{{% md %}}The job allows for paid time off due to illness.{{% /md %}}</dd><dt>VACATION</dt>
+    <dd>VACATION{{% md %}}The job includes paid time off for vacation.{{% /md %}}</dd><dt>VISION</dt>
+    <dd>VISION{{% md %}}The job includes vision services covered by a vision insurance plan.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobjoblevel">Job<wbr>Job<wbr>Level</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Job<wbr>Level<wbr>Unspecified</dt>
+    <dd>JOB_LEVEL_UNSPECIFIED{{% md %}}The default value if the level is not specified.{{% /md %}}</dd><dt>Entry<wbr>Level</dt>
+    <dd>ENTRY_LEVEL{{% md %}}Entry-level individual contributors, typically with less than 2 years of experience in a similar role. Includes interns.{{% /md %}}</dd><dt>Experienced</dt>
+    <dd>EXPERIENCED{{% md %}}Experienced individual contributors, typically with 2+ years of experience in a similar role.{{% /md %}}</dd><dt>Manager</dt>
+    <dd>MANAGER{{% md %}}Entry- to mid-level managers responsible for managing a team of people.{{% /md %}}</dd><dt>Director</dt>
+    <dd>DIRECTOR{{% md %}}Senior-level managers responsible for managing teams of managers.{{% /md %}}</dd><dt>Executive</dt>
+    <dd>EXECUTIVE{{% md %}}Executive-level managers and above, including C-level positions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Job<wbr>Job<wbr>Level<wbr>Job<wbr>Level<wbr>Unspecified</dt>
+    <dd>JOB_LEVEL_UNSPECIFIED{{% md %}}The default value if the level is not specified.{{% /md %}}</dd><dt>Job<wbr>Job<wbr>Level<wbr>Entry<wbr>Level</dt>
+    <dd>ENTRY_LEVEL{{% md %}}Entry-level individual contributors, typically with less than 2 years of experience in a similar role. Includes interns.{{% /md %}}</dd><dt>Job<wbr>Job<wbr>Level<wbr>Experienced</dt>
+    <dd>EXPERIENCED{{% md %}}Experienced individual contributors, typically with 2+ years of experience in a similar role.{{% /md %}}</dd><dt>Job<wbr>Job<wbr>Level<wbr>Manager</dt>
+    <dd>MANAGER{{% md %}}Entry- to mid-level managers responsible for managing a team of people.{{% /md %}}</dd><dt>Job<wbr>Job<wbr>Level<wbr>Director</dt>
+    <dd>DIRECTOR{{% md %}}Senior-level managers responsible for managing teams of managers.{{% /md %}}</dd><dt>Job<wbr>Job<wbr>Level<wbr>Executive</dt>
+    <dd>EXECUTIVE{{% md %}}Executive-level managers and above, including C-level positions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Job<wbr>Level<wbr>Unspecified</dt>
+    <dd>JOB_LEVEL_UNSPECIFIED{{% md %}}The default value if the level is not specified.{{% /md %}}</dd><dt>Entry<wbr>Level</dt>
+    <dd>ENTRY_LEVEL{{% md %}}Entry-level individual contributors, typically with less than 2 years of experience in a similar role. Includes interns.{{% /md %}}</dd><dt>Experienced</dt>
+    <dd>EXPERIENCED{{% md %}}Experienced individual contributors, typically with 2+ years of experience in a similar role.{{% /md %}}</dd><dt>Manager</dt>
+    <dd>MANAGER{{% md %}}Entry- to mid-level managers responsible for managing a team of people.{{% /md %}}</dd><dt>Director</dt>
+    <dd>DIRECTOR{{% md %}}Senior-level managers responsible for managing teams of managers.{{% /md %}}</dd><dt>Executive</dt>
+    <dd>EXECUTIVE{{% md %}}Executive-level managers and above, including C-level positions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>JOB_LEVEL_UNSPECIFIED</dt>
+    <dd>JOB_LEVEL_UNSPECIFIED{{% md %}}The default value if the level is not specified.{{% /md %}}</dd><dt>ENTRY_LEVEL</dt>
+    <dd>ENTRY_LEVEL{{% md %}}Entry-level individual contributors, typically with less than 2 years of experience in a similar role. Includes interns.{{% /md %}}</dd><dt>EXPERIENCED</dt>
+    <dd>EXPERIENCED{{% md %}}Experienced individual contributors, typically with 2+ years of experience in a similar role.{{% /md %}}</dd><dt>MANAGER</dt>
+    <dd>MANAGER{{% md %}}Entry- to mid-level managers responsible for managing a team of people.{{% /md %}}</dd><dt>DIRECTOR</dt>
+    <dd>DIRECTOR{{% md %}}Senior-level managers responsible for managing teams of managers.{{% /md %}}</dd><dt>EXECUTIVE</dt>
+    <dd>EXECUTIVE{{% md %}}Executive-level managers and above, including C-level positions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobpostingregion">Job<wbr>Posting<wbr>Region</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Posting<wbr>Region<wbr>Unspecified</dt>
+    <dd>POSTING_REGION_UNSPECIFIED{{% md %}}If the region is unspecified, the job is only returned if it matches the LocationFilter.{{% /md %}}</dd><dt>Administrative<wbr>Area</dt>
+    <dd>ADMINISTRATIVE_AREA{{% md %}}In addition to exact location matching, job posting is returned when the LocationFilter in the search query is in the same administrative area as the returned job posting. For example, if a `ADMINISTRATIVE_AREA` job is posted in "CA, USA", it's returned if LocationFilter has "Mountain View". Administrative area refers to top-level administrative subdivision of this country. For example, US state, IT region, UK constituent nation and JP prefecture.{{% /md %}}</dd><dt>Nation</dt>
+    <dd>NATION{{% md %}}In addition to exact location matching, job is returned when LocationFilter in search query is in the same country as this job. For example, if a `NATION_WIDE` job is posted in "USA", it's returned if LocationFilter has 'Mountain View'.{{% /md %}}</dd><dt>Telecommute</dt>
+    <dd>TELECOMMUTE{{% md %}}Job allows employees to work remotely (telecommute). If locations are provided with this value, the job is considered as having a location, but telecommuting is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Job<wbr>Posting<wbr>Region<wbr>Posting<wbr>Region<wbr>Unspecified</dt>
+    <dd>POSTING_REGION_UNSPECIFIED{{% md %}}If the region is unspecified, the job is only returned if it matches the LocationFilter.{{% /md %}}</dd><dt>Job<wbr>Posting<wbr>Region<wbr>Administrative<wbr>Area</dt>
+    <dd>ADMINISTRATIVE_AREA{{% md %}}In addition to exact location matching, job posting is returned when the LocationFilter in the search query is in the same administrative area as the returned job posting. For example, if a `ADMINISTRATIVE_AREA` job is posted in "CA, USA", it's returned if LocationFilter has "Mountain View". Administrative area refers to top-level administrative subdivision of this country. For example, US state, IT region, UK constituent nation and JP prefecture.{{% /md %}}</dd><dt>Job<wbr>Posting<wbr>Region<wbr>Nation</dt>
+    <dd>NATION{{% md %}}In addition to exact location matching, job is returned when LocationFilter in search query is in the same country as this job. For example, if a `NATION_WIDE` job is posted in "USA", it's returned if LocationFilter has 'Mountain View'.{{% /md %}}</dd><dt>Job<wbr>Posting<wbr>Region<wbr>Telecommute</dt>
+    <dd>TELECOMMUTE{{% md %}}Job allows employees to work remotely (telecommute). If locations are provided with this value, the job is considered as having a location, but telecommuting is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Posting<wbr>Region<wbr>Unspecified</dt>
+    <dd>POSTING_REGION_UNSPECIFIED{{% md %}}If the region is unspecified, the job is only returned if it matches the LocationFilter.{{% /md %}}</dd><dt>Administrative<wbr>Area</dt>
+    <dd>ADMINISTRATIVE_AREA{{% md %}}In addition to exact location matching, job posting is returned when the LocationFilter in the search query is in the same administrative area as the returned job posting. For example, if a `ADMINISTRATIVE_AREA` job is posted in "CA, USA", it's returned if LocationFilter has "Mountain View". Administrative area refers to top-level administrative subdivision of this country. For example, US state, IT region, UK constituent nation and JP prefecture.{{% /md %}}</dd><dt>Nation</dt>
+    <dd>NATION{{% md %}}In addition to exact location matching, job is returned when LocationFilter in search query is in the same country as this job. For example, if a `NATION_WIDE` job is posted in "USA", it's returned if LocationFilter has 'Mountain View'.{{% /md %}}</dd><dt>Telecommute</dt>
+    <dd>TELECOMMUTE{{% md %}}Job allows employees to work remotely (telecommute). If locations are provided with this value, the job is considered as having a location, but telecommuting is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>POSTING_REGION_UNSPECIFIED</dt>
+    <dd>POSTING_REGION_UNSPECIFIED{{% md %}}If the region is unspecified, the job is only returned if it matches the LocationFilter.{{% /md %}}</dd><dt>ADMINISTRATIVE_AREA</dt>
+    <dd>ADMINISTRATIVE_AREA{{% md %}}In addition to exact location matching, job posting is returned when the LocationFilter in the search query is in the same administrative area as the returned job posting. For example, if a `ADMINISTRATIVE_AREA` job is posted in "CA, USA", it's returned if LocationFilter has "Mountain View". Administrative area refers to top-level administrative subdivision of this country. For example, US state, IT region, UK constituent nation and JP prefecture.{{% /md %}}</dd><dt>NATION</dt>
+    <dd>NATION{{% md %}}In addition to exact location matching, job is returned when LocationFilter in search query is in the same country as this job. For example, if a `NATION_WIDE` job is posted in "USA", it's returned if LocationFilter has 'Mountain View'.{{% /md %}}</dd><dt>TELECOMMUTE</dt>
+    <dd>TELECOMMUTE{{% md %}}Job allows employees to work remotely (telecommute). If locations are provided with this value, the job is considered as having a location, but telecommuting is allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="latlng">Lat<wbr>Lng</h4>
@@ -2609,7 +3113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationtype_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#locationlocationtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Jobs.<wbr>V3.<wbr>Location<wbr>Location<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of a location, which corresponds to the address lines field of PostalAddress. For example, "Downtown, Atlanta, GA, USA" has a type of LocationType#NEIGHBORHOOD, and "Kansas City, KS, USA" has a type of LocationType#LOCALITY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2645,7 +3149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationtype_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#locationlocationtype">Location<wbr>Location<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of a location, which corresponds to the address lines field of PostalAddress. For example, "Downtown, Atlanta, GA, USA" has a type of LocationType#NEIGHBORHOOD, and "Kansas City, KS, USA" has a type of LocationType#LOCALITY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2681,7 +3185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationtype_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#locationlocationtype">Location<wbr>Location<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of a location, which corresponds to the address lines field of PostalAddress. For example, "Downtown, Atlanta, GA, USA" has a type of LocationType#NEIGHBORHOOD, and "Kansas City, KS, USA" has a type of LocationType#LOCALITY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2717,7 +3221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_type_python" style="color: inherit; text-decoration: inherit;">location_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#locationlocationtype">Location<wbr>Location<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of a location, which corresponds to the address lines field of PostalAddress. For example, "Downtown, Atlanta, GA, USA" has a type of LocationType#NEIGHBORHOOD, and "Kansas City, KS, USA" has a type of LocationType#LOCALITY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2736,6 +3240,68 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Radius in miles of the job location. This value is derived from the location bounding box in which a circle with the specified radius centered from LatLng covers the area associated with the job location. For example, currently, "Mountain View, CA, USA" has a radius of 6.17 miles.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="locationlocationtype">Location<wbr>Location<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Location<wbr>Type<wbr>Unspecified</dt>
+    <dd>LOCATION_TYPE_UNSPECIFIED{{% md %}}Default value if the type is not specified.{{% /md %}}</dd><dt>Country</dt>
+    <dd>COUNTRY{{% md %}}A country level location.{{% /md %}}</dd><dt>Administrative<wbr>Area</dt>
+    <dd>ADMINISTRATIVE_AREA{{% md %}}A state or equivalent level location.{{% /md %}}</dd><dt>Sub<wbr>Administrative<wbr>Area</dt>
+    <dd>SUB_ADMINISTRATIVE_AREA{{% md %}}A county or equivalent level location.{{% /md %}}</dd><dt>Locality</dt>
+    <dd>LOCALITY{{% md %}}A city or equivalent level location.{{% /md %}}</dd><dt>Postal<wbr>Code</dt>
+    <dd>POSTAL_CODE{{% md %}}A postal code level location.{{% /md %}}</dd><dt>Sub<wbr>Locality</dt>
+    <dd>SUB_LOCALITY{{% md %}}A sublocality is a subdivision of a locality, for example a city borough, ward, or arrondissement. Sublocalities are usually recognized by a local political authority. For example, Manhattan and Brooklyn are recognized as boroughs by the City of New York, and are therefore modeled as sublocalities.{{% /md %}}</dd><dt>Sub<wbr>Locality1</dt>
+    <dd>SUB_LOCALITY_1{{% md %}}A district or equivalent level location.{{% /md %}}</dd><dt>Sub<wbr>Locality2</dt>
+    <dd>SUB_LOCALITY_2{{% md %}}A smaller district or equivalent level display.{{% /md %}}</dd><dt>Neighborhood</dt>
+    <dd>NEIGHBORHOOD{{% md %}}A neighborhood level location.{{% /md %}}</dd><dt>Street<wbr>Address</dt>
+    <dd>STREET_ADDRESS{{% md %}}A street address level location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Location<wbr>Location<wbr>Type<wbr>Location<wbr>Type<wbr>Unspecified</dt>
+    <dd>LOCATION_TYPE_UNSPECIFIED{{% md %}}Default value if the type is not specified.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Country</dt>
+    <dd>COUNTRY{{% md %}}A country level location.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Administrative<wbr>Area</dt>
+    <dd>ADMINISTRATIVE_AREA{{% md %}}A state or equivalent level location.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Sub<wbr>Administrative<wbr>Area</dt>
+    <dd>SUB_ADMINISTRATIVE_AREA{{% md %}}A county or equivalent level location.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Locality</dt>
+    <dd>LOCALITY{{% md %}}A city or equivalent level location.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Postal<wbr>Code</dt>
+    <dd>POSTAL_CODE{{% md %}}A postal code level location.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Sub<wbr>Locality</dt>
+    <dd>SUB_LOCALITY{{% md %}}A sublocality is a subdivision of a locality, for example a city borough, ward, or arrondissement. Sublocalities are usually recognized by a local political authority. For example, Manhattan and Brooklyn are recognized as boroughs by the City of New York, and are therefore modeled as sublocalities.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Sub<wbr>Locality1</dt>
+    <dd>SUB_LOCALITY_1{{% md %}}A district or equivalent level location.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Sub<wbr>Locality2</dt>
+    <dd>SUB_LOCALITY_2{{% md %}}A smaller district or equivalent level display.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Neighborhood</dt>
+    <dd>NEIGHBORHOOD{{% md %}}A neighborhood level location.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Street<wbr>Address</dt>
+    <dd>STREET_ADDRESS{{% md %}}A street address level location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Location<wbr>Type<wbr>Unspecified</dt>
+    <dd>LOCATION_TYPE_UNSPECIFIED{{% md %}}Default value if the type is not specified.{{% /md %}}</dd><dt>Country</dt>
+    <dd>COUNTRY{{% md %}}A country level location.{{% /md %}}</dd><dt>Administrative<wbr>Area</dt>
+    <dd>ADMINISTRATIVE_AREA{{% md %}}A state or equivalent level location.{{% /md %}}</dd><dt>Sub<wbr>Administrative<wbr>Area</dt>
+    <dd>SUB_ADMINISTRATIVE_AREA{{% md %}}A county or equivalent level location.{{% /md %}}</dd><dt>Locality</dt>
+    <dd>LOCALITY{{% md %}}A city or equivalent level location.{{% /md %}}</dd><dt>Postal<wbr>Code</dt>
+    <dd>POSTAL_CODE{{% md %}}A postal code level location.{{% /md %}}</dd><dt>Sub<wbr>Locality</dt>
+    <dd>SUB_LOCALITY{{% md %}}A sublocality is a subdivision of a locality, for example a city borough, ward, or arrondissement. Sublocalities are usually recognized by a local political authority. For example, Manhattan and Brooklyn are recognized as boroughs by the City of New York, and are therefore modeled as sublocalities.{{% /md %}}</dd><dt>Sub<wbr>Locality1</dt>
+    <dd>SUB_LOCALITY_1{{% md %}}A district or equivalent level location.{{% /md %}}</dd><dt>Sub<wbr>Locality2</dt>
+    <dd>SUB_LOCALITY_2{{% md %}}A smaller district or equivalent level display.{{% /md %}}</dd><dt>Neighborhood</dt>
+    <dd>NEIGHBORHOOD{{% md %}}A neighborhood level location.{{% /md %}}</dd><dt>Street<wbr>Address</dt>
+    <dd>STREET_ADDRESS{{% md %}}A street address level location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LOCATION_TYPE_UNSPECIFIED</dt>
+    <dd>LOCATION_TYPE_UNSPECIFIED{{% md %}}Default value if the type is not specified.{{% /md %}}</dd><dt>COUNTRY</dt>
+    <dd>COUNTRY{{% md %}}A country level location.{{% /md %}}</dd><dt>ADMINISTRATIVE_AREA</dt>
+    <dd>ADMINISTRATIVE_AREA{{% md %}}A state or equivalent level location.{{% /md %}}</dd><dt>SUB_ADMINISTRATIVE_AREA</dt>
+    <dd>SUB_ADMINISTRATIVE_AREA{{% md %}}A county or equivalent level location.{{% /md %}}</dd><dt>LOCALITY</dt>
+    <dd>LOCALITY{{% md %}}A city or equivalent level location.{{% /md %}}</dd><dt>POSTAL_CODE</dt>
+    <dd>POSTAL_CODE{{% md %}}A postal code level location.{{% /md %}}</dd><dt>SUB_LOCALITY</dt>
+    <dd>SUB_LOCALITY{{% md %}}A sublocality is a subdivision of a locality, for example a city borough, ward, or arrondissement. Sublocalities are usually recognized by a local political authority. For example, Manhattan and Brooklyn are recognized as boroughs by the City of New York, and are therefore modeled as sublocalities.{{% /md %}}</dd><dt>SUB_LOCALITY1</dt>
+    <dd>SUB_LOCALITY_1{{% md %}}A district or equivalent level location.{{% /md %}}</dd><dt>SUB_LOCALITY2</dt>
+    <dd>SUB_LOCALITY_2{{% md %}}A smaller district or equivalent level display.{{% /md %}}</dd><dt>NEIGHBORHOOD</dt>
+    <dd>NEIGHBORHOOD{{% md %}}A neighborhood level location.{{% /md %}}</dd><dt>STREET_ADDRESS</dt>
+    <dd>STREET_ADDRESS{{% md %}}A street address level location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="locationresponse">Location<wbr>Response</h4>
@@ -3869,7 +4435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#htmlsanitization_csharp" style="color: inherit; text-decoration: inherit;">Html<wbr>Sanitization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#processingoptionshtmlsanitization">Pulumi.<wbr>Google<wbr>Native.<wbr>Jobs.<wbr>V3.<wbr>Processing<wbr>Options<wbr>Html<wbr>Sanitization</a></span>
     </dt>
     <dd>{{% md %}}Optional. Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation is not disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3889,7 +4455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#htmlsanitization_go" style="color: inherit; text-decoration: inherit;">Html<wbr>Sanitization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#processingoptionshtmlsanitization">Processing<wbr>Options<wbr>Html<wbr>Sanitization</a></span>
     </dt>
     <dd>{{% md %}}Optional. Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation is not disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3909,7 +4475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#htmlsanitization_nodejs" style="color: inherit; text-decoration: inherit;">html<wbr>Sanitization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#processingoptionshtmlsanitization">Processing<wbr>Options<wbr>Html<wbr>Sanitization</a></span>
     </dt>
     <dd>{{% md %}}Optional. Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation is not disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3929,9 +4495,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#html_sanitization_python" style="color: inherit; text-decoration: inherit;">html_<wbr>sanitization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#processingoptionshtmlsanitization">Processing<wbr>Options<wbr>Html<wbr>Sanitization</a></span>
     </dt>
     <dd>{{% md %}}Optional. Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation is not disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="processingoptionshtmlsanitization">Processing<wbr>Options<wbr>Html<wbr>Sanitization</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Html<wbr>Sanitization<wbr>Unspecified</dt>
+    <dd>HTML_SANITIZATION_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>Html<wbr>Sanitization<wbr>Disabled</dt>
+    <dd>HTML_SANITIZATION_DISABLED{{% md %}}Disables sanitization on HTML input.{{% /md %}}</dd><dt>Simple<wbr>Formatting<wbr>Only</dt>
+    <dd>SIMPLE_FORMATTING_ONLY{{% md %}}Sanitizes HTML input, only accepts bold, italic, ordered list, and unordered list markup tags.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Processing<wbr>Options<wbr>Html<wbr>Sanitization<wbr>Html<wbr>Sanitization<wbr>Unspecified</dt>
+    <dd>HTML_SANITIZATION_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>Processing<wbr>Options<wbr>Html<wbr>Sanitization<wbr>Html<wbr>Sanitization<wbr>Disabled</dt>
+    <dd>HTML_SANITIZATION_DISABLED{{% md %}}Disables sanitization on HTML input.{{% /md %}}</dd><dt>Processing<wbr>Options<wbr>Html<wbr>Sanitization<wbr>Simple<wbr>Formatting<wbr>Only</dt>
+    <dd>SIMPLE_FORMATTING_ONLY{{% md %}}Sanitizes HTML input, only accepts bold, italic, ordered list, and unordered list markup tags.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Html<wbr>Sanitization<wbr>Unspecified</dt>
+    <dd>HTML_SANITIZATION_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>Html<wbr>Sanitization<wbr>Disabled</dt>
+    <dd>HTML_SANITIZATION_DISABLED{{% md %}}Disables sanitization on HTML input.{{% /md %}}</dd><dt>Simple<wbr>Formatting<wbr>Only</dt>
+    <dd>SIMPLE_FORMATTING_ONLY{{% md %}}Sanitizes HTML input, only accepts bold, italic, ordered list, and unordered list markup tags.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>HTML_SANITIZATION_UNSPECIFIED</dt>
+    <dd>HTML_SANITIZATION_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>HTML_SANITIZATION_DISABLED</dt>
+    <dd>HTML_SANITIZATION_DISABLED{{% md %}}Disables sanitization on HTML input.{{% /md %}}</dd><dt>SIMPLE_FORMATTING_ONLY</dt>
+    <dd>SIMPLE_FORMATTING_ONLY{{% md %}}Sanitizes HTML input, only accepts bold, italic, ordered list, and unordered list markup tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="processingoptionsresponse">Processing<wbr>Options<wbr>Response</h4>

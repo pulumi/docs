@@ -17,6 +17,14 @@ Explore the resources and functions of the google-native.cloudiot/v1 module.
     <li><a href="registryiampolicy" title="RegistryIamPolicy"><span class="symbol resource"></span>RegistryIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getdevice" title="GetDevice"><span class="symbol function"></span>GetDevice</a></li>
+    <li><a href="getregistry" title="GetRegistry"><span class="symbol function"></span>GetRegistry</a></li>
+    <li><a href="getregistrygroupiampolicy" title="GetRegistryGroupIamPolicy"><span class="symbol function"></span>GetRegistryGroupIamPolicy</a></li>
+    <li><a href="getregistryiampolicy" title="GetRegistryIamPolicy"><span class="symbol function"></span>GetRegistryIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -24,6 +32,6 @@ Explore the resources and functions of the google-native.cloudiot/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

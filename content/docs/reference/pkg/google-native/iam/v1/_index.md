@@ -20,6 +20,17 @@ Explore the resources and functions of the google-native.iam/v1 module.
     <li><a href="workloadidentitypool" title="WorkloadIdentityPool"><span class="symbol resource"></span>WorkloadIdentityPool</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getkey" title="GetKey"><span class="symbol function"></span>GetKey</a></li>
+    <li><a href="getorganizationrole" title="GetOrganizationRole"><span class="symbol function"></span>GetOrganizationRole</a></li>
+    <li><a href="getprovider" title="GetProvider"><span class="symbol function"></span>GetProvider</a></li>
+    <li><a href="getrole" title="GetRole"><span class="symbol function"></span>GetRole</a></li>
+    <li><a href="getserviceaccount" title="GetServiceAccount"><span class="symbol function"></span>GetServiceAccount</a></li>
+    <li><a href="getserviceaccountiampolicy" title="GetServiceAccountIamPolicy"><span class="symbol function"></span>GetServiceAccountIamPolicy</a></li>
+    <li><a href="getworkloadidentitypool" title="GetWorkloadIdentityPool"><span class="symbol function"></span>GetWorkloadIdentityPool</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -27,6 +38,6 @@ Explore the resources and functions of the google-native.iam/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

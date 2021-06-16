@@ -28,7 +28,7 @@ Creates a Product.
 <span class="k">def </span><span class="nx">Product</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-            <span class="nx">availability</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">availability</span><span class="p">:</span> <span class="nx">Optional[_retail_v2alpha.ProductAvailability]</span> = None<span class="p">,</span>
             <span class="nx">available_quantity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
             <span class="nx">available_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">branch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -45,7 +45,7 @@ Creates a Product.
             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[_retail_v2alpha.ProductType]</span> = None<span class="p">,</span>
             <span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Product</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -228,7 +228,7 @@ The Product resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#availability_csharp" style="color: inherit; text-decoration: inherit;">Availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#productavailability">Pulumi.<wbr>Google<wbr>Native.<wbr>Retail.<wbr>V2Alpha.<wbr>Product<wbr>Availability</a></span>
     </dt>
     <dd>{{% md %}}The online availability of the Product. Default to Availability.IN_STOCK. Google Merchant Center Property [availability](https://support.google.com/merchants/answer/6324448). Schema.org Property [Offer.availability](https://schema.org/availability).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -324,7 +324,7 @@ The Product resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#producttype">Pulumi.<wbr>Google<wbr>Native.<wbr>Retail.<wbr>V2Alpha.<wbr>Product<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The type of the product. This field is output-only. Default to Catalog.product_level_config.ingestion_product_type if unset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -392,7 +392,7 @@ The Product resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#availability_go" style="color: inherit; text-decoration: inherit;">Availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#productavailability">Product<wbr>Availability</a></span>
     </dt>
     <dd>{{% md %}}The online availability of the Product. Default to Availability.IN_STOCK. Google Merchant Center Property [availability](https://support.google.com/merchants/answer/6324448). Schema.org Property [Offer.availability](https://schema.org/availability).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -488,7 +488,7 @@ The Product resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#producttype">Product<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The type of the product. This field is output-only. Default to Catalog.product_level_config.ingestion_product_type if unset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -556,7 +556,7 @@ The Product resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#availability_nodejs" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#productavailability">Product<wbr>Availability</a></span>
     </dt>
     <dd>{{% md %}}The online availability of the Product. Default to Availability.IN_STOCK. Google Merchant Center Property [availability](https://support.google.com/merchants/answer/6324448). Schema.org Property [Offer.availability](https://schema.org/availability).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -652,7 +652,7 @@ The Product resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#producttype">Product<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The type of the product. This field is output-only. Default to Catalog.product_level_config.ingestion_product_type if unset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -720,7 +720,7 @@ The Product resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#productavailability">Product<wbr>Availability</a></span>
     </dt>
     <dd>{{% md %}}The online availability of the Product. Default to Availability.IN_STOCK. Google Merchant Center Property [availability](https://support.google.com/merchants/answer/6324448). Schema.org Property [Offer.availability](https://schema.org/availability).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -816,7 +816,7 @@ The Product resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#producttype">Product<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The type of the product. This field is output-only. Default to Catalog.product_level_config.ingestion_product_type if unset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1412,6 +1412,78 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Price of the product. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371). Schema.org property [Offer.priceSpecification](https://schema.org/priceSpecification).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="productavailability">Product<wbr>Availability</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Availability<wbr>Unspecified</dt>
+    <dd>AVAILABILITY_UNSPECIFIED{{% md %}}Default product availability. Default to Availability.IN_STOCK if unset.{{% /md %}}</dd><dt>In<wbr>Stock</dt>
+    <dd>IN_STOCK{{% md %}}Product in stock.{{% /md %}}</dd><dt>Out<wbr>Of<wbr>Stock</dt>
+    <dd>OUT_OF_STOCK{{% md %}}Product out of stock.{{% /md %}}</dd><dt>Preorder</dt>
+    <dd>PREORDER{{% md %}}Product that is in pre-order state.{{% /md %}}</dd><dt>Backorder</dt>
+    <dd>BACKORDER{{% md %}}Product that is back-ordered (i.e. temporarily out of stock).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Product<wbr>Availability<wbr>Availability<wbr>Unspecified</dt>
+    <dd>AVAILABILITY_UNSPECIFIED{{% md %}}Default product availability. Default to Availability.IN_STOCK if unset.{{% /md %}}</dd><dt>Product<wbr>Availability<wbr>In<wbr>Stock</dt>
+    <dd>IN_STOCK{{% md %}}Product in stock.{{% /md %}}</dd><dt>Product<wbr>Availability<wbr>Out<wbr>Of<wbr>Stock</dt>
+    <dd>OUT_OF_STOCK{{% md %}}Product out of stock.{{% /md %}}</dd><dt>Product<wbr>Availability<wbr>Preorder</dt>
+    <dd>PREORDER{{% md %}}Product that is in pre-order state.{{% /md %}}</dd><dt>Product<wbr>Availability<wbr>Backorder</dt>
+    <dd>BACKORDER{{% md %}}Product that is back-ordered (i.e. temporarily out of stock).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Availability<wbr>Unspecified</dt>
+    <dd>AVAILABILITY_UNSPECIFIED{{% md %}}Default product availability. Default to Availability.IN_STOCK if unset.{{% /md %}}</dd><dt>In<wbr>Stock</dt>
+    <dd>IN_STOCK{{% md %}}Product in stock.{{% /md %}}</dd><dt>Out<wbr>Of<wbr>Stock</dt>
+    <dd>OUT_OF_STOCK{{% md %}}Product out of stock.{{% /md %}}</dd><dt>Preorder</dt>
+    <dd>PREORDER{{% md %}}Product that is in pre-order state.{{% /md %}}</dd><dt>Backorder</dt>
+    <dd>BACKORDER{{% md %}}Product that is back-ordered (i.e. temporarily out of stock).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>AVAILABILITY_UNSPECIFIED</dt>
+    <dd>AVAILABILITY_UNSPECIFIED{{% md %}}Default product availability. Default to Availability.IN_STOCK if unset.{{% /md %}}</dd><dt>IN_STOCK</dt>
+    <dd>IN_STOCK{{% md %}}Product in stock.{{% /md %}}</dd><dt>OUT_OF_STOCK</dt>
+    <dd>OUT_OF_STOCK{{% md %}}Product out of stock.{{% /md %}}</dd><dt>PREORDER</dt>
+    <dd>PREORDER{{% md %}}Product that is in pre-order state.{{% /md %}}</dd><dt>BACKORDER</dt>
+    <dd>BACKORDER{{% md %}}Product that is back-ordered (i.e. temporarily out of stock).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="producttype">Product<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Default value. Default to Catalog.product_level_config.ingestion_product_type if unset.{{% /md %}}</dd><dt>Primary</dt>
+    <dd>PRIMARY{{% md %}}The primary type. As the primary unit for predicting, indexing and search serving, a Type.PRIMARY Product is grouped with multiple Type.VARIANT Products.{{% /md %}}</dd><dt>Variant</dt>
+    <dd>VARIANT{{% md %}}The variant type. Type.VARIANT Products usually share some common attributes on the same Type.PRIMARY Products, but they have variant attributes like different colors, sizes and prices, etc.{{% /md %}}</dd><dt>Collection</dt>
+    <dd>COLLECTION{{% md %}}The collection type. Collection products are bundled Type.PRIMARY Products or Type.VARIANT Products that are sold together, such as a jewelry set with necklaces, earrings and rings, etc.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Product<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Default value. Default to Catalog.product_level_config.ingestion_product_type if unset.{{% /md %}}</dd><dt>Product<wbr>Type<wbr>Primary</dt>
+    <dd>PRIMARY{{% md %}}The primary type. As the primary unit for predicting, indexing and search serving, a Type.PRIMARY Product is grouped with multiple Type.VARIANT Products.{{% /md %}}</dd><dt>Product<wbr>Type<wbr>Variant</dt>
+    <dd>VARIANT{{% md %}}The variant type. Type.VARIANT Products usually share some common attributes on the same Type.PRIMARY Products, but they have variant attributes like different colors, sizes and prices, etc.{{% /md %}}</dd><dt>Product<wbr>Type<wbr>Collection</dt>
+    <dd>COLLECTION{{% md %}}The collection type. Collection products are bundled Type.PRIMARY Products or Type.VARIANT Products that are sold together, such as a jewelry set with necklaces, earrings and rings, etc.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Default value. Default to Catalog.product_level_config.ingestion_product_type if unset.{{% /md %}}</dd><dt>Primary</dt>
+    <dd>PRIMARY{{% md %}}The primary type. As the primary unit for predicting, indexing and search serving, a Type.PRIMARY Product is grouped with multiple Type.VARIANT Products.{{% /md %}}</dd><dt>Variant</dt>
+    <dd>VARIANT{{% md %}}The variant type. Type.VARIANT Products usually share some common attributes on the same Type.PRIMARY Products, but they have variant attributes like different colors, sizes and prices, etc.{{% /md %}}</dd><dt>Collection</dt>
+    <dd>COLLECTION{{% md %}}The collection type. Collection products are bundled Type.PRIMARY Products or Type.VARIANT Products that are sold together, such as a jewelry set with necklaces, earrings and rings, etc.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Default value. Default to Catalog.product_level_config.ingestion_product_type if unset.{{% /md %}}</dd><dt>PRIMARY</dt>
+    <dd>PRIMARY{{% md %}}The primary type. As the primary unit for predicting, indexing and search serving, a Type.PRIMARY Product is grouped with multiple Type.VARIANT Products.{{% /md %}}</dd><dt>VARIANT</dt>
+    <dd>VARIANT{{% md %}}The variant type. Type.VARIANT Products usually share some common attributes on the same Type.PRIMARY Products, but they have variant attributes like different colors, sizes and prices, etc.{{% /md %}}</dd><dt>COLLECTION</dt>
+    <dd>COLLECTION{{% md %}}The collection type. Collection products are bundled Type.PRIMARY Products or Type.VARIANT Products that are sold together, such as a jewelry set with necklaces, earrings and rings, etc.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

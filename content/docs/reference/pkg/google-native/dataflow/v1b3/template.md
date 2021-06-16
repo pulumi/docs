@@ -811,7 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#runtimeenvironmentipconfiguration">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataflow.<wbr>V1b3.<wbr>Runtime<wbr>Environment<wbr>Ip<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration for VM IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -943,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfiguration_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#runtimeenvironmentipconfiguration">Runtime<wbr>Environment<wbr>Ip<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration for VM IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1075,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#runtimeenvironmentipconfiguration">Runtime<wbr>Environment<wbr>Ip<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration for VM IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1207,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configuration_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#runtimeenvironmentipconfiguration">Runtime<wbr>Environment<wbr>Ip<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration for VM IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1298,6 +1298,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone will take precedence.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="runtimeenvironmentipconfiguration">Runtime<wbr>Environment<wbr>Ip<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Worker<wbr>Ip<wbr>Unspecified</dt>
+    <dd>WORKER_IP_UNSPECIFIED{{% md %}}The configuration is unknown, or unspecified.{{% /md %}}</dd><dt>Worker<wbr>Ip<wbr>Public</dt>
+    <dd>WORKER_IP_PUBLIC{{% md %}}Workers should have public IP addresses.{{% /md %}}</dd><dt>Worker<wbr>Ip<wbr>Private</dt>
+    <dd>WORKER_IP_PRIVATE{{% md %}}Workers should have private IP addresses.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Runtime<wbr>Environment<wbr>Ip<wbr>Configuration<wbr>Worker<wbr>Ip<wbr>Unspecified</dt>
+    <dd>WORKER_IP_UNSPECIFIED{{% md %}}The configuration is unknown, or unspecified.{{% /md %}}</dd><dt>Runtime<wbr>Environment<wbr>Ip<wbr>Configuration<wbr>Worker<wbr>Ip<wbr>Public</dt>
+    <dd>WORKER_IP_PUBLIC{{% md %}}Workers should have public IP addresses.{{% /md %}}</dd><dt>Runtime<wbr>Environment<wbr>Ip<wbr>Configuration<wbr>Worker<wbr>Ip<wbr>Private</dt>
+    <dd>WORKER_IP_PRIVATE{{% md %}}Workers should have private IP addresses.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Worker<wbr>Ip<wbr>Unspecified</dt>
+    <dd>WORKER_IP_UNSPECIFIED{{% md %}}The configuration is unknown, or unspecified.{{% /md %}}</dd><dt>Worker<wbr>Ip<wbr>Public</dt>
+    <dd>WORKER_IP_PUBLIC{{% md %}}Workers should have public IP addresses.{{% /md %}}</dd><dt>Worker<wbr>Ip<wbr>Private</dt>
+    <dd>WORKER_IP_PRIVATE{{% md %}}Workers should have private IP addresses.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>WORKER_IP_UNSPECIFIED</dt>
+    <dd>WORKER_IP_UNSPECIFIED{{% md %}}The configuration is unknown, or unspecified.{{% /md %}}</dd><dt>WORKER_IP_PUBLIC</dt>
+    <dd>WORKER_IP_PUBLIC{{% md %}}Workers should have public IP addresses.{{% /md %}}</dd><dt>WORKER_IP_PRIVATE</dt>
+    <dd>WORKER_IP_PRIVATE{{% md %}}Workers should have private IP addresses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="runtimemetadataresponse">Runtime<wbr>Metadata<wbr>Response</h4>

@@ -17,6 +17,14 @@ Explore the resources and functions of the google-native.accesscontextmanager/v1
     <li><a href="serviceperimeter" title="ServicePerimeter"><span class="symbol resource"></span>ServicePerimeter</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getaccesslevel" title="GetAccessLevel"><span class="symbol function"></span>GetAccessLevel</a></li>
+    <li><a href="getaccesspolicy" title="GetAccessPolicy"><span class="symbol function"></span>GetAccessPolicy</a></li>
+    <li><a href="getgcpuseraccessbinding" title="GetGcpUserAccessBinding"><span class="symbol function"></span>GetGcpUserAccessBinding</a></li>
+    <li><a href="getserviceperimeter" title="GetServicePerimeter"><span class="symbol function"></span>GetServicePerimeter</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -24,6 +32,6 @@ Explore the resources and functions of the google-native.accesscontextmanager/v1
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

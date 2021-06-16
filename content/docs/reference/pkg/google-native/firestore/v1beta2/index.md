@@ -32,8 +32,8 @@ Creates a composite index. This returns a google.longrunning.Operation which may
           <span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[_firestore_v1beta2.GoogleFirestoreAdminV1beta2IndexFieldArgs]]</span> = None<span class="p">,</span>
           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-          <span class="nx">query_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-          <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+          <span class="nx">query_scope</span><span class="p">:</span> <span class="nx">Optional[_firestore_v1beta2.IndexQueryScope]</span> = None<span class="p">,</span>
+          <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_firestore_v1beta2.IndexState]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Index</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IndexArgs</a></span><span class="p">,</span>
@@ -207,7 +207,7 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#queryscope_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#indexqueryscope">Pulumi.<wbr>Google<wbr>Native.<wbr>Firestore.<wbr>V1Beta2.<wbr>Index<wbr>Query<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Indexes with a collection query scope specified allow queries against a collection that is the child of a specific document, specified at query time, and that has the same collection id. Indexes with a collection group query scope specified allow queries against all collections descended from a specific document, specified at query time, and that have the same collection id as this index.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -215,7 +215,7 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#indexstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Firestore.<wbr>V1Beta2.<wbr>Index<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The serving state of the index.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -267,7 +267,7 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#queryscope_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#indexqueryscope">Index<wbr>Query<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Indexes with a collection query scope specified allow queries against a collection that is the child of a specific document, specified at query time, and that has the same collection id. Indexes with a collection group query scope specified allow queries against all collections descended from a specific document, specified at query time, and that have the same collection id as this index.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -275,7 +275,7 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#indexstate">Index<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The serving state of the index.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -327,7 +327,7 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#queryscope_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#indexqueryscope">Index<wbr>Query<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Indexes with a collection query scope specified allow queries against a collection that is the child of a specific document, specified at query time, and that has the same collection id. Indexes with a collection group query scope specified allow queries against all collections descended from a specific document, specified at query time, and that have the same collection id as this index.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -335,7 +335,7 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#indexstate">Index<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The serving state of the index.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -387,7 +387,7 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#query_scope_python" style="color: inherit; text-decoration: inherit;">query_<wbr>scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#indexqueryscope">Index<wbr>Query<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Indexes with a collection query scope specified allow queries against a collection that is the child of a specific document, specified at query time, and that has the same collection id. Indexes with a collection group query scope specified allow queries against all collections descended from a specific document, specified at query time, and that have the same collection id as this index.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -395,7 +395,7 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#indexstate">Index<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The serving state of the index.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -474,7 +474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arrayconfig_csharp" style="color: inherit; text-decoration: inherit;">Array<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlefirestoreadminv1beta2indexfieldarrayconfig">Pulumi.<wbr>Google<wbr>Native.<wbr>Firestore.<wbr>V1Beta2.<wbr>Google<wbr>Firestore<wbr>Admin<wbr>V1beta2Index<wbr>Field<wbr>Array<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Indicates that this field supports operations on `array_value`s.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlefirestoreadminv1beta2indexfieldorder">Pulumi.<wbr>Google<wbr>Native.<wbr>Firestore.<wbr>V1Beta2.<wbr>Google<wbr>Firestore<wbr>Admin<wbr>V1beta2Index<wbr>Field<wbr>Order</a></span>
     </dt>
     <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -502,7 +502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arrayconfig_go" style="color: inherit; text-decoration: inherit;">Array<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlefirestoreadminv1beta2indexfieldarrayconfig">Google<wbr>Firestore<wbr>Admin<wbr>V1beta2Index<wbr>Field<wbr>Array<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Indicates that this field supports operations on `array_value`s.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlefirestoreadminv1beta2indexfieldorder">Google<wbr>Firestore<wbr>Admin<wbr>V1beta2Index<wbr>Field<wbr>Order</a></span>
     </dt>
     <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -530,7 +530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arrayconfig_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlefirestoreadminv1beta2indexfieldarrayconfig">Google<wbr>Firestore<wbr>Admin<wbr>V1beta2Index<wbr>Field<wbr>Array<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Indicates that this field supports operations on `array_value`s.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlefirestoreadminv1beta2indexfieldorder">Google<wbr>Firestore<wbr>Admin<wbr>V1beta2Index<wbr>Field<wbr>Order</a></span>
     </dt>
     <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -558,7 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#array_config_python" style="color: inherit; text-decoration: inherit;">array_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlefirestoreadminv1beta2indexfieldarrayconfig">Google<wbr>Firestore<wbr>Admin<wbr>V1beta2Index<wbr>Field<wbr>Array<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Indicates that this field supports operations on `array_value`s.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,9 +574,65 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlefirestoreadminv1beta2indexfieldorder">Google<wbr>Firestore<wbr>Admin<wbr>V1beta2Index<wbr>Field<wbr>Order</a></span>
     </dt>
     <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlefirestoreadminv1beta2indexfieldarrayconfig">Google<wbr>Firestore<wbr>Admin<wbr>V1beta2Index<wbr>Field<wbr>Array<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Array<wbr>Config<wbr>Unspecified</dt>
+    <dd>ARRAY_CONFIG_UNSPECIFIED{{% md %}}The index does not support additional array queries.{{% /md %}}</dd><dt>Contains</dt>
+    <dd>CONTAINS{{% md %}}The index supports array containment queries.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Firestore<wbr>Admin<wbr>V1beta2Index<wbr>Field<wbr>Array<wbr>Config<wbr>Array<wbr>Config<wbr>Unspecified</dt>
+    <dd>ARRAY_CONFIG_UNSPECIFIED{{% md %}}The index does not support additional array queries.{{% /md %}}</dd><dt>Google<wbr>Firestore<wbr>Admin<wbr>V1beta2Index<wbr>Field<wbr>Array<wbr>Config<wbr>Contains</dt>
+    <dd>CONTAINS{{% md %}}The index supports array containment queries.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Array<wbr>Config<wbr>Unspecified</dt>
+    <dd>ARRAY_CONFIG_UNSPECIFIED{{% md %}}The index does not support additional array queries.{{% /md %}}</dd><dt>Contains</dt>
+    <dd>CONTAINS{{% md %}}The index supports array containment queries.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ARRAY_CONFIG_UNSPECIFIED</dt>
+    <dd>ARRAY_CONFIG_UNSPECIFIED{{% md %}}The index does not support additional array queries.{{% /md %}}</dd><dt>CONTAINS</dt>
+    <dd>CONTAINS{{% md %}}The index supports array containment queries.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlefirestoreadminv1beta2indexfieldorder">Google<wbr>Firestore<wbr>Admin<wbr>V1beta2Index<wbr>Field<wbr>Order</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Order<wbr>Unspecified</dt>
+    <dd>ORDER_UNSPECIFIED{{% md %}}The ordering is unspecified. Not a valid option.{{% /md %}}</dd><dt>Ascending</dt>
+    <dd>ASCENDING{{% md %}}The field is ordered by ascending field value.{{% /md %}}</dd><dt>Descending</dt>
+    <dd>DESCENDING{{% md %}}The field is ordered by descending field value.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Firestore<wbr>Admin<wbr>V1beta2Index<wbr>Field<wbr>Order<wbr>Order<wbr>Unspecified</dt>
+    <dd>ORDER_UNSPECIFIED{{% md %}}The ordering is unspecified. Not a valid option.{{% /md %}}</dd><dt>Google<wbr>Firestore<wbr>Admin<wbr>V1beta2Index<wbr>Field<wbr>Order<wbr>Ascending</dt>
+    <dd>ASCENDING{{% md %}}The field is ordered by ascending field value.{{% /md %}}</dd><dt>Google<wbr>Firestore<wbr>Admin<wbr>V1beta2Index<wbr>Field<wbr>Order<wbr>Descending</dt>
+    <dd>DESCENDING{{% md %}}The field is ordered by descending field value.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Order<wbr>Unspecified</dt>
+    <dd>ORDER_UNSPECIFIED{{% md %}}The ordering is unspecified. Not a valid option.{{% /md %}}</dd><dt>Ascending</dt>
+    <dd>ASCENDING{{% md %}}The field is ordered by ascending field value.{{% /md %}}</dd><dt>Descending</dt>
+    <dd>DESCENDING{{% md %}}The field is ordered by descending field value.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ORDER_UNSPECIFIED</dt>
+    <dd>ORDER_UNSPECIFIED{{% md %}}The ordering is unspecified. Not a valid option.{{% /md %}}</dd><dt>ASCENDING</dt>
+    <dd>ASCENDING{{% md %}}The field is ordered by ascending field value.{{% /md %}}</dd><dt>DESCENDING</dt>
+    <dd>DESCENDING{{% md %}}The field is ordered by descending field value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googlefirestoreadminv1beta2indexfieldresponse">Google<wbr>Firestore<wbr>Admin<wbr>V1beta2Index<wbr>Field<wbr>Response</h4>
@@ -691,6 +747,70 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="indexqueryscope">Index<wbr>Query<wbr>Scope</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Query<wbr>Scope<wbr>Unspecified</dt>
+    <dd>QUERY_SCOPE_UNSPECIFIED{{% md %}}The query scope is unspecified. Not a valid option.{{% /md %}}</dd><dt>Collection</dt>
+    <dd>COLLECTION{{% md %}}Indexes with a collection query scope specified allow queries against a collection that is the child of a specific document, specified at query time, and that has the collection id specified by the index.{{% /md %}}</dd><dt>Collection<wbr>Group</dt>
+    <dd>COLLECTION_GROUP{{% md %}}Indexes with a collection group query scope specified allow queries against all collections that has the collection id specified by the index.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Index<wbr>Query<wbr>Scope<wbr>Query<wbr>Scope<wbr>Unspecified</dt>
+    <dd>QUERY_SCOPE_UNSPECIFIED{{% md %}}The query scope is unspecified. Not a valid option.{{% /md %}}</dd><dt>Index<wbr>Query<wbr>Scope<wbr>Collection</dt>
+    <dd>COLLECTION{{% md %}}Indexes with a collection query scope specified allow queries against a collection that is the child of a specific document, specified at query time, and that has the collection id specified by the index.{{% /md %}}</dd><dt>Index<wbr>Query<wbr>Scope<wbr>Collection<wbr>Group</dt>
+    <dd>COLLECTION_GROUP{{% md %}}Indexes with a collection group query scope specified allow queries against all collections that has the collection id specified by the index.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Query<wbr>Scope<wbr>Unspecified</dt>
+    <dd>QUERY_SCOPE_UNSPECIFIED{{% md %}}The query scope is unspecified. Not a valid option.{{% /md %}}</dd><dt>Collection</dt>
+    <dd>COLLECTION{{% md %}}Indexes with a collection query scope specified allow queries against a collection that is the child of a specific document, specified at query time, and that has the collection id specified by the index.{{% /md %}}</dd><dt>Collection<wbr>Group</dt>
+    <dd>COLLECTION_GROUP{{% md %}}Indexes with a collection group query scope specified allow queries against all collections that has the collection id specified by the index.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>QUERY_SCOPE_UNSPECIFIED</dt>
+    <dd>QUERY_SCOPE_UNSPECIFIED{{% md %}}The query scope is unspecified. Not a valid option.{{% /md %}}</dd><dt>COLLECTION</dt>
+    <dd>COLLECTION{{% md %}}Indexes with a collection query scope specified allow queries against a collection that is the child of a specific document, specified at query time, and that has the collection id specified by the index.{{% /md %}}</dd><dt>COLLECTION_GROUP</dt>
+    <dd>COLLECTION_GROUP{{% md %}}Indexes with a collection group query scope specified allow queries against all collections that has the collection id specified by the index.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="indexstate">Index<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state is unspecified.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}The index is being created. There is an active long-running operation for the index. The index is updated when writing a document. Some index data may exist.{{% /md %}}</dd><dt>Ready</dt>
+    <dd>READY{{% md %}}The index is ready to be used. The index is updated when writing a document. The index is fully populated from all stored documents it applies to.{{% /md %}}</dd><dt>Needs<wbr>Repair</dt>
+    <dd>NEEDS_REPAIR{{% md %}}The index was being created, but something went wrong. There is no active long-running operation for the index, and the most recently finished long-running operation failed. The index is not updated when writing a document. Some index data may exist. Use the google.longrunning.Operations API to determine why the operation that last attempted to create this index failed, then re-create the index.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Index<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state is unspecified.{{% /md %}}</dd><dt>Index<wbr>State<wbr>Creating</dt>
+    <dd>CREATING{{% md %}}The index is being created. There is an active long-running operation for the index. The index is updated when writing a document. Some index data may exist.{{% /md %}}</dd><dt>Index<wbr>State<wbr>Ready</dt>
+    <dd>READY{{% md %}}The index is ready to be used. The index is updated when writing a document. The index is fully populated from all stored documents it applies to.{{% /md %}}</dd><dt>Index<wbr>State<wbr>Needs<wbr>Repair</dt>
+    <dd>NEEDS_REPAIR{{% md %}}The index was being created, but something went wrong. There is no active long-running operation for the index, and the most recently finished long-running operation failed. The index is not updated when writing a document. Some index data may exist. Use the google.longrunning.Operations API to determine why the operation that last attempted to create this index failed, then re-create the index.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state is unspecified.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}The index is being created. There is an active long-running operation for the index. The index is updated when writing a document. Some index data may exist.{{% /md %}}</dd><dt>Ready</dt>
+    <dd>READY{{% md %}}The index is ready to be used. The index is updated when writing a document. The index is fully populated from all stored documents it applies to.{{% /md %}}</dd><dt>Needs<wbr>Repair</dt>
+    <dd>NEEDS_REPAIR{{% md %}}The index was being created, but something went wrong. There is no active long-running operation for the index, and the most recently finished long-running operation failed. The index is not updated when writing a document. Some index data may exist. Use the google.longrunning.Operations API to determine why the operation that last attempted to create this index failed, then re-create the index.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state is unspecified.{{% /md %}}</dd><dt>CREATING</dt>
+    <dd>CREATING{{% md %}}The index is being created. There is an active long-running operation for the index. The index is updated when writing a document. Some index data may exist.{{% /md %}}</dd><dt>READY</dt>
+    <dd>READY{{% md %}}The index is ready to be used. The index is updated when writing a document. The index is fully populated from all stored documents it applies to.{{% /md %}}</dd><dt>NEEDS_REPAIR</dt>
+    <dd>NEEDS_REPAIR{{% md %}}The index was being created, but something went wrong. There is no active long-running operation for the index, and the most recently finished long-running operation failed. The index is not updated when writing a document. Some index data may exist. Use the google.longrunning.Operations API to determine why the operation that last attempted to create this index failed, then re-create the index.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

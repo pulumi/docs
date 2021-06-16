@@ -33,7 +33,7 @@ Create a new CryptoKey within a KeyRing. CryptoKey.purpose and CryptoKey.version
               <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">next_rotation_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[_cloudkms_v1.CryptoKeyPurpose]</span> = None<span class="p">,</span>
               <span class="nx">rotation_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">skip_initial_version_creation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">version_template</span><span class="p">:</span> <span class="nx">Optional[_cloudkms_v1.CryptoKeyVersionTemplateArgs]</span> = None<span class="p">)</span>
@@ -218,7 +218,7 @@ The CryptoKey resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#purpose_csharp" style="color: inherit; text-decoration: inherit;">Purpose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cryptokeypurpose">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloudkms.<wbr>V1.<wbr>Crypto<wbr>Key<wbr>Purpose</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The immutable purpose of this CryptoKey.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -302,7 +302,7 @@ The CryptoKey resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#purpose_go" style="color: inherit; text-decoration: inherit;">Purpose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cryptokeypurpose">Crypto<wbr>Key<wbr>Purpose</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The immutable purpose of this CryptoKey.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +386,7 @@ The CryptoKey resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cryptokeypurpose">Crypto<wbr>Key<wbr>Purpose</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The immutable purpose of this CryptoKey.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +470,7 @@ The CryptoKey resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#cryptokeypurpose">Crypto<wbr>Key<wbr>Purpose</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The immutable purpose of this CryptoKey.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -772,6 +772,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Google partition certificate chain corresponding to the attestation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cryptokeypurpose">Crypto<wbr>Key<wbr>Purpose</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Crypto<wbr>Key<wbr>Purpose<wbr>Unspecified</dt>
+    <dd>CRYPTO_KEY_PURPOSE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Encrypt<wbr>Decrypt</dt>
+    <dd>ENCRYPT_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with Encrypt and Decrypt.{{% /md %}}</dd><dt>Asymmetric<wbr>Sign</dt>
+    <dd>ASYMMETRIC_SIGN{{% md %}}CryptoKeys with this purpose may be used with AsymmetricSign and GetPublicKey.{{% /md %}}</dd><dt>Asymmetric<wbr>Decrypt</dt>
+    <dd>ASYMMETRIC_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with AsymmetricDecrypt and GetPublicKey.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Crypto<wbr>Key<wbr>Purpose<wbr>Crypto<wbr>Key<wbr>Purpose<wbr>Unspecified</dt>
+    <dd>CRYPTO_KEY_PURPOSE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Purpose<wbr>Encrypt<wbr>Decrypt</dt>
+    <dd>ENCRYPT_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with Encrypt and Decrypt.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Purpose<wbr>Asymmetric<wbr>Sign</dt>
+    <dd>ASYMMETRIC_SIGN{{% md %}}CryptoKeys with this purpose may be used with AsymmetricSign and GetPublicKey.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Purpose<wbr>Asymmetric<wbr>Decrypt</dt>
+    <dd>ASYMMETRIC_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with AsymmetricDecrypt and GetPublicKey.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Crypto<wbr>Key<wbr>Purpose<wbr>Unspecified</dt>
+    <dd>CRYPTO_KEY_PURPOSE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Encrypt<wbr>Decrypt</dt>
+    <dd>ENCRYPT_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with Encrypt and Decrypt.{{% /md %}}</dd><dt>Asymmetric<wbr>Sign</dt>
+    <dd>ASYMMETRIC_SIGN{{% md %}}CryptoKeys with this purpose may be used with AsymmetricSign and GetPublicKey.{{% /md %}}</dd><dt>Asymmetric<wbr>Decrypt</dt>
+    <dd>ASYMMETRIC_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with AsymmetricDecrypt and GetPublicKey.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CRYPTO_KEY_PURPOSE_UNSPECIFIED</dt>
+    <dd>CRYPTO_KEY_PURPOSE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>ENCRYPT_DECRYPT</dt>
+    <dd>ENCRYPT_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with Encrypt and Decrypt.{{% /md %}}</dd><dt>ASYMMETRIC_SIGN</dt>
+    <dd>ASYMMETRIC_SIGN{{% md %}}CryptoKeys with this purpose may be used with AsymmetricSign and GetPublicKey.{{% /md %}}</dd><dt>ASYMMETRIC_DECRYPT</dt>
+    <dd>ASYMMETRIC_DECRYPT{{% md %}}CryptoKeys with this purpose may be used with AsymmetricDecrypt and GetPublicKey.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cryptokeyversionresponse">Crypto<wbr>Key<wbr>Version<wbr>Response</h4>
@@ -1217,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cryptokeyversiontemplatealgorithm">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloudkms.<wbr>V1.<wbr>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Required. Algorithm to use when creating a CryptoKeyVersion based on this template. For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1225,7 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionlevel_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cryptokeyversiontemplateprotectionlevel">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloudkms.<wbr>V1.<wbr>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Protection<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}ProtectionLevel to use when creating a CryptoKeyVersion based on this template. Immutable. Defaults to SOFTWARE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1237,7 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cryptokeyversiontemplatealgorithm">Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Required. Algorithm to use when creating a CryptoKeyVersion based on this template. For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1245,7 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionlevel_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cryptokeyversiontemplateprotectionlevel">Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Protection<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}ProtectionLevel to use when creating a CryptoKeyVersion based on this template. Immutable. Defaults to SOFTWARE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1257,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cryptokeyversiontemplatealgorithm">Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Required. Algorithm to use when creating a CryptoKeyVersion based on this template. For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1265,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionlevel_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cryptokeyversiontemplateprotectionlevel">Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Protection<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}ProtectionLevel to use when creating a CryptoKeyVersion based on this template. Immutable. Defaults to SOFTWARE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1277,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#cryptokeyversiontemplatealgorithm">Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Required. Algorithm to use when creating a CryptoKeyVersion based on this template. For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,9 +1319,129 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_level_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#cryptokeyversiontemplateprotectionlevel">Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Protection<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}ProtectionLevel to use when creating a CryptoKeyVersion based on this template. Immutable. Defaults to SOFTWARE.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cryptokeyversiontemplatealgorithm">Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Crypto<wbr>Key<wbr>Version<wbr>Algorithm<wbr>Unspecified</dt>
+    <dd>CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Google<wbr>Symmetric<wbr>Encryption</dt>
+    <dd>GOOGLE_SYMMETRIC_ENCRYPTION{{% md %}}Creates symmetric encryption keys.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pss2048Sha256</dt>
+    <dd>RSA_SIGN_PSS_2048_SHA256{{% md %}}RSASSA-PSS 2048 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pss3072Sha256</dt>
+    <dd>RSA_SIGN_PSS_3072_SHA256{{% md %}}RSASSA-PSS 3072 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pss4096Sha256</dt>
+    <dd>RSA_SIGN_PSS_4096_SHA256{{% md %}}RSASSA-PSS 4096 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pss4096Sha512</dt>
+    <dd>RSA_SIGN_PSS_4096_SHA512{{% md %}}RSASSA-PSS 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pkcs12048Sha256</dt>
+    <dd>RSA_SIGN_PKCS1_2048_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 2048 bit key and a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pkcs13072Sha256</dt>
+    <dd>RSA_SIGN_PKCS1_3072_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 3072 bit key and a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pkcs14096Sha256</dt>
+    <dd>RSA_SIGN_PKCS1_4096_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 4096 bit key and a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pkcs14096Sha512</dt>
+    <dd>RSA_SIGN_PKCS1_4096_SHA512{{% md %}}RSASSA-PKCS1-v1_5 with a 4096 bit key and a SHA512 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep2048Sha256</dt>
+    <dd>RSA_DECRYPT_OAEP_2048_SHA256{{% md %}}RSAES-OAEP 2048 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep3072Sha256</dt>
+    <dd>RSA_DECRYPT_OAEP_3072_SHA256{{% md %}}RSAES-OAEP 3072 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep4096Sha256</dt>
+    <dd>RSA_DECRYPT_OAEP_4096_SHA256{{% md %}}RSAES-OAEP 4096 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep4096Sha512</dt>
+    <dd>RSA_DECRYPT_OAEP_4096_SHA512{{% md %}}RSAES-OAEP 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>Ec<wbr>Sign<wbr>P256Sha256</dt>
+    <dd>EC_SIGN_P256_SHA256{{% md %}}ECDSA on the NIST P-256 curve with a SHA256 digest.{{% /md %}}</dd><dt>Ec<wbr>Sign<wbr>P384Sha384</dt>
+    <dd>EC_SIGN_P384_SHA384{{% md %}}ECDSA on the NIST P-384 curve with a SHA384 digest.{{% /md %}}</dd><dt>External<wbr>Symmetric<wbr>Encryption</dt>
+    <dd>EXTERNAL_SYMMETRIC_ENCRYPTION{{% md %}}Algorithm representing symmetric encryption by an external key manager.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Crypto<wbr>Key<wbr>Version<wbr>Algorithm<wbr>Unspecified</dt>
+    <dd>CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Google<wbr>Symmetric<wbr>Encryption</dt>
+    <dd>GOOGLE_SYMMETRIC_ENCRYPTION{{% md %}}Creates symmetric encryption keys.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Rsa<wbr>Sign<wbr>Pss2048Sha256</dt>
+    <dd>RSA_SIGN_PSS_2048_SHA256{{% md %}}RSASSA-PSS 2048 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Rsa<wbr>Sign<wbr>Pss3072Sha256</dt>
+    <dd>RSA_SIGN_PSS_3072_SHA256{{% md %}}RSASSA-PSS 3072 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Rsa<wbr>Sign<wbr>Pss4096Sha256</dt>
+    <dd>RSA_SIGN_PSS_4096_SHA256{{% md %}}RSASSA-PSS 4096 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Rsa<wbr>Sign<wbr>Pss4096Sha512</dt>
+    <dd>RSA_SIGN_PSS_4096_SHA512{{% md %}}RSASSA-PSS 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Rsa<wbr>Sign<wbr>Pkcs12048Sha256</dt>
+    <dd>RSA_SIGN_PKCS1_2048_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 2048 bit key and a SHA256 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Rsa<wbr>Sign<wbr>Pkcs13072Sha256</dt>
+    <dd>RSA_SIGN_PKCS1_3072_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 3072 bit key and a SHA256 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Rsa<wbr>Sign<wbr>Pkcs14096Sha256</dt>
+    <dd>RSA_SIGN_PKCS1_4096_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 4096 bit key and a SHA256 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Rsa<wbr>Sign<wbr>Pkcs14096Sha512</dt>
+    <dd>RSA_SIGN_PKCS1_4096_SHA512{{% md %}}RSASSA-PKCS1-v1_5 with a 4096 bit key and a SHA512 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Rsa<wbr>Decrypt<wbr>Oaep2048Sha256</dt>
+    <dd>RSA_DECRYPT_OAEP_2048_SHA256{{% md %}}RSAES-OAEP 2048 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Rsa<wbr>Decrypt<wbr>Oaep3072Sha256</dt>
+    <dd>RSA_DECRYPT_OAEP_3072_SHA256{{% md %}}RSAES-OAEP 3072 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Rsa<wbr>Decrypt<wbr>Oaep4096Sha256</dt>
+    <dd>RSA_DECRYPT_OAEP_4096_SHA256{{% md %}}RSAES-OAEP 4096 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Rsa<wbr>Decrypt<wbr>Oaep4096Sha512</dt>
+    <dd>RSA_DECRYPT_OAEP_4096_SHA512{{% md %}}RSAES-OAEP 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Ec<wbr>Sign<wbr>P256Sha256</dt>
+    <dd>EC_SIGN_P256_SHA256{{% md %}}ECDSA on the NIST P-256 curve with a SHA256 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>Ec<wbr>Sign<wbr>P384Sha384</dt>
+    <dd>EC_SIGN_P384_SHA384{{% md %}}ECDSA on the NIST P-384 curve with a SHA384 digest.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Algorithm<wbr>External<wbr>Symmetric<wbr>Encryption</dt>
+    <dd>EXTERNAL_SYMMETRIC_ENCRYPTION{{% md %}}Algorithm representing symmetric encryption by an external key manager.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Crypto<wbr>Key<wbr>Version<wbr>Algorithm<wbr>Unspecified</dt>
+    <dd>CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Google<wbr>Symmetric<wbr>Encryption</dt>
+    <dd>GOOGLE_SYMMETRIC_ENCRYPTION{{% md %}}Creates symmetric encryption keys.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pss2048Sha256</dt>
+    <dd>RSA_SIGN_PSS_2048_SHA256{{% md %}}RSASSA-PSS 2048 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pss3072Sha256</dt>
+    <dd>RSA_SIGN_PSS_3072_SHA256{{% md %}}RSASSA-PSS 3072 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pss4096Sha256</dt>
+    <dd>RSA_SIGN_PSS_4096_SHA256{{% md %}}RSASSA-PSS 4096 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pss4096Sha512</dt>
+    <dd>RSA_SIGN_PSS_4096_SHA512{{% md %}}RSASSA-PSS 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pkcs12048Sha256</dt>
+    <dd>RSA_SIGN_PKCS1_2048_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 2048 bit key and a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pkcs13072Sha256</dt>
+    <dd>RSA_SIGN_PKCS1_3072_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 3072 bit key and a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pkcs14096Sha256</dt>
+    <dd>RSA_SIGN_PKCS1_4096_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 4096 bit key and a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pkcs14096Sha512</dt>
+    <dd>RSA_SIGN_PKCS1_4096_SHA512{{% md %}}RSASSA-PKCS1-v1_5 with a 4096 bit key and a SHA512 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep2048Sha256</dt>
+    <dd>RSA_DECRYPT_OAEP_2048_SHA256{{% md %}}RSAES-OAEP 2048 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep3072Sha256</dt>
+    <dd>RSA_DECRYPT_OAEP_3072_SHA256{{% md %}}RSAES-OAEP 3072 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep4096Sha256</dt>
+    <dd>RSA_DECRYPT_OAEP_4096_SHA256{{% md %}}RSAES-OAEP 4096 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Decrypt<wbr>Oaep4096Sha512</dt>
+    <dd>RSA_DECRYPT_OAEP_4096_SHA512{{% md %}}RSAES-OAEP 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>Ec<wbr>Sign<wbr>P256Sha256</dt>
+    <dd>EC_SIGN_P256_SHA256{{% md %}}ECDSA on the NIST P-256 curve with a SHA256 digest.{{% /md %}}</dd><dt>Ec<wbr>Sign<wbr>P384Sha384</dt>
+    <dd>EC_SIGN_P384_SHA384{{% md %}}ECDSA on the NIST P-384 curve with a SHA384 digest.{{% /md %}}</dd><dt>External<wbr>Symmetric<wbr>Encryption</dt>
+    <dd>EXTERNAL_SYMMETRIC_ENCRYPTION{{% md %}}Algorithm representing symmetric encryption by an external key manager.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED</dt>
+    <dd>CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>GOOGLE_SYMMETRIC_ENCRYPTION</dt>
+    <dd>GOOGLE_SYMMETRIC_ENCRYPTION{{% md %}}Creates symmetric encryption keys.{{% /md %}}</dd><dt>RSA_SIGN_PSS2048_SHA256</dt>
+    <dd>RSA_SIGN_PSS_2048_SHA256{{% md %}}RSASSA-PSS 2048 bit key with a SHA256 digest.{{% /md %}}</dd><dt>RSA_SIGN_PSS3072_SHA256</dt>
+    <dd>RSA_SIGN_PSS_3072_SHA256{{% md %}}RSASSA-PSS 3072 bit key with a SHA256 digest.{{% /md %}}</dd><dt>RSA_SIGN_PSS4096_SHA256</dt>
+    <dd>RSA_SIGN_PSS_4096_SHA256{{% md %}}RSASSA-PSS 4096 bit key with a SHA256 digest.{{% /md %}}</dd><dt>RSA_SIGN_PSS4096_SHA512</dt>
+    <dd>RSA_SIGN_PSS_4096_SHA512{{% md %}}RSASSA-PSS 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>RSA_SIGN_PKCS12048_SHA256</dt>
+    <dd>RSA_SIGN_PKCS1_2048_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 2048 bit key and a SHA256 digest.{{% /md %}}</dd><dt>RSA_SIGN_PKCS13072_SHA256</dt>
+    <dd>RSA_SIGN_PKCS1_3072_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 3072 bit key and a SHA256 digest.{{% /md %}}</dd><dt>RSA_SIGN_PKCS14096_SHA256</dt>
+    <dd>RSA_SIGN_PKCS1_4096_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 4096 bit key and a SHA256 digest.{{% /md %}}</dd><dt>RSA_SIGN_PKCS14096_SHA512</dt>
+    <dd>RSA_SIGN_PKCS1_4096_SHA512{{% md %}}RSASSA-PKCS1-v1_5 with a 4096 bit key and a SHA512 digest.{{% /md %}}</dd><dt>RSA_DECRYPT_OAEP2048_SHA256</dt>
+    <dd>RSA_DECRYPT_OAEP_2048_SHA256{{% md %}}RSAES-OAEP 2048 bit key with a SHA256 digest.{{% /md %}}</dd><dt>RSA_DECRYPT_OAEP3072_SHA256</dt>
+    <dd>RSA_DECRYPT_OAEP_3072_SHA256{{% md %}}RSAES-OAEP 3072 bit key with a SHA256 digest.{{% /md %}}</dd><dt>RSA_DECRYPT_OAEP4096_SHA256</dt>
+    <dd>RSA_DECRYPT_OAEP_4096_SHA256{{% md %}}RSAES-OAEP 4096 bit key with a SHA256 digest.{{% /md %}}</dd><dt>RSA_DECRYPT_OAEP4096_SHA512</dt>
+    <dd>RSA_DECRYPT_OAEP_4096_SHA512{{% md %}}RSAES-OAEP 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>EC_SIGN_P256_SHA256</dt>
+    <dd>EC_SIGN_P256_SHA256{{% md %}}ECDSA on the NIST P-256 curve with a SHA256 digest.{{% /md %}}</dd><dt>EC_SIGN_P384_SHA384</dt>
+    <dd>EC_SIGN_P384_SHA384{{% md %}}ECDSA on the NIST P-384 curve with a SHA384 digest.{{% /md %}}</dd><dt>EXTERNAL_SYMMETRIC_ENCRYPTION</dt>
+    <dd>EXTERNAL_SYMMETRIC_ENCRYPTION{{% md %}}Algorithm representing symmetric encryption by an external key manager.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cryptokeyversiontemplateprotectionlevel">Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Protection<wbr>Level</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Protection<wbr>Level<wbr>Unspecified</dt>
+    <dd>PROTECTION_LEVEL_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Software</dt>
+    <dd>SOFTWARE{{% md %}}Crypto operations are performed in software.{{% /md %}}</dd><dt>Hsm</dt>
+    <dd>HSM{{% md %}}Crypto operations are performed in a Hardware Security Module.{{% /md %}}</dd><dt>External</dt>
+    <dd>EXTERNAL{{% md %}}Crypto operations are performed by an external key manager.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Protection<wbr>Level<wbr>Protection<wbr>Level<wbr>Unspecified</dt>
+    <dd>PROTECTION_LEVEL_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Protection<wbr>Level<wbr>Software</dt>
+    <dd>SOFTWARE{{% md %}}Crypto operations are performed in software.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Protection<wbr>Level<wbr>Hsm</dt>
+    <dd>HSM{{% md %}}Crypto operations are performed in a Hardware Security Module.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Protection<wbr>Level<wbr>External</dt>
+    <dd>EXTERNAL{{% md %}}Crypto operations are performed by an external key manager.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Protection<wbr>Level<wbr>Unspecified</dt>
+    <dd>PROTECTION_LEVEL_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Software</dt>
+    <dd>SOFTWARE{{% md %}}Crypto operations are performed in software.{{% /md %}}</dd><dt>Hsm</dt>
+    <dd>HSM{{% md %}}Crypto operations are performed in a Hardware Security Module.{{% /md %}}</dd><dt>External</dt>
+    <dd>EXTERNAL{{% md %}}Crypto operations are performed by an external key manager.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PROTECTION_LEVEL_UNSPECIFIED</dt>
+    <dd>PROTECTION_LEVEL_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>SOFTWARE</dt>
+    <dd>SOFTWARE{{% md %}}Crypto operations are performed in software.{{% /md %}}</dd><dt>HSM</dt>
+    <dd>HSM{{% md %}}Crypto operations are performed in a Hardware Security Module.{{% /md %}}</dd><dt>EXTERNAL</dt>
+    <dd>EXTERNAL{{% md %}}Crypto operations are performed by an external key manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cryptokeyversiontemplateresponse">Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Response</h4>

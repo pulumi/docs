@@ -40,7 +40,7 @@ Creates a new FHIR store within the parent dataset.
               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">stream_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_healthcare_v1beta1.StreamConfigArgs]]</span> = None<span class="p">,</span>
               <span class="nx">validation_config</span><span class="p">:</span> <span class="nx">Optional[_healthcare_v1beta1.ValidationConfigArgs]</span> = None<span class="p">,</span>
-              <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+              <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[_healthcare_v1beta1.FhirStoreVersion]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">FhirStore</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FhirStoreArgs</a></span><span class="p">,</span>
@@ -278,7 +278,7 @@ The FhirStore resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#fhirstoreversion">Pulumi.<wbr>Google<wbr>Native.<wbr>Healthcare.<wbr>V1Beta1.<wbr>Fhir<wbr>Store<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The FHIR specification version that this FHIR store supports natively. This field is immutable after store creation. Requests are rejected if they contain FHIR resources of a different version. Version is required for every FHIR store.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -394,7 +394,7 @@ The FhirStore resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#fhirstoreversion">Fhir<wbr>Store<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The FHIR specification version that this FHIR store supports natively. This field is immutable after store creation. Requests are rejected if they contain FHIR resources of a different version. Version is required for every FHIR store.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -510,7 +510,7 @@ The FhirStore resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#fhirstoreversion">Fhir<wbr>Store<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The FHIR specification version that this FHIR store supports natively. This field is immutable after store creation. Requests are rejected if they contain FHIR resources of a different version. Version is required for every FHIR store.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -626,7 +626,7 @@ The FhirStore resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#fhirstoreversion">Fhir<wbr>Store<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The FHIR specification version that this FHIR store supports natively. This field is immutable after store creation. Requests are rejected if they contain FHIR resources of a different version. Version is required for every FHIR store.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -696,6 +696,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="fhirstoreversion">Fhir<wbr>Store<wbr>Version</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Version<wbr>Unspecified</dt>
+    <dd>VERSION_UNSPECIFIED{{% md %}}VERSION_UNSPECIFIED is treated as STU3 to accommodate the existing FHIR stores.{{% /md %}}</dd><dt>Dstu2</dt>
+    <dd>DSTU2{{% md %}}Draft Standard for Trial Use, [Release 2](https://www.hl7.org/fhir/DSTU2){{% /md %}}</dd><dt>Stu3</dt>
+    <dd>STU3{{% md %}}Standard for Trial Use, [Release 3](https://www.hl7.org/fhir/STU3){{% /md %}}</dd><dt>R4</dt>
+    <dd>R4{{% md %}}[Release 4](https://www.hl7.org/fhir/R4){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Fhir<wbr>Store<wbr>Version<wbr>Version<wbr>Unspecified</dt>
+    <dd>VERSION_UNSPECIFIED{{% md %}}VERSION_UNSPECIFIED is treated as STU3 to accommodate the existing FHIR stores.{{% /md %}}</dd><dt>Fhir<wbr>Store<wbr>Version<wbr>Dstu2</dt>
+    <dd>DSTU2{{% md %}}Draft Standard for Trial Use, [Release 2](https://www.hl7.org/fhir/DSTU2){{% /md %}}</dd><dt>Fhir<wbr>Store<wbr>Version<wbr>Stu3</dt>
+    <dd>STU3{{% md %}}Standard for Trial Use, [Release 3](https://www.hl7.org/fhir/STU3){{% /md %}}</dd><dt>Fhir<wbr>Store<wbr>Version<wbr>R4</dt>
+    <dd>R4{{% md %}}[Release 4](https://www.hl7.org/fhir/R4){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Version<wbr>Unspecified</dt>
+    <dd>VERSION_UNSPECIFIED{{% md %}}VERSION_UNSPECIFIED is treated as STU3 to accommodate the existing FHIR stores.{{% /md %}}</dd><dt>Dstu2</dt>
+    <dd>DSTU2{{% md %}}Draft Standard for Trial Use, [Release 2](https://www.hl7.org/fhir/DSTU2){{% /md %}}</dd><dt>Stu3</dt>
+    <dd>STU3{{% md %}}Standard for Trial Use, [Release 3](https://www.hl7.org/fhir/STU3){{% /md %}}</dd><dt>R4</dt>
+    <dd>R4{{% md %}}[Release 4](https://www.hl7.org/fhir/R4){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>VERSION_UNSPECIFIED</dt>
+    <dd>VERSION_UNSPECIFIED{{% md %}}VERSION_UNSPECIFIED is treated as STU3 to accommodate the existing FHIR stores.{{% /md %}}</dd><dt>DSTU2</dt>
+    <dd>DSTU2{{% md %}}Draft Standard for Trial Use, [Release 2](https://www.hl7.org/fhir/DSTU2){{% /md %}}</dd><dt>STU3</dt>
+    <dd>STU3{{% md %}}Standard for Trial Use, [Release 3](https://www.hl7.org/fhir/STU3){{% /md %}}</dd><dt>R4</dt>
+    <dd>R4{{% md %}}[Release 4](https://www.hl7.org/fhir/R4){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="googlecloudhealthcarev1beta1fhirbigquerydestination">Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Fhir<wbr>Big<wbr>Query<wbr>Destination</h4>
 
 {{% choosable language csharp %}}
@@ -729,7 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#writedisposition_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudhealthcarev1beta1fhirbigquerydestinationwritedisposition">Pulumi.<wbr>Google<wbr>Native.<wbr>Healthcare.<wbr>V1Beta1.<wbr>Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Fhir<wbr>Big<wbr>Query<wbr>Destination<wbr>Write<wbr>Disposition</a></span>
     </dt>
     <dd>{{% md %}}Determines if existing data in the destination dataset is overwritten, appended to, or not written if the tables contain data. If a write_disposition is specified, the `force` parameter is ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -765,7 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#writedisposition_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudhealthcarev1beta1fhirbigquerydestinationwritedisposition">Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Fhir<wbr>Big<wbr>Query<wbr>Destination<wbr>Write<wbr>Disposition</a></span>
     </dt>
     <dd>{{% md %}}Determines if existing data in the destination dataset is overwritten, appended to, or not written if the tables contain data. If a write_disposition is specified, the `force` parameter is ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -801,7 +835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#writedisposition_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudhealthcarev1beta1fhirbigquerydestinationwritedisposition">Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Fhir<wbr>Big<wbr>Query<wbr>Destination<wbr>Write<wbr>Disposition</a></span>
     </dt>
     <dd>{{% md %}}Determines if existing data in the destination dataset is overwritten, appended to, or not written if the tables contain data. If a write_disposition is specified, the `force` parameter is ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -837,7 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#write_disposition_python" style="color: inherit; text-decoration: inherit;">write_<wbr>disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudhealthcarev1beta1fhirbigquerydestinationwritedisposition">Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Fhir<wbr>Big<wbr>Query<wbr>Destination<wbr>Write<wbr>Disposition</a></span>
     </dt>
     <dd>{{% md %}}Determines if existing data in the destination dataset is overwritten, appended to, or not written if the tables contain data. If a write_disposition is specified, the `force` parameter is ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -988,6 +1022,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Determines if existing data in the destination dataset is overwritten, appended to, or not written if the tables contain data. If a write_disposition is specified, the `force` parameter is ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="googlecloudhealthcarev1beta1fhirbigquerydestinationwritedisposition">Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Fhir<wbr>Big<wbr>Query<wbr>Destination<wbr>Write<wbr>Disposition</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Write<wbr>Disposition<wbr>Unspecified</dt>
+    <dd>WRITE_DISPOSITION_UNSPECIFIED{{% md %}}Default behavior is the same as WRITE_EMPTY.{{% /md %}}</dd><dt>Write<wbr>Empty</dt>
+    <dd>WRITE_EMPTY{{% md %}}Only export data if the destination tables are empty.{{% /md %}}</dd><dt>Write<wbr>Truncate</dt>
+    <dd>WRITE_TRUNCATE{{% md %}}Erase all existing data in the tables before writing the instances.{{% /md %}}</dd><dt>Write<wbr>Append</dt>
+    <dd>WRITE_APPEND{{% md %}}Append data to the existing tables.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Fhir<wbr>Big<wbr>Query<wbr>Destination<wbr>Write<wbr>Disposition<wbr>Write<wbr>Disposition<wbr>Unspecified</dt>
+    <dd>WRITE_DISPOSITION_UNSPECIFIED{{% md %}}Default behavior is the same as WRITE_EMPTY.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Fhir<wbr>Big<wbr>Query<wbr>Destination<wbr>Write<wbr>Disposition<wbr>Write<wbr>Empty</dt>
+    <dd>WRITE_EMPTY{{% md %}}Only export data if the destination tables are empty.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Fhir<wbr>Big<wbr>Query<wbr>Destination<wbr>Write<wbr>Disposition<wbr>Write<wbr>Truncate</dt>
+    <dd>WRITE_TRUNCATE{{% md %}}Erase all existing data in the tables before writing the instances.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Fhir<wbr>Big<wbr>Query<wbr>Destination<wbr>Write<wbr>Disposition<wbr>Write<wbr>Append</dt>
+    <dd>WRITE_APPEND{{% md %}}Append data to the existing tables.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Write<wbr>Disposition<wbr>Unspecified</dt>
+    <dd>WRITE_DISPOSITION_UNSPECIFIED{{% md %}}Default behavior is the same as WRITE_EMPTY.{{% /md %}}</dd><dt>Write<wbr>Empty</dt>
+    <dd>WRITE_EMPTY{{% md %}}Only export data if the destination tables are empty.{{% /md %}}</dd><dt>Write<wbr>Truncate</dt>
+    <dd>WRITE_TRUNCATE{{% md %}}Erase all existing data in the tables before writing the instances.{{% /md %}}</dd><dt>Write<wbr>Append</dt>
+    <dd>WRITE_APPEND{{% md %}}Append data to the existing tables.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>WRITE_DISPOSITION_UNSPECIFIED</dt>
+    <dd>WRITE_DISPOSITION_UNSPECIFIED{{% md %}}Default behavior is the same as WRITE_EMPTY.{{% /md %}}</dd><dt>WRITE_EMPTY</dt>
+    <dd>WRITE_EMPTY{{% md %}}Only export data if the destination tables are empty.{{% /md %}}</dd><dt>WRITE_TRUNCATE</dt>
+    <dd>WRITE_TRUNCATE{{% md %}}Erase all existing data in the tables before writing the instances.{{% /md %}}</dd><dt>WRITE_APPEND</dt>
+    <dd>WRITE_APPEND{{% md %}}Append data to the existing tables.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="notificationconfig">Notification<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -1105,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schematype_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schemaconfigschematype">Pulumi.<wbr>Google<wbr>Native.<wbr>Healthcare.<wbr>V1Beta1.<wbr>Schema<wbr>Config<wbr>Schema<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the output schema type. Schema type is required.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1125,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schematype_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schemaconfigschematype">Schema<wbr>Config<wbr>Schema<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the output schema type. Schema type is required.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1145,7 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schematype_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schemaconfigschematype">Schema<wbr>Config<wbr>Schema<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the output schema type. Schema type is required.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1165,7 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_type_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#schemaconfigschematype">Schema<wbr>Config<wbr>Schema<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the output schema type. Schema type is required.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1250,6 +1318,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the output schema type. Schema type is required.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="schemaconfigschematype">Schema<wbr>Config<wbr>Schema<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Schema<wbr>Type<wbr>Unspecified</dt>
+    <dd>SCHEMA_TYPE_UNSPECIFIED{{% md %}}No schema type specified. This type is unsupported.{{% /md %}}</dd><dt>Lossless</dt>
+    <dd>LOSSLESS{{% md %}}A data-driven schema generated from the fields present in the FHIR data being exported, with no additional simplification.{{% /md %}}</dd><dt>Analytics</dt>
+    <dd>ANALYTICS{{% md %}}Analytics schema defined by the FHIR community. See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md. BigQuery only allows a maximum of 10,000 columns per table. Due to this limitation, the server will not generate schemas for fields of type `Resource`, which can hold any resource type. The affected fields are `Parameters.parameter.resource`, `Bundle.entry.resource`, and `Bundle.entry.response.outcome`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Schema<wbr>Config<wbr>Schema<wbr>Type<wbr>Schema<wbr>Type<wbr>Unspecified</dt>
+    <dd>SCHEMA_TYPE_UNSPECIFIED{{% md %}}No schema type specified. This type is unsupported.{{% /md %}}</dd><dt>Schema<wbr>Config<wbr>Schema<wbr>Type<wbr>Lossless</dt>
+    <dd>LOSSLESS{{% md %}}A data-driven schema generated from the fields present in the FHIR data being exported, with no additional simplification.{{% /md %}}</dd><dt>Schema<wbr>Config<wbr>Schema<wbr>Type<wbr>Analytics</dt>
+    <dd>ANALYTICS{{% md %}}Analytics schema defined by the FHIR community. See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md. BigQuery only allows a maximum of 10,000 columns per table. Due to this limitation, the server will not generate schemas for fields of type `Resource`, which can hold any resource type. The affected fields are `Parameters.parameter.resource`, `Bundle.entry.resource`, and `Bundle.entry.response.outcome`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Schema<wbr>Type<wbr>Unspecified</dt>
+    <dd>SCHEMA_TYPE_UNSPECIFIED{{% md %}}No schema type specified. This type is unsupported.{{% /md %}}</dd><dt>Lossless</dt>
+    <dd>LOSSLESS{{% md %}}A data-driven schema generated from the fields present in the FHIR data being exported, with no additional simplification.{{% /md %}}</dd><dt>Analytics</dt>
+    <dd>ANALYTICS{{% md %}}Analytics schema defined by the FHIR community. See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md. BigQuery only allows a maximum of 10,000 columns per table. Due to this limitation, the server will not generate schemas for fields of type `Resource`, which can hold any resource type. The affected fields are `Parameters.parameter.resource`, `Bundle.entry.resource`, and `Bundle.entry.response.outcome`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SCHEMA_TYPE_UNSPECIFIED</dt>
+    <dd>SCHEMA_TYPE_UNSPECIFIED{{% md %}}No schema type specified. This type is unsupported.{{% /md %}}</dd><dt>LOSSLESS</dt>
+    <dd>LOSSLESS{{% md %}}A data-driven schema generated from the fields present in the FHIR data being exported, with no additional simplification.{{% /md %}}</dd><dt>ANALYTICS</dt>
+    <dd>ANALYTICS{{% md %}}Analytics schema defined by the FHIR community. See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md. BigQuery only allows a maximum of 10,000 columns per table. Due to this limitation, the server will not generate schemas for fields of type `Resource`, which can hold any resource type. The affected fields are `Parameters.parameter.resource`, `Bundle.entry.resource`, and `Bundle.entry.response.outcome`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="streamconfig">Stream<wbr>Config</h4>

@@ -1099,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#localdiskinitializeparamsdisktype">Pulumi.<wbr>Google<wbr>Native.<wbr>Notebooks.<wbr>V1.<wbr>Local<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1143,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#localdiskinitializeparamsdisktype">Local<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1187,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#localdiskinitializeparamsdisktype">Local<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1231,7 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#localdiskinitializeparamsdisktype">Local<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1242,6 +1242,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="localdiskinitializeparamsdisktype">Local<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Disk<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Disk<wbr>Type<wbr>Unspecified</dt>
+    <dd>DISK_TYPE_UNSPECIFIED{{% md %}}Disk type not set.{{% /md %}}</dd><dt>Pd<wbr>Standard</dt>
+    <dd>PD_STANDARD{{% md %}}Standard persistent disk type.{{% /md %}}</dd><dt>Pd<wbr>Ssd</dt>
+    <dd>PD_SSD{{% md %}}SSD persistent disk type.{{% /md %}}</dd><dt>Pd<wbr>Balanced</dt>
+    <dd>PD_BALANCED{{% md %}}Balanced persistent disk type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Local<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Disk<wbr>Type<wbr>Disk<wbr>Type<wbr>Unspecified</dt>
+    <dd>DISK_TYPE_UNSPECIFIED{{% md %}}Disk type not set.{{% /md %}}</dd><dt>Local<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Disk<wbr>Type<wbr>Pd<wbr>Standard</dt>
+    <dd>PD_STANDARD{{% md %}}Standard persistent disk type.{{% /md %}}</dd><dt>Local<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Disk<wbr>Type<wbr>Pd<wbr>Ssd</dt>
+    <dd>PD_SSD{{% md %}}SSD persistent disk type.{{% /md %}}</dd><dt>Local<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Disk<wbr>Type<wbr>Pd<wbr>Balanced</dt>
+    <dd>PD_BALANCED{{% md %}}Balanced persistent disk type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Disk<wbr>Type<wbr>Unspecified</dt>
+    <dd>DISK_TYPE_UNSPECIFIED{{% md %}}Disk type not set.{{% /md %}}</dd><dt>Pd<wbr>Standard</dt>
+    <dd>PD_STANDARD{{% md %}}Standard persistent disk type.{{% /md %}}</dd><dt>Pd<wbr>Ssd</dt>
+    <dd>PD_SSD{{% md %}}SSD persistent disk type.{{% /md %}}</dd><dt>Pd<wbr>Balanced</dt>
+    <dd>PD_BALANCED{{% md %}}Balanced persistent disk type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DISK_TYPE_UNSPECIFIED</dt>
+    <dd>DISK_TYPE_UNSPECIFIED{{% md %}}Disk type not set.{{% /md %}}</dd><dt>PD_STANDARD</dt>
+    <dd>PD_STANDARD{{% md %}}Standard persistent disk type.{{% /md %}}</dd><dt>PD_SSD</dt>
+    <dd>PD_SSD{{% md %}}SSD persistent disk type.{{% /md %}}</dd><dt>PD_BALANCED</dt>
+    <dd>PD_BALANCED{{% md %}}Balanced persistent disk type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="localdiskinitializeparamsresponse">Local<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Response</h4>
@@ -1841,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#runtimeacceleratorconfigtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Notebooks.<wbr>V1.<wbr>Runtime<wbr>Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Accelerator model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1861,7 +1895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#runtimeacceleratorconfigtype">Runtime<wbr>Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Accelerator model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1881,7 +1915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#runtimeacceleratorconfigtype">Runtime<wbr>Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Accelerator model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1901,7 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#runtimeacceleratorconfigtype">Runtime<wbr>Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Accelerator model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1988,6 +2022,72 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Accelerator model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="runtimeacceleratorconfigtype">Runtime<wbr>Accelerator<wbr>Config<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Accelerator<wbr>Type<wbr>Unspecified</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Accelerator type is not specified.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Accelerator type is Nvidia Tesla K80.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Accelerator type is Nvidia Tesla P100.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Accelerator type is Nvidia Tesla V100.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Accelerator type is Nvidia Tesla P4.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Accelerator type is Nvidia Tesla T4.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>A100</dt>
+    <dd>NVIDIA_TESLA_A100{{% md %}}Accelerator type is Nvidia Tesla A100.{{% /md %}}</dd><dt>Tpu<wbr>V2</dt>
+    <dd>TPU_V2{{% md %}}(Coming soon) Accelerator type is TPU V2.{{% /md %}}</dd><dt>Tpu<wbr>V3</dt>
+    <dd>TPU_V3{{% md %}}(Coming soon) Accelerator type is TPU V3.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>T4Vws</dt>
+    <dd>NVIDIA_TESLA_T4_VWS{{% md %}}Accelerator type is NVIDIA Tesla T4 Virtual Workstations.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P100Vws</dt>
+    <dd>NVIDIA_TESLA_P100_VWS{{% md %}}Accelerator type is NVIDIA Tesla P100 Virtual Workstations.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P4Vws</dt>
+    <dd>NVIDIA_TESLA_P4_VWS{{% md %}}Accelerator type is NVIDIA Tesla P4 Virtual Workstations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Runtime<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Accelerator<wbr>Type<wbr>Unspecified</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Accelerator type is not specified.{{% /md %}}</dd><dt>Runtime<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Accelerator type is Nvidia Tesla K80.{{% /md %}}</dd><dt>Runtime<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Accelerator type is Nvidia Tesla P100.{{% /md %}}</dd><dt>Runtime<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Accelerator type is Nvidia Tesla V100.{{% /md %}}</dd><dt>Runtime<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Accelerator type is Nvidia Tesla P4.{{% /md %}}</dd><dt>Runtime<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Accelerator type is Nvidia Tesla T4.{{% /md %}}</dd><dt>Runtime<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>A100</dt>
+    <dd>NVIDIA_TESLA_A100{{% md %}}Accelerator type is Nvidia Tesla A100.{{% /md %}}</dd><dt>Runtime<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Tpu<wbr>V2</dt>
+    <dd>TPU_V2{{% md %}}(Coming soon) Accelerator type is TPU V2.{{% /md %}}</dd><dt>Runtime<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Tpu<wbr>V3</dt>
+    <dd>TPU_V3{{% md %}}(Coming soon) Accelerator type is TPU V3.{{% /md %}}</dd><dt>Runtime<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>T4Vws</dt>
+    <dd>NVIDIA_TESLA_T4_VWS{{% md %}}Accelerator type is NVIDIA Tesla T4 Virtual Workstations.{{% /md %}}</dd><dt>Runtime<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>P100Vws</dt>
+    <dd>NVIDIA_TESLA_P100_VWS{{% md %}}Accelerator type is NVIDIA Tesla P100 Virtual Workstations.{{% /md %}}</dd><dt>Runtime<wbr>Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>P4Vws</dt>
+    <dd>NVIDIA_TESLA_P4_VWS{{% md %}}Accelerator type is NVIDIA Tesla P4 Virtual Workstations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Accelerator<wbr>Type<wbr>Unspecified</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Accelerator type is not specified.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Accelerator type is Nvidia Tesla K80.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Accelerator type is Nvidia Tesla P100.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Accelerator type is Nvidia Tesla V100.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Accelerator type is Nvidia Tesla P4.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Accelerator type is Nvidia Tesla T4.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>A100</dt>
+    <dd>NVIDIA_TESLA_A100{{% md %}}Accelerator type is Nvidia Tesla A100.{{% /md %}}</dd><dt>Tpu<wbr>V2</dt>
+    <dd>TPU_V2{{% md %}}(Coming soon) Accelerator type is TPU V2.{{% /md %}}</dd><dt>Tpu<wbr>V3</dt>
+    <dd>TPU_V3{{% md %}}(Coming soon) Accelerator type is TPU V3.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>T4Vws</dt>
+    <dd>NVIDIA_TESLA_T4_VWS{{% md %}}Accelerator type is NVIDIA Tesla T4 Virtual Workstations.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P100Vws</dt>
+    <dd>NVIDIA_TESLA_P100_VWS{{% md %}}Accelerator type is NVIDIA Tesla P100 Virtual Workstations.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P4Vws</dt>
+    <dd>NVIDIA_TESLA_P4_VWS{{% md %}}Accelerator type is NVIDIA Tesla P4 Virtual Workstations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACCELERATOR_TYPE_UNSPECIFIED</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Accelerator type is not specified.{{% /md %}}</dd><dt>NVIDIA_TESLA_K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Accelerator type is Nvidia Tesla K80.{{% /md %}}</dd><dt>NVIDIA_TESLA_P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Accelerator type is Nvidia Tesla P100.{{% /md %}}</dd><dt>NVIDIA_TESLA_V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Accelerator type is Nvidia Tesla V100.{{% /md %}}</dd><dt>NVIDIA_TESLA_P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Accelerator type is Nvidia Tesla P4.{{% /md %}}</dd><dt>NVIDIA_TESLA_T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Accelerator type is Nvidia Tesla T4.{{% /md %}}</dd><dt>NVIDIA_TESLA_A100</dt>
+    <dd>NVIDIA_TESLA_A100{{% md %}}Accelerator type is Nvidia Tesla A100.{{% /md %}}</dd><dt>TPU_V2</dt>
+    <dd>TPU_V2{{% md %}}(Coming soon) Accelerator type is TPU V2.{{% /md %}}</dd><dt>TPU_V3</dt>
+    <dd>TPU_V3{{% md %}}(Coming soon) Accelerator type is TPU V3.{{% /md %}}</dd><dt>NVIDIA_TESLA_T4_VWS</dt>
+    <dd>NVIDIA_TESLA_T4_VWS{{% md %}}Accelerator type is NVIDIA Tesla T4 Virtual Workstations.{{% /md %}}</dd><dt>NVIDIA_TESLA_P100_VWS</dt>
+    <dd>NVIDIA_TESLA_P100_VWS{{% md %}}Accelerator type is NVIDIA Tesla P100 Virtual Workstations.{{% /md %}}</dd><dt>NVIDIA_TESLA_P4_VWS</dt>
+    <dd>NVIDIA_TESLA_P4_VWS{{% md %}}Accelerator type is NVIDIA Tesla P4 Virtual Workstations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="runtimeaccessconfig">Runtime<wbr>Access<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -1997,7 +2097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstype_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#runtimeaccessconfigaccesstype">Pulumi.<wbr>Google<wbr>Native.<wbr>Notebooks.<wbr>V1.<wbr>Runtime<wbr>Access<wbr>Config<wbr>Access<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of access mode this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2017,7 +2117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstype_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#runtimeaccessconfigaccesstype">Runtime<wbr>Access<wbr>Config<wbr>Access<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of access mode this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2037,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#runtimeaccessconfigaccesstype">Runtime<wbr>Access<wbr>Config<wbr>Access<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of access mode this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2057,7 +2157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#runtimeaccessconfigaccesstype">Runtime<wbr>Access<wbr>Config<wbr>Access<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of access mode this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2068,6 +2168,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="runtimeaccessconfigaccesstype">Runtime<wbr>Access<wbr>Config<wbr>Access<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Runtime<wbr>Access<wbr>Type<wbr>Unspecified</dt>
+    <dd>RUNTIME_ACCESS_TYPE_UNSPECIFIED{{% md %}}Unspecified access.{{% /md %}}</dd><dt>Single<wbr>User</dt>
+    <dd>SINGLE_USER{{% md %}}Single user login.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Runtime<wbr>Access<wbr>Config<wbr>Access<wbr>Type<wbr>Runtime<wbr>Access<wbr>Type<wbr>Unspecified</dt>
+    <dd>RUNTIME_ACCESS_TYPE_UNSPECIFIED{{% md %}}Unspecified access.{{% /md %}}</dd><dt>Runtime<wbr>Access<wbr>Config<wbr>Access<wbr>Type<wbr>Single<wbr>User</dt>
+    <dd>SINGLE_USER{{% md %}}Single user login.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Runtime<wbr>Access<wbr>Type<wbr>Unspecified</dt>
+    <dd>RUNTIME_ACCESS_TYPE_UNSPECIFIED{{% md %}}Unspecified access.{{% /md %}}</dd><dt>Single<wbr>User</dt>
+    <dd>SINGLE_USER{{% md %}}Single user login.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RUNTIME_ACCESS_TYPE_UNSPECIFIED</dt>
+    <dd>RUNTIME_ACCESS_TYPE_UNSPECIFIED{{% md %}}Unspecified access.{{% /md %}}</dd><dt>SINGLE_USER</dt>
+    <dd>SINGLE_USER{{% md %}}Single user login.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="runtimeaccessconfigresponse">Runtime<wbr>Access<wbr>Config<wbr>Response</h4>
@@ -3127,7 +3253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#virtualmachineconfignictype">Pulumi.<wbr>Google<wbr>Native.<wbr>Notebooks.<wbr>V1.<wbr>Virtual<wbr>Machine<wbr>Config<wbr>Nic<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3235,7 +3361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#virtualmachineconfignictype">Virtual<wbr>Machine<wbr>Config<wbr>Nic<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3343,7 +3469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#virtualmachineconfignictype">Virtual<wbr>Machine<wbr>Config<wbr>Nic<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3451,7 +3577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#virtualmachineconfignictype">Virtual<wbr>Machine<wbr>Config<wbr>Nic<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3478,6 +3604,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine tags to add to runtime (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualmachineconfignictype">Virtual<wbr>Machine<wbr>Config<wbr>Nic<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified<wbr>Nic<wbr>Type</dt>
+    <dd>UNSPECIFIED_NIC_TYPE{{% md %}}No type specified.{{% /md %}}</dd><dt>Virtio<wbr>Net</dt>
+    <dd>VIRTIO_NET{{% md %}}VIRTIO{{% /md %}}</dd><dt>Gvnic</dt>
+    <dd>GVNIC{{% md %}}GVNIC{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Virtual<wbr>Machine<wbr>Config<wbr>Nic<wbr>Type<wbr>Unspecified<wbr>Nic<wbr>Type</dt>
+    <dd>UNSPECIFIED_NIC_TYPE{{% md %}}No type specified.{{% /md %}}</dd><dt>Virtual<wbr>Machine<wbr>Config<wbr>Nic<wbr>Type<wbr>Virtio<wbr>Net</dt>
+    <dd>VIRTIO_NET{{% md %}}VIRTIO{{% /md %}}</dd><dt>Virtual<wbr>Machine<wbr>Config<wbr>Nic<wbr>Type<wbr>Gvnic</dt>
+    <dd>GVNIC{{% md %}}GVNIC{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified<wbr>Nic<wbr>Type</dt>
+    <dd>UNSPECIFIED_NIC_TYPE{{% md %}}No type specified.{{% /md %}}</dd><dt>Virtio<wbr>Net</dt>
+    <dd>VIRTIO_NET{{% md %}}VIRTIO{{% /md %}}</dd><dt>Gvnic</dt>
+    <dd>GVNIC{{% md %}}GVNIC{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED_NIC_TYPE</dt>
+    <dd>UNSPECIFIED_NIC_TYPE{{% md %}}No type specified.{{% /md %}}</dd><dt>VIRTIO_NET</dt>
+    <dd>VIRTIO_NET{{% md %}}VIRTIO{{% /md %}}</dd><dt>GVNIC</dt>
+    <dd>GVNIC{{% md %}}GVNIC{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineconfigresponse">Virtual<wbr>Machine<wbr>Config<wbr>Response</h4>

@@ -17,6 +17,14 @@ Explore the resources and functions of the google-native.metastore/v1beta module
     <li><a href="serviceiampolicy" title="ServiceIamPolicy"><span class="symbol resource"></span>ServiceIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getbackup" title="GetBackup"><span class="symbol function"></span>GetBackup</a></li>
+    <li><a href="getmetadataimport" title="GetMetadataImport"><span class="symbol function"></span>GetMetadataImport</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getserviceiampolicy" title="GetServiceIamPolicy"><span class="symbol function"></span>GetServiceIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -24,6 +32,6 @@ Explore the resources and functions of the google-native.metastore/v1beta module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

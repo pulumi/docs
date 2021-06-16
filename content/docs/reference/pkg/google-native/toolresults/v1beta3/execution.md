@@ -36,7 +36,7 @@ Creates an Execution. The returned Execution will have the id set. May return an
               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">specification</span><span class="p">:</span> <span class="nx">Optional[_toolresults_v1beta3.SpecificationArgs]</span> = None<span class="p">,</span>
-              <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_toolresults_v1beta3.ExecutionState]</span> = None<span class="p">,</span>
               <span class="nx">test_execution_matrix_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Execution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -243,7 +243,7 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#executionstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Tool<wbr>Results.<wbr>V1Beta3.<wbr>Execution<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The initial state is IN_PROGRESS. The only legal state transitions is from IN_PROGRESS to COMPLETE. A PRECONDITION_FAILED will be returned if an invalid transition is requested. The state can only be set to COMPLETE once. A FAILED_PRECONDITION will be returned if the state is set to COMPLETE multiple times. If the state is set to COMPLETE, all the in-progress steps within the execution will be set as COMPLETE. If the outcome of the step is not set, the outcome will be set to INCONCLUSIVE. - In response always set - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -335,7 +335,7 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#executionstate">Execution<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The initial state is IN_PROGRESS. The only legal state transitions is from IN_PROGRESS to COMPLETE. A PRECONDITION_FAILED will be returned if an invalid transition is requested. The state can only be set to COMPLETE once. A FAILED_PRECONDITION will be returned if the state is set to COMPLETE multiple times. If the state is set to COMPLETE, all the in-progress steps within the execution will be set as COMPLETE. If the outcome of the step is not set, the outcome will be set to INCONCLUSIVE. - In response always set - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -427,7 +427,7 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#executionstate">Execution<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The initial state is IN_PROGRESS. The only legal state transitions is from IN_PROGRESS to COMPLETE. A PRECONDITION_FAILED will be returned if an invalid transition is requested. The state can only be set to COMPLETE once. A FAILED_PRECONDITION will be returned if the state is set to COMPLETE multiple times. If the state is set to COMPLETE, all the in-progress steps within the execution will be set as COMPLETE. If the outcome of the step is not set, the outcome will be set to INCONCLUSIVE. - In response always set - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -519,7 +519,7 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#executionstate">Execution<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The initial state is IN_PROGRESS. The only legal state transitions is from IN_PROGRESS to COMPLETE. A PRECONDITION_FAILED will be returned if an invalid transition is requested. The state can only be set to COMPLETE once. A FAILED_PRECONDITION will be returned if the state is set to COMPLETE multiple times. If the state is set to COMPLETE, all the in-progress steps within the execution will be set as COMPLETE. If the outcome of the step is not set, the outcome will be set to INCONCLUSIVE. - In response always set - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2057,6 +2057,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Signed seconds of the span of time. Must be from -315,576,000,000 to +315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="executionstate">Execution<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unknown<wbr>State</dt>
+    <dd>unknownState{{% md %}}Should never be in this state. Exists for proto deserialization backward compatibility.{{% /md %}}</dd><dt>Pending</dt>
+    <dd>pending{{% md %}}The Execution/Step is created, ready to run, but not running yet. If an Execution/Step is created without initial state, it is assumed that the Execution/Step is in PENDING state.{{% /md %}}</dd><dt>In<wbr>Progress</dt>
+    <dd>inProgress{{% md %}}The Execution/Step is in progress.{{% /md %}}</dd><dt>Complete</dt>
+    <dd>complete{{% md %}}The finalized, immutable state. Steps/Executions in this state cannot be modified.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Execution<wbr>State<wbr>Unknown<wbr>State</dt>
+    <dd>unknownState{{% md %}}Should never be in this state. Exists for proto deserialization backward compatibility.{{% /md %}}</dd><dt>Execution<wbr>State<wbr>Pending</dt>
+    <dd>pending{{% md %}}The Execution/Step is created, ready to run, but not running yet. If an Execution/Step is created without initial state, it is assumed that the Execution/Step is in PENDING state.{{% /md %}}</dd><dt>Execution<wbr>State<wbr>In<wbr>Progress</dt>
+    <dd>inProgress{{% md %}}The Execution/Step is in progress.{{% /md %}}</dd><dt>Execution<wbr>State<wbr>Complete</dt>
+    <dd>complete{{% md %}}The finalized, immutable state. Steps/Executions in this state cannot be modified.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unknown<wbr>State</dt>
+    <dd>unknownState{{% md %}}Should never be in this state. Exists for proto deserialization backward compatibility.{{% /md %}}</dd><dt>Pending</dt>
+    <dd>pending{{% md %}}The Execution/Step is created, ready to run, but not running yet. If an Execution/Step is created without initial state, it is assumed that the Execution/Step is in PENDING state.{{% /md %}}</dd><dt>In<wbr>Progress</dt>
+    <dd>inProgress{{% md %}}The Execution/Step is in progress.{{% /md %}}</dd><dt>Complete</dt>
+    <dd>complete{{% md %}}The finalized, immutable state. Steps/Executions in this state cannot be modified.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNKNOWN_STATE</dt>
+    <dd>unknownState{{% md %}}Should never be in this state. Exists for proto deserialization backward compatibility.{{% /md %}}</dd><dt>PENDING</dt>
+    <dd>pending{{% md %}}The Execution/Step is created, ready to run, but not running yet. If an Execution/Step is created without initial state, it is assumed that the Execution/Step is in PENDING state.{{% /md %}}</dd><dt>IN_PROGRESS</dt>
+    <dd>inProgress{{% md %}}The Execution/Step is in progress.{{% /md %}}</dd><dt>COMPLETE</dt>
+    <dd>complete{{% md %}}The finalized, immutable state. Steps/Executions in this state cannot be modified.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="failuredetail">Failure<wbr>Detail</h4>
 
 {{% choosable language csharp %}}
@@ -3530,7 +3564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#outcomesummary">Pulumi.<wbr>Google<wbr>Native.<wbr>Tool<wbr>Results.<wbr>V1Beta3.<wbr>Outcome<wbr>Summary</a></span>
     </dt>
     <dd>{{% md %}}The simplest way to interpret a result. Required{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3574,7 +3608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_go" style="color: inherit; text-decoration: inherit;">Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#outcomesummary">Outcome<wbr>Summary</a></span>
     </dt>
     <dd>{{% md %}}The simplest way to interpret a result. Required{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3618,7 +3652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_nodejs" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#outcomesummary">Outcome<wbr>Summary</a></span>
     </dt>
     <dd>{{% md %}}The simplest way to interpret a result. Required{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3662,7 +3696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#outcomesummary">Outcome<wbr>Summary</a></span>
     </dt>
     <dd>{{% md %}}The simplest way to interpret a result. Required{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3843,6 +3877,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The simplest way to interpret a result. Required{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="outcomesummary">Outcome<wbr>Summary</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unset</dt>
+    <dd>unset{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Success</dt>
+    <dd>success{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>Failure</dt>
+    <dd>failure{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>Inconclusive</dt>
+    <dd>inconclusive{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>Skipped</dt>
+    <dd>skipped{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd><dt>Flaky</dt>
+    <dd>flaky{{% md %}}A group of steps that were run with the same configuration had both failure and success outcomes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Outcome<wbr>Summary<wbr>Unset</dt>
+    <dd>unset{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Outcome<wbr>Summary<wbr>Success</dt>
+    <dd>success{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>Outcome<wbr>Summary<wbr>Failure</dt>
+    <dd>failure{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>Outcome<wbr>Summary<wbr>Inconclusive</dt>
+    <dd>inconclusive{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>Outcome<wbr>Summary<wbr>Skipped</dt>
+    <dd>skipped{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd><dt>Outcome<wbr>Summary<wbr>Flaky</dt>
+    <dd>flaky{{% md %}}A group of steps that were run with the same configuration had both failure and success outcomes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unset</dt>
+    <dd>unset{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Success</dt>
+    <dd>success{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>Failure</dt>
+    <dd>failure{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>Inconclusive</dt>
+    <dd>inconclusive{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>Skipped</dt>
+    <dd>skipped{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd><dt>Flaky</dt>
+    <dd>flaky{{% md %}}A group of steps that were run with the same configuration had both failure and success outcomes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSET</dt>
+    <dd>unset{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>SUCCESS</dt>
+    <dd>success{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>FAILURE</dt>
+    <dd>failure{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>INCONCLUSIVE</dt>
+    <dd>inconclusive{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>SKIPPED</dt>
+    <dd>skipped{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd><dt>FLAKY</dt>
+    <dd>flaky{{% md %}}A group of steps that were run with the same configuration had both failure and success outcomes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skippeddetail">Skipped<wbr>Detail</h4>

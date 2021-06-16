@@ -710,7 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#dynamicgroupqueryresourcetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Identity.<wbr>V1.<wbr>Dynamic<wbr>Group<wbr>Query<wbr>Resource<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Resource type for the Dynamic Group Query{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -730,7 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#dynamicgroupqueryresourcetype">Dynamic<wbr>Group<wbr>Query<wbr>Resource<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Resource type for the Dynamic Group Query{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -750,7 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#dynamicgroupqueryresourcetype">Dynamic<wbr>Group<wbr>Query<wbr>Resource<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Resource type for the Dynamic Group Query{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -770,9 +770,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#dynamicgroupqueryresourcetype">Dynamic<wbr>Group<wbr>Query<wbr>Resource<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Resource type for the Dynamic Group Query{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dynamicgroupqueryresourcetype">Dynamic<wbr>Group<wbr>Query<wbr>Resource<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Resource<wbr>Type<wbr>Unspecified</dt>
+    <dd>RESOURCE_TYPE_UNSPECIFIED{{% md %}}Default value (not valid){{% /md %}}</dd><dt>User</dt>
+    <dd>USER{{% md %}}For queries on User{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Dynamic<wbr>Group<wbr>Query<wbr>Resource<wbr>Type<wbr>Resource<wbr>Type<wbr>Unspecified</dt>
+    <dd>RESOURCE_TYPE_UNSPECIFIED{{% md %}}Default value (not valid){{% /md %}}</dd><dt>Dynamic<wbr>Group<wbr>Query<wbr>Resource<wbr>Type<wbr>User</dt>
+    <dd>USER{{% md %}}For queries on User{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Resource<wbr>Type<wbr>Unspecified</dt>
+    <dd>RESOURCE_TYPE_UNSPECIFIED{{% md %}}Default value (not valid){{% /md %}}</dd><dt>User</dt>
+    <dd>USER{{% md %}}For queries on User{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RESOURCE_TYPE_UNSPECIFIED</dt>
+    <dd>RESOURCE_TYPE_UNSPECIFIED{{% md %}}Default value (not valid){{% /md %}}</dd><dt>USER</dt>
+    <dd>USER{{% md %}}For queries on User{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dynamicgroupqueryresponse">Dynamic<wbr>Group<wbr>Query<wbr>Response</h4>

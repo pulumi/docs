@@ -18,6 +18,15 @@ Explore the resources and functions of the google-native.datalabeling/v1beta1 mo
     <li><a href="instruction" title="Instruction"><span class="symbol resource"></span>Instruction</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getannotationspecset" title="GetAnnotationSpecSet"><span class="symbol function"></span>GetAnnotationSpecSet</a></li>
+    <li><a href="getdataset" title="GetDataset"><span class="symbol function"></span>GetDataset</a></li>
+    <li><a href="getevaluationjob" title="GetEvaluationJob"><span class="symbol function"></span>GetEvaluationJob</a></li>
+    <li><a href="getfeedbackmessage" title="GetFeedbackMessage"><span class="symbol function"></span>GetFeedbackMessage</a></li>
+    <li><a href="getinstruction" title="GetInstruction"><span class="symbol function"></span>GetInstruction</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -25,6 +34,6 @@ Explore the resources and functions of the google-native.datalabeling/v1beta1 mo
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

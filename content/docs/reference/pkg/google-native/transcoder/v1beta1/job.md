@@ -1218,7 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fadetype_csharp" style="color: inherit; text-decoration: inherit;">Fade<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#animationfadefadetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Transcoder.<wbr>V1Beta1.<wbr>Animation<wbr>Fade<wbr>Fade<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Type of fade animation: `FADE_IN` or `FADE_OUT`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1254,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fadetype_go" style="color: inherit; text-decoration: inherit;">Fade<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#animationfadefadetype">Animation<wbr>Fade<wbr>Fade<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Type of fade animation: `FADE_IN` or `FADE_OUT`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1290,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fadetype_nodejs" style="color: inherit; text-decoration: inherit;">fade<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#animationfadefadetype">Animation<wbr>Fade<wbr>Fade<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Type of fade animation: `FADE_IN` or `FADE_OUT`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1326,7 +1326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fade_type_python" style="color: inherit; text-decoration: inherit;">fade_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#animationfadefadetype">Animation<wbr>Fade<wbr>Fade<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Type of fade animation: `FADE_IN` or `FADE_OUT`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1345,6 +1345,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#normalizedcoordinate">Normalized<wbr>Coordinate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="animationfadefadetype">Animation<wbr>Fade<wbr>Fade<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Fade<wbr>Type<wbr>Unspecified</dt>
+    <dd>FADE_TYPE_UNSPECIFIED{{% md %}}The fade type is not specified.{{% /md %}}</dd><dt>Fade<wbr>In</dt>
+    <dd>FADE_IN{{% md %}}Fade the overlay object into view.{{% /md %}}</dd><dt>Fade<wbr>Out</dt>
+    <dd>FADE_OUT{{% md %}}Fade the overlay object out of view.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Animation<wbr>Fade<wbr>Fade<wbr>Type<wbr>Fade<wbr>Type<wbr>Unspecified</dt>
+    <dd>FADE_TYPE_UNSPECIFIED{{% md %}}The fade type is not specified.{{% /md %}}</dd><dt>Animation<wbr>Fade<wbr>Fade<wbr>Type<wbr>Fade<wbr>In</dt>
+    <dd>FADE_IN{{% md %}}Fade the overlay object into view.{{% /md %}}</dd><dt>Animation<wbr>Fade<wbr>Fade<wbr>Type<wbr>Fade<wbr>Out</dt>
+    <dd>FADE_OUT{{% md %}}Fade the overlay object out of view.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Fade<wbr>Type<wbr>Unspecified</dt>
+    <dd>FADE_TYPE_UNSPECIFIED{{% md %}}The fade type is not specified.{{% /md %}}</dd><dt>Fade<wbr>In</dt>
+    <dd>FADE_IN{{% md %}}Fade the overlay object into view.{{% /md %}}</dd><dt>Fade<wbr>Out</dt>
+    <dd>FADE_OUT{{% md %}}Fade the overlay object out of view.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FADE_TYPE_UNSPECIFIED</dt>
+    <dd>FADE_TYPE_UNSPECIFIED{{% md %}}The fade type is not specified.{{% /md %}}</dd><dt>FADE_IN</dt>
+    <dd>FADE_IN{{% md %}}Fade the overlay object into view.{{% /md %}}</dd><dt>FADE_OUT</dt>
+    <dd>FADE_OUT{{% md %}}Fade the overlay object out of view.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="animationfaderesponse">Animation<wbr>Fade<wbr>Response</h4>
@@ -5970,7 +6000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#manifesttype">Pulumi.<wbr>Google<wbr>Native.<wbr>Transcoder.<wbr>V1Beta1.<wbr>Manifest<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Type of the manifest, can be "HLS" or "DASH".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5998,7 +6028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#manifesttype">Manifest<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Type of the manifest, can be "HLS" or "DASH".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6026,7 +6056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#manifesttype">Manifest<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Type of the manifest, can be "HLS" or "DASH".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6054,7 +6084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#manifesttype">Manifest<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Type of the manifest, can be "HLS" or "DASH".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6171,6 +6201,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Type of the manifest, can be "HLS" or "DASH".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="manifesttype">Manifest<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Manifest<wbr>Type<wbr>Unspecified</dt>
+    <dd>MANIFEST_TYPE_UNSPECIFIED{{% md %}}The manifest type is not specified.{{% /md %}}</dd><dt>Hls</dt>
+    <dd>HLS{{% md %}}Create `"HLS"` manifest. The corresponding file extension is `".m3u8"`.{{% /md %}}</dd><dt>Dash</dt>
+    <dd>DASH{{% md %}}Create `"DASH"` manifest. The corresponding file extension is `".mpd"`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Manifest<wbr>Type<wbr>Manifest<wbr>Type<wbr>Unspecified</dt>
+    <dd>MANIFEST_TYPE_UNSPECIFIED{{% md %}}The manifest type is not specified.{{% /md %}}</dd><dt>Manifest<wbr>Type<wbr>Hls</dt>
+    <dd>HLS{{% md %}}Create `"HLS"` manifest. The corresponding file extension is `".m3u8"`.{{% /md %}}</dd><dt>Manifest<wbr>Type<wbr>Dash</dt>
+    <dd>DASH{{% md %}}Create `"DASH"` manifest. The corresponding file extension is `".mpd"`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Manifest<wbr>Type<wbr>Unspecified</dt>
+    <dd>MANIFEST_TYPE_UNSPECIFIED{{% md %}}The manifest type is not specified.{{% /md %}}</dd><dt>Hls</dt>
+    <dd>HLS{{% md %}}Create `"HLS"` manifest. The corresponding file extension is `".m3u8"`.{{% /md %}}</dd><dt>Dash</dt>
+    <dd>DASH{{% md %}}Create `"DASH"` manifest. The corresponding file extension is `".mpd"`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MANIFEST_TYPE_UNSPECIFIED</dt>
+    <dd>MANIFEST_TYPE_UNSPECIFIED{{% md %}}The manifest type is not specified.{{% /md %}}</dd><dt>HLS</dt>
+    <dd>HLS{{% md %}}Create `"HLS"` manifest. The corresponding file extension is `".m3u8"`.{{% /md %}}</dd><dt>DASH</dt>
+    <dd>DASH{{% md %}}Create `"DASH"` manifest. The corresponding file extension is `".mpd"`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mpegcommonencryption">Mpeg<wbr>Common<wbr>Encryption</h4>

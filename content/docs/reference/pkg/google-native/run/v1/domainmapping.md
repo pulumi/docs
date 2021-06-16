@@ -507,7 +507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatemode_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#domainmappingspeccertificatemode">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1.<wbr>Domain<wbr>Mapping<wbr>Spec<wbr>Certificate<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The mode of the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -535,7 +535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatemode_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#domainmappingspeccertificatemode">Domain<wbr>Mapping<wbr>Spec<wbr>Certificate<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The mode of the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -563,7 +563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatemode_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#domainmappingspeccertificatemode">Domain<wbr>Mapping<wbr>Spec<wbr>Certificate<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The mode of the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -591,7 +591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_mode_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#domainmappingspeccertificatemode">Domain<wbr>Mapping<wbr>Spec<wbr>Certificate<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The mode of the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,6 +610,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Knative Route that this DomainMapping applies to. The route must exist.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="domainmappingspeccertificatemode">Domain<wbr>Mapping<wbr>Spec<wbr>Certificate<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Certificate<wbr>Mode<wbr>Unspecified</dt>
+    <dd>CERTIFICATE_MODE_UNSPECIFIED</dd><dt>None</dt>
+    <dd>NONE{{% md %}}Do not provision an HTTPS certificate.{{% /md %}}</dd><dt>Automatic</dt>
+    <dd>AUTOMATIC{{% md %}}Automatically provisions an HTTPS certificate via GoogleCA or LetsEncrypt.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Domain<wbr>Mapping<wbr>Spec<wbr>Certificate<wbr>Mode<wbr>Certificate<wbr>Mode<wbr>Unspecified</dt>
+    <dd>CERTIFICATE_MODE_UNSPECIFIED</dd><dt>Domain<wbr>Mapping<wbr>Spec<wbr>Certificate<wbr>Mode<wbr>None</dt>
+    <dd>NONE{{% md %}}Do not provision an HTTPS certificate.{{% /md %}}</dd><dt>Domain<wbr>Mapping<wbr>Spec<wbr>Certificate<wbr>Mode<wbr>Automatic</dt>
+    <dd>AUTOMATIC{{% md %}}Automatically provisions an HTTPS certificate via GoogleCA or LetsEncrypt.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Certificate<wbr>Mode<wbr>Unspecified</dt>
+    <dd>CERTIFICATE_MODE_UNSPECIFIED</dd><dt>None</dt>
+    <dd>NONE{{% md %}}Do not provision an HTTPS certificate.{{% /md %}}</dd><dt>Automatic</dt>
+    <dd>AUTOMATIC{{% md %}}Automatically provisions an HTTPS certificate via GoogleCA or LetsEncrypt.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CERTIFICATE_MODE_UNSPECIFIED</dt>
+    <dd>CERTIFICATE_MODE_UNSPECIFIED</dd><dt>NONE</dt>
+    <dd>NONE{{% md %}}Do not provision an HTTPS certificate.{{% /md %}}</dd><dt>AUTOMATIC</dt>
+    <dd>AUTOMATIC{{% md %}}Automatically provisions an HTTPS certificate via GoogleCA or LetsEncrypt.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="domainmappingspecresponse">Domain<wbr>Mapping<wbr>Spec<wbr>Response</h4>
@@ -2943,7 +2973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcerecordtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1.<wbr>Resource<wbr>Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Resource record type. Example: `AAAA`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2971,7 +3001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcerecordtype">Resource<wbr>Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Resource record type. Example: `AAAA`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2999,7 +3029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcerecordtype">Resource<wbr>Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Resource record type. Example: `AAAA`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3027,7 +3057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#resourcerecordtype">Resource<wbr>Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Resource record type. Example: `AAAA`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3144,6 +3174,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource record type. Example: `AAAA`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourcerecordtype">Resource<wbr>Record<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Record<wbr>Type<wbr>Unspecified</dt>
+    <dd>RECORD_TYPE_UNSPECIFIED{{% md %}}An unknown resource record.{{% /md %}}</dd><dt>A</dt>
+    <dd>A{{% md %}}An A resource record. Data is an IPv4 address.{{% /md %}}</dd><dt>Aaaa</dt>
+    <dd>AAAA{{% md %}}An AAAA resource record. Data is an IPv6 address.{{% /md %}}</dd><dt>Cname</dt>
+    <dd>CNAME{{% md %}}A CNAME resource record. Data is a domain name to be aliased.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Resource<wbr>Record<wbr>Type<wbr>Record<wbr>Type<wbr>Unspecified</dt>
+    <dd>RECORD_TYPE_UNSPECIFIED{{% md %}}An unknown resource record.{{% /md %}}</dd><dt>Resource<wbr>Record<wbr>Type<wbr>A</dt>
+    <dd>A{{% md %}}An A resource record. Data is an IPv4 address.{{% /md %}}</dd><dt>Resource<wbr>Record<wbr>Type<wbr>Aaaa</dt>
+    <dd>AAAA{{% md %}}An AAAA resource record. Data is an IPv6 address.{{% /md %}}</dd><dt>Resource<wbr>Record<wbr>Type<wbr>Cname</dt>
+    <dd>CNAME{{% md %}}A CNAME resource record. Data is a domain name to be aliased.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Record<wbr>Type<wbr>Unspecified</dt>
+    <dd>RECORD_TYPE_UNSPECIFIED{{% md %}}An unknown resource record.{{% /md %}}</dd><dt>A</dt>
+    <dd>A{{% md %}}An A resource record. Data is an IPv4 address.{{% /md %}}</dd><dt>Aaaa</dt>
+    <dd>AAAA{{% md %}}An AAAA resource record. Data is an IPv6 address.{{% /md %}}</dd><dt>Cname</dt>
+    <dd>CNAME{{% md %}}A CNAME resource record. Data is a domain name to be aliased.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RECORD_TYPE_UNSPECIFIED</dt>
+    <dd>RECORD_TYPE_UNSPECIFIED{{% md %}}An unknown resource record.{{% /md %}}</dd><dt>A</dt>
+    <dd>A{{% md %}}An A resource record. Data is an IPv4 address.{{% /md %}}</dd><dt>AAAA</dt>
+    <dd>AAAA{{% md %}}An AAAA resource record. Data is an IPv6 address.{{% /md %}}</dd><dt>CNAME</dt>
+    <dd>CNAME{{% md %}}A CNAME resource record. Data is a domain name to be aliased.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -539,7 +539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logicoperator_csharp" style="color: inherit; text-decoration: inherit;">Logic<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#compositefilterlogicoperator">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Search.<wbr>V1.<wbr>Composite<wbr>Filter<wbr>Logic<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}The logic operator of the sub filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -559,7 +559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logicoperator_go" style="color: inherit; text-decoration: inherit;">Logic<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#compositefilterlogicoperator">Composite<wbr>Filter<wbr>Logic<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}The logic operator of the sub filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -579,7 +579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logicoperator_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#compositefilterlogicoperator">Composite<wbr>Filter<wbr>Logic<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}The logic operator of the sub filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -599,7 +599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logic_operator_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#compositefilterlogicoperator">Composite<wbr>Filter<wbr>Logic<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}The logic operator of the sub filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,6 +610,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#filter">Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sub filters.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="compositefilterlogicoperator">Composite<wbr>Filter<wbr>Logic<wbr>Operator</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>And</dt>
+    <dd>AND{{% md %}}Logical operators, which can only be applied to sub filters.{{% /md %}}</dd><dt>Or</dt>
+    <dd>OR</dd><dt>Not</dt>
+    <dd>NOT{{% md %}}NOT can only be applied on a single sub filter.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Composite<wbr>Filter<wbr>Logic<wbr>Operator<wbr>And</dt>
+    <dd>AND{{% md %}}Logical operators, which can only be applied to sub filters.{{% /md %}}</dd><dt>Composite<wbr>Filter<wbr>Logic<wbr>Operator<wbr>Or</dt>
+    <dd>OR</dd><dt>Composite<wbr>Filter<wbr>Logic<wbr>Operator<wbr>Not</dt>
+    <dd>NOT{{% md %}}NOT can only be applied on a single sub filter.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>And</dt>
+    <dd>AND{{% md %}}Logical operators, which can only be applied to sub filters.{{% /md %}}</dd><dt>Or</dt>
+    <dd>OR</dd><dt>Not</dt>
+    <dd>NOT{{% md %}}NOT can only be applied on a single sub filter.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>AND_</dt>
+    <dd>AND{{% md %}}Logical operators, which can only be applied to sub filters.{{% /md %}}</dd><dt>OR_</dt>
+    <dd>OR</dd><dt>NOT_</dt>
+    <dd>NOT{{% md %}}NOT can only be applied on a single sub filter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="compositefilterresponse">Composite<wbr>Filter<wbr>Response</h4>
@@ -1887,7 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sortorder_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>Order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sortoptionssortorder">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Search.<wbr>V1.<wbr>Sort<wbr>Options<wbr>Sort<wbr>Order</a></span>
     </dt>
     <dd>{{% md %}}Ascending is the default sort order{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1907,7 +1937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sortorder_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>Order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sortoptionssortorder">Sort<wbr>Options<wbr>Sort<wbr>Order</a></span>
     </dt>
     <dd>{{% md %}}Ascending is the default sort order{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1927,7 +1957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sortorder_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sortoptionssortorder">Sort<wbr>Options<wbr>Sort<wbr>Order</a></span>
     </dt>
     <dd>{{% md %}}Ascending is the default sort order{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1947,7 +1977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sort_order_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#sortoptionssortorder">Sort<wbr>Options<wbr>Sort<wbr>Order</a></span>
     </dt>
     <dd>{{% md %}}Ascending is the default sort order{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2034,6 +2064,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Ascending is the default sort order{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="sortoptionssortorder">Sort<wbr>Options<wbr>Sort<wbr>Order</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Ascending</dt>
+    <dd>ASCENDING</dd><dt>Descending</dt>
+    <dd>DESCENDING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Sort<wbr>Options<wbr>Sort<wbr>Order<wbr>Ascending</dt>
+    <dd>ASCENDING</dd><dt>Sort<wbr>Options<wbr>Sort<wbr>Order<wbr>Descending</dt>
+    <dd>DESCENDING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Ascending</dt>
+    <dd>ASCENDING</dd><dt>Descending</dt>
+    <dd>DESCENDING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ASCENDING</dt>
+    <dd>ASCENDING</dd><dt>DESCENDING</dt>
+    <dd>DESCENDING</dd></dl>
+{{% /choosable %}}
+
 <h4 id="source">Source</h4>
 
 {{% choosable language csharp %}}
@@ -2051,7 +2107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predefinedsource_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sourcepredefinedsource">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Search.<wbr>V1.<wbr>Source<wbr>Predefined<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Predefined content source for Google Apps.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2071,7 +2127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predefinedsource_go" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sourcepredefinedsource">Source<wbr>Predefined<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Predefined content source for Google Apps.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2091,7 +2147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predefinedsource_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sourcepredefinedsource">Source<wbr>Predefined<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Predefined content source for Google Apps.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2111,7 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predefined_source_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#sourcepredefinedsource">Source<wbr>Predefined<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Predefined content source for Google Apps.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2508,6 +2564,60 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Maximum number of suggestions allowed from a source. No limits will be set on results if this value is less than or equal to 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="sourcepredefinedsource">Source<wbr>Predefined<wbr>Source</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Query<wbr>History</dt>
+    <dd>QUERY_HISTORY{{% md %}}Suggests queries issued by the user in the past. Only valid when used with the suggest API. Ignored when used in the query API.{{% /md %}}</dd><dt>Person</dt>
+    <dd>PERSON{{% md %}}Suggests people in the organization. Only valid when used with the suggest API. Results in an error when used in the query API.{{% /md %}}</dd><dt>Google<wbr>Drive</dt>
+    <dd>GOOGLE_DRIVE</dd><dt>Google<wbr>Gmail</dt>
+    <dd>GOOGLE_GMAIL</dd><dt>Google<wbr>Sites</dt>
+    <dd>GOOGLE_SITES</dd><dt>Google<wbr>Groups</dt>
+    <dd>GOOGLE_GROUPS</dd><dt>Google<wbr>Calendar</dt>
+    <dd>GOOGLE_CALENDAR</dd><dt>Google<wbr>Keep</dt>
+    <dd>GOOGLE_KEEP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Source<wbr>Predefined<wbr>Source<wbr>None</dt>
+    <dd>NONE</dd><dt>Source<wbr>Predefined<wbr>Source<wbr>Query<wbr>History</dt>
+    <dd>QUERY_HISTORY{{% md %}}Suggests queries issued by the user in the past. Only valid when used with the suggest API. Ignored when used in the query API.{{% /md %}}</dd><dt>Source<wbr>Predefined<wbr>Source<wbr>Person</dt>
+    <dd>PERSON{{% md %}}Suggests people in the organization. Only valid when used with the suggest API. Results in an error when used in the query API.{{% /md %}}</dd><dt>Source<wbr>Predefined<wbr>Source<wbr>Google<wbr>Drive</dt>
+    <dd>GOOGLE_DRIVE</dd><dt>Source<wbr>Predefined<wbr>Source<wbr>Google<wbr>Gmail</dt>
+    <dd>GOOGLE_GMAIL</dd><dt>Source<wbr>Predefined<wbr>Source<wbr>Google<wbr>Sites</dt>
+    <dd>GOOGLE_SITES</dd><dt>Source<wbr>Predefined<wbr>Source<wbr>Google<wbr>Groups</dt>
+    <dd>GOOGLE_GROUPS</dd><dt>Source<wbr>Predefined<wbr>Source<wbr>Google<wbr>Calendar</dt>
+    <dd>GOOGLE_CALENDAR</dd><dt>Source<wbr>Predefined<wbr>Source<wbr>Google<wbr>Keep</dt>
+    <dd>GOOGLE_KEEP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Query<wbr>History</dt>
+    <dd>QUERY_HISTORY{{% md %}}Suggests queries issued by the user in the past. Only valid when used with the suggest API. Ignored when used in the query API.{{% /md %}}</dd><dt>Person</dt>
+    <dd>PERSON{{% md %}}Suggests people in the organization. Only valid when used with the suggest API. Results in an error when used in the query API.{{% /md %}}</dd><dt>Google<wbr>Drive</dt>
+    <dd>GOOGLE_DRIVE</dd><dt>Google<wbr>Gmail</dt>
+    <dd>GOOGLE_GMAIL</dd><dt>Google<wbr>Sites</dt>
+    <dd>GOOGLE_SITES</dd><dt>Google<wbr>Groups</dt>
+    <dd>GOOGLE_GROUPS</dd><dt>Google<wbr>Calendar</dt>
+    <dd>GOOGLE_CALENDAR</dd><dt>Google<wbr>Keep</dt>
+    <dd>GOOGLE_KEEP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NONE</dt>
+    <dd>NONE</dd><dt>QUERY_HISTORY</dt>
+    <dd>QUERY_HISTORY{{% md %}}Suggests queries issued by the user in the past. Only valid when used with the suggest API. Ignored when used in the query API.{{% /md %}}</dd><dt>PERSON</dt>
+    <dd>PERSON{{% md %}}Suggests people in the organization. Only valid when used with the suggest API. Results in an error when used in the query API.{{% /md %}}</dd><dt>GOOGLE_DRIVE</dt>
+    <dd>GOOGLE_DRIVE</dd><dt>GOOGLE_GMAIL</dt>
+    <dd>GOOGLE_GMAIL</dd><dt>GOOGLE_SITES</dt>
+    <dd>GOOGLE_SITES</dd><dt>GOOGLE_GROUPS</dt>
+    <dd>GOOGLE_GROUPS</dd><dt>GOOGLE_CALENDAR</dt>
+    <dd>GOOGLE_CALENDAR</dd><dt>GOOGLE_KEEP</dt>
+    <dd>GOOGLE_KEEP</dd></dl>
+{{% /choosable %}}
+
 <h4 id="sourceresponse">Source<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -2599,7 +2709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceimportance_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Importance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sourcescoringconfigsourceimportance">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Search.<wbr>V1.<wbr>Source<wbr>Scoring<wbr>Config<wbr>Source<wbr>Importance</a></span>
     </dt>
     <dd>{{% md %}}Importance of the source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2611,7 +2721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceimportance_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Importance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sourcescoringconfigsourceimportance">Source<wbr>Scoring<wbr>Config<wbr>Source<wbr>Importance</a></span>
     </dt>
     <dd>{{% md %}}Importance of the source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2623,7 +2733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceimportance_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Importance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sourcescoringconfigsourceimportance">Source<wbr>Scoring<wbr>Config<wbr>Source<wbr>Importance</a></span>
     </dt>
     <dd>{{% md %}}Importance of the source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2635,7 +2745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_importance_python" style="color: inherit; text-decoration: inherit;">source_<wbr>importance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#sourcescoringconfigsourceimportance">Source<wbr>Scoring<wbr>Config<wbr>Source<wbr>Importance</a></span>
     </dt>
     <dd>{{% md %}}Importance of the source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2688,6 +2798,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Importance of the source.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sourcescoringconfigsourceimportance">Source<wbr>Scoring<wbr>Config<wbr>Source<wbr>Importance</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Default</dt>
+    <dd>DEFAULT</dd><dt>Low</dt>
+    <dd>LOW</dd><dt>High</dt>
+    <dd>HIGH</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Source<wbr>Scoring<wbr>Config<wbr>Source<wbr>Importance<wbr>Default</dt>
+    <dd>DEFAULT</dd><dt>Source<wbr>Scoring<wbr>Config<wbr>Source<wbr>Importance<wbr>Low</dt>
+    <dd>LOW</dd><dt>Source<wbr>Scoring<wbr>Config<wbr>Source<wbr>Importance<wbr>High</dt>
+    <dd>HIGH</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Default</dt>
+    <dd>DEFAULT</dd><dt>Low</dt>
+    <dd>LOW</dd><dt>High</dt>
+    <dd>HIGH</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DEFAULT</dt>
+    <dd>DEFAULT</dd><dt>LOW</dt>
+    <dd>LOW</dd><dt>HIGH</dt>
+    <dd>HIGH</dd></dl>
 {{% /choosable %}}
 
 <h4 id="value">Value</h4>

@@ -74,7 +74,7 @@ Creates a cluster, consisting of the specified number and type of Google Compute
             <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">services_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[_container_v1beta1.ShieldedNodesArgs]</span> = None<span class="p">,</span>
-            <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_container_v1beta1.ClusterStatus]</span> = None<span class="p">,</span>
             <span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">tpu_config</span><span class="p">:</span> <span class="nx">Optional[_container_v1beta1.TpuConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">tpu_ipv4_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -590,7 +590,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#clusterstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Cluster<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The current status of this cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1026,7 +1026,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#clusterstatus">Cluster<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The current status of this cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1462,7 +1462,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#clusterstatus">Cluster<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The current status of this cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1898,7 +1898,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#clusterstatus">Cluster<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The current status of this cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4441,7 +4441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancertype_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cloudrunconfigloadbalancertype">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Cloud<wbr>Run<wbr>Config<wbr>Load<wbr>Balancer<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Which load balancer type is installed for Cloud Run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4461,7 +4461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancertype_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cloudrunconfigloadbalancertype">Cloud<wbr>Run<wbr>Config<wbr>Load<wbr>Balancer<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Which load balancer type is installed for Cloud Run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4481,7 +4481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancertype_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cloudrunconfigloadbalancertype">Cloud<wbr>Run<wbr>Config<wbr>Load<wbr>Balancer<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Which load balancer type is installed for Cloud Run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4501,9 +4501,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_balancer_type_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#cloudrunconfigloadbalancertype">Cloud<wbr>Run<wbr>Config<wbr>Load<wbr>Balancer<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Which load balancer type is installed for Cloud Run.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cloudrunconfigloadbalancertype">Cloud<wbr>Run<wbr>Config<wbr>Load<wbr>Balancer<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Load<wbr>Balancer<wbr>Type<wbr>Unspecified</dt>
+    <dd>LOAD_BALANCER_TYPE_UNSPECIFIED{{% md %}}Load balancer type for Cloud Run is unspecified.{{% /md %}}</dd><dt>Load<wbr>Balancer<wbr>Type<wbr>External</dt>
+    <dd>LOAD_BALANCER_TYPE_EXTERNAL{{% md %}}Install external load balancer for Cloud Run.{{% /md %}}</dd><dt>Load<wbr>Balancer<wbr>Type<wbr>Internal</dt>
+    <dd>LOAD_BALANCER_TYPE_INTERNAL{{% md %}}Install internal load balancer for Cloud Run.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Cloud<wbr>Run<wbr>Config<wbr>Load<wbr>Balancer<wbr>Type<wbr>Load<wbr>Balancer<wbr>Type<wbr>Unspecified</dt>
+    <dd>LOAD_BALANCER_TYPE_UNSPECIFIED{{% md %}}Load balancer type for Cloud Run is unspecified.{{% /md %}}</dd><dt>Cloud<wbr>Run<wbr>Config<wbr>Load<wbr>Balancer<wbr>Type<wbr>Load<wbr>Balancer<wbr>Type<wbr>External</dt>
+    <dd>LOAD_BALANCER_TYPE_EXTERNAL{{% md %}}Install external load balancer for Cloud Run.{{% /md %}}</dd><dt>Cloud<wbr>Run<wbr>Config<wbr>Load<wbr>Balancer<wbr>Type<wbr>Load<wbr>Balancer<wbr>Type<wbr>Internal</dt>
+    <dd>LOAD_BALANCER_TYPE_INTERNAL{{% md %}}Install internal load balancer for Cloud Run.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Load<wbr>Balancer<wbr>Type<wbr>Unspecified</dt>
+    <dd>LOAD_BALANCER_TYPE_UNSPECIFIED{{% md %}}Load balancer type for Cloud Run is unspecified.{{% /md %}}</dd><dt>Load<wbr>Balancer<wbr>Type<wbr>External</dt>
+    <dd>LOAD_BALANCER_TYPE_EXTERNAL{{% md %}}Install external load balancer for Cloud Run.{{% /md %}}</dd><dt>Load<wbr>Balancer<wbr>Type<wbr>Internal</dt>
+    <dd>LOAD_BALANCER_TYPE_INTERNAL{{% md %}}Install internal load balancer for Cloud Run.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LOAD_BALANCER_TYPE_UNSPECIFIED</dt>
+    <dd>LOAD_BALANCER_TYPE_UNSPECIFIED{{% md %}}Load balancer type for Cloud Run is unspecified.{{% /md %}}</dd><dt>LOAD_BALANCER_TYPE_EXTERNAL</dt>
+    <dd>LOAD_BALANCER_TYPE_EXTERNAL{{% md %}}Install external load balancer for Cloud Run.{{% /md %}}</dd><dt>LOAD_BALANCER_TYPE_INTERNAL</dt>
+    <dd>LOAD_BALANCER_TYPE_INTERNAL{{% md %}}Install internal load balancer for Cloud Run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cloudrunconfigresponse">Cloud<wbr>Run<wbr>Config<wbr>Response</h4>
@@ -4613,7 +4643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalingprofile_csharp" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#clusterautoscalingautoscalingprofile">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Cluster<wbr>Autoscaling<wbr>Autoscaling<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Defines autoscaling behaviour.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4657,7 +4687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalingprofile_go" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#clusterautoscalingautoscalingprofile">Cluster<wbr>Autoscaling<wbr>Autoscaling<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Defines autoscaling behaviour.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4701,7 +4731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalingprofile_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#clusterautoscalingautoscalingprofile">Cluster<wbr>Autoscaling<wbr>Autoscaling<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Defines autoscaling behaviour.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4745,7 +4775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscaling_profile_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#clusterautoscalingautoscalingprofile">Cluster<wbr>Autoscaling<wbr>Autoscaling<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Defines autoscaling behaviour.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4764,6 +4794,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#resourcelimit">Resource<wbr>Limit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains global constraints regarding minimum and maximum amount of resources in the cluster.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clusterautoscalingautoscalingprofile">Cluster<wbr>Autoscaling<wbr>Autoscaling<wbr>Profile</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Profile<wbr>Unspecified</dt>
+    <dd>PROFILE_UNSPECIFIED{{% md %}}No change to autoscaling configuration.{{% /md %}}</dd><dt>Optimize<wbr>Utilization</dt>
+    <dd>OPTIMIZE_UTILIZATION{{% md %}}Prioritize optimizing utilization of resources.{{% /md %}}</dd><dt>Balanced</dt>
+    <dd>BALANCED{{% md %}}Use default (balanced) autoscaling configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Cluster<wbr>Autoscaling<wbr>Autoscaling<wbr>Profile<wbr>Profile<wbr>Unspecified</dt>
+    <dd>PROFILE_UNSPECIFIED{{% md %}}No change to autoscaling configuration.{{% /md %}}</dd><dt>Cluster<wbr>Autoscaling<wbr>Autoscaling<wbr>Profile<wbr>Optimize<wbr>Utilization</dt>
+    <dd>OPTIMIZE_UTILIZATION{{% md %}}Prioritize optimizing utilization of resources.{{% /md %}}</dd><dt>Cluster<wbr>Autoscaling<wbr>Autoscaling<wbr>Profile<wbr>Balanced</dt>
+    <dd>BALANCED{{% md %}}Use default (balanced) autoscaling configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Profile<wbr>Unspecified</dt>
+    <dd>PROFILE_UNSPECIFIED{{% md %}}No change to autoscaling configuration.{{% /md %}}</dd><dt>Optimize<wbr>Utilization</dt>
+    <dd>OPTIMIZE_UTILIZATION{{% md %}}Prioritize optimizing utilization of resources.{{% /md %}}</dd><dt>Balanced</dt>
+    <dd>BALANCED{{% md %}}Use default (balanced) autoscaling configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PROFILE_UNSPECIFIED</dt>
+    <dd>PROFILE_UNSPECIFIED{{% md %}}No change to autoscaling configuration.{{% /md %}}</dd><dt>OPTIMIZE_UTILIZATION</dt>
+    <dd>OPTIMIZE_UTILIZATION{{% md %}}Prioritize optimizing utilization of resources.{{% /md %}}</dd><dt>BALANCED</dt>
+    <dd>BALANCED{{% md %}}Use default (balanced) autoscaling configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusterautoscalingresponse">Cluster<wbr>Autoscaling<wbr>Response</h4>
@@ -4944,6 +5004,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Contains global constraints regarding minimum and maximum amount of resources in the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="clusterstatus">Cluster<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Provisioning</dt>
+    <dd>PROVISIONING{{% md %}}The PROVISIONING state indicates the cluster is being created.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The RUNNING state indicates the cluster has been created and is fully usable.{{% /md %}}</dd><dt>Reconciling</dt>
+    <dd>RECONCILING{{% md %}}The RECONCILING state indicates that some work is actively being done on the cluster, such as upgrading the master or node software. Details can be found in the `statusMessage` field.{{% /md %}}</dd><dt>Stopping</dt>
+    <dd>STOPPING{{% md %}}The STOPPING state indicates the cluster is being deleted.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}The ERROR state indicates the cluster may be unusable. Details can be found in the `statusMessage` field.{{% /md %}}</dd><dt>Degraded</dt>
+    <dd>DEGRADED{{% md %}}The DEGRADED state indicates the cluster requires user action to restore full functionality. Details can be found in the `statusMessage` field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Cluster<wbr>Status<wbr>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Cluster<wbr>Status<wbr>Provisioning</dt>
+    <dd>PROVISIONING{{% md %}}The PROVISIONING state indicates the cluster is being created.{{% /md %}}</dd><dt>Cluster<wbr>Status<wbr>Running</dt>
+    <dd>RUNNING{{% md %}}The RUNNING state indicates the cluster has been created and is fully usable.{{% /md %}}</dd><dt>Cluster<wbr>Status<wbr>Reconciling</dt>
+    <dd>RECONCILING{{% md %}}The RECONCILING state indicates that some work is actively being done on the cluster, such as upgrading the master or node software. Details can be found in the `statusMessage` field.{{% /md %}}</dd><dt>Cluster<wbr>Status<wbr>Stopping</dt>
+    <dd>STOPPING{{% md %}}The STOPPING state indicates the cluster is being deleted.{{% /md %}}</dd><dt>Cluster<wbr>Status<wbr>Error</dt>
+    <dd>ERROR{{% md %}}The ERROR state indicates the cluster may be unusable. Details can be found in the `statusMessage` field.{{% /md %}}</dd><dt>Cluster<wbr>Status<wbr>Degraded</dt>
+    <dd>DEGRADED{{% md %}}The DEGRADED state indicates the cluster requires user action to restore full functionality. Details can be found in the `statusMessage` field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Provisioning</dt>
+    <dd>PROVISIONING{{% md %}}The PROVISIONING state indicates the cluster is being created.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The RUNNING state indicates the cluster has been created and is fully usable.{{% /md %}}</dd><dt>Reconciling</dt>
+    <dd>RECONCILING{{% md %}}The RECONCILING state indicates that some work is actively being done on the cluster, such as upgrading the master or node software. Details can be found in the `statusMessage` field.{{% /md %}}</dd><dt>Stopping</dt>
+    <dd>STOPPING{{% md %}}The STOPPING state indicates the cluster is being deleted.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}The ERROR state indicates the cluster may be unusable. Details can be found in the `statusMessage` field.{{% /md %}}</dd><dt>Degraded</dt>
+    <dd>DEGRADED{{% md %}}The DEGRADED state indicates the cluster requires user action to restore full functionality. Details can be found in the `statusMessage` field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATUS_UNSPECIFIED</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>PROVISIONING</dt>
+    <dd>PROVISIONING{{% md %}}The PROVISIONING state indicates the cluster is being created.{{% /md %}}</dd><dt>RUNNING</dt>
+    <dd>RUNNING{{% md %}}The RUNNING state indicates the cluster has been created and is fully usable.{{% /md %}}</dd><dt>RECONCILING</dt>
+    <dd>RECONCILING{{% md %}}The RECONCILING state indicates that some work is actively being done on the cluster, such as upgrading the master or node software. Details can be found in the `statusMessage` field.{{% /md %}}</dd><dt>STOPPING</dt>
+    <dd>STOPPING{{% md %}}The STOPPING state indicates the cluster is being deleted.{{% /md %}}</dd><dt>ERROR</dt>
+    <dd>ERROR{{% md %}}The ERROR state indicates the cluster may be unusable. Details can be found in the `statusMessage` field.{{% /md %}}</dd><dt>DEGRADED</dt>
+    <dd>DEGRADED{{% md %}}The DEGRADED state indicates the cluster requires user action to restore full functionality. Details can be found in the `statusMessage` field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="clustertelemetry">Cluster<wbr>Telemetry</h4>
 
 {{% choosable language csharp %}}
@@ -4953,7 +5059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#clustertelemetrytype">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Cluster<wbr>Telemetry<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the integration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4965,7 +5071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#clustertelemetrytype">Cluster<wbr>Telemetry<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the integration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4977,7 +5083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#clustertelemetrytype">Cluster<wbr>Telemetry<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the integration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4989,7 +5095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#clustertelemetrytype">Cluster<wbr>Telemetry<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the integration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5042,6 +5148,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the integration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clustertelemetrytype">Cluster<wbr>Telemetry<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}Monitoring integration is disabled.{{% /md %}}</dd><dt>Enabled</dt>
+    <dd>ENABLED{{% md %}}Monitoring integration is enabled.{{% /md %}}</dd><dt>System<wbr>Only</dt>
+    <dd>SYSTEM_ONLY{{% md %}}Only system components are monitored and logged.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Cluster<wbr>Telemetry<wbr>Type<wbr>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Cluster<wbr>Telemetry<wbr>Type<wbr>Disabled</dt>
+    <dd>DISABLED{{% md %}}Monitoring integration is disabled.{{% /md %}}</dd><dt>Cluster<wbr>Telemetry<wbr>Type<wbr>Enabled</dt>
+    <dd>ENABLED{{% md %}}Monitoring integration is enabled.{{% /md %}}</dd><dt>Cluster<wbr>Telemetry<wbr>Type<wbr>System<wbr>Only</dt>
+    <dd>SYSTEM_ONLY{{% md %}}Only system components are monitored and logged.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}Monitoring integration is disabled.{{% /md %}}</dd><dt>Enabled</dt>
+    <dd>ENABLED{{% md %}}Monitoring integration is enabled.{{% /md %}}</dd><dt>System<wbr>Only</dt>
+    <dd>SYSTEM_ONLY{{% md %}}Only system components are monitored and logged.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED</dt>
+    <dd>UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>DISABLED</dt>
+    <dd>DISABLED{{% md %}}Monitoring integration is disabled.{{% /md %}}</dd><dt>ENABLED</dt>
+    <dd>ENABLED{{% md %}}Monitoring integration is enabled.{{% /md %}}</dd><dt>SYSTEM_ONLY</dt>
+    <dd>SYSTEM_ONLY{{% md %}}Only system components are monitored and logged.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="confidentialnodes">Confidential<wbr>Nodes</h4>
@@ -5525,7 +5665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#databaseencryptionstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Database<wbr>Encryption<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Denotes the state of etcd encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5545,7 +5685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#databaseencryptionstate">Database<wbr>Encryption<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Denotes the state of etcd encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5565,7 +5705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#databaseencryptionstate">Database<wbr>Encryption<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Denotes the state of etcd encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5585,7 +5725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#databaseencryptionstate">Database<wbr>Encryption<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Denotes the state of etcd encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5670,6 +5810,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Denotes the state of etcd encryption.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="databaseencryptionstate">Database<wbr>Encryption<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}Should never be set{{% /md %}}</dd><dt>Encrypted</dt>
+    <dd>ENCRYPTED{{% md %}}Secrets in etcd are encrypted.{{% /md %}}</dd><dt>Decrypted</dt>
+    <dd>DECRYPTED{{% md %}}Secrets in etcd are stored in plain text (at etcd level) - this is unrelated to Compute Engine level full disk encryption.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Database<wbr>Encryption<wbr>State<wbr>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}Should never be set{{% /md %}}</dd><dt>Database<wbr>Encryption<wbr>State<wbr>Encrypted</dt>
+    <dd>ENCRYPTED{{% md %}}Secrets in etcd are encrypted.{{% /md %}}</dd><dt>Database<wbr>Encryption<wbr>State<wbr>Decrypted</dt>
+    <dd>DECRYPTED{{% md %}}Secrets in etcd are stored in plain text (at etcd level) - this is unrelated to Compute Engine level full disk encryption.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}Should never be set{{% /md %}}</dd><dt>Encrypted</dt>
+    <dd>ENCRYPTED{{% md %}}Secrets in etcd are encrypted.{{% /md %}}</dd><dt>Decrypted</dt>
+    <dd>DECRYPTED{{% md %}}Secrets in etcd are stored in plain text (at etcd level) - this is unrelated to Compute Engine level full disk encryption.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNKNOWN</dt>
+    <dd>UNKNOWN{{% md %}}Should never be set{{% /md %}}</dd><dt>ENCRYPTED</dt>
+    <dd>ENCRYPTED{{% md %}}Secrets in etcd are encrypted.{{% /md %}}</dd><dt>DECRYPTED</dt>
+    <dd>DECRYPTED{{% md %}}Secrets in etcd are stored in plain text (at etcd level) - this is unrelated to Compute Engine level full disk encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="defaultsnatstatus">Default<wbr>Snat<wbr>Status</h4>
@@ -6957,7 +7127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auth_csharp" style="color: inherit; text-decoration: inherit;">Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#istioconfigauth">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Istio<wbr>Config<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}The specified Istio auth mode, either none, or mutual TLS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6977,7 +7147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auth_go" style="color: inherit; text-decoration: inherit;">Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#istioconfigauth">Istio<wbr>Config<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}The specified Istio auth mode, either none, or mutual TLS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6997,7 +7167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#istioconfigauth">Istio<wbr>Config<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}The specified Istio auth mode, either none, or mutual TLS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7017,7 +7187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#istioconfigauth">Istio<wbr>Config<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}The specified Istio auth mode, either none, or mutual TLS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7028,6 +7198,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Istio is enabled for this cluster.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="istioconfigauth">Istio<wbr>Config<wbr>Auth</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Auth<wbr>None</dt>
+    <dd>AUTH_NONE{{% md %}}auth not enabled{{% /md %}}</dd><dt>Auth<wbr>Mutual<wbr>Tls</dt>
+    <dd>AUTH_MUTUAL_TLS{{% md %}}auth mutual TLS enabled{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Istio<wbr>Config<wbr>Auth<wbr>Auth<wbr>None</dt>
+    <dd>AUTH_NONE{{% md %}}auth not enabled{{% /md %}}</dd><dt>Istio<wbr>Config<wbr>Auth<wbr>Auth<wbr>Mutual<wbr>Tls</dt>
+    <dd>AUTH_MUTUAL_TLS{{% md %}}auth mutual TLS enabled{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Auth<wbr>None</dt>
+    <dd>AUTH_NONE{{% md %}}auth not enabled{{% /md %}}</dd><dt>Auth<wbr>Mutual<wbr>Tls</dt>
+    <dd>AUTH_MUTUAL_TLS{{% md %}}auth mutual TLS enabled{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>AUTH_NONE</dt>
+    <dd>AUTH_NONE{{% md %}}auth not enabled{{% /md %}}</dd><dt>AUTH_MUTUAL_TLS</dt>
+    <dd>AUTH_MUTUAL_TLS{{% md %}}auth mutual TLS enabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="istioconfigresponse">Istio<wbr>Config<wbr>Response</h4>
@@ -8597,7 +8793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datapathprovider_csharp" style="color: inherit; text-decoration: inherit;">Datapath<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#networkconfigdatapathprovider">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Network<wbr>Config<wbr>Datapath<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8637,7 +8833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipv6googleaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#networkconfigprivateipv6googleaccess">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Network<wbr>Config<wbr>Private<wbr>Ipv6Google<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8657,7 +8853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datapathprovider_go" style="color: inherit; text-decoration: inherit;">Datapath<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#networkconfigdatapathprovider">Network<wbr>Config<wbr>Datapath<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8697,7 +8893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipv6googleaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#networkconfigprivateipv6googleaccess">Network<wbr>Config<wbr>Private<wbr>Ipv6Google<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8717,7 +8913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datapathprovider_nodejs" style="color: inherit; text-decoration: inherit;">datapath<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#networkconfigdatapathprovider">Network<wbr>Config<wbr>Datapath<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8757,7 +8953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipv6googleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv6Google<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#networkconfigprivateipv6googleaccess">Network<wbr>Config<wbr>Private<wbr>Ipv6Google<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8777,7 +8973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datapath_provider_python" style="color: inherit; text-decoration: inherit;">datapath_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#networkconfigdatapathprovider">Network<wbr>Config<wbr>Datapath<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8817,7 +9013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_ipv6_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv6_<wbr>google_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#networkconfigprivateipv6googleaccess">Network<wbr>Config<wbr>Private<wbr>Ipv6Google<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8828,6 +9024,70 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/vpc) to which the cluster is connected. Example: projects/my-project/regions/us-central1/subnetworks/my-subnet{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="networkconfigdatapathprovider">Network<wbr>Config<wbr>Datapath<wbr>Provider</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Datapath<wbr>Provider<wbr>Unspecified</dt>
+    <dd>DATAPATH_PROVIDER_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>Legacy<wbr>Datapath</dt>
+    <dd>LEGACY_DATAPATH{{% md %}}Use the IPTables implementation based on kube-proxy.{{% /md %}}</dd><dt>Advanced<wbr>Datapath</dt>
+    <dd>ADVANCED_DATAPATH{{% md %}}Use the eBPF based GKE Dataplane V2 with additional features. See the [GKE Dataplane V2 documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/dataplane-v2) for more.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Network<wbr>Config<wbr>Datapath<wbr>Provider<wbr>Datapath<wbr>Provider<wbr>Unspecified</dt>
+    <dd>DATAPATH_PROVIDER_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>Network<wbr>Config<wbr>Datapath<wbr>Provider<wbr>Legacy<wbr>Datapath</dt>
+    <dd>LEGACY_DATAPATH{{% md %}}Use the IPTables implementation based on kube-proxy.{{% /md %}}</dd><dt>Network<wbr>Config<wbr>Datapath<wbr>Provider<wbr>Advanced<wbr>Datapath</dt>
+    <dd>ADVANCED_DATAPATH{{% md %}}Use the eBPF based GKE Dataplane V2 with additional features. See the [GKE Dataplane V2 documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/dataplane-v2) for more.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Datapath<wbr>Provider<wbr>Unspecified</dt>
+    <dd>DATAPATH_PROVIDER_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>Legacy<wbr>Datapath</dt>
+    <dd>LEGACY_DATAPATH{{% md %}}Use the IPTables implementation based on kube-proxy.{{% /md %}}</dd><dt>Advanced<wbr>Datapath</dt>
+    <dd>ADVANCED_DATAPATH{{% md %}}Use the eBPF based GKE Dataplane V2 with additional features. See the [GKE Dataplane V2 documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/dataplane-v2) for more.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DATAPATH_PROVIDER_UNSPECIFIED</dt>
+    <dd>DATAPATH_PROVIDER_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>LEGACY_DATAPATH</dt>
+    <dd>LEGACY_DATAPATH{{% md %}}Use the IPTables implementation based on kube-proxy.{{% /md %}}</dd><dt>ADVANCED_DATAPATH</dt>
+    <dd>ADVANCED_DATAPATH{{% md %}}Use the eBPF based GKE Dataplane V2 with additional features. See the [GKE Dataplane V2 documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/dataplane-v2) for more.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="networkconfigprivateipv6googleaccess">Network<wbr>Config<wbr>Private<wbr>Ipv6Google<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Private<wbr>Ipv6Google<wbr>Access<wbr>Unspecified</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED{{% md %}}Default value. Same as DISABLED{{% /md %}}</dd><dt>Private<wbr>Ipv6Google<wbr>Access<wbr>Disabled</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_DISABLED{{% md %}}No private access to or from Google Services{{% /md %}}</dd><dt>Private<wbr>Ipv6Google<wbr>Access<wbr>To<wbr>Google</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_TO_GOOGLE{{% md %}}Enables private IPv6 access to Google Services from GKE{{% /md %}}</dd><dt>Private<wbr>Ipv6Google<wbr>Access<wbr>Bidirectional</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL{{% md %}}Enables priate IPv6 access to and from Google Services{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Network<wbr>Config<wbr>Private<wbr>Ipv6Google<wbr>Access<wbr>Private<wbr>Ipv6Google<wbr>Access<wbr>Unspecified</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED{{% md %}}Default value. Same as DISABLED{{% /md %}}</dd><dt>Network<wbr>Config<wbr>Private<wbr>Ipv6Google<wbr>Access<wbr>Private<wbr>Ipv6Google<wbr>Access<wbr>Disabled</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_DISABLED{{% md %}}No private access to or from Google Services{{% /md %}}</dd><dt>Network<wbr>Config<wbr>Private<wbr>Ipv6Google<wbr>Access<wbr>Private<wbr>Ipv6Google<wbr>Access<wbr>To<wbr>Google</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_TO_GOOGLE{{% md %}}Enables private IPv6 access to Google Services from GKE{{% /md %}}</dd><dt>Network<wbr>Config<wbr>Private<wbr>Ipv6Google<wbr>Access<wbr>Private<wbr>Ipv6Google<wbr>Access<wbr>Bidirectional</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL{{% md %}}Enables priate IPv6 access to and from Google Services{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Private<wbr>Ipv6Google<wbr>Access<wbr>Unspecified</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED{{% md %}}Default value. Same as DISABLED{{% /md %}}</dd><dt>Private<wbr>Ipv6Google<wbr>Access<wbr>Disabled</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_DISABLED{{% md %}}No private access to or from Google Services{{% /md %}}</dd><dt>Private<wbr>Ipv6Google<wbr>Access<wbr>To<wbr>Google</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_TO_GOOGLE{{% md %}}Enables private IPv6 access to Google Services from GKE{{% /md %}}</dd><dt>Private<wbr>Ipv6Google<wbr>Access<wbr>Bidirectional</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL{{% md %}}Enables priate IPv6 access to and from Google Services{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED{{% md %}}Default value. Same as DISABLED{{% /md %}}</dd><dt>PRIVATE_IPV6_GOOGLE_ACCESS_DISABLED</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_DISABLED{{% md %}}No private access to or from Google Services{{% /md %}}</dd><dt>PRIVATE_IPV6_GOOGLE_ACCESS_TO_GOOGLE</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_TO_GOOGLE{{% md %}}Enables private IPv6 access to Google Services from GKE{{% /md %}}</dd><dt>PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL</dt>
+    <dd>PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL{{% md %}}Enables priate IPv6 access to and from Google Services{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkconfigresponse">Network<wbr>Config<wbr>Response</h4>
@@ -9089,7 +9349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#networkpolicyprovider">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Network<wbr>Policy<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The selected network policy provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9109,7 +9369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_go" style="color: inherit; text-decoration: inherit;">Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#networkpolicyprovider">Network<wbr>Policy<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The selected network policy provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9129,7 +9389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#networkpolicyprovider">Network<wbr>Policy<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The selected network policy provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9149,7 +9409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#networkpolicyprovider">Network<wbr>Policy<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The selected network policy provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9252,6 +9512,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether NetworkPolicy is enabled for this cluster.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="networkpolicyprovider">Network<wbr>Policy<wbr>Provider</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Provider<wbr>Unspecified</dt>
+    <dd>PROVIDER_UNSPECIFIED{{% md %}}Not set{{% /md %}}</dd><dt>Calico</dt>
+    <dd>CALICO{{% md %}}Tigera (Calico Felix).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Network<wbr>Policy<wbr>Provider<wbr>Provider<wbr>Unspecified</dt>
+    <dd>PROVIDER_UNSPECIFIED{{% md %}}Not set{{% /md %}}</dd><dt>Network<wbr>Policy<wbr>Provider<wbr>Calico</dt>
+    <dd>CALICO{{% md %}}Tigera (Calico Felix).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Provider<wbr>Unspecified</dt>
+    <dd>PROVIDER_UNSPECIFIED{{% md %}}Not set{{% /md %}}</dd><dt>Calico</dt>
+    <dd>CALICO{{% md %}}Tigera (Calico Felix).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PROVIDER_UNSPECIFIED</dt>
+    <dd>PROVIDER_UNSPECIFIED{{% md %}}Not set{{% /md %}}</dd><dt>CALICO</dt>
+    <dd>CALICO{{% md %}}Tigera (Calico Felix).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkpolicyresponse">Network<wbr>Policy<wbr>Response</h4>
@@ -11633,7 +11919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodepoolstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Node<wbr>Pool<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The status of the nodes in this pool instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11757,7 +12043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodepoolstatus">Node<wbr>Pool<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The status of the nodes in this pool instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11881,7 +12167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodepoolstatus">Node<wbr>Pool<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The status of the nodes in this pool instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12005,7 +12291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#nodepoolstatus">Node<wbr>Pool<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The status of the nodes in this pool instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12816,6 +13102,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The version of the Kubernetes of this node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="nodepoolstatus">Node<wbr>Pool<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Provisioning</dt>
+    <dd>PROVISIONING{{% md %}}The PROVISIONING state indicates the node pool is being created.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The RUNNING state indicates the node pool has been created and is fully usable.{{% /md %}}</dd><dt>Running<wbr>With<wbr>Error</dt>
+    <dd>RUNNING_WITH_ERROR{{% md %}}The RUNNING_WITH_ERROR state indicates the node pool has been created and is partially usable. Some error state has occurred and some functionality may be impaired. Customer may need to reissue a request or trigger a new update.{{% /md %}}</dd><dt>Reconciling</dt>
+    <dd>RECONCILING{{% md %}}The RECONCILING state indicates that some work is actively being done on the node pool, such as upgrading node software. Details can be found in the `statusMessage` field.{{% /md %}}</dd><dt>Stopping</dt>
+    <dd>STOPPING{{% md %}}The STOPPING state indicates the node pool is being deleted.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}The ERROR state indicates the node pool may be unusable. Details can be found in the `statusMessage` field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Node<wbr>Pool<wbr>Status<wbr>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Node<wbr>Pool<wbr>Status<wbr>Provisioning</dt>
+    <dd>PROVISIONING{{% md %}}The PROVISIONING state indicates the node pool is being created.{{% /md %}}</dd><dt>Node<wbr>Pool<wbr>Status<wbr>Running</dt>
+    <dd>RUNNING{{% md %}}The RUNNING state indicates the node pool has been created and is fully usable.{{% /md %}}</dd><dt>Node<wbr>Pool<wbr>Status<wbr>Running<wbr>With<wbr>Error</dt>
+    <dd>RUNNING_WITH_ERROR{{% md %}}The RUNNING_WITH_ERROR state indicates the node pool has been created and is partially usable. Some error state has occurred and some functionality may be impaired. Customer may need to reissue a request or trigger a new update.{{% /md %}}</dd><dt>Node<wbr>Pool<wbr>Status<wbr>Reconciling</dt>
+    <dd>RECONCILING{{% md %}}The RECONCILING state indicates that some work is actively being done on the node pool, such as upgrading node software. Details can be found in the `statusMessage` field.{{% /md %}}</dd><dt>Node<wbr>Pool<wbr>Status<wbr>Stopping</dt>
+    <dd>STOPPING{{% md %}}The STOPPING state indicates the node pool is being deleted.{{% /md %}}</dd><dt>Node<wbr>Pool<wbr>Status<wbr>Error</dt>
+    <dd>ERROR{{% md %}}The ERROR state indicates the node pool may be unusable. Details can be found in the `statusMessage` field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Provisioning</dt>
+    <dd>PROVISIONING{{% md %}}The PROVISIONING state indicates the node pool is being created.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The RUNNING state indicates the node pool has been created and is fully usable.{{% /md %}}</dd><dt>Running<wbr>With<wbr>Error</dt>
+    <dd>RUNNING_WITH_ERROR{{% md %}}The RUNNING_WITH_ERROR state indicates the node pool has been created and is partially usable. Some error state has occurred and some functionality may be impaired. Customer may need to reissue a request or trigger a new update.{{% /md %}}</dd><dt>Reconciling</dt>
+    <dd>RECONCILING{{% md %}}The RECONCILING state indicates that some work is actively being done on the node pool, such as upgrading node software. Details can be found in the `statusMessage` field.{{% /md %}}</dd><dt>Stopping</dt>
+    <dd>STOPPING{{% md %}}The STOPPING state indicates the node pool is being deleted.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}The ERROR state indicates the node pool may be unusable. Details can be found in the `statusMessage` field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATUS_UNSPECIFIED</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>PROVISIONING</dt>
+    <dd>PROVISIONING{{% md %}}The PROVISIONING state indicates the node pool is being created.{{% /md %}}</dd><dt>RUNNING</dt>
+    <dd>RUNNING{{% md %}}The RUNNING state indicates the node pool has been created and is fully usable.{{% /md %}}</dd><dt>RUNNING_WITH_ERROR</dt>
+    <dd>RUNNING_WITH_ERROR{{% md %}}The RUNNING_WITH_ERROR state indicates the node pool has been created and is partially usable. Some error state has occurred and some functionality may be impaired. Customer may need to reissue a request or trigger a new update.{{% /md %}}</dd><dt>RECONCILING</dt>
+    <dd>RECONCILING{{% md %}}The RECONCILING state indicates that some work is actively being done on the node pool, such as upgrading node software. Details can be found in the `statusMessage` field.{{% /md %}}</dd><dt>STOPPING</dt>
+    <dd>STOPPING{{% md %}}The STOPPING state indicates the node pool is being deleted.{{% /md %}}</dd><dt>ERROR</dt>
+    <dd>ERROR{{% md %}}The ERROR state indicates the node pool may be unusable. Details can be found in the `statusMessage` field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="nodetaint">Node<wbr>Taint</h4>
 
 {{% choosable language csharp %}}
@@ -12825,7 +13157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effect_csharp" style="color: inherit; text-decoration: inherit;">Effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodetainteffect">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Node<wbr>Taint<wbr>Effect</a></span>
     </dt>
     <dd>{{% md %}}Effect for taint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12853,7 +13185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effect_go" style="color: inherit; text-decoration: inherit;">Effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodetainteffect">Node<wbr>Taint<wbr>Effect</a></span>
     </dt>
     <dd>{{% md %}}Effect for taint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12881,7 +13213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effect_nodejs" style="color: inherit; text-decoration: inherit;">effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodetainteffect">Node<wbr>Taint<wbr>Effect</a></span>
     </dt>
     <dd>{{% md %}}Effect for taint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12909,7 +13241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effect_python" style="color: inherit; text-decoration: inherit;">effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#nodetainteffect">Node<wbr>Taint<wbr>Effect</a></span>
     </dt>
     <dd>{{% md %}}Effect for taint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12928,6 +13260,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value for taint.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="nodetainteffect">Node<wbr>Taint<wbr>Effect</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Effect<wbr>Unspecified</dt>
+    <dd>EFFECT_UNSPECIFIED{{% md %}}Not set{{% /md %}}</dd><dt>No<wbr>Schedule</dt>
+    <dd>NO_SCHEDULE{{% md %}}NoSchedule{{% /md %}}</dd><dt>Prefer<wbr>No<wbr>Schedule</dt>
+    <dd>PREFER_NO_SCHEDULE{{% md %}}PreferNoSchedule{{% /md %}}</dd><dt>No<wbr>Execute</dt>
+    <dd>NO_EXECUTE{{% md %}}NoExecute{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Node<wbr>Taint<wbr>Effect<wbr>Effect<wbr>Unspecified</dt>
+    <dd>EFFECT_UNSPECIFIED{{% md %}}Not set{{% /md %}}</dd><dt>Node<wbr>Taint<wbr>Effect<wbr>No<wbr>Schedule</dt>
+    <dd>NO_SCHEDULE{{% md %}}NoSchedule{{% /md %}}</dd><dt>Node<wbr>Taint<wbr>Effect<wbr>Prefer<wbr>No<wbr>Schedule</dt>
+    <dd>PREFER_NO_SCHEDULE{{% md %}}PreferNoSchedule{{% /md %}}</dd><dt>Node<wbr>Taint<wbr>Effect<wbr>No<wbr>Execute</dt>
+    <dd>NO_EXECUTE{{% md %}}NoExecute{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Effect<wbr>Unspecified</dt>
+    <dd>EFFECT_UNSPECIFIED{{% md %}}Not set{{% /md %}}</dd><dt>No<wbr>Schedule</dt>
+    <dd>NO_SCHEDULE{{% md %}}NoSchedule{{% /md %}}</dd><dt>Prefer<wbr>No<wbr>Schedule</dt>
+    <dd>PREFER_NO_SCHEDULE{{% md %}}PreferNoSchedule{{% /md %}}</dd><dt>No<wbr>Execute</dt>
+    <dd>NO_EXECUTE{{% md %}}NoExecute{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EFFECT_UNSPECIFIED</dt>
+    <dd>EFFECT_UNSPECIFIED{{% md %}}Not set{{% /md %}}</dd><dt>NO_SCHEDULE</dt>
+    <dd>NO_SCHEDULE{{% md %}}NoSchedule{{% /md %}}</dd><dt>PREFER_NO_SCHEDULE</dt>
+    <dd>PREFER_NO_SCHEDULE{{% md %}}PreferNoSchedule{{% /md %}}</dd><dt>NO_EXECUTE</dt>
+    <dd>NO_EXECUTE{{% md %}}NoExecute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodetaintresponse">Node<wbr>Taint<wbr>Response</h4>
@@ -14165,7 +14531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_csharp" style="color: inherit; text-decoration: inherit;">Channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#releasechannelchannel">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Release<wbr>Channel<wbr>Channel</a></span>
     </dt>
     <dd>{{% md %}}channel specifies which release channel the cluster is subscribed to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14177,7 +14543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_go" style="color: inherit; text-decoration: inherit;">Channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#releasechannelchannel">Release<wbr>Channel<wbr>Channel</a></span>
     </dt>
     <dd>{{% md %}}channel specifies which release channel the cluster is subscribed to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14189,7 +14555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_nodejs" style="color: inherit; text-decoration: inherit;">channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#releasechannelchannel">Release<wbr>Channel<wbr>Channel</a></span>
     </dt>
     <dd>{{% md %}}channel specifies which release channel the cluster is subscribed to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14201,9 +14567,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_python" style="color: inherit; text-decoration: inherit;">channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#releasechannelchannel">Release<wbr>Channel<wbr>Channel</a></span>
     </dt>
     <dd>{{% md %}}channel specifies which release channel the cluster is subscribed to.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="releasechannelchannel">Release<wbr>Channel<wbr>Channel</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}No channel specified.{{% /md %}}</dd><dt>Rapid</dt>
+    <dd>RAPID{{% md %}}RAPID channel is offered on an early access basis for customers who want to test new releases. WARNING: Versions available in the RAPID Channel may be subject to unresolved issues with no known workaround and are not subject to any SLAs.{{% /md %}}</dd><dt>Regular</dt>
+    <dd>REGULAR{{% md %}}Clusters subscribed to REGULAR receive versions that are considered GA quality. REGULAR is intended for production users who want to take advantage of new features.{{% /md %}}</dd><dt>Stable</dt>
+    <dd>STABLE{{% md %}}Clusters subscribed to STABLE receive versions that are known to be stable and reliable in production.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Release<wbr>Channel<wbr>Channel<wbr>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}No channel specified.{{% /md %}}</dd><dt>Release<wbr>Channel<wbr>Channel<wbr>Rapid</dt>
+    <dd>RAPID{{% md %}}RAPID channel is offered on an early access basis for customers who want to test new releases. WARNING: Versions available in the RAPID Channel may be subject to unresolved issues with no known workaround and are not subject to any SLAs.{{% /md %}}</dd><dt>Release<wbr>Channel<wbr>Channel<wbr>Regular</dt>
+    <dd>REGULAR{{% md %}}Clusters subscribed to REGULAR receive versions that are considered GA quality. REGULAR is intended for production users who want to take advantage of new features.{{% /md %}}</dd><dt>Release<wbr>Channel<wbr>Channel<wbr>Stable</dt>
+    <dd>STABLE{{% md %}}Clusters subscribed to STABLE receive versions that are known to be stable and reliable in production.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}No channel specified.{{% /md %}}</dd><dt>Rapid</dt>
+    <dd>RAPID{{% md %}}RAPID channel is offered on an early access basis for customers who want to test new releases. WARNING: Versions available in the RAPID Channel may be subject to unresolved issues with no known workaround and are not subject to any SLAs.{{% /md %}}</dd><dt>Regular</dt>
+    <dd>REGULAR{{% md %}}Clusters subscribed to REGULAR receive versions that are considered GA quality. REGULAR is intended for production users who want to take advantage of new features.{{% /md %}}</dd><dt>Stable</dt>
+    <dd>STABLE{{% md %}}Clusters subscribed to STABLE receive versions that are known to be stable and reliable in production.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED</dt>
+    <dd>UNSPECIFIED{{% md %}}No channel specified.{{% /md %}}</dd><dt>RAPID</dt>
+    <dd>RAPID{{% md %}}RAPID channel is offered on an early access basis for customers who want to test new releases. WARNING: Versions available in the RAPID Channel may be subject to unresolved issues with no known workaround and are not subject to any SLAs.{{% /md %}}</dd><dt>REGULAR</dt>
+    <dd>REGULAR{{% md %}}Clusters subscribed to REGULAR receive versions that are considered GA quality. REGULAR is intended for production users who want to take advantage of new features.{{% /md %}}</dd><dt>STABLE</dt>
+    <dd>STABLE{{% md %}}Clusters subscribed to STABLE receive versions that are known to be stable and reliable in production.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="releasechannelresponse">Release<wbr>Channel<wbr>Response</h4>
@@ -14265,7 +14665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumereservationtype_csharp" style="color: inherit; text-decoration: inherit;">Consume<wbr>Reservation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#reservationaffinityconsumereservationtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Corresponds to the type of reservation consumption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14293,7 +14693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumereservationtype_go" style="color: inherit; text-decoration: inherit;">Consume<wbr>Reservation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#reservationaffinityconsumereservationtype">Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Corresponds to the type of reservation consumption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14321,7 +14721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumereservationtype_nodejs" style="color: inherit; text-decoration: inherit;">consume<wbr>Reservation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#reservationaffinityconsumereservationtype">Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Corresponds to the type of reservation consumption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14349,7 +14749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consume_reservation_type_python" style="color: inherit; text-decoration: inherit;">consume_<wbr>reservation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#reservationaffinityconsumereservationtype">Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Corresponds to the type of reservation consumption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14368,6 +14768,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label value(s) of reservation resource(s).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="reservationaffinityconsumereservationtype">Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Default value. This should not be used.{{% /md %}}</dd><dt>No<wbr>Reservation</dt>
+    <dd>NO_RESERVATION{{% md %}}Do not consume from any reserved capacity.{{% /md %}}</dd><dt>Any<wbr>Reservation</dt>
+    <dd>ANY_RESERVATION{{% md %}}Consume any reservation available.{{% /md %}}</dd><dt>Specific<wbr>Reservation</dt>
+    <dd>SPECIFIC_RESERVATION{{% md %}}Must consume from a specific reservation. Must specify key value fields for specifying the reservations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type<wbr>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Default value. This should not be used.{{% /md %}}</dd><dt>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type<wbr>No<wbr>Reservation</dt>
+    <dd>NO_RESERVATION{{% md %}}Do not consume from any reserved capacity.{{% /md %}}</dd><dt>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type<wbr>Any<wbr>Reservation</dt>
+    <dd>ANY_RESERVATION{{% md %}}Consume any reservation available.{{% /md %}}</dd><dt>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type<wbr>Specific<wbr>Reservation</dt>
+    <dd>SPECIFIC_RESERVATION{{% md %}}Must consume from a specific reservation. Must specify key value fields for specifying the reservations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Default value. This should not be used.{{% /md %}}</dd><dt>No<wbr>Reservation</dt>
+    <dd>NO_RESERVATION{{% md %}}Do not consume from any reserved capacity.{{% /md %}}</dd><dt>Any<wbr>Reservation</dt>
+    <dd>ANY_RESERVATION{{% md %}}Consume any reservation available.{{% /md %}}</dd><dt>Specific<wbr>Reservation</dt>
+    <dd>SPECIFIC_RESERVATION{{% md %}}Must consume from a specific reservation. Must specify key value fields for specifying the reservations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED</dt>
+    <dd>UNSPECIFIED{{% md %}}Default value. This should not be used.{{% /md %}}</dd><dt>NO_RESERVATION</dt>
+    <dd>NO_RESERVATION{{% md %}}Do not consume from any reserved capacity.{{% /md %}}</dd><dt>ANY_RESERVATION</dt>
+    <dd>ANY_RESERVATION{{% md %}}Consume any reservation available.{{% /md %}}</dd><dt>SPECIFIC_RESERVATION</dt>
+    <dd>SPECIFIC_RESERVATION{{% md %}}Must consume from a specific reservation. Must specify key value fields for specifying the reservations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reservationaffinityresponse">Reservation<wbr>Affinity<wbr>Response</h4>
@@ -14957,7 +15391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sandboxconfigtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Sandbox<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the sandbox to use for the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14977,7 +15411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sandboxconfigtype">Sandbox<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the sandbox to use for the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14997,7 +15431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sandboxconfigtype">Sandbox<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the sandbox to use for the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15017,7 +15451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#sandboxconfigtype">Sandbox<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the sandbox to use for the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15102,6 +15536,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the sandbox to use for the node.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sandboxconfigtype">Sandbox<wbr>Config<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Default value. This should not be used.{{% /md %}}</dd><dt>Gvisor</dt>
+    <dd>GVISOR{{% md %}}Run sandbox using gvisor.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Sandbox<wbr>Config<wbr>Type<wbr>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Default value. This should not be used.{{% /md %}}</dd><dt>Sandbox<wbr>Config<wbr>Type<wbr>Gvisor</dt>
+    <dd>GVISOR{{% md %}}Run sandbox using gvisor.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Default value. This should not be used.{{% /md %}}</dd><dt>Gvisor</dt>
+    <dd>GVISOR{{% md %}}Run sandbox using gvisor.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED</dt>
+    <dd>UNSPECIFIED{{% md %}}Default value. This should not be used.{{% /md %}}</dd><dt>GVISOR</dt>
+    <dd>GVISOR{{% md %}}Run sandbox using gvisor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="shieldedinstanceconfig">Shielded<wbr>Instance<wbr>Config</h4>
@@ -15377,7 +15837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonicalcode_csharp" style="color: inherit; text-decoration: inherit;">Canonical<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#statusconditioncanonicalcode">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Status<wbr>Condition<wbr>Canonical<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Canonical code of the condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15397,7 +15857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonicalcode_go" style="color: inherit; text-decoration: inherit;">Canonical<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#statusconditioncanonicalcode">Status<wbr>Condition<wbr>Canonical<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Canonical code of the condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15417,7 +15877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonicalcode_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#statusconditioncanonicalcode">Status<wbr>Condition<wbr>Canonical<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Canonical code of the condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15437,7 +15897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonical_code_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#statusconditioncanonicalcode">Status<wbr>Condition<wbr>Canonical<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Canonical code of the condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15448,6 +15908,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-friendly representation of the condition{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="statusconditioncanonicalcode">Status<wbr>Condition<wbr>Canonical<wbr>Code</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Ok</dt>
+    <dd>OK{{% md %}}Not an error; returned on success HTTP Mapping: 200 OK{{% /md %}}</dd><dt>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The operation was cancelled, typically by the caller. HTTP Mapping: 499 Client Closed Request{{% /md %}}</dd><dt>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}Unknown error. For example, this error may be returned when a `Status` value received from another address space belongs to an error space that is not known in this address space. Also errors raised by APIs that do not return enough error information may be converted to this error. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd><dt>Invalid<wbr>Argument</dt>
+    <dd>INVALID_ARGUMENT{{% md %}}The client specified an invalid argument. Note that this differs from `FAILED_PRECONDITION`. `INVALID_ARGUMENT` indicates arguments that are problematic regardless of the state of the system (e.g., a malformed file name). HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>Deadline<wbr>Exceeded</dt>
+    <dd>DEADLINE_EXCEEDED{{% md %}}The deadline expired before the operation could complete. For operations that change the state of the system, this error may be returned even if the operation has completed successfully. For example, a successful response from a server could have been delayed long enough for the deadline to expire. HTTP Mapping: 504 Gateway Timeout{{% /md %}}</dd><dt>Not<wbr>Found</dt>
+    <dd>NOT_FOUND{{% md %}}Some requested entity (e.g., file or directory) was not found. Note to server developers: if a request is denied for an entire class of users, such as gradual feature rollout or undocumented allowlist, `NOT_FOUND` may be used. If a request is denied for some users within a class of users, such as user-based access control, `PERMISSION_DENIED` must be used. HTTP Mapping: 404 Not Found{{% /md %}}</dd><dt>Already<wbr>Exists</dt>
+    <dd>ALREADY_EXISTS{{% md %}}The entity that a client attempted to create (e.g., file or directory) already exists. HTTP Mapping: 409 Conflict{{% /md %}}</dd><dt>Permission<wbr>Denied</dt>
+    <dd>PERMISSION_DENIED{{% md %}}The caller does not have permission to execute the specified operation. `PERMISSION_DENIED` must not be used for rejections caused by exhausting some resource (use `RESOURCE_EXHAUSTED` instead for those errors). `PERMISSION_DENIED` must not be used if the caller can not be identified (use `UNAUTHENTICATED` instead for those errors). This error code does not imply the request is valid or the requested entity exists or satisfies other pre-conditions. HTTP Mapping: 403 Forbidden{{% /md %}}</dd><dt>Unauthenticated</dt>
+    <dd>UNAUTHENTICATED{{% md %}}The request does not have valid authentication credentials for the operation. HTTP Mapping: 401 Unauthorized{{% /md %}}</dd><dt>Resource<wbr>Exhausted</dt>
+    <dd>RESOURCE_EXHAUSTED{{% md %}}Some resource has been exhausted, perhaps a per-user quota, or perhaps the entire file system is out of space. HTTP Mapping: 429 Too Many Requests{{% /md %}}</dd><dt>Failed<wbr>Precondition</dt>
+    <dd>FAILED_PRECONDITION{{% md %}}The operation was rejected because the system is not in a state required for the operation's execution. For example, the directory to be deleted is non-empty, an rmdir operation is applied to a non-directory, etc. Service implementors can use the following guidelines to decide between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`: (a) Use `UNAVAILABLE` if the client can retry just the failing call. (b) Use `ABORTED` if the client should retry at a higher level (e.g., when a client-specified test-and-set fails, indicating the client should restart a read-modify-write sequence). (c) Use `FAILED_PRECONDITION` if the client should not retry until the system state has been explicitly fixed. E.g., if an "rmdir" fails because the directory is non-empty, `FAILED_PRECONDITION` should be returned since the client should not retry unless the files are deleted from the directory. HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>Aborted</dt>
+    <dd>ABORTED{{% md %}}The operation was aborted, typically due to a concurrency issue such as a sequencer check failure or transaction abort. See the guidelines above for deciding between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`. HTTP Mapping: 409 Conflict{{% /md %}}</dd><dt>Out<wbr>Of<wbr>Range</dt>
+    <dd>OUT_OF_RANGE{{% md %}}The operation was attempted past the valid range. E.g., seeking or reading past end-of-file. Unlike `INVALID_ARGUMENT`, this error indicates a problem that may be fixed if the system state changes. For example, a 32-bit file system will generate `INVALID_ARGUMENT` if asked to read at an offset that is not in the range [0,2^32-1], but it will generate `OUT_OF_RANGE` if asked to read from an offset past the current file size. There is a fair bit of overlap between `FAILED_PRECONDITION` and `OUT_OF_RANGE`. We recommend using `OUT_OF_RANGE` (the more specific error) when it applies so that callers who are iterating through a space can easily look for an `OUT_OF_RANGE` error to detect when they are done. HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>Unimplemented</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The operation is not implemented or is not supported/enabled in this service. HTTP Mapping: 501 Not Implemented{{% /md %}}</dd><dt>Internal</dt>
+    <dd>INTERNAL{{% md %}}Internal errors. This means that some invariants expected by the underlying system have been broken. This error code is reserved for serious errors. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd><dt>Unavailable</dt>
+    <dd>UNAVAILABLE{{% md %}}The service is currently unavailable. This is most likely a transient condition, which can be corrected by retrying with a backoff. Note that it is not always safe to retry non-idempotent operations. See the guidelines above for deciding between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`. HTTP Mapping: 503 Service Unavailable{{% /md %}}</dd><dt>Data<wbr>Loss</dt>
+    <dd>DATA_LOSS{{% md %}}Unrecoverable data loss or corruption. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Ok</dt>
+    <dd>OK{{% md %}}Not an error; returned on success HTTP Mapping: 200 OK{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The operation was cancelled, typically by the caller. HTTP Mapping: 499 Client Closed Request{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}Unknown error. For example, this error may be returned when a `Status` value received from another address space belongs to an error space that is not known in this address space. Also errors raised by APIs that do not return enough error information may be converted to this error. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Invalid<wbr>Argument</dt>
+    <dd>INVALID_ARGUMENT{{% md %}}The client specified an invalid argument. Note that this differs from `FAILED_PRECONDITION`. `INVALID_ARGUMENT` indicates arguments that are problematic regardless of the state of the system (e.g., a malformed file name). HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Deadline<wbr>Exceeded</dt>
+    <dd>DEADLINE_EXCEEDED{{% md %}}The deadline expired before the operation could complete. For operations that change the state of the system, this error may be returned even if the operation has completed successfully. For example, a successful response from a server could have been delayed long enough for the deadline to expire. HTTP Mapping: 504 Gateway Timeout{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Not<wbr>Found</dt>
+    <dd>NOT_FOUND{{% md %}}Some requested entity (e.g., file or directory) was not found. Note to server developers: if a request is denied for an entire class of users, such as gradual feature rollout or undocumented allowlist, `NOT_FOUND` may be used. If a request is denied for some users within a class of users, such as user-based access control, `PERMISSION_DENIED` must be used. HTTP Mapping: 404 Not Found{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Already<wbr>Exists</dt>
+    <dd>ALREADY_EXISTS{{% md %}}The entity that a client attempted to create (e.g., file or directory) already exists. HTTP Mapping: 409 Conflict{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Permission<wbr>Denied</dt>
+    <dd>PERMISSION_DENIED{{% md %}}The caller does not have permission to execute the specified operation. `PERMISSION_DENIED` must not be used for rejections caused by exhausting some resource (use `RESOURCE_EXHAUSTED` instead for those errors). `PERMISSION_DENIED` must not be used if the caller can not be identified (use `UNAUTHENTICATED` instead for those errors). This error code does not imply the request is valid or the requested entity exists or satisfies other pre-conditions. HTTP Mapping: 403 Forbidden{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Unauthenticated</dt>
+    <dd>UNAUTHENTICATED{{% md %}}The request does not have valid authentication credentials for the operation. HTTP Mapping: 401 Unauthorized{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Resource<wbr>Exhausted</dt>
+    <dd>RESOURCE_EXHAUSTED{{% md %}}Some resource has been exhausted, perhaps a per-user quota, or perhaps the entire file system is out of space. HTTP Mapping: 429 Too Many Requests{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Failed<wbr>Precondition</dt>
+    <dd>FAILED_PRECONDITION{{% md %}}The operation was rejected because the system is not in a state required for the operation's execution. For example, the directory to be deleted is non-empty, an rmdir operation is applied to a non-directory, etc. Service implementors can use the following guidelines to decide between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`: (a) Use `UNAVAILABLE` if the client can retry just the failing call. (b) Use `ABORTED` if the client should retry at a higher level (e.g., when a client-specified test-and-set fails, indicating the client should restart a read-modify-write sequence). (c) Use `FAILED_PRECONDITION` if the client should not retry until the system state has been explicitly fixed. E.g., if an "rmdir" fails because the directory is non-empty, `FAILED_PRECONDITION` should be returned since the client should not retry unless the files are deleted from the directory. HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Aborted</dt>
+    <dd>ABORTED{{% md %}}The operation was aborted, typically due to a concurrency issue such as a sequencer check failure or transaction abort. See the guidelines above for deciding between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`. HTTP Mapping: 409 Conflict{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Out<wbr>Of<wbr>Range</dt>
+    <dd>OUT_OF_RANGE{{% md %}}The operation was attempted past the valid range. E.g., seeking or reading past end-of-file. Unlike `INVALID_ARGUMENT`, this error indicates a problem that may be fixed if the system state changes. For example, a 32-bit file system will generate `INVALID_ARGUMENT` if asked to read at an offset that is not in the range [0,2^32-1], but it will generate `OUT_OF_RANGE` if asked to read from an offset past the current file size. There is a fair bit of overlap between `FAILED_PRECONDITION` and `OUT_OF_RANGE`. We recommend using `OUT_OF_RANGE` (the more specific error) when it applies so that callers who are iterating through a space can easily look for an `OUT_OF_RANGE` error to detect when they are done. HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Unimplemented</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The operation is not implemented or is not supported/enabled in this service. HTTP Mapping: 501 Not Implemented{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Internal</dt>
+    <dd>INTERNAL{{% md %}}Internal errors. This means that some invariants expected by the underlying system have been broken. This error code is reserved for serious errors. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Unavailable</dt>
+    <dd>UNAVAILABLE{{% md %}}The service is currently unavailable. This is most likely a transient condition, which can be corrected by retrying with a backoff. Note that it is not always safe to retry non-idempotent operations. See the guidelines above for deciding between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`. HTTP Mapping: 503 Service Unavailable{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Data<wbr>Loss</dt>
+    <dd>DATA_LOSS{{% md %}}Unrecoverable data loss or corruption. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Ok</dt>
+    <dd>OK{{% md %}}Not an error; returned on success HTTP Mapping: 200 OK{{% /md %}}</dd><dt>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The operation was cancelled, typically by the caller. HTTP Mapping: 499 Client Closed Request{{% /md %}}</dd><dt>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}Unknown error. For example, this error may be returned when a `Status` value received from another address space belongs to an error space that is not known in this address space. Also errors raised by APIs that do not return enough error information may be converted to this error. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd><dt>Invalid<wbr>Argument</dt>
+    <dd>INVALID_ARGUMENT{{% md %}}The client specified an invalid argument. Note that this differs from `FAILED_PRECONDITION`. `INVALID_ARGUMENT` indicates arguments that are problematic regardless of the state of the system (e.g., a malformed file name). HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>Deadline<wbr>Exceeded</dt>
+    <dd>DEADLINE_EXCEEDED{{% md %}}The deadline expired before the operation could complete. For operations that change the state of the system, this error may be returned even if the operation has completed successfully. For example, a successful response from a server could have been delayed long enough for the deadline to expire. HTTP Mapping: 504 Gateway Timeout{{% /md %}}</dd><dt>Not<wbr>Found</dt>
+    <dd>NOT_FOUND{{% md %}}Some requested entity (e.g., file or directory) was not found. Note to server developers: if a request is denied for an entire class of users, such as gradual feature rollout or undocumented allowlist, `NOT_FOUND` may be used. If a request is denied for some users within a class of users, such as user-based access control, `PERMISSION_DENIED` must be used. HTTP Mapping: 404 Not Found{{% /md %}}</dd><dt>Already<wbr>Exists</dt>
+    <dd>ALREADY_EXISTS{{% md %}}The entity that a client attempted to create (e.g., file or directory) already exists. HTTP Mapping: 409 Conflict{{% /md %}}</dd><dt>Permission<wbr>Denied</dt>
+    <dd>PERMISSION_DENIED{{% md %}}The caller does not have permission to execute the specified operation. `PERMISSION_DENIED` must not be used for rejections caused by exhausting some resource (use `RESOURCE_EXHAUSTED` instead for those errors). `PERMISSION_DENIED` must not be used if the caller can not be identified (use `UNAUTHENTICATED` instead for those errors). This error code does not imply the request is valid or the requested entity exists or satisfies other pre-conditions. HTTP Mapping: 403 Forbidden{{% /md %}}</dd><dt>Unauthenticated</dt>
+    <dd>UNAUTHENTICATED{{% md %}}The request does not have valid authentication credentials for the operation. HTTP Mapping: 401 Unauthorized{{% /md %}}</dd><dt>Resource<wbr>Exhausted</dt>
+    <dd>RESOURCE_EXHAUSTED{{% md %}}Some resource has been exhausted, perhaps a per-user quota, or perhaps the entire file system is out of space. HTTP Mapping: 429 Too Many Requests{{% /md %}}</dd><dt>Failed<wbr>Precondition</dt>
+    <dd>FAILED_PRECONDITION{{% md %}}The operation was rejected because the system is not in a state required for the operation's execution. For example, the directory to be deleted is non-empty, an rmdir operation is applied to a non-directory, etc. Service implementors can use the following guidelines to decide between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`: (a) Use `UNAVAILABLE` if the client can retry just the failing call. (b) Use `ABORTED` if the client should retry at a higher level (e.g., when a client-specified test-and-set fails, indicating the client should restart a read-modify-write sequence). (c) Use `FAILED_PRECONDITION` if the client should not retry until the system state has been explicitly fixed. E.g., if an "rmdir" fails because the directory is non-empty, `FAILED_PRECONDITION` should be returned since the client should not retry unless the files are deleted from the directory. HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>Aborted</dt>
+    <dd>ABORTED{{% md %}}The operation was aborted, typically due to a concurrency issue such as a sequencer check failure or transaction abort. See the guidelines above for deciding between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`. HTTP Mapping: 409 Conflict{{% /md %}}</dd><dt>Out<wbr>Of<wbr>Range</dt>
+    <dd>OUT_OF_RANGE{{% md %}}The operation was attempted past the valid range. E.g., seeking or reading past end-of-file. Unlike `INVALID_ARGUMENT`, this error indicates a problem that may be fixed if the system state changes. For example, a 32-bit file system will generate `INVALID_ARGUMENT` if asked to read at an offset that is not in the range [0,2^32-1], but it will generate `OUT_OF_RANGE` if asked to read from an offset past the current file size. There is a fair bit of overlap between `FAILED_PRECONDITION` and `OUT_OF_RANGE`. We recommend using `OUT_OF_RANGE` (the more specific error) when it applies so that callers who are iterating through a space can easily look for an `OUT_OF_RANGE` error to detect when they are done. HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>Unimplemented</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The operation is not implemented or is not supported/enabled in this service. HTTP Mapping: 501 Not Implemented{{% /md %}}</dd><dt>Internal</dt>
+    <dd>INTERNAL{{% md %}}Internal errors. This means that some invariants expected by the underlying system have been broken. This error code is reserved for serious errors. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd><dt>Unavailable</dt>
+    <dd>UNAVAILABLE{{% md %}}The service is currently unavailable. This is most likely a transient condition, which can be corrected by retrying with a backoff. Note that it is not always safe to retry non-idempotent operations. See the guidelines above for deciding between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`. HTTP Mapping: 503 Service Unavailable{{% /md %}}</dd><dt>Data<wbr>Loss</dt>
+    <dd>DATA_LOSS{{% md %}}Unrecoverable data loss or corruption. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>OK</dt>
+    <dd>OK{{% md %}}Not an error; returned on success HTTP Mapping: 200 OK{{% /md %}}</dd><dt>CANCELLED</dt>
+    <dd>CANCELLED{{% md %}}The operation was cancelled, typically by the caller. HTTP Mapping: 499 Client Closed Request{{% /md %}}</dd><dt>UNKNOWN</dt>
+    <dd>UNKNOWN{{% md %}}Unknown error. For example, this error may be returned when a `Status` value received from another address space belongs to an error space that is not known in this address space. Also errors raised by APIs that do not return enough error information may be converted to this error. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd><dt>INVALID_ARGUMENT</dt>
+    <dd>INVALID_ARGUMENT{{% md %}}The client specified an invalid argument. Note that this differs from `FAILED_PRECONDITION`. `INVALID_ARGUMENT` indicates arguments that are problematic regardless of the state of the system (e.g., a malformed file name). HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>DEADLINE_EXCEEDED</dt>
+    <dd>DEADLINE_EXCEEDED{{% md %}}The deadline expired before the operation could complete. For operations that change the state of the system, this error may be returned even if the operation has completed successfully. For example, a successful response from a server could have been delayed long enough for the deadline to expire. HTTP Mapping: 504 Gateway Timeout{{% /md %}}</dd><dt>NOT_FOUND</dt>
+    <dd>NOT_FOUND{{% md %}}Some requested entity (e.g., file or directory) was not found. Note to server developers: if a request is denied for an entire class of users, such as gradual feature rollout or undocumented allowlist, `NOT_FOUND` may be used. If a request is denied for some users within a class of users, such as user-based access control, `PERMISSION_DENIED` must be used. HTTP Mapping: 404 Not Found{{% /md %}}</dd><dt>ALREADY_EXISTS</dt>
+    <dd>ALREADY_EXISTS{{% md %}}The entity that a client attempted to create (e.g., file or directory) already exists. HTTP Mapping: 409 Conflict{{% /md %}}</dd><dt>PERMISSION_DENIED</dt>
+    <dd>PERMISSION_DENIED{{% md %}}The caller does not have permission to execute the specified operation. `PERMISSION_DENIED` must not be used for rejections caused by exhausting some resource (use `RESOURCE_EXHAUSTED` instead for those errors). `PERMISSION_DENIED` must not be used if the caller can not be identified (use `UNAUTHENTICATED` instead for those errors). This error code does not imply the request is valid or the requested entity exists or satisfies other pre-conditions. HTTP Mapping: 403 Forbidden{{% /md %}}</dd><dt>UNAUTHENTICATED</dt>
+    <dd>UNAUTHENTICATED{{% md %}}The request does not have valid authentication credentials for the operation. HTTP Mapping: 401 Unauthorized{{% /md %}}</dd><dt>RESOURCE_EXHAUSTED</dt>
+    <dd>RESOURCE_EXHAUSTED{{% md %}}Some resource has been exhausted, perhaps a per-user quota, or perhaps the entire file system is out of space. HTTP Mapping: 429 Too Many Requests{{% /md %}}</dd><dt>FAILED_PRECONDITION</dt>
+    <dd>FAILED_PRECONDITION{{% md %}}The operation was rejected because the system is not in a state required for the operation's execution. For example, the directory to be deleted is non-empty, an rmdir operation is applied to a non-directory, etc. Service implementors can use the following guidelines to decide between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`: (a) Use `UNAVAILABLE` if the client can retry just the failing call. (b) Use `ABORTED` if the client should retry at a higher level (e.g., when a client-specified test-and-set fails, indicating the client should restart a read-modify-write sequence). (c) Use `FAILED_PRECONDITION` if the client should not retry until the system state has been explicitly fixed. E.g., if an "rmdir" fails because the directory is non-empty, `FAILED_PRECONDITION` should be returned since the client should not retry unless the files are deleted from the directory. HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>ABORTED</dt>
+    <dd>ABORTED{{% md %}}The operation was aborted, typically due to a concurrency issue such as a sequencer check failure or transaction abort. See the guidelines above for deciding between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`. HTTP Mapping: 409 Conflict{{% /md %}}</dd><dt>OUT_OF_RANGE</dt>
+    <dd>OUT_OF_RANGE{{% md %}}The operation was attempted past the valid range. E.g., seeking or reading past end-of-file. Unlike `INVALID_ARGUMENT`, this error indicates a problem that may be fixed if the system state changes. For example, a 32-bit file system will generate `INVALID_ARGUMENT` if asked to read at an offset that is not in the range [0,2^32-1], but it will generate `OUT_OF_RANGE` if asked to read from an offset past the current file size. There is a fair bit of overlap between `FAILED_PRECONDITION` and `OUT_OF_RANGE`. We recommend using `OUT_OF_RANGE` (the more specific error) when it applies so that callers who are iterating through a space can easily look for an `OUT_OF_RANGE` error to detect when they are done. HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>UNIMPLEMENTED</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The operation is not implemented or is not supported/enabled in this service. HTTP Mapping: 501 Not Implemented{{% /md %}}</dd><dt>INTERNAL</dt>
+    <dd>INTERNAL{{% md %}}Internal errors. This means that some invariants expected by the underlying system have been broken. This error code is reserved for serious errors. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd><dt>UNAVAILABLE</dt>
+    <dd>UNAVAILABLE{{% md %}}The service is currently unavailable. This is most likely a transient condition, which can be corrected by retrying with a backoff. Note that it is not always safe to retry non-idempotent operations. See the guidelines above for deciding between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`. HTTP Mapping: 503 Service Unavailable{{% /md %}}</dd><dt>DATA_LOSS</dt>
+    <dd>DATA_LOSS{{% md %}}Unrecoverable data loss or corruption. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="statusconditionresponse">Status<wbr>Condition<wbr>Response</h4>
@@ -16525,7 +17071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workloadmetadataconfigmode">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Mode is the configuration for how to expose metadata to workloads running on the node pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16533,7 +17079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodemetadata_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workloadmetadataconfignodemetadata">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Node<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}NodeMetadata is the configuration for how to expose metadata to the workloads running on the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16545,7 +17091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workloadmetadataconfigmode">Workload<wbr>Metadata<wbr>Config<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Mode is the configuration for how to expose metadata to workloads running on the node pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16553,7 +17099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodemetadata_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workloadmetadataconfignodemetadata">Workload<wbr>Metadata<wbr>Config<wbr>Node<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}NodeMetadata is the configuration for how to expose metadata to the workloads running on the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16565,7 +17111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workloadmetadataconfigmode">Workload<wbr>Metadata<wbr>Config<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Mode is the configuration for how to expose metadata to workloads running on the node pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16573,7 +17119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodemetadata_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workloadmetadataconfignodemetadata">Workload<wbr>Metadata<wbr>Config<wbr>Node<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}NodeMetadata is the configuration for how to expose metadata to the workloads running on the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16585,7 +17131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#workloadmetadataconfigmode">Workload<wbr>Metadata<wbr>Config<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Mode is the configuration for how to expose metadata to workloads running on the node pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16593,9 +17139,73 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_metadata_python" style="color: inherit; text-decoration: inherit;">node_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#workloadmetadataconfignodemetadata">Workload<wbr>Metadata<wbr>Config<wbr>Node<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}NodeMetadata is the configuration for how to expose metadata to the workloads running on the node.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="workloadmetadataconfigmode">Workload<wbr>Metadata<wbr>Config<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Gce<wbr>Metadata</dt>
+    <dd>GCE_METADATA{{% md %}}Expose all Compute Engine metadata to pods.{{% /md %}}</dd><dt>Gke<wbr>Metadata</dt>
+    <dd>GKE_METADATA{{% md %}}Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if Workload Identity is enabled at the cluster level.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Workload<wbr>Metadata<wbr>Config<wbr>Mode<wbr>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Workload<wbr>Metadata<wbr>Config<wbr>Mode<wbr>Gce<wbr>Metadata</dt>
+    <dd>GCE_METADATA{{% md %}}Expose all Compute Engine metadata to pods.{{% /md %}}</dd><dt>Workload<wbr>Metadata<wbr>Config<wbr>Mode<wbr>Gke<wbr>Metadata</dt>
+    <dd>GKE_METADATA{{% md %}}Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if Workload Identity is enabled at the cluster level.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Gce<wbr>Metadata</dt>
+    <dd>GCE_METADATA{{% md %}}Expose all Compute Engine metadata to pods.{{% /md %}}</dd><dt>Gke<wbr>Metadata</dt>
+    <dd>GKE_METADATA{{% md %}}Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if Workload Identity is enabled at the cluster level.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MODE_UNSPECIFIED</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>GCE_METADATA</dt>
+    <dd>GCE_METADATA{{% md %}}Expose all Compute Engine metadata to pods.{{% /md %}}</dd><dt>GKE_METADATA</dt>
+    <dd>GKE_METADATA{{% md %}}Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if Workload Identity is enabled at the cluster level.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="workloadmetadataconfignodemetadata">Workload<wbr>Metadata<wbr>Config<wbr>Node<wbr>Metadata</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Secure</dt>
+    <dd>SECURE{{% md %}}Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. Metadata concealment is a temporary security solution available while the bootstrapping process for cluster nodes is being redesigned with significant security improvements. This feature is scheduled to be deprecated in the future and later removed.{{% /md %}}</dd><dt>Expose</dt>
+    <dd>EXPOSE{{% md %}}Expose all VM metadata to pods.{{% /md %}}</dd><dt>Gke<wbr>Metadata<wbr>Server</dt>
+    <dd>GKE_METADATA_SERVER{{% md %}}Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if Workload Identity is enabled at the cluster level.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Workload<wbr>Metadata<wbr>Config<wbr>Node<wbr>Metadata<wbr>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Workload<wbr>Metadata<wbr>Config<wbr>Node<wbr>Metadata<wbr>Secure</dt>
+    <dd>SECURE{{% md %}}Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. Metadata concealment is a temporary security solution available while the bootstrapping process for cluster nodes is being redesigned with significant security improvements. This feature is scheduled to be deprecated in the future and later removed.{{% /md %}}</dd><dt>Workload<wbr>Metadata<wbr>Config<wbr>Node<wbr>Metadata<wbr>Expose</dt>
+    <dd>EXPOSE{{% md %}}Expose all VM metadata to pods.{{% /md %}}</dd><dt>Workload<wbr>Metadata<wbr>Config<wbr>Node<wbr>Metadata<wbr>Gke<wbr>Metadata<wbr>Server</dt>
+    <dd>GKE_METADATA_SERVER{{% md %}}Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if Workload Identity is enabled at the cluster level.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Secure</dt>
+    <dd>SECURE{{% md %}}Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. Metadata concealment is a temporary security solution available while the bootstrapping process for cluster nodes is being redesigned with significant security improvements. This feature is scheduled to be deprecated in the future and later removed.{{% /md %}}</dd><dt>Expose</dt>
+    <dd>EXPOSE{{% md %}}Expose all VM metadata to pods.{{% /md %}}</dd><dt>Gke<wbr>Metadata<wbr>Server</dt>
+    <dd>GKE_METADATA_SERVER{{% md %}}Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if Workload Identity is enabled at the cluster level.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED</dt>
+    <dd>UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>SECURE</dt>
+    <dd>SECURE{{% md %}}Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. Metadata concealment is a temporary security solution available while the bootstrapping process for cluster nodes is being redesigned with significant security improvements. This feature is scheduled to be deprecated in the future and later removed.{{% /md %}}</dd><dt>EXPOSE</dt>
+    <dd>EXPOSE{{% md %}}Expose all VM metadata to pods.{{% /md %}}</dd><dt>GKE_METADATA_SERVER</dt>
+    <dd>GKE_METADATA_SERVER{{% md %}}Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if Workload Identity is enabled at the cluster level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workloadmetadataconfigresponse">Workload<wbr>Metadata<wbr>Config<wbr>Response</h4>

@@ -29,7 +29,7 @@ Creates a Project resource. Initially, the Project resource is owned by its crea
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-            <span class="nx">lifecycle_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">lifecycle_state</span><span class="p">:</span> <span class="nx">Optional[_cloudresourcemanager_v1beta1.ProjectLifecycleState]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[_cloudresourcemanager_v1beta1.ResourceIdArgs]</span> = None<span class="p">,</span>
             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -184,7 +184,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#lifecyclestate_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#projectlifecyclestate">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Resource<wbr>Manager.<wbr>V1Beta1.<wbr>Project<wbr>Lifecycle<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The Project lifecycle state. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -252,7 +252,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#lifecyclestate_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#projectlifecyclestate">Project<wbr>Lifecycle<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The Project lifecycle state. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -320,7 +320,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#lifecyclestate_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#projectlifecyclestate">Project<wbr>Lifecycle<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The Project lifecycle state. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -388,7 +388,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#lifecycle_state_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#projectlifecyclestate">Project<wbr>Lifecycle<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The Project lifecycle state. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -497,6 +497,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="projectlifecyclestate">Project<wbr>Lifecycle<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Lifecycle<wbr>State<wbr>Unspecified</dt>
+    <dd>LIFECYCLE_STATE_UNSPECIFIED{{% md %}}Unspecified state. This is only used/useful for distinguishing unset values.{{% /md %}}</dd><dt>Active</dt>
+    <dd>ACTIVE{{% md %}}The normal and active state.{{% /md %}}</dd><dt>Delete<wbr>Requested</dt>
+    <dd>DELETE_REQUESTED{{% md %}}The project has been marked for deletion by the user (by invoking DeleteProject) or by the system (Google Cloud Platform). This can generally be reversed by invoking UndeleteProject.{{% /md %}}</dd><dt>Delete<wbr>In<wbr>Progress</dt>
+    <dd>DELETE_IN_PROGRESS{{% md %}}This lifecycle state is no longer used and is not returned by the API.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Project<wbr>Lifecycle<wbr>State<wbr>Lifecycle<wbr>State<wbr>Unspecified</dt>
+    <dd>LIFECYCLE_STATE_UNSPECIFIED{{% md %}}Unspecified state. This is only used/useful for distinguishing unset values.{{% /md %}}</dd><dt>Project<wbr>Lifecycle<wbr>State<wbr>Active</dt>
+    <dd>ACTIVE{{% md %}}The normal and active state.{{% /md %}}</dd><dt>Project<wbr>Lifecycle<wbr>State<wbr>Delete<wbr>Requested</dt>
+    <dd>DELETE_REQUESTED{{% md %}}The project has been marked for deletion by the user (by invoking DeleteProject) or by the system (Google Cloud Platform). This can generally be reversed by invoking UndeleteProject.{{% /md %}}</dd><dt>Project<wbr>Lifecycle<wbr>State<wbr>Delete<wbr>In<wbr>Progress</dt>
+    <dd>DELETE_IN_PROGRESS{{% md %}}This lifecycle state is no longer used and is not returned by the API.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Lifecycle<wbr>State<wbr>Unspecified</dt>
+    <dd>LIFECYCLE_STATE_UNSPECIFIED{{% md %}}Unspecified state. This is only used/useful for distinguishing unset values.{{% /md %}}</dd><dt>Active</dt>
+    <dd>ACTIVE{{% md %}}The normal and active state.{{% /md %}}</dd><dt>Delete<wbr>Requested</dt>
+    <dd>DELETE_REQUESTED{{% md %}}The project has been marked for deletion by the user (by invoking DeleteProject) or by the system (Google Cloud Platform). This can generally be reversed by invoking UndeleteProject.{{% /md %}}</dd><dt>Delete<wbr>In<wbr>Progress</dt>
+    <dd>DELETE_IN_PROGRESS{{% md %}}This lifecycle state is no longer used and is not returned by the API.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LIFECYCLE_STATE_UNSPECIFIED</dt>
+    <dd>LIFECYCLE_STATE_UNSPECIFIED{{% md %}}Unspecified state. This is only used/useful for distinguishing unset values.{{% /md %}}</dd><dt>ACTIVE</dt>
+    <dd>ACTIVE{{% md %}}The normal and active state.{{% /md %}}</dd><dt>DELETE_REQUESTED</dt>
+    <dd>DELETE_REQUESTED{{% md %}}The project has been marked for deletion by the user (by invoking DeleteProject) or by the system (Google Cloud Platform). This can generally be reversed by invoking UndeleteProject.{{% /md %}}</dd><dt>DELETE_IN_PROGRESS</dt>
+    <dd>DELETE_IN_PROGRESS{{% md %}}This lifecycle state is no longer used and is not returned by the API.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="resourceid">Resource<wbr>Id</h4>
 

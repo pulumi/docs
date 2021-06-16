@@ -748,7 +748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2fulfillmentfeaturetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Fulfillment<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the feature that enabled for fulfillment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -760,7 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2fulfillmentfeaturetype">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Fulfillment<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the feature that enabled for fulfillment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -772,7 +772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2fulfillmentfeaturetype">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Fulfillment<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the feature that enabled for fulfillment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -784,7 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2fulfillmentfeaturetype">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Fulfillment<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the feature that enabled for fulfillment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -837,6 +837,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the feature that enabled for fulfillment.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowv2fulfillmentfeaturetype">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Fulfillment<wbr>Feature<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Feature type not specified.{{% /md %}}</dd><dt>Smalltalk</dt>
+    <dd>SMALLTALK{{% md %}}Fulfillment is enabled for SmallTalk.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Fulfillment<wbr>Feature<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Feature type not specified.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Fulfillment<wbr>Feature<wbr>Type<wbr>Smalltalk</dt>
+    <dd>SMALLTALK{{% md %}}Fulfillment is enabled for SmallTalk.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Feature type not specified.{{% /md %}}</dd><dt>Smalltalk</dt>
+    <dd>SMALLTALK{{% md %}}Fulfillment is enabled for SmallTalk.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Feature type not specified.{{% /md %}}</dd><dt>SMALLTALK</dt>
+    <dd>SMALLTALK{{% md %}}Fulfillment is enabled for SmallTalk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddialogflowv2fulfillmentgenericwebservice">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Fulfillment<wbr>Generic<wbr>Web<wbr>Service</h4>
@@ -1390,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputaudioencoding_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Audio<wbr>Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2texttospeechsettingsoutputaudioencoding">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Text<wbr>To<wbr>Speech<wbr>Settings<wbr>Output<wbr>Audio<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}Required. Audio encoding of the synthesized audio content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1426,7 +1452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputaudioencoding_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Audio<wbr>Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2texttospeechsettingsoutputaudioencoding">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Text<wbr>To<wbr>Speech<wbr>Settings<wbr>Output<wbr>Audio<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}Required. Audio encoding of the synthesized audio content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1462,7 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputaudioencoding_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Audio<wbr>Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2texttospeechsettingsoutputaudioencoding">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Text<wbr>To<wbr>Speech<wbr>Settings<wbr>Output<wbr>Audio<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}Required. Audio encoding of the synthesized audio content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1498,7 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_audio_encoding_python" style="color: inherit; text-decoration: inherit;">output_<wbr>audio_<wbr>encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2texttospeechsettingsoutputaudioencoding">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Text<wbr>To<wbr>Speech<wbr>Settings<wbr>Output<wbr>Audio<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}Required. Audio encoding of the synthesized audio content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1517,6 +1543,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Configuration of how speech should be synthesized, mapping from language (https://cloud.google.com/dialogflow/docs/reference/language) to SynthesizeSpeechConfig.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowv2texttospeechsettingsoutputaudioencoding">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Text<wbr>To<wbr>Speech<wbr>Settings<wbr>Output<wbr>Audio<wbr>Encoding</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Output<wbr>Audio<wbr>Encoding<wbr>Unspecified</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Output<wbr>Audio<wbr>Encoding<wbr>Linear16</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_LINEAR_16{{% md %}}Uncompressed 16-bit signed little-endian samples (Linear PCM). Audio content returned as LINEAR16 also contains a WAV header.{{% /md %}}</dd><dt>Output<wbr>Audio<wbr>Encoding<wbr>Mp3</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_MP3{{% md %}}MP3 audio at 32kbps.{{% /md %}}</dd><dt>Output<wbr>Audio<wbr>Encoding<wbr>Mp364Kbps</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_MP3_64_KBPS{{% md %}}MP3 audio at 64kbps.{{% /md %}}</dd><dt>Output<wbr>Audio<wbr>Encoding<wbr>Ogg<wbr>Opus</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_OGG_OPUS{{% md %}}Opus encoded audio wrapped in an ogg container. The result will be a file which can be played natively on Android, and in browsers (at least Chrome and Firefox). The quality of the encoding is considerably higher than MP3 while using approximately the same bitrate.{{% /md %}}</dd><dt>Output<wbr>Audio<wbr>Encoding<wbr>Mulaw</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_MULAW{{% md %}}8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Text<wbr>To<wbr>Speech<wbr>Settings<wbr>Output<wbr>Audio<wbr>Encoding<wbr>Output<wbr>Audio<wbr>Encoding<wbr>Unspecified</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Text<wbr>To<wbr>Speech<wbr>Settings<wbr>Output<wbr>Audio<wbr>Encoding<wbr>Output<wbr>Audio<wbr>Encoding<wbr>Linear16</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_LINEAR_16{{% md %}}Uncompressed 16-bit signed little-endian samples (Linear PCM). Audio content returned as LINEAR16 also contains a WAV header.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Text<wbr>To<wbr>Speech<wbr>Settings<wbr>Output<wbr>Audio<wbr>Encoding<wbr>Output<wbr>Audio<wbr>Encoding<wbr>Mp3</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_MP3{{% md %}}MP3 audio at 32kbps.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Text<wbr>To<wbr>Speech<wbr>Settings<wbr>Output<wbr>Audio<wbr>Encoding<wbr>Output<wbr>Audio<wbr>Encoding<wbr>Mp364Kbps</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_MP3_64_KBPS{{% md %}}MP3 audio at 64kbps.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Text<wbr>To<wbr>Speech<wbr>Settings<wbr>Output<wbr>Audio<wbr>Encoding<wbr>Output<wbr>Audio<wbr>Encoding<wbr>Ogg<wbr>Opus</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_OGG_OPUS{{% md %}}Opus encoded audio wrapped in an ogg container. The result will be a file which can be played natively on Android, and in browsers (at least Chrome and Firefox). The quality of the encoding is considerably higher than MP3 while using approximately the same bitrate.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Text<wbr>To<wbr>Speech<wbr>Settings<wbr>Output<wbr>Audio<wbr>Encoding<wbr>Output<wbr>Audio<wbr>Encoding<wbr>Mulaw</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_MULAW{{% md %}}8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Output<wbr>Audio<wbr>Encoding<wbr>Unspecified</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Output<wbr>Audio<wbr>Encoding<wbr>Linear16</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_LINEAR_16{{% md %}}Uncompressed 16-bit signed little-endian samples (Linear PCM). Audio content returned as LINEAR16 also contains a WAV header.{{% /md %}}</dd><dt>Output<wbr>Audio<wbr>Encoding<wbr>Mp3</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_MP3{{% md %}}MP3 audio at 32kbps.{{% /md %}}</dd><dt>Output<wbr>Audio<wbr>Encoding<wbr>Mp364Kbps</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_MP3_64_KBPS{{% md %}}MP3 audio at 64kbps.{{% /md %}}</dd><dt>Output<wbr>Audio<wbr>Encoding<wbr>Ogg<wbr>Opus</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_OGG_OPUS{{% md %}}Opus encoded audio wrapped in an ogg container. The result will be a file which can be played natively on Android, and in browsers (at least Chrome and Firefox). The quality of the encoding is considerably higher than MP3 while using approximately the same bitrate.{{% /md %}}</dd><dt>Output<wbr>Audio<wbr>Encoding<wbr>Mulaw</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_MULAW{{% md %}}8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>OUTPUT_AUDIO_ENCODING_UNSPECIFIED</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>OUTPUT_AUDIO_ENCODING_LINEAR16</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_LINEAR_16{{% md %}}Uncompressed 16-bit signed little-endian samples (Linear PCM). Audio content returned as LINEAR16 also contains a WAV header.{{% /md %}}</dd><dt>OUTPUT_AUDIO_ENCODING_MP3</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_MP3{{% md %}}MP3 audio at 32kbps.{{% /md %}}</dd><dt>OUTPUT_AUDIO_ENCODING_MP364_KBPS</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_MP3_64_KBPS{{% md %}}MP3 audio at 64kbps.{{% /md %}}</dd><dt>OUTPUT_AUDIO_ENCODING_OGG_OPUS</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_OGG_OPUS{{% md %}}Opus encoded audio wrapped in an ogg container. The result will be a file which can be played natively on Android, and in browsers (at least Chrome and Firefox). The quality of the encoding is considerably higher than MP3 while using approximately the same bitrate.{{% /md %}}</dd><dt>OUTPUT_AUDIO_ENCODING_MULAW</dt>
+    <dd>OUTPUT_AUDIO_ENCODING_MULAW{{% md %}}8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddialogflowv2texttospeechsettingsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Text<wbr>To<wbr>Speech<wbr>Settings<wbr>Response</h4>

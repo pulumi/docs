@@ -1207,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syntax_csharp" style="color: inherit; text-decoration: inherit;">Syntax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#apisyntax">Pulumi.<wbr>Google<wbr>Native.<wbr>Service<wbr>Management.<wbr>V1.<wbr>Api<wbr>Syntax</a></span>
     </dt>
     <dd>{{% md %}}The source syntax of the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1267,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syntax_go" style="color: inherit; text-decoration: inherit;">Syntax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#apisyntax">Api<wbr>Syntax</a></span>
     </dt>
     <dd>{{% md %}}The source syntax of the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1327,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syntax_nodejs" style="color: inherit; text-decoration: inherit;">syntax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#apisyntax">Api<wbr>Syntax</a></span>
     </dt>
     <dd>{{% md %}}The source syntax of the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1387,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syntax_python" style="color: inherit; text-decoration: inherit;">syntax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#apisyntax">Api<wbr>Syntax</a></span>
     </dt>
     <dd>{{% md %}}The source syntax of the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1640,6 +1640,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A version string for this interface. If specified, must have the form `major-version.minor-version`, as in `1.10`. If the minor version is omitted, it defaults to zero. If the entire version field is empty, the major version is derived from the package name, as outlined below. If the field is not empty, the version in the package name will be verified to be consistent with what is provided here. The versioning schema uses [semantic versioning](http://semver.org) where the major version number indicates a breaking change and the minor version an additive, non-breaking change. Both version numbers are signals to users what to expect from different versions, and should be carefully chosen based on the product plan. The major version is also reflected in the package name of the interface, which must end in `v`, as in `google.feature.v1`. For major versions 0 and 1, the suffix can be omitted. Zero major versions must only be used for experimental, non-GA interfaces. {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="apisyntax">Api<wbr>Syntax</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Syntax<wbr>Proto2</dt>
+    <dd>SYNTAX_PROTO2{{% md %}}Syntax `proto2`.{{% /md %}}</dd><dt>Syntax<wbr>Proto3</dt>
+    <dd>SYNTAX_PROTO3{{% md %}}Syntax `proto3`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Api<wbr>Syntax<wbr>Syntax<wbr>Proto2</dt>
+    <dd>SYNTAX_PROTO2{{% md %}}Syntax `proto2`.{{% /md %}}</dd><dt>Api<wbr>Syntax<wbr>Syntax<wbr>Proto3</dt>
+    <dd>SYNTAX_PROTO3{{% md %}}Syntax `proto3`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Syntax<wbr>Proto2</dt>
+    <dd>SYNTAX_PROTO2{{% md %}}Syntax `proto2`.{{% /md %}}</dd><dt>Syntax<wbr>Proto3</dt>
+    <dd>SYNTAX_PROTO3{{% md %}}Syntax `proto3`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SYNTAX_PROTO2</dt>
+    <dd>SYNTAX_PROTO2{{% md %}}Syntax `proto2`.{{% /md %}}</dd><dt>SYNTAX_PROTO3</dt>
+    <dd>SYNTAX_PROTO3{{% md %}}Syntax `proto3`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="authprovider">Auth<wbr>Provider</h4>
@@ -2807,7 +2833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathtranslation_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Translation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backendrulepathtranslation">Pulumi.<wbr>Google<wbr>Native.<wbr>Service<wbr>Management.<wbr>V1.<wbr>Backend<wbr>Rule<wbr>Path<wbr>Translation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2883,7 +2909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathtranslation_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Translation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backendrulepathtranslation">Backend<wbr>Rule<wbr>Path<wbr>Translation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2959,7 +2985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathtranslation_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Translation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backendrulepathtranslation">Backend<wbr>Rule<wbr>Path<wbr>Translation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3035,7 +3061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_translation_python" style="color: inherit; text-decoration: inherit;">path_<wbr>translation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#backendrulepathtranslation">Backend<wbr>Rule<wbr>Path<wbr>Translation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3054,6 +3080,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Selects the methods to which this rule applies. Refer to selector for syntax details.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="backendrulepathtranslation">Backend<wbr>Rule<wbr>Path<wbr>Translation</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Path<wbr>Translation<wbr>Unspecified</dt>
+    <dd>PATH_TRANSLATION_UNSPECIFIED</dd><dt>Constant<wbr>Address</dt>
+    <dd>CONSTANT_ADDRESS{{% md %}}Use the backend address as-is, with no modification to the path. If the URL pattern contains variables, the variable names and values will be appended to the query string. If a query string parameter and a URL pattern variable have the same name, this may result in duplicate keys in the query string. # Examples Given the following operation config: Method path: /api/company/{cid}/user/{uid} Backend address: https://example.cloudfunctions.net/getUser Requests to the following request paths will call the backend at the translated path: Request path: /api/company/widgetworks/user/johndoe Translated: https://example.cloudfunctions.net/getUser?cid=widgetworks&uid=johndoe Request path: /api/company/widgetworks/user/johndoe?timezone=EST Translated: https://example.cloudfunctions.net/getUser?timezone=EST&cid=widgetworks&uid=johndoe{{% /md %}}</dd><dt>Append<wbr>Path<wbr>To<wbr>Address</dt>
+    <dd>APPEND_PATH_TO_ADDRESS{{% md %}}The request path will be appended to the backend address. # Examples Given the following operation config: Method path: /api/company/{cid}/user/{uid} Backend address: https://example.appspot.com Requests to the following request paths will call the backend at the translated path: Request path: /api/company/widgetworks/user/johndoe Translated: https://example.appspot.com/api/company/widgetworks/user/johndoe Request path: /api/company/widgetworks/user/johndoe?timezone=EST Translated: https://example.appspot.com/api/company/widgetworks/user/johndoe?timezone=EST{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Backend<wbr>Rule<wbr>Path<wbr>Translation<wbr>Path<wbr>Translation<wbr>Unspecified</dt>
+    <dd>PATH_TRANSLATION_UNSPECIFIED</dd><dt>Backend<wbr>Rule<wbr>Path<wbr>Translation<wbr>Constant<wbr>Address</dt>
+    <dd>CONSTANT_ADDRESS{{% md %}}Use the backend address as-is, with no modification to the path. If the URL pattern contains variables, the variable names and values will be appended to the query string. If a query string parameter and a URL pattern variable have the same name, this may result in duplicate keys in the query string. # Examples Given the following operation config: Method path: /api/company/{cid}/user/{uid} Backend address: https://example.cloudfunctions.net/getUser Requests to the following request paths will call the backend at the translated path: Request path: /api/company/widgetworks/user/johndoe Translated: https://example.cloudfunctions.net/getUser?cid=widgetworks&uid=johndoe Request path: /api/company/widgetworks/user/johndoe?timezone=EST Translated: https://example.cloudfunctions.net/getUser?timezone=EST&cid=widgetworks&uid=johndoe{{% /md %}}</dd><dt>Backend<wbr>Rule<wbr>Path<wbr>Translation<wbr>Append<wbr>Path<wbr>To<wbr>Address</dt>
+    <dd>APPEND_PATH_TO_ADDRESS{{% md %}}The request path will be appended to the backend address. # Examples Given the following operation config: Method path: /api/company/{cid}/user/{uid} Backend address: https://example.appspot.com Requests to the following request paths will call the backend at the translated path: Request path: /api/company/widgetworks/user/johndoe Translated: https://example.appspot.com/api/company/widgetworks/user/johndoe Request path: /api/company/widgetworks/user/johndoe?timezone=EST Translated: https://example.appspot.com/api/company/widgetworks/user/johndoe?timezone=EST{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Path<wbr>Translation<wbr>Unspecified</dt>
+    <dd>PATH_TRANSLATION_UNSPECIFIED</dd><dt>Constant<wbr>Address</dt>
+    <dd>CONSTANT_ADDRESS{{% md %}}Use the backend address as-is, with no modification to the path. If the URL pattern contains variables, the variable names and values will be appended to the query string. If a query string parameter and a URL pattern variable have the same name, this may result in duplicate keys in the query string. # Examples Given the following operation config: Method path: /api/company/{cid}/user/{uid} Backend address: https://example.cloudfunctions.net/getUser Requests to the following request paths will call the backend at the translated path: Request path: /api/company/widgetworks/user/johndoe Translated: https://example.cloudfunctions.net/getUser?cid=widgetworks&uid=johndoe Request path: /api/company/widgetworks/user/johndoe?timezone=EST Translated: https://example.cloudfunctions.net/getUser?timezone=EST&cid=widgetworks&uid=johndoe{{% /md %}}</dd><dt>Append<wbr>Path<wbr>To<wbr>Address</dt>
+    <dd>APPEND_PATH_TO_ADDRESS{{% md %}}The request path will be appended to the backend address. # Examples Given the following operation config: Method path: /api/company/{cid}/user/{uid} Backend address: https://example.appspot.com Requests to the following request paths will call the backend at the translated path: Request path: /api/company/widgetworks/user/johndoe Translated: https://example.appspot.com/api/company/widgetworks/user/johndoe Request path: /api/company/widgetworks/user/johndoe?timezone=EST Translated: https://example.appspot.com/api/company/widgetworks/user/johndoe?timezone=EST{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PATH_TRANSLATION_UNSPECIFIED</dt>
+    <dd>PATH_TRANSLATION_UNSPECIFIED</dd><dt>CONSTANT_ADDRESS</dt>
+    <dd>CONSTANT_ADDRESS{{% md %}}Use the backend address as-is, with no modification to the path. If the URL pattern contains variables, the variable names and values will be appended to the query string. If a query string parameter and a URL pattern variable have the same name, this may result in duplicate keys in the query string. # Examples Given the following operation config: Method path: /api/company/{cid}/user/{uid} Backend address: https://example.cloudfunctions.net/getUser Requests to the following request paths will call the backend at the translated path: Request path: /api/company/widgetworks/user/johndoe Translated: https://example.cloudfunctions.net/getUser?cid=widgetworks&uid=johndoe Request path: /api/company/widgetworks/user/johndoe?timezone=EST Translated: https://example.cloudfunctions.net/getUser?timezone=EST&cid=widgetworks&uid=johndoe{{% /md %}}</dd><dt>APPEND_PATH_TO_ADDRESS</dt>
+    <dd>APPEND_PATH_TO_ADDRESS{{% md %}}The request path will be appended to the backend address. # Examples Given the following operation config: Method path: /api/company/{cid}/user/{uid} Backend address: https://example.appspot.com Requests to the following request paths will call the backend at the translated path: Request path: /api/company/widgetworks/user/johndoe Translated: https://example.appspot.com/api/company/widgetworks/user/johndoe Request path: /api/company/widgetworks/user/johndoe?timezone=EST Translated: https://example.appspot.com/api/company/widgetworks/user/johndoe?timezone=EST{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="backendruleresponse">Backend<wbr>Rule<wbr>Response</h4>
@@ -5591,7 +5647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syntax_csharp" style="color: inherit; text-decoration: inherit;">Syntax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#enumsyntax">Pulumi.<wbr>Google<wbr>Native.<wbr>Service<wbr>Management.<wbr>V1.<wbr>Enum<wbr>Syntax</a></span>
     </dt>
     <dd>{{% md %}}The source syntax.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5635,7 +5691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syntax_go" style="color: inherit; text-decoration: inherit;">Syntax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#enumsyntax">Enum<wbr>Syntax</a></span>
     </dt>
     <dd>{{% md %}}The source syntax.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5679,7 +5735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syntax_nodejs" style="color: inherit; text-decoration: inherit;">syntax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#enumsyntax">Enum<wbr>Syntax</a></span>
     </dt>
     <dd>{{% md %}}The source syntax.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5723,7 +5779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syntax_python" style="color: inherit; text-decoration: inherit;">syntax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#enumsyntax">Enum<wbr>Syntax</a></span>
     </dt>
     <dd>{{% md %}}The source syntax.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5904,6 +5960,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source syntax.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="enumsyntax">Enum<wbr>Syntax</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Syntax<wbr>Proto2</dt>
+    <dd>SYNTAX_PROTO2{{% md %}}Syntax `proto2`.{{% /md %}}</dd><dt>Syntax<wbr>Proto3</dt>
+    <dd>SYNTAX_PROTO3{{% md %}}Syntax `proto3`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Enum<wbr>Syntax<wbr>Syntax<wbr>Proto2</dt>
+    <dd>SYNTAX_PROTO2{{% md %}}Syntax `proto2`.{{% /md %}}</dd><dt>Enum<wbr>Syntax<wbr>Syntax<wbr>Proto3</dt>
+    <dd>SYNTAX_PROTO3{{% md %}}Syntax `proto3`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Syntax<wbr>Proto2</dt>
+    <dd>SYNTAX_PROTO2{{% md %}}Syntax `proto2`.{{% /md %}}</dd><dt>Syntax<wbr>Proto3</dt>
+    <dd>SYNTAX_PROTO3{{% md %}}Syntax `proto3`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SYNTAX_PROTO2</dt>
+    <dd>SYNTAX_PROTO2{{% md %}}Syntax `proto2`.{{% /md %}}</dd><dt>SYNTAX_PROTO3</dt>
+    <dd>SYNTAX_PROTO3{{% md %}}Syntax `proto3`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="enumvalue">Enum<wbr>Value</h4>
@@ -6143,7 +6225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cardinality_csharp" style="color: inherit; text-decoration: inherit;">Cardinality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#fieldcardinality">Pulumi.<wbr>Google<wbr>Native.<wbr>Service<wbr>Management.<wbr>V1.<wbr>Field<wbr>Cardinality</a></span>
     </dt>
     <dd>{{% md %}}The field cardinality.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6167,7 +6249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#fieldkind">Pulumi.<wbr>Google<wbr>Native.<wbr>Service<wbr>Management.<wbr>V1.<wbr>Field<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The field type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6227,7 +6309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cardinality_go" style="color: inherit; text-decoration: inherit;">Cardinality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#fieldcardinality">Field<wbr>Cardinality</a></span>
     </dt>
     <dd>{{% md %}}The field cardinality.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6251,7 +6333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#fieldkind">Field<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The field type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6311,7 +6393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cardinality_nodejs" style="color: inherit; text-decoration: inherit;">cardinality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#fieldcardinality">Field<wbr>Cardinality</a></span>
     </dt>
     <dd>{{% md %}}The field cardinality.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6335,7 +6417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#fieldkind">Field<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The field type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6395,7 +6477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cardinality_python" style="color: inherit; text-decoration: inherit;">cardinality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#fieldcardinality">Field<wbr>Cardinality</a></span>
     </dt>
     <dd>{{% md %}}The field cardinality.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6419,7 +6501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#fieldkind">Field<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The field type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6470,6 +6552,134 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field type URL, without the scheme, for message or enumeration types. Example: `"type.googleapis.com/google.protobuf.Timestamp"`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="fieldcardinality">Field<wbr>Cardinality</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Cardinality<wbr>Unknown</dt>
+    <dd>CARDINALITY_UNKNOWN{{% md %}}For fields with unknown cardinality.{{% /md %}}</dd><dt>Cardinality<wbr>Optional</dt>
+    <dd>CARDINALITY_OPTIONAL{{% md %}}For optional fields.{{% /md %}}</dd><dt>Cardinality<wbr>Required</dt>
+    <dd>CARDINALITY_REQUIRED{{% md %}}For required fields. Proto2 syntax only.{{% /md %}}</dd><dt>Cardinality<wbr>Repeated</dt>
+    <dd>CARDINALITY_REPEATED{{% md %}}For repeated fields.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Field<wbr>Cardinality<wbr>Cardinality<wbr>Unknown</dt>
+    <dd>CARDINALITY_UNKNOWN{{% md %}}For fields with unknown cardinality.{{% /md %}}</dd><dt>Field<wbr>Cardinality<wbr>Cardinality<wbr>Optional</dt>
+    <dd>CARDINALITY_OPTIONAL{{% md %}}For optional fields.{{% /md %}}</dd><dt>Field<wbr>Cardinality<wbr>Cardinality<wbr>Required</dt>
+    <dd>CARDINALITY_REQUIRED{{% md %}}For required fields. Proto2 syntax only.{{% /md %}}</dd><dt>Field<wbr>Cardinality<wbr>Cardinality<wbr>Repeated</dt>
+    <dd>CARDINALITY_REPEATED{{% md %}}For repeated fields.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Cardinality<wbr>Unknown</dt>
+    <dd>CARDINALITY_UNKNOWN{{% md %}}For fields with unknown cardinality.{{% /md %}}</dd><dt>Cardinality<wbr>Optional</dt>
+    <dd>CARDINALITY_OPTIONAL{{% md %}}For optional fields.{{% /md %}}</dd><dt>Cardinality<wbr>Required</dt>
+    <dd>CARDINALITY_REQUIRED{{% md %}}For required fields. Proto2 syntax only.{{% /md %}}</dd><dt>Cardinality<wbr>Repeated</dt>
+    <dd>CARDINALITY_REPEATED{{% md %}}For repeated fields.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CARDINALITY_UNKNOWN</dt>
+    <dd>CARDINALITY_UNKNOWN{{% md %}}For fields with unknown cardinality.{{% /md %}}</dd><dt>CARDINALITY_OPTIONAL</dt>
+    <dd>CARDINALITY_OPTIONAL{{% md %}}For optional fields.{{% /md %}}</dd><dt>CARDINALITY_REQUIRED</dt>
+    <dd>CARDINALITY_REQUIRED{{% md %}}For required fields. Proto2 syntax only.{{% /md %}}</dd><dt>CARDINALITY_REPEATED</dt>
+    <dd>CARDINALITY_REPEATED{{% md %}}For repeated fields.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="fieldkind">Field<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Unknown</dt>
+    <dd>TYPE_UNKNOWN{{% md %}}Field type unknown.{{% /md %}}</dd><dt>Type<wbr>Double</dt>
+    <dd>TYPE_DOUBLE{{% md %}}Field type double.{{% /md %}}</dd><dt>Type<wbr>Float</dt>
+    <dd>TYPE_FLOAT{{% md %}}Field type float.{{% /md %}}</dd><dt>Type<wbr>Int64</dt>
+    <dd>TYPE_INT64{{% md %}}Field type int64.{{% /md %}}</dd><dt>Type<wbr>Uint64</dt>
+    <dd>TYPE_UINT64{{% md %}}Field type uint64.{{% /md %}}</dd><dt>Type<wbr>Int32</dt>
+    <dd>TYPE_INT32{{% md %}}Field type int32.{{% /md %}}</dd><dt>Type<wbr>Fixed64</dt>
+    <dd>TYPE_FIXED64{{% md %}}Field type fixed64.{{% /md %}}</dd><dt>Type<wbr>Fixed32</dt>
+    <dd>TYPE_FIXED32{{% md %}}Field type fixed32.{{% /md %}}</dd><dt>Type<wbr>Bool</dt>
+    <dd>TYPE_BOOL{{% md %}}Field type bool.{{% /md %}}</dd><dt>Type<wbr>String</dt>
+    <dd>TYPE_STRING{{% md %}}Field type string.{{% /md %}}</dd><dt>Type<wbr>Group</dt>
+    <dd>TYPE_GROUP{{% md %}}Field type group. Proto2 syntax only, and deprecated.{{% /md %}}</dd><dt>Type<wbr>Message</dt>
+    <dd>TYPE_MESSAGE{{% md %}}Field type message.{{% /md %}}</dd><dt>Type<wbr>Bytes</dt>
+    <dd>TYPE_BYTES{{% md %}}Field type bytes.{{% /md %}}</dd><dt>Type<wbr>Uint32</dt>
+    <dd>TYPE_UINT32{{% md %}}Field type uint32.{{% /md %}}</dd><dt>Type<wbr>Enum</dt>
+    <dd>TYPE_ENUM{{% md %}}Field type enum.{{% /md %}}</dd><dt>Type<wbr>Sfixed32</dt>
+    <dd>TYPE_SFIXED32{{% md %}}Field type sfixed32.{{% /md %}}</dd><dt>Type<wbr>Sfixed64</dt>
+    <dd>TYPE_SFIXED64{{% md %}}Field type sfixed64.{{% /md %}}</dd><dt>Type<wbr>Sint32</dt>
+    <dd>TYPE_SINT32{{% md %}}Field type sint32.{{% /md %}}</dd><dt>Type<wbr>Sint64</dt>
+    <dd>TYPE_SINT64{{% md %}}Field type sint64.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Field<wbr>Kind<wbr>Type<wbr>Unknown</dt>
+    <dd>TYPE_UNKNOWN{{% md %}}Field type unknown.{{% /md %}}</dd><dt>Field<wbr>Kind<wbr>Type<wbr>Double</dt>
+    <dd>TYPE_DOUBLE{{% md %}}Field type double.{{% /md %}}</dd><dt>Field<wbr>Kind<wbr>Type<wbr>Float</dt>
+    <dd>TYPE_FLOAT{{% md %}}Field type float.{{% /md %}}</dd><dt>Field<wbr>Kind<wbr>Type<wbr>Int64</dt>
+    <dd>TYPE_INT64{{% md %}}Field type int64.{{% /md %}}</dd><dt>Field<wbr>Kind<wbr>Type<wbr>Uint64</dt>
+    <dd>TYPE_UINT64{{% md %}}Field type uint64.{{% /md %}}</dd><dt>Field<wbr>Kind<wbr>Type<wbr>Int32</dt>
+    <dd>TYPE_INT32{{% md %}}Field type int32.{{% /md %}}</dd><dt>Field<wbr>Kind<wbr>Type<wbr>Fixed64</dt>
+    <dd>TYPE_FIXED64{{% md %}}Field type fixed64.{{% /md %}}</dd><dt>Field<wbr>Kind<wbr>Type<wbr>Fixed32</dt>
+    <dd>TYPE_FIXED32{{% md %}}Field type fixed32.{{% /md %}}</dd><dt>Field<wbr>Kind<wbr>Type<wbr>Bool</dt>
+    <dd>TYPE_BOOL{{% md %}}Field type bool.{{% /md %}}</dd><dt>Field<wbr>Kind<wbr>Type<wbr>String</dt>
+    <dd>TYPE_STRING{{% md %}}Field type string.{{% /md %}}</dd><dt>Field<wbr>Kind<wbr>Type<wbr>Group</dt>
+    <dd>TYPE_GROUP{{% md %}}Field type group. Proto2 syntax only, and deprecated.{{% /md %}}</dd><dt>Field<wbr>Kind<wbr>Type<wbr>Message</dt>
+    <dd>TYPE_MESSAGE{{% md %}}Field type message.{{% /md %}}</dd><dt>Field<wbr>Kind<wbr>Type<wbr>Bytes</dt>
+    <dd>TYPE_BYTES{{% md %}}Field type bytes.{{% /md %}}</dd><dt>Field<wbr>Kind<wbr>Type<wbr>Uint32</dt>
+    <dd>TYPE_UINT32{{% md %}}Field type uint32.{{% /md %}}</dd><dt>Field<wbr>Kind<wbr>Type<wbr>Enum</dt>
+    <dd>TYPE_ENUM{{% md %}}Field type enum.{{% /md %}}</dd><dt>Field<wbr>Kind<wbr>Type<wbr>Sfixed32</dt>
+    <dd>TYPE_SFIXED32{{% md %}}Field type sfixed32.{{% /md %}}</dd><dt>Field<wbr>Kind<wbr>Type<wbr>Sfixed64</dt>
+    <dd>TYPE_SFIXED64{{% md %}}Field type sfixed64.{{% /md %}}</dd><dt>Field<wbr>Kind<wbr>Type<wbr>Sint32</dt>
+    <dd>TYPE_SINT32{{% md %}}Field type sint32.{{% /md %}}</dd><dt>Field<wbr>Kind<wbr>Type<wbr>Sint64</dt>
+    <dd>TYPE_SINT64{{% md %}}Field type sint64.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Unknown</dt>
+    <dd>TYPE_UNKNOWN{{% md %}}Field type unknown.{{% /md %}}</dd><dt>Type<wbr>Double</dt>
+    <dd>TYPE_DOUBLE{{% md %}}Field type double.{{% /md %}}</dd><dt>Type<wbr>Float</dt>
+    <dd>TYPE_FLOAT{{% md %}}Field type float.{{% /md %}}</dd><dt>Type<wbr>Int64</dt>
+    <dd>TYPE_INT64{{% md %}}Field type int64.{{% /md %}}</dd><dt>Type<wbr>Uint64</dt>
+    <dd>TYPE_UINT64{{% md %}}Field type uint64.{{% /md %}}</dd><dt>Type<wbr>Int32</dt>
+    <dd>TYPE_INT32{{% md %}}Field type int32.{{% /md %}}</dd><dt>Type<wbr>Fixed64</dt>
+    <dd>TYPE_FIXED64{{% md %}}Field type fixed64.{{% /md %}}</dd><dt>Type<wbr>Fixed32</dt>
+    <dd>TYPE_FIXED32{{% md %}}Field type fixed32.{{% /md %}}</dd><dt>Type<wbr>Bool</dt>
+    <dd>TYPE_BOOL{{% md %}}Field type bool.{{% /md %}}</dd><dt>Type<wbr>String</dt>
+    <dd>TYPE_STRING{{% md %}}Field type string.{{% /md %}}</dd><dt>Type<wbr>Group</dt>
+    <dd>TYPE_GROUP{{% md %}}Field type group. Proto2 syntax only, and deprecated.{{% /md %}}</dd><dt>Type<wbr>Message</dt>
+    <dd>TYPE_MESSAGE{{% md %}}Field type message.{{% /md %}}</dd><dt>Type<wbr>Bytes</dt>
+    <dd>TYPE_BYTES{{% md %}}Field type bytes.{{% /md %}}</dd><dt>Type<wbr>Uint32</dt>
+    <dd>TYPE_UINT32{{% md %}}Field type uint32.{{% /md %}}</dd><dt>Type<wbr>Enum</dt>
+    <dd>TYPE_ENUM{{% md %}}Field type enum.{{% /md %}}</dd><dt>Type<wbr>Sfixed32</dt>
+    <dd>TYPE_SFIXED32{{% md %}}Field type sfixed32.{{% /md %}}</dd><dt>Type<wbr>Sfixed64</dt>
+    <dd>TYPE_SFIXED64{{% md %}}Field type sfixed64.{{% /md %}}</dd><dt>Type<wbr>Sint32</dt>
+    <dd>TYPE_SINT32{{% md %}}Field type sint32.{{% /md %}}</dd><dt>Type<wbr>Sint64</dt>
+    <dd>TYPE_SINT64{{% md %}}Field type sint64.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_UNKNOWN</dt>
+    <dd>TYPE_UNKNOWN{{% md %}}Field type unknown.{{% /md %}}</dd><dt>TYPE_DOUBLE</dt>
+    <dd>TYPE_DOUBLE{{% md %}}Field type double.{{% /md %}}</dd><dt>TYPE_FLOAT</dt>
+    <dd>TYPE_FLOAT{{% md %}}Field type float.{{% /md %}}</dd><dt>TYPE_INT64</dt>
+    <dd>TYPE_INT64{{% md %}}Field type int64.{{% /md %}}</dd><dt>TYPE_UINT64</dt>
+    <dd>TYPE_UINT64{{% md %}}Field type uint64.{{% /md %}}</dd><dt>TYPE_INT32</dt>
+    <dd>TYPE_INT32{{% md %}}Field type int32.{{% /md %}}</dd><dt>TYPE_FIXED64</dt>
+    <dd>TYPE_FIXED64{{% md %}}Field type fixed64.{{% /md %}}</dd><dt>TYPE_FIXED32</dt>
+    <dd>TYPE_FIXED32{{% md %}}Field type fixed32.{{% /md %}}</dd><dt>TYPE_BOOL</dt>
+    <dd>TYPE_BOOL{{% md %}}Field type bool.{{% /md %}}</dd><dt>TYPE_STRING</dt>
+    <dd>TYPE_STRING{{% md %}}Field type string.{{% /md %}}</dd><dt>TYPE_GROUP</dt>
+    <dd>TYPE_GROUP{{% md %}}Field type group. Proto2 syntax only, and deprecated.{{% /md %}}</dd><dt>TYPE_MESSAGE</dt>
+    <dd>TYPE_MESSAGE{{% md %}}Field type message.{{% /md %}}</dd><dt>TYPE_BYTES</dt>
+    <dd>TYPE_BYTES{{% md %}}Field type bytes.{{% /md %}}</dd><dt>TYPE_UINT32</dt>
+    <dd>TYPE_UINT32{{% md %}}Field type uint32.{{% /md %}}</dd><dt>TYPE_ENUM</dt>
+    <dd>TYPE_ENUM{{% md %}}Field type enum.{{% /md %}}</dd><dt>TYPE_SFIXED32</dt>
+    <dd>TYPE_SFIXED32{{% md %}}Field type sfixed32.{{% /md %}}</dd><dt>TYPE_SFIXED64</dt>
+    <dd>TYPE_SFIXED64{{% md %}}Field type sfixed64.{{% /md %}}</dd><dt>TYPE_SINT32</dt>
+    <dd>TYPE_SINT32{{% md %}}Field type sint32.{{% /md %}}</dd><dt>TYPE_SINT64</dt>
+    <dd>TYPE_SINT64{{% md %}}Field type sint64.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="fieldresponse">Field<wbr>Response</h4>
@@ -7903,7 +8113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuetype_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#labeldescriptorvaluetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Service<wbr>Management.<wbr>V1.<wbr>Label<wbr>Descriptor<wbr>Value<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7931,7 +8141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuetype_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#labeldescriptorvaluetype">Label<wbr>Descriptor<wbr>Value<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7959,7 +8169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuetype_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#labeldescriptorvaluetype">Label<wbr>Descriptor<wbr>Value<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7987,7 +8197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#labeldescriptorvaluetype">Label<wbr>Descriptor<wbr>Value<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8104,6 +8314,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="labeldescriptorvaluetype">Label<wbr>Descriptor<wbr>Value<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>String</dt>
+    <dd>STRING{{% md %}}A variable-length string. This is the default.{{% /md %}}</dd><dt>Bool</dt>
+    <dd>BOOL{{% md %}}Boolean; true or false.{{% /md %}}</dd><dt>Int64</dt>
+    <dd>INT64{{% md %}}A 64-bit signed integer.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Label<wbr>Descriptor<wbr>Value<wbr>Type<wbr>String</dt>
+    <dd>STRING{{% md %}}A variable-length string. This is the default.{{% /md %}}</dd><dt>Label<wbr>Descriptor<wbr>Value<wbr>Type<wbr>Bool</dt>
+    <dd>BOOL{{% md %}}Boolean; true or false.{{% /md %}}</dd><dt>Label<wbr>Descriptor<wbr>Value<wbr>Type<wbr>Int64</dt>
+    <dd>INT64{{% md %}}A 64-bit signed integer.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>String</dt>
+    <dd>STRING{{% md %}}A variable-length string. This is the default.{{% /md %}}</dd><dt>Bool</dt>
+    <dd>BOOL{{% md %}}Boolean; true or false.{{% /md %}}</dd><dt>Int64</dt>
+    <dd>INT64{{% md %}}A 64-bit signed integer.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STRING</dt>
+    <dd>STRING{{% md %}}A variable-length string. This is the default.{{% /md %}}</dd><dt>BOOL</dt>
+    <dd>BOOL{{% md %}}Boolean; true or false.{{% /md %}}</dd><dt>INT64</dt>
+    <dd>INT64{{% md %}}A 64-bit signed integer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logdescriptor">Log<wbr>Descriptor</h4>
@@ -8783,7 +9023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syntax_csharp" style="color: inherit; text-decoration: inherit;">Syntax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#methodsyntax">Pulumi.<wbr>Google<wbr>Native.<wbr>Service<wbr>Management.<wbr>V1.<wbr>Method<wbr>Syntax</a></span>
     </dt>
     <dd>{{% md %}}The source syntax of this method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8843,7 +9083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syntax_go" style="color: inherit; text-decoration: inherit;">Syntax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#methodsyntax">Method<wbr>Syntax</a></span>
     </dt>
     <dd>{{% md %}}The source syntax of this method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8903,7 +9143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syntax_nodejs" style="color: inherit; text-decoration: inherit;">syntax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#methodsyntax">Method<wbr>Syntax</a></span>
     </dt>
     <dd>{{% md %}}The source syntax of this method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8963,7 +9203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syntax_python" style="color: inherit; text-decoration: inherit;">syntax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#methodsyntax">Method<wbr>Syntax</a></span>
     </dt>
     <dd>{{% md %}}The source syntax of this method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9210,6 +9450,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The source syntax of this method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="methodsyntax">Method<wbr>Syntax</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Syntax<wbr>Proto2</dt>
+    <dd>SYNTAX_PROTO2{{% md %}}Syntax `proto2`.{{% /md %}}</dd><dt>Syntax<wbr>Proto3</dt>
+    <dd>SYNTAX_PROTO3{{% md %}}Syntax `proto3`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Method<wbr>Syntax<wbr>Syntax<wbr>Proto2</dt>
+    <dd>SYNTAX_PROTO2{{% md %}}Syntax `proto2`.{{% /md %}}</dd><dt>Method<wbr>Syntax<wbr>Syntax<wbr>Proto3</dt>
+    <dd>SYNTAX_PROTO3{{% md %}}Syntax `proto3`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Syntax<wbr>Proto2</dt>
+    <dd>SYNTAX_PROTO2{{% md %}}Syntax `proto2`.{{% /md %}}</dd><dt>Syntax<wbr>Proto3</dt>
+    <dd>SYNTAX_PROTO3{{% md %}}Syntax `proto3`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SYNTAX_PROTO2</dt>
+    <dd>SYNTAX_PROTO2{{% md %}}Syntax `proto2`.{{% /md %}}</dd><dt>SYNTAX_PROTO3</dt>
+    <dd>SYNTAX_PROTO3{{% md %}}Syntax `proto3`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="metricdescriptor">Metric<wbr>Descriptor</h4>
 
 {{% choosable language csharp %}}
@@ -9243,7 +9509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#launchstage_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricdescriptorlaunchstage">Pulumi.<wbr>Google<wbr>Native.<wbr>Service<wbr>Management.<wbr>V1.<wbr>Metric<wbr>Descriptor<wbr>Launch<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}Optional. The launch stage of the metric definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9259,7 +9525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrickind_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricdescriptormetrickind">Pulumi.<wbr>Google<wbr>Native.<wbr>Service<wbr>Management.<wbr>V1.<wbr>Metric<wbr>Descriptor<wbr>Metric<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Whether the metric records instantaneous values, changes to a value, etc. Some combinations of `metric_kind` and `value_type` might not be supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9299,7 +9565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuetype_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricdescriptorvaluetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Service<wbr>Management.<wbr>V1.<wbr>Metric<wbr>Descriptor<wbr>Value<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Whether the measurement is an integer, a floating-point number, etc. Some combinations of `metric_kind` and `value_type` might not be supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9335,7 +9601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#launchstage_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricdescriptorlaunchstage">Metric<wbr>Descriptor<wbr>Launch<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}Optional. The launch stage of the metric definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9351,7 +9617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrickind_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricdescriptormetrickind">Metric<wbr>Descriptor<wbr>Metric<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Whether the metric records instantaneous values, changes to a value, etc. Some combinations of `metric_kind` and `value_type` might not be supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9391,7 +9657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuetype_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricdescriptorvaluetype">Metric<wbr>Descriptor<wbr>Value<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Whether the measurement is an integer, a floating-point number, etc. Some combinations of `metric_kind` and `value_type` might not be supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9427,7 +9693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#launchstage_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricdescriptorlaunchstage">Metric<wbr>Descriptor<wbr>Launch<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}Optional. The launch stage of the metric definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9443,7 +9709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrickind_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricdescriptormetrickind">Metric<wbr>Descriptor<wbr>Metric<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Whether the metric records instantaneous values, changes to a value, etc. Some combinations of `metric_kind` and `value_type` might not be supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9483,7 +9749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuetype_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metricdescriptorvaluetype">Metric<wbr>Descriptor<wbr>Value<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Whether the measurement is an integer, a floating-point number, etc. Some combinations of `metric_kind` and `value_type` might not be supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9519,7 +9785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#launch_stage_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#metricdescriptorlaunchstage">Metric<wbr>Descriptor<wbr>Launch<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}Optional. The launch stage of the metric definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9535,7 +9801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_kind_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#metricdescriptormetrickind">Metric<wbr>Descriptor<wbr>Metric<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Whether the metric records instantaneous values, changes to a value, etc. Some combinations of `metric_kind` and `value_type` might not be supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9575,9 +9841,59 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#metricdescriptorvaluetype">Metric<wbr>Descriptor<wbr>Value<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Whether the measurement is an integer, a floating-point number, etc. Some combinations of `metric_kind` and `value_type` might not be supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="metricdescriptorlaunchstage">Metric<wbr>Descriptor<wbr>Launch<wbr>Stage</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Launch<wbr>Stage<wbr>Unspecified</dt>
+    <dd>LAUNCH_STAGE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Unimplemented</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The feature is not yet implemented. Users can not use it.{{% /md %}}</dd><dt>Prelaunch</dt>
+    <dd>PRELAUNCH{{% md %}}Prelaunch features are hidden from users and are only visible internally.{{% /md %}}</dd><dt>Early<wbr>Access</dt>
+    <dd>EARLY_ACCESS{{% md %}}Early Access features are limited to a closed group of testers. To use these features, you must sign up in advance and sign a Trusted Tester agreement (which includes confidentiality provisions). These features may be unstable, changed in backward-incompatible ways, and are not guaranteed to be released.{{% /md %}}</dd><dt>Alpha</dt>
+    <dd>ALPHA{{% md %}}Alpha is a limited availability test for releases before they are cleared for widespread use. By Alpha, all significant design issues are resolved and we are in the process of verifying functionality. Alpha customers need to apply for access, agree to applicable terms, and have their projects allowlisted. Alpha releases don’t have to be feature complete, no SLAs are provided, and there are no technical support obligations, but they will be far enough along that customers can actually use them in test environments or for limited-use tests -- just like they would in normal production cases.{{% /md %}}</dd><dt>Beta</dt>
+    <dd>BETA{{% md %}}Beta is the point at which we are ready to open a release for any customer to use. There are no SLA or technical support obligations in a Beta release. Products will be complete from a feature perspective, but may have some open outstanding issues. Beta releases are suitable for limited production use cases.{{% /md %}}</dd><dt>Ga</dt>
+    <dd>GA{{% md %}}GA features are open to all developers and are considered stable and fully qualified for production use.{{% /md %}}</dd><dt>Deprecated</dt>
+    <dd>DEPRECATED{{% md %}}Deprecated features are scheduled to be shut down and removed. For more information, see the “Deprecation Policy” section of our [Terms of Service](https://cloud.google.com/terms/) and the [Google Cloud Platform Subject to the Deprecation Policy](https://cloud.google.com/terms/deprecation) documentation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Metric<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Launch<wbr>Stage<wbr>Unspecified</dt>
+    <dd>LAUNCH_STAGE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Unimplemented</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The feature is not yet implemented. Users can not use it.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Prelaunch</dt>
+    <dd>PRELAUNCH{{% md %}}Prelaunch features are hidden from users and are only visible internally.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Early<wbr>Access</dt>
+    <dd>EARLY_ACCESS{{% md %}}Early Access features are limited to a closed group of testers. To use these features, you must sign up in advance and sign a Trusted Tester agreement (which includes confidentiality provisions). These features may be unstable, changed in backward-incompatible ways, and are not guaranteed to be released.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Alpha</dt>
+    <dd>ALPHA{{% md %}}Alpha is a limited availability test for releases before they are cleared for widespread use. By Alpha, all significant design issues are resolved and we are in the process of verifying functionality. Alpha customers need to apply for access, agree to applicable terms, and have their projects allowlisted. Alpha releases don’t have to be feature complete, no SLAs are provided, and there are no technical support obligations, but they will be far enough along that customers can actually use them in test environments or for limited-use tests -- just like they would in normal production cases.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Beta</dt>
+    <dd>BETA{{% md %}}Beta is the point at which we are ready to open a release for any customer to use. There are no SLA or technical support obligations in a Beta release. Products will be complete from a feature perspective, but may have some open outstanding issues. Beta releases are suitable for limited production use cases.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Ga</dt>
+    <dd>GA{{% md %}}GA features are open to all developers and are considered stable and fully qualified for production use.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Deprecated</dt>
+    <dd>DEPRECATED{{% md %}}Deprecated features are scheduled to be shut down and removed. For more information, see the “Deprecation Policy” section of our [Terms of Service](https://cloud.google.com/terms/) and the [Google Cloud Platform Subject to the Deprecation Policy](https://cloud.google.com/terms/deprecation) documentation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Launch<wbr>Stage<wbr>Unspecified</dt>
+    <dd>LAUNCH_STAGE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Unimplemented</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The feature is not yet implemented. Users can not use it.{{% /md %}}</dd><dt>Prelaunch</dt>
+    <dd>PRELAUNCH{{% md %}}Prelaunch features are hidden from users and are only visible internally.{{% /md %}}</dd><dt>Early<wbr>Access</dt>
+    <dd>EARLY_ACCESS{{% md %}}Early Access features are limited to a closed group of testers. To use these features, you must sign up in advance and sign a Trusted Tester agreement (which includes confidentiality provisions). These features may be unstable, changed in backward-incompatible ways, and are not guaranteed to be released.{{% /md %}}</dd><dt>Alpha</dt>
+    <dd>ALPHA{{% md %}}Alpha is a limited availability test for releases before they are cleared for widespread use. By Alpha, all significant design issues are resolved and we are in the process of verifying functionality. Alpha customers need to apply for access, agree to applicable terms, and have their projects allowlisted. Alpha releases don’t have to be feature complete, no SLAs are provided, and there are no technical support obligations, but they will be far enough along that customers can actually use them in test environments or for limited-use tests -- just like they would in normal production cases.{{% /md %}}</dd><dt>Beta</dt>
+    <dd>BETA{{% md %}}Beta is the point at which we are ready to open a release for any customer to use. There are no SLA or technical support obligations in a Beta release. Products will be complete from a feature perspective, but may have some open outstanding issues. Beta releases are suitable for limited production use cases.{{% /md %}}</dd><dt>Ga</dt>
+    <dd>GA{{% md %}}GA features are open to all developers and are considered stable and fully qualified for production use.{{% /md %}}</dd><dt>Deprecated</dt>
+    <dd>DEPRECATED{{% md %}}Deprecated features are scheduled to be shut down and removed. For more information, see the “Deprecation Policy” section of our [Terms of Service](https://cloud.google.com/terms/) and the [Google Cloud Platform Subject to the Deprecation Policy](https://cloud.google.com/terms/deprecation) documentation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LAUNCH_STAGE_UNSPECIFIED</dt>
+    <dd>LAUNCH_STAGE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>UNIMPLEMENTED</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The feature is not yet implemented. Users can not use it.{{% /md %}}</dd><dt>PRELAUNCH</dt>
+    <dd>PRELAUNCH{{% md %}}Prelaunch features are hidden from users and are only visible internally.{{% /md %}}</dd><dt>EARLY_ACCESS</dt>
+    <dd>EARLY_ACCESS{{% md %}}Early Access features are limited to a closed group of testers. To use these features, you must sign up in advance and sign a Trusted Tester agreement (which includes confidentiality provisions). These features may be unstable, changed in backward-incompatible ways, and are not guaranteed to be released.{{% /md %}}</dd><dt>ALPHA</dt>
+    <dd>ALPHA{{% md %}}Alpha is a limited availability test for releases before they are cleared for widespread use. By Alpha, all significant design issues are resolved and we are in the process of verifying functionality. Alpha customers need to apply for access, agree to applicable terms, and have their projects allowlisted. Alpha releases don’t have to be feature complete, no SLAs are provided, and there are no technical support obligations, but they will be far enough along that customers can actually use them in test environments or for limited-use tests -- just like they would in normal production cases.{{% /md %}}</dd><dt>BETA</dt>
+    <dd>BETA{{% md %}}Beta is the point at which we are ready to open a release for any customer to use. There are no SLA or technical support obligations in a Beta release. Products will be complete from a feature perspective, but may have some open outstanding issues. Beta releases are suitable for limited production use cases.{{% /md %}}</dd><dt>GA</dt>
+    <dd>GA{{% md %}}GA features are open to all developers and are considered stable and fully qualified for production use.{{% /md %}}</dd><dt>DEPRECATED</dt>
+    <dd>DEPRECATED{{% md %}}Deprecated features are scheduled to be shut down and removed. For more information, see the “Deprecation Policy” section of our [Terms of Service](https://cloud.google.com/terms/) and the [Google Cloud Platform Subject to the Deprecation Policy](https://cloud.google.com/terms/deprecation) documentation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metricdescriptormetadata">Metric<wbr>Descriptor<wbr>Metadata</h4>
@@ -9742,6 +10058,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sampling period of metric data points. For metrics which are written periodically, consecutive data points are stored at this time interval, excluding data loss due to errors. Metrics with a higher granularity have a smaller sampling period.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="metricdescriptormetrickind">Metric<wbr>Descriptor<wbr>Metric<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Metric<wbr>Kind<wbr>Unspecified</dt>
+    <dd>METRIC_KIND_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Gauge</dt>
+    <dd>GAUGE{{% md %}}An instantaneous measurement of a value.{{% /md %}}</dd><dt>Delta</dt>
+    <dd>DELTA{{% md %}}The change in a value during a time interval.{{% /md %}}</dd><dt>Cumulative</dt>
+    <dd>CUMULATIVE{{% md %}}A value accumulated over a time interval. Cumulative measurements in a time series should have the same start time and increasing end times, until an event resets the cumulative value to zero and sets a new start time for the following points.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Metric<wbr>Descriptor<wbr>Metric<wbr>Kind<wbr>Metric<wbr>Kind<wbr>Unspecified</dt>
+    <dd>METRIC_KIND_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Metric<wbr>Kind<wbr>Gauge</dt>
+    <dd>GAUGE{{% md %}}An instantaneous measurement of a value.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Metric<wbr>Kind<wbr>Delta</dt>
+    <dd>DELTA{{% md %}}The change in a value during a time interval.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Metric<wbr>Kind<wbr>Cumulative</dt>
+    <dd>CUMULATIVE{{% md %}}A value accumulated over a time interval. Cumulative measurements in a time series should have the same start time and increasing end times, until an event resets the cumulative value to zero and sets a new start time for the following points.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Metric<wbr>Kind<wbr>Unspecified</dt>
+    <dd>METRIC_KIND_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Gauge</dt>
+    <dd>GAUGE{{% md %}}An instantaneous measurement of a value.{{% /md %}}</dd><dt>Delta</dt>
+    <dd>DELTA{{% md %}}The change in a value during a time interval.{{% /md %}}</dd><dt>Cumulative</dt>
+    <dd>CUMULATIVE{{% md %}}A value accumulated over a time interval. Cumulative measurements in a time series should have the same start time and increasing end times, until an event resets the cumulative value to zero and sets a new start time for the following points.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>METRIC_KIND_UNSPECIFIED</dt>
+    <dd>METRIC_KIND_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>GAUGE</dt>
+    <dd>GAUGE{{% md %}}An instantaneous measurement of a value.{{% /md %}}</dd><dt>DELTA</dt>
+    <dd>DELTA{{% md %}}The change in a value during a time interval.{{% /md %}}</dd><dt>CUMULATIVE</dt>
+    <dd>CUMULATIVE{{% md %}}A value accumulated over a time interval. Cumulative measurements in a time series should have the same start time and increasing end times, until an event resets the cumulative value to zero and sets a new start time for the following points.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metricdescriptorresponse">Metric<wbr>Descriptor<wbr>Response</h4>
@@ -10114,6 +10464,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether the measurement is an integer, a floating-point number, etc. Some combinations of `metric_kind` and `value_type` might not be supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="metricdescriptorvaluetype">Metric<wbr>Descriptor<wbr>Value<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Value<wbr>Type<wbr>Unspecified</dt>
+    <dd>VALUE_TYPE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Bool</dt>
+    <dd>BOOL{{% md %}}The value is a boolean. This value type can be used only if the metric kind is `GAUGE`.{{% /md %}}</dd><dt>Int64</dt>
+    <dd>INT64{{% md %}}The value is a signed 64-bit integer.{{% /md %}}</dd><dt>Double</dt>
+    <dd>DOUBLE{{% md %}}The value is a double precision floating point number.{{% /md %}}</dd><dt>String</dt>
+    <dd>STRING{{% md %}}The value is a text string. This value type can be used only if the metric kind is `GAUGE`.{{% /md %}}</dd><dt>Distribution</dt>
+    <dd>DISTRIBUTION{{% md %}}The value is a `Distribution`.{{% /md %}}</dd><dt>Money</dt>
+    <dd>MONEY{{% md %}}The value is money.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Metric<wbr>Descriptor<wbr>Value<wbr>Type<wbr>Value<wbr>Type<wbr>Unspecified</dt>
+    <dd>VALUE_TYPE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Value<wbr>Type<wbr>Bool</dt>
+    <dd>BOOL{{% md %}}The value is a boolean. This value type can be used only if the metric kind is `GAUGE`.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Value<wbr>Type<wbr>Int64</dt>
+    <dd>INT64{{% md %}}The value is a signed 64-bit integer.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Value<wbr>Type<wbr>Double</dt>
+    <dd>DOUBLE{{% md %}}The value is a double precision floating point number.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Value<wbr>Type<wbr>String</dt>
+    <dd>STRING{{% md %}}The value is a text string. This value type can be used only if the metric kind is `GAUGE`.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Value<wbr>Type<wbr>Distribution</dt>
+    <dd>DISTRIBUTION{{% md %}}The value is a `Distribution`.{{% /md %}}</dd><dt>Metric<wbr>Descriptor<wbr>Value<wbr>Type<wbr>Money</dt>
+    <dd>MONEY{{% md %}}The value is money.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Value<wbr>Type<wbr>Unspecified</dt>
+    <dd>VALUE_TYPE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Bool</dt>
+    <dd>BOOL{{% md %}}The value is a boolean. This value type can be used only if the metric kind is `GAUGE`.{{% /md %}}</dd><dt>Int64</dt>
+    <dd>INT64{{% md %}}The value is a signed 64-bit integer.{{% /md %}}</dd><dt>Double</dt>
+    <dd>DOUBLE{{% md %}}The value is a double precision floating point number.{{% /md %}}</dd><dt>String</dt>
+    <dd>STRING{{% md %}}The value is a text string. This value type can be used only if the metric kind is `GAUGE`.{{% /md %}}</dd><dt>Distribution</dt>
+    <dd>DISTRIBUTION{{% md %}}The value is a `Distribution`.{{% /md %}}</dd><dt>Money</dt>
+    <dd>MONEY{{% md %}}The value is money.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>VALUE_TYPE_UNSPECIFIED</dt>
+    <dd>VALUE_TYPE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>BOOL</dt>
+    <dd>BOOL{{% md %}}The value is a boolean. This value type can be used only if the metric kind is `GAUGE`.{{% /md %}}</dd><dt>INT64</dt>
+    <dd>INT64{{% md %}}The value is a signed 64-bit integer.{{% /md %}}</dd><dt>DOUBLE</dt>
+    <dd>DOUBLE{{% md %}}The value is a double precision floating point number.{{% /md %}}</dd><dt>STRING</dt>
+    <dd>STRING{{% md %}}The value is a text string. This value type can be used only if the metric kind is `GAUGE`.{{% /md %}}</dd><dt>DISTRIBUTION</dt>
+    <dd>DISTRIBUTION{{% md %}}The value is a `Distribution`.{{% /md %}}</dd><dt>MONEY</dt>
+    <dd>MONEY{{% md %}}The value is money.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="metricrule">Metric<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
@@ -10475,7 +10871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#launchstage_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#monitoredresourcedescriptorlaunchstage">Pulumi.<wbr>Google<wbr>Native.<wbr>Service<wbr>Management.<wbr>V1.<wbr>Monitored<wbr>Resource<wbr>Descriptor<wbr>Launch<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}Optional. The launch stage of the monitored resource definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10527,7 +10923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#launchstage_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#monitoredresourcedescriptorlaunchstage">Monitored<wbr>Resource<wbr>Descriptor<wbr>Launch<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}Optional. The launch stage of the monitored resource definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10579,7 +10975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#launchstage_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#monitoredresourcedescriptorlaunchstage">Monitored<wbr>Resource<wbr>Descriptor<wbr>Launch<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}Optional. The launch stage of the monitored resource definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10631,7 +11027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#launch_stage_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#monitoredresourcedescriptorlaunchstage">Monitored<wbr>Resource<wbr>Descriptor<wbr>Launch<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}Optional. The launch stage of the monitored resource definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10650,6 +11046,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The monitored resource type. For example, the type `"cloudsql_database"` represents databases in Google Cloud SQL.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="monitoredresourcedescriptorlaunchstage">Monitored<wbr>Resource<wbr>Descriptor<wbr>Launch<wbr>Stage</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Launch<wbr>Stage<wbr>Unspecified</dt>
+    <dd>LAUNCH_STAGE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Unimplemented</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The feature is not yet implemented. Users can not use it.{{% /md %}}</dd><dt>Prelaunch</dt>
+    <dd>PRELAUNCH{{% md %}}Prelaunch features are hidden from users and are only visible internally.{{% /md %}}</dd><dt>Early<wbr>Access</dt>
+    <dd>EARLY_ACCESS{{% md %}}Early Access features are limited to a closed group of testers. To use these features, you must sign up in advance and sign a Trusted Tester agreement (which includes confidentiality provisions). These features may be unstable, changed in backward-incompatible ways, and are not guaranteed to be released.{{% /md %}}</dd><dt>Alpha</dt>
+    <dd>ALPHA{{% md %}}Alpha is a limited availability test for releases before they are cleared for widespread use. By Alpha, all significant design issues are resolved and we are in the process of verifying functionality. Alpha customers need to apply for access, agree to applicable terms, and have their projects allowlisted. Alpha releases don’t have to be feature complete, no SLAs are provided, and there are no technical support obligations, but they will be far enough along that customers can actually use them in test environments or for limited-use tests -- just like they would in normal production cases.{{% /md %}}</dd><dt>Beta</dt>
+    <dd>BETA{{% md %}}Beta is the point at which we are ready to open a release for any customer to use. There are no SLA or technical support obligations in a Beta release. Products will be complete from a feature perspective, but may have some open outstanding issues. Beta releases are suitable for limited production use cases.{{% /md %}}</dd><dt>Ga</dt>
+    <dd>GA{{% md %}}GA features are open to all developers and are considered stable and fully qualified for production use.{{% /md %}}</dd><dt>Deprecated</dt>
+    <dd>DEPRECATED{{% md %}}Deprecated features are scheduled to be shut down and removed. For more information, see the “Deprecation Policy” section of our [Terms of Service](https://cloud.google.com/terms/) and the [Google Cloud Platform Subject to the Deprecation Policy](https://cloud.google.com/terms/deprecation) documentation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Monitored<wbr>Resource<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Launch<wbr>Stage<wbr>Unspecified</dt>
+    <dd>LAUNCH_STAGE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Monitored<wbr>Resource<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Unimplemented</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The feature is not yet implemented. Users can not use it.{{% /md %}}</dd><dt>Monitored<wbr>Resource<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Prelaunch</dt>
+    <dd>PRELAUNCH{{% md %}}Prelaunch features are hidden from users and are only visible internally.{{% /md %}}</dd><dt>Monitored<wbr>Resource<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Early<wbr>Access</dt>
+    <dd>EARLY_ACCESS{{% md %}}Early Access features are limited to a closed group of testers. To use these features, you must sign up in advance and sign a Trusted Tester agreement (which includes confidentiality provisions). These features may be unstable, changed in backward-incompatible ways, and are not guaranteed to be released.{{% /md %}}</dd><dt>Monitored<wbr>Resource<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Alpha</dt>
+    <dd>ALPHA{{% md %}}Alpha is a limited availability test for releases before they are cleared for widespread use. By Alpha, all significant design issues are resolved and we are in the process of verifying functionality. Alpha customers need to apply for access, agree to applicable terms, and have their projects allowlisted. Alpha releases don’t have to be feature complete, no SLAs are provided, and there are no technical support obligations, but they will be far enough along that customers can actually use them in test environments or for limited-use tests -- just like they would in normal production cases.{{% /md %}}</dd><dt>Monitored<wbr>Resource<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Beta</dt>
+    <dd>BETA{{% md %}}Beta is the point at which we are ready to open a release for any customer to use. There are no SLA or technical support obligations in a Beta release. Products will be complete from a feature perspective, but may have some open outstanding issues. Beta releases are suitable for limited production use cases.{{% /md %}}</dd><dt>Monitored<wbr>Resource<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Ga</dt>
+    <dd>GA{{% md %}}GA features are open to all developers and are considered stable and fully qualified for production use.{{% /md %}}</dd><dt>Monitored<wbr>Resource<wbr>Descriptor<wbr>Launch<wbr>Stage<wbr>Deprecated</dt>
+    <dd>DEPRECATED{{% md %}}Deprecated features are scheduled to be shut down and removed. For more information, see the “Deprecation Policy” section of our [Terms of Service](https://cloud.google.com/terms/) and the [Google Cloud Platform Subject to the Deprecation Policy](https://cloud.google.com/terms/deprecation) documentation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Launch<wbr>Stage<wbr>Unspecified</dt>
+    <dd>LAUNCH_STAGE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>Unimplemented</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The feature is not yet implemented. Users can not use it.{{% /md %}}</dd><dt>Prelaunch</dt>
+    <dd>PRELAUNCH{{% md %}}Prelaunch features are hidden from users and are only visible internally.{{% /md %}}</dd><dt>Early<wbr>Access</dt>
+    <dd>EARLY_ACCESS{{% md %}}Early Access features are limited to a closed group of testers. To use these features, you must sign up in advance and sign a Trusted Tester agreement (which includes confidentiality provisions). These features may be unstable, changed in backward-incompatible ways, and are not guaranteed to be released.{{% /md %}}</dd><dt>Alpha</dt>
+    <dd>ALPHA{{% md %}}Alpha is a limited availability test for releases before they are cleared for widespread use. By Alpha, all significant design issues are resolved and we are in the process of verifying functionality. Alpha customers need to apply for access, agree to applicable terms, and have their projects allowlisted. Alpha releases don’t have to be feature complete, no SLAs are provided, and there are no technical support obligations, but they will be far enough along that customers can actually use them in test environments or for limited-use tests -- just like they would in normal production cases.{{% /md %}}</dd><dt>Beta</dt>
+    <dd>BETA{{% md %}}Beta is the point at which we are ready to open a release for any customer to use. There are no SLA or technical support obligations in a Beta release. Products will be complete from a feature perspective, but may have some open outstanding issues. Beta releases are suitable for limited production use cases.{{% /md %}}</dd><dt>Ga</dt>
+    <dd>GA{{% md %}}GA features are open to all developers and are considered stable and fully qualified for production use.{{% /md %}}</dd><dt>Deprecated</dt>
+    <dd>DEPRECATED{{% md %}}Deprecated features are scheduled to be shut down and removed. For more information, see the “Deprecation Policy” section of our [Terms of Service](https://cloud.google.com/terms/) and the [Google Cloud Platform Subject to the Deprecation Policy](https://cloud.google.com/terms/deprecation) documentation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LAUNCH_STAGE_UNSPECIFIED</dt>
+    <dd>LAUNCH_STAGE_UNSPECIFIED{{% md %}}Do not use this default value.{{% /md %}}</dd><dt>UNIMPLEMENTED</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The feature is not yet implemented. Users can not use it.{{% /md %}}</dd><dt>PRELAUNCH</dt>
+    <dd>PRELAUNCH{{% md %}}Prelaunch features are hidden from users and are only visible internally.{{% /md %}}</dd><dt>EARLY_ACCESS</dt>
+    <dd>EARLY_ACCESS{{% md %}}Early Access features are limited to a closed group of testers. To use these features, you must sign up in advance and sign a Trusted Tester agreement (which includes confidentiality provisions). These features may be unstable, changed in backward-incompatible ways, and are not guaranteed to be released.{{% /md %}}</dd><dt>ALPHA</dt>
+    <dd>ALPHA{{% md %}}Alpha is a limited availability test for releases before they are cleared for widespread use. By Alpha, all significant design issues are resolved and we are in the process of verifying functionality. Alpha customers need to apply for access, agree to applicable terms, and have their projects allowlisted. Alpha releases don’t have to be feature complete, no SLAs are provided, and there are no technical support obligations, but they will be far enough along that customers can actually use them in test environments or for limited-use tests -- just like they would in normal production cases.{{% /md %}}</dd><dt>BETA</dt>
+    <dd>BETA{{% md %}}Beta is the point at which we are ready to open a release for any customer to use. There are no SLA or technical support obligations in a Beta release. Products will be complete from a feature perspective, but may have some open outstanding issues. Beta releases are suitable for limited production use cases.{{% /md %}}</dd><dt>GA</dt>
+    <dd>GA{{% md %}}GA features are open to all developers and are considered stable and fully qualified for production use.{{% /md %}}</dd><dt>DEPRECATED</dt>
+    <dd>DEPRECATED{{% md %}}Deprecated features are scheduled to be shut down and removed. For more information, see the “Deprecation Policy” section of our [Terms of Service](https://cloud.google.com/terms/) and the [Google Cloud Platform Subject to the Deprecation Policy](https://cloud.google.com/terms/deprecation) documentation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monitoredresourcedescriptorresponse">Monitored<wbr>Resource<wbr>Descriptor<wbr>Response</h4>
@@ -13263,7 +13709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syntax_csharp" style="color: inherit; text-decoration: inherit;">Syntax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#typesyntax">Pulumi.<wbr>Google<wbr>Native.<wbr>Service<wbr>Management.<wbr>V1.<wbr>Type<wbr>Syntax</a></span>
     </dt>
     <dd>{{% md %}}The source syntax.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13315,7 +13761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syntax_go" style="color: inherit; text-decoration: inherit;">Syntax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#typesyntax">Type<wbr>Syntax</a></span>
     </dt>
     <dd>{{% md %}}The source syntax.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13367,7 +13813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syntax_nodejs" style="color: inherit; text-decoration: inherit;">syntax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#typesyntax">Type<wbr>Syntax</a></span>
     </dt>
     <dd>{{% md %}}The source syntax.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13419,7 +13865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syntax_python" style="color: inherit; text-decoration: inherit;">syntax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#typesyntax">Type<wbr>Syntax</a></span>
     </dt>
     <dd>{{% md %}}The source syntax.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13632,6 +14078,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source syntax.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="typesyntax">Type<wbr>Syntax</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Syntax<wbr>Proto2</dt>
+    <dd>SYNTAX_PROTO2{{% md %}}Syntax `proto2`.{{% /md %}}</dd><dt>Syntax<wbr>Proto3</dt>
+    <dd>SYNTAX_PROTO3{{% md %}}Syntax `proto3`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Type<wbr>Syntax<wbr>Syntax<wbr>Proto2</dt>
+    <dd>SYNTAX_PROTO2{{% md %}}Syntax `proto2`.{{% /md %}}</dd><dt>Type<wbr>Syntax<wbr>Syntax<wbr>Proto3</dt>
+    <dd>SYNTAX_PROTO3{{% md %}}Syntax `proto3`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Syntax<wbr>Proto2</dt>
+    <dd>SYNTAX_PROTO2{{% md %}}Syntax `proto2`.{{% /md %}}</dd><dt>Syntax<wbr>Proto3</dt>
+    <dd>SYNTAX_PROTO3{{% md %}}Syntax `proto3`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SYNTAX_PROTO2</dt>
+    <dd>SYNTAX_PROTO2{{% md %}}Syntax `proto2`.{{% /md %}}</dd><dt>SYNTAX_PROTO3</dt>
+    <dd>SYNTAX_PROTO3{{% md %}}Syntax `proto3`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="usage">Usage</h4>

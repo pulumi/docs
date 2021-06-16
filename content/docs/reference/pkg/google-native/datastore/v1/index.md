@@ -27,7 +27,7 @@ Creates the specified index. A newly created index's initial state is `CREATING`
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Index</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">ancestor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">ancestor</span><span class="p">:</span> <span class="nx">Optional[_datastore_v1.IndexAncestor]</span> = None<span class="p">,</span>
           <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Sequence[_datastore_v1.GoogleDatastoreAdminV1IndexedPropertyArgs]]</span> = None<span class="p">)</span>
@@ -172,7 +172,7 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ancestor_csharp" style="color: inherit; text-decoration: inherit;">Ancestor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#indexancestor">Pulumi.<wbr>Google<wbr>Native.<wbr>Datastore.<wbr>V1.<wbr>Index<wbr>Ancestor</a></span>
     </dt>
     <dd>{{% md %}}Required. The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -208,7 +208,7 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ancestor_go" style="color: inherit; text-decoration: inherit;">Ancestor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#indexancestor">Index<wbr>Ancestor</a></span>
     </dt>
     <dd>{{% md %}}Required. The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -244,7 +244,7 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ancestor_nodejs" style="color: inherit; text-decoration: inherit;">ancestor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#indexancestor">Index<wbr>Ancestor</a></span>
     </dt>
     <dd>{{% md %}}Required. The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -280,7 +280,7 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ancestor_python" style="color: inherit; text-decoration: inherit;">ancestor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#indexancestor">Index<wbr>Ancestor</a></span>
     </dt>
     <dd>{{% md %}}Required. The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -439,7 +439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googledatastoreadminv1indexedpropertydirection">Pulumi.<wbr>Google<wbr>Native.<wbr>Datastore.<wbr>V1.<wbr>Google<wbr>Datastore<wbr>Admin<wbr>V1Indexed<wbr>Property<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}Required. The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -459,7 +459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googledatastoreadminv1indexedpropertydirection">Google<wbr>Datastore<wbr>Admin<wbr>V1Indexed<wbr>Property<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}Required. The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -479,7 +479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googledatastoreadminv1indexedpropertydirection">Google<wbr>Datastore<wbr>Admin<wbr>V1Indexed<wbr>Property<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}Required. The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -499,7 +499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googledatastoreadminv1indexedpropertydirection">Google<wbr>Datastore<wbr>Admin<wbr>V1Indexed<wbr>Property<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}Required. The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,6 +510,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The property name to index.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googledatastoreadminv1indexedpropertydirection">Google<wbr>Datastore<wbr>Admin<wbr>V1Indexed<wbr>Property<wbr>Direction</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Direction<wbr>Unspecified</dt>
+    <dd>DIRECTION_UNSPECIFIED{{% md %}}The direction is unspecified.{{% /md %}}</dd><dt>Ascending</dt>
+    <dd>ASCENDING{{% md %}}The property's values are indexed so as to support sequencing in ascending order and also query by <, >, <=, >=, and =.{{% /md %}}</dd><dt>Descending</dt>
+    <dd>DESCENDING{{% md %}}The property's values are indexed so as to support sequencing in descending order and also query by <, >, <=, >=, and =.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Datastore<wbr>Admin<wbr>V1Indexed<wbr>Property<wbr>Direction<wbr>Direction<wbr>Unspecified</dt>
+    <dd>DIRECTION_UNSPECIFIED{{% md %}}The direction is unspecified.{{% /md %}}</dd><dt>Google<wbr>Datastore<wbr>Admin<wbr>V1Indexed<wbr>Property<wbr>Direction<wbr>Ascending</dt>
+    <dd>ASCENDING{{% md %}}The property's values are indexed so as to support sequencing in ascending order and also query by <, >, <=, >=, and =.{{% /md %}}</dd><dt>Google<wbr>Datastore<wbr>Admin<wbr>V1Indexed<wbr>Property<wbr>Direction<wbr>Descending</dt>
+    <dd>DESCENDING{{% md %}}The property's values are indexed so as to support sequencing in descending order and also query by <, >, <=, >=, and =.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Direction<wbr>Unspecified</dt>
+    <dd>DIRECTION_UNSPECIFIED{{% md %}}The direction is unspecified.{{% /md %}}</dd><dt>Ascending</dt>
+    <dd>ASCENDING{{% md %}}The property's values are indexed so as to support sequencing in ascending order and also query by <, >, <=, >=, and =.{{% /md %}}</dd><dt>Descending</dt>
+    <dd>DESCENDING{{% md %}}The property's values are indexed so as to support sequencing in descending order and also query by <, >, <=, >=, and =.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DIRECTION_UNSPECIFIED</dt>
+    <dd>DIRECTION_UNSPECIFIED{{% md %}}The direction is unspecified.{{% /md %}}</dd><dt>ASCENDING</dt>
+    <dd>ASCENDING{{% md %}}The property's values are indexed so as to support sequencing in ascending order and also query by <, >, <=, >=, and =.{{% /md %}}</dd><dt>DESCENDING</dt>
+    <dd>DESCENDING{{% md %}}The property's values are indexed so as to support sequencing in descending order and also query by <, >, <=, >=, and =.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googledatastoreadminv1indexedpropertyresponse">Google<wbr>Datastore<wbr>Admin<wbr>V1Indexed<wbr>Property<wbr>Response</h4>
@@ -592,6 +622,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The property name to index.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="indexancestor">Index<wbr>Ancestor</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Ancestor<wbr>Mode<wbr>Unspecified</dt>
+    <dd>ANCESTOR_MODE_UNSPECIFIED{{% md %}}The ancestor mode is unspecified.{{% /md %}}</dd><dt>None</dt>
+    <dd>NONE{{% md %}}Do not include the entity's ancestors in the index.{{% /md %}}</dd><dt>All<wbr>Ancestors</dt>
+    <dd>ALL_ANCESTORS{{% md %}}Include all the entity's ancestors in the index.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Index<wbr>Ancestor<wbr>Ancestor<wbr>Mode<wbr>Unspecified</dt>
+    <dd>ANCESTOR_MODE_UNSPECIFIED{{% md %}}The ancestor mode is unspecified.{{% /md %}}</dd><dt>Index<wbr>Ancestor<wbr>None</dt>
+    <dd>NONE{{% md %}}Do not include the entity's ancestors in the index.{{% /md %}}</dd><dt>Index<wbr>Ancestor<wbr>All<wbr>Ancestors</dt>
+    <dd>ALL_ANCESTORS{{% md %}}Include all the entity's ancestors in the index.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Ancestor<wbr>Mode<wbr>Unspecified</dt>
+    <dd>ANCESTOR_MODE_UNSPECIFIED{{% md %}}The ancestor mode is unspecified.{{% /md %}}</dd><dt>None</dt>
+    <dd>NONE{{% md %}}Do not include the entity's ancestors in the index.{{% /md %}}</dd><dt>All<wbr>Ancestors</dt>
+    <dd>ALL_ANCESTORS{{% md %}}Include all the entity's ancestors in the index.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ANCESTOR_MODE_UNSPECIFIED</dt>
+    <dd>ANCESTOR_MODE_UNSPECIFIED{{% md %}}The ancestor mode is unspecified.{{% /md %}}</dd><dt>NONE</dt>
+    <dd>NONE{{% md %}}Do not include the entity's ancestors in the index.{{% /md %}}</dd><dt>ALL_ANCESTORS</dt>
+    <dd>ALL_ANCESTORS{{% md %}}Include all the entity's ancestors in the index.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -21,6 +21,18 @@ Explore the resources and functions of the google-native.bigtableadmin/v2 module
     <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getappprofile" title="GetAppProfile"><span class="symbol function"></span>GetAppProfile</a></li>
+    <li><a href="getbackup" title="GetBackup"><span class="symbol function"></span>GetBackup</a></li>
+    <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
+    <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+    <li><a href="getinstanceclusterbackupiampolicy" title="GetInstanceClusterBackupIamPolicy"><span class="symbol function"></span>GetInstanceClusterBackupIamPolicy</a></li>
+    <li><a href="getinstanceiampolicy" title="GetInstanceIamPolicy"><span class="symbol function"></span>GetInstanceIamPolicy</a></li>
+    <li><a href="getinstancetableiampolicy" title="GetInstanceTableIamPolicy"><span class="symbol function"></span>GetInstanceTableIamPolicy</a></li>
+    <li><a href="gettable" title="GetTable"><span class="symbol function"></span>GetTable</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -28,6 +40,6 @@ Explore the resources and functions of the google-native.bigtableadmin/v2 module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

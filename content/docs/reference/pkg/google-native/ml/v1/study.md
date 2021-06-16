@@ -1531,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_csharp" style="color: inherit; text-decoration: inherit;">Goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_metricspecgoal">Pulumi.<wbr>Google<wbr>Native.<wbr>Ml.<wbr>V1.<wbr>Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Metric<wbr>Spec<wbr>Goal</a></span>
     </dt>
     <dd>{{% md %}}Required. The optimization goal of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1551,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_go" style="color: inherit; text-decoration: inherit;">Goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_metricspecgoal">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Metric<wbr>Spec<wbr>Goal</a></span>
     </dt>
     <dd>{{% md %}}Required. The optimization goal of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1571,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_nodejs" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_metricspecgoal">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Metric<wbr>Spec<wbr>Goal</a></span>
     </dt>
     <dd>{{% md %}}Required. The optimization goal of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1591,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_python" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_metricspecgoal">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Metric<wbr>Spec<wbr>Goal</a></span>
     </dt>
     <dd>{{% md %}}Required. The optimization goal of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1602,6 +1602,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the metric.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudmlv1_studyconfig_metricspecgoal">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Metric<wbr>Spec<wbr>Goal</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Goal<wbr>Type<wbr>Unspecified</dt>
+    <dd>GOAL_TYPE_UNSPECIFIED{{% md %}}Goal Type will default to maximize.{{% /md %}}</dd><dt>Maximize</dt>
+    <dd>MAXIMIZE{{% md %}}Maximize the goal metric.{{% /md %}}</dd><dt>Minimize</dt>
+    <dd>MINIMIZE{{% md %}}Minimize the goal metric.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Metric<wbr>Spec<wbr>Goal<wbr>Goal<wbr>Type<wbr>Unspecified</dt>
+    <dd>GOAL_TYPE_UNSPECIFIED{{% md %}}Goal Type will default to maximize.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Metric<wbr>Spec<wbr>Goal<wbr>Maximize</dt>
+    <dd>MAXIMIZE{{% md %}}Maximize the goal metric.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Metric<wbr>Spec<wbr>Goal<wbr>Minimize</dt>
+    <dd>MINIMIZE{{% md %}}Minimize the goal metric.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Goal<wbr>Type<wbr>Unspecified</dt>
+    <dd>GOAL_TYPE_UNSPECIFIED{{% md %}}Goal Type will default to maximize.{{% /md %}}</dd><dt>Maximize</dt>
+    <dd>MAXIMIZE{{% md %}}Maximize the goal metric.{{% /md %}}</dd><dt>Minimize</dt>
+    <dd>MINIMIZE{{% md %}}Minimize the goal metric.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>GOAL_TYPE_UNSPECIFIED</dt>
+    <dd>GOAL_TYPE_UNSPECIFIED{{% md %}}Goal Type will default to maximize.{{% /md %}}</dd><dt>MAXIMIZE</dt>
+    <dd>MAXIMIZE{{% md %}}Maximize the goal metric.{{% /md %}}</dd><dt>MINIMIZE</dt>
+    <dd>MINIMIZE{{% md %}}Minimize the goal metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googlecloudmlv1_studyconfig_metricspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Metric<wbr>Spec<wbr>Response</h4>
@@ -1767,7 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletype_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspecscaletype">Pulumi.<wbr>Google<wbr>Native.<wbr>Ml.<wbr>V1.<wbr>Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Scale<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}How the parameter should be scaled. Leave unset for categorical parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1775,7 +1805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspectype">Pulumi.<wbr>Google<wbr>Native.<wbr>Ml.<wbr>V1.<wbr>Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1859,7 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletype_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspecscaletype">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Scale<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}How the parameter should be scaled. Leave unset for categorical parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1867,7 +1897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspectype">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1951,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletype_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspecscaletype">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Scale<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}How the parameter should be scaled. Leave unset for categorical parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1959,7 +1989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspectype">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2043,7 +2073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_type_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspecscaletype">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Scale<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}How the parameter should be scaled. Leave unset for categorical parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2051,7 +2081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspectype">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2426,6 +2456,78 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Required. The type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="googlecloudmlv1_studyconfig_parameterspecscaletype">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Scale<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Scale<wbr>Type<wbr>Unspecified</dt>
+    <dd>SCALE_TYPE_UNSPECIFIED{{% md %}}By default, no scaling is applied.{{% /md %}}</dd><dt>Unit<wbr>Linear<wbr>Scale</dt>
+    <dd>UNIT_LINEAR_SCALE{{% md %}}Scales the feasible space to (0, 1) linearly.{{% /md %}}</dd><dt>Unit<wbr>Log<wbr>Scale</dt>
+    <dd>UNIT_LOG_SCALE{{% md %}}Scales the feasible space logarithmically to (0, 1). The entire feasible space must be strictly positive.{{% /md %}}</dd><dt>Unit<wbr>Reverse<wbr>Log<wbr>Scale</dt>
+    <dd>UNIT_REVERSE_LOG_SCALE{{% md %}}Scales the feasible space "reverse" logarithmically to (0, 1). The result is that values close to the top of the feasible space are spread out more than points near the bottom. The entire feasible space must be strictly positive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Scale<wbr>Type<wbr>Scale<wbr>Type<wbr>Unspecified</dt>
+    <dd>SCALE_TYPE_UNSPECIFIED{{% md %}}By default, no scaling is applied.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Scale<wbr>Type<wbr>Unit<wbr>Linear<wbr>Scale</dt>
+    <dd>UNIT_LINEAR_SCALE{{% md %}}Scales the feasible space to (0, 1) linearly.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Scale<wbr>Type<wbr>Unit<wbr>Log<wbr>Scale</dt>
+    <dd>UNIT_LOG_SCALE{{% md %}}Scales the feasible space logarithmically to (0, 1). The entire feasible space must be strictly positive.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Scale<wbr>Type<wbr>Unit<wbr>Reverse<wbr>Log<wbr>Scale</dt>
+    <dd>UNIT_REVERSE_LOG_SCALE{{% md %}}Scales the feasible space "reverse" logarithmically to (0, 1). The result is that values close to the top of the feasible space are spread out more than points near the bottom. The entire feasible space must be strictly positive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Scale<wbr>Type<wbr>Unspecified</dt>
+    <dd>SCALE_TYPE_UNSPECIFIED{{% md %}}By default, no scaling is applied.{{% /md %}}</dd><dt>Unit<wbr>Linear<wbr>Scale</dt>
+    <dd>UNIT_LINEAR_SCALE{{% md %}}Scales the feasible space to (0, 1) linearly.{{% /md %}}</dd><dt>Unit<wbr>Log<wbr>Scale</dt>
+    <dd>UNIT_LOG_SCALE{{% md %}}Scales the feasible space logarithmically to (0, 1). The entire feasible space must be strictly positive.{{% /md %}}</dd><dt>Unit<wbr>Reverse<wbr>Log<wbr>Scale</dt>
+    <dd>UNIT_REVERSE_LOG_SCALE{{% md %}}Scales the feasible space "reverse" logarithmically to (0, 1). The result is that values close to the top of the feasible space are spread out more than points near the bottom. The entire feasible space must be strictly positive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SCALE_TYPE_UNSPECIFIED</dt>
+    <dd>SCALE_TYPE_UNSPECIFIED{{% md %}}By default, no scaling is applied.{{% /md %}}</dd><dt>UNIT_LINEAR_SCALE</dt>
+    <dd>UNIT_LINEAR_SCALE{{% md %}}Scales the feasible space to (0, 1) linearly.{{% /md %}}</dd><dt>UNIT_LOG_SCALE</dt>
+    <dd>UNIT_LOG_SCALE{{% md %}}Scales the feasible space logarithmically to (0, 1). The entire feasible space must be strictly positive.{{% /md %}}</dd><dt>UNIT_REVERSE_LOG_SCALE</dt>
+    <dd>UNIT_REVERSE_LOG_SCALE{{% md %}}Scales the feasible space "reverse" logarithmically to (0, 1). The result is that values close to the top of the feasible space are spread out more than points near the bottom. The entire feasible space must be strictly positive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudmlv1_studyconfig_parameterspectype">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Parameter<wbr>Type<wbr>Unspecified</dt>
+    <dd>PARAMETER_TYPE_UNSPECIFIED{{% md %}}You must specify a valid type. Using this unspecified type will result in an error.{{% /md %}}</dd><dt>Double</dt>
+    <dd>DOUBLE{{% md %}}Type for real-valued parameters.{{% /md %}}</dd><dt>Integer</dt>
+    <dd>INTEGER{{% md %}}Type for integral parameters.{{% /md %}}</dd><dt>Categorical</dt>
+    <dd>CATEGORICAL{{% md %}}The parameter is categorical, with a value chosen from the categories field.{{% /md %}}</dd><dt>Discrete</dt>
+    <dd>DISCRETE{{% md %}}The parameter is real valued, with a fixed set of feasible points. If `type==DISCRETE`, feasible_points must be provided, and {`min_value`, `max_value`} will be ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Type<wbr>Parameter<wbr>Type<wbr>Unspecified</dt>
+    <dd>PARAMETER_TYPE_UNSPECIFIED{{% md %}}You must specify a valid type. Using this unspecified type will result in an error.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Type<wbr>Double</dt>
+    <dd>DOUBLE{{% md %}}Type for real-valued parameters.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Type<wbr>Integer</dt>
+    <dd>INTEGER{{% md %}}Type for integral parameters.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Type<wbr>Categorical</dt>
+    <dd>CATEGORICAL{{% md %}}The parameter is categorical, with a value chosen from the categories field.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Type<wbr>Discrete</dt>
+    <dd>DISCRETE{{% md %}}The parameter is real valued, with a fixed set of feasible points. If `type==DISCRETE`, feasible_points must be provided, and {`min_value`, `max_value`} will be ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Parameter<wbr>Type<wbr>Unspecified</dt>
+    <dd>PARAMETER_TYPE_UNSPECIFIED{{% md %}}You must specify a valid type. Using this unspecified type will result in an error.{{% /md %}}</dd><dt>Double</dt>
+    <dd>DOUBLE{{% md %}}Type for real-valued parameters.{{% /md %}}</dd><dt>Integer</dt>
+    <dd>INTEGER{{% md %}}Type for integral parameters.{{% /md %}}</dd><dt>Categorical</dt>
+    <dd>CATEGORICAL{{% md %}}The parameter is categorical, with a value chosen from the categories field.{{% /md %}}</dd><dt>Discrete</dt>
+    <dd>DISCRETE{{% md %}}The parameter is real valued, with a fixed set of feasible points. If `type==DISCRETE`, feasible_points must be provided, and {`min_value`, `max_value`} will be ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PARAMETER_TYPE_UNSPECIFIED</dt>
+    <dd>PARAMETER_TYPE_UNSPECIFIED{{% md %}}You must specify a valid type. Using this unspecified type will result in an error.{{% /md %}}</dd><dt>DOUBLE</dt>
+    <dd>DOUBLE{{% md %}}Type for real-valued parameters.{{% /md %}}</dd><dt>INTEGER</dt>
+    <dd>INTEGER{{% md %}}Type for integral parameters.{{% /md %}}</dd><dt>CATEGORICAL</dt>
+    <dd>CATEGORICAL{{% md %}}The parameter is categorical, with a value chosen from the categories field.{{% /md %}}</dd><dt>DISCRETE</dt>
+    <dd>DISCRETE{{% md %}}The parameter is real valued, with a fixed set of feasible points. If `type==DISCRETE`, feasible_points must be provided, and {`min_value`, `max_value`} will be ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="googlecloudmlv1__automatedstoppingconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Automated<wbr>Stopping<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -2599,7 +2701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__studyconfigalgorithm">Pulumi.<wbr>Google<wbr>Native.<wbr>Ml.<wbr>V1.<wbr>Google<wbr>Cloud<wbr>Ml<wbr>V1__Study<wbr>Config<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The search algorithm specified for the study.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2635,7 +2737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__studyconfigalgorithm">Google<wbr>Cloud<wbr>Ml<wbr>V1__Study<wbr>Config<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The search algorithm specified for the study.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2671,7 +2773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__studyconfigalgorithm">Google<wbr>Cloud<wbr>Ml<wbr>V1__Study<wbr>Config<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The search algorithm specified for the study.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2707,7 +2809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudmlv1__studyconfigalgorithm">Google<wbr>Cloud<wbr>Ml<wbr>V1__Study<wbr>Config<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The search algorithm specified for the study.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2734,6 +2836,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. The set of parameters to tune.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudmlv1__studyconfigalgorithm">Google<wbr>Cloud<wbr>Ml<wbr>V1__Study<wbr>Config<wbr>Algorithm</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Algorithm<wbr>Unspecified</dt>
+    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The default algorithm used by the Cloud AI Platform Vizier service.{{% /md %}}</dd><dt>Gaussian<wbr>Process<wbr>Bandit</dt>
+    <dd>GAUSSIAN_PROCESS_BANDIT{{% md %}}Gaussian Process Bandit.{{% /md %}}</dd><dt>Grid<wbr>Search</dt>
+    <dd>GRID_SEARCH{{% md %}}Simple grid search within the feasible space. To use grid search, all parameters must be `INTEGER`, `CATEGORICAL`, or `DISCRETE`.{{% /md %}}</dd><dt>Random<wbr>Search</dt>
+    <dd>RANDOM_SEARCH{{% md %}}Simple random search within the feasible space.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Study<wbr>Config<wbr>Algorithm<wbr>Algorithm<wbr>Unspecified</dt>
+    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The default algorithm used by the Cloud AI Platform Vizier service.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Study<wbr>Config<wbr>Algorithm<wbr>Gaussian<wbr>Process<wbr>Bandit</dt>
+    <dd>GAUSSIAN_PROCESS_BANDIT{{% md %}}Gaussian Process Bandit.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Study<wbr>Config<wbr>Algorithm<wbr>Grid<wbr>Search</dt>
+    <dd>GRID_SEARCH{{% md %}}Simple grid search within the feasible space. To use grid search, all parameters must be `INTEGER`, `CATEGORICAL`, or `DISCRETE`.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Study<wbr>Config<wbr>Algorithm<wbr>Random<wbr>Search</dt>
+    <dd>RANDOM_SEARCH{{% md %}}Simple random search within the feasible space.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Algorithm<wbr>Unspecified</dt>
+    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The default algorithm used by the Cloud AI Platform Vizier service.{{% /md %}}</dd><dt>Gaussian<wbr>Process<wbr>Bandit</dt>
+    <dd>GAUSSIAN_PROCESS_BANDIT{{% md %}}Gaussian Process Bandit.{{% /md %}}</dd><dt>Grid<wbr>Search</dt>
+    <dd>GRID_SEARCH{{% md %}}Simple grid search within the feasible space. To use grid search, all parameters must be `INTEGER`, `CATEGORICAL`, or `DISCRETE`.{{% /md %}}</dd><dt>Random<wbr>Search</dt>
+    <dd>RANDOM_SEARCH{{% md %}}Simple random search within the feasible space.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALGORITHM_UNSPECIFIED</dt>
+    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The default algorithm used by the Cloud AI Platform Vizier service.{{% /md %}}</dd><dt>GAUSSIAN_PROCESS_BANDIT</dt>
+    <dd>GAUSSIAN_PROCESS_BANDIT{{% md %}}Gaussian Process Bandit.{{% /md %}}</dd><dt>GRID_SEARCH</dt>
+    <dd>GRID_SEARCH{{% md %}}Simple grid search within the feasible space. To use grid search, all parameters must be `INTEGER`, `CATEGORICAL`, or `DISCRETE`.{{% /md %}}</dd><dt>RANDOM_SEARCH</dt>
+    <dd>RANDOM_SEARCH{{% md %}}Simple random search within the feasible space.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googlecloudmlv1__studyconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Study<wbr>Config<wbr>Response</h4>

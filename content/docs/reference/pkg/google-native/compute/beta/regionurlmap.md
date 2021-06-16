@@ -4155,7 +4155,7 @@ The value must be between 1 and 1024 characters.{{% /md %}}</dd><dt class="prope
 <a href="#redirectresponsecode_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Response<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpredirectactionredirectresponsecode">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Http<wbr>Redirect<wbr>Action<wbr>Redirect<wbr>Response<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction.
 Supported values are:  
@@ -4221,7 +4221,7 @@ The value must be between 1 and 1024 characters.{{% /md %}}</dd><dt class="prope
 <a href="#redirectresponsecode_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Response<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpredirectactionredirectresponsecode">Http<wbr>Redirect<wbr>Action<wbr>Redirect<wbr>Response<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction.
 Supported values are:  
@@ -4287,7 +4287,7 @@ The value must be between 1 and 1024 characters.{{% /md %}}</dd><dt class="prope
 <a href="#redirectresponsecode_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Response<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpredirectactionredirectresponsecode">Http<wbr>Redirect<wbr>Action<wbr>Redirect<wbr>Response<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction.
 Supported values are:  
@@ -4353,7 +4353,7 @@ The value must be between 1 and 1024 characters.{{% /md %}}</dd><dt class="prope
 <a href="#redirect_response_code_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>response_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#httpredirectactionredirectresponsecode">Http<wbr>Redirect<wbr>Action<wbr>Redirect<wbr>Response<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction.
 Supported values are:  
@@ -4371,6 +4371,44 @@ Supported values are:
     </dt>
     <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior to redirecting the request. If set to false, the query portion of the original URL is retained.
 The default is set to false.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="httpredirectactionredirectresponsecode">Http<wbr>Redirect<wbr>Action<wbr>Redirect<wbr>Response<wbr>Code</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Found</dt>
+    <dd>FOUND</dd><dt>Moved<wbr>Permanently<wbr>Default</dt>
+    <dd>MOVED_PERMANENTLY_DEFAULT</dd><dt>Permanent<wbr>Redirect</dt>
+    <dd>PERMANENT_REDIRECT</dd><dt>See<wbr>Other</dt>
+    <dd>SEE_OTHER</dd><dt>Temporary<wbr>Redirect</dt>
+    <dd>TEMPORARY_REDIRECT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Http<wbr>Redirect<wbr>Action<wbr>Redirect<wbr>Response<wbr>Code<wbr>Found</dt>
+    <dd>FOUND</dd><dt>Http<wbr>Redirect<wbr>Action<wbr>Redirect<wbr>Response<wbr>Code<wbr>Moved<wbr>Permanently<wbr>Default</dt>
+    <dd>MOVED_PERMANENTLY_DEFAULT</dd><dt>Http<wbr>Redirect<wbr>Action<wbr>Redirect<wbr>Response<wbr>Code<wbr>Permanent<wbr>Redirect</dt>
+    <dd>PERMANENT_REDIRECT</dd><dt>Http<wbr>Redirect<wbr>Action<wbr>Redirect<wbr>Response<wbr>Code<wbr>See<wbr>Other</dt>
+    <dd>SEE_OTHER</dd><dt>Http<wbr>Redirect<wbr>Action<wbr>Redirect<wbr>Response<wbr>Code<wbr>Temporary<wbr>Redirect</dt>
+    <dd>TEMPORARY_REDIRECT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Found</dt>
+    <dd>FOUND</dd><dt>Moved<wbr>Permanently<wbr>Default</dt>
+    <dd>MOVED_PERMANENTLY_DEFAULT</dd><dt>Permanent<wbr>Redirect</dt>
+    <dd>PERMANENT_REDIRECT</dd><dt>See<wbr>Other</dt>
+    <dd>SEE_OTHER</dd><dt>Temporary<wbr>Redirect</dt>
+    <dd>TEMPORARY_REDIRECT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FOUND</dt>
+    <dd>FOUND</dd><dt>MOVED_PERMANENTLY_DEFAULT</dt>
+    <dd>MOVED_PERMANENTLY_DEFAULT</dd><dt>PERMANENT_REDIRECT</dt>
+    <dd>PERMANENT_REDIRECT</dd><dt>SEE_OTHER</dt>
+    <dd>SEE_OTHER</dd><dt>TEMPORARY_REDIRECT</dt>
+    <dd>TEMPORARY_REDIRECT</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httpredirectactionresponse">Http<wbr>Redirect<wbr>Action<wbr>Response</h4>
@@ -7101,7 +7139,7 @@ This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd>
 <a href="#filtermatchcriteria_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Match<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metadatafilterfiltermatchcriteria">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Match<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels contribute towards the overall metadataFilter match.
 Supported values are:  
@@ -7125,7 +7163,7 @@ This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd>
 <a href="#filtermatchcriteria_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Match<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metadatafilterfiltermatchcriteria">Metadata<wbr>Filter<wbr>Filter<wbr>Match<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels contribute towards the overall metadataFilter match.
 Supported values are:  
@@ -7149,7 +7187,7 @@ This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd>
 <a href="#filtermatchcriteria_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Match<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#metadatafilterfiltermatchcriteria">Metadata<wbr>Filter<wbr>Filter<wbr>Match<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels contribute towards the overall metadataFilter match.
 Supported values are:  
@@ -7173,12 +7211,42 @@ This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd>
 <a href="#filter_match_criteria_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>match_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#metadatafilterfiltermatchcriteria">Metadata<wbr>Filter<wbr>Filter<wbr>Match<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels contribute towards the overall metadataFilter match.
 Supported values are:  
 - MATCH_ANY: At least one of the filterLabels must have a matching label in the provided metadata. 
 - MATCH_ALL: All filterLabels must have matching labels in the provided metadata.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="metadatafilterfiltermatchcriteria">Metadata<wbr>Filter<wbr>Filter<wbr>Match<wbr>Criteria</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Match<wbr>All</dt>
+    <dd>MATCH_ALL</dd><dt>Match<wbr>Any</dt>
+    <dd>MATCH_ANY</dd><dt>Not<wbr>Set</dt>
+    <dd>NOT_SET</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Metadata<wbr>Filter<wbr>Filter<wbr>Match<wbr>Criteria<wbr>Match<wbr>All</dt>
+    <dd>MATCH_ALL</dd><dt>Metadata<wbr>Filter<wbr>Filter<wbr>Match<wbr>Criteria<wbr>Match<wbr>Any</dt>
+    <dd>MATCH_ANY</dd><dt>Metadata<wbr>Filter<wbr>Filter<wbr>Match<wbr>Criteria<wbr>Not<wbr>Set</dt>
+    <dd>NOT_SET</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Match<wbr>All</dt>
+    <dd>MATCH_ALL</dd><dt>Match<wbr>Any</dt>
+    <dd>MATCH_ANY</dd><dt>Not<wbr>Set</dt>
+    <dd>NOT_SET</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MATCH_ALL</dt>
+    <dd>MATCH_ALL</dd><dt>MATCH_ANY</dt>
+    <dd>MATCH_ANY</dd><dt>NOT_SET</dt>
+    <dd>NOT_SET</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metadatafilterlabelmatch">Metadata<wbr>Filter<wbr>Label<wbr>Match</h4>

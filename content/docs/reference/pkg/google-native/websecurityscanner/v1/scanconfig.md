@@ -30,17 +30,17 @@ Creates a new ScanConfig.
                <span class="nx">authentication</span><span class="p">:</span> <span class="nx">Optional[_websecurityscanner_v1.AuthenticationArgs]</span> = None<span class="p">,</span>
                <span class="nx">blacklist_patterns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">export_to_security_command_center</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">export_to_security_command_center</span><span class="p">:</span> <span class="nx">Optional[_websecurityscanner_v1.ScanConfigExportToSecurityCommandCenter]</span> = None<span class="p">,</span>
                <span class="nx">ignore_http_status_errors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">managed_scan</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">max_qps</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">risk_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">risk_level</span><span class="p">:</span> <span class="nx">Optional[_websecurityscanner_v1.ScanConfigRiskLevel]</span> = None<span class="p">,</span>
                <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[_websecurityscanner_v1.ScheduleArgs]</span> = None<span class="p">,</span>
                <span class="nx">starting_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                <span class="nx">static_ip_scan</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-               <span class="nx">user_agent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+               <span class="nx">user_agent</span><span class="p">:</span> <span class="nx">Optional[_websecurityscanner_v1.ScanConfigUserAgent]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ScanConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScanConfigArgs</a></span><span class="p">,</span>
@@ -206,7 +206,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#exporttosecuritycommandcenter_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfigexporttosecuritycommandcenter">Pulumi.<wbr>Google<wbr>Native.<wbr>Web<wbr>Security<wbr>Scanner.<wbr>V1.<wbr>Scan<wbr>Config<wbr>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a></span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Security Command Center.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -246,7 +246,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#risklevel_csharp" style="color: inherit; text-decoration: inherit;">Risk<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfigrisklevel">Pulumi.<wbr>Google<wbr>Native.<wbr>Web<wbr>Security<wbr>Scanner.<wbr>V1.<wbr>Scan<wbr>Config<wbr>Risk<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The risk level selected for the scan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -278,7 +278,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#useragent_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfiguseragent">Pulumi.<wbr>Google<wbr>Native.<wbr>Web<wbr>Security<wbr>Scanner.<wbr>V1.<wbr>Scan<wbr>Config<wbr>User<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}The user agent used during scanning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -322,7 +322,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#exporttosecuritycommandcenter_go" style="color: inherit; text-decoration: inherit;">Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfigexporttosecuritycommandcenter">Scan<wbr>Config<wbr>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a></span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Security Command Center.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +362,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#risklevel_go" style="color: inherit; text-decoration: inherit;">Risk<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfigrisklevel">Scan<wbr>Config<wbr>Risk<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The risk level selected for the scan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +394,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#useragent_go" style="color: inherit; text-decoration: inherit;">User<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfiguseragent">Scan<wbr>Config<wbr>User<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}The user agent used during scanning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -438,7 +438,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#exporttosecuritycommandcenter_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfigexporttosecuritycommandcenter">Scan<wbr>Config<wbr>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a></span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Security Command Center.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +478,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#risklevel_nodejs" style="color: inherit; text-decoration: inherit;">risk<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfigrisklevel">Scan<wbr>Config<wbr>Risk<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The risk level selected for the scan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +510,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#useragent_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#scanconfiguseragent">Scan<wbr>Config<wbr>User<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}The user agent used during scanning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -554,7 +554,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#export_to_security_command_center_python" style="color: inherit; text-decoration: inherit;">export_<wbr>to_<wbr>security_<wbr>command_<wbr>center</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#scanconfigexporttosecuritycommandcenter">Scan<wbr>Config<wbr>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a></span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Security Command Center.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +594,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#risk_level_python" style="color: inherit; text-decoration: inherit;">risk_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#scanconfigrisklevel">Scan<wbr>Config<wbr>Risk<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The risk level selected for the scan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +626,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#user_agent_python" style="color: inherit; text-decoration: inherit;">user_<wbr>agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#scanconfiguseragent">Scan<wbr>Config<wbr>User<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}The user agent used during scanning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1514,6 +1514,100 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Describes OAuth2 client id of resources protected by Identity-Aware-Proxy (IAP).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="scanconfigexporttosecuritycommandcenter">Scan<wbr>Config<wbr>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center<wbr>Unspecified</dt>
+    <dd>EXPORT_TO_SECURITY_COMMAND_CENTER_UNSPECIFIED{{% md %}}Use default, which is ENABLED.{{% /md %}}</dd><dt>Enabled</dt>
+    <dd>ENABLED{{% md %}}Export results of this scan to Security Command Center.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}Do not export results of this scan to Security Command Center.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Scan<wbr>Config<wbr>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center<wbr>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center<wbr>Unspecified</dt>
+    <dd>EXPORT_TO_SECURITY_COMMAND_CENTER_UNSPECIFIED{{% md %}}Use default, which is ENABLED.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center<wbr>Enabled</dt>
+    <dd>ENABLED{{% md %}}Export results of this scan to Security Command Center.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center<wbr>Disabled</dt>
+    <dd>DISABLED{{% md %}}Do not export results of this scan to Security Command Center.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center<wbr>Unspecified</dt>
+    <dd>EXPORT_TO_SECURITY_COMMAND_CENTER_UNSPECIFIED{{% md %}}Use default, which is ENABLED.{{% /md %}}</dd><dt>Enabled</dt>
+    <dd>ENABLED{{% md %}}Export results of this scan to Security Command Center.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}Do not export results of this scan to Security Command Center.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EXPORT_TO_SECURITY_COMMAND_CENTER_UNSPECIFIED</dt>
+    <dd>EXPORT_TO_SECURITY_COMMAND_CENTER_UNSPECIFIED{{% md %}}Use default, which is ENABLED.{{% /md %}}</dd><dt>ENABLED</dt>
+    <dd>ENABLED{{% md %}}Export results of this scan to Security Command Center.{{% /md %}}</dd><dt>DISABLED</dt>
+    <dd>DISABLED{{% md %}}Do not export results of this scan to Security Command Center.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="scanconfigrisklevel">Scan<wbr>Config<wbr>Risk<wbr>Level</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Risk<wbr>Level<wbr>Unspecified</dt>
+    <dd>RISK_LEVEL_UNSPECIFIED{{% md %}}Use default, which is NORMAL.{{% /md %}}</dd><dt>Normal</dt>
+    <dd>NORMAL{{% md %}}Normal scanning (Recommended){{% /md %}}</dd><dt>Low</dt>
+    <dd>LOW{{% md %}}Lower impact scanning{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Scan<wbr>Config<wbr>Risk<wbr>Level<wbr>Risk<wbr>Level<wbr>Unspecified</dt>
+    <dd>RISK_LEVEL_UNSPECIFIED{{% md %}}Use default, which is NORMAL.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Risk<wbr>Level<wbr>Normal</dt>
+    <dd>NORMAL{{% md %}}Normal scanning (Recommended){{% /md %}}</dd><dt>Scan<wbr>Config<wbr>Risk<wbr>Level<wbr>Low</dt>
+    <dd>LOW{{% md %}}Lower impact scanning{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Risk<wbr>Level<wbr>Unspecified</dt>
+    <dd>RISK_LEVEL_UNSPECIFIED{{% md %}}Use default, which is NORMAL.{{% /md %}}</dd><dt>Normal</dt>
+    <dd>NORMAL{{% md %}}Normal scanning (Recommended){{% /md %}}</dd><dt>Low</dt>
+    <dd>LOW{{% md %}}Lower impact scanning{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RISK_LEVEL_UNSPECIFIED</dt>
+    <dd>RISK_LEVEL_UNSPECIFIED{{% md %}}Use default, which is NORMAL.{{% /md %}}</dd><dt>NORMAL</dt>
+    <dd>NORMAL{{% md %}}Normal scanning (Recommended){{% /md %}}</dd><dt>LOW</dt>
+    <dd>LOW{{% md %}}Lower impact scanning{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="scanconfiguseragent">Scan<wbr>Config<wbr>User<wbr>Agent</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>User<wbr>Agent<wbr>Unspecified</dt>
+    <dd>USER_AGENT_UNSPECIFIED{{% md %}}The user agent is unknown. Service will default to CHROME_LINUX.{{% /md %}}</dd><dt>Chrome<wbr>Linux</dt>
+    <dd>CHROME_LINUX{{% md %}}Chrome on Linux. This is the service default if unspecified.{{% /md %}}</dd><dt>Chrome<wbr>Android</dt>
+    <dd>CHROME_ANDROID{{% md %}}Chrome on Android.{{% /md %}}</dd><dt>Safari<wbr>Iphone</dt>
+    <dd>SAFARI_IPHONE{{% md %}}Safari on IPhone.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Scan<wbr>Config<wbr>User<wbr>Agent<wbr>User<wbr>Agent<wbr>Unspecified</dt>
+    <dd>USER_AGENT_UNSPECIFIED{{% md %}}The user agent is unknown. Service will default to CHROME_LINUX.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>User<wbr>Agent<wbr>Chrome<wbr>Linux</dt>
+    <dd>CHROME_LINUX{{% md %}}Chrome on Linux. This is the service default if unspecified.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>User<wbr>Agent<wbr>Chrome<wbr>Android</dt>
+    <dd>CHROME_ANDROID{{% md %}}Chrome on Android.{{% /md %}}</dd><dt>Scan<wbr>Config<wbr>User<wbr>Agent<wbr>Safari<wbr>Iphone</dt>
+    <dd>SAFARI_IPHONE{{% md %}}Safari on IPhone.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>User<wbr>Agent<wbr>Unspecified</dt>
+    <dd>USER_AGENT_UNSPECIFIED{{% md %}}The user agent is unknown. Service will default to CHROME_LINUX.{{% /md %}}</dd><dt>Chrome<wbr>Linux</dt>
+    <dd>CHROME_LINUX{{% md %}}Chrome on Linux. This is the service default if unspecified.{{% /md %}}</dd><dt>Chrome<wbr>Android</dt>
+    <dd>CHROME_ANDROID{{% md %}}Chrome on Android.{{% /md %}}</dd><dt>Safari<wbr>Iphone</dt>
+    <dd>SAFARI_IPHONE{{% md %}}Safari on IPhone.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>USER_AGENT_UNSPECIFIED</dt>
+    <dd>USER_AGENT_UNSPECIFIED{{% md %}}The user agent is unknown. Service will default to CHROME_LINUX.{{% /md %}}</dd><dt>CHROME_LINUX</dt>
+    <dd>CHROME_LINUX{{% md %}}Chrome on Linux. This is the service default if unspecified.{{% /md %}}</dd><dt>CHROME_ANDROID</dt>
+    <dd>CHROME_ANDROID{{% md %}}Chrome on Android.{{% /md %}}</dd><dt>SAFARI_IPHONE</dt>
+    <dd>SAFARI_IPHONE{{% md %}}Safari on IPhone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="schedule">Schedule</h4>

@@ -49,7 +49,7 @@ Creates a VpnTunnel resource in the specified project and region using the data 
               <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">shared_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">shared_secret_hash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.VpnTunnelStatus]</span> = None<span class="p">,</span>
               <span class="nx">target_vpn_gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">vpn_gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">vpn_gateway_interface</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
@@ -364,7 +364,7 @@ To see the latest fingerprint, make a get() request to retrieve a VpnTunnel.{{% 
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#vpntunnelstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Vpn<wbr>Tunnel<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the VPN tunnel, which can be one of the following: 
 - PROVISIONING: Resource is being allocated for the VPN tunnel. 
@@ -593,7 +593,7 @@ To see the latest fingerprint, make a get() request to retrieve a VpnTunnel.{{% 
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#vpntunnelstatus">Vpn<wbr>Tunnel<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the VPN tunnel, which can be one of the following: 
 - PROVISIONING: Resource is being allocated for the VPN tunnel. 
@@ -822,7 +822,7 @@ To see the latest fingerprint, make a get() request to retrieve a VpnTunnel.{{% 
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#vpntunnelstatus">Vpn<wbr>Tunnel<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the VPN tunnel, which can be one of the following: 
 - PROVISIONING: Resource is being allocated for the VPN tunnel. 
@@ -1051,7 +1051,7 @@ To see the latest fingerprint, make a get() request to retrieve a VpnTunnel.{{% 
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#vpntunnelstatus">Vpn<wbr>Tunnel<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the VPN tunnel, which can be one of the following: 
 - PROVISIONING: Resource is being allocated for the VPN tunnel. 
@@ -1155,6 +1155,80 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="vpntunnelstatus">Vpn<wbr>Tunnel<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Allocating<wbr>Resources</dt>
+    <dd>ALLOCATING_RESOURCES</dd><dt>Authorization<wbr>Error</dt>
+    <dd>AUTHORIZATION_ERROR</dd><dt>Deprovisioning</dt>
+    <dd>DEPROVISIONING</dd><dt>Established</dt>
+    <dd>ESTABLISHED</dd><dt>Failed</dt>
+    <dd>FAILED</dd><dt>First<wbr>Handshake</dt>
+    <dd>FIRST_HANDSHAKE</dd><dt>Negotiation<wbr>Failure</dt>
+    <dd>NEGOTIATION_FAILURE</dd><dt>Network<wbr>Error</dt>
+    <dd>NETWORK_ERROR</dd><dt>No<wbr>Incoming<wbr>Packets</dt>
+    <dd>NO_INCOMING_PACKETS</dd><dt>Provisioning</dt>
+    <dd>PROVISIONING</dd><dt>Rejected</dt>
+    <dd>REJECTED</dd><dt>Stopped</dt>
+    <dd>STOPPED</dd><dt>Waiting<wbr>For<wbr>Full<wbr>Config</dt>
+    <dd>WAITING_FOR_FULL_CONFIG</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Vpn<wbr>Tunnel<wbr>Status<wbr>Allocating<wbr>Resources</dt>
+    <dd>ALLOCATING_RESOURCES</dd><dt>Vpn<wbr>Tunnel<wbr>Status<wbr>Authorization<wbr>Error</dt>
+    <dd>AUTHORIZATION_ERROR</dd><dt>Vpn<wbr>Tunnel<wbr>Status<wbr>Deprovisioning</dt>
+    <dd>DEPROVISIONING</dd><dt>Vpn<wbr>Tunnel<wbr>Status<wbr>Established</dt>
+    <dd>ESTABLISHED</dd><dt>Vpn<wbr>Tunnel<wbr>Status<wbr>Failed</dt>
+    <dd>FAILED</dd><dt>Vpn<wbr>Tunnel<wbr>Status<wbr>First<wbr>Handshake</dt>
+    <dd>FIRST_HANDSHAKE</dd><dt>Vpn<wbr>Tunnel<wbr>Status<wbr>Negotiation<wbr>Failure</dt>
+    <dd>NEGOTIATION_FAILURE</dd><dt>Vpn<wbr>Tunnel<wbr>Status<wbr>Network<wbr>Error</dt>
+    <dd>NETWORK_ERROR</dd><dt>Vpn<wbr>Tunnel<wbr>Status<wbr>No<wbr>Incoming<wbr>Packets</dt>
+    <dd>NO_INCOMING_PACKETS</dd><dt>Vpn<wbr>Tunnel<wbr>Status<wbr>Provisioning</dt>
+    <dd>PROVISIONING</dd><dt>Vpn<wbr>Tunnel<wbr>Status<wbr>Rejected</dt>
+    <dd>REJECTED</dd><dt>Vpn<wbr>Tunnel<wbr>Status<wbr>Stopped</dt>
+    <dd>STOPPED</dd><dt>Vpn<wbr>Tunnel<wbr>Status<wbr>Waiting<wbr>For<wbr>Full<wbr>Config</dt>
+    <dd>WAITING_FOR_FULL_CONFIG</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Allocating<wbr>Resources</dt>
+    <dd>ALLOCATING_RESOURCES</dd><dt>Authorization<wbr>Error</dt>
+    <dd>AUTHORIZATION_ERROR</dd><dt>Deprovisioning</dt>
+    <dd>DEPROVISIONING</dd><dt>Established</dt>
+    <dd>ESTABLISHED</dd><dt>Failed</dt>
+    <dd>FAILED</dd><dt>First<wbr>Handshake</dt>
+    <dd>FIRST_HANDSHAKE</dd><dt>Negotiation<wbr>Failure</dt>
+    <dd>NEGOTIATION_FAILURE</dd><dt>Network<wbr>Error</dt>
+    <dd>NETWORK_ERROR</dd><dt>No<wbr>Incoming<wbr>Packets</dt>
+    <dd>NO_INCOMING_PACKETS</dd><dt>Provisioning</dt>
+    <dd>PROVISIONING</dd><dt>Rejected</dt>
+    <dd>REJECTED</dd><dt>Stopped</dt>
+    <dd>STOPPED</dd><dt>Waiting<wbr>For<wbr>Full<wbr>Config</dt>
+    <dd>WAITING_FOR_FULL_CONFIG</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALLOCATING_RESOURCES</dt>
+    <dd>ALLOCATING_RESOURCES</dd><dt>AUTHORIZATION_ERROR</dt>
+    <dd>AUTHORIZATION_ERROR</dd><dt>DEPROVISIONING</dt>
+    <dd>DEPROVISIONING</dd><dt>ESTABLISHED</dt>
+    <dd>ESTABLISHED</dd><dt>FAILED</dt>
+    <dd>FAILED</dd><dt>FIRST_HANDSHAKE</dt>
+    <dd>FIRST_HANDSHAKE</dd><dt>NEGOTIATION_FAILURE</dt>
+    <dd>NEGOTIATION_FAILURE</dd><dt>NETWORK_ERROR</dt>
+    <dd>NETWORK_ERROR</dd><dt>NO_INCOMING_PACKETS</dt>
+    <dd>NO_INCOMING_PACKETS</dd><dt>PROVISIONING</dt>
+    <dd>PROVISIONING</dd><dt>REJECTED</dt>
+    <dd>REJECTED</dd><dt>STOPPED</dt>
+    <dd>STOPPED</dd><dt>WAITING_FOR_FULL_CONFIG</dt>
+    <dd>WAITING_FOR_FULL_CONFIG</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

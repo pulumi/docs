@@ -4092,106 +4092,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}[Optional] When hive partition detection is requested, a common prefix for all source uris should be supplied. The prefix must end immediately before the partition key encoding begins. For example, consider files following this data layout. gs://bucket/path_to_table/dt=2019-01-01/country=BR/id=7/file.avro gs://bucket/path_to_table/dt=2018-12-31/country=CA/id=3/file.avro When hive partitioning is requested with either AUTO or STRINGS detection, the common prefix can be either of gs://bucket/path_to_table or gs://bucket/path_to_table/ (trailing slash does not matter).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="jobcategories">Job<wbr>Categories</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="names_csharp">
-<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="names_go">
-<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="names_nodejs">
-<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="names_python">
-<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="jobcategoriesresponse">Job<wbr>Categories<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="names_csharp">
-<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="names_go">
-<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="names_nodejs">
-<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="names_python">
-<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="jobconfiguration">Job<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
@@ -9236,334 +9136,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}[Optional] Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="jobpolicytags">Job<wbr>Policy<wbr>Tags</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="names_csharp">
-<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="names_go">
-<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="names_nodejs">
-<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="names_python">
-<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="jobpolicytagsresponse">Job<wbr>Policy<wbr>Tags<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="names_csharp">
-<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="names_go">
-<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="names_nodejs">
-<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="names_python">
-<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="jobrange">Job<wbr>Range</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="end_csharp">
-<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="interval_csharp">
-<a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="start_csharp">
-<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="end_go">
-<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="interval_go">
-<a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="start_go">
-<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="end_nodejs">
-<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="interval_nodejs">
-<a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="start_nodejs">
-<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="end_python">
-<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="interval_python">
-<a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="start_python">
-<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="jobrangeresponse">Job<wbr>Range<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="end_csharp">
-<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="interval_csharp">
-<a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="start_csharp">
-<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="end_go">
-<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="interval_go">
-<a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="start_go">
-<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="end_nodejs">
-<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="interval_nodejs">
-<a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="start_nodejs">
-<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="end_python">
-<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="interval_python">
-<a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="start_python">
-<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="jobreference">Job<wbr>Reference</h4>
 
 {{% choosable language csharp %}}
@@ -9792,170 +9364,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}[Required] The ID of the project containing this job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="jobreservationusageitem">Job<wbr>Reservation<wbr>Usage<wbr>Item</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="slotms_csharp">
-<a href="#slotms_csharp" style="color: inherit; text-decoration: inherit;">Slot<wbr>Ms</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="slotms_go">
-<a href="#slotms_go" style="color: inherit; text-decoration: inherit;">Slot<wbr>Ms</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="slotms_nodejs">
-<a href="#slotms_nodejs" style="color: inherit; text-decoration: inherit;">slot<wbr>Ms</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="slot_ms_python">
-<a href="#slot_ms_python" style="color: inherit; text-decoration: inherit;">slot_<wbr>ms</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="jobreservationusageitemresponse">Job<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="slotms_csharp">
-<a href="#slotms_csharp" style="color: inherit; text-decoration: inherit;">Slot<wbr>Ms</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="slotms_go">
-<a href="#slotms_go" style="color: inherit; text-decoration: inherit;">Slot<wbr>Ms</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="slotms_nodejs">
-<a href="#slotms_nodejs" style="color: inherit; text-decoration: inherit;">slot<wbr>Ms</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="slot_ms_python">
-<a href="#slot_ms_python" style="color: inherit; text-decoration: inherit;">slot_<wbr>ms</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="jobstatistics">Job<wbr>Statistics</h4>
 
 {{% choosable language csharp %}}
@@ -10037,7 +9445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservationusage_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreservationusageitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jobstatisticsreservationusageitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Statistics<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Job resource usage breakdown by reservation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10177,7 +9585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservationusage_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreservationusageitem">[]Job<wbr>Reservation<wbr>Usage<wbr>Item</a></span>
+        <span class="property-type"><a href="#jobstatisticsreservationusageitem">[]Job<wbr>Statistics<wbr>Reservation<wbr>Usage<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Job resource usage breakdown by reservation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10317,7 +9725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservationusage_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreservationusageitem">Job<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jobstatisticsreservationusageitem">Job<wbr>Statistics<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Job resource usage breakdown by reservation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10465,7 +9873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservation_usage_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreservationusageitem">Job<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobstatisticsreservationusageitem">Job<wbr>Statistics<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Job resource usage breakdown by reservation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10639,7 +10047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservationusage_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreservationusageitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jobstatistics2reservationusageitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Statistics2Reservation<wbr>Usage<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Job resource usage breakdown by reservation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10835,7 +10243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservationusage_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreservationusageitem">[]Job<wbr>Reservation<wbr>Usage<wbr>Item</a></span>
+        <span class="property-type"><a href="#jobstatistics2reservationusageitem">[]Job<wbr>Statistics2Reservation<wbr>Usage<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Job resource usage breakdown by reservation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11031,7 +10439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservationusage_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreservationusageitem">Job<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jobstatistics2reservationusageitem">Job<wbr>Statistics2Reservation<wbr>Usage<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Job resource usage breakdown by reservation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11227,7 +10635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservation_usage_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreservationusageitem">Job<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobstatistics2reservationusageitem">Job<wbr>Statistics2Reservation<wbr>Usage<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Job resource usage breakdown by reservation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11302,6 +10710,170 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#queryparameter">Query<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Standard SQL only: list of undeclared query parameters detected during a dry run validation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobstatistics2reservationusageitem">Job<wbr>Statistics2Reservation<wbr>Usage<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="slotms_csharp">
+<a href="#slotms_csharp" style="color: inherit; text-decoration: inherit;">Slot<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="slotms_go">
+<a href="#slotms_go" style="color: inherit; text-decoration: inherit;">Slot<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="slotms_nodejs">
+<a href="#slotms_nodejs" style="color: inherit; text-decoration: inherit;">slot<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="slot_ms_python">
+<a href="#slot_ms_python" style="color: inherit; text-decoration: inherit;">slot_<wbr>ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobstatistics2reservationusageitemresponse">Job<wbr>Statistics2Reservation<wbr>Usage<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="slotms_csharp">
+<a href="#slotms_csharp" style="color: inherit; text-decoration: inherit;">Slot<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="slotms_go">
+<a href="#slotms_go" style="color: inherit; text-decoration: inherit;">Slot<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="slotms_nodejs">
+<a href="#slotms_nodejs" style="color: inherit; text-decoration: inherit;">slot<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="slot_ms_python">
+<a href="#slot_ms_python" style="color: inherit; text-decoration: inherit;">slot_<wbr>ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobstatistics2response">Job<wbr>Statistics2Response</h4>
@@ -11425,7 +10997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservationusage_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreservationusageitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jobstatistics2reservationusageitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Statistics2Reservation<wbr>Usage<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Job resource usage breakdown by reservation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11621,7 +11193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservationusage_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreservationusageitemresponse">[]Job<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobstatistics2reservationusageitemresponse">[]Job<wbr>Statistics2Reservation<wbr>Usage<wbr>Item<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Job resource usage breakdown by reservation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11817,7 +11389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservationusage_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreservationusageitemresponse">Job<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jobstatistics2reservationusageitemresponse">Job<wbr>Statistics2Reservation<wbr>Usage<wbr>Item<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Job resource usage breakdown by reservation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12013,7 +11585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservation_usage_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreservationusageitemresponse">Job<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobstatistics2reservationusageitemresponse">Job<wbr>Statistics2Reservation<wbr>Usage<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Job resource usage breakdown by reservation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12610,6 +12182,170 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}[Output-only] Number of user bytes extracted into the result. This is the byte count as computed by BigQuery for billing purposes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="jobstatisticsreservationusageitem">Job<wbr>Statistics<wbr>Reservation<wbr>Usage<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="slotms_csharp">
+<a href="#slotms_csharp" style="color: inherit; text-decoration: inherit;">Slot<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="slotms_go">
+<a href="#slotms_go" style="color: inherit; text-decoration: inherit;">Slot<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="slotms_nodejs">
+<a href="#slotms_nodejs" style="color: inherit; text-decoration: inherit;">slot<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="slot_ms_python">
+<a href="#slot_ms_python" style="color: inherit; text-decoration: inherit;">slot_<wbr>ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobstatisticsreservationusageitemresponse">Job<wbr>Statistics<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="slotms_csharp">
+<a href="#slotms_csharp" style="color: inherit; text-decoration: inherit;">Slot<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="slotms_go">
+<a href="#slotms_go" style="color: inherit; text-decoration: inherit;">Slot<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="slotms_nodejs">
+<a href="#slotms_nodejs" style="color: inherit; text-decoration: inherit;">slot<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Reservation name or "unreserved" for on-demand resources usage.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="slot_ms_python">
+<a href="#slot_ms_python" style="color: inherit; text-decoration: inherit;">slot_<wbr>ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output-only] Slot-milliseconds the job spent in the given reservation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="jobstatisticsresponse">Job<wbr>Statistics<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -12691,7 +12427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservationusage_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreservationusageitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jobstatisticsreservationusageitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Statistics<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Job resource usage breakdown by reservation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12831,7 +12567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservationusage_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreservationusageitemresponse">[]Job<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobstatisticsreservationusageitemresponse">[]Job<wbr>Statistics<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Job resource usage breakdown by reservation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12971,7 +12707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservationusage_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreservationusageitemresponse">Job<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jobstatisticsreservationusageitemresponse">Job<wbr>Statistics<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Job resource usage breakdown by reservation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13119,7 +12855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservation_usage_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreservationusageitemresponse">Job<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobstatisticsreservationusageitemresponse">Job<wbr>Statistics<wbr>Reservation<wbr>Usage<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Job resource usage breakdown by reservation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13398,234 +13134,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] Running state of the job.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="jobstructtypesitem">Job<wbr>Struct<wbr>Types<wbr>Item</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Optional] Human-oriented description of the field.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Optional] The name of this field.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queryparametertype">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Query<wbr>Parameter<wbr>Type<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}[Required] The type of this field.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Optional] Human-oriented description of the field.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Optional] The name of this field.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queryparametertype">Query<wbr>Parameter<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}[Required] The type of this field.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Optional] Human-oriented description of the field.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Optional] The name of this field.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queryparametertype">Query<wbr>Parameter<wbr>Type<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}[Required] The type of this field.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Optional] Human-oriented description of the field.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Optional] The name of this field.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queryparametertype">Query<wbr>Parameter<wbr>Type<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}[Required] The type of this field.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="jobstructtypesitemresponse">Job<wbr>Struct<wbr>Types<wbr>Item<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Optional] Human-oriented description of the field.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Optional] The name of this field.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queryparametertyperesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Query<wbr>Parameter<wbr>Type<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}[Required] The type of this field.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Optional] Human-oriented description of the field.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Optional] The name of this field.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queryparametertyperesponse">Query<wbr>Parameter<wbr>Type<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}[Required] The type of this field.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Optional] Human-oriented description of the field.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Optional] The name of this field.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queryparametertyperesponse">Query<wbr>Parameter<wbr>Type<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}[Required] The type of this field.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Optional] Human-oriented description of the field.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Optional] The name of this field.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queryparametertyperesponse">Query<wbr>Parameter<wbr>Type<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}[Required] The type of this field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="modelreference">Model<wbr>Reference</h4>
@@ -14265,7 +13773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structtypes_csharp" style="color: inherit; text-decoration: inherit;">Struct<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstructtypesitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Struct<wbr>Types<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#queryparametertypestructtypesitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Query<wbr>Parameter<wbr>Type<wbr>Struct<wbr>Types<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The types of the fields of this struct, in order, if this is a struct.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14293,7 +13801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structtypes_go" style="color: inherit; text-decoration: inherit;">Struct<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstructtypesitem">[]Job<wbr>Struct<wbr>Types<wbr>Item</a></span>
+        <span class="property-type"><a href="#queryparametertypestructtypesitem">[]Query<wbr>Parameter<wbr>Type<wbr>Struct<wbr>Types<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The types of the fields of this struct, in order, if this is a struct.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14321,7 +13829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structtypes_nodejs" style="color: inherit; text-decoration: inherit;">struct<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstructtypesitem">Job<wbr>Struct<wbr>Types<wbr>Item<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#queryparametertypestructtypesitem">Query<wbr>Parameter<wbr>Type<wbr>Struct<wbr>Types<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The types of the fields of this struct, in order, if this is a struct.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14349,7 +13857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#struct_types_python" style="color: inherit; text-decoration: inherit;">struct_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstructtypesitem">Job<wbr>Struct<wbr>Types<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#queryparametertypestructtypesitem">Query<wbr>Parameter<wbr>Type<wbr>Struct<wbr>Types<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The types of the fields of this struct, in order, if this is a struct.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14379,7 +13887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structtypes_csharp" style="color: inherit; text-decoration: inherit;">Struct<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstructtypesitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Struct<wbr>Types<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#queryparametertypestructtypesitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Query<wbr>Parameter<wbr>Type<wbr>Struct<wbr>Types<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The types of the fields of this struct, in order, if this is a struct.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14407,7 +13915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structtypes_go" style="color: inherit; text-decoration: inherit;">Struct<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstructtypesitemresponse">[]Job<wbr>Struct<wbr>Types<wbr>Item<wbr>Response</a></span>
+        <span class="property-type"><a href="#queryparametertypestructtypesitemresponse">[]Query<wbr>Parameter<wbr>Type<wbr>Struct<wbr>Types<wbr>Item<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The types of the fields of this struct, in order, if this is a struct.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14435,7 +13943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structtypes_nodejs" style="color: inherit; text-decoration: inherit;">struct<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstructtypesitemresponse">Job<wbr>Struct<wbr>Types<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#queryparametertypestructtypesitemresponse">Query<wbr>Parameter<wbr>Type<wbr>Struct<wbr>Types<wbr>Item<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The types of the fields of this struct, in order, if this is a struct.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14463,7 +13971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#struct_types_python" style="color: inherit; text-decoration: inherit;">struct_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstructtypesitemresponse">Job<wbr>Struct<wbr>Types<wbr>Item<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#queryparametertypestructtypesitemresponse">Query<wbr>Parameter<wbr>Type<wbr>Struct<wbr>Types<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The types of the fields of this struct, in order, if this is a struct.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14474,6 +13982,234 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The top level type of this field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="queryparametertypestructtypesitem">Query<wbr>Parameter<wbr>Type<wbr>Struct<wbr>Types<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] Human-oriented description of the field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] The name of this field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queryparametertype">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Query<wbr>Parameter<wbr>Type<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Required] The type of this field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] Human-oriented description of the field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] The name of this field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queryparametertype">Query<wbr>Parameter<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}[Required] The type of this field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] Human-oriented description of the field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] The name of this field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queryparametertype">Query<wbr>Parameter<wbr>Type<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Required] The type of this field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Optional] Human-oriented description of the field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Optional] The name of this field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queryparametertype">Query<wbr>Parameter<wbr>Type<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Required] The type of this field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="queryparametertypestructtypesitemresponse">Query<wbr>Parameter<wbr>Type<wbr>Struct<wbr>Types<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] Human-oriented description of the field.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] The name of this field.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queryparametertyperesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Query<wbr>Parameter<wbr>Type<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Required] The type of this field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] Human-oriented description of the field.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] The name of this field.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queryparametertyperesponse">Query<wbr>Parameter<wbr>Type<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Required] The type of this field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] Human-oriented description of the field.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Optional] The name of this field.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queryparametertyperesponse">Query<wbr>Parameter<wbr>Type<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Required] The type of this field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Optional] Human-oriented description of the field.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Optional] The name of this field.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queryparametertyperesponse">Query<wbr>Parameter<wbr>Type<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Required] The type of this field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="queryparametervalue">Query<wbr>Parameter<wbr>Value</h4>
@@ -15077,7 +14813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrange">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#rangepartitioningrange">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Range<wbr>Partitioning<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15097,7 +14833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrange">Job<wbr>Range</a></span>
+        <span class="property-type"><a href="#rangepartitioningrange">Range<wbr>Partitioning<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15117,7 +14853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrange">Job<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#rangepartitioningrange">Range<wbr>Partitioning<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15137,9 +14873,237 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrange">Job<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#rangepartitioningrange">Range<wbr>Partitioning<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rangepartitioningrange">Range<wbr>Partitioning<wbr>Range</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="end_csharp">
+<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_csharp">
+<a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="end_go">
+<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_go">
+<a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="end_nodejs">
+<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_nodejs">
+<a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="end_python">
+<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_python">
+<a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rangepartitioningrangeresponse">Range<wbr>Partitioning<wbr>Range<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="end_csharp">
+<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="interval_csharp">
+<a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="end_go">
+<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="interval_go">
+<a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="end_nodejs">
+<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="interval_nodejs">
+<a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="end_python">
+<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="interval_python">
+<a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rangepartitioningresponse">Range<wbr>Partitioning<wbr>Response</h4>
@@ -15159,7 +15123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrangeresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Range<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rangepartitioningrangeresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Range<wbr>Partitioning<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15179,7 +15143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrangeresponse">Job<wbr>Range<wbr>Response</a></span>
+        <span class="property-type"><a href="#rangepartitioningrangeresponse">Range<wbr>Partitioning<wbr>Range<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15199,7 +15163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrangeresponse">Job<wbr>Range<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rangepartitioningrangeresponse">Range<wbr>Partitioning<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15219,7 +15183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrangeresponse">Job<wbr>Range<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rangepartitioningrangeresponse">Range<wbr>Partitioning<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16537,7 +16501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_csharp" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcategories">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Categories<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemacategories">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16585,7 +16549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policytags_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpolicytags">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Policy<wbr>Tags<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemapolicytags">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16621,7 +16585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_go" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcategories">Job<wbr>Categories</a></span>
+        <span class="property-type"><a href="#tablefieldschemacategories">Table<wbr>Field<wbr>Schema<wbr>Categories</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16669,7 +16633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policytags_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpolicytags">Job<wbr>Policy<wbr>Tags</a></span>
+        <span class="property-type"><a href="#tablefieldschemapolicytags">Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16705,7 +16669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcategories">Job<wbr>Categories<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemacategories">Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16753,7 +16717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policytags_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpolicytags">Job<wbr>Policy<wbr>Tags<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemapolicytags">Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16789,7 +16753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcategories">Job<wbr>Categories<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemacategories">Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16837,7 +16801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_tags_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpolicytags">Job<wbr>Policy<wbr>Tags<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemapolicytags">Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16866,6 +16830,206 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}[Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as INTEGER), FLOAT, FLOAT64 (same as FLOAT), NUMERIC, BIGNUMERIC, BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE, TIME, DATETIME, INTERVAL, RECORD (where RECORD indicates that the field contains a nested schema) or STRUCT (same as RECORD).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="tablefieldschemacategories">Table<wbr>Field<wbr>Schema<wbr>Categories</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tablefieldschemacategoriesresponse">Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tablefieldschemapolicytags">Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tablefieldschemapolicytagsresponse">Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="tablefieldschemaresponse">Table<wbr>Field<wbr>Schema<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -16875,7 +17039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_csharp" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcategoriesresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Categories<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemacategoriesresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16923,7 +17087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policytags_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpolicytagsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Policy<wbr>Tags<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemapolicytagsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16959,7 +17123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_go" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcategoriesresponse">Job<wbr>Categories<wbr>Response</a></span>
+        <span class="property-type"><a href="#tablefieldschemacategoriesresponse">Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17007,7 +17171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policytags_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpolicytagsresponse">Job<wbr>Policy<wbr>Tags<wbr>Response</a></span>
+        <span class="property-type"><a href="#tablefieldschemapolicytagsresponse">Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17043,7 +17207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcategoriesresponse">Job<wbr>Categories<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemacategoriesresponse">Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17091,7 +17255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policytags_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpolicytagsresponse">Job<wbr>Policy<wbr>Tags<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemapolicytagsresponse">Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17127,7 +17291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcategoriesresponse">Job<wbr>Categories<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemacategoriesresponse">Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17175,7 +17339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_tags_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpolicytagsresponse">Job<wbr>Policy<wbr>Tags<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemapolicytagsresponse">Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">

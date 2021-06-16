@@ -15,6 +15,12 @@ Explore the resources and functions of the google-native.secretmanager/v1beta1 m
     <li><a href="secretiampolicy" title="SecretIamPolicy"><span class="symbol resource"></span>SecretIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getsecret" title="GetSecret"><span class="symbol function"></span>GetSecret</a></li>
+    <li><a href="getsecretiampolicy" title="GetSecretIamPolicy"><span class="symbol function"></span>GetSecretIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -22,6 +28,6 @@ Explore the resources and functions of the google-native.secretmanager/v1beta1 m
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

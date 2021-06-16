@@ -34,7 +34,7 @@ Creates a new worker pool with a specified size and configuration. Returns a lon
                <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_remotebuildexecution_v1alpha.WorkerPoolState]</span> = None<span class="p">,</span>
                <span class="nx">worker_config</span><span class="p">:</span> <span class="nx">Optional[_remotebuildexecution_v1alpha.GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs]</span> = None<span class="p">,</span>
                <span class="nx">worker_count</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -226,7 +226,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workerpoolstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Remote<wbr>Build<wbr>Execution.<wbr>V1Alpha.<wbr>Worker<wbr>Pool<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}State of the worker pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -310,7 +310,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workerpoolstate">Worker<wbr>Pool<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}State of the worker pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +394,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workerpoolstate">Worker<wbr>Pool<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}State of the worker pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +478,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#workerpoolstate">Worker<wbr>Pool<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}State of the worker pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1630,6 +1630,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the image used by each VM.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="workerpoolstate">Worker<wbr>Pool<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Not a valid state, but the default value of the enum.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}The worker pool is in state `CREATING` once `CreateWorkerPool` is called and before all requested workers are ready.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The worker pool is in state `RUNNING` when all its workers are ready for use.{{% /md %}}</dd><dt>Updating</dt>
+    <dd>UPDATING{{% md %}}The worker pool is in state `UPDATING` once `UpdateWorkerPool` is called and before the new configuration has all the requested workers ready for use, and no older configuration has any workers. At that point the state transitions to `RUNNING`.{{% /md %}}</dd><dt>Deleting</dt>
+    <dd>DELETING{{% md %}}The worker pool is in state `DELETING` once the `Delete` method is called and before the deletion completes.{{% /md %}}</dd><dt>Inactive</dt>
+    <dd>INACTIVE{{% md %}}The worker pool is in state `INACTIVE` when the instance hosting the worker pool in not running.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Worker<wbr>Pool<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Not a valid state, but the default value of the enum.{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>State<wbr>Creating</dt>
+    <dd>CREATING{{% md %}}The worker pool is in state `CREATING` once `CreateWorkerPool` is called and before all requested workers are ready.{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>State<wbr>Running</dt>
+    <dd>RUNNING{{% md %}}The worker pool is in state `RUNNING` when all its workers are ready for use.{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>State<wbr>Updating</dt>
+    <dd>UPDATING{{% md %}}The worker pool is in state `UPDATING` once `UpdateWorkerPool` is called and before the new configuration has all the requested workers ready for use, and no older configuration has any workers. At that point the state transitions to `RUNNING`.{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>State<wbr>Deleting</dt>
+    <dd>DELETING{{% md %}}The worker pool is in state `DELETING` once the `Delete` method is called and before the deletion completes.{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>State<wbr>Inactive</dt>
+    <dd>INACTIVE{{% md %}}The worker pool is in state `INACTIVE` when the instance hosting the worker pool in not running.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Not a valid state, but the default value of the enum.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}The worker pool is in state `CREATING` once `CreateWorkerPool` is called and before all requested workers are ready.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The worker pool is in state `RUNNING` when all its workers are ready for use.{{% /md %}}</dd><dt>Updating</dt>
+    <dd>UPDATING{{% md %}}The worker pool is in state `UPDATING` once `UpdateWorkerPool` is called and before the new configuration has all the requested workers ready for use, and no older configuration has any workers. At that point the state transitions to `RUNNING`.{{% /md %}}</dd><dt>Deleting</dt>
+    <dd>DELETING{{% md %}}The worker pool is in state `DELETING` once the `Delete` method is called and before the deletion completes.{{% /md %}}</dd><dt>Inactive</dt>
+    <dd>INACTIVE{{% md %}}The worker pool is in state `INACTIVE` when the instance hosting the worker pool in not running.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Not a valid state, but the default value of the enum.{{% /md %}}</dd><dt>CREATING</dt>
+    <dd>CREATING{{% md %}}The worker pool is in state `CREATING` once `CreateWorkerPool` is called and before all requested workers are ready.{{% /md %}}</dd><dt>RUNNING</dt>
+    <dd>RUNNING{{% md %}}The worker pool is in state `RUNNING` when all its workers are ready for use.{{% /md %}}</dd><dt>UPDATING</dt>
+    <dd>UPDATING{{% md %}}The worker pool is in state `UPDATING` once `UpdateWorkerPool` is called and before the new configuration has all the requested workers ready for use, and no older configuration has any workers. At that point the state transitions to `RUNNING`.{{% /md %}}</dd><dt>DELETING</dt>
+    <dd>DELETING{{% md %}}The worker pool is in state `DELETING` once the `Delete` method is called and before the deletion completes.{{% /md %}}</dd><dt>INACTIVE</dt>
+    <dd>INACTIVE{{% md %}}The worker pool is in state `INACTIVE` when the instance hosting the worker pool in not running.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
