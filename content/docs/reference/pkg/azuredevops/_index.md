@@ -34,6 +34,7 @@ A Pulumi package for creating and managing Azure DevOps.
     <li><a href="branchpolicycommentresolution" title="BranchPolicyCommentResolution"><span class="symbol resource"></span>BranchPolicyCommentResolution</a></li>
     <li><a href="branchpolicymergetypes" title="BranchPolicyMergeTypes"><span class="symbol resource"></span>BranchPolicyMergeTypes</a></li>
     <li><a href="branchpolicyminreviewers" title="BranchPolicyMinReviewers"><span class="symbol resource"></span>BranchPolicyMinReviewers</a></li>
+    <li><a href="branchpolicystatuscheck" title="BranchPolicyStatusCheck"><span class="symbol resource"></span>BranchPolicyStatusCheck</a></li>
     <li><a href="branchpolicyworkitemlinking" title="BranchPolicyWorkItemLinking"><span class="symbol resource"></span>BranchPolicyWorkItemLinking</a></li>
     <li><a href="builddefinition" title="BuildDefinition"><span class="symbol resource"></span>BuildDefinition</a></li>
     <li><a href="builddefinitionpermissions" title="BuildDefinitionPermissions"><span class="symbol resource"></span>BuildDefinitionPermissions</a></li>
@@ -48,6 +49,8 @@ A Pulumi package for creating and managing Azure DevOps.
     <li><a href="projectpermissions" title="ProjectPermissions"><span class="symbol resource"></span>ProjectPermissions</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
+    <li><a href="repositorypolicyauthoremailpattern" title="RepositoryPolicyAuthorEmailPattern"><span class="symbol resource"></span>RepositoryPolicyAuthorEmailPattern</a></li>
+    <li><a href="repositorypolicyfilepathpattern" title="RepositoryPolicyFilePathPattern"><span class="symbol resource"></span>RepositoryPolicyFilePathPattern</a></li>
     <li><a href="resourceauthorization" title="ResourceAuthorization"><span class="symbol resource"></span>ResourceAuthorization</a></li>
     <li><a href="serviceendpointartifactory" title="ServiceEndpointArtifactory"><span class="symbol resource"></span>ServiceEndpointArtifactory</a></li>
     <li><a href="serviceendpointaws" title="ServiceEndpointAws"><span class="symbol resource"></span>ServiceEndpointAws</a></li>
@@ -61,6 +64,7 @@ A Pulumi package for creating and managing Azure DevOps.
     <li><a href="serviceendpointkubernetes" title="ServiceEndpointKubernetes"><span class="symbol resource"></span>ServiceEndpointKubernetes</a></li>
     <li><a href="serviceendpointnpm" title="ServiceEndpointNpm"><span class="symbol resource"></span>ServiceEndpointNpm</a></li>
     <li><a href="serviceendpointpipeline" title="ServiceEndpointPipeline"><span class="symbol resource"></span>ServiceEndpointPipeline</a></li>
+    <li><a href="serviceendpointservicefabric" title="ServiceEndpointServiceFabric"><span class="symbol resource"></span>ServiceEndpointServiceFabric</a></li>
     <li><a href="serviceendpointsonarqube" title="ServiceEndpointSonarQube"><span class="symbol resource"></span>ServiceEndpointSonarQube</a></li>
     <li><a href="serviceendpointssh" title="ServiceEndpointSsh"><span class="symbol resource"></span>ServiceEndpointSsh</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
@@ -93,6 +97,6 @@ A Pulumi package for creating and managing Azure DevOps.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.1.0</dd>
+	<dd>2.1.1</dd>
 </dl>
 
