@@ -17,6 +17,14 @@ Explore the resources and functions of the google-native.toolresults/v1beta3 mod
     <li><a href="step" title="Step"><span class="symbol resource"></span>Step</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getexecution" title="GetExecution"><span class="symbol function"></span>GetExecution</a></li>
+    <li><a href="gethistory" title="GetHistory"><span class="symbol function"></span>GetHistory</a></li>
+    <li><a href="getperfsampleseries" title="GetPerfSampleSeries"><span class="symbol function"></span>GetPerfSampleSeries</a></li>
+    <li><a href="getstep" title="GetStep"><span class="symbol function"></span>GetStep</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -24,6 +32,6 @@ Explore the resources and functions of the google-native.toolresults/v1beta3 mod
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

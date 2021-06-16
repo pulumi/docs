@@ -38,7 +38,7 @@ Creates a Microsoft AD Domain in a given project. Operation
            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">reserved_ip_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-           <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_managedidentities_v1alpha1.DomainState]</span> = None<span class="p">,</span>
            <span class="nx">status_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">trusts</span><span class="p">:</span> <span class="nx">Optional[Sequence[_managedidentities_v1alpha1.TrustArgs]]</span> = None<span class="p">,</span>
            <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -263,7 +263,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#domainstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Managedidentities.<wbr>V1Alpha1.<wbr>Domain<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of this domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -387,7 +387,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#domainstate">Domain<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The current state of this domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -511,7 +511,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#domainstate">Domain<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of this domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -635,7 +635,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#domainstate">Domain<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of this domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -729,6 +729,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="domainstate">Domain<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}ManagedIdentities domain is being created.{{% /md %}}</dd><dt>Ready</dt>
+    <dd>READY{{% md %}}ManagedIdentities domain has been created and is fully usable.{{% /md %}}</dd><dt>Updating</dt>
+    <dd>UPDATING{{% md %}}ManagedIdentities domain configuration is being updated.{{% /md %}}</dd><dt>Deleting</dt>
+    <dd>DELETING{{% md %}}ManagedIdentities domain is being deleted.{{% /md %}}</dd><dt>Repairing</dt>
+    <dd>REPAIRING{{% md %}}ManagedIdentities domain is being repaired and may be unusable. Details can be found in the `status_message` field.{{% /md %}}</dd><dt>Performing<wbr>Maintenance</dt>
+    <dd>PERFORMING_MAINTENANCE{{% md %}}ManagedIdentities domain is undergoing maintenance.{{% /md %}}</dd><dt>Down</dt>
+    <dd>DOWN{{% md %}}ManagedIdentities domain is not serving customer requests.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Domain<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Domain<wbr>State<wbr>Creating</dt>
+    <dd>CREATING{{% md %}}ManagedIdentities domain is being created.{{% /md %}}</dd><dt>Domain<wbr>State<wbr>Ready</dt>
+    <dd>READY{{% md %}}ManagedIdentities domain has been created and is fully usable.{{% /md %}}</dd><dt>Domain<wbr>State<wbr>Updating</dt>
+    <dd>UPDATING{{% md %}}ManagedIdentities domain configuration is being updated.{{% /md %}}</dd><dt>Domain<wbr>State<wbr>Deleting</dt>
+    <dd>DELETING{{% md %}}ManagedIdentities domain is being deleted.{{% /md %}}</dd><dt>Domain<wbr>State<wbr>Repairing</dt>
+    <dd>REPAIRING{{% md %}}ManagedIdentities domain is being repaired and may be unusable. Details can be found in the `status_message` field.{{% /md %}}</dd><dt>Domain<wbr>State<wbr>Performing<wbr>Maintenance</dt>
+    <dd>PERFORMING_MAINTENANCE{{% md %}}ManagedIdentities domain is undergoing maintenance.{{% /md %}}</dd><dt>Domain<wbr>State<wbr>Down</dt>
+    <dd>DOWN{{% md %}}ManagedIdentities domain is not serving customer requests.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}ManagedIdentities domain is being created.{{% /md %}}</dd><dt>Ready</dt>
+    <dd>READY{{% md %}}ManagedIdentities domain has been created and is fully usable.{{% /md %}}</dd><dt>Updating</dt>
+    <dd>UPDATING{{% md %}}ManagedIdentities domain configuration is being updated.{{% /md %}}</dd><dt>Deleting</dt>
+    <dd>DELETING{{% md %}}ManagedIdentities domain is being deleted.{{% /md %}}</dd><dt>Repairing</dt>
+    <dd>REPAIRING{{% md %}}ManagedIdentities domain is being repaired and may be unusable. Details can be found in the `status_message` field.{{% /md %}}</dd><dt>Performing<wbr>Maintenance</dt>
+    <dd>PERFORMING_MAINTENANCE{{% md %}}ManagedIdentities domain is undergoing maintenance.{{% /md %}}</dd><dt>Down</dt>
+    <dd>DOWN{{% md %}}ManagedIdentities domain is not serving customer requests.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>CREATING</dt>
+    <dd>CREATING{{% md %}}ManagedIdentities domain is being created.{{% /md %}}</dd><dt>READY</dt>
+    <dd>READY{{% md %}}ManagedIdentities domain has been created and is fully usable.{{% /md %}}</dd><dt>UPDATING</dt>
+    <dd>UPDATING{{% md %}}ManagedIdentities domain configuration is being updated.{{% /md %}}</dd><dt>DELETING</dt>
+    <dd>DELETING{{% md %}}ManagedIdentities domain is being deleted.{{% /md %}}</dd><dt>REPAIRING</dt>
+    <dd>REPAIRING{{% md %}}ManagedIdentities domain is being repaired and may be unusable. Details can be found in the `status_message` field.{{% /md %}}</dd><dt>PERFORMING_MAINTENANCE</dt>
+    <dd>PERFORMING_MAINTENANCE{{% md %}}ManagedIdentities domain is undergoing maintenance.{{% /md %}}</dd><dt>DOWN</dt>
+    <dd>DOWN{{% md %}}ManagedIdentities domain is not serving customer requests.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="trust">Trust</h4>
 
 {{% choosable language csharp %}}
@@ -762,7 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#truststate">Pulumi.<wbr>Google<wbr>Native.<wbr>Managedidentities.<wbr>V1Alpha1.<wbr>Trust<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of this trust.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -794,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustdirection_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#trusttrustdirection">Pulumi.<wbr>Google<wbr>Native.<wbr>Managedidentities.<wbr>V1Alpha1.<wbr>Trust<wbr>Trust<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}The trust direction decides the current domain is trusted, trusting or both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -810,7 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trusttype_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#trusttrusttype">Pulumi.<wbr>Google<wbr>Native.<wbr>Managedidentities.<wbr>V1Alpha1.<wbr>Trust<wbr>Trust<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of trust represented by the trust resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -854,7 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#truststate">Trust<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of this trust.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -886,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustdirection_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#trusttrustdirection">Trust<wbr>Trust<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}The trust direction decides the current domain is trusted, trusting or both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -902,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trusttype_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#trusttrusttype">Trust<wbr>Trust<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of trust represented by the trust resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -946,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#truststate">Trust<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of this trust.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -978,7 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustdirection_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#trusttrustdirection">Trust<wbr>Trust<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}The trust direction decides the current domain is trusted, trusting or both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -994,7 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trusttype_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#trusttrusttype">Trust<wbr>Trust<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of trust represented by the trust resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1038,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#truststate">Trust<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of this trust.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1070,7 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trust_direction_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#trusttrustdirection">Trust<wbr>Trust<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}The trust direction decides the current domain is trusted, trusting or both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1086,7 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trust_type_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#trusttrusttype">Trust<wbr>Trust<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of trust represented by the trust resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1467,6 +1517,112 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last update time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="truststate">Trust<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Not Set{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}Domain trust is being created.{{% /md %}}</dd><dt>Updating</dt>
+    <dd>UPDATING{{% md %}}Domain trust is being updated.{{% /md %}}</dd><dt>Deleting</dt>
+    <dd>DELETING{{% md %}}Domain trust is being deleted.{{% /md %}}</dd><dt>Connected</dt>
+    <dd>CONNECTED{{% md %}}Domain trust is connected.{{% /md %}}</dd><dt>Disconnected</dt>
+    <dd>DISCONNECTED{{% md %}}Domain trust is disconnected.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Trust<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Not Set{{% /md %}}</dd><dt>Trust<wbr>State<wbr>Creating</dt>
+    <dd>CREATING{{% md %}}Domain trust is being created.{{% /md %}}</dd><dt>Trust<wbr>State<wbr>Updating</dt>
+    <dd>UPDATING{{% md %}}Domain trust is being updated.{{% /md %}}</dd><dt>Trust<wbr>State<wbr>Deleting</dt>
+    <dd>DELETING{{% md %}}Domain trust is being deleted.{{% /md %}}</dd><dt>Trust<wbr>State<wbr>Connected</dt>
+    <dd>CONNECTED{{% md %}}Domain trust is connected.{{% /md %}}</dd><dt>Trust<wbr>State<wbr>Disconnected</dt>
+    <dd>DISCONNECTED{{% md %}}Domain trust is disconnected.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Not Set{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}Domain trust is being created.{{% /md %}}</dd><dt>Updating</dt>
+    <dd>UPDATING{{% md %}}Domain trust is being updated.{{% /md %}}</dd><dt>Deleting</dt>
+    <dd>DELETING{{% md %}}Domain trust is being deleted.{{% /md %}}</dd><dt>Connected</dt>
+    <dd>CONNECTED{{% md %}}Domain trust is connected.{{% /md %}}</dd><dt>Disconnected</dt>
+    <dd>DISCONNECTED{{% md %}}Domain trust is disconnected.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Not Set{{% /md %}}</dd><dt>CREATING</dt>
+    <dd>CREATING{{% md %}}Domain trust is being created.{{% /md %}}</dd><dt>UPDATING</dt>
+    <dd>UPDATING{{% md %}}Domain trust is being updated.{{% /md %}}</dd><dt>DELETING</dt>
+    <dd>DELETING{{% md %}}Domain trust is being deleted.{{% /md %}}</dd><dt>CONNECTED</dt>
+    <dd>CONNECTED{{% md %}}Domain trust is connected.{{% /md %}}</dd><dt>DISCONNECTED</dt>
+    <dd>DISCONNECTED{{% md %}}Domain trust is disconnected.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="trusttrustdirection">Trust<wbr>Trust<wbr>Direction</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Trust<wbr>Direction<wbr>Unspecified</dt>
+    <dd>TRUST_DIRECTION_UNSPECIFIED{{% md %}}Not Set{{% /md %}}</dd><dt>Inbound</dt>
+    <dd>INBOUND{{% md %}}The inbound direction represents the trusting side.{{% /md %}}</dd><dt>Outbound</dt>
+    <dd>OUTBOUND{{% md %}}The outboud direction represents the trusted side.{{% /md %}}</dd><dt>Bidirectional</dt>
+    <dd>BIDIRECTIONAL{{% md %}}The bidirectional direction represents the trusted / trusting side.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Trust<wbr>Trust<wbr>Direction<wbr>Trust<wbr>Direction<wbr>Unspecified</dt>
+    <dd>TRUST_DIRECTION_UNSPECIFIED{{% md %}}Not Set{{% /md %}}</dd><dt>Trust<wbr>Trust<wbr>Direction<wbr>Inbound</dt>
+    <dd>INBOUND{{% md %}}The inbound direction represents the trusting side.{{% /md %}}</dd><dt>Trust<wbr>Trust<wbr>Direction<wbr>Outbound</dt>
+    <dd>OUTBOUND{{% md %}}The outboud direction represents the trusted side.{{% /md %}}</dd><dt>Trust<wbr>Trust<wbr>Direction<wbr>Bidirectional</dt>
+    <dd>BIDIRECTIONAL{{% md %}}The bidirectional direction represents the trusted / trusting side.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Trust<wbr>Direction<wbr>Unspecified</dt>
+    <dd>TRUST_DIRECTION_UNSPECIFIED{{% md %}}Not Set{{% /md %}}</dd><dt>Inbound</dt>
+    <dd>INBOUND{{% md %}}The inbound direction represents the trusting side.{{% /md %}}</dd><dt>Outbound</dt>
+    <dd>OUTBOUND{{% md %}}The outboud direction represents the trusted side.{{% /md %}}</dd><dt>Bidirectional</dt>
+    <dd>BIDIRECTIONAL{{% md %}}The bidirectional direction represents the trusted / trusting side.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TRUST_DIRECTION_UNSPECIFIED</dt>
+    <dd>TRUST_DIRECTION_UNSPECIFIED{{% md %}}Not Set{{% /md %}}</dd><dt>INBOUND</dt>
+    <dd>INBOUND{{% md %}}The inbound direction represents the trusting side.{{% /md %}}</dd><dt>OUTBOUND</dt>
+    <dd>OUTBOUND{{% md %}}The outboud direction represents the trusted side.{{% /md %}}</dd><dt>BIDIRECTIONAL</dt>
+    <dd>BIDIRECTIONAL{{% md %}}The bidirectional direction represents the trusted / trusting side.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="trusttrusttype">Trust<wbr>Trust<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Trust<wbr>Type<wbr>Unspecified</dt>
+    <dd>TRUST_TYPE_UNSPECIFIED{{% md %}}Not Set{{% /md %}}</dd><dt>Forest</dt>
+    <dd>FOREST{{% md %}}The forest trust.{{% /md %}}</dd><dt>External</dt>
+    <dd>EXTERNAL{{% md %}}The external domain trust.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Trust<wbr>Trust<wbr>Type<wbr>Trust<wbr>Type<wbr>Unspecified</dt>
+    <dd>TRUST_TYPE_UNSPECIFIED{{% md %}}Not Set{{% /md %}}</dd><dt>Trust<wbr>Trust<wbr>Type<wbr>Forest</dt>
+    <dd>FOREST{{% md %}}The forest trust.{{% /md %}}</dd><dt>Trust<wbr>Trust<wbr>Type<wbr>External</dt>
+    <dd>EXTERNAL{{% md %}}The external domain trust.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Trust<wbr>Type<wbr>Unspecified</dt>
+    <dd>TRUST_TYPE_UNSPECIFIED{{% md %}}Not Set{{% /md %}}</dd><dt>Forest</dt>
+    <dd>FOREST{{% md %}}The forest trust.{{% /md %}}</dd><dt>External</dt>
+    <dd>EXTERNAL{{% md %}}The external domain trust.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TRUST_TYPE_UNSPECIFIED</dt>
+    <dd>TRUST_TYPE_UNSPECIFIED{{% md %}}Not Set{{% /md %}}</dd><dt>FOREST</dt>
+    <dd>FOREST{{% md %}}The forest trust.{{% /md %}}</dd><dt>EXTERNAL</dt>
+    <dd>EXTERNAL{{% md %}}The external domain trust.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -27,7 +27,7 @@ Creates a taxonomy in the specified project.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Taxonomy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">activated_policy_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">activated_policy_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[_datacatalog_v1beta1.TaxonomyActivatedPolicyTypesItem]]</span> = None<span class="p">,</span>
              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -181,7 +181,7 @@ The Taxonomy resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#activatedpolicytypes_csharp" style="color: inherit; text-decoration: inherit;">Activated<wbr>Policy<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#taxonomyactivatedpolicytypesitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Data<wbr>Catalog.<wbr>V1Beta1.<wbr>Taxonomy<wbr>Activated<wbr>Policy<wbr>Types<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -225,7 +225,7 @@ The Taxonomy resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#activatedpolicytypes_go" style="color: inherit; text-decoration: inherit;">Activated<wbr>Policy<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#taxonomyactivatedpolicytypesitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -269,7 +269,7 @@ The Taxonomy resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#activatedpolicytypes_nodejs" style="color: inherit; text-decoration: inherit;">activated<wbr>Policy<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#taxonomyactivatedpolicytypesitem">Taxonomy<wbr>Activated<wbr>Policy<wbr>Types<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -313,7 +313,7 @@ The Taxonomy resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#activated_policy_types_python" style="color: inherit; text-decoration: inherit;">activated_<wbr>policy_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#taxonomyactivatedpolicytypesitem">Taxonomy<wbr>Activated<wbr>Policy<wbr>Types<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -607,6 +607,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last-modified time of the resource within the given system.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="taxonomyactivatedpolicytypesitem">Taxonomy<wbr>Activated<wbr>Policy<wbr>Types<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Policy<wbr>Type<wbr>Unspecified</dt>
+    <dd>POLICY_TYPE_UNSPECIFIED{{% md %}}Unspecified policy type.{{% /md %}}</dd><dt>Fine<wbr>Grained<wbr>Access<wbr>Control</dt>
+    <dd>FINE_GRAINED_ACCESS_CONTROL{{% md %}}Fine grained access control policy, which enables access control on tagged resources.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Taxonomy<wbr>Activated<wbr>Policy<wbr>Types<wbr>Item<wbr>Policy<wbr>Type<wbr>Unspecified</dt>
+    <dd>POLICY_TYPE_UNSPECIFIED{{% md %}}Unspecified policy type.{{% /md %}}</dd><dt>Taxonomy<wbr>Activated<wbr>Policy<wbr>Types<wbr>Item<wbr>Fine<wbr>Grained<wbr>Access<wbr>Control</dt>
+    <dd>FINE_GRAINED_ACCESS_CONTROL{{% md %}}Fine grained access control policy, which enables access control on tagged resources.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Policy<wbr>Type<wbr>Unspecified</dt>
+    <dd>POLICY_TYPE_UNSPECIFIED{{% md %}}Unspecified policy type.{{% /md %}}</dd><dt>Fine<wbr>Grained<wbr>Access<wbr>Control</dt>
+    <dd>FINE_GRAINED_ACCESS_CONTROL{{% md %}}Fine grained access control policy, which enables access control on tagged resources.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>POLICY_TYPE_UNSPECIFIED</dt>
+    <dd>POLICY_TYPE_UNSPECIFIED{{% md %}}Unspecified policy type.{{% /md %}}</dd><dt>FINE_GRAINED_ACCESS_CONTROL</dt>
+    <dd>FINE_GRAINED_ACCESS_CONTROL{{% md %}}Fine grained access control policy, which enables access control on tagged resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

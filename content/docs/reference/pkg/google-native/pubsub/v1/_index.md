@@ -21,6 +21,18 @@ Explore the resources and functions of the google-native.pubsub/v1 module.
     <li><a href="topiciampolicy" title="TopicIamPolicy"><span class="symbol resource"></span>TopicIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getschema" title="GetSchema"><span class="symbol function"></span>GetSchema</a></li>
+    <li><a href="getschemaiampolicy" title="GetSchemaIamPolicy"><span class="symbol function"></span>GetSchemaIamPolicy</a></li>
+    <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
+    <li><a href="getsnapshotiampolicy" title="GetSnapshotIamPolicy"><span class="symbol function"></span>GetSnapshotIamPolicy</a></li>
+    <li><a href="getsubscription" title="GetSubscription"><span class="symbol function"></span>GetSubscription</a></li>
+    <li><a href="getsubscriptioniampolicy" title="GetSubscriptionIamPolicy"><span class="symbol function"></span>GetSubscriptionIamPolicy</a></li>
+    <li><a href="gettopic" title="GetTopic"><span class="symbol function"></span>GetTopic</a></li>
+    <li><a href="gettopiciampolicy" title="GetTopicIamPolicy"><span class="symbol function"></span>GetTopicIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -28,6 +40,6 @@ Explore the resources and functions of the google-native.pubsub/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

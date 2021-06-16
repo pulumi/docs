@@ -37,7 +37,7 @@ Creates an evaluation job.
                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                  <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                  <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_datalabeling_v1beta1.EvaluationJobState]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">EvaluationJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EvaluationJobArgs</a></span><span class="p">,</span>
@@ -251,7 +251,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#evaluationjobstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Data<wbr>Labeling.<wbr>V1Beta1.<wbr>Evaluation<wbr>Job<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Describes the current state of the job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -343,7 +343,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#evaluationjobstate">Evaluation<wbr>Job<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Describes the current state of the job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -435,7 +435,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#evaluationjobstate">Evaluation<wbr>Job<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Describes the current state of the job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -527,7 +527,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#evaluationjobstate">Evaluation<wbr>Job<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Describes the current state of the job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -596,6 +596,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="evaluationjobstate">Evaluation<wbr>Job<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED</dd><dt>Scheduled</dt>
+    <dd>SCHEDULED{{% md %}}The job is scheduled to run at the configured interval. You can pause or delete the job. When the job is in this state, it samples prediction input and output from your model version into your BigQuery table as predictions occur.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The job is currently running. When the job runs, Data Labeling Service does several things: 1. If you have configured your job to use Data Labeling Service for ground truth labeling, the service creates a Dataset and a labeling task for all data sampled since the last time the job ran. Human labelers provide ground truth labels for your data. Human labeling may take hours, or even days, depending on how much data has been sampled. The job remains in the `RUNNING` state during this time, and it can even be running multiple times in parallel if it gets triggered again (for example 24 hours later) before the earlier run has completed. When human labelers have finished labeling the data, the next step occurs. If you have configured your job to provide your own ground truth labels, Data Labeling Service still creates a Dataset for newly sampled data, but it expects that you have already added ground truth labels to the BigQuery table by this time. The next step occurs immediately. 2. Data Labeling Service creates an Evaluation by comparing your model version's predictions with the ground truth labels. If the job remains in this state for a long time, it continues to sample prediction data into your BigQuery table and will run again at the next interval, even if it causes the job to run multiple times in parallel.{{% /md %}}</dd><dt>Paused</dt>
+    <dd>PAUSED{{% md %}}The job is not sampling prediction input and output into your BigQuery table and it will not run according to its schedule. You can resume the job.{{% /md %}}</dd><dt>Stopped</dt>
+    <dd>STOPPED{{% md %}}The job has this state right before it is deleted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Evaluation<wbr>Job<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED</dd><dt>Evaluation<wbr>Job<wbr>State<wbr>Scheduled</dt>
+    <dd>SCHEDULED{{% md %}}The job is scheduled to run at the configured interval. You can pause or delete the job. When the job is in this state, it samples prediction input and output from your model version into your BigQuery table as predictions occur.{{% /md %}}</dd><dt>Evaluation<wbr>Job<wbr>State<wbr>Running</dt>
+    <dd>RUNNING{{% md %}}The job is currently running. When the job runs, Data Labeling Service does several things: 1. If you have configured your job to use Data Labeling Service for ground truth labeling, the service creates a Dataset and a labeling task for all data sampled since the last time the job ran. Human labelers provide ground truth labels for your data. Human labeling may take hours, or even days, depending on how much data has been sampled. The job remains in the `RUNNING` state during this time, and it can even be running multiple times in parallel if it gets triggered again (for example 24 hours later) before the earlier run has completed. When human labelers have finished labeling the data, the next step occurs. If you have configured your job to provide your own ground truth labels, Data Labeling Service still creates a Dataset for newly sampled data, but it expects that you have already added ground truth labels to the BigQuery table by this time. The next step occurs immediately. 2. Data Labeling Service creates an Evaluation by comparing your model version's predictions with the ground truth labels. If the job remains in this state for a long time, it continues to sample prediction data into your BigQuery table and will run again at the next interval, even if it causes the job to run multiple times in parallel.{{% /md %}}</dd><dt>Evaluation<wbr>Job<wbr>State<wbr>Paused</dt>
+    <dd>PAUSED{{% md %}}The job is not sampling prediction input and output into your BigQuery table and it will not run according to its schedule. You can resume the job.{{% /md %}}</dd><dt>Evaluation<wbr>Job<wbr>State<wbr>Stopped</dt>
+    <dd>STOPPED{{% md %}}The job has this state right before it is deleted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED</dd><dt>Scheduled</dt>
+    <dd>SCHEDULED{{% md %}}The job is scheduled to run at the configured interval. You can pause or delete the job. When the job is in this state, it samples prediction input and output from your model version into your BigQuery table as predictions occur.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The job is currently running. When the job runs, Data Labeling Service does several things: 1. If you have configured your job to use Data Labeling Service for ground truth labeling, the service creates a Dataset and a labeling task for all data sampled since the last time the job ran. Human labelers provide ground truth labels for your data. Human labeling may take hours, or even days, depending on how much data has been sampled. The job remains in the `RUNNING` state during this time, and it can even be running multiple times in parallel if it gets triggered again (for example 24 hours later) before the earlier run has completed. When human labelers have finished labeling the data, the next step occurs. If you have configured your job to provide your own ground truth labels, Data Labeling Service still creates a Dataset for newly sampled data, but it expects that you have already added ground truth labels to the BigQuery table by this time. The next step occurs immediately. 2. Data Labeling Service creates an Evaluation by comparing your model version's predictions with the ground truth labels. If the job remains in this state for a long time, it continues to sample prediction data into your BigQuery table and will run again at the next interval, even if it causes the job to run multiple times in parallel.{{% /md %}}</dd><dt>Paused</dt>
+    <dd>PAUSED{{% md %}}The job is not sampling prediction input and output into your BigQuery table and it will not run according to its schedule. You can resume the job.{{% /md %}}</dd><dt>Stopped</dt>
+    <dd>STOPPED{{% md %}}The job has this state right before it is deleted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED</dd><dt>SCHEDULED</dt>
+    <dd>SCHEDULED{{% md %}}The job is scheduled to run at the configured interval. You can pause or delete the job. When the job is in this state, it samples prediction input and output from your model version into your BigQuery table as predictions occur.{{% /md %}}</dd><dt>RUNNING</dt>
+    <dd>RUNNING{{% md %}}The job is currently running. When the job runs, Data Labeling Service does several things: 1. If you have configured your job to use Data Labeling Service for ground truth labeling, the service creates a Dataset and a labeling task for all data sampled since the last time the job ran. Human labelers provide ground truth labels for your data. Human labeling may take hours, or even days, depending on how much data has been sampled. The job remains in the `RUNNING` state during this time, and it can even be running multiple times in parallel if it gets triggered again (for example 24 hours later) before the earlier run has completed. When human labelers have finished labeling the data, the next step occurs. If you have configured your job to provide your own ground truth labels, Data Labeling Service still creates a Dataset for newly sampled data, but it expects that you have already added ground truth labels to the BigQuery table by this time. The next step occurs immediately. 2. Data Labeling Service creates an Evaluation by comparing your model version's predictions with the ground truth labels. If the job remains in this state for a long time, it continues to sample prediction data into your BigQuery table and will run again at the next interval, even if it causes the job to run multiple times in parallel.{{% /md %}}</dd><dt>PAUSED</dt>
+    <dd>PAUSED{{% md %}}The job is not sampling prediction input and output into your BigQuery table and it will not run according to its schedule. You can resume the job.{{% /md %}}</dd><dt>STOPPED</dt>
+    <dd>STOPPED{{% md %}}The job has this state right before it is deleted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="googleclouddatalabelingv1beta1attempt">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Attempt</h4>
 
@@ -2966,7 +3004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#answeraggregationtype_csharp" style="color: inherit; text-decoration: inherit;">Answer<wbr>Aggregation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1imageclassificationconfigansweraggregationtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Data<wbr>Labeling.<wbr>V1Beta1.<wbr>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Image<wbr>Classification<wbr>Config<wbr>Answer<wbr>Aggregation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of how to aggregate answers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2994,7 +3032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#answeraggregationtype_go" style="color: inherit; text-decoration: inherit;">Answer<wbr>Aggregation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1imageclassificationconfigansweraggregationtype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Image<wbr>Classification<wbr>Config<wbr>Answer<wbr>Aggregation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of how to aggregate answers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3022,7 +3060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#answeraggregationtype_nodejs" style="color: inherit; text-decoration: inherit;">answer<wbr>Aggregation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1imageclassificationconfigansweraggregationtype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Image<wbr>Classification<wbr>Config<wbr>Answer<wbr>Aggregation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of how to aggregate answers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3050,9 +3088,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#answer_aggregation_type_python" style="color: inherit; text-decoration: inherit;">answer_<wbr>aggregation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1imageclassificationconfigansweraggregationtype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Image<wbr>Classification<wbr>Config<wbr>Answer<wbr>Aggregation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of how to aggregate answers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddatalabelingv1beta1imageclassificationconfigansweraggregationtype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Image<wbr>Classification<wbr>Config<wbr>Answer<wbr>Aggregation<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>String<wbr>Aggregation<wbr>Type<wbr>Unspecified</dt>
+    <dd>STRING_AGGREGATION_TYPE_UNSPECIFIED</dd><dt>Majority<wbr>Vote</dt>
+    <dd>MAJORITY_VOTE{{% md %}}Majority vote to aggregate answers.{{% /md %}}</dd><dt>Unanimous<wbr>Vote</dt>
+    <dd>UNANIMOUS_VOTE{{% md %}}Unanimous answers will be adopted.{{% /md %}}</dd><dt>No<wbr>Aggregation</dt>
+    <dd>NO_AGGREGATION{{% md %}}Preserve all answers by crowd compute.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Image<wbr>Classification<wbr>Config<wbr>Answer<wbr>Aggregation<wbr>Type<wbr>String<wbr>Aggregation<wbr>Type<wbr>Unspecified</dt>
+    <dd>STRING_AGGREGATION_TYPE_UNSPECIFIED</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Image<wbr>Classification<wbr>Config<wbr>Answer<wbr>Aggregation<wbr>Type<wbr>Majority<wbr>Vote</dt>
+    <dd>MAJORITY_VOTE{{% md %}}Majority vote to aggregate answers.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Image<wbr>Classification<wbr>Config<wbr>Answer<wbr>Aggregation<wbr>Type<wbr>Unanimous<wbr>Vote</dt>
+    <dd>UNANIMOUS_VOTE{{% md %}}Unanimous answers will be adopted.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Image<wbr>Classification<wbr>Config<wbr>Answer<wbr>Aggregation<wbr>Type<wbr>No<wbr>Aggregation</dt>
+    <dd>NO_AGGREGATION{{% md %}}Preserve all answers by crowd compute.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>String<wbr>Aggregation<wbr>Type<wbr>Unspecified</dt>
+    <dd>STRING_AGGREGATION_TYPE_UNSPECIFIED</dd><dt>Majority<wbr>Vote</dt>
+    <dd>MAJORITY_VOTE{{% md %}}Majority vote to aggregate answers.{{% /md %}}</dd><dt>Unanimous<wbr>Vote</dt>
+    <dd>UNANIMOUS_VOTE{{% md %}}Unanimous answers will be adopted.{{% /md %}}</dd><dt>No<wbr>Aggregation</dt>
+    <dd>NO_AGGREGATION{{% md %}}Preserve all answers by crowd compute.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STRING_AGGREGATION_TYPE_UNSPECIFIED</dt>
+    <dd>STRING_AGGREGATION_TYPE_UNSPECIFIED</dd><dt>MAJORITY_VOTE</dt>
+    <dd>MAJORITY_VOTE{{% md %}}Majority vote to aggregate answers.{{% /md %}}</dd><dt>UNANIMOUS_VOTE</dt>
+    <dd>UNANIMOUS_VOTE{{% md %}}Unanimous answers will be adopted.{{% /md %}}</dd><dt>NO_AGGREGATION</dt>
+    <dd>NO_AGGREGATION{{% md %}}Preserve all answers by crowd compute.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddatalabelingv1beta1imageclassificationconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Image<wbr>Classification<wbr>Config<wbr>Response</h4>
@@ -3178,7 +3250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotationtype_csharp" style="color: inherit; text-decoration: inherit;">Annotation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigannotationtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Data<wbr>Labeling.<wbr>V1Beta1.<wbr>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3202,7 +3274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigdatatype">Pulumi.<wbr>Google<wbr>Native.<wbr>Data<wbr>Labeling.<wbr>V1Beta1.<wbr>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Data type must be specifed when user tries to import data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3230,7 +3302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotationtype_go" style="color: inherit; text-decoration: inherit;">Annotation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigannotationtype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3254,7 +3326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigdatatype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Data type must be specifed when user tries to import data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3282,7 +3354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotationtype_nodejs" style="color: inherit; text-decoration: inherit;">annotation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigannotationtype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3306,7 +3378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigdatatype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Data type must be specifed when user tries to import data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3334,7 +3406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotation_type_python" style="color: inherit; text-decoration: inherit;">annotation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigannotationtype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3358,7 +3430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigdatatype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Data type must be specifed when user tries to import data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3377,6 +3449,118 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#googleclouddatalabelingv1beta1textmetadata">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required for text import, as language code must be specified.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddatalabelingv1beta1inputconfigannotationtype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Annotation<wbr>Type<wbr>Unspecified</dt>
+    <dd>ANNOTATION_TYPE_UNSPECIFIED</dd><dt>Image<wbr>Classification<wbr>Annotation</dt>
+    <dd>IMAGE_CLASSIFICATION_ANNOTATION{{% md %}}Classification annotations in an image. Allowed for continuous evaluation.{{% /md %}}</dd><dt>Image<wbr>Bounding<wbr>Box<wbr>Annotation</dt>
+    <dd>IMAGE_BOUNDING_BOX_ANNOTATION{{% md %}}Bounding box annotations in an image. A form of image object detection. Allowed for continuous evaluation.{{% /md %}}</dd><dt>Image<wbr>Oriented<wbr>Bounding<wbr>Box<wbr>Annotation</dt>
+    <dd>IMAGE_ORIENTED_BOUNDING_BOX_ANNOTATION{{% md %}}Oriented bounding box. The box does not have to be parallel to horizontal line.{{% /md %}}</dd><dt>Image<wbr>Bounding<wbr>Poly<wbr>Annotation</dt>
+    <dd>IMAGE_BOUNDING_POLY_ANNOTATION{{% md %}}Bounding poly annotations in an image.{{% /md %}}</dd><dt>Image<wbr>Polyline<wbr>Annotation</dt>
+    <dd>IMAGE_POLYLINE_ANNOTATION{{% md %}}Polyline annotations in an image.{{% /md %}}</dd><dt>Image<wbr>Segmentation<wbr>Annotation</dt>
+    <dd>IMAGE_SEGMENTATION_ANNOTATION{{% md %}}Segmentation annotations in an image.{{% /md %}}</dd><dt>Video<wbr>Shots<wbr>Classification<wbr>Annotation</dt>
+    <dd>VIDEO_SHOTS_CLASSIFICATION_ANNOTATION{{% md %}}Classification annotations in video shots.{{% /md %}}</dd><dt>Video<wbr>Object<wbr>Tracking<wbr>Annotation</dt>
+    <dd>VIDEO_OBJECT_TRACKING_ANNOTATION{{% md %}}Video object tracking annotation.{{% /md %}}</dd><dt>Video<wbr>Object<wbr>Detection<wbr>Annotation</dt>
+    <dd>VIDEO_OBJECT_DETECTION_ANNOTATION{{% md %}}Video object detection annotation.{{% /md %}}</dd><dt>Video<wbr>Event<wbr>Annotation</dt>
+    <dd>VIDEO_EVENT_ANNOTATION{{% md %}}Video event annotation.{{% /md %}}</dd><dt>Text<wbr>Classification<wbr>Annotation</dt>
+    <dd>TEXT_CLASSIFICATION_ANNOTATION{{% md %}}Classification for text. Allowed for continuous evaluation.{{% /md %}}</dd><dt>Text<wbr>Entity<wbr>Extraction<wbr>Annotation</dt>
+    <dd>TEXT_ENTITY_EXTRACTION_ANNOTATION{{% md %}}Entity extraction for text.{{% /md %}}</dd><dt>General<wbr>Classification<wbr>Annotation</dt>
+    <dd>GENERAL_CLASSIFICATION_ANNOTATION{{% md %}}General classification. Allowed for continuous evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Annotation<wbr>Type<wbr>Unspecified</dt>
+    <dd>ANNOTATION_TYPE_UNSPECIFIED</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Image<wbr>Classification<wbr>Annotation</dt>
+    <dd>IMAGE_CLASSIFICATION_ANNOTATION{{% md %}}Classification annotations in an image. Allowed for continuous evaluation.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Image<wbr>Bounding<wbr>Box<wbr>Annotation</dt>
+    <dd>IMAGE_BOUNDING_BOX_ANNOTATION{{% md %}}Bounding box annotations in an image. A form of image object detection. Allowed for continuous evaluation.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Image<wbr>Oriented<wbr>Bounding<wbr>Box<wbr>Annotation</dt>
+    <dd>IMAGE_ORIENTED_BOUNDING_BOX_ANNOTATION{{% md %}}Oriented bounding box. The box does not have to be parallel to horizontal line.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Image<wbr>Bounding<wbr>Poly<wbr>Annotation</dt>
+    <dd>IMAGE_BOUNDING_POLY_ANNOTATION{{% md %}}Bounding poly annotations in an image.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Image<wbr>Polyline<wbr>Annotation</dt>
+    <dd>IMAGE_POLYLINE_ANNOTATION{{% md %}}Polyline annotations in an image.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Image<wbr>Segmentation<wbr>Annotation</dt>
+    <dd>IMAGE_SEGMENTATION_ANNOTATION{{% md %}}Segmentation annotations in an image.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Video<wbr>Shots<wbr>Classification<wbr>Annotation</dt>
+    <dd>VIDEO_SHOTS_CLASSIFICATION_ANNOTATION{{% md %}}Classification annotations in video shots.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Video<wbr>Object<wbr>Tracking<wbr>Annotation</dt>
+    <dd>VIDEO_OBJECT_TRACKING_ANNOTATION{{% md %}}Video object tracking annotation.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Video<wbr>Object<wbr>Detection<wbr>Annotation</dt>
+    <dd>VIDEO_OBJECT_DETECTION_ANNOTATION{{% md %}}Video object detection annotation.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Video<wbr>Event<wbr>Annotation</dt>
+    <dd>VIDEO_EVENT_ANNOTATION{{% md %}}Video event annotation.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Text<wbr>Classification<wbr>Annotation</dt>
+    <dd>TEXT_CLASSIFICATION_ANNOTATION{{% md %}}Classification for text. Allowed for continuous evaluation.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>Text<wbr>Entity<wbr>Extraction<wbr>Annotation</dt>
+    <dd>TEXT_ENTITY_EXTRACTION_ANNOTATION{{% md %}}Entity extraction for text.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Annotation<wbr>Type<wbr>General<wbr>Classification<wbr>Annotation</dt>
+    <dd>GENERAL_CLASSIFICATION_ANNOTATION{{% md %}}General classification. Allowed for continuous evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Annotation<wbr>Type<wbr>Unspecified</dt>
+    <dd>ANNOTATION_TYPE_UNSPECIFIED</dd><dt>Image<wbr>Classification<wbr>Annotation</dt>
+    <dd>IMAGE_CLASSIFICATION_ANNOTATION{{% md %}}Classification annotations in an image. Allowed for continuous evaluation.{{% /md %}}</dd><dt>Image<wbr>Bounding<wbr>Box<wbr>Annotation</dt>
+    <dd>IMAGE_BOUNDING_BOX_ANNOTATION{{% md %}}Bounding box annotations in an image. A form of image object detection. Allowed for continuous evaluation.{{% /md %}}</dd><dt>Image<wbr>Oriented<wbr>Bounding<wbr>Box<wbr>Annotation</dt>
+    <dd>IMAGE_ORIENTED_BOUNDING_BOX_ANNOTATION{{% md %}}Oriented bounding box. The box does not have to be parallel to horizontal line.{{% /md %}}</dd><dt>Image<wbr>Bounding<wbr>Poly<wbr>Annotation</dt>
+    <dd>IMAGE_BOUNDING_POLY_ANNOTATION{{% md %}}Bounding poly annotations in an image.{{% /md %}}</dd><dt>Image<wbr>Polyline<wbr>Annotation</dt>
+    <dd>IMAGE_POLYLINE_ANNOTATION{{% md %}}Polyline annotations in an image.{{% /md %}}</dd><dt>Image<wbr>Segmentation<wbr>Annotation</dt>
+    <dd>IMAGE_SEGMENTATION_ANNOTATION{{% md %}}Segmentation annotations in an image.{{% /md %}}</dd><dt>Video<wbr>Shots<wbr>Classification<wbr>Annotation</dt>
+    <dd>VIDEO_SHOTS_CLASSIFICATION_ANNOTATION{{% md %}}Classification annotations in video shots.{{% /md %}}</dd><dt>Video<wbr>Object<wbr>Tracking<wbr>Annotation</dt>
+    <dd>VIDEO_OBJECT_TRACKING_ANNOTATION{{% md %}}Video object tracking annotation.{{% /md %}}</dd><dt>Video<wbr>Object<wbr>Detection<wbr>Annotation</dt>
+    <dd>VIDEO_OBJECT_DETECTION_ANNOTATION{{% md %}}Video object detection annotation.{{% /md %}}</dd><dt>Video<wbr>Event<wbr>Annotation</dt>
+    <dd>VIDEO_EVENT_ANNOTATION{{% md %}}Video event annotation.{{% /md %}}</dd><dt>Text<wbr>Classification<wbr>Annotation</dt>
+    <dd>TEXT_CLASSIFICATION_ANNOTATION{{% md %}}Classification for text. Allowed for continuous evaluation.{{% /md %}}</dd><dt>Text<wbr>Entity<wbr>Extraction<wbr>Annotation</dt>
+    <dd>TEXT_ENTITY_EXTRACTION_ANNOTATION{{% md %}}Entity extraction for text.{{% /md %}}</dd><dt>General<wbr>Classification<wbr>Annotation</dt>
+    <dd>GENERAL_CLASSIFICATION_ANNOTATION{{% md %}}General classification. Allowed for continuous evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ANNOTATION_TYPE_UNSPECIFIED</dt>
+    <dd>ANNOTATION_TYPE_UNSPECIFIED</dd><dt>IMAGE_CLASSIFICATION_ANNOTATION</dt>
+    <dd>IMAGE_CLASSIFICATION_ANNOTATION{{% md %}}Classification annotations in an image. Allowed for continuous evaluation.{{% /md %}}</dd><dt>IMAGE_BOUNDING_BOX_ANNOTATION</dt>
+    <dd>IMAGE_BOUNDING_BOX_ANNOTATION{{% md %}}Bounding box annotations in an image. A form of image object detection. Allowed for continuous evaluation.{{% /md %}}</dd><dt>IMAGE_ORIENTED_BOUNDING_BOX_ANNOTATION</dt>
+    <dd>IMAGE_ORIENTED_BOUNDING_BOX_ANNOTATION{{% md %}}Oriented bounding box. The box does not have to be parallel to horizontal line.{{% /md %}}</dd><dt>IMAGE_BOUNDING_POLY_ANNOTATION</dt>
+    <dd>IMAGE_BOUNDING_POLY_ANNOTATION{{% md %}}Bounding poly annotations in an image.{{% /md %}}</dd><dt>IMAGE_POLYLINE_ANNOTATION</dt>
+    <dd>IMAGE_POLYLINE_ANNOTATION{{% md %}}Polyline annotations in an image.{{% /md %}}</dd><dt>IMAGE_SEGMENTATION_ANNOTATION</dt>
+    <dd>IMAGE_SEGMENTATION_ANNOTATION{{% md %}}Segmentation annotations in an image.{{% /md %}}</dd><dt>VIDEO_SHOTS_CLASSIFICATION_ANNOTATION</dt>
+    <dd>VIDEO_SHOTS_CLASSIFICATION_ANNOTATION{{% md %}}Classification annotations in video shots.{{% /md %}}</dd><dt>VIDEO_OBJECT_TRACKING_ANNOTATION</dt>
+    <dd>VIDEO_OBJECT_TRACKING_ANNOTATION{{% md %}}Video object tracking annotation.{{% /md %}}</dd><dt>VIDEO_OBJECT_DETECTION_ANNOTATION</dt>
+    <dd>VIDEO_OBJECT_DETECTION_ANNOTATION{{% md %}}Video object detection annotation.{{% /md %}}</dd><dt>VIDEO_EVENT_ANNOTATION</dt>
+    <dd>VIDEO_EVENT_ANNOTATION{{% md %}}Video event annotation.{{% /md %}}</dd><dt>TEXT_CLASSIFICATION_ANNOTATION</dt>
+    <dd>TEXT_CLASSIFICATION_ANNOTATION{{% md %}}Classification for text. Allowed for continuous evaluation.{{% /md %}}</dd><dt>TEXT_ENTITY_EXTRACTION_ANNOTATION</dt>
+    <dd>TEXT_ENTITY_EXTRACTION_ANNOTATION{{% md %}}Entity extraction for text.{{% /md %}}</dd><dt>GENERAL_CLASSIFICATION_ANNOTATION</dt>
+    <dd>GENERAL_CLASSIFICATION_ANNOTATION{{% md %}}General classification. Allowed for continuous evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddatalabelingv1beta1inputconfigdatatype">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Data<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATA_TYPE_UNSPECIFIED{{% md %}}Data type is unspecified.{{% /md %}}</dd><dt>Image</dt>
+    <dd>IMAGE{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>Video</dt>
+    <dd>VIDEO{{% md %}}Video data type.{{% /md %}}</dd><dt>Text</dt>
+    <dd>TEXT{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>General<wbr>Data</dt>
+    <dd>GENERAL_DATA{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type<wbr>Data<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATA_TYPE_UNSPECIFIED{{% md %}}Data type is unspecified.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type<wbr>Image</dt>
+    <dd>IMAGE{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type<wbr>Video</dt>
+    <dd>VIDEO{{% md %}}Video data type.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type<wbr>Text</dt>
+    <dd>TEXT{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Data<wbr>Type<wbr>General<wbr>Data</dt>
+    <dd>GENERAL_DATA{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Data<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATA_TYPE_UNSPECIFIED{{% md %}}Data type is unspecified.{{% /md %}}</dd><dt>Image</dt>
+    <dd>IMAGE{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>Video</dt>
+    <dd>VIDEO{{% md %}}Video data type.{{% /md %}}</dd><dt>Text</dt>
+    <dd>TEXT{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>General<wbr>Data</dt>
+    <dd>GENERAL_DATA{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DATA_TYPE_UNSPECIFIED</dt>
+    <dd>DATA_TYPE_UNSPECIFIED{{% md %}}Data type is unspecified.{{% /md %}}</dd><dt>IMAGE</dt>
+    <dd>IMAGE{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>VIDEO</dt>
+    <dd>VIDEO{{% md %}}Video data type.{{% /md %}}</dd><dt>TEXT</dt>
+    <dd>TEXT{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd><dt>GENERAL_DATA</dt>
+    <dd>GENERAL_DATA{{% md %}}Allowed for continuous evaluation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddatalabelingv1beta1inputconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Response</h4>

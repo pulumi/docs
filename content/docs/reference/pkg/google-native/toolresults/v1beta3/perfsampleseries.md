@@ -441,7 +441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perfmetrictype_csharp" style="color: inherit; text-decoration: inherit;">Perf<wbr>Metric<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#basicperfsampleseriesperfmetrictype">Pulumi.<wbr>Google<wbr>Native.<wbr>Tool<wbr>Results.<wbr>V1Beta3.<wbr>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Metric<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -449,7 +449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perfunit_csharp" style="color: inherit; text-decoration: inherit;">Perf<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#basicperfsampleseriesperfunit">Pulumi.<wbr>Google<wbr>Native.<wbr>Tool<wbr>Results.<wbr>V1Beta3.<wbr>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Unit</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -457,7 +457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampleserieslabel_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Series<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#basicperfsampleseriessampleserieslabel">Pulumi.<wbr>Google<wbr>Native.<wbr>Tool<wbr>Results.<wbr>V1Beta3.<wbr>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Sample<wbr>Series<wbr>Label</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -469,7 +469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perfmetrictype_go" style="color: inherit; text-decoration: inherit;">Perf<wbr>Metric<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#basicperfsampleseriesperfmetrictype">Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Metric<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -477,7 +477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perfunit_go" style="color: inherit; text-decoration: inherit;">Perf<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#basicperfsampleseriesperfunit">Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Unit</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -485,7 +485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampleserieslabel_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Series<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#basicperfsampleseriessampleserieslabel">Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Sample<wbr>Series<wbr>Label</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -497,7 +497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perfmetrictype_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Metric<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#basicperfsampleseriesperfmetrictype">Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Metric<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -505,7 +505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perfunit_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#basicperfsampleseriesperfunit">Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Unit</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -513,7 +513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampleserieslabel_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Series<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#basicperfsampleseriessampleserieslabel">Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Sample<wbr>Series<wbr>Label</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -525,7 +525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perf_metric_type_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>metric_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#basicperfsampleseriesperfmetrictype">Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Metric<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -533,7 +533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perf_unit_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#basicperfsampleseriesperfunit">Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Unit</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -541,9 +541,89 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sample_series_label_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>series_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#basicperfsampleseriessampleserieslabel">Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Sample<wbr>Series<wbr>Label</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="basicperfsampleseriesperfmetrictype">Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Metric<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Perf<wbr>Metric<wbr>Type<wbr>Unspecified</dt>
+    <dd>perfMetricTypeUnspecified</dd><dt>Memory</dt>
+    <dd>memory</dd><dt>Cpu</dt>
+    <dd>cpu</dd><dt>Network</dt>
+    <dd>network</dd><dt>Graphics</dt>
+    <dd>graphics</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Metric<wbr>Type<wbr>Perf<wbr>Metric<wbr>Type<wbr>Unspecified</dt>
+    <dd>perfMetricTypeUnspecified</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Metric<wbr>Type<wbr>Memory</dt>
+    <dd>memory</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Metric<wbr>Type<wbr>Cpu</dt>
+    <dd>cpu</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Metric<wbr>Type<wbr>Network</dt>
+    <dd>network</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Metric<wbr>Type<wbr>Graphics</dt>
+    <dd>graphics</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Perf<wbr>Metric<wbr>Type<wbr>Unspecified</dt>
+    <dd>perfMetricTypeUnspecified</dd><dt>Memory</dt>
+    <dd>memory</dd><dt>Cpu</dt>
+    <dd>cpu</dd><dt>Network</dt>
+    <dd>network</dd><dt>Graphics</dt>
+    <dd>graphics</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PERF_METRIC_TYPE_UNSPECIFIED</dt>
+    <dd>perfMetricTypeUnspecified</dd><dt>MEMORY</dt>
+    <dd>memory</dd><dt>CPU</dt>
+    <dd>cpu</dd><dt>NETWORK</dt>
+    <dd>network</dd><dt>GRAPHICS</dt>
+    <dd>graphics</dd></dl>
+{{% /choosable %}}
+
+<h4 id="basicperfsampleseriesperfunit">Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Unit</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Perf<wbr>Unit<wbr>Unspecified</dt>
+    <dd>perfUnitUnspecified</dd><dt>Kibibyte</dt>
+    <dd>kibibyte</dd><dt>Percent</dt>
+    <dd>percent</dd><dt>Bytes<wbr>Per<wbr>Second</dt>
+    <dd>bytesPerSecond</dd><dt>Frames<wbr>Per<wbr>Second</dt>
+    <dd>framesPerSecond</dd><dt>Byte</dt>
+    <dd>byte</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Unit<wbr>Perf<wbr>Unit<wbr>Unspecified</dt>
+    <dd>perfUnitUnspecified</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Unit<wbr>Kibibyte</dt>
+    <dd>kibibyte</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Unit<wbr>Percent</dt>
+    <dd>percent</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Unit<wbr>Bytes<wbr>Per<wbr>Second</dt>
+    <dd>bytesPerSecond</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Unit<wbr>Frames<wbr>Per<wbr>Second</dt>
+    <dd>framesPerSecond</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Perf<wbr>Unit<wbr>Byte</dt>
+    <dd>byte</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Perf<wbr>Unit<wbr>Unspecified</dt>
+    <dd>perfUnitUnspecified</dd><dt>Kibibyte</dt>
+    <dd>kibibyte</dd><dt>Percent</dt>
+    <dd>percent</dd><dt>Bytes<wbr>Per<wbr>Second</dt>
+    <dd>bytesPerSecond</dd><dt>Frames<wbr>Per<wbr>Second</dt>
+    <dd>framesPerSecond</dd><dt>Byte</dt>
+    <dd>byte</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PERF_UNIT_UNSPECIFIED</dt>
+    <dd>perfUnitUnspecified</dd><dt>KIBIBYTE</dt>
+    <dd>kibibyte</dd><dt>PERCENT</dt>
+    <dd>percent</dd><dt>BYTES_PER_SECOND</dt>
+    <dd>bytesPerSecond</dd><dt>FRAMES_PER_SECOND</dt>
+    <dd>framesPerSecond</dd><dt>BYTE</dt>
+    <dd>byte</dd></dl>
 {{% /choosable %}}
 
 <h4 id="basicperfsampleseriesresponse">Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Response</h4>
@@ -658,6 +738,76 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="basicperfsampleseriessampleserieslabel">Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Sample<wbr>Series<wbr>Label</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sample<wbr>Series<wbr>Type<wbr>Unspecified</dt>
+    <dd>sampleSeriesTypeUnspecified</dd><dt>Memory<wbr>Rss<wbr>Private</dt>
+    <dd>memoryRssPrivate{{% md %}}Memory sample series{{% /md %}}</dd><dt>Memory<wbr>Rss<wbr>Shared</dt>
+    <dd>memoryRssShared</dd><dt>Memory<wbr>Rss<wbr>Total</dt>
+    <dd>memoryRssTotal</dd><dt>Memory<wbr>Total</dt>
+    <dd>memoryTotal</dd><dt>Cpu<wbr>User</dt>
+    <dd>cpuUser{{% md %}}CPU sample series{{% /md %}}</dd><dt>Cpu<wbr>Kernel</dt>
+    <dd>cpuKernel</dd><dt>Cpu<wbr>Total</dt>
+    <dd>cpuTotal</dd><dt>Nt<wbr>Bytes<wbr>Transferred</dt>
+    <dd>ntBytesTransferred{{% md %}}Network sample series{{% /md %}}</dd><dt>Nt<wbr>Bytes<wbr>Received</dt>
+    <dd>ntBytesReceived</dd><dt>Network<wbr>Sent</dt>
+    <dd>networkSent</dd><dt>Network<wbr>Received</dt>
+    <dd>networkReceived</dd><dt>Graphics<wbr>Frame<wbr>Rate</dt>
+    <dd>graphicsFrameRate{{% md %}}Graphics sample series{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Sample<wbr>Series<wbr>Label<wbr>Sample<wbr>Series<wbr>Type<wbr>Unspecified</dt>
+    <dd>sampleSeriesTypeUnspecified</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Sample<wbr>Series<wbr>Label<wbr>Memory<wbr>Rss<wbr>Private</dt>
+    <dd>memoryRssPrivate{{% md %}}Memory sample series{{% /md %}}</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Sample<wbr>Series<wbr>Label<wbr>Memory<wbr>Rss<wbr>Shared</dt>
+    <dd>memoryRssShared</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Sample<wbr>Series<wbr>Label<wbr>Memory<wbr>Rss<wbr>Total</dt>
+    <dd>memoryRssTotal</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Sample<wbr>Series<wbr>Label<wbr>Memory<wbr>Total</dt>
+    <dd>memoryTotal</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Sample<wbr>Series<wbr>Label<wbr>Cpu<wbr>User</dt>
+    <dd>cpuUser{{% md %}}CPU sample series{{% /md %}}</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Sample<wbr>Series<wbr>Label<wbr>Cpu<wbr>Kernel</dt>
+    <dd>cpuKernel</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Sample<wbr>Series<wbr>Label<wbr>Cpu<wbr>Total</dt>
+    <dd>cpuTotal</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Sample<wbr>Series<wbr>Label<wbr>Nt<wbr>Bytes<wbr>Transferred</dt>
+    <dd>ntBytesTransferred{{% md %}}Network sample series{{% /md %}}</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Sample<wbr>Series<wbr>Label<wbr>Nt<wbr>Bytes<wbr>Received</dt>
+    <dd>ntBytesReceived</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Sample<wbr>Series<wbr>Label<wbr>Network<wbr>Sent</dt>
+    <dd>networkSent</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Sample<wbr>Series<wbr>Label<wbr>Network<wbr>Received</dt>
+    <dd>networkReceived</dd><dt>Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Sample<wbr>Series<wbr>Label<wbr>Graphics<wbr>Frame<wbr>Rate</dt>
+    <dd>graphicsFrameRate{{% md %}}Graphics sample series{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sample<wbr>Series<wbr>Type<wbr>Unspecified</dt>
+    <dd>sampleSeriesTypeUnspecified</dd><dt>Memory<wbr>Rss<wbr>Private</dt>
+    <dd>memoryRssPrivate{{% md %}}Memory sample series{{% /md %}}</dd><dt>Memory<wbr>Rss<wbr>Shared</dt>
+    <dd>memoryRssShared</dd><dt>Memory<wbr>Rss<wbr>Total</dt>
+    <dd>memoryRssTotal</dd><dt>Memory<wbr>Total</dt>
+    <dd>memoryTotal</dd><dt>Cpu<wbr>User</dt>
+    <dd>cpuUser{{% md %}}CPU sample series{{% /md %}}</dd><dt>Cpu<wbr>Kernel</dt>
+    <dd>cpuKernel</dd><dt>Cpu<wbr>Total</dt>
+    <dd>cpuTotal</dd><dt>Nt<wbr>Bytes<wbr>Transferred</dt>
+    <dd>ntBytesTransferred{{% md %}}Network sample series{{% /md %}}</dd><dt>Nt<wbr>Bytes<wbr>Received</dt>
+    <dd>ntBytesReceived</dd><dt>Network<wbr>Sent</dt>
+    <dd>networkSent</dd><dt>Network<wbr>Received</dt>
+    <dd>networkReceived</dd><dt>Graphics<wbr>Frame<wbr>Rate</dt>
+    <dd>graphicsFrameRate{{% md %}}Graphics sample series{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SAMPLE_SERIES_TYPE_UNSPECIFIED</dt>
+    <dd>sampleSeriesTypeUnspecified</dd><dt>MEMORY_RSS_PRIVATE</dt>
+    <dd>memoryRssPrivate{{% md %}}Memory sample series{{% /md %}}</dd><dt>MEMORY_RSS_SHARED</dt>
+    <dd>memoryRssShared</dd><dt>MEMORY_RSS_TOTAL</dt>
+    <dd>memoryRssTotal</dd><dt>MEMORY_TOTAL</dt>
+    <dd>memoryTotal</dd><dt>CPU_USER</dt>
+    <dd>cpuUser{{% md %}}CPU sample series{{% /md %}}</dd><dt>CPU_KERNEL</dt>
+    <dd>cpuKernel</dd><dt>CPU_TOTAL</dt>
+    <dd>cpuTotal</dd><dt>NT_BYTES_TRANSFERRED</dt>
+    <dd>ntBytesTransferred{{% md %}}Network sample series{{% /md %}}</dd><dt>NT_BYTES_RECEIVED</dt>
+    <dd>ntBytesReceived</dd><dt>NETWORK_SENT</dt>
+    <dd>networkSent</dd><dt>NETWORK_RECEIVED</dt>
+    <dd>networkReceived</dd><dt>GRAPHICS_FRAME_RATE</dt>
+    <dd>graphicsFrameRate{{% md %}}Graphics sample series{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

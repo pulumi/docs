@@ -47,7 +47,7 @@ Deploys code and resource files to a new version.
             <span class="nx">handlers</span><span class="p">:</span> <span class="nx">Optional[Sequence[_appengine_v1beta.UrlMapArgs]]</span> = None<span class="p">,</span>
             <span class="nx">health_check</span><span class="p">:</span> <span class="nx">Optional[_appengine_v1beta.HealthCheckArgs]</span> = None<span class="p">,</span>
             <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+            <span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[_appengine_v1beta.VersionInboundServicesItem]]</span> = None<span class="p">,</span>
             <span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">libraries</span><span class="p">:</span> <span class="nx">Optional[Sequence[_appengine_v1beta.LibraryArgs]]</span> = None<span class="p">,</span>
             <span class="nx">liveness_check</span><span class="p">:</span> <span class="nx">Optional[_appengine_v1beta.LivenessCheckArgs]</span> = None<span class="p">,</span>
@@ -63,7 +63,7 @@ Deploys code and resource files to a new version.
             <span class="nx">runtime_main_executable_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[_appengine_v1beta.VersionServingStatus]</span> = None<span class="p">,</span>
             <span class="nx">threadsafe</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">version_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">vm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -369,7 +369,7 @@ The Version resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#inboundservices_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#versioninboundservicesitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>App<wbr>Engine.<wbr>V1Beta.<wbr>Version<wbr>Inbound<wbr>Services<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -489,7 +489,7 @@ The Version resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servingstatus_csharp" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#versionservingstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>App<wbr>Engine.<wbr>V1Beta.<wbr>Version<wbr>Serving<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.SERVING_STATUS_UNSPECIFIED is an invalid value. Defaults to SERVING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -701,7 +701,7 @@ The Version resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#inboundservices_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#versioninboundservicesitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -821,7 +821,7 @@ The Version resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servingstatus_go" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#versionservingstatus">Version<wbr>Serving<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.SERVING_STATUS_UNSPECIFIED is an invalid value. Defaults to SERVING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1033,7 +1033,7 @@ The Version resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#inboundservices_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#versioninboundservicesitem">Version<wbr>Inbound<wbr>Services<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1153,7 +1153,7 @@ The Version resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servingstatus_nodejs" style="color: inherit; text-decoration: inherit;">serving<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#versionservingstatus">Version<wbr>Serving<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.SERVING_STATUS_UNSPECIFIED is an invalid value. Defaults to SERVING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1365,7 +1365,7 @@ The Version resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#inbound_services_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#versioninboundservicesitem">Version<wbr>Inbound<wbr>Services<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1485,7 +1485,7 @@ The Version resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#serving_status_python" style="color: inherit; text-decoration: inherit;">serving_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#versionservingstatus">Version<wbr>Serving<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.SERVING_STATUS_UNSPECIFIED is an invalid value. Defaults to SERVING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1596,7 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authfailaction_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Fail<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#apiconfighandlerauthfailaction">Pulumi.<wbr>Google<wbr>Native.<wbr>App<wbr>Engine.<wbr>V1Beta.<wbr>Api<wbr>Config<wbr>Handler<wbr>Auth<wbr>Fail<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication. Defaults to redirect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1604,7 +1604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#apiconfighandlerlogin">Pulumi.<wbr>Google<wbr>Native.<wbr>App<wbr>Engine.<wbr>V1Beta.<wbr>Api<wbr>Config<wbr>Handler<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource. Defaults to optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1620,7 +1620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitylevel_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#apiconfighandlersecuritylevel">Pulumi.<wbr>Google<wbr>Native.<wbr>App<wbr>Engine.<wbr>V1Beta.<wbr>Api<wbr>Config<wbr>Handler<wbr>Security<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1640,7 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authfailaction_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Fail<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#apiconfighandlerauthfailaction">Api<wbr>Config<wbr>Handler<wbr>Auth<wbr>Fail<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication. Defaults to redirect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1648,7 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#apiconfighandlerlogin">Api<wbr>Config<wbr>Handler<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource. Defaults to optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1664,7 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitylevel_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#apiconfighandlersecuritylevel">Api<wbr>Config<wbr>Handler<wbr>Security<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1684,7 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authfailaction_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Fail<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#apiconfighandlerauthfailaction">Api<wbr>Config<wbr>Handler<wbr>Auth<wbr>Fail<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication. Defaults to redirect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1692,7 +1692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#apiconfighandlerlogin">Api<wbr>Config<wbr>Handler<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource. Defaults to optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1708,7 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitylevel_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#apiconfighandlersecuritylevel">Api<wbr>Config<wbr>Handler<wbr>Security<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1728,7 +1728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auth_fail_action_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>fail_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#apiconfighandlerauthfailaction">Api<wbr>Config<wbr>Handler<wbr>Auth<wbr>Fail<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication. Defaults to redirect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1736,7 +1736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#apiconfighandlerlogin">Api<wbr>Config<wbr>Handler<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource. Defaults to optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1752,7 +1752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_level_python" style="color: inherit; text-decoration: inherit;">security_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#apiconfighandlersecuritylevel">Api<wbr>Config<wbr>Handler<wbr>Security<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1763,6 +1763,70 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to serve the endpoint at.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="apiconfighandlerauthfailaction">Api<wbr>Config<wbr>Handler<wbr>Auth<wbr>Fail<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Auth<wbr>Fail<wbr>Action<wbr>Unspecified</dt>
+    <dd>AUTH_FAIL_ACTION_UNSPECIFIED{{% md %}}Not specified. AUTH_FAIL_ACTION_REDIRECT is assumed.{{% /md %}}</dd><dt>Auth<wbr>Fail<wbr>Action<wbr>Redirect</dt>
+    <dd>AUTH_FAIL_ACTION_REDIRECT{{% md %}}Redirects user to "accounts.google.com". The user is redirected back to the application URL after signing in or creating an account.{{% /md %}}</dd><dt>Auth<wbr>Fail<wbr>Action<wbr>Unauthorized</dt>
+    <dd>AUTH_FAIL_ACTION_UNAUTHORIZED{{% md %}}Rejects request with a 401 HTTP status code and an error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Api<wbr>Config<wbr>Handler<wbr>Auth<wbr>Fail<wbr>Action<wbr>Auth<wbr>Fail<wbr>Action<wbr>Unspecified</dt>
+    <dd>AUTH_FAIL_ACTION_UNSPECIFIED{{% md %}}Not specified. AUTH_FAIL_ACTION_REDIRECT is assumed.{{% /md %}}</dd><dt>Api<wbr>Config<wbr>Handler<wbr>Auth<wbr>Fail<wbr>Action<wbr>Auth<wbr>Fail<wbr>Action<wbr>Redirect</dt>
+    <dd>AUTH_FAIL_ACTION_REDIRECT{{% md %}}Redirects user to "accounts.google.com". The user is redirected back to the application URL after signing in or creating an account.{{% /md %}}</dd><dt>Api<wbr>Config<wbr>Handler<wbr>Auth<wbr>Fail<wbr>Action<wbr>Auth<wbr>Fail<wbr>Action<wbr>Unauthorized</dt>
+    <dd>AUTH_FAIL_ACTION_UNAUTHORIZED{{% md %}}Rejects request with a 401 HTTP status code and an error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Auth<wbr>Fail<wbr>Action<wbr>Unspecified</dt>
+    <dd>AUTH_FAIL_ACTION_UNSPECIFIED{{% md %}}Not specified. AUTH_FAIL_ACTION_REDIRECT is assumed.{{% /md %}}</dd><dt>Auth<wbr>Fail<wbr>Action<wbr>Redirect</dt>
+    <dd>AUTH_FAIL_ACTION_REDIRECT{{% md %}}Redirects user to "accounts.google.com". The user is redirected back to the application URL after signing in or creating an account.{{% /md %}}</dd><dt>Auth<wbr>Fail<wbr>Action<wbr>Unauthorized</dt>
+    <dd>AUTH_FAIL_ACTION_UNAUTHORIZED{{% md %}}Rejects request with a 401 HTTP status code and an error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>AUTH_FAIL_ACTION_UNSPECIFIED</dt>
+    <dd>AUTH_FAIL_ACTION_UNSPECIFIED{{% md %}}Not specified. AUTH_FAIL_ACTION_REDIRECT is assumed.{{% /md %}}</dd><dt>AUTH_FAIL_ACTION_REDIRECT</dt>
+    <dd>AUTH_FAIL_ACTION_REDIRECT{{% md %}}Redirects user to "accounts.google.com". The user is redirected back to the application URL after signing in or creating an account.{{% /md %}}</dd><dt>AUTH_FAIL_ACTION_UNAUTHORIZED</dt>
+    <dd>AUTH_FAIL_ACTION_UNAUTHORIZED{{% md %}}Rejects request with a 401 HTTP status code and an error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="apiconfighandlerlogin">Api<wbr>Config<wbr>Handler<wbr>Login</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Login<wbr>Unspecified</dt>
+    <dd>LOGIN_UNSPECIFIED{{% md %}}Not specified. LOGIN_OPTIONAL is assumed.{{% /md %}}</dd><dt>Login<wbr>Optional</dt>
+    <dd>LOGIN_OPTIONAL{{% md %}}Does not require that the user is signed in.{{% /md %}}</dd><dt>Login<wbr>Admin</dt>
+    <dd>LOGIN_ADMIN{{% md %}}If the user is not signed in, the auth_fail_action is taken. In addition, if the user is not an administrator for the application, they are given an error message regardless of auth_fail_action. If the user is an administrator, the handler proceeds.{{% /md %}}</dd><dt>Login<wbr>Required</dt>
+    <dd>LOGIN_REQUIRED{{% md %}}If the user has signed in, the handler proceeds normally. Otherwise, the auth_fail_action is taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Api<wbr>Config<wbr>Handler<wbr>Login<wbr>Login<wbr>Unspecified</dt>
+    <dd>LOGIN_UNSPECIFIED{{% md %}}Not specified. LOGIN_OPTIONAL is assumed.{{% /md %}}</dd><dt>Api<wbr>Config<wbr>Handler<wbr>Login<wbr>Login<wbr>Optional</dt>
+    <dd>LOGIN_OPTIONAL{{% md %}}Does not require that the user is signed in.{{% /md %}}</dd><dt>Api<wbr>Config<wbr>Handler<wbr>Login<wbr>Login<wbr>Admin</dt>
+    <dd>LOGIN_ADMIN{{% md %}}If the user is not signed in, the auth_fail_action is taken. In addition, if the user is not an administrator for the application, they are given an error message regardless of auth_fail_action. If the user is an administrator, the handler proceeds.{{% /md %}}</dd><dt>Api<wbr>Config<wbr>Handler<wbr>Login<wbr>Login<wbr>Required</dt>
+    <dd>LOGIN_REQUIRED{{% md %}}If the user has signed in, the handler proceeds normally. Otherwise, the auth_fail_action is taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Login<wbr>Unspecified</dt>
+    <dd>LOGIN_UNSPECIFIED{{% md %}}Not specified. LOGIN_OPTIONAL is assumed.{{% /md %}}</dd><dt>Login<wbr>Optional</dt>
+    <dd>LOGIN_OPTIONAL{{% md %}}Does not require that the user is signed in.{{% /md %}}</dd><dt>Login<wbr>Admin</dt>
+    <dd>LOGIN_ADMIN{{% md %}}If the user is not signed in, the auth_fail_action is taken. In addition, if the user is not an administrator for the application, they are given an error message regardless of auth_fail_action. If the user is an administrator, the handler proceeds.{{% /md %}}</dd><dt>Login<wbr>Required</dt>
+    <dd>LOGIN_REQUIRED{{% md %}}If the user has signed in, the handler proceeds normally. Otherwise, the auth_fail_action is taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LOGIN_UNSPECIFIED</dt>
+    <dd>LOGIN_UNSPECIFIED{{% md %}}Not specified. LOGIN_OPTIONAL is assumed.{{% /md %}}</dd><dt>LOGIN_OPTIONAL</dt>
+    <dd>LOGIN_OPTIONAL{{% md %}}Does not require that the user is signed in.{{% /md %}}</dd><dt>LOGIN_ADMIN</dt>
+    <dd>LOGIN_ADMIN{{% md %}}If the user is not signed in, the auth_fail_action is taken. In addition, if the user is not an administrator for the application, they are given an error message regardless of auth_fail_action. If the user is an administrator, the handler proceeds.{{% /md %}}</dd><dt>LOGIN_REQUIRED</dt>
+    <dd>LOGIN_REQUIRED{{% md %}}If the user has signed in, the handler proceeds normally. Otherwise, the auth_fail_action is taken.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="apiconfighandlerresponse">Api<wbr>Config<wbr>Handler<wbr>Response</h4>
@@ -1941,6 +2005,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to serve the endpoint at.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="apiconfighandlersecuritylevel">Api<wbr>Config<wbr>Handler<wbr>Security<wbr>Level</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Secure<wbr>Unspecified</dt>
+    <dd>SECURE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Secure<wbr>Default</dt>
+    <dd>SECURE_DEFAULT{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used, and respond accordingly.{{% /md %}}</dd><dt>Secure<wbr>Never</dt>
+    <dd>SECURE_NEVER{{% md %}}Requests for a URL that match this handler that use HTTPS are automatically redirected to the HTTP equivalent URL.{{% /md %}}</dd><dt>Secure<wbr>Optional</dt>
+    <dd>SECURE_OPTIONAL{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used and respond accordingly.{{% /md %}}</dd><dt>Secure<wbr>Always</dt>
+    <dd>SECURE_ALWAYS{{% md %}}Requests for a URL that match this handler that do not use HTTPS are automatically redirected to the HTTPS URL with the same path. Query parameters are reserved for the redirect.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Api<wbr>Config<wbr>Handler<wbr>Security<wbr>Level<wbr>Secure<wbr>Unspecified</dt>
+    <dd>SECURE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Api<wbr>Config<wbr>Handler<wbr>Security<wbr>Level<wbr>Secure<wbr>Default</dt>
+    <dd>SECURE_DEFAULT{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used, and respond accordingly.{{% /md %}}</dd><dt>Api<wbr>Config<wbr>Handler<wbr>Security<wbr>Level<wbr>Secure<wbr>Never</dt>
+    <dd>SECURE_NEVER{{% md %}}Requests for a URL that match this handler that use HTTPS are automatically redirected to the HTTP equivalent URL.{{% /md %}}</dd><dt>Api<wbr>Config<wbr>Handler<wbr>Security<wbr>Level<wbr>Secure<wbr>Optional</dt>
+    <dd>SECURE_OPTIONAL{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used and respond accordingly.{{% /md %}}</dd><dt>Api<wbr>Config<wbr>Handler<wbr>Security<wbr>Level<wbr>Secure<wbr>Always</dt>
+    <dd>SECURE_ALWAYS{{% md %}}Requests for a URL that match this handler that do not use HTTPS are automatically redirected to the HTTPS URL with the same path. Query parameters are reserved for the redirect.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Secure<wbr>Unspecified</dt>
+    <dd>SECURE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Secure<wbr>Default</dt>
+    <dd>SECURE_DEFAULT{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used, and respond accordingly.{{% /md %}}</dd><dt>Secure<wbr>Never</dt>
+    <dd>SECURE_NEVER{{% md %}}Requests for a URL that match this handler that use HTTPS are automatically redirected to the HTTP equivalent URL.{{% /md %}}</dd><dt>Secure<wbr>Optional</dt>
+    <dd>SECURE_OPTIONAL{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used and respond accordingly.{{% /md %}}</dd><dt>Secure<wbr>Always</dt>
+    <dd>SECURE_ALWAYS{{% md %}}Requests for a URL that match this handler that do not use HTTPS are automatically redirected to the HTTPS URL with the same path. Query parameters are reserved for the redirect.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SECURE_UNSPECIFIED</dt>
+    <dd>SECURE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>SECURE_DEFAULT</dt>
+    <dd>SECURE_DEFAULT{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used, and respond accordingly.{{% /md %}}</dd><dt>SECURE_NEVER</dt>
+    <dd>SECURE_NEVER{{% md %}}Requests for a URL that match this handler that use HTTPS are automatically redirected to the HTTP equivalent URL.{{% /md %}}</dd><dt>SECURE_OPTIONAL</dt>
+    <dd>SECURE_OPTIONAL{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used and respond accordingly.{{% /md %}}</dd><dt>SECURE_ALWAYS</dt>
+    <dd>SECURE_ALWAYS{{% md %}}Requests for a URL that match this handler that do not use HTTPS are automatically redirected to the HTTPS URL with the same path. Query parameters are reserved for the redirect.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="apiendpointhandler">Api<wbr>Endpoint<wbr>Handler</h4>
@@ -4704,7 +4806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolloutstrategy_csharp" style="color: inherit; text-decoration: inherit;">Rollout<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#endpointsapiservicerolloutstrategy">Pulumi.<wbr>Google<wbr>Native.<wbr>App<wbr>Engine.<wbr>V1Beta.<wbr>Endpoints<wbr>Api<wbr>Service<wbr>Rollout<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Endpoints rollout strategy. If FIXED, config_id must be specified. If MANAGED, config_id must be omitted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4740,7 +4842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolloutstrategy_go" style="color: inherit; text-decoration: inherit;">Rollout<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#endpointsapiservicerolloutstrategy">Endpoints<wbr>Api<wbr>Service<wbr>Rollout<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Endpoints rollout strategy. If FIXED, config_id must be specified. If MANAGED, config_id must be omitted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4776,7 +4878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolloutstrategy_nodejs" style="color: inherit; text-decoration: inherit;">rollout<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#endpointsapiservicerolloutstrategy">Endpoints<wbr>Api<wbr>Service<wbr>Rollout<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Endpoints rollout strategy. If FIXED, config_id must be specified. If MANAGED, config_id must be omitted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4812,7 +4914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollout_strategy_python" style="color: inherit; text-decoration: inherit;">rollout_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#endpointsapiservicerolloutstrategy">Endpoints<wbr>Api<wbr>Service<wbr>Rollout<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Endpoints rollout strategy. If FIXED, config_id must be specified. If MANAGED, config_id must be omitted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4963,6 +5065,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Endpoints rollout strategy. If FIXED, config_id must be specified. If MANAGED, config_id must be omitted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="endpointsapiservicerolloutstrategy">Endpoints<wbr>Api<wbr>Service<wbr>Rollout<wbr>Strategy</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified<wbr>Rollout<wbr>Strategy</dt>
+    <dd>UNSPECIFIED_ROLLOUT_STRATEGY{{% md %}}Not specified. Defaults to FIXED.{{% /md %}}</dd><dt>Fixed</dt>
+    <dd>FIXED{{% md %}}Endpoints service configuration ID will be fixed to the configuration ID specified by config_id.{{% /md %}}</dd><dt>Managed</dt>
+    <dd>MANAGED{{% md %}}Endpoints service configuration ID will be updated with each rollout.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Endpoints<wbr>Api<wbr>Service<wbr>Rollout<wbr>Strategy<wbr>Unspecified<wbr>Rollout<wbr>Strategy</dt>
+    <dd>UNSPECIFIED_ROLLOUT_STRATEGY{{% md %}}Not specified. Defaults to FIXED.{{% /md %}}</dd><dt>Endpoints<wbr>Api<wbr>Service<wbr>Rollout<wbr>Strategy<wbr>Fixed</dt>
+    <dd>FIXED{{% md %}}Endpoints service configuration ID will be fixed to the configuration ID specified by config_id.{{% /md %}}</dd><dt>Endpoints<wbr>Api<wbr>Service<wbr>Rollout<wbr>Strategy<wbr>Managed</dt>
+    <dd>MANAGED{{% md %}}Endpoints service configuration ID will be updated with each rollout.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified<wbr>Rollout<wbr>Strategy</dt>
+    <dd>UNSPECIFIED_ROLLOUT_STRATEGY{{% md %}}Not specified. Defaults to FIXED.{{% /md %}}</dd><dt>Fixed</dt>
+    <dd>FIXED{{% md %}}Endpoints service configuration ID will be fixed to the configuration ID specified by config_id.{{% /md %}}</dd><dt>Managed</dt>
+    <dd>MANAGED{{% md %}}Endpoints service configuration ID will be updated with each rollout.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED_ROLLOUT_STRATEGY</dt>
+    <dd>UNSPECIFIED_ROLLOUT_STRATEGY{{% md %}}Not specified. Defaults to FIXED.{{% /md %}}</dd><dt>FIXED</dt>
+    <dd>FIXED{{% md %}}Endpoints service configuration ID will be fixed to the configuration ID specified by config_id.{{% /md %}}</dd><dt>MANAGED</dt>
+    <dd>MANAGED{{% md %}}Endpoints service configuration ID will be updated with each rollout.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="entrypoint">Entrypoint</h4>
 
 {{% choosable language csharp %}}
@@ -5072,7 +5204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorcode_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#errorhandlererrorcode">Pulumi.<wbr>Google<wbr>Native.<wbr>App<wbr>Engine.<wbr>V1Beta.<wbr>Error<wbr>Handler<wbr>Error<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Error condition this handler applies to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5100,7 +5232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorcode_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#errorhandlererrorcode">Error<wbr>Handler<wbr>Error<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Error condition this handler applies to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5128,7 +5260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#errorhandlererrorcode">Error<wbr>Handler<wbr>Error<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Error condition this handler applies to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5156,7 +5288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#errorhandlererrorcode">Error<wbr>Handler<wbr>Error<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Error condition this handler applies to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5175,6 +5307,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Static file content to be served for this error.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="errorhandlererrorcode">Error<wbr>Handler<wbr>Error<wbr>Code</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Error<wbr>Code<wbr>Unspecified</dt>
+    <dd>ERROR_CODE_UNSPECIFIED{{% md %}}Not specified. ERROR_CODE_DEFAULT is assumed.{{% /md %}}</dd><dt>Error<wbr>Code<wbr>Default</dt>
+    <dd>ERROR_CODE_DEFAULT{{% md %}}All other error types.{{% /md %}}</dd><dt>Error<wbr>Code<wbr>Over<wbr>Quota</dt>
+    <dd>ERROR_CODE_OVER_QUOTA{{% md %}}Application has exceeded a resource quota.{{% /md %}}</dd><dt>Error<wbr>Code<wbr>Dos<wbr>Api<wbr>Denial</dt>
+    <dd>ERROR_CODE_DOS_API_DENIAL{{% md %}}Client blocked by the application's Denial of Service protection configuration.{{% /md %}}</dd><dt>Error<wbr>Code<wbr>Timeout</dt>
+    <dd>ERROR_CODE_TIMEOUT{{% md %}}Deadline reached before the application responds.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Error<wbr>Handler<wbr>Error<wbr>Code<wbr>Error<wbr>Code<wbr>Unspecified</dt>
+    <dd>ERROR_CODE_UNSPECIFIED{{% md %}}Not specified. ERROR_CODE_DEFAULT is assumed.{{% /md %}}</dd><dt>Error<wbr>Handler<wbr>Error<wbr>Code<wbr>Error<wbr>Code<wbr>Default</dt>
+    <dd>ERROR_CODE_DEFAULT{{% md %}}All other error types.{{% /md %}}</dd><dt>Error<wbr>Handler<wbr>Error<wbr>Code<wbr>Error<wbr>Code<wbr>Over<wbr>Quota</dt>
+    <dd>ERROR_CODE_OVER_QUOTA{{% md %}}Application has exceeded a resource quota.{{% /md %}}</dd><dt>Error<wbr>Handler<wbr>Error<wbr>Code<wbr>Error<wbr>Code<wbr>Dos<wbr>Api<wbr>Denial</dt>
+    <dd>ERROR_CODE_DOS_API_DENIAL{{% md %}}Client blocked by the application's Denial of Service protection configuration.{{% /md %}}</dd><dt>Error<wbr>Handler<wbr>Error<wbr>Code<wbr>Error<wbr>Code<wbr>Timeout</dt>
+    <dd>ERROR_CODE_TIMEOUT{{% md %}}Deadline reached before the application responds.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Error<wbr>Code<wbr>Unspecified</dt>
+    <dd>ERROR_CODE_UNSPECIFIED{{% md %}}Not specified. ERROR_CODE_DEFAULT is assumed.{{% /md %}}</dd><dt>Error<wbr>Code<wbr>Default</dt>
+    <dd>ERROR_CODE_DEFAULT{{% md %}}All other error types.{{% /md %}}</dd><dt>Error<wbr>Code<wbr>Over<wbr>Quota</dt>
+    <dd>ERROR_CODE_OVER_QUOTA{{% md %}}Application has exceeded a resource quota.{{% /md %}}</dd><dt>Error<wbr>Code<wbr>Dos<wbr>Api<wbr>Denial</dt>
+    <dd>ERROR_CODE_DOS_API_DENIAL{{% md %}}Client blocked by the application's Denial of Service protection configuration.{{% /md %}}</dd><dt>Error<wbr>Code<wbr>Timeout</dt>
+    <dd>ERROR_CODE_TIMEOUT{{% md %}}Deadline reached before the application responds.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ERROR_CODE_UNSPECIFIED</dt>
+    <dd>ERROR_CODE_UNSPECIFIED{{% md %}}Not specified. ERROR_CODE_DEFAULT is assumed.{{% /md %}}</dd><dt>ERROR_CODE_DEFAULT</dt>
+    <dd>ERROR_CODE_DEFAULT{{% md %}}All other error types.{{% /md %}}</dd><dt>ERROR_CODE_OVER_QUOTA</dt>
+    <dd>ERROR_CODE_OVER_QUOTA{{% md %}}Application has exceeded a resource quota.{{% /md %}}</dd><dt>ERROR_CODE_DOS_API_DENIAL</dt>
+    <dd>ERROR_CODE_DOS_API_DENIAL{{% md %}}Client blocked by the application's Denial of Service protection configuration.{{% /md %}}</dd><dt>ERROR_CODE_TIMEOUT</dt>
+    <dd>ERROR_CODE_TIMEOUT{{% md %}}Deadline reached before the application responds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="errorhandlerresponse">Error<wbr>Handler<wbr>Response</h4>
@@ -9068,7 +9238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authfailaction_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Fail<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#urlmapauthfailaction">Pulumi.<wbr>Google<wbr>Native.<wbr>App<wbr>Engine.<wbr>V1Beta.<wbr>Url<wbr>Map<wbr>Auth<wbr>Fail<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication. Defaults to redirect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9076,7 +9246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#urlmaplogin">Pulumi.<wbr>Google<wbr>Native.<wbr>App<wbr>Engine.<wbr>V1Beta.<wbr>Url<wbr>Map<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource. Not supported for Node.js in the App Engine standard environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9084,7 +9254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirecthttpresponsecode_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Http<wbr>Response<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#urlmapredirecthttpresponsecode">Pulumi.<wbr>Google<wbr>Native.<wbr>App<wbr>Engine.<wbr>V1Beta.<wbr>Url<wbr>Map<wbr>Redirect<wbr>Http<wbr>Response<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}30x code to use when performing redirects for the secure field. Defaults to 302.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9100,7 +9270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitylevel_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#urlmapsecuritylevel">Pulumi.<wbr>Google<wbr>Native.<wbr>App<wbr>Engine.<wbr>V1Beta.<wbr>Url<wbr>Map<wbr>Security<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9136,7 +9306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authfailaction_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Fail<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#urlmapauthfailaction">Url<wbr>Map<wbr>Auth<wbr>Fail<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication. Defaults to redirect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9144,7 +9314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#urlmaplogin">Url<wbr>Map<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource. Not supported for Node.js in the App Engine standard environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9152,7 +9322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirecthttpresponsecode_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Http<wbr>Response<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#urlmapredirecthttpresponsecode">Url<wbr>Map<wbr>Redirect<wbr>Http<wbr>Response<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}30x code to use when performing redirects for the secure field. Defaults to 302.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9168,7 +9338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitylevel_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#urlmapsecuritylevel">Url<wbr>Map<wbr>Security<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9204,7 +9374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authfailaction_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Fail<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#urlmapauthfailaction">Url<wbr>Map<wbr>Auth<wbr>Fail<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication. Defaults to redirect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9212,7 +9382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#urlmaplogin">Url<wbr>Map<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource. Not supported for Node.js in the App Engine standard environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9220,7 +9390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirecthttpresponsecode_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Http<wbr>Response<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#urlmapredirecthttpresponsecode">Url<wbr>Map<wbr>Redirect<wbr>Http<wbr>Response<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}30x code to use when performing redirects for the secure field. Defaults to 302.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9236,7 +9406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitylevel_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#urlmapsecuritylevel">Url<wbr>Map<wbr>Security<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9272,7 +9442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auth_fail_action_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>fail_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#urlmapauthfailaction">Url<wbr>Map<wbr>Auth<wbr>Fail<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication. Defaults to redirect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9280,7 +9450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#urlmaplogin">Url<wbr>Map<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource. Not supported for Node.js in the App Engine standard environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9288,7 +9458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirect_http_response_code_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>http_<wbr>response_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#urlmapredirecthttpresponsecode">Url<wbr>Map<wbr>Redirect<wbr>Http<wbr>Response<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}30x code to use when performing redirects for the secure field. Defaults to 302.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9304,7 +9474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_level_python" style="color: inherit; text-decoration: inherit;">security_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#urlmapsecuritylevel">Url<wbr>Map<wbr>Security<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9323,6 +9493,108 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings. All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="urlmapauthfailaction">Url<wbr>Map<wbr>Auth<wbr>Fail<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Auth<wbr>Fail<wbr>Action<wbr>Unspecified</dt>
+    <dd>AUTH_FAIL_ACTION_UNSPECIFIED{{% md %}}Not specified. AUTH_FAIL_ACTION_REDIRECT is assumed.{{% /md %}}</dd><dt>Auth<wbr>Fail<wbr>Action<wbr>Redirect</dt>
+    <dd>AUTH_FAIL_ACTION_REDIRECT{{% md %}}Redirects user to "accounts.google.com". The user is redirected back to the application URL after signing in or creating an account.{{% /md %}}</dd><dt>Auth<wbr>Fail<wbr>Action<wbr>Unauthorized</dt>
+    <dd>AUTH_FAIL_ACTION_UNAUTHORIZED{{% md %}}Rejects request with a 401 HTTP status code and an error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Url<wbr>Map<wbr>Auth<wbr>Fail<wbr>Action<wbr>Auth<wbr>Fail<wbr>Action<wbr>Unspecified</dt>
+    <dd>AUTH_FAIL_ACTION_UNSPECIFIED{{% md %}}Not specified. AUTH_FAIL_ACTION_REDIRECT is assumed.{{% /md %}}</dd><dt>Url<wbr>Map<wbr>Auth<wbr>Fail<wbr>Action<wbr>Auth<wbr>Fail<wbr>Action<wbr>Redirect</dt>
+    <dd>AUTH_FAIL_ACTION_REDIRECT{{% md %}}Redirects user to "accounts.google.com". The user is redirected back to the application URL after signing in or creating an account.{{% /md %}}</dd><dt>Url<wbr>Map<wbr>Auth<wbr>Fail<wbr>Action<wbr>Auth<wbr>Fail<wbr>Action<wbr>Unauthorized</dt>
+    <dd>AUTH_FAIL_ACTION_UNAUTHORIZED{{% md %}}Rejects request with a 401 HTTP status code and an error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Auth<wbr>Fail<wbr>Action<wbr>Unspecified</dt>
+    <dd>AUTH_FAIL_ACTION_UNSPECIFIED{{% md %}}Not specified. AUTH_FAIL_ACTION_REDIRECT is assumed.{{% /md %}}</dd><dt>Auth<wbr>Fail<wbr>Action<wbr>Redirect</dt>
+    <dd>AUTH_FAIL_ACTION_REDIRECT{{% md %}}Redirects user to "accounts.google.com". The user is redirected back to the application URL after signing in or creating an account.{{% /md %}}</dd><dt>Auth<wbr>Fail<wbr>Action<wbr>Unauthorized</dt>
+    <dd>AUTH_FAIL_ACTION_UNAUTHORIZED{{% md %}}Rejects request with a 401 HTTP status code and an error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>AUTH_FAIL_ACTION_UNSPECIFIED</dt>
+    <dd>AUTH_FAIL_ACTION_UNSPECIFIED{{% md %}}Not specified. AUTH_FAIL_ACTION_REDIRECT is assumed.{{% /md %}}</dd><dt>AUTH_FAIL_ACTION_REDIRECT</dt>
+    <dd>AUTH_FAIL_ACTION_REDIRECT{{% md %}}Redirects user to "accounts.google.com". The user is redirected back to the application URL after signing in or creating an account.{{% /md %}}</dd><dt>AUTH_FAIL_ACTION_UNAUTHORIZED</dt>
+    <dd>AUTH_FAIL_ACTION_UNAUTHORIZED{{% md %}}Rejects request with a 401 HTTP status code and an error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="urlmaplogin">Url<wbr>Map<wbr>Login</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Login<wbr>Unspecified</dt>
+    <dd>LOGIN_UNSPECIFIED{{% md %}}Not specified. LOGIN_OPTIONAL is assumed.{{% /md %}}</dd><dt>Login<wbr>Optional</dt>
+    <dd>LOGIN_OPTIONAL{{% md %}}Does not require that the user is signed in.{{% /md %}}</dd><dt>Login<wbr>Admin</dt>
+    <dd>LOGIN_ADMIN{{% md %}}If the user is not signed in, the auth_fail_action is taken. In addition, if the user is not an administrator for the application, they are given an error message regardless of auth_fail_action. If the user is an administrator, the handler proceeds.{{% /md %}}</dd><dt>Login<wbr>Required</dt>
+    <dd>LOGIN_REQUIRED{{% md %}}If the user has signed in, the handler proceeds normally. Otherwise, the auth_fail_action is taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Url<wbr>Map<wbr>Login<wbr>Login<wbr>Unspecified</dt>
+    <dd>LOGIN_UNSPECIFIED{{% md %}}Not specified. LOGIN_OPTIONAL is assumed.{{% /md %}}</dd><dt>Url<wbr>Map<wbr>Login<wbr>Login<wbr>Optional</dt>
+    <dd>LOGIN_OPTIONAL{{% md %}}Does not require that the user is signed in.{{% /md %}}</dd><dt>Url<wbr>Map<wbr>Login<wbr>Login<wbr>Admin</dt>
+    <dd>LOGIN_ADMIN{{% md %}}If the user is not signed in, the auth_fail_action is taken. In addition, if the user is not an administrator for the application, they are given an error message regardless of auth_fail_action. If the user is an administrator, the handler proceeds.{{% /md %}}</dd><dt>Url<wbr>Map<wbr>Login<wbr>Login<wbr>Required</dt>
+    <dd>LOGIN_REQUIRED{{% md %}}If the user has signed in, the handler proceeds normally. Otherwise, the auth_fail_action is taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Login<wbr>Unspecified</dt>
+    <dd>LOGIN_UNSPECIFIED{{% md %}}Not specified. LOGIN_OPTIONAL is assumed.{{% /md %}}</dd><dt>Login<wbr>Optional</dt>
+    <dd>LOGIN_OPTIONAL{{% md %}}Does not require that the user is signed in.{{% /md %}}</dd><dt>Login<wbr>Admin</dt>
+    <dd>LOGIN_ADMIN{{% md %}}If the user is not signed in, the auth_fail_action is taken. In addition, if the user is not an administrator for the application, they are given an error message regardless of auth_fail_action. If the user is an administrator, the handler proceeds.{{% /md %}}</dd><dt>Login<wbr>Required</dt>
+    <dd>LOGIN_REQUIRED{{% md %}}If the user has signed in, the handler proceeds normally. Otherwise, the auth_fail_action is taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LOGIN_UNSPECIFIED</dt>
+    <dd>LOGIN_UNSPECIFIED{{% md %}}Not specified. LOGIN_OPTIONAL is assumed.{{% /md %}}</dd><dt>LOGIN_OPTIONAL</dt>
+    <dd>LOGIN_OPTIONAL{{% md %}}Does not require that the user is signed in.{{% /md %}}</dd><dt>LOGIN_ADMIN</dt>
+    <dd>LOGIN_ADMIN{{% md %}}If the user is not signed in, the auth_fail_action is taken. In addition, if the user is not an administrator for the application, they are given an error message regardless of auth_fail_action. If the user is an administrator, the handler proceeds.{{% /md %}}</dd><dt>LOGIN_REQUIRED</dt>
+    <dd>LOGIN_REQUIRED{{% md %}}If the user has signed in, the handler proceeds normally. Otherwise, the auth_fail_action is taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="urlmapredirecthttpresponsecode">Url<wbr>Map<wbr>Redirect<wbr>Http<wbr>Response<wbr>Code</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Redirect<wbr>Http<wbr>Response<wbr>Code<wbr>Unspecified</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_UNSPECIFIED{{% md %}}Not specified. 302 is assumed.{{% /md %}}</dd><dt>Redirect<wbr>Http<wbr>Response<wbr>Code301</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_301{{% md %}}301 Moved Permanently code.{{% /md %}}</dd><dt>Redirect<wbr>Http<wbr>Response<wbr>Code302</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_302{{% md %}}302 Moved Temporarily code.{{% /md %}}</dd><dt>Redirect<wbr>Http<wbr>Response<wbr>Code303</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_303{{% md %}}303 See Other code.{{% /md %}}</dd><dt>Redirect<wbr>Http<wbr>Response<wbr>Code307</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_307{{% md %}}307 Temporary Redirect code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Url<wbr>Map<wbr>Redirect<wbr>Http<wbr>Response<wbr>Code<wbr>Redirect<wbr>Http<wbr>Response<wbr>Code<wbr>Unspecified</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_UNSPECIFIED{{% md %}}Not specified. 302 is assumed.{{% /md %}}</dd><dt>Url<wbr>Map<wbr>Redirect<wbr>Http<wbr>Response<wbr>Code<wbr>Redirect<wbr>Http<wbr>Response<wbr>Code301</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_301{{% md %}}301 Moved Permanently code.{{% /md %}}</dd><dt>Url<wbr>Map<wbr>Redirect<wbr>Http<wbr>Response<wbr>Code<wbr>Redirect<wbr>Http<wbr>Response<wbr>Code302</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_302{{% md %}}302 Moved Temporarily code.{{% /md %}}</dd><dt>Url<wbr>Map<wbr>Redirect<wbr>Http<wbr>Response<wbr>Code<wbr>Redirect<wbr>Http<wbr>Response<wbr>Code303</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_303{{% md %}}303 See Other code.{{% /md %}}</dd><dt>Url<wbr>Map<wbr>Redirect<wbr>Http<wbr>Response<wbr>Code<wbr>Redirect<wbr>Http<wbr>Response<wbr>Code307</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_307{{% md %}}307 Temporary Redirect code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Redirect<wbr>Http<wbr>Response<wbr>Code<wbr>Unspecified</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_UNSPECIFIED{{% md %}}Not specified. 302 is assumed.{{% /md %}}</dd><dt>Redirect<wbr>Http<wbr>Response<wbr>Code301</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_301{{% md %}}301 Moved Permanently code.{{% /md %}}</dd><dt>Redirect<wbr>Http<wbr>Response<wbr>Code302</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_302{{% md %}}302 Moved Temporarily code.{{% /md %}}</dd><dt>Redirect<wbr>Http<wbr>Response<wbr>Code303</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_303{{% md %}}303 See Other code.{{% /md %}}</dd><dt>Redirect<wbr>Http<wbr>Response<wbr>Code307</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_307{{% md %}}307 Temporary Redirect code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>REDIRECT_HTTP_RESPONSE_CODE_UNSPECIFIED</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_UNSPECIFIED{{% md %}}Not specified. 302 is assumed.{{% /md %}}</dd><dt>REDIRECT_HTTP_RESPONSE_CODE301</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_301{{% md %}}301 Moved Permanently code.{{% /md %}}</dd><dt>REDIRECT_HTTP_RESPONSE_CODE302</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_302{{% md %}}302 Moved Temporarily code.{{% /md %}}</dd><dt>REDIRECT_HTTP_RESPONSE_CODE303</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_303{{% md %}}303 See Other code.{{% /md %}}</dd><dt>REDIRECT_HTTP_RESPONSE_CODE307</dt>
+    <dd>REDIRECT_HTTP_RESPONSE_CODE_307{{% md %}}307 Temporary Redirect code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmapresponse">Url<wbr>Map<wbr>Response</h4>
@@ -9597,6 +9869,128 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings. All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="urlmapsecuritylevel">Url<wbr>Map<wbr>Security<wbr>Level</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Secure<wbr>Unspecified</dt>
+    <dd>SECURE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Secure<wbr>Default</dt>
+    <dd>SECURE_DEFAULT{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used, and respond accordingly.{{% /md %}}</dd><dt>Secure<wbr>Never</dt>
+    <dd>SECURE_NEVER{{% md %}}Requests for a URL that match this handler that use HTTPS are automatically redirected to the HTTP equivalent URL.{{% /md %}}</dd><dt>Secure<wbr>Optional</dt>
+    <dd>SECURE_OPTIONAL{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used and respond accordingly.{{% /md %}}</dd><dt>Secure<wbr>Always</dt>
+    <dd>SECURE_ALWAYS{{% md %}}Requests for a URL that match this handler that do not use HTTPS are automatically redirected to the HTTPS URL with the same path. Query parameters are reserved for the redirect.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Url<wbr>Map<wbr>Security<wbr>Level<wbr>Secure<wbr>Unspecified</dt>
+    <dd>SECURE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Url<wbr>Map<wbr>Security<wbr>Level<wbr>Secure<wbr>Default</dt>
+    <dd>SECURE_DEFAULT{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used, and respond accordingly.{{% /md %}}</dd><dt>Url<wbr>Map<wbr>Security<wbr>Level<wbr>Secure<wbr>Never</dt>
+    <dd>SECURE_NEVER{{% md %}}Requests for a URL that match this handler that use HTTPS are automatically redirected to the HTTP equivalent URL.{{% /md %}}</dd><dt>Url<wbr>Map<wbr>Security<wbr>Level<wbr>Secure<wbr>Optional</dt>
+    <dd>SECURE_OPTIONAL{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used and respond accordingly.{{% /md %}}</dd><dt>Url<wbr>Map<wbr>Security<wbr>Level<wbr>Secure<wbr>Always</dt>
+    <dd>SECURE_ALWAYS{{% md %}}Requests for a URL that match this handler that do not use HTTPS are automatically redirected to the HTTPS URL with the same path. Query parameters are reserved for the redirect.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Secure<wbr>Unspecified</dt>
+    <dd>SECURE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Secure<wbr>Default</dt>
+    <dd>SECURE_DEFAULT{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used, and respond accordingly.{{% /md %}}</dd><dt>Secure<wbr>Never</dt>
+    <dd>SECURE_NEVER{{% md %}}Requests for a URL that match this handler that use HTTPS are automatically redirected to the HTTP equivalent URL.{{% /md %}}</dd><dt>Secure<wbr>Optional</dt>
+    <dd>SECURE_OPTIONAL{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used and respond accordingly.{{% /md %}}</dd><dt>Secure<wbr>Always</dt>
+    <dd>SECURE_ALWAYS{{% md %}}Requests for a URL that match this handler that do not use HTTPS are automatically redirected to the HTTPS URL with the same path. Query parameters are reserved for the redirect.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SECURE_UNSPECIFIED</dt>
+    <dd>SECURE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>SECURE_DEFAULT</dt>
+    <dd>SECURE_DEFAULT{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used, and respond accordingly.{{% /md %}}</dd><dt>SECURE_NEVER</dt>
+    <dd>SECURE_NEVER{{% md %}}Requests for a URL that match this handler that use HTTPS are automatically redirected to the HTTP equivalent URL.{{% /md %}}</dd><dt>SECURE_OPTIONAL</dt>
+    <dd>SECURE_OPTIONAL{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used and respond accordingly.{{% /md %}}</dd><dt>SECURE_ALWAYS</dt>
+    <dd>SECURE_ALWAYS{{% md %}}Requests for a URL that match this handler that do not use HTTPS are automatically redirected to the HTTPS URL with the same path. Query parameters are reserved for the redirect.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="versioninboundservicesitem">Version<wbr>Inbound<wbr>Services<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Inbound<wbr>Service<wbr>Unspecified</dt>
+    <dd>INBOUND_SERVICE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Inbound<wbr>Service<wbr>Mail</dt>
+    <dd>INBOUND_SERVICE_MAIL{{% md %}}Allows an application to receive mail.{{% /md %}}</dd><dt>Inbound<wbr>Service<wbr>Mail<wbr>Bounce</dt>
+    <dd>INBOUND_SERVICE_MAIL_BOUNCE{{% md %}}Allows an application to receive email-bound notifications.{{% /md %}}</dd><dt>Inbound<wbr>Service<wbr>Xmpp<wbr>Error</dt>
+    <dd>INBOUND_SERVICE_XMPP_ERROR{{% md %}}Allows an application to receive error stanzas.{{% /md %}}</dd><dt>Inbound<wbr>Service<wbr>Xmpp<wbr>Message</dt>
+    <dd>INBOUND_SERVICE_XMPP_MESSAGE{{% md %}}Allows an application to receive instant messages.{{% /md %}}</dd><dt>Inbound<wbr>Service<wbr>Xmpp<wbr>Subscribe</dt>
+    <dd>INBOUND_SERVICE_XMPP_SUBSCRIBE{{% md %}}Allows an application to receive user subscription POSTs.{{% /md %}}</dd><dt>Inbound<wbr>Service<wbr>Xmpp<wbr>Presence</dt>
+    <dd>INBOUND_SERVICE_XMPP_PRESENCE{{% md %}}Allows an application to receive a user's chat presence.{{% /md %}}</dd><dt>Inbound<wbr>Service<wbr>Channel<wbr>Presence</dt>
+    <dd>INBOUND_SERVICE_CHANNEL_PRESENCE{{% md %}}Registers an application for notifications when a client connects or disconnects from a channel.{{% /md %}}</dd><dt>Inbound<wbr>Service<wbr>Warmup</dt>
+    <dd>INBOUND_SERVICE_WARMUP{{% md %}}Enables warmup requests.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Version<wbr>Inbound<wbr>Services<wbr>Item<wbr>Inbound<wbr>Service<wbr>Unspecified</dt>
+    <dd>INBOUND_SERVICE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Version<wbr>Inbound<wbr>Services<wbr>Item<wbr>Inbound<wbr>Service<wbr>Mail</dt>
+    <dd>INBOUND_SERVICE_MAIL{{% md %}}Allows an application to receive mail.{{% /md %}}</dd><dt>Version<wbr>Inbound<wbr>Services<wbr>Item<wbr>Inbound<wbr>Service<wbr>Mail<wbr>Bounce</dt>
+    <dd>INBOUND_SERVICE_MAIL_BOUNCE{{% md %}}Allows an application to receive email-bound notifications.{{% /md %}}</dd><dt>Version<wbr>Inbound<wbr>Services<wbr>Item<wbr>Inbound<wbr>Service<wbr>Xmpp<wbr>Error</dt>
+    <dd>INBOUND_SERVICE_XMPP_ERROR{{% md %}}Allows an application to receive error stanzas.{{% /md %}}</dd><dt>Version<wbr>Inbound<wbr>Services<wbr>Item<wbr>Inbound<wbr>Service<wbr>Xmpp<wbr>Message</dt>
+    <dd>INBOUND_SERVICE_XMPP_MESSAGE{{% md %}}Allows an application to receive instant messages.{{% /md %}}</dd><dt>Version<wbr>Inbound<wbr>Services<wbr>Item<wbr>Inbound<wbr>Service<wbr>Xmpp<wbr>Subscribe</dt>
+    <dd>INBOUND_SERVICE_XMPP_SUBSCRIBE{{% md %}}Allows an application to receive user subscription POSTs.{{% /md %}}</dd><dt>Version<wbr>Inbound<wbr>Services<wbr>Item<wbr>Inbound<wbr>Service<wbr>Xmpp<wbr>Presence</dt>
+    <dd>INBOUND_SERVICE_XMPP_PRESENCE{{% md %}}Allows an application to receive a user's chat presence.{{% /md %}}</dd><dt>Version<wbr>Inbound<wbr>Services<wbr>Item<wbr>Inbound<wbr>Service<wbr>Channel<wbr>Presence</dt>
+    <dd>INBOUND_SERVICE_CHANNEL_PRESENCE{{% md %}}Registers an application for notifications when a client connects or disconnects from a channel.{{% /md %}}</dd><dt>Version<wbr>Inbound<wbr>Services<wbr>Item<wbr>Inbound<wbr>Service<wbr>Warmup</dt>
+    <dd>INBOUND_SERVICE_WARMUP{{% md %}}Enables warmup requests.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Inbound<wbr>Service<wbr>Unspecified</dt>
+    <dd>INBOUND_SERVICE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Inbound<wbr>Service<wbr>Mail</dt>
+    <dd>INBOUND_SERVICE_MAIL{{% md %}}Allows an application to receive mail.{{% /md %}}</dd><dt>Inbound<wbr>Service<wbr>Mail<wbr>Bounce</dt>
+    <dd>INBOUND_SERVICE_MAIL_BOUNCE{{% md %}}Allows an application to receive email-bound notifications.{{% /md %}}</dd><dt>Inbound<wbr>Service<wbr>Xmpp<wbr>Error</dt>
+    <dd>INBOUND_SERVICE_XMPP_ERROR{{% md %}}Allows an application to receive error stanzas.{{% /md %}}</dd><dt>Inbound<wbr>Service<wbr>Xmpp<wbr>Message</dt>
+    <dd>INBOUND_SERVICE_XMPP_MESSAGE{{% md %}}Allows an application to receive instant messages.{{% /md %}}</dd><dt>Inbound<wbr>Service<wbr>Xmpp<wbr>Subscribe</dt>
+    <dd>INBOUND_SERVICE_XMPP_SUBSCRIBE{{% md %}}Allows an application to receive user subscription POSTs.{{% /md %}}</dd><dt>Inbound<wbr>Service<wbr>Xmpp<wbr>Presence</dt>
+    <dd>INBOUND_SERVICE_XMPP_PRESENCE{{% md %}}Allows an application to receive a user's chat presence.{{% /md %}}</dd><dt>Inbound<wbr>Service<wbr>Channel<wbr>Presence</dt>
+    <dd>INBOUND_SERVICE_CHANNEL_PRESENCE{{% md %}}Registers an application for notifications when a client connects or disconnects from a channel.{{% /md %}}</dd><dt>Inbound<wbr>Service<wbr>Warmup</dt>
+    <dd>INBOUND_SERVICE_WARMUP{{% md %}}Enables warmup requests.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>INBOUND_SERVICE_UNSPECIFIED</dt>
+    <dd>INBOUND_SERVICE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>INBOUND_SERVICE_MAIL</dt>
+    <dd>INBOUND_SERVICE_MAIL{{% md %}}Allows an application to receive mail.{{% /md %}}</dd><dt>INBOUND_SERVICE_MAIL_BOUNCE</dt>
+    <dd>INBOUND_SERVICE_MAIL_BOUNCE{{% md %}}Allows an application to receive email-bound notifications.{{% /md %}}</dd><dt>INBOUND_SERVICE_XMPP_ERROR</dt>
+    <dd>INBOUND_SERVICE_XMPP_ERROR{{% md %}}Allows an application to receive error stanzas.{{% /md %}}</dd><dt>INBOUND_SERVICE_XMPP_MESSAGE</dt>
+    <dd>INBOUND_SERVICE_XMPP_MESSAGE{{% md %}}Allows an application to receive instant messages.{{% /md %}}</dd><dt>INBOUND_SERVICE_XMPP_SUBSCRIBE</dt>
+    <dd>INBOUND_SERVICE_XMPP_SUBSCRIBE{{% md %}}Allows an application to receive user subscription POSTs.{{% /md %}}</dd><dt>INBOUND_SERVICE_XMPP_PRESENCE</dt>
+    <dd>INBOUND_SERVICE_XMPP_PRESENCE{{% md %}}Allows an application to receive a user's chat presence.{{% /md %}}</dd><dt>INBOUND_SERVICE_CHANNEL_PRESENCE</dt>
+    <dd>INBOUND_SERVICE_CHANNEL_PRESENCE{{% md %}}Registers an application for notifications when a client connects or disconnects from a channel.{{% /md %}}</dd><dt>INBOUND_SERVICE_WARMUP</dt>
+    <dd>INBOUND_SERVICE_WARMUP{{% md %}}Enables warmup requests.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="versionservingstatus">Version<wbr>Serving<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Serving<wbr>Status<wbr>Unspecified</dt>
+    <dd>SERVING_STATUS_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Serving</dt>
+    <dd>SERVING{{% md %}}Currently serving. Instances are created according to the scaling settings of the version.{{% /md %}}</dd><dt>Stopped</dt>
+    <dd>STOPPED{{% md %}}Disabled. No instances will be created and the scaling settings are ignored until the state of the version changes to SERVING.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Version<wbr>Serving<wbr>Status<wbr>Serving<wbr>Status<wbr>Unspecified</dt>
+    <dd>SERVING_STATUS_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Version<wbr>Serving<wbr>Status<wbr>Serving</dt>
+    <dd>SERVING{{% md %}}Currently serving. Instances are created according to the scaling settings of the version.{{% /md %}}</dd><dt>Version<wbr>Serving<wbr>Status<wbr>Stopped</dt>
+    <dd>STOPPED{{% md %}}Disabled. No instances will be created and the scaling settings are ignored until the state of the version changes to SERVING.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Serving<wbr>Status<wbr>Unspecified</dt>
+    <dd>SERVING_STATUS_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Serving</dt>
+    <dd>SERVING{{% md %}}Currently serving. Instances are created according to the scaling settings of the version.{{% /md %}}</dd><dt>Stopped</dt>
+    <dd>STOPPED{{% md %}}Disabled. No instances will be created and the scaling settings are ignored until the state of the version changes to SERVING.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SERVING_STATUS_UNSPECIFIED</dt>
+    <dd>SERVING_STATUS_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>SERVING</dt>
+    <dd>SERVING{{% md %}}Currently serving. Instances are created according to the scaling settings of the version.{{% /md %}}</dd><dt>STOPPED</dt>
+    <dd>STOPPED{{% md %}}Disabled. No instances will be created and the scaling settings are ignored until the state of the version changes to SERVING.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="volume">Volume</h4>

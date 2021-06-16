@@ -31,7 +31,7 @@ Creates a new participant in a conversation.
                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v2.ParticipantRole]</span> = None<span class="p">,</span>
                 <span class="nx">sip_recording_media_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Participant</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -198,7 +198,7 @@ The Participant resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#participantrole">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2.<wbr>Participant<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The role this participant plays in the conversation. This field must be set during participant creation and is then immutable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -250,7 +250,7 @@ The Participant resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#participantrole">Participant<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The role this participant plays in the conversation. This field must be set during participant creation and is then immutable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -302,7 +302,7 @@ The Participant resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#participantrole">Participant<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The role this participant plays in the conversation. This field must be set during participant creation and is then immutable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +354,7 @@ The Participant resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#participantrole">Participant<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The role this participant plays in the conversation. This field must be set during participant creation and is then immutable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -427,6 +427,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="participantrole">Participant<wbr>Role</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Role<wbr>Unspecified</dt>
+    <dd>ROLE_UNSPECIFIED{{% md %}}Participant role not set.{{% /md %}}</dd><dt>Human<wbr>Agent</dt>
+    <dd>HUMAN_AGENT{{% md %}}Participant is a human agent.{{% /md %}}</dd><dt>Automated<wbr>Agent</dt>
+    <dd>AUTOMATED_AGENT{{% md %}}Participant is an automated agent, such as a Dialogflow agent.{{% /md %}}</dd><dt>End<wbr>User</dt>
+    <dd>END_USER{{% md %}}Participant is an end user that has called or chatted with Dialogflow services.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Participant<wbr>Role<wbr>Role<wbr>Unspecified</dt>
+    <dd>ROLE_UNSPECIFIED{{% md %}}Participant role not set.{{% /md %}}</dd><dt>Participant<wbr>Role<wbr>Human<wbr>Agent</dt>
+    <dd>HUMAN_AGENT{{% md %}}Participant is a human agent.{{% /md %}}</dd><dt>Participant<wbr>Role<wbr>Automated<wbr>Agent</dt>
+    <dd>AUTOMATED_AGENT{{% md %}}Participant is an automated agent, such as a Dialogflow agent.{{% /md %}}</dd><dt>Participant<wbr>Role<wbr>End<wbr>User</dt>
+    <dd>END_USER{{% md %}}Participant is an end user that has called or chatted with Dialogflow services.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Role<wbr>Unspecified</dt>
+    <dd>ROLE_UNSPECIFIED{{% md %}}Participant role not set.{{% /md %}}</dd><dt>Human<wbr>Agent</dt>
+    <dd>HUMAN_AGENT{{% md %}}Participant is a human agent.{{% /md %}}</dd><dt>Automated<wbr>Agent</dt>
+    <dd>AUTOMATED_AGENT{{% md %}}Participant is an automated agent, such as a Dialogflow agent.{{% /md %}}</dd><dt>End<wbr>User</dt>
+    <dd>END_USER{{% md %}}Participant is an end user that has called or chatted with Dialogflow services.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ROLE_UNSPECIFIED</dt>
+    <dd>ROLE_UNSPECIFIED{{% md %}}Participant role not set.{{% /md %}}</dd><dt>HUMAN_AGENT</dt>
+    <dd>HUMAN_AGENT{{% md %}}Participant is a human agent.{{% /md %}}</dd><dt>AUTOMATED_AGENT</dt>
+    <dd>AUTOMATED_AGENT{{% md %}}Participant is an automated agent, such as a Dialogflow agent.{{% /md %}}</dd><dt>END_USER</dt>
+    <dd>END_USER{{% md %}}Participant is an end user that has called or chatted with Dialogflow services.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

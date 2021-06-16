@@ -604,7 +604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archivetype_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#aptrepositoryarchivetype">Pulumi.<wbr>Google<wbr>Native.<wbr>OSConfig.<wbr>V1Beta.<wbr>Apt<wbr>Repository<wbr>Archive<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of archive files in this repository. The default behavior is DEB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -648,7 +648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archivetype_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#aptrepositoryarchivetype">Apt<wbr>Repository<wbr>Archive<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of archive files in this repository. The default behavior is DEB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -692,7 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archivetype_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#aptrepositoryarchivetype">Apt<wbr>Repository<wbr>Archive<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of archive files in this repository. The default behavior is DEB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -736,7 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archive_type_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#aptrepositoryarchivetype">Apt<wbr>Repository<wbr>Archive<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of archive files in this repository. The default behavior is DEB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -771,6 +771,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. URI for this repository.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="aptrepositoryarchivetype">Apt<wbr>Repository<wbr>Archive<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Archive<wbr>Type<wbr>Unspecified</dt>
+    <dd>ARCHIVE_TYPE_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>Deb</dt>
+    <dd>DEB{{% md %}}DEB indicates that the archive contains binary files.{{% /md %}}</dd><dt>Deb<wbr>Src</dt>
+    <dd>DEB_SRC{{% md %}}DEB_SRC indicates that the archive contains source files.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Apt<wbr>Repository<wbr>Archive<wbr>Type<wbr>Archive<wbr>Type<wbr>Unspecified</dt>
+    <dd>ARCHIVE_TYPE_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>Apt<wbr>Repository<wbr>Archive<wbr>Type<wbr>Deb</dt>
+    <dd>DEB{{% md %}}DEB indicates that the archive contains binary files.{{% /md %}}</dd><dt>Apt<wbr>Repository<wbr>Archive<wbr>Type<wbr>Deb<wbr>Src</dt>
+    <dd>DEB_SRC{{% md %}}DEB_SRC indicates that the archive contains source files.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Archive<wbr>Type<wbr>Unspecified</dt>
+    <dd>ARCHIVE_TYPE_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>Deb</dt>
+    <dd>DEB{{% md %}}DEB indicates that the archive contains binary files.{{% /md %}}</dd><dt>Deb<wbr>Src</dt>
+    <dd>DEB_SRC{{% md %}}DEB_SRC indicates that the archive contains source files.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ARCHIVE_TYPE_UNSPECIFIED</dt>
+    <dd>ARCHIVE_TYPE_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>DEB</dt>
+    <dd>DEB{{% md %}}DEB indicates that the archive contains binary files.{{% /md %}}</dd><dt>DEB_SRC</dt>
+    <dd>DEB_SRC{{% md %}}DEB_SRC indicates that the archive contains source files.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="aptrepositoryresponse">Apt<wbr>Repository<wbr>Response</h4>
@@ -1808,7 +1838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#desiredstate_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#packagedesiredstate">Pulumi.<wbr>Google<wbr>Native.<wbr>OSConfig.<wbr>V1Beta.<wbr>Package<wbr>Desired<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The desired_state the agent should maintain for this package. The default is to ensure the package is installed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1816,7 +1846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manager_csharp" style="color: inherit; text-decoration: inherit;">Manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#packagemanager">Pulumi.<wbr>Google<wbr>Native.<wbr>OSConfig.<wbr>V1Beta.<wbr>Package<wbr>Manager</a></span>
     </dt>
     <dd>{{% md %}}Type of package manager that can be used to install this package. If a system does not have the package manager, the package is not installed or removed no error message is returned. By default, or if you specify `ANY`, the agent attempts to install and remove this package using the default package manager. This is useful when creating a policy that applies to different types of systems. The default behavior is ANY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1836,7 +1866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#desiredstate_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#packagedesiredstate">Package<wbr>Desired<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The desired_state the agent should maintain for this package. The default is to ensure the package is installed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1844,7 +1874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manager_go" style="color: inherit; text-decoration: inherit;">Manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#packagemanager">Package<wbr>Manager</a></span>
     </dt>
     <dd>{{% md %}}Type of package manager that can be used to install this package. If a system does not have the package manager, the package is not installed or removed no error message is returned. By default, or if you specify `ANY`, the agent attempts to install and remove this package using the default package manager. This is useful when creating a policy that applies to different types of systems. The default behavior is ANY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1864,7 +1894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#desiredstate_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#packagedesiredstate">Package<wbr>Desired<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The desired_state the agent should maintain for this package. The default is to ensure the package is installed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1872,7 +1902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manager_nodejs" style="color: inherit; text-decoration: inherit;">manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#packagemanager">Package<wbr>Manager</a></span>
     </dt>
     <dd>{{% md %}}Type of package manager that can be used to install this package. If a system does not have the package manager, the package is not installed or removed no error message is returned. By default, or if you specify `ANY`, the agent attempts to install and remove this package using the default package manager. This is useful when creating a policy that applies to different types of systems. The default behavior is ANY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1892,7 +1922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#desired_state_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#packagedesiredstate">Package<wbr>Desired<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The desired_state the agent should maintain for this package. The default is to ensure the package is installed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1900,7 +1930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manager_python" style="color: inherit; text-decoration: inherit;">manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#packagemanager">Package<wbr>Manager</a></span>
     </dt>
     <dd>{{% md %}}Type of package manager that can be used to install this package. If a system does not have the package manager, the package is not installed or removed no error message is returned. By default, or if you specify `ANY`, the agent attempts to install and remove this package using the default package manager. This is useful when creating a policy that applies to different types of systems. The default behavior is ANY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1911,6 +1941,82 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the package. A package is uniquely identified for conflict validation by checking the package name and the manager(s) that the package targets.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="packagedesiredstate">Package<wbr>Desired<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Desired<wbr>State<wbr>Unspecified</dt>
+    <dd>DESIRED_STATE_UNSPECIFIED{{% md %}}The default is to ensure the package is installed.{{% /md %}}</dd><dt>Installed</dt>
+    <dd>INSTALLED{{% md %}}The agent ensures that the package is installed.{{% /md %}}</dd><dt>Updated</dt>
+    <dd>UPDATED{{% md %}}The agent ensures that the package is installed and periodically checks for and install any updates.{{% /md %}}</dd><dt>Removed</dt>
+    <dd>REMOVED{{% md %}}The agent ensures that the package is not installed and uninstall it if detected.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Package<wbr>Desired<wbr>State<wbr>Desired<wbr>State<wbr>Unspecified</dt>
+    <dd>DESIRED_STATE_UNSPECIFIED{{% md %}}The default is to ensure the package is installed.{{% /md %}}</dd><dt>Package<wbr>Desired<wbr>State<wbr>Installed</dt>
+    <dd>INSTALLED{{% md %}}The agent ensures that the package is installed.{{% /md %}}</dd><dt>Package<wbr>Desired<wbr>State<wbr>Updated</dt>
+    <dd>UPDATED{{% md %}}The agent ensures that the package is installed and periodically checks for and install any updates.{{% /md %}}</dd><dt>Package<wbr>Desired<wbr>State<wbr>Removed</dt>
+    <dd>REMOVED{{% md %}}The agent ensures that the package is not installed and uninstall it if detected.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Desired<wbr>State<wbr>Unspecified</dt>
+    <dd>DESIRED_STATE_UNSPECIFIED{{% md %}}The default is to ensure the package is installed.{{% /md %}}</dd><dt>Installed</dt>
+    <dd>INSTALLED{{% md %}}The agent ensures that the package is installed.{{% /md %}}</dd><dt>Updated</dt>
+    <dd>UPDATED{{% md %}}The agent ensures that the package is installed and periodically checks for and install any updates.{{% /md %}}</dd><dt>Removed</dt>
+    <dd>REMOVED{{% md %}}The agent ensures that the package is not installed and uninstall it if detected.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DESIRED_STATE_UNSPECIFIED</dt>
+    <dd>DESIRED_STATE_UNSPECIFIED{{% md %}}The default is to ensure the package is installed.{{% /md %}}</dd><dt>INSTALLED</dt>
+    <dd>INSTALLED{{% md %}}The agent ensures that the package is installed.{{% /md %}}</dd><dt>UPDATED</dt>
+    <dd>UPDATED{{% md %}}The agent ensures that the package is installed and periodically checks for and install any updates.{{% /md %}}</dd><dt>REMOVED</dt>
+    <dd>REMOVED{{% md %}}The agent ensures that the package is not installed and uninstall it if detected.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="packagemanager">Package<wbr>Manager</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Manager<wbr>Unspecified</dt>
+    <dd>MANAGER_UNSPECIFIED{{% md %}}The default behavior is ANY.{{% /md %}}</dd><dt>Any</dt>
+    <dd>ANY{{% md %}}Apply this package config using the default system package manager.{{% /md %}}</dd><dt>Apt</dt>
+    <dd>APT{{% md %}}Apply this package config only if Apt is available on the system.{{% /md %}}</dd><dt>Yum</dt>
+    <dd>YUM{{% md %}}Apply this package config only if Yum is available on the system.{{% /md %}}</dd><dt>Zypper</dt>
+    <dd>ZYPPER{{% md %}}Apply this package config only if Zypper is available on the system.{{% /md %}}</dd><dt>Goo</dt>
+    <dd>GOO{{% md %}}Apply this package config only if GooGet is available on the system.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Package<wbr>Manager<wbr>Manager<wbr>Unspecified</dt>
+    <dd>MANAGER_UNSPECIFIED{{% md %}}The default behavior is ANY.{{% /md %}}</dd><dt>Package<wbr>Manager<wbr>Any</dt>
+    <dd>ANY{{% md %}}Apply this package config using the default system package manager.{{% /md %}}</dd><dt>Package<wbr>Manager<wbr>Apt</dt>
+    <dd>APT{{% md %}}Apply this package config only if Apt is available on the system.{{% /md %}}</dd><dt>Package<wbr>Manager<wbr>Yum</dt>
+    <dd>YUM{{% md %}}Apply this package config only if Yum is available on the system.{{% /md %}}</dd><dt>Package<wbr>Manager<wbr>Zypper</dt>
+    <dd>ZYPPER{{% md %}}Apply this package config only if Zypper is available on the system.{{% /md %}}</dd><dt>Package<wbr>Manager<wbr>Goo</dt>
+    <dd>GOO{{% md %}}Apply this package config only if GooGet is available on the system.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Manager<wbr>Unspecified</dt>
+    <dd>MANAGER_UNSPECIFIED{{% md %}}The default behavior is ANY.{{% /md %}}</dd><dt>Any</dt>
+    <dd>ANY{{% md %}}Apply this package config using the default system package manager.{{% /md %}}</dd><dt>Apt</dt>
+    <dd>APT{{% md %}}Apply this package config only if Apt is available on the system.{{% /md %}}</dd><dt>Yum</dt>
+    <dd>YUM{{% md %}}Apply this package config only if Yum is available on the system.{{% /md %}}</dd><dt>Zypper</dt>
+    <dd>ZYPPER{{% md %}}Apply this package config only if Zypper is available on the system.{{% /md %}}</dd><dt>Goo</dt>
+    <dd>GOO{{% md %}}Apply this package config only if GooGet is available on the system.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MANAGER_UNSPECIFIED</dt>
+    <dd>MANAGER_UNSPECIFIED{{% md %}}The default behavior is ANY.{{% /md %}}</dd><dt>ANY</dt>
+    <dd>ANY{{% md %}}Apply this package config using the default system package manager.{{% /md %}}</dd><dt>APT</dt>
+    <dd>APT{{% md %}}Apply this package config only if Apt is available on the system.{{% /md %}}</dd><dt>YUM</dt>
+    <dd>YUM{{% md %}}Apply this package config only if Yum is available on the system.{{% /md %}}</dd><dt>ZYPPER</dt>
+    <dd>ZYPPER{{% md %}}Apply this package config only if Zypper is available on the system.{{% /md %}}</dd><dt>GOO</dt>
+    <dd>GOO{{% md %}}Apply this package config only if GooGet is available on the system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="packagerepository">Package<wbr>Repository</h4>
@@ -2336,7 +2442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#desiredstate_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#softwarerecipedesiredstate">Pulumi.<wbr>Google<wbr>Native.<wbr>OSConfig.<wbr>V1Beta.<wbr>Software<wbr>Recipe<wbr>Desired<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED: The software recipe is installed on the instance but won't be updated to new versions. UPDATED: The software recipe is installed on the instance. The recipe is updated to a higher version, if a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for software recipes and attempts to create or update a recipe to the REMOVE state is rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2388,7 +2494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#desiredstate_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#softwarerecipedesiredstate">Software<wbr>Recipe<wbr>Desired<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED: The software recipe is installed on the instance but won't be updated to new versions. UPDATED: The software recipe is installed on the instance. The recipe is updated to a higher version, if a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for software recipes and attempts to create or update a recipe to the REMOVE state is rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2440,7 +2546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#desiredstate_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#softwarerecipedesiredstate">Software<wbr>Recipe<wbr>Desired<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED: The software recipe is installed on the instance but won't be updated to new versions. UPDATED: The software recipe is installed on the instance. The recipe is updated to a higher version, if a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for software recipes and attempts to create or update a recipe to the REMOVE state is rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2492,7 +2598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#desired_state_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#softwarerecipedesiredstate">Software<wbr>Recipe<wbr>Desired<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED: The software recipe is installed on the instance but won't be updated to new versions. UPDATED: The software recipe is installed on the instance. The recipe is updated to a higher version, if a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for software recipes and attempts to create or update a recipe to the REMOVE state is rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3179,6 +3285,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#softwarerecipeartifactremoteresponse">Software<wbr>Recipe<wbr>Artifact<wbr>Remote<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A generic remote artifact.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="softwarerecipedesiredstate">Software<wbr>Recipe<wbr>Desired<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Desired<wbr>State<wbr>Unspecified</dt>
+    <dd>DESIRED_STATE_UNSPECIFIED{{% md %}}The default is to ensure the package is installed.{{% /md %}}</dd><dt>Installed</dt>
+    <dd>INSTALLED{{% md %}}The agent ensures that the package is installed.{{% /md %}}</dd><dt>Updated</dt>
+    <dd>UPDATED{{% md %}}The agent ensures that the package is installed and periodically checks for and install any updates.{{% /md %}}</dd><dt>Removed</dt>
+    <dd>REMOVED{{% md %}}The agent ensures that the package is not installed and uninstall it if detected.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Software<wbr>Recipe<wbr>Desired<wbr>State<wbr>Desired<wbr>State<wbr>Unspecified</dt>
+    <dd>DESIRED_STATE_UNSPECIFIED{{% md %}}The default is to ensure the package is installed.{{% /md %}}</dd><dt>Software<wbr>Recipe<wbr>Desired<wbr>State<wbr>Installed</dt>
+    <dd>INSTALLED{{% md %}}The agent ensures that the package is installed.{{% /md %}}</dd><dt>Software<wbr>Recipe<wbr>Desired<wbr>State<wbr>Updated</dt>
+    <dd>UPDATED{{% md %}}The agent ensures that the package is installed and periodically checks for and install any updates.{{% /md %}}</dd><dt>Software<wbr>Recipe<wbr>Desired<wbr>State<wbr>Removed</dt>
+    <dd>REMOVED{{% md %}}The agent ensures that the package is not installed and uninstall it if detected.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Desired<wbr>State<wbr>Unspecified</dt>
+    <dd>DESIRED_STATE_UNSPECIFIED{{% md %}}The default is to ensure the package is installed.{{% /md %}}</dd><dt>Installed</dt>
+    <dd>INSTALLED{{% md %}}The agent ensures that the package is installed.{{% /md %}}</dd><dt>Updated</dt>
+    <dd>UPDATED{{% md %}}The agent ensures that the package is installed and periodically checks for and install any updates.{{% /md %}}</dd><dt>Removed</dt>
+    <dd>REMOVED{{% md %}}The agent ensures that the package is not installed and uninstall it if detected.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DESIRED_STATE_UNSPECIFIED</dt>
+    <dd>DESIRED_STATE_UNSPECIFIED{{% md %}}The default is to ensure the package is installed.{{% /md %}}</dd><dt>INSTALLED</dt>
+    <dd>INSTALLED{{% md %}}The agent ensures that the package is installed.{{% /md %}}</dd><dt>UPDATED</dt>
+    <dd>UPDATED{{% md %}}The agent ensures that the package is installed and periodically checks for and install any updates.{{% /md %}}</dd><dt>REMOVED</dt>
+    <dd>REMOVED{{% md %}}The agent ensures that the package is not installed and uninstall it if detected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="softwarereciperesponse">Software<wbr>Recipe<wbr>Response</h4>
@@ -4242,7 +4382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#softwarerecipestepextractarchivetype">Pulumi.<wbr>Google<wbr>Native.<wbr>OSConfig.<wbr>V1Beta.<wbr>Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the archive to extract.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4270,7 +4410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#softwarerecipestepextractarchivetype">Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the archive to extract.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4298,7 +4438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#softwarerecipestepextractarchivetype">Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the archive to extract.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4326,7 +4466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#softwarerecipestepextractarchivetype">Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the archive to extract.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4443,6 +4583,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The type of the archive to extract.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="softwarerecipestepextractarchivetype">Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Archive<wbr>Type<wbr>Unspecified</dt>
+    <dd>ARCHIVE_TYPE_UNSPECIFIED{{% md %}}Indicates that the archive type isn't specified.{{% /md %}}</dd><dt>Tar</dt>
+    <dd>TAR{{% md %}}Indicates that the archive is a tar archive with no encryption.{{% /md %}}</dd><dt>Tar<wbr>Gzip</dt>
+    <dd>TAR_GZIP{{% md %}}Indicates that the archive is a tar archive with gzip encryption.{{% /md %}}</dd><dt>Tar<wbr>Bzip</dt>
+    <dd>TAR_BZIP{{% md %}}Indicates that the archive is a tar archive with bzip encryption.{{% /md %}}</dd><dt>Tar<wbr>Lzma</dt>
+    <dd>TAR_LZMA{{% md %}}Indicates that the archive is a tar archive with lzma encryption.{{% /md %}}</dd><dt>Tar<wbr>Xz</dt>
+    <dd>TAR_XZ{{% md %}}Indicates that the archive is a tar archive with xz encryption.{{% /md %}}</dd><dt>Zip</dt>
+    <dd>ZIP{{% md %}}Indicates that the archive is a zip archive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Type<wbr>Archive<wbr>Type<wbr>Unspecified</dt>
+    <dd>ARCHIVE_TYPE_UNSPECIFIED{{% md %}}Indicates that the archive type isn't specified.{{% /md %}}</dd><dt>Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Type<wbr>Tar</dt>
+    <dd>TAR{{% md %}}Indicates that the archive is a tar archive with no encryption.{{% /md %}}</dd><dt>Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Type<wbr>Tar<wbr>Gzip</dt>
+    <dd>TAR_GZIP{{% md %}}Indicates that the archive is a tar archive with gzip encryption.{{% /md %}}</dd><dt>Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Type<wbr>Tar<wbr>Bzip</dt>
+    <dd>TAR_BZIP{{% md %}}Indicates that the archive is a tar archive with bzip encryption.{{% /md %}}</dd><dt>Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Type<wbr>Tar<wbr>Lzma</dt>
+    <dd>TAR_LZMA{{% md %}}Indicates that the archive is a tar archive with lzma encryption.{{% /md %}}</dd><dt>Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Type<wbr>Tar<wbr>Xz</dt>
+    <dd>TAR_XZ{{% md %}}Indicates that the archive is a tar archive with xz encryption.{{% /md %}}</dd><dt>Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Type<wbr>Zip</dt>
+    <dd>ZIP{{% md %}}Indicates that the archive is a zip archive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Archive<wbr>Type<wbr>Unspecified</dt>
+    <dd>ARCHIVE_TYPE_UNSPECIFIED{{% md %}}Indicates that the archive type isn't specified.{{% /md %}}</dd><dt>Tar</dt>
+    <dd>TAR{{% md %}}Indicates that the archive is a tar archive with no encryption.{{% /md %}}</dd><dt>Tar<wbr>Gzip</dt>
+    <dd>TAR_GZIP{{% md %}}Indicates that the archive is a tar archive with gzip encryption.{{% /md %}}</dd><dt>Tar<wbr>Bzip</dt>
+    <dd>TAR_BZIP{{% md %}}Indicates that the archive is a tar archive with bzip encryption.{{% /md %}}</dd><dt>Tar<wbr>Lzma</dt>
+    <dd>TAR_LZMA{{% md %}}Indicates that the archive is a tar archive with lzma encryption.{{% /md %}}</dd><dt>Tar<wbr>Xz</dt>
+    <dd>TAR_XZ{{% md %}}Indicates that the archive is a tar archive with xz encryption.{{% /md %}}</dd><dt>Zip</dt>
+    <dd>ZIP{{% md %}}Indicates that the archive is a zip archive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ARCHIVE_TYPE_UNSPECIFIED</dt>
+    <dd>ARCHIVE_TYPE_UNSPECIFIED{{% md %}}Indicates that the archive type isn't specified.{{% /md %}}</dd><dt>TAR</dt>
+    <dd>TAR{{% md %}}Indicates that the archive is a tar archive with no encryption.{{% /md %}}</dd><dt>TAR_GZIP</dt>
+    <dd>TAR_GZIP{{% md %}}Indicates that the archive is a tar archive with gzip encryption.{{% /md %}}</dd><dt>TAR_BZIP</dt>
+    <dd>TAR_BZIP{{% md %}}Indicates that the archive is a tar archive with bzip encryption.{{% /md %}}</dd><dt>TAR_LZMA</dt>
+    <dd>TAR_LZMA{{% md %}}Indicates that the archive is a tar archive with lzma encryption.{{% /md %}}</dd><dt>TAR_XZ</dt>
+    <dd>TAR_XZ{{% md %}}Indicates that the archive is a tar archive with xz encryption.{{% /md %}}</dd><dt>ZIP</dt>
+    <dd>ZIP{{% md %}}Indicates that the archive is a zip archive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="softwarerecipestepinstalldpkg">Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Dpkg</h4>
@@ -5132,7 +5318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interpreter_csharp" style="color: inherit; text-decoration: inherit;">Interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#softwarerecipesteprunscriptinterpreter">Pulumi.<wbr>Google<wbr>Native.<wbr>OSConfig.<wbr>V1Beta.<wbr>Software<wbr>Recipe<wbr>Step<wbr>Run<wbr>Script<wbr>Interpreter</a></span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](https://en.wikipedia.org/wiki/Shebang_\(Unix\)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5160,7 +5346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interpreter_go" style="color: inherit; text-decoration: inherit;">Interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#softwarerecipesteprunscriptinterpreter">Software<wbr>Recipe<wbr>Step<wbr>Run<wbr>Script<wbr>Interpreter</a></span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](https://en.wikipedia.org/wiki/Shebang_\(Unix\)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5188,7 +5374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#softwarerecipesteprunscriptinterpreter">Software<wbr>Recipe<wbr>Step<wbr>Run<wbr>Script<wbr>Interpreter</a></span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](https://en.wikipedia.org/wiki/Shebang_\(Unix\)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5216,7 +5402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#softwarerecipesteprunscriptinterpreter">Software<wbr>Recipe<wbr>Step<wbr>Run<wbr>Script<wbr>Interpreter</a></span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](https://en.wikipedia.org/wiki/Shebang_\(Unix\)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5227,6 +5413,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The shell script to be executed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="softwarerecipesteprunscriptinterpreter">Software<wbr>Recipe<wbr>Step<wbr>Run<wbr>Script<wbr>Interpreter</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Interpreter<wbr>Unspecified</dt>
+    <dd>INTERPRETER_UNSPECIFIED{{% md %}}Default value for ScriptType.{{% /md %}}</dd><dt>Shell</dt>
+    <dd>SHELL{{% md %}}Indicates that the script is run with `/bin/sh` on Linux and `cmd` on windows.{{% /md %}}</dd><dt>Powershell</dt>
+    <dd>POWERSHELL{{% md %}}Indicates that the script is run with powershell.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Software<wbr>Recipe<wbr>Step<wbr>Run<wbr>Script<wbr>Interpreter<wbr>Interpreter<wbr>Unspecified</dt>
+    <dd>INTERPRETER_UNSPECIFIED{{% md %}}Default value for ScriptType.{{% /md %}}</dd><dt>Software<wbr>Recipe<wbr>Step<wbr>Run<wbr>Script<wbr>Interpreter<wbr>Shell</dt>
+    <dd>SHELL{{% md %}}Indicates that the script is run with `/bin/sh` on Linux and `cmd` on windows.{{% /md %}}</dd><dt>Software<wbr>Recipe<wbr>Step<wbr>Run<wbr>Script<wbr>Interpreter<wbr>Powershell</dt>
+    <dd>POWERSHELL{{% md %}}Indicates that the script is run with powershell.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Interpreter<wbr>Unspecified</dt>
+    <dd>INTERPRETER_UNSPECIFIED{{% md %}}Default value for ScriptType.{{% /md %}}</dd><dt>Shell</dt>
+    <dd>SHELL{{% md %}}Indicates that the script is run with `/bin/sh` on Linux and `cmd` on windows.{{% /md %}}</dd><dt>Powershell</dt>
+    <dd>POWERSHELL{{% md %}}Indicates that the script is run with powershell.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>INTERPRETER_UNSPECIFIED</dt>
+    <dd>INTERPRETER_UNSPECIFIED{{% md %}}Default value for ScriptType.{{% /md %}}</dd><dt>SHELL</dt>
+    <dd>SHELL{{% md %}}Indicates that the script is run with `/bin/sh` on Linux and `cmd` on windows.{{% /md %}}</dd><dt>POWERSHELL</dt>
+    <dd>POWERSHELL{{% md %}}Indicates that the script is run with powershell.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="softwarerecipesteprunscriptresponse">Software<wbr>Recipe<wbr>Step<wbr>Run<wbr>Script<wbr>Response</h4>

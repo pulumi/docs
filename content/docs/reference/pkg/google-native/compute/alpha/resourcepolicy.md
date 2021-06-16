@@ -41,7 +41,7 @@ Creates a new resource policy.
                    <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">snapshot_schedule_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.ResourcePolicySnapshotSchedulePolicyArgs]</span> = None<span class="p">,</span>
-                   <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.ResourcePolicyStatus]</span> = None<span class="p">,</span>
                    <span class="nx">vm_maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.ResourcePolicyVmMaintenancePolicyArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ResourcePolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -288,7 +288,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicystatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Resource<wbr>Policy<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of resource policy creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -420,7 +420,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicystatus">Resource<wbr>Policy<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of resource policy creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -552,7 +552,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicystatus">Resource<wbr>Policy<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of resource policy creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -684,7 +684,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#resourcepolicystatus">Resource<wbr>Policy<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of resource policy creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1007,7 +1007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collocation_csharp" style="color: inherit; text-decoration: inherit;">Collocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicycollocation">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Collocation</a></span>
     </dt>
     <dd>{{% md %}}Specifies network collocation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1015,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_csharp" style="color: inherit; text-decoration: inherit;">Locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicylocality">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Locality</a></span>
     </dt>
     <dd>{{% md %}}Specifies network locality{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1023,7 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicyscope">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Scope specifies the availability domain to which the VMs should be spread.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1031,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#style_csharp" style="color: inherit; text-decoration: inherit;">Style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicystyle">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Style</a></span>
     </dt>
     <dd>{{% md %}}Specifies instances to hosts placement relationship{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1059,7 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collocation_go" style="color: inherit; text-decoration: inherit;">Collocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicycollocation">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Collocation</a></span>
     </dt>
     <dd>{{% md %}}Specifies network collocation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1067,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_go" style="color: inherit; text-decoration: inherit;">Locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicylocality">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Locality</a></span>
     </dt>
     <dd>{{% md %}}Specifies network locality{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1075,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicyscope">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Scope specifies the availability domain to which the VMs should be spread.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1083,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#style_go" style="color: inherit; text-decoration: inherit;">Style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicystyle">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Style</a></span>
     </dt>
     <dd>{{% md %}}Specifies instances to hosts placement relationship{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1111,7 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collocation_nodejs" style="color: inherit; text-decoration: inherit;">collocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicycollocation">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Collocation</a></span>
     </dt>
     <dd>{{% md %}}Specifies network collocation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1119,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicylocality">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Locality</a></span>
     </dt>
     <dd>{{% md %}}Specifies network locality{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1127,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicyscope">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Scope specifies the availability domain to which the VMs should be spread.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1135,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#style_nodejs" style="color: inherit; text-decoration: inherit;">style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicystyle">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Style</a></span>
     </dt>
     <dd>{{% md %}}Specifies instances to hosts placement relationship{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1163,7 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collocation_python" style="color: inherit; text-decoration: inherit;">collocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicycollocation">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Collocation</a></span>
     </dt>
     <dd>{{% md %}}Specifies network collocation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1171,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicylocality">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Locality</a></span>
     </dt>
     <dd>{{% md %}}Specifies network locality{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1179,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicyscope">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Scope specifies the availability domain to which the VMs should be spread.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1187,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#style_python" style="color: inherit; text-decoration: inherit;">style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicystyle">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Style</a></span>
     </dt>
     <dd>{{% md %}}Specifies instances to hosts placement relationship{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1198,6 +1198,66 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of vms in this placement group{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourcepolicygroupplacementpolicycollocation">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Collocation</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Clustered</dt>
+    <dd>CLUSTERED</dd><dt>Collocated</dt>
+    <dd>COLLOCATED</dd><dt>Unspecified<wbr>Collocation</dt>
+    <dd>UNSPECIFIED_COLLOCATION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Collocation<wbr>Clustered</dt>
+    <dd>CLUSTERED</dd><dt>Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Collocation<wbr>Collocated</dt>
+    <dd>COLLOCATED</dd><dt>Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Collocation<wbr>Unspecified<wbr>Collocation</dt>
+    <dd>UNSPECIFIED_COLLOCATION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Clustered</dt>
+    <dd>CLUSTERED</dd><dt>Collocated</dt>
+    <dd>COLLOCATED</dd><dt>Unspecified<wbr>Collocation</dt>
+    <dd>UNSPECIFIED_COLLOCATION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CLUSTERED</dt>
+    <dd>CLUSTERED</dd><dt>COLLOCATED</dt>
+    <dd>COLLOCATED</dd><dt>UNSPECIFIED_COLLOCATION</dt>
+    <dd>UNSPECIFIED_COLLOCATION</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourcepolicygroupplacementpolicylocality">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Locality</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Best<wbr>Effort</dt>
+    <dd>BEST_EFFORT</dd><dt>Strict</dt>
+    <dd>STRICT</dd><dt>Unspecified<wbr>Locality</dt>
+    <dd>UNSPECIFIED_LOCALITY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Locality<wbr>Best<wbr>Effort</dt>
+    <dd>BEST_EFFORT</dd><dt>Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Locality<wbr>Strict</dt>
+    <dd>STRICT</dd><dt>Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Locality<wbr>Unspecified<wbr>Locality</dt>
+    <dd>UNSPECIFIED_LOCALITY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Best<wbr>Effort</dt>
+    <dd>BEST_EFFORT</dd><dt>Strict</dt>
+    <dd>STRICT</dd><dt>Unspecified<wbr>Locality</dt>
+    <dd>UNSPECIFIED_LOCALITY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>BEST_EFFORT</dt>
+    <dd>BEST_EFFORT</dd><dt>STRICT</dt>
+    <dd>STRICT</dd><dt>UNSPECIFIED_LOCALITY</dt>
+    <dd>UNSPECIFIED_LOCALITY</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcepolicygroupplacementpolicyresponse">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Response</h4>
@@ -1408,6 +1468,62 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of vms in this placement group{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourcepolicygroupplacementpolicyscope">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Scope</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Host</dt>
+    <dd>HOST</dd><dt>Unspecified<wbr>Scope</dt>
+    <dd>UNSPECIFIED_SCOPE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Scope<wbr>Host</dt>
+    <dd>HOST</dd><dt>Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Scope<wbr>Unspecified<wbr>Scope</dt>
+    <dd>UNSPECIFIED_SCOPE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Host</dt>
+    <dd>HOST</dd><dt>Unspecified<wbr>Scope</dt>
+    <dd>UNSPECIFIED_SCOPE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>HOST</dt>
+    <dd>HOST</dd><dt>UNSPECIFIED_SCOPE</dt>
+    <dd>UNSPECIFIED_SCOPE</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourcepolicygroupplacementpolicystyle">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Style</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Compact</dt>
+    <dd>COMPACT</dd><dt>Fully<wbr>Spread</dt>
+    <dd>FULLY_SPREAD</dd><dt>Unspecified<wbr>Placement<wbr>Type</dt>
+    <dd>UNSPECIFIED_PLACEMENT_TYPE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Style<wbr>Compact</dt>
+    <dd>COMPACT</dd><dt>Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Style<wbr>Fully<wbr>Spread</dt>
+    <dd>FULLY_SPREAD</dd><dt>Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Style<wbr>Unspecified<wbr>Placement<wbr>Type</dt>
+    <dd>UNSPECIFIED_PLACEMENT_TYPE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Compact</dt>
+    <dd>COMPACT</dd><dt>Fully<wbr>Spread</dt>
+    <dd>FULLY_SPREAD</dd><dt>Unspecified<wbr>Placement<wbr>Type</dt>
+    <dd>UNSPECIFIED_PLACEMENT_TYPE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>COMPACT</dt>
+    <dd>COMPACT</dd><dt>FULLY_SPREAD</dt>
+    <dd>FULLY_SPREAD</dd><dt>UNSPECIFIED_PLACEMENT_TYPE</dt>
+    <dd>UNSPECIFIED_PLACEMENT_TYPE</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcepolicyhourlycycle">Resource<wbr>Policy<wbr>Hourly<wbr>Cycle</h4>
@@ -2603,7 +2719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onpolicyswitch_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Policy<wbr>Switch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicyonpolicyswitch">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>On<wbr>Policy<wbr>Switch</a></span>
     </dt>
     <dd>{{% md %}}TODO(b/165626794): Remove this field Specifies the behavior to apply to existing, scheduled snapshots snapshots if the policy is changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2611,7 +2727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onsourcediskdelete_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Source<wbr>Disk<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicyonsourcediskdelete">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>On<wbr>Source<wbr>Disk<wbr>Delete</a></span>
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2631,7 +2747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onpolicyswitch_go" style="color: inherit; text-decoration: inherit;">On<wbr>Policy<wbr>Switch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicyonpolicyswitch">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>On<wbr>Policy<wbr>Switch</a></span>
     </dt>
     <dd>{{% md %}}TODO(b/165626794): Remove this field Specifies the behavior to apply to existing, scheduled snapshots snapshots if the policy is changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2639,7 +2755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onsourcediskdelete_go" style="color: inherit; text-decoration: inherit;">On<wbr>Source<wbr>Disk<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicyonsourcediskdelete">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>On<wbr>Source<wbr>Disk<wbr>Delete</a></span>
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2659,7 +2775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onpolicyswitch_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Policy<wbr>Switch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicyonpolicyswitch">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>On<wbr>Policy<wbr>Switch</a></span>
     </dt>
     <dd>{{% md %}}TODO(b/165626794): Remove this field Specifies the behavior to apply to existing, scheduled snapshots snapshots if the policy is changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2667,7 +2783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onsourcediskdelete_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Source<wbr>Disk<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicyonsourcediskdelete">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>On<wbr>Source<wbr>Disk<wbr>Delete</a></span>
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2687,7 +2803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_policy_switch_python" style="color: inherit; text-decoration: inherit;">on_<wbr>policy_<wbr>switch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicyonpolicyswitch">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>On<wbr>Policy<wbr>Switch</a></span>
     </dt>
     <dd>{{% md %}}TODO(b/165626794): Remove this field Specifies the behavior to apply to existing, scheduled snapshots snapshots if the policy is changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2695,9 +2811,69 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_source_disk_delete_python" style="color: inherit; text-decoration: inherit;">on_<wbr>source_<wbr>disk_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicyonsourcediskdelete">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>On<wbr>Source<wbr>Disk<wbr>Delete</a></span>
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourcepolicysnapshotschedulepolicyretentionpolicyonpolicyswitch">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>On<wbr>Policy<wbr>Switch</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Do<wbr>Not<wbr>Retroactively<wbr>Apply</dt>
+    <dd>DO_NOT_RETROACTIVELY_APPLY</dd><dt>Retroactively<wbr>Apply</dt>
+    <dd>RETROACTIVELY_APPLY</dd><dt>Unspecified<wbr>On<wbr>Policy<wbr>Switch</dt>
+    <dd>UNSPECIFIED_ON_POLICY_SWITCH</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>On<wbr>Policy<wbr>Switch<wbr>Do<wbr>Not<wbr>Retroactively<wbr>Apply</dt>
+    <dd>DO_NOT_RETROACTIVELY_APPLY</dd><dt>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>On<wbr>Policy<wbr>Switch<wbr>Retroactively<wbr>Apply</dt>
+    <dd>RETROACTIVELY_APPLY</dd><dt>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>On<wbr>Policy<wbr>Switch<wbr>Unspecified<wbr>On<wbr>Policy<wbr>Switch</dt>
+    <dd>UNSPECIFIED_ON_POLICY_SWITCH</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Do<wbr>Not<wbr>Retroactively<wbr>Apply</dt>
+    <dd>DO_NOT_RETROACTIVELY_APPLY</dd><dt>Retroactively<wbr>Apply</dt>
+    <dd>RETROACTIVELY_APPLY</dd><dt>Unspecified<wbr>On<wbr>Policy<wbr>Switch</dt>
+    <dd>UNSPECIFIED_ON_POLICY_SWITCH</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DO_NOT_RETROACTIVELY_APPLY</dt>
+    <dd>DO_NOT_RETROACTIVELY_APPLY</dd><dt>RETROACTIVELY_APPLY</dt>
+    <dd>RETROACTIVELY_APPLY</dd><dt>UNSPECIFIED_ON_POLICY_SWITCH</dt>
+    <dd>UNSPECIFIED_ON_POLICY_SWITCH</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourcepolicysnapshotschedulepolicyretentionpolicyonsourcediskdelete">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>On<wbr>Source<wbr>Disk<wbr>Delete</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Apply<wbr>Retention<wbr>Policy</dt>
+    <dd>APPLY_RETENTION_POLICY</dd><dt>Keep<wbr>Auto<wbr>Snapshots</dt>
+    <dd>KEEP_AUTO_SNAPSHOTS</dd><dt>Unspecified<wbr>On<wbr>Source<wbr>Disk<wbr>Delete</dt>
+    <dd>UNSPECIFIED_ON_SOURCE_DISK_DELETE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>On<wbr>Source<wbr>Disk<wbr>Delete<wbr>Apply<wbr>Retention<wbr>Policy</dt>
+    <dd>APPLY_RETENTION_POLICY</dd><dt>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>On<wbr>Source<wbr>Disk<wbr>Delete<wbr>Keep<wbr>Auto<wbr>Snapshots</dt>
+    <dd>KEEP_AUTO_SNAPSHOTS</dd><dt>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>On<wbr>Source<wbr>Disk<wbr>Delete<wbr>Unspecified<wbr>On<wbr>Source<wbr>Disk<wbr>Delete</dt>
+    <dd>UNSPECIFIED_ON_SOURCE_DISK_DELETE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Apply<wbr>Retention<wbr>Policy</dt>
+    <dd>APPLY_RETENTION_POLICY</dd><dt>Keep<wbr>Auto<wbr>Snapshots</dt>
+    <dd>KEEP_AUTO_SNAPSHOTS</dd><dt>Unspecified<wbr>On<wbr>Source<wbr>Disk<wbr>Delete</dt>
+    <dd>UNSPECIFIED_ON_SOURCE_DISK_DELETE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>APPLY_RETENTION_POLICY</dt>
+    <dd>APPLY_RETENTION_POLICY</dd><dt>KEEP_AUTO_SNAPSHOTS</dt>
+    <dd>KEEP_AUTO_SNAPSHOTS</dd><dt>UNSPECIFIED_ON_SOURCE_DISK_DELETE</dt>
+    <dd>UNSPECIFIED_ON_SOURCE_DISK_DELETE</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcepolicysnapshotschedulepolicyretentionpolicyresponse">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Response</h4>
@@ -3334,6 +3510,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="resourcepolicystatus">Resource<wbr>Policy<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Expired</dt>
+    <dd>EXPIRED</dd><dt>Invalid</dt>
+    <dd>INVALID</dd><dt>Ready</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Resource<wbr>Policy<wbr>Status<wbr>Creating</dt>
+    <dd>CREATING</dd><dt>Resource<wbr>Policy<wbr>Status<wbr>Deleting</dt>
+    <dd>DELETING</dd><dt>Resource<wbr>Policy<wbr>Status<wbr>Expired</dt>
+    <dd>EXPIRED</dd><dt>Resource<wbr>Policy<wbr>Status<wbr>Invalid</dt>
+    <dd>INVALID</dd><dt>Resource<wbr>Policy<wbr>Status<wbr>Ready</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Expired</dt>
+    <dd>EXPIRED</dd><dt>Invalid</dt>
+    <dd>INVALID</dd><dt>Ready</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CREATING</dt>
+    <dd>CREATING</dd><dt>DELETING</dt>
+    <dd>DELETING</dd><dt>EXPIRED</dt>
+    <dd>EXPIRED</dd><dt>INVALID</dt>
+    <dd>INVALID</dd><dt>READY</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
 <h4 id="resourcepolicyvmmaintenancepolicy">Resource<wbr>Policy<wbr>Vm<wbr>Maintenance<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
@@ -3757,7 +3971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicyweeklycycledayofweekday">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3785,7 +3999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicyweeklycycledayofweekday">Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3813,7 +4027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcepolicyweeklycycledayofweekday">Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3841,7 +4055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#resourcepolicyweeklycycledayofweekday">Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3860,6 +4074,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourcepolicyweeklycycledayofweekday">Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Day</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Friday</dt>
+    <dd>FRIDAY</dd><dt>Invalid</dt>
+    <dd>INVALID</dd><dt>Monday</dt>
+    <dd>MONDAY</dd><dt>Saturday</dt>
+    <dd>SATURDAY</dd><dt>Sunday</dt>
+    <dd>SUNDAY</dd><dt>Thursday</dt>
+    <dd>THURSDAY</dd><dt>Tuesday</dt>
+    <dd>TUESDAY</dd><dt>Wednesday</dt>
+    <dd>WEDNESDAY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Day<wbr>Friday</dt>
+    <dd>FRIDAY</dd><dt>Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Day<wbr>Invalid</dt>
+    <dd>INVALID</dd><dt>Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Day<wbr>Monday</dt>
+    <dd>MONDAY</dd><dt>Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Day<wbr>Saturday</dt>
+    <dd>SATURDAY</dd><dt>Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Day<wbr>Sunday</dt>
+    <dd>SUNDAY</dd><dt>Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Day<wbr>Thursday</dt>
+    <dd>THURSDAY</dd><dt>Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Day<wbr>Tuesday</dt>
+    <dd>TUESDAY</dd><dt>Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Day<wbr>Wednesday</dt>
+    <dd>WEDNESDAY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Friday</dt>
+    <dd>FRIDAY</dd><dt>Invalid</dt>
+    <dd>INVALID</dd><dt>Monday</dt>
+    <dd>MONDAY</dd><dt>Saturday</dt>
+    <dd>SATURDAY</dd><dt>Sunday</dt>
+    <dd>SUNDAY</dd><dt>Thursday</dt>
+    <dd>THURSDAY</dd><dt>Tuesday</dt>
+    <dd>TUESDAY</dd><dt>Wednesday</dt>
+    <dd>WEDNESDAY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FRIDAY</dt>
+    <dd>FRIDAY</dd><dt>INVALID</dt>
+    <dd>INVALID</dd><dt>MONDAY</dt>
+    <dd>MONDAY</dd><dt>SATURDAY</dt>
+    <dd>SATURDAY</dd><dt>SUNDAY</dt>
+    <dd>SUNDAY</dd><dt>THURSDAY</dt>
+    <dd>THURSDAY</dd><dt>TUESDAY</dt>
+    <dd>TUESDAY</dd><dt>WEDNESDAY</dt>
+    <dd>WEDNESDAY</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcepolicyweeklycycledayofweekresponse">Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Response</h4>

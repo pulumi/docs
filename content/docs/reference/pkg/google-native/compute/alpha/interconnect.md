@@ -37,15 +37,15 @@ Creates a Interconnect in the specified project using the data included in the r
                  <span class="nx">google_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">interconnect_attachments</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">interconnect_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">interconnect_type</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.InterconnectInterconnectType]</span> = None<span class="p">,</span>
                  <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-                 <span class="nx">link_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">link_type</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.InterconnectLinkType]</span> = None<span class="p">,</span>
                  <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">noc_contact_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">operational_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">operational_status</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.InterconnectOperationalStatus]</span> = None<span class="p">,</span>
                  <span class="nx">peer_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">provisioned_link_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -53,7 +53,7 @@ Creates a Interconnect in the specified project using the data included in the r
                  <span class="nx">requested_link_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                  <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                 <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.InterconnectState]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Interconnect</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InterconnectArgs</a></span><span class="p">,</span>
@@ -275,7 +275,7 @@ The Interconnect resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#interconnecttype_csharp" style="color: inherit; text-decoration: inherit;">Interconnect<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectinterconnecttype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Interconnect<wbr>Interconnect<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of interconnect, which can take one of the following values: 
 - PARTNER: A partner-managed interconnection shared between customers though a partner. 
@@ -311,7 +311,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#linktype_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectlinktype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Interconnect<wbr>Link<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of link requested, which can take one of the following values: 
 - LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics 
@@ -345,7 +345,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#operationalstatus_csharp" style="color: inherit; text-decoration: inherit;">Operational<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectoperationalstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Interconnect<wbr>Operational<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The current status of this Interconnect's functionality, which can take one of the following values: 
 - OS_ACTIVE: A valid Interconnect, which is turned up and is ready to use. Attachments may be provisioned on this Interconnect. 
@@ -404,7 +404,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Interconnect<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of Interconnect functionality, which can take one of the following values: 
 - ACTIVE: The Interconnect is valid, turned up and ready to use. Attachments may be provisioned on this Interconnect. 
@@ -507,7 +507,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#interconnecttype_go" style="color: inherit; text-decoration: inherit;">Interconnect<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectinterconnecttype">Interconnect<wbr>Interconnect<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of interconnect, which can take one of the following values: 
 - PARTNER: A partner-managed interconnection shared between customers though a partner. 
@@ -543,7 +543,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#linktype_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectlinktype">Interconnect<wbr>Link<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of link requested, which can take one of the following values: 
 - LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics 
@@ -577,7 +577,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#operationalstatus_go" style="color: inherit; text-decoration: inherit;">Operational<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectoperationalstatus">Interconnect<wbr>Operational<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The current status of this Interconnect's functionality, which can take one of the following values: 
 - OS_ACTIVE: A valid Interconnect, which is turned up and is ready to use. Attachments may be provisioned on this Interconnect. 
@@ -636,7 +636,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectstate">Interconnect<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of Interconnect functionality, which can take one of the following values: 
 - ACTIVE: The Interconnect is valid, turned up and ready to use. Attachments may be provisioned on this Interconnect. 
@@ -739,7 +739,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#interconnecttype_nodejs" style="color: inherit; text-decoration: inherit;">interconnect<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectinterconnecttype">Interconnect<wbr>Interconnect<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of interconnect, which can take one of the following values: 
 - PARTNER: A partner-managed interconnection shared between customers though a partner. 
@@ -775,7 +775,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#linktype_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectlinktype">Interconnect<wbr>Link<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of link requested, which can take one of the following values: 
 - LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics 
@@ -809,7 +809,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#operationalstatus_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectoperationalstatus">Interconnect<wbr>Operational<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The current status of this Interconnect's functionality, which can take one of the following values: 
 - OS_ACTIVE: A valid Interconnect, which is turned up and is ready to use. Attachments may be provisioned on this Interconnect. 
@@ -868,7 +868,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectstate">Interconnect<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of Interconnect functionality, which can take one of the following values: 
 - ACTIVE: The Interconnect is valid, turned up and ready to use. Attachments may be provisioned on this Interconnect. 
@@ -971,7 +971,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#interconnect_type_python" style="color: inherit; text-decoration: inherit;">interconnect_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#interconnectinterconnecttype">Interconnect<wbr>Interconnect<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of interconnect, which can take one of the following values: 
 - PARTNER: A partner-managed interconnection shared between customers though a partner. 
@@ -1007,7 +1007,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#link_type_python" style="color: inherit; text-decoration: inherit;">link_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#interconnectlinktype">Interconnect<wbr>Link<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of link requested, which can take one of the following values: 
 - LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics 
@@ -1041,7 +1041,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#operational_status_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#interconnectoperationalstatus">Interconnect<wbr>Operational<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The current status of this Interconnect's functionality, which can take one of the following values: 
 - OS_ACTIVE: A valid Interconnect, which is turned up and is ready to use. Attachments may be provisioned on this Interconnect. 
@@ -1100,7 +1100,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#interconnectstate">Interconnect<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of Interconnect functionality, which can take one of the following values: 
 - ACTIVE: The Interconnect is valid, turned up and ready to use. Attachments may be provisioned on this Interconnect. 
@@ -1401,6 +1401,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Google-side demarc ID for this circuit. Assigned at circuit turn-up and provided by Google to the customer in the LOA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="interconnectinterconnecttype">Interconnect<wbr>Interconnect<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Dedicated</dt>
+    <dd>DEDICATED</dd><dt>It<wbr>Private</dt>
+    <dd>IT_PRIVATE</dd><dt>Partner</dt>
+    <dd>PARTNER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Interconnect<wbr>Interconnect<wbr>Type<wbr>Dedicated</dt>
+    <dd>DEDICATED</dd><dt>Interconnect<wbr>Interconnect<wbr>Type<wbr>It<wbr>Private</dt>
+    <dd>IT_PRIVATE</dd><dt>Interconnect<wbr>Interconnect<wbr>Type<wbr>Partner</dt>
+    <dd>PARTNER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Dedicated</dt>
+    <dd>DEDICATED</dd><dt>It<wbr>Private</dt>
+    <dd>IT_PRIVATE</dd><dt>Partner</dt>
+    <dd>PARTNER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DEDICATED</dt>
+    <dd>DEDICATED</dd><dt>IT_PRIVATE</dt>
+    <dd>IT_PRIVATE</dd><dt>PARTNER</dt>
+    <dd>PARTNER</dd></dl>
+{{% /choosable %}}
+
+<h4 id="interconnectlinktype">Interconnect<wbr>Link<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Link<wbr>Type<wbr>Ethernet100g<wbr>Lr</dt>
+    <dd>LINK_TYPE_ETHERNET_100G_LR</dd><dt>Link<wbr>Type<wbr>Ethernet10g<wbr>Lr</dt>
+    <dd>LINK_TYPE_ETHERNET_10G_LR</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Interconnect<wbr>Link<wbr>Type<wbr>Link<wbr>Type<wbr>Ethernet100g<wbr>Lr</dt>
+    <dd>LINK_TYPE_ETHERNET_100G_LR</dd><dt>Interconnect<wbr>Link<wbr>Type<wbr>Link<wbr>Type<wbr>Ethernet10g<wbr>Lr</dt>
+    <dd>LINK_TYPE_ETHERNET_10G_LR</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Link<wbr>Type<wbr>Ethernet100g<wbr>Lr</dt>
+    <dd>LINK_TYPE_ETHERNET_100G_LR</dd><dt>Link<wbr>Type<wbr>Ethernet10g<wbr>Lr</dt>
+    <dd>LINK_TYPE_ETHERNET_10G_LR</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LINK_TYPE_ETHERNET100G_LR</dt>
+    <dd>LINK_TYPE_ETHERNET_100G_LR</dd><dt>LINK_TYPE_ETHERNET10G_LR</dt>
+    <dd>LINK_TYPE_ETHERNET_10G_LR</dd></dl>
+{{% /choosable %}}
+
+<h4 id="interconnectoperationalstatus">Interconnect<wbr>Operational<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Os<wbr>Active</dt>
+    <dd>OS_ACTIVE</dd><dt>Os<wbr>Unprovisioned</dt>
+    <dd>OS_UNPROVISIONED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Interconnect<wbr>Operational<wbr>Status<wbr>Os<wbr>Active</dt>
+    <dd>OS_ACTIVE</dd><dt>Interconnect<wbr>Operational<wbr>Status<wbr>Os<wbr>Unprovisioned</dt>
+    <dd>OS_UNPROVISIONED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Os<wbr>Active</dt>
+    <dd>OS_ACTIVE</dd><dt>Os<wbr>Unprovisioned</dt>
+    <dd>OS_UNPROVISIONED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>OS_ACTIVE</dt>
+    <dd>OS_ACTIVE</dd><dt>OS_UNPROVISIONED</dt>
+    <dd>OS_UNPROVISIONED</dd></dl>
+{{% /choosable %}}
+
 <h4 id="interconnectoutagenotification">Interconnect<wbr>Outage<wbr>Notification</h4>
 
 {{% choosable language csharp %}}
@@ -1434,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuetype_csharp" style="color: inherit; text-decoration: inherit;">Issue<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectoutagenotificationissuetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Interconnect<wbr>Outage<wbr>Notification<wbr>Issue<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Form this outage is expected to take, which can take one of the following values: 
 - OUTAGE: The Interconnect may be completely out of service for some or all of the specified window. 
@@ -1452,7 +1534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectoutagenotificationsource">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Interconnect<wbr>Outage<wbr>Notification<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The party that generated this notification, which can take the following value: 
 - GOOGLE: this notification as generated by Google. Note that the value of NSRC_GOOGLE has been deprecated in favor of GOOGLE.{{% /md %}}</dd><dt class="property-optional"
@@ -1469,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectoutagenotificationstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Interconnect<wbr>Outage<wbr>Notification<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}State of this notification, which can take one of the following values: 
 - ACTIVE: This outage notification is active. The event could be in the past, present, or future. See start_time and end_time for scheduling. 
@@ -1507,7 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuetype_go" style="color: inherit; text-decoration: inherit;">Issue<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectoutagenotificationissuetype">Interconnect<wbr>Outage<wbr>Notification<wbr>Issue<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Form this outage is expected to take, which can take one of the following values: 
 - OUTAGE: The Interconnect may be completely out of service for some or all of the specified window. 
@@ -1525,7 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectoutagenotificationsource">Interconnect<wbr>Outage<wbr>Notification<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The party that generated this notification, which can take the following value: 
 - GOOGLE: this notification as generated by Google. Note that the value of NSRC_GOOGLE has been deprecated in favor of GOOGLE.{{% /md %}}</dd><dt class="property-optional"
@@ -1542,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectoutagenotificationstate">Interconnect<wbr>Outage<wbr>Notification<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}State of this notification, which can take one of the following values: 
 - ACTIVE: This outage notification is active. The event could be in the past, present, or future. See start_time and end_time for scheduling. 
@@ -1580,7 +1662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuetype_nodejs" style="color: inherit; text-decoration: inherit;">issue<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectoutagenotificationissuetype">Interconnect<wbr>Outage<wbr>Notification<wbr>Issue<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Form this outage is expected to take, which can take one of the following values: 
 - OUTAGE: The Interconnect may be completely out of service for some or all of the specified window. 
@@ -1598,7 +1680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectoutagenotificationsource">Interconnect<wbr>Outage<wbr>Notification<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The party that generated this notification, which can take the following value: 
 - GOOGLE: this notification as generated by Google. Note that the value of NSRC_GOOGLE has been deprecated in favor of GOOGLE.{{% /md %}}</dd><dt class="property-optional"
@@ -1615,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#interconnectoutagenotificationstate">Interconnect<wbr>Outage<wbr>Notification<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}State of this notification, which can take one of the following values: 
 - ACTIVE: This outage notification is active. The event could be in the past, present, or future. See start_time and end_time for scheduling. 
@@ -1653,7 +1735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issue_type_python" style="color: inherit; text-decoration: inherit;">issue_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#interconnectoutagenotificationissuetype">Interconnect<wbr>Outage<wbr>Notification<wbr>Issue<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Form this outage is expected to take, which can take one of the following values: 
 - OUTAGE: The Interconnect may be completely out of service for some or all of the specified window. 
@@ -1671,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#interconnectoutagenotificationsource">Interconnect<wbr>Outage<wbr>Notification<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The party that generated this notification, which can take the following value: 
 - GOOGLE: this notification as generated by Google. Note that the value of NSRC_GOOGLE has been deprecated in favor of GOOGLE.{{% /md %}}</dd><dt class="property-optional"
@@ -1688,11 +1770,45 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#interconnectoutagenotificationstate">Interconnect<wbr>Outage<wbr>Notification<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}State of this notification, which can take one of the following values: 
 - ACTIVE: This outage notification is active. The event could be in the past, present, or future. See start_time and end_time for scheduling. 
 - CANCELLED: The outage associated with this notification was cancelled before the outage was due to start. Note that the versions of this enum prefixed with "NS_" have been deprecated in favor of the unprefixed values.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="interconnectoutagenotificationissuetype">Interconnect<wbr>Outage<wbr>Notification<wbr>Issue<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>It<wbr>Outage</dt>
+    <dd>IT_OUTAGE</dd><dt>It<wbr>Partial<wbr>Outage</dt>
+    <dd>IT_PARTIAL_OUTAGE</dd><dt>Outage</dt>
+    <dd>OUTAGE</dd><dt>Partial<wbr>Outage</dt>
+    <dd>PARTIAL_OUTAGE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Interconnect<wbr>Outage<wbr>Notification<wbr>Issue<wbr>Type<wbr>It<wbr>Outage</dt>
+    <dd>IT_OUTAGE</dd><dt>Interconnect<wbr>Outage<wbr>Notification<wbr>Issue<wbr>Type<wbr>It<wbr>Partial<wbr>Outage</dt>
+    <dd>IT_PARTIAL_OUTAGE</dd><dt>Interconnect<wbr>Outage<wbr>Notification<wbr>Issue<wbr>Type<wbr>Outage</dt>
+    <dd>OUTAGE</dd><dt>Interconnect<wbr>Outage<wbr>Notification<wbr>Issue<wbr>Type<wbr>Partial<wbr>Outage</dt>
+    <dd>PARTIAL_OUTAGE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>It<wbr>Outage</dt>
+    <dd>IT_OUTAGE</dd><dt>It<wbr>Partial<wbr>Outage</dt>
+    <dd>IT_PARTIAL_OUTAGE</dd><dt>Outage</dt>
+    <dd>OUTAGE</dd><dt>Partial<wbr>Outage</dt>
+    <dd>PARTIAL_OUTAGE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>IT_OUTAGE</dt>
+    <dd>IT_OUTAGE</dd><dt>IT_PARTIAL_OUTAGE</dt>
+    <dd>IT_PARTIAL_OUTAGE</dd><dt>OUTAGE</dt>
+    <dd>OUTAGE</dd><dt>PARTIAL_OUTAGE</dt>
+    <dd>PARTIAL_OUTAGE</dd></dl>
 {{% /choosable %}}
 
 <h4 id="interconnectoutagenotificationresponse">Interconnect<wbr>Outage<wbr>Notification<wbr>Response</h4>
@@ -1987,6 +2103,96 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}State of this notification, which can take one of the following values: 
 - ACTIVE: This outage notification is active. The event could be in the past, present, or future. See start_time and end_time for scheduling. 
 - CANCELLED: The outage associated with this notification was cancelled before the outage was due to start. Note that the versions of this enum prefixed with "NS_" have been deprecated in favor of the unprefixed values.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="interconnectoutagenotificationsource">Interconnect<wbr>Outage<wbr>Notification<wbr>Source</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Google</dt>
+    <dd>GOOGLE</dd><dt>Nsrc<wbr>Google</dt>
+    <dd>NSRC_GOOGLE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Interconnect<wbr>Outage<wbr>Notification<wbr>Source<wbr>Google</dt>
+    <dd>GOOGLE</dd><dt>Interconnect<wbr>Outage<wbr>Notification<wbr>Source<wbr>Nsrc<wbr>Google</dt>
+    <dd>NSRC_GOOGLE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Google</dt>
+    <dd>GOOGLE</dd><dt>Nsrc<wbr>Google</dt>
+    <dd>NSRC_GOOGLE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>GOOGLE</dt>
+    <dd>GOOGLE</dd><dt>NSRC_GOOGLE</dt>
+    <dd>NSRC_GOOGLE</dd></dl>
+{{% /choosable %}}
+
+<h4 id="interconnectoutagenotificationstate">Interconnect<wbr>Outage<wbr>Notification<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Cancelled</dt>
+    <dd>CANCELLED</dd><dt>Completed</dt>
+    <dd>COMPLETED</dd><dt>Ns<wbr>Active</dt>
+    <dd>NS_ACTIVE</dd><dt>Ns<wbr>Canceled</dt>
+    <dd>NS_CANCELED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Interconnect<wbr>Outage<wbr>Notification<wbr>State<wbr>Active</dt>
+    <dd>ACTIVE</dd><dt>Interconnect<wbr>Outage<wbr>Notification<wbr>State<wbr>Cancelled</dt>
+    <dd>CANCELLED</dd><dt>Interconnect<wbr>Outage<wbr>Notification<wbr>State<wbr>Completed</dt>
+    <dd>COMPLETED</dd><dt>Interconnect<wbr>Outage<wbr>Notification<wbr>State<wbr>Ns<wbr>Active</dt>
+    <dd>NS_ACTIVE</dd><dt>Interconnect<wbr>Outage<wbr>Notification<wbr>State<wbr>Ns<wbr>Canceled</dt>
+    <dd>NS_CANCELED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Cancelled</dt>
+    <dd>CANCELLED</dd><dt>Completed</dt>
+    <dd>COMPLETED</dd><dt>Ns<wbr>Active</dt>
+    <dd>NS_ACTIVE</dd><dt>Ns<wbr>Canceled</dt>
+    <dd>NS_CANCELED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACTIVE</dt>
+    <dd>ACTIVE</dd><dt>CANCELLED</dt>
+    <dd>CANCELLED</dd><dt>COMPLETED</dt>
+    <dd>COMPLETED</dd><dt>NS_ACTIVE</dt>
+    <dd>NS_ACTIVE</dd><dt>NS_CANCELED</dt>
+    <dd>NS_CANCELED</dd></dl>
+{{% /choosable %}}
+
+<h4 id="interconnectstate">Interconnect<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Unprovisioned</dt>
+    <dd>UNPROVISIONED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Interconnect<wbr>State<wbr>Active</dt>
+    <dd>ACTIVE</dd><dt>Interconnect<wbr>State<wbr>Unprovisioned</dt>
+    <dd>UNPROVISIONED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Unprovisioned</dt>
+    <dd>UNPROVISIONED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACTIVE</dt>
+    <dd>ACTIVE</dd><dt>UNPROVISIONED</dt>
+    <dd>UNPROVISIONED</dd></dl>
 {{% /choosable %}}
 
 

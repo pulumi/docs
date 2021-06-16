@@ -20,6 +20,17 @@ Explore the resources and functions of the google-native.monitoring/v3 module.
     <li><a href="uptimecheckconfig" title="UptimeCheckConfig"><span class="symbol resource"></span>UptimeCheckConfig</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getalertpolicy" title="GetAlertPolicy"><span class="symbol function"></span>GetAlertPolicy</a></li>
+    <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
+    <li><a href="getmetricdescriptor" title="GetMetricDescriptor"><span class="symbol function"></span>GetMetricDescriptor</a></li>
+    <li><a href="getnotificationchannel" title="GetNotificationChannel"><span class="symbol function"></span>GetNotificationChannel</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getservicelevelobjective" title="GetServiceLevelObjective"><span class="symbol function"></span>GetServiceLevelObjective</a></li>
+    <li><a href="getuptimecheckconfig" title="GetUptimeCheckConfig"><span class="symbol function"></span>GetUptimeCheckConfig</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -27,6 +38,6 @@ Explore the resources and functions of the google-native.monitoring/v3 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

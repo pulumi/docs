@@ -31,12 +31,12 @@ Creates and runs a matrix of tests according to the given specifications. Unsupp
                <span class="nx">environment_matrix</span><span class="p">:</span> <span class="nx">Optional[_testing_v1.EnvironmentMatrixArgs]</span> = None<span class="p">,</span>
                <span class="nx">fail_fast</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">flaky_test_attempts</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-               <span class="nx">invalid_matrix_details</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">outcome_summary</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">invalid_matrix_details</span><span class="p">:</span> <span class="nx">Optional[_testing_v1.TestMatrixInvalidMatrixDetails]</span> = None<span class="p">,</span>
+               <span class="nx">outcome_summary</span><span class="p">:</span> <span class="nx">Optional[_testing_v1.TestMatrixOutcomeSummary]</span> = None<span class="p">,</span>
                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">result_storage</span><span class="p">:</span> <span class="nx">Optional[_testing_v1.ResultStorageArgs]</span> = None<span class="p">,</span>
-               <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_testing_v1.TestMatrixState]</span> = None<span class="p">,</span>
                <span class="nx">test_executions</span><span class="p">:</span> <span class="nx">Optional[Sequence[_testing_v1.TestExecutionArgs]]</span> = None<span class="p">,</span>
                <span class="nx">test_matrix_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">test_specification</span><span class="p">:</span> <span class="nx">Optional[_testing_v1.TestSpecificationArgs]</span> = None<span class="p">,</span>
@@ -214,7 +214,7 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#invalidmatrixdetails_csharp" style="color: inherit; text-decoration: inherit;">Invalid<wbr>Matrix<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testmatrixinvalidmatrixdetails">Pulumi.<wbr>Google<wbr>Native.<wbr>Testing.<wbr>V1.<wbr>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Describes why the matrix is considered invalid. Only useful for matrices in the INVALID state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -222,7 +222,7 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#outcomesummary_csharp" style="color: inherit; text-decoration: inherit;">Outcome<wbr>Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testmatrixoutcomesummary">Pulumi.<wbr>Google<wbr>Native.<wbr>Testing.<wbr>V1.<wbr>Test<wbr>Matrix<wbr>Outcome<wbr>Summary</a></span>
     </dt>
     <dd>{{% md %}}Output Only. The overall outcome of the test. Only set when the test matrix state is FINISHED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -246,7 +246,7 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testmatrixstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Testing.<wbr>V1.<wbr>Test<wbr>Matrix<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Indicates the current progress of the test matrix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +330,7 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#invalidmatrixdetails_go" style="color: inherit; text-decoration: inherit;">Invalid<wbr>Matrix<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testmatrixinvalidmatrixdetails">Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Describes why the matrix is considered invalid. Only useful for matrices in the INVALID state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +338,7 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#outcomesummary_go" style="color: inherit; text-decoration: inherit;">Outcome<wbr>Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testmatrixoutcomesummary">Test<wbr>Matrix<wbr>Outcome<wbr>Summary</a></span>
     </dt>
     <dd>{{% md %}}Output Only. The overall outcome of the test. Only set when the test matrix state is FINISHED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +362,7 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testmatrixstate">Test<wbr>Matrix<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Indicates the current progress of the test matrix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +446,7 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#invalidmatrixdetails_nodejs" style="color: inherit; text-decoration: inherit;">invalid<wbr>Matrix<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testmatrixinvalidmatrixdetails">Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Describes why the matrix is considered invalid. Only useful for matrices in the INVALID state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +454,7 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#outcomesummary_nodejs" style="color: inherit; text-decoration: inherit;">outcome<wbr>Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testmatrixoutcomesummary">Test<wbr>Matrix<wbr>Outcome<wbr>Summary</a></span>
     </dt>
     <dd>{{% md %}}Output Only. The overall outcome of the test. Only set when the test matrix state is FINISHED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +478,7 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testmatrixstate">Test<wbr>Matrix<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Indicates the current progress of the test matrix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +562,7 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#invalid_matrix_details_python" style="color: inherit; text-decoration: inherit;">invalid_<wbr>matrix_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#testmatrixinvalidmatrixdetails">Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Describes why the matrix is considered invalid. Only useful for matrices in the INVALID state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +570,7 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#outcome_summary_python" style="color: inherit; text-decoration: inherit;">outcome_<wbr>summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#testmatrixoutcomesummary">Test<wbr>Matrix<wbr>Outcome<wbr>Summary</a></span>
     </dt>
     <dd>{{% md %}}Output Only. The overall outcome of the test. Only set when the test matrix state is FINISHED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +594,7 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#testmatrixstate">Test<wbr>Matrix<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Indicates the current progress of the test matrix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1221,7 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratoroption_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#androidinstrumentationtestorchestratoroption">Pulumi.<wbr>Google<wbr>Native.<wbr>Testing.<wbr>V1.<wbr>Android<wbr>Instrumentation<wbr>Test<wbr>Orchestrator<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}The option of whether running each test within its own invocation of instrumentation with Android Test Orchestrator or not. ** Orchestrator is only compatible with AndroidJUnitRunner version 1.0 or higher! ** Orchestrator offers the following benefits: - No shared state - Crashes are isolated - Logs are scoped per test See for more information about Android Test Orchestrator. If not set, the test will be run without the orchestrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1297,7 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratoroption_go" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#androidinstrumentationtestorchestratoroption">Android<wbr>Instrumentation<wbr>Test<wbr>Orchestrator<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}The option of whether running each test within its own invocation of instrumentation with Android Test Orchestrator or not. ** Orchestrator is only compatible with AndroidJUnitRunner version 1.0 or higher! ** Orchestrator offers the following benefits: - No shared state - Crashes are isolated - Logs are scoped per test See for more information about Android Test Orchestrator. If not set, the test will be run without the orchestrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1373,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratoroption_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#androidinstrumentationtestorchestratoroption">Android<wbr>Instrumentation<wbr>Test<wbr>Orchestrator<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}The option of whether running each test within its own invocation of instrumentation with Android Test Orchestrator or not. ** Orchestrator is only compatible with AndroidJUnitRunner version 1.0 or higher! ** Orchestrator offers the following benefits: - No shared state - Crashes are isolated - Logs are scoped per test See for more information about Android Test Orchestrator. If not set, the test will be run without the orchestrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1449,7 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestrator_option_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#androidinstrumentationtestorchestratoroption">Android<wbr>Instrumentation<wbr>Test<wbr>Orchestrator<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}The option of whether running each test within its own invocation of instrumentation with Android Test Orchestrator or not. ** Orchestrator is only compatible with AndroidJUnitRunner version 1.0 or higher! ** Orchestrator offers the following benefits: - No shared state - Crashes are isolated - Logs are scoped per test See for more information about Android Test Orchestrator. If not set, the test will be run without the orchestrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1492,6 +1492,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Each target must be fully qualified with the package name or class name, in one of these formats: - "package package_name" - "class package_name.class_name" - "class package_name.class_name#method_name" If empty, all targets in the module will be run.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="androidinstrumentationtestorchestratoroption">Android<wbr>Instrumentation<wbr>Test<wbr>Orchestrator<wbr>Option</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Orchestrator<wbr>Option<wbr>Unspecified</dt>
+    <dd>ORCHESTRATOR_OPTION_UNSPECIFIED{{% md %}}Default value: the server will choose the mode. Currently implies that the test will run without the orchestrator. In the future, all instrumentation tests will be run with the orchestrator. Using the orchestrator is highly encouraged because of all the benefits it offers.{{% /md %}}</dd><dt>Use<wbr>Orchestrator</dt>
+    <dd>USE_ORCHESTRATOR{{% md %}}Run test using orchestrator. ** Only compatible with AndroidJUnitRunner version 1.0 or higher! ** Recommended.{{% /md %}}</dd><dt>Do<wbr>Not<wbr>Use<wbr>Orchestrator</dt>
+    <dd>DO_NOT_USE_ORCHESTRATOR{{% md %}}Run test without using orchestrator.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Android<wbr>Instrumentation<wbr>Test<wbr>Orchestrator<wbr>Option<wbr>Orchestrator<wbr>Option<wbr>Unspecified</dt>
+    <dd>ORCHESTRATOR_OPTION_UNSPECIFIED{{% md %}}Default value: the server will choose the mode. Currently implies that the test will run without the orchestrator. In the future, all instrumentation tests will be run with the orchestrator. Using the orchestrator is highly encouraged because of all the benefits it offers.{{% /md %}}</dd><dt>Android<wbr>Instrumentation<wbr>Test<wbr>Orchestrator<wbr>Option<wbr>Use<wbr>Orchestrator</dt>
+    <dd>USE_ORCHESTRATOR{{% md %}}Run test using orchestrator. ** Only compatible with AndroidJUnitRunner version 1.0 or higher! ** Recommended.{{% /md %}}</dd><dt>Android<wbr>Instrumentation<wbr>Test<wbr>Orchestrator<wbr>Option<wbr>Do<wbr>Not<wbr>Use<wbr>Orchestrator</dt>
+    <dd>DO_NOT_USE_ORCHESTRATOR{{% md %}}Run test without using orchestrator.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Orchestrator<wbr>Option<wbr>Unspecified</dt>
+    <dd>ORCHESTRATOR_OPTION_UNSPECIFIED{{% md %}}Default value: the server will choose the mode. Currently implies that the test will run without the orchestrator. In the future, all instrumentation tests will be run with the orchestrator. Using the orchestrator is highly encouraged because of all the benefits it offers.{{% /md %}}</dd><dt>Use<wbr>Orchestrator</dt>
+    <dd>USE_ORCHESTRATOR{{% md %}}Run test using orchestrator. ** Only compatible with AndroidJUnitRunner version 1.0 or higher! ** Recommended.{{% /md %}}</dd><dt>Do<wbr>Not<wbr>Use<wbr>Orchestrator</dt>
+    <dd>DO_NOT_USE_ORCHESTRATOR{{% md %}}Run test without using orchestrator.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ORCHESTRATOR_OPTION_UNSPECIFIED</dt>
+    <dd>ORCHESTRATOR_OPTION_UNSPECIFIED{{% md %}}Default value: the server will choose the mode. Currently implies that the test will run without the orchestrator. In the future, all instrumentation tests will be run with the orchestrator. Using the orchestrator is highly encouraged because of all the benefits it offers.{{% /md %}}</dd><dt>USE_ORCHESTRATOR</dt>
+    <dd>USE_ORCHESTRATOR{{% md %}}Run test using orchestrator. ** Only compatible with AndroidJUnitRunner version 1.0 or higher! ** Recommended.{{% /md %}}</dd><dt>DO_NOT_USE_ORCHESTRATOR</dt>
+    <dd>DO_NOT_USE_ORCHESTRATOR{{% md %}}Run test without using orchestrator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="androidinstrumentationtestresponse">Android<wbr>Instrumentation<wbr>Test<wbr>Response</h4>
@@ -6797,7 +6827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiontype_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#robodirectiveactiontype">Pulumi.<wbr>Google<wbr>Native.<wbr>Testing.<wbr>V1.<wbr>Robo<wbr>Directive<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of action that Robo should perform on the specified element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6825,7 +6855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiontype_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#robodirectiveactiontype">Robo<wbr>Directive<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of action that Robo should perform on the specified element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6853,7 +6883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiontype_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#robodirectiveactiontype">Robo<wbr>Directive<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of action that Robo should perform on the specified element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6881,7 +6911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#robodirectiveactiontype">Robo<wbr>Directive<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of action that Robo should perform on the specified element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6900,6 +6930,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The android resource name of the target UI element. For example, in Java: R.string.foo in xml: @string/foo Only the "foo" part is needed. Reference doc: https://developer.android.com/guide/topics/resources/accessing-resources.html{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="robodirectiveactiontype">Robo<wbr>Directive<wbr>Action<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Action<wbr>Type<wbr>Unspecified</dt>
+    <dd>ACTION_TYPE_UNSPECIFIED{{% md %}}DO NOT USE. For proto versioning only.{{% /md %}}</dd><dt>Single<wbr>Click</dt>
+    <dd>SINGLE_CLICK{{% md %}}Direct Robo to click on the specified element. No-op if specified element is not clickable.{{% /md %}}</dd><dt>Enter<wbr>Text</dt>
+    <dd>ENTER_TEXT{{% md %}}Direct Robo to enter text on the specified element. No-op if specified element is not enabled or does not allow text entry.{{% /md %}}</dd><dt>Ignore</dt>
+    <dd>IGNORE{{% md %}}Direct Robo to ignore interactions with a specific element.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Robo<wbr>Directive<wbr>Action<wbr>Type<wbr>Action<wbr>Type<wbr>Unspecified</dt>
+    <dd>ACTION_TYPE_UNSPECIFIED{{% md %}}DO NOT USE. For proto versioning only.{{% /md %}}</dd><dt>Robo<wbr>Directive<wbr>Action<wbr>Type<wbr>Single<wbr>Click</dt>
+    <dd>SINGLE_CLICK{{% md %}}Direct Robo to click on the specified element. No-op if specified element is not clickable.{{% /md %}}</dd><dt>Robo<wbr>Directive<wbr>Action<wbr>Type<wbr>Enter<wbr>Text</dt>
+    <dd>ENTER_TEXT{{% md %}}Direct Robo to enter text on the specified element. No-op if specified element is not enabled or does not allow text entry.{{% /md %}}</dd><dt>Robo<wbr>Directive<wbr>Action<wbr>Type<wbr>Ignore</dt>
+    <dd>IGNORE{{% md %}}Direct Robo to ignore interactions with a specific element.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Action<wbr>Type<wbr>Unspecified</dt>
+    <dd>ACTION_TYPE_UNSPECIFIED{{% md %}}DO NOT USE. For proto versioning only.{{% /md %}}</dd><dt>Single<wbr>Click</dt>
+    <dd>SINGLE_CLICK{{% md %}}Direct Robo to click on the specified element. No-op if specified element is not clickable.{{% /md %}}</dd><dt>Enter<wbr>Text</dt>
+    <dd>ENTER_TEXT{{% md %}}Direct Robo to enter text on the specified element. No-op if specified element is not enabled or does not allow text entry.{{% /md %}}</dd><dt>Ignore</dt>
+    <dd>IGNORE{{% md %}}Direct Robo to ignore interactions with a specific element.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACTION_TYPE_UNSPECIFIED</dt>
+    <dd>ACTION_TYPE_UNSPECIFIED{{% md %}}DO NOT USE. For proto versioning only.{{% /md %}}</dd><dt>SINGLE_CLICK</dt>
+    <dd>SINGLE_CLICK{{% md %}}Direct Robo to click on the specified element. No-op if specified element is not clickable.{{% /md %}}</dd><dt>ENTER_TEXT</dt>
+    <dd>ENTER_TEXT{{% md %}}Direct Robo to enter text on the specified element. No-op if specified element is not enabled or does not allow text entry.{{% /md %}}</dd><dt>IGNORE</dt>
+    <dd>IGNORE{{% md %}}Direct Robo to ignore interactions with a specific element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="robodirectiveresponse">Robo<wbr>Directive<wbr>Response</h4>
@@ -8177,7 +8241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testexecutionstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Testing.<wbr>V1.<wbr>Test<wbr>Execution<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Indicates the current progress of the test execution (e.g., FINISHED).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8261,7 +8325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testexecutionstate">Test<wbr>Execution<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Indicates the current progress of the test execution (e.g., FINISHED).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8345,7 +8409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testexecutionstate">Test<wbr>Execution<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Indicates the current progress of the test execution (e.g., FINISHED).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8429,7 +8493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#testexecutionstate">Test<wbr>Execution<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Indicates the current progress of the test execution (e.g., FINISHED).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8770,6 +8834,326 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#toolresultsstepresponse">Tool<wbr>Results<wbr>Step<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Where the results for this execution are written.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="testexecutionstate">Test<wbr>Execution<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Test<wbr>State<wbr>Unspecified</dt>
+    <dd>TEST_STATE_UNSPECIFIED{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Validating</dt>
+    <dd>VALIDATING{{% md %}}The execution or matrix is being validated.{{% /md %}}</dd><dt>Pending</dt>
+    <dd>PENDING{{% md %}}The execution or matrix is waiting for resources to become available.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The execution is currently being processed. Can only be set on an execution.{{% /md %}}</dd><dt>Finished</dt>
+    <dd>FINISHED{{% md %}}The execution or matrix has terminated normally. On a matrix this means that the matrix level processing completed normally, but individual executions may be in an ERROR state.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}The execution or matrix has stopped because it encountered an infrastructure failure.{{% /md %}}</dd><dt>Unsupported<wbr>Environment</dt>
+    <dd>UNSUPPORTED_ENVIRONMENT{{% md %}}The execution was not run because it corresponds to a unsupported environment. Can only be set on an execution.{{% /md %}}</dd><dt>Incompatible<wbr>Environment</dt>
+    <dd>INCOMPATIBLE_ENVIRONMENT{{% md %}}The execution was not run because the provided inputs are incompatible with the requested environment. Example: requested AndroidVersion is lower than APK's minSdkVersion Can only be set on an execution.{{% /md %}}</dd><dt>Incompatible<wbr>Architecture</dt>
+    <dd>INCOMPATIBLE_ARCHITECTURE{{% md %}}The execution was not run because the provided inputs are incompatible with the requested architecture. Example: requested device does not support running the native code in the supplied APK Can only be set on an execution.{{% /md %}}</dd><dt>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The user cancelled the execution. Can only be set on an execution.{{% /md %}}</dd><dt>Invalid</dt>
+    <dd>INVALID{{% md %}}The execution or matrix was not run because the provided inputs are not valid. Examples: input file is not of the expected type, is malformed/corrupt, or was flagged as malware{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Test<wbr>Execution<wbr>State<wbr>Test<wbr>State<wbr>Unspecified</dt>
+    <dd>TEST_STATE_UNSPECIFIED{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Test<wbr>Execution<wbr>State<wbr>Validating</dt>
+    <dd>VALIDATING{{% md %}}The execution or matrix is being validated.{{% /md %}}</dd><dt>Test<wbr>Execution<wbr>State<wbr>Pending</dt>
+    <dd>PENDING{{% md %}}The execution or matrix is waiting for resources to become available.{{% /md %}}</dd><dt>Test<wbr>Execution<wbr>State<wbr>Running</dt>
+    <dd>RUNNING{{% md %}}The execution is currently being processed. Can only be set on an execution.{{% /md %}}</dd><dt>Test<wbr>Execution<wbr>State<wbr>Finished</dt>
+    <dd>FINISHED{{% md %}}The execution or matrix has terminated normally. On a matrix this means that the matrix level processing completed normally, but individual executions may be in an ERROR state.{{% /md %}}</dd><dt>Test<wbr>Execution<wbr>State<wbr>Error</dt>
+    <dd>ERROR{{% md %}}The execution or matrix has stopped because it encountered an infrastructure failure.{{% /md %}}</dd><dt>Test<wbr>Execution<wbr>State<wbr>Unsupported<wbr>Environment</dt>
+    <dd>UNSUPPORTED_ENVIRONMENT{{% md %}}The execution was not run because it corresponds to a unsupported environment. Can only be set on an execution.{{% /md %}}</dd><dt>Test<wbr>Execution<wbr>State<wbr>Incompatible<wbr>Environment</dt>
+    <dd>INCOMPATIBLE_ENVIRONMENT{{% md %}}The execution was not run because the provided inputs are incompatible with the requested environment. Example: requested AndroidVersion is lower than APK's minSdkVersion Can only be set on an execution.{{% /md %}}</dd><dt>Test<wbr>Execution<wbr>State<wbr>Incompatible<wbr>Architecture</dt>
+    <dd>INCOMPATIBLE_ARCHITECTURE{{% md %}}The execution was not run because the provided inputs are incompatible with the requested architecture. Example: requested device does not support running the native code in the supplied APK Can only be set on an execution.{{% /md %}}</dd><dt>Test<wbr>Execution<wbr>State<wbr>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The user cancelled the execution. Can only be set on an execution.{{% /md %}}</dd><dt>Test<wbr>Execution<wbr>State<wbr>Invalid</dt>
+    <dd>INVALID{{% md %}}The execution or matrix was not run because the provided inputs are not valid. Examples: input file is not of the expected type, is malformed/corrupt, or was flagged as malware{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Test<wbr>State<wbr>Unspecified</dt>
+    <dd>TEST_STATE_UNSPECIFIED{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Validating</dt>
+    <dd>VALIDATING{{% md %}}The execution or matrix is being validated.{{% /md %}}</dd><dt>Pending</dt>
+    <dd>PENDING{{% md %}}The execution or matrix is waiting for resources to become available.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The execution is currently being processed. Can only be set on an execution.{{% /md %}}</dd><dt>Finished</dt>
+    <dd>FINISHED{{% md %}}The execution or matrix has terminated normally. On a matrix this means that the matrix level processing completed normally, but individual executions may be in an ERROR state.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}The execution or matrix has stopped because it encountered an infrastructure failure.{{% /md %}}</dd><dt>Unsupported<wbr>Environment</dt>
+    <dd>UNSUPPORTED_ENVIRONMENT{{% md %}}The execution was not run because it corresponds to a unsupported environment. Can only be set on an execution.{{% /md %}}</dd><dt>Incompatible<wbr>Environment</dt>
+    <dd>INCOMPATIBLE_ENVIRONMENT{{% md %}}The execution was not run because the provided inputs are incompatible with the requested environment. Example: requested AndroidVersion is lower than APK's minSdkVersion Can only be set on an execution.{{% /md %}}</dd><dt>Incompatible<wbr>Architecture</dt>
+    <dd>INCOMPATIBLE_ARCHITECTURE{{% md %}}The execution was not run because the provided inputs are incompatible with the requested architecture. Example: requested device does not support running the native code in the supplied APK Can only be set on an execution.{{% /md %}}</dd><dt>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The user cancelled the execution. Can only be set on an execution.{{% /md %}}</dd><dt>Invalid</dt>
+    <dd>INVALID{{% md %}}The execution or matrix was not run because the provided inputs are not valid. Examples: input file is not of the expected type, is malformed/corrupt, or was flagged as malware{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TEST_STATE_UNSPECIFIED</dt>
+    <dd>TEST_STATE_UNSPECIFIED{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>VALIDATING</dt>
+    <dd>VALIDATING{{% md %}}The execution or matrix is being validated.{{% /md %}}</dd><dt>PENDING</dt>
+    <dd>PENDING{{% md %}}The execution or matrix is waiting for resources to become available.{{% /md %}}</dd><dt>RUNNING</dt>
+    <dd>RUNNING{{% md %}}The execution is currently being processed. Can only be set on an execution.{{% /md %}}</dd><dt>FINISHED</dt>
+    <dd>FINISHED{{% md %}}The execution or matrix has terminated normally. On a matrix this means that the matrix level processing completed normally, but individual executions may be in an ERROR state.{{% /md %}}</dd><dt>ERROR</dt>
+    <dd>ERROR{{% md %}}The execution or matrix has stopped because it encountered an infrastructure failure.{{% /md %}}</dd><dt>UNSUPPORTED_ENVIRONMENT</dt>
+    <dd>UNSUPPORTED_ENVIRONMENT{{% md %}}The execution was not run because it corresponds to a unsupported environment. Can only be set on an execution.{{% /md %}}</dd><dt>INCOMPATIBLE_ENVIRONMENT</dt>
+    <dd>INCOMPATIBLE_ENVIRONMENT{{% md %}}The execution was not run because the provided inputs are incompatible with the requested environment. Example: requested AndroidVersion is lower than APK's minSdkVersion Can only be set on an execution.{{% /md %}}</dd><dt>INCOMPATIBLE_ARCHITECTURE</dt>
+    <dd>INCOMPATIBLE_ARCHITECTURE{{% md %}}The execution was not run because the provided inputs are incompatible with the requested architecture. Example: requested device does not support running the native code in the supplied APK Can only be set on an execution.{{% /md %}}</dd><dt>CANCELLED</dt>
+    <dd>CANCELLED{{% md %}}The user cancelled the execution. Can only be set on an execution.{{% /md %}}</dd><dt>INVALID</dt>
+    <dd>INVALID{{% md %}}The execution or matrix was not run because the provided inputs are not valid. Examples: input file is not of the expected type, is malformed/corrupt, or was flagged as malware{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="testmatrixinvalidmatrixdetails">Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Invalid<wbr>Matrix<wbr>Details<wbr>Unspecified</dt>
+    <dd>INVALID_MATRIX_DETAILS_UNSPECIFIED{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Details<wbr>Unavailable</dt>
+    <dd>DETAILS_UNAVAILABLE{{% md %}}The matrix is INVALID, but there are no further details available.{{% /md %}}</dd><dt>Malformed<wbr>Apk</dt>
+    <dd>MALFORMED_APK{{% md %}}The input app APK could not be parsed.{{% /md %}}</dd><dt>Malformed<wbr>Test<wbr>Apk</dt>
+    <dd>MALFORMED_TEST_APK{{% md %}}The input test APK could not be parsed.{{% /md %}}</dd><dt>No<wbr>Manifest</dt>
+    <dd>NO_MANIFEST{{% md %}}The AndroidManifest.xml could not be found.{{% /md %}}</dd><dt>No<wbr>Package<wbr>Name</dt>
+    <dd>NO_PACKAGE_NAME{{% md %}}The APK manifest does not declare a package name.{{% /md %}}</dd><dt>Invalid<wbr>Package<wbr>Name</dt>
+    <dd>INVALID_PACKAGE_NAME{{% md %}}The APK application ID (aka package name) is invalid. See also https://developer.android.com/studio/build/application-id{{% /md %}}</dd><dt>Test<wbr>Same<wbr>As<wbr>App</dt>
+    <dd>TEST_SAME_AS_APP{{% md %}}The test package and app package are the same.{{% /md %}}</dd><dt>No<wbr>Instrumentation</dt>
+    <dd>NO_INSTRUMENTATION{{% md %}}The test apk does not declare an instrumentation.{{% /md %}}</dd><dt>No<wbr>Signature</dt>
+    <dd>NO_SIGNATURE{{% md %}}The input app apk does not have a signature.{{% /md %}}</dd><dt>Instrumentation<wbr>Orchestrator<wbr>Incompatible</dt>
+    <dd>INSTRUMENTATION_ORCHESTRATOR_INCOMPATIBLE{{% md %}}The test runner class specified by user or in the test APK's manifest file is not compatible with Android Test Orchestrator. Orchestrator is only compatible with AndroidJUnitRunner version 1.0 or higher. Orchestrator can be disabled by using DO_NOT_USE_ORCHESTRATOR OrchestratorOption.{{% /md %}}</dd><dt>No<wbr>Test<wbr>Runner<wbr>Class</dt>
+    <dd>NO_TEST_RUNNER_CLASS{{% md %}}The test APK does not contain the test runner class specified by user or in the manifest file. This can be caused by either of the following reasons: - the user provided a runner class name that's incorrect, or - the test runner isn't built into the test APK (might be in the app APK instead).{{% /md %}}</dd><dt>No<wbr>Launcher<wbr>Activity</dt>
+    <dd>NO_LAUNCHER_ACTIVITY{{% md %}}A main launcher activity could not be found.{{% /md %}}</dd><dt>Forbidden<wbr>Permissions</dt>
+    <dd>FORBIDDEN_PERMISSIONS{{% md %}}The app declares one or more permissions that are not allowed.{{% /md %}}</dd><dt>Invalid<wbr>Robo<wbr>Directives</dt>
+    <dd>INVALID_ROBO_DIRECTIVES{{% md %}}There is a conflict in the provided robo_directives.{{% /md %}}</dd><dt>Invalid<wbr>Resource<wbr>Name</dt>
+    <dd>INVALID_RESOURCE_NAME{{% md %}}There is at least one invalid resource name in the provided robo directives{{% /md %}}</dd><dt>Invalid<wbr>Directive<wbr>Action</dt>
+    <dd>INVALID_DIRECTIVE_ACTION{{% md %}}Invalid definition of action in the robo directives (e.g. a click or ignore action includes an input text field){{% /md %}}</dd><dt>Test<wbr>Loop<wbr>Intent<wbr>Filter<wbr>Not<wbr>Found</dt>
+    <dd>TEST_LOOP_INTENT_FILTER_NOT_FOUND{{% md %}}There is no test loop intent filter, or the one that is given is not formatted correctly.{{% /md %}}</dd><dt>Scenario<wbr>Label<wbr>Not<wbr>Declared</dt>
+    <dd>SCENARIO_LABEL_NOT_DECLARED{{% md %}}The request contains a scenario label that was not declared in the manifest.{{% /md %}}</dd><dt>Scenario<wbr>Label<wbr>Malformed</dt>
+    <dd>SCENARIO_LABEL_MALFORMED{{% md %}}There was an error when parsing a label's value.{{% /md %}}</dd><dt>Scenario<wbr>Not<wbr>Declared</dt>
+    <dd>SCENARIO_NOT_DECLARED{{% md %}}The request contains a scenario number that was not declared in the manifest.{{% /md %}}</dd><dt>Device<wbr>Admin<wbr>Receiver</dt>
+    <dd>DEVICE_ADMIN_RECEIVER{{% md %}}Device administrator applications are not allowed.{{% /md %}}</dd><dt>Malformed<wbr>Xc<wbr>Test<wbr>Zip</dt>
+    <dd>MALFORMED_XC_TEST_ZIP{{% md %}}The zipped XCTest was malformed. The zip did not contain a single .xctestrun file and the contents of the DerivedData/Build/Products directory.{{% /md %}}</dd><dt>Built<wbr>For<wbr>Ios<wbr>Simulator</dt>
+    <dd>BUILT_FOR_IOS_SIMULATOR{{% md %}}The zipped XCTest was built for the iOS simulator rather than for a physical device.{{% /md %}}</dd><dt>No<wbr>Tests<wbr>In<wbr>Xc<wbr>Test<wbr>Zip</dt>
+    <dd>NO_TESTS_IN_XC_TEST_ZIP{{% md %}}The .xctestrun file did not specify any test targets.{{% /md %}}</dd><dt>Use<wbr>Destination<wbr>Artifacts</dt>
+    <dd>USE_DESTINATION_ARTIFACTS{{% md %}}One or more of the test targets defined in the .xctestrun file specifies "UseDestinationArtifacts", which is disallowed.{{% /md %}}</dd><dt>Test<wbr>Not<wbr>App<wbr>Hosted</dt>
+    <dd>TEST_NOT_APP_HOSTED{{% md %}}XC tests which run on physical devices must have "IsAppHostedTestBundle" == "true" in the xctestrun file.{{% /md %}}</dd><dt>Plist<wbr>Cannot<wbr>Be<wbr>Parsed</dt>
+    <dd>PLIST_CANNOT_BE_PARSED{{% md %}}An Info.plist file in the XCTest zip could not be parsed.{{% /md %}}</dd><dt>Test<wbr>Only<wbr>Apk</dt>
+    <dd>TEST_ONLY_APK{{% md %}}The APK is marked as "testOnly". Deprecated and not currently used.{{% /md %}}</dd><dt>Malformed<wbr>Ipa</dt>
+    <dd>MALFORMED_IPA{{% md %}}The input IPA could not be parsed.{{% /md %}}</dd><dt>Missing<wbr>Url<wbr>Scheme</dt>
+    <dd>MISSING_URL_SCHEME{{% md %}}The application doesn't register the game loop URL scheme.{{% /md %}}</dd><dt>Malformed<wbr>App<wbr>Bundle</dt>
+    <dd>MALFORMED_APP_BUNDLE{{% md %}}The iOS application bundle (.app) couldn't be processed.{{% /md %}}</dd><dt>No<wbr>Code<wbr>Apk</dt>
+    <dd>NO_CODE_APK{{% md %}}APK contains no code. See also https://developer.android.com/guide/topics/manifest/application-element.html#code{{% /md %}}</dd><dt>Invalid<wbr>Input<wbr>Apk</dt>
+    <dd>INVALID_INPUT_APK{{% md %}}Either the provided input APK path was malformed, the APK file does not exist, or the user does not have permission to access the APK file.{{% /md %}}</dd><dt>Invalid<wbr>Apk<wbr>Preview<wbr>Sdk</dt>
+    <dd>INVALID_APK_PREVIEW_SDK{{% md %}}APK is built for a preview SDK which is unsupported{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Unspecified</dt>
+    <dd>INVALID_MATRIX_DETAILS_UNSPECIFIED{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Details<wbr>Unavailable</dt>
+    <dd>DETAILS_UNAVAILABLE{{% md %}}The matrix is INVALID, but there are no further details available.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Malformed<wbr>Apk</dt>
+    <dd>MALFORMED_APK{{% md %}}The input app APK could not be parsed.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Malformed<wbr>Test<wbr>Apk</dt>
+    <dd>MALFORMED_TEST_APK{{% md %}}The input test APK could not be parsed.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>No<wbr>Manifest</dt>
+    <dd>NO_MANIFEST{{% md %}}The AndroidManifest.xml could not be found.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>No<wbr>Package<wbr>Name</dt>
+    <dd>NO_PACKAGE_NAME{{% md %}}The APK manifest does not declare a package name.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Invalid<wbr>Package<wbr>Name</dt>
+    <dd>INVALID_PACKAGE_NAME{{% md %}}The APK application ID (aka package name) is invalid. See also https://developer.android.com/studio/build/application-id{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Test<wbr>Same<wbr>As<wbr>App</dt>
+    <dd>TEST_SAME_AS_APP{{% md %}}The test package and app package are the same.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>No<wbr>Instrumentation</dt>
+    <dd>NO_INSTRUMENTATION{{% md %}}The test apk does not declare an instrumentation.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>No<wbr>Signature</dt>
+    <dd>NO_SIGNATURE{{% md %}}The input app apk does not have a signature.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Instrumentation<wbr>Orchestrator<wbr>Incompatible</dt>
+    <dd>INSTRUMENTATION_ORCHESTRATOR_INCOMPATIBLE{{% md %}}The test runner class specified by user or in the test APK's manifest file is not compatible with Android Test Orchestrator. Orchestrator is only compatible with AndroidJUnitRunner version 1.0 or higher. Orchestrator can be disabled by using DO_NOT_USE_ORCHESTRATOR OrchestratorOption.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>No<wbr>Test<wbr>Runner<wbr>Class</dt>
+    <dd>NO_TEST_RUNNER_CLASS{{% md %}}The test APK does not contain the test runner class specified by user or in the manifest file. This can be caused by either of the following reasons: - the user provided a runner class name that's incorrect, or - the test runner isn't built into the test APK (might be in the app APK instead).{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>No<wbr>Launcher<wbr>Activity</dt>
+    <dd>NO_LAUNCHER_ACTIVITY{{% md %}}A main launcher activity could not be found.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Forbidden<wbr>Permissions</dt>
+    <dd>FORBIDDEN_PERMISSIONS{{% md %}}The app declares one or more permissions that are not allowed.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Invalid<wbr>Robo<wbr>Directives</dt>
+    <dd>INVALID_ROBO_DIRECTIVES{{% md %}}There is a conflict in the provided robo_directives.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Invalid<wbr>Resource<wbr>Name</dt>
+    <dd>INVALID_RESOURCE_NAME{{% md %}}There is at least one invalid resource name in the provided robo directives{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Invalid<wbr>Directive<wbr>Action</dt>
+    <dd>INVALID_DIRECTIVE_ACTION{{% md %}}Invalid definition of action in the robo directives (e.g. a click or ignore action includes an input text field){{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Test<wbr>Loop<wbr>Intent<wbr>Filter<wbr>Not<wbr>Found</dt>
+    <dd>TEST_LOOP_INTENT_FILTER_NOT_FOUND{{% md %}}There is no test loop intent filter, or the one that is given is not formatted correctly.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Scenario<wbr>Label<wbr>Not<wbr>Declared</dt>
+    <dd>SCENARIO_LABEL_NOT_DECLARED{{% md %}}The request contains a scenario label that was not declared in the manifest.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Scenario<wbr>Label<wbr>Malformed</dt>
+    <dd>SCENARIO_LABEL_MALFORMED{{% md %}}There was an error when parsing a label's value.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Scenario<wbr>Not<wbr>Declared</dt>
+    <dd>SCENARIO_NOT_DECLARED{{% md %}}The request contains a scenario number that was not declared in the manifest.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Device<wbr>Admin<wbr>Receiver</dt>
+    <dd>DEVICE_ADMIN_RECEIVER{{% md %}}Device administrator applications are not allowed.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Malformed<wbr>Xc<wbr>Test<wbr>Zip</dt>
+    <dd>MALFORMED_XC_TEST_ZIP{{% md %}}The zipped XCTest was malformed. The zip did not contain a single .xctestrun file and the contents of the DerivedData/Build/Products directory.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Built<wbr>For<wbr>Ios<wbr>Simulator</dt>
+    <dd>BUILT_FOR_IOS_SIMULATOR{{% md %}}The zipped XCTest was built for the iOS simulator rather than for a physical device.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>No<wbr>Tests<wbr>In<wbr>Xc<wbr>Test<wbr>Zip</dt>
+    <dd>NO_TESTS_IN_XC_TEST_ZIP{{% md %}}The .xctestrun file did not specify any test targets.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Use<wbr>Destination<wbr>Artifacts</dt>
+    <dd>USE_DESTINATION_ARTIFACTS{{% md %}}One or more of the test targets defined in the .xctestrun file specifies "UseDestinationArtifacts", which is disallowed.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Test<wbr>Not<wbr>App<wbr>Hosted</dt>
+    <dd>TEST_NOT_APP_HOSTED{{% md %}}XC tests which run on physical devices must have "IsAppHostedTestBundle" == "true" in the xctestrun file.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Plist<wbr>Cannot<wbr>Be<wbr>Parsed</dt>
+    <dd>PLIST_CANNOT_BE_PARSED{{% md %}}An Info.plist file in the XCTest zip could not be parsed.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Test<wbr>Only<wbr>Apk</dt>
+    <dd>TEST_ONLY_APK{{% md %}}The APK is marked as "testOnly". Deprecated and not currently used.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Malformed<wbr>Ipa</dt>
+    <dd>MALFORMED_IPA{{% md %}}The input IPA could not be parsed.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Missing<wbr>Url<wbr>Scheme</dt>
+    <dd>MISSING_URL_SCHEME{{% md %}}The application doesn't register the game loop URL scheme.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Malformed<wbr>App<wbr>Bundle</dt>
+    <dd>MALFORMED_APP_BUNDLE{{% md %}}The iOS application bundle (.app) couldn't be processed.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>No<wbr>Code<wbr>Apk</dt>
+    <dd>NO_CODE_APK{{% md %}}APK contains no code. See also https://developer.android.com/guide/topics/manifest/application-element.html#code{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Invalid<wbr>Input<wbr>Apk</dt>
+    <dd>INVALID_INPUT_APK{{% md %}}Either the provided input APK path was malformed, the APK file does not exist, or the user does not have permission to access the APK file.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Invalid<wbr>Matrix<wbr>Details<wbr>Invalid<wbr>Apk<wbr>Preview<wbr>Sdk</dt>
+    <dd>INVALID_APK_PREVIEW_SDK{{% md %}}APK is built for a preview SDK which is unsupported{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Invalid<wbr>Matrix<wbr>Details<wbr>Unspecified</dt>
+    <dd>INVALID_MATRIX_DETAILS_UNSPECIFIED{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Details<wbr>Unavailable</dt>
+    <dd>DETAILS_UNAVAILABLE{{% md %}}The matrix is INVALID, but there are no further details available.{{% /md %}}</dd><dt>Malformed<wbr>Apk</dt>
+    <dd>MALFORMED_APK{{% md %}}The input app APK could not be parsed.{{% /md %}}</dd><dt>Malformed<wbr>Test<wbr>Apk</dt>
+    <dd>MALFORMED_TEST_APK{{% md %}}The input test APK could not be parsed.{{% /md %}}</dd><dt>No<wbr>Manifest</dt>
+    <dd>NO_MANIFEST{{% md %}}The AndroidManifest.xml could not be found.{{% /md %}}</dd><dt>No<wbr>Package<wbr>Name</dt>
+    <dd>NO_PACKAGE_NAME{{% md %}}The APK manifest does not declare a package name.{{% /md %}}</dd><dt>Invalid<wbr>Package<wbr>Name</dt>
+    <dd>INVALID_PACKAGE_NAME{{% md %}}The APK application ID (aka package name) is invalid. See also https://developer.android.com/studio/build/application-id{{% /md %}}</dd><dt>Test<wbr>Same<wbr>As<wbr>App</dt>
+    <dd>TEST_SAME_AS_APP{{% md %}}The test package and app package are the same.{{% /md %}}</dd><dt>No<wbr>Instrumentation</dt>
+    <dd>NO_INSTRUMENTATION{{% md %}}The test apk does not declare an instrumentation.{{% /md %}}</dd><dt>No<wbr>Signature</dt>
+    <dd>NO_SIGNATURE{{% md %}}The input app apk does not have a signature.{{% /md %}}</dd><dt>Instrumentation<wbr>Orchestrator<wbr>Incompatible</dt>
+    <dd>INSTRUMENTATION_ORCHESTRATOR_INCOMPATIBLE{{% md %}}The test runner class specified by user or in the test APK's manifest file is not compatible with Android Test Orchestrator. Orchestrator is only compatible with AndroidJUnitRunner version 1.0 or higher. Orchestrator can be disabled by using DO_NOT_USE_ORCHESTRATOR OrchestratorOption.{{% /md %}}</dd><dt>No<wbr>Test<wbr>Runner<wbr>Class</dt>
+    <dd>NO_TEST_RUNNER_CLASS{{% md %}}The test APK does not contain the test runner class specified by user or in the manifest file. This can be caused by either of the following reasons: - the user provided a runner class name that's incorrect, or - the test runner isn't built into the test APK (might be in the app APK instead).{{% /md %}}</dd><dt>No<wbr>Launcher<wbr>Activity</dt>
+    <dd>NO_LAUNCHER_ACTIVITY{{% md %}}A main launcher activity could not be found.{{% /md %}}</dd><dt>Forbidden<wbr>Permissions</dt>
+    <dd>FORBIDDEN_PERMISSIONS{{% md %}}The app declares one or more permissions that are not allowed.{{% /md %}}</dd><dt>Invalid<wbr>Robo<wbr>Directives</dt>
+    <dd>INVALID_ROBO_DIRECTIVES{{% md %}}There is a conflict in the provided robo_directives.{{% /md %}}</dd><dt>Invalid<wbr>Resource<wbr>Name</dt>
+    <dd>INVALID_RESOURCE_NAME{{% md %}}There is at least one invalid resource name in the provided robo directives{{% /md %}}</dd><dt>Invalid<wbr>Directive<wbr>Action</dt>
+    <dd>INVALID_DIRECTIVE_ACTION{{% md %}}Invalid definition of action in the robo directives (e.g. a click or ignore action includes an input text field){{% /md %}}</dd><dt>Test<wbr>Loop<wbr>Intent<wbr>Filter<wbr>Not<wbr>Found</dt>
+    <dd>TEST_LOOP_INTENT_FILTER_NOT_FOUND{{% md %}}There is no test loop intent filter, or the one that is given is not formatted correctly.{{% /md %}}</dd><dt>Scenario<wbr>Label<wbr>Not<wbr>Declared</dt>
+    <dd>SCENARIO_LABEL_NOT_DECLARED{{% md %}}The request contains a scenario label that was not declared in the manifest.{{% /md %}}</dd><dt>Scenario<wbr>Label<wbr>Malformed</dt>
+    <dd>SCENARIO_LABEL_MALFORMED{{% md %}}There was an error when parsing a label's value.{{% /md %}}</dd><dt>Scenario<wbr>Not<wbr>Declared</dt>
+    <dd>SCENARIO_NOT_DECLARED{{% md %}}The request contains a scenario number that was not declared in the manifest.{{% /md %}}</dd><dt>Device<wbr>Admin<wbr>Receiver</dt>
+    <dd>DEVICE_ADMIN_RECEIVER{{% md %}}Device administrator applications are not allowed.{{% /md %}}</dd><dt>Malformed<wbr>Xc<wbr>Test<wbr>Zip</dt>
+    <dd>MALFORMED_XC_TEST_ZIP{{% md %}}The zipped XCTest was malformed. The zip did not contain a single .xctestrun file and the contents of the DerivedData/Build/Products directory.{{% /md %}}</dd><dt>Built<wbr>For<wbr>Ios<wbr>Simulator</dt>
+    <dd>BUILT_FOR_IOS_SIMULATOR{{% md %}}The zipped XCTest was built for the iOS simulator rather than for a physical device.{{% /md %}}</dd><dt>No<wbr>Tests<wbr>In<wbr>Xc<wbr>Test<wbr>Zip</dt>
+    <dd>NO_TESTS_IN_XC_TEST_ZIP{{% md %}}The .xctestrun file did not specify any test targets.{{% /md %}}</dd><dt>Use<wbr>Destination<wbr>Artifacts</dt>
+    <dd>USE_DESTINATION_ARTIFACTS{{% md %}}One or more of the test targets defined in the .xctestrun file specifies "UseDestinationArtifacts", which is disallowed.{{% /md %}}</dd><dt>Test<wbr>Not<wbr>App<wbr>Hosted</dt>
+    <dd>TEST_NOT_APP_HOSTED{{% md %}}XC tests which run on physical devices must have "IsAppHostedTestBundle" == "true" in the xctestrun file.{{% /md %}}</dd><dt>Plist<wbr>Cannot<wbr>Be<wbr>Parsed</dt>
+    <dd>PLIST_CANNOT_BE_PARSED{{% md %}}An Info.plist file in the XCTest zip could not be parsed.{{% /md %}}</dd><dt>Test<wbr>Only<wbr>Apk</dt>
+    <dd>TEST_ONLY_APK{{% md %}}The APK is marked as "testOnly". Deprecated and not currently used.{{% /md %}}</dd><dt>Malformed<wbr>Ipa</dt>
+    <dd>MALFORMED_IPA{{% md %}}The input IPA could not be parsed.{{% /md %}}</dd><dt>Missing<wbr>Url<wbr>Scheme</dt>
+    <dd>MISSING_URL_SCHEME{{% md %}}The application doesn't register the game loop URL scheme.{{% /md %}}</dd><dt>Malformed<wbr>App<wbr>Bundle</dt>
+    <dd>MALFORMED_APP_BUNDLE{{% md %}}The iOS application bundle (.app) couldn't be processed.{{% /md %}}</dd><dt>No<wbr>Code<wbr>Apk</dt>
+    <dd>NO_CODE_APK{{% md %}}APK contains no code. See also https://developer.android.com/guide/topics/manifest/application-element.html#code{{% /md %}}</dd><dt>Invalid<wbr>Input<wbr>Apk</dt>
+    <dd>INVALID_INPUT_APK{{% md %}}Either the provided input APK path was malformed, the APK file does not exist, or the user does not have permission to access the APK file.{{% /md %}}</dd><dt>Invalid<wbr>Apk<wbr>Preview<wbr>Sdk</dt>
+    <dd>INVALID_APK_PREVIEW_SDK{{% md %}}APK is built for a preview SDK which is unsupported{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>INVALID_MATRIX_DETAILS_UNSPECIFIED</dt>
+    <dd>INVALID_MATRIX_DETAILS_UNSPECIFIED{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>DETAILS_UNAVAILABLE</dt>
+    <dd>DETAILS_UNAVAILABLE{{% md %}}The matrix is INVALID, but there are no further details available.{{% /md %}}</dd><dt>MALFORMED_APK</dt>
+    <dd>MALFORMED_APK{{% md %}}The input app APK could not be parsed.{{% /md %}}</dd><dt>MALFORMED_TEST_APK</dt>
+    <dd>MALFORMED_TEST_APK{{% md %}}The input test APK could not be parsed.{{% /md %}}</dd><dt>NO_MANIFEST</dt>
+    <dd>NO_MANIFEST{{% md %}}The AndroidManifest.xml could not be found.{{% /md %}}</dd><dt>NO_PACKAGE_NAME</dt>
+    <dd>NO_PACKAGE_NAME{{% md %}}The APK manifest does not declare a package name.{{% /md %}}</dd><dt>INVALID_PACKAGE_NAME</dt>
+    <dd>INVALID_PACKAGE_NAME{{% md %}}The APK application ID (aka package name) is invalid. See also https://developer.android.com/studio/build/application-id{{% /md %}}</dd><dt>TEST_SAME_AS_APP</dt>
+    <dd>TEST_SAME_AS_APP{{% md %}}The test package and app package are the same.{{% /md %}}</dd><dt>NO_INSTRUMENTATION</dt>
+    <dd>NO_INSTRUMENTATION{{% md %}}The test apk does not declare an instrumentation.{{% /md %}}</dd><dt>NO_SIGNATURE</dt>
+    <dd>NO_SIGNATURE{{% md %}}The input app apk does not have a signature.{{% /md %}}</dd><dt>INSTRUMENTATION_ORCHESTRATOR_INCOMPATIBLE</dt>
+    <dd>INSTRUMENTATION_ORCHESTRATOR_INCOMPATIBLE{{% md %}}The test runner class specified by user or in the test APK's manifest file is not compatible with Android Test Orchestrator. Orchestrator is only compatible with AndroidJUnitRunner version 1.0 or higher. Orchestrator can be disabled by using DO_NOT_USE_ORCHESTRATOR OrchestratorOption.{{% /md %}}</dd><dt>NO_TEST_RUNNER_CLASS</dt>
+    <dd>NO_TEST_RUNNER_CLASS{{% md %}}The test APK does not contain the test runner class specified by user or in the manifest file. This can be caused by either of the following reasons: - the user provided a runner class name that's incorrect, or - the test runner isn't built into the test APK (might be in the app APK instead).{{% /md %}}</dd><dt>NO_LAUNCHER_ACTIVITY</dt>
+    <dd>NO_LAUNCHER_ACTIVITY{{% md %}}A main launcher activity could not be found.{{% /md %}}</dd><dt>FORBIDDEN_PERMISSIONS</dt>
+    <dd>FORBIDDEN_PERMISSIONS{{% md %}}The app declares one or more permissions that are not allowed.{{% /md %}}</dd><dt>INVALID_ROBO_DIRECTIVES</dt>
+    <dd>INVALID_ROBO_DIRECTIVES{{% md %}}There is a conflict in the provided robo_directives.{{% /md %}}</dd><dt>INVALID_RESOURCE_NAME</dt>
+    <dd>INVALID_RESOURCE_NAME{{% md %}}There is at least one invalid resource name in the provided robo directives{{% /md %}}</dd><dt>INVALID_DIRECTIVE_ACTION</dt>
+    <dd>INVALID_DIRECTIVE_ACTION{{% md %}}Invalid definition of action in the robo directives (e.g. a click or ignore action includes an input text field){{% /md %}}</dd><dt>TEST_LOOP_INTENT_FILTER_NOT_FOUND</dt>
+    <dd>TEST_LOOP_INTENT_FILTER_NOT_FOUND{{% md %}}There is no test loop intent filter, or the one that is given is not formatted correctly.{{% /md %}}</dd><dt>SCENARIO_LABEL_NOT_DECLARED</dt>
+    <dd>SCENARIO_LABEL_NOT_DECLARED{{% md %}}The request contains a scenario label that was not declared in the manifest.{{% /md %}}</dd><dt>SCENARIO_LABEL_MALFORMED</dt>
+    <dd>SCENARIO_LABEL_MALFORMED{{% md %}}There was an error when parsing a label's value.{{% /md %}}</dd><dt>SCENARIO_NOT_DECLARED</dt>
+    <dd>SCENARIO_NOT_DECLARED{{% md %}}The request contains a scenario number that was not declared in the manifest.{{% /md %}}</dd><dt>DEVICE_ADMIN_RECEIVER</dt>
+    <dd>DEVICE_ADMIN_RECEIVER{{% md %}}Device administrator applications are not allowed.{{% /md %}}</dd><dt>MALFORMED_XC_TEST_ZIP</dt>
+    <dd>MALFORMED_XC_TEST_ZIP{{% md %}}The zipped XCTest was malformed. The zip did not contain a single .xctestrun file and the contents of the DerivedData/Build/Products directory.{{% /md %}}</dd><dt>BUILT_FOR_IOS_SIMULATOR</dt>
+    <dd>BUILT_FOR_IOS_SIMULATOR{{% md %}}The zipped XCTest was built for the iOS simulator rather than for a physical device.{{% /md %}}</dd><dt>NO_TESTS_IN_XC_TEST_ZIP</dt>
+    <dd>NO_TESTS_IN_XC_TEST_ZIP{{% md %}}The .xctestrun file did not specify any test targets.{{% /md %}}</dd><dt>USE_DESTINATION_ARTIFACTS</dt>
+    <dd>USE_DESTINATION_ARTIFACTS{{% md %}}One or more of the test targets defined in the .xctestrun file specifies "UseDestinationArtifacts", which is disallowed.{{% /md %}}</dd><dt>TEST_NOT_APP_HOSTED</dt>
+    <dd>TEST_NOT_APP_HOSTED{{% md %}}XC tests which run on physical devices must have "IsAppHostedTestBundle" == "true" in the xctestrun file.{{% /md %}}</dd><dt>PLIST_CANNOT_BE_PARSED</dt>
+    <dd>PLIST_CANNOT_BE_PARSED{{% md %}}An Info.plist file in the XCTest zip could not be parsed.{{% /md %}}</dd><dt>TEST_ONLY_APK</dt>
+    <dd>TEST_ONLY_APK{{% md %}}The APK is marked as "testOnly". Deprecated and not currently used.{{% /md %}}</dd><dt>MALFORMED_IPA</dt>
+    <dd>MALFORMED_IPA{{% md %}}The input IPA could not be parsed.{{% /md %}}</dd><dt>MISSING_URL_SCHEME</dt>
+    <dd>MISSING_URL_SCHEME{{% md %}}The application doesn't register the game loop URL scheme.{{% /md %}}</dd><dt>MALFORMED_APP_BUNDLE</dt>
+    <dd>MALFORMED_APP_BUNDLE{{% md %}}The iOS application bundle (.app) couldn't be processed.{{% /md %}}</dd><dt>NO_CODE_APK</dt>
+    <dd>NO_CODE_APK{{% md %}}APK contains no code. See also https://developer.android.com/guide/topics/manifest/application-element.html#code{{% /md %}}</dd><dt>INVALID_INPUT_APK</dt>
+    <dd>INVALID_INPUT_APK{{% md %}}Either the provided input APK path was malformed, the APK file does not exist, or the user does not have permission to access the APK file.{{% /md %}}</dd><dt>INVALID_APK_PREVIEW_SDK</dt>
+    <dd>INVALID_APK_PREVIEW_SDK{{% md %}}APK is built for a preview SDK which is unsupported{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="testmatrixoutcomesummary">Test<wbr>Matrix<wbr>Outcome<wbr>Summary</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Outcome<wbr>Summary<wbr>Unspecified</dt>
+    <dd>OUTCOME_SUMMARY_UNSPECIFIED{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Success</dt>
+    <dd>SUCCESS{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>Failure</dt>
+    <dd>FAILURE{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>Inconclusive</dt>
+    <dd>INCONCLUSIVE{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>Skipped</dt>
+    <dd>SKIPPED{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Test<wbr>Matrix<wbr>Outcome<wbr>Summary<wbr>Outcome<wbr>Summary<wbr>Unspecified</dt>
+    <dd>OUTCOME_SUMMARY_UNSPECIFIED{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Outcome<wbr>Summary<wbr>Success</dt>
+    <dd>SUCCESS{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Outcome<wbr>Summary<wbr>Failure</dt>
+    <dd>FAILURE{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Outcome<wbr>Summary<wbr>Inconclusive</dt>
+    <dd>INCONCLUSIVE{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>Outcome<wbr>Summary<wbr>Skipped</dt>
+    <dd>SKIPPED{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Outcome<wbr>Summary<wbr>Unspecified</dt>
+    <dd>OUTCOME_SUMMARY_UNSPECIFIED{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Success</dt>
+    <dd>SUCCESS{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>Failure</dt>
+    <dd>FAILURE{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>Inconclusive</dt>
+    <dd>INCONCLUSIVE{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>Skipped</dt>
+    <dd>SKIPPED{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>OUTCOME_SUMMARY_UNSPECIFIED</dt>
+    <dd>OUTCOME_SUMMARY_UNSPECIFIED{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>SUCCESS</dt>
+    <dd>SUCCESS{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>FAILURE</dt>
+    <dd>FAILURE{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>INCONCLUSIVE</dt>
+    <dd>INCONCLUSIVE{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>SKIPPED</dt>
+    <dd>SKIPPED{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="testmatrixstate">Test<wbr>Matrix<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Test<wbr>State<wbr>Unspecified</dt>
+    <dd>TEST_STATE_UNSPECIFIED{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Validating</dt>
+    <dd>VALIDATING{{% md %}}The execution or matrix is being validated.{{% /md %}}</dd><dt>Pending</dt>
+    <dd>PENDING{{% md %}}The execution or matrix is waiting for resources to become available.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The execution is currently being processed. Can only be set on an execution.{{% /md %}}</dd><dt>Finished</dt>
+    <dd>FINISHED{{% md %}}The execution or matrix has terminated normally. On a matrix this means that the matrix level processing completed normally, but individual executions may be in an ERROR state.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}The execution or matrix has stopped because it encountered an infrastructure failure.{{% /md %}}</dd><dt>Unsupported<wbr>Environment</dt>
+    <dd>UNSUPPORTED_ENVIRONMENT{{% md %}}The execution was not run because it corresponds to a unsupported environment. Can only be set on an execution.{{% /md %}}</dd><dt>Incompatible<wbr>Environment</dt>
+    <dd>INCOMPATIBLE_ENVIRONMENT{{% md %}}The execution was not run because the provided inputs are incompatible with the requested environment. Example: requested AndroidVersion is lower than APK's minSdkVersion Can only be set on an execution.{{% /md %}}</dd><dt>Incompatible<wbr>Architecture</dt>
+    <dd>INCOMPATIBLE_ARCHITECTURE{{% md %}}The execution was not run because the provided inputs are incompatible with the requested architecture. Example: requested device does not support running the native code in the supplied APK Can only be set on an execution.{{% /md %}}</dd><dt>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The user cancelled the execution. Can only be set on an execution.{{% /md %}}</dd><dt>Invalid</dt>
+    <dd>INVALID{{% md %}}The execution or matrix was not run because the provided inputs are not valid. Examples: input file is not of the expected type, is malformed/corrupt, or was flagged as malware{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Test<wbr>Matrix<wbr>State<wbr>Test<wbr>State<wbr>Unspecified</dt>
+    <dd>TEST_STATE_UNSPECIFIED{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>State<wbr>Validating</dt>
+    <dd>VALIDATING{{% md %}}The execution or matrix is being validated.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>State<wbr>Pending</dt>
+    <dd>PENDING{{% md %}}The execution or matrix is waiting for resources to become available.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>State<wbr>Running</dt>
+    <dd>RUNNING{{% md %}}The execution is currently being processed. Can only be set on an execution.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>State<wbr>Finished</dt>
+    <dd>FINISHED{{% md %}}The execution or matrix has terminated normally. On a matrix this means that the matrix level processing completed normally, but individual executions may be in an ERROR state.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>State<wbr>Error</dt>
+    <dd>ERROR{{% md %}}The execution or matrix has stopped because it encountered an infrastructure failure.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>State<wbr>Unsupported<wbr>Environment</dt>
+    <dd>UNSUPPORTED_ENVIRONMENT{{% md %}}The execution was not run because it corresponds to a unsupported environment. Can only be set on an execution.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>State<wbr>Incompatible<wbr>Environment</dt>
+    <dd>INCOMPATIBLE_ENVIRONMENT{{% md %}}The execution was not run because the provided inputs are incompatible with the requested environment. Example: requested AndroidVersion is lower than APK's minSdkVersion Can only be set on an execution.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>State<wbr>Incompatible<wbr>Architecture</dt>
+    <dd>INCOMPATIBLE_ARCHITECTURE{{% md %}}The execution was not run because the provided inputs are incompatible with the requested architecture. Example: requested device does not support running the native code in the supplied APK Can only be set on an execution.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>State<wbr>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The user cancelled the execution. Can only be set on an execution.{{% /md %}}</dd><dt>Test<wbr>Matrix<wbr>State<wbr>Invalid</dt>
+    <dd>INVALID{{% md %}}The execution or matrix was not run because the provided inputs are not valid. Examples: input file is not of the expected type, is malformed/corrupt, or was flagged as malware{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Test<wbr>State<wbr>Unspecified</dt>
+    <dd>TEST_STATE_UNSPECIFIED{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Validating</dt>
+    <dd>VALIDATING{{% md %}}The execution or matrix is being validated.{{% /md %}}</dd><dt>Pending</dt>
+    <dd>PENDING{{% md %}}The execution or matrix is waiting for resources to become available.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The execution is currently being processed. Can only be set on an execution.{{% /md %}}</dd><dt>Finished</dt>
+    <dd>FINISHED{{% md %}}The execution or matrix has terminated normally. On a matrix this means that the matrix level processing completed normally, but individual executions may be in an ERROR state.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}The execution or matrix has stopped because it encountered an infrastructure failure.{{% /md %}}</dd><dt>Unsupported<wbr>Environment</dt>
+    <dd>UNSUPPORTED_ENVIRONMENT{{% md %}}The execution was not run because it corresponds to a unsupported environment. Can only be set on an execution.{{% /md %}}</dd><dt>Incompatible<wbr>Environment</dt>
+    <dd>INCOMPATIBLE_ENVIRONMENT{{% md %}}The execution was not run because the provided inputs are incompatible with the requested environment. Example: requested AndroidVersion is lower than APK's minSdkVersion Can only be set on an execution.{{% /md %}}</dd><dt>Incompatible<wbr>Architecture</dt>
+    <dd>INCOMPATIBLE_ARCHITECTURE{{% md %}}The execution was not run because the provided inputs are incompatible with the requested architecture. Example: requested device does not support running the native code in the supplied APK Can only be set on an execution.{{% /md %}}</dd><dt>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The user cancelled the execution. Can only be set on an execution.{{% /md %}}</dd><dt>Invalid</dt>
+    <dd>INVALID{{% md %}}The execution or matrix was not run because the provided inputs are not valid. Examples: input file is not of the expected type, is malformed/corrupt, or was flagged as malware{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TEST_STATE_UNSPECIFIED</dt>
+    <dd>TEST_STATE_UNSPECIFIED{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>VALIDATING</dt>
+    <dd>VALIDATING{{% md %}}The execution or matrix is being validated.{{% /md %}}</dd><dt>PENDING</dt>
+    <dd>PENDING{{% md %}}The execution or matrix is waiting for resources to become available.{{% /md %}}</dd><dt>RUNNING</dt>
+    <dd>RUNNING{{% md %}}The execution is currently being processed. Can only be set on an execution.{{% /md %}}</dd><dt>FINISHED</dt>
+    <dd>FINISHED{{% md %}}The execution or matrix has terminated normally. On a matrix this means that the matrix level processing completed normally, but individual executions may be in an ERROR state.{{% /md %}}</dd><dt>ERROR</dt>
+    <dd>ERROR{{% md %}}The execution or matrix has stopped because it encountered an infrastructure failure.{{% /md %}}</dd><dt>UNSUPPORTED_ENVIRONMENT</dt>
+    <dd>UNSUPPORTED_ENVIRONMENT{{% md %}}The execution was not run because it corresponds to a unsupported environment. Can only be set on an execution.{{% /md %}}</dd><dt>INCOMPATIBLE_ENVIRONMENT</dt>
+    <dd>INCOMPATIBLE_ENVIRONMENT{{% md %}}The execution was not run because the provided inputs are incompatible with the requested environment. Example: requested AndroidVersion is lower than APK's minSdkVersion Can only be set on an execution.{{% /md %}}</dd><dt>INCOMPATIBLE_ARCHITECTURE</dt>
+    <dd>INCOMPATIBLE_ARCHITECTURE{{% md %}}The execution was not run because the provided inputs are incompatible with the requested architecture. Example: requested device does not support running the native code in the supplied APK Can only be set on an execution.{{% /md %}}</dd><dt>CANCELLED</dt>
+    <dd>CANCELLED{{% md %}}The user cancelled the execution. Can only be set on an execution.{{% /md %}}</dd><dt>INVALID</dt>
+    <dd>INVALID{{% md %}}The execution or matrix was not run because the provided inputs are not valid. Examples: input file is not of the expected type, is malformed/corrupt, or was flagged as malware{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="testsetup">Test<wbr>Setup</h4>

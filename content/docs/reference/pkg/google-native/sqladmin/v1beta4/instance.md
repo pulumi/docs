@@ -27,15 +27,15 @@ Creates a new Cloud SQL instance.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">backend_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">backend_type</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.InstanceBackendType]</span> = None<span class="p">,</span>
              <span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">current_disk_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">database_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">database_version</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.InstanceDatabaseVersion]</span> = None<span class="p">,</span>
              <span class="nx">disk_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.DiskEncryptionConfigurationArgs]</span> = None<span class="p">,</span>
              <span class="nx">disk_encryption_status</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.DiskEncryptionStatusArgs]</span> = None<span class="p">,</span>
              <span class="nx">failover_replica</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.InstanceFailoverReplicaArgs]</span> = None<span class="p">,</span>
              <span class="nx">gce_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.InstanceInstanceType]</span> = None<span class="p">,</span>
              <span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[_sqladmin_v1beta4.IpMappingArgs]]</span> = None<span class="p">,</span>
              <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">master_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -55,8 +55,8 @@ Creates a new Cloud SQL instance.
              <span class="nx">server_ca_cert</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.SslCertArgs]</span> = None<span class="p">,</span>
              <span class="nx">service_account_email_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.SettingsArgs]</span> = None<span class="p">,</span>
-             <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">suspension_reason</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+             <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.InstanceState]</span> = None<span class="p">,</span>
+             <span class="nx">suspension_reason</span><span class="p">:</span> <span class="nx">Optional[Sequence[_sqladmin_v1beta4.InstanceSuspensionReasonItem]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span>
@@ -198,7 +198,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#backendtype_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancebackendtype">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Instance<wbr>Backend<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}} *SECOND_GEN*: Cloud SQL database instance. *EXTERNAL*: A database server that is not managed by Google. This property is read-only; use the *tier* property in the *settings* object to determine the database type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -222,7 +222,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#databaseversion_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancedatabaseversion">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Instance<wbr>Database<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The database engine type and version. The *databaseVersion* field cannot be changed after instance creation. MySQL instances: *MYSQL_8_0*, *MYSQL_5_7* (default), or *MYSQL_5_6*. PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11*, *POSTGRES_12*, or *POSTGRES_13* (default). SQL Server instances: *SQLSERVER_2017_STANDARD* (default), *SQLSERVER_2017_ENTERPRISE*, *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -262,7 +262,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instanceinstancetype">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Instance<wbr>Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The instance type. This can be one of the following. *CLOUD_SQL_INSTANCE*: A Cloud SQL instance that is not replicating from a primary instance. *ON_PREMISES_INSTANCE*: An instance running on the customer's premises. *READ_REPLICA_INSTANCE*: A Cloud SQL instance configured as a read-replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +414,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancestate">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Instance<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current serving state of the Cloud SQL instance. This can be one of the following. *SQL_INSTANCE_STATE_UNSPECIFIED*: The state of the instance is unknown. *RUNNABLE*: The instance is running, or has been stopped by owner. *SUSPENDED*: The instance is not available, for example due to problems with billing. *PENDING_DELETE*: The instance is being deleted. *PENDING_CREATE*: The instance is being created. *MAINTENANCE*: The instance is down for maintenance. *FAILED*: The instance creation failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +422,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#suspensionreason_csharp" style="color: inherit; text-decoration: inherit;">Suspension<wbr>Reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#instancesuspensionreasonitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Instance<wbr>Suspension<wbr>Reason<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}If the instance state is SUSPENDED, the reason for the suspension.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -442,7 +442,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#backendtype_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancebackendtype">Instance<wbr>Backend<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}} *SECOND_GEN*: Cloud SQL database instance. *EXTERNAL*: A database server that is not managed by Google. This property is read-only; use the *tier* property in the *settings* object to determine the database type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +466,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#databaseversion_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancedatabaseversion">Instance<wbr>Database<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The database engine type and version. The *databaseVersion* field cannot be changed after instance creation. MySQL instances: *MYSQL_8_0*, *MYSQL_5_7* (default), or *MYSQL_5_6*. PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11*, *POSTGRES_12*, or *POSTGRES_13* (default). SQL Server instances: *SQLSERVER_2017_STANDARD* (default), *SQLSERVER_2017_ENTERPRISE*, *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +506,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instanceinstancetype">Instance<wbr>Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The instance type. This can be one of the following. *CLOUD_SQL_INSTANCE*: A Cloud SQL instance that is not replicating from a primary instance. *ON_PREMISES_INSTANCE*: An instance running on the customer's premises. *READ_REPLICA_INSTANCE*: A Cloud SQL instance configured as a read-replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -658,7 +658,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancestate">Instance<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The current serving state of the Cloud SQL instance. This can be one of the following. *SQL_INSTANCE_STATE_UNSPECIFIED*: The state of the instance is unknown. *RUNNABLE*: The instance is running, or has been stopped by owner. *SUSPENDED*: The instance is not available, for example due to problems with billing. *PENDING_DELETE*: The instance is being deleted. *PENDING_CREATE*: The instance is being created. *MAINTENANCE*: The instance is down for maintenance. *FAILED*: The instance creation failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -666,7 +666,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#suspensionreason_go" style="color: inherit; text-decoration: inherit;">Suspension<wbr>Reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#instancesuspensionreasonitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}If the instance state is SUSPENDED, the reason for the suspension.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -686,7 +686,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#backendtype_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancebackendtype">Instance<wbr>Backend<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}} *SECOND_GEN*: Cloud SQL database instance. *EXTERNAL*: A database server that is not managed by Google. This property is read-only; use the *tier* property in the *settings* object to determine the database type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +710,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#databaseversion_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancedatabaseversion">Instance<wbr>Database<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The database engine type and version. The *databaseVersion* field cannot be changed after instance creation. MySQL instances: *MYSQL_8_0*, *MYSQL_5_7* (default), or *MYSQL_5_6*. PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11*, *POSTGRES_12*, or *POSTGRES_13* (default). SQL Server instances: *SQLSERVER_2017_STANDARD* (default), *SQLSERVER_2017_ENTERPRISE*, *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +750,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instanceinstancetype">Instance<wbr>Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The instance type. This can be one of the following. *CLOUD_SQL_INSTANCE*: A Cloud SQL instance that is not replicating from a primary instance. *ON_PREMISES_INSTANCE*: An instance running on the customer's premises. *READ_REPLICA_INSTANCE*: A Cloud SQL instance configured as a read-replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -902,7 +902,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancestate">Instance<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current serving state of the Cloud SQL instance. This can be one of the following. *SQL_INSTANCE_STATE_UNSPECIFIED*: The state of the instance is unknown. *RUNNABLE*: The instance is running, or has been stopped by owner. *SUSPENDED*: The instance is not available, for example due to problems with billing. *PENDING_DELETE*: The instance is being deleted. *PENDING_CREATE*: The instance is being created. *MAINTENANCE*: The instance is down for maintenance. *FAILED*: The instance creation failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -910,7 +910,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#suspensionreason_nodejs" style="color: inherit; text-decoration: inherit;">suspension<wbr>Reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#instancesuspensionreasonitem">Instance<wbr>Suspension<wbr>Reason<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}If the instance state is SUSPENDED, the reason for the suspension.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -930,7 +930,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#backend_type_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancebackendtype">Instance<wbr>Backend<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}} *SECOND_GEN*: Cloud SQL database instance. *EXTERNAL*: A database server that is not managed by Google. This property is read-only; use the *tier* property in the *settings* object to determine the database type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -954,7 +954,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#database_version_python" style="color: inherit; text-decoration: inherit;">database_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancedatabaseversion">Instance<wbr>Database<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The database engine type and version. The *databaseVersion* field cannot be changed after instance creation. MySQL instances: *MYSQL_8_0*, *MYSQL_5_7* (default), or *MYSQL_5_6*. PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11*, *POSTGRES_12*, or *POSTGRES_13* (default). SQL Server instances: *SQLSERVER_2017_STANDARD* (default), *SQLSERVER_2017_ENTERPRISE*, *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -994,7 +994,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instanceinstancetype">Instance<wbr>Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The instance type. This can be one of the following. *CLOUD_SQL_INSTANCE*: A Cloud SQL instance that is not replicating from a primary instance. *ON_PREMISES_INSTANCE*: An instance running on the customer's premises. *READ_REPLICA_INSTANCE*: A Cloud SQL instance configured as a read-replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1146,7 +1146,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancestate">Instance<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current serving state of the Cloud SQL instance. This can be one of the following. *SQL_INSTANCE_STATE_UNSPECIFIED*: The state of the instance is unknown. *RUNNABLE*: The instance is running, or has been stopped by owner. *SUSPENDED*: The instance is not available, for example due to problems with billing. *PENDING_DELETE*: The instance is being deleted. *PENDING_CREATE*: The instance is being created. *MAINTENANCE*: The instance is down for maintenance. *FAILED*: The instance creation failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1154,7 +1154,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#suspension_reason_python" style="color: inherit; text-decoration: inherit;">suspension_<wbr>reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#instancesuspensionreasonitem">Instance<wbr>Suspension<wbr>Reason<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}If the instance state is SUSPENDED, the reason for the suspension.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2145,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionunit_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backupretentionsettingsretentionunit">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Backup<wbr>Retention<wbr>Settings<wbr>Retention<wbr>Unit</a></span>
     </dt>
     <dd>{{% md %}}The unit that 'retained_backups' represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2165,7 +2165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionunit_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backupretentionsettingsretentionunit">Backup<wbr>Retention<wbr>Settings<wbr>Retention<wbr>Unit</a></span>
     </dt>
     <dd>{{% md %}}The unit that 'retained_backups' represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2185,7 +2185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionunit_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backupretentionsettingsretentionunit">Backup<wbr>Retention<wbr>Settings<wbr>Retention<wbr>Unit</a></span>
     </dt>
     <dd>{{% md %}}The unit that 'retained_backups' represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2205,7 +2205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_unit_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#backupretentionsettingsretentionunit">Backup<wbr>Retention<wbr>Settings<wbr>Retention<wbr>Unit</a></span>
     </dt>
     <dd>{{% md %}}The unit that 'retained_backups' represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2290,6 +2290,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit that 'retained_backups' represents.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="backupretentionsettingsretentionunit">Backup<wbr>Retention<wbr>Settings<wbr>Retention<wbr>Unit</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Retention<wbr>Unit<wbr>Unspecified</dt>
+    <dd>RETENTION_UNIT_UNSPECIFIED{{% md %}}Backup retention unit is unspecified, will be treated as COUNT.{{% /md %}}</dd><dt>Count</dt>
+    <dd>COUNT{{% md %}}Retention will be by count, eg. "retain the most recent 7 backups".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Backup<wbr>Retention<wbr>Settings<wbr>Retention<wbr>Unit<wbr>Retention<wbr>Unit<wbr>Unspecified</dt>
+    <dd>RETENTION_UNIT_UNSPECIFIED{{% md %}}Backup retention unit is unspecified, will be treated as COUNT.{{% /md %}}</dd><dt>Backup<wbr>Retention<wbr>Settings<wbr>Retention<wbr>Unit<wbr>Count</dt>
+    <dd>COUNT{{% md %}}Retention will be by count, eg. "retain the most recent 7 backups".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Retention<wbr>Unit<wbr>Unspecified</dt>
+    <dd>RETENTION_UNIT_UNSPECIFIED{{% md %}}Backup retention unit is unspecified, will be treated as COUNT.{{% /md %}}</dd><dt>Count</dt>
+    <dd>COUNT{{% md %}}Retention will be by count, eg. "retain the most recent 7 backups".{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RETENTION_UNIT_UNSPECIFIED</dt>
+    <dd>RETENTION_UNIT_UNSPECIFIED{{% md %}}Backup retention unit is unspecified, will be treated as COUNT.{{% /md %}}</dd><dt>COUNT</dt>
+    <dd>COUNT{{% md %}}Retention will be by count, eg. "retain the most recent 7 backups".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databaseflags">Database<wbr>Flags</h4>
@@ -3304,6 +3330,118 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether Query Insights will record client address when enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="instancebackendtype">Instance<wbr>Backend<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sql<wbr>Backend<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_BACKEND_TYPE_UNSPECIFIED{{% md %}}This is an unknown backend type for instance.{{% /md %}}</dd><dt>First<wbr>Gen</dt>
+    <dd>FIRST_GEN{{% md %}}V1 speckle instance.{{% /md %}}</dd><dt>Second<wbr>Gen</dt>
+    <dd>SECOND_GEN{{% md %}}V2 speckle instance.{{% /md %}}</dd><dt>External</dt>
+    <dd>EXTERNAL{{% md %}}On premises instance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Backend<wbr>Type<wbr>Sql<wbr>Backend<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_BACKEND_TYPE_UNSPECIFIED{{% md %}}This is an unknown backend type for instance.{{% /md %}}</dd><dt>Instance<wbr>Backend<wbr>Type<wbr>First<wbr>Gen</dt>
+    <dd>FIRST_GEN{{% md %}}V1 speckle instance.{{% /md %}}</dd><dt>Instance<wbr>Backend<wbr>Type<wbr>Second<wbr>Gen</dt>
+    <dd>SECOND_GEN{{% md %}}V2 speckle instance.{{% /md %}}</dd><dt>Instance<wbr>Backend<wbr>Type<wbr>External</dt>
+    <dd>EXTERNAL{{% md %}}On premises instance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sql<wbr>Backend<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_BACKEND_TYPE_UNSPECIFIED{{% md %}}This is an unknown backend type for instance.{{% /md %}}</dd><dt>First<wbr>Gen</dt>
+    <dd>FIRST_GEN{{% md %}}V1 speckle instance.{{% /md %}}</dd><dt>Second<wbr>Gen</dt>
+    <dd>SECOND_GEN{{% md %}}V2 speckle instance.{{% /md %}}</dd><dt>External</dt>
+    <dd>EXTERNAL{{% md %}}On premises instance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQL_BACKEND_TYPE_UNSPECIFIED</dt>
+    <dd>SQL_BACKEND_TYPE_UNSPECIFIED{{% md %}}This is an unknown backend type for instance.{{% /md %}}</dd><dt>FIRST_GEN</dt>
+    <dd>FIRST_GEN{{% md %}}V1 speckle instance.{{% /md %}}</dd><dt>SECOND_GEN</dt>
+    <dd>SECOND_GEN{{% md %}}V2 speckle instance.{{% /md %}}</dd><dt>EXTERNAL</dt>
+    <dd>EXTERNAL{{% md %}}On premises instance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancedatabaseversion">Instance<wbr>Database<wbr>Version</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sql<wbr>Database<wbr>Version<wbr>Unspecified</dt>
+    <dd>SQL_DATABASE_VERSION_UNSPECIFIED{{% md %}}This is an unknown database version.{{% /md %}}</dd><dt>Mysql51</dt>
+    <dd>MYSQL_5_1{{% md %}}The database version is MySQL 5.1.{{% /md %}}</dd><dt>Mysql55</dt>
+    <dd>MYSQL_5_5{{% md %}}The database version is MySQL 5.5.{{% /md %}}</dd><dt>Mysql56</dt>
+    <dd>MYSQL_5_6{{% md %}}The database version is MySQL 5.6.{{% /md %}}</dd><dt>Mysql57</dt>
+    <dd>MYSQL_5_7{{% md %}}The database version is MySQL 5.7.{{% /md %}}</dd><dt>Postgres96</dt>
+    <dd>POSTGRES_9_6{{% md %}}The database version is PostgreSQL 9.6.{{% /md %}}</dd><dt>Postgres11</dt>
+    <dd>POSTGRES_11{{% md %}}The database version is PostgreSQL 11.{{% /md %}}</dd><dt>Sqlserver2017Standard</dt>
+    <dd>SQLSERVER_2017_STANDARD{{% md %}}The database version is SQL Server 2017 Standard.{{% /md %}}</dd><dt>Sqlserver2017Enterprise</dt>
+    <dd>SQLSERVER_2017_ENTERPRISE{{% md %}}The database version is SQL Server 2017 Enterprise.{{% /md %}}</dd><dt>Sqlserver2017Express</dt>
+    <dd>SQLSERVER_2017_EXPRESS{{% md %}}The database version is SQL Server 2017 Express.{{% /md %}}</dd><dt>Sqlserver2017Web</dt>
+    <dd>SQLSERVER_2017_WEB{{% md %}}The database version is SQL Server 2017 Web.{{% /md %}}</dd><dt>Postgres10</dt>
+    <dd>POSTGRES_10{{% md %}}The database version is PostgreSQL 10.{{% /md %}}</dd><dt>Postgres12</dt>
+    <dd>POSTGRES_12{{% md %}}The database version is PostgreSQL 12.{{% /md %}}</dd><dt>Mysql80</dt>
+    <dd>MYSQL_8_0{{% md %}}The database version is MySQL 8.{{% /md %}}</dd><dt>Postgres13</dt>
+    <dd>POSTGRES_13{{% md %}}The database version is PostgreSQL 13.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Database<wbr>Version<wbr>Sql<wbr>Database<wbr>Version<wbr>Unspecified</dt>
+    <dd>SQL_DATABASE_VERSION_UNSPECIFIED{{% md %}}This is an unknown database version.{{% /md %}}</dd><dt>Instance<wbr>Database<wbr>Version<wbr>Mysql51</dt>
+    <dd>MYSQL_5_1{{% md %}}The database version is MySQL 5.1.{{% /md %}}</dd><dt>Instance<wbr>Database<wbr>Version<wbr>Mysql55</dt>
+    <dd>MYSQL_5_5{{% md %}}The database version is MySQL 5.5.{{% /md %}}</dd><dt>Instance<wbr>Database<wbr>Version<wbr>Mysql56</dt>
+    <dd>MYSQL_5_6{{% md %}}The database version is MySQL 5.6.{{% /md %}}</dd><dt>Instance<wbr>Database<wbr>Version<wbr>Mysql57</dt>
+    <dd>MYSQL_5_7{{% md %}}The database version is MySQL 5.7.{{% /md %}}</dd><dt>Instance<wbr>Database<wbr>Version<wbr>Postgres96</dt>
+    <dd>POSTGRES_9_6{{% md %}}The database version is PostgreSQL 9.6.{{% /md %}}</dd><dt>Instance<wbr>Database<wbr>Version<wbr>Postgres11</dt>
+    <dd>POSTGRES_11{{% md %}}The database version is PostgreSQL 11.{{% /md %}}</dd><dt>Instance<wbr>Database<wbr>Version<wbr>Sqlserver2017Standard</dt>
+    <dd>SQLSERVER_2017_STANDARD{{% md %}}The database version is SQL Server 2017 Standard.{{% /md %}}</dd><dt>Instance<wbr>Database<wbr>Version<wbr>Sqlserver2017Enterprise</dt>
+    <dd>SQLSERVER_2017_ENTERPRISE{{% md %}}The database version is SQL Server 2017 Enterprise.{{% /md %}}</dd><dt>Instance<wbr>Database<wbr>Version<wbr>Sqlserver2017Express</dt>
+    <dd>SQLSERVER_2017_EXPRESS{{% md %}}The database version is SQL Server 2017 Express.{{% /md %}}</dd><dt>Instance<wbr>Database<wbr>Version<wbr>Sqlserver2017Web</dt>
+    <dd>SQLSERVER_2017_WEB{{% md %}}The database version is SQL Server 2017 Web.{{% /md %}}</dd><dt>Instance<wbr>Database<wbr>Version<wbr>Postgres10</dt>
+    <dd>POSTGRES_10{{% md %}}The database version is PostgreSQL 10.{{% /md %}}</dd><dt>Instance<wbr>Database<wbr>Version<wbr>Postgres12</dt>
+    <dd>POSTGRES_12{{% md %}}The database version is PostgreSQL 12.{{% /md %}}</dd><dt>Instance<wbr>Database<wbr>Version<wbr>Mysql80</dt>
+    <dd>MYSQL_8_0{{% md %}}The database version is MySQL 8.{{% /md %}}</dd><dt>Instance<wbr>Database<wbr>Version<wbr>Postgres13</dt>
+    <dd>POSTGRES_13{{% md %}}The database version is PostgreSQL 13.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sql<wbr>Database<wbr>Version<wbr>Unspecified</dt>
+    <dd>SQL_DATABASE_VERSION_UNSPECIFIED{{% md %}}This is an unknown database version.{{% /md %}}</dd><dt>Mysql51</dt>
+    <dd>MYSQL_5_1{{% md %}}The database version is MySQL 5.1.{{% /md %}}</dd><dt>Mysql55</dt>
+    <dd>MYSQL_5_5{{% md %}}The database version is MySQL 5.5.{{% /md %}}</dd><dt>Mysql56</dt>
+    <dd>MYSQL_5_6{{% md %}}The database version is MySQL 5.6.{{% /md %}}</dd><dt>Mysql57</dt>
+    <dd>MYSQL_5_7{{% md %}}The database version is MySQL 5.7.{{% /md %}}</dd><dt>Postgres96</dt>
+    <dd>POSTGRES_9_6{{% md %}}The database version is PostgreSQL 9.6.{{% /md %}}</dd><dt>Postgres11</dt>
+    <dd>POSTGRES_11{{% md %}}The database version is PostgreSQL 11.{{% /md %}}</dd><dt>Sqlserver2017Standard</dt>
+    <dd>SQLSERVER_2017_STANDARD{{% md %}}The database version is SQL Server 2017 Standard.{{% /md %}}</dd><dt>Sqlserver2017Enterprise</dt>
+    <dd>SQLSERVER_2017_ENTERPRISE{{% md %}}The database version is SQL Server 2017 Enterprise.{{% /md %}}</dd><dt>Sqlserver2017Express</dt>
+    <dd>SQLSERVER_2017_EXPRESS{{% md %}}The database version is SQL Server 2017 Express.{{% /md %}}</dd><dt>Sqlserver2017Web</dt>
+    <dd>SQLSERVER_2017_WEB{{% md %}}The database version is SQL Server 2017 Web.{{% /md %}}</dd><dt>Postgres10</dt>
+    <dd>POSTGRES_10{{% md %}}The database version is PostgreSQL 10.{{% /md %}}</dd><dt>Postgres12</dt>
+    <dd>POSTGRES_12{{% md %}}The database version is PostgreSQL 12.{{% /md %}}</dd><dt>Mysql80</dt>
+    <dd>MYSQL_8_0{{% md %}}The database version is MySQL 8.{{% /md %}}</dd><dt>Postgres13</dt>
+    <dd>POSTGRES_13{{% md %}}The database version is PostgreSQL 13.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQL_DATABASE_VERSION_UNSPECIFIED</dt>
+    <dd>SQL_DATABASE_VERSION_UNSPECIFIED{{% md %}}This is an unknown database version.{{% /md %}}</dd><dt>MYSQL51</dt>
+    <dd>MYSQL_5_1{{% md %}}The database version is MySQL 5.1.{{% /md %}}</dd><dt>MYSQL55</dt>
+    <dd>MYSQL_5_5{{% md %}}The database version is MySQL 5.5.{{% /md %}}</dd><dt>MYSQL56</dt>
+    <dd>MYSQL_5_6{{% md %}}The database version is MySQL 5.6.{{% /md %}}</dd><dt>MYSQL57</dt>
+    <dd>MYSQL_5_7{{% md %}}The database version is MySQL 5.7.{{% /md %}}</dd><dt>POSTGRES96</dt>
+    <dd>POSTGRES_9_6{{% md %}}The database version is PostgreSQL 9.6.{{% /md %}}</dd><dt>POSTGRES11</dt>
+    <dd>POSTGRES_11{{% md %}}The database version is PostgreSQL 11.{{% /md %}}</dd><dt>SQLSERVER2017_STANDARD</dt>
+    <dd>SQLSERVER_2017_STANDARD{{% md %}}The database version is SQL Server 2017 Standard.{{% /md %}}</dd><dt>SQLSERVER2017_ENTERPRISE</dt>
+    <dd>SQLSERVER_2017_ENTERPRISE{{% md %}}The database version is SQL Server 2017 Enterprise.{{% /md %}}</dd><dt>SQLSERVER2017_EXPRESS</dt>
+    <dd>SQLSERVER_2017_EXPRESS{{% md %}}The database version is SQL Server 2017 Express.{{% /md %}}</dd><dt>SQLSERVER2017_WEB</dt>
+    <dd>SQLSERVER_2017_WEB{{% md %}}The database version is SQL Server 2017 Web.{{% /md %}}</dd><dt>POSTGRES10</dt>
+    <dd>POSTGRES_10{{% md %}}The database version is PostgreSQL 10.{{% /md %}}</dd><dt>POSTGRES12</dt>
+    <dd>POSTGRES_12{{% md %}}The database version is PostgreSQL 12.{{% /md %}}</dd><dt>MYSQL80</dt>
+    <dd>MYSQL_8_0{{% md %}}The database version is MySQL 8.{{% /md %}}</dd><dt>POSTGRES13</dt>
+    <dd>POSTGRES_13{{% md %}}The database version is PostgreSQL 13.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="instancefailoverreplica">Instance<wbr>Failover<wbr>Replica</h4>
 
 {{% choosable language csharp %}}
@@ -3466,6 +3604,124 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID. This property is applicable only to Second Generation instances.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instanceinstancetype">Instance<wbr>Instance<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sql<wbr>Instance<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_INSTANCE_TYPE_UNSPECIFIED{{% md %}}This is an unknown Cloud SQL instance type.{{% /md %}}</dd><dt>Cloud<wbr>Sql<wbr>Instance</dt>
+    <dd>CLOUD_SQL_INSTANCE{{% md %}}A regular Cloud SQL instance.{{% /md %}}</dd><dt>On<wbr>Premises<wbr>Instance</dt>
+    <dd>ON_PREMISES_INSTANCE{{% md %}}An instance running on the customer's premises that is not managed by Cloud SQL.{{% /md %}}</dd><dt>Read<wbr>Replica<wbr>Instance</dt>
+    <dd>READ_REPLICA_INSTANCE{{% md %}}A Cloud SQL instance acting as a read-replica.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Instance<wbr>Type<wbr>Sql<wbr>Instance<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_INSTANCE_TYPE_UNSPECIFIED{{% md %}}This is an unknown Cloud SQL instance type.{{% /md %}}</dd><dt>Instance<wbr>Instance<wbr>Type<wbr>Cloud<wbr>Sql<wbr>Instance</dt>
+    <dd>CLOUD_SQL_INSTANCE{{% md %}}A regular Cloud SQL instance.{{% /md %}}</dd><dt>Instance<wbr>Instance<wbr>Type<wbr>On<wbr>Premises<wbr>Instance</dt>
+    <dd>ON_PREMISES_INSTANCE{{% md %}}An instance running on the customer's premises that is not managed by Cloud SQL.{{% /md %}}</dd><dt>Instance<wbr>Instance<wbr>Type<wbr>Read<wbr>Replica<wbr>Instance</dt>
+    <dd>READ_REPLICA_INSTANCE{{% md %}}A Cloud SQL instance acting as a read-replica.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sql<wbr>Instance<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_INSTANCE_TYPE_UNSPECIFIED{{% md %}}This is an unknown Cloud SQL instance type.{{% /md %}}</dd><dt>Cloud<wbr>Sql<wbr>Instance</dt>
+    <dd>CLOUD_SQL_INSTANCE{{% md %}}A regular Cloud SQL instance.{{% /md %}}</dd><dt>On<wbr>Premises<wbr>Instance</dt>
+    <dd>ON_PREMISES_INSTANCE{{% md %}}An instance running on the customer's premises that is not managed by Cloud SQL.{{% /md %}}</dd><dt>Read<wbr>Replica<wbr>Instance</dt>
+    <dd>READ_REPLICA_INSTANCE{{% md %}}A Cloud SQL instance acting as a read-replica.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQL_INSTANCE_TYPE_UNSPECIFIED</dt>
+    <dd>SQL_INSTANCE_TYPE_UNSPECIFIED{{% md %}}This is an unknown Cloud SQL instance type.{{% /md %}}</dd><dt>CLOUD_SQL_INSTANCE</dt>
+    <dd>CLOUD_SQL_INSTANCE{{% md %}}A regular Cloud SQL instance.{{% /md %}}</dd><dt>ON_PREMISES_INSTANCE</dt>
+    <dd>ON_PREMISES_INSTANCE{{% md %}}An instance running on the customer's premises that is not managed by Cloud SQL.{{% /md %}}</dd><dt>READ_REPLICA_INSTANCE</dt>
+    <dd>READ_REPLICA_INSTANCE{{% md %}}A Cloud SQL instance acting as a read-replica.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancestate">Instance<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sql<wbr>Instance<wbr>State<wbr>Unspecified</dt>
+    <dd>SQL_INSTANCE_STATE_UNSPECIFIED{{% md %}}The state of the instance is unknown.{{% /md %}}</dd><dt>Runnable</dt>
+    <dd>RUNNABLE{{% md %}}The instance is running, or has been stopped by owner.{{% /md %}}</dd><dt>Suspended</dt>
+    <dd>SUSPENDED{{% md %}}The instance is not available, for example due to problems with billing.{{% /md %}}</dd><dt>Pending<wbr>Delete</dt>
+    <dd>PENDING_DELETE{{% md %}}The instance is being deleted.{{% /md %}}</dd><dt>Pending<wbr>Create</dt>
+    <dd>PENDING_CREATE{{% md %}}The instance is being created.{{% /md %}}</dd><dt>Maintenance</dt>
+    <dd>MAINTENANCE{{% md %}}The instance is down for maintenance.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The creation of the instance failed or a fatal error occurred during maintenance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>State<wbr>Sql<wbr>Instance<wbr>State<wbr>Unspecified</dt>
+    <dd>SQL_INSTANCE_STATE_UNSPECIFIED{{% md %}}The state of the instance is unknown.{{% /md %}}</dd><dt>Instance<wbr>State<wbr>Runnable</dt>
+    <dd>RUNNABLE{{% md %}}The instance is running, or has been stopped by owner.{{% /md %}}</dd><dt>Instance<wbr>State<wbr>Suspended</dt>
+    <dd>SUSPENDED{{% md %}}The instance is not available, for example due to problems with billing.{{% /md %}}</dd><dt>Instance<wbr>State<wbr>Pending<wbr>Delete</dt>
+    <dd>PENDING_DELETE{{% md %}}The instance is being deleted.{{% /md %}}</dd><dt>Instance<wbr>State<wbr>Pending<wbr>Create</dt>
+    <dd>PENDING_CREATE{{% md %}}The instance is being created.{{% /md %}}</dd><dt>Instance<wbr>State<wbr>Maintenance</dt>
+    <dd>MAINTENANCE{{% md %}}The instance is down for maintenance.{{% /md %}}</dd><dt>Instance<wbr>State<wbr>Failed</dt>
+    <dd>FAILED{{% md %}}The creation of the instance failed or a fatal error occurred during maintenance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sql<wbr>Instance<wbr>State<wbr>Unspecified</dt>
+    <dd>SQL_INSTANCE_STATE_UNSPECIFIED{{% md %}}The state of the instance is unknown.{{% /md %}}</dd><dt>Runnable</dt>
+    <dd>RUNNABLE{{% md %}}The instance is running, or has been stopped by owner.{{% /md %}}</dd><dt>Suspended</dt>
+    <dd>SUSPENDED{{% md %}}The instance is not available, for example due to problems with billing.{{% /md %}}</dd><dt>Pending<wbr>Delete</dt>
+    <dd>PENDING_DELETE{{% md %}}The instance is being deleted.{{% /md %}}</dd><dt>Pending<wbr>Create</dt>
+    <dd>PENDING_CREATE{{% md %}}The instance is being created.{{% /md %}}</dd><dt>Maintenance</dt>
+    <dd>MAINTENANCE{{% md %}}The instance is down for maintenance.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The creation of the instance failed or a fatal error occurred during maintenance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQL_INSTANCE_STATE_UNSPECIFIED</dt>
+    <dd>SQL_INSTANCE_STATE_UNSPECIFIED{{% md %}}The state of the instance is unknown.{{% /md %}}</dd><dt>RUNNABLE</dt>
+    <dd>RUNNABLE{{% md %}}The instance is running, or has been stopped by owner.{{% /md %}}</dd><dt>SUSPENDED</dt>
+    <dd>SUSPENDED{{% md %}}The instance is not available, for example due to problems with billing.{{% /md %}}</dd><dt>PENDING_DELETE</dt>
+    <dd>PENDING_DELETE{{% md %}}The instance is being deleted.{{% /md %}}</dd><dt>PENDING_CREATE</dt>
+    <dd>PENDING_CREATE{{% md %}}The instance is being created.{{% /md %}}</dd><dt>MAINTENANCE</dt>
+    <dd>MAINTENANCE{{% md %}}The instance is down for maintenance.{{% /md %}}</dd><dt>FAILED</dt>
+    <dd>FAILED{{% md %}}The creation of the instance failed or a fatal error occurred during maintenance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancesuspensionreasonitem">Instance<wbr>Suspension<wbr>Reason<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sql<wbr>Suspension<wbr>Reason<wbr>Unspecified</dt>
+    <dd>SQL_SUSPENSION_REASON_UNSPECIFIED{{% md %}}This is an unknown suspension reason.{{% /md %}}</dd><dt>Billing<wbr>Issue</dt>
+    <dd>BILLING_ISSUE{{% md %}}The instance is suspended due to billing issues (for example:, GCP account issue){{% /md %}}</dd><dt>Legal<wbr>Issue</dt>
+    <dd>LEGAL_ISSUE{{% md %}}The instance is suspended due to illegal content (for example:, child pornography, copyrighted material, etc.).{{% /md %}}</dd><dt>Operational<wbr>Issue</dt>
+    <dd>OPERATIONAL_ISSUE{{% md %}}The instance is causing operational issues (for example:, causing the database to crash).{{% /md %}}</dd><dt>Kms<wbr>Key<wbr>Issue</dt>
+    <dd>KMS_KEY_ISSUE{{% md %}}The KMS key used by the instance is either revoked or denied access to{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Suspension<wbr>Reason<wbr>Item<wbr>Sql<wbr>Suspension<wbr>Reason<wbr>Unspecified</dt>
+    <dd>SQL_SUSPENSION_REASON_UNSPECIFIED{{% md %}}This is an unknown suspension reason.{{% /md %}}</dd><dt>Instance<wbr>Suspension<wbr>Reason<wbr>Item<wbr>Billing<wbr>Issue</dt>
+    <dd>BILLING_ISSUE{{% md %}}The instance is suspended due to billing issues (for example:, GCP account issue){{% /md %}}</dd><dt>Instance<wbr>Suspension<wbr>Reason<wbr>Item<wbr>Legal<wbr>Issue</dt>
+    <dd>LEGAL_ISSUE{{% md %}}The instance is suspended due to illegal content (for example:, child pornography, copyrighted material, etc.).{{% /md %}}</dd><dt>Instance<wbr>Suspension<wbr>Reason<wbr>Item<wbr>Operational<wbr>Issue</dt>
+    <dd>OPERATIONAL_ISSUE{{% md %}}The instance is causing operational issues (for example:, causing the database to crash).{{% /md %}}</dd><dt>Instance<wbr>Suspension<wbr>Reason<wbr>Item<wbr>Kms<wbr>Key<wbr>Issue</dt>
+    <dd>KMS_KEY_ISSUE{{% md %}}The KMS key used by the instance is either revoked or denied access to{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sql<wbr>Suspension<wbr>Reason<wbr>Unspecified</dt>
+    <dd>SQL_SUSPENSION_REASON_UNSPECIFIED{{% md %}}This is an unknown suspension reason.{{% /md %}}</dd><dt>Billing<wbr>Issue</dt>
+    <dd>BILLING_ISSUE{{% md %}}The instance is suspended due to billing issues (for example:, GCP account issue){{% /md %}}</dd><dt>Legal<wbr>Issue</dt>
+    <dd>LEGAL_ISSUE{{% md %}}The instance is suspended due to illegal content (for example:, child pornography, copyrighted material, etc.).{{% /md %}}</dd><dt>Operational<wbr>Issue</dt>
+    <dd>OPERATIONAL_ISSUE{{% md %}}The instance is causing operational issues (for example:, causing the database to crash).{{% /md %}}</dd><dt>Kms<wbr>Key<wbr>Issue</dt>
+    <dd>KMS_KEY_ISSUE{{% md %}}The KMS key used by the instance is either revoked or denied access to{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQL_SUSPENSION_REASON_UNSPECIFIED</dt>
+    <dd>SQL_SUSPENSION_REASON_UNSPECIFIED{{% md %}}This is an unknown suspension reason.{{% /md %}}</dd><dt>BILLING_ISSUE</dt>
+    <dd>BILLING_ISSUE{{% md %}}The instance is suspended due to billing issues (for example:, GCP account issue){{% /md %}}</dd><dt>LEGAL_ISSUE</dt>
+    <dd>LEGAL_ISSUE{{% md %}}The instance is suspended due to illegal content (for example:, child pornography, copyrighted material, etc.).{{% /md %}}</dd><dt>OPERATIONAL_ISSUE</dt>
+    <dd>OPERATIONAL_ISSUE{{% md %}}The instance is causing operational issues (for example:, causing the database to crash).{{% /md %}}</dd><dt>KMS_KEY_ISSUE</dt>
+    <dd>KMS_KEY_ISSUE{{% md %}}The KMS key used by the instance is either revoked or denied access to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ipconfiguration">Ip<wbr>Configuration</h4>
@@ -3785,7 +4041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#ipmappingtype">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Ip<wbr>Mapping<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of this IP address. A *PRIMARY* address is a public address that can accept incoming connections. A *PRIVATE* address is a private address that can accept incoming connections. An *OUTGOING* address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3813,7 +4069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#ipmappingtype">Ip<wbr>Mapping<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of this IP address. A *PRIMARY* address is a public address that can accept incoming connections. A *PRIVATE* address is a private address that can accept incoming connections. An *OUTGOING* address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3841,7 +4097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#ipmappingtype">Ip<wbr>Mapping<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of this IP address. A *PRIMARY* address is a public address that can accept incoming connections. A *PRIVATE* address is a private address that can accept incoming connections. An *OUTGOING* address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3869,7 +4125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#ipmappingtype">Ip<wbr>Mapping<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of this IP address. A *PRIMARY* address is a public address that can accept incoming connections. A *PRIVATE* address is a private address that can accept incoming connections. An *OUTGOING* address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3986,6 +4242,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of this IP address. A *PRIMARY* address is a public address that can accept incoming connections. A *PRIVATE* address is a private address that can accept incoming connections. An *OUTGOING* address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ipmappingtype">Ip<wbr>Mapping<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sql<wbr>Ip<wbr>Address<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_IP_ADDRESS_TYPE_UNSPECIFIED{{% md %}}This is an unknown IP address type.{{% /md %}}</dd><dt>Primary</dt>
+    <dd>PRIMARY{{% md %}}IP address the customer is supposed to connect to. Usually this is the load balancer's IP address{{% /md %}}</dd><dt>Outgoing</dt>
+    <dd>OUTGOING{{% md %}}Source IP address of the connection a read replica establishes to its external primary instance. This IP address can be allowlisted by the customer in case it has a firewall that filters incoming connection to its on premises primary instance.{{% /md %}}</dd><dt>Private</dt>
+    <dd>PRIVATE{{% md %}}Private IP used when using private IPs and network peering.{{% /md %}}</dd><dt>Migrated1st<wbr>Gen</dt>
+    <dd>MIGRATED_1ST_GEN{{% md %}}V1 IP of a migrated instance. We want the user to decommission this IP as soon as the migration is complete. Note: V1 instances with V1 ip addresses will be counted as PRIMARY.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Ip<wbr>Mapping<wbr>Type<wbr>Sql<wbr>Ip<wbr>Address<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_IP_ADDRESS_TYPE_UNSPECIFIED{{% md %}}This is an unknown IP address type.{{% /md %}}</dd><dt>Ip<wbr>Mapping<wbr>Type<wbr>Primary</dt>
+    <dd>PRIMARY{{% md %}}IP address the customer is supposed to connect to. Usually this is the load balancer's IP address{{% /md %}}</dd><dt>Ip<wbr>Mapping<wbr>Type<wbr>Outgoing</dt>
+    <dd>OUTGOING{{% md %}}Source IP address of the connection a read replica establishes to its external primary instance. This IP address can be allowlisted by the customer in case it has a firewall that filters incoming connection to its on premises primary instance.{{% /md %}}</dd><dt>Ip<wbr>Mapping<wbr>Type<wbr>Private</dt>
+    <dd>PRIVATE{{% md %}}Private IP used when using private IPs and network peering.{{% /md %}}</dd><dt>Ip<wbr>Mapping<wbr>Type<wbr>Migrated1st<wbr>Gen</dt>
+    <dd>MIGRATED_1ST_GEN{{% md %}}V1 IP of a migrated instance. We want the user to decommission this IP as soon as the migration is complete. Note: V1 instances with V1 ip addresses will be counted as PRIMARY.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sql<wbr>Ip<wbr>Address<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_IP_ADDRESS_TYPE_UNSPECIFIED{{% md %}}This is an unknown IP address type.{{% /md %}}</dd><dt>Primary</dt>
+    <dd>PRIMARY{{% md %}}IP address the customer is supposed to connect to. Usually this is the load balancer's IP address{{% /md %}}</dd><dt>Outgoing</dt>
+    <dd>OUTGOING{{% md %}}Source IP address of the connection a read replica establishes to its external primary instance. This IP address can be allowlisted by the customer in case it has a firewall that filters incoming connection to its on premises primary instance.{{% /md %}}</dd><dt>Private</dt>
+    <dd>PRIVATE{{% md %}}Private IP used when using private IPs and network peering.{{% /md %}}</dd><dt>Migrated1st<wbr>Gen</dt>
+    <dd>MIGRATED_1ST_GEN{{% md %}}V1 IP of a migrated instance. We want the user to decommission this IP as soon as the migration is complete. Note: V1 instances with V1 ip addresses will be counted as PRIMARY.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQL_IP_ADDRESS_TYPE_UNSPECIFIED</dt>
+    <dd>SQL_IP_ADDRESS_TYPE_UNSPECIFIED{{% md %}}This is an unknown IP address type.{{% /md %}}</dd><dt>PRIMARY</dt>
+    <dd>PRIMARY{{% md %}}IP address the customer is supposed to connect to. Usually this is the load balancer's IP address{{% /md %}}</dd><dt>OUTGOING</dt>
+    <dd>OUTGOING{{% md %}}Source IP address of the connection a read replica establishes to its external primary instance. This IP address can be allowlisted by the customer in case it has a firewall that filters incoming connection to its on premises primary instance.{{% /md %}}</dd><dt>PRIVATE</dt>
+    <dd>PRIVATE{{% md %}}Private IP used when using private IPs and network peering.{{% /md %}}</dd><dt>MIGRATED1ST_GEN</dt>
+    <dd>MIGRATED_1ST_GEN{{% md %}}V1 IP of a migrated instance. We want the user to decommission this IP as soon as the migration is complete. Note: V1 instances with V1 ip addresses will be counted as PRIMARY.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="locationpreference">Location<wbr>Preference</h4>
@@ -4313,7 +4607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatetrack_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#maintenancewindowupdatetrack">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Maintenance<wbr>Window<wbr>Update<wbr>Track</a></span>
     </dt>
     <dd>{{% md %}}Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4349,7 +4643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatetrack_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#maintenancewindowupdatetrack">Maintenance<wbr>Window<wbr>Update<wbr>Track</a></span>
     </dt>
     <dd>{{% md %}}Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4385,7 +4679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatetrack_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#maintenancewindowupdatetrack">Maintenance<wbr>Window<wbr>Update<wbr>Track</a></span>
     </dt>
     <dd>{{% md %}}Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4421,7 +4715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_track_python" style="color: inherit; text-decoration: inherit;">update_<wbr>track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#maintenancewindowupdatetrack">Maintenance<wbr>Window<wbr>Update<wbr>Track</a></span>
     </dt>
     <dd>{{% md %}}Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4570,6 +4864,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="maintenancewindowupdatetrack">Maintenance<wbr>Window<wbr>Update<wbr>Track</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sql<wbr>Update<wbr>Track<wbr>Unspecified</dt>
+    <dd>SQL_UPDATE_TRACK_UNSPECIFIED{{% md %}}This is an unknown maintenance timing preference.{{% /md %}}</dd><dt>Canary</dt>
+    <dd>canary{{% md %}}For instance update that requires a restart, this update track indicates your instance prefer to restart for new version early in maintenance window.{{% /md %}}</dd><dt>Stable</dt>
+    <dd>stable{{% md %}}For instance update that requires a restart, this update track indicates your instance prefer to let Cloud SQL choose the timing of restart (within its Maintenance window, if applicable).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Maintenance<wbr>Window<wbr>Update<wbr>Track<wbr>Sql<wbr>Update<wbr>Track<wbr>Unspecified</dt>
+    <dd>SQL_UPDATE_TRACK_UNSPECIFIED{{% md %}}This is an unknown maintenance timing preference.{{% /md %}}</dd><dt>Maintenance<wbr>Window<wbr>Update<wbr>Track<wbr>Canary</dt>
+    <dd>canary{{% md %}}For instance update that requires a restart, this update track indicates your instance prefer to restart for new version early in maintenance window.{{% /md %}}</dd><dt>Maintenance<wbr>Window<wbr>Update<wbr>Track<wbr>Stable</dt>
+    <dd>stable{{% md %}}For instance update that requires a restart, this update track indicates your instance prefer to let Cloud SQL choose the timing of restart (within its Maintenance window, if applicable).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sql<wbr>Update<wbr>Track<wbr>Unspecified</dt>
+    <dd>SQL_UPDATE_TRACK_UNSPECIFIED{{% md %}}This is an unknown maintenance timing preference.{{% /md %}}</dd><dt>Canary</dt>
+    <dd>canary{{% md %}}For instance update that requires a restart, this update track indicates your instance prefer to restart for new version early in maintenance window.{{% /md %}}</dd><dt>Stable</dt>
+    <dd>stable{{% md %}}For instance update that requires a restart, this update track indicates your instance prefer to let Cloud SQL choose the timing of restart (within its Maintenance window, if applicable).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQL_UPDATE_TRACK_UNSPECIFIED</dt>
+    <dd>SQL_UPDATE_TRACK_UNSPECIFIED{{% md %}}This is an unknown maintenance timing preference.{{% /md %}}</dd><dt>CANARY</dt>
+    <dd>canary{{% md %}}For instance update that requires a restart, this update track indicates your instance prefer to restart for new version early in maintenance window.{{% /md %}}</dd><dt>STABLE</dt>
+    <dd>stable{{% md %}}For instance update that requires a restart, this update track indicates your instance prefer to let Cloud SQL choose the timing of restart (within its Maintenance window, if applicable).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mysqlreplicaconfiguration">My<wbr>Sql<wbr>Replica<wbr>Configuration</h4>
@@ -6097,7 +6421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Activation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#settingsactivationpolicy">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Settings<wbr>Activation<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: *ALWAYS*: The instance is on, and remains so even in the absence of connection requests. *NEVER*: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6113,7 +6437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availabilitytype_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#settingsavailabilitytype">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Settings<wbr>Availability<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Availability type. Potential values: *ZONAL*: The instance serves data from only one zone. Outages in that zone affect data accessibility. *REGIONAL*: The instance can serve data from more than one zone in a region (it is highly available). For more information, see Overview of the High Availability Configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6153,7 +6477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisktype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#settingsdatadisktype">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Settings<wbr>Data<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6225,7 +6549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pricingplan_csharp" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#settingspricingplan">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Settings<wbr>Pricing<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6277,7 +6601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activationpolicy_go" style="color: inherit; text-decoration: inherit;">Activation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#settingsactivationpolicy">Settings<wbr>Activation<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: *ALWAYS*: The instance is on, and remains so even in the absence of connection requests. *NEVER*: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6293,7 +6617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availabilitytype_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#settingsavailabilitytype">Settings<wbr>Availability<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Availability type. Potential values: *ZONAL*: The instance serves data from only one zone. Outages in that zone affect data accessibility. *REGIONAL*: The instance can serve data from more than one zone in a region (it is highly available). For more information, see Overview of the High Availability Configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6333,7 +6657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisktype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#settingsdatadisktype">Settings<wbr>Data<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6405,7 +6729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pricingplan_go" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#settingspricingplan">Settings<wbr>Pricing<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6457,7 +6781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">activation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#settingsactivationpolicy">Settings<wbr>Activation<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: *ALWAYS*: The instance is on, and remains so even in the absence of connection requests. *NEVER*: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6473,7 +6797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availabilitytype_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#settingsavailabilitytype">Settings<wbr>Availability<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Availability type. Potential values: *ZONAL*: The instance serves data from only one zone. Outages in that zone affect data accessibility. *REGIONAL*: The instance can serve data from more than one zone in a region (it is highly available). For more information, see Overview of the High Availability Configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6513,7 +6837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisktype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#settingsdatadisktype">Settings<wbr>Data<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6585,7 +6909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pricingplan_nodejs" style="color: inherit; text-decoration: inherit;">pricing<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#settingspricingplan">Settings<wbr>Pricing<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6637,7 +6961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activation_policy_python" style="color: inherit; text-decoration: inherit;">activation_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#settingsactivationpolicy">Settings<wbr>Activation<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: *ALWAYS*: The instance is on, and remains so even in the absence of connection requests. *NEVER*: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6653,7 +6977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_type_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#settingsavailabilitytype">Settings<wbr>Availability<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Availability type. Potential values: *ZONAL*: The instance serves data from only one zone. Outages in that zone affect data accessibility. *REGIONAL*: The instance can serve data from more than one zone in a region (it is highly available). For more information, see Overview of the High Availability Configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6693,7 +7017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#settingsdatadisktype">Settings<wbr>Data<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6765,7 +7089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pricing_plan_python" style="color: inherit; text-decoration: inherit;">pricing_<wbr>plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#settingspricingplan">Settings<wbr>Pricing<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6808,6 +7132,134 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-provided labels, represented as a dictionary where each label is a single key value pair.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="settingsactivationpolicy">Settings<wbr>Activation<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sql<wbr>Activation<wbr>Policy<wbr>Unspecified</dt>
+    <dd>SQL_ACTIVATION_POLICY_UNSPECIFIED{{% md %}}Unknown activation plan.{{% /md %}}</dd><dt>Always</dt>
+    <dd>ALWAYS{{% md %}}The instance is always up and running.{{% /md %}}</dd><dt>Never</dt>
+    <dd>NEVER{{% md %}}The instance never starts.{{% /md %}}</dd><dt>On<wbr>Demand</dt>
+    <dd>ON_DEMAND{{% md %}}The instance starts upon receiving requests.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Settings<wbr>Activation<wbr>Policy<wbr>Sql<wbr>Activation<wbr>Policy<wbr>Unspecified</dt>
+    <dd>SQL_ACTIVATION_POLICY_UNSPECIFIED{{% md %}}Unknown activation plan.{{% /md %}}</dd><dt>Settings<wbr>Activation<wbr>Policy<wbr>Always</dt>
+    <dd>ALWAYS{{% md %}}The instance is always up and running.{{% /md %}}</dd><dt>Settings<wbr>Activation<wbr>Policy<wbr>Never</dt>
+    <dd>NEVER{{% md %}}The instance never starts.{{% /md %}}</dd><dt>Settings<wbr>Activation<wbr>Policy<wbr>On<wbr>Demand</dt>
+    <dd>ON_DEMAND{{% md %}}The instance starts upon receiving requests.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sql<wbr>Activation<wbr>Policy<wbr>Unspecified</dt>
+    <dd>SQL_ACTIVATION_POLICY_UNSPECIFIED{{% md %}}Unknown activation plan.{{% /md %}}</dd><dt>Always</dt>
+    <dd>ALWAYS{{% md %}}The instance is always up and running.{{% /md %}}</dd><dt>Never</dt>
+    <dd>NEVER{{% md %}}The instance never starts.{{% /md %}}</dd><dt>On<wbr>Demand</dt>
+    <dd>ON_DEMAND{{% md %}}The instance starts upon receiving requests.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQL_ACTIVATION_POLICY_UNSPECIFIED</dt>
+    <dd>SQL_ACTIVATION_POLICY_UNSPECIFIED{{% md %}}Unknown activation plan.{{% /md %}}</dd><dt>ALWAYS</dt>
+    <dd>ALWAYS{{% md %}}The instance is always up and running.{{% /md %}}</dd><dt>NEVER</dt>
+    <dd>NEVER{{% md %}}The instance never starts.{{% /md %}}</dd><dt>ON_DEMAND</dt>
+    <dd>ON_DEMAND{{% md %}}The instance starts upon receiving requests.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="settingsavailabilitytype">Settings<wbr>Availability<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sql<wbr>Availability<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_AVAILABILITY_TYPE_UNSPECIFIED{{% md %}}This is an unknown Availability type.{{% /md %}}</dd><dt>Zonal</dt>
+    <dd>ZONAL{{% md %}}Zonal available instance.{{% /md %}}</dd><dt>Regional</dt>
+    <dd>REGIONAL{{% md %}}Regional available instance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Settings<wbr>Availability<wbr>Type<wbr>Sql<wbr>Availability<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_AVAILABILITY_TYPE_UNSPECIFIED{{% md %}}This is an unknown Availability type.{{% /md %}}</dd><dt>Settings<wbr>Availability<wbr>Type<wbr>Zonal</dt>
+    <dd>ZONAL{{% md %}}Zonal available instance.{{% /md %}}</dd><dt>Settings<wbr>Availability<wbr>Type<wbr>Regional</dt>
+    <dd>REGIONAL{{% md %}}Regional available instance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sql<wbr>Availability<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_AVAILABILITY_TYPE_UNSPECIFIED{{% md %}}This is an unknown Availability type.{{% /md %}}</dd><dt>Zonal</dt>
+    <dd>ZONAL{{% md %}}Zonal available instance.{{% /md %}}</dd><dt>Regional</dt>
+    <dd>REGIONAL{{% md %}}Regional available instance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQL_AVAILABILITY_TYPE_UNSPECIFIED</dt>
+    <dd>SQL_AVAILABILITY_TYPE_UNSPECIFIED{{% md %}}This is an unknown Availability type.{{% /md %}}</dd><dt>ZONAL</dt>
+    <dd>ZONAL{{% md %}}Zonal available instance.{{% /md %}}</dd><dt>REGIONAL</dt>
+    <dd>REGIONAL{{% md %}}Regional available instance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="settingsdatadisktype">Settings<wbr>Data<wbr>Disk<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sql<wbr>Data<wbr>Disk<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_DATA_DISK_TYPE_UNSPECIFIED{{% md %}}This is an unknown data disk type.{{% /md %}}</dd><dt>Pd<wbr>Ssd</dt>
+    <dd>PD_SSD{{% md %}}An SSD data disk.{{% /md %}}</dd><dt>Pd<wbr>Hdd</dt>
+    <dd>PD_HDD{{% md %}}An HDD data disk.{{% /md %}}</dd><dt>Obsolete<wbr>Local<wbr>Ssd</dt>
+    <dd>OBSOLETE_LOCAL_SSD{{% md %}}This field is deprecated and will be removed from a future version of the API.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Settings<wbr>Data<wbr>Disk<wbr>Type<wbr>Sql<wbr>Data<wbr>Disk<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_DATA_DISK_TYPE_UNSPECIFIED{{% md %}}This is an unknown data disk type.{{% /md %}}</dd><dt>Settings<wbr>Data<wbr>Disk<wbr>Type<wbr>Pd<wbr>Ssd</dt>
+    <dd>PD_SSD{{% md %}}An SSD data disk.{{% /md %}}</dd><dt>Settings<wbr>Data<wbr>Disk<wbr>Type<wbr>Pd<wbr>Hdd</dt>
+    <dd>PD_HDD{{% md %}}An HDD data disk.{{% /md %}}</dd><dt>Settings<wbr>Data<wbr>Disk<wbr>Type<wbr>Obsolete<wbr>Local<wbr>Ssd</dt>
+    <dd>OBSOLETE_LOCAL_SSD{{% md %}}This field is deprecated and will be removed from a future version of the API.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sql<wbr>Data<wbr>Disk<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_DATA_DISK_TYPE_UNSPECIFIED{{% md %}}This is an unknown data disk type.{{% /md %}}</dd><dt>Pd<wbr>Ssd</dt>
+    <dd>PD_SSD{{% md %}}An SSD data disk.{{% /md %}}</dd><dt>Pd<wbr>Hdd</dt>
+    <dd>PD_HDD{{% md %}}An HDD data disk.{{% /md %}}</dd><dt>Obsolete<wbr>Local<wbr>Ssd</dt>
+    <dd>OBSOLETE_LOCAL_SSD{{% md %}}This field is deprecated and will be removed from a future version of the API.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQL_DATA_DISK_TYPE_UNSPECIFIED</dt>
+    <dd>SQL_DATA_DISK_TYPE_UNSPECIFIED{{% md %}}This is an unknown data disk type.{{% /md %}}</dd><dt>PD_SSD</dt>
+    <dd>PD_SSD{{% md %}}An SSD data disk.{{% /md %}}</dd><dt>PD_HDD</dt>
+    <dd>PD_HDD{{% md %}}An HDD data disk.{{% /md %}}</dd><dt>OBSOLETE_LOCAL_SSD</dt>
+    <dd>OBSOLETE_LOCAL_SSD{{% md %}}This field is deprecated and will be removed from a future version of the API.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="settingspricingplan">Settings<wbr>Pricing<wbr>Plan</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sql<wbr>Pricing<wbr>Plan<wbr>Unspecified</dt>
+    <dd>SQL_PRICING_PLAN_UNSPECIFIED{{% md %}}This is an unknown pricing plan for this instance.{{% /md %}}</dd><dt>Package</dt>
+    <dd>PACKAGE{{% md %}}The instance is billed at a monthly flat rate.{{% /md %}}</dd><dt>Per<wbr>Use</dt>
+    <dd>PER_USE{{% md %}}The instance is billed per usage.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Settings<wbr>Pricing<wbr>Plan<wbr>Sql<wbr>Pricing<wbr>Plan<wbr>Unspecified</dt>
+    <dd>SQL_PRICING_PLAN_UNSPECIFIED{{% md %}}This is an unknown pricing plan for this instance.{{% /md %}}</dd><dt>Settings<wbr>Pricing<wbr>Plan<wbr>Package</dt>
+    <dd>PACKAGE{{% md %}}The instance is billed at a monthly flat rate.{{% /md %}}</dd><dt>Settings<wbr>Pricing<wbr>Plan<wbr>Per<wbr>Use</dt>
+    <dd>PER_USE{{% md %}}The instance is billed per usage.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sql<wbr>Pricing<wbr>Plan<wbr>Unspecified</dt>
+    <dd>SQL_PRICING_PLAN_UNSPECIFIED{{% md %}}This is an unknown pricing plan for this instance.{{% /md %}}</dd><dt>Package</dt>
+    <dd>PACKAGE{{% md %}}The instance is billed at a monthly flat rate.{{% /md %}}</dd><dt>Per<wbr>Use</dt>
+    <dd>PER_USE{{% md %}}The instance is billed per usage.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQL_PRICING_PLAN_UNSPECIFIED</dt>
+    <dd>SQL_PRICING_PLAN_UNSPECIFIED{{% md %}}This is an unknown pricing plan for this instance.{{% /md %}}</dd><dt>PACKAGE</dt>
+    <dd>PACKAGE{{% md %}}The instance is billed at a monthly flat rate.{{% /md %}}</dd><dt>PER_USE</dt>
+    <dd>PER_USE{{% md %}}The instance is billed per usage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="settingsresponse">Settings<wbr>Response</h4>
@@ -7713,7 +8165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqloutofdiskstate_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sqloutofdiskreportsqloutofdiskstate">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend -- the proactive database wellness job{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7733,7 +8185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqloutofdiskstate_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sqloutofdiskreportsqloutofdiskstate">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend -- the proactive database wellness job{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7753,7 +8205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqloutofdiskstate_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sqloutofdiskreportsqloutofdiskstate">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend -- the proactive database wellness job{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7773,7 +8225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_out_of_disk_state_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>out_<wbr>of_<wbr>disk_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#sqloutofdiskreportsqloutofdiskstate">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend -- the proactive database wellness job{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7858,6 +8310,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field represents the state generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the Pantheon frontend -- the proactive database wellness job{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sqloutofdiskreportsqloutofdiskstate">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State<wbr>Unspecified</dt>
+    <dd>SQL_OUT_OF_DISK_STATE_UNSPECIFIED{{% md %}}Unspecified state{{% /md %}}</dd><dt>Normal</dt>
+    <dd>NORMAL{{% md %}}The instance has plenty space on data disk{{% /md %}}</dd><dt>Soft<wbr>Shutdown</dt>
+    <dd>SOFT_SHUTDOWN{{% md %}}Data disk is almost used up. It is shutdown to prevent data corruption.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State<wbr>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State<wbr>Unspecified</dt>
+    <dd>SQL_OUT_OF_DISK_STATE_UNSPECIFIED{{% md %}}Unspecified state{{% /md %}}</dd><dt>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State<wbr>Normal</dt>
+    <dd>NORMAL{{% md %}}The instance has plenty space on data disk{{% /md %}}</dd><dt>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State<wbr>Soft<wbr>Shutdown</dt>
+    <dd>SOFT_SHUTDOWN{{% md %}}Data disk is almost used up. It is shutdown to prevent data corruption.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>State<wbr>Unspecified</dt>
+    <dd>SQL_OUT_OF_DISK_STATE_UNSPECIFIED{{% md %}}Unspecified state{{% /md %}}</dd><dt>Normal</dt>
+    <dd>NORMAL{{% md %}}The instance has plenty space on data disk{{% /md %}}</dd><dt>Soft<wbr>Shutdown</dt>
+    <dd>SOFT_SHUTDOWN{{% md %}}Data disk is almost used up. It is shutdown to prevent data corruption.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQL_OUT_OF_DISK_STATE_UNSPECIFIED</dt>
+    <dd>SQL_OUT_OF_DISK_STATE_UNSPECIFIED{{% md %}}Unspecified state{{% /md %}}</dd><dt>NORMAL</dt>
+    <dd>NORMAL{{% md %}}The instance has plenty space on data disk{{% /md %}}</dd><dt>SOFT_SHUTDOWN</dt>
+    <dd>SOFT_SHUTDOWN{{% md %}}Data disk is almost used up. It is shutdown to prevent data corruption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqlscheduledmaintenance">Sql<wbr>Scheduled<wbr>Maintenance</h4>

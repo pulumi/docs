@@ -30,7 +30,7 @@ Creates a PacketMirroring resource in the specified project and region using the
                     <span class="nx">collector_ilb</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.PacketMirroringForwardingRuleInfoArgs]</span> = None<span class="p">,</span>
                     <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                    <span class="nx">enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">enable</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.PacketMirroringEnable]</span> = None<span class="p">,</span>
                     <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.PacketMirroringFilterArgs]</span> = None<span class="p">,</span>
                     <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -216,7 +216,7 @@ The PacketMirroring resource accepts the following [input]({{< relref "/docs/int
 <a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#packetmirroringenable">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Packet<wbr>Mirroring<wbr>Enable</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet mirroring policy will not be enforced on the network.
 
@@ -352,7 +352,7 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 <a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#packetmirroringenable">Packet<wbr>Mirroring<wbr>Enable</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet mirroring policy will not be enforced on the network.
 
@@ -488,7 +488,7 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#packetmirroringenable">Packet<wbr>Mirroring<wbr>Enable</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet mirroring policy will not be enforced on the network.
 
@@ -624,7 +624,7 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#packetmirroringenable">Packet<wbr>Mirroring<wbr>Enable</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet mirroring policy will not be enforced on the network.
 
@@ -778,6 +778,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="packetmirroringenable">Packet<wbr>Mirroring<wbr>Enable</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>False</dt>
+    <dd>FALSE</dd><dt>True</dt>
+    <dd>TRUE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Packet<wbr>Mirroring<wbr>Enable<wbr>False</dt>
+    <dd>FALSE</dd><dt>Packet<wbr>Mirroring<wbr>Enable<wbr>True</dt>
+    <dd>TRUE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>False</dt>
+    <dd>FALSE</dd><dt>True</dt>
+    <dd>TRUE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FALSE</dt>
+    <dd>FALSE</dd><dt>TRUE</dt>
+    <dd>TRUE</dd></dl>
+{{% /choosable %}}
+
 <h4 id="packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
@@ -795,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#packetmirroringfilterdirection">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Packet<wbr>Mirroring<wbr>Filter<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -823,7 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#packetmirroringfilterdirection">Packet<wbr>Mirroring<wbr>Filter<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -859,7 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#packetmirroringfilterdirection">Packet<wbr>Mirroring<wbr>Filter<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -879,7 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#packetmirroringfilterdirection">Packet<wbr>Mirroring<wbr>Filter<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -890,6 +916,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Protocols that apply as filter on mirrored traffic. If no protocols are specified, all traffic that matches the specified CIDR ranges is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="packetmirroringfilterdirection">Packet<wbr>Mirroring<wbr>Filter<wbr>Direction</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Both</dt>
+    <dd>BOTH</dd><dt>Egress</dt>
+    <dd>EGRESS</dd><dt>Ingress</dt>
+    <dd>INGRESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Packet<wbr>Mirroring<wbr>Filter<wbr>Direction<wbr>Both</dt>
+    <dd>BOTH</dd><dt>Packet<wbr>Mirroring<wbr>Filter<wbr>Direction<wbr>Egress</dt>
+    <dd>EGRESS</dd><dt>Packet<wbr>Mirroring<wbr>Filter<wbr>Direction<wbr>Ingress</dt>
+    <dd>INGRESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Both</dt>
+    <dd>BOTH</dd><dt>Egress</dt>
+    <dd>EGRESS</dd><dt>Ingress</dt>
+    <dd>INGRESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>BOTH</dt>
+    <dd>BOTH</dd><dt>EGRESS</dt>
+    <dd>EGRESS</dd><dt>INGRESS</dt>
+    <dd>INGRESS</dd></dl>
 {{% /choosable %}}
 
 <h4 id="packetmirroringfilterresponse">Packet<wbr>Mirroring<wbr>Filter<wbr>Response</h4>

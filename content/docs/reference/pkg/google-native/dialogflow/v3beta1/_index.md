@@ -26,6 +26,23 @@ Explore the resources and functions of the google-native.dialogflow/v3beta1 modu
     <li><a href="webhook" title="Webhook"><span class="symbol resource"></span>Webhook</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getagent" title="GetAgent"><span class="symbol function"></span>GetAgent</a></li>
+    <li><a href="getentitytype" title="GetEntityType"><span class="symbol function"></span>GetEntityType</a></li>
+    <li><a href="getenvironment" title="GetEnvironment"><span class="symbol function"></span>GetEnvironment</a></li>
+    <li><a href="getexperiment" title="GetExperiment"><span class="symbol function"></span>GetExperiment</a></li>
+    <li><a href="getflow" title="GetFlow"><span class="symbol function"></span>GetFlow</a></li>
+    <li><a href="getintent" title="GetIntent"><span class="symbol function"></span>GetIntent</a></li>
+    <li><a href="getpage" title="GetPage"><span class="symbol function"></span>GetPage</a></li>
+    <li><a href="getsecuritysetting" title="GetSecuritySetting"><span class="symbol function"></span>GetSecuritySetting</a></li>
+    <li><a href="getsessionentitytype" title="GetSessionEntityType"><span class="symbol function"></span>GetSessionEntityType</a></li>
+    <li><a href="gettestcase" title="GetTestCase"><span class="symbol function"></span>GetTestCase</a></li>
+    <li><a href="gettransitionroutegroup" title="GetTransitionRouteGroup"><span class="symbol function"></span>GetTransitionRouteGroup</a></li>
+    <li><a href="getversion" title="GetVersion"><span class="symbol function"></span>GetVersion</a></li>
+    <li><a href="getwebhook" title="GetWebhook"><span class="symbol function"></span>GetWebhook</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -33,6 +50,6 @@ Explore the resources and functions of the google-native.dialogflow/v3beta1 modu
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

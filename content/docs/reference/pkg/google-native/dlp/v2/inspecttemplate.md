@@ -653,7 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusiontype_csharp" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2custominfotypeexclusiontype">Pulumi.<wbr>Google<wbr>Native.<wbr>DLP.<wbr>V2.<wbr>Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Exclusion<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -669,7 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#likelihood_csharp" style="color: inherit; text-decoration: inherit;">Likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2custominfotypelikelihood">Pulumi.<wbr>Google<wbr>Native.<wbr>DLP.<wbr>V2.<wbr>Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Likelihood</a></span>
     </dt>
     <dd>{{% md %}}Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Defaults to `VERY_LIKELY` if not specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -721,7 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusiontype_go" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2custominfotypeexclusiontype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Exclusion<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -737,7 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#likelihood_go" style="color: inherit; text-decoration: inherit;">Likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2custominfotypelikelihood">Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Likelihood</a></span>
     </dt>
     <dd>{{% md %}}Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Defaults to `VERY_LIKELY` if not specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -789,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusiontype_nodejs" style="color: inherit; text-decoration: inherit;">exclusion<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2custominfotypeexclusiontype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Exclusion<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -805,7 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#likelihood_nodejs" style="color: inherit; text-decoration: inherit;">likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2custominfotypelikelihood">Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Likelihood</a></span>
     </dt>
     <dd>{{% md %}}Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Defaults to `VERY_LIKELY` if not specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -857,7 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusion_type_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleprivacydlpv2custominfotypeexclusiontype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Exclusion<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -873,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#likelihood_python" style="color: inherit; text-decoration: inherit;">likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleprivacydlpv2custominfotypelikelihood">Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Likelihood</a></span>
     </dt>
     <dd>{{% md %}}Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Defaults to `VERY_LIKELY` if not specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -900,6 +900,74 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#googleprivacydlpv2surrogatetype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Surrogate<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Message for detecting output from deidentification transformations that support reversing.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleprivacydlpv2custominfotypeexclusiontype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Exclusion<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Exclusion<wbr>Type<wbr>Unspecified</dt>
+    <dd>EXCLUSION_TYPE_UNSPECIFIED{{% md %}}A finding of this custom info type will not be excluded from results.{{% /md %}}</dd><dt>Exclusion<wbr>Type<wbr>Exclude</dt>
+    <dd>EXCLUSION_TYPE_EXCLUDE{{% md %}}A finding of this custom info type will be excluded from final results, but can still affect rule execution.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Exclusion<wbr>Type<wbr>Exclusion<wbr>Type<wbr>Unspecified</dt>
+    <dd>EXCLUSION_TYPE_UNSPECIFIED{{% md %}}A finding of this custom info type will not be excluded from results.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Exclusion<wbr>Type<wbr>Exclusion<wbr>Type<wbr>Exclude</dt>
+    <dd>EXCLUSION_TYPE_EXCLUDE{{% md %}}A finding of this custom info type will be excluded from final results, but can still affect rule execution.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Exclusion<wbr>Type<wbr>Unspecified</dt>
+    <dd>EXCLUSION_TYPE_UNSPECIFIED{{% md %}}A finding of this custom info type will not be excluded from results.{{% /md %}}</dd><dt>Exclusion<wbr>Type<wbr>Exclude</dt>
+    <dd>EXCLUSION_TYPE_EXCLUDE{{% md %}}A finding of this custom info type will be excluded from final results, but can still affect rule execution.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EXCLUSION_TYPE_UNSPECIFIED</dt>
+    <dd>EXCLUSION_TYPE_UNSPECIFIED{{% md %}}A finding of this custom info type will not be excluded from results.{{% /md %}}</dd><dt>EXCLUSION_TYPE_EXCLUDE</dt>
+    <dd>EXCLUSION_TYPE_EXCLUDE{{% md %}}A finding of this custom info type will be excluded from final results, but can still affect rule execution.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleprivacydlpv2custominfotypelikelihood">Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Likelihood</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Likelihood<wbr>Unspecified</dt>
+    <dd>LIKELIHOOD_UNSPECIFIED{{% md %}}Default value; same as POSSIBLE.{{% /md %}}</dd><dt>Very<wbr>Unlikely</dt>
+    <dd>VERY_UNLIKELY{{% md %}}Few matching elements.{{% /md %}}</dd><dt>Unlikely</dt>
+    <dd>UNLIKELY</dd><dt>Possible</dt>
+    <dd>POSSIBLE{{% md %}}Some matching elements.{{% /md %}}</dd><dt>Likely</dt>
+    <dd>LIKELY</dd><dt>Very<wbr>Likely</dt>
+    <dd>VERY_LIKELY{{% md %}}Many matching elements.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Likelihood<wbr>Likelihood<wbr>Unspecified</dt>
+    <dd>LIKELIHOOD_UNSPECIFIED{{% md %}}Default value; same as POSSIBLE.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Likelihood<wbr>Very<wbr>Unlikely</dt>
+    <dd>VERY_UNLIKELY{{% md %}}Few matching elements.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Likelihood<wbr>Unlikely</dt>
+    <dd>UNLIKELY</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Likelihood<wbr>Possible</dt>
+    <dd>POSSIBLE{{% md %}}Some matching elements.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Likelihood<wbr>Likely</dt>
+    <dd>LIKELY</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Likelihood<wbr>Very<wbr>Likely</dt>
+    <dd>VERY_LIKELY{{% md %}}Many matching elements.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Likelihood<wbr>Unspecified</dt>
+    <dd>LIKELIHOOD_UNSPECIFIED{{% md %}}Default value; same as POSSIBLE.{{% /md %}}</dd><dt>Very<wbr>Unlikely</dt>
+    <dd>VERY_UNLIKELY{{% md %}}Few matching elements.{{% /md %}}</dd><dt>Unlikely</dt>
+    <dd>UNLIKELY</dd><dt>Possible</dt>
+    <dd>POSSIBLE{{% md %}}Some matching elements.{{% /md %}}</dd><dt>Likely</dt>
+    <dd>LIKELY</dd><dt>Very<wbr>Likely</dt>
+    <dd>VERY_LIKELY{{% md %}}Many matching elements.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LIKELIHOOD_UNSPECIFIED</dt>
+    <dd>LIKELIHOOD_UNSPECIFIED{{% md %}}Default value; same as POSSIBLE.{{% /md %}}</dd><dt>VERY_UNLIKELY</dt>
+    <dd>VERY_UNLIKELY{{% md %}}Few matching elements.{{% /md %}}</dd><dt>UNLIKELY</dt>
+    <dd>UNLIKELY</dd><dt>POSSIBLE</dt>
+    <dd>POSSIBLE{{% md %}}Some matching elements.{{% /md %}}</dd><dt>LIKELY</dt>
+    <dd>LIKELY</dd><dt>VERY_LIKELY</dt>
+    <dd>VERY_LIKELY{{% md %}}Many matching elements.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleprivacydlpv2custominfotyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Response</h4>
@@ -1565,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchingtype_csharp" style="color: inherit; text-decoration: inherit;">Matching<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2exclusionrulematchingtype">Pulumi.<wbr>Google<wbr>Native.<wbr>DLP.<wbr>V2.<wbr>Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclusion<wbr>Rule<wbr>Matching<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}How the rule is applied, see MatchingType documentation for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1601,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchingtype_go" style="color: inherit; text-decoration: inherit;">Matching<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2exclusionrulematchingtype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclusion<wbr>Rule<wbr>Matching<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}How the rule is applied, see MatchingType documentation for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1637,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchingtype_nodejs" style="color: inherit; text-decoration: inherit;">matching<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2exclusionrulematchingtype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclusion<wbr>Rule<wbr>Matching<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}How the rule is applied, see MatchingType documentation for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1673,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matching_type_python" style="color: inherit; text-decoration: inherit;">matching_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleprivacydlpv2exclusionrulematchingtype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclusion<wbr>Rule<wbr>Matching<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}How the rule is applied, see MatchingType documentation for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1684,6 +1752,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#googleprivacydlpv2regex">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleprivacydlpv2exclusionrulematchingtype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclusion<wbr>Rule<wbr>Matching<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Matching<wbr>Type<wbr>Unspecified</dt>
+    <dd>MATCHING_TYPE_UNSPECIFIED{{% md %}}Invalid.{{% /md %}}</dd><dt>Matching<wbr>Type<wbr>Full<wbr>Match</dt>
+    <dd>MATCHING_TYPE_FULL_MATCH{{% md %}}Full match. - Dictionary: join of Dictionary results matched complete finding quote - Regex: all regex matches fill a finding quote start to end - Exclude info type: completely inside affecting info types findings{{% /md %}}</dd><dt>Matching<wbr>Type<wbr>Partial<wbr>Match</dt>
+    <dd>MATCHING_TYPE_PARTIAL_MATCH{{% md %}}Partial match. - Dictionary: at least one of the tokens in the finding matches - Regex: substring of the finding matches - Exclude info type: intersects with affecting info types findings{{% /md %}}</dd><dt>Matching<wbr>Type<wbr>Inverse<wbr>Match</dt>
+    <dd>MATCHING_TYPE_INVERSE_MATCH{{% md %}}Inverse match. - Dictionary: no tokens in the finding match the dictionary - Regex: finding doesn't match the regex - Exclude info type: no intersection with affecting info types findings{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclusion<wbr>Rule<wbr>Matching<wbr>Type<wbr>Matching<wbr>Type<wbr>Unspecified</dt>
+    <dd>MATCHING_TYPE_UNSPECIFIED{{% md %}}Invalid.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclusion<wbr>Rule<wbr>Matching<wbr>Type<wbr>Matching<wbr>Type<wbr>Full<wbr>Match</dt>
+    <dd>MATCHING_TYPE_FULL_MATCH{{% md %}}Full match. - Dictionary: join of Dictionary results matched complete finding quote - Regex: all regex matches fill a finding quote start to end - Exclude info type: completely inside affecting info types findings{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclusion<wbr>Rule<wbr>Matching<wbr>Type<wbr>Matching<wbr>Type<wbr>Partial<wbr>Match</dt>
+    <dd>MATCHING_TYPE_PARTIAL_MATCH{{% md %}}Partial match. - Dictionary: at least one of the tokens in the finding matches - Regex: substring of the finding matches - Exclude info type: intersects with affecting info types findings{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclusion<wbr>Rule<wbr>Matching<wbr>Type<wbr>Matching<wbr>Type<wbr>Inverse<wbr>Match</dt>
+    <dd>MATCHING_TYPE_INVERSE_MATCH{{% md %}}Inverse match. - Dictionary: no tokens in the finding match the dictionary - Regex: finding doesn't match the regex - Exclude info type: no intersection with affecting info types findings{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Matching<wbr>Type<wbr>Unspecified</dt>
+    <dd>MATCHING_TYPE_UNSPECIFIED{{% md %}}Invalid.{{% /md %}}</dd><dt>Matching<wbr>Type<wbr>Full<wbr>Match</dt>
+    <dd>MATCHING_TYPE_FULL_MATCH{{% md %}}Full match. - Dictionary: join of Dictionary results matched complete finding quote - Regex: all regex matches fill a finding quote start to end - Exclude info type: completely inside affecting info types findings{{% /md %}}</dd><dt>Matching<wbr>Type<wbr>Partial<wbr>Match</dt>
+    <dd>MATCHING_TYPE_PARTIAL_MATCH{{% md %}}Partial match. - Dictionary: at least one of the tokens in the finding matches - Regex: substring of the finding matches - Exclude info type: intersects with affecting info types findings{{% /md %}}</dd><dt>Matching<wbr>Type<wbr>Inverse<wbr>Match</dt>
+    <dd>MATCHING_TYPE_INVERSE_MATCH{{% md %}}Inverse match. - Dictionary: no tokens in the finding match the dictionary - Regex: finding doesn't match the regex - Exclude info type: no intersection with affecting info types findings{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MATCHING_TYPE_UNSPECIFIED</dt>
+    <dd>MATCHING_TYPE_UNSPECIFIED{{% md %}}Invalid.{{% /md %}}</dd><dt>MATCHING_TYPE_FULL_MATCH</dt>
+    <dd>MATCHING_TYPE_FULL_MATCH{{% md %}}Full match. - Dictionary: join of Dictionary results matched complete finding quote - Regex: all regex matches fill a finding quote start to end - Exclude info type: completely inside affecting info types findings{{% /md %}}</dd><dt>MATCHING_TYPE_PARTIAL_MATCH</dt>
+    <dd>MATCHING_TYPE_PARTIAL_MATCH{{% md %}}Partial match. - Dictionary: at least one of the tokens in the finding matches - Regex: substring of the finding matches - Exclude info type: intersects with affecting info types findings{{% /md %}}</dd><dt>MATCHING_TYPE_INVERSE_MATCH</dt>
+    <dd>MATCHING_TYPE_INVERSE_MATCH{{% md %}}Inverse match. - Dictionary: no tokens in the finding match the dictionary - Regex: finding doesn't match the regex - Exclude info type: no intersection with affecting info types findings{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleprivacydlpv2exclusionruleresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclusion<wbr>Rule<wbr>Response</h4>
@@ -2561,7 +2663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentoptions_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectconfigcontentoptionsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>DLP.<wbr>V2.<wbr>Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Content<wbr>Options<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of options defining data content to scan. If empty, text, images, and other content will be included.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2609,7 +2711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minlikelihood_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectconfigminlikelihood">Pulumi.<wbr>Google<wbr>Native.<wbr>DLP.<wbr>V2.<wbr>Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Min<wbr>Likelihood</a></span>
     </dt>
     <dd>{{% md %}}Only returns findings equal or above this threshold. The default is POSSIBLE. See https://cloud.google.com/dlp/docs/likelihood to learn more.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2629,7 +2731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentoptions_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectconfigcontentoptionsitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of options defining data content to scan. If empty, text, images, and other content will be included.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2677,7 +2779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minlikelihood_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectconfigminlikelihood">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Min<wbr>Likelihood</a></span>
     </dt>
     <dd>{{% md %}}Only returns findings equal or above this threshold. The default is POSSIBLE. See https://cloud.google.com/dlp/docs/likelihood to learn more.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2697,7 +2799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentoptions_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectconfigcontentoptionsitem">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Content<wbr>Options<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}List of options defining data content to scan. If empty, text, images, and other content will be included.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2745,7 +2847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minlikelihood_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectconfigminlikelihood">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Min<wbr>Likelihood</a></span>
     </dt>
     <dd>{{% md %}}Only returns findings equal or above this threshold. The default is POSSIBLE. See https://cloud.google.com/dlp/docs/likelihood to learn more.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2765,7 +2867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_options_python" style="color: inherit; text-decoration: inherit;">content_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectconfigcontentoptionsitem">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Content<wbr>Options<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}List of options defining data content to scan. If empty, text, images, and other content will be included.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2813,7 +2915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_likelihood_python" style="color: inherit; text-decoration: inherit;">min_<wbr>likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectconfigminlikelihood">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Min<wbr>Likelihood</a></span>
     </dt>
     <dd>{{% md %}}Only returns findings equal or above this threshold. The default is POSSIBLE. See https://cloud.google.com/dlp/docs/likelihood to learn more.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2824,6 +2926,78 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#googleprivacydlpv2inspectionruleset">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspection<wbr>Rule<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end, other rules are executed in the order they are specified for each info type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleprivacydlpv2inspectconfigcontentoptionsitem">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Content<wbr>Options<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Content<wbr>Unspecified</dt>
+    <dd>CONTENT_UNSPECIFIED{{% md %}}Includes entire content of a file or a data stream.{{% /md %}}</dd><dt>Content<wbr>Text</dt>
+    <dd>CONTENT_TEXT{{% md %}}Text content within the data, excluding any metadata.{{% /md %}}</dd><dt>Content<wbr>Image</dt>
+    <dd>CONTENT_IMAGE{{% md %}}Images found in the data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Content<wbr>Options<wbr>Item<wbr>Content<wbr>Unspecified</dt>
+    <dd>CONTENT_UNSPECIFIED{{% md %}}Includes entire content of a file or a data stream.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Content<wbr>Options<wbr>Item<wbr>Content<wbr>Text</dt>
+    <dd>CONTENT_TEXT{{% md %}}Text content within the data, excluding any metadata.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Content<wbr>Options<wbr>Item<wbr>Content<wbr>Image</dt>
+    <dd>CONTENT_IMAGE{{% md %}}Images found in the data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Content<wbr>Unspecified</dt>
+    <dd>CONTENT_UNSPECIFIED{{% md %}}Includes entire content of a file or a data stream.{{% /md %}}</dd><dt>Content<wbr>Text</dt>
+    <dd>CONTENT_TEXT{{% md %}}Text content within the data, excluding any metadata.{{% /md %}}</dd><dt>Content<wbr>Image</dt>
+    <dd>CONTENT_IMAGE{{% md %}}Images found in the data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CONTENT_UNSPECIFIED</dt>
+    <dd>CONTENT_UNSPECIFIED{{% md %}}Includes entire content of a file or a data stream.{{% /md %}}</dd><dt>CONTENT_TEXT</dt>
+    <dd>CONTENT_TEXT{{% md %}}Text content within the data, excluding any metadata.{{% /md %}}</dd><dt>CONTENT_IMAGE</dt>
+    <dd>CONTENT_IMAGE{{% md %}}Images found in the data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleprivacydlpv2inspectconfigminlikelihood">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Min<wbr>Likelihood</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Likelihood<wbr>Unspecified</dt>
+    <dd>LIKELIHOOD_UNSPECIFIED{{% md %}}Default value; same as POSSIBLE.{{% /md %}}</dd><dt>Very<wbr>Unlikely</dt>
+    <dd>VERY_UNLIKELY{{% md %}}Few matching elements.{{% /md %}}</dd><dt>Unlikely</dt>
+    <dd>UNLIKELY</dd><dt>Possible</dt>
+    <dd>POSSIBLE{{% md %}}Some matching elements.{{% /md %}}</dd><dt>Likely</dt>
+    <dd>LIKELY</dd><dt>Very<wbr>Likely</dt>
+    <dd>VERY_LIKELY{{% md %}}Many matching elements.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Min<wbr>Likelihood<wbr>Likelihood<wbr>Unspecified</dt>
+    <dd>LIKELIHOOD_UNSPECIFIED{{% md %}}Default value; same as POSSIBLE.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Min<wbr>Likelihood<wbr>Very<wbr>Unlikely</dt>
+    <dd>VERY_UNLIKELY{{% md %}}Few matching elements.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Min<wbr>Likelihood<wbr>Unlikely</dt>
+    <dd>UNLIKELY</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Min<wbr>Likelihood<wbr>Possible</dt>
+    <dd>POSSIBLE{{% md %}}Some matching elements.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Min<wbr>Likelihood<wbr>Likely</dt>
+    <dd>LIKELY</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Min<wbr>Likelihood<wbr>Very<wbr>Likely</dt>
+    <dd>VERY_LIKELY{{% md %}}Many matching elements.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Likelihood<wbr>Unspecified</dt>
+    <dd>LIKELIHOOD_UNSPECIFIED{{% md %}}Default value; same as POSSIBLE.{{% /md %}}</dd><dt>Very<wbr>Unlikely</dt>
+    <dd>VERY_UNLIKELY{{% md %}}Few matching elements.{{% /md %}}</dd><dt>Unlikely</dt>
+    <dd>UNLIKELY</dd><dt>Possible</dt>
+    <dd>POSSIBLE{{% md %}}Some matching elements.{{% /md %}}</dd><dt>Likely</dt>
+    <dd>LIKELY</dd><dt>Very<wbr>Likely</dt>
+    <dd>VERY_LIKELY{{% md %}}Many matching elements.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LIKELIHOOD_UNSPECIFIED</dt>
+    <dd>LIKELIHOOD_UNSPECIFIED{{% md %}}Default value; same as POSSIBLE.{{% /md %}}</dd><dt>VERY_UNLIKELY</dt>
+    <dd>VERY_UNLIKELY{{% md %}}Few matching elements.{{% /md %}}</dd><dt>UNLIKELY</dt>
+    <dd>UNLIKELY</dd><dt>POSSIBLE</dt>
+    <dd>POSSIBLE{{% md %}}Some matching elements.{{% /md %}}</dd><dt>LIKELY</dt>
+    <dd>LIKELY</dd><dt>VERY_LIKELY</dt>
+    <dd>VERY_LIKELY{{% md %}}Many matching elements.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleprivacydlpv2inspectconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Response</h4>
@@ -3437,7 +3611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixedlikelihood_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2likelihoodadjustmentfixedlikelihood">Pulumi.<wbr>Google<wbr>Native.<wbr>DLP.<wbr>V2.<wbr>Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Fixed<wbr>Likelihood</a></span>
     </dt>
     <dd>{{% md %}}Set the likelihood of a finding to a fixed value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3457,7 +3631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixedlikelihood_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2likelihoodadjustmentfixedlikelihood">Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Fixed<wbr>Likelihood</a></span>
     </dt>
     <dd>{{% md %}}Set the likelihood of a finding to a fixed value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3477,7 +3651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixedlikelihood_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2likelihoodadjustmentfixedlikelihood">Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Fixed<wbr>Likelihood</a></span>
     </dt>
     <dd>{{% md %}}Set the likelihood of a finding to a fixed value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3497,7 +3671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixed_likelihood_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleprivacydlpv2likelihoodadjustmentfixedlikelihood">Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Fixed<wbr>Likelihood</a></span>
     </dt>
     <dd>{{% md %}}Set the likelihood of a finding to a fixed value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3508,6 +3682,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Increase or decrease the likelihood by the specified number of levels. For example, if a finding would be `POSSIBLE` without the detection rule and `relative_likelihood` is 1, then it is upgraded to `LIKELY`, while a value of -1 would downgrade it to `UNLIKELY`. Likelihood may never drop below `VERY_UNLIKELY` or exceed `VERY_LIKELY`, so applying an adjustment of 1 followed by an adjustment of -1 when base likelihood is `VERY_LIKELY` will result in a final likelihood of `LIKELY`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleprivacydlpv2likelihoodadjustmentfixedlikelihood">Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Fixed<wbr>Likelihood</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Likelihood<wbr>Unspecified</dt>
+    <dd>LIKELIHOOD_UNSPECIFIED{{% md %}}Default value; same as POSSIBLE.{{% /md %}}</dd><dt>Very<wbr>Unlikely</dt>
+    <dd>VERY_UNLIKELY{{% md %}}Few matching elements.{{% /md %}}</dd><dt>Unlikely</dt>
+    <dd>UNLIKELY</dd><dt>Possible</dt>
+    <dd>POSSIBLE{{% md %}}Some matching elements.{{% /md %}}</dd><dt>Likely</dt>
+    <dd>LIKELY</dd><dt>Very<wbr>Likely</dt>
+    <dd>VERY_LIKELY{{% md %}}Many matching elements.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Fixed<wbr>Likelihood<wbr>Likelihood<wbr>Unspecified</dt>
+    <dd>LIKELIHOOD_UNSPECIFIED{{% md %}}Default value; same as POSSIBLE.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Fixed<wbr>Likelihood<wbr>Very<wbr>Unlikely</dt>
+    <dd>VERY_UNLIKELY{{% md %}}Few matching elements.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Fixed<wbr>Likelihood<wbr>Unlikely</dt>
+    <dd>UNLIKELY</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Fixed<wbr>Likelihood<wbr>Possible</dt>
+    <dd>POSSIBLE{{% md %}}Some matching elements.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Fixed<wbr>Likelihood<wbr>Likely</dt>
+    <dd>LIKELY</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Fixed<wbr>Likelihood<wbr>Very<wbr>Likely</dt>
+    <dd>VERY_LIKELY{{% md %}}Many matching elements.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Likelihood<wbr>Unspecified</dt>
+    <dd>LIKELIHOOD_UNSPECIFIED{{% md %}}Default value; same as POSSIBLE.{{% /md %}}</dd><dt>Very<wbr>Unlikely</dt>
+    <dd>VERY_UNLIKELY{{% md %}}Few matching elements.{{% /md %}}</dd><dt>Unlikely</dt>
+    <dd>UNLIKELY</dd><dt>Possible</dt>
+    <dd>POSSIBLE{{% md %}}Some matching elements.{{% /md %}}</dd><dt>Likely</dt>
+    <dd>LIKELY</dd><dt>Very<wbr>Likely</dt>
+    <dd>VERY_LIKELY{{% md %}}Many matching elements.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LIKELIHOOD_UNSPECIFIED</dt>
+    <dd>LIKELIHOOD_UNSPECIFIED{{% md %}}Default value; same as POSSIBLE.{{% /md %}}</dd><dt>VERY_UNLIKELY</dt>
+    <dd>VERY_UNLIKELY{{% md %}}Few matching elements.{{% /md %}}</dd><dt>UNLIKELY</dt>
+    <dd>UNLIKELY</dd><dt>POSSIBLE</dt>
+    <dd>POSSIBLE{{% md %}}Some matching elements.{{% /md %}}</dd><dt>LIKELY</dt>
+    <dd>LIKELY</dd><dt>VERY_LIKELY</dt>
+    <dd>VERY_LIKELY{{% md %}}Many matching elements.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleprivacydlpv2likelihoodadjustmentresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Response</h4>

@@ -38,7 +38,7 @@ Creates a new company entity.
             <span class="nx">keyword_searchable_job_custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[_jobs_v3.CompanySize]</span> = None<span class="p">,</span>
             <span class="nx">suspended</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">website_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -262,7 +262,7 @@ The Company resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#companysize">Pulumi.<wbr>Google<wbr>Native.<wbr>Jobs.<wbr>V3.<wbr>Company<wbr>Size</a></span>
     </dt>
     <dd>{{% md %}}Optional. The employer's company size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +378,7 @@ The Company resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#companysize">Company<wbr>Size</a></span>
     </dt>
     <dd>{{% md %}}Optional. The employer's company size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +494,7 @@ The Company resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#companysize">Company<wbr>Size</a></span>
     </dt>
     <dd>{{% md %}}Optional. The employer's company size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +610,7 @@ The Company resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#companysize">Company<wbr>Size</a></span>
     </dt>
     <dd>{{% md %}}Optional. The employer's company size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -796,6 +796,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A structured headquarters location of the company, resolved from Company.hq_location if provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="companysize">Company<wbr>Size</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Company<wbr>Size<wbr>Unspecified</dt>
+    <dd>COMPANY_SIZE_UNSPECIFIED{{% md %}}Default value if the size is not specified.{{% /md %}}</dd><dt>Mini</dt>
+    <dd>MINI{{% md %}}The company has less than 50 employees.{{% /md %}}</dd><dt>Small</dt>
+    <dd>SMALL{{% md %}}The company has between 50 and 99 employees.{{% /md %}}</dd><dt>Smedium</dt>
+    <dd>SMEDIUM{{% md %}}The company has between 100 and 499 employees.{{% /md %}}</dd><dt>Medium</dt>
+    <dd>MEDIUM{{% md %}}The company has between 500 and 999 employees.{{% /md %}}</dd><dt>Big</dt>
+    <dd>BIG{{% md %}}The company has between 1,000 and 4,999 employees.{{% /md %}}</dd><dt>Bigger</dt>
+    <dd>BIGGER{{% md %}}The company has between 5,000 and 9,999 employees.{{% /md %}}</dd><dt>Giant</dt>
+    <dd>GIANT{{% md %}}The company has 10,000 or more employees.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Company<wbr>Size<wbr>Company<wbr>Size<wbr>Unspecified</dt>
+    <dd>COMPANY_SIZE_UNSPECIFIED{{% md %}}Default value if the size is not specified.{{% /md %}}</dd><dt>Company<wbr>Size<wbr>Mini</dt>
+    <dd>MINI{{% md %}}The company has less than 50 employees.{{% /md %}}</dd><dt>Company<wbr>Size<wbr>Small</dt>
+    <dd>SMALL{{% md %}}The company has between 50 and 99 employees.{{% /md %}}</dd><dt>Company<wbr>Size<wbr>Smedium</dt>
+    <dd>SMEDIUM{{% md %}}The company has between 100 and 499 employees.{{% /md %}}</dd><dt>Company<wbr>Size<wbr>Medium</dt>
+    <dd>MEDIUM{{% md %}}The company has between 500 and 999 employees.{{% /md %}}</dd><dt>Company<wbr>Size<wbr>Big</dt>
+    <dd>BIG{{% md %}}The company has between 1,000 and 4,999 employees.{{% /md %}}</dd><dt>Company<wbr>Size<wbr>Bigger</dt>
+    <dd>BIGGER{{% md %}}The company has between 5,000 and 9,999 employees.{{% /md %}}</dd><dt>Company<wbr>Size<wbr>Giant</dt>
+    <dd>GIANT{{% md %}}The company has 10,000 or more employees.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Company<wbr>Size<wbr>Unspecified</dt>
+    <dd>COMPANY_SIZE_UNSPECIFIED{{% md %}}Default value if the size is not specified.{{% /md %}}</dd><dt>Mini</dt>
+    <dd>MINI{{% md %}}The company has less than 50 employees.{{% /md %}}</dd><dt>Small</dt>
+    <dd>SMALL{{% md %}}The company has between 50 and 99 employees.{{% /md %}}</dd><dt>Smedium</dt>
+    <dd>SMEDIUM{{% md %}}The company has between 100 and 499 employees.{{% /md %}}</dd><dt>Medium</dt>
+    <dd>MEDIUM{{% md %}}The company has between 500 and 999 employees.{{% /md %}}</dd><dt>Big</dt>
+    <dd>BIG{{% md %}}The company has between 1,000 and 4,999 employees.{{% /md %}}</dd><dt>Bigger</dt>
+    <dd>BIGGER{{% md %}}The company has between 5,000 and 9,999 employees.{{% /md %}}</dd><dt>Giant</dt>
+    <dd>GIANT{{% md %}}The company has 10,000 or more employees.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>COMPANY_SIZE_UNSPECIFIED</dt>
+    <dd>COMPANY_SIZE_UNSPECIFIED{{% md %}}Default value if the size is not specified.{{% /md %}}</dd><dt>MINI</dt>
+    <dd>MINI{{% md %}}The company has less than 50 employees.{{% /md %}}</dd><dt>SMALL</dt>
+    <dd>SMALL{{% md %}}The company has between 50 and 99 employees.{{% /md %}}</dd><dt>SMEDIUM</dt>
+    <dd>SMEDIUM{{% md %}}The company has between 100 and 499 employees.{{% /md %}}</dd><dt>MEDIUM</dt>
+    <dd>MEDIUM{{% md %}}The company has between 500 and 999 employees.{{% /md %}}</dd><dt>BIG</dt>
+    <dd>BIG{{% md %}}The company has between 1,000 and 4,999 employees.{{% /md %}}</dd><dt>BIGGER</dt>
+    <dd>BIGGER{{% md %}}The company has between 5,000 and 9,999 employees.{{% /md %}}</dd><dt>GIANT</dt>
+    <dd>GIANT{{% md %}}The company has 10,000 or more employees.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="latlng">Lat<wbr>Lng</h4>
 
 {{% choosable language csharp %}}
@@ -977,7 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationtype_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#locationlocationtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Jobs.<wbr>V3.<wbr>Location<wbr>Location<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of a location, which corresponds to the address lines field of PostalAddress. For example, "Downtown, Atlanta, GA, USA" has a type of LocationType#NEIGHBORHOOD, and "Kansas City, KS, USA" has a type of LocationType#LOCALITY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1013,7 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationtype_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#locationlocationtype">Location<wbr>Location<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of a location, which corresponds to the address lines field of PostalAddress. For example, "Downtown, Atlanta, GA, USA" has a type of LocationType#NEIGHBORHOOD, and "Kansas City, KS, USA" has a type of LocationType#LOCALITY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1049,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationtype_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#locationlocationtype">Location<wbr>Location<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of a location, which corresponds to the address lines field of PostalAddress. For example, "Downtown, Atlanta, GA, USA" has a type of LocationType#NEIGHBORHOOD, and "Kansas City, KS, USA" has a type of LocationType#LOCALITY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1085,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_type_python" style="color: inherit; text-decoration: inherit;">location_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#locationlocationtype">Location<wbr>Location<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of a location, which corresponds to the address lines field of PostalAddress. For example, "Downtown, Atlanta, GA, USA" has a type of LocationType#NEIGHBORHOOD, and "Kansas City, KS, USA" has a type of LocationType#LOCALITY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1104,6 +1154,68 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Radius in miles of the job location. This value is derived from the location bounding box in which a circle with the specified radius centered from LatLng covers the area associated with the job location. For example, currently, "Mountain View, CA, USA" has a radius of 6.17 miles.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="locationlocationtype">Location<wbr>Location<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Location<wbr>Type<wbr>Unspecified</dt>
+    <dd>LOCATION_TYPE_UNSPECIFIED{{% md %}}Default value if the type is not specified.{{% /md %}}</dd><dt>Country</dt>
+    <dd>COUNTRY{{% md %}}A country level location.{{% /md %}}</dd><dt>Administrative<wbr>Area</dt>
+    <dd>ADMINISTRATIVE_AREA{{% md %}}A state or equivalent level location.{{% /md %}}</dd><dt>Sub<wbr>Administrative<wbr>Area</dt>
+    <dd>SUB_ADMINISTRATIVE_AREA{{% md %}}A county or equivalent level location.{{% /md %}}</dd><dt>Locality</dt>
+    <dd>LOCALITY{{% md %}}A city or equivalent level location.{{% /md %}}</dd><dt>Postal<wbr>Code</dt>
+    <dd>POSTAL_CODE{{% md %}}A postal code level location.{{% /md %}}</dd><dt>Sub<wbr>Locality</dt>
+    <dd>SUB_LOCALITY{{% md %}}A sublocality is a subdivision of a locality, for example a city borough, ward, or arrondissement. Sublocalities are usually recognized by a local political authority. For example, Manhattan and Brooklyn are recognized as boroughs by the City of New York, and are therefore modeled as sublocalities.{{% /md %}}</dd><dt>Sub<wbr>Locality1</dt>
+    <dd>SUB_LOCALITY_1{{% md %}}A district or equivalent level location.{{% /md %}}</dd><dt>Sub<wbr>Locality2</dt>
+    <dd>SUB_LOCALITY_2{{% md %}}A smaller district or equivalent level display.{{% /md %}}</dd><dt>Neighborhood</dt>
+    <dd>NEIGHBORHOOD{{% md %}}A neighborhood level location.{{% /md %}}</dd><dt>Street<wbr>Address</dt>
+    <dd>STREET_ADDRESS{{% md %}}A street address level location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Location<wbr>Location<wbr>Type<wbr>Location<wbr>Type<wbr>Unspecified</dt>
+    <dd>LOCATION_TYPE_UNSPECIFIED{{% md %}}Default value if the type is not specified.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Country</dt>
+    <dd>COUNTRY{{% md %}}A country level location.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Administrative<wbr>Area</dt>
+    <dd>ADMINISTRATIVE_AREA{{% md %}}A state or equivalent level location.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Sub<wbr>Administrative<wbr>Area</dt>
+    <dd>SUB_ADMINISTRATIVE_AREA{{% md %}}A county or equivalent level location.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Locality</dt>
+    <dd>LOCALITY{{% md %}}A city or equivalent level location.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Postal<wbr>Code</dt>
+    <dd>POSTAL_CODE{{% md %}}A postal code level location.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Sub<wbr>Locality</dt>
+    <dd>SUB_LOCALITY{{% md %}}A sublocality is a subdivision of a locality, for example a city borough, ward, or arrondissement. Sublocalities are usually recognized by a local political authority. For example, Manhattan and Brooklyn are recognized as boroughs by the City of New York, and are therefore modeled as sublocalities.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Sub<wbr>Locality1</dt>
+    <dd>SUB_LOCALITY_1{{% md %}}A district or equivalent level location.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Sub<wbr>Locality2</dt>
+    <dd>SUB_LOCALITY_2{{% md %}}A smaller district or equivalent level display.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Neighborhood</dt>
+    <dd>NEIGHBORHOOD{{% md %}}A neighborhood level location.{{% /md %}}</dd><dt>Location<wbr>Location<wbr>Type<wbr>Street<wbr>Address</dt>
+    <dd>STREET_ADDRESS{{% md %}}A street address level location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Location<wbr>Type<wbr>Unspecified</dt>
+    <dd>LOCATION_TYPE_UNSPECIFIED{{% md %}}Default value if the type is not specified.{{% /md %}}</dd><dt>Country</dt>
+    <dd>COUNTRY{{% md %}}A country level location.{{% /md %}}</dd><dt>Administrative<wbr>Area</dt>
+    <dd>ADMINISTRATIVE_AREA{{% md %}}A state or equivalent level location.{{% /md %}}</dd><dt>Sub<wbr>Administrative<wbr>Area</dt>
+    <dd>SUB_ADMINISTRATIVE_AREA{{% md %}}A county or equivalent level location.{{% /md %}}</dd><dt>Locality</dt>
+    <dd>LOCALITY{{% md %}}A city or equivalent level location.{{% /md %}}</dd><dt>Postal<wbr>Code</dt>
+    <dd>POSTAL_CODE{{% md %}}A postal code level location.{{% /md %}}</dd><dt>Sub<wbr>Locality</dt>
+    <dd>SUB_LOCALITY{{% md %}}A sublocality is a subdivision of a locality, for example a city borough, ward, or arrondissement. Sublocalities are usually recognized by a local political authority. For example, Manhattan and Brooklyn are recognized as boroughs by the City of New York, and are therefore modeled as sublocalities.{{% /md %}}</dd><dt>Sub<wbr>Locality1</dt>
+    <dd>SUB_LOCALITY_1{{% md %}}A district or equivalent level location.{{% /md %}}</dd><dt>Sub<wbr>Locality2</dt>
+    <dd>SUB_LOCALITY_2{{% md %}}A smaller district or equivalent level display.{{% /md %}}</dd><dt>Neighborhood</dt>
+    <dd>NEIGHBORHOOD{{% md %}}A neighborhood level location.{{% /md %}}</dd><dt>Street<wbr>Address</dt>
+    <dd>STREET_ADDRESS{{% md %}}A street address level location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LOCATION_TYPE_UNSPECIFIED</dt>
+    <dd>LOCATION_TYPE_UNSPECIFIED{{% md %}}Default value if the type is not specified.{{% /md %}}</dd><dt>COUNTRY</dt>
+    <dd>COUNTRY{{% md %}}A country level location.{{% /md %}}</dd><dt>ADMINISTRATIVE_AREA</dt>
+    <dd>ADMINISTRATIVE_AREA{{% md %}}A state or equivalent level location.{{% /md %}}</dd><dt>SUB_ADMINISTRATIVE_AREA</dt>
+    <dd>SUB_ADMINISTRATIVE_AREA{{% md %}}A county or equivalent level location.{{% /md %}}</dd><dt>LOCALITY</dt>
+    <dd>LOCALITY{{% md %}}A city or equivalent level location.{{% /md %}}</dd><dt>POSTAL_CODE</dt>
+    <dd>POSTAL_CODE{{% md %}}A postal code level location.{{% /md %}}</dd><dt>SUB_LOCALITY</dt>
+    <dd>SUB_LOCALITY{{% md %}}A sublocality is a subdivision of a locality, for example a city borough, ward, or arrondissement. Sublocalities are usually recognized by a local political authority. For example, Manhattan and Brooklyn are recognized as boroughs by the City of New York, and are therefore modeled as sublocalities.{{% /md %}}</dd><dt>SUB_LOCALITY1</dt>
+    <dd>SUB_LOCALITY_1{{% md %}}A district or equivalent level location.{{% /md %}}</dd><dt>SUB_LOCALITY2</dt>
+    <dd>SUB_LOCALITY_2{{% md %}}A smaller district or equivalent level display.{{% /md %}}</dd><dt>NEIGHBORHOOD</dt>
+    <dd>NEIGHBORHOOD{{% md %}}A neighborhood level location.{{% /md %}}</dd><dt>STREET_ADDRESS</dt>
+    <dd>STREET_ADDRESS{{% md %}}A street address level location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="locationresponse">Location<wbr>Response</h4>

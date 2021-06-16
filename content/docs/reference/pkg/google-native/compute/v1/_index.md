@@ -89,6 +89,86 @@ Explore the resources and functions of the google-native.compute/v1 module.
     <li><a href="vpntunnel" title="VpnTunnel"><span class="symbol resource"></span>VpnTunnel</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getaddress" title="GetAddress"><span class="symbol function"></span>GetAddress</a></li>
+    <li><a href="getautoscaler" title="GetAutoscaler"><span class="symbol function"></span>GetAutoscaler</a></li>
+    <li><a href="getbackendbucket" title="GetBackendBucket"><span class="symbol function"></span>GetBackendBucket</a></li>
+    <li><a href="getbackendservice" title="GetBackendService"><span class="symbol function"></span>GetBackendService</a></li>
+    <li><a href="getdisk" title="GetDisk"><span class="symbol function"></span>GetDisk</a></li>
+    <li><a href="getdiskiampolicy" title="GetDiskIamPolicy"><span class="symbol function"></span>GetDiskIamPolicy</a></li>
+    <li><a href="getexternalvpngateway" title="GetExternalVpnGateway"><span class="symbol function"></span>GetExternalVpnGateway</a></li>
+    <li><a href="getfirewall" title="GetFirewall"><span class="symbol function"></span>GetFirewall</a></li>
+    <li><a href="getfirewallpolicy" title="GetFirewallPolicy"><span class="symbol function"></span>GetFirewallPolicy</a></li>
+    <li><a href="getfirewallpolicyiampolicy" title="GetFirewallPolicyIamPolicy"><span class="symbol function"></span>GetFirewallPolicyIamPolicy</a></li>
+    <li><a href="getforwardingrule" title="GetForwardingRule"><span class="symbol function"></span>GetForwardingRule</a></li>
+    <li><a href="getglobaladdress" title="GetGlobalAddress"><span class="symbol function"></span>GetGlobalAddress</a></li>
+    <li><a href="getglobalforwardingrule" title="GetGlobalForwardingRule"><span class="symbol function"></span>GetGlobalForwardingRule</a></li>
+    <li><a href="getglobalnetworkendpointgroup" title="GetGlobalNetworkEndpointGroup"><span class="symbol function"></span>GetGlobalNetworkEndpointGroup</a></li>
+    <li><a href="getglobalpublicdelegatedprefix" title="GetGlobalPublicDelegatedPrefix"><span class="symbol function"></span>GetGlobalPublicDelegatedPrefix</a></li>
+    <li><a href="gethealthcheck" title="GetHealthCheck"><span class="symbol function"></span>GetHealthCheck</a></li>
+    <li><a href="gethttphealthcheck" title="GetHttpHealthCheck"><span class="symbol function"></span>GetHttpHealthCheck</a></li>
+    <li><a href="gethttpshealthcheck" title="GetHttpsHealthCheck"><span class="symbol function"></span>GetHttpsHealthCheck</a></li>
+    <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
+    <li><a href="getimageiampolicy" title="GetImageIamPolicy"><span class="symbol function"></span>GetImageIamPolicy</a></li>
+    <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+    <li><a href="getinstancegroup" title="GetInstanceGroup"><span class="symbol function"></span>GetInstanceGroup</a></li>
+    <li><a href="getinstancegroupmanager" title="GetInstanceGroupManager"><span class="symbol function"></span>GetInstanceGroupManager</a></li>
+    <li><a href="getinstanceiampolicy" title="GetInstanceIamPolicy"><span class="symbol function"></span>GetInstanceIamPolicy</a></li>
+    <li><a href="getinstancetemplate" title="GetInstanceTemplate"><span class="symbol function"></span>GetInstanceTemplate</a></li>
+    <li><a href="getinstancetemplateiampolicy" title="GetInstanceTemplateIamPolicy"><span class="symbol function"></span>GetInstanceTemplateIamPolicy</a></li>
+    <li><a href="getinterconnect" title="GetInterconnect"><span class="symbol function"></span>GetInterconnect</a></li>
+    <li><a href="getinterconnectattachment" title="GetInterconnectAttachment"><span class="symbol function"></span>GetInterconnectAttachment</a></li>
+    <li><a href="getlicense" title="GetLicense"><span class="symbol function"></span>GetLicense</a></li>
+    <li><a href="getlicenseiampolicy" title="GetLicenseIamPolicy"><span class="symbol function"></span>GetLicenseIamPolicy</a></li>
+    <li><a href="getnetwork" title="GetNetwork"><span class="symbol function"></span>GetNetwork</a></li>
+    <li><a href="getnetworkendpointgroup" title="GetNetworkEndpointGroup"><span class="symbol function"></span>GetNetworkEndpointGroup</a></li>
+    <li><a href="getnodegroup" title="GetNodeGroup"><span class="symbol function"></span>GetNodeGroup</a></li>
+    <li><a href="getnodegroupiampolicy" title="GetNodeGroupIamPolicy"><span class="symbol function"></span>GetNodeGroupIamPolicy</a></li>
+    <li><a href="getnodetemplate" title="GetNodeTemplate"><span class="symbol function"></span>GetNodeTemplate</a></li>
+    <li><a href="getnodetemplateiampolicy" title="GetNodeTemplateIamPolicy"><span class="symbol function"></span>GetNodeTemplateIamPolicy</a></li>
+    <li><a href="getpacketmirroring" title="GetPacketMirroring"><span class="symbol function"></span>GetPacketMirroring</a></li>
+    <li><a href="getpublicadvertisedprefix" title="GetPublicAdvertisedPrefix"><span class="symbol function"></span>GetPublicAdvertisedPrefix</a></li>
+    <li><a href="getpublicdelegatedprefix" title="GetPublicDelegatedPrefix"><span class="symbol function"></span>GetPublicDelegatedPrefix</a></li>
+    <li><a href="getregionautoscaler" title="GetRegionAutoscaler"><span class="symbol function"></span>GetRegionAutoscaler</a></li>
+    <li><a href="getregionbackendservice" title="GetRegionBackendService"><span class="symbol function"></span>GetRegionBackendService</a></li>
+    <li><a href="getregioncommitment" title="GetRegionCommitment"><span class="symbol function"></span>GetRegionCommitment</a></li>
+    <li><a href="getregiondisk" title="GetRegionDisk"><span class="symbol function"></span>GetRegionDisk</a></li>
+    <li><a href="getregiondiskiampolicy" title="GetRegionDiskIamPolicy"><span class="symbol function"></span>GetRegionDiskIamPolicy</a></li>
+    <li><a href="getregionhealthcheck" title="GetRegionHealthCheck"><span class="symbol function"></span>GetRegionHealthCheck</a></li>
+    <li><a href="getregionhealthcheckservice" title="GetRegionHealthCheckService"><span class="symbol function"></span>GetRegionHealthCheckService</a></li>
+    <li><a href="getregioninstancegroupmanager" title="GetRegionInstanceGroupManager"><span class="symbol function"></span>GetRegionInstanceGroupManager</a></li>
+    <li><a href="getregionnetworkendpointgroup" title="GetRegionNetworkEndpointGroup"><span class="symbol function"></span>GetRegionNetworkEndpointGroup</a></li>
+    <li><a href="getregionnotificationendpoint" title="GetRegionNotificationEndpoint"><span class="symbol function"></span>GetRegionNotificationEndpoint</a></li>
+    <li><a href="getregionsslcertificate" title="GetRegionSslCertificate"><span class="symbol function"></span>GetRegionSslCertificate</a></li>
+    <li><a href="getregiontargethttpproxy" title="GetRegionTargetHttpProxy"><span class="symbol function"></span>GetRegionTargetHttpProxy</a></li>
+    <li><a href="getregiontargethttpsproxy" title="GetRegionTargetHttpsProxy"><span class="symbol function"></span>GetRegionTargetHttpsProxy</a></li>
+    <li><a href="getregionurlmap" title="GetRegionUrlMap"><span class="symbol function"></span>GetRegionUrlMap</a></li>
+    <li><a href="getreservation" title="GetReservation"><span class="symbol function"></span>GetReservation</a></li>
+    <li><a href="getreservationiampolicy" title="GetReservationIamPolicy"><span class="symbol function"></span>GetReservationIamPolicy</a></li>
+    <li><a href="getresourcepolicy" title="GetResourcePolicy"><span class="symbol function"></span>GetResourcePolicy</a></li>
+    <li><a href="getresourcepolicyiampolicy" title="GetResourcePolicyIamPolicy"><span class="symbol function"></span>GetResourcePolicyIamPolicy</a></li>
+    <li><a href="getroute" title="GetRoute"><span class="symbol function"></span>GetRoute</a></li>
+    <li><a href="getrouter" title="GetRouter"><span class="symbol function"></span>GetRouter</a></li>
+    <li><a href="getsecuritypolicy" title="GetSecurityPolicy"><span class="symbol function"></span>GetSecurityPolicy</a></li>
+    <li><a href="getsnapshotiampolicy" title="GetSnapshotIamPolicy"><span class="symbol function"></span>GetSnapshotIamPolicy</a></li>
+    <li><a href="getsslcertificate" title="GetSslCertificate"><span class="symbol function"></span>GetSslCertificate</a></li>
+    <li><a href="getsslpolicy" title="GetSslPolicy"><span class="symbol function"></span>GetSslPolicy</a></li>
+    <li><a href="getsubnetwork" title="GetSubnetwork"><span class="symbol function"></span>GetSubnetwork</a></li>
+    <li><a href="getsubnetworkiampolicy" title="GetSubnetworkIamPolicy"><span class="symbol function"></span>GetSubnetworkIamPolicy</a></li>
+    <li><a href="gettargetgrpcproxy" title="GetTargetGrpcProxy"><span class="symbol function"></span>GetTargetGrpcProxy</a></li>
+    <li><a href="gettargethttpproxy" title="GetTargetHttpProxy"><span class="symbol function"></span>GetTargetHttpProxy</a></li>
+    <li><a href="gettargethttpsproxy" title="GetTargetHttpsProxy"><span class="symbol function"></span>GetTargetHttpsProxy</a></li>
+    <li><a href="gettargetinstance" title="GetTargetInstance"><span class="symbol function"></span>GetTargetInstance</a></li>
+    <li><a href="gettargetpool" title="GetTargetPool"><span class="symbol function"></span>GetTargetPool</a></li>
+    <li><a href="gettargetsslproxy" title="GetTargetSslProxy"><span class="symbol function"></span>GetTargetSslProxy</a></li>
+    <li><a href="gettargettcpproxy" title="GetTargetTcpProxy"><span class="symbol function"></span>GetTargetTcpProxy</a></li>
+    <li><a href="gettargetvpngateway" title="GetTargetVpnGateway"><span class="symbol function"></span>GetTargetVpnGateway</a></li>
+    <li><a href="geturlmap" title="GetUrlMap"><span class="symbol function"></span>GetUrlMap</a></li>
+    <li><a href="getvpngateway" title="GetVpnGateway"><span class="symbol function"></span>GetVpnGateway</a></li>
+    <li><a href="getvpntunnel" title="GetVpnTunnel"><span class="symbol function"></span>GetVpnTunnel</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -96,6 +176,6 @@ Explore the resources and functions of the google-native.compute/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

@@ -33,7 +33,7 @@ Creates a persistent disk in the specified project using the data in the request
          <span class="nx">erase_windows_vss_signature</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
          <span class="nx">guest_os_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.GuestOsFeatureArgs]]</span> = None<span class="p">,</span>
          <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-         <span class="nx">interface</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">interface</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.DiskInterface]</span> = None<span class="p">,</span>
          <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -67,7 +67,7 @@ Creates a persistent disk in the specified project using the data in the request
          <span class="nx">source_snapshot_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
          <span class="nx">source_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">source_storage_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.DiskStatus]</span> = None<span class="p">,</span>
          <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">user_licenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
          <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -275,7 +275,7 @@ If you do not provide an encryption key when creating the disk, then the disk wi
 <a href="#interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#diskinterface">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Disk<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +570,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#diskstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Disk<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of disk creation.  
 - CREATING: Disk is provisioning. 
@@ -682,7 +682,7 @@ If you do not provide an encryption key when creating the disk, then the disk wi
 <a href="#interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#diskinterface">Disk<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -977,7 +977,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#diskstatus">Disk<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of disk creation.  
 - CREATING: Disk is provisioning. 
@@ -1089,7 +1089,7 @@ If you do not provide an encryption key when creating the disk, then the disk wi
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#diskinterface">Disk<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1384,7 +1384,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#diskstatus">Disk<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of disk creation.  
 - CREATING: Disk is provisioning. 
@@ -1496,7 +1496,7 @@ If you do not provide an encryption key when creating the disk, then the disk wi
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#diskinterface">Disk<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1791,7 +1791,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#diskstatus">Disk<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of disk creation.  
 - CREATING: Disk is provisioning. 
@@ -2287,6 +2287,74 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
     <dd>{{% md %}}[Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="diskinterface">Disk<wbr>Interface</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Nvme</dt>
+    <dd>NVME</dd><dt>Scsi</dt>
+    <dd>SCSI</dd><dt>Unspecified</dt>
+    <dd>UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Disk<wbr>Interface<wbr>Nvme</dt>
+    <dd>NVME</dd><dt>Disk<wbr>Interface<wbr>Scsi</dt>
+    <dd>SCSI</dd><dt>Disk<wbr>Interface<wbr>Unspecified</dt>
+    <dd>UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Nvme</dt>
+    <dd>NVME</dd><dt>Scsi</dt>
+    <dd>SCSI</dd><dt>Unspecified</dt>
+    <dd>UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NVME</dt>
+    <dd>NVME</dd><dt>SCSI</dt>
+    <dd>SCSI</dd><dt>UNSPECIFIED</dt>
+    <dd>UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+<h4 id="diskstatus">Disk<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Failed</dt>
+    <dd>FAILED</dd><dt>Ready</dt>
+    <dd>READY</dd><dt>Restoring</dt>
+    <dd>RESTORING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Disk<wbr>Status<wbr>Creating</dt>
+    <dd>CREATING</dd><dt>Disk<wbr>Status<wbr>Deleting</dt>
+    <dd>DELETING</dd><dt>Disk<wbr>Status<wbr>Failed</dt>
+    <dd>FAILED</dd><dt>Disk<wbr>Status<wbr>Ready</dt>
+    <dd>READY</dd><dt>Disk<wbr>Status<wbr>Restoring</dt>
+    <dd>RESTORING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Failed</dt>
+    <dd>FAILED</dd><dt>Ready</dt>
+    <dd>READY</dd><dt>Restoring</dt>
+    <dd>RESTORING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CREATING</dt>
+    <dd>CREATING</dd><dt>DELETING</dt>
+    <dd>DELETING</dd><dt>FAILED</dt>
+    <dd>FAILED</dd><dt>READY</dt>
+    <dd>READY</dd><dt>RESTORING</dt>
+    <dd>RESTORING</dd></dl>
+{{% /choosable %}}
+
 <h4 id="guestosfeature">Guest<wbr>Os<wbr>Feature</h4>
 
 {{% choosable language csharp %}}
@@ -2296,7 +2364,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2308,7 +2376,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2320,7 +2388,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2332,7 +2400,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2385,6 +2453,60 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Bare<wbr>Metal<wbr>Linux<wbr>Compatible</dt>
+    <dd>BARE_METAL_LINUX_COMPATIBLE</dd><dt>Feature<wbr>Type<wbr>Unspecified</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>Gvnic</dt>
+    <dd>GVNIC</dd><dt>Multi<wbr>Ip<wbr>Subnet</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>Secure<wbr>Boot</dt>
+    <dd>SECURE_BOOT</dd><dt>Sev<wbr>Capable</dt>
+    <dd>SEV_CAPABLE</dd><dt>Uefi<wbr>Compatible</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>Virtio<wbr>Scsi<wbr>Multiqueue</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>Windows</dt>
+    <dd>WINDOWS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Bare<wbr>Metal<wbr>Linux<wbr>Compatible</dt>
+    <dd>BARE_METAL_LINUX_COMPATIBLE</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Feature<wbr>Type<wbr>Unspecified</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Gvnic</dt>
+    <dd>GVNIC</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Multi<wbr>Ip<wbr>Subnet</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Secure<wbr>Boot</dt>
+    <dd>SECURE_BOOT</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Sev<wbr>Capable</dt>
+    <dd>SEV_CAPABLE</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Uefi<wbr>Compatible</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Virtio<wbr>Scsi<wbr>Multiqueue</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Windows</dt>
+    <dd>WINDOWS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Bare<wbr>Metal<wbr>Linux<wbr>Compatible</dt>
+    <dd>BARE_METAL_LINUX_COMPATIBLE</dd><dt>Feature<wbr>Type<wbr>Unspecified</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>Gvnic</dt>
+    <dd>GVNIC</dd><dt>Multi<wbr>Ip<wbr>Subnet</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>Secure<wbr>Boot</dt>
+    <dd>SECURE_BOOT</dd><dt>Sev<wbr>Capable</dt>
+    <dd>SEV_CAPABLE</dd><dt>Uefi<wbr>Compatible</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>Virtio<wbr>Scsi<wbr>Multiqueue</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>Windows</dt>
+    <dd>WINDOWS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>BARE_METAL_LINUX_COMPATIBLE</dt>
+    <dd>BARE_METAL_LINUX_COMPATIBLE</dd><dt>FEATURE_TYPE_UNSPECIFIED</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>GVNIC</dt>
+    <dd>GVNIC</dd><dt>MULTI_IP_SUBNET</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>SECURE_BOOT</dt>
+    <dd>SECURE_BOOT</dd><dt>SEV_CAPABLE</dt>
+    <dd>SEV_CAPABLE</dd><dt>UEFI_COMPATIBLE</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>VIRTIO_SCSI_MULTIQUEUE</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>WINDOWS</dt>
+    <dd>WINDOWS</dd></dl>
 {{% /choosable %}}
 
 

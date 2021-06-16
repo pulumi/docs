@@ -42,6 +42,41 @@ Explore the resources and functions of the google-native.apigee/v1 module.
     <li><a href="targetserver" title="TargetServer"><span class="symbol resource"></span>TargetServer</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getalias" title="GetAlias"><span class="symbol function"></span>GetAlias</a></li>
+    <li><a href="getapi" title="GetApi"><span class="symbol function"></span>GetApi</a></li>
+    <li><a href="getapiproduct" title="GetApiProduct"><span class="symbol function"></span>GetApiProduct</a></li>
+    <li><a href="getapicategory" title="GetApicategory"><span class="symbol function"></span>GetApicategory</a></li>
+    <li><a href="getapp" title="GetApp"><span class="symbol function"></span>GetApp</a></li>
+    <li><a href="getcanaryevaluation" title="GetCanaryEvaluation"><span class="symbol function"></span>GetCanaryEvaluation</a></li>
+    <li><a href="getdatacollector" title="GetDataCollector"><span class="symbol function"></span>GetDataCollector</a></li>
+    <li><a href="getdatastore" title="GetDatastore"><span class="symbol function"></span>GetDatastore</a></li>
+    <li><a href="getdebugsession" title="GetDebugSession"><span class="symbol function"></span>GetDebugSession</a></li>
+    <li><a href="getdeveloper" title="GetDeveloper"><span class="symbol function"></span>GetDeveloper</a></li>
+    <li><a href="getenvgroup" title="GetEnvgroup"><span class="symbol function"></span>GetEnvgroup</a></li>
+    <li><a href="getenvgroupattachment" title="GetEnvgroupAttachment"><span class="symbol function"></span>GetEnvgroupAttachment</a></li>
+    <li><a href="getenvironment" title="GetEnvironment"><span class="symbol function"></span>GetEnvironment</a></li>
+    <li><a href="getexport" title="GetExport"><span class="symbol function"></span>GetExport</a></li>
+    <li><a href="gethostquery" title="GetHostQuery"><span class="symbol function"></span>GetHostQuery</a></li>
+    <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+    <li><a href="getinstanceattachment" title="GetInstanceAttachment"><span class="symbol function"></span>GetInstanceAttachment</a></li>
+    <li><a href="getkey" title="GetKey"><span class="symbol function"></span>GetKey</a></li>
+    <li><a href="getkeystore" title="GetKeystore"><span class="symbol function"></span>GetKeystore</a></li>
+    <li><a href="getnataddress" title="GetNatAddress"><span class="symbol function"></span>GetNatAddress</a></li>
+    <li><a href="getorganization" title="GetOrganization"><span class="symbol function"></span>GetOrganization</a></li>
+    <li><a href="getorganizationenvironmentiampolicy" title="GetOrganizationEnvironmentIamPolicy"><span class="symbol function"></span>GetOrganizationEnvironmentIamPolicy</a></li>
+    <li><a href="getoverride" title="GetOverride"><span class="symbol function"></span>GetOverride</a></li>
+    <li><a href="getquery" title="GetQuery"><span class="symbol function"></span>GetQuery</a></li>
+    <li><a href="getrateplan" title="GetRatePlan"><span class="symbol function"></span>GetRatePlan</a></li>
+    <li><a href="getreference" title="GetReference"><span class="symbol function"></span>GetReference</a></li>
+    <li><a href="getreport" title="GetReport"><span class="symbol function"></span>GetReport</a></li>
+    <li><a href="getresourcefile" title="GetResourcefile"><span class="symbol function"></span>GetResourcefile</a></li>
+    <li><a href="getsharedflow" title="GetSharedflow"><span class="symbol function"></span>GetSharedflow</a></li>
+    <li><a href="getsubscription" title="GetSubscription"><span class="symbol function"></span>GetSubscription</a></li>
+    <li><a href="gettargetserver" title="GetTargetServer"><span class="symbol function"></span>GetTargetServer</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -49,6 +84,6 @@ Explore the resources and functions of the google-native.apigee/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

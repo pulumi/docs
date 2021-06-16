@@ -14,6 +14,11 @@ Explore the resources and functions of the google-native.vpcaccess/v1 module.
     <li><a href="connector" title="Connector"><span class="symbol resource"></span>Connector</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getconnector" title="GetConnector"><span class="symbol function"></span>GetConnector</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -21,6 +26,6 @@ Explore the resources and functions of the google-native.vpcaccess/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

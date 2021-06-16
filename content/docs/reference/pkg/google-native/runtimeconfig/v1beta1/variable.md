@@ -31,7 +31,7 @@ Creates a variable within the given configuration. You cannot create a variable 
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_runtimeconfig_v1beta1.VariableState]</span> = None<span class="p">,</span>
              <span class="nx">text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -200,7 +200,7 @@ The Variable resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#variablestate">Pulumi.<wbr>Google<wbr>Native.<wbr>Runtime<wbr>Config.<wbr>V1Beta1.<wbr>Variable<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the variable. The variable state indicates the outcome of the `variables().watch` call and is visible through the `get` and `list` calls.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -268,7 +268,7 @@ The Variable resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#variablestate">Variable<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The current state of the variable. The variable state indicates the outcome of the `variables().watch` call and is visible through the `get` and `list` calls.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -336,7 +336,7 @@ The Variable resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#variablestate">Variable<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the variable. The variable state indicates the outcome of the `variables().watch` call and is visible through the `get` and `list` calls.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -404,7 +404,7 @@ The Variable resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#variablestate">Variable<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the variable. The variable state indicates the outcome of the `variables().watch` call and is visible through the `get` and `list` calls.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -493,6 +493,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="variablestate">Variable<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Variable<wbr>State<wbr>Unspecified</dt>
+    <dd>VARIABLE_STATE_UNSPECIFIED{{% md %}}Default variable state.{{% /md %}}</dd><dt>Updated</dt>
+    <dd>UPDATED{{% md %}}The variable was updated, while `variables().watch` was executing.{{% /md %}}</dd><dt>Deleted</dt>
+    <dd>DELETED{{% md %}}The variable was deleted, while `variables().watch` was executing.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Variable<wbr>State<wbr>Variable<wbr>State<wbr>Unspecified</dt>
+    <dd>VARIABLE_STATE_UNSPECIFIED{{% md %}}Default variable state.{{% /md %}}</dd><dt>Variable<wbr>State<wbr>Updated</dt>
+    <dd>UPDATED{{% md %}}The variable was updated, while `variables().watch` was executing.{{% /md %}}</dd><dt>Variable<wbr>State<wbr>Deleted</dt>
+    <dd>DELETED{{% md %}}The variable was deleted, while `variables().watch` was executing.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Variable<wbr>State<wbr>Unspecified</dt>
+    <dd>VARIABLE_STATE_UNSPECIFIED{{% md %}}Default variable state.{{% /md %}}</dd><dt>Updated</dt>
+    <dd>UPDATED{{% md %}}The variable was updated, while `variables().watch` was executing.{{% /md %}}</dd><dt>Deleted</dt>
+    <dd>DELETED{{% md %}}The variable was deleted, while `variables().watch` was executing.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>VARIABLE_STATE_UNSPECIFIED</dt>
+    <dd>VARIABLE_STATE_UNSPECIFIED{{% md %}}Default variable state.{{% /md %}}</dd><dt>UPDATED</dt>
+    <dd>UPDATED{{% md %}}The variable was updated, while `variables().watch` was executing.{{% /md %}}</dd><dt>DELETED</dt>
+    <dd>DELETED{{% md %}}The variable was deleted, while `variables().watch` was executing.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

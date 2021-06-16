@@ -42,12 +42,12 @@ Creates a node pool for a cluster.
              <span class="nx">pod_ipv4_cidr_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_container_v1.NodePoolStatus]</span> = None<span class="p">,</span>
              <span class="nx">upgrade_settings</span><span class="p">:</span> <span class="nx">Optional[_container_v1.UpgradeSettingsArgs]</span> = None<span class="p">,</span>
              <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">NodePool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodePoolArgs</a></span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodePoolInitArgs</a></span><span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -95,7 +95,7 @@ Creates a node pool for a cluster.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">NodePoolArgs</a></span>
+        <span class="property-type"><a href="#inputs">NodePoolInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -298,7 +298,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodepoolstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1.<wbr>Node<wbr>Pool<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The status of the nodes in this pool instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +446,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodepoolstatus">Node<wbr>Pool<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The status of the nodes in this pool instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +594,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodepoolstatus">Node<wbr>Pool<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The status of the nodes in this pool instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +742,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#nodepoolstatus">Node<wbr>Pool<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The status of the nodes in this pool instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3548,6 +3548,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Minimum number of nodes in the NodePool. Must be >= 1 and <= max_node_count.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="nodepoolstatus">Node<wbr>Pool<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Provisioning</dt>
+    <dd>PROVISIONING{{% md %}}The PROVISIONING state indicates the node pool is being created.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The RUNNING state indicates the node pool has been created and is fully usable.{{% /md %}}</dd><dt>Running<wbr>With<wbr>Error</dt>
+    <dd>RUNNING_WITH_ERROR{{% md %}}The RUNNING_WITH_ERROR state indicates the node pool has been created and is partially usable. Some error state has occurred and some functionality may be impaired. Customer may need to reissue a request or trigger a new update.{{% /md %}}</dd><dt>Reconciling</dt>
+    <dd>RECONCILING{{% md %}}The RECONCILING state indicates that some work is actively being done on the node pool, such as upgrading node software. Details can be found in the `statusMessage` field.{{% /md %}}</dd><dt>Stopping</dt>
+    <dd>STOPPING{{% md %}}The STOPPING state indicates the node pool is being deleted.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}The ERROR state indicates the node pool may be unusable. Details can be found in the `statusMessage` field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Node<wbr>Pool<wbr>Status<wbr>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Node<wbr>Pool<wbr>Status<wbr>Provisioning</dt>
+    <dd>PROVISIONING{{% md %}}The PROVISIONING state indicates the node pool is being created.{{% /md %}}</dd><dt>Node<wbr>Pool<wbr>Status<wbr>Running</dt>
+    <dd>RUNNING{{% md %}}The RUNNING state indicates the node pool has been created and is fully usable.{{% /md %}}</dd><dt>Node<wbr>Pool<wbr>Status<wbr>Running<wbr>With<wbr>Error</dt>
+    <dd>RUNNING_WITH_ERROR{{% md %}}The RUNNING_WITH_ERROR state indicates the node pool has been created and is partially usable. Some error state has occurred and some functionality may be impaired. Customer may need to reissue a request or trigger a new update.{{% /md %}}</dd><dt>Node<wbr>Pool<wbr>Status<wbr>Reconciling</dt>
+    <dd>RECONCILING{{% md %}}The RECONCILING state indicates that some work is actively being done on the node pool, such as upgrading node software. Details can be found in the `statusMessage` field.{{% /md %}}</dd><dt>Node<wbr>Pool<wbr>Status<wbr>Stopping</dt>
+    <dd>STOPPING{{% md %}}The STOPPING state indicates the node pool is being deleted.{{% /md %}}</dd><dt>Node<wbr>Pool<wbr>Status<wbr>Error</dt>
+    <dd>ERROR{{% md %}}The ERROR state indicates the node pool may be unusable. Details can be found in the `statusMessage` field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Provisioning</dt>
+    <dd>PROVISIONING{{% md %}}The PROVISIONING state indicates the node pool is being created.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The RUNNING state indicates the node pool has been created and is fully usable.{{% /md %}}</dd><dt>Running<wbr>With<wbr>Error</dt>
+    <dd>RUNNING_WITH_ERROR{{% md %}}The RUNNING_WITH_ERROR state indicates the node pool has been created and is partially usable. Some error state has occurred and some functionality may be impaired. Customer may need to reissue a request or trigger a new update.{{% /md %}}</dd><dt>Reconciling</dt>
+    <dd>RECONCILING{{% md %}}The RECONCILING state indicates that some work is actively being done on the node pool, such as upgrading node software. Details can be found in the `statusMessage` field.{{% /md %}}</dd><dt>Stopping</dt>
+    <dd>STOPPING{{% md %}}The STOPPING state indicates the node pool is being deleted.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}The ERROR state indicates the node pool may be unusable. Details can be found in the `statusMessage` field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATUS_UNSPECIFIED</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>PROVISIONING</dt>
+    <dd>PROVISIONING{{% md %}}The PROVISIONING state indicates the node pool is being created.{{% /md %}}</dd><dt>RUNNING</dt>
+    <dd>RUNNING{{% md %}}The RUNNING state indicates the node pool has been created and is fully usable.{{% /md %}}</dd><dt>RUNNING_WITH_ERROR</dt>
+    <dd>RUNNING_WITH_ERROR{{% md %}}The RUNNING_WITH_ERROR state indicates the node pool has been created and is partially usable. Some error state has occurred and some functionality may be impaired. Customer may need to reissue a request or trigger a new update.{{% /md %}}</dd><dt>RECONCILING</dt>
+    <dd>RECONCILING{{% md %}}The RECONCILING state indicates that some work is actively being done on the node pool, such as upgrading node software. Details can be found in the `statusMessage` field.{{% /md %}}</dd><dt>STOPPING</dt>
+    <dd>STOPPING{{% md %}}The STOPPING state indicates the node pool is being deleted.{{% /md %}}</dd><dt>ERROR</dt>
+    <dd>ERROR{{% md %}}The ERROR state indicates the node pool may be unusable. Details can be found in the `statusMessage` field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="nodetaint">Node<wbr>Taint</h4>
 
 {{% choosable language csharp %}}
@@ -3557,7 +3603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effect_csharp" style="color: inherit; text-decoration: inherit;">Effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodetainteffect">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1.<wbr>Node<wbr>Taint<wbr>Effect</a></span>
     </dt>
     <dd>{{% md %}}Effect for taint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3585,7 +3631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effect_go" style="color: inherit; text-decoration: inherit;">Effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodetainteffect">Node<wbr>Taint<wbr>Effect</a></span>
     </dt>
     <dd>{{% md %}}Effect for taint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3613,7 +3659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effect_nodejs" style="color: inherit; text-decoration: inherit;">effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodetainteffect">Node<wbr>Taint<wbr>Effect</a></span>
     </dt>
     <dd>{{% md %}}Effect for taint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3641,7 +3687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effect_python" style="color: inherit; text-decoration: inherit;">effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#nodetainteffect">Node<wbr>Taint<wbr>Effect</a></span>
     </dt>
     <dd>{{% md %}}Effect for taint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3660,6 +3706,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value for taint.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="nodetainteffect">Node<wbr>Taint<wbr>Effect</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Effect<wbr>Unspecified</dt>
+    <dd>EFFECT_UNSPECIFIED{{% md %}}Not set{{% /md %}}</dd><dt>No<wbr>Schedule</dt>
+    <dd>NO_SCHEDULE{{% md %}}NoSchedule{{% /md %}}</dd><dt>Prefer<wbr>No<wbr>Schedule</dt>
+    <dd>PREFER_NO_SCHEDULE{{% md %}}PreferNoSchedule{{% /md %}}</dd><dt>No<wbr>Execute</dt>
+    <dd>NO_EXECUTE{{% md %}}NoExecute{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Node<wbr>Taint<wbr>Effect<wbr>Effect<wbr>Unspecified</dt>
+    <dd>EFFECT_UNSPECIFIED{{% md %}}Not set{{% /md %}}</dd><dt>Node<wbr>Taint<wbr>Effect<wbr>No<wbr>Schedule</dt>
+    <dd>NO_SCHEDULE{{% md %}}NoSchedule{{% /md %}}</dd><dt>Node<wbr>Taint<wbr>Effect<wbr>Prefer<wbr>No<wbr>Schedule</dt>
+    <dd>PREFER_NO_SCHEDULE{{% md %}}PreferNoSchedule{{% /md %}}</dd><dt>Node<wbr>Taint<wbr>Effect<wbr>No<wbr>Execute</dt>
+    <dd>NO_EXECUTE{{% md %}}NoExecute{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Effect<wbr>Unspecified</dt>
+    <dd>EFFECT_UNSPECIFIED{{% md %}}Not set{{% /md %}}</dd><dt>No<wbr>Schedule</dt>
+    <dd>NO_SCHEDULE{{% md %}}NoSchedule{{% /md %}}</dd><dt>Prefer<wbr>No<wbr>Schedule</dt>
+    <dd>PREFER_NO_SCHEDULE{{% md %}}PreferNoSchedule{{% /md %}}</dd><dt>No<wbr>Execute</dt>
+    <dd>NO_EXECUTE{{% md %}}NoExecute{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EFFECT_UNSPECIFIED</dt>
+    <dd>EFFECT_UNSPECIFIED{{% md %}}Not set{{% /md %}}</dd><dt>NO_SCHEDULE</dt>
+    <dd>NO_SCHEDULE{{% md %}}NoSchedule{{% /md %}}</dd><dt>PREFER_NO_SCHEDULE</dt>
+    <dd>PREFER_NO_SCHEDULE{{% md %}}PreferNoSchedule{{% /md %}}</dd><dt>NO_EXECUTE</dt>
+    <dd>NO_EXECUTE{{% md %}}NoExecute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodetaintresponse">Node<wbr>Taint<wbr>Response</h4>
@@ -3785,7 +3865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumereservationtype_csharp" style="color: inherit; text-decoration: inherit;">Consume<wbr>Reservation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#reservationaffinityconsumereservationtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1.<wbr>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Corresponds to the type of reservation consumption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3813,7 +3893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumereservationtype_go" style="color: inherit; text-decoration: inherit;">Consume<wbr>Reservation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#reservationaffinityconsumereservationtype">Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Corresponds to the type of reservation consumption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3841,7 +3921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumereservationtype_nodejs" style="color: inherit; text-decoration: inherit;">consume<wbr>Reservation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#reservationaffinityconsumereservationtype">Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Corresponds to the type of reservation consumption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3869,7 +3949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consume_reservation_type_python" style="color: inherit; text-decoration: inherit;">consume_<wbr>reservation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#reservationaffinityconsumereservationtype">Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Corresponds to the type of reservation consumption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3888,6 +3968,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label value(s) of reservation resource(s).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="reservationaffinityconsumereservationtype">Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Default value. This should not be used.{{% /md %}}</dd><dt>No<wbr>Reservation</dt>
+    <dd>NO_RESERVATION{{% md %}}Do not consume from any reserved capacity.{{% /md %}}</dd><dt>Any<wbr>Reservation</dt>
+    <dd>ANY_RESERVATION{{% md %}}Consume any reservation available.{{% /md %}}</dd><dt>Specific<wbr>Reservation</dt>
+    <dd>SPECIFIC_RESERVATION{{% md %}}Must consume from a specific reservation. Must specify key value fields for specifying the reservations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type<wbr>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Default value. This should not be used.{{% /md %}}</dd><dt>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type<wbr>No<wbr>Reservation</dt>
+    <dd>NO_RESERVATION{{% md %}}Do not consume from any reserved capacity.{{% /md %}}</dd><dt>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type<wbr>Any<wbr>Reservation</dt>
+    <dd>ANY_RESERVATION{{% md %}}Consume any reservation available.{{% /md %}}</dd><dt>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type<wbr>Specific<wbr>Reservation</dt>
+    <dd>SPECIFIC_RESERVATION{{% md %}}Must consume from a specific reservation. Must specify key value fields for specifying the reservations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Default value. This should not be used.{{% /md %}}</dd><dt>No<wbr>Reservation</dt>
+    <dd>NO_RESERVATION{{% md %}}Do not consume from any reserved capacity.{{% /md %}}</dd><dt>Any<wbr>Reservation</dt>
+    <dd>ANY_RESERVATION{{% md %}}Consume any reservation available.{{% /md %}}</dd><dt>Specific<wbr>Reservation</dt>
+    <dd>SPECIFIC_RESERVATION{{% md %}}Must consume from a specific reservation. Must specify key value fields for specifying the reservations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED</dt>
+    <dd>UNSPECIFIED{{% md %}}Default value. This should not be used.{{% /md %}}</dd><dt>NO_RESERVATION</dt>
+    <dd>NO_RESERVATION{{% md %}}Do not consume from any reserved capacity.{{% /md %}}</dd><dt>ANY_RESERVATION</dt>
+    <dd>ANY_RESERVATION{{% md %}}Consume any reservation available.{{% /md %}}</dd><dt>SPECIFIC_RESERVATION</dt>
+    <dd>SPECIFIC_RESERVATION{{% md %}}Must consume from a specific reservation. Must specify key value fields for specifying the reservations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reservationaffinityresponse">Reservation<wbr>Affinity<wbr>Response</h4>
@@ -4013,7 +4127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sandboxconfigtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1.<wbr>Sandbox<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the sandbox to use for the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4025,7 +4139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sandboxconfigtype">Sandbox<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the sandbox to use for the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4037,7 +4151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sandboxconfigtype">Sandbox<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the sandbox to use for the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4049,7 +4163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#sandboxconfigtype">Sandbox<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the sandbox to use for the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4102,6 +4216,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the sandbox to use for the node.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sandboxconfigtype">Sandbox<wbr>Config<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Default value. This should not be used.{{% /md %}}</dd><dt>Gvisor</dt>
+    <dd>GVISOR{{% md %}}Run sandbox using gvisor.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Sandbox<wbr>Config<wbr>Type<wbr>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Default value. This should not be used.{{% /md %}}</dd><dt>Sandbox<wbr>Config<wbr>Type<wbr>Gvisor</dt>
+    <dd>GVISOR{{% md %}}Run sandbox using gvisor.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}Default value. This should not be used.{{% /md %}}</dd><dt>Gvisor</dt>
+    <dd>GVISOR{{% md %}}Run sandbox using gvisor.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED</dt>
+    <dd>UNSPECIFIED{{% md %}}Default value. This should not be used.{{% /md %}}</dd><dt>GVISOR</dt>
+    <dd>GVISOR{{% md %}}Run sandbox using gvisor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="shieldedinstanceconfig">Shielded<wbr>Instance<wbr>Config</h4>
@@ -4277,7 +4417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonicalcode_csharp" style="color: inherit; text-decoration: inherit;">Canonical<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#statusconditioncanonicalcode">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1.<wbr>Status<wbr>Condition<wbr>Canonical<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Canonical code of the condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4297,7 +4437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonicalcode_go" style="color: inherit; text-decoration: inherit;">Canonical<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#statusconditioncanonicalcode">Status<wbr>Condition<wbr>Canonical<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Canonical code of the condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4317,7 +4457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonicalcode_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#statusconditioncanonicalcode">Status<wbr>Condition<wbr>Canonical<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Canonical code of the condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4337,7 +4477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonical_code_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#statusconditioncanonicalcode">Status<wbr>Condition<wbr>Canonical<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Canonical code of the condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4348,6 +4488,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-friendly representation of the condition{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="statusconditioncanonicalcode">Status<wbr>Condition<wbr>Canonical<wbr>Code</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Ok</dt>
+    <dd>OK{{% md %}}Not an error; returned on success HTTP Mapping: 200 OK{{% /md %}}</dd><dt>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The operation was cancelled, typically by the caller. HTTP Mapping: 499 Client Closed Request{{% /md %}}</dd><dt>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}Unknown error. For example, this error may be returned when a `Status` value received from another address space belongs to an error space that is not known in this address space. Also errors raised by APIs that do not return enough error information may be converted to this error. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd><dt>Invalid<wbr>Argument</dt>
+    <dd>INVALID_ARGUMENT{{% md %}}The client specified an invalid argument. Note that this differs from `FAILED_PRECONDITION`. `INVALID_ARGUMENT` indicates arguments that are problematic regardless of the state of the system (e.g., a malformed file name). HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>Deadline<wbr>Exceeded</dt>
+    <dd>DEADLINE_EXCEEDED{{% md %}}The deadline expired before the operation could complete. For operations that change the state of the system, this error may be returned even if the operation has completed successfully. For example, a successful response from a server could have been delayed long enough for the deadline to expire. HTTP Mapping: 504 Gateway Timeout{{% /md %}}</dd><dt>Not<wbr>Found</dt>
+    <dd>NOT_FOUND{{% md %}}Some requested entity (e.g., file or directory) was not found. Note to server developers: if a request is denied for an entire class of users, such as gradual feature rollout or undocumented allowlist, `NOT_FOUND` may be used. If a request is denied for some users within a class of users, such as user-based access control, `PERMISSION_DENIED` must be used. HTTP Mapping: 404 Not Found{{% /md %}}</dd><dt>Already<wbr>Exists</dt>
+    <dd>ALREADY_EXISTS{{% md %}}The entity that a client attempted to create (e.g., file or directory) already exists. HTTP Mapping: 409 Conflict{{% /md %}}</dd><dt>Permission<wbr>Denied</dt>
+    <dd>PERMISSION_DENIED{{% md %}}The caller does not have permission to execute the specified operation. `PERMISSION_DENIED` must not be used for rejections caused by exhausting some resource (use `RESOURCE_EXHAUSTED` instead for those errors). `PERMISSION_DENIED` must not be used if the caller can not be identified (use `UNAUTHENTICATED` instead for those errors). This error code does not imply the request is valid or the requested entity exists or satisfies other pre-conditions. HTTP Mapping: 403 Forbidden{{% /md %}}</dd><dt>Unauthenticated</dt>
+    <dd>UNAUTHENTICATED{{% md %}}The request does not have valid authentication credentials for the operation. HTTP Mapping: 401 Unauthorized{{% /md %}}</dd><dt>Resource<wbr>Exhausted</dt>
+    <dd>RESOURCE_EXHAUSTED{{% md %}}Some resource has been exhausted, perhaps a per-user quota, or perhaps the entire file system is out of space. HTTP Mapping: 429 Too Many Requests{{% /md %}}</dd><dt>Failed<wbr>Precondition</dt>
+    <dd>FAILED_PRECONDITION{{% md %}}The operation was rejected because the system is not in a state required for the operation's execution. For example, the directory to be deleted is non-empty, an rmdir operation is applied to a non-directory, etc. Service implementors can use the following guidelines to decide between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`: (a) Use `UNAVAILABLE` if the client can retry just the failing call. (b) Use `ABORTED` if the client should retry at a higher level (e.g., when a client-specified test-and-set fails, indicating the client should restart a read-modify-write sequence). (c) Use `FAILED_PRECONDITION` if the client should not retry until the system state has been explicitly fixed. E.g., if an "rmdir" fails because the directory is non-empty, `FAILED_PRECONDITION` should be returned since the client should not retry unless the files are deleted from the directory. HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>Aborted</dt>
+    <dd>ABORTED{{% md %}}The operation was aborted, typically due to a concurrency issue such as a sequencer check failure or transaction abort. See the guidelines above for deciding between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`. HTTP Mapping: 409 Conflict{{% /md %}}</dd><dt>Out<wbr>Of<wbr>Range</dt>
+    <dd>OUT_OF_RANGE{{% md %}}The operation was attempted past the valid range. E.g., seeking or reading past end-of-file. Unlike `INVALID_ARGUMENT`, this error indicates a problem that may be fixed if the system state changes. For example, a 32-bit file system will generate `INVALID_ARGUMENT` if asked to read at an offset that is not in the range [0,2^32-1], but it will generate `OUT_OF_RANGE` if asked to read from an offset past the current file size. There is a fair bit of overlap between `FAILED_PRECONDITION` and `OUT_OF_RANGE`. We recommend using `OUT_OF_RANGE` (the more specific error) when it applies so that callers who are iterating through a space can easily look for an `OUT_OF_RANGE` error to detect when they are done. HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>Unimplemented</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The operation is not implemented or is not supported/enabled in this service. HTTP Mapping: 501 Not Implemented{{% /md %}}</dd><dt>Internal</dt>
+    <dd>INTERNAL{{% md %}}Internal errors. This means that some invariants expected by the underlying system have been broken. This error code is reserved for serious errors. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd><dt>Unavailable</dt>
+    <dd>UNAVAILABLE{{% md %}}The service is currently unavailable. This is most likely a transient condition, which can be corrected by retrying with a backoff. Note that it is not always safe to retry non-idempotent operations. See the guidelines above for deciding between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`. HTTP Mapping: 503 Service Unavailable{{% /md %}}</dd><dt>Data<wbr>Loss</dt>
+    <dd>DATA_LOSS{{% md %}}Unrecoverable data loss or corruption. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Ok</dt>
+    <dd>OK{{% md %}}Not an error; returned on success HTTP Mapping: 200 OK{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The operation was cancelled, typically by the caller. HTTP Mapping: 499 Client Closed Request{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}Unknown error. For example, this error may be returned when a `Status` value received from another address space belongs to an error space that is not known in this address space. Also errors raised by APIs that do not return enough error information may be converted to this error. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Invalid<wbr>Argument</dt>
+    <dd>INVALID_ARGUMENT{{% md %}}The client specified an invalid argument. Note that this differs from `FAILED_PRECONDITION`. `INVALID_ARGUMENT` indicates arguments that are problematic regardless of the state of the system (e.g., a malformed file name). HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Deadline<wbr>Exceeded</dt>
+    <dd>DEADLINE_EXCEEDED{{% md %}}The deadline expired before the operation could complete. For operations that change the state of the system, this error may be returned even if the operation has completed successfully. For example, a successful response from a server could have been delayed long enough for the deadline to expire. HTTP Mapping: 504 Gateway Timeout{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Not<wbr>Found</dt>
+    <dd>NOT_FOUND{{% md %}}Some requested entity (e.g., file or directory) was not found. Note to server developers: if a request is denied for an entire class of users, such as gradual feature rollout or undocumented allowlist, `NOT_FOUND` may be used. If a request is denied for some users within a class of users, such as user-based access control, `PERMISSION_DENIED` must be used. HTTP Mapping: 404 Not Found{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Already<wbr>Exists</dt>
+    <dd>ALREADY_EXISTS{{% md %}}The entity that a client attempted to create (e.g., file or directory) already exists. HTTP Mapping: 409 Conflict{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Permission<wbr>Denied</dt>
+    <dd>PERMISSION_DENIED{{% md %}}The caller does not have permission to execute the specified operation. `PERMISSION_DENIED` must not be used for rejections caused by exhausting some resource (use `RESOURCE_EXHAUSTED` instead for those errors). `PERMISSION_DENIED` must not be used if the caller can not be identified (use `UNAUTHENTICATED` instead for those errors). This error code does not imply the request is valid or the requested entity exists or satisfies other pre-conditions. HTTP Mapping: 403 Forbidden{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Unauthenticated</dt>
+    <dd>UNAUTHENTICATED{{% md %}}The request does not have valid authentication credentials for the operation. HTTP Mapping: 401 Unauthorized{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Resource<wbr>Exhausted</dt>
+    <dd>RESOURCE_EXHAUSTED{{% md %}}Some resource has been exhausted, perhaps a per-user quota, or perhaps the entire file system is out of space. HTTP Mapping: 429 Too Many Requests{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Failed<wbr>Precondition</dt>
+    <dd>FAILED_PRECONDITION{{% md %}}The operation was rejected because the system is not in a state required for the operation's execution. For example, the directory to be deleted is non-empty, an rmdir operation is applied to a non-directory, etc. Service implementors can use the following guidelines to decide between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`: (a) Use `UNAVAILABLE` if the client can retry just the failing call. (b) Use `ABORTED` if the client should retry at a higher level (e.g., when a client-specified test-and-set fails, indicating the client should restart a read-modify-write sequence). (c) Use `FAILED_PRECONDITION` if the client should not retry until the system state has been explicitly fixed. E.g., if an "rmdir" fails because the directory is non-empty, `FAILED_PRECONDITION` should be returned since the client should not retry unless the files are deleted from the directory. HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Aborted</dt>
+    <dd>ABORTED{{% md %}}The operation was aborted, typically due to a concurrency issue such as a sequencer check failure or transaction abort. See the guidelines above for deciding between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`. HTTP Mapping: 409 Conflict{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Out<wbr>Of<wbr>Range</dt>
+    <dd>OUT_OF_RANGE{{% md %}}The operation was attempted past the valid range. E.g., seeking or reading past end-of-file. Unlike `INVALID_ARGUMENT`, this error indicates a problem that may be fixed if the system state changes. For example, a 32-bit file system will generate `INVALID_ARGUMENT` if asked to read at an offset that is not in the range [0,2^32-1], but it will generate `OUT_OF_RANGE` if asked to read from an offset past the current file size. There is a fair bit of overlap between `FAILED_PRECONDITION` and `OUT_OF_RANGE`. We recommend using `OUT_OF_RANGE` (the more specific error) when it applies so that callers who are iterating through a space can easily look for an `OUT_OF_RANGE` error to detect when they are done. HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Unimplemented</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The operation is not implemented or is not supported/enabled in this service. HTTP Mapping: 501 Not Implemented{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Internal</dt>
+    <dd>INTERNAL{{% md %}}Internal errors. This means that some invariants expected by the underlying system have been broken. This error code is reserved for serious errors. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Unavailable</dt>
+    <dd>UNAVAILABLE{{% md %}}The service is currently unavailable. This is most likely a transient condition, which can be corrected by retrying with a backoff. Note that it is not always safe to retry non-idempotent operations. See the guidelines above for deciding between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`. HTTP Mapping: 503 Service Unavailable{{% /md %}}</dd><dt>Status<wbr>Condition<wbr>Canonical<wbr>Code<wbr>Data<wbr>Loss</dt>
+    <dd>DATA_LOSS{{% md %}}Unrecoverable data loss or corruption. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Ok</dt>
+    <dd>OK{{% md %}}Not an error; returned on success HTTP Mapping: 200 OK{{% /md %}}</dd><dt>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The operation was cancelled, typically by the caller. HTTP Mapping: 499 Client Closed Request{{% /md %}}</dd><dt>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}Unknown error. For example, this error may be returned when a `Status` value received from another address space belongs to an error space that is not known in this address space. Also errors raised by APIs that do not return enough error information may be converted to this error. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd><dt>Invalid<wbr>Argument</dt>
+    <dd>INVALID_ARGUMENT{{% md %}}The client specified an invalid argument. Note that this differs from `FAILED_PRECONDITION`. `INVALID_ARGUMENT` indicates arguments that are problematic regardless of the state of the system (e.g., a malformed file name). HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>Deadline<wbr>Exceeded</dt>
+    <dd>DEADLINE_EXCEEDED{{% md %}}The deadline expired before the operation could complete. For operations that change the state of the system, this error may be returned even if the operation has completed successfully. For example, a successful response from a server could have been delayed long enough for the deadline to expire. HTTP Mapping: 504 Gateway Timeout{{% /md %}}</dd><dt>Not<wbr>Found</dt>
+    <dd>NOT_FOUND{{% md %}}Some requested entity (e.g., file or directory) was not found. Note to server developers: if a request is denied for an entire class of users, such as gradual feature rollout or undocumented allowlist, `NOT_FOUND` may be used. If a request is denied for some users within a class of users, such as user-based access control, `PERMISSION_DENIED` must be used. HTTP Mapping: 404 Not Found{{% /md %}}</dd><dt>Already<wbr>Exists</dt>
+    <dd>ALREADY_EXISTS{{% md %}}The entity that a client attempted to create (e.g., file or directory) already exists. HTTP Mapping: 409 Conflict{{% /md %}}</dd><dt>Permission<wbr>Denied</dt>
+    <dd>PERMISSION_DENIED{{% md %}}The caller does not have permission to execute the specified operation. `PERMISSION_DENIED` must not be used for rejections caused by exhausting some resource (use `RESOURCE_EXHAUSTED` instead for those errors). `PERMISSION_DENIED` must not be used if the caller can not be identified (use `UNAUTHENTICATED` instead for those errors). This error code does not imply the request is valid or the requested entity exists or satisfies other pre-conditions. HTTP Mapping: 403 Forbidden{{% /md %}}</dd><dt>Unauthenticated</dt>
+    <dd>UNAUTHENTICATED{{% md %}}The request does not have valid authentication credentials for the operation. HTTP Mapping: 401 Unauthorized{{% /md %}}</dd><dt>Resource<wbr>Exhausted</dt>
+    <dd>RESOURCE_EXHAUSTED{{% md %}}Some resource has been exhausted, perhaps a per-user quota, or perhaps the entire file system is out of space. HTTP Mapping: 429 Too Many Requests{{% /md %}}</dd><dt>Failed<wbr>Precondition</dt>
+    <dd>FAILED_PRECONDITION{{% md %}}The operation was rejected because the system is not in a state required for the operation's execution. For example, the directory to be deleted is non-empty, an rmdir operation is applied to a non-directory, etc. Service implementors can use the following guidelines to decide between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`: (a) Use `UNAVAILABLE` if the client can retry just the failing call. (b) Use `ABORTED` if the client should retry at a higher level (e.g., when a client-specified test-and-set fails, indicating the client should restart a read-modify-write sequence). (c) Use `FAILED_PRECONDITION` if the client should not retry until the system state has been explicitly fixed. E.g., if an "rmdir" fails because the directory is non-empty, `FAILED_PRECONDITION` should be returned since the client should not retry unless the files are deleted from the directory. HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>Aborted</dt>
+    <dd>ABORTED{{% md %}}The operation was aborted, typically due to a concurrency issue such as a sequencer check failure or transaction abort. See the guidelines above for deciding between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`. HTTP Mapping: 409 Conflict{{% /md %}}</dd><dt>Out<wbr>Of<wbr>Range</dt>
+    <dd>OUT_OF_RANGE{{% md %}}The operation was attempted past the valid range. E.g., seeking or reading past end-of-file. Unlike `INVALID_ARGUMENT`, this error indicates a problem that may be fixed if the system state changes. For example, a 32-bit file system will generate `INVALID_ARGUMENT` if asked to read at an offset that is not in the range [0,2^32-1], but it will generate `OUT_OF_RANGE` if asked to read from an offset past the current file size. There is a fair bit of overlap between `FAILED_PRECONDITION` and `OUT_OF_RANGE`. We recommend using `OUT_OF_RANGE` (the more specific error) when it applies so that callers who are iterating through a space can easily look for an `OUT_OF_RANGE` error to detect when they are done. HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>Unimplemented</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The operation is not implemented or is not supported/enabled in this service. HTTP Mapping: 501 Not Implemented{{% /md %}}</dd><dt>Internal</dt>
+    <dd>INTERNAL{{% md %}}Internal errors. This means that some invariants expected by the underlying system have been broken. This error code is reserved for serious errors. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd><dt>Unavailable</dt>
+    <dd>UNAVAILABLE{{% md %}}The service is currently unavailable. This is most likely a transient condition, which can be corrected by retrying with a backoff. Note that it is not always safe to retry non-idempotent operations. See the guidelines above for deciding between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`. HTTP Mapping: 503 Service Unavailable{{% /md %}}</dd><dt>Data<wbr>Loss</dt>
+    <dd>DATA_LOSS{{% md %}}Unrecoverable data loss or corruption. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>OK</dt>
+    <dd>OK{{% md %}}Not an error; returned on success HTTP Mapping: 200 OK{{% /md %}}</dd><dt>CANCELLED</dt>
+    <dd>CANCELLED{{% md %}}The operation was cancelled, typically by the caller. HTTP Mapping: 499 Client Closed Request{{% /md %}}</dd><dt>UNKNOWN</dt>
+    <dd>UNKNOWN{{% md %}}Unknown error. For example, this error may be returned when a `Status` value received from another address space belongs to an error space that is not known in this address space. Also errors raised by APIs that do not return enough error information may be converted to this error. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd><dt>INVALID_ARGUMENT</dt>
+    <dd>INVALID_ARGUMENT{{% md %}}The client specified an invalid argument. Note that this differs from `FAILED_PRECONDITION`. `INVALID_ARGUMENT` indicates arguments that are problematic regardless of the state of the system (e.g., a malformed file name). HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>DEADLINE_EXCEEDED</dt>
+    <dd>DEADLINE_EXCEEDED{{% md %}}The deadline expired before the operation could complete. For operations that change the state of the system, this error may be returned even if the operation has completed successfully. For example, a successful response from a server could have been delayed long enough for the deadline to expire. HTTP Mapping: 504 Gateway Timeout{{% /md %}}</dd><dt>NOT_FOUND</dt>
+    <dd>NOT_FOUND{{% md %}}Some requested entity (e.g., file or directory) was not found. Note to server developers: if a request is denied for an entire class of users, such as gradual feature rollout or undocumented allowlist, `NOT_FOUND` may be used. If a request is denied for some users within a class of users, such as user-based access control, `PERMISSION_DENIED` must be used. HTTP Mapping: 404 Not Found{{% /md %}}</dd><dt>ALREADY_EXISTS</dt>
+    <dd>ALREADY_EXISTS{{% md %}}The entity that a client attempted to create (e.g., file or directory) already exists. HTTP Mapping: 409 Conflict{{% /md %}}</dd><dt>PERMISSION_DENIED</dt>
+    <dd>PERMISSION_DENIED{{% md %}}The caller does not have permission to execute the specified operation. `PERMISSION_DENIED` must not be used for rejections caused by exhausting some resource (use `RESOURCE_EXHAUSTED` instead for those errors). `PERMISSION_DENIED` must not be used if the caller can not be identified (use `UNAUTHENTICATED` instead for those errors). This error code does not imply the request is valid or the requested entity exists or satisfies other pre-conditions. HTTP Mapping: 403 Forbidden{{% /md %}}</dd><dt>UNAUTHENTICATED</dt>
+    <dd>UNAUTHENTICATED{{% md %}}The request does not have valid authentication credentials for the operation. HTTP Mapping: 401 Unauthorized{{% /md %}}</dd><dt>RESOURCE_EXHAUSTED</dt>
+    <dd>RESOURCE_EXHAUSTED{{% md %}}Some resource has been exhausted, perhaps a per-user quota, or perhaps the entire file system is out of space. HTTP Mapping: 429 Too Many Requests{{% /md %}}</dd><dt>FAILED_PRECONDITION</dt>
+    <dd>FAILED_PRECONDITION{{% md %}}The operation was rejected because the system is not in a state required for the operation's execution. For example, the directory to be deleted is non-empty, an rmdir operation is applied to a non-directory, etc. Service implementors can use the following guidelines to decide between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`: (a) Use `UNAVAILABLE` if the client can retry just the failing call. (b) Use `ABORTED` if the client should retry at a higher level (e.g., when a client-specified test-and-set fails, indicating the client should restart a read-modify-write sequence). (c) Use `FAILED_PRECONDITION` if the client should not retry until the system state has been explicitly fixed. E.g., if an "rmdir" fails because the directory is non-empty, `FAILED_PRECONDITION` should be returned since the client should not retry unless the files are deleted from the directory. HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>ABORTED</dt>
+    <dd>ABORTED{{% md %}}The operation was aborted, typically due to a concurrency issue such as a sequencer check failure or transaction abort. See the guidelines above for deciding between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`. HTTP Mapping: 409 Conflict{{% /md %}}</dd><dt>OUT_OF_RANGE</dt>
+    <dd>OUT_OF_RANGE{{% md %}}The operation was attempted past the valid range. E.g., seeking or reading past end-of-file. Unlike `INVALID_ARGUMENT`, this error indicates a problem that may be fixed if the system state changes. For example, a 32-bit file system will generate `INVALID_ARGUMENT` if asked to read at an offset that is not in the range [0,2^32-1], but it will generate `OUT_OF_RANGE` if asked to read from an offset past the current file size. There is a fair bit of overlap between `FAILED_PRECONDITION` and `OUT_OF_RANGE`. We recommend using `OUT_OF_RANGE` (the more specific error) when it applies so that callers who are iterating through a space can easily look for an `OUT_OF_RANGE` error to detect when they are done. HTTP Mapping: 400 Bad Request{{% /md %}}</dd><dt>UNIMPLEMENTED</dt>
+    <dd>UNIMPLEMENTED{{% md %}}The operation is not implemented or is not supported/enabled in this service. HTTP Mapping: 501 Not Implemented{{% /md %}}</dd><dt>INTERNAL</dt>
+    <dd>INTERNAL{{% md %}}Internal errors. This means that some invariants expected by the underlying system have been broken. This error code is reserved for serious errors. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd><dt>UNAVAILABLE</dt>
+    <dd>UNAVAILABLE{{% md %}}The service is currently unavailable. This is most likely a transient condition, which can be corrected by retrying with a backoff. Note that it is not always safe to retry non-idempotent operations. See the guidelines above for deciding between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`. HTTP Mapping: 503 Service Unavailable{{% /md %}}</dd><dt>DATA_LOSS</dt>
+    <dd>DATA_LOSS{{% md %}}Unrecoverable data loss or corruption. HTTP Mapping: 500 Internal Server Error{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="statusconditionresponse">Status<wbr>Condition<wbr>Response</h4>
@@ -4605,7 +4831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workloadmetadataconfigmode">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1.<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Mode is the configuration for how to expose metadata to workloads running on the node pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4617,7 +4843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workloadmetadataconfigmode">Workload<wbr>Metadata<wbr>Config<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Mode is the configuration for how to expose metadata to workloads running on the node pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4629,7 +4855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workloadmetadataconfigmode">Workload<wbr>Metadata<wbr>Config<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Mode is the configuration for how to expose metadata to workloads running on the node pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4641,9 +4867,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#workloadmetadataconfigmode">Workload<wbr>Metadata<wbr>Config<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Mode is the configuration for how to expose metadata to workloads running on the node pool.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="workloadmetadataconfigmode">Workload<wbr>Metadata<wbr>Config<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Gce<wbr>Metadata</dt>
+    <dd>GCE_METADATA{{% md %}}Expose all Compute Engine metadata to pods.{{% /md %}}</dd><dt>Gke<wbr>Metadata</dt>
+    <dd>GKE_METADATA{{% md %}}Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if Workload Identity is enabled at the cluster level.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Workload<wbr>Metadata<wbr>Config<wbr>Mode<wbr>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Workload<wbr>Metadata<wbr>Config<wbr>Mode<wbr>Gce<wbr>Metadata</dt>
+    <dd>GCE_METADATA{{% md %}}Expose all Compute Engine metadata to pods.{{% /md %}}</dd><dt>Workload<wbr>Metadata<wbr>Config<wbr>Mode<wbr>Gke<wbr>Metadata</dt>
+    <dd>GKE_METADATA{{% md %}}Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if Workload Identity is enabled at the cluster level.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Gce<wbr>Metadata</dt>
+    <dd>GCE_METADATA{{% md %}}Expose all Compute Engine metadata to pods.{{% /md %}}</dd><dt>Gke<wbr>Metadata</dt>
+    <dd>GKE_METADATA{{% md %}}Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if Workload Identity is enabled at the cluster level.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MODE_UNSPECIFIED</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>GCE_METADATA</dt>
+    <dd>GCE_METADATA{{% md %}}Expose all Compute Engine metadata to pods.{{% /md %}}</dd><dt>GKE_METADATA</dt>
+    <dd>GKE_METADATA{{% md %}}Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if Workload Identity is enabled at the cluster level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workloadmetadataconfigresponse">Workload<wbr>Metadata<wbr>Config<wbr>Response</h4>

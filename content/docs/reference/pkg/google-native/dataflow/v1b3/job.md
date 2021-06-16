@@ -30,7 +30,7 @@ Creates a Cloud Dataflow job. To create a job, we recommend using `projects.loca
         <span class="nx">client_request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">created_from_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">current_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">current_state</span><span class="p">:</span> <span class="nx">Optional[_dataflow_v1b3.JobCurrentState]</span> = None<span class="p">,</span>
         <span class="nx">current_state_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[_dataflow_v1b3.EnvironmentArgs]</span> = None<span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -42,7 +42,7 @@ Creates a Cloud Dataflow job. To create a job, we recommend using `projects.loca
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">replace_job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">replaced_by_job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">requested_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">requested_state</span><span class="p">:</span> <span class="nx">Optional[_dataflow_v1b3.JobRequestedState]</span> = None<span class="p">,</span>
         <span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">stage_states</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dataflow_v1b3.ExecutionStageStateArgs]]</span> = None<span class="p">,</span>
         <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -50,7 +50,7 @@ Creates a Cloud Dataflow job. To create a job, we recommend using `projects.loca
         <span class="nx">steps_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">temp_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">transform_name_mapping</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[_dataflow_v1b3.JobType]</span> = None<span class="p">,</span>
         <span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -225,7 +225,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#currentstate_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobcurrentstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataflow.<wbr>V1b3.<wbr>Job<wbr>Current<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the job. Jobs are created in the `JOB_STATE_STOPPED` state unless otherwise specified. A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal state. After a job has reached a terminal state, no further state updates may be made. This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -305,7 +305,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#requestedstate_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobrequestedstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataflow.<wbr>V1b3.<wbr>Job<wbr>Requested<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The job's requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to directly set a job's requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job if it has not already reached a terminal state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -369,7 +369,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataflow.<wbr>V1b3.<wbr>Job<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of Cloud Dataflow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -429,7 +429,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#currentstate_go" style="color: inherit; text-decoration: inherit;">Current<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobcurrentstate">Job<wbr>Current<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the job. Jobs are created in the `JOB_STATE_STOPPED` state unless otherwise specified. A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal state. After a job has reached a terminal state, no further state updates may be made. This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -509,7 +509,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#requestedstate_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobrequestedstate">Job<wbr>Requested<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The job's requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to directly set a job's requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job if it has not already reached a terminal state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -573,7 +573,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobtype">Job<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of Cloud Dataflow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -633,7 +633,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#currentstate_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobcurrentstate">Job<wbr>Current<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the job. Jobs are created in the `JOB_STATE_STOPPED` state unless otherwise specified. A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal state. After a job has reached a terminal state, no further state updates may be made. This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -713,7 +713,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#requestedstate_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobrequestedstate">Job<wbr>Requested<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The job's requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to directly set a job's requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job if it has not already reached a terminal state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -777,7 +777,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobtype">Job<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of Cloud Dataflow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -837,7 +837,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#current_state_python" style="color: inherit; text-decoration: inherit;">current_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#jobcurrentstate">Job<wbr>Current<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the job. Jobs are created in the `JOB_STATE_STOPPED` state unless otherwise specified. A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal state. After a job has reached a terminal state, no further state updates may be made. This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -917,7 +917,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#requested_state_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#jobrequestedstate">Job<wbr>Requested<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The job's requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to directly set a job's requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job if it has not already reached a terminal state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -981,7 +981,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#jobtype">Job<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of Cloud Dataflow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1068,7 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#autoscalingsettingsalgorithm">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataflow.<wbr>V1b3.<wbr>Autoscaling<wbr>Settings<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The algorithm to use for autoscaling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1088,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#autoscalingsettingsalgorithm">Autoscaling<wbr>Settings<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The algorithm to use for autoscaling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1108,7 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#autoscalingsettingsalgorithm">Autoscaling<wbr>Settings<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The algorithm to use for autoscaling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1128,7 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#autoscalingsettingsalgorithm">Autoscaling<wbr>Settings<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The algorithm to use for autoscaling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1139,6 +1139,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of workers to cap scaling at.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="autoscalingsettingsalgorithm">Autoscaling<wbr>Settings<wbr>Algorithm</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Autoscaling<wbr>Algorithm<wbr>Unknown</dt>
+    <dd>AUTOSCALING_ALGORITHM_UNKNOWN{{% md %}}The algorithm is unknown, or unspecified.{{% /md %}}</dd><dt>Autoscaling<wbr>Algorithm<wbr>None</dt>
+    <dd>AUTOSCALING_ALGORITHM_NONE{{% md %}}Disable autoscaling.{{% /md %}}</dd><dt>Autoscaling<wbr>Algorithm<wbr>Basic</dt>
+    <dd>AUTOSCALING_ALGORITHM_BASIC{{% md %}}Increase worker count over time to reduce job execution time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Autoscaling<wbr>Settings<wbr>Algorithm<wbr>Autoscaling<wbr>Algorithm<wbr>Unknown</dt>
+    <dd>AUTOSCALING_ALGORITHM_UNKNOWN{{% md %}}The algorithm is unknown, or unspecified.{{% /md %}}</dd><dt>Autoscaling<wbr>Settings<wbr>Algorithm<wbr>Autoscaling<wbr>Algorithm<wbr>None</dt>
+    <dd>AUTOSCALING_ALGORITHM_NONE{{% md %}}Disable autoscaling.{{% /md %}}</dd><dt>Autoscaling<wbr>Settings<wbr>Algorithm<wbr>Autoscaling<wbr>Algorithm<wbr>Basic</dt>
+    <dd>AUTOSCALING_ALGORITHM_BASIC{{% md %}}Increase worker count over time to reduce job execution time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Autoscaling<wbr>Algorithm<wbr>Unknown</dt>
+    <dd>AUTOSCALING_ALGORITHM_UNKNOWN{{% md %}}The algorithm is unknown, or unspecified.{{% /md %}}</dd><dt>Autoscaling<wbr>Algorithm<wbr>None</dt>
+    <dd>AUTOSCALING_ALGORITHM_NONE{{% md %}}Disable autoscaling.{{% /md %}}</dd><dt>Autoscaling<wbr>Algorithm<wbr>Basic</dt>
+    <dd>AUTOSCALING_ALGORITHM_BASIC{{% md %}}Increase worker count over time to reduce job execution time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>AUTOSCALING_ALGORITHM_UNKNOWN</dt>
+    <dd>AUTOSCALING_ALGORITHM_UNKNOWN{{% md %}}The algorithm is unknown, or unspecified.{{% /md %}}</dd><dt>AUTOSCALING_ALGORITHM_NONE</dt>
+    <dd>AUTOSCALING_ALGORITHM_NONE{{% md %}}Disable autoscaling.{{% /md %}}</dd><dt>AUTOSCALING_ALGORITHM_BASIC</dt>
+    <dd>AUTOSCALING_ALGORITHM_BASIC{{% md %}}Increase worker count over time to reduce job execution time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="autoscalingsettingsresponse">Autoscaling<wbr>Settings<wbr>Response</h4>
@@ -3536,7 +3566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flexresourceschedulinggoal_csharp" style="color: inherit; text-decoration: inherit;">Flex<wbr>Resource<wbr>Scheduling<wbr>Goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#environmentflexresourceschedulinggoal">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataflow.<wbr>V1b3.<wbr>Environment<wbr>Flex<wbr>Resource<wbr>Scheduling<wbr>Goal</a></span>
     </dt>
     <dd>{{% md %}}Which Flexible Resource Scheduling mode to run in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3668,7 +3698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flexresourceschedulinggoal_go" style="color: inherit; text-decoration: inherit;">Flex<wbr>Resource<wbr>Scheduling<wbr>Goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#environmentflexresourceschedulinggoal">Environment<wbr>Flex<wbr>Resource<wbr>Scheduling<wbr>Goal</a></span>
     </dt>
     <dd>{{% md %}}Which Flexible Resource Scheduling mode to run in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3800,7 +3830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flexresourceschedulinggoal_nodejs" style="color: inherit; text-decoration: inherit;">flex<wbr>Resource<wbr>Scheduling<wbr>Goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#environmentflexresourceschedulinggoal">Environment<wbr>Flex<wbr>Resource<wbr>Scheduling<wbr>Goal</a></span>
     </dt>
     <dd>{{% md %}}Which Flexible Resource Scheduling mode to run in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3932,7 +3962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flex_resource_scheduling_goal_python" style="color: inherit; text-decoration: inherit;">flex_<wbr>resource_<wbr>scheduling_<wbr>goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#environmentflexresourceschedulinggoal">Environment<wbr>Flex<wbr>Resource<wbr>Scheduling<wbr>Goal</a></span>
     </dt>
     <dd>{{% md %}}Which Flexible Resource Scheduling mode to run in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4023,6 +4053,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane's region is chosen based on available capacity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="environmentflexresourceschedulinggoal">Environment<wbr>Flex<wbr>Resource<wbr>Scheduling<wbr>Goal</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Flexrs<wbr>Unspecified</dt>
+    <dd>FLEXRS_UNSPECIFIED{{% md %}}Run in the default mode.{{% /md %}}</dd><dt>Flexrs<wbr>Speed<wbr>Optimized</dt>
+    <dd>FLEXRS_SPEED_OPTIMIZED{{% md %}}Optimize for lower execution time.{{% /md %}}</dd><dt>Flexrs<wbr>Cost<wbr>Optimized</dt>
+    <dd>FLEXRS_COST_OPTIMIZED{{% md %}}Optimize for lower cost.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Environment<wbr>Flex<wbr>Resource<wbr>Scheduling<wbr>Goal<wbr>Flexrs<wbr>Unspecified</dt>
+    <dd>FLEXRS_UNSPECIFIED{{% md %}}Run in the default mode.{{% /md %}}</dd><dt>Environment<wbr>Flex<wbr>Resource<wbr>Scheduling<wbr>Goal<wbr>Flexrs<wbr>Speed<wbr>Optimized</dt>
+    <dd>FLEXRS_SPEED_OPTIMIZED{{% md %}}Optimize for lower execution time.{{% /md %}}</dd><dt>Environment<wbr>Flex<wbr>Resource<wbr>Scheduling<wbr>Goal<wbr>Flexrs<wbr>Cost<wbr>Optimized</dt>
+    <dd>FLEXRS_COST_OPTIMIZED{{% md %}}Optimize for lower cost.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Flexrs<wbr>Unspecified</dt>
+    <dd>FLEXRS_UNSPECIFIED{{% md %}}Run in the default mode.{{% /md %}}</dd><dt>Flexrs<wbr>Speed<wbr>Optimized</dt>
+    <dd>FLEXRS_SPEED_OPTIMIZED{{% md %}}Optimize for lower execution time.{{% /md %}}</dd><dt>Flexrs<wbr>Cost<wbr>Optimized</dt>
+    <dd>FLEXRS_COST_OPTIMIZED{{% md %}}Optimize for lower cost.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FLEXRS_UNSPECIFIED</dt>
+    <dd>FLEXRS_UNSPECIFIED{{% md %}}Run in the default mode.{{% /md %}}</dd><dt>FLEXRS_SPEED_OPTIMIZED</dt>
+    <dd>FLEXRS_SPEED_OPTIMIZED{{% md %}}Optimize for lower execution time.{{% /md %}}</dd><dt>FLEXRS_COST_OPTIMIZED</dt>
+    <dd>FLEXRS_COST_OPTIMIZED{{% md %}}Optimize for lower cost.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="environmentresponse">Environment<wbr>Response</h4>
@@ -4612,7 +4672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executionstagestate_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Stage<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#executionstagestateexecutionstagestate">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataflow.<wbr>V1b3.<wbr>Execution<wbr>Stage<wbr>State<wbr>Execution<wbr>Stage<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Executions stage states allow the same set of values as JobState.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4640,7 +4700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executionstagestate_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Stage<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#executionstagestateexecutionstagestate">Execution<wbr>Stage<wbr>State<wbr>Execution<wbr>Stage<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Executions stage states allow the same set of values as JobState.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4668,7 +4728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executionstagestate_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Stage<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#executionstagestateexecutionstagestate">Execution<wbr>Stage<wbr>State<wbr>Execution<wbr>Stage<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Executions stage states allow the same set of values as JobState.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4696,9 +4756,79 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#execution_stage_state_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>stage_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#executionstagestateexecutionstagestate">Execution<wbr>Stage<wbr>State<wbr>Execution<wbr>Stage<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Executions stage states allow the same set of values as JobState.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="executionstagestateexecutionstagestate">Execution<wbr>Stage<wbr>State<wbr>Execution<wbr>Stage<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Job<wbr>State<wbr>Unknown</dt>
+    <dd>JOB_STATE_UNKNOWN{{% md %}}The job's run state isn't specified.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Stopped</dt>
+    <dd>JOB_STATE_STOPPED{{% md %}}`JOB_STATE_STOPPED` indicates that the job has not yet started to run.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Running</dt>
+    <dd>JOB_STATE_RUNNING{{% md %}}`JOB_STATE_RUNNING` indicates that the job is currently running.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Done</dt>
+    <dd>JOB_STATE_DONE{{% md %}}`JOB_STATE_DONE` indicates that the job has successfully completed. This is a terminal job state. This state may be set by the Cloud Dataflow service, as a transition from `JOB_STATE_RUNNING`. It may also be set via a Cloud Dataflow `UpdateJob` call, if the job has not yet reached a terminal state.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Failed</dt>
+    <dd>JOB_STATE_FAILED{{% md %}}`JOB_STATE_FAILED` indicates that the job has failed. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Cancelled</dt>
+    <dd>JOB_STATE_CANCELLED{{% md %}}`JOB_STATE_CANCELLED` indicates that the job has been explicitly cancelled. This is a terminal job state. This state may only be set via a Cloud Dataflow `UpdateJob` call, and only if the job has not yet reached another terminal state.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Updated</dt>
+    <dd>JOB_STATE_UPDATED{{% md %}}`JOB_STATE_UPDATED` indicates that the job was successfully updated, meaning that this job was stopped and another job was started, inheriting state from this one. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Draining</dt>
+    <dd>JOB_STATE_DRAINING{{% md %}}`JOB_STATE_DRAINING` indicates that the job is in the process of draining. A draining job has stopped pulling from its input sources and is processing any data that remains in-flight. This state may be set via a Cloud Dataflow `UpdateJob` call, but only as a transition from `JOB_STATE_RUNNING`. Jobs that are draining may only transition to `JOB_STATE_DRAINED`, `JOB_STATE_CANCELLED`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Drained</dt>
+    <dd>JOB_STATE_DRAINED{{% md %}}`JOB_STATE_DRAINED` indicates that the job has been drained. A drained job terminated by stopping pulling from its input sources and processing any data that remained in-flight when draining was requested. This state is a terminal state, may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_DRAINING`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Pending</dt>
+    <dd>JOB_STATE_PENDING{{% md %}}`JOB_STATE_PENDING` indicates that the job has been created but is not yet running. Jobs that are pending may only transition to `JOB_STATE_RUNNING`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Cancelling</dt>
+    <dd>JOB_STATE_CANCELLING{{% md %}}`JOB_STATE_CANCELLING` indicates that the job has been explicitly cancelled and is in the process of stopping. Jobs that are cancelling may only transition to `JOB_STATE_CANCELLED` or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Queued</dt>
+    <dd>JOB_STATE_QUEUED{{% md %}}`JOB_STATE_QUEUED` indicates that the job has been created but is being delayed until launch. Jobs that are queued may only transition to `JOB_STATE_PENDING` or `JOB_STATE_CANCELLED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Resource<wbr>Cleaning<wbr>Up</dt>
+    <dd>JOB_STATE_RESOURCE_CLEANING_UP{{% md %}}`JOB_STATE_RESOURCE_CLEANING_UP` indicates that the batch job's associated resources are currently being cleaned up after a successful run. Currently, this is an opt-in feature, please reach out to Cloud support team if you are interested.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Execution<wbr>Stage<wbr>State<wbr>Execution<wbr>Stage<wbr>State<wbr>Job<wbr>State<wbr>Unknown</dt>
+    <dd>JOB_STATE_UNKNOWN{{% md %}}The job's run state isn't specified.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>State<wbr>Execution<wbr>Stage<wbr>State<wbr>Job<wbr>State<wbr>Stopped</dt>
+    <dd>JOB_STATE_STOPPED{{% md %}}`JOB_STATE_STOPPED` indicates that the job has not yet started to run.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>State<wbr>Execution<wbr>Stage<wbr>State<wbr>Job<wbr>State<wbr>Running</dt>
+    <dd>JOB_STATE_RUNNING{{% md %}}`JOB_STATE_RUNNING` indicates that the job is currently running.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>State<wbr>Execution<wbr>Stage<wbr>State<wbr>Job<wbr>State<wbr>Done</dt>
+    <dd>JOB_STATE_DONE{{% md %}}`JOB_STATE_DONE` indicates that the job has successfully completed. This is a terminal job state. This state may be set by the Cloud Dataflow service, as a transition from `JOB_STATE_RUNNING`. It may also be set via a Cloud Dataflow `UpdateJob` call, if the job has not yet reached a terminal state.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>State<wbr>Execution<wbr>Stage<wbr>State<wbr>Job<wbr>State<wbr>Failed</dt>
+    <dd>JOB_STATE_FAILED{{% md %}}`JOB_STATE_FAILED` indicates that the job has failed. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>State<wbr>Execution<wbr>Stage<wbr>State<wbr>Job<wbr>State<wbr>Cancelled</dt>
+    <dd>JOB_STATE_CANCELLED{{% md %}}`JOB_STATE_CANCELLED` indicates that the job has been explicitly cancelled. This is a terminal job state. This state may only be set via a Cloud Dataflow `UpdateJob` call, and only if the job has not yet reached another terminal state.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>State<wbr>Execution<wbr>Stage<wbr>State<wbr>Job<wbr>State<wbr>Updated</dt>
+    <dd>JOB_STATE_UPDATED{{% md %}}`JOB_STATE_UPDATED` indicates that the job was successfully updated, meaning that this job was stopped and another job was started, inheriting state from this one. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>State<wbr>Execution<wbr>Stage<wbr>State<wbr>Job<wbr>State<wbr>Draining</dt>
+    <dd>JOB_STATE_DRAINING{{% md %}}`JOB_STATE_DRAINING` indicates that the job is in the process of draining. A draining job has stopped pulling from its input sources and is processing any data that remains in-flight. This state may be set via a Cloud Dataflow `UpdateJob` call, but only as a transition from `JOB_STATE_RUNNING`. Jobs that are draining may only transition to `JOB_STATE_DRAINED`, `JOB_STATE_CANCELLED`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>State<wbr>Execution<wbr>Stage<wbr>State<wbr>Job<wbr>State<wbr>Drained</dt>
+    <dd>JOB_STATE_DRAINED{{% md %}}`JOB_STATE_DRAINED` indicates that the job has been drained. A drained job terminated by stopping pulling from its input sources and processing any data that remained in-flight when draining was requested. This state is a terminal state, may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_DRAINING`.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>State<wbr>Execution<wbr>Stage<wbr>State<wbr>Job<wbr>State<wbr>Pending</dt>
+    <dd>JOB_STATE_PENDING{{% md %}}`JOB_STATE_PENDING` indicates that the job has been created but is not yet running. Jobs that are pending may only transition to `JOB_STATE_RUNNING`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>State<wbr>Execution<wbr>Stage<wbr>State<wbr>Job<wbr>State<wbr>Cancelling</dt>
+    <dd>JOB_STATE_CANCELLING{{% md %}}`JOB_STATE_CANCELLING` indicates that the job has been explicitly cancelled and is in the process of stopping. Jobs that are cancelling may only transition to `JOB_STATE_CANCELLED` or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>State<wbr>Execution<wbr>Stage<wbr>State<wbr>Job<wbr>State<wbr>Queued</dt>
+    <dd>JOB_STATE_QUEUED{{% md %}}`JOB_STATE_QUEUED` indicates that the job has been created but is being delayed until launch. Jobs that are queued may only transition to `JOB_STATE_PENDING` or `JOB_STATE_CANCELLED`.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>State<wbr>Execution<wbr>Stage<wbr>State<wbr>Job<wbr>State<wbr>Resource<wbr>Cleaning<wbr>Up</dt>
+    <dd>JOB_STATE_RESOURCE_CLEANING_UP{{% md %}}`JOB_STATE_RESOURCE_CLEANING_UP` indicates that the batch job's associated resources are currently being cleaned up after a successful run. Currently, this is an opt-in feature, please reach out to Cloud support team if you are interested.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Job<wbr>State<wbr>Unknown</dt>
+    <dd>JOB_STATE_UNKNOWN{{% md %}}The job's run state isn't specified.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Stopped</dt>
+    <dd>JOB_STATE_STOPPED{{% md %}}`JOB_STATE_STOPPED` indicates that the job has not yet started to run.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Running</dt>
+    <dd>JOB_STATE_RUNNING{{% md %}}`JOB_STATE_RUNNING` indicates that the job is currently running.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Done</dt>
+    <dd>JOB_STATE_DONE{{% md %}}`JOB_STATE_DONE` indicates that the job has successfully completed. This is a terminal job state. This state may be set by the Cloud Dataflow service, as a transition from `JOB_STATE_RUNNING`. It may also be set via a Cloud Dataflow `UpdateJob` call, if the job has not yet reached a terminal state.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Failed</dt>
+    <dd>JOB_STATE_FAILED{{% md %}}`JOB_STATE_FAILED` indicates that the job has failed. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Cancelled</dt>
+    <dd>JOB_STATE_CANCELLED{{% md %}}`JOB_STATE_CANCELLED` indicates that the job has been explicitly cancelled. This is a terminal job state. This state may only be set via a Cloud Dataflow `UpdateJob` call, and only if the job has not yet reached another terminal state.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Updated</dt>
+    <dd>JOB_STATE_UPDATED{{% md %}}`JOB_STATE_UPDATED` indicates that the job was successfully updated, meaning that this job was stopped and another job was started, inheriting state from this one. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Draining</dt>
+    <dd>JOB_STATE_DRAINING{{% md %}}`JOB_STATE_DRAINING` indicates that the job is in the process of draining. A draining job has stopped pulling from its input sources and is processing any data that remains in-flight. This state may be set via a Cloud Dataflow `UpdateJob` call, but only as a transition from `JOB_STATE_RUNNING`. Jobs that are draining may only transition to `JOB_STATE_DRAINED`, `JOB_STATE_CANCELLED`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Drained</dt>
+    <dd>JOB_STATE_DRAINED{{% md %}}`JOB_STATE_DRAINED` indicates that the job has been drained. A drained job terminated by stopping pulling from its input sources and processing any data that remained in-flight when draining was requested. This state is a terminal state, may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_DRAINING`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Pending</dt>
+    <dd>JOB_STATE_PENDING{{% md %}}`JOB_STATE_PENDING` indicates that the job has been created but is not yet running. Jobs that are pending may only transition to `JOB_STATE_RUNNING`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Cancelling</dt>
+    <dd>JOB_STATE_CANCELLING{{% md %}}`JOB_STATE_CANCELLING` indicates that the job has been explicitly cancelled and is in the process of stopping. Jobs that are cancelling may only transition to `JOB_STATE_CANCELLED` or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Queued</dt>
+    <dd>JOB_STATE_QUEUED{{% md %}}`JOB_STATE_QUEUED` indicates that the job has been created but is being delayed until launch. Jobs that are queued may only transition to `JOB_STATE_PENDING` or `JOB_STATE_CANCELLED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Resource<wbr>Cleaning<wbr>Up</dt>
+    <dd>JOB_STATE_RESOURCE_CLEANING_UP{{% md %}}`JOB_STATE_RESOURCE_CLEANING_UP` indicates that the batch job's associated resources are currently being cleaned up after a successful run. Currently, this is an opt-in feature, please reach out to Cloud support team if you are interested.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>JOB_STATE_UNKNOWN</dt>
+    <dd>JOB_STATE_UNKNOWN{{% md %}}The job's run state isn't specified.{{% /md %}}</dd><dt>JOB_STATE_STOPPED</dt>
+    <dd>JOB_STATE_STOPPED{{% md %}}`JOB_STATE_STOPPED` indicates that the job has not yet started to run.{{% /md %}}</dd><dt>JOB_STATE_RUNNING</dt>
+    <dd>JOB_STATE_RUNNING{{% md %}}`JOB_STATE_RUNNING` indicates that the job is currently running.{{% /md %}}</dd><dt>JOB_STATE_DONE</dt>
+    <dd>JOB_STATE_DONE{{% md %}}`JOB_STATE_DONE` indicates that the job has successfully completed. This is a terminal job state. This state may be set by the Cloud Dataflow service, as a transition from `JOB_STATE_RUNNING`. It may also be set via a Cloud Dataflow `UpdateJob` call, if the job has not yet reached a terminal state.{{% /md %}}</dd><dt>JOB_STATE_FAILED</dt>
+    <dd>JOB_STATE_FAILED{{% md %}}`JOB_STATE_FAILED` indicates that the job has failed. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>JOB_STATE_CANCELLED</dt>
+    <dd>JOB_STATE_CANCELLED{{% md %}}`JOB_STATE_CANCELLED` indicates that the job has been explicitly cancelled. This is a terminal job state. This state may only be set via a Cloud Dataflow `UpdateJob` call, and only if the job has not yet reached another terminal state.{{% /md %}}</dd><dt>JOB_STATE_UPDATED</dt>
+    <dd>JOB_STATE_UPDATED{{% md %}}`JOB_STATE_UPDATED` indicates that the job was successfully updated, meaning that this job was stopped and another job was started, inheriting state from this one. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>JOB_STATE_DRAINING</dt>
+    <dd>JOB_STATE_DRAINING{{% md %}}`JOB_STATE_DRAINING` indicates that the job is in the process of draining. A draining job has stopped pulling from its input sources and is processing any data that remains in-flight. This state may be set via a Cloud Dataflow `UpdateJob` call, but only as a transition from `JOB_STATE_RUNNING`. Jobs that are draining may only transition to `JOB_STATE_DRAINED`, `JOB_STATE_CANCELLED`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>JOB_STATE_DRAINED</dt>
+    <dd>JOB_STATE_DRAINED{{% md %}}`JOB_STATE_DRAINED` indicates that the job has been drained. A drained job terminated by stopping pulling from its input sources and processing any data that remained in-flight when draining was requested. This state is a terminal state, may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_DRAINING`.{{% /md %}}</dd><dt>JOB_STATE_PENDING</dt>
+    <dd>JOB_STATE_PENDING{{% md %}}`JOB_STATE_PENDING` indicates that the job has been created but is not yet running. Jobs that are pending may only transition to `JOB_STATE_RUNNING`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>JOB_STATE_CANCELLING</dt>
+    <dd>JOB_STATE_CANCELLING{{% md %}}`JOB_STATE_CANCELLING` indicates that the job has been explicitly cancelled and is in the process of stopping. Jobs that are cancelling may only transition to `JOB_STATE_CANCELLED` or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>JOB_STATE_QUEUED</dt>
+    <dd>JOB_STATE_QUEUED{{% md %}}`JOB_STATE_QUEUED` indicates that the job has been created but is being delayed until launch. Jobs that are queued may only transition to `JOB_STATE_PENDING` or `JOB_STATE_CANCELLED`.{{% /md %}}</dd><dt>JOB_STATE_RESOURCE_CLEANING_UP</dt>
+    <dd>JOB_STATE_RESOURCE_CLEANING_UP{{% md %}}`JOB_STATE_RESOURCE_CLEANING_UP` indicates that the batch job's associated resources are currently being cleaned up after a successful run. Currently, this is an opt-in feature, please reach out to Cloud support team if you are interested.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="executionstagestateresponse">Execution<wbr>Stage<wbr>State<wbr>Response</h4>
@@ -4856,7 +4986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#executionstagesummarykind">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataflow.<wbr>V1b3.<wbr>Execution<wbr>Stage<wbr>Summary<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Type of transform this stage is executing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4924,7 +5054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#executionstagesummarykind">Execution<wbr>Stage<wbr>Summary<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Type of transform this stage is executing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4992,7 +5122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#executionstagesummarykind">Execution<wbr>Stage<wbr>Summary<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Type of transform this stage is executing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5060,7 +5190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#executionstagesummarykind">Execution<wbr>Stage<wbr>Summary<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Type of transform this stage is executing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5087,6 +5217,60 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Other stages that must complete before this stage can run.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="executionstagesummarykind">Execution<wbr>Stage<wbr>Summary<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unknown<wbr>Kind</dt>
+    <dd>UNKNOWN_KIND{{% md %}}Unrecognized transform type.{{% /md %}}</dd><dt>Par<wbr>Do<wbr>Kind</dt>
+    <dd>PAR_DO_KIND{{% md %}}ParDo transform.{{% /md %}}</dd><dt>Group<wbr>By<wbr>Key<wbr>Kind</dt>
+    <dd>GROUP_BY_KEY_KIND{{% md %}}Group By Key transform.{{% /md %}}</dd><dt>Flatten<wbr>Kind</dt>
+    <dd>FLATTEN_KIND{{% md %}}Flatten transform.{{% /md %}}</dd><dt>Read<wbr>Kind</dt>
+    <dd>READ_KIND{{% md %}}Read transform.{{% /md %}}</dd><dt>Write<wbr>Kind</dt>
+    <dd>WRITE_KIND{{% md %}}Write transform.{{% /md %}}</dd><dt>Constant<wbr>Kind</dt>
+    <dd>CONSTANT_KIND{{% md %}}Constructs from a constant value, such as with Create.of.{{% /md %}}</dd><dt>Singleton<wbr>Kind</dt>
+    <dd>SINGLETON_KIND{{% md %}}Creates a Singleton view of a collection.{{% /md %}}</dd><dt>Shuffle<wbr>Kind</dt>
+    <dd>SHUFFLE_KIND{{% md %}}Opening or closing a shuffle session, often as part of a GroupByKey.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Execution<wbr>Stage<wbr>Summary<wbr>Kind<wbr>Unknown<wbr>Kind</dt>
+    <dd>UNKNOWN_KIND{{% md %}}Unrecognized transform type.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>Summary<wbr>Kind<wbr>Par<wbr>Do<wbr>Kind</dt>
+    <dd>PAR_DO_KIND{{% md %}}ParDo transform.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>Summary<wbr>Kind<wbr>Group<wbr>By<wbr>Key<wbr>Kind</dt>
+    <dd>GROUP_BY_KEY_KIND{{% md %}}Group By Key transform.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>Summary<wbr>Kind<wbr>Flatten<wbr>Kind</dt>
+    <dd>FLATTEN_KIND{{% md %}}Flatten transform.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>Summary<wbr>Kind<wbr>Read<wbr>Kind</dt>
+    <dd>READ_KIND{{% md %}}Read transform.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>Summary<wbr>Kind<wbr>Write<wbr>Kind</dt>
+    <dd>WRITE_KIND{{% md %}}Write transform.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>Summary<wbr>Kind<wbr>Constant<wbr>Kind</dt>
+    <dd>CONSTANT_KIND{{% md %}}Constructs from a constant value, such as with Create.of.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>Summary<wbr>Kind<wbr>Singleton<wbr>Kind</dt>
+    <dd>SINGLETON_KIND{{% md %}}Creates a Singleton view of a collection.{{% /md %}}</dd><dt>Execution<wbr>Stage<wbr>Summary<wbr>Kind<wbr>Shuffle<wbr>Kind</dt>
+    <dd>SHUFFLE_KIND{{% md %}}Opening or closing a shuffle session, often as part of a GroupByKey.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unknown<wbr>Kind</dt>
+    <dd>UNKNOWN_KIND{{% md %}}Unrecognized transform type.{{% /md %}}</dd><dt>Par<wbr>Do<wbr>Kind</dt>
+    <dd>PAR_DO_KIND{{% md %}}ParDo transform.{{% /md %}}</dd><dt>Group<wbr>By<wbr>Key<wbr>Kind</dt>
+    <dd>GROUP_BY_KEY_KIND{{% md %}}Group By Key transform.{{% /md %}}</dd><dt>Flatten<wbr>Kind</dt>
+    <dd>FLATTEN_KIND{{% md %}}Flatten transform.{{% /md %}}</dd><dt>Read<wbr>Kind</dt>
+    <dd>READ_KIND{{% md %}}Read transform.{{% /md %}}</dd><dt>Write<wbr>Kind</dt>
+    <dd>WRITE_KIND{{% md %}}Write transform.{{% /md %}}</dd><dt>Constant<wbr>Kind</dt>
+    <dd>CONSTANT_KIND{{% md %}}Constructs from a constant value, such as with Create.of.{{% /md %}}</dd><dt>Singleton<wbr>Kind</dt>
+    <dd>SINGLETON_KIND{{% md %}}Creates a Singleton view of a collection.{{% /md %}}</dd><dt>Shuffle<wbr>Kind</dt>
+    <dd>SHUFFLE_KIND{{% md %}}Opening or closing a shuffle session, often as part of a GroupByKey.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNKNOWN_KIND</dt>
+    <dd>UNKNOWN_KIND{{% md %}}Unrecognized transform type.{{% /md %}}</dd><dt>PAR_DO_KIND</dt>
+    <dd>PAR_DO_KIND{{% md %}}ParDo transform.{{% /md %}}</dd><dt>GROUP_BY_KEY_KIND</dt>
+    <dd>GROUP_BY_KEY_KIND{{% md %}}Group By Key transform.{{% /md %}}</dd><dt>FLATTEN_KIND</dt>
+    <dd>FLATTEN_KIND{{% md %}}Flatten transform.{{% /md %}}</dd><dt>READ_KIND</dt>
+    <dd>READ_KIND{{% md %}}Read transform.{{% /md %}}</dd><dt>WRITE_KIND</dt>
+    <dd>WRITE_KIND{{% md %}}Write transform.{{% /md %}}</dd><dt>CONSTANT_KIND</dt>
+    <dd>CONSTANT_KIND{{% md %}}Constructs from a constant value, such as with Create.of.{{% /md %}}</dd><dt>SINGLETON_KIND</dt>
+    <dd>SINGLETON_KIND{{% md %}}Creates a Singleton view of a collection.{{% /md %}}</dd><dt>SHUFFLE_KIND</dt>
+    <dd>SHUFFLE_KIND{{% md %}}Opening or closing a shuffle session, often as part of a GroupByKey.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="executionstagesummaryresponse">Execution<wbr>Stage<wbr>Summary<wbr>Response</h4>
@@ -5429,6 +5613,76 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File Pattern used to access files by the connector.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobcurrentstate">Job<wbr>Current<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Job<wbr>State<wbr>Unknown</dt>
+    <dd>JOB_STATE_UNKNOWN{{% md %}}The job's run state isn't specified.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Stopped</dt>
+    <dd>JOB_STATE_STOPPED{{% md %}}`JOB_STATE_STOPPED` indicates that the job has not yet started to run.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Running</dt>
+    <dd>JOB_STATE_RUNNING{{% md %}}`JOB_STATE_RUNNING` indicates that the job is currently running.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Done</dt>
+    <dd>JOB_STATE_DONE{{% md %}}`JOB_STATE_DONE` indicates that the job has successfully completed. This is a terminal job state. This state may be set by the Cloud Dataflow service, as a transition from `JOB_STATE_RUNNING`. It may also be set via a Cloud Dataflow `UpdateJob` call, if the job has not yet reached a terminal state.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Failed</dt>
+    <dd>JOB_STATE_FAILED{{% md %}}`JOB_STATE_FAILED` indicates that the job has failed. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Cancelled</dt>
+    <dd>JOB_STATE_CANCELLED{{% md %}}`JOB_STATE_CANCELLED` indicates that the job has been explicitly cancelled. This is a terminal job state. This state may only be set via a Cloud Dataflow `UpdateJob` call, and only if the job has not yet reached another terminal state.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Updated</dt>
+    <dd>JOB_STATE_UPDATED{{% md %}}`JOB_STATE_UPDATED` indicates that the job was successfully updated, meaning that this job was stopped and another job was started, inheriting state from this one. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Draining</dt>
+    <dd>JOB_STATE_DRAINING{{% md %}}`JOB_STATE_DRAINING` indicates that the job is in the process of draining. A draining job has stopped pulling from its input sources and is processing any data that remains in-flight. This state may be set via a Cloud Dataflow `UpdateJob` call, but only as a transition from `JOB_STATE_RUNNING`. Jobs that are draining may only transition to `JOB_STATE_DRAINED`, `JOB_STATE_CANCELLED`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Drained</dt>
+    <dd>JOB_STATE_DRAINED{{% md %}}`JOB_STATE_DRAINED` indicates that the job has been drained. A drained job terminated by stopping pulling from its input sources and processing any data that remained in-flight when draining was requested. This state is a terminal state, may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_DRAINING`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Pending</dt>
+    <dd>JOB_STATE_PENDING{{% md %}}`JOB_STATE_PENDING` indicates that the job has been created but is not yet running. Jobs that are pending may only transition to `JOB_STATE_RUNNING`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Cancelling</dt>
+    <dd>JOB_STATE_CANCELLING{{% md %}}`JOB_STATE_CANCELLING` indicates that the job has been explicitly cancelled and is in the process of stopping. Jobs that are cancelling may only transition to `JOB_STATE_CANCELLED` or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Queued</dt>
+    <dd>JOB_STATE_QUEUED{{% md %}}`JOB_STATE_QUEUED` indicates that the job has been created but is being delayed until launch. Jobs that are queued may only transition to `JOB_STATE_PENDING` or `JOB_STATE_CANCELLED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Resource<wbr>Cleaning<wbr>Up</dt>
+    <dd>JOB_STATE_RESOURCE_CLEANING_UP{{% md %}}`JOB_STATE_RESOURCE_CLEANING_UP` indicates that the batch job's associated resources are currently being cleaned up after a successful run. Currently, this is an opt-in feature, please reach out to Cloud support team if you are interested.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Job<wbr>Current<wbr>State<wbr>Job<wbr>State<wbr>Unknown</dt>
+    <dd>JOB_STATE_UNKNOWN{{% md %}}The job's run state isn't specified.{{% /md %}}</dd><dt>Job<wbr>Current<wbr>State<wbr>Job<wbr>State<wbr>Stopped</dt>
+    <dd>JOB_STATE_STOPPED{{% md %}}`JOB_STATE_STOPPED` indicates that the job has not yet started to run.{{% /md %}}</dd><dt>Job<wbr>Current<wbr>State<wbr>Job<wbr>State<wbr>Running</dt>
+    <dd>JOB_STATE_RUNNING{{% md %}}`JOB_STATE_RUNNING` indicates that the job is currently running.{{% /md %}}</dd><dt>Job<wbr>Current<wbr>State<wbr>Job<wbr>State<wbr>Done</dt>
+    <dd>JOB_STATE_DONE{{% md %}}`JOB_STATE_DONE` indicates that the job has successfully completed. This is a terminal job state. This state may be set by the Cloud Dataflow service, as a transition from `JOB_STATE_RUNNING`. It may also be set via a Cloud Dataflow `UpdateJob` call, if the job has not yet reached a terminal state.{{% /md %}}</dd><dt>Job<wbr>Current<wbr>State<wbr>Job<wbr>State<wbr>Failed</dt>
+    <dd>JOB_STATE_FAILED{{% md %}}`JOB_STATE_FAILED` indicates that the job has failed. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>Job<wbr>Current<wbr>State<wbr>Job<wbr>State<wbr>Cancelled</dt>
+    <dd>JOB_STATE_CANCELLED{{% md %}}`JOB_STATE_CANCELLED` indicates that the job has been explicitly cancelled. This is a terminal job state. This state may only be set via a Cloud Dataflow `UpdateJob` call, and only if the job has not yet reached another terminal state.{{% /md %}}</dd><dt>Job<wbr>Current<wbr>State<wbr>Job<wbr>State<wbr>Updated</dt>
+    <dd>JOB_STATE_UPDATED{{% md %}}`JOB_STATE_UPDATED` indicates that the job was successfully updated, meaning that this job was stopped and another job was started, inheriting state from this one. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>Job<wbr>Current<wbr>State<wbr>Job<wbr>State<wbr>Draining</dt>
+    <dd>JOB_STATE_DRAINING{{% md %}}`JOB_STATE_DRAINING` indicates that the job is in the process of draining. A draining job has stopped pulling from its input sources and is processing any data that remains in-flight. This state may be set via a Cloud Dataflow `UpdateJob` call, but only as a transition from `JOB_STATE_RUNNING`. Jobs that are draining may only transition to `JOB_STATE_DRAINED`, `JOB_STATE_CANCELLED`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>Current<wbr>State<wbr>Job<wbr>State<wbr>Drained</dt>
+    <dd>JOB_STATE_DRAINED{{% md %}}`JOB_STATE_DRAINED` indicates that the job has been drained. A drained job terminated by stopping pulling from its input sources and processing any data that remained in-flight when draining was requested. This state is a terminal state, may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_DRAINING`.{{% /md %}}</dd><dt>Job<wbr>Current<wbr>State<wbr>Job<wbr>State<wbr>Pending</dt>
+    <dd>JOB_STATE_PENDING{{% md %}}`JOB_STATE_PENDING` indicates that the job has been created but is not yet running. Jobs that are pending may only transition to `JOB_STATE_RUNNING`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>Current<wbr>State<wbr>Job<wbr>State<wbr>Cancelling</dt>
+    <dd>JOB_STATE_CANCELLING{{% md %}}`JOB_STATE_CANCELLING` indicates that the job has been explicitly cancelled and is in the process of stopping. Jobs that are cancelling may only transition to `JOB_STATE_CANCELLED` or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>Current<wbr>State<wbr>Job<wbr>State<wbr>Queued</dt>
+    <dd>JOB_STATE_QUEUED{{% md %}}`JOB_STATE_QUEUED` indicates that the job has been created but is being delayed until launch. Jobs that are queued may only transition to `JOB_STATE_PENDING` or `JOB_STATE_CANCELLED`.{{% /md %}}</dd><dt>Job<wbr>Current<wbr>State<wbr>Job<wbr>State<wbr>Resource<wbr>Cleaning<wbr>Up</dt>
+    <dd>JOB_STATE_RESOURCE_CLEANING_UP{{% md %}}`JOB_STATE_RESOURCE_CLEANING_UP` indicates that the batch job's associated resources are currently being cleaned up after a successful run. Currently, this is an opt-in feature, please reach out to Cloud support team if you are interested.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Job<wbr>State<wbr>Unknown</dt>
+    <dd>JOB_STATE_UNKNOWN{{% md %}}The job's run state isn't specified.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Stopped</dt>
+    <dd>JOB_STATE_STOPPED{{% md %}}`JOB_STATE_STOPPED` indicates that the job has not yet started to run.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Running</dt>
+    <dd>JOB_STATE_RUNNING{{% md %}}`JOB_STATE_RUNNING` indicates that the job is currently running.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Done</dt>
+    <dd>JOB_STATE_DONE{{% md %}}`JOB_STATE_DONE` indicates that the job has successfully completed. This is a terminal job state. This state may be set by the Cloud Dataflow service, as a transition from `JOB_STATE_RUNNING`. It may also be set via a Cloud Dataflow `UpdateJob` call, if the job has not yet reached a terminal state.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Failed</dt>
+    <dd>JOB_STATE_FAILED{{% md %}}`JOB_STATE_FAILED` indicates that the job has failed. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Cancelled</dt>
+    <dd>JOB_STATE_CANCELLED{{% md %}}`JOB_STATE_CANCELLED` indicates that the job has been explicitly cancelled. This is a terminal job state. This state may only be set via a Cloud Dataflow `UpdateJob` call, and only if the job has not yet reached another terminal state.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Updated</dt>
+    <dd>JOB_STATE_UPDATED{{% md %}}`JOB_STATE_UPDATED` indicates that the job was successfully updated, meaning that this job was stopped and another job was started, inheriting state from this one. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Draining</dt>
+    <dd>JOB_STATE_DRAINING{{% md %}}`JOB_STATE_DRAINING` indicates that the job is in the process of draining. A draining job has stopped pulling from its input sources and is processing any data that remains in-flight. This state may be set via a Cloud Dataflow `UpdateJob` call, but only as a transition from `JOB_STATE_RUNNING`. Jobs that are draining may only transition to `JOB_STATE_DRAINED`, `JOB_STATE_CANCELLED`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Drained</dt>
+    <dd>JOB_STATE_DRAINED{{% md %}}`JOB_STATE_DRAINED` indicates that the job has been drained. A drained job terminated by stopping pulling from its input sources and processing any data that remained in-flight when draining was requested. This state is a terminal state, may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_DRAINING`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Pending</dt>
+    <dd>JOB_STATE_PENDING{{% md %}}`JOB_STATE_PENDING` indicates that the job has been created but is not yet running. Jobs that are pending may only transition to `JOB_STATE_RUNNING`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Cancelling</dt>
+    <dd>JOB_STATE_CANCELLING{{% md %}}`JOB_STATE_CANCELLING` indicates that the job has been explicitly cancelled and is in the process of stopping. Jobs that are cancelling may only transition to `JOB_STATE_CANCELLED` or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Queued</dt>
+    <dd>JOB_STATE_QUEUED{{% md %}}`JOB_STATE_QUEUED` indicates that the job has been created but is being delayed until launch. Jobs that are queued may only transition to `JOB_STATE_PENDING` or `JOB_STATE_CANCELLED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Resource<wbr>Cleaning<wbr>Up</dt>
+    <dd>JOB_STATE_RESOURCE_CLEANING_UP{{% md %}}`JOB_STATE_RESOURCE_CLEANING_UP` indicates that the batch job's associated resources are currently being cleaned up after a successful run. Currently, this is an opt-in feature, please reach out to Cloud support team if you are interested.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>JOB_STATE_UNKNOWN</dt>
+    <dd>JOB_STATE_UNKNOWN{{% md %}}The job's run state isn't specified.{{% /md %}}</dd><dt>JOB_STATE_STOPPED</dt>
+    <dd>JOB_STATE_STOPPED{{% md %}}`JOB_STATE_STOPPED` indicates that the job has not yet started to run.{{% /md %}}</dd><dt>JOB_STATE_RUNNING</dt>
+    <dd>JOB_STATE_RUNNING{{% md %}}`JOB_STATE_RUNNING` indicates that the job is currently running.{{% /md %}}</dd><dt>JOB_STATE_DONE</dt>
+    <dd>JOB_STATE_DONE{{% md %}}`JOB_STATE_DONE` indicates that the job has successfully completed. This is a terminal job state. This state may be set by the Cloud Dataflow service, as a transition from `JOB_STATE_RUNNING`. It may also be set via a Cloud Dataflow `UpdateJob` call, if the job has not yet reached a terminal state.{{% /md %}}</dd><dt>JOB_STATE_FAILED</dt>
+    <dd>JOB_STATE_FAILED{{% md %}}`JOB_STATE_FAILED` indicates that the job has failed. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>JOB_STATE_CANCELLED</dt>
+    <dd>JOB_STATE_CANCELLED{{% md %}}`JOB_STATE_CANCELLED` indicates that the job has been explicitly cancelled. This is a terminal job state. This state may only be set via a Cloud Dataflow `UpdateJob` call, and only if the job has not yet reached another terminal state.{{% /md %}}</dd><dt>JOB_STATE_UPDATED</dt>
+    <dd>JOB_STATE_UPDATED{{% md %}}`JOB_STATE_UPDATED` indicates that the job was successfully updated, meaning that this job was stopped and another job was started, inheriting state from this one. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>JOB_STATE_DRAINING</dt>
+    <dd>JOB_STATE_DRAINING{{% md %}}`JOB_STATE_DRAINING` indicates that the job is in the process of draining. A draining job has stopped pulling from its input sources and is processing any data that remains in-flight. This state may be set via a Cloud Dataflow `UpdateJob` call, but only as a transition from `JOB_STATE_RUNNING`. Jobs that are draining may only transition to `JOB_STATE_DRAINED`, `JOB_STATE_CANCELLED`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>JOB_STATE_DRAINED</dt>
+    <dd>JOB_STATE_DRAINED{{% md %}}`JOB_STATE_DRAINED` indicates that the job has been drained. A drained job terminated by stopping pulling from its input sources and processing any data that remained in-flight when draining was requested. This state is a terminal state, may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_DRAINING`.{{% /md %}}</dd><dt>JOB_STATE_PENDING</dt>
+    <dd>JOB_STATE_PENDING{{% md %}}`JOB_STATE_PENDING` indicates that the job has been created but is not yet running. Jobs that are pending may only transition to `JOB_STATE_RUNNING`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>JOB_STATE_CANCELLING</dt>
+    <dd>JOB_STATE_CANCELLING{{% md %}}`JOB_STATE_CANCELLING` indicates that the job has been explicitly cancelled and is in the process of stopping. Jobs that are cancelling may only transition to `JOB_STATE_CANCELLED` or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>JOB_STATE_QUEUED</dt>
+    <dd>JOB_STATE_QUEUED{{% md %}}`JOB_STATE_QUEUED` indicates that the job has been created but is being delayed until launch. Jobs that are queued may only transition to `JOB_STATE_PENDING` or `JOB_STATE_CANCELLED`.{{% /md %}}</dd><dt>JOB_STATE_RESOURCE_CLEANING_UP</dt>
+    <dd>JOB_STATE_RESOURCE_CLEANING_UP{{% md %}}`JOB_STATE_RESOURCE_CLEANING_UP` indicates that the batch job's associated resources are currently being cleaned up after a successful run. Currently, this is an opt-in feature, please reach out to Cloud support team if you are interested.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobmetadata">Job<wbr>Metadata</h4>
@@ -5913,6 +6167,106 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#spanneriodetailsresponse">Spanner<wbr>IODetails<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a Spanner source used in the Dataflow job.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobrequestedstate">Job<wbr>Requested<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Job<wbr>State<wbr>Unknown</dt>
+    <dd>JOB_STATE_UNKNOWN{{% md %}}The job's run state isn't specified.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Stopped</dt>
+    <dd>JOB_STATE_STOPPED{{% md %}}`JOB_STATE_STOPPED` indicates that the job has not yet started to run.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Running</dt>
+    <dd>JOB_STATE_RUNNING{{% md %}}`JOB_STATE_RUNNING` indicates that the job is currently running.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Done</dt>
+    <dd>JOB_STATE_DONE{{% md %}}`JOB_STATE_DONE` indicates that the job has successfully completed. This is a terminal job state. This state may be set by the Cloud Dataflow service, as a transition from `JOB_STATE_RUNNING`. It may also be set via a Cloud Dataflow `UpdateJob` call, if the job has not yet reached a terminal state.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Failed</dt>
+    <dd>JOB_STATE_FAILED{{% md %}}`JOB_STATE_FAILED` indicates that the job has failed. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Cancelled</dt>
+    <dd>JOB_STATE_CANCELLED{{% md %}}`JOB_STATE_CANCELLED` indicates that the job has been explicitly cancelled. This is a terminal job state. This state may only be set via a Cloud Dataflow `UpdateJob` call, and only if the job has not yet reached another terminal state.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Updated</dt>
+    <dd>JOB_STATE_UPDATED{{% md %}}`JOB_STATE_UPDATED` indicates that the job was successfully updated, meaning that this job was stopped and another job was started, inheriting state from this one. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Draining</dt>
+    <dd>JOB_STATE_DRAINING{{% md %}}`JOB_STATE_DRAINING` indicates that the job is in the process of draining. A draining job has stopped pulling from its input sources and is processing any data that remains in-flight. This state may be set via a Cloud Dataflow `UpdateJob` call, but only as a transition from `JOB_STATE_RUNNING`. Jobs that are draining may only transition to `JOB_STATE_DRAINED`, `JOB_STATE_CANCELLED`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Drained</dt>
+    <dd>JOB_STATE_DRAINED{{% md %}}`JOB_STATE_DRAINED` indicates that the job has been drained. A drained job terminated by stopping pulling from its input sources and processing any data that remained in-flight when draining was requested. This state is a terminal state, may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_DRAINING`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Pending</dt>
+    <dd>JOB_STATE_PENDING{{% md %}}`JOB_STATE_PENDING` indicates that the job has been created but is not yet running. Jobs that are pending may only transition to `JOB_STATE_RUNNING`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Cancelling</dt>
+    <dd>JOB_STATE_CANCELLING{{% md %}}`JOB_STATE_CANCELLING` indicates that the job has been explicitly cancelled and is in the process of stopping. Jobs that are cancelling may only transition to `JOB_STATE_CANCELLED` or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Queued</dt>
+    <dd>JOB_STATE_QUEUED{{% md %}}`JOB_STATE_QUEUED` indicates that the job has been created but is being delayed until launch. Jobs that are queued may only transition to `JOB_STATE_PENDING` or `JOB_STATE_CANCELLED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Resource<wbr>Cleaning<wbr>Up</dt>
+    <dd>JOB_STATE_RESOURCE_CLEANING_UP{{% md %}}`JOB_STATE_RESOURCE_CLEANING_UP` indicates that the batch job's associated resources are currently being cleaned up after a successful run. Currently, this is an opt-in feature, please reach out to Cloud support team if you are interested.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Job<wbr>Requested<wbr>State<wbr>Job<wbr>State<wbr>Unknown</dt>
+    <dd>JOB_STATE_UNKNOWN{{% md %}}The job's run state isn't specified.{{% /md %}}</dd><dt>Job<wbr>Requested<wbr>State<wbr>Job<wbr>State<wbr>Stopped</dt>
+    <dd>JOB_STATE_STOPPED{{% md %}}`JOB_STATE_STOPPED` indicates that the job has not yet started to run.{{% /md %}}</dd><dt>Job<wbr>Requested<wbr>State<wbr>Job<wbr>State<wbr>Running</dt>
+    <dd>JOB_STATE_RUNNING{{% md %}}`JOB_STATE_RUNNING` indicates that the job is currently running.{{% /md %}}</dd><dt>Job<wbr>Requested<wbr>State<wbr>Job<wbr>State<wbr>Done</dt>
+    <dd>JOB_STATE_DONE{{% md %}}`JOB_STATE_DONE` indicates that the job has successfully completed. This is a terminal job state. This state may be set by the Cloud Dataflow service, as a transition from `JOB_STATE_RUNNING`. It may also be set via a Cloud Dataflow `UpdateJob` call, if the job has not yet reached a terminal state.{{% /md %}}</dd><dt>Job<wbr>Requested<wbr>State<wbr>Job<wbr>State<wbr>Failed</dt>
+    <dd>JOB_STATE_FAILED{{% md %}}`JOB_STATE_FAILED` indicates that the job has failed. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>Job<wbr>Requested<wbr>State<wbr>Job<wbr>State<wbr>Cancelled</dt>
+    <dd>JOB_STATE_CANCELLED{{% md %}}`JOB_STATE_CANCELLED` indicates that the job has been explicitly cancelled. This is a terminal job state. This state may only be set via a Cloud Dataflow `UpdateJob` call, and only if the job has not yet reached another terminal state.{{% /md %}}</dd><dt>Job<wbr>Requested<wbr>State<wbr>Job<wbr>State<wbr>Updated</dt>
+    <dd>JOB_STATE_UPDATED{{% md %}}`JOB_STATE_UPDATED` indicates that the job was successfully updated, meaning that this job was stopped and another job was started, inheriting state from this one. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>Job<wbr>Requested<wbr>State<wbr>Job<wbr>State<wbr>Draining</dt>
+    <dd>JOB_STATE_DRAINING{{% md %}}`JOB_STATE_DRAINING` indicates that the job is in the process of draining. A draining job has stopped pulling from its input sources and is processing any data that remains in-flight. This state may be set via a Cloud Dataflow `UpdateJob` call, but only as a transition from `JOB_STATE_RUNNING`. Jobs that are draining may only transition to `JOB_STATE_DRAINED`, `JOB_STATE_CANCELLED`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>Requested<wbr>State<wbr>Job<wbr>State<wbr>Drained</dt>
+    <dd>JOB_STATE_DRAINED{{% md %}}`JOB_STATE_DRAINED` indicates that the job has been drained. A drained job terminated by stopping pulling from its input sources and processing any data that remained in-flight when draining was requested. This state is a terminal state, may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_DRAINING`.{{% /md %}}</dd><dt>Job<wbr>Requested<wbr>State<wbr>Job<wbr>State<wbr>Pending</dt>
+    <dd>JOB_STATE_PENDING{{% md %}}`JOB_STATE_PENDING` indicates that the job has been created but is not yet running. Jobs that are pending may only transition to `JOB_STATE_RUNNING`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>Requested<wbr>State<wbr>Job<wbr>State<wbr>Cancelling</dt>
+    <dd>JOB_STATE_CANCELLING{{% md %}}`JOB_STATE_CANCELLING` indicates that the job has been explicitly cancelled and is in the process of stopping. Jobs that are cancelling may only transition to `JOB_STATE_CANCELLED` or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>Requested<wbr>State<wbr>Job<wbr>State<wbr>Queued</dt>
+    <dd>JOB_STATE_QUEUED{{% md %}}`JOB_STATE_QUEUED` indicates that the job has been created but is being delayed until launch. Jobs that are queued may only transition to `JOB_STATE_PENDING` or `JOB_STATE_CANCELLED`.{{% /md %}}</dd><dt>Job<wbr>Requested<wbr>State<wbr>Job<wbr>State<wbr>Resource<wbr>Cleaning<wbr>Up</dt>
+    <dd>JOB_STATE_RESOURCE_CLEANING_UP{{% md %}}`JOB_STATE_RESOURCE_CLEANING_UP` indicates that the batch job's associated resources are currently being cleaned up after a successful run. Currently, this is an opt-in feature, please reach out to Cloud support team if you are interested.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Job<wbr>State<wbr>Unknown</dt>
+    <dd>JOB_STATE_UNKNOWN{{% md %}}The job's run state isn't specified.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Stopped</dt>
+    <dd>JOB_STATE_STOPPED{{% md %}}`JOB_STATE_STOPPED` indicates that the job has not yet started to run.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Running</dt>
+    <dd>JOB_STATE_RUNNING{{% md %}}`JOB_STATE_RUNNING` indicates that the job is currently running.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Done</dt>
+    <dd>JOB_STATE_DONE{{% md %}}`JOB_STATE_DONE` indicates that the job has successfully completed. This is a terminal job state. This state may be set by the Cloud Dataflow service, as a transition from `JOB_STATE_RUNNING`. It may also be set via a Cloud Dataflow `UpdateJob` call, if the job has not yet reached a terminal state.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Failed</dt>
+    <dd>JOB_STATE_FAILED{{% md %}}`JOB_STATE_FAILED` indicates that the job has failed. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Cancelled</dt>
+    <dd>JOB_STATE_CANCELLED{{% md %}}`JOB_STATE_CANCELLED` indicates that the job has been explicitly cancelled. This is a terminal job state. This state may only be set via a Cloud Dataflow `UpdateJob` call, and only if the job has not yet reached another terminal state.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Updated</dt>
+    <dd>JOB_STATE_UPDATED{{% md %}}`JOB_STATE_UPDATED` indicates that the job was successfully updated, meaning that this job was stopped and another job was started, inheriting state from this one. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Draining</dt>
+    <dd>JOB_STATE_DRAINING{{% md %}}`JOB_STATE_DRAINING` indicates that the job is in the process of draining. A draining job has stopped pulling from its input sources and is processing any data that remains in-flight. This state may be set via a Cloud Dataflow `UpdateJob` call, but only as a transition from `JOB_STATE_RUNNING`. Jobs that are draining may only transition to `JOB_STATE_DRAINED`, `JOB_STATE_CANCELLED`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Drained</dt>
+    <dd>JOB_STATE_DRAINED{{% md %}}`JOB_STATE_DRAINED` indicates that the job has been drained. A drained job terminated by stopping pulling from its input sources and processing any data that remained in-flight when draining was requested. This state is a terminal state, may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_DRAINING`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Pending</dt>
+    <dd>JOB_STATE_PENDING{{% md %}}`JOB_STATE_PENDING` indicates that the job has been created but is not yet running. Jobs that are pending may only transition to `JOB_STATE_RUNNING`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Cancelling</dt>
+    <dd>JOB_STATE_CANCELLING{{% md %}}`JOB_STATE_CANCELLING` indicates that the job has been explicitly cancelled and is in the process of stopping. Jobs that are cancelling may only transition to `JOB_STATE_CANCELLED` or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Queued</dt>
+    <dd>JOB_STATE_QUEUED{{% md %}}`JOB_STATE_QUEUED` indicates that the job has been created but is being delayed until launch. Jobs that are queued may only transition to `JOB_STATE_PENDING` or `JOB_STATE_CANCELLED`.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Resource<wbr>Cleaning<wbr>Up</dt>
+    <dd>JOB_STATE_RESOURCE_CLEANING_UP{{% md %}}`JOB_STATE_RESOURCE_CLEANING_UP` indicates that the batch job's associated resources are currently being cleaned up after a successful run. Currently, this is an opt-in feature, please reach out to Cloud support team if you are interested.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>JOB_STATE_UNKNOWN</dt>
+    <dd>JOB_STATE_UNKNOWN{{% md %}}The job's run state isn't specified.{{% /md %}}</dd><dt>JOB_STATE_STOPPED</dt>
+    <dd>JOB_STATE_STOPPED{{% md %}}`JOB_STATE_STOPPED` indicates that the job has not yet started to run.{{% /md %}}</dd><dt>JOB_STATE_RUNNING</dt>
+    <dd>JOB_STATE_RUNNING{{% md %}}`JOB_STATE_RUNNING` indicates that the job is currently running.{{% /md %}}</dd><dt>JOB_STATE_DONE</dt>
+    <dd>JOB_STATE_DONE{{% md %}}`JOB_STATE_DONE` indicates that the job has successfully completed. This is a terminal job state. This state may be set by the Cloud Dataflow service, as a transition from `JOB_STATE_RUNNING`. It may also be set via a Cloud Dataflow `UpdateJob` call, if the job has not yet reached a terminal state.{{% /md %}}</dd><dt>JOB_STATE_FAILED</dt>
+    <dd>JOB_STATE_FAILED{{% md %}}`JOB_STATE_FAILED` indicates that the job has failed. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>JOB_STATE_CANCELLED</dt>
+    <dd>JOB_STATE_CANCELLED{{% md %}}`JOB_STATE_CANCELLED` indicates that the job has been explicitly cancelled. This is a terminal job state. This state may only be set via a Cloud Dataflow `UpdateJob` call, and only if the job has not yet reached another terminal state.{{% /md %}}</dd><dt>JOB_STATE_UPDATED</dt>
+    <dd>JOB_STATE_UPDATED{{% md %}}`JOB_STATE_UPDATED` indicates that the job was successfully updated, meaning that this job was stopped and another job was started, inheriting state from this one. This is a terminal job state. This state may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_RUNNING`.{{% /md %}}</dd><dt>JOB_STATE_DRAINING</dt>
+    <dd>JOB_STATE_DRAINING{{% md %}}`JOB_STATE_DRAINING` indicates that the job is in the process of draining. A draining job has stopped pulling from its input sources and is processing any data that remains in-flight. This state may be set via a Cloud Dataflow `UpdateJob` call, but only as a transition from `JOB_STATE_RUNNING`. Jobs that are draining may only transition to `JOB_STATE_DRAINED`, `JOB_STATE_CANCELLED`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>JOB_STATE_DRAINED</dt>
+    <dd>JOB_STATE_DRAINED{{% md %}}`JOB_STATE_DRAINED` indicates that the job has been drained. A drained job terminated by stopping pulling from its input sources and processing any data that remained in-flight when draining was requested. This state is a terminal state, may only be set by the Cloud Dataflow service, and only as a transition from `JOB_STATE_DRAINING`.{{% /md %}}</dd><dt>JOB_STATE_PENDING</dt>
+    <dd>JOB_STATE_PENDING{{% md %}}`JOB_STATE_PENDING` indicates that the job has been created but is not yet running. Jobs that are pending may only transition to `JOB_STATE_RUNNING`, or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>JOB_STATE_CANCELLING</dt>
+    <dd>JOB_STATE_CANCELLING{{% md %}}`JOB_STATE_CANCELLING` indicates that the job has been explicitly cancelled and is in the process of stopping. Jobs that are cancelling may only transition to `JOB_STATE_CANCELLED` or `JOB_STATE_FAILED`.{{% /md %}}</dd><dt>JOB_STATE_QUEUED</dt>
+    <dd>JOB_STATE_QUEUED{{% md %}}`JOB_STATE_QUEUED` indicates that the job has been created but is being delayed until launch. Jobs that are queued may only transition to `JOB_STATE_PENDING` or `JOB_STATE_CANCELLED`.{{% /md %}}</dd><dt>JOB_STATE_RESOURCE_CLEANING_UP</dt>
+    <dd>JOB_STATE_RESOURCE_CLEANING_UP{{% md %}}`JOB_STATE_RESOURCE_CLEANING_UP` indicates that the batch job's associated resources are currently being cleaned up after a successful run. Currently, this is an opt-in feature, please reach out to Cloud support team if you are interested.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobtype">Job<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Job<wbr>Type<wbr>Unknown</dt>
+    <dd>JOB_TYPE_UNKNOWN{{% md %}}The type of the job is unspecified, or unknown.{{% /md %}}</dd><dt>Job<wbr>Type<wbr>Batch</dt>
+    <dd>JOB_TYPE_BATCH{{% md %}}A batch job with a well-defined end point: data is read, data is processed, data is written, and the job is done.{{% /md %}}</dd><dt>Job<wbr>Type<wbr>Streaming</dt>
+    <dd>JOB_TYPE_STREAMING{{% md %}}A continuously streaming job with no end: data is read, processed, and written continuously.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Job<wbr>Type<wbr>Job<wbr>Type<wbr>Unknown</dt>
+    <dd>JOB_TYPE_UNKNOWN{{% md %}}The type of the job is unspecified, or unknown.{{% /md %}}</dd><dt>Job<wbr>Type<wbr>Job<wbr>Type<wbr>Batch</dt>
+    <dd>JOB_TYPE_BATCH{{% md %}}A batch job with a well-defined end point: data is read, data is processed, data is written, and the job is done.{{% /md %}}</dd><dt>Job<wbr>Type<wbr>Job<wbr>Type<wbr>Streaming</dt>
+    <dd>JOB_TYPE_STREAMING{{% md %}}A continuously streaming job with no end: data is read, processed, and written continuously.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Job<wbr>Type<wbr>Unknown</dt>
+    <dd>JOB_TYPE_UNKNOWN{{% md %}}The type of the job is unspecified, or unknown.{{% /md %}}</dd><dt>Job<wbr>Type<wbr>Batch</dt>
+    <dd>JOB_TYPE_BATCH{{% md %}}A batch job with a well-defined end point: data is read, data is processed, data is written, and the job is done.{{% /md %}}</dd><dt>Job<wbr>Type<wbr>Streaming</dt>
+    <dd>JOB_TYPE_STREAMING{{% md %}}A continuously streaming job with no end: data is read, processed, and written continuously.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>JOB_TYPE_UNKNOWN</dt>
+    <dd>JOB_TYPE_UNKNOWN{{% md %}}The type of the job is unspecified, or unknown.{{% /md %}}</dd><dt>JOB_TYPE_BATCH</dt>
+    <dd>JOB_TYPE_BATCH{{% md %}}A batch job with a well-defined end point: data is read, data is processed, data is written, and the job is done.{{% /md %}}</dd><dt>JOB_TYPE_STREAMING</dt>
+    <dd>JOB_TYPE_STREAMING{{% md %}}A continuously streaming job with no end: data is read, processed, and written continuously.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="package">Package</h4>
@@ -6708,7 +7062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdksupportstatus_csharp" style="color: inherit; text-decoration: inherit;">Sdk<wbr>Support<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sdkversionsdksupportstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataflow.<wbr>V1b3.<wbr>Sdk<wbr>Version<wbr>Sdk<wbr>Support<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The support status for this SDK version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6736,7 +7090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdksupportstatus_go" style="color: inherit; text-decoration: inherit;">Sdk<wbr>Support<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sdkversionsdksupportstatus">Sdk<wbr>Version<wbr>Sdk<wbr>Support<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The support status for this SDK version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6764,7 +7118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdksupportstatus_nodejs" style="color: inherit; text-decoration: inherit;">sdk<wbr>Support<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sdkversionsdksupportstatus">Sdk<wbr>Version<wbr>Sdk<wbr>Support<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The support status for this SDK version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6792,7 +7146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdk_support_status_python" style="color: inherit; text-decoration: inherit;">sdk_<wbr>support_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#sdkversionsdksupportstatus">Sdk<wbr>Version<wbr>Sdk<wbr>Support<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The support status for this SDK version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6925,6 +7279,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A readable string describing the version of the SDK.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sdkversionsdksupportstatus">Sdk<wbr>Version<wbr>Sdk<wbr>Support<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}Cloud Dataflow is unaware of this version.{{% /md %}}</dd><dt>Supported</dt>
+    <dd>SUPPORTED{{% md %}}This is a known version of an SDK, and is supported.{{% /md %}}</dd><dt>Stale</dt>
+    <dd>STALE{{% md %}}A newer version of the SDK family exists, and an update is recommended.{{% /md %}}</dd><dt>Deprecated</dt>
+    <dd>DEPRECATED{{% md %}}This version of the SDK is deprecated and will eventually be no longer supported.{{% /md %}}</dd><dt>Unsupported</dt>
+    <dd>UNSUPPORTED{{% md %}}Support for this SDK version has ended and it should no longer be used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Sdk<wbr>Version<wbr>Sdk<wbr>Support<wbr>Status<wbr>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}Cloud Dataflow is unaware of this version.{{% /md %}}</dd><dt>Sdk<wbr>Version<wbr>Sdk<wbr>Support<wbr>Status<wbr>Supported</dt>
+    <dd>SUPPORTED{{% md %}}This is a known version of an SDK, and is supported.{{% /md %}}</dd><dt>Sdk<wbr>Version<wbr>Sdk<wbr>Support<wbr>Status<wbr>Stale</dt>
+    <dd>STALE{{% md %}}A newer version of the SDK family exists, and an update is recommended.{{% /md %}}</dd><dt>Sdk<wbr>Version<wbr>Sdk<wbr>Support<wbr>Status<wbr>Deprecated</dt>
+    <dd>DEPRECATED{{% md %}}This version of the SDK is deprecated and will eventually be no longer supported.{{% /md %}}</dd><dt>Sdk<wbr>Version<wbr>Sdk<wbr>Support<wbr>Status<wbr>Unsupported</dt>
+    <dd>UNSUPPORTED{{% md %}}Support for this SDK version has ended and it should no longer be used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}Cloud Dataflow is unaware of this version.{{% /md %}}</dd><dt>Supported</dt>
+    <dd>SUPPORTED{{% md %}}This is a known version of an SDK, and is supported.{{% /md %}}</dd><dt>Stale</dt>
+    <dd>STALE{{% md %}}A newer version of the SDK family exists, and an update is recommended.{{% /md %}}</dd><dt>Deprecated</dt>
+    <dd>DEPRECATED{{% md %}}This version of the SDK is deprecated and will eventually be no longer supported.{{% /md %}}</dd><dt>Unsupported</dt>
+    <dd>UNSUPPORTED{{% md %}}Support for this SDK version has ended and it should no longer be used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNKNOWN</dt>
+    <dd>UNKNOWN{{% md %}}Cloud Dataflow is unaware of this version.{{% /md %}}</dd><dt>SUPPORTED</dt>
+    <dd>SUPPORTED{{% md %}}This is a known version of an SDK, and is supported.{{% /md %}}</dd><dt>STALE</dt>
+    <dd>STALE{{% md %}}A newer version of the SDK family exists, and an update is recommended.{{% /md %}}</dd><dt>DEPRECATED</dt>
+    <dd>DEPRECATED{{% md %}}This version of the SDK is deprecated and will eventually be no longer supported.{{% /md %}}</dd><dt>UNSUPPORTED</dt>
+    <dd>UNSUPPORTED{{% md %}}Support for this SDK version has ended and it should no longer be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="spanneriodetails">Spanner<wbr>IODetails</h4>
@@ -8960,7 +9352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#transformsummarykind">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataflow.<wbr>V1b3.<wbr>Transform<wbr>Summary<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Type of transform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9012,7 +9404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#transformsummarykind">Transform<wbr>Summary<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Type of transform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9064,7 +9456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#transformsummarykind">Transform<wbr>Summary<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Type of transform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9116,7 +9508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#transformsummarykind">Transform<wbr>Summary<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Type of transform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9135,6 +9527,60 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}User names for all collection outputs to this transform.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="transformsummarykind">Transform<wbr>Summary<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unknown<wbr>Kind</dt>
+    <dd>UNKNOWN_KIND{{% md %}}Unrecognized transform type.{{% /md %}}</dd><dt>Par<wbr>Do<wbr>Kind</dt>
+    <dd>PAR_DO_KIND{{% md %}}ParDo transform.{{% /md %}}</dd><dt>Group<wbr>By<wbr>Key<wbr>Kind</dt>
+    <dd>GROUP_BY_KEY_KIND{{% md %}}Group By Key transform.{{% /md %}}</dd><dt>Flatten<wbr>Kind</dt>
+    <dd>FLATTEN_KIND{{% md %}}Flatten transform.{{% /md %}}</dd><dt>Read<wbr>Kind</dt>
+    <dd>READ_KIND{{% md %}}Read transform.{{% /md %}}</dd><dt>Write<wbr>Kind</dt>
+    <dd>WRITE_KIND{{% md %}}Write transform.{{% /md %}}</dd><dt>Constant<wbr>Kind</dt>
+    <dd>CONSTANT_KIND{{% md %}}Constructs from a constant value, such as with Create.of.{{% /md %}}</dd><dt>Singleton<wbr>Kind</dt>
+    <dd>SINGLETON_KIND{{% md %}}Creates a Singleton view of a collection.{{% /md %}}</dd><dt>Shuffle<wbr>Kind</dt>
+    <dd>SHUFFLE_KIND{{% md %}}Opening or closing a shuffle session, often as part of a GroupByKey.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Transform<wbr>Summary<wbr>Kind<wbr>Unknown<wbr>Kind</dt>
+    <dd>UNKNOWN_KIND{{% md %}}Unrecognized transform type.{{% /md %}}</dd><dt>Transform<wbr>Summary<wbr>Kind<wbr>Par<wbr>Do<wbr>Kind</dt>
+    <dd>PAR_DO_KIND{{% md %}}ParDo transform.{{% /md %}}</dd><dt>Transform<wbr>Summary<wbr>Kind<wbr>Group<wbr>By<wbr>Key<wbr>Kind</dt>
+    <dd>GROUP_BY_KEY_KIND{{% md %}}Group By Key transform.{{% /md %}}</dd><dt>Transform<wbr>Summary<wbr>Kind<wbr>Flatten<wbr>Kind</dt>
+    <dd>FLATTEN_KIND{{% md %}}Flatten transform.{{% /md %}}</dd><dt>Transform<wbr>Summary<wbr>Kind<wbr>Read<wbr>Kind</dt>
+    <dd>READ_KIND{{% md %}}Read transform.{{% /md %}}</dd><dt>Transform<wbr>Summary<wbr>Kind<wbr>Write<wbr>Kind</dt>
+    <dd>WRITE_KIND{{% md %}}Write transform.{{% /md %}}</dd><dt>Transform<wbr>Summary<wbr>Kind<wbr>Constant<wbr>Kind</dt>
+    <dd>CONSTANT_KIND{{% md %}}Constructs from a constant value, such as with Create.of.{{% /md %}}</dd><dt>Transform<wbr>Summary<wbr>Kind<wbr>Singleton<wbr>Kind</dt>
+    <dd>SINGLETON_KIND{{% md %}}Creates a Singleton view of a collection.{{% /md %}}</dd><dt>Transform<wbr>Summary<wbr>Kind<wbr>Shuffle<wbr>Kind</dt>
+    <dd>SHUFFLE_KIND{{% md %}}Opening or closing a shuffle session, often as part of a GroupByKey.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unknown<wbr>Kind</dt>
+    <dd>UNKNOWN_KIND{{% md %}}Unrecognized transform type.{{% /md %}}</dd><dt>Par<wbr>Do<wbr>Kind</dt>
+    <dd>PAR_DO_KIND{{% md %}}ParDo transform.{{% /md %}}</dd><dt>Group<wbr>By<wbr>Key<wbr>Kind</dt>
+    <dd>GROUP_BY_KEY_KIND{{% md %}}Group By Key transform.{{% /md %}}</dd><dt>Flatten<wbr>Kind</dt>
+    <dd>FLATTEN_KIND{{% md %}}Flatten transform.{{% /md %}}</dd><dt>Read<wbr>Kind</dt>
+    <dd>READ_KIND{{% md %}}Read transform.{{% /md %}}</dd><dt>Write<wbr>Kind</dt>
+    <dd>WRITE_KIND{{% md %}}Write transform.{{% /md %}}</dd><dt>Constant<wbr>Kind</dt>
+    <dd>CONSTANT_KIND{{% md %}}Constructs from a constant value, such as with Create.of.{{% /md %}}</dd><dt>Singleton<wbr>Kind</dt>
+    <dd>SINGLETON_KIND{{% md %}}Creates a Singleton view of a collection.{{% /md %}}</dd><dt>Shuffle<wbr>Kind</dt>
+    <dd>SHUFFLE_KIND{{% md %}}Opening or closing a shuffle session, often as part of a GroupByKey.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNKNOWN_KIND</dt>
+    <dd>UNKNOWN_KIND{{% md %}}Unrecognized transform type.{{% /md %}}</dd><dt>PAR_DO_KIND</dt>
+    <dd>PAR_DO_KIND{{% md %}}ParDo transform.{{% /md %}}</dd><dt>GROUP_BY_KEY_KIND</dt>
+    <dd>GROUP_BY_KEY_KIND{{% md %}}Group By Key transform.{{% /md %}}</dd><dt>FLATTEN_KIND</dt>
+    <dd>FLATTEN_KIND{{% md %}}Flatten transform.{{% /md %}}</dd><dt>READ_KIND</dt>
+    <dd>READ_KIND{{% md %}}Read transform.{{% /md %}}</dd><dt>WRITE_KIND</dt>
+    <dd>WRITE_KIND{{% md %}}Write transform.{{% /md %}}</dd><dt>CONSTANT_KIND</dt>
+    <dd>CONSTANT_KIND{{% md %}}Constructs from a constant value, such as with Create.of.{{% /md %}}</dd><dt>SINGLETON_KIND</dt>
+    <dd>SINGLETON_KIND{{% md %}}Creates a Singleton view of a collection.{{% /md %}}</dd><dt>SHUFFLE_KIND</dt>
+    <dd>SHUFFLE_KIND{{% md %}}Opening or closing a shuffle session, often as part of a GroupByKey.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transformsummaryresponse">Transform<wbr>Summary<wbr>Response</h4>
@@ -9340,7 +9786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultpackageset_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Package<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workerpooldefaultpackageset">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataflow.<wbr>V1b3.<wbr>Worker<wbr>Pool<wbr>Default<wbr>Package<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}The default package set to install. This allows the service to select a default set of packages which are useful to worker harnesses written in a particular language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9372,7 +9818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workerpoolipconfiguration">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataflow.<wbr>V1b3.<wbr>Worker<wbr>Pool<wbr>Ip<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration for VM IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9476,7 +9922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#teardownpolicy_csharp" style="color: inherit; text-decoration: inherit;">Teardown<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workerpoolteardownpolicy">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataflow.<wbr>V1b3.<wbr>Worker<wbr>Pool<wbr>Teardown<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user's project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9512,7 +9958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultpackageset_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Package<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workerpooldefaultpackageset">Worker<wbr>Pool<wbr>Default<wbr>Package<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}The default package set to install. This allows the service to select a default set of packages which are useful to worker harnesses written in a particular language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9544,7 +9990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfiguration_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workerpoolipconfiguration">Worker<wbr>Pool<wbr>Ip<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration for VM IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9648,7 +10094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#teardownpolicy_go" style="color: inherit; text-decoration: inherit;">Teardown<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workerpoolteardownpolicy">Worker<wbr>Pool<wbr>Teardown<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user's project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9684,7 +10130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultpackageset_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Package<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workerpooldefaultpackageset">Worker<wbr>Pool<wbr>Default<wbr>Package<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}The default package set to install. This allows the service to select a default set of packages which are useful to worker harnesses written in a particular language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9716,7 +10162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workerpoolipconfiguration">Worker<wbr>Pool<wbr>Ip<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration for VM IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9820,7 +10266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#teardownpolicy_nodejs" style="color: inherit; text-decoration: inherit;">teardown<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workerpoolteardownpolicy">Worker<wbr>Pool<wbr>Teardown<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user's project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9856,7 +10302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_package_set_python" style="color: inherit; text-decoration: inherit;">default_<wbr>package_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#workerpooldefaultpackageset">Worker<wbr>Pool<wbr>Default<wbr>Package<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}The default package set to install. This allows the service to select a default set of packages which are useful to worker harnesses written in a particular language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9888,7 +10334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configuration_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#workerpoolipconfiguration">Worker<wbr>Pool<wbr>Ip<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration for VM IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9992,7 +10438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#teardown_policy_python" style="color: inherit; text-decoration: inherit;">teardown_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#workerpoolteardownpolicy">Worker<wbr>Pool<wbr>Teardown<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user's project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10003,6 +10449,70 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="workerpooldefaultpackageset">Worker<wbr>Pool<wbr>Default<wbr>Package<wbr>Set</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Default<wbr>Package<wbr>Set<wbr>Unknown</dt>
+    <dd>DEFAULT_PACKAGE_SET_UNKNOWN{{% md %}}The default set of packages to stage is unknown, or unspecified.{{% /md %}}</dd><dt>Default<wbr>Package<wbr>Set<wbr>None</dt>
+    <dd>DEFAULT_PACKAGE_SET_NONE{{% md %}}Indicates that no packages should be staged at the worker unless explicitly specified by the job.{{% /md %}}</dd><dt>Default<wbr>Package<wbr>Set<wbr>Java</dt>
+    <dd>DEFAULT_PACKAGE_SET_JAVA{{% md %}}Stage packages typically useful to workers written in Java.{{% /md %}}</dd><dt>Default<wbr>Package<wbr>Set<wbr>Python</dt>
+    <dd>DEFAULT_PACKAGE_SET_PYTHON{{% md %}}Stage pacakges typically useful to workers written in Python.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Worker<wbr>Pool<wbr>Default<wbr>Package<wbr>Set<wbr>Default<wbr>Package<wbr>Set<wbr>Unknown</dt>
+    <dd>DEFAULT_PACKAGE_SET_UNKNOWN{{% md %}}The default set of packages to stage is unknown, or unspecified.{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>Default<wbr>Package<wbr>Set<wbr>Default<wbr>Package<wbr>Set<wbr>None</dt>
+    <dd>DEFAULT_PACKAGE_SET_NONE{{% md %}}Indicates that no packages should be staged at the worker unless explicitly specified by the job.{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>Default<wbr>Package<wbr>Set<wbr>Default<wbr>Package<wbr>Set<wbr>Java</dt>
+    <dd>DEFAULT_PACKAGE_SET_JAVA{{% md %}}Stage packages typically useful to workers written in Java.{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>Default<wbr>Package<wbr>Set<wbr>Default<wbr>Package<wbr>Set<wbr>Python</dt>
+    <dd>DEFAULT_PACKAGE_SET_PYTHON{{% md %}}Stage pacakges typically useful to workers written in Python.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Default<wbr>Package<wbr>Set<wbr>Unknown</dt>
+    <dd>DEFAULT_PACKAGE_SET_UNKNOWN{{% md %}}The default set of packages to stage is unknown, or unspecified.{{% /md %}}</dd><dt>Default<wbr>Package<wbr>Set<wbr>None</dt>
+    <dd>DEFAULT_PACKAGE_SET_NONE{{% md %}}Indicates that no packages should be staged at the worker unless explicitly specified by the job.{{% /md %}}</dd><dt>Default<wbr>Package<wbr>Set<wbr>Java</dt>
+    <dd>DEFAULT_PACKAGE_SET_JAVA{{% md %}}Stage packages typically useful to workers written in Java.{{% /md %}}</dd><dt>Default<wbr>Package<wbr>Set<wbr>Python</dt>
+    <dd>DEFAULT_PACKAGE_SET_PYTHON{{% md %}}Stage pacakges typically useful to workers written in Python.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DEFAULT_PACKAGE_SET_UNKNOWN</dt>
+    <dd>DEFAULT_PACKAGE_SET_UNKNOWN{{% md %}}The default set of packages to stage is unknown, or unspecified.{{% /md %}}</dd><dt>DEFAULT_PACKAGE_SET_NONE</dt>
+    <dd>DEFAULT_PACKAGE_SET_NONE{{% md %}}Indicates that no packages should be staged at the worker unless explicitly specified by the job.{{% /md %}}</dd><dt>DEFAULT_PACKAGE_SET_JAVA</dt>
+    <dd>DEFAULT_PACKAGE_SET_JAVA{{% md %}}Stage packages typically useful to workers written in Java.{{% /md %}}</dd><dt>DEFAULT_PACKAGE_SET_PYTHON</dt>
+    <dd>DEFAULT_PACKAGE_SET_PYTHON{{% md %}}Stage pacakges typically useful to workers written in Python.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="workerpoolipconfiguration">Worker<wbr>Pool<wbr>Ip<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Worker<wbr>Ip<wbr>Unspecified</dt>
+    <dd>WORKER_IP_UNSPECIFIED{{% md %}}The configuration is unknown, or unspecified.{{% /md %}}</dd><dt>Worker<wbr>Ip<wbr>Public</dt>
+    <dd>WORKER_IP_PUBLIC{{% md %}}Workers should have public IP addresses.{{% /md %}}</dd><dt>Worker<wbr>Ip<wbr>Private</dt>
+    <dd>WORKER_IP_PRIVATE{{% md %}}Workers should have private IP addresses.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Worker<wbr>Pool<wbr>Ip<wbr>Configuration<wbr>Worker<wbr>Ip<wbr>Unspecified</dt>
+    <dd>WORKER_IP_UNSPECIFIED{{% md %}}The configuration is unknown, or unspecified.{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>Ip<wbr>Configuration<wbr>Worker<wbr>Ip<wbr>Public</dt>
+    <dd>WORKER_IP_PUBLIC{{% md %}}Workers should have public IP addresses.{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>Ip<wbr>Configuration<wbr>Worker<wbr>Ip<wbr>Private</dt>
+    <dd>WORKER_IP_PRIVATE{{% md %}}Workers should have private IP addresses.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Worker<wbr>Ip<wbr>Unspecified</dt>
+    <dd>WORKER_IP_UNSPECIFIED{{% md %}}The configuration is unknown, or unspecified.{{% /md %}}</dd><dt>Worker<wbr>Ip<wbr>Public</dt>
+    <dd>WORKER_IP_PUBLIC{{% md %}}Workers should have public IP addresses.{{% /md %}}</dd><dt>Worker<wbr>Ip<wbr>Private</dt>
+    <dd>WORKER_IP_PRIVATE{{% md %}}Workers should have private IP addresses.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>WORKER_IP_UNSPECIFIED</dt>
+    <dd>WORKER_IP_UNSPECIFIED{{% md %}}The configuration is unknown, or unspecified.{{% /md %}}</dd><dt>WORKER_IP_PUBLIC</dt>
+    <dd>WORKER_IP_PUBLIC{{% md %}}Workers should have public IP addresses.{{% /md %}}</dd><dt>WORKER_IP_PRIVATE</dt>
+    <dd>WORKER_IP_PRIVATE{{% md %}}Workers should have private IP addresses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workerpoolresponse">Worker<wbr>Pool<wbr>Response</h4>
@@ -10693,6 +11203,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="workerpoolteardownpolicy">Worker<wbr>Pool<wbr>Teardown<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Teardown<wbr>Policy<wbr>Unknown</dt>
+    <dd>TEARDOWN_POLICY_UNKNOWN{{% md %}}The teardown policy isn't specified, or is unknown.{{% /md %}}</dd><dt>Teardown<wbr>Always</dt>
+    <dd>TEARDOWN_ALWAYS{{% md %}}Always teardown the resource.{{% /md %}}</dd><dt>Teardown<wbr>On<wbr>Success</dt>
+    <dd>TEARDOWN_ON_SUCCESS{{% md %}}Teardown the resource on success. This is useful for debugging failures.{{% /md %}}</dd><dt>Teardown<wbr>Never</dt>
+    <dd>TEARDOWN_NEVER{{% md %}}Never teardown the resource. This is useful for debugging and development.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Worker<wbr>Pool<wbr>Teardown<wbr>Policy<wbr>Teardown<wbr>Policy<wbr>Unknown</dt>
+    <dd>TEARDOWN_POLICY_UNKNOWN{{% md %}}The teardown policy isn't specified, or is unknown.{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>Teardown<wbr>Policy<wbr>Teardown<wbr>Always</dt>
+    <dd>TEARDOWN_ALWAYS{{% md %}}Always teardown the resource.{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>Teardown<wbr>Policy<wbr>Teardown<wbr>On<wbr>Success</dt>
+    <dd>TEARDOWN_ON_SUCCESS{{% md %}}Teardown the resource on success. This is useful for debugging failures.{{% /md %}}</dd><dt>Worker<wbr>Pool<wbr>Teardown<wbr>Policy<wbr>Teardown<wbr>Never</dt>
+    <dd>TEARDOWN_NEVER{{% md %}}Never teardown the resource. This is useful for debugging and development.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Teardown<wbr>Policy<wbr>Unknown</dt>
+    <dd>TEARDOWN_POLICY_UNKNOWN{{% md %}}The teardown policy isn't specified, or is unknown.{{% /md %}}</dd><dt>Teardown<wbr>Always</dt>
+    <dd>TEARDOWN_ALWAYS{{% md %}}Always teardown the resource.{{% /md %}}</dd><dt>Teardown<wbr>On<wbr>Success</dt>
+    <dd>TEARDOWN_ON_SUCCESS{{% md %}}Teardown the resource on success. This is useful for debugging failures.{{% /md %}}</dd><dt>Teardown<wbr>Never</dt>
+    <dd>TEARDOWN_NEVER{{% md %}}Never teardown the resource. This is useful for debugging and development.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TEARDOWN_POLICY_UNKNOWN</dt>
+    <dd>TEARDOWN_POLICY_UNKNOWN{{% md %}}The teardown policy isn't specified, or is unknown.{{% /md %}}</dd><dt>TEARDOWN_ALWAYS</dt>
+    <dd>TEARDOWN_ALWAYS{{% md %}}Always teardown the resource.{{% /md %}}</dd><dt>TEARDOWN_ON_SUCCESS</dt>
+    <dd>TEARDOWN_ON_SUCCESS{{% md %}}Teardown the resource on success. This is useful for debugging failures.{{% /md %}}</dd><dt>TEARDOWN_NEVER</dt>
+    <dd>TEARDOWN_NEVER{{% md %}}Never teardown the resource. This is useful for debugging and development.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workersettings">Worker<wbr>Settings</h4>

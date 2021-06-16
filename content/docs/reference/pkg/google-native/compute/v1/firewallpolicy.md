@@ -1151,7 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#firewallpolicyruledirection">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1251,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#firewallpolicyruledirection">Firewall<wbr>Policy<wbr>Rule<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1351,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#firewallpolicyruledirection">Firewall<wbr>Policy<wbr>Rule<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1451,7 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#firewallpolicyruledirection">Firewall<wbr>Policy<wbr>Rule<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1526,6 +1526,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of instances that are applied with this rule.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="firewallpolicyruledirection">Firewall<wbr>Policy<wbr>Rule<wbr>Direction</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Egress</dt>
+    <dd>EGRESS</dd><dt>Ingress</dt>
+    <dd>INGRESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Firewall<wbr>Policy<wbr>Rule<wbr>Direction<wbr>Egress</dt>
+    <dd>EGRESS</dd><dt>Firewall<wbr>Policy<wbr>Rule<wbr>Direction<wbr>Ingress</dt>
+    <dd>INGRESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Egress</dt>
+    <dd>EGRESS</dd><dt>Ingress</dt>
+    <dd>INGRESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EGRESS</dt>
+    <dd>EGRESS</dd><dt>INGRESS</dt>
+    <dd>INGRESS</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyrulematcher">Firewall<wbr>Policy<wbr>Rule<wbr>Matcher</h4>

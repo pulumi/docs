@@ -17,6 +17,14 @@ Explore the resources and functions of the google-native.cloudresourcemanager/v1
     <li><a href="projectiampolicy" title="ProjectIamPolicy"><span class="symbol resource"></span>ProjectIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getlien" title="GetLien"><span class="symbol function"></span>GetLien</a></li>
+    <li><a href="getorganizationiampolicy" title="GetOrganizationIamPolicy"><span class="symbol function"></span>GetOrganizationIamPolicy</a></li>
+    <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
+    <li><a href="getprojectiampolicy" title="GetProjectIamPolicy"><span class="symbol function"></span>GetProjectIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -24,6 +32,6 @@ Explore the resources and functions of the google-native.cloudresourcemanager/v1
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

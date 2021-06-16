@@ -19,6 +19,16 @@ Explore the resources and functions of the google-native.apigateway/v1 module.
     <li><a href="gatewayiampolicy" title="GatewayIamPolicy"><span class="symbol resource"></span>GatewayIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getapi" title="GetApi"><span class="symbol function"></span>GetApi</a></li>
+    <li><a href="getapiconfigiampolicy" title="GetApiConfigIamPolicy"><span class="symbol function"></span>GetApiConfigIamPolicy</a></li>
+    <li><a href="getapiiampolicy" title="GetApiIamPolicy"><span class="symbol function"></span>GetApiIamPolicy</a></li>
+    <li><a href="getconfig" title="GetConfig"><span class="symbol function"></span>GetConfig</a></li>
+    <li><a href="getgateway" title="GetGateway"><span class="symbol function"></span>GetGateway</a></li>
+    <li><a href="getgatewayiampolicy" title="GetGatewayIamPolicy"><span class="symbol function"></span>GetGatewayIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -26,6 +36,6 @@ Explore the resources and functions of the google-native.apigateway/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

@@ -29,7 +29,7 @@ Creates a repository. The returned Operation will finish once the repository has
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[_artifactregistry_v1beta1.RepositoryFormat]</span> = None<span class="p">,</span>
                <span class="nx">kms_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -202,7 +202,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#repositoryformat">Pulumi.<wbr>Google<wbr>Native.<wbr>Artifact<wbr>Registry.<wbr>V1Beta1.<wbr>Repository<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The format of packages that are stored in the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -286,7 +286,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#repositoryformat">Repository<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The format of packages that are stored in the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +370,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#repositoryformat">Repository<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The format of packages that are stored in the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +454,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#repositoryformat">Repository<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The format of packages that are stored in the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -559,6 +559,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="repositoryformat">Repository<wbr>Format</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Format<wbr>Unspecified</dt>
+    <dd>FORMAT_UNSPECIFIED{{% md %}}Unspecified package format.{{% /md %}}</dd><dt>Docker</dt>
+    <dd>DOCKER{{% md %}}Docker package format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Repository<wbr>Format<wbr>Format<wbr>Unspecified</dt>
+    <dd>FORMAT_UNSPECIFIED{{% md %}}Unspecified package format.{{% /md %}}</dd><dt>Repository<wbr>Format<wbr>Docker</dt>
+    <dd>DOCKER{{% md %}}Docker package format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Format<wbr>Unspecified</dt>
+    <dd>FORMAT_UNSPECIFIED{{% md %}}Unspecified package format.{{% /md %}}</dd><dt>Docker</dt>
+    <dd>DOCKER{{% md %}}Docker package format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FORMAT_UNSPECIFIED</dt>
+    <dd>FORMAT_UNSPECIFIED{{% md %}}Unspecified package format.{{% /md %}}</dd><dt>DOCKER</dt>
+    <dd>DOCKER{{% md %}}Docker package format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

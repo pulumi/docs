@@ -708,7 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#pkixpublickeysignaturealgorithm">Pulumi.<wbr>Google<wbr>Native.<wbr>Binary<wbr>Authorization.<wbr>V1.<wbr>Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -728,7 +728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#pkixpublickeysignaturealgorithm">Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -748,7 +748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#pkixpublickeysignaturealgorithm">Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -768,7 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#pkixpublickeysignaturealgorithm">Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -853,6 +853,84 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="pkixpublickeysignaturealgorithm">Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Signature<wbr>Algorithm<wbr>Unspecified</dt>
+    <dd>SIGNATURE_ALGORITHM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Rsa<wbr>Pss2048Sha256</dt>
+    <dd>RSA_PSS_2048_SHA256{{% md %}}RSASSA-PSS 2048 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Pss3072Sha256</dt>
+    <dd>RSA_PSS_3072_SHA256{{% md %}}RSASSA-PSS 3072 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Pss4096Sha256</dt>
+    <dd>RSA_PSS_4096_SHA256{{% md %}}RSASSA-PSS 4096 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Pss4096Sha512</dt>
+    <dd>RSA_PSS_4096_SHA512{{% md %}}RSASSA-PSS 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pkcs12048Sha256</dt>
+    <dd>RSA_SIGN_PKCS1_2048_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 2048 bit key and a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pkcs13072Sha256</dt>
+    <dd>RSA_SIGN_PKCS1_3072_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 3072 bit key and a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pkcs14096Sha256</dt>
+    <dd>RSA_SIGN_PKCS1_4096_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 4096 bit key and a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pkcs14096Sha512</dt>
+    <dd>RSA_SIGN_PKCS1_4096_SHA512{{% md %}}RSASSA-PKCS1-v1_5 with a 4096 bit key and a SHA512 digest.{{% /md %}}</dd><dt>Ecdsa<wbr>P256Sha256</dt>
+    <dd>ECDSA_P256_SHA256{{% md %}}ECDSA on the NIST P-256 curve with a SHA256 digest.{{% /md %}}</dd><dt>Ec<wbr>Sign<wbr>P256Sha256</dt>
+    <dd>EC_SIGN_P256_SHA256{{% md %}}ECDSA on the NIST P-256 curve with a SHA256 digest.{{% /md %}}</dd><dt>Ecdsa<wbr>P384Sha384</dt>
+    <dd>ECDSA_P384_SHA384{{% md %}}ECDSA on the NIST P-384 curve with a SHA384 digest.{{% /md %}}</dd><dt>Ec<wbr>Sign<wbr>P384Sha384</dt>
+    <dd>EC_SIGN_P384_SHA384{{% md %}}ECDSA on the NIST P-384 curve with a SHA384 digest.{{% /md %}}</dd><dt>Ecdsa<wbr>P521Sha512</dt>
+    <dd>ECDSA_P521_SHA512{{% md %}}ECDSA on the NIST P-521 curve with a SHA512 digest.{{% /md %}}</dd><dt>Ec<wbr>Sign<wbr>P521Sha512</dt>
+    <dd>EC_SIGN_P521_SHA512{{% md %}}ECDSA on the NIST P-521 curve with a SHA512 digest.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm<wbr>Signature<wbr>Algorithm<wbr>Unspecified</dt>
+    <dd>SIGNATURE_ALGORITHM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm<wbr>Rsa<wbr>Pss2048Sha256</dt>
+    <dd>RSA_PSS_2048_SHA256{{% md %}}RSASSA-PSS 2048 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm<wbr>Rsa<wbr>Pss3072Sha256</dt>
+    <dd>RSA_PSS_3072_SHA256{{% md %}}RSASSA-PSS 3072 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm<wbr>Rsa<wbr>Pss4096Sha256</dt>
+    <dd>RSA_PSS_4096_SHA256{{% md %}}RSASSA-PSS 4096 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm<wbr>Rsa<wbr>Pss4096Sha512</dt>
+    <dd>RSA_PSS_4096_SHA512{{% md %}}RSASSA-PSS 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm<wbr>Rsa<wbr>Sign<wbr>Pkcs12048Sha256</dt>
+    <dd>RSA_SIGN_PKCS1_2048_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 2048 bit key and a SHA256 digest.{{% /md %}}</dd><dt>Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm<wbr>Rsa<wbr>Sign<wbr>Pkcs13072Sha256</dt>
+    <dd>RSA_SIGN_PKCS1_3072_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 3072 bit key and a SHA256 digest.{{% /md %}}</dd><dt>Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm<wbr>Rsa<wbr>Sign<wbr>Pkcs14096Sha256</dt>
+    <dd>RSA_SIGN_PKCS1_4096_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 4096 bit key and a SHA256 digest.{{% /md %}}</dd><dt>Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm<wbr>Rsa<wbr>Sign<wbr>Pkcs14096Sha512</dt>
+    <dd>RSA_SIGN_PKCS1_4096_SHA512{{% md %}}RSASSA-PKCS1-v1_5 with a 4096 bit key and a SHA512 digest.{{% /md %}}</dd><dt>Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm<wbr>Ecdsa<wbr>P256Sha256</dt>
+    <dd>ECDSA_P256_SHA256{{% md %}}ECDSA on the NIST P-256 curve with a SHA256 digest.{{% /md %}}</dd><dt>Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm<wbr>Ec<wbr>Sign<wbr>P256Sha256</dt>
+    <dd>EC_SIGN_P256_SHA256{{% md %}}ECDSA on the NIST P-256 curve with a SHA256 digest.{{% /md %}}</dd><dt>Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm<wbr>Ecdsa<wbr>P384Sha384</dt>
+    <dd>ECDSA_P384_SHA384{{% md %}}ECDSA on the NIST P-384 curve with a SHA384 digest.{{% /md %}}</dd><dt>Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm<wbr>Ec<wbr>Sign<wbr>P384Sha384</dt>
+    <dd>EC_SIGN_P384_SHA384{{% md %}}ECDSA on the NIST P-384 curve with a SHA384 digest.{{% /md %}}</dd><dt>Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm<wbr>Ecdsa<wbr>P521Sha512</dt>
+    <dd>ECDSA_P521_SHA512{{% md %}}ECDSA on the NIST P-521 curve with a SHA512 digest.{{% /md %}}</dd><dt>Pkix<wbr>Public<wbr>Key<wbr>Signature<wbr>Algorithm<wbr>Ec<wbr>Sign<wbr>P521Sha512</dt>
+    <dd>EC_SIGN_P521_SHA512{{% md %}}ECDSA on the NIST P-521 curve with a SHA512 digest.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Signature<wbr>Algorithm<wbr>Unspecified</dt>
+    <dd>SIGNATURE_ALGORITHM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Rsa<wbr>Pss2048Sha256</dt>
+    <dd>RSA_PSS_2048_SHA256{{% md %}}RSASSA-PSS 2048 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Pss3072Sha256</dt>
+    <dd>RSA_PSS_3072_SHA256{{% md %}}RSASSA-PSS 3072 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Pss4096Sha256</dt>
+    <dd>RSA_PSS_4096_SHA256{{% md %}}RSASSA-PSS 4096 bit key with a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Pss4096Sha512</dt>
+    <dd>RSA_PSS_4096_SHA512{{% md %}}RSASSA-PSS 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pkcs12048Sha256</dt>
+    <dd>RSA_SIGN_PKCS1_2048_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 2048 bit key and a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pkcs13072Sha256</dt>
+    <dd>RSA_SIGN_PKCS1_3072_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 3072 bit key and a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pkcs14096Sha256</dt>
+    <dd>RSA_SIGN_PKCS1_4096_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 4096 bit key and a SHA256 digest.{{% /md %}}</dd><dt>Rsa<wbr>Sign<wbr>Pkcs14096Sha512</dt>
+    <dd>RSA_SIGN_PKCS1_4096_SHA512{{% md %}}RSASSA-PKCS1-v1_5 with a 4096 bit key and a SHA512 digest.{{% /md %}}</dd><dt>Ecdsa<wbr>P256Sha256</dt>
+    <dd>ECDSA_P256_SHA256{{% md %}}ECDSA on the NIST P-256 curve with a SHA256 digest.{{% /md %}}</dd><dt>Ec<wbr>Sign<wbr>P256Sha256</dt>
+    <dd>EC_SIGN_P256_SHA256{{% md %}}ECDSA on the NIST P-256 curve with a SHA256 digest.{{% /md %}}</dd><dt>Ecdsa<wbr>P384Sha384</dt>
+    <dd>ECDSA_P384_SHA384{{% md %}}ECDSA on the NIST P-384 curve with a SHA384 digest.{{% /md %}}</dd><dt>Ec<wbr>Sign<wbr>P384Sha384</dt>
+    <dd>EC_SIGN_P384_SHA384{{% md %}}ECDSA on the NIST P-384 curve with a SHA384 digest.{{% /md %}}</dd><dt>Ecdsa<wbr>P521Sha512</dt>
+    <dd>ECDSA_P521_SHA512{{% md %}}ECDSA on the NIST P-521 curve with a SHA512 digest.{{% /md %}}</dd><dt>Ec<wbr>Sign<wbr>P521Sha512</dt>
+    <dd>EC_SIGN_P521_SHA512{{% md %}}ECDSA on the NIST P-521 curve with a SHA512 digest.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SIGNATURE_ALGORITHM_UNSPECIFIED</dt>
+    <dd>SIGNATURE_ALGORITHM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>RSA_PSS2048_SHA256</dt>
+    <dd>RSA_PSS_2048_SHA256{{% md %}}RSASSA-PSS 2048 bit key with a SHA256 digest.{{% /md %}}</dd><dt>RSA_PSS3072_SHA256</dt>
+    <dd>RSA_PSS_3072_SHA256{{% md %}}RSASSA-PSS 3072 bit key with a SHA256 digest.{{% /md %}}</dd><dt>RSA_PSS4096_SHA256</dt>
+    <dd>RSA_PSS_4096_SHA256{{% md %}}RSASSA-PSS 4096 bit key with a SHA256 digest.{{% /md %}}</dd><dt>RSA_PSS4096_SHA512</dt>
+    <dd>RSA_PSS_4096_SHA512{{% md %}}RSASSA-PSS 4096 bit key with a SHA512 digest.{{% /md %}}</dd><dt>RSA_SIGN_PKCS12048_SHA256</dt>
+    <dd>RSA_SIGN_PKCS1_2048_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 2048 bit key and a SHA256 digest.{{% /md %}}</dd><dt>RSA_SIGN_PKCS13072_SHA256</dt>
+    <dd>RSA_SIGN_PKCS1_3072_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 3072 bit key and a SHA256 digest.{{% /md %}}</dd><dt>RSA_SIGN_PKCS14096_SHA256</dt>
+    <dd>RSA_SIGN_PKCS1_4096_SHA256{{% md %}}RSASSA-PKCS1-v1_5 with a 4096 bit key and a SHA256 digest.{{% /md %}}</dd><dt>RSA_SIGN_PKCS14096_SHA512</dt>
+    <dd>RSA_SIGN_PKCS1_4096_SHA512{{% md %}}RSASSA-PKCS1-v1_5 with a 4096 bit key and a SHA512 digest.{{% /md %}}</dd><dt>ECDSA_P256_SHA256</dt>
+    <dd>ECDSA_P256_SHA256{{% md %}}ECDSA on the NIST P-256 curve with a SHA256 digest.{{% /md %}}</dd><dt>EC_SIGN_P256_SHA256</dt>
+    <dd>EC_SIGN_P256_SHA256{{% md %}}ECDSA on the NIST P-256 curve with a SHA256 digest.{{% /md %}}</dd><dt>ECDSA_P384_SHA384</dt>
+    <dd>ECDSA_P384_SHA384{{% md %}}ECDSA on the NIST P-384 curve with a SHA384 digest.{{% /md %}}</dd><dt>EC_SIGN_P384_SHA384</dt>
+    <dd>EC_SIGN_P384_SHA384{{% md %}}ECDSA on the NIST P-384 curve with a SHA384 digest.{{% /md %}}</dd><dt>ECDSA_P521_SHA512</dt>
+    <dd>ECDSA_P521_SHA512{{% md %}}ECDSA on the NIST P-521 curve with a SHA512 digest.{{% /md %}}</dd><dt>EC_SIGN_P521_SHA512</dt>
+    <dd>EC_SIGN_P521_SHA512{{% md %}}ECDSA on the NIST P-521 curve with a SHA512 digest.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userownedgrafeasnote">User<wbr>Owned<wbr>Grafeas<wbr>Note</h4>

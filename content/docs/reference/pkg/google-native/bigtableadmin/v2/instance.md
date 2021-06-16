@@ -34,7 +34,7 @@ Create an instance within a project.
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+             <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[_bigtableadmin_v2.InstanceType]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span>
@@ -224,7 +224,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Bigtable<wbr>Admin.<wbr>V2.<wbr>Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the instance. Defaults to `PRODUCTION`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -292,7 +292,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the instance. Defaults to `PRODUCTION`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -360,7 +360,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the instance. Defaults to `PRODUCTION`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -428,7 +428,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the instance. Defaults to `PRODUCTION`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -525,6 +525,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="instancetype">Instance<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}The type of the instance is unspecified. If set when creating an instance, a `PRODUCTION` instance will be created. If set when updating an instance, the type will be left unchanged.{{% /md %}}</dd><dt>Production</dt>
+    <dd>PRODUCTION{{% md %}}An instance meant for production use. `serve_nodes` must be set on the cluster.{{% /md %}}</dd><dt>Development</dt>
+    <dd>DEVELOPMENT{{% md %}}DEPRECATED: Prefer PRODUCTION for all use cases, as it no longer enforces a higher minimum node count than DEVELOPMENT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}The type of the instance is unspecified. If set when creating an instance, a `PRODUCTION` instance will be created. If set when updating an instance, the type will be left unchanged.{{% /md %}}</dd><dt>Instance<wbr>Type<wbr>Production</dt>
+    <dd>PRODUCTION{{% md %}}An instance meant for production use. `serve_nodes` must be set on the cluster.{{% /md %}}</dd><dt>Instance<wbr>Type<wbr>Development</dt>
+    <dd>DEVELOPMENT{{% md %}}DEPRECATED: Prefer PRODUCTION for all use cases, as it no longer enforces a higher minimum node count than DEVELOPMENT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}The type of the instance is unspecified. If set when creating an instance, a `PRODUCTION` instance will be created. If set when updating an instance, the type will be left unchanged.{{% /md %}}</dd><dt>Production</dt>
+    <dd>PRODUCTION{{% md %}}An instance meant for production use. `serve_nodes` must be set on the cluster.{{% /md %}}</dd><dt>Development</dt>
+    <dd>DEVELOPMENT{{% md %}}DEPRECATED: Prefer PRODUCTION for all use cases, as it no longer enforces a higher minimum node count than DEVELOPMENT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}The type of the instance is unspecified. If set when creating an instance, a `PRODUCTION` instance will be created. If set when updating an instance, the type will be left unchanged.{{% /md %}}</dd><dt>PRODUCTION</dt>
+    <dd>PRODUCTION{{% md %}}An instance meant for production use. `serve_nodes` must be set on the cluster.{{% /md %}}</dd><dt>DEVELOPMENT</dt>
+    <dd>DEVELOPMENT{{% md %}}DEPRECATED: Prefer PRODUCTION for all use cases, as it no longer enforces a higher minimum node count than DEVELOPMENT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

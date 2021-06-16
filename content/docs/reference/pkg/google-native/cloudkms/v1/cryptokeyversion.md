@@ -32,7 +32,7 @@ Create a new CryptoKeyVersion in a CryptoKey. The server will assign the next se
                      <span class="nx">key_ring_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                     <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_cloudkms_v1.CryptoKeyVersionState]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">CryptoKeyVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CryptoKeyVersionArgs</a></span><span class="p">,</span>
@@ -206,7 +206,7 @@ The CryptoKeyVersion resource accepts the following [input]({{< relref "/docs/in
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cryptokeyversionstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloudkms.<wbr>V1.<wbr>Crypto<wbr>Key<wbr>Version<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the CryptoKeyVersion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -258,7 +258,7 @@ The CryptoKeyVersion resource accepts the following [input]({{< relref "/docs/in
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cryptokeyversionstate">Crypto<wbr>Key<wbr>Version<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The current state of the CryptoKeyVersion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -310,7 +310,7 @@ The CryptoKeyVersion resource accepts the following [input]({{< relref "/docs/in
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cryptokeyversionstate">Crypto<wbr>Key<wbr>Version<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the CryptoKeyVersion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -362,7 +362,7 @@ The CryptoKeyVersion resource accepts the following [input]({{< relref "/docs/in
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#cryptokeyversionstate">Crypto<wbr>Key<wbr>Version<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of the CryptoKeyVersion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -896,6 +896,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Google partition certificate chain corresponding to the attestation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cryptokeyversionstate">Crypto<wbr>Key<wbr>Version<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Crypto<wbr>Key<wbr>Version<wbr>State<wbr>Unspecified</dt>
+    <dd>CRYPTO_KEY_VERSION_STATE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Pending<wbr>Generation</dt>
+    <dd>PENDING_GENERATION{{% md %}}This version is still being generated. It may not be used, enabled, disabled, or destroyed yet. Cloud KMS will automatically mark this version ENABLED as soon as the version is ready.{{% /md %}}</dd><dt>Enabled</dt>
+    <dd>ENABLED{{% md %}}This version may be used for cryptographic operations.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}This version may not be used, but the key material is still available, and the version can be placed back into the ENABLED state.{{% /md %}}</dd><dt>Destroyed</dt>
+    <dd>DESTROYED{{% md %}}This version is destroyed, and the key material is no longer stored.{{% /md %}}</dd><dt>Destroy<wbr>Scheduled</dt>
+    <dd>DESTROY_SCHEDULED{{% md %}}This version is scheduled for destruction, and will be destroyed soon. Call RestoreCryptoKeyVersion to put it back into the DISABLED state.{{% /md %}}</dd><dt>Pending<wbr>Import</dt>
+    <dd>PENDING_IMPORT{{% md %}}This version is still being imported. It may not be used, enabled, disabled, or destroyed yet. Cloud KMS will automatically mark this version ENABLED as soon as the version is ready.{{% /md %}}</dd><dt>Import<wbr>Failed</dt>
+    <dd>IMPORT_FAILED{{% md %}}This version was not imported successfully. It may not be used, enabled, disabled, or destroyed. The submitted key material has been discarded. Additional details can be found in CryptoKeyVersion.import_failure_reason.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Crypto<wbr>Key<wbr>Version<wbr>State<wbr>Crypto<wbr>Key<wbr>Version<wbr>State<wbr>Unspecified</dt>
+    <dd>CRYPTO_KEY_VERSION_STATE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>State<wbr>Pending<wbr>Generation</dt>
+    <dd>PENDING_GENERATION{{% md %}}This version is still being generated. It may not be used, enabled, disabled, or destroyed yet. Cloud KMS will automatically mark this version ENABLED as soon as the version is ready.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>State<wbr>Enabled</dt>
+    <dd>ENABLED{{% md %}}This version may be used for cryptographic operations.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>State<wbr>Disabled</dt>
+    <dd>DISABLED{{% md %}}This version may not be used, but the key material is still available, and the version can be placed back into the ENABLED state.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>State<wbr>Destroyed</dt>
+    <dd>DESTROYED{{% md %}}This version is destroyed, and the key material is no longer stored.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>State<wbr>Destroy<wbr>Scheduled</dt>
+    <dd>DESTROY_SCHEDULED{{% md %}}This version is scheduled for destruction, and will be destroyed soon. Call RestoreCryptoKeyVersion to put it back into the DISABLED state.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>State<wbr>Pending<wbr>Import</dt>
+    <dd>PENDING_IMPORT{{% md %}}This version is still being imported. It may not be used, enabled, disabled, or destroyed yet. Cloud KMS will automatically mark this version ENABLED as soon as the version is ready.{{% /md %}}</dd><dt>Crypto<wbr>Key<wbr>Version<wbr>State<wbr>Import<wbr>Failed</dt>
+    <dd>IMPORT_FAILED{{% md %}}This version was not imported successfully. It may not be used, enabled, disabled, or destroyed. The submitted key material has been discarded. Additional details can be found in CryptoKeyVersion.import_failure_reason.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Crypto<wbr>Key<wbr>Version<wbr>State<wbr>Unspecified</dt>
+    <dd>CRYPTO_KEY_VERSION_STATE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Pending<wbr>Generation</dt>
+    <dd>PENDING_GENERATION{{% md %}}This version is still being generated. It may not be used, enabled, disabled, or destroyed yet. Cloud KMS will automatically mark this version ENABLED as soon as the version is ready.{{% /md %}}</dd><dt>Enabled</dt>
+    <dd>ENABLED{{% md %}}This version may be used for cryptographic operations.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}This version may not be used, but the key material is still available, and the version can be placed back into the ENABLED state.{{% /md %}}</dd><dt>Destroyed</dt>
+    <dd>DESTROYED{{% md %}}This version is destroyed, and the key material is no longer stored.{{% /md %}}</dd><dt>Destroy<wbr>Scheduled</dt>
+    <dd>DESTROY_SCHEDULED{{% md %}}This version is scheduled for destruction, and will be destroyed soon. Call RestoreCryptoKeyVersion to put it back into the DISABLED state.{{% /md %}}</dd><dt>Pending<wbr>Import</dt>
+    <dd>PENDING_IMPORT{{% md %}}This version is still being imported. It may not be used, enabled, disabled, or destroyed yet. Cloud KMS will automatically mark this version ENABLED as soon as the version is ready.{{% /md %}}</dd><dt>Import<wbr>Failed</dt>
+    <dd>IMPORT_FAILED{{% md %}}This version was not imported successfully. It may not be used, enabled, disabled, or destroyed. The submitted key material has been discarded. Additional details can be found in CryptoKeyVersion.import_failure_reason.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CRYPTO_KEY_VERSION_STATE_UNSPECIFIED</dt>
+    <dd>CRYPTO_KEY_VERSION_STATE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>PENDING_GENERATION</dt>
+    <dd>PENDING_GENERATION{{% md %}}This version is still being generated. It may not be used, enabled, disabled, or destroyed yet. Cloud KMS will automatically mark this version ENABLED as soon as the version is ready.{{% /md %}}</dd><dt>ENABLED</dt>
+    <dd>ENABLED{{% md %}}This version may be used for cryptographic operations.{{% /md %}}</dd><dt>DISABLED</dt>
+    <dd>DISABLED{{% md %}}This version may not be used, but the key material is still available, and the version can be placed back into the ENABLED state.{{% /md %}}</dd><dt>DESTROYED</dt>
+    <dd>DESTROYED{{% md %}}This version is destroyed, and the key material is no longer stored.{{% /md %}}</dd><dt>DESTROY_SCHEDULED</dt>
+    <dd>DESTROY_SCHEDULED{{% md %}}This version is scheduled for destruction, and will be destroyed soon. Call RestoreCryptoKeyVersion to put it back into the DISABLED state.{{% /md %}}</dd><dt>PENDING_IMPORT</dt>
+    <dd>PENDING_IMPORT{{% md %}}This version is still being imported. It may not be used, enabled, disabled, or destroyed yet. Cloud KMS will automatically mark this version ENABLED as soon as the version is ready.{{% /md %}}</dd><dt>IMPORT_FAILED</dt>
+    <dd>IMPORT_FAILED{{% md %}}This version was not imported successfully. It may not be used, enabled, disabled, or destroyed. The submitted key material has been discarded. Additional details can be found in CryptoKeyVersion.import_failure_reason.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="externalprotectionleveloptions">External<wbr>Protection<wbr>Level<wbr>Options</h4>

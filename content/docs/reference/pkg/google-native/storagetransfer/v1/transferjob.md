@@ -33,7 +33,7 @@ Creates a transfer job that runs periodically.
                 <span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[_storagetransfer_v1.NotificationConfigArgs]</span> = None<span class="p">,</span>
                 <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[_storagetransfer_v1.ScheduleArgs]</span> = None<span class="p">,</span>
-                <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_storagetransfer_v1.TransferJobStatus]</span> = None<span class="p">,</span>
                 <span class="nx">transfer_spec</span><span class="p">:</span> <span class="nx">Optional[_storagetransfer_v1.TransferSpecArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TransferJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -216,7 +216,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#transferjobstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage<wbr>Transfer.<wbr>V1.<wbr>Transfer<wbr>Job<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the job. This value MUST be specified for `CreateTransferJobRequests`. **Note:** The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -284,7 +284,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#transferjobstatus">Transfer<wbr>Job<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the job. This value MUST be specified for `CreateTransferJobRequests`. **Note:** The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -352,7 +352,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#transferjobstatus">Transfer<wbr>Job<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the job. This value MUST be specified for `CreateTransferJobRequests`. **Note:** The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -420,7 +420,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#transferjobstatus">Transfer<wbr>Job<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the job. This value MUST be specified for `CreateTransferJobRequests`. **Note:** The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1879,7 +1879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtypes_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#notificationconfigeventtypesitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Storage<wbr>Transfer.<wbr>V1.<wbr>Notification<wbr>Config<wbr>Event<wbr>Types<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}Event types for which a notification is desired. If empty, send notifications for all event types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1887,7 +1887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payloadformat_csharp" style="color: inherit; text-decoration: inherit;">Payload<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#notificationconfigpayloadformat">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage<wbr>Transfer.<wbr>V1.<wbr>Notification<wbr>Config<wbr>Payload<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Required. The desired format of the notification message payloads.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1907,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtypes_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#notificationconfigeventtypesitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}Event types for which a notification is desired. If empty, send notifications for all event types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1915,7 +1915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payloadformat_go" style="color: inherit; text-decoration: inherit;">Payload<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#notificationconfigpayloadformat">Notification<wbr>Config<wbr>Payload<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Required. The desired format of the notification message payloads.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1935,7 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtypes_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#notificationconfigeventtypesitem">Notification<wbr>Config<wbr>Event<wbr>Types<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}Event types for which a notification is desired. If empty, send notifications for all event types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1943,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payloadformat_nodejs" style="color: inherit; text-decoration: inherit;">payload<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#notificationconfigpayloadformat">Notification<wbr>Config<wbr>Payload<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Required. The desired format of the notification message payloads.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1963,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_types_python" style="color: inherit; text-decoration: inherit;">event_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#notificationconfigeventtypesitem">Notification<wbr>Config<wbr>Event<wbr>Types<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}Event types for which a notification is desired. If empty, send notifications for all event types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1971,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payload_format_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#notificationconfigpayloadformat">Notification<wbr>Config<wbr>Payload<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Required. The desired format of the notification message payloads.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1982,6 +1982,70 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The `Topic.name` of the Cloud Pub/Sub topic to which to publish notifications. Must be of the format: `projects/{project}/topics/{topic}`. Not matching this format will result in an INVALID_ARGUMENT error.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="notificationconfigeventtypesitem">Notification<wbr>Config<wbr>Event<wbr>Types<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Event<wbr>Type<wbr>Unspecified</dt>
+    <dd>EVENT_TYPE_UNSPECIFIED{{% md %}}Illegal value, to avoid allowing a default.{{% /md %}}</dd><dt>Transfer<wbr>Operation<wbr>Success</dt>
+    <dd>TRANSFER_OPERATION_SUCCESS{{% md %}}`TransferOperation` completed with status SUCCESS.{{% /md %}}</dd><dt>Transfer<wbr>Operation<wbr>Failed</dt>
+    <dd>TRANSFER_OPERATION_FAILED{{% md %}}`TransferOperation` completed with status FAILED.{{% /md %}}</dd><dt>Transfer<wbr>Operation<wbr>Aborted</dt>
+    <dd>TRANSFER_OPERATION_ABORTED{{% md %}}`TransferOperation` completed with status ABORTED.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Notification<wbr>Config<wbr>Event<wbr>Types<wbr>Item<wbr>Event<wbr>Type<wbr>Unspecified</dt>
+    <dd>EVENT_TYPE_UNSPECIFIED{{% md %}}Illegal value, to avoid allowing a default.{{% /md %}}</dd><dt>Notification<wbr>Config<wbr>Event<wbr>Types<wbr>Item<wbr>Transfer<wbr>Operation<wbr>Success</dt>
+    <dd>TRANSFER_OPERATION_SUCCESS{{% md %}}`TransferOperation` completed with status SUCCESS.{{% /md %}}</dd><dt>Notification<wbr>Config<wbr>Event<wbr>Types<wbr>Item<wbr>Transfer<wbr>Operation<wbr>Failed</dt>
+    <dd>TRANSFER_OPERATION_FAILED{{% md %}}`TransferOperation` completed with status FAILED.{{% /md %}}</dd><dt>Notification<wbr>Config<wbr>Event<wbr>Types<wbr>Item<wbr>Transfer<wbr>Operation<wbr>Aborted</dt>
+    <dd>TRANSFER_OPERATION_ABORTED{{% md %}}`TransferOperation` completed with status ABORTED.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Event<wbr>Type<wbr>Unspecified</dt>
+    <dd>EVENT_TYPE_UNSPECIFIED{{% md %}}Illegal value, to avoid allowing a default.{{% /md %}}</dd><dt>Transfer<wbr>Operation<wbr>Success</dt>
+    <dd>TRANSFER_OPERATION_SUCCESS{{% md %}}`TransferOperation` completed with status SUCCESS.{{% /md %}}</dd><dt>Transfer<wbr>Operation<wbr>Failed</dt>
+    <dd>TRANSFER_OPERATION_FAILED{{% md %}}`TransferOperation` completed with status FAILED.{{% /md %}}</dd><dt>Transfer<wbr>Operation<wbr>Aborted</dt>
+    <dd>TRANSFER_OPERATION_ABORTED{{% md %}}`TransferOperation` completed with status ABORTED.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EVENT_TYPE_UNSPECIFIED</dt>
+    <dd>EVENT_TYPE_UNSPECIFIED{{% md %}}Illegal value, to avoid allowing a default.{{% /md %}}</dd><dt>TRANSFER_OPERATION_SUCCESS</dt>
+    <dd>TRANSFER_OPERATION_SUCCESS{{% md %}}`TransferOperation` completed with status SUCCESS.{{% /md %}}</dd><dt>TRANSFER_OPERATION_FAILED</dt>
+    <dd>TRANSFER_OPERATION_FAILED{{% md %}}`TransferOperation` completed with status FAILED.{{% /md %}}</dd><dt>TRANSFER_OPERATION_ABORTED</dt>
+    <dd>TRANSFER_OPERATION_ABORTED{{% md %}}`TransferOperation` completed with status ABORTED.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="notificationconfigpayloadformat">Notification<wbr>Config<wbr>Payload<wbr>Format</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Payload<wbr>Format<wbr>Unspecified</dt>
+    <dd>PAYLOAD_FORMAT_UNSPECIFIED{{% md %}}Illegal value, to avoid allowing a default.{{% /md %}}</dd><dt>None</dt>
+    <dd>NONE{{% md %}}No payload is included with the notification.{{% /md %}}</dd><dt>Json</dt>
+    <dd>JSON{{% md %}}`TransferOperation` is [formatted as a JSON response](https://developers.google.com/protocol-buffers/docs/proto3#json), in application/json.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Notification<wbr>Config<wbr>Payload<wbr>Format<wbr>Payload<wbr>Format<wbr>Unspecified</dt>
+    <dd>PAYLOAD_FORMAT_UNSPECIFIED{{% md %}}Illegal value, to avoid allowing a default.{{% /md %}}</dd><dt>Notification<wbr>Config<wbr>Payload<wbr>Format<wbr>None</dt>
+    <dd>NONE{{% md %}}No payload is included with the notification.{{% /md %}}</dd><dt>Notification<wbr>Config<wbr>Payload<wbr>Format<wbr>Json</dt>
+    <dd>JSON{{% md %}}`TransferOperation` is [formatted as a JSON response](https://developers.google.com/protocol-buffers/docs/proto3#json), in application/json.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Payload<wbr>Format<wbr>Unspecified</dt>
+    <dd>PAYLOAD_FORMAT_UNSPECIFIED{{% md %}}Illegal value, to avoid allowing a default.{{% /md %}}</dd><dt>None</dt>
+    <dd>NONE{{% md %}}No payload is included with the notification.{{% /md %}}</dd><dt>Json</dt>
+    <dd>JSON{{% md %}}`TransferOperation` is [formatted as a JSON response](https://developers.google.com/protocol-buffers/docs/proto3#json), in application/json.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PAYLOAD_FORMAT_UNSPECIFIED</dt>
+    <dd>PAYLOAD_FORMAT_UNSPECIFIED{{% md %}}Illegal value, to avoid allowing a default.{{% /md %}}</dd><dt>NONE</dt>
+    <dd>NONE{{% md %}}No payload is included with the notification.{{% /md %}}</dd><dt>JSON</dt>
+    <dd>JSON{{% md %}}`TransferOperation` is [formatted as a JSON response](https://developers.google.com/protocol-buffers/docs/proto3#json), in application/json.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="notificationconfigresponse">Notification<wbr>Config<wbr>Response</h4>
@@ -3164,6 +3228,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="transferjobstatus">Transfer<wbr>Job<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Zero is an illegal value.{{% /md %}}</dd><dt>Enabled</dt>
+    <dd>ENABLED{{% md %}}New transfers will be performed based on the schedule.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}New transfers will not be scheduled.{{% /md %}}</dd><dt>Deleted</dt>
+    <dd>DELETED{{% md %}}This is a soft delete state. After a transfer job is set to this state, the job and all the transfer executions are subject to garbage collection. Transfer jobs become eligible for garbage collection 30 days after their status is set to `DELETED`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Transfer<wbr>Job<wbr>Status<wbr>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Zero is an illegal value.{{% /md %}}</dd><dt>Transfer<wbr>Job<wbr>Status<wbr>Enabled</dt>
+    <dd>ENABLED{{% md %}}New transfers will be performed based on the schedule.{{% /md %}}</dd><dt>Transfer<wbr>Job<wbr>Status<wbr>Disabled</dt>
+    <dd>DISABLED{{% md %}}New transfers will not be scheduled.{{% /md %}}</dd><dt>Transfer<wbr>Job<wbr>Status<wbr>Deleted</dt>
+    <dd>DELETED{{% md %}}This is a soft delete state. After a transfer job is set to this state, the job and all the transfer executions are subject to garbage collection. Transfer jobs become eligible for garbage collection 30 days after their status is set to `DELETED`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Zero is an illegal value.{{% /md %}}</dd><dt>Enabled</dt>
+    <dd>ENABLED{{% md %}}New transfers will be performed based on the schedule.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}New transfers will not be scheduled.{{% /md %}}</dd><dt>Deleted</dt>
+    <dd>DELETED{{% md %}}This is a soft delete state. After a transfer job is set to this state, the job and all the transfer executions are subject to garbage collection. Transfer jobs become eligible for garbage collection 30 days after their status is set to `DELETED`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATUS_UNSPECIFIED</dt>
+    <dd>STATUS_UNSPECIFIED{{% md %}}Zero is an illegal value.{{% /md %}}</dd><dt>ENABLED</dt>
+    <dd>ENABLED{{% md %}}New transfers will be performed based on the schedule.{{% /md %}}</dd><dt>DISABLED</dt>
+    <dd>DISABLED{{% md %}}New transfers will not be scheduled.{{% /md %}}</dd><dt>DELETED</dt>
+    <dd>DELETED{{% md %}}This is a soft delete state. After a transfer job is set to this state, the job and all the transfer executions are subject to garbage collection. Transfer jobs become eligible for garbage collection 30 days after their status is set to `DELETED`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferoptions">Transfer<wbr>Options</h4>

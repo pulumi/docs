@@ -27,11 +27,11 @@ Registers a new domain name and creates a corresponding `Registration` resource.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Registration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                 <span class="nx">contact_notices</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">contact_notices</span><span class="p">:</span> <span class="nx">Optional[Sequence[_domains_v1beta1.RegistrationContactNoticesItem]]</span> = None<span class="p">,</span>
                  <span class="nx">contact_settings</span><span class="p">:</span> <span class="nx">Optional[_domains_v1beta1.ContactSettingsArgs]</span> = None<span class="p">,</span>
                  <span class="nx">dns_settings</span><span class="p">:</span> <span class="nx">Optional[_domains_v1beta1.DnsSettingsArgs]</span> = None<span class="p">,</span>
                  <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">domain_notices</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">domain_notices</span><span class="p">:</span> <span class="nx">Optional[Sequence[_domains_v1beta1.RegistrationDomainNoticesItem]]</span> = None<span class="p">,</span>
                  <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                  <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">management_settings</span><span class="p">:</span> <span class="nx">Optional[_domains_v1beta1.ManagementSettingsArgs]</span> = None<span class="p">,</span>
@@ -187,7 +187,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#contactnotices_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Notices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#registrationcontactnoticesitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Domains.<wbr>V1Beta1.<wbr>Registration<wbr>Contact<wbr>Notices<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of contact notices that the caller acknowledges. The notices needed here depend on the values specified in `registration.contact_settings`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -219,7 +219,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#domainnotices_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Notices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#registrationdomainnoticesitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Domains.<wbr>V1Beta1.<wbr>Registration<wbr>Domain<wbr>Notices<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of domain notices that you acknowledge. Call `RetrieveRegisterParameters` to see the notices that need acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -279,7 +279,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#contactnotices_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Notices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#registrationcontactnoticesitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}The list of contact notices that the caller acknowledges. The notices needed here depend on the values specified in `registration.contact_settings`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -311,7 +311,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#domainnotices_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Notices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#registrationdomainnoticesitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}The list of domain notices that you acknowledge. Call `RetrieveRegisterParameters` to see the notices that need acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -371,7 +371,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#contactnotices_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Notices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#registrationcontactnoticesitem">Registration<wbr>Contact<wbr>Notices<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}The list of contact notices that the caller acknowledges. The notices needed here depend on the values specified in `registration.contact_settings`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -403,7 +403,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#domainnotices_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Notices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#registrationdomainnoticesitem">Registration<wbr>Domain<wbr>Notices<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}The list of domain notices that you acknowledge. Call `RetrieveRegisterParameters` to see the notices that need acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -463,7 +463,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#contact_notices_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>notices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#registrationcontactnoticesitem">Registration<wbr>Contact<wbr>Notices<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}The list of contact notices that the caller acknowledges. The notices needed here depend on the values specified in `registration.contact_settings`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -495,7 +495,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#domain_notices_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>notices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#registrationdomainnoticesitem">Registration<wbr>Domain<wbr>Notices<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}The list of domain notices that you acknowledge. Call `RetrieveRegisterParameters` to see the notices that need acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1130,7 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privacy_csharp" style="color: inherit; text-decoration: inherit;">Privacy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#contactsettingsprivacy">Pulumi.<wbr>Google<wbr>Native.<wbr>Domains.<wbr>V1Beta1.<wbr>Contact<wbr>Settings<wbr>Privacy</a></span>
     </dt>
     <dd>{{% md %}}Required. Privacy setting for the contacts associated with the `Registration`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1166,7 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privacy_go" style="color: inherit; text-decoration: inherit;">Privacy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#contactsettingsprivacy">Contact<wbr>Settings<wbr>Privacy</a></span>
     </dt>
     <dd>{{% md %}}Required. Privacy setting for the contacts associated with the `Registration`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1202,7 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privacy_nodejs" style="color: inherit; text-decoration: inherit;">privacy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#contactsettingsprivacy">Contact<wbr>Settings<wbr>Privacy</a></span>
     </dt>
     <dd>{{% md %}}Required. Privacy setting for the contacts associated with the `Registration`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1238,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privacy_python" style="color: inherit; text-decoration: inherit;">privacy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#contactsettingsprivacy">Contact<wbr>Settings<wbr>Privacy</a></span>
     </dt>
     <dd>{{% md %}}Required. Privacy setting for the contacts associated with the `Registration`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1257,6 +1257,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#contact">Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The technical contact for the `Registration`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="contactsettingsprivacy">Contact<wbr>Settings<wbr>Privacy</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Contact<wbr>Privacy<wbr>Unspecified</dt>
+    <dd>CONTACT_PRIVACY_UNSPECIFIED{{% md %}}The contact privacy settings are undefined.{{% /md %}}</dd><dt>Public<wbr>Contact<wbr>Data</dt>
+    <dd>PUBLIC_CONTACT_DATA{{% md %}}All the data from `ContactSettings` is publicly available. When setting this option, you must also provide a `PUBLIC_CONTACT_DATA_ACKNOWLEDGEMENT` in the `contact_notices` field of the request.{{% /md %}}</dd><dt>Private<wbr>Contact<wbr>Data</dt>
+    <dd>PRIVATE_CONTACT_DATA{{% md %}}None of the data from `ContactSettings` is publicly available. Instead, proxy contact data is published for your domain. Email sent to the proxy email address is forwarded to the registrant's email address. Cloud Domains provides this privacy proxy service at no additional cost.{{% /md %}}</dd><dt>Redacted<wbr>Contact<wbr>Data</dt>
+    <dd>REDACTED_CONTACT_DATA{{% md %}}Some data from `ContactSettings` is publicly available. The actual information redacted depends on the domain. For details, see [the registration privacy article](https://support.google.com/domains/answer/3251242).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Contact<wbr>Settings<wbr>Privacy<wbr>Contact<wbr>Privacy<wbr>Unspecified</dt>
+    <dd>CONTACT_PRIVACY_UNSPECIFIED{{% md %}}The contact privacy settings are undefined.{{% /md %}}</dd><dt>Contact<wbr>Settings<wbr>Privacy<wbr>Public<wbr>Contact<wbr>Data</dt>
+    <dd>PUBLIC_CONTACT_DATA{{% md %}}All the data from `ContactSettings` is publicly available. When setting this option, you must also provide a `PUBLIC_CONTACT_DATA_ACKNOWLEDGEMENT` in the `contact_notices` field of the request.{{% /md %}}</dd><dt>Contact<wbr>Settings<wbr>Privacy<wbr>Private<wbr>Contact<wbr>Data</dt>
+    <dd>PRIVATE_CONTACT_DATA{{% md %}}None of the data from `ContactSettings` is publicly available. Instead, proxy contact data is published for your domain. Email sent to the proxy email address is forwarded to the registrant's email address. Cloud Domains provides this privacy proxy service at no additional cost.{{% /md %}}</dd><dt>Contact<wbr>Settings<wbr>Privacy<wbr>Redacted<wbr>Contact<wbr>Data</dt>
+    <dd>REDACTED_CONTACT_DATA{{% md %}}Some data from `ContactSettings` is publicly available. The actual information redacted depends on the domain. For details, see [the registration privacy article](https://support.google.com/domains/answer/3251242).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Contact<wbr>Privacy<wbr>Unspecified</dt>
+    <dd>CONTACT_PRIVACY_UNSPECIFIED{{% md %}}The contact privacy settings are undefined.{{% /md %}}</dd><dt>Public<wbr>Contact<wbr>Data</dt>
+    <dd>PUBLIC_CONTACT_DATA{{% md %}}All the data from `ContactSettings` is publicly available. When setting this option, you must also provide a `PUBLIC_CONTACT_DATA_ACKNOWLEDGEMENT` in the `contact_notices` field of the request.{{% /md %}}</dd><dt>Private<wbr>Contact<wbr>Data</dt>
+    <dd>PRIVATE_CONTACT_DATA{{% md %}}None of the data from `ContactSettings` is publicly available. Instead, proxy contact data is published for your domain. Email sent to the proxy email address is forwarded to the registrant's email address. Cloud Domains provides this privacy proxy service at no additional cost.{{% /md %}}</dd><dt>Redacted<wbr>Contact<wbr>Data</dt>
+    <dd>REDACTED_CONTACT_DATA{{% md %}}Some data from `ContactSettings` is publicly available. The actual information redacted depends on the domain. For details, see [the registration privacy article](https://support.google.com/domains/answer/3251242).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CONTACT_PRIVACY_UNSPECIFIED</dt>
+    <dd>CONTACT_PRIVACY_UNSPECIFIED{{% md %}}The contact privacy settings are undefined.{{% /md %}}</dd><dt>PUBLIC_CONTACT_DATA</dt>
+    <dd>PUBLIC_CONTACT_DATA{{% md %}}All the data from `ContactSettings` is publicly available. When setting this option, you must also provide a `PUBLIC_CONTACT_DATA_ACKNOWLEDGEMENT` in the `contact_notices` field of the request.{{% /md %}}</dd><dt>PRIVATE_CONTACT_DATA</dt>
+    <dd>PRIVATE_CONTACT_DATA{{% md %}}None of the data from `ContactSettings` is publicly available. Instead, proxy contact data is published for your domain. Email sent to the proxy email address is forwarded to the registrant's email address. Cloud Domains provides this privacy proxy service at no additional cost.{{% /md %}}</dd><dt>REDACTED_CONTACT_DATA</dt>
+    <dd>REDACTED_CONTACT_DATA{{% md %}}Some data from `ContactSettings` is publicly available. The actual information redacted depends on the domain. For details, see [the registration privacy article](https://support.google.com/domains/answer/3251242).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="contactsettingsresponse">Contact<wbr>Settings<wbr>Response</h4>
@@ -1806,7 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#dsrecordalgorithm">Pulumi.<wbr>Google<wbr>Native.<wbr>Domains.<wbr>V1Beta1.<wbr>Ds<wbr>Record<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The algorithm used to generate the referenced DNSKEY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1822,7 +1856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digesttype_csharp" style="color: inherit; text-decoration: inherit;">Digest<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#dsrecorddigesttype">Pulumi.<wbr>Google<wbr>Native.<wbr>Domains.<wbr>V1Beta1.<wbr>Ds<wbr>Record<wbr>Digest<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The hash function used to generate the digest of the referenced DNSKEY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1842,7 +1876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#dsrecordalgorithm">Ds<wbr>Record<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The algorithm used to generate the referenced DNSKEY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1858,7 +1892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digesttype_go" style="color: inherit; text-decoration: inherit;">Digest<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#dsrecorddigesttype">Ds<wbr>Record<wbr>Digest<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The hash function used to generate the digest of the referenced DNSKEY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1878,7 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#dsrecordalgorithm">Ds<wbr>Record<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The algorithm used to generate the referenced DNSKEY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1894,7 +1928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digesttype_nodejs" style="color: inherit; text-decoration: inherit;">digest<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#dsrecorddigesttype">Ds<wbr>Record<wbr>Digest<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The hash function used to generate the digest of the referenced DNSKEY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1914,7 +1948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#dsrecordalgorithm">Ds<wbr>Record<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}The algorithm used to generate the referenced DNSKEY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1930,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digest_type_python" style="color: inherit; text-decoration: inherit;">digest_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#dsrecorddigesttype">Ds<wbr>Record<wbr>Digest<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The hash function used to generate the digest of the referenced DNSKEY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1941,6 +1975,114 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The key tag of the record. Must be set in range 0 -- 65535.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dsrecordalgorithm">Ds<wbr>Record<wbr>Algorithm</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Algorithm<wbr>Unspecified</dt>
+    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The algorithm is unspecified.{{% /md %}}</dd><dt>Dsa</dt>
+    <dd>DSA{{% md %}}DSA/SHA1. Not recommended for new deployments.{{% /md %}}</dd><dt>Ecc</dt>
+    <dd>ECC{{% md %}}ECC. Not recommended for new deployments.{{% /md %}}</dd><dt>Rsasha1</dt>
+    <dd>RSASHA1{{% md %}}RSA/SHA-1. Not recommended for new deployments.{{% /md %}}</dd><dt>Dsansec3sha1</dt>
+    <dd>DSANSEC3SHA1{{% md %}}DSA-NSEC3-SHA1. Not recommended for new deployments.{{% /md %}}</dd><dt>Rsasha1nsec3sha1</dt>
+    <dd>RSASHA1NSEC3SHA1{{% md %}}RSA/SHA1-NSEC3-SHA1. Not recommended for new deployments.{{% /md %}}</dd><dt>Rsasha256</dt>
+    <dd>RSASHA256{{% md %}}RSA/SHA-256.{{% /md %}}</dd><dt>Rsasha512</dt>
+    <dd>RSASHA512{{% md %}}RSA/SHA-512.{{% /md %}}</dd><dt>Eccgost</dt>
+    <dd>ECCGOST{{% md %}}GOST R 34.10-2001.{{% /md %}}</dd><dt>Ecdsap256sha256</dt>
+    <dd>ECDSAP256SHA256{{% md %}}ECDSA Curve P-256 with SHA-256.{{% /md %}}</dd><dt>Ecdsap384sha384</dt>
+    <dd>ECDSAP384SHA384{{% md %}}ECDSA Curve P-384 with SHA-384.{{% /md %}}</dd><dt>Ed25519</dt>
+    <dd>ED25519{{% md %}}Ed25519.{{% /md %}}</dd><dt>Ed448</dt>
+    <dd>ED448{{% md %}}Ed448.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Algorithm<wbr>Unspecified</dt>
+    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The algorithm is unspecified.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Dsa</dt>
+    <dd>DSA{{% md %}}DSA/SHA1. Not recommended for new deployments.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Ecc</dt>
+    <dd>ECC{{% md %}}ECC. Not recommended for new deployments.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Rsasha1</dt>
+    <dd>RSASHA1{{% md %}}RSA/SHA-1. Not recommended for new deployments.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Dsansec3sha1</dt>
+    <dd>DSANSEC3SHA1{{% md %}}DSA-NSEC3-SHA1. Not recommended for new deployments.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Rsasha1nsec3sha1</dt>
+    <dd>RSASHA1NSEC3SHA1{{% md %}}RSA/SHA1-NSEC3-SHA1. Not recommended for new deployments.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Rsasha256</dt>
+    <dd>RSASHA256{{% md %}}RSA/SHA-256.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Rsasha512</dt>
+    <dd>RSASHA512{{% md %}}RSA/SHA-512.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Eccgost</dt>
+    <dd>ECCGOST{{% md %}}GOST R 34.10-2001.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Ecdsap256sha256</dt>
+    <dd>ECDSAP256SHA256{{% md %}}ECDSA Curve P-256 with SHA-256.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Ecdsap384sha384</dt>
+    <dd>ECDSAP384SHA384{{% md %}}ECDSA Curve P-384 with SHA-384.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Ed25519</dt>
+    <dd>ED25519{{% md %}}Ed25519.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Algorithm<wbr>Ed448</dt>
+    <dd>ED448{{% md %}}Ed448.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Algorithm<wbr>Unspecified</dt>
+    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The algorithm is unspecified.{{% /md %}}</dd><dt>Dsa</dt>
+    <dd>DSA{{% md %}}DSA/SHA1. Not recommended for new deployments.{{% /md %}}</dd><dt>Ecc</dt>
+    <dd>ECC{{% md %}}ECC. Not recommended for new deployments.{{% /md %}}</dd><dt>Rsasha1</dt>
+    <dd>RSASHA1{{% md %}}RSA/SHA-1. Not recommended for new deployments.{{% /md %}}</dd><dt>Dsansec3sha1</dt>
+    <dd>DSANSEC3SHA1{{% md %}}DSA-NSEC3-SHA1. Not recommended for new deployments.{{% /md %}}</dd><dt>Rsasha1nsec3sha1</dt>
+    <dd>RSASHA1NSEC3SHA1{{% md %}}RSA/SHA1-NSEC3-SHA1. Not recommended for new deployments.{{% /md %}}</dd><dt>Rsasha256</dt>
+    <dd>RSASHA256{{% md %}}RSA/SHA-256.{{% /md %}}</dd><dt>Rsasha512</dt>
+    <dd>RSASHA512{{% md %}}RSA/SHA-512.{{% /md %}}</dd><dt>Eccgost</dt>
+    <dd>ECCGOST{{% md %}}GOST R 34.10-2001.{{% /md %}}</dd><dt>Ecdsap256sha256</dt>
+    <dd>ECDSAP256SHA256{{% md %}}ECDSA Curve P-256 with SHA-256.{{% /md %}}</dd><dt>Ecdsap384sha384</dt>
+    <dd>ECDSAP384SHA384{{% md %}}ECDSA Curve P-384 with SHA-384.{{% /md %}}</dd><dt>Ed25519</dt>
+    <dd>ED25519{{% md %}}Ed25519.{{% /md %}}</dd><dt>Ed448</dt>
+    <dd>ED448{{% md %}}Ed448.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALGORITHM_UNSPECIFIED</dt>
+    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The algorithm is unspecified.{{% /md %}}</dd><dt>DSA</dt>
+    <dd>DSA{{% md %}}DSA/SHA1. Not recommended for new deployments.{{% /md %}}</dd><dt>ECC</dt>
+    <dd>ECC{{% md %}}ECC. Not recommended for new deployments.{{% /md %}}</dd><dt>RSASHA1</dt>
+    <dd>RSASHA1{{% md %}}RSA/SHA-1. Not recommended for new deployments.{{% /md %}}</dd><dt>DSANSEC3SHA1</dt>
+    <dd>DSANSEC3SHA1{{% md %}}DSA-NSEC3-SHA1. Not recommended for new deployments.{{% /md %}}</dd><dt>RSASHA1NSEC3SHA1</dt>
+    <dd>RSASHA1NSEC3SHA1{{% md %}}RSA/SHA1-NSEC3-SHA1. Not recommended for new deployments.{{% /md %}}</dd><dt>RSASHA256</dt>
+    <dd>RSASHA256{{% md %}}RSA/SHA-256.{{% /md %}}</dd><dt>RSASHA512</dt>
+    <dd>RSASHA512{{% md %}}RSA/SHA-512.{{% /md %}}</dd><dt>ECCGOST</dt>
+    <dd>ECCGOST{{% md %}}GOST R 34.10-2001.{{% /md %}}</dd><dt>ECDSAP256SHA256</dt>
+    <dd>ECDSAP256SHA256{{% md %}}ECDSA Curve P-256 with SHA-256.{{% /md %}}</dd><dt>ECDSAP384SHA384</dt>
+    <dd>ECDSAP384SHA384{{% md %}}ECDSA Curve P-384 with SHA-384.{{% /md %}}</dd><dt>ED25519</dt>
+    <dd>ED25519{{% md %}}Ed25519.{{% /md %}}</dd><dt>ED448</dt>
+    <dd>ED448{{% md %}}Ed448.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dsrecorddigesttype">Ds<wbr>Record<wbr>Digest<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Digest<wbr>Type<wbr>Unspecified</dt>
+    <dd>DIGEST_TYPE_UNSPECIFIED{{% md %}}The DigestType is unspecified.{{% /md %}}</dd><dt>Sha1</dt>
+    <dd>SHA1{{% md %}}SHA-1. Not recommended for new deployments.{{% /md %}}</dd><dt>Sha256</dt>
+    <dd>SHA256{{% md %}}SHA-256.{{% /md %}}</dd><dt>Gost3411</dt>
+    <dd>GOST3411{{% md %}}GOST R 34.11-94.{{% /md %}}</dd><dt>Sha384</dt>
+    <dd>SHA384{{% md %}}SHA-384.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Ds<wbr>Record<wbr>Digest<wbr>Type<wbr>Digest<wbr>Type<wbr>Unspecified</dt>
+    <dd>DIGEST_TYPE_UNSPECIFIED{{% md %}}The DigestType is unspecified.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Digest<wbr>Type<wbr>Sha1</dt>
+    <dd>SHA1{{% md %}}SHA-1. Not recommended for new deployments.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Digest<wbr>Type<wbr>Sha256</dt>
+    <dd>SHA256{{% md %}}SHA-256.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Digest<wbr>Type<wbr>Gost3411</dt>
+    <dd>GOST3411{{% md %}}GOST R 34.11-94.{{% /md %}}</dd><dt>Ds<wbr>Record<wbr>Digest<wbr>Type<wbr>Sha384</dt>
+    <dd>SHA384{{% md %}}SHA-384.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Digest<wbr>Type<wbr>Unspecified</dt>
+    <dd>DIGEST_TYPE_UNSPECIFIED{{% md %}}The DigestType is unspecified.{{% /md %}}</dd><dt>Sha1</dt>
+    <dd>SHA1{{% md %}}SHA-1. Not recommended for new deployments.{{% /md %}}</dd><dt>Sha256</dt>
+    <dd>SHA256{{% md %}}SHA-256.{{% /md %}}</dd><dt>Gost3411</dt>
+    <dd>GOST3411{{% md %}}GOST R 34.11-94.{{% /md %}}</dd><dt>Sha384</dt>
+    <dd>SHA384{{% md %}}SHA-384.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DIGEST_TYPE_UNSPECIFIED</dt>
+    <dd>DIGEST_TYPE_UNSPECIFIED{{% md %}}The DigestType is unspecified.{{% /md %}}</dd><dt>SHA1</dt>
+    <dd>SHA1{{% md %}}SHA-1. Not recommended for new deployments.{{% /md %}}</dd><dt>SHA256</dt>
+    <dd>SHA256{{% md %}}SHA-256.{{% /md %}}</dd><dt>GOST3411</dt>
+    <dd>GOST3411{{% md %}}GOST R 34.11-94.{{% /md %}}</dd><dt>SHA384</dt>
+    <dd>SHA384{{% md %}}SHA-384.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dsrecordresponse">Ds<wbr>Record<wbr>Response</h4>
@@ -2326,7 +2468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dsstate_csharp" style="color: inherit; text-decoration: inherit;">Ds<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googledomainsdnsdsstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Domains.<wbr>V1Beta1.<wbr>Google<wbr>Domains<wbr>Dns<wbr>Ds<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Required. The state of DS records for this domain. Used to enable or disable automatic DNSSEC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2338,7 +2480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dsstate_go" style="color: inherit; text-decoration: inherit;">Ds<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googledomainsdnsdsstate">Google<wbr>Domains<wbr>Dns<wbr>Ds<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Required. The state of DS records for this domain. Used to enable or disable automatic DNSSEC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2350,7 +2492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dsstate_nodejs" style="color: inherit; text-decoration: inherit;">ds<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googledomainsdnsdsstate">Google<wbr>Domains<wbr>Dns<wbr>Ds<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Required. The state of DS records for this domain. Used to enable or disable automatic DNSSEC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2362,9 +2504,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ds_state_python" style="color: inherit; text-decoration: inherit;">ds_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googledomainsdnsdsstate">Google<wbr>Domains<wbr>Dns<wbr>Ds<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Required. The state of DS records for this domain. Used to enable or disable automatic DNSSEC.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googledomainsdnsdsstate">Google<wbr>Domains<wbr>Dns<wbr>Ds<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Ds<wbr>State<wbr>Unspecified</dt>
+    <dd>DS_STATE_UNSPECIFIED{{% md %}}DS state is unspecified.{{% /md %}}</dd><dt>Ds<wbr>Records<wbr>Unpublished</dt>
+    <dd>DS_RECORDS_UNPUBLISHED{{% md %}}DNSSEC is disabled for this domain. No DS records for this domain are published in the parent DNS zone.{{% /md %}}</dd><dt>Ds<wbr>Records<wbr>Published</dt>
+    <dd>DS_RECORDS_PUBLISHED{{% md %}}DNSSEC is enabled for this domain. Appropriate DS records for this domain are published in the parent DNS zone. This option is valid only if the DNS zone referenced in the `Registration`'s `dns_provider` field is already DNSSEC-signed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Domains<wbr>Dns<wbr>Ds<wbr>State<wbr>Ds<wbr>State<wbr>Unspecified</dt>
+    <dd>DS_STATE_UNSPECIFIED{{% md %}}DS state is unspecified.{{% /md %}}</dd><dt>Google<wbr>Domains<wbr>Dns<wbr>Ds<wbr>State<wbr>Ds<wbr>Records<wbr>Unpublished</dt>
+    <dd>DS_RECORDS_UNPUBLISHED{{% md %}}DNSSEC is disabled for this domain. No DS records for this domain are published in the parent DNS zone.{{% /md %}}</dd><dt>Google<wbr>Domains<wbr>Dns<wbr>Ds<wbr>State<wbr>Ds<wbr>Records<wbr>Published</dt>
+    <dd>DS_RECORDS_PUBLISHED{{% md %}}DNSSEC is enabled for this domain. Appropriate DS records for this domain are published in the parent DNS zone. This option is valid only if the DNS zone referenced in the `Registration`'s `dns_provider` field is already DNSSEC-signed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Ds<wbr>State<wbr>Unspecified</dt>
+    <dd>DS_STATE_UNSPECIFIED{{% md %}}DS state is unspecified.{{% /md %}}</dd><dt>Ds<wbr>Records<wbr>Unpublished</dt>
+    <dd>DS_RECORDS_UNPUBLISHED{{% md %}}DNSSEC is disabled for this domain. No DS records for this domain are published in the parent DNS zone.{{% /md %}}</dd><dt>Ds<wbr>Records<wbr>Published</dt>
+    <dd>DS_RECORDS_PUBLISHED{{% md %}}DNSSEC is enabled for this domain. Appropriate DS records for this domain are published in the parent DNS zone. This option is valid only if the DNS zone referenced in the `Registration`'s `dns_provider` field is already DNSSEC-signed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DS_STATE_UNSPECIFIED</dt>
+    <dd>DS_STATE_UNSPECIFIED{{% md %}}DS state is unspecified.{{% /md %}}</dd><dt>DS_RECORDS_UNPUBLISHED</dt>
+    <dd>DS_RECORDS_UNPUBLISHED{{% md %}}DNSSEC is disabled for this domain. No DS records for this domain are published in the parent DNS zone.{{% /md %}}</dd><dt>DS_RECORDS_PUBLISHED</dt>
+    <dd>DS_RECORDS_PUBLISHED{{% md %}}DNSSEC is enabled for this domain. Appropriate DS records for this domain are published in the parent DNS zone. This option is valid only if the DNS zone referenced in the `Registration`'s `dns_provider` field is already DNSSEC-signed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googledomainsdnsresponse">Google<wbr>Domains<wbr>Dns<wbr>Response</h4>
@@ -2490,7 +2662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transferlockstate_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Lock<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#managementsettingstransferlockstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Domains.<wbr>V1Beta1.<wbr>Management<wbr>Settings<wbr>Transfer<wbr>Lock<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Controls whether the domain can be transferred to another registrar.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2502,7 +2674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transferlockstate_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Lock<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#managementsettingstransferlockstate">Management<wbr>Settings<wbr>Transfer<wbr>Lock<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Controls whether the domain can be transferred to another registrar.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2514,7 +2686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transferlockstate_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Lock<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#managementsettingstransferlockstate">Management<wbr>Settings<wbr>Transfer<wbr>Lock<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Controls whether the domain can be transferred to another registrar.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2526,7 +2698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transfer_lock_state_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>lock_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#managementsettingstransferlockstate">Management<wbr>Settings<wbr>Transfer<wbr>Lock<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Controls whether the domain can be transferred to another registrar.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2611,6 +2783,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls whether the domain can be transferred to another registrar.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="managementsettingstransferlockstate">Management<wbr>Settings<wbr>Transfer<wbr>Lock<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Transfer<wbr>Lock<wbr>State<wbr>Unspecified</dt>
+    <dd>TRANSFER_LOCK_STATE_UNSPECIFIED{{% md %}}The state is unspecified.{{% /md %}}</dd><dt>Unlocked</dt>
+    <dd>UNLOCKED{{% md %}}The domain is unlocked and can be transferred to another registrar.{{% /md %}}</dd><dt>Locked</dt>
+    <dd>LOCKED{{% md %}}The domain is locked and cannot be transferred to another registrar.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Management<wbr>Settings<wbr>Transfer<wbr>Lock<wbr>State<wbr>Transfer<wbr>Lock<wbr>State<wbr>Unspecified</dt>
+    <dd>TRANSFER_LOCK_STATE_UNSPECIFIED{{% md %}}The state is unspecified.{{% /md %}}</dd><dt>Management<wbr>Settings<wbr>Transfer<wbr>Lock<wbr>State<wbr>Unlocked</dt>
+    <dd>UNLOCKED{{% md %}}The domain is unlocked and can be transferred to another registrar.{{% /md %}}</dd><dt>Management<wbr>Settings<wbr>Transfer<wbr>Lock<wbr>State<wbr>Locked</dt>
+    <dd>LOCKED{{% md %}}The domain is locked and cannot be transferred to another registrar.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Transfer<wbr>Lock<wbr>State<wbr>Unspecified</dt>
+    <dd>TRANSFER_LOCK_STATE_UNSPECIFIED{{% md %}}The state is unspecified.{{% /md %}}</dd><dt>Unlocked</dt>
+    <dd>UNLOCKED{{% md %}}The domain is unlocked and can be transferred to another registrar.{{% /md %}}</dd><dt>Locked</dt>
+    <dd>LOCKED{{% md %}}The domain is locked and cannot be transferred to another registrar.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TRANSFER_LOCK_STATE_UNSPECIFIED</dt>
+    <dd>TRANSFER_LOCK_STATE_UNSPECIFIED{{% md %}}The state is unspecified.{{% /md %}}</dd><dt>UNLOCKED</dt>
+    <dd>UNLOCKED{{% md %}}The domain is unlocked and can be transferred to another registrar.{{% /md %}}</dd><dt>LOCKED</dt>
+    <dd>LOCKED{{% md %}}The domain is locked and cannot be transferred to another registrar.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="money">Money</h4>
@@ -3465,6 +3667,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Sublocality of the address. For example, this can be neighborhoods, boroughs, districts.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="registrationcontactnoticesitem">Registration<wbr>Contact<wbr>Notices<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Contact<wbr>Notice<wbr>Unspecified</dt>
+    <dd>CONTACT_NOTICE_UNSPECIFIED{{% md %}}The notice is undefined.{{% /md %}}</dd><dt>Public<wbr>Contact<wbr>Data<wbr>Acknowledgement</dt>
+    <dd>PUBLIC_CONTACT_DATA_ACKNOWLEDGEMENT{{% md %}}Required when setting the `privacy` field of `ContactSettings` to `PUBLIC_CONTACT_DATA`, which exposes contact data publicly.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Registration<wbr>Contact<wbr>Notices<wbr>Item<wbr>Contact<wbr>Notice<wbr>Unspecified</dt>
+    <dd>CONTACT_NOTICE_UNSPECIFIED{{% md %}}The notice is undefined.{{% /md %}}</dd><dt>Registration<wbr>Contact<wbr>Notices<wbr>Item<wbr>Public<wbr>Contact<wbr>Data<wbr>Acknowledgement</dt>
+    <dd>PUBLIC_CONTACT_DATA_ACKNOWLEDGEMENT{{% md %}}Required when setting the `privacy` field of `ContactSettings` to `PUBLIC_CONTACT_DATA`, which exposes contact data publicly.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Contact<wbr>Notice<wbr>Unspecified</dt>
+    <dd>CONTACT_NOTICE_UNSPECIFIED{{% md %}}The notice is undefined.{{% /md %}}</dd><dt>Public<wbr>Contact<wbr>Data<wbr>Acknowledgement</dt>
+    <dd>PUBLIC_CONTACT_DATA_ACKNOWLEDGEMENT{{% md %}}Required when setting the `privacy` field of `ContactSettings` to `PUBLIC_CONTACT_DATA`, which exposes contact data publicly.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CONTACT_NOTICE_UNSPECIFIED</dt>
+    <dd>CONTACT_NOTICE_UNSPECIFIED{{% md %}}The notice is undefined.{{% /md %}}</dd><dt>PUBLIC_CONTACT_DATA_ACKNOWLEDGEMENT</dt>
+    <dd>PUBLIC_CONTACT_DATA_ACKNOWLEDGEMENT{{% md %}}Required when setting the `privacy` field of `ContactSettings` to `PUBLIC_CONTACT_DATA`, which exposes contact data publicly.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="registrationdomainnoticesitem">Registration<wbr>Domain<wbr>Notices<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Domain<wbr>Notice<wbr>Unspecified</dt>
+    <dd>DOMAIN_NOTICE_UNSPECIFIED{{% md %}}The notice is undefined.{{% /md %}}</dd><dt>Hsts<wbr>Preloaded</dt>
+    <dd>HSTS_PRELOADED{{% md %}}Indicates that the domain is preloaded on the HTTP Strict Transport Security list in browsers. Serving a website on such domain requires an SSL certificate. For details, see [how to get an SSL certificate](https://support.google.com/domains/answer/7638036).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Registration<wbr>Domain<wbr>Notices<wbr>Item<wbr>Domain<wbr>Notice<wbr>Unspecified</dt>
+    <dd>DOMAIN_NOTICE_UNSPECIFIED{{% md %}}The notice is undefined.{{% /md %}}</dd><dt>Registration<wbr>Domain<wbr>Notices<wbr>Item<wbr>Hsts<wbr>Preloaded</dt>
+    <dd>HSTS_PRELOADED{{% md %}}Indicates that the domain is preloaded on the HTTP Strict Transport Security list in browsers. Serving a website on such domain requires an SSL certificate. For details, see [how to get an SSL certificate](https://support.google.com/domains/answer/7638036).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Domain<wbr>Notice<wbr>Unspecified</dt>
+    <dd>DOMAIN_NOTICE_UNSPECIFIED{{% md %}}The notice is undefined.{{% /md %}}</dd><dt>Hsts<wbr>Preloaded</dt>
+    <dd>HSTS_PRELOADED{{% md %}}Indicates that the domain is preloaded on the HTTP Strict Transport Security list in browsers. Serving a website on such domain requires an SSL certificate. For details, see [how to get an SSL certificate](https://support.google.com/domains/answer/7638036).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DOMAIN_NOTICE_UNSPECIFIED</dt>
+    <dd>DOMAIN_NOTICE_UNSPECIFIED{{% md %}}The notice is undefined.{{% /md %}}</dd><dt>HSTS_PRELOADED</dt>
+    <dd>HSTS_PRELOADED{{% md %}}Indicates that the domain is preloaded on the HTTP Strict Transport Security list in browsers. Serving a website on such domain requires an SSL certificate. For details, see [how to get an SSL certificate](https://support.google.com/domains/answer/7638036).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

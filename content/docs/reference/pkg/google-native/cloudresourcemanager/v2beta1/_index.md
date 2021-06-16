@@ -15,6 +15,12 @@ Explore the resources and functions of the google-native.cloudresourcemanager/v2
     <li><a href="folderiampolicy" title="FolderIamPolicy"><span class="symbol resource"></span>FolderIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getfolder" title="GetFolder"><span class="symbol function"></span>GetFolder</a></li>
+    <li><a href="getfolderiampolicy" title="GetFolderIamPolicy"><span class="symbol function"></span>GetFolderIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -22,6 +28,6 @@ Explore the resources and functions of the google-native.cloudresourcemanager/v2
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

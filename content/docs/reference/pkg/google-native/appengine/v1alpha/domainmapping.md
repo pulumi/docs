@@ -490,7 +490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcerecordtype">Pulumi.<wbr>Google<wbr>Native.<wbr>App<wbr>Engine.<wbr>V1Alpha.<wbr>Resource<wbr>Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Resource record type. Example: AAAA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -518,7 +518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcerecordtype">Resource<wbr>Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Resource record type. Example: AAAA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -546,7 +546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcerecordtype">Resource<wbr>Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Resource record type. Example: AAAA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -574,7 +574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#resourcerecordtype">Resource<wbr>Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Resource record type. Example: AAAA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -691,6 +691,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource record type. Example: AAAA.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourcerecordtype">Resource<wbr>Record<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>A</dt>
+    <dd>A{{% md %}}An A resource record. Data is an IPv4 address.{{% /md %}}</dd><dt>Aaaa</dt>
+    <dd>AAAA{{% md %}}An AAAA resource record. Data is an IPv6 address.{{% /md %}}</dd><dt>Cname</dt>
+    <dd>CNAME{{% md %}}A CNAME resource record. Data is a domain name to be aliased.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Resource<wbr>Record<wbr>Type<wbr>A</dt>
+    <dd>A{{% md %}}An A resource record. Data is an IPv4 address.{{% /md %}}</dd><dt>Resource<wbr>Record<wbr>Type<wbr>Aaaa</dt>
+    <dd>AAAA{{% md %}}An AAAA resource record. Data is an IPv6 address.{{% /md %}}</dd><dt>Resource<wbr>Record<wbr>Type<wbr>Cname</dt>
+    <dd>CNAME{{% md %}}A CNAME resource record. Data is a domain name to be aliased.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>A</dt>
+    <dd>A{{% md %}}An A resource record. Data is an IPv4 address.{{% /md %}}</dd><dt>Aaaa</dt>
+    <dd>AAAA{{% md %}}An AAAA resource record. Data is an IPv6 address.{{% /md %}}</dd><dt>Cname</dt>
+    <dd>CNAME{{% md %}}A CNAME resource record. Data is a domain name to be aliased.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>A</dt>
+    <dd>A{{% md %}}An A resource record. Data is an IPv4 address.{{% /md %}}</dd><dt>AAAA</dt>
+    <dd>AAAA{{% md %}}An AAAA resource record. Data is an IPv6 address.{{% /md %}}</dd><dt>CNAME</dt>
+    <dd>CNAME{{% md %}}A CNAME resource record. Data is a domain name to be aliased.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sslsettings">Ssl<wbr>Settings</h4>

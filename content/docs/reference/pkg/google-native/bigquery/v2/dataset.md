@@ -812,7 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_types_csharp" style="color: inherit; text-decoration: inherit;">Target_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasettarget_typesitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Dataset<wbr>Target_<wbr>types<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datasetaccessentrytarget_typesitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Dataset<wbr>Access<wbr>Entry<wbr>Target_<wbr>types<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -832,7 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_types_go" style="color: inherit; text-decoration: inherit;">Target_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasettarget_typesitem">[]Dataset<wbr>Target_<wbr>types<wbr>Item</a></span>
+        <span class="property-type"><a href="#datasetaccessentrytarget_typesitem">[]Dataset<wbr>Access<wbr>Entry<wbr>Target_<wbr>types<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -852,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_types_nodejs" style="color: inherit; text-decoration: inherit;">target_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasettarget_typesitem">Dataset<wbr>Target_<wbr>types<wbr>Item<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#datasetaccessentrytarget_typesitem">Dataset<wbr>Access<wbr>Entry<wbr>Target_<wbr>types<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -872,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_types_python" style="color: inherit; text-decoration: inherit;">target_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasettarget_typesitem">Dataset<wbr>Target_<wbr>types<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasetaccessentrytarget_typesitem">Dataset<wbr>Access<wbr>Entry<wbr>Target_<wbr>types<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -894,7 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_types_csharp" style="color: inherit; text-decoration: inherit;">Target_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasettarget_typesitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Dataset<wbr>Target_<wbr>types<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datasetaccessentrytarget_typesitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Dataset<wbr>Access<wbr>Entry<wbr>Target_<wbr>types<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -914,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_types_go" style="color: inherit; text-decoration: inherit;">Target_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasettarget_typesitemresponse">[]Dataset<wbr>Target_<wbr>types<wbr>Item<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetaccessentrytarget_typesitemresponse">[]Dataset<wbr>Access<wbr>Entry<wbr>Target_<wbr>types<wbr>Item<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -934,7 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_types_nodejs" style="color: inherit; text-decoration: inherit;">target_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasettarget_typesitemresponse">Dataset<wbr>Target_<wbr>types<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#datasetaccessentrytarget_typesitemresponse">Dataset<wbr>Access<wbr>Entry<wbr>Target_<wbr>types<wbr>Item<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -954,9 +954,109 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_types_python" style="color: inherit; text-decoration: inherit;">target_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasettarget_typesitemresponse">Dataset<wbr>Target_<wbr>types<wbr>Item<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasetaccessentrytarget_typesitemresponse">Dataset<wbr>Access<wbr>Entry<wbr>Target_<wbr>types<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datasetaccessentrytarget_typesitem">Dataset<wbr>Access<wbr>Entry<wbr>Target_<wbr>types<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="targettype_csharp">
+<a href="#targettype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="targettype_go">
+<a href="#targettype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="targettype_nodejs">
+<a href="#targettype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="target_type_python">
+<a href="#target_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datasetaccessentrytarget_typesitemresponse">Dataset<wbr>Access<wbr>Entry<wbr>Target_<wbr>types<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="targettype_csharp">
+<a href="#targettype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="targettype_go">
+<a href="#targettype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="targettype_nodejs">
+<a href="#targettype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="target_type_python">
+<a href="#target_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasetaccessitem">Dataset<wbr>Access<wbr>Item</h4>
@@ -1733,106 +1833,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The ID of the project containing this dataset.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="datasettarget_typesitem">Dataset<wbr>Target_<wbr>types<wbr>Item</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="targettype_csharp">
-<a href="#targettype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="targettype_go">
-<a href="#targettype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="targettype_nodejs">
-<a href="#targettype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="target_type_python">
-<a href="#target_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="datasettarget_typesitemresponse">Dataset<wbr>Target_<wbr>types<wbr>Item<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="targettype_csharp">
-<a href="#targettype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="targettype_go">
-<a href="#targettype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="targettype_nodejs">
-<a href="#targettype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="target_type_python">
-<a href="#target_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionconfiguration">Encryption<wbr>Configuration</h4>

@@ -30,7 +30,7 @@ Creates a Redis instance based on the specified tier and memory size. By default
              <span class="nx">alternative_location_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">auth_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">authorized_network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">connect_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">connect_mode</span><span class="p">:</span> <span class="nx">Optional[_redis_v1.InstanceConnectMode]</span> = None<span class="p">,</span>
              <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -41,8 +41,8 @@ Creates a Redis instance based on the specified tier and memory size. By default
              <span class="nx">redis_configs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
              <span class="nx">redis_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">reserved_ip_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">transit_encryption_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+             <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[_redis_v1.InstanceTier]</span> = None<span class="p">,</span>
+             <span class="nx">transit_encryption_mode</span><span class="p">:</span> <span class="nx">Optional[_redis_v1.InstanceTransitEncryptionMode]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span>
@@ -224,7 +224,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#connectmode_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instanceconnectmode">Pulumi.<wbr>Google<wbr>Native.<wbr>Redis.<wbr>V1.<wbr>Instance<wbr>Connect<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Optional. The network connect mode of the Redis instance. If not provided, the connect mode defaults to DIRECT_PEERING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -288,7 +288,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancetier">Pulumi.<wbr>Google<wbr>Native.<wbr>Redis.<wbr>V1.<wbr>Instance<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Required. The service tier of the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -296,7 +296,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#transitencryptionmode_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Encryption<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancetransitencryptionmode">Pulumi.<wbr>Google<wbr>Native.<wbr>Redis.<wbr>V1.<wbr>Instance<wbr>Transit<wbr>Encryption<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Optional. The TLS mode of the Redis instance. If not provided, TLS is disabled for the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -356,7 +356,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#connectmode_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instanceconnectmode">Instance<wbr>Connect<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Optional. The network connect mode of the Redis instance. If not provided, the connect mode defaults to DIRECT_PEERING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -420,7 +420,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancetier">Instance<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Required. The service tier of the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -428,7 +428,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#transitencryptionmode_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Encryption<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancetransitencryptionmode">Instance<wbr>Transit<wbr>Encryption<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Optional. The TLS mode of the Redis instance. If not provided, TLS is disabled for the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -488,7 +488,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#connectmode_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instanceconnectmode">Instance<wbr>Connect<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Optional. The network connect mode of the Redis instance. If not provided, the connect mode defaults to DIRECT_PEERING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -552,7 +552,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancetier">Instance<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Required. The service tier of the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -560,7 +560,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#transitencryptionmode_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Encryption<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancetransitencryptionmode">Instance<wbr>Transit<wbr>Encryption<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Optional. The TLS mode of the Redis instance. If not provided, TLS is disabled for the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -620,7 +620,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#connect_mode_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instanceconnectmode">Instance<wbr>Connect<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Optional. The network connect mode of the Redis instance. If not provided, the connect mode defaults to DIRECT_PEERING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -684,7 +684,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancetier">Instance<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Required. The service tier of the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -692,7 +692,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#transit_encryption_mode_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>encryption_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancetransitencryptionmode">Instance<wbr>Transit<wbr>Encryption<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Optional. The TLS mode of the Redis instance. If not provided, TLS is disabled for the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1017,6 +1017,96 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="instanceconnectmode">Instance<wbr>Connect<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Connect<wbr>Mode<wbr>Unspecified</dt>
+    <dd>CONNECT_MODE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Direct<wbr>Peering</dt>
+    <dd>DIRECT_PEERING{{% md %}}Connect via direct peering to the Memorystore for Redis hosted service.{{% /md %}}</dd><dt>Private<wbr>Service<wbr>Access</dt>
+    <dd>PRIVATE_SERVICE_ACCESS{{% md %}}Connect your Memorystore for Redis instance using Private Service Access. Private services access provides an IP address range for multiple Google Cloud services, including Memorystore.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Connect<wbr>Mode<wbr>Connect<wbr>Mode<wbr>Unspecified</dt>
+    <dd>CONNECT_MODE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Instance<wbr>Connect<wbr>Mode<wbr>Direct<wbr>Peering</dt>
+    <dd>DIRECT_PEERING{{% md %}}Connect via direct peering to the Memorystore for Redis hosted service.{{% /md %}}</dd><dt>Instance<wbr>Connect<wbr>Mode<wbr>Private<wbr>Service<wbr>Access</dt>
+    <dd>PRIVATE_SERVICE_ACCESS{{% md %}}Connect your Memorystore for Redis instance using Private Service Access. Private services access provides an IP address range for multiple Google Cloud services, including Memorystore.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Connect<wbr>Mode<wbr>Unspecified</dt>
+    <dd>CONNECT_MODE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Direct<wbr>Peering</dt>
+    <dd>DIRECT_PEERING{{% md %}}Connect via direct peering to the Memorystore for Redis hosted service.{{% /md %}}</dd><dt>Private<wbr>Service<wbr>Access</dt>
+    <dd>PRIVATE_SERVICE_ACCESS{{% md %}}Connect your Memorystore for Redis instance using Private Service Access. Private services access provides an IP address range for multiple Google Cloud services, including Memorystore.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CONNECT_MODE_UNSPECIFIED</dt>
+    <dd>CONNECT_MODE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>DIRECT_PEERING</dt>
+    <dd>DIRECT_PEERING{{% md %}}Connect via direct peering to the Memorystore for Redis hosted service.{{% /md %}}</dd><dt>PRIVATE_SERVICE_ACCESS</dt>
+    <dd>PRIVATE_SERVICE_ACCESS{{% md %}}Connect your Memorystore for Redis instance using Private Service Access. Private services access provides an IP address range for multiple Google Cloud services, including Memorystore.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancetier">Instance<wbr>Tier</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Tier<wbr>Unspecified</dt>
+    <dd>TIER_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Basic</dt>
+    <dd>BASIC{{% md %}}BASIC tier: standalone instance{{% /md %}}</dd><dt>Standard<wbr>Ha</dt>
+    <dd>STANDARD_HA{{% md %}}STANDARD_HA tier: highly available primary/replica instances{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Tier<wbr>Tier<wbr>Unspecified</dt>
+    <dd>TIER_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Instance<wbr>Tier<wbr>Basic</dt>
+    <dd>BASIC{{% md %}}BASIC tier: standalone instance{{% /md %}}</dd><dt>Instance<wbr>Tier<wbr>Standard<wbr>Ha</dt>
+    <dd>STANDARD_HA{{% md %}}STANDARD_HA tier: highly available primary/replica instances{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Tier<wbr>Unspecified</dt>
+    <dd>TIER_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Basic</dt>
+    <dd>BASIC{{% md %}}BASIC tier: standalone instance{{% /md %}}</dd><dt>Standard<wbr>Ha</dt>
+    <dd>STANDARD_HA{{% md %}}STANDARD_HA tier: highly available primary/replica instances{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TIER_UNSPECIFIED</dt>
+    <dd>TIER_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>BASIC</dt>
+    <dd>BASIC{{% md %}}BASIC tier: standalone instance{{% /md %}}</dd><dt>STANDARD_HA</dt>
+    <dd>STANDARD_HA{{% md %}}STANDARD_HA tier: highly available primary/replica instances{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancetransitencryptionmode">Instance<wbr>Transit<wbr>Encryption<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Transit<wbr>Encryption<wbr>Mode<wbr>Unspecified</dt>
+    <dd>TRANSIT_ENCRYPTION_MODE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Server<wbr>Authentication</dt>
+    <dd>SERVER_AUTHENTICATION{{% md %}}Client to Server traffic encryption enabled with server authentication.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}TLS is disabled for the instance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Transit<wbr>Encryption<wbr>Mode<wbr>Transit<wbr>Encryption<wbr>Mode<wbr>Unspecified</dt>
+    <dd>TRANSIT_ENCRYPTION_MODE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Instance<wbr>Transit<wbr>Encryption<wbr>Mode<wbr>Server<wbr>Authentication</dt>
+    <dd>SERVER_AUTHENTICATION{{% md %}}Client to Server traffic encryption enabled with server authentication.{{% /md %}}</dd><dt>Instance<wbr>Transit<wbr>Encryption<wbr>Mode<wbr>Disabled</dt>
+    <dd>DISABLED{{% md %}}TLS is disabled for the instance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Transit<wbr>Encryption<wbr>Mode<wbr>Unspecified</dt>
+    <dd>TRANSIT_ENCRYPTION_MODE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>Server<wbr>Authentication</dt>
+    <dd>SERVER_AUTHENTICATION{{% md %}}Client to Server traffic encryption enabled with server authentication.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}TLS is disabled for the instance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TRANSIT_ENCRYPTION_MODE_UNSPECIFIED</dt>
+    <dd>TRANSIT_ENCRYPTION_MODE_UNSPECIFIED{{% md %}}Not set.{{% /md %}}</dd><dt>SERVER_AUTHENTICATION</dt>
+    <dd>SERVER_AUTHENTICATION{{% md %}}Client to Server traffic encryption enabled with server authentication.{{% /md %}}</dd><dt>DISABLED</dt>
+    <dd>DISABLED{{% md %}}TLS is disabled for the instance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="tlscertificateresponse">Tls<wbr>Certificate<wbr>Response</h4>
 

@@ -37,7 +37,7 @@ Creates a new notification channel, representing a single notification endpoint 
                         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">user_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-                        <span class="nx">verification_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                        <span class="nx">verification_status</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.NotificationChannelVerificationStatus]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">NotificationChannel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NotificationChannelArgs</a></span><span class="p">,</span>
@@ -251,7 +251,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#verificationstatus_csharp" style="color: inherit; text-decoration: inherit;">Verification<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#notificationchannelverificationstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V3.<wbr>Notification<wbr>Channel<wbr>Verification<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this channel has been verified or not. On a ListNotificationChannels or GetNotificationChannel operation, this field is expected to be populated.If the value is UNVERIFIED, then it indicates that the channel is non-functioning (it both requires verification and lacks verification); otherwise, it is assumed that the channel works.If the channel is neither VERIFIED nor UNVERIFIED, it implies that the channel is of a type that does not require verification or that this specific channel has been exempted from verification because it was created prior to verification being required for channels of this type.This field cannot be modified using a standard UpdateNotificationChannel operation. To change the value of this field, you must call VerifyNotificationChannel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -343,7 +343,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#verificationstatus_go" style="color: inherit; text-decoration: inherit;">Verification<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#notificationchannelverificationstatus">Notification<wbr>Channel<wbr>Verification<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this channel has been verified or not. On a ListNotificationChannels or GetNotificationChannel operation, this field is expected to be populated.If the value is UNVERIFIED, then it indicates that the channel is non-functioning (it both requires verification and lacks verification); otherwise, it is assumed that the channel works.If the channel is neither VERIFIED nor UNVERIFIED, it implies that the channel is of a type that does not require verification or that this specific channel has been exempted from verification because it was created prior to verification being required for channels of this type.This field cannot be modified using a standard UpdateNotificationChannel operation. To change the value of this field, you must call VerifyNotificationChannel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -435,7 +435,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#verificationstatus_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#notificationchannelverificationstatus">Notification<wbr>Channel<wbr>Verification<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this channel has been verified or not. On a ListNotificationChannels or GetNotificationChannel operation, this field is expected to be populated.If the value is UNVERIFIED, then it indicates that the channel is non-functioning (it both requires verification and lacks verification); otherwise, it is assumed that the channel works.If the channel is neither VERIFIED nor UNVERIFIED, it implies that the channel is of a type that does not require verification or that this specific channel has been exempted from verification because it was created prior to verification being required for channels of this type.This field cannot be modified using a standard UpdateNotificationChannel operation. To change the value of this field, you must call VerifyNotificationChannel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -527,7 +527,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#verification_status_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#notificationchannelverificationstatus">Notification<wbr>Channel<wbr>Verification<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this channel has been verified or not. On a ListNotificationChannels or GetNotificationChannel operation, this field is expected to be populated.If the value is UNVERIFIED, then it indicates that the channel is non-functioning (it both requires verification and lacks verification); otherwise, it is assumed that the channel works.If the channel is neither VERIFIED nor UNVERIFIED, it implies that the channel is of a type that does not require verification or that this specific channel has been exempted from verification because it was created prior to verification being required for channels of this type.This field cannot be modified using a standard UpdateNotificationChannel operation. To change the value of this field, you must call VerifyNotificationChannel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -759,6 +759,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address of the user making the change.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="notificationchannelverificationstatus">Notification<wbr>Channel<wbr>Verification<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Verification<wbr>Status<wbr>Unspecified</dt>
+    <dd>VERIFICATION_STATUS_UNSPECIFIED{{% md %}}Sentinel value used to indicate that the state is unknown, omitted, or is not applicable (as in the case of channels that neither support nor require verification in order to function).{{% /md %}}</dd><dt>Unverified</dt>
+    <dd>UNVERIFIED{{% md %}}The channel has yet to be verified and requires verification to function. Note that this state also applies to the case where the verification process has been initiated by sending a verification code but where the verification code has not been submitted to complete the process.{{% /md %}}</dd><dt>Verified</dt>
+    <dd>VERIFIED{{% md %}}It has been proven that notifications can be received on this notification channel and that someone on the project has access to messages that are delivered to that channel.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Notification<wbr>Channel<wbr>Verification<wbr>Status<wbr>Verification<wbr>Status<wbr>Unspecified</dt>
+    <dd>VERIFICATION_STATUS_UNSPECIFIED{{% md %}}Sentinel value used to indicate that the state is unknown, omitted, or is not applicable (as in the case of channels that neither support nor require verification in order to function).{{% /md %}}</dd><dt>Notification<wbr>Channel<wbr>Verification<wbr>Status<wbr>Unverified</dt>
+    <dd>UNVERIFIED{{% md %}}The channel has yet to be verified and requires verification to function. Note that this state also applies to the case where the verification process has been initiated by sending a verification code but where the verification code has not been submitted to complete the process.{{% /md %}}</dd><dt>Notification<wbr>Channel<wbr>Verification<wbr>Status<wbr>Verified</dt>
+    <dd>VERIFIED{{% md %}}It has been proven that notifications can be received on this notification channel and that someone on the project has access to messages that are delivered to that channel.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Verification<wbr>Status<wbr>Unspecified</dt>
+    <dd>VERIFICATION_STATUS_UNSPECIFIED{{% md %}}Sentinel value used to indicate that the state is unknown, omitted, or is not applicable (as in the case of channels that neither support nor require verification in order to function).{{% /md %}}</dd><dt>Unverified</dt>
+    <dd>UNVERIFIED{{% md %}}The channel has yet to be verified and requires verification to function. Note that this state also applies to the case where the verification process has been initiated by sending a verification code but where the verification code has not been submitted to complete the process.{{% /md %}}</dd><dt>Verified</dt>
+    <dd>VERIFIED{{% md %}}It has been proven that notifications can be received on this notification channel and that someone on the project has access to messages that are delivered to that channel.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>VERIFICATION_STATUS_UNSPECIFIED</dt>
+    <dd>VERIFICATION_STATUS_UNSPECIFIED{{% md %}}Sentinel value used to indicate that the state is unknown, omitted, or is not applicable (as in the case of channels that neither support nor require verification in order to function).{{% /md %}}</dd><dt>UNVERIFIED</dt>
+    <dd>UNVERIFIED{{% md %}}The channel has yet to be verified and requires verification to function. Note that this state also applies to the case where the verification process has been initiated by sending a verification code but where the verification code has not been submitted to complete the process.{{% /md %}}</dd><dt>VERIFIED</dt>
+    <dd>VERIFIED{{% md %}}It has been proven that notifications can be received on this notification channel and that someone on the project has access to messages that are delivered to that channel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

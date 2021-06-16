@@ -603,7 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasetype_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#databasedumpdatabasetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Metastore.<wbr>V1Alpha.<wbr>Database<wbr>Dump<wbr>Database<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -627,7 +627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#databasedumptype">Pulumi.<wbr>Google<wbr>Native.<wbr>Metastore.<wbr>V1Alpha.<wbr>Database<wbr>Dump<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of the database dump. If unspecified, defaults to MYSQL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -639,7 +639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasetype_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#databasedumpdatabasetype">Database<wbr>Dump<wbr>Database<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -663,7 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#databasedumptype">Database<wbr>Dump<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of the database dump. If unspecified, defaults to MYSQL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -675,7 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasetype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#databasedumpdatabasetype">Database<wbr>Dump<wbr>Database<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -699,7 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#databasedumptype">Database<wbr>Dump<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of the database dump. If unspecified, defaults to MYSQL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -711,7 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#databasedumpdatabasetype">Database<wbr>Dump<wbr>Database<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -735,9 +735,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#databasedumptype">Database<wbr>Dump<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of the database dump. If unspecified, defaults to MYSQL.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="databasedumpdatabasetype">Database<wbr>Dump<wbr>Database<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Database<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATABASE_TYPE_UNSPECIFIED{{% md %}}The type of the source database is unknown.{{% /md %}}</dd><dt>Mysql</dt>
+    <dd>MYSQL{{% md %}}The type of the source database is MySQL.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Database<wbr>Dump<wbr>Database<wbr>Type<wbr>Database<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATABASE_TYPE_UNSPECIFIED{{% md %}}The type of the source database is unknown.{{% /md %}}</dd><dt>Database<wbr>Dump<wbr>Database<wbr>Type<wbr>Mysql</dt>
+    <dd>MYSQL{{% md %}}The type of the source database is MySQL.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Database<wbr>Type<wbr>Unspecified</dt>
+    <dd>DATABASE_TYPE_UNSPECIFIED{{% md %}}The type of the source database is unknown.{{% /md %}}</dd><dt>Mysql</dt>
+    <dd>MYSQL{{% md %}}The type of the source database is MySQL.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DATABASE_TYPE_UNSPECIFIED</dt>
+    <dd>DATABASE_TYPE_UNSPECIFIED{{% md %}}The type of the source database is unknown.{{% /md %}}</dd><dt>MYSQL</dt>
+    <dd>MYSQL{{% md %}}The type of the source database is MySQL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databasedumpresponse">Database<wbr>Dump<wbr>Response</h4>
@@ -884,6 +910,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The type of the database dump. If unspecified, defaults to MYSQL.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="databasedumptype">Database<wbr>Dump<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}The type of the database dump is unknown.{{% /md %}}</dd><dt>Mysql</dt>
+    <dd>MYSQL{{% md %}}Database dump is a MySQL dump file.{{% /md %}}</dd><dt>Avro</dt>
+    <dd>AVRO{{% md %}}Database dump contains Avro files.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Database<wbr>Dump<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}The type of the database dump is unknown.{{% /md %}}</dd><dt>Database<wbr>Dump<wbr>Type<wbr>Mysql</dt>
+    <dd>MYSQL{{% md %}}Database dump is a MySQL dump file.{{% /md %}}</dd><dt>Database<wbr>Dump<wbr>Type<wbr>Avro</dt>
+    <dd>AVRO{{% md %}}Database dump contains Avro files.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}The type of the database dump is unknown.{{% /md %}}</dd><dt>Mysql</dt>
+    <dd>MYSQL{{% md %}}Database dump is a MySQL dump file.{{% /md %}}</dd><dt>Avro</dt>
+    <dd>AVRO{{% md %}}Database dump contains Avro files.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}The type of the database dump is unknown.{{% /md %}}</dd><dt>MYSQL</dt>
+    <dd>MYSQL{{% md %}}Database dump is a MySQL dump file.{{% /md %}}</dd><dt>AVRO</dt>
+    <dd>AVRO{{% md %}}Database dump contains Avro files.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

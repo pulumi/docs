@@ -547,7 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#disktype">Pulumi.<wbr>Google<wbr>Native.<wbr>Genomics.<wbr>V1Alpha2.<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the disk to create.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -599,7 +599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#disktype">Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the disk to create.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -651,7 +651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#disktype">Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the disk to create.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -703,7 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#disktype">Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the disk to create.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -916,6 +916,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The type of the disk to create.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="disktype">Disk<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Default disk type. Use one of the other options below.{{% /md %}}</dd><dt>Persistent<wbr>Hdd</dt>
+    <dd>PERSISTENT_HDD{{% md %}}Specifies a Google Compute Engine persistent hard disk. See https://cloud.google.com/compute/docs/disks/#pdspecs for details.{{% /md %}}</dd><dt>Persistent<wbr>Ssd</dt>
+    <dd>PERSISTENT_SSD{{% md %}}Specifies a Google Compute Engine persistent solid-state disk. See https://cloud.google.com/compute/docs/disks/#pdspecs for details.{{% /md %}}</dd><dt>Local<wbr>Ssd</dt>
+    <dd>LOCAL_SSD{{% md %}}Specifies a Google Compute Engine local SSD. See https://cloud.google.com/compute/docs/disks/local-ssd for details.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Disk<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Default disk type. Use one of the other options below.{{% /md %}}</dd><dt>Disk<wbr>Type<wbr>Persistent<wbr>Hdd</dt>
+    <dd>PERSISTENT_HDD{{% md %}}Specifies a Google Compute Engine persistent hard disk. See https://cloud.google.com/compute/docs/disks/#pdspecs for details.{{% /md %}}</dd><dt>Disk<wbr>Type<wbr>Persistent<wbr>Ssd</dt>
+    <dd>PERSISTENT_SSD{{% md %}}Specifies a Google Compute Engine persistent solid-state disk. See https://cloud.google.com/compute/docs/disks/#pdspecs for details.{{% /md %}}</dd><dt>Disk<wbr>Type<wbr>Local<wbr>Ssd</dt>
+    <dd>LOCAL_SSD{{% md %}}Specifies a Google Compute Engine local SSD. See https://cloud.google.com/compute/docs/disks/local-ssd for details.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Default disk type. Use one of the other options below.{{% /md %}}</dd><dt>Persistent<wbr>Hdd</dt>
+    <dd>PERSISTENT_HDD{{% md %}}Specifies a Google Compute Engine persistent hard disk. See https://cloud.google.com/compute/docs/disks/#pdspecs for details.{{% /md %}}</dd><dt>Persistent<wbr>Ssd</dt>
+    <dd>PERSISTENT_SSD{{% md %}}Specifies a Google Compute Engine persistent solid-state disk. See https://cloud.google.com/compute/docs/disks/#pdspecs for details.{{% /md %}}</dd><dt>Local<wbr>Ssd</dt>
+    <dd>LOCAL_SSD{{% md %}}Specifies a Google Compute Engine local SSD. See https://cloud.google.com/compute/docs/disks/local-ssd for details.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Default disk type. Use one of the other options below.{{% /md %}}</dd><dt>PERSISTENT_HDD</dt>
+    <dd>PERSISTENT_HDD{{% md %}}Specifies a Google Compute Engine persistent hard disk. See https://cloud.google.com/compute/docs/disks/#pdspecs for details.{{% /md %}}</dd><dt>PERSISTENT_SSD</dt>
+    <dd>PERSISTENT_SSD{{% md %}}Specifies a Google Compute Engine persistent solid-state disk. See https://cloud.google.com/compute/docs/disks/#pdspecs for details.{{% /md %}}</dd><dt>LOCAL_SSD</dt>
+    <dd>LOCAL_SSD{{% md %}}Specifies a Google Compute Engine local SSD. See https://cloud.google.com/compute/docs/disks/local-ssd for details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dockerexecutor">Docker<wbr>Executor</h4>

@@ -30,7 +30,7 @@ Creates a feed in a parent project/folder/organization to listen to its asset up
          <span class="nx">asset_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
          <span class="nx">asset_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
          <span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[_cloudasset_v1.ExprArgs]</span> = None<span class="p">,</span>
-         <span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[_cloudasset_v1.FeedContentType]</span> = None<span class="p">,</span>
          <span class="nx">feed_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">feed_output_config</span><span class="p">:</span> <span class="nx">Optional[_cloudasset_v1.FeedOutputConfigArgs]</span> = None<span class="p">,</span>
          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -209,7 +209,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#feedcontenttype">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Asset.<wbr>V1.<wbr>Feed<wbr>Content<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -285,7 +285,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#feedcontenttype">Feed<wbr>Content<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -361,7 +361,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#feedcontenttype">Feed<wbr>Content<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -437,7 +437,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#feedcontenttype">Feed<wbr>Content<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -821,6 +821,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="feedcontenttype">Feed<wbr>Content<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Content<wbr>Type<wbr>Unspecified</dt>
+    <dd>CONTENT_TYPE_UNSPECIFIED{{% md %}}Unspecified content type.{{% /md %}}</dd><dt>Resource</dt>
+    <dd>RESOURCE{{% md %}}Resource metadata.{{% /md %}}</dd><dt>Iam<wbr>Policy</dt>
+    <dd>IAM_POLICY{{% md %}}The actual IAM policy set on a resource.{{% /md %}}</dd><dt>Org<wbr>Policy</dt>
+    <dd>ORG_POLICY{{% md %}}The Cloud Organization Policy set on an asset.{{% /md %}}</dd><dt>Access<wbr>Policy</dt>
+    <dd>ACCESS_POLICY{{% md %}}The Cloud Access context manager Policy set on an asset.{{% /md %}}</dd><dt>Os<wbr>Inventory</dt>
+    <dd>OS_INVENTORY{{% md %}}The runtime OS Inventory information.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Feed<wbr>Content<wbr>Type<wbr>Content<wbr>Type<wbr>Unspecified</dt>
+    <dd>CONTENT_TYPE_UNSPECIFIED{{% md %}}Unspecified content type.{{% /md %}}</dd><dt>Feed<wbr>Content<wbr>Type<wbr>Resource</dt>
+    <dd>RESOURCE{{% md %}}Resource metadata.{{% /md %}}</dd><dt>Feed<wbr>Content<wbr>Type<wbr>Iam<wbr>Policy</dt>
+    <dd>IAM_POLICY{{% md %}}The actual IAM policy set on a resource.{{% /md %}}</dd><dt>Feed<wbr>Content<wbr>Type<wbr>Org<wbr>Policy</dt>
+    <dd>ORG_POLICY{{% md %}}The Cloud Organization Policy set on an asset.{{% /md %}}</dd><dt>Feed<wbr>Content<wbr>Type<wbr>Access<wbr>Policy</dt>
+    <dd>ACCESS_POLICY{{% md %}}The Cloud Access context manager Policy set on an asset.{{% /md %}}</dd><dt>Feed<wbr>Content<wbr>Type<wbr>Os<wbr>Inventory</dt>
+    <dd>OS_INVENTORY{{% md %}}The runtime OS Inventory information.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Content<wbr>Type<wbr>Unspecified</dt>
+    <dd>CONTENT_TYPE_UNSPECIFIED{{% md %}}Unspecified content type.{{% /md %}}</dd><dt>Resource</dt>
+    <dd>RESOURCE{{% md %}}Resource metadata.{{% /md %}}</dd><dt>Iam<wbr>Policy</dt>
+    <dd>IAM_POLICY{{% md %}}The actual IAM policy set on a resource.{{% /md %}}</dd><dt>Org<wbr>Policy</dt>
+    <dd>ORG_POLICY{{% md %}}The Cloud Organization Policy set on an asset.{{% /md %}}</dd><dt>Access<wbr>Policy</dt>
+    <dd>ACCESS_POLICY{{% md %}}The Cloud Access context manager Policy set on an asset.{{% /md %}}</dd><dt>Os<wbr>Inventory</dt>
+    <dd>OS_INVENTORY{{% md %}}The runtime OS Inventory information.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CONTENT_TYPE_UNSPECIFIED</dt>
+    <dd>CONTENT_TYPE_UNSPECIFIED{{% md %}}Unspecified content type.{{% /md %}}</dd><dt>RESOURCE</dt>
+    <dd>RESOURCE{{% md %}}Resource metadata.{{% /md %}}</dd><dt>IAM_POLICY</dt>
+    <dd>IAM_POLICY{{% md %}}The actual IAM policy set on a resource.{{% /md %}}</dd><dt>ORG_POLICY</dt>
+    <dd>ORG_POLICY{{% md %}}The Cloud Organization Policy set on an asset.{{% /md %}}</dd><dt>ACCESS_POLICY</dt>
+    <dd>ACCESS_POLICY{{% md %}}The Cloud Access context manager Policy set on an asset.{{% /md %}}</dd><dt>OS_INVENTORY</dt>
+    <dd>OS_INVENTORY{{% md %}}The runtime OS Inventory information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="feedoutputconfig">Feed<wbr>Output<wbr>Config</h4>

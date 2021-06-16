@@ -18,6 +18,15 @@ Explore the resources and functions of the google-native.servicemanagement/v1 mo
     <li><a href="serviceiampolicy" title="ServiceIamPolicy"><span class="symbol resource"></span>ServiceIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getconfig" title="GetConfig"><span class="symbol function"></span>GetConfig</a></li>
+    <li><a href="getrollout" title="GetRollout"><span class="symbol function"></span>GetRollout</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getserviceconsumeriampolicy" title="GetServiceConsumerIamPolicy"><span class="symbol function"></span>GetServiceConsumerIamPolicy</a></li>
+    <li><a href="getserviceiampolicy" title="GetServiceIamPolicy"><span class="symbol function"></span>GetServiceIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -25,6 +34,6 @@ Explore the resources and functions of the google-native.servicemanagement/v1 mo
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

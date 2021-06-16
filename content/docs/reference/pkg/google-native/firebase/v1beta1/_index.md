@@ -16,6 +16,13 @@ Explore the resources and functions of the google-native.firebase/v1beta1 module
     <li><a href="webapp" title="WebApp"><span class="symbol resource"></span>WebApp</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getandroidapp" title="GetAndroidApp"><span class="symbol function"></span>GetAndroidApp</a></li>
+    <li><a href="getiosapp" title="GetIosApp"><span class="symbol function"></span>GetIosApp</a></li>
+    <li><a href="getwebapp" title="GetWebApp"><span class="symbol function"></span>GetWebApp</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -23,6 +30,6 @@ Explore the resources and functions of the google-native.firebase/v1beta1 module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

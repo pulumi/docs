@@ -40,9 +40,9 @@ Creates a new migration job in a given project and location.
                  <span class="nx">reverse_ssh_connectivity</span><span class="p">:</span> <span class="nx">Optional[_datamigration_v1.ReverseSshConnectivityArgs]</span> = None<span class="p">,</span>
                  <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">source_database</span><span class="p">:</span> <span class="nx">Optional[_datamigration_v1.DatabaseTypeArgs]</span> = None<span class="p">,</span>
-                 <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_datamigration_v1.MigrationJobState]</span> = None<span class="p">,</span>
                  <span class="nx">static_ip_connectivity</span><span class="p">:</span> <span class="nx">Optional[_datamigration_v1.StaticIpConnectivityArgs]</span> = None<span class="p">,</span>
-                 <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[_datamigration_v1.MigrationJobType]</span> = None<span class="p">,</span>
                  <span class="nx">vpc_peering_connectivity</span><span class="p">:</span> <span class="nx">Optional[_datamigration_v1.VpcPeeringConnectivityArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">MigrationJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -281,7 +281,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#migrationjobstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Datamigration.<wbr>V1.<wbr>Migration<wbr>Job<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current migration job state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -297,7 +297,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#migrationjobtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Datamigration.<wbr>V1.<wbr>Migration<wbr>Job<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The migration job type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -421,7 +421,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#migrationjobstate">Migration<wbr>Job<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The current migration job state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -437,7 +437,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#migrationjobtype">Migration<wbr>Job<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The migration job type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -561,7 +561,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#migrationjobstate">Migration<wbr>Job<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current migration job state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -577,7 +577,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#migrationjobtype">Migration<wbr>Job<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The migration job type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -701,7 +701,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#migrationjobstate">Migration<wbr>Job<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current migration job state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -717,7 +717,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#migrationjobtype">Migration<wbr>Job<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The migration job type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -996,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#databasetypeengine">Pulumi.<wbr>Google<wbr>Native.<wbr>Datamigration.<wbr>V1.<wbr>Database<wbr>Type<wbr>Engine</a></span>
     </dt>
     <dd>{{% md %}}The database engine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1004,7 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#databasetypeprovider">Pulumi.<wbr>Google<wbr>Native.<wbr>Datamigration.<wbr>V1.<wbr>Database<wbr>Type<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The database provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1016,7 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#databasetypeengine">Database<wbr>Type<wbr>Engine</a></span>
     </dt>
     <dd>{{% md %}}The database engine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1024,7 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_go" style="color: inherit; text-decoration: inherit;">Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#databasetypeprovider">Database<wbr>Type<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The database provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1036,7 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#databasetypeengine">Database<wbr>Type<wbr>Engine</a></span>
     </dt>
     <dd>{{% md %}}The database engine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1044,7 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#databasetypeprovider">Database<wbr>Type<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The database provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1056,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#databasetypeengine">Database<wbr>Type<wbr>Engine</a></span>
     </dt>
     <dd>{{% md %}}The database engine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1064,9 +1064,69 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#databasetypeprovider">Database<wbr>Type<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The database provider.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="databasetypeengine">Database<wbr>Type<wbr>Engine</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Database<wbr>Engine<wbr>Unspecified</dt>
+    <dd>DATABASE_ENGINE_UNSPECIFIED{{% md %}}The source database engine of the migration job is unknown.{{% /md %}}</dd><dt>Mysql</dt>
+    <dd>MYSQL{{% md %}}The source engine is MySQL.{{% /md %}}</dd><dt>Postgresql</dt>
+    <dd>POSTGRESQL{{% md %}}The source engine is PostgreSQL.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Database<wbr>Type<wbr>Engine<wbr>Database<wbr>Engine<wbr>Unspecified</dt>
+    <dd>DATABASE_ENGINE_UNSPECIFIED{{% md %}}The source database engine of the migration job is unknown.{{% /md %}}</dd><dt>Database<wbr>Type<wbr>Engine<wbr>Mysql</dt>
+    <dd>MYSQL{{% md %}}The source engine is MySQL.{{% /md %}}</dd><dt>Database<wbr>Type<wbr>Engine<wbr>Postgresql</dt>
+    <dd>POSTGRESQL{{% md %}}The source engine is PostgreSQL.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Database<wbr>Engine<wbr>Unspecified</dt>
+    <dd>DATABASE_ENGINE_UNSPECIFIED{{% md %}}The source database engine of the migration job is unknown.{{% /md %}}</dd><dt>Mysql</dt>
+    <dd>MYSQL{{% md %}}The source engine is MySQL.{{% /md %}}</dd><dt>Postgresql</dt>
+    <dd>POSTGRESQL{{% md %}}The source engine is PostgreSQL.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DATABASE_ENGINE_UNSPECIFIED</dt>
+    <dd>DATABASE_ENGINE_UNSPECIFIED{{% md %}}The source database engine of the migration job is unknown.{{% /md %}}</dd><dt>MYSQL</dt>
+    <dd>MYSQL{{% md %}}The source engine is MySQL.{{% /md %}}</dd><dt>POSTGRESQL</dt>
+    <dd>POSTGRESQL{{% md %}}The source engine is PostgreSQL.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="databasetypeprovider">Database<wbr>Type<wbr>Provider</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Database<wbr>Provider<wbr>Unspecified</dt>
+    <dd>DATABASE_PROVIDER_UNSPECIFIED{{% md %}}The database provider is unknown.{{% /md %}}</dd><dt>Cloudsql</dt>
+    <dd>CLOUDSQL{{% md %}}CloudSQL runs the database.{{% /md %}}</dd><dt>Rds</dt>
+    <dd>RDS{{% md %}}RDS runs the database.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Database<wbr>Type<wbr>Provider<wbr>Database<wbr>Provider<wbr>Unspecified</dt>
+    <dd>DATABASE_PROVIDER_UNSPECIFIED{{% md %}}The database provider is unknown.{{% /md %}}</dd><dt>Database<wbr>Type<wbr>Provider<wbr>Cloudsql</dt>
+    <dd>CLOUDSQL{{% md %}}CloudSQL runs the database.{{% /md %}}</dd><dt>Database<wbr>Type<wbr>Provider<wbr>Rds</dt>
+    <dd>RDS{{% md %}}RDS runs the database.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Database<wbr>Provider<wbr>Unspecified</dt>
+    <dd>DATABASE_PROVIDER_UNSPECIFIED{{% md %}}The database provider is unknown.{{% /md %}}</dd><dt>Cloudsql</dt>
+    <dd>CLOUDSQL{{% md %}}CloudSQL runs the database.{{% /md %}}</dd><dt>Rds</dt>
+    <dd>RDS{{% md %}}RDS runs the database.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DATABASE_PROVIDER_UNSPECIFIED</dt>
+    <dd>DATABASE_PROVIDER_UNSPECIFIED{{% md %}}The database provider is unknown.{{% /md %}}</dd><dt>CLOUDSQL</dt>
+    <dd>CLOUDSQL{{% md %}}CloudSQL runs the database.{{% /md %}}</dd><dt>RDS</dt>
+    <dd>RDS{{% md %}}RDS runs the database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databasetyperesponse">Database<wbr>Type<wbr>Response</h4>
@@ -1149,6 +1209,118 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database provider.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="migrationjobstate">Migration<wbr>Job<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state of the migration job is unknown.{{% /md %}}</dd><dt>Maintenance</dt>
+    <dd>MAINTENANCE{{% md %}}The migration job is down for maintenance.{{% /md %}}</dd><dt>Draft</dt>
+    <dd>DRAFT{{% md %}}The migration job is in draft mode and no resources are created.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}The migration job is being created.{{% /md %}}</dd><dt>Not<wbr>Started</dt>
+    <dd>NOT_STARTED{{% md %}}The migration job is created, not started and is fully editable.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The migration job is running.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The migration job failed.{{% /md %}}</dd><dt>Completed</dt>
+    <dd>COMPLETED{{% md %}}The migration job has been completed.{{% /md %}}</dd><dt>Deleting</dt>
+    <dd>DELETING{{% md %}}The migration job is being deleted.{{% /md %}}</dd><dt>Stopping</dt>
+    <dd>STOPPING{{% md %}}The migration job is being stopped.{{% /md %}}</dd><dt>Stopped</dt>
+    <dd>STOPPED{{% md %}}The migration job is currently stopped.{{% /md %}}</dd><dt>Deleted</dt>
+    <dd>DELETED{{% md %}}The migration job has been deleted.{{% /md %}}</dd><dt>Updating</dt>
+    <dd>UPDATING{{% md %}}The migration job is being updated.{{% /md %}}</dd><dt>Starting</dt>
+    <dd>STARTING{{% md %}}The migration job is starting.{{% /md %}}</dd><dt>Restarting</dt>
+    <dd>RESTARTING{{% md %}}The migration job is restarting.{{% /md %}}</dd><dt>Resuming</dt>
+    <dd>RESUMING{{% md %}}The migration job is resuming.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Migration<wbr>Job<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state of the migration job is unknown.{{% /md %}}</dd><dt>Migration<wbr>Job<wbr>State<wbr>Maintenance</dt>
+    <dd>MAINTENANCE{{% md %}}The migration job is down for maintenance.{{% /md %}}</dd><dt>Migration<wbr>Job<wbr>State<wbr>Draft</dt>
+    <dd>DRAFT{{% md %}}The migration job is in draft mode and no resources are created.{{% /md %}}</dd><dt>Migration<wbr>Job<wbr>State<wbr>Creating</dt>
+    <dd>CREATING{{% md %}}The migration job is being created.{{% /md %}}</dd><dt>Migration<wbr>Job<wbr>State<wbr>Not<wbr>Started</dt>
+    <dd>NOT_STARTED{{% md %}}The migration job is created, not started and is fully editable.{{% /md %}}</dd><dt>Migration<wbr>Job<wbr>State<wbr>Running</dt>
+    <dd>RUNNING{{% md %}}The migration job is running.{{% /md %}}</dd><dt>Migration<wbr>Job<wbr>State<wbr>Failed</dt>
+    <dd>FAILED{{% md %}}The migration job failed.{{% /md %}}</dd><dt>Migration<wbr>Job<wbr>State<wbr>Completed</dt>
+    <dd>COMPLETED{{% md %}}The migration job has been completed.{{% /md %}}</dd><dt>Migration<wbr>Job<wbr>State<wbr>Deleting</dt>
+    <dd>DELETING{{% md %}}The migration job is being deleted.{{% /md %}}</dd><dt>Migration<wbr>Job<wbr>State<wbr>Stopping</dt>
+    <dd>STOPPING{{% md %}}The migration job is being stopped.{{% /md %}}</dd><dt>Migration<wbr>Job<wbr>State<wbr>Stopped</dt>
+    <dd>STOPPED{{% md %}}The migration job is currently stopped.{{% /md %}}</dd><dt>Migration<wbr>Job<wbr>State<wbr>Deleted</dt>
+    <dd>DELETED{{% md %}}The migration job has been deleted.{{% /md %}}</dd><dt>Migration<wbr>Job<wbr>State<wbr>Updating</dt>
+    <dd>UPDATING{{% md %}}The migration job is being updated.{{% /md %}}</dd><dt>Migration<wbr>Job<wbr>State<wbr>Starting</dt>
+    <dd>STARTING{{% md %}}The migration job is starting.{{% /md %}}</dd><dt>Migration<wbr>Job<wbr>State<wbr>Restarting</dt>
+    <dd>RESTARTING{{% md %}}The migration job is restarting.{{% /md %}}</dd><dt>Migration<wbr>Job<wbr>State<wbr>Resuming</dt>
+    <dd>RESUMING{{% md %}}The migration job is resuming.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state of the migration job is unknown.{{% /md %}}</dd><dt>Maintenance</dt>
+    <dd>MAINTENANCE{{% md %}}The migration job is down for maintenance.{{% /md %}}</dd><dt>Draft</dt>
+    <dd>DRAFT{{% md %}}The migration job is in draft mode and no resources are created.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}The migration job is being created.{{% /md %}}</dd><dt>Not<wbr>Started</dt>
+    <dd>NOT_STARTED{{% md %}}The migration job is created, not started and is fully editable.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The migration job is running.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The migration job failed.{{% /md %}}</dd><dt>Completed</dt>
+    <dd>COMPLETED{{% md %}}The migration job has been completed.{{% /md %}}</dd><dt>Deleting</dt>
+    <dd>DELETING{{% md %}}The migration job is being deleted.{{% /md %}}</dd><dt>Stopping</dt>
+    <dd>STOPPING{{% md %}}The migration job is being stopped.{{% /md %}}</dd><dt>Stopped</dt>
+    <dd>STOPPED{{% md %}}The migration job is currently stopped.{{% /md %}}</dd><dt>Deleted</dt>
+    <dd>DELETED{{% md %}}The migration job has been deleted.{{% /md %}}</dd><dt>Updating</dt>
+    <dd>UPDATING{{% md %}}The migration job is being updated.{{% /md %}}</dd><dt>Starting</dt>
+    <dd>STARTING{{% md %}}The migration job is starting.{{% /md %}}</dd><dt>Restarting</dt>
+    <dd>RESTARTING{{% md %}}The migration job is restarting.{{% /md %}}</dd><dt>Resuming</dt>
+    <dd>RESUMING{{% md %}}The migration job is resuming.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state of the migration job is unknown.{{% /md %}}</dd><dt>MAINTENANCE</dt>
+    <dd>MAINTENANCE{{% md %}}The migration job is down for maintenance.{{% /md %}}</dd><dt>DRAFT</dt>
+    <dd>DRAFT{{% md %}}The migration job is in draft mode and no resources are created.{{% /md %}}</dd><dt>CREATING</dt>
+    <dd>CREATING{{% md %}}The migration job is being created.{{% /md %}}</dd><dt>NOT_STARTED</dt>
+    <dd>NOT_STARTED{{% md %}}The migration job is created, not started and is fully editable.{{% /md %}}</dd><dt>RUNNING</dt>
+    <dd>RUNNING{{% md %}}The migration job is running.{{% /md %}}</dd><dt>FAILED</dt>
+    <dd>FAILED{{% md %}}The migration job failed.{{% /md %}}</dd><dt>COMPLETED</dt>
+    <dd>COMPLETED{{% md %}}The migration job has been completed.{{% /md %}}</dd><dt>DELETING</dt>
+    <dd>DELETING{{% md %}}The migration job is being deleted.{{% /md %}}</dd><dt>STOPPING</dt>
+    <dd>STOPPING{{% md %}}The migration job is being stopped.{{% /md %}}</dd><dt>STOPPED</dt>
+    <dd>STOPPED{{% md %}}The migration job is currently stopped.{{% /md %}}</dd><dt>DELETED</dt>
+    <dd>DELETED{{% md %}}The migration job has been deleted.{{% /md %}}</dd><dt>UPDATING</dt>
+    <dd>UPDATING{{% md %}}The migration job is being updated.{{% /md %}}</dd><dt>STARTING</dt>
+    <dd>STARTING{{% md %}}The migration job is starting.{{% /md %}}</dd><dt>RESTARTING</dt>
+    <dd>RESTARTING{{% md %}}The migration job is restarting.{{% /md %}}</dd><dt>RESUMING</dt>
+    <dd>RESUMING{{% md %}}The migration job is resuming.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="migrationjobtype">Migration<wbr>Job<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}The type of the migration job is unknown.{{% /md %}}</dd><dt>One<wbr>Time</dt>
+    <dd>ONE_TIME{{% md %}}The migration job is a one time migration.{{% /md %}}</dd><dt>Continuous</dt>
+    <dd>CONTINUOUS{{% md %}}The migration job is a continuous migration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Migration<wbr>Job<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}The type of the migration job is unknown.{{% /md %}}</dd><dt>Migration<wbr>Job<wbr>Type<wbr>One<wbr>Time</dt>
+    <dd>ONE_TIME{{% md %}}The migration job is a one time migration.{{% /md %}}</dd><dt>Migration<wbr>Job<wbr>Type<wbr>Continuous</dt>
+    <dd>CONTINUOUS{{% md %}}The migration job is a continuous migration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}The type of the migration job is unknown.{{% /md %}}</dd><dt>One<wbr>Time</dt>
+    <dd>ONE_TIME{{% md %}}The migration job is a one time migration.{{% /md %}}</dd><dt>Continuous</dt>
+    <dd>CONTINUOUS{{% md %}}The migration job is a continuous migration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}The type of the migration job is unknown.{{% /md %}}</dd><dt>ONE_TIME</dt>
+    <dd>ONE_TIME{{% md %}}The migration job is a one time migration.{{% /md %}}</dd><dt>CONTINUOUS</dt>
+    <dd>CONTINUOUS{{% md %}}The migration job is a continuous migration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reversesshconnectivity">Reverse<wbr>Ssh<wbr>Connectivity</h4>

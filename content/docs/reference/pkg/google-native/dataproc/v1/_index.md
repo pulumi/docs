@@ -24,6 +24,21 @@ Explore the resources and functions of the google-native.dataproc/v1 module.
     <li><a href="workflowtemplateiampolicy" title="WorkflowTemplateIamPolicy"><span class="symbol resource"></span>WorkflowTemplateIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getautoscalingpolicy" title="GetAutoscalingPolicy"><span class="symbol function"></span>GetAutoscalingPolicy</a></li>
+    <li><a href="getautoscalingpolicyiampolicy" title="GetAutoscalingPolicyIamPolicy"><span class="symbol function"></span>GetAutoscalingPolicyIamPolicy</a></li>
+    <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
+    <li><a href="getjob" title="GetJob"><span class="symbol function"></span>GetJob</a></li>
+    <li><a href="getregionautoscalingpolicyiampolicy" title="GetRegionAutoscalingPolicyIamPolicy"><span class="symbol function"></span>GetRegionAutoscalingPolicyIamPolicy</a></li>
+    <li><a href="getregionclusteriampolicy" title="GetRegionClusterIamPolicy"><span class="symbol function"></span>GetRegionClusterIamPolicy</a></li>
+    <li><a href="getregionjobiampolicy" title="GetRegionJobIamPolicy"><span class="symbol function"></span>GetRegionJobIamPolicy</a></li>
+    <li><a href="getregionoperationiampolicy" title="GetRegionOperationIamPolicy"><span class="symbol function"></span>GetRegionOperationIamPolicy</a></li>
+    <li><a href="getregionworkflowtemplateiampolicy" title="GetRegionWorkflowTemplateIamPolicy"><span class="symbol function"></span>GetRegionWorkflowTemplateIamPolicy</a></li>
+    <li><a href="getworkflowtemplate" title="GetWorkflowTemplate"><span class="symbol function"></span>GetWorkflowTemplate</a></li>
+    <li><a href="getworkflowtemplateiampolicy" title="GetWorkflowTemplateIamPolicy"><span class="symbol function"></span>GetWorkflowTemplateIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -31,6 +46,6 @@ Explore the resources and functions of the google-native.dataproc/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

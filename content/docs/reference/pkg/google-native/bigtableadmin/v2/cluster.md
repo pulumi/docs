@@ -28,7 +28,7 @@ Creates a cluster within an instance.
 <span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">default_storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">default_storage_type</span><span class="p">:</span> <span class="nx">Optional[_bigtableadmin_v2.ClusterDefaultStorageType]</span> = None<span class="p">,</span>
             <span class="nx">encryption_config</span><span class="p">:</span> <span class="nx">Optional[_bigtableadmin_v2.EncryptionConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -192,7 +192,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#defaultstoragetype_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Storage<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#clusterdefaultstoragetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Bigtable<wbr>Admin.<wbr>V2.<wbr>Cluster<wbr>Default<wbr>Storage<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -260,7 +260,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#defaultstoragetype_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Storage<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#clusterdefaultstoragetype">Cluster<wbr>Default<wbr>Storage<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -328,7 +328,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#defaultstoragetype_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Storage<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#clusterdefaultstoragetype">Cluster<wbr>Default<wbr>Storage<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -396,7 +396,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#default_storage_type_python" style="color: inherit; text-decoration: inherit;">default_<wbr>storage_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#clusterdefaultstoragetype">Cluster<wbr>Default<wbr>Storage<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -529,6 +529,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="clusterdefaultstoragetype">Cluster<wbr>Default<wbr>Storage<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Storage<wbr>Type<wbr>Unspecified</dt>
+    <dd>STORAGE_TYPE_UNSPECIFIED{{% md %}}The user did not specify a storage type.{{% /md %}}</dd><dt>Ssd</dt>
+    <dd>SSD{{% md %}}Flash (SSD) storage should be used.{{% /md %}}</dd><dt>Hdd</dt>
+    <dd>HDD{{% md %}}Magnetic drive (HDD) storage should be used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Cluster<wbr>Default<wbr>Storage<wbr>Type<wbr>Storage<wbr>Type<wbr>Unspecified</dt>
+    <dd>STORAGE_TYPE_UNSPECIFIED{{% md %}}The user did not specify a storage type.{{% /md %}}</dd><dt>Cluster<wbr>Default<wbr>Storage<wbr>Type<wbr>Ssd</dt>
+    <dd>SSD{{% md %}}Flash (SSD) storage should be used.{{% /md %}}</dd><dt>Cluster<wbr>Default<wbr>Storage<wbr>Type<wbr>Hdd</dt>
+    <dd>HDD{{% md %}}Magnetic drive (HDD) storage should be used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Storage<wbr>Type<wbr>Unspecified</dt>
+    <dd>STORAGE_TYPE_UNSPECIFIED{{% md %}}The user did not specify a storage type.{{% /md %}}</dd><dt>Ssd</dt>
+    <dd>SSD{{% md %}}Flash (SSD) storage should be used.{{% /md %}}</dd><dt>Hdd</dt>
+    <dd>HDD{{% md %}}Magnetic drive (HDD) storage should be used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STORAGE_TYPE_UNSPECIFIED</dt>
+    <dd>STORAGE_TYPE_UNSPECIFIED{{% md %}}The user did not specify a storage type.{{% /md %}}</dd><dt>SSD</dt>
+    <dd>SSD{{% md %}}Flash (SSD) storage should be used.{{% /md %}}</dd><dt>HDD</dt>
+    <dd>HDD{{% md %}}Magnetic drive (HDD) storage should be used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="encryptionconfig">Encryption<wbr>Config</h4>
 

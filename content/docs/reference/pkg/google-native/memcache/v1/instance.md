@@ -33,7 +33,7 @@ Creates a new Instance in a given location.
              <span class="nx">instance_messages</span><span class="p">:</span> <span class="nx">Optional[Sequence[_memcache_v1.InstanceMessageArgs]]</span> = None<span class="p">,</span>
              <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">memcache_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">memcache_version</span><span class="p">:</span> <span class="nx">Optional[_memcache_v1.InstanceMemcacheVersion]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[_memcache_v1.NodeConfigArgs]</span> = None<span class="p">,</span>
              <span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -229,7 +229,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#memcacheversion_csharp" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancememcacheversion">Pulumi.<wbr>Google<wbr>Native.<wbr>Memcache.<wbr>V1.<wbr>Instance<wbr>Memcache<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The major version of Memcached software. If not provided, latest supported version will be used. Currently the latest supported major version is `MEMCACHE_1_5`. The minor version will be automatically determined by our system based on the latest supported minor version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -337,7 +337,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#memcacheversion_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancememcacheversion">Instance<wbr>Memcache<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The major version of Memcached software. If not provided, latest supported version will be used. Currently the latest supported major version is `MEMCACHE_1_5`. The minor version will be automatically determined by our system based on the latest supported minor version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -445,7 +445,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#memcacheversion_nodejs" style="color: inherit; text-decoration: inherit;">memcache<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancememcacheversion">Instance<wbr>Memcache<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The major version of Memcached software. If not provided, latest supported version will be used. Currently the latest supported major version is `MEMCACHE_1_5`. The minor version will be automatically determined by our system based on the latest supported minor version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -553,7 +553,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#memcache_version_python" style="color: inherit; text-decoration: inherit;">memcache_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancememcacheversion">Instance<wbr>Memcache<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The major version of Memcached software. If not provided, latest supported version will be used. Currently the latest supported major version is `MEMCACHE_1_5`. The minor version will be automatically determined by our system based on the latest supported minor version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -855,6 +855,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="instancememcacheversion">Instance<wbr>Memcache<wbr>Version</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Memcache<wbr>Version<wbr>Unspecified</dt>
+    <dd>MEMCACHE_VERSION_UNSPECIFIED</dd><dt>Memcache15</dt>
+    <dd>MEMCACHE_1_5{{% md %}}Memcached 1.5 version.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Memcache<wbr>Version<wbr>Memcache<wbr>Version<wbr>Unspecified</dt>
+    <dd>MEMCACHE_VERSION_UNSPECIFIED</dd><dt>Instance<wbr>Memcache<wbr>Version<wbr>Memcache15</dt>
+    <dd>MEMCACHE_1_5{{% md %}}Memcached 1.5 version.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Memcache<wbr>Version<wbr>Unspecified</dt>
+    <dd>MEMCACHE_VERSION_UNSPECIFIED</dd><dt>Memcache15</dt>
+    <dd>MEMCACHE_1_5{{% md %}}Memcached 1.5 version.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MEMCACHE_VERSION_UNSPECIFIED</dt>
+    <dd>MEMCACHE_VERSION_UNSPECIFIED</dd><dt>MEMCACHE15</dt>
+    <dd>MEMCACHE_1_5{{% md %}}Memcached 1.5 version.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="instancemessage">Instance<wbr>Message</h4>
 
 {{% choosable language csharp %}}
@@ -864,7 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancemessagecode">Pulumi.<wbr>Google<wbr>Native.<wbr>Memcache.<wbr>V1.<wbr>Instance<wbr>Message<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}A code that correspond to one type of user-facing message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -884,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancemessagecode">Instance<wbr>Message<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}A code that correspond to one type of user-facing message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -904,7 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancemessagecode">Instance<wbr>Message<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}A code that correspond to one type of user-facing message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -924,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancemessagecode">Instance<wbr>Message<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}A code that correspond to one type of user-facing message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -935,6 +961,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Message on memcached instance which will be exposed to users.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancemessagecode">Instance<wbr>Message<wbr>Code</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Code<wbr>Unspecified</dt>
+    <dd>CODE_UNSPECIFIED{{% md %}}Message Code not set.{{% /md %}}</dd><dt>Zone<wbr>Distribution<wbr>Unbalanced</dt>
+    <dd>ZONE_DISTRIBUTION_UNBALANCED{{% md %}}Memcached nodes are distributed unevenly.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Message<wbr>Code<wbr>Code<wbr>Unspecified</dt>
+    <dd>CODE_UNSPECIFIED{{% md %}}Message Code not set.{{% /md %}}</dd><dt>Instance<wbr>Message<wbr>Code<wbr>Zone<wbr>Distribution<wbr>Unbalanced</dt>
+    <dd>ZONE_DISTRIBUTION_UNBALANCED{{% md %}}Memcached nodes are distributed unevenly.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Code<wbr>Unspecified</dt>
+    <dd>CODE_UNSPECIFIED{{% md %}}Message Code not set.{{% /md %}}</dd><dt>Zone<wbr>Distribution<wbr>Unbalanced</dt>
+    <dd>ZONE_DISTRIBUTION_UNBALANCED{{% md %}}Memcached nodes are distributed unevenly.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CODE_UNSPECIFIED</dt>
+    <dd>CODE_UNSPECIFIED{{% md %}}Message Code not set.{{% /md %}}</dd><dt>ZONE_DISTRIBUTION_UNBALANCED</dt>
+    <dd>ZONE_DISTRIBUTION_UNBALANCED{{% md %}}Memcached nodes are distributed unevenly.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancemessageresponse">Instance<wbr>Message<wbr>Response</h4>

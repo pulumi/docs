@@ -42,7 +42,7 @@ Creates a new Data Fusion instance in the specified project and location.
              <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
              <span class="nx">private_instance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[_datafusion_v1.InstanceType]</span> = None<span class="p">,</span>
              <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -298,7 +298,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Data<wbr>Fusion.<wbr>V1.<wbr>Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Instance type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +446,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Instance type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +594,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Instance type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +742,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Instance type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1157,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratortype_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#acceleratoracceleratortype">Pulumi.<wbr>Google<wbr>Native.<wbr>Data<wbr>Fusion.<wbr>V1.<wbr>Accelerator<wbr>Accelerator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of an accelator for a CDF instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1165,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#acceleratorstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Data<wbr>Fusion.<wbr>V1.<wbr>Accelerator<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of the accelerator{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1177,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratortype_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#acceleratoracceleratortype">Accelerator<wbr>Accelerator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of an accelator for a CDF instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#acceleratorstate">Accelerator<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of the accelerator{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1197,7 +1197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#acceleratoracceleratortype">Accelerator<wbr>Accelerator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of an accelator for a CDF instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1205,7 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#acceleratorstate">Accelerator<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of the accelerator{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1217,7 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#acceleratoracceleratortype">Accelerator<wbr>Accelerator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of an accelator for a CDF instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1225,9 +1225,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#acceleratorstate">Accelerator<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of the accelerator{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="acceleratoracceleratortype">Accelerator<wbr>Accelerator<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Accelerator<wbr>Type<wbr>Unspecified</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Default value, if unspecified.{{% /md %}}</dd><dt>Cdc</dt>
+    <dd>CDC{{% md %}}Change Data Capture accelerator for CDF.{{% /md %}}</dd><dt>Healthcare</dt>
+    <dd>HEALTHCARE{{% md %}}Cloud Healthcare accelerator for CDF. This accelerator is to enable Cloud Healthcare specific CDF plugins developed by Healthcare team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Accelerator<wbr>Accelerator<wbr>Type<wbr>Accelerator<wbr>Type<wbr>Unspecified</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Default value, if unspecified.{{% /md %}}</dd><dt>Accelerator<wbr>Accelerator<wbr>Type<wbr>Cdc</dt>
+    <dd>CDC{{% md %}}Change Data Capture accelerator for CDF.{{% /md %}}</dd><dt>Accelerator<wbr>Accelerator<wbr>Type<wbr>Healthcare</dt>
+    <dd>HEALTHCARE{{% md %}}Cloud Healthcare accelerator for CDF. This accelerator is to enable Cloud Healthcare specific CDF plugins developed by Healthcare team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Accelerator<wbr>Type<wbr>Unspecified</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Default value, if unspecified.{{% /md %}}</dd><dt>Cdc</dt>
+    <dd>CDC{{% md %}}Change Data Capture accelerator for CDF.{{% /md %}}</dd><dt>Healthcare</dt>
+    <dd>HEALTHCARE{{% md %}}Cloud Healthcare accelerator for CDF. This accelerator is to enable Cloud Healthcare specific CDF plugins developed by Healthcare team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACCELERATOR_TYPE_UNSPECIFIED</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Default value, if unspecified.{{% /md %}}</dd><dt>CDC</dt>
+    <dd>CDC{{% md %}}Change Data Capture accelerator for CDF.{{% /md %}}</dd><dt>HEALTHCARE</dt>
+    <dd>HEALTHCARE{{% md %}}Cloud Healthcare accelerator for CDF. This accelerator is to enable Cloud Healthcare specific CDF plugins developed by Healthcare team.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="acceleratorresponse">Accelerator<wbr>Response</h4>
@@ -1310,6 +1340,74 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the accelerator{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="acceleratorstate">Accelerator<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Default value, do not use{{% /md %}}</dd><dt>Enabled</dt>
+    <dd>ENABLED{{% md %}}Indicates that the accelerator is enabled and available to use{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}Indicates that the accelerator is disabled and not available to use{{% /md %}}</dd><dt>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}Indicates that accelerator state is currently unknown. Requests for enable, disable could be retried while in this state{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Accelerator<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Default value, do not use{{% /md %}}</dd><dt>Accelerator<wbr>State<wbr>Enabled</dt>
+    <dd>ENABLED{{% md %}}Indicates that the accelerator is enabled and available to use{{% /md %}}</dd><dt>Accelerator<wbr>State<wbr>Disabled</dt>
+    <dd>DISABLED{{% md %}}Indicates that the accelerator is disabled and not available to use{{% /md %}}</dd><dt>Accelerator<wbr>State<wbr>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}Indicates that accelerator state is currently unknown. Requests for enable, disable could be retried while in this state{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Default value, do not use{{% /md %}}</dd><dt>Enabled</dt>
+    <dd>ENABLED{{% md %}}Indicates that the accelerator is enabled and available to use{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}Indicates that the accelerator is disabled and not available to use{{% /md %}}</dd><dt>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}Indicates that accelerator state is currently unknown. Requests for enable, disable could be retried while in this state{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Default value, do not use{{% /md %}}</dd><dt>ENABLED</dt>
+    <dd>ENABLED{{% md %}}Indicates that the accelerator is enabled and available to use{{% /md %}}</dd><dt>DISABLED</dt>
+    <dd>DISABLED{{% md %}}Indicates that the accelerator is disabled and not available to use{{% /md %}}</dd><dt>UNKNOWN</dt>
+    <dd>UNKNOWN{{% md %}}Indicates that accelerator state is currently unknown. Requests for enable, disable could be retried while in this state{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancetype">Instance<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}No type specified. The instance creation will fail.{{% /md %}}</dd><dt>Basic</dt>
+    <dd>BASIC{{% md %}}Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for streaming pipelines, etc.{{% /md %}}</dd><dt>Enterprise</dt>
+    <dd>ENTERPRISE{{% md %}}Enterprise Data Fusion instance. In Enterprise type, the user will have all features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.{{% /md %}}</dd><dt>Developer</dt>
+    <dd>DEVELOPER{{% md %}}Developer Data Fusion instance. In Developer type, the user will have all features available but with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration pipelines at low cost.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}No type specified. The instance creation will fail.{{% /md %}}</dd><dt>Instance<wbr>Type<wbr>Basic</dt>
+    <dd>BASIC{{% md %}}Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for streaming pipelines, etc.{{% /md %}}</dd><dt>Instance<wbr>Type<wbr>Enterprise</dt>
+    <dd>ENTERPRISE{{% md %}}Enterprise Data Fusion instance. In Enterprise type, the user will have all features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.{{% /md %}}</dd><dt>Instance<wbr>Type<wbr>Developer</dt>
+    <dd>DEVELOPER{{% md %}}Developer Data Fusion instance. In Developer type, the user will have all features available but with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration pipelines at low cost.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}No type specified. The instance creation will fail.{{% /md %}}</dd><dt>Basic</dt>
+    <dd>BASIC{{% md %}}Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for streaming pipelines, etc.{{% /md %}}</dd><dt>Enterprise</dt>
+    <dd>ENTERPRISE{{% md %}}Enterprise Data Fusion instance. In Enterprise type, the user will have all features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.{{% /md %}}</dd><dt>Developer</dt>
+    <dd>DEVELOPER{{% md %}}Developer Data Fusion instance. In Developer type, the user will have all features available but with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration pipelines at low cost.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}No type specified. The instance creation will fail.{{% /md %}}</dd><dt>BASIC</dt>
+    <dd>BASIC{{% md %}}Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for streaming pipelines, etc.{{% /md %}}</dd><dt>ENTERPRISE</dt>
+    <dd>ENTERPRISE{{% md %}}Enterprise Data Fusion instance. In Enterprise type, the user will have all features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.{{% /md %}}</dd><dt>DEVELOPER</dt>
+    <dd>DEVELOPER{{% md %}}Developer Data Fusion instance. In Developer type, the user will have all features available but with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration pipelines at low cost.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkconfig">Network<wbr>Config</h4>

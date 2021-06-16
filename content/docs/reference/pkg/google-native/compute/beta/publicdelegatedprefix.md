@@ -41,7 +41,7 @@ Creates a PublicDelegatedPrefix in the specified project in the given region usi
                           <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                          <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                          <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.PublicDelegatedPrefixStatus]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">PublicDelegatedPrefix</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PublicDelegatedPrefixArgs</a></span><span class="p">,</span>
@@ -289,7 +289,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicDelegate
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publicdelegatedprefixstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Public<wbr>Delegated<wbr>Prefix<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the public delegated prefix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -415,7 +415,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicDelegate
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publicdelegatedprefixstatus">Public<wbr>Delegated<wbr>Prefix<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the public delegated prefix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -541,7 +541,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicDelegate
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publicdelegatedprefixstatus">Public<wbr>Delegated<wbr>Prefix<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the public delegated prefix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -667,7 +667,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicDelegate
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#publicdelegatedprefixstatus">Public<wbr>Delegated<wbr>Prefix<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the public delegated prefix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -794,7 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publicdelegatedprefixpublicdelegatedsubprefixstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Public<wbr>Delegated<wbr>Prefix<wbr>Public<wbr>Delegated<wbr>Sub<wbr>Prefix<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the sub public delegated prefix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -854,7 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publicdelegatedprefixpublicdelegatedsubprefixstatus">Public<wbr>Delegated<wbr>Prefix<wbr>Public<wbr>Delegated<wbr>Sub<wbr>Prefix<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the sub public delegated prefix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -914,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publicdelegatedprefixpublicdelegatedsubprefixstatus">Public<wbr>Delegated<wbr>Prefix<wbr>Public<wbr>Delegated<wbr>Sub<wbr>Prefix<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the sub public delegated prefix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -974,7 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#publicdelegatedprefixpublicdelegatedsubprefixstatus">Public<wbr>Delegated<wbr>Prefix<wbr>Public<wbr>Delegated<wbr>Sub<wbr>Prefix<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the sub public delegated prefix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1219,6 +1219,62 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the sub public delegated prefix.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="publicdelegatedprefixpublicdelegatedsubprefixstatus">Public<wbr>Delegated<wbr>Prefix<wbr>Public<wbr>Delegated<wbr>Sub<wbr>Prefix<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Inactive</dt>
+    <dd>INACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Public<wbr>Delegated<wbr>Prefix<wbr>Public<wbr>Delegated<wbr>Sub<wbr>Prefix<wbr>Status<wbr>Active</dt>
+    <dd>ACTIVE</dd><dt>Public<wbr>Delegated<wbr>Prefix<wbr>Public<wbr>Delegated<wbr>Sub<wbr>Prefix<wbr>Status<wbr>Inactive</dt>
+    <dd>INACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Inactive</dt>
+    <dd>INACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACTIVE</dt>
+    <dd>ACTIVE</dd><dt>INACTIVE</dt>
+    <dd>INACTIVE</dd></dl>
+{{% /choosable %}}
+
+<h4 id="publicdelegatedprefixstatus">Public<wbr>Delegated<wbr>Prefix<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Announced</dt>
+    <dd>ANNOUNCED</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Initializing</dt>
+    <dd>INITIALIZING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Public<wbr>Delegated<wbr>Prefix<wbr>Status<wbr>Announced</dt>
+    <dd>ANNOUNCED</dd><dt>Public<wbr>Delegated<wbr>Prefix<wbr>Status<wbr>Deleting</dt>
+    <dd>DELETING</dd><dt>Public<wbr>Delegated<wbr>Prefix<wbr>Status<wbr>Initializing</dt>
+    <dd>INITIALIZING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Announced</dt>
+    <dd>ANNOUNCED</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Initializing</dt>
+    <dd>INITIALIZING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ANNOUNCED</dt>
+    <dd>ANNOUNCED</dd><dt>DELETING</dt>
+    <dd>DELETING</dd><dt>INITIALIZING</dt>
+    <dd>INITIALIZING</dd></dl>
 {{% /choosable %}}
 
 

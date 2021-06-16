@@ -28,7 +28,7 @@ Creates a new table in the specified instance. The table can be created with a f
 <span class="k">def </span><span class="nx">Table</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
           <span class="nx">column_families</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-          <span class="nx">granularity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">granularity</span><span class="p">:</span> <span class="nx">Optional[_bigtableadmin_v2.TableGranularity]</span> = None<span class="p">,</span>
           <span class="nx">initial_splits</span><span class="p">:</span> <span class="nx">Optional[Sequence[_bigtableadmin_v2.SplitArgs]]</span> = None<span class="p">,</span>
           <span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -191,7 +191,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#granularity_csharp" style="color: inherit; text-decoration: inherit;">Granularity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#tablegranularity">Pulumi.<wbr>Google<wbr>Native.<wbr>Bigtable<wbr>Admin.<wbr>V2.<wbr>Table<wbr>Granularity</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this table. Timestamps not matching the granularity will be rejected. If unspecified at creation time, the value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -251,7 +251,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#granularity_go" style="color: inherit; text-decoration: inherit;">Granularity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#tablegranularity">Table<wbr>Granularity</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this table. Timestamps not matching the granularity will be rejected. If unspecified at creation time, the value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -311,7 +311,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#granularity_nodejs" style="color: inherit; text-decoration: inherit;">granularity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#tablegranularity">Table<wbr>Granularity</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this table. Timestamps not matching the granularity will be rejected. If unspecified at creation time, the value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -371,7 +371,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#granularity_python" style="color: inherit; text-decoration: inherit;">granularity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#tablegranularity">Table<wbr>Granularity</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this table. Timestamps not matching the granularity will be rejected. If unspecified at creation time, the value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -805,6 +805,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Row key to use as an initial tablet boundary.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tablegranularity">Table<wbr>Granularity</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Timestamp<wbr>Granularity<wbr>Unspecified</dt>
+    <dd>TIMESTAMP_GRANULARITY_UNSPECIFIED{{% md %}}The user did not specify a granularity. Should not be returned. When specified during table creation, MILLIS will be used.{{% /md %}}</dd><dt>Millis</dt>
+    <dd>MILLIS{{% md %}}The table keeps data versioned at a granularity of 1ms.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Table<wbr>Granularity<wbr>Timestamp<wbr>Granularity<wbr>Unspecified</dt>
+    <dd>TIMESTAMP_GRANULARITY_UNSPECIFIED{{% md %}}The user did not specify a granularity. Should not be returned. When specified during table creation, MILLIS will be used.{{% /md %}}</dd><dt>Table<wbr>Granularity<wbr>Millis</dt>
+    <dd>MILLIS{{% md %}}The table keeps data versioned at a granularity of 1ms.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Timestamp<wbr>Granularity<wbr>Unspecified</dt>
+    <dd>TIMESTAMP_GRANULARITY_UNSPECIFIED{{% md %}}The user did not specify a granularity. Should not be returned. When specified during table creation, MILLIS will be used.{{% /md %}}</dd><dt>Millis</dt>
+    <dd>MILLIS{{% md %}}The table keeps data versioned at a granularity of 1ms.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TIMESTAMP_GRANULARITY_UNSPECIFIED</dt>
+    <dd>TIMESTAMP_GRANULARITY_UNSPECIFIED{{% md %}}The user did not specify a granularity. Should not be returned. When specified during table creation, MILLIS will be used.{{% /md %}}</dd><dt>MILLIS</dt>
+    <dd>MILLIS{{% md %}}The table keeps data versioned at a granularity of 1ms.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

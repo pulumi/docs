@@ -16,6 +16,13 @@ Explore the resources and functions of the google-native.cloudchannel/v1 module.
     <li><a href="entitlement" title="Entitlement"><span class="symbol resource"></span>Entitlement</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getchannelpartnerlink" title="GetChannelPartnerLink"><span class="symbol function"></span>GetChannelPartnerLink</a></li>
+    <li><a href="getcustomer" title="GetCustomer"><span class="symbol function"></span>GetCustomer</a></li>
+    <li><a href="getentitlement" title="GetEntitlement"><span class="symbol function"></span>GetEntitlement</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -23,6 +30,6 @@ Explore the resources and functions of the google-native.cloudchannel/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

@@ -33,7 +33,7 @@ Creates a TargetInstance resource in the specified project and zone using the da
                    <span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">nat_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">nat_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.TargetInstanceNatPolicy]</span> = None<span class="p">,</span>
                    <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -238,7 +238,7 @@ The TargetInstance resource accepts the following [input]({{< relref "/docs/intr
 <a href="#natpolicy_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#targetinstancenatpolicy">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Target<wbr>Instance<wbr>Nat<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -333,7 +333,7 @@ The TargetInstance resource accepts the following [input]({{< relref "/docs/intr
 <a href="#natpolicy_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#targetinstancenatpolicy">Target<wbr>Instance<wbr>Nat<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -428,7 +428,7 @@ The TargetInstance resource accepts the following [input]({{< relref "/docs/intr
 <a href="#natpolicy_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#targetinstancenatpolicy">Target<wbr>Instance<wbr>Nat<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -523,7 +523,7 @@ The TargetInstance resource accepts the following [input]({{< relref "/docs/intr
 <a href="#nat_policy_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#targetinstancenatpolicy">Target<wbr>Instance<wbr>Nat<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -604,6 +604,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="targetinstancenatpolicy">Target<wbr>Instance<wbr>Nat<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>No<wbr>Nat</dt>
+    <dd>NO_NAT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Target<wbr>Instance<wbr>Nat<wbr>Policy<wbr>No<wbr>Nat</dt>
+    <dd>NO_NAT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>No<wbr>Nat</dt>
+    <dd>NO_NAT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NO_NAT</dt>
+    <dd>NO_NAT</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

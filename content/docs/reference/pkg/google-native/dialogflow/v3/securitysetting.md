@@ -32,9 +32,9 @@ Create security settings in the specified location.
                     <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                    <span class="nx">purge_data_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">redaction_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                    <span class="nx">redaction_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">purge_data_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dialogflow_v3.SecuritySettingPurgeDataTypesItem]]</span> = None<span class="p">,</span>
+                    <span class="nx">redaction_scope</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v3.SecuritySettingRedactionScope]</span> = None<span class="p">,</span>
+                    <span class="nx">redaction_strategy</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v3.SecuritySettingRedactionStrategy]</span> = None<span class="p">,</span>
                     <span class="nx">retention_window_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">SecuritySetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -209,7 +209,7 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
 <a href="#purgedatatypes_csharp" style="color: inherit; text-decoration: inherit;">Purge<wbr>Data<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#securitysettingpurgedatatypesitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3.<wbr>Security<wbr>Setting<wbr>Purge<wbr>Data<wbr>Types<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of types of data to remove when retention settings triggers purge.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -217,7 +217,7 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
 <a href="#redactionscope_csharp" style="color: inherit; text-decoration: inherit;">Redaction<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitysettingredactionscope">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3.<wbr>Security<wbr>Setting<wbr>Redaction<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Defines on what data we apply redaction. Note that we don't redact data to which we don't have access, e.g., Stackdriver logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -225,7 +225,7 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
 <a href="#redactionstrategy_csharp" style="color: inherit; text-decoration: inherit;">Redaction<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitysettingredactionstrategy">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3.<wbr>Security<wbr>Setting<wbr>Redaction<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Strategy that defines how we do redaction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -285,7 +285,7 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
 <a href="#purgedatatypes_go" style="color: inherit; text-decoration: inherit;">Purge<wbr>Data<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#securitysettingpurgedatatypesitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of types of data to remove when retention settings triggers purge.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -293,7 +293,7 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
 <a href="#redactionscope_go" style="color: inherit; text-decoration: inherit;">Redaction<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitysettingredactionscope">Security<wbr>Setting<wbr>Redaction<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Defines on what data we apply redaction. Note that we don't redact data to which we don't have access, e.g., Stackdriver logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -301,7 +301,7 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
 <a href="#redactionstrategy_go" style="color: inherit; text-decoration: inherit;">Redaction<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitysettingredactionstrategy">Security<wbr>Setting<wbr>Redaction<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Strategy that defines how we do redaction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -361,7 +361,7 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
 <a href="#purgedatatypes_nodejs" style="color: inherit; text-decoration: inherit;">purge<wbr>Data<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#securitysettingpurgedatatypesitem">Security<wbr>Setting<wbr>Purge<wbr>Data<wbr>Types<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}List of types of data to remove when retention settings triggers purge.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -369,7 +369,7 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
 <a href="#redactionscope_nodejs" style="color: inherit; text-decoration: inherit;">redaction<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitysettingredactionscope">Security<wbr>Setting<wbr>Redaction<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Defines on what data we apply redaction. Note that we don't redact data to which we don't have access, e.g., Stackdriver logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -377,7 +377,7 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
 <a href="#redactionstrategy_nodejs" style="color: inherit; text-decoration: inherit;">redaction<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitysettingredactionstrategy">Security<wbr>Setting<wbr>Redaction<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Strategy that defines how we do redaction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -437,7 +437,7 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
 <a href="#purge_data_types_python" style="color: inherit; text-decoration: inherit;">purge_<wbr>data_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#securitysettingpurgedatatypesitem">Security<wbr>Setting<wbr>Purge<wbr>Data<wbr>Types<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}List of types of data to remove when retention settings triggers purge.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -445,7 +445,7 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
 <a href="#redaction_scope_python" style="color: inherit; text-decoration: inherit;">redaction_<wbr>scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#securitysettingredactionscope">Security<wbr>Setting<wbr>Redaction<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Defines on what data we apply redaction. Note that we don't redact data to which we don't have access, e.g., Stackdriver logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -453,7 +453,7 @@ The SecuritySetting resource accepts the following [input]({{< relref "/docs/int
 <a href="#redaction_strategy_python" style="color: inherit; text-decoration: inherit;">redaction_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#securitysettingredactionstrategy">Security<wbr>Setting<wbr>Redaction<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Strategy that defines how we do redaction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,6 +526,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="securitysettingpurgedatatypesitem">Security<wbr>Setting<wbr>Purge<wbr>Data<wbr>Types<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Purge<wbr>Data<wbr>Type<wbr>Unspecified</dt>
+    <dd>PURGE_DATA_TYPE_UNSPECIFIED{{% md %}}Unspecified. Do not use.{{% /md %}}</dd><dt>Dialogflow<wbr>History</dt>
+    <dd>DIALOGFLOW_HISTORY{{% md %}}Dialogflow history. This does not include Stackdriver log, which is owned by the user not Dialogflow.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Security<wbr>Setting<wbr>Purge<wbr>Data<wbr>Types<wbr>Item<wbr>Purge<wbr>Data<wbr>Type<wbr>Unspecified</dt>
+    <dd>PURGE_DATA_TYPE_UNSPECIFIED{{% md %}}Unspecified. Do not use.{{% /md %}}</dd><dt>Security<wbr>Setting<wbr>Purge<wbr>Data<wbr>Types<wbr>Item<wbr>Dialogflow<wbr>History</dt>
+    <dd>DIALOGFLOW_HISTORY{{% md %}}Dialogflow history. This does not include Stackdriver log, which is owned by the user not Dialogflow.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Purge<wbr>Data<wbr>Type<wbr>Unspecified</dt>
+    <dd>PURGE_DATA_TYPE_UNSPECIFIED{{% md %}}Unspecified. Do not use.{{% /md %}}</dd><dt>Dialogflow<wbr>History</dt>
+    <dd>DIALOGFLOW_HISTORY{{% md %}}Dialogflow history. This does not include Stackdriver log, which is owned by the user not Dialogflow.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PURGE_DATA_TYPE_UNSPECIFIED</dt>
+    <dd>PURGE_DATA_TYPE_UNSPECIFIED{{% md %}}Unspecified. Do not use.{{% /md %}}</dd><dt>DIALOGFLOW_HISTORY</dt>
+    <dd>DIALOGFLOW_HISTORY{{% md %}}Dialogflow history. This does not include Stackdriver log, which is owned by the user not Dialogflow.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="securitysettingredactionscope">Security<wbr>Setting<wbr>Redaction<wbr>Scope</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Redaction<wbr>Scope<wbr>Unspecified</dt>
+    <dd>REDACTION_SCOPE_UNSPECIFIED{{% md %}}Don't redact any kind of data.{{% /md %}}</dd><dt>Redact<wbr>Disk<wbr>Storage</dt>
+    <dd>REDACT_DISK_STORAGE{{% md %}}On data to be written to disk or similar devices that are capable of holding data even if power is disconnected. This includes data that are temporarily saved on disk.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Security<wbr>Setting<wbr>Redaction<wbr>Scope<wbr>Redaction<wbr>Scope<wbr>Unspecified</dt>
+    <dd>REDACTION_SCOPE_UNSPECIFIED{{% md %}}Don't redact any kind of data.{{% /md %}}</dd><dt>Security<wbr>Setting<wbr>Redaction<wbr>Scope<wbr>Redact<wbr>Disk<wbr>Storage</dt>
+    <dd>REDACT_DISK_STORAGE{{% md %}}On data to be written to disk or similar devices that are capable of holding data even if power is disconnected. This includes data that are temporarily saved on disk.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Redaction<wbr>Scope<wbr>Unspecified</dt>
+    <dd>REDACTION_SCOPE_UNSPECIFIED{{% md %}}Don't redact any kind of data.{{% /md %}}</dd><dt>Redact<wbr>Disk<wbr>Storage</dt>
+    <dd>REDACT_DISK_STORAGE{{% md %}}On data to be written to disk or similar devices that are capable of holding data even if power is disconnected. This includes data that are temporarily saved on disk.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>REDACTION_SCOPE_UNSPECIFIED</dt>
+    <dd>REDACTION_SCOPE_UNSPECIFIED{{% md %}}Don't redact any kind of data.{{% /md %}}</dd><dt>REDACT_DISK_STORAGE</dt>
+    <dd>REDACT_DISK_STORAGE{{% md %}}On data to be written to disk or similar devices that are capable of holding data even if power is disconnected. This includes data that are temporarily saved on disk.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="securitysettingredactionstrategy">Security<wbr>Setting<wbr>Redaction<wbr>Strategy</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Redaction<wbr>Strategy<wbr>Unspecified</dt>
+    <dd>REDACTION_STRATEGY_UNSPECIFIED{{% md %}}Do not redact.{{% /md %}}</dd><dt>Redact<wbr>With<wbr>Service</dt>
+    <dd>REDACT_WITH_SERVICE{{% md %}}Call redaction service to clean up the data to be persisted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Security<wbr>Setting<wbr>Redaction<wbr>Strategy<wbr>Redaction<wbr>Strategy<wbr>Unspecified</dt>
+    <dd>REDACTION_STRATEGY_UNSPECIFIED{{% md %}}Do not redact.{{% /md %}}</dd><dt>Security<wbr>Setting<wbr>Redaction<wbr>Strategy<wbr>Redact<wbr>With<wbr>Service</dt>
+    <dd>REDACT_WITH_SERVICE{{% md %}}Call redaction service to clean up the data to be persisted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Redaction<wbr>Strategy<wbr>Unspecified</dt>
+    <dd>REDACTION_STRATEGY_UNSPECIFIED{{% md %}}Do not redact.{{% /md %}}</dd><dt>Redact<wbr>With<wbr>Service</dt>
+    <dd>REDACT_WITH_SERVICE{{% md %}}Call redaction service to clean up the data to be persisted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>REDACTION_STRATEGY_UNSPECIFIED</dt>
+    <dd>REDACTION_STRATEGY_UNSPECIFIED{{% md %}}Do not redact.{{% /md %}}</dd><dt>REDACT_WITH_SERVICE</dt>
+    <dd>REDACT_WITH_SERVICE{{% md %}}Call redaction service to clean up the data to be persisted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

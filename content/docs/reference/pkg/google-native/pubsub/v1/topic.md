@@ -607,7 +607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schemasettingsencoding">Pulumi.<wbr>Google<wbr>Native.<wbr>Pubsub.<wbr>V1.<wbr>Schema<wbr>Settings<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}The encoding of messages validated against `schema`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -627,7 +627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schemasettingsencoding">Schema<wbr>Settings<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}The encoding of messages validated against `schema`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -647,7 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schemasettingsencoding">Schema<wbr>Settings<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}The encoding of messages validated against `schema`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -667,7 +667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#schemasettingsencoding">Schema<wbr>Settings<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}The encoding of messages validated against `schema`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,6 +678,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the schema that messages published should be validated against. Format is `projects/{project}/schemas/{schema}`. The value of this field will be `_deleted-schema_` if the schema has been deleted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="schemasettingsencoding">Schema<wbr>Settings<wbr>Encoding</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Encoding<wbr>Unspecified</dt>
+    <dd>ENCODING_UNSPECIFIED{{% md %}}Unspecified{{% /md %}}</dd><dt>Json</dt>
+    <dd>JSON{{% md %}}JSON encoding{{% /md %}}</dd><dt>Binary</dt>
+    <dd>BINARY{{% md %}}Binary encoding, as defined by the schema type. For some schema types, binary encoding may not be available.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Schema<wbr>Settings<wbr>Encoding<wbr>Encoding<wbr>Unspecified</dt>
+    <dd>ENCODING_UNSPECIFIED{{% md %}}Unspecified{{% /md %}}</dd><dt>Schema<wbr>Settings<wbr>Encoding<wbr>Json</dt>
+    <dd>JSON{{% md %}}JSON encoding{{% /md %}}</dd><dt>Schema<wbr>Settings<wbr>Encoding<wbr>Binary</dt>
+    <dd>BINARY{{% md %}}Binary encoding, as defined by the schema type. For some schema types, binary encoding may not be available.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Encoding<wbr>Unspecified</dt>
+    <dd>ENCODING_UNSPECIFIED{{% md %}}Unspecified{{% /md %}}</dd><dt>Json</dt>
+    <dd>JSON{{% md %}}JSON encoding{{% /md %}}</dd><dt>Binary</dt>
+    <dd>BINARY{{% md %}}Binary encoding, as defined by the schema type. For some schema types, binary encoding may not be available.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ENCODING_UNSPECIFIED</dt>
+    <dd>ENCODING_UNSPECIFIED{{% md %}}Unspecified{{% /md %}}</dd><dt>JSON</dt>
+    <dd>JSON{{% md %}}JSON encoding{{% /md %}}</dd><dt>BINARY</dt>
+    <dd>BINARY{{% md %}}Binary encoding, as defined by the schema type. For some schema types, binary encoding may not be available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="schemasettingsresponse">Schema<wbr>Settings<wbr>Response</h4>

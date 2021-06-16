@@ -35,7 +35,7 @@ Creates a new function. If a function with the given name already exists in the 
              <span class="nx">environment_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
              <span class="nx">event_trigger</span><span class="p">:</span> <span class="nx">Optional[_cloudfunctions_v1.EventTriggerArgs]</span> = None<span class="p">,</span>
              <span class="nx">https_trigger</span><span class="p">:</span> <span class="nx">Optional[_cloudfunctions_v1.HttpsTriggerArgs]</span> = None<span class="p">,</span>
-             <span class="nx">ingress_settings</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">ingress_settings</span><span class="p">:</span> <span class="nx">Optional[_cloudfunctions_v1.FunctionIngressSettings]</span> = None<span class="p">,</span>
              <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">max_instances</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -50,7 +50,7 @@ Creates a new function. If a function with the given name already exists in the 
              <span class="nx">source_upload_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">vpc_connector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">vpc_connector_egress_settings</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+             <span class="nx">vpc_connector_egress_settings</span><span class="p">:</span> <span class="nx">Optional[_cloudfunctions_v1.FunctionVpcConnectorEgressSettings]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Function</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">,</span>
@@ -264,7 +264,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ingresssettings_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#functioningresssettings">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Functions.<wbr>V1.<wbr>Function<wbr>Ingress<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The ingress settings for the function, controlling what traffic can reach it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -368,7 +368,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vpcconnectoregresssettings_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Connector<wbr>Egress<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#functionvpcconnectoregresssettings">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Functions.<wbr>V1.<wbr>Function<wbr>Vpc<wbr>Connector<wbr>Egress<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -460,7 +460,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ingresssettings_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#functioningresssettings">Function<wbr>Ingress<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The ingress settings for the function, controlling what traffic can reach it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -564,7 +564,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vpcconnectoregresssettings_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Connector<wbr>Egress<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#functionvpcconnectoregresssettings">Function<wbr>Vpc<wbr>Connector<wbr>Egress<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -656,7 +656,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ingresssettings_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#functioningresssettings">Function<wbr>Ingress<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The ingress settings for the function, controlling what traffic can reach it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -760,7 +760,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vpcconnectoregresssettings_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Connector<wbr>Egress<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#functionvpcconnectoregresssettings">Function<wbr>Vpc<wbr>Connector<wbr>Egress<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -852,7 +852,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ingress_settings_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#functioningresssettings">Function<wbr>Ingress<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The ingress settings for the function, controlling what traffic can reach it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -956,7 +956,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vpc_connector_egress_settings_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>connector_<wbr>egress_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#functionvpcconnectoregresssettings">Function<wbr>Vpc<wbr>Connector<wbr>Egress<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1546,6 +1546,70 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}If specified, then the function will be retried in case of a failure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="functioningresssettings">Function<wbr>Ingress<wbr>Settings</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Ingress<wbr>Settings<wbr>Unspecified</dt>
+    <dd>INGRESS_SETTINGS_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>Allow<wbr>All</dt>
+    <dd>ALLOW_ALL{{% md %}}Allow HTTP traffic from public and private sources.{{% /md %}}</dd><dt>Allow<wbr>Internal<wbr>Only</dt>
+    <dd>ALLOW_INTERNAL_ONLY{{% md %}}Allow HTTP traffic from only private VPC sources.{{% /md %}}</dd><dt>Allow<wbr>Internal<wbr>And<wbr>Gclb</dt>
+    <dd>ALLOW_INTERNAL_AND_GCLB{{% md %}}Allow HTTP traffic from private VPC sources and through GCLB.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Function<wbr>Ingress<wbr>Settings<wbr>Ingress<wbr>Settings<wbr>Unspecified</dt>
+    <dd>INGRESS_SETTINGS_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>Function<wbr>Ingress<wbr>Settings<wbr>Allow<wbr>All</dt>
+    <dd>ALLOW_ALL{{% md %}}Allow HTTP traffic from public and private sources.{{% /md %}}</dd><dt>Function<wbr>Ingress<wbr>Settings<wbr>Allow<wbr>Internal<wbr>Only</dt>
+    <dd>ALLOW_INTERNAL_ONLY{{% md %}}Allow HTTP traffic from only private VPC sources.{{% /md %}}</dd><dt>Function<wbr>Ingress<wbr>Settings<wbr>Allow<wbr>Internal<wbr>And<wbr>Gclb</dt>
+    <dd>ALLOW_INTERNAL_AND_GCLB{{% md %}}Allow HTTP traffic from private VPC sources and through GCLB.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Ingress<wbr>Settings<wbr>Unspecified</dt>
+    <dd>INGRESS_SETTINGS_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>Allow<wbr>All</dt>
+    <dd>ALLOW_ALL{{% md %}}Allow HTTP traffic from public and private sources.{{% /md %}}</dd><dt>Allow<wbr>Internal<wbr>Only</dt>
+    <dd>ALLOW_INTERNAL_ONLY{{% md %}}Allow HTTP traffic from only private VPC sources.{{% /md %}}</dd><dt>Allow<wbr>Internal<wbr>And<wbr>Gclb</dt>
+    <dd>ALLOW_INTERNAL_AND_GCLB{{% md %}}Allow HTTP traffic from private VPC sources and through GCLB.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>INGRESS_SETTINGS_UNSPECIFIED</dt>
+    <dd>INGRESS_SETTINGS_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>ALLOW_ALL</dt>
+    <dd>ALLOW_ALL{{% md %}}Allow HTTP traffic from public and private sources.{{% /md %}}</dd><dt>ALLOW_INTERNAL_ONLY</dt>
+    <dd>ALLOW_INTERNAL_ONLY{{% md %}}Allow HTTP traffic from only private VPC sources.{{% /md %}}</dd><dt>ALLOW_INTERNAL_AND_GCLB</dt>
+    <dd>ALLOW_INTERNAL_AND_GCLB{{% md %}}Allow HTTP traffic from private VPC sources and through GCLB.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="functionvpcconnectoregresssettings">Function<wbr>Vpc<wbr>Connector<wbr>Egress<wbr>Settings</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Vpc<wbr>Connector<wbr>Egress<wbr>Settings<wbr>Unspecified</dt>
+    <dd>VPC_CONNECTOR_EGRESS_SETTINGS_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>Private<wbr>Ranges<wbr>Only</dt>
+    <dd>PRIVATE_RANGES_ONLY{{% md %}}Use the VPC Access Connector only for private IP space from RFC1918.{{% /md %}}</dd><dt>All<wbr>Traffic</dt>
+    <dd>ALL_TRAFFIC{{% md %}}Force the use of VPC Access Connector for all egress traffic from the function.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Function<wbr>Vpc<wbr>Connector<wbr>Egress<wbr>Settings<wbr>Vpc<wbr>Connector<wbr>Egress<wbr>Settings<wbr>Unspecified</dt>
+    <dd>VPC_CONNECTOR_EGRESS_SETTINGS_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>Function<wbr>Vpc<wbr>Connector<wbr>Egress<wbr>Settings<wbr>Private<wbr>Ranges<wbr>Only</dt>
+    <dd>PRIVATE_RANGES_ONLY{{% md %}}Use the VPC Access Connector only for private IP space from RFC1918.{{% /md %}}</dd><dt>Function<wbr>Vpc<wbr>Connector<wbr>Egress<wbr>Settings<wbr>All<wbr>Traffic</dt>
+    <dd>ALL_TRAFFIC{{% md %}}Force the use of VPC Access Connector for all egress traffic from the function.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Vpc<wbr>Connector<wbr>Egress<wbr>Settings<wbr>Unspecified</dt>
+    <dd>VPC_CONNECTOR_EGRESS_SETTINGS_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>Private<wbr>Ranges<wbr>Only</dt>
+    <dd>PRIVATE_RANGES_ONLY{{% md %}}Use the VPC Access Connector only for private IP space from RFC1918.{{% /md %}}</dd><dt>All<wbr>Traffic</dt>
+    <dd>ALL_TRAFFIC{{% md %}}Force the use of VPC Access Connector for all egress traffic from the function.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>VPC_CONNECTOR_EGRESS_SETTINGS_UNSPECIFIED</dt>
+    <dd>VPC_CONNECTOR_EGRESS_SETTINGS_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>PRIVATE_RANGES_ONLY</dt>
+    <dd>PRIVATE_RANGES_ONLY{{% md %}}Use the VPC Access Connector only for private IP space from RFC1918.{{% /md %}}</dd><dt>ALL_TRAFFIC</dt>
+    <dd>ALL_TRAFFIC{{% md %}}Force the use of VPC Access Connector for all egress traffic from the function.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="httpstrigger">Https<wbr>Trigger</h4>
 
 {{% choosable language csharp %}}
@@ -1555,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitylevel_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpstriggersecuritylevel">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Functions.<wbr>V1.<wbr>Https<wbr>Trigger<wbr>Security<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The security level for the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1567,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitylevel_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpstriggersecuritylevel">Https<wbr>Trigger<wbr>Security<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The security level for the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1579,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitylevel_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpstriggersecuritylevel">Https<wbr>Trigger<wbr>Security<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The security level for the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1591,7 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_level_python" style="color: inherit; text-decoration: inherit;">security_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#httpstriggersecuritylevel">Https<wbr>Trigger<wbr>Security<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The security level for the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1676,6 +1740,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deployed url for the function.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="httpstriggersecuritylevel">Https<wbr>Trigger<wbr>Security<wbr>Level</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Security<wbr>Level<wbr>Unspecified</dt>
+    <dd>SECURITY_LEVEL_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>Secure<wbr>Always</dt>
+    <dd>SECURE_ALWAYS{{% md %}}Requests for a URL that match this handler that do not use HTTPS are automatically redirected to the HTTPS URL with the same path. Query parameters are reserved for the redirect.{{% /md %}}</dd><dt>Secure<wbr>Optional</dt>
+    <dd>SECURE_OPTIONAL{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used and respond accordingly.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Https<wbr>Trigger<wbr>Security<wbr>Level<wbr>Security<wbr>Level<wbr>Unspecified</dt>
+    <dd>SECURITY_LEVEL_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>Https<wbr>Trigger<wbr>Security<wbr>Level<wbr>Secure<wbr>Always</dt>
+    <dd>SECURE_ALWAYS{{% md %}}Requests for a URL that match this handler that do not use HTTPS are automatically redirected to the HTTPS URL with the same path. Query parameters are reserved for the redirect.{{% /md %}}</dd><dt>Https<wbr>Trigger<wbr>Security<wbr>Level<wbr>Secure<wbr>Optional</dt>
+    <dd>SECURE_OPTIONAL{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used and respond accordingly.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Security<wbr>Level<wbr>Unspecified</dt>
+    <dd>SECURITY_LEVEL_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>Secure<wbr>Always</dt>
+    <dd>SECURE_ALWAYS{{% md %}}Requests for a URL that match this handler that do not use HTTPS are automatically redirected to the HTTPS URL with the same path. Query parameters are reserved for the redirect.{{% /md %}}</dd><dt>Secure<wbr>Optional</dt>
+    <dd>SECURE_OPTIONAL{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used and respond accordingly.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SECURITY_LEVEL_UNSPECIFIED</dt>
+    <dd>SECURITY_LEVEL_UNSPECIFIED{{% md %}}Unspecified.{{% /md %}}</dd><dt>SECURE_ALWAYS</dt>
+    <dd>SECURE_ALWAYS{{% md %}}Requests for a URL that match this handler that do not use HTTPS are automatically redirected to the HTTPS URL with the same path. Query parameters are reserved for the redirect.{{% /md %}}</dd><dt>SECURE_OPTIONAL</dt>
+    <dd>SECURE_OPTIONAL{{% md %}}Both HTTP and HTTPS requests with URLs that match the handler succeed without redirects. The application can examine the request to determine which protocol was used and respond accordingly.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourcerepository">Source<wbr>Repository</h4>

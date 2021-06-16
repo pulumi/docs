@@ -34,9 +34,9 @@ Returns the specified SSL policy resource. Gets a list of available SSL policies
               <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.SslPolicyMinTlsVersion]</span> = None<span class="p">,</span>
               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.SslPolicyProfile]</span> = None<span class="p">,</span>
               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -241,7 +241,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#mintlsversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslpolicymintlsversion">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Ssl<wbr>Policy<wbr>Min<wbr>Tls<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The minimum version of SSL protocol that can be used by the clients to establish a connection with the load balancer. This can be one of TLS_1_0, TLS_1_1, TLS_1_2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -257,7 +257,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#profile_csharp" style="color: inherit; text-decoration: inherit;">Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslpolicyprofile">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Ssl<wbr>Policy<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Profile specifies the set of SSL features that can be used by the load balancer when negotiating SSL with clients. This can be one of COMPATIBLE, MODERN, RESTRICTED, or CUSTOM. If using CUSTOM, the set of SSL features to enable must be specified in the customFeatures field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -360,7 +360,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#mintlsversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslpolicymintlsversion">Ssl<wbr>Policy<wbr>Min<wbr>Tls<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The minimum version of SSL protocol that can be used by the clients to establish a connection with the load balancer. This can be one of TLS_1_0, TLS_1_1, TLS_1_2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -376,7 +376,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#profile_go" style="color: inherit; text-decoration: inherit;">Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslpolicyprofile">Ssl<wbr>Policy<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Profile specifies the set of SSL features that can be used by the load balancer when negotiating SSL with clients. This can be one of COMPATIBLE, MODERN, RESTRICTED, or CUSTOM. If using CUSTOM, the set of SSL features to enable must be specified in the customFeatures field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -479,7 +479,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslpolicymintlsversion">Ssl<wbr>Policy<wbr>Min<wbr>Tls<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The minimum version of SSL protocol that can be used by the clients to establish a connection with the load balancer. This can be one of TLS_1_0, TLS_1_1, TLS_1_2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -495,7 +495,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslpolicyprofile">Ssl<wbr>Policy<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Profile specifies the set of SSL features that can be used by the load balancer when negotiating SSL with clients. This can be one of COMPATIBLE, MODERN, RESTRICTED, or CUSTOM. If using CUSTOM, the set of SSL features to enable must be specified in the customFeatures field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +598,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#sslpolicymintlsversion">Ssl<wbr>Policy<wbr>Min<wbr>Tls<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The minimum version of SSL protocol that can be used by the clients to establish a connection with the load balancer. This can be one of TLS_1_0, TLS_1_1, TLS_1_2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +614,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#sslpolicyprofile">Ssl<wbr>Policy<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Profile specifies the set of SSL features that can be used by the load balancer when negotiating SSL with clients. This can be one of COMPATIBLE, MODERN, RESTRICTED, or CUSTOM. If using CUSTOM, the set of SSL features to enable must be specified in the customFeatures field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -708,168 +708,68 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="sslpolicydataitem">Ssl<wbr>Policy<wbr>Data<wbr>Item</h4>
+<h4 id="sslpolicymintlsversion">Ssl<wbr>Policy<wbr>Min<wbr>Tls<wbr>Version</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Tls10</dt>
+    <dd>TLS_1_0</dd><dt>Tls11</dt>
+    <dd>TLS_1_1</dd><dt>Tls12</dt>
+    <dd>TLS_1_2</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Ssl<wbr>Policy<wbr>Min<wbr>Tls<wbr>Version<wbr>Tls10</dt>
+    <dd>TLS_1_0</dd><dt>Ssl<wbr>Policy<wbr>Min<wbr>Tls<wbr>Version<wbr>Tls11</dt>
+    <dd>TLS_1_1</dd><dt>Ssl<wbr>Policy<wbr>Min<wbr>Tls<wbr>Version<wbr>Tls12</dt>
+    <dd>TLS_1_2</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Tls10</dt>
+    <dd>TLS_1_0</dd><dt>Tls11</dt>
+    <dd>TLS_1_1</dd><dt>Tls12</dt>
+    <dd>TLS_1_2</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>TLS10</dt>
+    <dd>TLS_1_0</dd><dt>TLS11</dt>
+    <dd>TLS_1_1</dd><dt>TLS12</dt>
+    <dd>TLS_1_2</dd></dl>
 {{% /choosable %}}
 
-<h4 id="sslpolicydataitemresponse">Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Response</h4>
+<h4 id="sslpolicyprofile">Ssl<wbr>Policy<wbr>Profile</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Compatible</dt>
+    <dd>COMPATIBLE</dd><dt>Custom</dt>
+    <dd>CUSTOM</dd><dt>Modern</dt>
+    <dd>MODERN</dd><dt>Restricted</dt>
+    <dd>RESTRICTED</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Ssl<wbr>Policy<wbr>Profile<wbr>Compatible</dt>
+    <dd>COMPATIBLE</dd><dt>Ssl<wbr>Policy<wbr>Profile<wbr>Custom</dt>
+    <dd>CUSTOM</dd><dt>Ssl<wbr>Policy<wbr>Profile<wbr>Modern</dt>
+    <dd>MODERN</dd><dt>Ssl<wbr>Policy<wbr>Profile<wbr>Restricted</dt>
+    <dd>RESTRICTED</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>Compatible</dt>
+    <dd>COMPATIBLE</dd><dt>Custom</dt>
+    <dd>CUSTOM</dd><dt>Modern</dt>
+    <dd>MODERN</dd><dt>Restricted</dt>
+    <dd>RESTRICTED</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+<dl class="tabular"><dt>COMPATIBLE</dt>
+    <dd>COMPATIBLE</dd><dt>CUSTOM</dt>
+    <dd>CUSTOM</dd><dt>MODERN</dt>
+    <dd>MODERN</dd><dt>RESTRICTED</dt>
+    <dd>RESTRICTED</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sslpolicywarningsitem">Ssl<wbr>Policy<wbr>Warnings<wbr>Item</h4>
@@ -881,7 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslpolicywarningsitemcode">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -889,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslpolicydataitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sslpolicywarningsitemdataitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
 "data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
@@ -910,7 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslpolicywarningsitemcode">Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -918,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslpolicydataitem">[]Ssl<wbr>Policy<wbr>Data<wbr>Item</a></span>
+        <span class="property-type"><a href="#sslpolicywarningsitemdataitem">[]Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
 "data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
@@ -939,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslpolicywarningsitemcode">Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -947,7 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslpolicydataitem">Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sslpolicywarningsitemdataitem">Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
 "data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
@@ -968,7 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#sslpolicywarningsitemcode">Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -976,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslpolicydataitem">Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sslpolicywarningsitemdataitem">Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
 "data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
@@ -988,6 +888,288 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sslpolicywarningsitemcode">Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Cleanup<wbr>Failed</dt>
+    <dd>CLEANUP_FAILED</dd><dt>Deprecated<wbr>Resource<wbr>Used</dt>
+    <dd>DEPRECATED_RESOURCE_USED</dd><dt>Deprecated<wbr>Type<wbr>Used</dt>
+    <dd>DEPRECATED_TYPE_USED</dd><dt>Disk<wbr>Size<wbr>Larger<wbr>Than<wbr>Image<wbr>Size</dt>
+    <dd>DISK_SIZE_LARGER_THAN_IMAGE_SIZE</dd><dt>Experimental<wbr>Type<wbr>Used</dt>
+    <dd>EXPERIMENTAL_TYPE_USED</dd><dt>External<wbr>Api<wbr>Warning</dt>
+    <dd>EXTERNAL_API_WARNING</dd><dt>Field<wbr>Value<wbr>Overriden</dt>
+    <dd>FIELD_VALUE_OVERRIDEN</dd><dt>Injected<wbr>Kernels<wbr>Deprecated</dt>
+    <dd>INJECTED_KERNELS_DEPRECATED</dd><dt>Large<wbr>Deployment<wbr>Warning</dt>
+    <dd>LARGE_DEPLOYMENT_WARNING</dd><dt>Missing<wbr>Type<wbr>Dependency</dt>
+    <dd>MISSING_TYPE_DEPENDENCY</dd><dt>Next<wbr>Hop<wbr>Address<wbr>Not<wbr>Assigned</dt>
+    <dd>NEXT_HOP_ADDRESS_NOT_ASSIGNED</dd><dt>Next<wbr>Hop<wbr>Cannot<wbr>Ip<wbr>Forward</dt>
+    <dd>NEXT_HOP_CANNOT_IP_FORWARD</dd><dt>Next<wbr>Hop<wbr>Instance<wbr>Not<wbr>Found</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_FOUND</dd><dt>Next<wbr>Hop<wbr>Instance<wbr>Not<wbr>On<wbr>Network</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_ON_NETWORK</dd><dt>Next<wbr>Hop<wbr>Not<wbr>Running</dt>
+    <dd>NEXT_HOP_NOT_RUNNING</dd><dt>Not<wbr>Critical<wbr>Error</dt>
+    <dd>NOT_CRITICAL_ERROR</dd><dt>No<wbr>Results<wbr>On<wbr>Page</dt>
+    <dd>NO_RESULTS_ON_PAGE</dd><dt>Partial<wbr>Success</dt>
+    <dd>PARTIAL_SUCCESS</dd><dt>Required<wbr>Tos<wbr>Agreement</dt>
+    <dd>REQUIRED_TOS_AGREEMENT</dd><dt>Resource<wbr>In<wbr>Use<wbr>By<wbr>Other<wbr>Resource<wbr>Warning</dt>
+    <dd>RESOURCE_IN_USE_BY_OTHER_RESOURCE_WARNING</dd><dt>Resource<wbr>Not<wbr>Deleted</dt>
+    <dd>RESOURCE_NOT_DELETED</dd><dt>Schema<wbr>Validation<wbr>Ignored</dt>
+    <dd>SCHEMA_VALIDATION_IGNORED</dd><dt>Single<wbr>Instance<wbr>Property<wbr>Template</dt>
+    <dd>SINGLE_INSTANCE_PROPERTY_TEMPLATE</dd><dt>Undeclared<wbr>Properties</dt>
+    <dd>UNDECLARED_PROPERTIES</dd><dt>Unreachable</dt>
+    <dd>UNREACHABLE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Cleanup<wbr>Failed</dt>
+    <dd>CLEANUP_FAILED</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Deprecated<wbr>Resource<wbr>Used</dt>
+    <dd>DEPRECATED_RESOURCE_USED</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Deprecated<wbr>Type<wbr>Used</dt>
+    <dd>DEPRECATED_TYPE_USED</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Disk<wbr>Size<wbr>Larger<wbr>Than<wbr>Image<wbr>Size</dt>
+    <dd>DISK_SIZE_LARGER_THAN_IMAGE_SIZE</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Experimental<wbr>Type<wbr>Used</dt>
+    <dd>EXPERIMENTAL_TYPE_USED</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>External<wbr>Api<wbr>Warning</dt>
+    <dd>EXTERNAL_API_WARNING</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Field<wbr>Value<wbr>Overriden</dt>
+    <dd>FIELD_VALUE_OVERRIDEN</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Injected<wbr>Kernels<wbr>Deprecated</dt>
+    <dd>INJECTED_KERNELS_DEPRECATED</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Large<wbr>Deployment<wbr>Warning</dt>
+    <dd>LARGE_DEPLOYMENT_WARNING</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Missing<wbr>Type<wbr>Dependency</dt>
+    <dd>MISSING_TYPE_DEPENDENCY</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Next<wbr>Hop<wbr>Address<wbr>Not<wbr>Assigned</dt>
+    <dd>NEXT_HOP_ADDRESS_NOT_ASSIGNED</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Next<wbr>Hop<wbr>Cannot<wbr>Ip<wbr>Forward</dt>
+    <dd>NEXT_HOP_CANNOT_IP_FORWARD</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Next<wbr>Hop<wbr>Instance<wbr>Not<wbr>Found</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_FOUND</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Next<wbr>Hop<wbr>Instance<wbr>Not<wbr>On<wbr>Network</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_ON_NETWORK</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Next<wbr>Hop<wbr>Not<wbr>Running</dt>
+    <dd>NEXT_HOP_NOT_RUNNING</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Not<wbr>Critical<wbr>Error</dt>
+    <dd>NOT_CRITICAL_ERROR</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>No<wbr>Results<wbr>On<wbr>Page</dt>
+    <dd>NO_RESULTS_ON_PAGE</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Partial<wbr>Success</dt>
+    <dd>PARTIAL_SUCCESS</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Required<wbr>Tos<wbr>Agreement</dt>
+    <dd>REQUIRED_TOS_AGREEMENT</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Resource<wbr>In<wbr>Use<wbr>By<wbr>Other<wbr>Resource<wbr>Warning</dt>
+    <dd>RESOURCE_IN_USE_BY_OTHER_RESOURCE_WARNING</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Resource<wbr>Not<wbr>Deleted</dt>
+    <dd>RESOURCE_NOT_DELETED</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Schema<wbr>Validation<wbr>Ignored</dt>
+    <dd>SCHEMA_VALIDATION_IGNORED</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Single<wbr>Instance<wbr>Property<wbr>Template</dt>
+    <dd>SINGLE_INSTANCE_PROPERTY_TEMPLATE</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Undeclared<wbr>Properties</dt>
+    <dd>UNDECLARED_PROPERTIES</dd><dt>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Code<wbr>Unreachable</dt>
+    <dd>UNREACHABLE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Cleanup<wbr>Failed</dt>
+    <dd>CLEANUP_FAILED</dd><dt>Deprecated<wbr>Resource<wbr>Used</dt>
+    <dd>DEPRECATED_RESOURCE_USED</dd><dt>Deprecated<wbr>Type<wbr>Used</dt>
+    <dd>DEPRECATED_TYPE_USED</dd><dt>Disk<wbr>Size<wbr>Larger<wbr>Than<wbr>Image<wbr>Size</dt>
+    <dd>DISK_SIZE_LARGER_THAN_IMAGE_SIZE</dd><dt>Experimental<wbr>Type<wbr>Used</dt>
+    <dd>EXPERIMENTAL_TYPE_USED</dd><dt>External<wbr>Api<wbr>Warning</dt>
+    <dd>EXTERNAL_API_WARNING</dd><dt>Field<wbr>Value<wbr>Overriden</dt>
+    <dd>FIELD_VALUE_OVERRIDEN</dd><dt>Injected<wbr>Kernels<wbr>Deprecated</dt>
+    <dd>INJECTED_KERNELS_DEPRECATED</dd><dt>Large<wbr>Deployment<wbr>Warning</dt>
+    <dd>LARGE_DEPLOYMENT_WARNING</dd><dt>Missing<wbr>Type<wbr>Dependency</dt>
+    <dd>MISSING_TYPE_DEPENDENCY</dd><dt>Next<wbr>Hop<wbr>Address<wbr>Not<wbr>Assigned</dt>
+    <dd>NEXT_HOP_ADDRESS_NOT_ASSIGNED</dd><dt>Next<wbr>Hop<wbr>Cannot<wbr>Ip<wbr>Forward</dt>
+    <dd>NEXT_HOP_CANNOT_IP_FORWARD</dd><dt>Next<wbr>Hop<wbr>Instance<wbr>Not<wbr>Found</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_FOUND</dd><dt>Next<wbr>Hop<wbr>Instance<wbr>Not<wbr>On<wbr>Network</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_ON_NETWORK</dd><dt>Next<wbr>Hop<wbr>Not<wbr>Running</dt>
+    <dd>NEXT_HOP_NOT_RUNNING</dd><dt>Not<wbr>Critical<wbr>Error</dt>
+    <dd>NOT_CRITICAL_ERROR</dd><dt>No<wbr>Results<wbr>On<wbr>Page</dt>
+    <dd>NO_RESULTS_ON_PAGE</dd><dt>Partial<wbr>Success</dt>
+    <dd>PARTIAL_SUCCESS</dd><dt>Required<wbr>Tos<wbr>Agreement</dt>
+    <dd>REQUIRED_TOS_AGREEMENT</dd><dt>Resource<wbr>In<wbr>Use<wbr>By<wbr>Other<wbr>Resource<wbr>Warning</dt>
+    <dd>RESOURCE_IN_USE_BY_OTHER_RESOURCE_WARNING</dd><dt>Resource<wbr>Not<wbr>Deleted</dt>
+    <dd>RESOURCE_NOT_DELETED</dd><dt>Schema<wbr>Validation<wbr>Ignored</dt>
+    <dd>SCHEMA_VALIDATION_IGNORED</dd><dt>Single<wbr>Instance<wbr>Property<wbr>Template</dt>
+    <dd>SINGLE_INSTANCE_PROPERTY_TEMPLATE</dd><dt>Undeclared<wbr>Properties</dt>
+    <dd>UNDECLARED_PROPERTIES</dd><dt>Unreachable</dt>
+    <dd>UNREACHABLE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CLEANUP_FAILED</dt>
+    <dd>CLEANUP_FAILED</dd><dt>DEPRECATED_RESOURCE_USED</dt>
+    <dd>DEPRECATED_RESOURCE_USED</dd><dt>DEPRECATED_TYPE_USED</dt>
+    <dd>DEPRECATED_TYPE_USED</dd><dt>DISK_SIZE_LARGER_THAN_IMAGE_SIZE</dt>
+    <dd>DISK_SIZE_LARGER_THAN_IMAGE_SIZE</dd><dt>EXPERIMENTAL_TYPE_USED</dt>
+    <dd>EXPERIMENTAL_TYPE_USED</dd><dt>EXTERNAL_API_WARNING</dt>
+    <dd>EXTERNAL_API_WARNING</dd><dt>FIELD_VALUE_OVERRIDEN</dt>
+    <dd>FIELD_VALUE_OVERRIDEN</dd><dt>INJECTED_KERNELS_DEPRECATED</dt>
+    <dd>INJECTED_KERNELS_DEPRECATED</dd><dt>LARGE_DEPLOYMENT_WARNING</dt>
+    <dd>LARGE_DEPLOYMENT_WARNING</dd><dt>MISSING_TYPE_DEPENDENCY</dt>
+    <dd>MISSING_TYPE_DEPENDENCY</dd><dt>NEXT_HOP_ADDRESS_NOT_ASSIGNED</dt>
+    <dd>NEXT_HOP_ADDRESS_NOT_ASSIGNED</dd><dt>NEXT_HOP_CANNOT_IP_FORWARD</dt>
+    <dd>NEXT_HOP_CANNOT_IP_FORWARD</dd><dt>NEXT_HOP_INSTANCE_NOT_FOUND</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_FOUND</dd><dt>NEXT_HOP_INSTANCE_NOT_ON_NETWORK</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_ON_NETWORK</dd><dt>NEXT_HOP_NOT_RUNNING</dt>
+    <dd>NEXT_HOP_NOT_RUNNING</dd><dt>NOT_CRITICAL_ERROR</dt>
+    <dd>NOT_CRITICAL_ERROR</dd><dt>NO_RESULTS_ON_PAGE</dt>
+    <dd>NO_RESULTS_ON_PAGE</dd><dt>PARTIAL_SUCCESS</dt>
+    <dd>PARTIAL_SUCCESS</dd><dt>REQUIRED_TOS_AGREEMENT</dt>
+    <dd>REQUIRED_TOS_AGREEMENT</dd><dt>RESOURCE_IN_USE_BY_OTHER_RESOURCE_WARNING</dt>
+    <dd>RESOURCE_IN_USE_BY_OTHER_RESOURCE_WARNING</dd><dt>RESOURCE_NOT_DELETED</dt>
+    <dd>RESOURCE_NOT_DELETED</dd><dt>SCHEMA_VALIDATION_IGNORED</dt>
+    <dd>SCHEMA_VALIDATION_IGNORED</dd><dt>SINGLE_INSTANCE_PROPERTY_TEMPLATE</dt>
+    <dd>SINGLE_INSTANCE_PROPERTY_TEMPLATE</dd><dt>UNDECLARED_PROPERTIES</dt>
+    <dd>UNDECLARED_PROPERTIES</dd><dt>UNREACHABLE</dt>
+    <dd>UNREACHABLE</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sslpolicywarningsitemdataitem">Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sslpolicywarningsitemdataitemresponse">Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sslpolicywarningsitemresponse">Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Response</h4>
@@ -1007,7 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslpolicydataitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sslpolicywarningsitemdataitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
 "data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"
@@ -1036,7 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslpolicydataitemresponse">[]Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Response</a></span>
+        <span class="property-type"><a href="#sslpolicywarningsitemdataitemresponse">[]Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
 "data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"
@@ -1065,7 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslpolicydataitemresponse">Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sslpolicywarningsitemdataitemresponse">Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
 "data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"
@@ -1094,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslpolicydataitemresponse">Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sslpolicywarningsitemdataitemresponse">Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
 "data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"

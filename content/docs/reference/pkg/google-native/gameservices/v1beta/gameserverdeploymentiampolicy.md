@@ -817,7 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logtype_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#auditlogconfiglogtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Game<wbr>Services.<wbr>V1Beta.<wbr>Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The log type that this config enables.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -845,7 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logtype_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#auditlogconfiglogtype">Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The log type that this config enables.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -873,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logtype_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#auditlogconfiglogtype">Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The log type that this config enables.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -901,9 +901,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#auditlogconfiglogtype">Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The log type that this config enables.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="auditlogconfiglogtype">Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Log<wbr>Type<wbr>Unspecified</dt>
+    <dd>LOG_TYPE_UNSPECIFIED{{% md %}}Default case. Should never be this.{{% /md %}}</dd><dt>Admin<wbr>Read</dt>
+    <dd>ADMIN_READ{{% md %}}Admin reads. Example: CloudIAM getIamPolicy{{% /md %}}</dd><dt>Data<wbr>Write</dt>
+    <dd>DATA_WRITE{{% md %}}Data writes. Example: CloudSQL Users create{{% /md %}}</dd><dt>Data<wbr>Read</dt>
+    <dd>DATA_READ{{% md %}}Data reads. Example: CloudSQL Users list{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type<wbr>Log<wbr>Type<wbr>Unspecified</dt>
+    <dd>LOG_TYPE_UNSPECIFIED{{% md %}}Default case. Should never be this.{{% /md %}}</dd><dt>Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type<wbr>Admin<wbr>Read</dt>
+    <dd>ADMIN_READ{{% md %}}Admin reads. Example: CloudIAM getIamPolicy{{% /md %}}</dd><dt>Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type<wbr>Data<wbr>Write</dt>
+    <dd>DATA_WRITE{{% md %}}Data writes. Example: CloudSQL Users create{{% /md %}}</dd><dt>Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type<wbr>Data<wbr>Read</dt>
+    <dd>DATA_READ{{% md %}}Data reads. Example: CloudSQL Users list{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Log<wbr>Type<wbr>Unspecified</dt>
+    <dd>LOG_TYPE_UNSPECIFIED{{% md %}}Default case. Should never be this.{{% /md %}}</dd><dt>Admin<wbr>Read</dt>
+    <dd>ADMIN_READ{{% md %}}Admin reads. Example: CloudIAM getIamPolicy{{% /md %}}</dd><dt>Data<wbr>Write</dt>
+    <dd>DATA_WRITE{{% md %}}Data writes. Example: CloudSQL Users create{{% /md %}}</dd><dt>Data<wbr>Read</dt>
+    <dd>DATA_READ{{% md %}}Data reads. Example: CloudSQL Users list{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LOG_TYPE_UNSPECIFIED</dt>
+    <dd>LOG_TYPE_UNSPECIFIED{{% md %}}Default case. Should never be this.{{% /md %}}</dd><dt>ADMIN_READ</dt>
+    <dd>ADMIN_READ{{% md %}}Admin reads. Example: CloudIAM getIamPolicy{{% /md %}}</dd><dt>DATA_WRITE</dt>
+    <dd>DATA_WRITE{{% md %}}Data writes. Example: CloudSQL Users create{{% /md %}}</dd><dt>DATA_READ</dt>
+    <dd>DATA_READ{{% md %}}Data reads. Example: CloudSQL Users list{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="auditlogconfigresponse">Audit<wbr>Log<wbr>Config<wbr>Response</h4>
@@ -1029,7 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissiontype_csharp" style="color: inherit; text-decoration: inherit;">Permission<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#authorizationloggingoptionspermissiontype">Pulumi.<wbr>Google<wbr>Native.<wbr>Game<wbr>Services.<wbr>V1Beta.<wbr>Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the permission that was checked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1041,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissiontype_go" style="color: inherit; text-decoration: inherit;">Permission<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#authorizationloggingoptionspermissiontype">Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the permission that was checked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1053,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissiontype_nodejs" style="color: inherit; text-decoration: inherit;">permission<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#authorizationloggingoptionspermissiontype">Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the permission that was checked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1065,9 +1099,47 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permission_type_python" style="color: inherit; text-decoration: inherit;">permission_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#authorizationloggingoptionspermissiontype">Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the permission that was checked.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="authorizationloggingoptionspermissiontype">Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Permission<wbr>Type<wbr>Unspecified</dt>
+    <dd>PERMISSION_TYPE_UNSPECIFIED{{% md %}}Default. Should not be used.{{% /md %}}</dd><dt>Admin<wbr>Read</dt>
+    <dd>ADMIN_READ{{% md %}}A read of admin (meta) data.{{% /md %}}</dd><dt>Admin<wbr>Write</dt>
+    <dd>ADMIN_WRITE{{% md %}}A write of admin (meta) data.{{% /md %}}</dd><dt>Data<wbr>Read</dt>
+    <dd>DATA_READ{{% md %}}A read of standard data.{{% /md %}}</dd><dt>Data<wbr>Write</dt>
+    <dd>DATA_WRITE{{% md %}}A write of standard data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type<wbr>Permission<wbr>Type<wbr>Unspecified</dt>
+    <dd>PERMISSION_TYPE_UNSPECIFIED{{% md %}}Default. Should not be used.{{% /md %}}</dd><dt>Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type<wbr>Admin<wbr>Read</dt>
+    <dd>ADMIN_READ{{% md %}}A read of admin (meta) data.{{% /md %}}</dd><dt>Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type<wbr>Admin<wbr>Write</dt>
+    <dd>ADMIN_WRITE{{% md %}}A write of admin (meta) data.{{% /md %}}</dd><dt>Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type<wbr>Data<wbr>Read</dt>
+    <dd>DATA_READ{{% md %}}A read of standard data.{{% /md %}}</dd><dt>Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type<wbr>Data<wbr>Write</dt>
+    <dd>DATA_WRITE{{% md %}}A write of standard data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Permission<wbr>Type<wbr>Unspecified</dt>
+    <dd>PERMISSION_TYPE_UNSPECIFIED{{% md %}}Default. Should not be used.{{% /md %}}</dd><dt>Admin<wbr>Read</dt>
+    <dd>ADMIN_READ{{% md %}}A read of admin (meta) data.{{% /md %}}</dd><dt>Admin<wbr>Write</dt>
+    <dd>ADMIN_WRITE{{% md %}}A write of admin (meta) data.{{% /md %}}</dd><dt>Data<wbr>Read</dt>
+    <dd>DATA_READ{{% md %}}A read of standard data.{{% /md %}}</dd><dt>Data<wbr>Write</dt>
+    <dd>DATA_WRITE{{% md %}}A write of standard data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PERMISSION_TYPE_UNSPECIFIED</dt>
+    <dd>PERMISSION_TYPE_UNSPECIFIED{{% md %}}Default. Should not be used.{{% /md %}}</dd><dt>ADMIN_READ</dt>
+    <dd>ADMIN_READ{{% md %}}A read of admin (meta) data.{{% /md %}}</dd><dt>ADMIN_WRITE</dt>
+    <dd>ADMIN_WRITE{{% md %}}A write of admin (meta) data.{{% /md %}}</dd><dt>DATA_READ</dt>
+    <dd>DATA_READ{{% md %}}A read of standard data.{{% /md %}}</dd><dt>DATA_WRITE</dt>
+    <dd>DATA_WRITE{{% md %}}A write of standard data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="authorizationloggingoptionsresponse">Authorization<wbr>Logging<wbr>Options<wbr>Response</h4>
@@ -1429,7 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cloudauditoptionslogname">Pulumi.<wbr>Google<wbr>Native.<wbr>Game<wbr>Services.<wbr>V1Beta.<wbr>Cloud<wbr>Audit<wbr>Options<wbr>Log<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The log_name to populate in the Cloud Audit Record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1449,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cloudauditoptionslogname">Cloud<wbr>Audit<wbr>Options<wbr>Log<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The log_name to populate in the Cloud Audit Record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1469,7 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#cloudauditoptionslogname">Cloud<wbr>Audit<wbr>Options<wbr>Log<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The log_name to populate in the Cloud Audit Record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1489,9 +1561,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#cloudauditoptionslogname">Cloud<wbr>Audit<wbr>Options<wbr>Log<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The log_name to populate in the Cloud Audit Record.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cloudauditoptionslogname">Cloud<wbr>Audit<wbr>Options<wbr>Log<wbr>Name</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified<wbr>Log<wbr>Name</dt>
+    <dd>UNSPECIFIED_LOG_NAME{{% md %}}Default. Should not be used.{{% /md %}}</dd><dt>Admin<wbr>Activity</dt>
+    <dd>ADMIN_ACTIVITY{{% md %}}Corresponds to "cloudaudit.googleapis.com/activity"{{% /md %}}</dd><dt>Data<wbr>Access</dt>
+    <dd>DATA_ACCESS{{% md %}}Corresponds to "cloudaudit.googleapis.com/data_access"{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Cloud<wbr>Audit<wbr>Options<wbr>Log<wbr>Name<wbr>Unspecified<wbr>Log<wbr>Name</dt>
+    <dd>UNSPECIFIED_LOG_NAME{{% md %}}Default. Should not be used.{{% /md %}}</dd><dt>Cloud<wbr>Audit<wbr>Options<wbr>Log<wbr>Name<wbr>Admin<wbr>Activity</dt>
+    <dd>ADMIN_ACTIVITY{{% md %}}Corresponds to "cloudaudit.googleapis.com/activity"{{% /md %}}</dd><dt>Cloud<wbr>Audit<wbr>Options<wbr>Log<wbr>Name<wbr>Data<wbr>Access</dt>
+    <dd>DATA_ACCESS{{% md %}}Corresponds to "cloudaudit.googleapis.com/data_access"{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified<wbr>Log<wbr>Name</dt>
+    <dd>UNSPECIFIED_LOG_NAME{{% md %}}Default. Should not be used.{{% /md %}}</dd><dt>Admin<wbr>Activity</dt>
+    <dd>ADMIN_ACTIVITY{{% md %}}Corresponds to "cloudaudit.googleapis.com/activity"{{% /md %}}</dd><dt>Data<wbr>Access</dt>
+    <dd>DATA_ACCESS{{% md %}}Corresponds to "cloudaudit.googleapis.com/data_access"{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED_LOG_NAME</dt>
+    <dd>UNSPECIFIED_LOG_NAME{{% md %}}Default. Should not be used.{{% /md %}}</dd><dt>ADMIN_ACTIVITY</dt>
+    <dd>ADMIN_ACTIVITY{{% md %}}Corresponds to "cloudaudit.googleapis.com/activity"{{% /md %}}</dd><dt>DATA_ACCESS</dt>
+    <dd>DATA_ACCESS{{% md %}}Corresponds to "cloudaudit.googleapis.com/data_access"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cloudauditoptionsresponse">Cloud<wbr>Audit<wbr>Options<wbr>Response</h4>
@@ -1585,7 +1687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iam_csharp" style="color: inherit; text-decoration: inherit;">Iam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conditioniam">Pulumi.<wbr>Google<wbr>Native.<wbr>Game<wbr>Services.<wbr>V1Beta.<wbr>Condition<wbr>Iam</a></span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by the IAM system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1593,7 +1695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#op_csharp" style="color: inherit; text-decoration: inherit;">Op</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conditionop">Pulumi.<wbr>Google<wbr>Native.<wbr>Game<wbr>Services.<wbr>V1Beta.<wbr>Condition<wbr>Op</a></span>
     </dt>
     <dd>{{% md %}}An operator to apply the subject with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1609,7 +1711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sys_csharp" style="color: inherit; text-decoration: inherit;">Sys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conditionsys">Pulumi.<wbr>Google<wbr>Native.<wbr>Game<wbr>Services.<wbr>V1Beta.<wbr>Condition<wbr>Sys</a></span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1629,7 +1731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iam_go" style="color: inherit; text-decoration: inherit;">Iam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conditioniam">Condition<wbr>Iam</a></span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by the IAM system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1637,7 +1739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#op_go" style="color: inherit; text-decoration: inherit;">Op</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conditionop">Condition<wbr>Op</a></span>
     </dt>
     <dd>{{% md %}}An operator to apply the subject with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1653,7 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sys_go" style="color: inherit; text-decoration: inherit;">Sys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conditionsys">Condition<wbr>Sys</a></span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1673,7 +1775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iam_nodejs" style="color: inherit; text-decoration: inherit;">iam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conditioniam">Condition<wbr>Iam</a></span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by the IAM system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1681,7 +1783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#op_nodejs" style="color: inherit; text-decoration: inherit;">op</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conditionop">Condition<wbr>Op</a></span>
     </dt>
     <dd>{{% md %}}An operator to apply the subject with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1697,7 +1799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sys_nodejs" style="color: inherit; text-decoration: inherit;">sys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conditionsys">Condition<wbr>Sys</a></span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1717,7 +1819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iam_python" style="color: inherit; text-decoration: inherit;">iam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#conditioniam">Condition<wbr>Iam</a></span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by the IAM system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1725,7 +1827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#op_python" style="color: inherit; text-decoration: inherit;">op</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#conditionop">Condition<wbr>Op</a></span>
     </dt>
     <dd>{{% md %}}An operator to apply the subject with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1741,7 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sys_python" style="color: inherit; text-decoration: inherit;">sys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#conditionsys">Condition<wbr>Sys</a></span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1752,6 +1854,98 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The objects of the condition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="conditioniam">Condition<wbr>Iam</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>No<wbr>Attr</dt>
+    <dd>NO_ATTR{{% md %}}Default non-attribute.{{% /md %}}</dd><dt>Authority</dt>
+    <dd>AUTHORITY{{% md %}}Either principal or (if present) authority selector.{{% /md %}}</dd><dt>Attribution</dt>
+    <dd>ATTRIBUTION{{% md %}}The principal (even if an authority selector is present), which must only be used for attribution, not authorization.{{% /md %}}</dd><dt>Security<wbr>Realm</dt>
+    <dd>SECURITY_REALM{{% md %}}Any of the security realms in the IAMContext (go/security-realms). When used with IN, the condition indicates "any of the request's realms match one of the given values; with NOT_IN, "none of the realms match any of the given values". Note that a value can be: - 'self' (i.e., allow connections from clients that are in the same security realm) - 'self:metro' (i.e., clients that are in the same metro) - 'self:cloud-region' (i.e., allow connections from clients that are in the same cloud region) - 'guardians' (i.e., allow connections from its guardian realms. See go/security-realms-glossary#guardian for more information.) - a realm (e.g., 'campus-abc') - a realm group (e.g., 'realms-for-borg-cell-xx', see: go/realm-groups) A match is determined by a realm group membership check performed by a RealmAclRep object (go/realm-acl-howto). It is not permitted to grant access based on the *absence* of a realm, so realm conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN).{{% /md %}}</dd><dt>Approver</dt>
+    <dd>APPROVER{{% md %}}An approver (distinct from the requester) that has authorized this request. When used with IN, the condition indicates that one of the approvers associated with the request matches the specified principal, or is a member of the specified group. Approvers can only grant additional access, and are thus only used in a strictly positive context (e.g. ALLOW/IN or DENY/NOT_IN).{{% /md %}}</dd><dt>Justification<wbr>Type</dt>
+    <dd>JUSTIFICATION_TYPE{{% md %}}What types of justifications have been supplied with this request. String values should match enum names from security.credentials.JustificationType, e.g. "MANUAL_STRING". It is not permitted to grant access based on the *absence* of a justification, so justification conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN). Multiple justifications, e.g., a Buganizer ID and a manually-entered reason, are normal and supported.{{% /md %}}</dd><dt>Credentials<wbr>Type</dt>
+    <dd>CREDENTIALS_TYPE{{% md %}}What type of credentials have been supplied with this request. String values should match enum names from security_loas_l2.CredentialsType - currently, only CREDS_TYPE_EMERGENCY is supported. It is not permitted to grant access based on the *absence* of a credentials type, so the conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN).{{% /md %}}</dd><dt>Creds<wbr>Assertion</dt>
+    <dd>CREDS_ASSERTION{{% md %}}EXPERIMENTAL -- DO NOT USE. The conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Condition<wbr>Iam<wbr>No<wbr>Attr</dt>
+    <dd>NO_ATTR{{% md %}}Default non-attribute.{{% /md %}}</dd><dt>Condition<wbr>Iam<wbr>Authority</dt>
+    <dd>AUTHORITY{{% md %}}Either principal or (if present) authority selector.{{% /md %}}</dd><dt>Condition<wbr>Iam<wbr>Attribution</dt>
+    <dd>ATTRIBUTION{{% md %}}The principal (even if an authority selector is present), which must only be used for attribution, not authorization.{{% /md %}}</dd><dt>Condition<wbr>Iam<wbr>Security<wbr>Realm</dt>
+    <dd>SECURITY_REALM{{% md %}}Any of the security realms in the IAMContext (go/security-realms). When used with IN, the condition indicates "any of the request's realms match one of the given values; with NOT_IN, "none of the realms match any of the given values". Note that a value can be: - 'self' (i.e., allow connections from clients that are in the same security realm) - 'self:metro' (i.e., clients that are in the same metro) - 'self:cloud-region' (i.e., allow connections from clients that are in the same cloud region) - 'guardians' (i.e., allow connections from its guardian realms. See go/security-realms-glossary#guardian for more information.) - a realm (e.g., 'campus-abc') - a realm group (e.g., 'realms-for-borg-cell-xx', see: go/realm-groups) A match is determined by a realm group membership check performed by a RealmAclRep object (go/realm-acl-howto). It is not permitted to grant access based on the *absence* of a realm, so realm conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN).{{% /md %}}</dd><dt>Condition<wbr>Iam<wbr>Approver</dt>
+    <dd>APPROVER{{% md %}}An approver (distinct from the requester) that has authorized this request. When used with IN, the condition indicates that one of the approvers associated with the request matches the specified principal, or is a member of the specified group. Approvers can only grant additional access, and are thus only used in a strictly positive context (e.g. ALLOW/IN or DENY/NOT_IN).{{% /md %}}</dd><dt>Condition<wbr>Iam<wbr>Justification<wbr>Type</dt>
+    <dd>JUSTIFICATION_TYPE{{% md %}}What types of justifications have been supplied with this request. String values should match enum names from security.credentials.JustificationType, e.g. "MANUAL_STRING". It is not permitted to grant access based on the *absence* of a justification, so justification conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN). Multiple justifications, e.g., a Buganizer ID and a manually-entered reason, are normal and supported.{{% /md %}}</dd><dt>Condition<wbr>Iam<wbr>Credentials<wbr>Type</dt>
+    <dd>CREDENTIALS_TYPE{{% md %}}What type of credentials have been supplied with this request. String values should match enum names from security_loas_l2.CredentialsType - currently, only CREDS_TYPE_EMERGENCY is supported. It is not permitted to grant access based on the *absence* of a credentials type, so the conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN).{{% /md %}}</dd><dt>Condition<wbr>Iam<wbr>Creds<wbr>Assertion</dt>
+    <dd>CREDS_ASSERTION{{% md %}}EXPERIMENTAL -- DO NOT USE. The conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>No<wbr>Attr</dt>
+    <dd>NO_ATTR{{% md %}}Default non-attribute.{{% /md %}}</dd><dt>Authority</dt>
+    <dd>AUTHORITY{{% md %}}Either principal or (if present) authority selector.{{% /md %}}</dd><dt>Attribution</dt>
+    <dd>ATTRIBUTION{{% md %}}The principal (even if an authority selector is present), which must only be used for attribution, not authorization.{{% /md %}}</dd><dt>Security<wbr>Realm</dt>
+    <dd>SECURITY_REALM{{% md %}}Any of the security realms in the IAMContext (go/security-realms). When used with IN, the condition indicates "any of the request's realms match one of the given values; with NOT_IN, "none of the realms match any of the given values". Note that a value can be: - 'self' (i.e., allow connections from clients that are in the same security realm) - 'self:metro' (i.e., clients that are in the same metro) - 'self:cloud-region' (i.e., allow connections from clients that are in the same cloud region) - 'guardians' (i.e., allow connections from its guardian realms. See go/security-realms-glossary#guardian for more information.) - a realm (e.g., 'campus-abc') - a realm group (e.g., 'realms-for-borg-cell-xx', see: go/realm-groups) A match is determined by a realm group membership check performed by a RealmAclRep object (go/realm-acl-howto). It is not permitted to grant access based on the *absence* of a realm, so realm conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN).{{% /md %}}</dd><dt>Approver</dt>
+    <dd>APPROVER{{% md %}}An approver (distinct from the requester) that has authorized this request. When used with IN, the condition indicates that one of the approvers associated with the request matches the specified principal, or is a member of the specified group. Approvers can only grant additional access, and are thus only used in a strictly positive context (e.g. ALLOW/IN or DENY/NOT_IN).{{% /md %}}</dd><dt>Justification<wbr>Type</dt>
+    <dd>JUSTIFICATION_TYPE{{% md %}}What types of justifications have been supplied with this request. String values should match enum names from security.credentials.JustificationType, e.g. "MANUAL_STRING". It is not permitted to grant access based on the *absence* of a justification, so justification conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN). Multiple justifications, e.g., a Buganizer ID and a manually-entered reason, are normal and supported.{{% /md %}}</dd><dt>Credentials<wbr>Type</dt>
+    <dd>CREDENTIALS_TYPE{{% md %}}What type of credentials have been supplied with this request. String values should match enum names from security_loas_l2.CredentialsType - currently, only CREDS_TYPE_EMERGENCY is supported. It is not permitted to grant access based on the *absence* of a credentials type, so the conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN).{{% /md %}}</dd><dt>Creds<wbr>Assertion</dt>
+    <dd>CREDS_ASSERTION{{% md %}}EXPERIMENTAL -- DO NOT USE. The conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NO_ATTR</dt>
+    <dd>NO_ATTR{{% md %}}Default non-attribute.{{% /md %}}</dd><dt>AUTHORITY</dt>
+    <dd>AUTHORITY{{% md %}}Either principal or (if present) authority selector.{{% /md %}}</dd><dt>ATTRIBUTION</dt>
+    <dd>ATTRIBUTION{{% md %}}The principal (even if an authority selector is present), which must only be used for attribution, not authorization.{{% /md %}}</dd><dt>SECURITY_REALM</dt>
+    <dd>SECURITY_REALM{{% md %}}Any of the security realms in the IAMContext (go/security-realms). When used with IN, the condition indicates "any of the request's realms match one of the given values; with NOT_IN, "none of the realms match any of the given values". Note that a value can be: - 'self' (i.e., allow connections from clients that are in the same security realm) - 'self:metro' (i.e., clients that are in the same metro) - 'self:cloud-region' (i.e., allow connections from clients that are in the same cloud region) - 'guardians' (i.e., allow connections from its guardian realms. See go/security-realms-glossary#guardian for more information.) - a realm (e.g., 'campus-abc') - a realm group (e.g., 'realms-for-borg-cell-xx', see: go/realm-groups) A match is determined by a realm group membership check performed by a RealmAclRep object (go/realm-acl-howto). It is not permitted to grant access based on the *absence* of a realm, so realm conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN).{{% /md %}}</dd><dt>APPROVER</dt>
+    <dd>APPROVER{{% md %}}An approver (distinct from the requester) that has authorized this request. When used with IN, the condition indicates that one of the approvers associated with the request matches the specified principal, or is a member of the specified group. Approvers can only grant additional access, and are thus only used in a strictly positive context (e.g. ALLOW/IN or DENY/NOT_IN).{{% /md %}}</dd><dt>JUSTIFICATION_TYPE</dt>
+    <dd>JUSTIFICATION_TYPE{{% md %}}What types of justifications have been supplied with this request. String values should match enum names from security.credentials.JustificationType, e.g. "MANUAL_STRING". It is not permitted to grant access based on the *absence* of a justification, so justification conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN). Multiple justifications, e.g., a Buganizer ID and a manually-entered reason, are normal and supported.{{% /md %}}</dd><dt>CREDENTIALS_TYPE</dt>
+    <dd>CREDENTIALS_TYPE{{% md %}}What type of credentials have been supplied with this request. String values should match enum names from security_loas_l2.CredentialsType - currently, only CREDS_TYPE_EMERGENCY is supported. It is not permitted to grant access based on the *absence* of a credentials type, so the conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN).{{% /md %}}</dd><dt>CREDS_ASSERTION</dt>
+    <dd>CREDS_ASSERTION{{% md %}}EXPERIMENTAL -- DO NOT USE. The conditions can only be used in a "positive" context (e.g., ALLOW/IN or DENY/NOT_IN).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="conditionop">Condition<wbr>Op</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>No<wbr>Op</dt>
+    <dd>NO_OP{{% md %}}Default no-op.{{% /md %}}</dd><dt>Equals<wbr>Value</dt>
+    <dd>EQUALS{{% md %}}DEPRECATED. Use IN instead.{{% /md %}}</dd><dt>Not<wbr>Equals</dt>
+    <dd>NOT_EQUALS{{% md %}}DEPRECATED. Use NOT_IN instead.{{% /md %}}</dd><dt>In</dt>
+    <dd>IN{{% md %}}The condition is true if the subject (or any element of it if it is a set) matches any of the supplied values.{{% /md %}}</dd><dt>Not<wbr>In</dt>
+    <dd>NOT_IN{{% md %}}The condition is true if the subject (or every element of it if it is a set) matches none of the supplied values.{{% /md %}}</dd><dt>Discharged</dt>
+    <dd>DISCHARGED{{% md %}}Subject is discharged{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Condition<wbr>Op<wbr>No<wbr>Op</dt>
+    <dd>NO_OP{{% md %}}Default no-op.{{% /md %}}</dd><dt>Condition<wbr>Op<wbr>Equals</dt>
+    <dd>EQUALS{{% md %}}DEPRECATED. Use IN instead.{{% /md %}}</dd><dt>Condition<wbr>Op<wbr>Not<wbr>Equals</dt>
+    <dd>NOT_EQUALS{{% md %}}DEPRECATED. Use NOT_IN instead.{{% /md %}}</dd><dt>Condition<wbr>Op<wbr>In</dt>
+    <dd>IN{{% md %}}The condition is true if the subject (or any element of it if it is a set) matches any of the supplied values.{{% /md %}}</dd><dt>Condition<wbr>Op<wbr>Not<wbr>In</dt>
+    <dd>NOT_IN{{% md %}}The condition is true if the subject (or every element of it if it is a set) matches none of the supplied values.{{% /md %}}</dd><dt>Condition<wbr>Op<wbr>Discharged</dt>
+    <dd>DISCHARGED{{% md %}}Subject is discharged{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>No<wbr>Op</dt>
+    <dd>NO_OP{{% md %}}Default no-op.{{% /md %}}</dd><dt>Equals</dt>
+    <dd>EQUALS{{% md %}}DEPRECATED. Use IN instead.{{% /md %}}</dd><dt>Not<wbr>Equals</dt>
+    <dd>NOT_EQUALS{{% md %}}DEPRECATED. Use NOT_IN instead.{{% /md %}}</dd><dt>In</dt>
+    <dd>IN{{% md %}}The condition is true if the subject (or any element of it if it is a set) matches any of the supplied values.{{% /md %}}</dd><dt>Not<wbr>In</dt>
+    <dd>NOT_IN{{% md %}}The condition is true if the subject (or every element of it if it is a set) matches none of the supplied values.{{% /md %}}</dd><dt>Discharged</dt>
+    <dd>DISCHARGED{{% md %}}Subject is discharged{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NO_OP</dt>
+    <dd>NO_OP{{% md %}}Default no-op.{{% /md %}}</dd><dt>EQUALS</dt>
+    <dd>EQUALS{{% md %}}DEPRECATED. Use IN instead.{{% /md %}}</dd><dt>NOT_EQUALS</dt>
+    <dd>NOT_EQUALS{{% md %}}DEPRECATED. Use NOT_IN instead.{{% /md %}}</dd><dt>IN_</dt>
+    <dd>IN{{% md %}}The condition is true if the subject (or any element of it if it is a set) matches any of the supplied values.{{% /md %}}</dd><dt>NOT_IN</dt>
+    <dd>NOT_IN{{% md %}}The condition is true if the subject (or every element of it if it is a set) matches none of the supplied values.{{% /md %}}</dd><dt>DISCHARGED</dt>
+    <dd>DISCHARGED{{% md %}}Subject is discharged{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="conditionresponse">Condition<wbr>Response</h4>
@@ -1930,6 +2124,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The objects of the condition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="conditionsys">Condition<wbr>Sys</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>No<wbr>Attr</dt>
+    <dd>NO_ATTR{{% md %}}Default non-attribute type{{% /md %}}</dd><dt>Region</dt>
+    <dd>REGION{{% md %}}Region of the resource{{% /md %}}</dd><dt>Service</dt>
+    <dd>SERVICE{{% md %}}Service name{{% /md %}}</dd><dt>Name</dt>
+    <dd>NAME{{% md %}}Resource name{{% /md %}}</dd><dt>Ip</dt>
+    <dd>IP{{% md %}}IP address of the caller{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Condition<wbr>Sys<wbr>No<wbr>Attr</dt>
+    <dd>NO_ATTR{{% md %}}Default non-attribute type{{% /md %}}</dd><dt>Condition<wbr>Sys<wbr>Region</dt>
+    <dd>REGION{{% md %}}Region of the resource{{% /md %}}</dd><dt>Condition<wbr>Sys<wbr>Service</dt>
+    <dd>SERVICE{{% md %}}Service name{{% /md %}}</dd><dt>Condition<wbr>Sys<wbr>Name</dt>
+    <dd>NAME{{% md %}}Resource name{{% /md %}}</dd><dt>Condition<wbr>Sys<wbr>Ip</dt>
+    <dd>IP{{% md %}}IP address of the caller{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>No<wbr>Attr</dt>
+    <dd>NO_ATTR{{% md %}}Default non-attribute type{{% /md %}}</dd><dt>Region</dt>
+    <dd>REGION{{% md %}}Region of the resource{{% /md %}}</dd><dt>Service</dt>
+    <dd>SERVICE{{% md %}}Service name{{% /md %}}</dd><dt>Name</dt>
+    <dd>NAME{{% md %}}Resource name{{% /md %}}</dd><dt>Ip</dt>
+    <dd>IP{{% md %}}IP address of the caller{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NO_ATTR</dt>
+    <dd>NO_ATTR{{% md %}}Default non-attribute type{{% /md %}}</dd><dt>REGION</dt>
+    <dd>REGION{{% md %}}Region of the resource{{% /md %}}</dd><dt>SERVICE</dt>
+    <dd>SERVICE{{% md %}}Service name{{% /md %}}</dd><dt>NAME</dt>
+    <dd>NAME{{% md %}}Resource name{{% /md %}}</dd><dt>IP</dt>
+    <dd>IP{{% md %}}IP address of the caller{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="counteroptions">Counter<wbr>Options</h4>
@@ -2333,7 +2565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logmode_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#dataaccessoptionslogmode">Pulumi.<wbr>Google<wbr>Native.<wbr>Game<wbr>Services.<wbr>V1Beta.<wbr>Data<wbr>Access<wbr>Options<wbr>Log<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2345,7 +2577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logmode_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#dataaccessoptionslogmode">Data<wbr>Access<wbr>Options<wbr>Log<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2357,7 +2589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logmode_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#dataaccessoptionslogmode">Data<wbr>Access<wbr>Options<wbr>Log<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2369,9 +2601,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_mode_python" style="color: inherit; text-decoration: inherit;">log_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#dataaccessoptionslogmode">Data<wbr>Access<wbr>Options<wbr>Log<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dataaccessoptionslogmode">Data<wbr>Access<wbr>Options<wbr>Log<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Log<wbr>Mode<wbr>Unspecified</dt>
+    <dd>LOG_MODE_UNSPECIFIED{{% md %}}Client is not required to write a partial Gin log immediately after the authorization check. If client chooses to write one and it fails, client may either fail open (allow the operation to continue) or fail closed (handle as a DENY outcome).{{% /md %}}</dd><dt>Log<wbr>Fail<wbr>Closed</dt>
+    <dd>LOG_FAIL_CLOSED{{% md %}}The application's operation in the context of which this authorization check is being made may only be performed if it is successfully logged to Gin. For instance, the authorization library may satisfy this obligation by emitting a partial log entry at authorization check time and only returning ALLOW to the application if it succeeds. If a matching Rule has this directive, but the client has not indicated that it will honor such requirements, then the IAM check will result in authorization failure by setting CheckPolicyResponse.success=false.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Data<wbr>Access<wbr>Options<wbr>Log<wbr>Mode<wbr>Log<wbr>Mode<wbr>Unspecified</dt>
+    <dd>LOG_MODE_UNSPECIFIED{{% md %}}Client is not required to write a partial Gin log immediately after the authorization check. If client chooses to write one and it fails, client may either fail open (allow the operation to continue) or fail closed (handle as a DENY outcome).{{% /md %}}</dd><dt>Data<wbr>Access<wbr>Options<wbr>Log<wbr>Mode<wbr>Log<wbr>Fail<wbr>Closed</dt>
+    <dd>LOG_FAIL_CLOSED{{% md %}}The application's operation in the context of which this authorization check is being made may only be performed if it is successfully logged to Gin. For instance, the authorization library may satisfy this obligation by emitting a partial log entry at authorization check time and only returning ALLOW to the application if it succeeds. If a matching Rule has this directive, but the client has not indicated that it will honor such requirements, then the IAM check will result in authorization failure by setting CheckPolicyResponse.success=false.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Log<wbr>Mode<wbr>Unspecified</dt>
+    <dd>LOG_MODE_UNSPECIFIED{{% md %}}Client is not required to write a partial Gin log immediately after the authorization check. If client chooses to write one and it fails, client may either fail open (allow the operation to continue) or fail closed (handle as a DENY outcome).{{% /md %}}</dd><dt>Log<wbr>Fail<wbr>Closed</dt>
+    <dd>LOG_FAIL_CLOSED{{% md %}}The application's operation in the context of which this authorization check is being made may only be performed if it is successfully logged to Gin. For instance, the authorization library may satisfy this obligation by emitting a partial log entry at authorization check time and only returning ALLOW to the application if it succeeds. If a matching Rule has this directive, but the client has not indicated that it will honor such requirements, then the IAM check will result in authorization failure by setting CheckPolicyResponse.success=false.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LOG_MODE_UNSPECIFIED</dt>
+    <dd>LOG_MODE_UNSPECIFIED{{% md %}}Client is not required to write a partial Gin log immediately after the authorization check. If client chooses to write one and it fails, client may either fail open (allow the operation to continue) or fail closed (handle as a DENY outcome).{{% /md %}}</dd><dt>LOG_FAIL_CLOSED</dt>
+    <dd>LOG_FAIL_CLOSED{{% md %}}The application's operation in the context of which this authorization check is being made may only be performed if it is successfully logged to Gin. For instance, the authorization library may satisfy this obligation by emitting a partial log entry at authorization check time and only returning ALLOW to the application if it succeeds. If a matching Rule has this directive, but the client has not indicated that it will honor such requirements, then the IAM check will result in authorization failure by setting CheckPolicyResponse.success=false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dataaccessoptionsresponse">Data<wbr>Access<wbr>Options<wbr>Response</h4>
@@ -2953,7 +3211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#ruleaction">Pulumi.<wbr>Google<wbr>Native.<wbr>Game<wbr>Services.<wbr>V1Beta.<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Required{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3013,7 +3271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#ruleaction">Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Required{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3073,7 +3331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#ruleaction">Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Required{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3133,7 +3391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#ruleaction">Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Required{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3184,6 +3442,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A permission is a string of form '..' (e.g., 'storage.buckets.list'). A value of '*' matches all permissions, and a verb part of '*' (e.g., 'storage.buckets.*') matches all verbs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ruleaction">Rule<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>No<wbr>Action</dt>
+    <dd>NO_ACTION{{% md %}}Default no action.{{% /md %}}</dd><dt>Allow</dt>
+    <dd>ALLOW{{% md %}}Matching 'Entries' grant access.{{% /md %}}</dd><dt>Allow<wbr>With<wbr>Log</dt>
+    <dd>ALLOW_WITH_LOG{{% md %}}Matching 'Entries' grant access and the caller promises to log the request per the returned log_configs.{{% /md %}}</dd><dt>Deny</dt>
+    <dd>DENY{{% md %}}Matching 'Entries' deny access.{{% /md %}}</dd><dt>Deny<wbr>With<wbr>Log</dt>
+    <dd>DENY_WITH_LOG{{% md %}}Matching 'Entries' deny access and the caller promises to log the request per the returned log_configs.{{% /md %}}</dd><dt>Log</dt>
+    <dd>LOG{{% md %}}Matching 'Entries' tell IAM.Check callers to generate logs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Rule<wbr>Action<wbr>No<wbr>Action</dt>
+    <dd>NO_ACTION{{% md %}}Default no action.{{% /md %}}</dd><dt>Rule<wbr>Action<wbr>Allow</dt>
+    <dd>ALLOW{{% md %}}Matching 'Entries' grant access.{{% /md %}}</dd><dt>Rule<wbr>Action<wbr>Allow<wbr>With<wbr>Log</dt>
+    <dd>ALLOW_WITH_LOG{{% md %}}Matching 'Entries' grant access and the caller promises to log the request per the returned log_configs.{{% /md %}}</dd><dt>Rule<wbr>Action<wbr>Deny</dt>
+    <dd>DENY{{% md %}}Matching 'Entries' deny access.{{% /md %}}</dd><dt>Rule<wbr>Action<wbr>Deny<wbr>With<wbr>Log</dt>
+    <dd>DENY_WITH_LOG{{% md %}}Matching 'Entries' deny access and the caller promises to log the request per the returned log_configs.{{% /md %}}</dd><dt>Rule<wbr>Action<wbr>Log</dt>
+    <dd>LOG{{% md %}}Matching 'Entries' tell IAM.Check callers to generate logs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>No<wbr>Action</dt>
+    <dd>NO_ACTION{{% md %}}Default no action.{{% /md %}}</dd><dt>Allow</dt>
+    <dd>ALLOW{{% md %}}Matching 'Entries' grant access.{{% /md %}}</dd><dt>Allow<wbr>With<wbr>Log</dt>
+    <dd>ALLOW_WITH_LOG{{% md %}}Matching 'Entries' grant access and the caller promises to log the request per the returned log_configs.{{% /md %}}</dd><dt>Deny</dt>
+    <dd>DENY{{% md %}}Matching 'Entries' deny access.{{% /md %}}</dd><dt>Deny<wbr>With<wbr>Log</dt>
+    <dd>DENY_WITH_LOG{{% md %}}Matching 'Entries' deny access and the caller promises to log the request per the returned log_configs.{{% /md %}}</dd><dt>Log</dt>
+    <dd>LOG{{% md %}}Matching 'Entries' tell IAM.Check callers to generate logs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NO_ACTION</dt>
+    <dd>NO_ACTION{{% md %}}Default no action.{{% /md %}}</dd><dt>ALLOW</dt>
+    <dd>ALLOW{{% md %}}Matching 'Entries' grant access.{{% /md %}}</dd><dt>ALLOW_WITH_LOG</dt>
+    <dd>ALLOW_WITH_LOG{{% md %}}Matching 'Entries' grant access and the caller promises to log the request per the returned log_configs.{{% /md %}}</dd><dt>DENY</dt>
+    <dd>DENY{{% md %}}Matching 'Entries' deny access.{{% /md %}}</dd><dt>DENY_WITH_LOG</dt>
+    <dd>DENY_WITH_LOG{{% md %}}Matching 'Entries' deny access and the caller promises to log the request per the returned log_configs.{{% /md %}}</dd><dt>LOG</dt>
+    <dd>LOG{{% md %}}Matching 'Entries' tell IAM.Check callers to generate logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ruleresponse">Rule<wbr>Response</h4>

@@ -30,7 +30,7 @@ Create a Service Perimeter. The longrunning operation from this RPC will have a 
                      <span class="nx">access_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">perimeter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">perimeter_type</span><span class="p">:</span> <span class="nx">Optional[_accesscontextmanager_v1.ServicePerimeterPerimeterType]</span> = None<span class="p">,</span>
                      <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_accesscontextmanager_v1.ServicePerimeterConfigArgs]</span> = None<span class="p">,</span>
                      <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_accesscontextmanager_v1.ServicePerimeterConfigArgs]</span> = None<span class="p">,</span>
                      <span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -192,7 +192,7 @@ The ServicePerimeter resource accepts the following [input]({{< relref "/docs/in
 <a href="#perimetertype_csharp" style="color: inherit; text-decoration: inherit;">Perimeter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#serviceperimeterperimetertype">Pulumi.<wbr>Google<wbr>Native.<wbr>Access<wbr>Context<wbr>Manager.<wbr>V1.<wbr>Service<wbr>Perimeter<wbr>Perimeter<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, the restricted service list as well as access level lists must be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -260,7 +260,7 @@ The ServicePerimeter resource accepts the following [input]({{< relref "/docs/in
 <a href="#perimetertype_go" style="color: inherit; text-decoration: inherit;">Perimeter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#serviceperimeterperimetertype">Service<wbr>Perimeter<wbr>Perimeter<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, the restricted service list as well as access level lists must be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -328,7 +328,7 @@ The ServicePerimeter resource accepts the following [input]({{< relref "/docs/in
 <a href="#perimetertype_nodejs" style="color: inherit; text-decoration: inherit;">perimeter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#serviceperimeterperimetertype">Service<wbr>Perimeter<wbr>Perimeter<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, the restricted service list as well as access level lists must be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -396,7 +396,7 @@ The ServicePerimeter resource accepts the following [input]({{< relref "/docs/in
 <a href="#perimeter_type_python" style="color: inherit; text-decoration: inherit;">perimeter_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#serviceperimeterperimetertype">Service<wbr>Perimeter<wbr>Perimeter<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, the restricted service list as well as access level lists must be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -679,7 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identitytype_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#egressfromidentitytype">Pulumi.<wbr>Google<wbr>Native.<wbr>Access<wbr>Context<wbr>Manager.<wbr>V1.<wbr>Egress<wbr>From<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -699,7 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identitytype_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#egressfromidentitytype">Egress<wbr>From<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -719,7 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identitytype_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#egressfromidentitytype">Egress<wbr>From<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -739,9 +739,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_type_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#egressfromidentitytype">Egress<wbr>From<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="egressfromidentitytype">Egress<wbr>From<wbr>Identity<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Identity<wbr>Type<wbr>Unspecified</dt>
+    <dd>IDENTITY_TYPE_UNSPECIFIED{{% md %}}No blanket identity group specified.{{% /md %}}</dd><dt>Any<wbr>Identity</dt>
+    <dd>ANY_IDENTITY{{% md %}}Authorize access from all identities outside the perimeter.{{% /md %}}</dd><dt>Any<wbr>User<wbr>Account</dt>
+    <dd>ANY_USER_ACCOUNT{{% md %}}Authorize access from all human users outside the perimeter.{{% /md %}}</dd><dt>Any<wbr>Service<wbr>Account</dt>
+    <dd>ANY_SERVICE_ACCOUNT{{% md %}}Authorize access from all service accounts outside the perimeter.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Egress<wbr>From<wbr>Identity<wbr>Type<wbr>Identity<wbr>Type<wbr>Unspecified</dt>
+    <dd>IDENTITY_TYPE_UNSPECIFIED{{% md %}}No blanket identity group specified.{{% /md %}}</dd><dt>Egress<wbr>From<wbr>Identity<wbr>Type<wbr>Any<wbr>Identity</dt>
+    <dd>ANY_IDENTITY{{% md %}}Authorize access from all identities outside the perimeter.{{% /md %}}</dd><dt>Egress<wbr>From<wbr>Identity<wbr>Type<wbr>Any<wbr>User<wbr>Account</dt>
+    <dd>ANY_USER_ACCOUNT{{% md %}}Authorize access from all human users outside the perimeter.{{% /md %}}</dd><dt>Egress<wbr>From<wbr>Identity<wbr>Type<wbr>Any<wbr>Service<wbr>Account</dt>
+    <dd>ANY_SERVICE_ACCOUNT{{% md %}}Authorize access from all service accounts outside the perimeter.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Identity<wbr>Type<wbr>Unspecified</dt>
+    <dd>IDENTITY_TYPE_UNSPECIFIED{{% md %}}No blanket identity group specified.{{% /md %}}</dd><dt>Any<wbr>Identity</dt>
+    <dd>ANY_IDENTITY{{% md %}}Authorize access from all identities outside the perimeter.{{% /md %}}</dd><dt>Any<wbr>User<wbr>Account</dt>
+    <dd>ANY_USER_ACCOUNT{{% md %}}Authorize access from all human users outside the perimeter.{{% /md %}}</dd><dt>Any<wbr>Service<wbr>Account</dt>
+    <dd>ANY_SERVICE_ACCOUNT{{% md %}}Authorize access from all service accounts outside the perimeter.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>IDENTITY_TYPE_UNSPECIFIED</dt>
+    <dd>IDENTITY_TYPE_UNSPECIFIED{{% md %}}No blanket identity group specified.{{% /md %}}</dd><dt>ANY_IDENTITY</dt>
+    <dd>ANY_IDENTITY{{% md %}}Authorize access from all identities outside the perimeter.{{% /md %}}</dd><dt>ANY_USER_ACCOUNT</dt>
+    <dd>ANY_USER_ACCOUNT{{% md %}}Authorize access from all human users outside the perimeter.{{% /md %}}</dd><dt>ANY_SERVICE_ACCOUNT</dt>
+    <dd>ANY_SERVICE_ACCOUNT{{% md %}}Authorize access from all service accounts outside the perimeter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="egressfromresponse">Egress<wbr>From<wbr>Response</h4>
@@ -1171,7 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identitytype_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#ingressfromidentitytype">Pulumi.<wbr>Google<wbr>Native.<wbr>Access<wbr>Context<wbr>Manager.<wbr>V1.<wbr>Ingress<wbr>From<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1199,7 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identitytype_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#ingressfromidentitytype">Ingress<wbr>From<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1227,7 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identitytype_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#ingressfromidentitytype">Ingress<wbr>From<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1255,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_type_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#ingressfromidentitytype">Ingress<wbr>From<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1266,6 +1300,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#ingresssource">Ingress<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sources that this IngressPolicy authorizes access from.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ingressfromidentitytype">Ingress<wbr>From<wbr>Identity<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Identity<wbr>Type<wbr>Unspecified</dt>
+    <dd>IDENTITY_TYPE_UNSPECIFIED{{% md %}}No blanket identity group specified.{{% /md %}}</dd><dt>Any<wbr>Identity</dt>
+    <dd>ANY_IDENTITY{{% md %}}Authorize access from all identities outside the perimeter.{{% /md %}}</dd><dt>Any<wbr>User<wbr>Account</dt>
+    <dd>ANY_USER_ACCOUNT{{% md %}}Authorize access from all human users outside the perimeter.{{% /md %}}</dd><dt>Any<wbr>Service<wbr>Account</dt>
+    <dd>ANY_SERVICE_ACCOUNT{{% md %}}Authorize access from all service accounts outside the perimeter.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Ingress<wbr>From<wbr>Identity<wbr>Type<wbr>Identity<wbr>Type<wbr>Unspecified</dt>
+    <dd>IDENTITY_TYPE_UNSPECIFIED{{% md %}}No blanket identity group specified.{{% /md %}}</dd><dt>Ingress<wbr>From<wbr>Identity<wbr>Type<wbr>Any<wbr>Identity</dt>
+    <dd>ANY_IDENTITY{{% md %}}Authorize access from all identities outside the perimeter.{{% /md %}}</dd><dt>Ingress<wbr>From<wbr>Identity<wbr>Type<wbr>Any<wbr>User<wbr>Account</dt>
+    <dd>ANY_USER_ACCOUNT{{% md %}}Authorize access from all human users outside the perimeter.{{% /md %}}</dd><dt>Ingress<wbr>From<wbr>Identity<wbr>Type<wbr>Any<wbr>Service<wbr>Account</dt>
+    <dd>ANY_SERVICE_ACCOUNT{{% md %}}Authorize access from all service accounts outside the perimeter.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Identity<wbr>Type<wbr>Unspecified</dt>
+    <dd>IDENTITY_TYPE_UNSPECIFIED{{% md %}}No blanket identity group specified.{{% /md %}}</dd><dt>Any<wbr>Identity</dt>
+    <dd>ANY_IDENTITY{{% md %}}Authorize access from all identities outside the perimeter.{{% /md %}}</dd><dt>Any<wbr>User<wbr>Account</dt>
+    <dd>ANY_USER_ACCOUNT{{% md %}}Authorize access from all human users outside the perimeter.{{% /md %}}</dd><dt>Any<wbr>Service<wbr>Account</dt>
+    <dd>ANY_SERVICE_ACCOUNT{{% md %}}Authorize access from all service accounts outside the perimeter.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>IDENTITY_TYPE_UNSPECIFIED</dt>
+    <dd>IDENTITY_TYPE_UNSPECIFIED{{% md %}}No blanket identity group specified.{{% /md %}}</dd><dt>ANY_IDENTITY</dt>
+    <dd>ANY_IDENTITY{{% md %}}Authorize access from all identities outside the perimeter.{{% /md %}}</dd><dt>ANY_USER_ACCOUNT</dt>
+    <dd>ANY_USER_ACCOUNT{{% md %}}Authorize access from all human users outside the perimeter.{{% /md %}}</dd><dt>ANY_SERVICE_ACCOUNT</dt>
+    <dd>ANY_SERVICE_ACCOUNT{{% md %}}Authorize access from all service accounts outside the perimeter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ingressfromresponse">Ingress<wbr>From<wbr>Response</h4>
@@ -2456,6 +2524,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#vpcaccessibleservicesresponse">Vpc<wbr>Accessible<wbr>Services<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for APIs allowed within Perimeter.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceperimeterperimetertype">Service<wbr>Perimeter<wbr>Perimeter<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Perimeter<wbr>Type<wbr>Regular</dt>
+    <dd>PERIMETER_TYPE_REGULAR{{% md %}}Regular Perimeter.{{% /md %}}</dd><dt>Perimeter<wbr>Type<wbr>Bridge</dt>
+    <dd>PERIMETER_TYPE_BRIDGE{{% md %}}Perimeter Bridge.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Service<wbr>Perimeter<wbr>Perimeter<wbr>Type<wbr>Perimeter<wbr>Type<wbr>Regular</dt>
+    <dd>PERIMETER_TYPE_REGULAR{{% md %}}Regular Perimeter.{{% /md %}}</dd><dt>Service<wbr>Perimeter<wbr>Perimeter<wbr>Type<wbr>Perimeter<wbr>Type<wbr>Bridge</dt>
+    <dd>PERIMETER_TYPE_BRIDGE{{% md %}}Perimeter Bridge.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Perimeter<wbr>Type<wbr>Regular</dt>
+    <dd>PERIMETER_TYPE_REGULAR{{% md %}}Regular Perimeter.{{% /md %}}</dd><dt>Perimeter<wbr>Type<wbr>Bridge</dt>
+    <dd>PERIMETER_TYPE_BRIDGE{{% md %}}Perimeter Bridge.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PERIMETER_TYPE_REGULAR</dt>
+    <dd>PERIMETER_TYPE_REGULAR{{% md %}}Regular Perimeter.{{% /md %}}</dd><dt>PERIMETER_TYPE_BRIDGE</dt>
+    <dd>PERIMETER_TYPE_BRIDGE{{% md %}}Perimeter Bridge.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vpcaccessibleservices">Vpc<wbr>Accessible<wbr>Services</h4>

@@ -38,7 +38,7 @@ Creates an entry. Only entries of 'FILESET' type or user-specified type can be c
           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[_datacatalog_v1beta1.GoogleCloudDatacatalogV1beta1SchemaArgs]</span> = None<span class="p">,</span>
-          <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[_datacatalog_v1beta1.EntryType]</span> = None<span class="p">,</span>
           <span class="nx">user_specified_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">user_specified_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -262,7 +262,7 @@ The Entry resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#entrytype">Pulumi.<wbr>Google<wbr>Native.<wbr>Data<wbr>Catalog.<wbr>V1Beta1.<wbr>Entry<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +378,7 @@ The Entry resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#entrytype">Entry<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +494,7 @@ The Entry resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#entrytype">Entry<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +610,7 @@ The Entry resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#entrytype">Entry<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -791,6 +791,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="entrytype">Entry<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Entry<wbr>Type<wbr>Unspecified</dt>
+    <dd>ENTRY_TYPE_UNSPECIFIED{{% md %}}Default unknown type.{{% /md %}}</dd><dt>Table</dt>
+    <dd>TABLE{{% md %}}Output only. The type of entry that has a GoogleSQL schema, including logical views.{{% /md %}}</dd><dt>Model</dt>
+    <dd>MODEL{{% md %}}Output only. The type of models. https://cloud.google.com/bigquery-ml/docs/bigqueryml-intro{{% /md %}}</dd><dt>Data<wbr>Stream</dt>
+    <dd>DATA_STREAM{{% md %}}Output only. An entry type which is used for streaming entries. Example: Pub/Sub topic.{{% /md %}}</dd><dt>Fileset</dt>
+    <dd>FILESET{{% md %}}An entry type which is a set of files or objects. Example: Cloud Storage fileset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Entry<wbr>Type<wbr>Entry<wbr>Type<wbr>Unspecified</dt>
+    <dd>ENTRY_TYPE_UNSPECIFIED{{% md %}}Default unknown type.{{% /md %}}</dd><dt>Entry<wbr>Type<wbr>Table</dt>
+    <dd>TABLE{{% md %}}Output only. The type of entry that has a GoogleSQL schema, including logical views.{{% /md %}}</dd><dt>Entry<wbr>Type<wbr>Model</dt>
+    <dd>MODEL{{% md %}}Output only. The type of models. https://cloud.google.com/bigquery-ml/docs/bigqueryml-intro{{% /md %}}</dd><dt>Entry<wbr>Type<wbr>Data<wbr>Stream</dt>
+    <dd>DATA_STREAM{{% md %}}Output only. An entry type which is used for streaming entries. Example: Pub/Sub topic.{{% /md %}}</dd><dt>Entry<wbr>Type<wbr>Fileset</dt>
+    <dd>FILESET{{% md %}}An entry type which is a set of files or objects. Example: Cloud Storage fileset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Entry<wbr>Type<wbr>Unspecified</dt>
+    <dd>ENTRY_TYPE_UNSPECIFIED{{% md %}}Default unknown type.{{% /md %}}</dd><dt>Table</dt>
+    <dd>TABLE{{% md %}}Output only. The type of entry that has a GoogleSQL schema, including logical views.{{% /md %}}</dd><dt>Model</dt>
+    <dd>MODEL{{% md %}}Output only. The type of models. https://cloud.google.com/bigquery-ml/docs/bigqueryml-intro{{% /md %}}</dd><dt>Data<wbr>Stream</dt>
+    <dd>DATA_STREAM{{% md %}}Output only. An entry type which is used for streaming entries. Example: Pub/Sub topic.{{% /md %}}</dd><dt>Fileset</dt>
+    <dd>FILESET{{% md %}}An entry type which is a set of files or objects. Example: Cloud Storage fileset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ENTRY_TYPE_UNSPECIFIED</dt>
+    <dd>ENTRY_TYPE_UNSPECIFIED{{% md %}}Default unknown type.{{% /md %}}</dd><dt>TABLE</dt>
+    <dd>TABLE{{% md %}}Output only. The type of entry that has a GoogleSQL schema, including logical views.{{% /md %}}</dd><dt>MODEL</dt>
+    <dd>MODEL{{% md %}}Output only. The type of models. https://cloud.google.com/bigquery-ml/docs/bigqueryml-intro{{% /md %}}</dd><dt>DATA_STREAM</dt>
+    <dd>DATA_STREAM{{% md %}}Output only. An entry type which is used for streaming entries. Example: Pub/Sub topic.{{% /md %}}</dd><dt>FILESET</dt>
+    <dd>FILESET{{% md %}}An entry type which is a set of files or objects. Example: Cloud Storage fileset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="googleclouddatacatalogv1beta1bigquerydateshardedspecresponse">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Big<wbr>Query<wbr>Date<wbr>Sharded<wbr>Spec<wbr>Response</h4>
 

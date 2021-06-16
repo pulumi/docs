@@ -28,7 +28,7 @@ Creates a ServiceAttachment in the specified project in the given scope using th
 <span class="k">def </span><span class="nx">ServiceAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                       <span class="nx">connected_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.ServiceAttachmentConnectedEndpointArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">connection_preference</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">connection_preference</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.ServiceAttachmentConnectionPreference]</span> = None<span class="p">,</span>
                       <span class="nx">consumer_forwarding_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.ServiceAttachmentConsumerForwardingRuleArgs]]</span> = None<span class="p">,</span>
                       <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -201,7 +201,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#connectionpreference_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#serviceattachmentconnectionpreference">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Service<wbr>Attachment<wbr>Connection<wbr>Preference</a></span>
     </dt>
     <dd>{{% md %}}The connection preference of service attachment. The value can be set to ACCEPT_AUTOMATIC. An ACCEPT_AUTOMATIC service attachment is one that always accepts the connection from consumer forwarding rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -341,7 +341,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#connectionpreference_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#serviceattachmentconnectionpreference">Service<wbr>Attachment<wbr>Connection<wbr>Preference</a></span>
     </dt>
     <dd>{{% md %}}The connection preference of service attachment. The value can be set to ACCEPT_AUTOMATIC. An ACCEPT_AUTOMATIC service attachment is one that always accepts the connection from consumer forwarding rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -481,7 +481,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#connectionpreference_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#serviceattachmentconnectionpreference">Service<wbr>Attachment<wbr>Connection<wbr>Preference</a></span>
     </dt>
     <dd>{{% md %}}The connection preference of service attachment. The value can be set to ACCEPT_AUTOMATIC. An ACCEPT_AUTOMATIC service attachment is one that always accepts the connection from consumer forwarding rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -621,7 +621,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#connection_preference_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#serviceattachmentconnectionpreference">Service<wbr>Attachment<wbr>Connection<wbr>Preference</a></span>
     </dt>
     <dd>{{% md %}}The connection preference of service attachment. The value can be set to ACCEPT_AUTOMATIC. An ACCEPT_AUTOMATIC service attachment is one that always accepts the connection from consumer forwarding rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -820,7 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#serviceattachmentconnectedendpointstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Service<wbr>Attachment<wbr>Connected<wbr>Endpoint<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of a connected endpoint to this service attachment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -848,7 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#serviceattachmentconnectedendpointstatus">Service<wbr>Attachment<wbr>Connected<wbr>Endpoint<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of a connected endpoint to this service attachment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -876,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#serviceattachmentconnectedendpointstatus">Service<wbr>Attachment<wbr>Connected<wbr>Endpoint<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of a connected endpoint to this service attachment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -904,7 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#serviceattachmentconnectedendpointstatus">Service<wbr>Attachment<wbr>Connected<wbr>Endpoint<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of a connected endpoint to this service attachment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1023,6 +1023,70 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The status of a connected endpoint to this service attachment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="serviceattachmentconnectedendpointstatus">Service<wbr>Attachment<wbr>Connected<wbr>Endpoint<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Accepted</dt>
+    <dd>ACCEPTED</dd><dt>Closed</dt>
+    <dd>CLOSED</dd><dt>Pending</dt>
+    <dd>PENDING</dd><dt>Rejected</dt>
+    <dd>REJECTED</dd><dt>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Service<wbr>Attachment<wbr>Connected<wbr>Endpoint<wbr>Status<wbr>Accepted</dt>
+    <dd>ACCEPTED</dd><dt>Service<wbr>Attachment<wbr>Connected<wbr>Endpoint<wbr>Status<wbr>Closed</dt>
+    <dd>CLOSED</dd><dt>Service<wbr>Attachment<wbr>Connected<wbr>Endpoint<wbr>Status<wbr>Pending</dt>
+    <dd>PENDING</dd><dt>Service<wbr>Attachment<wbr>Connected<wbr>Endpoint<wbr>Status<wbr>Rejected</dt>
+    <dd>REJECTED</dd><dt>Service<wbr>Attachment<wbr>Connected<wbr>Endpoint<wbr>Status<wbr>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Accepted</dt>
+    <dd>ACCEPTED</dd><dt>Closed</dt>
+    <dd>CLOSED</dd><dt>Pending</dt>
+    <dd>PENDING</dd><dt>Rejected</dt>
+    <dd>REJECTED</dd><dt>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACCEPTED</dt>
+    <dd>ACCEPTED</dd><dt>CLOSED</dt>
+    <dd>CLOSED</dd><dt>PENDING</dt>
+    <dd>PENDING</dd><dt>REJECTED</dt>
+    <dd>REJECTED</dd><dt>STATUS_UNSPECIFIED</dt>
+    <dd>STATUS_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceattachmentconnectionpreference">Service<wbr>Attachment<wbr>Connection<wbr>Preference</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Accept<wbr>Automatic</dt>
+    <dd>ACCEPT_AUTOMATIC</dd><dt>Connection<wbr>Preference<wbr>Unspecified</dt>
+    <dd>CONNECTION_PREFERENCE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Service<wbr>Attachment<wbr>Connection<wbr>Preference<wbr>Accept<wbr>Automatic</dt>
+    <dd>ACCEPT_AUTOMATIC</dd><dt>Service<wbr>Attachment<wbr>Connection<wbr>Preference<wbr>Connection<wbr>Preference<wbr>Unspecified</dt>
+    <dd>CONNECTION_PREFERENCE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Accept<wbr>Automatic</dt>
+    <dd>ACCEPT_AUTOMATIC</dd><dt>Connection<wbr>Preference<wbr>Unspecified</dt>
+    <dd>CONNECTION_PREFERENCE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACCEPT_AUTOMATIC</dt>
+    <dd>ACCEPT_AUTOMATIC</dd><dt>CONNECTION_PREFERENCE_UNSPECIFIED</dt>
+    <dd>CONNECTION_PREFERENCE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
 <h4 id="serviceattachmentconsumerforwardingrule">Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
@@ -1048,7 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#serviceattachmentconsumerforwardingrulestatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the forwarding rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1076,7 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#serviceattachmentconsumerforwardingrulestatus">Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the forwarding rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1104,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#serviceattachmentconsumerforwardingrulestatus">Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the forwarding rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1132,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#serviceattachmentconsumerforwardingrulestatus">Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the forwarding rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1249,6 +1313,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the forwarding rule.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceattachmentconsumerforwardingrulestatus">Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Accepted</dt>
+    <dd>ACCEPTED</dd><dt>Closed</dt>
+    <dd>CLOSED</dd><dt>Pending</dt>
+    <dd>PENDING</dd><dt>Rejected</dt>
+    <dd>REJECTED</dd><dt>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule<wbr>Status<wbr>Accepted</dt>
+    <dd>ACCEPTED</dd><dt>Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule<wbr>Status<wbr>Closed</dt>
+    <dd>CLOSED</dd><dt>Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule<wbr>Status<wbr>Pending</dt>
+    <dd>PENDING</dd><dt>Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule<wbr>Status<wbr>Rejected</dt>
+    <dd>REJECTED</dd><dt>Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule<wbr>Status<wbr>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Accepted</dt>
+    <dd>ACCEPTED</dd><dt>Closed</dt>
+    <dd>CLOSED</dd><dt>Pending</dt>
+    <dd>PENDING</dd><dt>Rejected</dt>
+    <dd>REJECTED</dd><dt>Status<wbr>Unspecified</dt>
+    <dd>STATUS_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACCEPTED</dt>
+    <dd>ACCEPTED</dd><dt>CLOSED</dt>
+    <dd>CLOSED</dd><dt>PENDING</dt>
+    <dd>PENDING</dd><dt>REJECTED</dt>
+    <dd>REJECTED</dd><dt>STATUS_UNSPECIFIED</dt>
+    <dd>STATUS_UNSPECIFIED</dd></dl>
 {{% /choosable %}}
 
 <h4 id="uint128">Uint128</h4>

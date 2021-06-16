@@ -15,6 +15,12 @@ Explore the resources and functions of the google-native.deploymentmanager/v2 mo
     <li><a href="deploymentiampolicy" title="DeploymentIamPolicy"><span class="symbol resource"></span>DeploymentIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getdeployment" title="GetDeployment"><span class="symbol function"></span>GetDeployment</a></li>
+    <li><a href="getdeploymentiampolicy" title="GetDeploymentIamPolicy"><span class="symbol function"></span>GetDeploymentIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -22,6 +28,6 @@ Explore the resources and functions of the google-native.deploymentmanager/v2 mo
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

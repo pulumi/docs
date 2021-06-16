@@ -17,6 +17,14 @@ Explore the resources and functions of the google-native.datamigration/v1beta1 m
     <li><a href="migrationjobiampolicy" title="MigrationJobIamPolicy"><span class="symbol resource"></span>MigrationJobIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getconnectionprofile" title="GetConnectionProfile"><span class="symbol function"></span>GetConnectionProfile</a></li>
+    <li><a href="getconnectionprofileiampolicy" title="GetConnectionProfileIamPolicy"><span class="symbol function"></span>GetConnectionProfileIamPolicy</a></li>
+    <li><a href="getmigrationjob" title="GetMigrationJob"><span class="symbol function"></span>GetMigrationJob</a></li>
+    <li><a href="getmigrationjobiampolicy" title="GetMigrationJobIamPolicy"><span class="symbol function"></span>GetMigrationJobIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -24,6 +32,6 @@ Explore the resources and functions of the google-native.datamigration/v1beta1 m
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

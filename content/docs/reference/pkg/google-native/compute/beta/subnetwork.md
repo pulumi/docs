@@ -41,15 +41,15 @@ Creates a subnetwork in the specified project using the data included in the req
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">private_ip_google_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-               <span class="nx">private_ipv6_google_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">private_ipv6_google_access</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.SubnetworkPrivateIpv6GoogleAccess]</span> = None<span class="p">,</span>
                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.SubnetworkPurpose]</span> = None<span class="p">,</span>
                <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.SubnetworkRole]</span> = None<span class="p">,</span>
                <span class="nx">secondary_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.SubnetworkSecondaryRangeArgs]]</span> = None<span class="p">,</span>
                <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+               <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.SubnetworkState]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Subnetwork</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SubnetworkArgs</a></span><span class="p">,</span>
@@ -319,7 +319,7 @@ To see the latest fingerprint, make a get() request to retrieve a Subnetwork.{{%
 <a href="#privateipv6googleaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subnetworkprivateipv6googleaccess">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Subnetwork<wbr>Private<wbr>Ipv6Google<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet. This is an expanded field of enablePrivateV6Access. If both fields are set, privateIpv6GoogleAccess will take priority.
 
@@ -329,7 +329,7 @@ This field can be both set at resource creation time and updated using patch.{{%
 <a href="#purpose_csharp" style="color: inherit; text-decoration: inherit;">Purpose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subnetworkpurpose">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Subnetwork<wbr>Purpose</a></span>
     </dt>
     <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE_RFC_1918 or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified, the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -345,7 +345,7 @@ This field can be both set at resource creation time and updated using patch.{{%
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subnetworkrole">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Subnetwork<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining. This field can be updated with a patch request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -369,7 +369,7 @@ This field can be both set at resource creation time and updated using patch.{{%
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subnetworkstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Subnetwork<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The state of the subnetwork, which can be one of the following values: READY: Subnetwork is created and ready to use DRAINING: only applicable to subnetworks that have the purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load balancer are being drained. A subnetwork that is draining cannot be used or modified until it reaches a status of READY CREATING: Subnetwork is provisioning DELETING: Subnetwork is being deleted UPDATING: Subnetwork is being updated{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -517,7 +517,7 @@ To see the latest fingerprint, make a get() request to retrieve a Subnetwork.{{%
 <a href="#privateipv6googleaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subnetworkprivateipv6googleaccess">Subnetwork<wbr>Private<wbr>Ipv6Google<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet. This is an expanded field of enablePrivateV6Access. If both fields are set, privateIpv6GoogleAccess will take priority.
 
@@ -527,7 +527,7 @@ This field can be both set at resource creation time and updated using patch.{{%
 <a href="#purpose_go" style="color: inherit; text-decoration: inherit;">Purpose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subnetworkpurpose">Subnetwork<wbr>Purpose</a></span>
     </dt>
     <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE_RFC_1918 or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified, the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -543,7 +543,7 @@ This field can be both set at resource creation time and updated using patch.{{%
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subnetworkrole">Subnetwork<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining. This field can be updated with a patch request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -567,7 +567,7 @@ This field can be both set at resource creation time and updated using patch.{{%
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subnetworkstate">Subnetwork<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The state of the subnetwork, which can be one of the following values: READY: Subnetwork is created and ready to use DRAINING: only applicable to subnetworks that have the purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load balancer are being drained. A subnetwork that is draining cannot be used or modified until it reaches a status of READY CREATING: Subnetwork is provisioning DELETING: Subnetwork is being deleted UPDATING: Subnetwork is being updated{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -715,7 +715,7 @@ To see the latest fingerprint, make a get() request to retrieve a Subnetwork.{{%
 <a href="#privateipv6googleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv6Google<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subnetworkprivateipv6googleaccess">Subnetwork<wbr>Private<wbr>Ipv6Google<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet. This is an expanded field of enablePrivateV6Access. If both fields are set, privateIpv6GoogleAccess will take priority.
 
@@ -725,7 +725,7 @@ This field can be both set at resource creation time and updated using patch.{{%
 <a href="#purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subnetworkpurpose">Subnetwork<wbr>Purpose</a></span>
     </dt>
     <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE_RFC_1918 or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified, the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -741,7 +741,7 @@ This field can be both set at resource creation time and updated using patch.{{%
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subnetworkrole">Subnetwork<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining. This field can be updated with a patch request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -765,7 +765,7 @@ This field can be both set at resource creation time and updated using patch.{{%
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subnetworkstate">Subnetwork<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The state of the subnetwork, which can be one of the following values: READY: Subnetwork is created and ready to use DRAINING: only applicable to subnetworks that have the purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load balancer are being drained. A subnetwork that is draining cannot be used or modified until it reaches a status of READY CREATING: Subnetwork is provisioning DELETING: Subnetwork is being deleted UPDATING: Subnetwork is being updated{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -913,7 +913,7 @@ To see the latest fingerprint, make a get() request to retrieve a Subnetwork.{{%
 <a href="#private_ipv6_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv6_<wbr>google_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#subnetworkprivateipv6googleaccess">Subnetwork<wbr>Private<wbr>Ipv6Google<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet. This is an expanded field of enablePrivateV6Access. If both fields are set, privateIpv6GoogleAccess will take priority.
 
@@ -923,7 +923,7 @@ This field can be both set at resource creation time and updated using patch.{{%
 <a href="#purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#subnetworkpurpose">Subnetwork<wbr>Purpose</a></span>
     </dt>
     <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE_RFC_1918 or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified, the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -939,7 +939,7 @@ This field can be both set at resource creation time and updated using patch.{{%
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#subnetworkrole">Subnetwork<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining. This field can be updated with a patch request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -963,7 +963,7 @@ This field can be both set at resource creation time and updated using patch.{{%
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#subnetworkstate">Subnetwork<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The state of the subnetwork, which can be one of the following values: READY: Subnetwork is created and ready to use DRAINING: only applicable to subnetworks that have the purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load balancer are being drained. A subnetwork that is draining cannot be used or modified until it reaches a status of READY CREATING: Subnetwork is provisioning DELETING: Subnetwork is being deleted UPDATING: Subnetwork is being updated{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1042,7 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregationinterval_csharp" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subnetworklogconfigaggregationinterval">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Subnetwork<wbr>Log<wbr>Config<wbr>Aggregation<wbr>Interval</a></span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled. Toggles the aggregation interval for collecting flow logs. Increasing the interval time will reduce the amount of generated flow logs for long lasting connections. Default is an interval of 5 seconds per connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1074,7 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subnetworklogconfigmetadata">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Subnetwork<wbr>Log<wbr>Config<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logs for this subnetwork is enabled. Configures whether all, none or a subset of metadata fields should be added to the reported VPC flow logs. Default is EXCLUDE_ALL_METADATA.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1094,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregationinterval_go" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subnetworklogconfigaggregationinterval">Subnetwork<wbr>Log<wbr>Config<wbr>Aggregation<wbr>Interval</a></span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled. Toggles the aggregation interval for collecting flow logs. Increasing the interval time will reduce the amount of generated flow logs for long lasting connections. Default is an interval of 5 seconds per connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1126,7 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subnetworklogconfigmetadata">Subnetwork<wbr>Log<wbr>Config<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logs for this subnetwork is enabled. Configures whether all, none or a subset of metadata fields should be added to the reported VPC flow logs. Default is EXCLUDE_ALL_METADATA.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1146,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregationinterval_nodejs" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subnetworklogconfigaggregationinterval">Subnetwork<wbr>Log<wbr>Config<wbr>Aggregation<wbr>Interval</a></span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled. Toggles the aggregation interval for collecting flow logs. Increasing the interval time will reduce the amount of generated flow logs for long lasting connections. Default is an interval of 5 seconds per connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1178,7 +1178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subnetworklogconfigmetadata">Subnetwork<wbr>Log<wbr>Config<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logs for this subnetwork is enabled. Configures whether all, none or a subset of metadata fields should be added to the reported VPC flow logs. Default is EXCLUDE_ALL_METADATA.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1198,7 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_interval_python" style="color: inherit; text-decoration: inherit;">aggregation_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#subnetworklogconfigaggregationinterval">Subnetwork<wbr>Log<wbr>Config<wbr>Aggregation<wbr>Interval</a></span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled. Toggles the aggregation interval for collecting flow logs. Increasing the interval time will reduce the amount of generated flow logs for long lasting connections. Default is an interval of 5 seconds per connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1230,7 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#subnetworklogconfigmetadata">Subnetwork<wbr>Log<wbr>Config<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logs for this subnetwork is enabled. Configures whether all, none or a subset of metadata fields should be added to the reported VPC flow logs. Default is EXCLUDE_ALL_METADATA.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1241,6 +1241,78 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" was set to CUSTOM_METADATA.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="subnetworklogconfigaggregationinterval">Subnetwork<wbr>Log<wbr>Config<wbr>Aggregation<wbr>Interval</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Interval10Min</dt>
+    <dd>INTERVAL_10_MIN</dd><dt>Interval15Min</dt>
+    <dd>INTERVAL_15_MIN</dd><dt>Interval1Min</dt>
+    <dd>INTERVAL_1_MIN</dd><dt>Interval30Sec</dt>
+    <dd>INTERVAL_30_SEC</dd><dt>Interval5Min</dt>
+    <dd>INTERVAL_5_MIN</dd><dt>Interval5Sec</dt>
+    <dd>INTERVAL_5_SEC</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Subnetwork<wbr>Log<wbr>Config<wbr>Aggregation<wbr>Interval<wbr>Interval10Min</dt>
+    <dd>INTERVAL_10_MIN</dd><dt>Subnetwork<wbr>Log<wbr>Config<wbr>Aggregation<wbr>Interval<wbr>Interval15Min</dt>
+    <dd>INTERVAL_15_MIN</dd><dt>Subnetwork<wbr>Log<wbr>Config<wbr>Aggregation<wbr>Interval<wbr>Interval1Min</dt>
+    <dd>INTERVAL_1_MIN</dd><dt>Subnetwork<wbr>Log<wbr>Config<wbr>Aggregation<wbr>Interval<wbr>Interval30Sec</dt>
+    <dd>INTERVAL_30_SEC</dd><dt>Subnetwork<wbr>Log<wbr>Config<wbr>Aggregation<wbr>Interval<wbr>Interval5Min</dt>
+    <dd>INTERVAL_5_MIN</dd><dt>Subnetwork<wbr>Log<wbr>Config<wbr>Aggregation<wbr>Interval<wbr>Interval5Sec</dt>
+    <dd>INTERVAL_5_SEC</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Interval10Min</dt>
+    <dd>INTERVAL_10_MIN</dd><dt>Interval15Min</dt>
+    <dd>INTERVAL_15_MIN</dd><dt>Interval1Min</dt>
+    <dd>INTERVAL_1_MIN</dd><dt>Interval30Sec</dt>
+    <dd>INTERVAL_30_SEC</dd><dt>Interval5Min</dt>
+    <dd>INTERVAL_5_MIN</dd><dt>Interval5Sec</dt>
+    <dd>INTERVAL_5_SEC</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>INTERVAL10_MIN</dt>
+    <dd>INTERVAL_10_MIN</dd><dt>INTERVAL15_MIN</dt>
+    <dd>INTERVAL_15_MIN</dd><dt>INTERVAL1_MIN</dt>
+    <dd>INTERVAL_1_MIN</dd><dt>INTERVAL30_SEC</dt>
+    <dd>INTERVAL_30_SEC</dd><dt>INTERVAL5_MIN</dt>
+    <dd>INTERVAL_5_MIN</dd><dt>INTERVAL5_SEC</dt>
+    <dd>INTERVAL_5_SEC</dd></dl>
+{{% /choosable %}}
+
+<h4 id="subnetworklogconfigmetadata">Subnetwork<wbr>Log<wbr>Config<wbr>Metadata</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Custom<wbr>Metadata</dt>
+    <dd>CUSTOM_METADATA</dd><dt>Exclude<wbr>All<wbr>Metadata</dt>
+    <dd>EXCLUDE_ALL_METADATA</dd><dt>Include<wbr>All<wbr>Metadata</dt>
+    <dd>INCLUDE_ALL_METADATA</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Subnetwork<wbr>Log<wbr>Config<wbr>Metadata<wbr>Custom<wbr>Metadata</dt>
+    <dd>CUSTOM_METADATA</dd><dt>Subnetwork<wbr>Log<wbr>Config<wbr>Metadata<wbr>Exclude<wbr>All<wbr>Metadata</dt>
+    <dd>EXCLUDE_ALL_METADATA</dd><dt>Subnetwork<wbr>Log<wbr>Config<wbr>Metadata<wbr>Include<wbr>All<wbr>Metadata</dt>
+    <dd>INCLUDE_ALL_METADATA</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Custom<wbr>Metadata</dt>
+    <dd>CUSTOM_METADATA</dd><dt>Exclude<wbr>All<wbr>Metadata</dt>
+    <dd>EXCLUDE_ALL_METADATA</dd><dt>Include<wbr>All<wbr>Metadata</dt>
+    <dd>INCLUDE_ALL_METADATA</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CUSTOM_METADATA</dt>
+    <dd>CUSTOM_METADATA</dd><dt>EXCLUDE_ALL_METADATA</dt>
+    <dd>EXCLUDE_ALL_METADATA</dd><dt>INCLUDE_ALL_METADATA</dt>
+    <dd>INCLUDE_ALL_METADATA</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subnetworklogconfigresponse">Subnetwork<wbr>Log<wbr>Config<wbr>Response</h4>
@@ -1453,6 +1525,96 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" was set to CUSTOM_METADATA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="subnetworkprivateipv6googleaccess">Subnetwork<wbr>Private<wbr>Ipv6Google<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Disable<wbr>Google<wbr>Access</dt>
+    <dd>DISABLE_GOOGLE_ACCESS</dd><dt>Enable<wbr>Bidirectional<wbr>Access<wbr>To<wbr>Google</dt>
+    <dd>ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE</dd><dt>Enable<wbr>Outbound<wbr>Vm<wbr>Access<wbr>To<wbr>Google</dt>
+    <dd>ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Subnetwork<wbr>Private<wbr>Ipv6Google<wbr>Access<wbr>Disable<wbr>Google<wbr>Access</dt>
+    <dd>DISABLE_GOOGLE_ACCESS</dd><dt>Subnetwork<wbr>Private<wbr>Ipv6Google<wbr>Access<wbr>Enable<wbr>Bidirectional<wbr>Access<wbr>To<wbr>Google</dt>
+    <dd>ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE</dd><dt>Subnetwork<wbr>Private<wbr>Ipv6Google<wbr>Access<wbr>Enable<wbr>Outbound<wbr>Vm<wbr>Access<wbr>To<wbr>Google</dt>
+    <dd>ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Disable<wbr>Google<wbr>Access</dt>
+    <dd>DISABLE_GOOGLE_ACCESS</dd><dt>Enable<wbr>Bidirectional<wbr>Access<wbr>To<wbr>Google</dt>
+    <dd>ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE</dd><dt>Enable<wbr>Outbound<wbr>Vm<wbr>Access<wbr>To<wbr>Google</dt>
+    <dd>ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DISABLE_GOOGLE_ACCESS</dt>
+    <dd>DISABLE_GOOGLE_ACCESS</dd><dt>ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE</dt>
+    <dd>ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE</dd><dt>ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE</dt>
+    <dd>ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE</dd></dl>
+{{% /choosable %}}
+
+<h4 id="subnetworkpurpose">Subnetwork<wbr>Purpose</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Internal<wbr>Https<wbr>Load<wbr>Balancer</dt>
+    <dd>INTERNAL_HTTPS_LOAD_BALANCER</dd><dt>Private</dt>
+    <dd>PRIVATE</dd><dt>Private<wbr>Rfc1918</dt>
+    <dd>PRIVATE_RFC_1918</dd><dt>Private<wbr>Service<wbr>Connect</dt>
+    <dd>PRIVATE_SERVICE_CONNECT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Subnetwork<wbr>Purpose<wbr>Internal<wbr>Https<wbr>Load<wbr>Balancer</dt>
+    <dd>INTERNAL_HTTPS_LOAD_BALANCER</dd><dt>Subnetwork<wbr>Purpose<wbr>Private</dt>
+    <dd>PRIVATE</dd><dt>Subnetwork<wbr>Purpose<wbr>Private<wbr>Rfc1918</dt>
+    <dd>PRIVATE_RFC_1918</dd><dt>Subnetwork<wbr>Purpose<wbr>Private<wbr>Service<wbr>Connect</dt>
+    <dd>PRIVATE_SERVICE_CONNECT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Internal<wbr>Https<wbr>Load<wbr>Balancer</dt>
+    <dd>INTERNAL_HTTPS_LOAD_BALANCER</dd><dt>Private</dt>
+    <dd>PRIVATE</dd><dt>Private<wbr>Rfc1918</dt>
+    <dd>PRIVATE_RFC_1918</dd><dt>Private<wbr>Service<wbr>Connect</dt>
+    <dd>PRIVATE_SERVICE_CONNECT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>INTERNAL_HTTPS_LOAD_BALANCER</dt>
+    <dd>INTERNAL_HTTPS_LOAD_BALANCER</dd><dt>PRIVATE</dt>
+    <dd>PRIVATE</dd><dt>PRIVATE_RFC1918</dt>
+    <dd>PRIVATE_RFC_1918</dd><dt>PRIVATE_SERVICE_CONNECT</dt>
+    <dd>PRIVATE_SERVICE_CONNECT</dd></dl>
+{{% /choosable %}}
+
+<h4 id="subnetworkrole">Subnetwork<wbr>Role</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Backup</dt>
+    <dd>BACKUP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Subnetwork<wbr>Role<wbr>Active</dt>
+    <dd>ACTIVE</dd><dt>Subnetwork<wbr>Role<wbr>Backup</dt>
+    <dd>BACKUP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Backup</dt>
+    <dd>BACKUP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACTIVE</dt>
+    <dd>ACTIVE</dd><dt>BACKUP</dt>
+    <dd>BACKUP</dd></dl>
+{{% /choosable %}}
+
 <h4 id="subnetworksecondaryrange">Subnetwork<wbr>Secondary<wbr>Range</h4>
 
 {{% choosable language csharp %}}
@@ -1615,6 +1777,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name associated with this subnetwork secondary range, used when adding an alias IP range to a VM instance. The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within the subnetwork.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="subnetworkstate">Subnetwork<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Draining</dt>
+    <dd>DRAINING</dd><dt>Ready</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Subnetwork<wbr>State<wbr>Draining</dt>
+    <dd>DRAINING</dd><dt>Subnetwork<wbr>State<wbr>Ready</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Draining</dt>
+    <dd>DRAINING</dd><dt>Ready</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DRAINING</dt>
+    <dd>DRAINING</dd><dt>READY</dt>
+    <dd>READY</dd></dl>
 {{% /choosable %}}
 
 

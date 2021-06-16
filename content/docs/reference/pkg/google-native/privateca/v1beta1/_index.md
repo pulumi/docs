@@ -18,6 +18,15 @@ Explore the resources and functions of the google-native.privateca/v1beta1 modul
     <li><a href="reusableconfigiampolicy" title="ReusableConfigIamPolicy"><span class="symbol resource"></span>ReusableConfigIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
+    <li><a href="getcertificateauthority" title="GetCertificateAuthority"><span class="symbol function"></span>GetCertificateAuthority</a></li>
+    <li><a href="getcertificateauthoritycertificaterevocationlistiampolicy" title="GetCertificateAuthorityCertificateRevocationListIamPolicy"><span class="symbol function"></span>GetCertificateAuthorityCertificateRevocationListIamPolicy</a></li>
+    <li><a href="getcertificateauthorityiampolicy" title="GetCertificateAuthorityIamPolicy"><span class="symbol function"></span>GetCertificateAuthorityIamPolicy</a></li>
+    <li><a href="getreusableconfigiampolicy" title="GetReusableConfigIamPolicy"><span class="symbol function"></span>GetReusableConfigIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -25,6 +34,6 @@ Explore the resources and functions of the google-native.privateca/v1beta1 modul
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

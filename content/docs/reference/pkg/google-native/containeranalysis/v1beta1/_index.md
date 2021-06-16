@@ -17,6 +17,14 @@ Explore the resources and functions of the google-native.containeranalysis/v1bet
     <li><a href="occurrenceiampolicy" title="OccurrenceIamPolicy"><span class="symbol resource"></span>OccurrenceIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getnote" title="GetNote"><span class="symbol function"></span>GetNote</a></li>
+    <li><a href="getnoteiampolicy" title="GetNoteIamPolicy"><span class="symbol function"></span>GetNoteIamPolicy</a></li>
+    <li><a href="getoccurrence" title="GetOccurrence"><span class="symbol function"></span>GetOccurrence</a></li>
+    <li><a href="getoccurrenceiampolicy" title="GetOccurrenceIamPolicy"><span class="symbol function"></span>GetOccurrenceIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -24,6 +32,6 @@ Explore the resources and functions of the google-native.containeranalysis/v1bet
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

@@ -31,15 +31,15 @@ Creates an Apigee organization. See [Create an Apigee organization](https://clou
                  <span class="nx">analytics_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                  <span class="nx">authorized_network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">billing_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">billing_type</span><span class="p">:</span> <span class="nx">Optional[_apigee_v1.OrganizationBillingType]</span> = None<span class="p">,</span>
                  <span class="nx">customer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[_apigee_v1.GoogleCloudApigeeV1PropertiesArgs]</span> = None<span class="p">,</span>
                  <span class="nx">runtime_database_encryption_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">runtime_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                 <span class="nx">runtime_type</span><span class="p">:</span> <span class="nx">Optional[_apigee_v1.OrganizationRuntimeType]</span> = None<span class="p">,</span>
+                 <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[_apigee_v1.OrganizationType]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationArgs</a></span><span class="p">,</span>
@@ -213,7 +213,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#billingtype_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#organizationbillingtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Organization<wbr>Billing<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -261,7 +261,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#runtimetype_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#organizationruntimetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Organization<wbr>Runtime<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Runtime type of the Apigee organization based on the Apigee subscription purchased.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -269,7 +269,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#organizationtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Organization<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Not used by Apigee.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -321,7 +321,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#billingtype_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#organizationbillingtype">Organization<wbr>Billing<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -369,7 +369,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#runtimetype_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#organizationruntimetype">Organization<wbr>Runtime<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Runtime type of the Apigee organization based on the Apigee subscription purchased.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -377,7 +377,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#organizationtype">Organization<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Not used by Apigee.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -429,7 +429,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#billingtype_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#organizationbillingtype">Organization<wbr>Billing<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -477,7 +477,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#runtimetype_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#organizationruntimetype">Organization<wbr>Runtime<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Runtime type of the Apigee organization based on the Apigee subscription purchased.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -485,7 +485,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#organizationtype">Organization<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Not used by Apigee.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -537,7 +537,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#billing_type_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#organizationbillingtype">Organization<wbr>Billing<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -585,7 +585,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#runtime_type_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#organizationruntimetype">Organization<wbr>Runtime<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Runtime type of the Apigee organization based on the Apigee subscription purchased.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -593,7 +593,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#organizationtype">Organization<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Not used by Apigee.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1709,6 +1709,100 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The property value{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="organizationbillingtype">Organization<wbr>Billing<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Billing<wbr>Type<wbr>Unspecified</dt>
+    <dd>BILLING_TYPE_UNSPECIFIED{{% md %}}Billing type not specified.{{% /md %}}</dd><dt>Subscription</dt>
+    <dd>SUBSCRIPTION{{% md %}}A pre-paid subscription to Apigee.{{% /md %}}</dd><dt>Evaluation</dt>
+    <dd>EVALUATION{{% md %}}Free and limited access to Apigee for evaluation purposes only. only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Organization<wbr>Billing<wbr>Type<wbr>Billing<wbr>Type<wbr>Unspecified</dt>
+    <dd>BILLING_TYPE_UNSPECIFIED{{% md %}}Billing type not specified.{{% /md %}}</dd><dt>Organization<wbr>Billing<wbr>Type<wbr>Subscription</dt>
+    <dd>SUBSCRIPTION{{% md %}}A pre-paid subscription to Apigee.{{% /md %}}</dd><dt>Organization<wbr>Billing<wbr>Type<wbr>Evaluation</dt>
+    <dd>EVALUATION{{% md %}}Free and limited access to Apigee for evaluation purposes only. only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Billing<wbr>Type<wbr>Unspecified</dt>
+    <dd>BILLING_TYPE_UNSPECIFIED{{% md %}}Billing type not specified.{{% /md %}}</dd><dt>Subscription</dt>
+    <dd>SUBSCRIPTION{{% md %}}A pre-paid subscription to Apigee.{{% /md %}}</dd><dt>Evaluation</dt>
+    <dd>EVALUATION{{% md %}}Free and limited access to Apigee for evaluation purposes only. only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>BILLING_TYPE_UNSPECIFIED</dt>
+    <dd>BILLING_TYPE_UNSPECIFIED{{% md %}}Billing type not specified.{{% /md %}}</dd><dt>SUBSCRIPTION</dt>
+    <dd>SUBSCRIPTION{{% md %}}A pre-paid subscription to Apigee.{{% /md %}}</dd><dt>EVALUATION</dt>
+    <dd>EVALUATION{{% md %}}Free and limited access to Apigee for evaluation purposes only. only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="organizationruntimetype">Organization<wbr>Runtime<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Runtime<wbr>Type<wbr>Unspecified</dt>
+    <dd>RUNTIME_TYPE_UNSPECIFIED{{% md %}}Runtime type not specified.{{% /md %}}</dd><dt>Cloud</dt>
+    <dd>CLOUD{{% md %}}Google-managed Apigee runtime.{{% /md %}}</dd><dt>Hybrid</dt>
+    <dd>HYBRID{{% md %}}User-managed Apigee hybrid runtime.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Organization<wbr>Runtime<wbr>Type<wbr>Runtime<wbr>Type<wbr>Unspecified</dt>
+    <dd>RUNTIME_TYPE_UNSPECIFIED{{% md %}}Runtime type not specified.{{% /md %}}</dd><dt>Organization<wbr>Runtime<wbr>Type<wbr>Cloud</dt>
+    <dd>CLOUD{{% md %}}Google-managed Apigee runtime.{{% /md %}}</dd><dt>Organization<wbr>Runtime<wbr>Type<wbr>Hybrid</dt>
+    <dd>HYBRID{{% md %}}User-managed Apigee hybrid runtime.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Runtime<wbr>Type<wbr>Unspecified</dt>
+    <dd>RUNTIME_TYPE_UNSPECIFIED{{% md %}}Runtime type not specified.{{% /md %}}</dd><dt>Cloud</dt>
+    <dd>CLOUD{{% md %}}Google-managed Apigee runtime.{{% /md %}}</dd><dt>Hybrid</dt>
+    <dd>HYBRID{{% md %}}User-managed Apigee hybrid runtime.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RUNTIME_TYPE_UNSPECIFIED</dt>
+    <dd>RUNTIME_TYPE_UNSPECIFIED{{% md %}}Runtime type not specified.{{% /md %}}</dd><dt>CLOUD</dt>
+    <dd>CLOUD{{% md %}}Google-managed Apigee runtime.{{% /md %}}</dd><dt>HYBRID</dt>
+    <dd>HYBRID{{% md %}}User-managed Apigee hybrid runtime.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="organizationtype">Organization<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Subscription type not specified.{{% /md %}}</dd><dt>Type<wbr>Trial</dt>
+    <dd>TYPE_TRIAL{{% md %}}Subscription to Apigee is free, limited, and used for evaluation purposes only.{{% /md %}}</dd><dt>Type<wbr>Paid</dt>
+    <dd>TYPE_PAID{{% md %}}Full subscription to Apigee has been purchased. See [Apigee pricing](https://cloud.google.com/apigee/pricing/).{{% /md %}}</dd><dt>Type<wbr>Internal</dt>
+    <dd>TYPE_INTERNAL{{% md %}}For internal users only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Organization<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Subscription type not specified.{{% /md %}}</dd><dt>Organization<wbr>Type<wbr>Type<wbr>Trial</dt>
+    <dd>TYPE_TRIAL{{% md %}}Subscription to Apigee is free, limited, and used for evaluation purposes only.{{% /md %}}</dd><dt>Organization<wbr>Type<wbr>Type<wbr>Paid</dt>
+    <dd>TYPE_PAID{{% md %}}Full subscription to Apigee has been purchased. See [Apigee pricing](https://cloud.google.com/apigee/pricing/).{{% /md %}}</dd><dt>Organization<wbr>Type<wbr>Type<wbr>Internal</dt>
+    <dd>TYPE_INTERNAL{{% md %}}For internal users only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Subscription type not specified.{{% /md %}}</dd><dt>Type<wbr>Trial</dt>
+    <dd>TYPE_TRIAL{{% md %}}Subscription to Apigee is free, limited, and used for evaluation purposes only.{{% /md %}}</dd><dt>Type<wbr>Paid</dt>
+    <dd>TYPE_PAID{{% md %}}Full subscription to Apigee has been purchased. See [Apigee pricing](https://cloud.google.com/apigee/pricing/).{{% /md %}}</dd><dt>Type<wbr>Internal</dt>
+    <dd>TYPE_INTERNAL{{% md %}}For internal users only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Subscription type not specified.{{% /md %}}</dd><dt>TYPE_TRIAL</dt>
+    <dd>TYPE_TRIAL{{% md %}}Subscription to Apigee is free, limited, and used for evaluation purposes only.{{% /md %}}</dd><dt>TYPE_PAID</dt>
+    <dd>TYPE_PAID{{% md %}}Full subscription to Apigee has been purchased. See [Apigee pricing](https://cloud.google.com/apigee/pricing/).{{% /md %}}</dd><dt>TYPE_INTERNAL</dt>
+    <dd>TYPE_INTERNAL{{% md %}}For internal users only.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

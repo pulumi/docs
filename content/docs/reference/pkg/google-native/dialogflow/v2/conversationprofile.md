@@ -3647,7 +3647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageformat_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfigmessageformat">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Message<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Format of message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3667,7 +3667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageformat_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfigmessageformat">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Message<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Format of message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3687,7 +3687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageformat_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfigmessageformat">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Message<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Format of message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3707,7 +3707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_format_python" style="color: inherit; text-decoration: inherit;">message_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfigmessageformat">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Message<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Format of message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3718,6 +3718,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as serialized ConversationEvent protos. Notification works for phone calls, if this topic either is in the same project as the conversation or you grant `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic project. Format: `projects//locations//topics/`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowv2notificationconfigmessageformat">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Message<wbr>Format</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Message<wbr>Format<wbr>Unspecified</dt>
+    <dd>MESSAGE_FORMAT_UNSPECIFIED{{% md %}}If it is unspeified, PROTO will be used.{{% /md %}}</dd><dt>Proto</dt>
+    <dd>PROTO{{% md %}}Pubsub message will be serialized proto.{{% /md %}}</dd><dt>Json</dt>
+    <dd>JSON{{% md %}}Pubsub message will be json.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Message<wbr>Format<wbr>Message<wbr>Format<wbr>Unspecified</dt>
+    <dd>MESSAGE_FORMAT_UNSPECIFIED{{% md %}}If it is unspeified, PROTO will be used.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Message<wbr>Format<wbr>Proto</dt>
+    <dd>PROTO{{% md %}}Pubsub message will be serialized proto.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Message<wbr>Format<wbr>Json</dt>
+    <dd>JSON{{% md %}}Pubsub message will be json.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Message<wbr>Format<wbr>Unspecified</dt>
+    <dd>MESSAGE_FORMAT_UNSPECIFIED{{% md %}}If it is unspeified, PROTO will be used.{{% /md %}}</dd><dt>Proto</dt>
+    <dd>PROTO{{% md %}}Pubsub message will be serialized proto.{{% /md %}}</dd><dt>Json</dt>
+    <dd>JSON{{% md %}}Pubsub message will be json.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MESSAGE_FORMAT_UNSPECIFIED</dt>
+    <dd>MESSAGE_FORMAT_UNSPECIFIED{{% md %}}If it is unspeified, PROTO will be used.{{% /md %}}</dd><dt>PROTO</dt>
+    <dd>PROTO{{% md %}}Pubsub message will be serialized proto.{{% /md %}}</dd><dt>JSON</dt>
+    <dd>JSON{{% md %}}Pubsub message will be json.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddialogflowv2notificationconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Response</h4>
@@ -3811,7 +3841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#speechmodelvariant_csharp" style="color: inherit; text-decoration: inherit;">Speech<wbr>Model<wbr>Variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2speechtotextconfigspeechmodelvariant">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Speech<wbr>To<wbr>Text<wbr>Config<wbr>Speech<wbr>Model<wbr>Variant</a></span>
     </dt>
     <dd>{{% md %}}Optional. The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`, `USE_BEST_AVAILABLE` will be treated as `USE_ENHANCED`. It can be overridden in AnalyzeContentRequest and StreamingAnalyzeContentRequest request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3823,7 +3853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#speechmodelvariant_go" style="color: inherit; text-decoration: inherit;">Speech<wbr>Model<wbr>Variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2speechtotextconfigspeechmodelvariant">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Speech<wbr>To<wbr>Text<wbr>Config<wbr>Speech<wbr>Model<wbr>Variant</a></span>
     </dt>
     <dd>{{% md %}}Optional. The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`, `USE_BEST_AVAILABLE` will be treated as `USE_ENHANCED`. It can be overridden in AnalyzeContentRequest and StreamingAnalyzeContentRequest request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3835,7 +3865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#speechmodelvariant_nodejs" style="color: inherit; text-decoration: inherit;">speech<wbr>Model<wbr>Variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2speechtotextconfigspeechmodelvariant">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Speech<wbr>To<wbr>Text<wbr>Config<wbr>Speech<wbr>Model<wbr>Variant</a></span>
     </dt>
     <dd>{{% md %}}Optional. The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`, `USE_BEST_AVAILABLE` will be treated as `USE_ENHANCED`. It can be overridden in AnalyzeContentRequest and StreamingAnalyzeContentRequest request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3847,7 +3877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#speech_model_variant_python" style="color: inherit; text-decoration: inherit;">speech_<wbr>model_<wbr>variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2speechtotextconfigspeechmodelvariant">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Speech<wbr>To<wbr>Text<wbr>Config<wbr>Speech<wbr>Model<wbr>Variant</a></span>
     </dt>
     <dd>{{% md %}}Optional. The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`, `USE_BEST_AVAILABLE` will be treated as `USE_ENHANCED`. It can be overridden in AnalyzeContentRequest and StreamingAnalyzeContentRequest request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3902,6 +3932,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Optional. The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`, `USE_BEST_AVAILABLE` will be treated as `USE_ENHANCED`. It can be overridden in AnalyzeContentRequest and StreamingAnalyzeContentRequest request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="googleclouddialogflowv2speechtotextconfigspeechmodelvariant">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Speech<wbr>To<wbr>Text<wbr>Config<wbr>Speech<wbr>Model<wbr>Variant</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Speech<wbr>Model<wbr>Variant<wbr>Unspecified</dt>
+    <dd>SPEECH_MODEL_VARIANT_UNSPECIFIED{{% md %}}No model variant specified. In this case Dialogflow defaults to USE_BEST_AVAILABLE.{{% /md %}}</dd><dt>Use<wbr>Best<wbr>Available</dt>
+    <dd>USE_BEST_AVAILABLE{{% md %}}Use the best available variant of the Speech model that the caller is eligible for. Please see the [Dialogflow docs](https://cloud.google.com/dialogflow/docs/data-logging) for how to make your project eligible for enhanced models.{{% /md %}}</dd><dt>Use<wbr>Standard</dt>
+    <dd>USE_STANDARD{{% md %}}Use standard model variant even if an enhanced model is available. See the [Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models) for details about enhanced models.{{% /md %}}</dd><dt>Use<wbr>Enhanced</dt>
+    <dd>USE_ENHANCED{{% md %}}Use an enhanced model variant: * If an enhanced variant does not exist for the given model and request language, Dialogflow falls back to the standard variant. The [Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models) describes which models have enhanced variants. * If the API caller isn't eligible for enhanced models, Dialogflow returns an error. Please see the [Dialogflow docs](https://cloud.google.com/dialogflow/docs/data-logging) for how to make your project eligible.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Speech<wbr>To<wbr>Text<wbr>Config<wbr>Speech<wbr>Model<wbr>Variant<wbr>Speech<wbr>Model<wbr>Variant<wbr>Unspecified</dt>
+    <dd>SPEECH_MODEL_VARIANT_UNSPECIFIED{{% md %}}No model variant specified. In this case Dialogflow defaults to USE_BEST_AVAILABLE.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Speech<wbr>To<wbr>Text<wbr>Config<wbr>Speech<wbr>Model<wbr>Variant<wbr>Use<wbr>Best<wbr>Available</dt>
+    <dd>USE_BEST_AVAILABLE{{% md %}}Use the best available variant of the Speech model that the caller is eligible for. Please see the [Dialogflow docs](https://cloud.google.com/dialogflow/docs/data-logging) for how to make your project eligible for enhanced models.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Speech<wbr>To<wbr>Text<wbr>Config<wbr>Speech<wbr>Model<wbr>Variant<wbr>Use<wbr>Standard</dt>
+    <dd>USE_STANDARD{{% md %}}Use standard model variant even if an enhanced model is available. See the [Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models) for details about enhanced models.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Speech<wbr>To<wbr>Text<wbr>Config<wbr>Speech<wbr>Model<wbr>Variant<wbr>Use<wbr>Enhanced</dt>
+    <dd>USE_ENHANCED{{% md %}}Use an enhanced model variant: * If an enhanced variant does not exist for the given model and request language, Dialogflow falls back to the standard variant. The [Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models) describes which models have enhanced variants. * If the API caller isn't eligible for enhanced models, Dialogflow returns an error. Please see the [Dialogflow docs](https://cloud.google.com/dialogflow/docs/data-logging) for how to make your project eligible.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Speech<wbr>Model<wbr>Variant<wbr>Unspecified</dt>
+    <dd>SPEECH_MODEL_VARIANT_UNSPECIFIED{{% md %}}No model variant specified. In this case Dialogflow defaults to USE_BEST_AVAILABLE.{{% /md %}}</dd><dt>Use<wbr>Best<wbr>Available</dt>
+    <dd>USE_BEST_AVAILABLE{{% md %}}Use the best available variant of the Speech model that the caller is eligible for. Please see the [Dialogflow docs](https://cloud.google.com/dialogflow/docs/data-logging) for how to make your project eligible for enhanced models.{{% /md %}}</dd><dt>Use<wbr>Standard</dt>
+    <dd>USE_STANDARD{{% md %}}Use standard model variant even if an enhanced model is available. See the [Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models) for details about enhanced models.{{% /md %}}</dd><dt>Use<wbr>Enhanced</dt>
+    <dd>USE_ENHANCED{{% md %}}Use an enhanced model variant: * If an enhanced variant does not exist for the given model and request language, Dialogflow falls back to the standard variant. The [Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models) describes which models have enhanced variants. * If the API caller isn't eligible for enhanced models, Dialogflow returns an error. Please see the [Dialogflow docs](https://cloud.google.com/dialogflow/docs/data-logging) for how to make your project eligible.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SPEECH_MODEL_VARIANT_UNSPECIFIED</dt>
+    <dd>SPEECH_MODEL_VARIANT_UNSPECIFIED{{% md %}}No model variant specified. In this case Dialogflow defaults to USE_BEST_AVAILABLE.{{% /md %}}</dd><dt>USE_BEST_AVAILABLE</dt>
+    <dd>USE_BEST_AVAILABLE{{% md %}}Use the best available variant of the Speech model that the caller is eligible for. Please see the [Dialogflow docs](https://cloud.google.com/dialogflow/docs/data-logging) for how to make your project eligible for enhanced models.{{% /md %}}</dd><dt>USE_STANDARD</dt>
+    <dd>USE_STANDARD{{% md %}}Use standard model variant even if an enhanced model is available. See the [Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models) for details about enhanced models.{{% /md %}}</dd><dt>USE_ENHANCED</dt>
+    <dd>USE_ENHANCED{{% md %}}Use an enhanced model variant: * If an enhanced variant does not exist for the given model and request language, Dialogflow falls back to the standard variant. The [Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models) describes which models have enhanced variants. * If the API caller isn't eligible for enhanced models, Dialogflow returns an error. Please see the [Dialogflow docs](https://cloud.google.com/dialogflow/docs/data-logging) for how to make your project eligible.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="googleclouddialogflowv2suggestionfeature">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Suggestion<wbr>Feature</h4>
 
 {{% choosable language csharp %}}
@@ -3911,7 +3975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2suggestionfeaturetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Suggestion<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of Human Agent Assistant API feature to request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3923,7 +3987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2suggestionfeaturetype">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Suggestion<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of Human Agent Assistant API feature to request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3935,7 +3999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2suggestionfeaturetype">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Suggestion<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of Human Agent Assistant API feature to request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3947,7 +4011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowv2suggestionfeaturetype">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Suggestion<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of Human Agent Assistant API feature to request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4000,6 +4064,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of Human Agent Assistant API feature to request.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowv2suggestionfeaturetype">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Suggestion<wbr>Feature<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Unspecified feature type.{{% /md %}}</dd><dt>Article<wbr>Suggestion</dt>
+    <dd>ARTICLE_SUGGESTION{{% md %}}Run article suggestion model.{{% /md %}}</dd><dt>Faq</dt>
+    <dd>FAQ{{% md %}}Run FAQ model.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Suggestion<wbr>Feature<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Unspecified feature type.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Suggestion<wbr>Feature<wbr>Type<wbr>Article<wbr>Suggestion</dt>
+    <dd>ARTICLE_SUGGESTION{{% md %}}Run article suggestion model.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Suggestion<wbr>Feature<wbr>Type<wbr>Faq</dt>
+    <dd>FAQ{{% md %}}Run FAQ model.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Unspecified feature type.{{% /md %}}</dd><dt>Article<wbr>Suggestion</dt>
+    <dd>ARTICLE_SUGGESTION{{% md %}}Run article suggestion model.{{% /md %}}</dd><dt>Faq</dt>
+    <dd>FAQ{{% md %}}Run FAQ model.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Unspecified feature type.{{% /md %}}</dd><dt>ARTICLE_SUGGESTION</dt>
+    <dd>ARTICLE_SUGGESTION{{% md %}}Run article suggestion model.{{% /md %}}</dd><dt>FAQ</dt>
+    <dd>FAQ{{% md %}}Run FAQ model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

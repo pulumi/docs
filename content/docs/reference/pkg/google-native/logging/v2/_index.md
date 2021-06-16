@@ -15,6 +15,12 @@ Explore the resources and functions of the google-native.logging/v2 module.
     <li><a href="billingaccountsink" title="BillingAccountSink"><span class="symbol resource"></span>BillingAccountSink</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getbillingaccountexclusion" title="GetBillingAccountExclusion"><span class="symbol function"></span>GetBillingAccountExclusion</a></li>
+    <li><a href="getbillingaccountsink" title="GetBillingAccountSink"><span class="symbol function"></span>GetBillingAccountSink</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -22,6 +28,6 @@ Explore the resources and functions of the google-native.logging/v2 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

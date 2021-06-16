@@ -32,7 +32,7 @@ Creates the specified index. A newly created index's initial state is `CREATING`
           <span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[_firestore_v1beta1.GoogleFirestoreAdminV1beta1IndexFieldArgs]]</span> = None<span class="p">,</span>
           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-          <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+          <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_firestore_v1beta1.IndexState]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Index</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IndexArgs</a></span><span class="p">,</span>
@@ -206,7 +206,7 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#indexstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Firestore.<wbr>V1Beta1.<wbr>Index<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of the index. Output only.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -258,7 +258,7 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#indexstate">Index<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The state of the index. Output only.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -310,7 +310,7 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#indexstate">Index<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of the index. Output only.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -362,7 +362,7 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#indexstate">Index<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of the index. Output only.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -449,7 +449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlefirestoreadminv1beta1indexfieldmode">Pulumi.<wbr>Google<wbr>Native.<wbr>Firestore.<wbr>V1Beta1.<wbr>Google<wbr>Firestore<wbr>Admin<wbr>V1beta1Index<wbr>Field<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The field's mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -469,7 +469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlefirestoreadminv1beta1indexfieldmode">Google<wbr>Firestore<wbr>Admin<wbr>V1beta1Index<wbr>Field<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The field's mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -489,7 +489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlefirestoreadminv1beta1indexfieldmode">Google<wbr>Firestore<wbr>Admin<wbr>V1beta1Index<wbr>Field<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The field's mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -509,9 +509,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlefirestoreadminv1beta1indexfieldmode">Google<wbr>Firestore<wbr>Admin<wbr>V1beta1Index<wbr>Field<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The field's mode.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlefirestoreadminv1beta1indexfieldmode">Google<wbr>Firestore<wbr>Admin<wbr>V1beta1Index<wbr>Field<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}The mode is unspecified.{{% /md %}}</dd><dt>Ascending</dt>
+    <dd>ASCENDING{{% md %}}The field's values are indexed so as to support sequencing in ascending order and also query by <, >, <=, >=, and =.{{% /md %}}</dd><dt>Descending</dt>
+    <dd>DESCENDING{{% md %}}The field's values are indexed so as to support sequencing in descending order and also query by <, >, <=, >=, and =.{{% /md %}}</dd><dt>Array<wbr>Contains</dt>
+    <dd>ARRAY_CONTAINS{{% md %}}The field's array values are indexed so as to support membership using ARRAY_CONTAINS queries.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Firestore<wbr>Admin<wbr>V1beta1Index<wbr>Field<wbr>Mode<wbr>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}The mode is unspecified.{{% /md %}}</dd><dt>Google<wbr>Firestore<wbr>Admin<wbr>V1beta1Index<wbr>Field<wbr>Mode<wbr>Ascending</dt>
+    <dd>ASCENDING{{% md %}}The field's values are indexed so as to support sequencing in ascending order and also query by <, >, <=, >=, and =.{{% /md %}}</dd><dt>Google<wbr>Firestore<wbr>Admin<wbr>V1beta1Index<wbr>Field<wbr>Mode<wbr>Descending</dt>
+    <dd>DESCENDING{{% md %}}The field's values are indexed so as to support sequencing in descending order and also query by <, >, <=, >=, and =.{{% /md %}}</dd><dt>Google<wbr>Firestore<wbr>Admin<wbr>V1beta1Index<wbr>Field<wbr>Mode<wbr>Array<wbr>Contains</dt>
+    <dd>ARRAY_CONTAINS{{% md %}}The field's array values are indexed so as to support membership using ARRAY_CONTAINS queries.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}The mode is unspecified.{{% /md %}}</dd><dt>Ascending</dt>
+    <dd>ASCENDING{{% md %}}The field's values are indexed so as to support sequencing in ascending order and also query by <, >, <=, >=, and =.{{% /md %}}</dd><dt>Descending</dt>
+    <dd>DESCENDING{{% md %}}The field's values are indexed so as to support sequencing in descending order and also query by <, >, <=, >=, and =.{{% /md %}}</dd><dt>Array<wbr>Contains</dt>
+    <dd>ARRAY_CONTAINS{{% md %}}The field's array values are indexed so as to support membership using ARRAY_CONTAINS queries.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MODE_UNSPECIFIED</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}The mode is unspecified.{{% /md %}}</dd><dt>ASCENDING</dt>
+    <dd>ASCENDING{{% md %}}The field's values are indexed so as to support sequencing in ascending order and also query by <, >, <=, >=, and =.{{% /md %}}</dd><dt>DESCENDING</dt>
+    <dd>DESCENDING{{% md %}}The field's values are indexed so as to support sequencing in descending order and also query by <, >, <=, >=, and =.{{% /md %}}</dd><dt>ARRAY_CONTAINS</dt>
+    <dd>ARRAY_CONTAINS{{% md %}}The field's array values are indexed so as to support membership using ARRAY_CONTAINS queries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googlefirestoreadminv1beta1indexfieldresponse">Google<wbr>Firestore<wbr>Admin<wbr>V1beta1Index<wbr>Field<wbr>Response</h4>
@@ -594,6 +628,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field's mode.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="indexstate">Index<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state is unspecified.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}The index is being created. There is an active long-running operation for the index. The index is updated when writing a document. Some index data may exist.{{% /md %}}</dd><dt>Ready</dt>
+    <dd>READY{{% md %}}The index is ready to be used. The index is updated when writing a document. The index is fully populated from all stored documents it applies to.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}The index was being created, but something went wrong. There is no active long-running operation for the index, and the most recently finished long-running operation failed. The index is not updated when writing a document. Some index data may exist.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Index<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state is unspecified.{{% /md %}}</dd><dt>Index<wbr>State<wbr>Creating</dt>
+    <dd>CREATING{{% md %}}The index is being created. There is an active long-running operation for the index. The index is updated when writing a document. Some index data may exist.{{% /md %}}</dd><dt>Index<wbr>State<wbr>Ready</dt>
+    <dd>READY{{% md %}}The index is ready to be used. The index is updated when writing a document. The index is fully populated from all stored documents it applies to.{{% /md %}}</dd><dt>Index<wbr>State<wbr>Error</dt>
+    <dd>ERROR{{% md %}}The index was being created, but something went wrong. There is no active long-running operation for the index, and the most recently finished long-running operation failed. The index is not updated when writing a document. Some index data may exist.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state is unspecified.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}The index is being created. There is an active long-running operation for the index. The index is updated when writing a document. Some index data may exist.{{% /md %}}</dd><dt>Ready</dt>
+    <dd>READY{{% md %}}The index is ready to be used. The index is updated when writing a document. The index is fully populated from all stored documents it applies to.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}The index was being created, but something went wrong. There is no active long-running operation for the index, and the most recently finished long-running operation failed. The index is not updated when writing a document. Some index data may exist.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The state is unspecified.{{% /md %}}</dd><dt>CREATING</dt>
+    <dd>CREATING{{% md %}}The index is being created. There is an active long-running operation for the index. The index is updated when writing a document. Some index data may exist.{{% /md %}}</dd><dt>READY</dt>
+    <dd>READY{{% md %}}The index is ready to be used. The index is updated when writing a document. The index is fully populated from all stored documents it applies to.{{% /md %}}</dd><dt>ERROR</dt>
+    <dd>ERROR{{% md %}}The index was being created, but something went wrong. There is no active long-running operation for the index, and the most recently finished long-running operation failed. The index is not updated when writing a document. Some index data may exist.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

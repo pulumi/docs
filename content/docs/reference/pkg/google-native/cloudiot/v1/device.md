@@ -40,7 +40,7 @@ Creates a device in a device registry.
            <span class="nx">last_heartbeat_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">last_state_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-           <span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[_cloudiot_v1.DeviceLogLevel]</span> = None<span class="p">,</span>
            <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">num_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -300,7 +300,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#loglevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#deviceloglevel">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Io<wbr>T.<wbr>V1.<wbr>Device<wbr>Log<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}**Beta Feature** The logging verbosity for device activity. If unspecified, DeviceRegistry.log_level will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -464,7 +464,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#loglevel_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#deviceloglevel">Device<wbr>Log<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}**Beta Feature** The logging verbosity for device activity. If unspecified, DeviceRegistry.log_level will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -628,7 +628,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#deviceloglevel">Device<wbr>Log<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}**Beta Feature** The logging verbosity for device activity. If unspecified, DeviceRegistry.log_level will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -792,7 +792,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#deviceloglevel">Device<wbr>Log<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}**Beta Feature** The logging verbosity for device activity. If unspecified, DeviceRegistry.log_level will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1350,6 +1350,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A public key used to verify the signature of JSON Web Tokens (JWTs). When adding a new device credential, either via device creation or via modifications, this public key credential may be required to be signed by one of the registry level certificates. More specifically, if the registry contains at least one certificate, any new device credential must be signed by one of the registry certificates. As a result, when the registry contains certificates, only X.509 certificates are accepted as device credentials. However, if the registry does not contain a certificate, self-signed certificates and public keys will be accepted. New device credentials must be different from every registry-level certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="deviceloglevel">Device<wbr>Log<wbr>Level</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Log<wbr>Level<wbr>Unspecified</dt>
+    <dd>LOG_LEVEL_UNSPECIFIED{{% md %}}No logging specified. If not specified, logging will be disabled.{{% /md %}}</dd><dt>None</dt>
+    <dd>NONE{{% md %}}Disables logging.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}Error events will be logged.{{% /md %}}</dd><dt>Info</dt>
+    <dd>INFO{{% md %}}Informational events will be logged, such as connections and disconnections.{{% /md %}}</dd><dt>Debug</dt>
+    <dd>DEBUG{{% md %}}All events will be logged.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Device<wbr>Log<wbr>Level<wbr>Log<wbr>Level<wbr>Unspecified</dt>
+    <dd>LOG_LEVEL_UNSPECIFIED{{% md %}}No logging specified. If not specified, logging will be disabled.{{% /md %}}</dd><dt>Device<wbr>Log<wbr>Level<wbr>None</dt>
+    <dd>NONE{{% md %}}Disables logging.{{% /md %}}</dd><dt>Device<wbr>Log<wbr>Level<wbr>Error</dt>
+    <dd>ERROR{{% md %}}Error events will be logged.{{% /md %}}</dd><dt>Device<wbr>Log<wbr>Level<wbr>Info</dt>
+    <dd>INFO{{% md %}}Informational events will be logged, such as connections and disconnections.{{% /md %}}</dd><dt>Device<wbr>Log<wbr>Level<wbr>Debug</dt>
+    <dd>DEBUG{{% md %}}All events will be logged.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Log<wbr>Level<wbr>Unspecified</dt>
+    <dd>LOG_LEVEL_UNSPECIFIED{{% md %}}No logging specified. If not specified, logging will be disabled.{{% /md %}}</dd><dt>None</dt>
+    <dd>NONE{{% md %}}Disables logging.{{% /md %}}</dd><dt>Error</dt>
+    <dd>ERROR{{% md %}}Error events will be logged.{{% /md %}}</dd><dt>Info</dt>
+    <dd>INFO{{% md %}}Informational events will be logged, such as connections and disconnections.{{% /md %}}</dd><dt>Debug</dt>
+    <dd>DEBUG{{% md %}}All events will be logged.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LOG_LEVEL_UNSPECIFIED</dt>
+    <dd>LOG_LEVEL_UNSPECIFIED{{% md %}}No logging specified. If not specified, logging will be disabled.{{% /md %}}</dd><dt>NONE</dt>
+    <dd>NONE{{% md %}}Disables logging.{{% /md %}}</dd><dt>ERROR</dt>
+    <dd>ERROR{{% md %}}Error events will be logged.{{% /md %}}</dd><dt>INFO</dt>
+    <dd>INFO{{% md %}}Informational events will be logged, such as connections and disconnections.{{% /md %}}</dd><dt>DEBUG</dt>
+    <dd>DEBUG{{% md %}}All events will be logged.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="devicestate">Device<wbr>State</h4>
 
 {{% choosable language csharp %}}
@@ -1523,7 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewayauthmethod_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Auth<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#gatewayconfiggatewayauthmethod">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Io<wbr>T.<wbr>V1.<wbr>Gateway<wbr>Config<wbr>Gateway<wbr>Auth<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Indicates how to authorize and/or authenticate devices to access the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1531,7 +1569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewaytype_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#gatewayconfiggatewaytype">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Io<wbr>T.<wbr>V1.<wbr>Gateway<wbr>Config<wbr>Gateway<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the device is a gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1559,7 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewayauthmethod_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Auth<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#gatewayconfiggatewayauthmethod">Gateway<wbr>Config<wbr>Gateway<wbr>Auth<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Indicates how to authorize and/or authenticate devices to access the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1567,7 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewaytype_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#gatewayconfiggatewaytype">Gateway<wbr>Config<wbr>Gateway<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the device is a gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1595,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewayauthmethod_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Auth<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#gatewayconfiggatewayauthmethod">Gateway<wbr>Config<wbr>Gateway<wbr>Auth<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Indicates how to authorize and/or authenticate devices to access the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1603,7 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewaytype_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#gatewayconfiggatewaytype">Gateway<wbr>Config<wbr>Gateway<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the device is a gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1631,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_auth_method_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>auth_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#gatewayconfiggatewayauthmethod">Gateway<wbr>Config<wbr>Gateway<wbr>Auth<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Indicates how to authorize and/or authenticate devices to access the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1639,7 +1677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_type_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#gatewayconfiggatewaytype">Gateway<wbr>Config<wbr>Gateway<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the device is a gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1658,6 +1696,70 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The most recent time at which the device accessed the gateway specified in `last_accessed_gateway`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="gatewayconfiggatewayauthmethod">Gateway<wbr>Config<wbr>Gateway<wbr>Auth<wbr>Method</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Gateway<wbr>Auth<wbr>Method<wbr>Unspecified</dt>
+    <dd>GATEWAY_AUTH_METHOD_UNSPECIFIED{{% md %}}No authentication/authorization method specified. No devices are allowed to access the gateway.{{% /md %}}</dd><dt>Association<wbr>Only</dt>
+    <dd>ASSOCIATION_ONLY{{% md %}}The device is authenticated through the gateway association only. Device credentials are ignored even if provided.{{% /md %}}</dd><dt>Device<wbr>Auth<wbr>Token<wbr>Only</dt>
+    <dd>DEVICE_AUTH_TOKEN_ONLY{{% md %}}The device is authenticated through its own credentials. Gateway association is not checked.{{% /md %}}</dd><dt>Association<wbr>And<wbr>Device<wbr>Auth<wbr>Token</dt>
+    <dd>ASSOCIATION_AND_DEVICE_AUTH_TOKEN{{% md %}}The device is authenticated through both device credentials and gateway association. The device must be bound to the gateway and must provide its own credentials.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Gateway<wbr>Config<wbr>Gateway<wbr>Auth<wbr>Method<wbr>Gateway<wbr>Auth<wbr>Method<wbr>Unspecified</dt>
+    <dd>GATEWAY_AUTH_METHOD_UNSPECIFIED{{% md %}}No authentication/authorization method specified. No devices are allowed to access the gateway.{{% /md %}}</dd><dt>Gateway<wbr>Config<wbr>Gateway<wbr>Auth<wbr>Method<wbr>Association<wbr>Only</dt>
+    <dd>ASSOCIATION_ONLY{{% md %}}The device is authenticated through the gateway association only. Device credentials are ignored even if provided.{{% /md %}}</dd><dt>Gateway<wbr>Config<wbr>Gateway<wbr>Auth<wbr>Method<wbr>Device<wbr>Auth<wbr>Token<wbr>Only</dt>
+    <dd>DEVICE_AUTH_TOKEN_ONLY{{% md %}}The device is authenticated through its own credentials. Gateway association is not checked.{{% /md %}}</dd><dt>Gateway<wbr>Config<wbr>Gateway<wbr>Auth<wbr>Method<wbr>Association<wbr>And<wbr>Device<wbr>Auth<wbr>Token</dt>
+    <dd>ASSOCIATION_AND_DEVICE_AUTH_TOKEN{{% md %}}The device is authenticated through both device credentials and gateway association. The device must be bound to the gateway and must provide its own credentials.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Gateway<wbr>Auth<wbr>Method<wbr>Unspecified</dt>
+    <dd>GATEWAY_AUTH_METHOD_UNSPECIFIED{{% md %}}No authentication/authorization method specified. No devices are allowed to access the gateway.{{% /md %}}</dd><dt>Association<wbr>Only</dt>
+    <dd>ASSOCIATION_ONLY{{% md %}}The device is authenticated through the gateway association only. Device credentials are ignored even if provided.{{% /md %}}</dd><dt>Device<wbr>Auth<wbr>Token<wbr>Only</dt>
+    <dd>DEVICE_AUTH_TOKEN_ONLY{{% md %}}The device is authenticated through its own credentials. Gateway association is not checked.{{% /md %}}</dd><dt>Association<wbr>And<wbr>Device<wbr>Auth<wbr>Token</dt>
+    <dd>ASSOCIATION_AND_DEVICE_AUTH_TOKEN{{% md %}}The device is authenticated through both device credentials and gateway association. The device must be bound to the gateway and must provide its own credentials.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>GATEWAY_AUTH_METHOD_UNSPECIFIED</dt>
+    <dd>GATEWAY_AUTH_METHOD_UNSPECIFIED{{% md %}}No authentication/authorization method specified. No devices are allowed to access the gateway.{{% /md %}}</dd><dt>ASSOCIATION_ONLY</dt>
+    <dd>ASSOCIATION_ONLY{{% md %}}The device is authenticated through the gateway association only. Device credentials are ignored even if provided.{{% /md %}}</dd><dt>DEVICE_AUTH_TOKEN_ONLY</dt>
+    <dd>DEVICE_AUTH_TOKEN_ONLY{{% md %}}The device is authenticated through its own credentials. Gateway association is not checked.{{% /md %}}</dd><dt>ASSOCIATION_AND_DEVICE_AUTH_TOKEN</dt>
+    <dd>ASSOCIATION_AND_DEVICE_AUTH_TOKEN{{% md %}}The device is authenticated through both device credentials and gateway association. The device must be bound to the gateway and must provide its own credentials.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="gatewayconfiggatewaytype">Gateway<wbr>Config<wbr>Gateway<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Gateway<wbr>Type<wbr>Unspecified</dt>
+    <dd>GATEWAY_TYPE_UNSPECIFIED{{% md %}}If unspecified, the device is considered a non-gateway device.{{% /md %}}</dd><dt>Gateway</dt>
+    <dd>GATEWAY{{% md %}}The device is a gateway.{{% /md %}}</dd><dt>Non<wbr>Gateway</dt>
+    <dd>NON_GATEWAY{{% md %}}The device is not a gateway.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Gateway<wbr>Config<wbr>Gateway<wbr>Type<wbr>Gateway<wbr>Type<wbr>Unspecified</dt>
+    <dd>GATEWAY_TYPE_UNSPECIFIED{{% md %}}If unspecified, the device is considered a non-gateway device.{{% /md %}}</dd><dt>Gateway<wbr>Config<wbr>Gateway<wbr>Type<wbr>Gateway</dt>
+    <dd>GATEWAY{{% md %}}The device is a gateway.{{% /md %}}</dd><dt>Gateway<wbr>Config<wbr>Gateway<wbr>Type<wbr>Non<wbr>Gateway</dt>
+    <dd>NON_GATEWAY{{% md %}}The device is not a gateway.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Gateway<wbr>Type<wbr>Unspecified</dt>
+    <dd>GATEWAY_TYPE_UNSPECIFIED{{% md %}}If unspecified, the device is considered a non-gateway device.{{% /md %}}</dd><dt>Gateway</dt>
+    <dd>GATEWAY{{% md %}}The device is a gateway.{{% /md %}}</dd><dt>Non<wbr>Gateway</dt>
+    <dd>NON_GATEWAY{{% md %}}The device is not a gateway.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>GATEWAY_TYPE_UNSPECIFIED</dt>
+    <dd>GATEWAY_TYPE_UNSPECIFIED{{% md %}}If unspecified, the device is considered a non-gateway device.{{% /md %}}</dd><dt>GATEWAY</dt>
+    <dd>GATEWAY{{% md %}}The device is a gateway.{{% /md %}}</dd><dt>NON_GATEWAY</dt>
+    <dd>NON_GATEWAY{{% md %}}The device is not a gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="gatewayconfigresponse">Gateway<wbr>Config<wbr>Response</h4>
@@ -1815,7 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publickeycredentialformat">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Io<wbr>T.<wbr>V1.<wbr>Public<wbr>Key<wbr>Credential<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The format of the key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1835,7 +1937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publickeycredentialformat">Public<wbr>Key<wbr>Credential<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The format of the key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1855,7 +1957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publickeycredentialformat">Public<wbr>Key<wbr>Credential<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The format of the key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1875,7 +1977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#publickeycredentialformat">Public<wbr>Key<wbr>Credential<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The format of the key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1886,6 +1988,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="publickeycredentialformat">Public<wbr>Key<wbr>Credential<wbr>Format</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified<wbr>Public<wbr>Key<wbr>Format</dt>
+    <dd>UNSPECIFIED_PUBLIC_KEY_FORMAT{{% md %}}The format has not been specified. This is an invalid default value and must not be used.{{% /md %}}</dd><dt>Rsa<wbr>Pem</dt>
+    <dd>RSA_PEM{{% md %}}An RSA public key encoded in base64, and wrapped by `-----BEGIN PUBLIC KEY-----` and `-----END PUBLIC KEY-----`. This can be used to verify `RS256` signatures in JWT tokens ([RFC7518]( https://www.ietf.org/rfc/rfc7518.txt)).{{% /md %}}</dd><dt>Rsa<wbr>X509Pem</dt>
+    <dd>RSA_X509_PEM{{% md %}}As RSA_PEM, but wrapped in an X.509v3 certificate ([RFC5280]( https://www.ietf.org/rfc/rfc5280.txt)), encoded in base64, and wrapped by `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`.{{% /md %}}</dd><dt>Es256Pem</dt>
+    <dd>ES256_PEM{{% md %}}Public key for the ECDSA algorithm using P-256 and SHA-256, encoded in base64, and wrapped by `-----BEGIN PUBLIC KEY-----` and `-----END PUBLIC KEY-----`. This can be used to verify JWT tokens with the `ES256` algorithm ([RFC7518](https://www.ietf.org/rfc/rfc7518.txt)). This curve is defined in [OpenSSL](https://www.openssl.org/) as the `prime256v1` curve.{{% /md %}}</dd><dt>Es256X509Pem</dt>
+    <dd>ES256_X509_PEM{{% md %}}As ES256_PEM, but wrapped in an X.509v3 certificate ([RFC5280]( https://www.ietf.org/rfc/rfc5280.txt)), encoded in base64, and wrapped by `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Public<wbr>Key<wbr>Credential<wbr>Format<wbr>Unspecified<wbr>Public<wbr>Key<wbr>Format</dt>
+    <dd>UNSPECIFIED_PUBLIC_KEY_FORMAT{{% md %}}The format has not been specified. This is an invalid default value and must not be used.{{% /md %}}</dd><dt>Public<wbr>Key<wbr>Credential<wbr>Format<wbr>Rsa<wbr>Pem</dt>
+    <dd>RSA_PEM{{% md %}}An RSA public key encoded in base64, and wrapped by `-----BEGIN PUBLIC KEY-----` and `-----END PUBLIC KEY-----`. This can be used to verify `RS256` signatures in JWT tokens ([RFC7518]( https://www.ietf.org/rfc/rfc7518.txt)).{{% /md %}}</dd><dt>Public<wbr>Key<wbr>Credential<wbr>Format<wbr>Rsa<wbr>X509Pem</dt>
+    <dd>RSA_X509_PEM{{% md %}}As RSA_PEM, but wrapped in an X.509v3 certificate ([RFC5280]( https://www.ietf.org/rfc/rfc5280.txt)), encoded in base64, and wrapped by `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`.{{% /md %}}</dd><dt>Public<wbr>Key<wbr>Credential<wbr>Format<wbr>Es256Pem</dt>
+    <dd>ES256_PEM{{% md %}}Public key for the ECDSA algorithm using P-256 and SHA-256, encoded in base64, and wrapped by `-----BEGIN PUBLIC KEY-----` and `-----END PUBLIC KEY-----`. This can be used to verify JWT tokens with the `ES256` algorithm ([RFC7518](https://www.ietf.org/rfc/rfc7518.txt)). This curve is defined in [OpenSSL](https://www.openssl.org/) as the `prime256v1` curve.{{% /md %}}</dd><dt>Public<wbr>Key<wbr>Credential<wbr>Format<wbr>Es256X509Pem</dt>
+    <dd>ES256_X509_PEM{{% md %}}As ES256_PEM, but wrapped in an X.509v3 certificate ([RFC5280]( https://www.ietf.org/rfc/rfc5280.txt)), encoded in base64, and wrapped by `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified<wbr>Public<wbr>Key<wbr>Format</dt>
+    <dd>UNSPECIFIED_PUBLIC_KEY_FORMAT{{% md %}}The format has not been specified. This is an invalid default value and must not be used.{{% /md %}}</dd><dt>Rsa<wbr>Pem</dt>
+    <dd>RSA_PEM{{% md %}}An RSA public key encoded in base64, and wrapped by `-----BEGIN PUBLIC KEY-----` and `-----END PUBLIC KEY-----`. This can be used to verify `RS256` signatures in JWT tokens ([RFC7518]( https://www.ietf.org/rfc/rfc7518.txt)).{{% /md %}}</dd><dt>Rsa<wbr>X509Pem</dt>
+    <dd>RSA_X509_PEM{{% md %}}As RSA_PEM, but wrapped in an X.509v3 certificate ([RFC5280]( https://www.ietf.org/rfc/rfc5280.txt)), encoded in base64, and wrapped by `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`.{{% /md %}}</dd><dt>Es256Pem</dt>
+    <dd>ES256_PEM{{% md %}}Public key for the ECDSA algorithm using P-256 and SHA-256, encoded in base64, and wrapped by `-----BEGIN PUBLIC KEY-----` and `-----END PUBLIC KEY-----`. This can be used to verify JWT tokens with the `ES256` algorithm ([RFC7518](https://www.ietf.org/rfc/rfc7518.txt)). This curve is defined in [OpenSSL](https://www.openssl.org/) as the `prime256v1` curve.{{% /md %}}</dd><dt>Es256X509Pem</dt>
+    <dd>ES256_X509_PEM{{% md %}}As ES256_PEM, but wrapped in an X.509v3 certificate ([RFC5280]( https://www.ietf.org/rfc/rfc5280.txt)), encoded in base64, and wrapped by `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED_PUBLIC_KEY_FORMAT</dt>
+    <dd>UNSPECIFIED_PUBLIC_KEY_FORMAT{{% md %}}The format has not been specified. This is an invalid default value and must not be used.{{% /md %}}</dd><dt>RSA_PEM</dt>
+    <dd>RSA_PEM{{% md %}}An RSA public key encoded in base64, and wrapped by `-----BEGIN PUBLIC KEY-----` and `-----END PUBLIC KEY-----`. This can be used to verify `RS256` signatures in JWT tokens ([RFC7518]( https://www.ietf.org/rfc/rfc7518.txt)).{{% /md %}}</dd><dt>RSA_X509_PEM</dt>
+    <dd>RSA_X509_PEM{{% md %}}As RSA_PEM, but wrapped in an X.509v3 certificate ([RFC5280]( https://www.ietf.org/rfc/rfc5280.txt)), encoded in base64, and wrapped by `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`.{{% /md %}}</dd><dt>ES256_PEM</dt>
+    <dd>ES256_PEM{{% md %}}Public key for the ECDSA algorithm using P-256 and SHA-256, encoded in base64, and wrapped by `-----BEGIN PUBLIC KEY-----` and `-----END PUBLIC KEY-----`. This can be used to verify JWT tokens with the `ES256` algorithm ([RFC7518](https://www.ietf.org/rfc/rfc7518.txt)). This curve is defined in [OpenSSL](https://www.openssl.org/) as the `prime256v1` curve.{{% /md %}}</dd><dt>ES256_X509_PEM</dt>
+    <dd>ES256_X509_PEM{{% md %}}As ES256_PEM, but wrapped in an X.509v3 certificate ([RFC5280]( https://www.ietf.org/rfc/rfc5280.txt)), encoded in base64, and wrapped by `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="publickeycredentialresponse">Public<wbr>Key<wbr>Credential<wbr>Response</h4>

@@ -18,6 +18,15 @@ Explore the resources and functions of the google-native.dlp/v2 module.
     <li><a href="storedinfotype" title="StoredInfoType"><span class="symbol resource"></span>StoredInfoType</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getdeidentifytemplate" title="GetDeidentifyTemplate"><span class="symbol function"></span>GetDeidentifyTemplate</a></li>
+    <li><a href="getdlpjob" title="GetDlpJob"><span class="symbol function"></span>GetDlpJob</a></li>
+    <li><a href="getinspecttemplate" title="GetInspectTemplate"><span class="symbol function"></span>GetInspectTemplate</a></li>
+    <li><a href="getjobtrigger" title="GetJobTrigger"><span class="symbol function"></span>GetJobTrigger</a></li>
+    <li><a href="getstoredinfotype" title="GetStoredInfoType"><span class="symbol function"></span>GetStoredInfoType</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -25,6 +34,6 @@ Explore the resources and functions of the google-native.dlp/v2 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

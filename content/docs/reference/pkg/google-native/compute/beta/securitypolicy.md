@@ -45,7 +45,7 @@ Creates a new policy in the specified project using the data included in the req
                    <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.SecurityPolicyRuleArgs]]</span> = None<span class="p">,</span>
                    <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.SecurityPolicyType]</span> = None<span class="p">,</span>
                    <span class="nx">validate_only</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">SecurityPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -328,7 +328,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitypolicytype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Security<wbr>Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type indicates the intended use of the security policy. CLOUD_ARMOR policies apply to backend services. FIREWALL policies apply to organizations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -496,7 +496,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitypolicytype">Security<wbr>Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type indicates the intended use of the security policy. CLOUD_ARMOR policies apply to backend services. FIREWALL policies apply to organizations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -664,7 +664,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitypolicytype">Security<wbr>Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type indicates the intended use of the security policy. CLOUD_ARMOR policies apply to backend services. FIREWALL policies apply to organizations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -832,7 +832,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#securitypolicytype">Security<wbr>Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type indicates the intended use of the security policy. CLOUD_ARMOR policies apply to backend services. FIREWALL policies apply to organizations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1269,7 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulevisibility_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfigrulevisibility">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Rule<wbr>Visibility</a></span>
     </dt>
     <dd>{{% md %}}Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1289,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulevisibility_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfigrulevisibility">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Rule<wbr>Visibility</a></span>
     </dt>
     <dd>{{% md %}}Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1309,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulevisibility_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfigrulevisibility">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Rule<wbr>Visibility</a></span>
     </dt>
     <dd>{{% md %}}Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1329,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_visibility_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfigrulevisibility">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Rule<wbr>Visibility</a></span>
     </dt>
     <dd>{{% md %}}Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1414,6 +1414,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfigrulevisibility">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Rule<wbr>Visibility</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Premium</dt>
+    <dd>PREMIUM</dd><dt>Standard</dt>
+    <dd>STANDARD</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Rule<wbr>Visibility<wbr>Premium</dt>
+    <dd>PREMIUM</dd><dt>Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Rule<wbr>Visibility<wbr>Standard</dt>
+    <dd>STANDARD</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Premium</dt>
+    <dd>PREMIUM</dd><dt>Standard</dt>
+    <dd>STANDARD</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PREMIUM</dt>
+    <dd>PREMIUM</dd><dt>STANDARD</dt>
+    <dd>STANDARD</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securitypolicyadaptiveprotectionconfigresponse">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Response</h4>
@@ -1783,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitypolicyruledirection">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Security<wbr>Policy<wbr>Rule<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. This field may only be specified when versioned_expr is set to FIREWALL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1887,7 +1913,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitypolicyruledirection">Security<wbr>Policy<wbr>Rule<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. This field may only be specified when versioned_expr is set to FIREWALL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1991,7 +2017,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitypolicyruledirection">Security<wbr>Policy<wbr>Rule<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. This field may only be specified when versioned_expr is set to FIREWALL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2095,7 +2121,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#securitypolicyruledirection">Security<wbr>Policy<wbr>Rule<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. This field may only be specified when versioned_expr is set to FIREWALL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2176,6 +2202,32 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
     <dd>{{% md %}}A list of service accounts indicating the sets of instances that are applied with this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="securitypolicyruledirection">Security<wbr>Policy<wbr>Rule<wbr>Direction</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Egress</dt>
+    <dd>EGRESS</dd><dt>Ingress</dt>
+    <dd>INGRESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Security<wbr>Policy<wbr>Rule<wbr>Direction<wbr>Egress</dt>
+    <dd>EGRESS</dd><dt>Security<wbr>Policy<wbr>Rule<wbr>Direction<wbr>Ingress</dt>
+    <dd>INGRESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Egress</dt>
+    <dd>EGRESS</dd><dt>Ingress</dt>
+    <dd>INGRESS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EGRESS</dt>
+    <dd>EGRESS</dd><dt>INGRESS</dt>
+    <dd>INGRESS</dd></dl>
+{{% /choosable %}}
+
 <h4 id="securitypolicyrulematcher">Security<wbr>Policy<wbr>Rule<wbr>Matcher</h4>
 
 {{% choosable language csharp %}}
@@ -2201,7 +2253,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#versionedexpr_csharp" style="color: inherit; text-decoration: inherit;">Versioned<wbr>Expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitypolicyrulematcherversionedexpr">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Versioned<wbr>Expr</a></span>
     </dt>
     <dd>{{% md %}}Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2229,7 +2281,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#versionedexpr_go" style="color: inherit; text-decoration: inherit;">Versioned<wbr>Expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitypolicyrulematcherversionedexpr">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Versioned<wbr>Expr</a></span>
     </dt>
     <dd>{{% md %}}Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2257,7 +2309,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#versionedexpr_nodejs" style="color: inherit; text-decoration: inherit;">versioned<wbr>Expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#securitypolicyrulematcherversionedexpr">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Versioned<wbr>Expr</a></span>
     </dt>
     <dd>{{% md %}}Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2285,7 +2337,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#versioned_expr_python" style="color: inherit; text-decoration: inherit;">versioned_<wbr>expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#securitypolicyrulematcherversionedexpr">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Versioned<wbr>Expr</a></span>
     </dt>
     <dd>{{% md %}}Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2860,6 +2912,32 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
     <dd>{{% md %}}Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="securitypolicyrulematcherversionedexpr">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Versioned<wbr>Expr</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Firewall</dt>
+    <dd>FIREWALL</dd><dt>Src<wbr>Ips<wbr>V1</dt>
+    <dd>SRC_IPS_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Versioned<wbr>Expr<wbr>Firewall</dt>
+    <dd>FIREWALL</dd><dt>Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Versioned<wbr>Expr<wbr>Src<wbr>Ips<wbr>V1</dt>
+    <dd>SRC_IPS_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Firewall</dt>
+    <dd>FIREWALL</dd><dt>Src<wbr>Ips<wbr>V1</dt>
+    <dd>SRC_IPS_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FIREWALL</dt>
+    <dd>FIREWALL</dd><dt>SRC_IPS_V1</dt>
+    <dd>SRC_IPS_V1</dd></dl>
+{{% /choosable %}}
+
 <h4 id="securitypolicyruleresponse">Security<wbr>Policy<wbr>Rule<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -3276,6 +3354,32 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of instances that are applied with this rule.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="securitypolicytype">Security<wbr>Policy<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Cloud<wbr>Armor</dt>
+    <dd>CLOUD_ARMOR</dd><dt>Firewall</dt>
+    <dd>FIREWALL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Security<wbr>Policy<wbr>Type<wbr>Cloud<wbr>Armor</dt>
+    <dd>CLOUD_ARMOR</dd><dt>Security<wbr>Policy<wbr>Type<wbr>Firewall</dt>
+    <dd>FIREWALL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Cloud<wbr>Armor</dt>
+    <dd>CLOUD_ARMOR</dd><dt>Firewall</dt>
+    <dd>FIREWALL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CLOUD_ARMOR</dt>
+    <dd>CLOUD_ARMOR</dd><dt>FIREWALL</dt>
+    <dd>FIREWALL</dd></dl>
 {{% /choosable %}}
 
 

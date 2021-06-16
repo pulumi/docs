@@ -27,7 +27,7 @@ Creates a firewall rule for the application.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">IngressRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[_appengine_v1beta.IngressRuleAction]</span> = None<span class="p">,</span>
                 <span class="nx">app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -173,7 +173,7 @@ The IngressRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#ingressruleaction">Pulumi.<wbr>Google<wbr>Native.<wbr>App<wbr>Engine.<wbr>V1Beta.<wbr>Ingress<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take on matched requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -217,7 +217,7 @@ The IngressRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#ingressruleaction">Ingress<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take on matched requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -261,7 +261,7 @@ The IngressRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#ingressruleaction">Ingress<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take on matched requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -305,7 +305,7 @@ The IngressRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#ingressruleaction">Ingress<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take on matched requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,6 +394,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="ingressruleaction">Ingress<wbr>Rule<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified<wbr>Action</dt>
+    <dd>UNSPECIFIED_ACTION</dd><dt>Allow</dt>
+    <dd>ALLOW{{% md %}}Matching requests are allowed.{{% /md %}}</dd><dt>Deny</dt>
+    <dd>DENY{{% md %}}Matching requests are denied.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Ingress<wbr>Rule<wbr>Action<wbr>Unspecified<wbr>Action</dt>
+    <dd>UNSPECIFIED_ACTION</dd><dt>Ingress<wbr>Rule<wbr>Action<wbr>Allow</dt>
+    <dd>ALLOW{{% md %}}Matching requests are allowed.{{% /md %}}</dd><dt>Ingress<wbr>Rule<wbr>Action<wbr>Deny</dt>
+    <dd>DENY{{% md %}}Matching requests are denied.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified<wbr>Action</dt>
+    <dd>UNSPECIFIED_ACTION</dd><dt>Allow</dt>
+    <dd>ALLOW{{% md %}}Matching requests are allowed.{{% /md %}}</dd><dt>Deny</dt>
+    <dd>DENY{{% md %}}Matching requests are denied.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED_ACTION</dt>
+    <dd>UNSPECIFIED_ACTION</dd><dt>ALLOW</dt>
+    <dd>ALLOW{{% md %}}Matching requests are allowed.{{% /md %}}</dd><dt>DENY</dt>
+    <dd>DENY{{% md %}}Matching requests are denied.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

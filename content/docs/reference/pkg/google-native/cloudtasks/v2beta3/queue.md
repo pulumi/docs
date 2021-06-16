@@ -35,10 +35,10 @@ Creates a queue. Queues created with this method allow tasks to live for a maxim
           <span class="nx">rate_limits</span><span class="p">:</span> <span class="nx">Optional[_cloudtasks_v2beta3.RateLimitsArgs]</span> = None<span class="p">,</span>
           <span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[_cloudtasks_v2beta3.RetryConfigArgs]</span> = None<span class="p">,</span>
           <span class="nx">stackdriver_logging_config</span><span class="p">:</span> <span class="nx">Optional[_cloudtasks_v2beta3.StackdriverLoggingConfigArgs]</span> = None<span class="p">,</span>
-          <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_cloudtasks_v2beta3.QueueState]</span> = None<span class="p">,</span>
           <span class="nx">task_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">tombstone_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-          <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+          <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[_cloudtasks_v2beta3.QueueType]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Queue</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">QueueArgs</a></span><span class="p">,</span>
@@ -236,7 +236,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#queuestate">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Tasks.<wbr>V2Beta3.<wbr>Queue<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of the queue. `state` can only be changed by called PauseQueue, ResumeQueue, or uploading [queue.yaml/xml](https://cloud.google.com/appengine/docs/python/config/queueref). UpdateQueue cannot be used to change `state`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -260,7 +260,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#queuetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Tasks.<wbr>V2Beta3.<wbr>Queue<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The type of a queue (push or pull). `Queue.type` is an immutable property of the queue that is set at the queue creation time. When left unspecified, the default value of `PUSH` is selected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -336,7 +336,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#queuestate">Queue<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The state of the queue. `state` can only be changed by called PauseQueue, ResumeQueue, or uploading [queue.yaml/xml](https://cloud.google.com/appengine/docs/python/config/queueref). UpdateQueue cannot be used to change `state`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -360,7 +360,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#queuetype">Queue<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The type of a queue (push or pull). `Queue.type` is an immutable property of the queue that is set at the queue creation time. When left unspecified, the default value of `PUSH` is selected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -436,7 +436,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#queuestate">Queue<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of the queue. `state` can only be changed by called PauseQueue, ResumeQueue, or uploading [queue.yaml/xml](https://cloud.google.com/appengine/docs/python/config/queueref). UpdateQueue cannot be used to change `state`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -460,7 +460,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#queuetype">Queue<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The type of a queue (push or pull). `Queue.type` is an immutable property of the queue that is set at the queue creation time. When left unspecified, the default value of `PUSH` is selected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -536,7 +536,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#queuestate">Queue<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The state of the queue. `state` can only be changed by called PauseQueue, ResumeQueue, or uploading [queue.yaml/xml](https://cloud.google.com/appengine/docs/python/config/queueref). UpdateQueue cannot be used to change `state`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -560,7 +560,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#queuetype">Queue<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The type of a queue (push or pull). `Queue.type` is an immutable property of the queue that is set at the queue creation time. When left unspecified, the default value of `PUSH` is selected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1054,6 +1054,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}App version. By default, the task is sent to the version which is the default version when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="queuestate">Queue<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Unspecified state.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The queue is running. Tasks can be dispatched. If the queue was created using Cloud Tasks and the queue has had no activity (method calls or task dispatches) for 30 days, the queue may take a few minutes to re-activate. Some method calls may return NOT_FOUND and tasks may not be dispatched for a few minutes until the queue has been re-activated.{{% /md %}}</dd><dt>Paused</dt>
+    <dd>PAUSED{{% md %}}Tasks are paused by the user. If the queue is paused then Cloud Tasks will stop delivering tasks from it, but more tasks can still be added to it by the user.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}The queue is disabled. A queue becomes `DISABLED` when [queue.yaml](https://cloud.google.com/appengine/docs/python/config/queueref) or [queue.xml](https://cloud.google.com/appengine/docs/standard/java/config/queueref) is uploaded which does not contain the queue. You cannot directly disable a queue. When a queue is disabled, tasks can still be added to a queue but the tasks are not dispatched. To permanently delete this queue and all of its tasks, call DeleteQueue.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Queue<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Unspecified state.{{% /md %}}</dd><dt>Queue<wbr>State<wbr>Running</dt>
+    <dd>RUNNING{{% md %}}The queue is running. Tasks can be dispatched. If the queue was created using Cloud Tasks and the queue has had no activity (method calls or task dispatches) for 30 days, the queue may take a few minutes to re-activate. Some method calls may return NOT_FOUND and tasks may not be dispatched for a few minutes until the queue has been re-activated.{{% /md %}}</dd><dt>Queue<wbr>State<wbr>Paused</dt>
+    <dd>PAUSED{{% md %}}Tasks are paused by the user. If the queue is paused then Cloud Tasks will stop delivering tasks from it, but more tasks can still be added to it by the user.{{% /md %}}</dd><dt>Queue<wbr>State<wbr>Disabled</dt>
+    <dd>DISABLED{{% md %}}The queue is disabled. A queue becomes `DISABLED` when [queue.yaml](https://cloud.google.com/appengine/docs/python/config/queueref) or [queue.xml](https://cloud.google.com/appengine/docs/standard/java/config/queueref) is uploaded which does not contain the queue. You cannot directly disable a queue. When a queue is disabled, tasks can still be added to a queue but the tasks are not dispatched. To permanently delete this queue and all of its tasks, call DeleteQueue.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Unspecified state.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The queue is running. Tasks can be dispatched. If the queue was created using Cloud Tasks and the queue has had no activity (method calls or task dispatches) for 30 days, the queue may take a few minutes to re-activate. Some method calls may return NOT_FOUND and tasks may not be dispatched for a few minutes until the queue has been re-activated.{{% /md %}}</dd><dt>Paused</dt>
+    <dd>PAUSED{{% md %}}Tasks are paused by the user. If the queue is paused then Cloud Tasks will stop delivering tasks from it, but more tasks can still be added to it by the user.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}The queue is disabled. A queue becomes `DISABLED` when [queue.yaml](https://cloud.google.com/appengine/docs/python/config/queueref) or [queue.xml](https://cloud.google.com/appengine/docs/standard/java/config/queueref) is uploaded which does not contain the queue. You cannot directly disable a queue. When a queue is disabled, tasks can still be added to a queue but the tasks are not dispatched. To permanently delete this queue and all of its tasks, call DeleteQueue.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Unspecified state.{{% /md %}}</dd><dt>RUNNING</dt>
+    <dd>RUNNING{{% md %}}The queue is running. Tasks can be dispatched. If the queue was created using Cloud Tasks and the queue has had no activity (method calls or task dispatches) for 30 days, the queue may take a few minutes to re-activate. Some method calls may return NOT_FOUND and tasks may not be dispatched for a few minutes until the queue has been re-activated.{{% /md %}}</dd><dt>PAUSED</dt>
+    <dd>PAUSED{{% md %}}Tasks are paused by the user. If the queue is paused then Cloud Tasks will stop delivering tasks from it, but more tasks can still be added to it by the user.{{% /md %}}</dd><dt>DISABLED</dt>
+    <dd>DISABLED{{% md %}}The queue is disabled. A queue becomes `DISABLED` when [queue.yaml](https://cloud.google.com/appengine/docs/python/config/queueref) or [queue.xml](https://cloud.google.com/appengine/docs/standard/java/config/queueref) is uploaded which does not contain the queue. You cannot directly disable a queue. When a queue is disabled, tasks can still be added to a queue but the tasks are not dispatched. To permanently delete this queue and all of its tasks, call DeleteQueue.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="queuestatsresponse">Queue<wbr>Stats<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -1230,6 +1264,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An estimation of the number of tasks in the queue, that is, the tasks in the queue that haven't been executed, the tasks in the queue which the queue has dispatched but has not yet received a reply for, and the failed tasks that the queue is retrying.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="queuetype">Queue<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>Pull</dt>
+    <dd>PULL{{% md %}}A pull queue.{{% /md %}}</dd><dt>Push</dt>
+    <dd>PUSH{{% md %}}A push queue.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Queue<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>Queue<wbr>Type<wbr>Pull</dt>
+    <dd>PULL{{% md %}}A pull queue.{{% /md %}}</dd><dt>Queue<wbr>Type<wbr>Push</dt>
+    <dd>PUSH{{% md %}}A push queue.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>Pull</dt>
+    <dd>PULL{{% md %}}A pull queue.{{% /md %}}</dd><dt>Push</dt>
+    <dd>PUSH{{% md %}}A push queue.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Default value.{{% /md %}}</dd><dt>PULL</dt>
+    <dd>PULL{{% md %}}A pull queue.{{% /md %}}</dd><dt>PUSH</dt>
+    <dd>PUSH{{% md %}}A push queue.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ratelimits">Rate<wbr>Limits</h4>

@@ -36,7 +36,7 @@ Atomically updates the ResourceRecordSet collection.
            <span class="nx">managed_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-           <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+           <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_dns_v1.ChangeStatus]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Change</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ChangeArgs</a></span><span class="p">,</span>
@@ -242,7 +242,7 @@ The Change resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#changestatus">Pulumi.<wbr>Google<wbr>Native.<wbr>DNS.<wbr>V1.<wbr>Change<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -326,7 +326,7 @@ The Change resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#changestatus">Change<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -410,7 +410,7 @@ The Change resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#changestatus">Change<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -494,7 +494,7 @@ The Change resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#changestatus">Change<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -563,6 +563,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="changestatus">Change<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Pending</dt>
+    <dd>pending</dd><dt>Done</dt>
+    <dd>done</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Change<wbr>Status<wbr>Pending</dt>
+    <dd>pending</dd><dt>Change<wbr>Status<wbr>Done</dt>
+    <dd>done</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Pending</dt>
+    <dd>pending</dd><dt>Done</dt>
+    <dd>done</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PENDING</dt>
+    <dd>pending</dd><dt>DONE</dt>
+    <dd>done</dd></dl>
+{{% /choosable %}}
 
 <h4 id="resourcerecordset">Resource<wbr>Record<wbr>Set</h4>
 

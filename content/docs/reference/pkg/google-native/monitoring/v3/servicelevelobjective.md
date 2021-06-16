@@ -27,7 +27,7 @@ Create a ServiceLevelObjective for the given Service.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ServiceLevelObjective</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                          <span class="nx">calendar_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">calendar_period</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.ServiceLevelObjectiveCalendarPeriod]</span> = None<span class="p">,</span>
                           <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">goal</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
                           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -194,7 +194,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 <a href="#calendarperiod_csharp" style="color: inherit; text-decoration: inherit;">Calendar<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#servicelevelobjectivecalendarperiod">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V3.<wbr>Service<wbr>Level<wbr>Objective<wbr>Calendar<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}A calendar period, semantically "since the start of the current ". At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -278,7 +278,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 <a href="#calendarperiod_go" style="color: inherit; text-decoration: inherit;">Calendar<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#servicelevelobjectivecalendarperiod">Service<wbr>Level<wbr>Objective<wbr>Calendar<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}A calendar period, semantically "since the start of the current ". At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +362,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 <a href="#calendarperiod_nodejs" style="color: inherit; text-decoration: inherit;">calendar<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#servicelevelobjectivecalendarperiod">Service<wbr>Level<wbr>Objective<wbr>Calendar<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}A calendar period, semantically "since the start of the current ". At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +446,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 <a href="#calendar_period_python" style="color: inherit; text-decoration: inherit;">calendar_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#servicelevelobjectivecalendarperiod">Service<wbr>Level<wbr>Objective<wbr>Calendar<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}A calendar period, semantically "since the start of the current ". At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2130,6 +2130,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#windowsbasedsliresponse">Windows<wbr>Based<wbr>Sli<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Windows-based SLIs{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="servicelevelobjectivecalendarperiod">Service<wbr>Level<wbr>Objective<wbr>Calendar<wbr>Period</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Calendar<wbr>Period<wbr>Unspecified</dt>
+    <dd>CALENDAR_PERIOD_UNSPECIFIED{{% md %}}Undefined period, raises an error.{{% /md %}}</dd><dt>Day</dt>
+    <dd>DAY{{% md %}}A day.{{% /md %}}</dd><dt>Week</dt>
+    <dd>WEEK{{% md %}}A week. Weeks begin on Monday, following ISO 8601 (https://en.wikipedia.org/wiki/ISO_week_date).{{% /md %}}</dd><dt>Fortnight</dt>
+    <dd>FORTNIGHT{{% md %}}A fortnight. The first calendar fortnight of the year begins at the start of week 1 according to ISO 8601 (https://en.wikipedia.org/wiki/ISO_week_date).{{% /md %}}</dd><dt>Month</dt>
+    <dd>MONTH{{% md %}}A month.{{% /md %}}</dd><dt>Quarter</dt>
+    <dd>QUARTER{{% md %}}A quarter. Quarters start on dates 1-Jan, 1-Apr, 1-Jul, and 1-Oct of each year.{{% /md %}}</dd><dt>Half</dt>
+    <dd>HALF{{% md %}}A half-year. Half-years start on dates 1-Jan and 1-Jul.{{% /md %}}</dd><dt>Year</dt>
+    <dd>YEAR{{% md %}}A year.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Service<wbr>Level<wbr>Objective<wbr>Calendar<wbr>Period<wbr>Calendar<wbr>Period<wbr>Unspecified</dt>
+    <dd>CALENDAR_PERIOD_UNSPECIFIED{{% md %}}Undefined period, raises an error.{{% /md %}}</dd><dt>Service<wbr>Level<wbr>Objective<wbr>Calendar<wbr>Period<wbr>Day</dt>
+    <dd>DAY{{% md %}}A day.{{% /md %}}</dd><dt>Service<wbr>Level<wbr>Objective<wbr>Calendar<wbr>Period<wbr>Week</dt>
+    <dd>WEEK{{% md %}}A week. Weeks begin on Monday, following ISO 8601 (https://en.wikipedia.org/wiki/ISO_week_date).{{% /md %}}</dd><dt>Service<wbr>Level<wbr>Objective<wbr>Calendar<wbr>Period<wbr>Fortnight</dt>
+    <dd>FORTNIGHT{{% md %}}A fortnight. The first calendar fortnight of the year begins at the start of week 1 according to ISO 8601 (https://en.wikipedia.org/wiki/ISO_week_date).{{% /md %}}</dd><dt>Service<wbr>Level<wbr>Objective<wbr>Calendar<wbr>Period<wbr>Month</dt>
+    <dd>MONTH{{% md %}}A month.{{% /md %}}</dd><dt>Service<wbr>Level<wbr>Objective<wbr>Calendar<wbr>Period<wbr>Quarter</dt>
+    <dd>QUARTER{{% md %}}A quarter. Quarters start on dates 1-Jan, 1-Apr, 1-Jul, and 1-Oct of each year.{{% /md %}}</dd><dt>Service<wbr>Level<wbr>Objective<wbr>Calendar<wbr>Period<wbr>Half</dt>
+    <dd>HALF{{% md %}}A half-year. Half-years start on dates 1-Jan and 1-Jul.{{% /md %}}</dd><dt>Service<wbr>Level<wbr>Objective<wbr>Calendar<wbr>Period<wbr>Year</dt>
+    <dd>YEAR{{% md %}}A year.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Calendar<wbr>Period<wbr>Unspecified</dt>
+    <dd>CALENDAR_PERIOD_UNSPECIFIED{{% md %}}Undefined period, raises an error.{{% /md %}}</dd><dt>Day</dt>
+    <dd>DAY{{% md %}}A day.{{% /md %}}</dd><dt>Week</dt>
+    <dd>WEEK{{% md %}}A week. Weeks begin on Monday, following ISO 8601 (https://en.wikipedia.org/wiki/ISO_week_date).{{% /md %}}</dd><dt>Fortnight</dt>
+    <dd>FORTNIGHT{{% md %}}A fortnight. The first calendar fortnight of the year begins at the start of week 1 according to ISO 8601 (https://en.wikipedia.org/wiki/ISO_week_date).{{% /md %}}</dd><dt>Month</dt>
+    <dd>MONTH{{% md %}}A month.{{% /md %}}</dd><dt>Quarter</dt>
+    <dd>QUARTER{{% md %}}A quarter. Quarters start on dates 1-Jan, 1-Apr, 1-Jul, and 1-Oct of each year.{{% /md %}}</dd><dt>Half</dt>
+    <dd>HALF{{% md %}}A half-year. Half-years start on dates 1-Jan and 1-Jul.{{% /md %}}</dd><dt>Year</dt>
+    <dd>YEAR{{% md %}}A year.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CALENDAR_PERIOD_UNSPECIFIED</dt>
+    <dd>CALENDAR_PERIOD_UNSPECIFIED{{% md %}}Undefined period, raises an error.{{% /md %}}</dd><dt>DAY</dt>
+    <dd>DAY{{% md %}}A day.{{% /md %}}</dd><dt>WEEK</dt>
+    <dd>WEEK{{% md %}}A week. Weeks begin on Monday, following ISO 8601 (https://en.wikipedia.org/wiki/ISO_week_date).{{% /md %}}</dd><dt>FORTNIGHT</dt>
+    <dd>FORTNIGHT{{% md %}}A fortnight. The first calendar fortnight of the year begins at the start of week 1 according to ISO 8601 (https://en.wikipedia.org/wiki/ISO_week_date).{{% /md %}}</dd><dt>MONTH</dt>
+    <dd>MONTH{{% md %}}A month.{{% /md %}}</dd><dt>QUARTER</dt>
+    <dd>QUARTER{{% md %}}A quarter. Quarters start on dates 1-Jan, 1-Apr, 1-Jul, and 1-Oct of each year.{{% /md %}}</dd><dt>HALF</dt>
+    <dd>HALF{{% md %}}A half-year. Half-years start on dates 1-Jan and 1-Jul.{{% /md %}}</dd><dt>YEAR</dt>
+    <dd>YEAR{{% md %}}A year.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timeseriesratio">Time<wbr>Series<wbr>Ratio</h4>

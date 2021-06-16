@@ -27,11 +27,11 @@ Creates an entity type in the specified agent.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">EntityType</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-               <span class="nx">auto_expansion_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">auto_expansion_mode</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v2.EntityTypeAutoExpansionMode]</span> = None<span class="p">,</span>
                <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">enable_fuzzy_extraction</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">entities</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dialogflow_v2.GoogleCloudDialogflowV2EntityTypeEntityArgs]]</span> = None<span class="p">,</span>
-               <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v2.EntityTypeKind]</span> = None<span class="p">,</span>
                <span class="nx">language_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -185,7 +185,7 @@ The EntityType resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#autoexpansionmode_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Expansion<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#entitytypeautoexpansionmode">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2.<wbr>Entity<wbr>Type<wbr>Auto<wbr>Expansion<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Optional. Indicates whether the entity type can be automatically expanded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -217,7 +217,7 @@ The EntityType resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#entitytypekind">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V2.<wbr>Entity<wbr>Type<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Indicates the kind of entity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -261,7 +261,7 @@ The EntityType resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#autoexpansionmode_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Expansion<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#entitytypeautoexpansionmode">Entity<wbr>Type<wbr>Auto<wbr>Expansion<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Optional. Indicates whether the entity type can be automatically expanded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -293,7 +293,7 @@ The EntityType resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#entitytypekind">Entity<wbr>Type<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Indicates the kind of entity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -337,7 +337,7 @@ The EntityType resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#autoexpansionmode_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Expansion<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#entitytypeautoexpansionmode">Entity<wbr>Type<wbr>Auto<wbr>Expansion<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Optional. Indicates whether the entity type can be automatically expanded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -369,7 +369,7 @@ The EntityType resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#entitytypekind">Entity<wbr>Type<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Indicates the kind of entity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -413,7 +413,7 @@ The EntityType resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#auto_expansion_mode_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>expansion_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#entitytypeautoexpansionmode">Entity<wbr>Type<wbr>Auto<wbr>Expansion<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Optional. Indicates whether the entity type can be automatically expanded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -445,7 +445,7 @@ The EntityType resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#entitytypekind">Entity<wbr>Type<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Indicates the kind of entity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,6 +530,66 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="entitytypeautoexpansionmode">Entity<wbr>Type<wbr>Auto<wbr>Expansion<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Auto<wbr>Expansion<wbr>Mode<wbr>Unspecified</dt>
+    <dd>AUTO_EXPANSION_MODE_UNSPECIFIED{{% md %}}Auto expansion disabled for the entity.{{% /md %}}</dd><dt>Auto<wbr>Expansion<wbr>Mode<wbr>Default</dt>
+    <dd>AUTO_EXPANSION_MODE_DEFAULT{{% md %}}Allows an agent to recognize values that have not been explicitly listed in the entity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Entity<wbr>Type<wbr>Auto<wbr>Expansion<wbr>Mode<wbr>Auto<wbr>Expansion<wbr>Mode<wbr>Unspecified</dt>
+    <dd>AUTO_EXPANSION_MODE_UNSPECIFIED{{% md %}}Auto expansion disabled for the entity.{{% /md %}}</dd><dt>Entity<wbr>Type<wbr>Auto<wbr>Expansion<wbr>Mode<wbr>Auto<wbr>Expansion<wbr>Mode<wbr>Default</dt>
+    <dd>AUTO_EXPANSION_MODE_DEFAULT{{% md %}}Allows an agent to recognize values that have not been explicitly listed in the entity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Auto<wbr>Expansion<wbr>Mode<wbr>Unspecified</dt>
+    <dd>AUTO_EXPANSION_MODE_UNSPECIFIED{{% md %}}Auto expansion disabled for the entity.{{% /md %}}</dd><dt>Auto<wbr>Expansion<wbr>Mode<wbr>Default</dt>
+    <dd>AUTO_EXPANSION_MODE_DEFAULT{{% md %}}Allows an agent to recognize values that have not been explicitly listed in the entity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>AUTO_EXPANSION_MODE_UNSPECIFIED</dt>
+    <dd>AUTO_EXPANSION_MODE_UNSPECIFIED{{% md %}}Auto expansion disabled for the entity.{{% /md %}}</dd><dt>AUTO_EXPANSION_MODE_DEFAULT</dt>
+    <dd>AUTO_EXPANSION_MODE_DEFAULT{{% md %}}Allows an agent to recognize values that have not been explicitly listed in the entity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="entitytypekind">Entity<wbr>Type<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Kind<wbr>Unspecified</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Not specified. This value should be never used.{{% /md %}}</dd><dt>Kind<wbr>Map</dt>
+    <dd>KIND_MAP{{% md %}}Map entity types allow mapping of a group of synonyms to a reference value.{{% /md %}}</dd><dt>Kind<wbr>List</dt>
+    <dd>KIND_LIST{{% md %}}List entity types contain a set of entries that do not map to reference values. However, list entity types can contain references to other entity types (with or without aliases).{{% /md %}}</dd><dt>Kind<wbr>Regexp</dt>
+    <dd>KIND_REGEXP{{% md %}}Regexp entity types allow to specify regular expressions in entries values.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Entity<wbr>Type<wbr>Kind<wbr>Kind<wbr>Unspecified</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Not specified. This value should be never used.{{% /md %}}</dd><dt>Entity<wbr>Type<wbr>Kind<wbr>Kind<wbr>Map</dt>
+    <dd>KIND_MAP{{% md %}}Map entity types allow mapping of a group of synonyms to a reference value.{{% /md %}}</dd><dt>Entity<wbr>Type<wbr>Kind<wbr>Kind<wbr>List</dt>
+    <dd>KIND_LIST{{% md %}}List entity types contain a set of entries that do not map to reference values. However, list entity types can contain references to other entity types (with or without aliases).{{% /md %}}</dd><dt>Entity<wbr>Type<wbr>Kind<wbr>Kind<wbr>Regexp</dt>
+    <dd>KIND_REGEXP{{% md %}}Regexp entity types allow to specify regular expressions in entries values.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Kind<wbr>Unspecified</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Not specified. This value should be never used.{{% /md %}}</dd><dt>Kind<wbr>Map</dt>
+    <dd>KIND_MAP{{% md %}}Map entity types allow mapping of a group of synonyms to a reference value.{{% /md %}}</dd><dt>Kind<wbr>List</dt>
+    <dd>KIND_LIST{{% md %}}List entity types contain a set of entries that do not map to reference values. However, list entity types can contain references to other entity types (with or without aliases).{{% /md %}}</dd><dt>Kind<wbr>Regexp</dt>
+    <dd>KIND_REGEXP{{% md %}}Regexp entity types allow to specify regular expressions in entries values.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>KIND_UNSPECIFIED</dt>
+    <dd>KIND_UNSPECIFIED{{% md %}}Not specified. This value should be never used.{{% /md %}}</dd><dt>KIND_MAP</dt>
+    <dd>KIND_MAP{{% md %}}Map entity types allow mapping of a group of synonyms to a reference value.{{% /md %}}</dd><dt>KIND_LIST</dt>
+    <dd>KIND_LIST{{% md %}}List entity types contain a set of entries that do not map to reference values. However, list entity types can contain references to other entity types (with or without aliases).{{% /md %}}</dd><dt>KIND_REGEXP</dt>
+    <dd>KIND_REGEXP{{% md %}}Regexp entity types allow to specify regular expressions in entries values.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="googleclouddialogflowv2entitytypeentity">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Entity<wbr>Type<wbr>Entity</h4>
 

@@ -29,9 +29,9 @@ Create a rate plan that is associated with an API product in an organization. Us
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
              <span class="nx">apiproduct</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">apiproduct_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">billing_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">billing_period</span><span class="p">:</span> <span class="nx">Optional[_apigee_v1.RatePlanBillingPeriod]</span> = None<span class="p">,</span>
              <span class="nx">consumption_pricing_rates</span><span class="p">:</span> <span class="nx">Optional[Sequence[_apigee_v1.GoogleCloudApigeeV1RateRangeArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">consumption_pricing_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">consumption_pricing_type</span><span class="p">:</span> <span class="nx">Optional[_apigee_v1.RatePlanConsumptionPricingType]</span> = None<span class="p">,</span>
              <span class="nx">currency_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -39,12 +39,12 @@ Create a rate plan that is associated with an API product in an organization. Us
              <span class="nx">fixed_fee_frequency</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">fixed_recurring_fee</span><span class="p">:</span> <span class="nx">Optional[_apigee_v1.GoogleTypeMoneyArgs]</span> = None<span class="p">,</span>
              <span class="nx">organization_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">payment_funding_model</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">payment_funding_model</span><span class="p">:</span> <span class="nx">Optional[_apigee_v1.RatePlanPaymentFundingModel]</span> = None<span class="p">,</span>
              <span class="nx">revenue_share_rates</span><span class="p">:</span> <span class="nx">Optional[Sequence[_apigee_v1.GoogleCloudApigeeV1RevenueShareRangeArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">revenue_share_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">revenue_share_type</span><span class="p">:</span> <span class="nx">Optional[_apigee_v1.RatePlanRevenueShareType]</span> = None<span class="p">,</span>
              <span class="nx">setup_fee</span><span class="p">:</span> <span class="nx">Optional[_apigee_v1.GoogleTypeMoneyArgs]</span> = None<span class="p">,</span>
              <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+             <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_apigee_v1.RatePlanState]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">RatePlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RatePlanArgs</a></span><span class="p">,</span>
@@ -202,7 +202,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#billingperiod_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#rateplanbillingperiod">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Rate<wbr>Plan<wbr>Billing<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}Frequency at which the customer will be billed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -218,7 +218,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#consumptionpricingtype_csharp" style="color: inherit; text-decoration: inherit;">Consumption<wbr>Pricing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#rateplanconsumptionpricingtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Rate<wbr>Plan<wbr>Consumption<wbr>Pricing<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Pricing model used for consumption-based charges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -274,7 +274,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#paymentfundingmodel_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Funding<wbr>Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#rateplanpaymentfundingmodel">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Rate<wbr>Plan<wbr>Payment<wbr>Funding<wbr>Model</a></span>
     </dt>
     <dd>{{% md %}}Flag that specifies the billing account type, prepaid or postpaid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -290,7 +290,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#revenuesharetype_csharp" style="color: inherit; text-decoration: inherit;">Revenue<wbr>Share<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#rateplanrevenuesharetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Rate<wbr>Plan<wbr>Revenue<wbr>Share<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Method used to calculate the revenue that is shared with developers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,7 +314,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#rateplanstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Rate<wbr>Plan<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Current state of the rate plan (draft or published).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -350,7 +350,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#billingperiod_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#rateplanbillingperiod">Rate<wbr>Plan<wbr>Billing<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}Frequency at which the customer will be billed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -366,7 +366,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#consumptionpricingtype_go" style="color: inherit; text-decoration: inherit;">Consumption<wbr>Pricing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#rateplanconsumptionpricingtype">Rate<wbr>Plan<wbr>Consumption<wbr>Pricing<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Pricing model used for consumption-based charges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +422,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#paymentfundingmodel_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Funding<wbr>Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#rateplanpaymentfundingmodel">Rate<wbr>Plan<wbr>Payment<wbr>Funding<wbr>Model</a></span>
     </dt>
     <dd>{{% md %}}Flag that specifies the billing account type, prepaid or postpaid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +438,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#revenuesharetype_go" style="color: inherit; text-decoration: inherit;">Revenue<wbr>Share<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#rateplanrevenuesharetype">Rate<wbr>Plan<wbr>Revenue<wbr>Share<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Method used to calculate the revenue that is shared with developers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +462,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#rateplanstate">Rate<wbr>Plan<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Current state of the rate plan (draft or published).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -498,7 +498,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#billingperiod_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#rateplanbillingperiod">Rate<wbr>Plan<wbr>Billing<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}Frequency at which the customer will be billed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +514,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#consumptionpricingtype_nodejs" style="color: inherit; text-decoration: inherit;">consumption<wbr>Pricing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#rateplanconsumptionpricingtype">Rate<wbr>Plan<wbr>Consumption<wbr>Pricing<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Pricing model used for consumption-based charges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +570,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#paymentfundingmodel_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Funding<wbr>Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#rateplanpaymentfundingmodel">Rate<wbr>Plan<wbr>Payment<wbr>Funding<wbr>Model</a></span>
     </dt>
     <dd>{{% md %}}Flag that specifies the billing account type, prepaid or postpaid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +586,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#revenuesharetype_nodejs" style="color: inherit; text-decoration: inherit;">revenue<wbr>Share<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#rateplanrevenuesharetype">Rate<wbr>Plan<wbr>Revenue<wbr>Share<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Method used to calculate the revenue that is shared with developers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +610,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#rateplanstate">Rate<wbr>Plan<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Current state of the rate plan (draft or published).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -646,7 +646,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#billing_period_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#rateplanbillingperiod">Rate<wbr>Plan<wbr>Billing<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}Frequency at which the customer will be billed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +662,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#consumption_pricing_type_python" style="color: inherit; text-decoration: inherit;">consumption_<wbr>pricing_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#rateplanconsumptionpricingtype">Rate<wbr>Plan<wbr>Consumption<wbr>Pricing<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Pricing model used for consumption-based charges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +718,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#payment_funding_model_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>funding_<wbr>model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#rateplanpaymentfundingmodel">Rate<wbr>Plan<wbr>Payment<wbr>Funding<wbr>Model</a></span>
     </dt>
     <dd>{{% md %}}Flag that specifies the billing account type, prepaid or postpaid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +734,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#revenue_share_type_python" style="color: inherit; text-decoration: inherit;">revenue_<wbr>share_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#rateplanrevenuesharetype">Rate<wbr>Plan<wbr>Revenue<wbr>Share<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Method used to calculate the revenue that is shared with developers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +758,7 @@ The RatePlan resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#rateplanstate">Rate<wbr>Plan<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Current state of the rate plan (draft or published).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1606,6 +1606,164 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rateplanbillingperiod">Rate<wbr>Plan<wbr>Billing<wbr>Period</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Billing<wbr>Period<wbr>Unspecified</dt>
+    <dd>BILLING_PERIOD_UNSPECIFIED{{% md %}}Billing period not specified.{{% /md %}}</dd><dt>Weekly</dt>
+    <dd>WEEKLY{{% md %}}Weekly billing period. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Monthly</dt>
+    <dd>MONTHLY{{% md %}}Monthly billing period.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Rate<wbr>Plan<wbr>Billing<wbr>Period<wbr>Billing<wbr>Period<wbr>Unspecified</dt>
+    <dd>BILLING_PERIOD_UNSPECIFIED{{% md %}}Billing period not specified.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>Billing<wbr>Period<wbr>Weekly</dt>
+    <dd>WEEKLY{{% md %}}Weekly billing period. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>Billing<wbr>Period<wbr>Monthly</dt>
+    <dd>MONTHLY{{% md %}}Monthly billing period.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Billing<wbr>Period<wbr>Unspecified</dt>
+    <dd>BILLING_PERIOD_UNSPECIFIED{{% md %}}Billing period not specified.{{% /md %}}</dd><dt>Weekly</dt>
+    <dd>WEEKLY{{% md %}}Weekly billing period. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Monthly</dt>
+    <dd>MONTHLY{{% md %}}Monthly billing period.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>BILLING_PERIOD_UNSPECIFIED</dt>
+    <dd>BILLING_PERIOD_UNSPECIFIED{{% md %}}Billing period not specified.{{% /md %}}</dd><dt>WEEKLY</dt>
+    <dd>WEEKLY{{% md %}}Weekly billing period. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>MONTHLY</dt>
+    <dd>MONTHLY{{% md %}}Monthly billing period.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rateplanconsumptionpricingtype">Rate<wbr>Plan<wbr>Consumption<wbr>Pricing<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Consumption<wbr>Pricing<wbr>Type<wbr>Unspecified</dt>
+    <dd>CONSUMPTION_PRICING_TYPE_UNSPECIFIED{{% md %}}Pricing model not specified. This is the default.{{% /md %}}</dd><dt>Fixed<wbr>Per<wbr>Unit</dt>
+    <dd>FIXED_PER_UNIT{{% md %}}Fixed rate charged for each API call.{{% /md %}}</dd><dt>Banded</dt>
+    <dd>BANDED{{% md %}}Variable rate charged based on the total volume of API calls. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 150 x $1.5 = $225 * Total price for 250 calls: 250 x $1 = $250. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Tiered</dt>
+    <dd>TIERED{{% md %}}Variable rate charged for each API call based on price tiers. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 100 x $2 + 50 x $1.5 = $275 * Total price for 250 calls: 100 x $2 + 100 x $1.5 + 50 x $1 = $400. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Stairstep</dt>
+    <dd>STAIRSTEP{{% md %}}Flat rate charged for a bundle of API calls whether or not the entire bundle is used. Example: * 1-100 calls cost $75 flat fee * 101-200 calls cost $100 flat free * 201-300 calls cost $150 flat fee * Total price for 1 call: $75 * Total price for 50 calls: $75 * Total price for 150 calls: $100 * Total price for 250 calls: $150. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Rate<wbr>Plan<wbr>Consumption<wbr>Pricing<wbr>Type<wbr>Consumption<wbr>Pricing<wbr>Type<wbr>Unspecified</dt>
+    <dd>CONSUMPTION_PRICING_TYPE_UNSPECIFIED{{% md %}}Pricing model not specified. This is the default.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>Consumption<wbr>Pricing<wbr>Type<wbr>Fixed<wbr>Per<wbr>Unit</dt>
+    <dd>FIXED_PER_UNIT{{% md %}}Fixed rate charged for each API call.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>Consumption<wbr>Pricing<wbr>Type<wbr>Banded</dt>
+    <dd>BANDED{{% md %}}Variable rate charged based on the total volume of API calls. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 150 x $1.5 = $225 * Total price for 250 calls: 250 x $1 = $250. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>Consumption<wbr>Pricing<wbr>Type<wbr>Tiered</dt>
+    <dd>TIERED{{% md %}}Variable rate charged for each API call based on price tiers. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 100 x $2 + 50 x $1.5 = $275 * Total price for 250 calls: 100 x $2 + 100 x $1.5 + 50 x $1 = $400. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>Consumption<wbr>Pricing<wbr>Type<wbr>Stairstep</dt>
+    <dd>STAIRSTEP{{% md %}}Flat rate charged for a bundle of API calls whether or not the entire bundle is used. Example: * 1-100 calls cost $75 flat fee * 101-200 calls cost $100 flat free * 201-300 calls cost $150 flat fee * Total price for 1 call: $75 * Total price for 50 calls: $75 * Total price for 150 calls: $100 * Total price for 250 calls: $150. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Consumption<wbr>Pricing<wbr>Type<wbr>Unspecified</dt>
+    <dd>CONSUMPTION_PRICING_TYPE_UNSPECIFIED{{% md %}}Pricing model not specified. This is the default.{{% /md %}}</dd><dt>Fixed<wbr>Per<wbr>Unit</dt>
+    <dd>FIXED_PER_UNIT{{% md %}}Fixed rate charged for each API call.{{% /md %}}</dd><dt>Banded</dt>
+    <dd>BANDED{{% md %}}Variable rate charged based on the total volume of API calls. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 150 x $1.5 = $225 * Total price for 250 calls: 250 x $1 = $250. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Tiered</dt>
+    <dd>TIERED{{% md %}}Variable rate charged for each API call based on price tiers. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 100 x $2 + 50 x $1.5 = $275 * Total price for 250 calls: 100 x $2 + 100 x $1.5 + 50 x $1 = $400. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Stairstep</dt>
+    <dd>STAIRSTEP{{% md %}}Flat rate charged for a bundle of API calls whether or not the entire bundle is used. Example: * 1-100 calls cost $75 flat fee * 101-200 calls cost $100 flat free * 201-300 calls cost $150 flat fee * Total price for 1 call: $75 * Total price for 50 calls: $75 * Total price for 150 calls: $100 * Total price for 250 calls: $150. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CONSUMPTION_PRICING_TYPE_UNSPECIFIED</dt>
+    <dd>CONSUMPTION_PRICING_TYPE_UNSPECIFIED{{% md %}}Pricing model not specified. This is the default.{{% /md %}}</dd><dt>FIXED_PER_UNIT</dt>
+    <dd>FIXED_PER_UNIT{{% md %}}Fixed rate charged for each API call.{{% /md %}}</dd><dt>BANDED</dt>
+    <dd>BANDED{{% md %}}Variable rate charged based on the total volume of API calls. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 150 x $1.5 = $225 * Total price for 250 calls: 250 x $1 = $250. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>TIERED</dt>
+    <dd>TIERED{{% md %}}Variable rate charged for each API call based on price tiers. Example: * 1-100 calls cost $2 per call * 101-200 calls cost $1.50 per call * 201-300 calls cost $1 per call * Total price for 50 calls: 50 x $2 = $100 * Total price for 150 calls: 100 x $2 + 50 x $1.5 = $275 * Total price for 250 calls: 100 x $2 + 100 x $1.5 + 50 x $1 = $400. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>STAIRSTEP</dt>
+    <dd>STAIRSTEP{{% md %}}Flat rate charged for a bundle of API calls whether or not the entire bundle is used. Example: * 1-100 calls cost $75 flat fee * 101-200 calls cost $100 flat free * 201-300 calls cost $150 flat fee * Total price for 1 call: $75 * Total price for 50 calls: $75 * Total price for 150 calls: $100 * Total price for 250 calls: $150. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rateplanpaymentfundingmodel">Rate<wbr>Plan<wbr>Payment<wbr>Funding<wbr>Model</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Payment<wbr>Funding<wbr>Model<wbr>Unspecified</dt>
+    <dd>PAYMENT_FUNDING_MODEL_UNSPECIFIED{{% md %}}Billing account type not specified.{{% /md %}}</dd><dt>Prepaid</dt>
+    <dd>PREPAID{{% md %}}Prepaid billing account type. Developer pays in advance for the use of your API products. Funds are deducted from their prepaid account balance. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Postpaid</dt>
+    <dd>POSTPAID{{% md %}}Postpaid billing account type. Developer is billed through an invoice after using your API products.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Rate<wbr>Plan<wbr>Payment<wbr>Funding<wbr>Model<wbr>Payment<wbr>Funding<wbr>Model<wbr>Unspecified</dt>
+    <dd>PAYMENT_FUNDING_MODEL_UNSPECIFIED{{% md %}}Billing account type not specified.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>Payment<wbr>Funding<wbr>Model<wbr>Prepaid</dt>
+    <dd>PREPAID{{% md %}}Prepaid billing account type. Developer pays in advance for the use of your API products. Funds are deducted from their prepaid account balance. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>Payment<wbr>Funding<wbr>Model<wbr>Postpaid</dt>
+    <dd>POSTPAID{{% md %}}Postpaid billing account type. Developer is billed through an invoice after using your API products.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Payment<wbr>Funding<wbr>Model<wbr>Unspecified</dt>
+    <dd>PAYMENT_FUNDING_MODEL_UNSPECIFIED{{% md %}}Billing account type not specified.{{% /md %}}</dd><dt>Prepaid</dt>
+    <dd>PREPAID{{% md %}}Prepaid billing account type. Developer pays in advance for the use of your API products. Funds are deducted from their prepaid account balance. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>Postpaid</dt>
+    <dd>POSTPAID{{% md %}}Postpaid billing account type. Developer is billed through an invoice after using your API products.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PAYMENT_FUNDING_MODEL_UNSPECIFIED</dt>
+    <dd>PAYMENT_FUNDING_MODEL_UNSPECIFIED{{% md %}}Billing account type not specified.{{% /md %}}</dd><dt>PREPAID</dt>
+    <dd>PREPAID{{% md %}}Prepaid billing account type. Developer pays in advance for the use of your API products. Funds are deducted from their prepaid account balance. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd><dt>POSTPAID</dt>
+    <dd>POSTPAID{{% md %}}Postpaid billing account type. Developer is billed through an invoice after using your API products.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rateplanrevenuesharetype">Rate<wbr>Plan<wbr>Revenue<wbr>Share<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Revenue<wbr>Share<wbr>Type<wbr>Unspecified</dt>
+    <dd>REVENUE_SHARE_TYPE_UNSPECIFIED{{% md %}}Revenue share type is not specified.{{% /md %}}</dd><dt>Fixed</dt>
+    <dd>FIXED{{% md %}}Fixed percentage of the total revenue will be shared. The percentage to be shared can be configured by the API provider.{{% /md %}}</dd><dt>Volume<wbr>Banded</dt>
+    <dd>VOLUME_BANDED{{% md %}}Amount of revenue shared depends on the number of API calls. The API call volume ranges and the revenue share percentage for each volume can be configured by the API provider. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Rate<wbr>Plan<wbr>Revenue<wbr>Share<wbr>Type<wbr>Revenue<wbr>Share<wbr>Type<wbr>Unspecified</dt>
+    <dd>REVENUE_SHARE_TYPE_UNSPECIFIED{{% md %}}Revenue share type is not specified.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>Revenue<wbr>Share<wbr>Type<wbr>Fixed</dt>
+    <dd>FIXED{{% md %}}Fixed percentage of the total revenue will be shared. The percentage to be shared can be configured by the API provider.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>Revenue<wbr>Share<wbr>Type<wbr>Volume<wbr>Banded</dt>
+    <dd>VOLUME_BANDED{{% md %}}Amount of revenue shared depends on the number of API calls. The API call volume ranges and the revenue share percentage for each volume can be configured by the API provider. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Revenue<wbr>Share<wbr>Type<wbr>Unspecified</dt>
+    <dd>REVENUE_SHARE_TYPE_UNSPECIFIED{{% md %}}Revenue share type is not specified.{{% /md %}}</dd><dt>Fixed</dt>
+    <dd>FIXED{{% md %}}Fixed percentage of the total revenue will be shared. The percentage to be shared can be configured by the API provider.{{% /md %}}</dd><dt>Volume<wbr>Banded</dt>
+    <dd>VOLUME_BANDED{{% md %}}Amount of revenue shared depends on the number of API calls. The API call volume ranges and the revenue share percentage for each volume can be configured by the API provider. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>REVENUE_SHARE_TYPE_UNSPECIFIED</dt>
+    <dd>REVENUE_SHARE_TYPE_UNSPECIFIED{{% md %}}Revenue share type is not specified.{{% /md %}}</dd><dt>FIXED</dt>
+    <dd>FIXED{{% md %}}Fixed percentage of the total revenue will be shared. The percentage to be shared can be configured by the API provider.{{% /md %}}</dd><dt>VOLUME_BANDED</dt>
+    <dd>VOLUME_BANDED{{% md %}}Amount of revenue shared depends on the number of API calls. The API call volume ranges and the revenue share percentage for each volume can be configured by the API provider. **Note**: Not supported by Apigee at this time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rateplanstate">Rate<wbr>Plan<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}State of the rate plan is not specified.{{% /md %}}</dd><dt>Draft</dt>
+    <dd>DRAFT{{% md %}}Rate plan is in draft mode and only visible to API providers.{{% /md %}}</dd><dt>Published</dt>
+    <dd>PUBLISHED{{% md %}}Rate plan is published and will become visible to developers for the configured duration (between `startTime` and `endTime`).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Rate<wbr>Plan<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}State of the rate plan is not specified.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>State<wbr>Draft</dt>
+    <dd>DRAFT{{% md %}}Rate plan is in draft mode and only visible to API providers.{{% /md %}}</dd><dt>Rate<wbr>Plan<wbr>State<wbr>Published</dt>
+    <dd>PUBLISHED{{% md %}}Rate plan is published and will become visible to developers for the configured duration (between `startTime` and `endTime`).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}State of the rate plan is not specified.{{% /md %}}</dd><dt>Draft</dt>
+    <dd>DRAFT{{% md %}}Rate plan is in draft mode and only visible to API providers.{{% /md %}}</dd><dt>Published</dt>
+    <dd>PUBLISHED{{% md %}}Rate plan is published and will become visible to developers for the configured duration (between `startTime` and `endTime`).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}State of the rate plan is not specified.{{% /md %}}</dd><dt>DRAFT</dt>
+    <dd>DRAFT{{% md %}}Rate plan is in draft mode and only visible to API providers.{{% /md %}}</dd><dt>PUBLISHED</dt>
+    <dd>PUBLISHED{{% md %}}Rate plan is published and will become visible to developers for the configured duration (between `startTime` and `endTime`).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -745,7 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#managedcertificatestatus">Pulumi.<wbr>Google<wbr>Native.<wbr>App<wbr>Engine.<wbr>V1.<wbr>Managed<wbr>Certificate<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of certificate management. Refers to the most recent certificate acquisition or renewal attempt.@OutputOnly{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -765,7 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#managedcertificatestatus">Managed<wbr>Certificate<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of certificate management. Refers to the most recent certificate acquisition or renewal attempt.@OutputOnly{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -785,7 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#managedcertificatestatus">Managed<wbr>Certificate<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of certificate management. Refers to the most recent certificate acquisition or renewal attempt.@OutputOnly{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -805,7 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#managedcertificatestatus">Managed<wbr>Certificate<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of certificate management. Refers to the most recent certificate acquisition or renewal attempt.@OutputOnly{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -890,6 +890,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of certificate management. Refers to the most recent certificate acquisition or renewal attempt.@OutputOnly{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="managedcertificatestatus">Managed<wbr>Certificate<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Management<wbr>Status<wbr>Unspecified</dt>
+    <dd>MANAGEMENT_STATUS_UNSPECIFIED</dd><dt>Ok</dt>
+    <dd>OK{{% md %}}Certificate was successfully obtained and inserted into the serving system.{{% /md %}}</dd><dt>Pending</dt>
+    <dd>PENDING{{% md %}}Certificate is under active attempts to acquire or renew.{{% /md %}}</dd><dt>Failed<wbr>Retrying<wbr>Not<wbr>Visible</dt>
+    <dd>FAILED_RETRYING_NOT_VISIBLE{{% md %}}Most recent renewal failed due to an invalid DNS setup and will be retried. Renewal attempts will continue to fail until the certificate domain's DNS configuration is fixed. The last successfully provisioned certificate may still be serving.{{% /md %}}</dd><dt>Failed<wbr>Permanent</dt>
+    <dd>FAILED_PERMANENT{{% md %}}All renewal attempts have been exhausted, likely due to an invalid DNS setup.{{% /md %}}</dd><dt>Failed<wbr>Retrying<wbr>Caa<wbr>Forbidden</dt>
+    <dd>FAILED_RETRYING_CAA_FORBIDDEN{{% md %}}Most recent renewal failed due to an explicit CAA record that does not include one of the in-use CAs (Google CA and Let's Encrypt). Renewals will continue to fail until the CAA is reconfigured. The last successfully provisioned certificate may still be serving.{{% /md %}}</dd><dt>Failed<wbr>Retrying<wbr>Caa<wbr>Checking</dt>
+    <dd>FAILED_RETRYING_CAA_CHECKING{{% md %}}Most recent renewal failed due to a CAA retrieval failure. This means that the domain's DNS provider does not properly handle CAA records, failing requests for CAA records when no CAA records are defined. Renewals will continue to fail until the DNS provider is changed or a CAA record is added for the given domain. The last successfully provisioned certificate may still be serving.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Managed<wbr>Certificate<wbr>Status<wbr>Management<wbr>Status<wbr>Unspecified</dt>
+    <dd>MANAGEMENT_STATUS_UNSPECIFIED</dd><dt>Managed<wbr>Certificate<wbr>Status<wbr>Ok</dt>
+    <dd>OK{{% md %}}Certificate was successfully obtained and inserted into the serving system.{{% /md %}}</dd><dt>Managed<wbr>Certificate<wbr>Status<wbr>Pending</dt>
+    <dd>PENDING{{% md %}}Certificate is under active attempts to acquire or renew.{{% /md %}}</dd><dt>Managed<wbr>Certificate<wbr>Status<wbr>Failed<wbr>Retrying<wbr>Not<wbr>Visible</dt>
+    <dd>FAILED_RETRYING_NOT_VISIBLE{{% md %}}Most recent renewal failed due to an invalid DNS setup and will be retried. Renewal attempts will continue to fail until the certificate domain's DNS configuration is fixed. The last successfully provisioned certificate may still be serving.{{% /md %}}</dd><dt>Managed<wbr>Certificate<wbr>Status<wbr>Failed<wbr>Permanent</dt>
+    <dd>FAILED_PERMANENT{{% md %}}All renewal attempts have been exhausted, likely due to an invalid DNS setup.{{% /md %}}</dd><dt>Managed<wbr>Certificate<wbr>Status<wbr>Failed<wbr>Retrying<wbr>Caa<wbr>Forbidden</dt>
+    <dd>FAILED_RETRYING_CAA_FORBIDDEN{{% md %}}Most recent renewal failed due to an explicit CAA record that does not include one of the in-use CAs (Google CA and Let's Encrypt). Renewals will continue to fail until the CAA is reconfigured. The last successfully provisioned certificate may still be serving.{{% /md %}}</dd><dt>Managed<wbr>Certificate<wbr>Status<wbr>Failed<wbr>Retrying<wbr>Caa<wbr>Checking</dt>
+    <dd>FAILED_RETRYING_CAA_CHECKING{{% md %}}Most recent renewal failed due to a CAA retrieval failure. This means that the domain's DNS provider does not properly handle CAA records, failing requests for CAA records when no CAA records are defined. Renewals will continue to fail until the DNS provider is changed or a CAA record is added for the given domain. The last successfully provisioned certificate may still be serving.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Management<wbr>Status<wbr>Unspecified</dt>
+    <dd>MANAGEMENT_STATUS_UNSPECIFIED</dd><dt>Ok</dt>
+    <dd>OK{{% md %}}Certificate was successfully obtained and inserted into the serving system.{{% /md %}}</dd><dt>Pending</dt>
+    <dd>PENDING{{% md %}}Certificate is under active attempts to acquire or renew.{{% /md %}}</dd><dt>Failed<wbr>Retrying<wbr>Not<wbr>Visible</dt>
+    <dd>FAILED_RETRYING_NOT_VISIBLE{{% md %}}Most recent renewal failed due to an invalid DNS setup and will be retried. Renewal attempts will continue to fail until the certificate domain's DNS configuration is fixed. The last successfully provisioned certificate may still be serving.{{% /md %}}</dd><dt>Failed<wbr>Permanent</dt>
+    <dd>FAILED_PERMANENT{{% md %}}All renewal attempts have been exhausted, likely due to an invalid DNS setup.{{% /md %}}</dd><dt>Failed<wbr>Retrying<wbr>Caa<wbr>Forbidden</dt>
+    <dd>FAILED_RETRYING_CAA_FORBIDDEN{{% md %}}Most recent renewal failed due to an explicit CAA record that does not include one of the in-use CAs (Google CA and Let's Encrypt). Renewals will continue to fail until the CAA is reconfigured. The last successfully provisioned certificate may still be serving.{{% /md %}}</dd><dt>Failed<wbr>Retrying<wbr>Caa<wbr>Checking</dt>
+    <dd>FAILED_RETRYING_CAA_CHECKING{{% md %}}Most recent renewal failed due to a CAA retrieval failure. This means that the domain's DNS provider does not properly handle CAA records, failing requests for CAA records when no CAA records are defined. Renewals will continue to fail until the DNS provider is changed or a CAA record is added for the given domain. The last successfully provisioned certificate may still be serving.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MANAGEMENT_STATUS_UNSPECIFIED</dt>
+    <dd>MANAGEMENT_STATUS_UNSPECIFIED</dd><dt>OK</dt>
+    <dd>OK{{% md %}}Certificate was successfully obtained and inserted into the serving system.{{% /md %}}</dd><dt>PENDING</dt>
+    <dd>PENDING{{% md %}}Certificate is under active attempts to acquire or renew.{{% /md %}}</dd><dt>FAILED_RETRYING_NOT_VISIBLE</dt>
+    <dd>FAILED_RETRYING_NOT_VISIBLE{{% md %}}Most recent renewal failed due to an invalid DNS setup and will be retried. Renewal attempts will continue to fail until the certificate domain's DNS configuration is fixed. The last successfully provisioned certificate may still be serving.{{% /md %}}</dd><dt>FAILED_PERMANENT</dt>
+    <dd>FAILED_PERMANENT{{% md %}}All renewal attempts have been exhausted, likely due to an invalid DNS setup.{{% /md %}}</dd><dt>FAILED_RETRYING_CAA_FORBIDDEN</dt>
+    <dd>FAILED_RETRYING_CAA_FORBIDDEN{{% md %}}Most recent renewal failed due to an explicit CAA record that does not include one of the in-use CAs (Google CA and Let's Encrypt). Renewals will continue to fail until the CAA is reconfigured. The last successfully provisioned certificate may still be serving.{{% /md %}}</dd><dt>FAILED_RETRYING_CAA_CHECKING</dt>
+    <dd>FAILED_RETRYING_CAA_CHECKING{{% md %}}Most recent renewal failed due to a CAA retrieval failure. This means that the domain's DNS provider does not properly handle CAA records, failing requests for CAA records when no CAA records are defined. Renewals will continue to fail until the DNS provider is changed or a CAA record is added for the given domain. The last successfully provisioned certificate may still be serving.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -1587,170 +1587,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="bucketprojectteam">Bucket<wbr>Project<wbr>Team</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="projectnumber_csharp">
-<a href="#projectnumber_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="team_csharp">
-<a href="#team_csharp" style="color: inherit; text-decoration: inherit;">Team</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="projectnumber_go">
-<a href="#projectnumber_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="team_go">
-<a href="#team_go" style="color: inherit; text-decoration: inherit;">Team</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="projectnumber_nodejs">
-<a href="#projectnumber_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="team_nodejs">
-<a href="#team_nodejs" style="color: inherit; text-decoration: inherit;">team</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="project_number_python">
-<a href="#project_number_python" style="color: inherit; text-decoration: inherit;">project_<wbr>number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="team_python">
-<a href="#team_python" style="color: inherit; text-decoration: inherit;">team</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="bucketprojectteamresponse">Bucket<wbr>Project<wbr>Team<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="projectnumber_csharp">
-<a href="#projectnumber_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="team_csharp">
-<a href="#team_csharp" style="color: inherit; text-decoration: inherit;">Team</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="projectnumber_go">
-<a href="#projectnumber_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="team_go">
-<a href="#team_go" style="color: inherit; text-decoration: inherit;">Team</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="projectnumber_nodejs">
-<a href="#projectnumber_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="team_nodejs">
-<a href="#team_nodejs" style="color: inherit; text-decoration: inherit;">team</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_number_python">
-<a href="#project_number_python" style="color: inherit; text-decoration: inherit;">project_<wbr>number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="team_python">
-<a href="#team_python" style="color: inherit; text-decoration: inherit;">team</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="objectaccesscontrol">Object<wbr>Access<wbr>Control</h4>
 
 {{% choosable language csharp %}}
@@ -1851,7 +1687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteam">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Project<wbr>Team<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1970,7 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteam">Bucket<wbr>Project<wbr>Team</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2089,7 +1925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteam">Bucket<wbr>Project<wbr>Team<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2208,7 +2044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_team_python" style="color: inherit; text-decoration: inherit;">project_<wbr>team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteam">Bucket<wbr>Project<wbr>Team<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2227,6 +2063,170 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The link to this access-control entry.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="objectaccesscontrolprojectteam">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projectnumber_csharp">
+<a href="#projectnumber_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_csharp">
+<a href="#team_csharp" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projectnumber_go">
+<a href="#projectnumber_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_go">
+<a href="#team_go" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projectnumber_nodejs">
+<a href="#projectnumber_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_nodejs">
+<a href="#team_nodejs" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="project_number_python">
+<a href="#project_number_python" style="color: inherit; text-decoration: inherit;">project_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_python">
+<a href="#team_python" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="objectaccesscontrolprojectteamresponse">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projectnumber_csharp">
+<a href="#projectnumber_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_csharp">
+<a href="#team_csharp" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projectnumber_go">
+<a href="#projectnumber_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_go">
+<a href="#team_go" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projectnumber_nodejs">
+<a href="#projectnumber_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_nodejs">
+<a href="#team_nodejs" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="project_number_python">
+<a href="#project_number_python" style="color: inherit; text-decoration: inherit;">project_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_python">
+<a href="#team_python" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="objectaccesscontrolresponse">Object<wbr>Access<wbr>Control<wbr>Response</h4>
@@ -2321,7 +2321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteamresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteamresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2432,7 +2432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteamresponse">Bucket<wbr>Project<wbr>Team<wbr>Response</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteamresponse">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2543,7 +2543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteamresponse">Bucket<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteamresponse">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2654,7 +2654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_team_python" style="color: inherit; text-decoration: inherit;">project_<wbr>team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteamresponse">Bucket<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteamresponse">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">

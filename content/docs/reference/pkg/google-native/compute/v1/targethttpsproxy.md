@@ -36,7 +36,7 @@ Creates a TargetHttpsProxy resource in the specified project using the data incl
                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">proxy_bind</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-                     <span class="nx">quic_override</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">quic_override</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.TargetHttpsProxyQuicOverride]</span> = None<span class="p">,</span>
                      <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -256,7 +256,7 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#quicoverride_csharp" style="color: inherit; text-decoration: inherit;">Quic<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#targethttpsproxyquicoverride">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Target<wbr>Https<wbr>Proxy<wbr>Quic<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}Specifies the QUIC override policy for this TargetHttpsProxy resource. This setting determines whether the load balancer attempts to negotiate QUIC with clients. You can specify NONE, ENABLE, or DISABLE.  
 - When quic-override is set to NONE, Google manages whether QUIC is used. 
@@ -413,7 +413,7 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#quicoverride_go" style="color: inherit; text-decoration: inherit;">Quic<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#targethttpsproxyquicoverride">Target<wbr>Https<wbr>Proxy<wbr>Quic<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}Specifies the QUIC override policy for this TargetHttpsProxy resource. This setting determines whether the load balancer attempts to negotiate QUIC with clients. You can specify NONE, ENABLE, or DISABLE.  
 - When quic-override is set to NONE, Google manages whether QUIC is used. 
@@ -570,7 +570,7 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#quicoverride_nodejs" style="color: inherit; text-decoration: inherit;">quic<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#targethttpsproxyquicoverride">Target<wbr>Https<wbr>Proxy<wbr>Quic<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}Specifies the QUIC override policy for this TargetHttpsProxy resource. This setting determines whether the load balancer attempts to negotiate QUIC with clients. You can specify NONE, ENABLE, or DISABLE.  
 - When quic-override is set to NONE, Google manages whether QUIC is used. 
@@ -727,7 +727,7 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#quic_override_python" style="color: inherit; text-decoration: inherit;">quic_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#targethttpsproxyquicoverride">Target<wbr>Https<wbr>Proxy<wbr>Quic<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}Specifies the QUIC override policy for this TargetHttpsProxy resource. This setting determines whether the load balancer attempts to negotiate QUIC with clients. You can specify NONE, ENABLE, or DISABLE.  
 - When quic-override is set to NONE, Google manages whether QUIC is used. 
@@ -858,6 +858,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="targethttpsproxyquicoverride">Target<wbr>Https<wbr>Proxy<wbr>Quic<wbr>Override</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Disable</dt>
+    <dd>DISABLE</dd><dt>Enable</dt>
+    <dd>ENABLE</dd><dt>None</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Target<wbr>Https<wbr>Proxy<wbr>Quic<wbr>Override<wbr>Disable</dt>
+    <dd>DISABLE</dd><dt>Target<wbr>Https<wbr>Proxy<wbr>Quic<wbr>Override<wbr>Enable</dt>
+    <dd>ENABLE</dd><dt>Target<wbr>Https<wbr>Proxy<wbr>Quic<wbr>Override<wbr>None</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Disable</dt>
+    <dd>DISABLE</dd><dt>Enable</dt>
+    <dd>ENABLE</dd><dt>None</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DISABLE</dt>
+    <dd>DISABLE</dd><dt>ENABLE</dt>
+    <dd>ENABLE</dd><dt>NONE</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

@@ -15,6 +15,12 @@ Explore the resources and functions of the google-native.domains/v1beta1 module.
     <li><a href="registrationiampolicy" title="RegistrationIamPolicy"><span class="symbol resource"></span>RegistrationIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getregistration" title="GetRegistration"><span class="symbol function"></span>GetRegistration</a></li>
+    <li><a href="getregistrationiampolicy" title="GetRegistrationIamPolicy"><span class="symbol function"></span>GetRegistrationIamPolicy</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -22,6 +28,6 @@ Explore the resources and functions of the google-native.domains/v1beta1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

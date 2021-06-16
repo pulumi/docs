@@ -802,7 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networktier_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#accessconfignetworktier">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Access<wbr>Config<wbr>Network<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}This signifies the networking tier used for configuring this access configuration and can only take the following values: PREMIUM, STANDARD.
 
@@ -830,7 +830,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#accessconfigtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Access<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of configuration. The default and only option is ONE_TO_ONE_NAT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -866,7 +866,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#networktier_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#accessconfignetworktier">Access<wbr>Config<wbr>Network<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}This signifies the networking tier used for configuring this access configuration and can only take the following values: PREMIUM, STANDARD.
 
@@ -894,7 +894,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#accessconfigtype">Access<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of configuration. The default and only option is ONE_TO_ONE_NAT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -930,7 +930,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#networktier_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#accessconfignetworktier">Access<wbr>Config<wbr>Network<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}This signifies the networking tier used for configuring this access configuration and can only take the following values: PREMIUM, STANDARD.
 
@@ -958,7 +958,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#accessconfigtype">Access<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of configuration. The default and only option is ONE_TO_ONE_NAT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -994,7 +994,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#network_tier_python" style="color: inherit; text-decoration: inherit;">network_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#accessconfignetworktier">Access<wbr>Config<wbr>Network<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}This signifies the networking tier used for configuring this access configuration and can only take the following values: PREMIUM, STANDARD.
 
@@ -1022,9 +1022,35 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#accessconfigtype">Access<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of configuration. The default and only option is ONE_TO_ONE_NAT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="accessconfignetworktier">Access<wbr>Config<wbr>Network<wbr>Tier</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Premium</dt>
+    <dd>PREMIUM</dd><dt>Standard</dt>
+    <dd>STANDARD</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Access<wbr>Config<wbr>Network<wbr>Tier<wbr>Premium</dt>
+    <dd>PREMIUM</dd><dt>Access<wbr>Config<wbr>Network<wbr>Tier<wbr>Standard</dt>
+    <dd>STANDARD</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Premium</dt>
+    <dd>PREMIUM</dd><dt>Standard</dt>
+    <dd>STANDARD</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PREMIUM</dt>
+    <dd>PREMIUM</dd><dt>STANDARD</dt>
+    <dd>STANDARD</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accessconfigresponse">Access<wbr>Config<wbr>Response</h4>
@@ -1283,6 +1309,28 @@ If an AccessConfig with a valid external IP address is specified, it must match 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of configuration. The default and only option is ONE_TO_ONE_NAT.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="accessconfigtype">Access<wbr>Config<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>One<wbr>To<wbr>One<wbr>Nat</dt>
+    <dd>ONE_TO_ONE_NAT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Access<wbr>Config<wbr>Type<wbr>One<wbr>To<wbr>One<wbr>Nat</dt>
+    <dd>ONE_TO_ONE_NAT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>One<wbr>To<wbr>One<wbr>Nat</dt>
+    <dd>ONE_TO_ONE_NAT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ONE_TO_ONE_NAT</dt>
+    <dd>ONE_TO_ONE_NAT</dd></dl>
 {{% /choosable %}}
 
 <h4 id="advancedmachinefeatures">Advanced<wbr>Machine<wbr>Features</h4>
@@ -1698,7 +1746,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#attacheddiskinterface">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Attached<wbr>Disk<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1722,7 +1770,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#attacheddiskmode">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Attached<wbr>Disk<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1750,7 +1798,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#attacheddisktype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Attached<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1838,7 +1886,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#attacheddiskinterface">Attached<wbr>Disk<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1862,7 +1910,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#attacheddiskmode">Attached<wbr>Disk<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1890,7 +1938,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#attacheddisktype">Attached<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1978,7 +2026,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#attacheddiskinterface">Attached<wbr>Disk<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2002,7 +2050,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#attacheddiskmode">Attached<wbr>Disk<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2030,7 +2078,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#attacheddisktype">Attached<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2118,7 +2166,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#attacheddiskinterface">Attached<wbr>Disk<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2142,7 +2190,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#attacheddiskmode">Attached<wbr>Disk<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2170,7 +2218,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#attacheddisktype">Attached<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2231,7 +2279,7 @@ Other values include pd-ssd and local-ssd. If you define this field, you can pro
 <a href="#onupdateaction_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Update<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#attacheddiskinitializeparamsonupdateaction">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Attached<wbr>Disk<wbr>Initialize<wbr>Params<wbr>On<wbr>Update<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies which action to take on instance update with this disk. Default is to use the existing disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2364,7 +2412,7 @@ Other values include pd-ssd and local-ssd. If you define this field, you can pro
 <a href="#onupdateaction_go" style="color: inherit; text-decoration: inherit;">On<wbr>Update<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#attacheddiskinitializeparamsonupdateaction">Attached<wbr>Disk<wbr>Initialize<wbr>Params<wbr>On<wbr>Update<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies which action to take on instance update with this disk. Default is to use the existing disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2497,7 +2545,7 @@ Other values include pd-ssd and local-ssd. If you define this field, you can pro
 <a href="#onupdateaction_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Update<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#attacheddiskinitializeparamsonupdateaction">Attached<wbr>Disk<wbr>Initialize<wbr>Params<wbr>On<wbr>Update<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies which action to take on instance update with this disk. Default is to use the existing disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2630,7 +2678,7 @@ Other values include pd-ssd and local-ssd. If you define this field, you can pro
 <a href="#on_update_action_python" style="color: inherit; text-decoration: inherit;">on_<wbr>update_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#attacheddiskinitializeparamsonupdateaction">Attached<wbr>Disk<wbr>Initialize<wbr>Params<wbr>On<wbr>Update<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies which action to take on instance update with this disk. Default is to use the existing disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2707,6 +2755,36 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
         <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="attacheddiskinitializeparamsonupdateaction">Attached<wbr>Disk<wbr>Initialize<wbr>Params<wbr>On<wbr>Update<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Recreate<wbr>Disk</dt>
+    <dd>RECREATE_DISK</dd><dt>Recreate<wbr>Disk<wbr>If<wbr>Source<wbr>Changed</dt>
+    <dd>RECREATE_DISK_IF_SOURCE_CHANGED</dd><dt>Use<wbr>Existing<wbr>Disk</dt>
+    <dd>USE_EXISTING_DISK</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Attached<wbr>Disk<wbr>Initialize<wbr>Params<wbr>On<wbr>Update<wbr>Action<wbr>Recreate<wbr>Disk</dt>
+    <dd>RECREATE_DISK</dd><dt>Attached<wbr>Disk<wbr>Initialize<wbr>Params<wbr>On<wbr>Update<wbr>Action<wbr>Recreate<wbr>Disk<wbr>If<wbr>Source<wbr>Changed</dt>
+    <dd>RECREATE_DISK_IF_SOURCE_CHANGED</dd><dt>Attached<wbr>Disk<wbr>Initialize<wbr>Params<wbr>On<wbr>Update<wbr>Action<wbr>Use<wbr>Existing<wbr>Disk</dt>
+    <dd>USE_EXISTING_DISK</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Recreate<wbr>Disk</dt>
+    <dd>RECREATE_DISK</dd><dt>Recreate<wbr>Disk<wbr>If<wbr>Source<wbr>Changed</dt>
+    <dd>RECREATE_DISK_IF_SOURCE_CHANGED</dd><dt>Use<wbr>Existing<wbr>Disk</dt>
+    <dd>USE_EXISTING_DISK</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RECREATE_DISK</dt>
+    <dd>RECREATE_DISK</dd><dt>RECREATE_DISK_IF_SOURCE_CHANGED</dt>
+    <dd>RECREATE_DISK_IF_SOURCE_CHANGED</dd><dt>USE_EXISTING_DISK</dt>
+    <dd>USE_EXISTING_DISK</dd></dl>
 {{% /choosable %}}
 
 <h4 id="attacheddiskinitializeparamsresponse">Attached<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Response</h4>
@@ -3241,6 +3319,58 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
         <span class="property-type"><a href="#customerencryptionkeyresponse">Customer<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="attacheddiskinterface">Attached<wbr>Disk<wbr>Interface</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Nvme</dt>
+    <dd>NVME</dd><dt>Scsi</dt>
+    <dd>SCSI</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Attached<wbr>Disk<wbr>Interface<wbr>Nvme</dt>
+    <dd>NVME</dd><dt>Attached<wbr>Disk<wbr>Interface<wbr>Scsi</dt>
+    <dd>SCSI</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Nvme</dt>
+    <dd>NVME</dd><dt>Scsi</dt>
+    <dd>SCSI</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NVME</dt>
+    <dd>NVME</dd><dt>SCSI</dt>
+    <dd>SCSI</dd></dl>
+{{% /choosable %}}
+
+<h4 id="attacheddiskmode">Attached<wbr>Disk<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Read<wbr>Only</dt>
+    <dd>READ_ONLY</dd><dt>Read<wbr>Write</dt>
+    <dd>READ_WRITE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Attached<wbr>Disk<wbr>Mode<wbr>Read<wbr>Only</dt>
+    <dd>READ_ONLY</dd><dt>Attached<wbr>Disk<wbr>Mode<wbr>Read<wbr>Write</dt>
+    <dd>READ_WRITE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Read<wbr>Only</dt>
+    <dd>READ_ONLY</dd><dt>Read<wbr>Write</dt>
+    <dd>READ_WRITE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>READ_ONLY</dt>
+    <dd>READ_ONLY</dd><dt>READ_WRITE</dt>
+    <dd>READ_WRITE</dd></dl>
 {{% /choosable %}}
 
 <h4 id="attacheddiskresponse">Attached<wbr>Disk<wbr>Response</h4>
@@ -3805,6 +3935,32 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
     <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="attacheddisktype">Attached<wbr>Disk<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Persistent</dt>
+    <dd>PERSISTENT</dd><dt>Scratch</dt>
+    <dd>SCRATCH</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Attached<wbr>Disk<wbr>Type<wbr>Persistent</dt>
+    <dd>PERSISTENT</dd><dt>Attached<wbr>Disk<wbr>Type<wbr>Scratch</dt>
+    <dd>SCRATCH</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Persistent</dt>
+    <dd>PERSISTENT</dd><dt>Scratch</dt>
+    <dd>SCRATCH</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PERSISTENT</dt>
+    <dd>PERSISTENT</dd><dt>SCRATCH</dt>
+    <dd>SCRATCH</dd></dl>
+{{% /choosable %}}
+
 <h4 id="confidentialinstanceconfig">Confidential<wbr>Instance<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -4230,7 +4386,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#instantiatefrom_csharp" style="color: inherit; text-decoration: inherit;">Instantiate<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#diskinstantiationconfiginstantiatefrom">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Disk<wbr>Instantiation<wbr>Config<wbr>Instantiate<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to include the disk and what image to use. Possible values are:  
 - source-image: to use the same image that was used to create the source instance's corresponding disk. Applicable to the boot disk and additional read-write disks. 
@@ -4271,7 +4427,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#instantiatefrom_go" style="color: inherit; text-decoration: inherit;">Instantiate<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#diskinstantiationconfiginstantiatefrom">Disk<wbr>Instantiation<wbr>Config<wbr>Instantiate<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to include the disk and what image to use. Possible values are:  
 - source-image: to use the same image that was used to create the source instance's corresponding disk. Applicable to the boot disk and additional read-write disks. 
@@ -4312,7 +4468,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#instantiatefrom_nodejs" style="color: inherit; text-decoration: inherit;">instantiate<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#diskinstantiationconfiginstantiatefrom">Disk<wbr>Instantiation<wbr>Config<wbr>Instantiate<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to include the disk and what image to use. Possible values are:  
 - source-image: to use the same image that was used to create the source instance's corresponding disk. Applicable to the boot disk and additional read-write disks. 
@@ -4353,7 +4509,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#instantiate_from_python" style="color: inherit; text-decoration: inherit;">instantiate_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#diskinstantiationconfiginstantiatefrom">Disk<wbr>Instantiation<wbr>Config<wbr>Instantiate<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to include the disk and what image to use. Possible values are:  
 - source-image: to use the same image that was used to create the source instance's corresponding disk. Applicable to the boot disk and additional read-write disks. 
@@ -4361,6 +4517,52 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 - custom-image: to use a user-provided image url for disk creation. Applicable to the boot disk and additional read-write disks. 
 - attach-read-only: to attach a read-only disk. Applicable to read-only disks. 
 - do-not-include: to exclude a disk from the template. Applicable to additional read-write disks, local SSDs, and read-only disks.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="diskinstantiationconfiginstantiatefrom">Disk<wbr>Instantiation<wbr>Config<wbr>Instantiate<wbr>From</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Attach<wbr>Read<wbr>Only</dt>
+    <dd>ATTACH_READ_ONLY</dd><dt>Blank</dt>
+    <dd>BLANK</dd><dt>Custom<wbr>Image</dt>
+    <dd>CUSTOM_IMAGE</dd><dt>Default</dt>
+    <dd>DEFAULT</dd><dt>Do<wbr>Not<wbr>Include</dt>
+    <dd>DO_NOT_INCLUDE</dd><dt>Source<wbr>Image</dt>
+    <dd>SOURCE_IMAGE</dd><dt>Source<wbr>Image<wbr>Family</dt>
+    <dd>SOURCE_IMAGE_FAMILY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Disk<wbr>Instantiation<wbr>Config<wbr>Instantiate<wbr>From<wbr>Attach<wbr>Read<wbr>Only</dt>
+    <dd>ATTACH_READ_ONLY</dd><dt>Disk<wbr>Instantiation<wbr>Config<wbr>Instantiate<wbr>From<wbr>Blank</dt>
+    <dd>BLANK</dd><dt>Disk<wbr>Instantiation<wbr>Config<wbr>Instantiate<wbr>From<wbr>Custom<wbr>Image</dt>
+    <dd>CUSTOM_IMAGE</dd><dt>Disk<wbr>Instantiation<wbr>Config<wbr>Instantiate<wbr>From<wbr>Default</dt>
+    <dd>DEFAULT</dd><dt>Disk<wbr>Instantiation<wbr>Config<wbr>Instantiate<wbr>From<wbr>Do<wbr>Not<wbr>Include</dt>
+    <dd>DO_NOT_INCLUDE</dd><dt>Disk<wbr>Instantiation<wbr>Config<wbr>Instantiate<wbr>From<wbr>Source<wbr>Image</dt>
+    <dd>SOURCE_IMAGE</dd><dt>Disk<wbr>Instantiation<wbr>Config<wbr>Instantiate<wbr>From<wbr>Source<wbr>Image<wbr>Family</dt>
+    <dd>SOURCE_IMAGE_FAMILY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Attach<wbr>Read<wbr>Only</dt>
+    <dd>ATTACH_READ_ONLY</dd><dt>Blank</dt>
+    <dd>BLANK</dd><dt>Custom<wbr>Image</dt>
+    <dd>CUSTOM_IMAGE</dd><dt>Default</dt>
+    <dd>DEFAULT</dd><dt>Do<wbr>Not<wbr>Include</dt>
+    <dd>DO_NOT_INCLUDE</dd><dt>Source<wbr>Image</dt>
+    <dd>SOURCE_IMAGE</dd><dt>Source<wbr>Image<wbr>Family</dt>
+    <dd>SOURCE_IMAGE_FAMILY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ATTACH_READ_ONLY</dt>
+    <dd>ATTACH_READ_ONLY</dd><dt>BLANK</dt>
+    <dd>BLANK</dd><dt>CUSTOM_IMAGE</dt>
+    <dd>CUSTOM_IMAGE</dd><dt>DEFAULT</dt>
+    <dd>DEFAULT</dd><dt>DO_NOT_INCLUDE</dt>
+    <dd>DO_NOT_INCLUDE</dd><dt>SOURCE_IMAGE</dt>
+    <dd>SOURCE_IMAGE</dd><dt>SOURCE_IMAGE_FAMILY</dt>
+    <dd>SOURCE_IMAGE_FAMILY</dd></dl>
 {{% /choosable %}}
 
 <h4 id="diskinstantiationconfigresponse">Disk<wbr>Instantiation<wbr>Config<wbr>Response</h4>
@@ -4546,7 +4748,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#filetype_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#filecontentbufferfiletype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>File<wbr>Content<wbr>Buffer<wbr>File<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The file type of source file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4566,7 +4768,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#filetype_go" style="color: inherit; text-decoration: inherit;">File<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#filecontentbufferfiletype">File<wbr>Content<wbr>Buffer<wbr>File<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The file type of source file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4586,7 +4788,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#filetype_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#filecontentbufferfiletype">File<wbr>Content<wbr>Buffer<wbr>File<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The file type of source file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4606,9 +4808,39 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#file_type_python" style="color: inherit; text-decoration: inherit;">file_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#filecontentbufferfiletype">File<wbr>Content<wbr>Buffer<wbr>File<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The file type of source file.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="filecontentbufferfiletype">File<wbr>Content<wbr>Buffer<wbr>File<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Bin</dt>
+    <dd>BIN</dd><dt>Undefined</dt>
+    <dd>UNDEFINED</dd><dt>X509</dt>
+    <dd>X509</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>File<wbr>Content<wbr>Buffer<wbr>File<wbr>Type<wbr>Bin</dt>
+    <dd>BIN</dd><dt>File<wbr>Content<wbr>Buffer<wbr>File<wbr>Type<wbr>Undefined</dt>
+    <dd>UNDEFINED</dd><dt>File<wbr>Content<wbr>Buffer<wbr>File<wbr>Type<wbr>X509</dt>
+    <dd>X509</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Bin</dt>
+    <dd>BIN</dd><dt>Undefined</dt>
+    <dd>UNDEFINED</dd><dt>X509</dt>
+    <dd>X509</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>BIN</dt>
+    <dd>BIN</dd><dt>UNDEFINED</dt>
+    <dd>UNDEFINED</dd><dt>X509</dt>
+    <dd>X509</dd></dl>
 {{% /choosable %}}
 
 <h4 id="filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response</h4>
@@ -4702,7 +4934,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4714,7 +4946,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4726,7 +4958,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4738,7 +4970,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4791,6 +5023,56 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Feature<wbr>Type<wbr>Unspecified</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>Gvnic</dt>
+    <dd>GVNIC</dd><dt>Multi<wbr>Ip<wbr>Subnet</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>Secure<wbr>Boot</dt>
+    <dd>SECURE_BOOT</dd><dt>Sev<wbr>Capable</dt>
+    <dd>SEV_CAPABLE</dd><dt>Uefi<wbr>Compatible</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>Virtio<wbr>Scsi<wbr>Multiqueue</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>Windows</dt>
+    <dd>WINDOWS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Feature<wbr>Type<wbr>Unspecified</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Gvnic</dt>
+    <dd>GVNIC</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Multi<wbr>Ip<wbr>Subnet</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Secure<wbr>Boot</dt>
+    <dd>SECURE_BOOT</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Sev<wbr>Capable</dt>
+    <dd>SEV_CAPABLE</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Uefi<wbr>Compatible</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Virtio<wbr>Scsi<wbr>Multiqueue</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Windows</dt>
+    <dd>WINDOWS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Feature<wbr>Type<wbr>Unspecified</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>Gvnic</dt>
+    <dd>GVNIC</dd><dt>Multi<wbr>Ip<wbr>Subnet</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>Secure<wbr>Boot</dt>
+    <dd>SECURE_BOOT</dd><dt>Sev<wbr>Capable</dt>
+    <dd>SEV_CAPABLE</dd><dt>Uefi<wbr>Compatible</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>Virtio<wbr>Scsi<wbr>Multiqueue</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>Windows</dt>
+    <dd>WINDOWS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FEATURE_TYPE_UNSPECIFIED</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>GVNIC</dt>
+    <dd>GVNIC</dd><dt>MULTI_IP_SUBNET</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>SECURE_BOOT</dt>
+    <dd>SECURE_BOOT</dd><dt>SEV_CAPABLE</dt>
+    <dd>SEV_CAPABLE</dd><dt>UEFI_COMPATIBLE</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>VIRTIO_SCSI_MULTIQUEUE</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>WINDOWS</dt>
+    <dd>WINDOWS</dd></dl>
 {{% /choosable %}}
 
 <h4 id="initialstateconfig">Initial<wbr>State<wbr>Config</h4>
@@ -5085,170 +5367,6 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
     <dd>{{% md %}}The Platform Key (PK).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="instanceitemsitem">Instance<wbr>Items<wbr>Item</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="instanceitemsitemresponse">Instance<wbr>Items<wbr>Item<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="instanceproperties">Instance<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
@@ -5346,7 +5464,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#postkeyrevocationactiontype_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Key<wbr>Revocation<wbr>Action<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancepropertiespostkeyrevocationactiontype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Instance<wbr>Properties<wbr>Post<wbr>Key<wbr>Revocation<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}PostKeyRevocationActionType of the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5354,7 +5472,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#privateipv6googleaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancepropertiesprivateipv6googleaccess">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Instance<wbr>Properties<wbr>Private<wbr>Ipv6Google<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for VMs. If not specified, use  INHERIT_FROM_SUBNETWORK as default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5502,7 +5620,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#postkeyrevocationactiontype_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Key<wbr>Revocation<wbr>Action<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancepropertiespostkeyrevocationactiontype">Instance<wbr>Properties<wbr>Post<wbr>Key<wbr>Revocation<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}PostKeyRevocationActionType of the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5510,7 +5628,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#privateipv6googleaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancepropertiesprivateipv6googleaccess">Instance<wbr>Properties<wbr>Private<wbr>Ipv6Google<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for VMs. If not specified, use  INHERIT_FROM_SUBNETWORK as default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5658,7 +5776,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#postkeyrevocationactiontype_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Key<wbr>Revocation<wbr>Action<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancepropertiespostkeyrevocationactiontype">Instance<wbr>Properties<wbr>Post<wbr>Key<wbr>Revocation<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}PostKeyRevocationActionType of the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5666,7 +5784,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#privateipv6googleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv6Google<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancepropertiesprivateipv6googleaccess">Instance<wbr>Properties<wbr>Private<wbr>Ipv6Google<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for VMs. If not specified, use  INHERIT_FROM_SUBNETWORK as default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5814,7 +5932,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#post_key_revocation_action_type_python" style="color: inherit; text-decoration: inherit;">post_<wbr>key_<wbr>revocation_<wbr>action_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancepropertiespostkeyrevocationactiontype">Instance<wbr>Properties<wbr>Post<wbr>Key<wbr>Revocation<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}PostKeyRevocationActionType of the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5822,7 +5940,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#private_ipv6_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv6_<wbr>google_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancepropertiesprivateipv6googleaccess">Instance<wbr>Properties<wbr>Private<wbr>Ipv6Google<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for VMs. If not specified, use  INHERIT_FROM_SUBNETWORK as default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5873,6 +5991,66 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
         <span class="property-type"><a href="#tags">Tags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to apply to the instances that are created from these properties. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancepropertiespostkeyrevocationactiontype">Instance<wbr>Properties<wbr>Post<wbr>Key<wbr>Revocation<wbr>Action<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Noop</dt>
+    <dd>NOOP</dd><dt>Post<wbr>Key<wbr>Revocation<wbr>Action<wbr>Type<wbr>Unspecified</dt>
+    <dd>POST_KEY_REVOCATION_ACTION_TYPE_UNSPECIFIED</dd><dt>Shutdown</dt>
+    <dd>SHUTDOWN</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Properties<wbr>Post<wbr>Key<wbr>Revocation<wbr>Action<wbr>Type<wbr>Noop</dt>
+    <dd>NOOP</dd><dt>Instance<wbr>Properties<wbr>Post<wbr>Key<wbr>Revocation<wbr>Action<wbr>Type<wbr>Post<wbr>Key<wbr>Revocation<wbr>Action<wbr>Type<wbr>Unspecified</dt>
+    <dd>POST_KEY_REVOCATION_ACTION_TYPE_UNSPECIFIED</dd><dt>Instance<wbr>Properties<wbr>Post<wbr>Key<wbr>Revocation<wbr>Action<wbr>Type<wbr>Shutdown</dt>
+    <dd>SHUTDOWN</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Noop</dt>
+    <dd>NOOP</dd><dt>Post<wbr>Key<wbr>Revocation<wbr>Action<wbr>Type<wbr>Unspecified</dt>
+    <dd>POST_KEY_REVOCATION_ACTION_TYPE_UNSPECIFIED</dd><dt>Shutdown</dt>
+    <dd>SHUTDOWN</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NOOP</dt>
+    <dd>NOOP</dd><dt>POST_KEY_REVOCATION_ACTION_TYPE_UNSPECIFIED</dt>
+    <dd>POST_KEY_REVOCATION_ACTION_TYPE_UNSPECIFIED</dd><dt>SHUTDOWN</dt>
+    <dd>SHUTDOWN</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancepropertiesprivateipv6googleaccess">Instance<wbr>Properties<wbr>Private<wbr>Ipv6Google<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Enable<wbr>Bidirectional<wbr>Access<wbr>To<wbr>Google</dt>
+    <dd>ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE</dd><dt>Enable<wbr>Outbound<wbr>Vm<wbr>Access<wbr>To<wbr>Google</dt>
+    <dd>ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE</dd><dt>Inherit<wbr>From<wbr>Subnetwork</dt>
+    <dd>INHERIT_FROM_SUBNETWORK</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Properties<wbr>Private<wbr>Ipv6Google<wbr>Access<wbr>Enable<wbr>Bidirectional<wbr>Access<wbr>To<wbr>Google</dt>
+    <dd>ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE</dd><dt>Instance<wbr>Properties<wbr>Private<wbr>Ipv6Google<wbr>Access<wbr>Enable<wbr>Outbound<wbr>Vm<wbr>Access<wbr>To<wbr>Google</dt>
+    <dd>ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE</dd><dt>Instance<wbr>Properties<wbr>Private<wbr>Ipv6Google<wbr>Access<wbr>Inherit<wbr>From<wbr>Subnetwork</dt>
+    <dd>INHERIT_FROM_SUBNETWORK</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Enable<wbr>Bidirectional<wbr>Access<wbr>To<wbr>Google</dt>
+    <dd>ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE</dd><dt>Enable<wbr>Outbound<wbr>Vm<wbr>Access<wbr>To<wbr>Google</dt>
+    <dd>ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE</dd><dt>Inherit<wbr>From<wbr>Subnetwork</dt>
+    <dd>INHERIT_FROM_SUBNETWORK</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE</dt>
+    <dd>ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE</dd><dt>ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE</dt>
+    <dd>ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE</dd><dt>INHERIT_FROM_SUBNETWORK</dt>
+    <dd>INHERIT_FROM_SUBNETWORK</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancepropertiesresponse">Instance<wbr>Properties<wbr>Response</h4>
@@ -6520,7 +6698,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceitemsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Inputs.<wbr>Instance<wbr>Items<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metadataitemsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Inputs.<wbr>Metadata<wbr>Items<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6550,7 +6728,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceitemsitem">[]Instance<wbr>Items<wbr>Item</a></span>
+        <span class="property-type"><a href="#metadataitemsitem">[]Metadata<wbr>Items<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6580,7 +6758,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceitemsitem">Instance<wbr>Items<wbr>Item<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metadataitemsitem">Metadata<wbr>Items<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6610,7 +6788,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceitemsitem">Instance<wbr>Items<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metadataitemsitem">Metadata<wbr>Items<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6621,6 +6799,170 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#metadata for metadata.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="metadataitemsitem">Metadata<wbr>Items<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="metadataitemsitemresponse">Metadata<wbr>Items<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metadataresponse">Metadata<wbr>Response</h4>
@@ -6642,7 +6984,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceitemsitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Inputs.<wbr>Instance<wbr>Items<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metadataitemsitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Inputs.<wbr>Metadata<wbr>Items<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6672,7 +7014,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceitemsitemresponse">[]Instance<wbr>Items<wbr>Item<wbr>Response</a></span>
+        <span class="property-type"><a href="#metadataitemsitemresponse">[]Metadata<wbr>Items<wbr>Item<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6702,7 +7044,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceitemsitemresponse">Instance<wbr>Items<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metadataitemsitemresponse">Metadata<wbr>Items<wbr>Item<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6732,7 +7074,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceitemsitemresponse">Instance<wbr>Items<wbr>Item<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metadataitemsitemresponse">Metadata<wbr>Items<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6823,7 +7165,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#networkinterfacenictype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Network<wbr>Interface<wbr>Nic<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6914,7 +7256,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#networkinterfacenictype">Network<wbr>Interface<wbr>Nic<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7005,7 +7347,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#networkinterfacenictype">Network<wbr>Interface<wbr>Nic<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7096,7 +7438,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#networkinterfacenictype">Network<wbr>Interface<wbr>Nic<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7109,6 +7451,36 @@ If you specify this property, you can specify the network as a full or partial U
     <dd>{{% md %}}The URL of the Subnetwork resource for this instance. If the network resource is in legacy mode, do not specify this field. If the network is in auto subnet mode, specifying the subnetwork is optional. If the network is in custom subnet mode, specifying the subnetwork is required. If you specify this field, you can specify the subnetwork as a full or partial URL. For example, the following are all valid URLs:  
 - https://www.googleapis.com/compute/v1/projects/project/regions/region/subnetworks/subnetwork 
 - regions/region/subnetworks/subnetwork{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="networkinterfacenictype">Network<wbr>Interface<wbr>Nic<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Gvnic</dt>
+    <dd>GVNIC</dd><dt>Unspecified<wbr>Nic<wbr>Type</dt>
+    <dd>UNSPECIFIED_NIC_TYPE</dd><dt>Virtio<wbr>Net</dt>
+    <dd>VIRTIO_NET</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Network<wbr>Interface<wbr>Nic<wbr>Type<wbr>Gvnic</dt>
+    <dd>GVNIC</dd><dt>Network<wbr>Interface<wbr>Nic<wbr>Type<wbr>Unspecified<wbr>Nic<wbr>Type</dt>
+    <dd>UNSPECIFIED_NIC_TYPE</dd><dt>Network<wbr>Interface<wbr>Nic<wbr>Type<wbr>Virtio<wbr>Net</dt>
+    <dd>VIRTIO_NET</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Gvnic</dt>
+    <dd>GVNIC</dd><dt>Unspecified<wbr>Nic<wbr>Type</dt>
+    <dd>UNSPECIFIED_NIC_TYPE</dd><dt>Virtio<wbr>Net</dt>
+    <dd>VIRTIO_NET</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>GVNIC</dt>
+    <dd>GVNIC</dd><dt>UNSPECIFIED_NIC_TYPE</dt>
+    <dd>UNSPECIFIED_NIC_TYPE</dd><dt>VIRTIO_NET</dt>
+    <dd>VIRTIO_NET</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkinterfaceresponse">Network<wbr>Interface<wbr>Response</h4>
@@ -7486,7 +7858,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#consumereservationtype_csharp" style="color: inherit; text-decoration: inherit;">Consume<wbr>Reservation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#reservationaffinityconsumereservationtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of reservation from which this instance can consume resources: ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See  Consuming reserved instances for examples.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7514,7 +7886,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#consumereservationtype_go" style="color: inherit; text-decoration: inherit;">Consume<wbr>Reservation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#reservationaffinityconsumereservationtype">Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of reservation from which this instance can consume resources: ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See  Consuming reserved instances for examples.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7542,7 +7914,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#consumereservationtype_nodejs" style="color: inherit; text-decoration: inherit;">consume<wbr>Reservation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#reservationaffinityconsumereservationtype">Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of reservation from which this instance can consume resources: ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See  Consuming reserved instances for examples.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7570,7 +7942,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#consume_reservation_type_python" style="color: inherit; text-decoration: inherit;">consume_<wbr>reservation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#reservationaffinityconsumereservationtype">Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of reservation from which this instance can consume resources: ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See  Consuming reserved instances for examples.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7589,6 +7961,40 @@ If you specify this property, you can specify the network as a full or partial U
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label values of a reservation resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="reservationaffinityconsumereservationtype">Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Any<wbr>Reservation</dt>
+    <dd>ANY_RESERVATION</dd><dt>No<wbr>Reservation</dt>
+    <dd>NO_RESERVATION</dd><dt>Specific<wbr>Reservation</dt>
+    <dd>SPECIFIC_RESERVATION</dd><dt>Unspecified</dt>
+    <dd>UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type<wbr>Any<wbr>Reservation</dt>
+    <dd>ANY_RESERVATION</dd><dt>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type<wbr>No<wbr>Reservation</dt>
+    <dd>NO_RESERVATION</dd><dt>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type<wbr>Specific<wbr>Reservation</dt>
+    <dd>SPECIFIC_RESERVATION</dd><dt>Reservation<wbr>Affinity<wbr>Consume<wbr>Reservation<wbr>Type<wbr>Unspecified</dt>
+    <dd>UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Any<wbr>Reservation</dt>
+    <dd>ANY_RESERVATION</dd><dt>No<wbr>Reservation</dt>
+    <dd>NO_RESERVATION</dd><dt>Specific<wbr>Reservation</dt>
+    <dd>SPECIFIC_RESERVATION</dd><dt>Unspecified</dt>
+    <dd>UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ANY_RESERVATION</dt>
+    <dd>ANY_RESERVATION</dd><dt>NO_RESERVATION</dt>
+    <dd>NO_RESERVATION</dd><dt>SPECIFIC_RESERVATION</dt>
+    <dd>SPECIFIC_RESERVATION</dd><dt>UNSPECIFIED</dt>
+    <dd>UNSPECIFIED</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reservationaffinityresponse">Reservation<wbr>Affinity<wbr>Response</h4>
@@ -7748,7 +8154,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#onhostmaintenance_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Host<wbr>Maintenance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schedulingonhostmaintenance">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Scheduling<wbr>On<wbr>Host<wbr>Maintenance</a></span>
     </dt>
     <dd>{{% md %}}Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Setting Instance Scheduling Options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7802,7 +8208,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#onhostmaintenance_go" style="color: inherit; text-decoration: inherit;">On<wbr>Host<wbr>Maintenance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schedulingonhostmaintenance">Scheduling<wbr>On<wbr>Host<wbr>Maintenance</a></span>
     </dt>
     <dd>{{% md %}}Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Setting Instance Scheduling Options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7856,7 +8262,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#onhostmaintenance_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Host<wbr>Maintenance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schedulingonhostmaintenance">Scheduling<wbr>On<wbr>Host<wbr>Maintenance</a></span>
     </dt>
     <dd>{{% md %}}Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Setting Instance Scheduling Options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7910,7 +8316,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#on_host_maintenance_python" style="color: inherit; text-decoration: inherit;">on_<wbr>host_<wbr>maintenance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#schedulingonhostmaintenance">Scheduling<wbr>On<wbr>Host<wbr>Maintenance</a></span>
     </dt>
     <dd>{{% md %}}Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Setting Instance Scheduling Options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7940,7 +8346,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schedulingnodeaffinityoperator">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7968,7 +8374,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schedulingnodeaffinityoperator">Scheduling<wbr>Node<wbr>Affinity<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7996,7 +8402,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schedulingnodeaffinityoperator">Scheduling<wbr>Node<wbr>Affinity<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8024,7 +8430,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#schedulingnodeaffinityoperator">Scheduling<wbr>Node<wbr>Affinity<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8035,6 +8441,36 @@ By default, this is set to true so an instance is automatically restarted if it 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label values of Node resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="schedulingnodeaffinityoperator">Scheduling<wbr>Node<wbr>Affinity<wbr>Operator</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>In</dt>
+    <dd>IN</dd><dt>Not<wbr>In</dt>
+    <dd>NOT_IN</dd><dt>Operator<wbr>Unspecified</dt>
+    <dd>OPERATOR_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Scheduling<wbr>Node<wbr>Affinity<wbr>Operator<wbr>In</dt>
+    <dd>IN</dd><dt>Scheduling<wbr>Node<wbr>Affinity<wbr>Operator<wbr>Not<wbr>In</dt>
+    <dd>NOT_IN</dd><dt>Scheduling<wbr>Node<wbr>Affinity<wbr>Operator<wbr>Operator<wbr>Unspecified</dt>
+    <dd>OPERATOR_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>In</dt>
+    <dd>IN</dd><dt>Not<wbr>In</dt>
+    <dd>NOT_IN</dd><dt>Operator<wbr>Unspecified</dt>
+    <dd>OPERATOR_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>IN_</dt>
+    <dd>IN</dd><dt>NOT_IN</dt>
+    <dd>NOT_IN</dd><dt>OPERATOR_UNSPECIFIED</dt>
+    <dd>OPERATOR_UNSPECIFIED</dd></dl>
 {{% /choosable %}}
 
 <h4 id="schedulingnodeaffinityresponse">Scheduling<wbr>Node<wbr>Affinity<wbr>Response</h4>
@@ -8149,6 +8585,32 @@ By default, this is set to true so an instance is automatically restarted if it 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label values of Node resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="schedulingonhostmaintenance">Scheduling<wbr>On<wbr>Host<wbr>Maintenance</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Migrate</dt>
+    <dd>MIGRATE</dd><dt>Terminate</dt>
+    <dd>TERMINATE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Scheduling<wbr>On<wbr>Host<wbr>Maintenance<wbr>Migrate</dt>
+    <dd>MIGRATE</dd><dt>Scheduling<wbr>On<wbr>Host<wbr>Maintenance<wbr>Terminate</dt>
+    <dd>TERMINATE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Migrate</dt>
+    <dd>MIGRATE</dd><dt>Terminate</dt>
+    <dd>TERMINATE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MIGRATE</dt>
+    <dd>MIGRATE</dd><dt>TERMINATE</dt>
+    <dd>TERMINATE</dd></dl>
 {{% /choosable %}}
 
 <h4 id="schedulingresponse">Scheduling<wbr>Response</h4>

@@ -29,7 +29,7 @@ Creates a session entity type.
                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                       <span class="nx">agent_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">entities</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dialogflow_v3beta1.GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">entity_override_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">entity_override_mode</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v3beta1.SessionEntityTypeEntityOverrideMode]</span> = None<span class="p">,</span>
                       <span class="nx">environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -216,7 +216,7 @@ The SessionEntityType resource accepts the following [input]({{< relref "/docs/i
 <a href="#entityoverridemode_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Override<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sessionentitytypeentityoverridemode">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3Beta1.<wbr>Session<wbr>Entity<wbr>Type<wbr>Entity<wbr>Override<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Required. Indicates whether the additional data should override or supplement the custom entity type definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -284,7 +284,7 @@ The SessionEntityType resource accepts the following [input]({{< relref "/docs/i
 <a href="#entityoverridemode_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Override<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sessionentitytypeentityoverridemode">Session<wbr>Entity<wbr>Type<wbr>Entity<wbr>Override<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Required. Indicates whether the additional data should override or supplement the custom entity type definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -352,7 +352,7 @@ The SessionEntityType resource accepts the following [input]({{< relref "/docs/i
 <a href="#entityoverridemode_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Override<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sessionentitytypeentityoverridemode">Session<wbr>Entity<wbr>Type<wbr>Entity<wbr>Override<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Required. Indicates whether the additional data should override or supplement the custom entity type definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -420,7 +420,7 @@ The SessionEntityType resource accepts the following [input]({{< relref "/docs/i
 <a href="#entity_override_mode_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>override_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#sessionentitytypeentityoverridemode">Session<wbr>Entity<wbr>Type<wbr>Entity<wbr>Override<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Required. Indicates whether the additional data should override or supplement the custom entity type definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -660,6 +660,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The primary value associated with this entity entry. For example, if the entity type is *vegetable*, the value could be *scallions*. For `KIND_MAP` entity types: * A canonical value to be used in place of synonyms. For `KIND_LIST` entity types: * A string that can contain references to other entity types (with or without aliases).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sessionentitytypeentityoverridemode">Session<wbr>Entity<wbr>Type<wbr>Entity<wbr>Override<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Entity<wbr>Override<wbr>Mode<wbr>Unspecified</dt>
+    <dd>ENTITY_OVERRIDE_MODE_UNSPECIFIED{{% md %}}Not specified. This value should be never used.{{% /md %}}</dd><dt>Entity<wbr>Override<wbr>Mode<wbr>Override</dt>
+    <dd>ENTITY_OVERRIDE_MODE_OVERRIDE{{% md %}}The collection of session entities overrides the collection of entities in the corresponding custom entity type.{{% /md %}}</dd><dt>Entity<wbr>Override<wbr>Mode<wbr>Supplement</dt>
+    <dd>ENTITY_OVERRIDE_MODE_SUPPLEMENT{{% md %}}The collection of session entities extends the collection of entities in the corresponding custom entity type. Note: Even in this override mode calls to `ListSessionEntityTypes`, `GetSessionEntityType`, `CreateSessionEntityType` and `UpdateSessionEntityType` only return the additional entities added in this session entity type. If you want to get the supplemented list, please call EntityTypes.GetEntityType on the custom entity type and merge.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Session<wbr>Entity<wbr>Type<wbr>Entity<wbr>Override<wbr>Mode<wbr>Entity<wbr>Override<wbr>Mode<wbr>Unspecified</dt>
+    <dd>ENTITY_OVERRIDE_MODE_UNSPECIFIED{{% md %}}Not specified. This value should be never used.{{% /md %}}</dd><dt>Session<wbr>Entity<wbr>Type<wbr>Entity<wbr>Override<wbr>Mode<wbr>Entity<wbr>Override<wbr>Mode<wbr>Override</dt>
+    <dd>ENTITY_OVERRIDE_MODE_OVERRIDE{{% md %}}The collection of session entities overrides the collection of entities in the corresponding custom entity type.{{% /md %}}</dd><dt>Session<wbr>Entity<wbr>Type<wbr>Entity<wbr>Override<wbr>Mode<wbr>Entity<wbr>Override<wbr>Mode<wbr>Supplement</dt>
+    <dd>ENTITY_OVERRIDE_MODE_SUPPLEMENT{{% md %}}The collection of session entities extends the collection of entities in the corresponding custom entity type. Note: Even in this override mode calls to `ListSessionEntityTypes`, `GetSessionEntityType`, `CreateSessionEntityType` and `UpdateSessionEntityType` only return the additional entities added in this session entity type. If you want to get the supplemented list, please call EntityTypes.GetEntityType on the custom entity type and merge.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Entity<wbr>Override<wbr>Mode<wbr>Unspecified</dt>
+    <dd>ENTITY_OVERRIDE_MODE_UNSPECIFIED{{% md %}}Not specified. This value should be never used.{{% /md %}}</dd><dt>Entity<wbr>Override<wbr>Mode<wbr>Override</dt>
+    <dd>ENTITY_OVERRIDE_MODE_OVERRIDE{{% md %}}The collection of session entities overrides the collection of entities in the corresponding custom entity type.{{% /md %}}</dd><dt>Entity<wbr>Override<wbr>Mode<wbr>Supplement</dt>
+    <dd>ENTITY_OVERRIDE_MODE_SUPPLEMENT{{% md %}}The collection of session entities extends the collection of entities in the corresponding custom entity type. Note: Even in this override mode calls to `ListSessionEntityTypes`, `GetSessionEntityType`, `CreateSessionEntityType` and `UpdateSessionEntityType` only return the additional entities added in this session entity type. If you want to get the supplemented list, please call EntityTypes.GetEntityType on the custom entity type and merge.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ENTITY_OVERRIDE_MODE_UNSPECIFIED</dt>
+    <dd>ENTITY_OVERRIDE_MODE_UNSPECIFIED{{% md %}}Not specified. This value should be never used.{{% /md %}}</dd><dt>ENTITY_OVERRIDE_MODE_OVERRIDE</dt>
+    <dd>ENTITY_OVERRIDE_MODE_OVERRIDE{{% md %}}The collection of session entities overrides the collection of entities in the corresponding custom entity type.{{% /md %}}</dd><dt>ENTITY_OVERRIDE_MODE_SUPPLEMENT</dt>
+    <dd>ENTITY_OVERRIDE_MODE_SUPPLEMENT{{% md %}}The collection of session entities extends the collection of entities in the corresponding custom entity type. Note: Even in this override mode calls to `ListSessionEntityTypes`, `GetSessionEntityType`, `CreateSessionEntityType` and `UpdateSessionEntityType` only return the additional entities added in this session entity type. If you want to get the supplemented list, please call EntityTypes.GetEntityType on the custom entity type and merge.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

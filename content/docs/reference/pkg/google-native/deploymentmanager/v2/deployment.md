@@ -829,498 +829,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The contents of the file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="deploymentdataitem">Deployment<wbr>Data<wbr>Item</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="deploymentdataitemresponse">Deployment<wbr>Data<wbr>Item<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="deploymenterror">Deployment<wbr>Error</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="errors_csharp">
-<a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenterrorsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Deployment<wbr>Errors<wbr>Item<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="errors_go">
-<a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenterrorsitem">[]Deployment<wbr>Errors<wbr>Item</a></span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="errors_nodejs">
-<a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenterrorsitem">Deployment<wbr>Errors<wbr>Item<wbr>Args[]</a></span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="errors_python">
-<a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenterrorsitem">Deployment<wbr>Errors<wbr>Item<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="deploymenterrorresponse">Deployment<wbr>Error<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="errors_csharp">
-<a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenterrorsitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Deployment<wbr>Errors<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="errors_go">
-<a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenterrorsitemresponse">[]Deployment<wbr>Errors<wbr>Item<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="errors_nodejs">
-<a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenterrorsitemresponse">Deployment<wbr>Errors<wbr>Item<wbr>Response<wbr>Args[]</a></span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="errors_python">
-<a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenterrorsitemresponse">Deployment<wbr>Errors<wbr>Item<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="deploymenterrorsitem">Deployment<wbr>Errors<wbr>Item</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="code_csharp">
-<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="message_csharp">
-<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="code_go">
-<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="message_go">
-<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="code_nodejs">
-<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="message_nodejs">
-<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="code_python">
-<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="message_python">
-<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="deploymenterrorsitemresponse">Deployment<wbr>Errors<wbr>Item<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="code_csharp">
-<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="message_csharp">
-<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="code_go">
-<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="message_go">
-<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="code_nodejs">
-<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="message_nodejs">
-<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="code_python">
-<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="message_python">
-<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="deploymentlabelentry">Deployment<wbr>Label<wbr>Entry</h4>
 
 {{% choosable language csharp %}}
@@ -1877,234 +1385,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}URL of the manifest representing the update configuration of this deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="deploymentwarningsitem">Deployment<wbr>Warnings<wbr>Item</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="code_csharp">
-<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="data_csharp">
-<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentdataitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Deployment<wbr>Data<wbr>Item<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="message_csharp">
-<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="code_go">
-<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="data_go">
-<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentdataitem">[]Deployment<wbr>Data<wbr>Item</a></span>
-    </dt>
-    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="message_go">
-<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="code_nodejs">
-<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="data_nodejs">
-<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentdataitem">Deployment<wbr>Data<wbr>Item<wbr>Args[]</a></span>
-    </dt>
-    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="message_nodejs">
-<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="code_python">
-<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="data_python">
-<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentdataitem">Deployment<wbr>Data<wbr>Item<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="message_python">
-<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="deploymentwarningsitemresponse">Deployment<wbr>Warnings<wbr>Item<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="code_csharp">
-<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="data_csharp">
-<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentdataitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Deployment<wbr>Data<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="message_csharp">
-<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="code_go">
-<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="data_go">
-<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentdataitemresponse">[]Deployment<wbr>Data<wbr>Item<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="message_go">
-<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="code_nodejs">
-<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="data_nodejs">
-<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentdataitemresponse">Deployment<wbr>Data<wbr>Item<wbr>Response<wbr>Args[]</a></span>
-    </dt>
-    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="message_nodejs">
-<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="code_python">
-<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="data_python">
-<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentdataitemresponse">Deployment<wbr>Data<wbr>Item<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="message_python">
-<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="importfile">Import<wbr>File</h4>
 
 {{% choosable language csharp %}}
@@ -2302,7 +1582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenterror">Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Deployment<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#operationerror">Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Operation<wbr>Error<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If errors are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2406,7 +1686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#operationstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Operation<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the operation, which can be one of the following: `PENDING`, `RUNNING`, or `DONE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2446,7 +1726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warnings_csharp" style="color: inherit; text-decoration: inherit;">Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentwarningsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Deployment<wbr>Warnings<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#operationwarningsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Operation<wbr>Warnings<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If warning messages are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2490,7 +1770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenterror">Deployment<wbr>Error</a></span>
+        <span class="property-type"><a href="#operationerror">Operation<wbr>Error</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If errors are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2594,7 +1874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#operationstatus">Operation<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the operation, which can be one of the following: `PENDING`, `RUNNING`, or `DONE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2634,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warnings_go" style="color: inherit; text-decoration: inherit;">Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentwarningsitem">[]Deployment<wbr>Warnings<wbr>Item</a></span>
+        <span class="property-type"><a href="#operationwarningsitem">[]Operation<wbr>Warnings<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If warning messages are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2678,7 +1958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenterror">Deployment<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#operationerror">Operation<wbr>Error<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If errors are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2782,7 +2062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#operationstatus">Operation<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the operation, which can be one of the following: `PENDING`, `RUNNING`, or `DONE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2822,7 +2102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warnings_nodejs" style="color: inherit; text-decoration: inherit;">warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentwarningsitem">Deployment<wbr>Warnings<wbr>Item<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#operationwarningsitem">Operation<wbr>Warnings<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If warning messages are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2866,7 +2146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenterror">Deployment<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#operationerror">Operation<wbr>Error<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If errors are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2970,7 +2250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#operationstatus">Operation<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the operation, which can be one of the following: `PENDING`, `RUNNING`, or `DONE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3010,7 +2290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warnings_python" style="color: inherit; text-decoration: inherit;">warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentwarningsitem">Deployment<wbr>Warnings<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#operationwarningsitem">Operation<wbr>Warnings<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If warning messages are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3021,6 +2301,334 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the zone where the operation resides. Only applicable when performing per-zone operations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="operationerror">Operation<wbr>Error</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="errors_csharp">
+<a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationerrorerrorsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Operation<wbr>Error<wbr>Errors<wbr>Item<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="errors_go">
+<a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationerrorerrorsitem">[]Operation<wbr>Error<wbr>Errors<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="errors_nodejs">
+<a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationerrorerrorsitem">Operation<wbr>Error<wbr>Errors<wbr>Item<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="errors_python">
+<a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationerrorerrorsitem">Operation<wbr>Error<wbr>Errors<wbr>Item<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="operationerrorerrorsitem">Operation<wbr>Error<wbr>Errors<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="operationerrorerrorsitemresponse">Operation<wbr>Error<wbr>Errors<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="operationerrorresponse">Operation<wbr>Error<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="errors_csharp">
+<a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationerrorerrorsitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Operation<wbr>Error<wbr>Errors<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="errors_go">
+<a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationerrorerrorsitemresponse">[]Operation<wbr>Error<wbr>Errors<wbr>Item<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="errors_nodejs">
+<a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationerrorerrorsitemresponse">Operation<wbr>Error<wbr>Errors<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="errors_python">
+<a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationerrorerrorsitemresponse">Operation<wbr>Error<wbr>Errors<wbr>Item<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="operationresponse">Operation<wbr>Response</h4>
@@ -3056,7 +2664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenterrorresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Deployment<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#operationerrorresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Operation<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If errors are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3192,7 +2800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warnings_csharp" style="color: inherit; text-decoration: inherit;">Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentwarningsitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Deployment<wbr>Warnings<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#operationwarningsitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Operation<wbr>Warnings<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If warning messages are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3236,7 +2844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenterrorresponse">Deployment<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#operationerrorresponse">Operation<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If errors are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3372,7 +2980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warnings_go" style="color: inherit; text-decoration: inherit;">Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentwarningsitemresponse">[]Deployment<wbr>Warnings<wbr>Item<wbr>Response</a></span>
+        <span class="property-type"><a href="#operationwarningsitemresponse">[]Operation<wbr>Warnings<wbr>Item<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If warning messages are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3416,7 +3024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenterrorresponse">Deployment<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#operationerrorresponse">Operation<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If errors are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3552,7 +3160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warnings_nodejs" style="color: inherit; text-decoration: inherit;">warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentwarningsitemresponse">Deployment<wbr>Warnings<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#operationwarningsitemresponse">Operation<wbr>Warnings<wbr>Item<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If warning messages are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3596,7 +3204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenterrorresponse">Deployment<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#operationerrorresponse">Operation<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If errors are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3732,7 +3340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warnings_python" style="color: inherit; text-decoration: inherit;">warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentwarningsitemresponse">Deployment<wbr>Warnings<wbr>Item<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#operationwarningsitemresponse">Operation<wbr>Warnings<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If warning messages are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3743,6 +3351,546 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the zone where the operation resides. Only applicable when performing per-zone operations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="operationstatus">Operation<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Pending</dt>
+    <dd>PENDING</dd><dt>Running</dt>
+    <dd>RUNNING</dd><dt>Done</dt>
+    <dd>DONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Operation<wbr>Status<wbr>Pending</dt>
+    <dd>PENDING</dd><dt>Operation<wbr>Status<wbr>Running</dt>
+    <dd>RUNNING</dd><dt>Operation<wbr>Status<wbr>Done</dt>
+    <dd>DONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Pending</dt>
+    <dd>PENDING</dd><dt>Running</dt>
+    <dd>RUNNING</dd><dt>Done</dt>
+    <dd>DONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PENDING</dt>
+    <dd>PENDING</dd><dt>RUNNING</dt>
+    <dd>RUNNING</dd><dt>DONE</dt>
+    <dd>DONE</dd></dl>
+{{% /choosable %}}
+
+<h4 id="operationwarningsitem">Operation<wbr>Warnings<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationwarningsitemcode">Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Operation<wbr>Warnings<wbr>Item<wbr>Code</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_csharp">
+<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationwarningsitemdataitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Operation<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationwarningsitemcode">Operation<wbr>Warnings<wbr>Item<wbr>Code</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_go">
+<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationwarningsitemdataitem">[]Operation<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationwarningsitemcode">Operation<wbr>Warnings<wbr>Item<wbr>Code</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_nodejs">
+<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationwarningsitemdataitem">Operation<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationwarningsitemcode">Operation<wbr>Warnings<wbr>Item<wbr>Code</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_python">
+<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationwarningsitemdataitem">Operation<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="operationwarningsitemcode">Operation<wbr>Warnings<wbr>Item<wbr>Code</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Deprecated<wbr>Resource<wbr>Used</dt>
+    <dd>DEPRECATED_RESOURCE_USED{{% md %}}A link to a deprecated resource was created.{{% /md %}}</dd><dt>No<wbr>Results<wbr>On<wbr>Page</dt>
+    <dd>NO_RESULTS_ON_PAGE{{% md %}}No results are present on a particular list page.{{% /md %}}</dd><dt>Unreachable</dt>
+    <dd>UNREACHABLE{{% md %}}A given scope cannot be reached.{{% /md %}}</dd><dt>Next<wbr>Hop<wbr>Address<wbr>Not<wbr>Assigned</dt>
+    <dd>NEXT_HOP_ADDRESS_NOT_ASSIGNED{{% md %}}The route's nextHopIp address is not assigned to an instance on the network.{{% /md %}}</dd><dt>Next<wbr>Hop<wbr>Instance<wbr>Not<wbr>Found</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_FOUND{{% md %}}The route's nextHopInstance URL refers to an instance that does not exist.{{% /md %}}</dd><dt>Next<wbr>Hop<wbr>Instance<wbr>Not<wbr>On<wbr>Network</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_ON_NETWORK{{% md %}}The route's nextHopInstance URL refers to an instance that is not on the same network as the route.{{% /md %}}</dd><dt>Next<wbr>Hop<wbr>Cannot<wbr>Ip<wbr>Forward</dt>
+    <dd>NEXT_HOP_CANNOT_IP_FORWARD{{% md %}}The route's next hop instance cannot ip forward.{{% /md %}}</dd><dt>Next<wbr>Hop<wbr>Not<wbr>Running</dt>
+    <dd>NEXT_HOP_NOT_RUNNING{{% md %}}The route's next hop instance does not have a status of RUNNING.{{% /md %}}</dd><dt>Injected<wbr>Kernels<wbr>Deprecated</dt>
+    <dd>INJECTED_KERNELS_DEPRECATED{{% md %}}The operation involved use of an injected kernel, which is deprecated.{{% /md %}}</dd><dt>Required<wbr>Tos<wbr>Agreement</dt>
+    <dd>REQUIRED_TOS_AGREEMENT{{% md %}}The user attempted to use a resource that requires a TOS they have not accepted.{{% /md %}}</dd><dt>Disk<wbr>Size<wbr>Larger<wbr>Than<wbr>Image<wbr>Size</dt>
+    <dd>DISK_SIZE_LARGER_THAN_IMAGE_SIZE{{% md %}}The user created a boot disk that is larger than image size.{{% /md %}}</dd><dt>Resource<wbr>Not<wbr>Deleted</dt>
+    <dd>RESOURCE_NOT_DELETED{{% md %}}One or more of the resources set to auto-delete could not be deleted because they were in use.{{% /md %}}</dd><dt>Single<wbr>Instance<wbr>Property<wbr>Template</dt>
+    <dd>SINGLE_INSTANCE_PROPERTY_TEMPLATE{{% md %}}Instance template used in instance group manager is valid as such, but its application does not make a lot of sense, because it allows only single instance in instance group.{{% /md %}}</dd><dt>Not<wbr>Critical<wbr>Error</dt>
+    <dd>NOT_CRITICAL_ERROR{{% md %}}Error which is not critical. We decided to continue the process despite the mentioned error.{{% /md %}}</dd><dt>Cleanup<wbr>Failed</dt>
+    <dd>CLEANUP_FAILED{{% md %}}Warning about failed cleanup of transient changes made by a failed operation.{{% /md %}}</dd><dt>Field<wbr>Value<wbr>Overriden</dt>
+    <dd>FIELD_VALUE_OVERRIDEN{{% md %}}Warning that value of a field has been overridden. Deprecated unused field.{{% /md %}}</dd><dt>Resource<wbr>In<wbr>Use<wbr>By<wbr>Other<wbr>Resource<wbr>Warning</dt>
+    <dd>RESOURCE_IN_USE_BY_OTHER_RESOURCE_WARNING{{% md %}}Warning that a resource is in use.{{% /md %}}</dd><dt>Missing<wbr>Type<wbr>Dependency</dt>
+    <dd>MISSING_TYPE_DEPENDENCY{{% md %}}A resource depends on a missing type{{% /md %}}</dd><dt>External<wbr>Api<wbr>Warning</dt>
+    <dd>EXTERNAL_API_WARNING{{% md %}}Warning that is present in an external api call{{% /md %}}</dd><dt>Schema<wbr>Validation<wbr>Ignored</dt>
+    <dd>SCHEMA_VALIDATION_IGNORED{{% md %}}When a resource schema validation is ignored.{{% /md %}}</dd><dt>Undeclared<wbr>Properties</dt>
+    <dd>UNDECLARED_PROPERTIES{{% md %}}When undeclared properties in the schema are present{{% /md %}}</dd><dt>Experimental<wbr>Type<wbr>Used</dt>
+    <dd>EXPERIMENTAL_TYPE_USED{{% md %}}When deploying and at least one of the resources has a type marked as experimental{{% /md %}}</dd><dt>Deprecated<wbr>Type<wbr>Used</dt>
+    <dd>DEPRECATED_TYPE_USED{{% md %}}When deploying and at least one of the resources has a type marked as deprecated{{% /md %}}</dd><dt>Partial<wbr>Success</dt>
+    <dd>PARTIAL_SUCCESS{{% md %}}Success is reported, but some results may be missing due to errors{{% /md %}}</dd><dt>Large<wbr>Deployment<wbr>Warning</dt>
+    <dd>LARGE_DEPLOYMENT_WARNING{{% md %}}When deploying a deployment with a exceedingly large number of resources{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Deprecated<wbr>Resource<wbr>Used</dt>
+    <dd>DEPRECATED_RESOURCE_USED{{% md %}}A link to a deprecated resource was created.{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>No<wbr>Results<wbr>On<wbr>Page</dt>
+    <dd>NO_RESULTS_ON_PAGE{{% md %}}No results are present on a particular list page.{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Unreachable</dt>
+    <dd>UNREACHABLE{{% md %}}A given scope cannot be reached.{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Next<wbr>Hop<wbr>Address<wbr>Not<wbr>Assigned</dt>
+    <dd>NEXT_HOP_ADDRESS_NOT_ASSIGNED{{% md %}}The route's nextHopIp address is not assigned to an instance on the network.{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Next<wbr>Hop<wbr>Instance<wbr>Not<wbr>Found</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_FOUND{{% md %}}The route's nextHopInstance URL refers to an instance that does not exist.{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Next<wbr>Hop<wbr>Instance<wbr>Not<wbr>On<wbr>Network</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_ON_NETWORK{{% md %}}The route's nextHopInstance URL refers to an instance that is not on the same network as the route.{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Next<wbr>Hop<wbr>Cannot<wbr>Ip<wbr>Forward</dt>
+    <dd>NEXT_HOP_CANNOT_IP_FORWARD{{% md %}}The route's next hop instance cannot ip forward.{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Next<wbr>Hop<wbr>Not<wbr>Running</dt>
+    <dd>NEXT_HOP_NOT_RUNNING{{% md %}}The route's next hop instance does not have a status of RUNNING.{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Injected<wbr>Kernels<wbr>Deprecated</dt>
+    <dd>INJECTED_KERNELS_DEPRECATED{{% md %}}The operation involved use of an injected kernel, which is deprecated.{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Required<wbr>Tos<wbr>Agreement</dt>
+    <dd>REQUIRED_TOS_AGREEMENT{{% md %}}The user attempted to use a resource that requires a TOS they have not accepted.{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Disk<wbr>Size<wbr>Larger<wbr>Than<wbr>Image<wbr>Size</dt>
+    <dd>DISK_SIZE_LARGER_THAN_IMAGE_SIZE{{% md %}}The user created a boot disk that is larger than image size.{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Resource<wbr>Not<wbr>Deleted</dt>
+    <dd>RESOURCE_NOT_DELETED{{% md %}}One or more of the resources set to auto-delete could not be deleted because they were in use.{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Single<wbr>Instance<wbr>Property<wbr>Template</dt>
+    <dd>SINGLE_INSTANCE_PROPERTY_TEMPLATE{{% md %}}Instance template used in instance group manager is valid as such, but its application does not make a lot of sense, because it allows only single instance in instance group.{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Not<wbr>Critical<wbr>Error</dt>
+    <dd>NOT_CRITICAL_ERROR{{% md %}}Error which is not critical. We decided to continue the process despite the mentioned error.{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Cleanup<wbr>Failed</dt>
+    <dd>CLEANUP_FAILED{{% md %}}Warning about failed cleanup of transient changes made by a failed operation.{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Field<wbr>Value<wbr>Overriden</dt>
+    <dd>FIELD_VALUE_OVERRIDEN{{% md %}}Warning that value of a field has been overridden. Deprecated unused field.{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Resource<wbr>In<wbr>Use<wbr>By<wbr>Other<wbr>Resource<wbr>Warning</dt>
+    <dd>RESOURCE_IN_USE_BY_OTHER_RESOURCE_WARNING{{% md %}}Warning that a resource is in use.{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Missing<wbr>Type<wbr>Dependency</dt>
+    <dd>MISSING_TYPE_DEPENDENCY{{% md %}}A resource depends on a missing type{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>External<wbr>Api<wbr>Warning</dt>
+    <dd>EXTERNAL_API_WARNING{{% md %}}Warning that is present in an external api call{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Schema<wbr>Validation<wbr>Ignored</dt>
+    <dd>SCHEMA_VALIDATION_IGNORED{{% md %}}When a resource schema validation is ignored.{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Undeclared<wbr>Properties</dt>
+    <dd>UNDECLARED_PROPERTIES{{% md %}}When undeclared properties in the schema are present{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Experimental<wbr>Type<wbr>Used</dt>
+    <dd>EXPERIMENTAL_TYPE_USED{{% md %}}When deploying and at least one of the resources has a type marked as experimental{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Deprecated<wbr>Type<wbr>Used</dt>
+    <dd>DEPRECATED_TYPE_USED{{% md %}}When deploying and at least one of the resources has a type marked as deprecated{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Partial<wbr>Success</dt>
+    <dd>PARTIAL_SUCCESS{{% md %}}Success is reported, but some results may be missing due to errors{{% /md %}}</dd><dt>Operation<wbr>Warnings<wbr>Item<wbr>Code<wbr>Large<wbr>Deployment<wbr>Warning</dt>
+    <dd>LARGE_DEPLOYMENT_WARNING{{% md %}}When deploying a deployment with a exceedingly large number of resources{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Deprecated<wbr>Resource<wbr>Used</dt>
+    <dd>DEPRECATED_RESOURCE_USED{{% md %}}A link to a deprecated resource was created.{{% /md %}}</dd><dt>No<wbr>Results<wbr>On<wbr>Page</dt>
+    <dd>NO_RESULTS_ON_PAGE{{% md %}}No results are present on a particular list page.{{% /md %}}</dd><dt>Unreachable</dt>
+    <dd>UNREACHABLE{{% md %}}A given scope cannot be reached.{{% /md %}}</dd><dt>Next<wbr>Hop<wbr>Address<wbr>Not<wbr>Assigned</dt>
+    <dd>NEXT_HOP_ADDRESS_NOT_ASSIGNED{{% md %}}The route's nextHopIp address is not assigned to an instance on the network.{{% /md %}}</dd><dt>Next<wbr>Hop<wbr>Instance<wbr>Not<wbr>Found</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_FOUND{{% md %}}The route's nextHopInstance URL refers to an instance that does not exist.{{% /md %}}</dd><dt>Next<wbr>Hop<wbr>Instance<wbr>Not<wbr>On<wbr>Network</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_ON_NETWORK{{% md %}}The route's nextHopInstance URL refers to an instance that is not on the same network as the route.{{% /md %}}</dd><dt>Next<wbr>Hop<wbr>Cannot<wbr>Ip<wbr>Forward</dt>
+    <dd>NEXT_HOP_CANNOT_IP_FORWARD{{% md %}}The route's next hop instance cannot ip forward.{{% /md %}}</dd><dt>Next<wbr>Hop<wbr>Not<wbr>Running</dt>
+    <dd>NEXT_HOP_NOT_RUNNING{{% md %}}The route's next hop instance does not have a status of RUNNING.{{% /md %}}</dd><dt>Injected<wbr>Kernels<wbr>Deprecated</dt>
+    <dd>INJECTED_KERNELS_DEPRECATED{{% md %}}The operation involved use of an injected kernel, which is deprecated.{{% /md %}}</dd><dt>Required<wbr>Tos<wbr>Agreement</dt>
+    <dd>REQUIRED_TOS_AGREEMENT{{% md %}}The user attempted to use a resource that requires a TOS they have not accepted.{{% /md %}}</dd><dt>Disk<wbr>Size<wbr>Larger<wbr>Than<wbr>Image<wbr>Size</dt>
+    <dd>DISK_SIZE_LARGER_THAN_IMAGE_SIZE{{% md %}}The user created a boot disk that is larger than image size.{{% /md %}}</dd><dt>Resource<wbr>Not<wbr>Deleted</dt>
+    <dd>RESOURCE_NOT_DELETED{{% md %}}One or more of the resources set to auto-delete could not be deleted because they were in use.{{% /md %}}</dd><dt>Single<wbr>Instance<wbr>Property<wbr>Template</dt>
+    <dd>SINGLE_INSTANCE_PROPERTY_TEMPLATE{{% md %}}Instance template used in instance group manager is valid as such, but its application does not make a lot of sense, because it allows only single instance in instance group.{{% /md %}}</dd><dt>Not<wbr>Critical<wbr>Error</dt>
+    <dd>NOT_CRITICAL_ERROR{{% md %}}Error which is not critical. We decided to continue the process despite the mentioned error.{{% /md %}}</dd><dt>Cleanup<wbr>Failed</dt>
+    <dd>CLEANUP_FAILED{{% md %}}Warning about failed cleanup of transient changes made by a failed operation.{{% /md %}}</dd><dt>Field<wbr>Value<wbr>Overriden</dt>
+    <dd>FIELD_VALUE_OVERRIDEN{{% md %}}Warning that value of a field has been overridden. Deprecated unused field.{{% /md %}}</dd><dt>Resource<wbr>In<wbr>Use<wbr>By<wbr>Other<wbr>Resource<wbr>Warning</dt>
+    <dd>RESOURCE_IN_USE_BY_OTHER_RESOURCE_WARNING{{% md %}}Warning that a resource is in use.{{% /md %}}</dd><dt>Missing<wbr>Type<wbr>Dependency</dt>
+    <dd>MISSING_TYPE_DEPENDENCY{{% md %}}A resource depends on a missing type{{% /md %}}</dd><dt>External<wbr>Api<wbr>Warning</dt>
+    <dd>EXTERNAL_API_WARNING{{% md %}}Warning that is present in an external api call{{% /md %}}</dd><dt>Schema<wbr>Validation<wbr>Ignored</dt>
+    <dd>SCHEMA_VALIDATION_IGNORED{{% md %}}When a resource schema validation is ignored.{{% /md %}}</dd><dt>Undeclared<wbr>Properties</dt>
+    <dd>UNDECLARED_PROPERTIES{{% md %}}When undeclared properties in the schema are present{{% /md %}}</dd><dt>Experimental<wbr>Type<wbr>Used</dt>
+    <dd>EXPERIMENTAL_TYPE_USED{{% md %}}When deploying and at least one of the resources has a type marked as experimental{{% /md %}}</dd><dt>Deprecated<wbr>Type<wbr>Used</dt>
+    <dd>DEPRECATED_TYPE_USED{{% md %}}When deploying and at least one of the resources has a type marked as deprecated{{% /md %}}</dd><dt>Partial<wbr>Success</dt>
+    <dd>PARTIAL_SUCCESS{{% md %}}Success is reported, but some results may be missing due to errors{{% /md %}}</dd><dt>Large<wbr>Deployment<wbr>Warning</dt>
+    <dd>LARGE_DEPLOYMENT_WARNING{{% md %}}When deploying a deployment with a exceedingly large number of resources{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DEPRECATED_RESOURCE_USED</dt>
+    <dd>DEPRECATED_RESOURCE_USED{{% md %}}A link to a deprecated resource was created.{{% /md %}}</dd><dt>NO_RESULTS_ON_PAGE</dt>
+    <dd>NO_RESULTS_ON_PAGE{{% md %}}No results are present on a particular list page.{{% /md %}}</dd><dt>UNREACHABLE</dt>
+    <dd>UNREACHABLE{{% md %}}A given scope cannot be reached.{{% /md %}}</dd><dt>NEXT_HOP_ADDRESS_NOT_ASSIGNED</dt>
+    <dd>NEXT_HOP_ADDRESS_NOT_ASSIGNED{{% md %}}The route's nextHopIp address is not assigned to an instance on the network.{{% /md %}}</dd><dt>NEXT_HOP_INSTANCE_NOT_FOUND</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_FOUND{{% md %}}The route's nextHopInstance URL refers to an instance that does not exist.{{% /md %}}</dd><dt>NEXT_HOP_INSTANCE_NOT_ON_NETWORK</dt>
+    <dd>NEXT_HOP_INSTANCE_NOT_ON_NETWORK{{% md %}}The route's nextHopInstance URL refers to an instance that is not on the same network as the route.{{% /md %}}</dd><dt>NEXT_HOP_CANNOT_IP_FORWARD</dt>
+    <dd>NEXT_HOP_CANNOT_IP_FORWARD{{% md %}}The route's next hop instance cannot ip forward.{{% /md %}}</dd><dt>NEXT_HOP_NOT_RUNNING</dt>
+    <dd>NEXT_HOP_NOT_RUNNING{{% md %}}The route's next hop instance does not have a status of RUNNING.{{% /md %}}</dd><dt>INJECTED_KERNELS_DEPRECATED</dt>
+    <dd>INJECTED_KERNELS_DEPRECATED{{% md %}}The operation involved use of an injected kernel, which is deprecated.{{% /md %}}</dd><dt>REQUIRED_TOS_AGREEMENT</dt>
+    <dd>REQUIRED_TOS_AGREEMENT{{% md %}}The user attempted to use a resource that requires a TOS they have not accepted.{{% /md %}}</dd><dt>DISK_SIZE_LARGER_THAN_IMAGE_SIZE</dt>
+    <dd>DISK_SIZE_LARGER_THAN_IMAGE_SIZE{{% md %}}The user created a boot disk that is larger than image size.{{% /md %}}</dd><dt>RESOURCE_NOT_DELETED</dt>
+    <dd>RESOURCE_NOT_DELETED{{% md %}}One or more of the resources set to auto-delete could not be deleted because they were in use.{{% /md %}}</dd><dt>SINGLE_INSTANCE_PROPERTY_TEMPLATE</dt>
+    <dd>SINGLE_INSTANCE_PROPERTY_TEMPLATE{{% md %}}Instance template used in instance group manager is valid as such, but its application does not make a lot of sense, because it allows only single instance in instance group.{{% /md %}}</dd><dt>NOT_CRITICAL_ERROR</dt>
+    <dd>NOT_CRITICAL_ERROR{{% md %}}Error which is not critical. We decided to continue the process despite the mentioned error.{{% /md %}}</dd><dt>CLEANUP_FAILED</dt>
+    <dd>CLEANUP_FAILED{{% md %}}Warning about failed cleanup of transient changes made by a failed operation.{{% /md %}}</dd><dt>FIELD_VALUE_OVERRIDEN</dt>
+    <dd>FIELD_VALUE_OVERRIDEN{{% md %}}Warning that value of a field has been overridden. Deprecated unused field.{{% /md %}}</dd><dt>RESOURCE_IN_USE_BY_OTHER_RESOURCE_WARNING</dt>
+    <dd>RESOURCE_IN_USE_BY_OTHER_RESOURCE_WARNING{{% md %}}Warning that a resource is in use.{{% /md %}}</dd><dt>MISSING_TYPE_DEPENDENCY</dt>
+    <dd>MISSING_TYPE_DEPENDENCY{{% md %}}A resource depends on a missing type{{% /md %}}</dd><dt>EXTERNAL_API_WARNING</dt>
+    <dd>EXTERNAL_API_WARNING{{% md %}}Warning that is present in an external api call{{% /md %}}</dd><dt>SCHEMA_VALIDATION_IGNORED</dt>
+    <dd>SCHEMA_VALIDATION_IGNORED{{% md %}}When a resource schema validation is ignored.{{% /md %}}</dd><dt>UNDECLARED_PROPERTIES</dt>
+    <dd>UNDECLARED_PROPERTIES{{% md %}}When undeclared properties in the schema are present{{% /md %}}</dd><dt>EXPERIMENTAL_TYPE_USED</dt>
+    <dd>EXPERIMENTAL_TYPE_USED{{% md %}}When deploying and at least one of the resources has a type marked as experimental{{% /md %}}</dd><dt>DEPRECATED_TYPE_USED</dt>
+    <dd>DEPRECATED_TYPE_USED{{% md %}}When deploying and at least one of the resources has a type marked as deprecated{{% /md %}}</dd><dt>PARTIAL_SUCCESS</dt>
+    <dd>PARTIAL_SUCCESS{{% md %}}Success is reported, but some results may be missing due to errors{{% /md %}}</dd><dt>LARGE_DEPLOYMENT_WARNING</dt>
+    <dd>LARGE_DEPLOYMENT_WARNING{{% md %}}When deploying a deployment with a exceedingly large number of resources{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="operationwarningsitemdataitem">Operation<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="operationwarningsitemdataitemresponse">Operation<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="operationwarningsitemresponse">Operation<wbr>Warnings<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_csharp">
+<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationwarningsitemdataitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Operation<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_go">
+<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationwarningsitemdataitemresponse">[]Operation<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_nodejs">
+<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationwarningsitemdataitemresponse">Operation<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_python">
+<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationwarningsitemdataitemresponse">Operation<wbr>Warnings<wbr>Item<wbr>Data<wbr>Item<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="targetconfiguration">Target<wbr>Configuration</h4>

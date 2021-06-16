@@ -27,8 +27,8 @@ Creates a ServiceAccountKey.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Key</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">key_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">private_key_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">key_algorithm</span><span class="p">:</span> <span class="nx">Optional[_iam_v1.KeyKeyAlgorithm]</span> = None<span class="p">,</span>
+        <span class="nx">private_key_type</span><span class="p">:</span> <span class="nx">Optional[_iam_v1.KeyPrivateKeyType]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">service_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -180,7 +180,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#keyalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#keykeyalgorithm">Pulumi.<wbr>Google<wbr>Native.<wbr>IAM.<wbr>V1.<wbr>Key<wbr>Key<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Which type of key and algorithm to use for the key. The default is currently a 2K RSA key. However this may change in the future.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -188,7 +188,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#privatekeytype_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#keyprivatekeytype">Pulumi.<wbr>Google<wbr>Native.<wbr>IAM.<wbr>V1.<wbr>Key<wbr>Private<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The output format of the private key. The default value is `TYPE_GOOGLE_CREDENTIALS_FILE`, which is the Google Credentials File format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -216,7 +216,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#keyalgorithm_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#keykeyalgorithm">Key<wbr>Key<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Which type of key and algorithm to use for the key. The default is currently a 2K RSA key. However this may change in the future.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -224,7 +224,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#privatekeytype_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#keyprivatekeytype">Key<wbr>Private<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The output format of the private key. The default value is `TYPE_GOOGLE_CREDENTIALS_FILE`, which is the Google Credentials File format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -252,7 +252,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#keyalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#keykeyalgorithm">Key<wbr>Key<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Which type of key and algorithm to use for the key. The default is currently a 2K RSA key. However this may change in the future.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -260,7 +260,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#privatekeytype_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#keyprivatekeytype">Key<wbr>Private<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The output format of the private key. The default value is `TYPE_GOOGLE_CREDENTIALS_FILE`, which is the Google Credentials File format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -288,7 +288,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#key_algorithm_python" style="color: inherit; text-decoration: inherit;">key_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#keykeyalgorithm">Key<wbr>Key<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Which type of key and algorithm to use for the key. The default is currently a 2K RSA key. However this may change in the future.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -296,7 +296,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#private_key_type_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#keyprivatekeytype">Key<wbr>Private<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The output format of the private key. The default value is `TYPE_GOOGLE_CREDENTIALS_FILE`, which is the Google Credentials File format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -585,6 +585,70 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="keykeyalgorithm">Key<wbr>Key<wbr>Algorithm</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Key<wbr>Alg<wbr>Unspecified</dt>
+    <dd>KEY_ALG_UNSPECIFIED{{% md %}}An unspecified key algorithm.{{% /md %}}</dd><dt>Key<wbr>Alg<wbr>Rsa1024</dt>
+    <dd>KEY_ALG_RSA_1024{{% md %}}1k RSA Key.{{% /md %}}</dd><dt>Key<wbr>Alg<wbr>Rsa2048</dt>
+    <dd>KEY_ALG_RSA_2048{{% md %}}2k RSA Key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Key<wbr>Key<wbr>Algorithm<wbr>Key<wbr>Alg<wbr>Unspecified</dt>
+    <dd>KEY_ALG_UNSPECIFIED{{% md %}}An unspecified key algorithm.{{% /md %}}</dd><dt>Key<wbr>Key<wbr>Algorithm<wbr>Key<wbr>Alg<wbr>Rsa1024</dt>
+    <dd>KEY_ALG_RSA_1024{{% md %}}1k RSA Key.{{% /md %}}</dd><dt>Key<wbr>Key<wbr>Algorithm<wbr>Key<wbr>Alg<wbr>Rsa2048</dt>
+    <dd>KEY_ALG_RSA_2048{{% md %}}2k RSA Key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Key<wbr>Alg<wbr>Unspecified</dt>
+    <dd>KEY_ALG_UNSPECIFIED{{% md %}}An unspecified key algorithm.{{% /md %}}</dd><dt>Key<wbr>Alg<wbr>Rsa1024</dt>
+    <dd>KEY_ALG_RSA_1024{{% md %}}1k RSA Key.{{% /md %}}</dd><dt>Key<wbr>Alg<wbr>Rsa2048</dt>
+    <dd>KEY_ALG_RSA_2048{{% md %}}2k RSA Key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>KEY_ALG_UNSPECIFIED</dt>
+    <dd>KEY_ALG_UNSPECIFIED{{% md %}}An unspecified key algorithm.{{% /md %}}</dd><dt>KEY_ALG_RSA1024</dt>
+    <dd>KEY_ALG_RSA_1024{{% md %}}1k RSA Key.{{% /md %}}</dd><dt>KEY_ALG_RSA2048</dt>
+    <dd>KEY_ALG_RSA_2048{{% md %}}2k RSA Key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="keyprivatekeytype">Key<wbr>Private<wbr>Key<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Unspecified. Equivalent to `TYPE_GOOGLE_CREDENTIALS_FILE`.{{% /md %}}</dd><dt>Type<wbr>Pkcs12File</dt>
+    <dd>TYPE_PKCS12_FILE{{% md %}}PKCS12 format. The password for the PKCS12 file is `notasecret`. For more information, see https://tools.ietf.org/html/rfc7292.{{% /md %}}</dd><dt>Type<wbr>Google<wbr>Credentials<wbr>File</dt>
+    <dd>TYPE_GOOGLE_CREDENTIALS_FILE{{% md %}}Google Credentials File format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Key<wbr>Private<wbr>Key<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Unspecified. Equivalent to `TYPE_GOOGLE_CREDENTIALS_FILE`.{{% /md %}}</dd><dt>Key<wbr>Private<wbr>Key<wbr>Type<wbr>Type<wbr>Pkcs12File</dt>
+    <dd>TYPE_PKCS12_FILE{{% md %}}PKCS12 format. The password for the PKCS12 file is `notasecret`. For more information, see https://tools.ietf.org/html/rfc7292.{{% /md %}}</dd><dt>Key<wbr>Private<wbr>Key<wbr>Type<wbr>Type<wbr>Google<wbr>Credentials<wbr>File</dt>
+    <dd>TYPE_GOOGLE_CREDENTIALS_FILE{{% md %}}Google Credentials File format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Unspecified. Equivalent to `TYPE_GOOGLE_CREDENTIALS_FILE`.{{% /md %}}</dd><dt>Type<wbr>Pkcs12File</dt>
+    <dd>TYPE_PKCS12_FILE{{% md %}}PKCS12 format. The password for the PKCS12 file is `notasecret`. For more information, see https://tools.ietf.org/html/rfc7292.{{% /md %}}</dd><dt>Type<wbr>Google<wbr>Credentials<wbr>File</dt>
+    <dd>TYPE_GOOGLE_CREDENTIALS_FILE{{% md %}}Google Credentials File format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Unspecified. Equivalent to `TYPE_GOOGLE_CREDENTIALS_FILE`.{{% /md %}}</dd><dt>TYPE_PKCS12_FILE</dt>
+    <dd>TYPE_PKCS12_FILE{{% md %}}PKCS12 format. The password for the PKCS12 file is `notasecret`. For more information, see https://tools.ietf.org/html/rfc7292.{{% /md %}}</dd><dt>TYPE_GOOGLE_CREDENTIALS_FILE</dt>
+    <dd>TYPE_GOOGLE_CREDENTIALS_FILE{{% md %}}Google Credentials File format.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

@@ -685,7 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#aptsettingstype">Pulumi.<wbr>Google<wbr>Native.<wbr>OSConfig.<wbr>V1.<wbr>Apt<wbr>Settings<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -713,7 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#aptsettingstype">Apt<wbr>Settings<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -741,7 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#aptsettingstype">Apt<wbr>Settings<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -769,7 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#aptsettingstype">Apt<wbr>Settings<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -888,6 +888,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="aptsettingstype">Apt<wbr>Settings<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}By default, upgrade will be performed.{{% /md %}}</dd><dt>Dist</dt>
+    <dd>DIST{{% md %}}Runs `apt-get dist-upgrade`.{{% /md %}}</dd><dt>Upgrade</dt>
+    <dd>UPGRADE{{% md %}}Runs `apt-get upgrade`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Apt<wbr>Settings<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}By default, upgrade will be performed.{{% /md %}}</dd><dt>Apt<wbr>Settings<wbr>Type<wbr>Dist</dt>
+    <dd>DIST{{% md %}}Runs `apt-get dist-upgrade`.{{% /md %}}</dd><dt>Apt<wbr>Settings<wbr>Type<wbr>Upgrade</dt>
+    <dd>UPGRADE{{% md %}}Runs `apt-get upgrade`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}By default, upgrade will be performed.{{% /md %}}</dd><dt>Dist</dt>
+    <dd>DIST{{% md %}}Runs `apt-get dist-upgrade`.{{% /md %}}</dd><dt>Upgrade</dt>
+    <dd>UPGRADE{{% md %}}Runs `apt-get upgrade`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}By default, upgrade will be performed.{{% /md %}}</dd><dt>DIST</dt>
+    <dd>DIST{{% md %}}Runs `apt-get dist-upgrade`.{{% /md %}}</dd><dt>UPGRADE</dt>
+    <dd>UPGRADE{{% md %}}Runs `apt-get upgrade`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="execstep">Exec<wbr>Step</h4>
 
 {{% choosable language csharp %}}
@@ -995,7 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interpreter_csharp" style="color: inherit; text-decoration: inherit;">Interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#execstepconfiginterpreter">Pulumi.<wbr>Google<wbr>Native.<wbr>OSConfig.<wbr>V1.<wbr>Exec<wbr>Step<wbr>Config<wbr>Interpreter</a></span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1031,7 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interpreter_go" style="color: inherit; text-decoration: inherit;">Interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#execstepconfiginterpreter">Exec<wbr>Step<wbr>Config<wbr>Interpreter</a></span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1067,7 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#execstepconfiginterpreter">Exec<wbr>Step<wbr>Config<wbr>Interpreter</a></span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1103,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#execstepconfiginterpreter">Exec<wbr>Step<wbr>Config<wbr>Interpreter</a></span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1114,6 +1144,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="execstepconfiginterpreter">Exec<wbr>Step<wbr>Config<wbr>Interpreter</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Interpreter<wbr>Unspecified</dt>
+    <dd>INTERPRETER_UNSPECIFIED{{% md %}}Invalid for a Windows ExecStepConfig. For a Linux ExecStepConfig, the interpreter will be parsed from the shebang line of the script if unspecified.{{% /md %}}</dd><dt>Shell</dt>
+    <dd>SHELL{{% md %}}Indicates that the script is run with `/bin/sh` on Linux and `cmd` on Windows.{{% /md %}}</dd><dt>Powershell</dt>
+    <dd>POWERSHELL{{% md %}}Indicates that the file is run with PowerShell flags `-NonInteractive`, `-NoProfile`, and `-ExecutionPolicy Bypass`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Exec<wbr>Step<wbr>Config<wbr>Interpreter<wbr>Interpreter<wbr>Unspecified</dt>
+    <dd>INTERPRETER_UNSPECIFIED{{% md %}}Invalid for a Windows ExecStepConfig. For a Linux ExecStepConfig, the interpreter will be parsed from the shebang line of the script if unspecified.{{% /md %}}</dd><dt>Exec<wbr>Step<wbr>Config<wbr>Interpreter<wbr>Shell</dt>
+    <dd>SHELL{{% md %}}Indicates that the script is run with `/bin/sh` on Linux and `cmd` on Windows.{{% /md %}}</dd><dt>Exec<wbr>Step<wbr>Config<wbr>Interpreter<wbr>Powershell</dt>
+    <dd>POWERSHELL{{% md %}}Indicates that the file is run with PowerShell flags `-NonInteractive`, `-NoProfile`, and `-ExecutionPolicy Bypass`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Interpreter<wbr>Unspecified</dt>
+    <dd>INTERPRETER_UNSPECIFIED{{% md %}}Invalid for a Windows ExecStepConfig. For a Linux ExecStepConfig, the interpreter will be parsed from the shebang line of the script if unspecified.{{% /md %}}</dd><dt>Shell</dt>
+    <dd>SHELL{{% md %}}Indicates that the script is run with `/bin/sh` on Linux and `cmd` on Windows.{{% /md %}}</dd><dt>Powershell</dt>
+    <dd>POWERSHELL{{% md %}}Indicates that the file is run with PowerShell flags `-NonInteractive`, `-NoProfile`, and `-ExecutionPolicy Bypass`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>INTERPRETER_UNSPECIFIED</dt>
+    <dd>INTERPRETER_UNSPECIFIED{{% md %}}Invalid for a Windows ExecStepConfig. For a Linux ExecStepConfig, the interpreter will be parsed from the shebang line of the script if unspecified.{{% /md %}}</dd><dt>SHELL</dt>
+    <dd>SHELL{{% md %}}Indicates that the script is run with `/bin/sh` on Linux and `cmd` on Windows.{{% /md %}}</dd><dt>POWERSHELL</dt>
+    <dd>POWERSHELL{{% md %}}Indicates that the file is run with PowerShell flags `-NonInteractive`, `-NoProfile`, and `-ExecutionPolicy Bypass`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="execstepconfigresponse">Exec<wbr>Step<wbr>Config<wbr>Response</h4>
@@ -2041,7 +2101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rebootconfig_csharp" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#patchconfigrebootconfig">Pulumi.<wbr>Google<wbr>Native.<wbr>OSConfig.<wbr>V1.<wbr>Patch<wbr>Config<wbr>Reboot<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Post-patch reboot settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2109,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rebootconfig_go" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#patchconfigrebootconfig">Patch<wbr>Config<wbr>Reboot<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Post-patch reboot settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2177,7 +2237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rebootconfig_nodejs" style="color: inherit; text-decoration: inherit;">reboot<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#patchconfigrebootconfig">Patch<wbr>Config<wbr>Reboot<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Post-patch reboot settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2245,7 +2305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reboot_config_python" style="color: inherit; text-decoration: inherit;">reboot_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#patchconfigrebootconfig">Patch<wbr>Config<wbr>Reboot<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Post-patch reboot settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2272,6 +2332,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#zyppersettings">Zypper<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Zypper update settings. Use this setting to override the default `zypper` patch rules.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="patchconfigrebootconfig">Patch<wbr>Config<wbr>Reboot<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Reboot<wbr>Config<wbr>Unspecified</dt>
+    <dd>REBOOT_CONFIG_UNSPECIFIED{{% md %}}The default behavior is DEFAULT.{{% /md %}}</dd><dt>Default</dt>
+    <dd>DEFAULT{{% md %}}The agent decides if a reboot is necessary by checking signals such as registry keys on Windows or `/var/run/reboot-required` on APT based systems. On RPM based systems, a set of core system package install times are compared with system boot time.{{% /md %}}</dd><dt>Always</dt>
+    <dd>ALWAYS{{% md %}}Always reboot the machine after the update completes.{{% /md %}}</dd><dt>Never</dt>
+    <dd>NEVER{{% md %}}Never reboot the machine after the update completes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Patch<wbr>Config<wbr>Reboot<wbr>Config<wbr>Reboot<wbr>Config<wbr>Unspecified</dt>
+    <dd>REBOOT_CONFIG_UNSPECIFIED{{% md %}}The default behavior is DEFAULT.{{% /md %}}</dd><dt>Patch<wbr>Config<wbr>Reboot<wbr>Config<wbr>Default</dt>
+    <dd>DEFAULT{{% md %}}The agent decides if a reboot is necessary by checking signals such as registry keys on Windows or `/var/run/reboot-required` on APT based systems. On RPM based systems, a set of core system package install times are compared with system boot time.{{% /md %}}</dd><dt>Patch<wbr>Config<wbr>Reboot<wbr>Config<wbr>Always</dt>
+    <dd>ALWAYS{{% md %}}Always reboot the machine after the update completes.{{% /md %}}</dd><dt>Patch<wbr>Config<wbr>Reboot<wbr>Config<wbr>Never</dt>
+    <dd>NEVER{{% md %}}Never reboot the machine after the update completes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Reboot<wbr>Config<wbr>Unspecified</dt>
+    <dd>REBOOT_CONFIG_UNSPECIFIED{{% md %}}The default behavior is DEFAULT.{{% /md %}}</dd><dt>Default</dt>
+    <dd>DEFAULT{{% md %}}The agent decides if a reboot is necessary by checking signals such as registry keys on Windows or `/var/run/reboot-required` on APT based systems. On RPM based systems, a set of core system package install times are compared with system boot time.{{% /md %}}</dd><dt>Always</dt>
+    <dd>ALWAYS{{% md %}}Always reboot the machine after the update completes.{{% /md %}}</dd><dt>Never</dt>
+    <dd>NEVER{{% md %}}Never reboot the machine after the update completes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>REBOOT_CONFIG_UNSPECIFIED</dt>
+    <dd>REBOOT_CONFIG_UNSPECIFIED{{% md %}}The default behavior is DEFAULT.{{% /md %}}</dd><dt>DEFAULT</dt>
+    <dd>DEFAULT{{% md %}}The agent decides if a reboot is necessary by checking signals such as registry keys on Windows or `/var/run/reboot-required` on APT based systems. On RPM based systems, a set of core system package install times are compared with system boot time.{{% /md %}}</dd><dt>ALWAYS</dt>
+    <dd>ALWAYS{{% md %}}Always reboot the machine after the update completes.{{% /md %}}</dd><dt>NEVER</dt>
+    <dd>NEVER{{% md %}}Never reboot the machine after the update completes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchconfigresponse">Patch<wbr>Config<wbr>Response</h4>
@@ -3021,7 +3115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#patchrolloutmode">Pulumi.<wbr>Google<wbr>Native.<wbr>OSConfig.<wbr>V1.<wbr>Patch<wbr>Rollout<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Mode of the patch rollout.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3041,7 +3135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#patchrolloutmode">Patch<wbr>Rollout<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Mode of the patch rollout.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3061,7 +3155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#patchrolloutmode">Patch<wbr>Rollout<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Mode of the patch rollout.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3081,9 +3175,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#patchrolloutmode">Patch<wbr>Rollout<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Mode of the patch rollout.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="patchrolloutmode">Patch<wbr>Rollout<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}Mode must be specified.{{% /md %}}</dd><dt>Zone<wbr>By<wbr>Zone</dt>
+    <dd>ZONE_BY_ZONE{{% md %}}Patches are applied one zone at a time. The patch job begins in the region with the lowest number of targeted VMs. Within the region, patching begins in the zone with the lowest number of targeted VMs. If multiple regions (or zones within a region) have the same number of targeted VMs, a tie-breaker is achieved by sorting the regions or zones in alphabetical order.{{% /md %}}</dd><dt>Concurrent<wbr>Zones</dt>
+    <dd>CONCURRENT_ZONES{{% md %}}Patches are applied to VMs in all zones at the same time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Patch<wbr>Rollout<wbr>Mode<wbr>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}Mode must be specified.{{% /md %}}</dd><dt>Patch<wbr>Rollout<wbr>Mode<wbr>Zone<wbr>By<wbr>Zone</dt>
+    <dd>ZONE_BY_ZONE{{% md %}}Patches are applied one zone at a time. The patch job begins in the region with the lowest number of targeted VMs. Within the region, patching begins in the zone with the lowest number of targeted VMs. If multiple regions (or zones within a region) have the same number of targeted VMs, a tie-breaker is achieved by sorting the regions or zones in alphabetical order.{{% /md %}}</dd><dt>Patch<wbr>Rollout<wbr>Mode<wbr>Concurrent<wbr>Zones</dt>
+    <dd>CONCURRENT_ZONES{{% md %}}Patches are applied to VMs in all zones at the same time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}Mode must be specified.{{% /md %}}</dd><dt>Zone<wbr>By<wbr>Zone</dt>
+    <dd>ZONE_BY_ZONE{{% md %}}Patches are applied one zone at a time. The patch job begins in the region with the lowest number of targeted VMs. Within the region, patching begins in the zone with the lowest number of targeted VMs. If multiple regions (or zones within a region) have the same number of targeted VMs, a tie-breaker is achieved by sorting the regions or zones in alphabetical order.{{% /md %}}</dd><dt>Concurrent<wbr>Zones</dt>
+    <dd>CONCURRENT_ZONES{{% md %}}Patches are applied to VMs in all zones at the same time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MODE_UNSPECIFIED</dt>
+    <dd>MODE_UNSPECIFIED{{% md %}}Mode must be specified.{{% /md %}}</dd><dt>ZONE_BY_ZONE</dt>
+    <dd>ZONE_BY_ZONE{{% md %}}Patches are applied one zone at a time. The patch job begins in the region with the lowest number of targeted VMs. Within the region, patching begins in the zone with the lowest number of targeted VMs. If multiple regions (or zones within a region) have the same number of targeted VMs, a tie-breaker is achieved by sorting the regions or zones in alphabetical order.{{% /md %}}</dd><dt>CONCURRENT_ZONES</dt>
+    <dd>CONCURRENT_ZONES{{% md %}}Patches are applied to VMs in all zones at the same time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchrolloutresponse">Patch<wbr>Rollout<wbr>Response</h4>
@@ -3185,7 +3309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#recurringschedulefrequency">Pulumi.<wbr>Google<wbr>Native.<wbr>OSConfig.<wbr>V1.<wbr>Recurring<wbr>Schedule<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}Required. The frequency unit of this recurring schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3245,7 +3369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#recurringschedulefrequency">Recurring<wbr>Schedule<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}Required. The frequency unit of this recurring schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3305,7 +3429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#recurringschedulefrequency">Recurring<wbr>Schedule<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}Required. The frequency unit of this recurring schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3365,7 +3489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#recurringschedulefrequency">Recurring<wbr>Schedule<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}Required. The frequency unit of this recurring schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3408,6 +3532,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#weeklyschedule">Weekly<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Schedule with weekly executions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="recurringschedulefrequency">Recurring<wbr>Schedule<wbr>Frequency</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Frequency<wbr>Unspecified</dt>
+    <dd>FREQUENCY_UNSPECIFIED{{% md %}}Invalid. A frequency must be specified.{{% /md %}}</dd><dt>Weekly</dt>
+    <dd>WEEKLY{{% md %}}Indicates that the frequency should be expressed in terms of weeks.{{% /md %}}</dd><dt>Monthly</dt>
+    <dd>MONTHLY{{% md %}}Indicates that the frequency should be expressed in terms of months.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Recurring<wbr>Schedule<wbr>Frequency<wbr>Frequency<wbr>Unspecified</dt>
+    <dd>FREQUENCY_UNSPECIFIED{{% md %}}Invalid. A frequency must be specified.{{% /md %}}</dd><dt>Recurring<wbr>Schedule<wbr>Frequency<wbr>Weekly</dt>
+    <dd>WEEKLY{{% md %}}Indicates that the frequency should be expressed in terms of weeks.{{% /md %}}</dd><dt>Recurring<wbr>Schedule<wbr>Frequency<wbr>Monthly</dt>
+    <dd>MONTHLY{{% md %}}Indicates that the frequency should be expressed in terms of months.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Frequency<wbr>Unspecified</dt>
+    <dd>FREQUENCY_UNSPECIFIED{{% md %}}Invalid. A frequency must be specified.{{% /md %}}</dd><dt>Weekly</dt>
+    <dd>WEEKLY{{% md %}}Indicates that the frequency should be expressed in terms of weeks.{{% /md %}}</dd><dt>Monthly</dt>
+    <dd>MONTHLY{{% md %}}Indicates that the frequency should be expressed in terms of months.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FREQUENCY_UNSPECIFIED</dt>
+    <dd>FREQUENCY_UNSPECIFIED{{% md %}}Invalid. A frequency must be specified.{{% /md %}}</dd><dt>WEEKLY</dt>
+    <dd>WEEKLY{{% md %}}Indicates that the frequency should be expressed in terms of weeks.{{% /md %}}</dd><dt>MONTHLY</dt>
+    <dd>MONTHLY{{% md %}}Indicates that the frequency should be expressed in terms of months.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="recurringscheduleresponse">Recurring<wbr>Schedule<wbr>Response</h4>
@@ -4149,7 +4303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#weekdayofmonthdayofweek">Pulumi.<wbr>Google<wbr>Native.<wbr>OSConfig.<wbr>V1.<wbr>Week<wbr>Day<wbr>Of<wbr>Month<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}Required. A day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4169,7 +4323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#weekdayofmonthdayofweek">Week<wbr>Day<wbr>Of<wbr>Month<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}Required. A day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4189,7 +4343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#weekdayofmonthdayofweek">Week<wbr>Day<wbr>Of<wbr>Month<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}Required. A day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4209,7 +4363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#weekdayofmonthdayofweek">Week<wbr>Day<wbr>Of<wbr>Month<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}Required. A day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4220,6 +4374,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="weekdayofmonthdayofweek">Week<wbr>Day<wbr>Of<wbr>Month<wbr>Day<wbr>Of<wbr>Week</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Day<wbr>Of<wbr>Week<wbr>Unspecified</dt>
+    <dd>DAY_OF_WEEK_UNSPECIFIED{{% md %}}The day of the week is unspecified.{{% /md %}}</dd><dt>Monday</dt>
+    <dd>MONDAY{{% md %}}Monday{{% /md %}}</dd><dt>Tuesday</dt>
+    <dd>TUESDAY{{% md %}}Tuesday{{% /md %}}</dd><dt>Wednesday</dt>
+    <dd>WEDNESDAY{{% md %}}Wednesday{{% /md %}}</dd><dt>Thursday</dt>
+    <dd>THURSDAY{{% md %}}Thursday{{% /md %}}</dd><dt>Friday</dt>
+    <dd>FRIDAY{{% md %}}Friday{{% /md %}}</dd><dt>Saturday</dt>
+    <dd>SATURDAY{{% md %}}Saturday{{% /md %}}</dd><dt>Sunday</dt>
+    <dd>SUNDAY{{% md %}}Sunday{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Week<wbr>Day<wbr>Of<wbr>Month<wbr>Day<wbr>Of<wbr>Week<wbr>Day<wbr>Of<wbr>Week<wbr>Unspecified</dt>
+    <dd>DAY_OF_WEEK_UNSPECIFIED{{% md %}}The day of the week is unspecified.{{% /md %}}</dd><dt>Week<wbr>Day<wbr>Of<wbr>Month<wbr>Day<wbr>Of<wbr>Week<wbr>Monday</dt>
+    <dd>MONDAY{{% md %}}Monday{{% /md %}}</dd><dt>Week<wbr>Day<wbr>Of<wbr>Month<wbr>Day<wbr>Of<wbr>Week<wbr>Tuesday</dt>
+    <dd>TUESDAY{{% md %}}Tuesday{{% /md %}}</dd><dt>Week<wbr>Day<wbr>Of<wbr>Month<wbr>Day<wbr>Of<wbr>Week<wbr>Wednesday</dt>
+    <dd>WEDNESDAY{{% md %}}Wednesday{{% /md %}}</dd><dt>Week<wbr>Day<wbr>Of<wbr>Month<wbr>Day<wbr>Of<wbr>Week<wbr>Thursday</dt>
+    <dd>THURSDAY{{% md %}}Thursday{{% /md %}}</dd><dt>Week<wbr>Day<wbr>Of<wbr>Month<wbr>Day<wbr>Of<wbr>Week<wbr>Friday</dt>
+    <dd>FRIDAY{{% md %}}Friday{{% /md %}}</dd><dt>Week<wbr>Day<wbr>Of<wbr>Month<wbr>Day<wbr>Of<wbr>Week<wbr>Saturday</dt>
+    <dd>SATURDAY{{% md %}}Saturday{{% /md %}}</dd><dt>Week<wbr>Day<wbr>Of<wbr>Month<wbr>Day<wbr>Of<wbr>Week<wbr>Sunday</dt>
+    <dd>SUNDAY{{% md %}}Sunday{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Day<wbr>Of<wbr>Week<wbr>Unspecified</dt>
+    <dd>DAY_OF_WEEK_UNSPECIFIED{{% md %}}The day of the week is unspecified.{{% /md %}}</dd><dt>Monday</dt>
+    <dd>MONDAY{{% md %}}Monday{{% /md %}}</dd><dt>Tuesday</dt>
+    <dd>TUESDAY{{% md %}}Tuesday{{% /md %}}</dd><dt>Wednesday</dt>
+    <dd>WEDNESDAY{{% md %}}Wednesday{{% /md %}}</dd><dt>Thursday</dt>
+    <dd>THURSDAY{{% md %}}Thursday{{% /md %}}</dd><dt>Friday</dt>
+    <dd>FRIDAY{{% md %}}Friday{{% /md %}}</dd><dt>Saturday</dt>
+    <dd>SATURDAY{{% md %}}Saturday{{% /md %}}</dd><dt>Sunday</dt>
+    <dd>SUNDAY{{% md %}}Sunday{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DAY_OF_WEEK_UNSPECIFIED</dt>
+    <dd>DAY_OF_WEEK_UNSPECIFIED{{% md %}}The day of the week is unspecified.{{% /md %}}</dd><dt>MONDAY</dt>
+    <dd>MONDAY{{% md %}}Monday{{% /md %}}</dd><dt>TUESDAY</dt>
+    <dd>TUESDAY{{% md %}}Tuesday{{% /md %}}</dd><dt>WEDNESDAY</dt>
+    <dd>WEDNESDAY{{% md %}}Wednesday{{% /md %}}</dd><dt>THURSDAY</dt>
+    <dd>THURSDAY{{% md %}}Thursday{{% /md %}}</dd><dt>FRIDAY</dt>
+    <dd>FRIDAY{{% md %}}Friday{{% /md %}}</dd><dt>SATURDAY</dt>
+    <dd>SATURDAY{{% md %}}Saturday{{% /md %}}</dd><dt>SUNDAY</dt>
+    <dd>SUNDAY{{% md %}}Sunday{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="weekdayofmonthresponse">Week<wbr>Day<wbr>Of<wbr>Month<wbr>Response</h4>
@@ -4313,7 +4517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#weeklyscheduledayofweek">Pulumi.<wbr>Google<wbr>Native.<wbr>OSConfig.<wbr>V1.<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}Required. Day of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4325,7 +4529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#weeklyscheduledayofweek">Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}Required. Day of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4337,7 +4541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#weeklyscheduledayofweek">Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}Required. Day of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4349,9 +4553,59 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#weeklyscheduledayofweek">Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}Required. Day of the week.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="weeklyscheduledayofweek">Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Day<wbr>Of<wbr>Week<wbr>Unspecified</dt>
+    <dd>DAY_OF_WEEK_UNSPECIFIED{{% md %}}The day of the week is unspecified.{{% /md %}}</dd><dt>Monday</dt>
+    <dd>MONDAY{{% md %}}Monday{{% /md %}}</dd><dt>Tuesday</dt>
+    <dd>TUESDAY{{% md %}}Tuesday{{% /md %}}</dd><dt>Wednesday</dt>
+    <dd>WEDNESDAY{{% md %}}Wednesday{{% /md %}}</dd><dt>Thursday</dt>
+    <dd>THURSDAY{{% md %}}Thursday{{% /md %}}</dd><dt>Friday</dt>
+    <dd>FRIDAY{{% md %}}Friday{{% /md %}}</dd><dt>Saturday</dt>
+    <dd>SATURDAY{{% md %}}Saturday{{% /md %}}</dd><dt>Sunday</dt>
+    <dd>SUNDAY{{% md %}}Sunday{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Day<wbr>Of<wbr>Week<wbr>Unspecified</dt>
+    <dd>DAY_OF_WEEK_UNSPECIFIED{{% md %}}The day of the week is unspecified.{{% /md %}}</dd><dt>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Monday</dt>
+    <dd>MONDAY{{% md %}}Monday{{% /md %}}</dd><dt>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Tuesday</dt>
+    <dd>TUESDAY{{% md %}}Tuesday{{% /md %}}</dd><dt>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Wednesday</dt>
+    <dd>WEDNESDAY{{% md %}}Wednesday{{% /md %}}</dd><dt>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Thursday</dt>
+    <dd>THURSDAY{{% md %}}Thursday{{% /md %}}</dd><dt>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Friday</dt>
+    <dd>FRIDAY{{% md %}}Friday{{% /md %}}</dd><dt>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Saturday</dt>
+    <dd>SATURDAY{{% md %}}Saturday{{% /md %}}</dd><dt>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Sunday</dt>
+    <dd>SUNDAY{{% md %}}Sunday{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Day<wbr>Of<wbr>Week<wbr>Unspecified</dt>
+    <dd>DAY_OF_WEEK_UNSPECIFIED{{% md %}}The day of the week is unspecified.{{% /md %}}</dd><dt>Monday</dt>
+    <dd>MONDAY{{% md %}}Monday{{% /md %}}</dd><dt>Tuesday</dt>
+    <dd>TUESDAY{{% md %}}Tuesday{{% /md %}}</dd><dt>Wednesday</dt>
+    <dd>WEDNESDAY{{% md %}}Wednesday{{% /md %}}</dd><dt>Thursday</dt>
+    <dd>THURSDAY{{% md %}}Thursday{{% /md %}}</dd><dt>Friday</dt>
+    <dd>FRIDAY{{% md %}}Friday{{% /md %}}</dd><dt>Saturday</dt>
+    <dd>SATURDAY{{% md %}}Saturday{{% /md %}}</dd><dt>Sunday</dt>
+    <dd>SUNDAY{{% md %}}Sunday{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DAY_OF_WEEK_UNSPECIFIED</dt>
+    <dd>DAY_OF_WEEK_UNSPECIFIED{{% md %}}The day of the week is unspecified.{{% /md %}}</dd><dt>MONDAY</dt>
+    <dd>MONDAY{{% md %}}Monday{{% /md %}}</dd><dt>TUESDAY</dt>
+    <dd>TUESDAY{{% md %}}Tuesday{{% /md %}}</dd><dt>WEDNESDAY</dt>
+    <dd>WEDNESDAY{{% md %}}Wednesday{{% /md %}}</dd><dt>THURSDAY</dt>
+    <dd>THURSDAY{{% md %}}Thursday{{% /md %}}</dd><dt>FRIDAY</dt>
+    <dd>FRIDAY{{% md %}}Friday{{% /md %}}</dd><dt>SATURDAY</dt>
+    <dd>SATURDAY{{% md %}}Saturday{{% /md %}}</dd><dt>SUNDAY</dt>
+    <dd>SUNDAY{{% md %}}Sunday{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="weeklyscheduleresponse">Weekly<wbr>Schedule<wbr>Response</h4>
@@ -4413,7 +4667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classifications_csharp" style="color: inherit; text-decoration: inherit;">Classifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#windowsupdatesettingsclassificationsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>OSConfig.<wbr>V1.<wbr>Windows<wbr>Update<wbr>Settings<wbr>Classifications<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}Only apply updates of these windows update classifications. If empty, all updates are applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4441,7 +4695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classifications_go" style="color: inherit; text-decoration: inherit;">Classifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#windowsupdatesettingsclassificationsitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}Only apply updates of these windows update classifications. If empty, all updates are applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4469,7 +4723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classifications_nodejs" style="color: inherit; text-decoration: inherit;">classifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#windowsupdatesettingsclassificationsitem">Windows<wbr>Update<wbr>Settings<wbr>Classifications<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}Only apply updates of these windows update classifications. If empty, all updates are applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4497,7 +4751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classifications_python" style="color: inherit; text-decoration: inherit;">classifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#windowsupdatesettingsclassificationsitem">Windows<wbr>Update<wbr>Settings<wbr>Classifications<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}Only apply updates of these windows update classifications. If empty, all updates are applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4516,6 +4770,64 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated. This field must not be used with other patch configurations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="windowsupdatesettingsclassificationsitem">Windows<wbr>Update<wbr>Settings<wbr>Classifications<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Classification<wbr>Unspecified</dt>
+    <dd>CLASSIFICATION_UNSPECIFIED{{% md %}}Invalid. If classifications are included, they must be specified.{{% /md %}}</dd><dt>Critical</dt>
+    <dd>CRITICAL{{% md %}}"A widely released fix for a specific problem that addresses a critical, non-security-related bug." [1]{{% /md %}}</dd><dt>Security</dt>
+    <dd>SECURITY{{% md %}}"A widely released fix for a product-specific, security-related vulnerability. Security vulnerabilities are rated by their severity. The severity rating is indicated in the Microsoft security bulletin as critical, important, moderate, or low." [1]{{% /md %}}</dd><dt>Definition</dt>
+    <dd>DEFINITION{{% md %}}"A widely released and frequent software update that contains additions to a product's definition database. Definition databases are often used to detect objects that have specific attributes, such as malicious code, phishing websites, or junk mail." [1]{{% /md %}}</dd><dt>Driver</dt>
+    <dd>DRIVER{{% md %}}"Software that controls the input and output of a device." [1]{{% /md %}}</dd><dt>Feature<wbr>Pack</dt>
+    <dd>FEATURE_PACK{{% md %}}"New product functionality that is first distributed outside the context of a product release and that is typically included in the next full product release." [1]{{% /md %}}</dd><dt>Service<wbr>Pack</dt>
+    <dd>SERVICE_PACK{{% md %}}"A tested, cumulative set of all hotfixes, security updates, critical updates, and updates. Additionally, service packs may contain additional fixes for problems that are found internally since the release of the product. Service packs my also contain a limited number of customer-requested design changes or features." [1]{{% /md %}}</dd><dt>Tool</dt>
+    <dd>TOOL{{% md %}}"A utility or feature that helps complete a task or set of tasks." [1]{{% /md %}}</dd><dt>Update<wbr>Rollup</dt>
+    <dd>UPDATE_ROLLUP{{% md %}}"A tested, cumulative set of hotfixes, security updates, critical updates, and updates that are packaged together for easy deployment. A rollup generally targets a specific area, such as security, or a component of a product, such as Internet Information Services (IIS)." [1]{{% /md %}}</dd><dt>Update</dt>
+    <dd>UPDATE{{% md %}}"A widely released fix for a specific problem. An update addresses a noncritical, non-security-related bug." [1]{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Windows<wbr>Update<wbr>Settings<wbr>Classifications<wbr>Item<wbr>Classification<wbr>Unspecified</dt>
+    <dd>CLASSIFICATION_UNSPECIFIED{{% md %}}Invalid. If classifications are included, they must be specified.{{% /md %}}</dd><dt>Windows<wbr>Update<wbr>Settings<wbr>Classifications<wbr>Item<wbr>Critical</dt>
+    <dd>CRITICAL{{% md %}}"A widely released fix for a specific problem that addresses a critical, non-security-related bug." [1]{{% /md %}}</dd><dt>Windows<wbr>Update<wbr>Settings<wbr>Classifications<wbr>Item<wbr>Security</dt>
+    <dd>SECURITY{{% md %}}"A widely released fix for a product-specific, security-related vulnerability. Security vulnerabilities are rated by their severity. The severity rating is indicated in the Microsoft security bulletin as critical, important, moderate, or low." [1]{{% /md %}}</dd><dt>Windows<wbr>Update<wbr>Settings<wbr>Classifications<wbr>Item<wbr>Definition</dt>
+    <dd>DEFINITION{{% md %}}"A widely released and frequent software update that contains additions to a product's definition database. Definition databases are often used to detect objects that have specific attributes, such as malicious code, phishing websites, or junk mail." [1]{{% /md %}}</dd><dt>Windows<wbr>Update<wbr>Settings<wbr>Classifications<wbr>Item<wbr>Driver</dt>
+    <dd>DRIVER{{% md %}}"Software that controls the input and output of a device." [1]{{% /md %}}</dd><dt>Windows<wbr>Update<wbr>Settings<wbr>Classifications<wbr>Item<wbr>Feature<wbr>Pack</dt>
+    <dd>FEATURE_PACK{{% md %}}"New product functionality that is first distributed outside the context of a product release and that is typically included in the next full product release." [1]{{% /md %}}</dd><dt>Windows<wbr>Update<wbr>Settings<wbr>Classifications<wbr>Item<wbr>Service<wbr>Pack</dt>
+    <dd>SERVICE_PACK{{% md %}}"A tested, cumulative set of all hotfixes, security updates, critical updates, and updates. Additionally, service packs may contain additional fixes for problems that are found internally since the release of the product. Service packs my also contain a limited number of customer-requested design changes or features." [1]{{% /md %}}</dd><dt>Windows<wbr>Update<wbr>Settings<wbr>Classifications<wbr>Item<wbr>Tool</dt>
+    <dd>TOOL{{% md %}}"A utility or feature that helps complete a task or set of tasks." [1]{{% /md %}}</dd><dt>Windows<wbr>Update<wbr>Settings<wbr>Classifications<wbr>Item<wbr>Update<wbr>Rollup</dt>
+    <dd>UPDATE_ROLLUP{{% md %}}"A tested, cumulative set of hotfixes, security updates, critical updates, and updates that are packaged together for easy deployment. A rollup generally targets a specific area, such as security, or a component of a product, such as Internet Information Services (IIS)." [1]{{% /md %}}</dd><dt>Windows<wbr>Update<wbr>Settings<wbr>Classifications<wbr>Item<wbr>Update</dt>
+    <dd>UPDATE{{% md %}}"A widely released fix for a specific problem. An update addresses a noncritical, non-security-related bug." [1]{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Classification<wbr>Unspecified</dt>
+    <dd>CLASSIFICATION_UNSPECIFIED{{% md %}}Invalid. If classifications are included, they must be specified.{{% /md %}}</dd><dt>Critical</dt>
+    <dd>CRITICAL{{% md %}}"A widely released fix for a specific problem that addresses a critical, non-security-related bug." [1]{{% /md %}}</dd><dt>Security</dt>
+    <dd>SECURITY{{% md %}}"A widely released fix for a product-specific, security-related vulnerability. Security vulnerabilities are rated by their severity. The severity rating is indicated in the Microsoft security bulletin as critical, important, moderate, or low." [1]{{% /md %}}</dd><dt>Definition</dt>
+    <dd>DEFINITION{{% md %}}"A widely released and frequent software update that contains additions to a product's definition database. Definition databases are often used to detect objects that have specific attributes, such as malicious code, phishing websites, or junk mail." [1]{{% /md %}}</dd><dt>Driver</dt>
+    <dd>DRIVER{{% md %}}"Software that controls the input and output of a device." [1]{{% /md %}}</dd><dt>Feature<wbr>Pack</dt>
+    <dd>FEATURE_PACK{{% md %}}"New product functionality that is first distributed outside the context of a product release and that is typically included in the next full product release." [1]{{% /md %}}</dd><dt>Service<wbr>Pack</dt>
+    <dd>SERVICE_PACK{{% md %}}"A tested, cumulative set of all hotfixes, security updates, critical updates, and updates. Additionally, service packs may contain additional fixes for problems that are found internally since the release of the product. Service packs my also contain a limited number of customer-requested design changes or features." [1]{{% /md %}}</dd><dt>Tool</dt>
+    <dd>TOOL{{% md %}}"A utility or feature that helps complete a task or set of tasks." [1]{{% /md %}}</dd><dt>Update<wbr>Rollup</dt>
+    <dd>UPDATE_ROLLUP{{% md %}}"A tested, cumulative set of hotfixes, security updates, critical updates, and updates that are packaged together for easy deployment. A rollup generally targets a specific area, such as security, or a component of a product, such as Internet Information Services (IIS)." [1]{{% /md %}}</dd><dt>Update</dt>
+    <dd>UPDATE{{% md %}}"A widely released fix for a specific problem. An update addresses a noncritical, non-security-related bug." [1]{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CLASSIFICATION_UNSPECIFIED</dt>
+    <dd>CLASSIFICATION_UNSPECIFIED{{% md %}}Invalid. If classifications are included, they must be specified.{{% /md %}}</dd><dt>CRITICAL</dt>
+    <dd>CRITICAL{{% md %}}"A widely released fix for a specific problem that addresses a critical, non-security-related bug." [1]{{% /md %}}</dd><dt>SECURITY</dt>
+    <dd>SECURITY{{% md %}}"A widely released fix for a product-specific, security-related vulnerability. Security vulnerabilities are rated by their severity. The severity rating is indicated in the Microsoft security bulletin as critical, important, moderate, or low." [1]{{% /md %}}</dd><dt>DEFINITION</dt>
+    <dd>DEFINITION{{% md %}}"A widely released and frequent software update that contains additions to a product's definition database. Definition databases are often used to detect objects that have specific attributes, such as malicious code, phishing websites, or junk mail." [1]{{% /md %}}</dd><dt>DRIVER</dt>
+    <dd>DRIVER{{% md %}}"Software that controls the input and output of a device." [1]{{% /md %}}</dd><dt>FEATURE_PACK</dt>
+    <dd>FEATURE_PACK{{% md %}}"New product functionality that is first distributed outside the context of a product release and that is typically included in the next full product release." [1]{{% /md %}}</dd><dt>SERVICE_PACK</dt>
+    <dd>SERVICE_PACK{{% md %}}"A tested, cumulative set of all hotfixes, security updates, critical updates, and updates. Additionally, service packs may contain additional fixes for problems that are found internally since the release of the product. Service packs my also contain a limited number of customer-requested design changes or features." [1]{{% /md %}}</dd><dt>TOOL</dt>
+    <dd>TOOL{{% md %}}"A utility or feature that helps complete a task or set of tasks." [1]{{% /md %}}</dd><dt>UPDATE_ROLLUP</dt>
+    <dd>UPDATE_ROLLUP{{% md %}}"A tested, cumulative set of hotfixes, security updates, critical updates, and updates that are packaged together for easy deployment. A rollup generally targets a specific area, such as security, or a component of a product, such as Internet Information Services (IIS)." [1]{{% /md %}}</dd><dt>UPDATE</dt>
+    <dd>UPDATE{{% md %}}"A widely released fix for a specific problem. An update addresses a noncritical, non-security-related bug." [1]{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="windowsupdatesettingsresponse">Windows<wbr>Update<wbr>Settings<wbr>Response</h4>

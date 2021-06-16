@@ -27,7 +27,7 @@ Creates a new backup run on demand. This method is applicable only to Second Gen
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">BackupRun</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-              <span class="nx">backup_kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">backup_kind</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.BackupRunBackupKind]</span> = None<span class="p">,</span>
               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">disk_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.DiskEncryptionConfigurationArgs]</span> = None<span class="p">,</span>
               <span class="nx">disk_encryption_status</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.DiskEncryptionStatusArgs]</span> = None<span class="p">,</span>
@@ -41,8 +41,8 @@ Creates a new backup run on demand. This method is applicable only to Second Gen
               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.BackupRunStatus]</span> = None<span class="p">,</span>
+              <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.BackupRunType]</span> = None<span class="p">,</span>
               <span class="nx">window_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">BackupRun</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -193,7 +193,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backupkind_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backuprunbackupkind">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Backup<wbr>Run<wbr>Backup<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -289,7 +289,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backuprunstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Backup<wbr>Run<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of this run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -297,7 +297,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backupruntype">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Backup<wbr>Run<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of this run; can be either "AUTOMATED" or "ON_DEMAND". This field defaults to "ON_DEMAND" and is ignored, when specified for insert requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -333,7 +333,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backupkind_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backuprunbackupkind">Backup<wbr>Run<wbr>Backup<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -429,7 +429,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backuprunstatus">Backup<wbr>Run<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of this run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -437,7 +437,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backupruntype">Backup<wbr>Run<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of this run; can be either "AUTOMATED" or "ON_DEMAND". This field defaults to "ON_DEMAND" and is ignored, when specified for insert requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -473,7 +473,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backupkind_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backuprunbackupkind">Backup<wbr>Run<wbr>Backup<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -569,7 +569,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backuprunstatus">Backup<wbr>Run<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of this run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -577,7 +577,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backupruntype">Backup<wbr>Run<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of this run; can be either "AUTOMATED" or "ON_DEMAND". This field defaults to "ON_DEMAND" and is ignored, when specified for insert requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -613,7 +613,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backup_kind_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#backuprunbackupkind">Backup<wbr>Run<wbr>Backup<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -709,7 +709,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#backuprunstatus">Backup<wbr>Run<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of this run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -717,7 +717,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#backupruntype">Backup<wbr>Run<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of this run; can be either "AUTOMATED" or "ON_DEMAND". This field defaults to "ON_DEMAND" and is ignored, when specified for insert requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -794,6 +794,124 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="backuprunbackupkind">Backup<wbr>Run<wbr>Backup<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sql<wbr>Backup<wbr>Kind<wbr>Unspecified</dt>
+    <dd>SQL_BACKUP_KIND_UNSPECIFIED{{% md %}}This is an unknown BackupKind.{{% /md %}}</dd><dt>Snapshot</dt>
+    <dd>SNAPSHOT{{% md %}}The snapshot based backups{{% /md %}}</dd><dt>Physical</dt>
+    <dd>PHYSICAL{{% md %}}Physical backups{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Backup<wbr>Run<wbr>Backup<wbr>Kind<wbr>Sql<wbr>Backup<wbr>Kind<wbr>Unspecified</dt>
+    <dd>SQL_BACKUP_KIND_UNSPECIFIED{{% md %}}This is an unknown BackupKind.{{% /md %}}</dd><dt>Backup<wbr>Run<wbr>Backup<wbr>Kind<wbr>Snapshot</dt>
+    <dd>SNAPSHOT{{% md %}}The snapshot based backups{{% /md %}}</dd><dt>Backup<wbr>Run<wbr>Backup<wbr>Kind<wbr>Physical</dt>
+    <dd>PHYSICAL{{% md %}}Physical backups{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sql<wbr>Backup<wbr>Kind<wbr>Unspecified</dt>
+    <dd>SQL_BACKUP_KIND_UNSPECIFIED{{% md %}}This is an unknown BackupKind.{{% /md %}}</dd><dt>Snapshot</dt>
+    <dd>SNAPSHOT{{% md %}}The snapshot based backups{{% /md %}}</dd><dt>Physical</dt>
+    <dd>PHYSICAL{{% md %}}Physical backups{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQL_BACKUP_KIND_UNSPECIFIED</dt>
+    <dd>SQL_BACKUP_KIND_UNSPECIFIED{{% md %}}This is an unknown BackupKind.{{% /md %}}</dd><dt>SNAPSHOT</dt>
+    <dd>SNAPSHOT{{% md %}}The snapshot based backups{{% /md %}}</dd><dt>PHYSICAL</dt>
+    <dd>PHYSICAL{{% md %}}Physical backups{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="backuprunstatus">Backup<wbr>Run<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sql<wbr>Backup<wbr>Run<wbr>Status<wbr>Unspecified</dt>
+    <dd>SQL_BACKUP_RUN_STATUS_UNSPECIFIED{{% md %}}The status of the run is unknown.{{% /md %}}</dd><dt>Enqueued</dt>
+    <dd>ENQUEUED{{% md %}}The backup operation was enqueued.{{% /md %}}</dd><dt>Overdue</dt>
+    <dd>OVERDUE{{% md %}}The backup is overdue across a given backup window. Indicates a problem. Example: Long-running operation in progress during the whole window.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The backup is in progress.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The backup failed.{{% /md %}}</dd><dt>Successful</dt>
+    <dd>SUCCESSFUL{{% md %}}The backup was successful.{{% /md %}}</dd><dt>Skipped</dt>
+    <dd>SKIPPED{{% md %}}The backup was skipped (without problems) for a given backup window. Example: Instance was idle.{{% /md %}}</dd><dt>Deletion<wbr>Pending</dt>
+    <dd>DELETION_PENDING{{% md %}}The backup is about to be deleted.{{% /md %}}</dd><dt>Deletion<wbr>Failed</dt>
+    <dd>DELETION_FAILED{{% md %}}The backup deletion failed.{{% /md %}}</dd><dt>Deleted</dt>
+    <dd>DELETED{{% md %}}The backup has been deleted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Backup<wbr>Run<wbr>Status<wbr>Sql<wbr>Backup<wbr>Run<wbr>Status<wbr>Unspecified</dt>
+    <dd>SQL_BACKUP_RUN_STATUS_UNSPECIFIED{{% md %}}The status of the run is unknown.{{% /md %}}</dd><dt>Backup<wbr>Run<wbr>Status<wbr>Enqueued</dt>
+    <dd>ENQUEUED{{% md %}}The backup operation was enqueued.{{% /md %}}</dd><dt>Backup<wbr>Run<wbr>Status<wbr>Overdue</dt>
+    <dd>OVERDUE{{% md %}}The backup is overdue across a given backup window. Indicates a problem. Example: Long-running operation in progress during the whole window.{{% /md %}}</dd><dt>Backup<wbr>Run<wbr>Status<wbr>Running</dt>
+    <dd>RUNNING{{% md %}}The backup is in progress.{{% /md %}}</dd><dt>Backup<wbr>Run<wbr>Status<wbr>Failed</dt>
+    <dd>FAILED{{% md %}}The backup failed.{{% /md %}}</dd><dt>Backup<wbr>Run<wbr>Status<wbr>Successful</dt>
+    <dd>SUCCESSFUL{{% md %}}The backup was successful.{{% /md %}}</dd><dt>Backup<wbr>Run<wbr>Status<wbr>Skipped</dt>
+    <dd>SKIPPED{{% md %}}The backup was skipped (without problems) for a given backup window. Example: Instance was idle.{{% /md %}}</dd><dt>Backup<wbr>Run<wbr>Status<wbr>Deletion<wbr>Pending</dt>
+    <dd>DELETION_PENDING{{% md %}}The backup is about to be deleted.{{% /md %}}</dd><dt>Backup<wbr>Run<wbr>Status<wbr>Deletion<wbr>Failed</dt>
+    <dd>DELETION_FAILED{{% md %}}The backup deletion failed.{{% /md %}}</dd><dt>Backup<wbr>Run<wbr>Status<wbr>Deleted</dt>
+    <dd>DELETED{{% md %}}The backup has been deleted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sql<wbr>Backup<wbr>Run<wbr>Status<wbr>Unspecified</dt>
+    <dd>SQL_BACKUP_RUN_STATUS_UNSPECIFIED{{% md %}}The status of the run is unknown.{{% /md %}}</dd><dt>Enqueued</dt>
+    <dd>ENQUEUED{{% md %}}The backup operation was enqueued.{{% /md %}}</dd><dt>Overdue</dt>
+    <dd>OVERDUE{{% md %}}The backup is overdue across a given backup window. Indicates a problem. Example: Long-running operation in progress during the whole window.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The backup is in progress.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The backup failed.{{% /md %}}</dd><dt>Successful</dt>
+    <dd>SUCCESSFUL{{% md %}}The backup was successful.{{% /md %}}</dd><dt>Skipped</dt>
+    <dd>SKIPPED{{% md %}}The backup was skipped (without problems) for a given backup window. Example: Instance was idle.{{% /md %}}</dd><dt>Deletion<wbr>Pending</dt>
+    <dd>DELETION_PENDING{{% md %}}The backup is about to be deleted.{{% /md %}}</dd><dt>Deletion<wbr>Failed</dt>
+    <dd>DELETION_FAILED{{% md %}}The backup deletion failed.{{% /md %}}</dd><dt>Deleted</dt>
+    <dd>DELETED{{% md %}}The backup has been deleted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQL_BACKUP_RUN_STATUS_UNSPECIFIED</dt>
+    <dd>SQL_BACKUP_RUN_STATUS_UNSPECIFIED{{% md %}}The status of the run is unknown.{{% /md %}}</dd><dt>ENQUEUED</dt>
+    <dd>ENQUEUED{{% md %}}The backup operation was enqueued.{{% /md %}}</dd><dt>OVERDUE</dt>
+    <dd>OVERDUE{{% md %}}The backup is overdue across a given backup window. Indicates a problem. Example: Long-running operation in progress during the whole window.{{% /md %}}</dd><dt>RUNNING</dt>
+    <dd>RUNNING{{% md %}}The backup is in progress.{{% /md %}}</dd><dt>FAILED</dt>
+    <dd>FAILED{{% md %}}The backup failed.{{% /md %}}</dd><dt>SUCCESSFUL</dt>
+    <dd>SUCCESSFUL{{% md %}}The backup was successful.{{% /md %}}</dd><dt>SKIPPED</dt>
+    <dd>SKIPPED{{% md %}}The backup was skipped (without problems) for a given backup window. Example: Instance was idle.{{% /md %}}</dd><dt>DELETION_PENDING</dt>
+    <dd>DELETION_PENDING{{% md %}}The backup is about to be deleted.{{% /md %}}</dd><dt>DELETION_FAILED</dt>
+    <dd>DELETION_FAILED{{% md %}}The backup deletion failed.{{% /md %}}</dd><dt>DELETED</dt>
+    <dd>DELETED{{% md %}}The backup has been deleted.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="backupruntype">Backup<wbr>Run<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sql<wbr>Backup<wbr>Run<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_BACKUP_RUN_TYPE_UNSPECIFIED{{% md %}}This is an unknown BackupRun type.{{% /md %}}</dd><dt>Automated</dt>
+    <dd>AUTOMATED{{% md %}}The backup schedule automatically triggers a backup.{{% /md %}}</dd><dt>On<wbr>Demand</dt>
+    <dd>ON_DEMAND{{% md %}}The user manually triggers a backup.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Backup<wbr>Run<wbr>Type<wbr>Sql<wbr>Backup<wbr>Run<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_BACKUP_RUN_TYPE_UNSPECIFIED{{% md %}}This is an unknown BackupRun type.{{% /md %}}</dd><dt>Backup<wbr>Run<wbr>Type<wbr>Automated</dt>
+    <dd>AUTOMATED{{% md %}}The backup schedule automatically triggers a backup.{{% /md %}}</dd><dt>Backup<wbr>Run<wbr>Type<wbr>On<wbr>Demand</dt>
+    <dd>ON_DEMAND{{% md %}}The user manually triggers a backup.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sql<wbr>Backup<wbr>Run<wbr>Type<wbr>Unspecified</dt>
+    <dd>SQL_BACKUP_RUN_TYPE_UNSPECIFIED{{% md %}}This is an unknown BackupRun type.{{% /md %}}</dd><dt>Automated</dt>
+    <dd>AUTOMATED{{% md %}}The backup schedule automatically triggers a backup.{{% /md %}}</dd><dt>On<wbr>Demand</dt>
+    <dd>ON_DEMAND{{% md %}}The user manually triggers a backup.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SQL_BACKUP_RUN_TYPE_UNSPECIFIED</dt>
+    <dd>SQL_BACKUP_RUN_TYPE_UNSPECIFIED{{% md %}}This is an unknown BackupRun type.{{% /md %}}</dd><dt>AUTOMATED</dt>
+    <dd>AUTOMATED{{% md %}}The backup schedule automatically triggers a backup.{{% /md %}}</dd><dt>ON_DEMAND</dt>
+    <dd>ON_DEMAND{{% md %}}The user manually triggers a backup.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="diskencryptionconfiguration">Disk<wbr>Encryption<wbr>Configuration</h4>
 

@@ -46,7 +46,7 @@ Creates a HealthCheck resource in the specified project using the data included 
                       <span class="nx">ssl_health_check</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.SSLHealthCheckArgs]</span> = None<span class="p">,</span>
                       <span class="nx">tcp_health_check</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.TCPHealthCheckArgs]</span> = None<span class="p">,</span>
                       <span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-                      <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.RegionHealthCheckType]</span> = None<span class="p">,</span>
                       <span class="nx">unhealthy_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">RegionHealthCheck</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -333,7 +333,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionhealthchecktype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Region<wbr>Health<wbr>Check<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS or HTTP2. If not specified, the default is TCP. Exactly one of the protocol-specific health check field must be specified, which must match type field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -505,7 +505,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionhealthchecktype">Region<wbr>Health<wbr>Check<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS or HTTP2. If not specified, the default is TCP. Exactly one of the protocol-specific health check field must be specified, which must match type field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -677,7 +677,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionhealthchecktype">Region<wbr>Health<wbr>Check<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS or HTTP2. If not specified, the default is TCP. Exactly one of the protocol-specific health check field must be specified, which must match type field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -849,7 +849,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#regionhealthchecktype">Region<wbr>Health<wbr>Check<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS or HTTP2. If not specified, the default is TCP. Exactly one of the protocol-specific health check field must be specified, which must match type field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -963,7 +963,7 @@ The grpc_service_name can only be ASCII.{{% /md %}}</dd><dt class="property-opti
 <a href="#portspecification_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#grpchealthcheckportspecification">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>GRPCHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -1008,7 +1008,7 @@ The grpc_service_name can only be ASCII.{{% /md %}}</dd><dt class="property-opti
 <a href="#portspecification_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#grpchealthcheckportspecification">GRPCHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -1053,7 +1053,7 @@ The grpc_service_name can only be ASCII.{{% /md %}}</dd><dt class="property-opti
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#grpchealthcheckportspecification">GRPCHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -1098,7 +1098,7 @@ The grpc_service_name can only be ASCII.{{% /md %}}</dd><dt class="property-opti
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#grpchealthcheckportspecification">GRPCHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -1107,6 +1107,36 @@ USE_SERVING_PORT: For NetworkEndpointGroup, the port specified for each network 
 
 
 If not specified, gRPC health check follows behavior specified in port and portName fields.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="grpchealthcheckportspecification">GRPCHealth<wbr>Check<wbr>Port<wbr>Specification</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Use<wbr>Fixed<wbr>Port</dt>
+    <dd>USE_FIXED_PORT</dd><dt>Use<wbr>Named<wbr>Port</dt>
+    <dd>USE_NAMED_PORT</dd><dt>Use<wbr>Serving<wbr>Port</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>GRPCHealth<wbr>Check<wbr>Port<wbr>Specification<wbr>Use<wbr>Fixed<wbr>Port</dt>
+    <dd>USE_FIXED_PORT</dd><dt>GRPCHealth<wbr>Check<wbr>Port<wbr>Specification<wbr>Use<wbr>Named<wbr>Port</dt>
+    <dd>USE_NAMED_PORT</dd><dt>GRPCHealth<wbr>Check<wbr>Port<wbr>Specification<wbr>Use<wbr>Serving<wbr>Port</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Use<wbr>Fixed<wbr>Port</dt>
+    <dd>USE_FIXED_PORT</dd><dt>Use<wbr>Named<wbr>Port</dt>
+    <dd>USE_NAMED_PORT</dd><dt>Use<wbr>Serving<wbr>Port</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>USE_FIXED_PORT</dt>
+    <dd>USE_FIXED_PORT</dd><dt>USE_NAMED_PORT</dt>
+    <dd>USE_NAMED_PORT</dd><dt>USE_SERVING_PORT</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
 {{% /choosable %}}
 
 <h4 id="grpchealthcheckresponse">GRPCHealth<wbr>Check<wbr>Response</h4>
@@ -1324,7 +1354,7 @@ If not specified, gRPC health check follows behavior specified in port and portN
 <a href="#portspecification_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#http2healthcheckportspecification">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>HTTP2Health<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -1338,7 +1368,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#proxyheader_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#http2healthcheckproxyheader">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>HTTP2Health<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1390,7 +1420,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#portspecification_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#http2healthcheckportspecification">HTTP2Health<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -1404,7 +1434,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#proxyheader_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#http2healthcheckproxyheader">HTTP2Health<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1456,7 +1486,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#http2healthcheckportspecification">HTTP2Health<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -1470,7 +1500,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#http2healthcheckproxyheader">HTTP2Health<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1522,7 +1552,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#http2healthcheckportspecification">HTTP2Health<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -1536,7 +1566,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#http2healthcheckproxyheader">HTTP2Health<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1555,6 +1585,62 @@ If not specified, HTTP2 health check follows behavior specified in port and port
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="http2healthcheckportspecification">HTTP2Health<wbr>Check<wbr>Port<wbr>Specification</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Use<wbr>Fixed<wbr>Port</dt>
+    <dd>USE_FIXED_PORT</dd><dt>Use<wbr>Named<wbr>Port</dt>
+    <dd>USE_NAMED_PORT</dd><dt>Use<wbr>Serving<wbr>Port</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>HTTP2Health<wbr>Check<wbr>Port<wbr>Specification<wbr>Use<wbr>Fixed<wbr>Port</dt>
+    <dd>USE_FIXED_PORT</dd><dt>HTTP2Health<wbr>Check<wbr>Port<wbr>Specification<wbr>Use<wbr>Named<wbr>Port</dt>
+    <dd>USE_NAMED_PORT</dd><dt>HTTP2Health<wbr>Check<wbr>Port<wbr>Specification<wbr>Use<wbr>Serving<wbr>Port</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Use<wbr>Fixed<wbr>Port</dt>
+    <dd>USE_FIXED_PORT</dd><dt>Use<wbr>Named<wbr>Port</dt>
+    <dd>USE_NAMED_PORT</dd><dt>Use<wbr>Serving<wbr>Port</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>USE_FIXED_PORT</dt>
+    <dd>USE_FIXED_PORT</dd><dt>USE_NAMED_PORT</dt>
+    <dd>USE_NAMED_PORT</dd><dt>USE_SERVING_PORT</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+<h4 id="http2healthcheckproxyheader">HTTP2Health<wbr>Check<wbr>Proxy<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Proxy<wbr>V1</dt>
+    <dd>PROXY_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>HTTP2Health<wbr>Check<wbr>Proxy<wbr>Header<wbr>None</dt>
+    <dd>NONE</dd><dt>HTTP2Health<wbr>Check<wbr>Proxy<wbr>Header<wbr>Proxy<wbr>V1</dt>
+    <dd>PROXY_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Proxy<wbr>V1</dt>
+    <dd>PROXY_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NONE</dt>
+    <dd>NONE</dd><dt>PROXY_V1</dt>
+    <dd>PROXY_V1</dd></dl>
 {{% /choosable %}}
 
 <h4 id="http2healthcheckresponse">HTTP2Health<wbr>Check<wbr>Response</h4>
@@ -1856,7 +1942,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#portspecification_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httphealthcheckportspecification">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>HTTPHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -1870,7 +1956,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#proxyheader_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httphealthcheckproxyheader">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>HTTPHealth<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1922,7 +2008,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#portspecification_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httphealthcheckportspecification">HTTPHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -1936,7 +2022,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#proxyheader_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httphealthcheckproxyheader">HTTPHealth<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1988,7 +2074,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httphealthcheckportspecification">HTTPHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -2002,7 +2088,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httphealthcheckproxyheader">HTTPHealth<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2054,7 +2140,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#httphealthcheckportspecification">HTTPHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -2068,7 +2154,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#httphealthcheckproxyheader">HTTPHealth<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2087,6 +2173,62 @@ If not specified, HTTP health check follows behavior specified in port and portN
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="httphealthcheckportspecification">HTTPHealth<wbr>Check<wbr>Port<wbr>Specification</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Use<wbr>Fixed<wbr>Port</dt>
+    <dd>USE_FIXED_PORT</dd><dt>Use<wbr>Named<wbr>Port</dt>
+    <dd>USE_NAMED_PORT</dd><dt>Use<wbr>Serving<wbr>Port</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>HTTPHealth<wbr>Check<wbr>Port<wbr>Specification<wbr>Use<wbr>Fixed<wbr>Port</dt>
+    <dd>USE_FIXED_PORT</dd><dt>HTTPHealth<wbr>Check<wbr>Port<wbr>Specification<wbr>Use<wbr>Named<wbr>Port</dt>
+    <dd>USE_NAMED_PORT</dd><dt>HTTPHealth<wbr>Check<wbr>Port<wbr>Specification<wbr>Use<wbr>Serving<wbr>Port</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Use<wbr>Fixed<wbr>Port</dt>
+    <dd>USE_FIXED_PORT</dd><dt>Use<wbr>Named<wbr>Port</dt>
+    <dd>USE_NAMED_PORT</dd><dt>Use<wbr>Serving<wbr>Port</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>USE_FIXED_PORT</dt>
+    <dd>USE_FIXED_PORT</dd><dt>USE_NAMED_PORT</dt>
+    <dd>USE_NAMED_PORT</dd><dt>USE_SERVING_PORT</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+<h4 id="httphealthcheckproxyheader">HTTPHealth<wbr>Check<wbr>Proxy<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Proxy<wbr>V1</dt>
+    <dd>PROXY_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>HTTPHealth<wbr>Check<wbr>Proxy<wbr>Header<wbr>None</dt>
+    <dd>NONE</dd><dt>HTTPHealth<wbr>Check<wbr>Proxy<wbr>Header<wbr>Proxy<wbr>V1</dt>
+    <dd>PROXY_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Proxy<wbr>V1</dt>
+    <dd>PROXY_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NONE</dt>
+    <dd>NONE</dd><dt>PROXY_V1</dt>
+    <dd>PROXY_V1</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httphealthcheckresponse">HTTPHealth<wbr>Check<wbr>Response</h4>
@@ -2388,7 +2530,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#portspecification_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpshealthcheckportspecification">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>HTTPSHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -2402,7 +2544,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#proxyheader_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpshealthcheckproxyheader">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>HTTPSHealth<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2454,7 +2596,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#portspecification_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpshealthcheckportspecification">HTTPSHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -2468,7 +2610,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#proxyheader_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpshealthcheckproxyheader">HTTPSHealth<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2520,7 +2662,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpshealthcheckportspecification">HTTPSHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -2534,7 +2676,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpshealthcheckproxyheader">HTTPSHealth<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2586,7 +2728,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#httpshealthcheckportspecification">HTTPSHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -2600,7 +2742,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#httpshealthcheckproxyheader">HTTPSHealth<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2619,6 +2761,62 @@ If not specified, HTTPS health check follows behavior specified in port and port
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="httpshealthcheckportspecification">HTTPSHealth<wbr>Check<wbr>Port<wbr>Specification</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Use<wbr>Fixed<wbr>Port</dt>
+    <dd>USE_FIXED_PORT</dd><dt>Use<wbr>Named<wbr>Port</dt>
+    <dd>USE_NAMED_PORT</dd><dt>Use<wbr>Serving<wbr>Port</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>HTTPSHealth<wbr>Check<wbr>Port<wbr>Specification<wbr>Use<wbr>Fixed<wbr>Port</dt>
+    <dd>USE_FIXED_PORT</dd><dt>HTTPSHealth<wbr>Check<wbr>Port<wbr>Specification<wbr>Use<wbr>Named<wbr>Port</dt>
+    <dd>USE_NAMED_PORT</dd><dt>HTTPSHealth<wbr>Check<wbr>Port<wbr>Specification<wbr>Use<wbr>Serving<wbr>Port</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Use<wbr>Fixed<wbr>Port</dt>
+    <dd>USE_FIXED_PORT</dd><dt>Use<wbr>Named<wbr>Port</dt>
+    <dd>USE_NAMED_PORT</dd><dt>Use<wbr>Serving<wbr>Port</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>USE_FIXED_PORT</dt>
+    <dd>USE_FIXED_PORT</dd><dt>USE_NAMED_PORT</dt>
+    <dd>USE_NAMED_PORT</dd><dt>USE_SERVING_PORT</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+<h4 id="httpshealthcheckproxyheader">HTTPSHealth<wbr>Check<wbr>Proxy<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Proxy<wbr>V1</dt>
+    <dd>PROXY_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>HTTPSHealth<wbr>Check<wbr>Proxy<wbr>Header<wbr>None</dt>
+    <dd>NONE</dd><dt>HTTPSHealth<wbr>Check<wbr>Proxy<wbr>Header<wbr>Proxy<wbr>V1</dt>
+    <dd>PROXY_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Proxy<wbr>V1</dt>
+    <dd>PROXY_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NONE</dt>
+    <dd>NONE</dd><dt>PROXY_V1</dt>
+    <dd>PROXY_V1</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httpshealthcheckresponse">HTTPSHealth<wbr>Check<wbr>Response</h4>
@@ -2987,6 +3185,52 @@ If not specified, HTTPS health check follows behavior specified in port and port
     <dd>{{% md %}}Indicates whether or not to export logs. This is false by default, which means no health check logging will be done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="regionhealthchecktype">Region<wbr>Health<wbr>Check<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Grpc</dt>
+    <dd>GRPC</dd><dt>Http</dt>
+    <dd>HTTP</dd><dt>Http2</dt>
+    <dd>HTTP2</dd><dt>Https</dt>
+    <dd>HTTPS</dd><dt>Invalid</dt>
+    <dd>INVALID</dd><dt>Ssl</dt>
+    <dd>SSL</dd><dt>Tcp</dt>
+    <dd>TCP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Region<wbr>Health<wbr>Check<wbr>Type<wbr>Grpc</dt>
+    <dd>GRPC</dd><dt>Region<wbr>Health<wbr>Check<wbr>Type<wbr>Http</dt>
+    <dd>HTTP</dd><dt>Region<wbr>Health<wbr>Check<wbr>Type<wbr>Http2</dt>
+    <dd>HTTP2</dd><dt>Region<wbr>Health<wbr>Check<wbr>Type<wbr>Https</dt>
+    <dd>HTTPS</dd><dt>Region<wbr>Health<wbr>Check<wbr>Type<wbr>Invalid</dt>
+    <dd>INVALID</dd><dt>Region<wbr>Health<wbr>Check<wbr>Type<wbr>Ssl</dt>
+    <dd>SSL</dd><dt>Region<wbr>Health<wbr>Check<wbr>Type<wbr>Tcp</dt>
+    <dd>TCP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Grpc</dt>
+    <dd>GRPC</dd><dt>Http</dt>
+    <dd>HTTP</dd><dt>Http2</dt>
+    <dd>HTTP2</dd><dt>Https</dt>
+    <dd>HTTPS</dd><dt>Invalid</dt>
+    <dd>INVALID</dd><dt>Ssl</dt>
+    <dd>SSL</dd><dt>Tcp</dt>
+    <dd>TCP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>GRPC</dt>
+    <dd>GRPC</dd><dt>HTTP</dt>
+    <dd>HTTP</dd><dt>HTTP2</dt>
+    <dd>HTTP2</dd><dt>HTTPS</dt>
+    <dd>HTTPS</dd><dt>INVALID</dt>
+    <dd>INVALID</dd><dt>SSL</dt>
+    <dd>SSL</dd><dt>TCP</dt>
+    <dd>TCP</dd></dl>
+{{% /choosable %}}
+
 <h4 id="sslhealthcheck">SSLHealth<wbr>Check</h4>
 
 {{% choosable language csharp %}}
@@ -3012,7 +3256,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#portspecification_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslhealthcheckportspecification">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>SSLHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -3026,7 +3270,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#proxyheader_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslhealthcheckproxyheader">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>SSLHealth<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3070,7 +3314,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#portspecification_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslhealthcheckportspecification">SSLHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -3084,7 +3328,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#proxyheader_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslhealthcheckproxyheader">SSLHealth<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3128,7 +3372,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslhealthcheckportspecification">SSLHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -3142,7 +3386,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#sslhealthcheckproxyheader">SSLHealth<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3186,7 +3430,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#sslhealthcheckportspecification">SSLHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -3200,7 +3444,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#sslhealthcheckproxyheader">SSLHealth<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3219,6 +3463,62 @@ If not specified, SSL health check follows behavior specified in port and portNa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty (the default value), any response will indicate health. The response data can only be ASCII.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sslhealthcheckportspecification">SSLHealth<wbr>Check<wbr>Port<wbr>Specification</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Use<wbr>Fixed<wbr>Port</dt>
+    <dd>USE_FIXED_PORT</dd><dt>Use<wbr>Named<wbr>Port</dt>
+    <dd>USE_NAMED_PORT</dd><dt>Use<wbr>Serving<wbr>Port</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>SSLHealth<wbr>Check<wbr>Port<wbr>Specification<wbr>Use<wbr>Fixed<wbr>Port</dt>
+    <dd>USE_FIXED_PORT</dd><dt>SSLHealth<wbr>Check<wbr>Port<wbr>Specification<wbr>Use<wbr>Named<wbr>Port</dt>
+    <dd>USE_NAMED_PORT</dd><dt>SSLHealth<wbr>Check<wbr>Port<wbr>Specification<wbr>Use<wbr>Serving<wbr>Port</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Use<wbr>Fixed<wbr>Port</dt>
+    <dd>USE_FIXED_PORT</dd><dt>Use<wbr>Named<wbr>Port</dt>
+    <dd>USE_NAMED_PORT</dd><dt>Use<wbr>Serving<wbr>Port</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>USE_FIXED_PORT</dt>
+    <dd>USE_FIXED_PORT</dd><dt>USE_NAMED_PORT</dt>
+    <dd>USE_NAMED_PORT</dd><dt>USE_SERVING_PORT</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sslhealthcheckproxyheader">SSLHealth<wbr>Check<wbr>Proxy<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Proxy<wbr>V1</dt>
+    <dd>PROXY_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>SSLHealth<wbr>Check<wbr>Proxy<wbr>Header<wbr>None</dt>
+    <dd>NONE</dd><dt>SSLHealth<wbr>Check<wbr>Proxy<wbr>Header<wbr>Proxy<wbr>V1</dt>
+    <dd>PROXY_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Proxy<wbr>V1</dt>
+    <dd>PROXY_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NONE</dt>
+    <dd>NONE</dd><dt>PROXY_V1</dt>
+    <dd>PROXY_V1</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sslhealthcheckresponse">SSLHealth<wbr>Check<wbr>Response</h4>
@@ -3480,7 +3780,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#portspecification_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#tcphealthcheckportspecification">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>TCPHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -3494,7 +3794,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#proxyheader_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#tcphealthcheckproxyheader">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>TCPHealth<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3538,7 +3838,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#portspecification_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#tcphealthcheckportspecification">TCPHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -3552,7 +3852,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#proxyheader_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#tcphealthcheckproxyheader">TCPHealth<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3596,7 +3896,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#tcphealthcheckportspecification">TCPHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -3610,7 +3910,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#tcphealthcheckproxyheader">TCPHealth<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3654,7 +3954,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#tcphealthcheckportspecification">TCPHealth<wbr>Check<wbr>Port<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -3668,7 +3968,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#tcphealthcheckproxyheader">TCPHealth<wbr>Check<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3687,6 +3987,62 @@ If not specified, TCP health check follows behavior specified in port and portNa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty (the default value), any response will indicate health. The response data can only be ASCII.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tcphealthcheckportspecification">TCPHealth<wbr>Check<wbr>Port<wbr>Specification</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Use<wbr>Fixed<wbr>Port</dt>
+    <dd>USE_FIXED_PORT</dd><dt>Use<wbr>Named<wbr>Port</dt>
+    <dd>USE_NAMED_PORT</dd><dt>Use<wbr>Serving<wbr>Port</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>TCPHealth<wbr>Check<wbr>Port<wbr>Specification<wbr>Use<wbr>Fixed<wbr>Port</dt>
+    <dd>USE_FIXED_PORT</dd><dt>TCPHealth<wbr>Check<wbr>Port<wbr>Specification<wbr>Use<wbr>Named<wbr>Port</dt>
+    <dd>USE_NAMED_PORT</dd><dt>TCPHealth<wbr>Check<wbr>Port<wbr>Specification<wbr>Use<wbr>Serving<wbr>Port</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Use<wbr>Fixed<wbr>Port</dt>
+    <dd>USE_FIXED_PORT</dd><dt>Use<wbr>Named<wbr>Port</dt>
+    <dd>USE_NAMED_PORT</dd><dt>Use<wbr>Serving<wbr>Port</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>USE_FIXED_PORT</dt>
+    <dd>USE_FIXED_PORT</dd><dt>USE_NAMED_PORT</dt>
+    <dd>USE_NAMED_PORT</dd><dt>USE_SERVING_PORT</dt>
+    <dd>USE_SERVING_PORT</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tcphealthcheckproxyheader">TCPHealth<wbr>Check<wbr>Proxy<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Proxy<wbr>V1</dt>
+    <dd>PROXY_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>TCPHealth<wbr>Check<wbr>Proxy<wbr>Header<wbr>None</dt>
+    <dd>NONE</dd><dt>TCPHealth<wbr>Check<wbr>Proxy<wbr>Header<wbr>Proxy<wbr>V1</dt>
+    <dd>PROXY_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Proxy<wbr>V1</dt>
+    <dd>PROXY_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NONE</dt>
+    <dd>NONE</dd><dt>PROXY_V1</dt>
+    <dd>PROXY_V1</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tcphealthcheckresponse">TCPHealth<wbr>Check<wbr>Response</h4>

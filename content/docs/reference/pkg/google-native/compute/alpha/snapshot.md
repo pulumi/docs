@@ -52,9 +52,9 @@ Creates a snapshot in the specified project using the data included in the reque
              <span class="nx">source_disk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">source_disk_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
              <span class="nx">source_disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.SnapshotStatus]</span> = None<span class="p">,</span>
              <span class="nx">storage_bytes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">storage_bytes_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">storage_bytes_status</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.SnapshotStorageBytesStatus]</span> = None<span class="p">,</span>
              <span class="nx">storage_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Snapshot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -397,7 +397,7 @@ If you do not provide an encryption key when creating the snapshot, then the sna
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#snapshotstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Snapshot<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the snapshot. This can be CREATING, DELETING, FAILED, READY, or UPLOADING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -413,7 +413,7 @@ If you do not provide an encryption key when creating the snapshot, then the sna
 <a href="#storagebytesstatus_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Bytes<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#snapshotstoragebytesstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Snapshot<wbr>Storage<wbr>Bytes<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -641,7 +641,7 @@ If you do not provide an encryption key when creating the snapshot, then the sna
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#snapshotstatus">Snapshot<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the snapshot. This can be CREATING, DELETING, FAILED, READY, or UPLOADING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -657,7 +657,7 @@ If you do not provide an encryption key when creating the snapshot, then the sna
 <a href="#storagebytesstatus_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Bytes<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#snapshotstoragebytesstatus">Snapshot<wbr>Storage<wbr>Bytes<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -885,7 +885,7 @@ If you do not provide an encryption key when creating the snapshot, then the sna
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#snapshotstatus">Snapshot<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the snapshot. This can be CREATING, DELETING, FAILED, READY, or UPLOADING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -901,7 +901,7 @@ If you do not provide an encryption key when creating the snapshot, then the sna
 <a href="#storagebytesstatus_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Bytes<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#snapshotstoragebytesstatus">Snapshot<wbr>Storage<wbr>Bytes<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1129,7 @@ If you do not provide an encryption key when creating the snapshot, then the sna
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#snapshotstatus">Snapshot<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the snapshot. This can be CREATING, DELETING, FAILED, READY, or UPLOADING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1145,7 +1145,7 @@ If you do not provide an encryption key when creating the snapshot, then the sna
 <a href="#storage_bytes_status_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>bytes_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#snapshotstoragebytesstatus">Snapshot<wbr>Storage<wbr>Bytes<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1628,7 +1628,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1640,7 +1640,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1652,7 +1652,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1664,7 +1664,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1717,6 +1717,124 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="guestosfeaturetype">Guest<wbr>Os<wbr>Feature<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Bare<wbr>Metal<wbr>Linux<wbr>Compatible</dt>
+    <dd>BARE_METAL_LINUX_COMPATIBLE</dd><dt>Feature<wbr>Type<wbr>Unspecified</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>Gvnic</dt>
+    <dd>GVNIC</dd><dt>Multi<wbr>Ip<wbr>Subnet</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>Secure<wbr>Boot</dt>
+    <dd>SECURE_BOOT</dd><dt>Sev<wbr>Capable</dt>
+    <dd>SEV_CAPABLE</dd><dt>Uefi<wbr>Compatible</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>Virtio<wbr>Scsi<wbr>Multiqueue</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>Windows</dt>
+    <dd>WINDOWS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Bare<wbr>Metal<wbr>Linux<wbr>Compatible</dt>
+    <dd>BARE_METAL_LINUX_COMPATIBLE</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Feature<wbr>Type<wbr>Unspecified</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Gvnic</dt>
+    <dd>GVNIC</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Multi<wbr>Ip<wbr>Subnet</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Secure<wbr>Boot</dt>
+    <dd>SECURE_BOOT</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Sev<wbr>Capable</dt>
+    <dd>SEV_CAPABLE</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Uefi<wbr>Compatible</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Virtio<wbr>Scsi<wbr>Multiqueue</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>Guest<wbr>Os<wbr>Feature<wbr>Type<wbr>Windows</dt>
+    <dd>WINDOWS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Bare<wbr>Metal<wbr>Linux<wbr>Compatible</dt>
+    <dd>BARE_METAL_LINUX_COMPATIBLE</dd><dt>Feature<wbr>Type<wbr>Unspecified</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>Gvnic</dt>
+    <dd>GVNIC</dd><dt>Multi<wbr>Ip<wbr>Subnet</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>Secure<wbr>Boot</dt>
+    <dd>SECURE_BOOT</dd><dt>Sev<wbr>Capable</dt>
+    <dd>SEV_CAPABLE</dd><dt>Uefi<wbr>Compatible</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>Virtio<wbr>Scsi<wbr>Multiqueue</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>Windows</dt>
+    <dd>WINDOWS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>BARE_METAL_LINUX_COMPATIBLE</dt>
+    <dd>BARE_METAL_LINUX_COMPATIBLE</dd><dt>FEATURE_TYPE_UNSPECIFIED</dt>
+    <dd>FEATURE_TYPE_UNSPECIFIED</dd><dt>GVNIC</dt>
+    <dd>GVNIC</dd><dt>MULTI_IP_SUBNET</dt>
+    <dd>MULTI_IP_SUBNET</dd><dt>SECURE_BOOT</dt>
+    <dd>SECURE_BOOT</dd><dt>SEV_CAPABLE</dt>
+    <dd>SEV_CAPABLE</dd><dt>UEFI_COMPATIBLE</dt>
+    <dd>UEFI_COMPATIBLE</dd><dt>VIRTIO_SCSI_MULTIQUEUE</dt>
+    <dd>VIRTIO_SCSI_MULTIQUEUE</dd><dt>WINDOWS</dt>
+    <dd>WINDOWS</dd></dl>
+{{% /choosable %}}
+
+<h4 id="snapshotstatus">Snapshot<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Failed</dt>
+    <dd>FAILED</dd><dt>Ready</dt>
+    <dd>READY</dd><dt>Uploading</dt>
+    <dd>UPLOADING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Snapshot<wbr>Status<wbr>Creating</dt>
+    <dd>CREATING</dd><dt>Snapshot<wbr>Status<wbr>Deleting</dt>
+    <dd>DELETING</dd><dt>Snapshot<wbr>Status<wbr>Failed</dt>
+    <dd>FAILED</dd><dt>Snapshot<wbr>Status<wbr>Ready</dt>
+    <dd>READY</dd><dt>Snapshot<wbr>Status<wbr>Uploading</dt>
+    <dd>UPLOADING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Failed</dt>
+    <dd>FAILED</dd><dt>Ready</dt>
+    <dd>READY</dd><dt>Uploading</dt>
+    <dd>UPLOADING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CREATING</dt>
+    <dd>CREATING</dd><dt>DELETING</dt>
+    <dd>DELETING</dd><dt>FAILED</dt>
+    <dd>FAILED</dd><dt>READY</dt>
+    <dd>READY</dd><dt>UPLOADING</dt>
+    <dd>UPLOADING</dd></dl>
+{{% /choosable %}}
+
+<h4 id="snapshotstoragebytesstatus">Snapshot<wbr>Storage<wbr>Bytes<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Updating</dt>
+    <dd>UPDATING</dd><dt>Up<wbr>To<wbr>Date</dt>
+    <dd>UP_TO_DATE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Snapshot<wbr>Storage<wbr>Bytes<wbr>Status<wbr>Updating</dt>
+    <dd>UPDATING</dd><dt>Snapshot<wbr>Storage<wbr>Bytes<wbr>Status<wbr>Up<wbr>To<wbr>Date</dt>
+    <dd>UP_TO_DATE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Updating</dt>
+    <dd>UPDATING</dd><dt>Up<wbr>To<wbr>Date</dt>
+    <dd>UP_TO_DATE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UPDATING</dt>
+    <dd>UPDATING</dd><dt>UP_TO_DATE</dt>
+    <dd>UP_TO_DATE</dd></dl>
 {{% /choosable %}}
 
 

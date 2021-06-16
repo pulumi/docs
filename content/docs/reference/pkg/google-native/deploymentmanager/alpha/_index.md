@@ -17,6 +17,14 @@ Explore the resources and functions of the google-native.deploymentmanager/alpha
     <li><a href="typeprovider" title="TypeProvider"><span class="symbol resource"></span>TypeProvider</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getcompositetype" title="GetCompositeType"><span class="symbol function"></span>GetCompositeType</a></li>
+    <li><a href="getdeployment" title="GetDeployment"><span class="symbol function"></span>GetDeployment</a></li>
+    <li><a href="getdeploymentiampolicy" title="GetDeploymentIamPolicy"><span class="symbol function"></span>GetDeploymentIamPolicy</a></li>
+    <li><a href="gettypeprovider" title="GetTypeProvider"><span class="symbol function"></span>GetTypeProvider</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -24,6 +32,6 @@ Explore the resources and functions of the google-native.deploymentmanager/alpha
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

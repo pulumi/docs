@@ -41,7 +41,7 @@ Creates a PublicAdvertisedPrefix in the specified project using the parameters t
                            <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">shared_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                           <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.PublicAdvertisedPrefixStatus]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">PublicAdvertisedPrefix</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PublicAdvertisedPrefixArgs</a></span><span class="p">,</span>
@@ -289,7 +289,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publicadvertisedprefixstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Public<wbr>Advertised<wbr>Prefix<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the public advertised prefix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -415,7 +415,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publicadvertisedprefixstatus">Public<wbr>Advertised<wbr>Prefix<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the public advertised prefix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -541,7 +541,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publicadvertisedprefixstatus">Public<wbr>Advertised<wbr>Prefix<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the public advertised prefix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -667,7 +667,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#publicadvertisedprefixstatus">Public<wbr>Advertised<wbr>Prefix<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the public advertised prefix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1091,6 +1091,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the public delegated prefix. Possible values are: INITIALIZING: The public delegated prefix is being initialized and addresses cannot be created yet. ANNOUNCED: The public delegated prefix is active.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="publicadvertisedprefixstatus">Public<wbr>Advertised<wbr>Prefix<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Initial</dt>
+    <dd>INITIAL</dd><dt>Prefix<wbr>Configuration<wbr>Complete</dt>
+    <dd>PREFIX_CONFIGURATION_COMPLETE</dd><dt>Prefix<wbr>Configuration<wbr>In<wbr>Progress</dt>
+    <dd>PREFIX_CONFIGURATION_IN_PROGRESS</dd><dt>Prefix<wbr>Removal<wbr>In<wbr>Progress</dt>
+    <dd>PREFIX_REMOVAL_IN_PROGRESS</dd><dt>Ptr<wbr>Configured</dt>
+    <dd>PTR_CONFIGURED</dd><dt>Reverse<wbr>Dns<wbr>Lookup<wbr>Failed</dt>
+    <dd>REVERSE_DNS_LOOKUP_FAILED</dd><dt>Validated</dt>
+    <dd>VALIDATED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Public<wbr>Advertised<wbr>Prefix<wbr>Status<wbr>Initial</dt>
+    <dd>INITIAL</dd><dt>Public<wbr>Advertised<wbr>Prefix<wbr>Status<wbr>Prefix<wbr>Configuration<wbr>Complete</dt>
+    <dd>PREFIX_CONFIGURATION_COMPLETE</dd><dt>Public<wbr>Advertised<wbr>Prefix<wbr>Status<wbr>Prefix<wbr>Configuration<wbr>In<wbr>Progress</dt>
+    <dd>PREFIX_CONFIGURATION_IN_PROGRESS</dd><dt>Public<wbr>Advertised<wbr>Prefix<wbr>Status<wbr>Prefix<wbr>Removal<wbr>In<wbr>Progress</dt>
+    <dd>PREFIX_REMOVAL_IN_PROGRESS</dd><dt>Public<wbr>Advertised<wbr>Prefix<wbr>Status<wbr>Ptr<wbr>Configured</dt>
+    <dd>PTR_CONFIGURED</dd><dt>Public<wbr>Advertised<wbr>Prefix<wbr>Status<wbr>Reverse<wbr>Dns<wbr>Lookup<wbr>Failed</dt>
+    <dd>REVERSE_DNS_LOOKUP_FAILED</dd><dt>Public<wbr>Advertised<wbr>Prefix<wbr>Status<wbr>Validated</dt>
+    <dd>VALIDATED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Initial</dt>
+    <dd>INITIAL</dd><dt>Prefix<wbr>Configuration<wbr>Complete</dt>
+    <dd>PREFIX_CONFIGURATION_COMPLETE</dd><dt>Prefix<wbr>Configuration<wbr>In<wbr>Progress</dt>
+    <dd>PREFIX_CONFIGURATION_IN_PROGRESS</dd><dt>Prefix<wbr>Removal<wbr>In<wbr>Progress</dt>
+    <dd>PREFIX_REMOVAL_IN_PROGRESS</dd><dt>Ptr<wbr>Configured</dt>
+    <dd>PTR_CONFIGURED</dd><dt>Reverse<wbr>Dns<wbr>Lookup<wbr>Failed</dt>
+    <dd>REVERSE_DNS_LOOKUP_FAILED</dd><dt>Validated</dt>
+    <dd>VALIDATED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>INITIAL</dt>
+    <dd>INITIAL</dd><dt>PREFIX_CONFIGURATION_COMPLETE</dt>
+    <dd>PREFIX_CONFIGURATION_COMPLETE</dd><dt>PREFIX_CONFIGURATION_IN_PROGRESS</dt>
+    <dd>PREFIX_CONFIGURATION_IN_PROGRESS</dd><dt>PREFIX_REMOVAL_IN_PROGRESS</dt>
+    <dd>PREFIX_REMOVAL_IN_PROGRESS</dd><dt>PTR_CONFIGURED</dt>
+    <dd>PTR_CONFIGURED</dd><dt>REVERSE_DNS_LOOKUP_FAILED</dt>
+    <dd>REVERSE_DNS_LOOKUP_FAILED</dd><dt>VALIDATED</dt>
+    <dd>VALIDATED</dd></dl>
 {{% /choosable %}}
 
 

@@ -34,7 +34,7 @@ Creates a new instance in the specified region. Returns a long running operation
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+             <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_remotebuildexecution_v1alpha.InstanceState]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span>
@@ -224,7 +224,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancestate">Pulumi.<wbr>Google<wbr>Native.<wbr>Remote<wbr>Build<wbr>Execution.<wbr>V1Alpha.<wbr>Instance<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}State of the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -292,7 +292,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancestate">Instance<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}State of the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -360,7 +360,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancestate">Instance<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}State of the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -428,7 +428,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancestate">Instance<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}State of the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -571,7 +571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxisolation_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Isolation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicylinuxisolation">Pulumi.<wbr>Google<wbr>Native.<wbr>Remote<wbr>Build<wbr>Execution.<wbr>V1Alpha.<wbr>Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Linux<wbr>Isolation</a></span>
     </dt>
     <dd>{{% md %}}linux_isolation allows overriding the docker runtime used for containers started on Linux.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -647,7 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxisolation_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Isolation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicylinuxisolation">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Linux<wbr>Isolation</a></span>
     </dt>
     <dd>{{% md %}}linux_isolation allows overriding the docker runtime used for containers started on Linux.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -723,7 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxisolation_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Isolation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicylinuxisolation">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Linux<wbr>Isolation</a></span>
     </dt>
     <dd>{{% md %}}linux_isolation allows overriding the docker runtime used for containers started on Linux.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -799,7 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_isolation_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>isolation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicylinuxisolation">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Linux<wbr>Isolation</a></span>
     </dt>
     <dd>{{% md %}}linux_isolation allows overriding the docker runtime used for containers started on Linux.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -821,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeaturepolicy">Pulumi.<wbr>Google<wbr>Native.<wbr>Remote<wbr>Build<wbr>Execution.<wbr>V1Alpha.<wbr>Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The policy of the feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -841,7 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeaturepolicy">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The policy of the feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -861,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeaturepolicy">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The policy of the feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -881,9 +881,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeaturepolicy">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The policy of the feature.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeaturepolicy">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Policy<wbr>Unspecified</dt>
+    <dd>POLICY_UNSPECIFIED{{% md %}}Default value, if not explicitly set. Equivalent to FORBIDDEN, unless otherwise documented on a specific Feature.{{% /md %}}</dd><dt>Allowed</dt>
+    <dd>ALLOWED{{% md %}}Feature is explicitly allowed.{{% /md %}}</dd><dt>Forbidden</dt>
+    <dd>FORBIDDEN{{% md %}}Feature is forbidden. Requests attempting to leverage it will get an FailedPrecondition error, with a message like: "Feature forbidden by FeaturePolicy: Feature on instance "{{% /md %}}</dd><dt>Restricted</dt>
+    <dd>RESTRICTED{{% md %}}Only the values specified in the `allowed_values` are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Policy<wbr>Policy<wbr>Unspecified</dt>
+    <dd>POLICY_UNSPECIFIED{{% md %}}Default value, if not explicitly set. Equivalent to FORBIDDEN, unless otherwise documented on a specific Feature.{{% /md %}}</dd><dt>Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Policy<wbr>Allowed</dt>
+    <dd>ALLOWED{{% md %}}Feature is explicitly allowed.{{% /md %}}</dd><dt>Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Policy<wbr>Forbidden</dt>
+    <dd>FORBIDDEN{{% md %}}Feature is forbidden. Requests attempting to leverage it will get an FailedPrecondition error, with a message like: "Feature forbidden by FeaturePolicy: Feature on instance "{{% /md %}}</dd><dt>Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Policy<wbr>Restricted</dt>
+    <dd>RESTRICTED{{% md %}}Only the values specified in the `allowed_values` are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Policy<wbr>Unspecified</dt>
+    <dd>POLICY_UNSPECIFIED{{% md %}}Default value, if not explicitly set. Equivalent to FORBIDDEN, unless otherwise documented on a specific Feature.{{% /md %}}</dd><dt>Allowed</dt>
+    <dd>ALLOWED{{% md %}}Feature is explicitly allowed.{{% /md %}}</dd><dt>Forbidden</dt>
+    <dd>FORBIDDEN{{% md %}}Feature is forbidden. Requests attempting to leverage it will get an FailedPrecondition error, with a message like: "Feature forbidden by FeaturePolicy: Feature on instance "{{% /md %}}</dd><dt>Restricted</dt>
+    <dd>RESTRICTED{{% md %}}Only the values specified in the `allowed_values` are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>POLICY_UNSPECIFIED</dt>
+    <dd>POLICY_UNSPECIFIED{{% md %}}Default value, if not explicitly set. Equivalent to FORBIDDEN, unless otherwise documented on a specific Feature.{{% /md %}}</dd><dt>ALLOWED</dt>
+    <dd>ALLOWED{{% md %}}Feature is explicitly allowed.{{% /md %}}</dd><dt>FORBIDDEN</dt>
+    <dd>FORBIDDEN{{% md %}}Feature is forbidden. Requests attempting to leverage it will get an FailedPrecondition error, with a message like: "Feature forbidden by FeaturePolicy: Feature on instance "{{% /md %}}</dd><dt>RESTRICTED</dt>
+    <dd>RESTRICTED{{% md %}}Only the values specified in the `allowed_values` are allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response</h4>
@@ -966,6 +1000,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy of the feature.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googledevtoolsremotebuildexecutionadminv1alphafeaturepolicylinuxisolation">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Linux<wbr>Isolation</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Linux<wbr>Isolation<wbr>Unspecified</dt>
+    <dd>LINUX_ISOLATION_UNSPECIFIED{{% md %}}Default value. Will be using Linux default runtime.{{% /md %}}</dd><dt>Gvisor</dt>
+    <dd>GVISOR{{% md %}}Use gVisor runsc runtime.{{% /md %}}</dd><dt>Off</dt>
+    <dd>OFF{{% md %}}Use stardard Linux runtime. This has the same behaviour as unspecified, but it can be used to revert back from gVisor.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Linux<wbr>Isolation<wbr>Linux<wbr>Isolation<wbr>Unspecified</dt>
+    <dd>LINUX_ISOLATION_UNSPECIFIED{{% md %}}Default value. Will be using Linux default runtime.{{% /md %}}</dd><dt>Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Linux<wbr>Isolation<wbr>Gvisor</dt>
+    <dd>GVISOR{{% md %}}Use gVisor runsc runtime.{{% /md %}}</dd><dt>Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Linux<wbr>Isolation<wbr>Off</dt>
+    <dd>OFF{{% md %}}Use stardard Linux runtime. This has the same behaviour as unspecified, but it can be used to revert back from gVisor.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Linux<wbr>Isolation<wbr>Unspecified</dt>
+    <dd>LINUX_ISOLATION_UNSPECIFIED{{% md %}}Default value. Will be using Linux default runtime.{{% /md %}}</dd><dt>Gvisor</dt>
+    <dd>GVISOR{{% md %}}Use gVisor runsc runtime.{{% /md %}}</dd><dt>Off</dt>
+    <dd>OFF{{% md %}}Use stardard Linux runtime. This has the same behaviour as unspecified, but it can be used to revert back from gVisor.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LINUX_ISOLATION_UNSPECIFIED</dt>
+    <dd>LINUX_ISOLATION_UNSPECIFIED{{% md %}}Default value. Will be using Linux default runtime.{{% /md %}}</dd><dt>GVISOR</dt>
+    <dd>GVISOR{{% md %}}Use gVisor runsc runtime.{{% /md %}}</dd><dt>OFF</dt>
+    <dd>OFF{{% md %}}Use stardard Linux runtime. This has the same behaviour as unspecified, but it can be used to revert back from gVisor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Response</h4>
@@ -1272,6 +1336,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}linux_isolation allows overriding the docker runtime used for containers started on Linux.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancestate">Instance<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Not a valid state, but the default value of the enum.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}The instance is in state `CREATING` once `CreateInstance` is called and before the instance is ready for use.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The instance is in state `RUNNING` when it is ready for use.{{% /md %}}</dd><dt>Inactive</dt>
+    <dd>INACTIVE{{% md %}}An `INACTIVE` instance indicates that there is a problem that needs to be fixed. Such instances cannot be used for execution and instances that remain in this state for a significant period of time will be removed permanently.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Not a valid state, but the default value of the enum.{{% /md %}}</dd><dt>Instance<wbr>State<wbr>Creating</dt>
+    <dd>CREATING{{% md %}}The instance is in state `CREATING` once `CreateInstance` is called and before the instance is ready for use.{{% /md %}}</dd><dt>Instance<wbr>State<wbr>Running</dt>
+    <dd>RUNNING{{% md %}}The instance is in state `RUNNING` when it is ready for use.{{% /md %}}</dd><dt>Instance<wbr>State<wbr>Inactive</dt>
+    <dd>INACTIVE{{% md %}}An `INACTIVE` instance indicates that there is a problem that needs to be fixed. Such instances cannot be used for execution and instances that remain in this state for a significant period of time will be removed permanently.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Not a valid state, but the default value of the enum.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}The instance is in state `CREATING` once `CreateInstance` is called and before the instance is ready for use.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The instance is in state `RUNNING` when it is ready for use.{{% /md %}}</dd><dt>Inactive</dt>
+    <dd>INACTIVE{{% md %}}An `INACTIVE` instance indicates that there is a problem that needs to be fixed. Such instances cannot be used for execution and instances that remain in this state for a significant period of time will be removed permanently.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}Not a valid state, but the default value of the enum.{{% /md %}}</dd><dt>CREATING</dt>
+    <dd>CREATING{{% md %}}The instance is in state `CREATING` once `CreateInstance` is called and before the instance is ready for use.{{% /md %}}</dd><dt>RUNNING</dt>
+    <dd>RUNNING{{% md %}}The instance is in state `RUNNING` when it is ready for use.{{% /md %}}</dd><dt>INACTIVE</dt>
+    <dd>INACTIVE{{% md %}}An `INACTIVE` instance indicates that there is a problem that needs to be fixed. Such instances cannot be used for execution and instances that remain in this state for a significant period of time will be removed permanently.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

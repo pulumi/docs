@@ -1440,7 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteam">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Project<wbr>Team<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketaccesscontrolprojectteam">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1543,7 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteam">Bucket<wbr>Project<wbr>Team</a></span>
+        <span class="property-type"><a href="#bucketaccesscontrolprojectteam">Bucket<wbr>Access<wbr>Control<wbr>Project<wbr>Team</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1646,7 +1646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteam">Bucket<wbr>Project<wbr>Team<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketaccesscontrolprojectteam">Bucket<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1749,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_team_python" style="color: inherit; text-decoration: inherit;">project_<wbr>team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteam">Bucket<wbr>Project<wbr>Team<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketaccesscontrolprojectteam">Bucket<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1768,6 +1768,170 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The link to this access-control entry.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketaccesscontrolprojectteam">Bucket<wbr>Access<wbr>Control<wbr>Project<wbr>Team</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projectnumber_csharp">
+<a href="#projectnumber_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_csharp">
+<a href="#team_csharp" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projectnumber_go">
+<a href="#projectnumber_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_go">
+<a href="#team_go" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projectnumber_nodejs">
+<a href="#projectnumber_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_nodejs">
+<a href="#team_nodejs" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="project_number_python">
+<a href="#project_number_python" style="color: inherit; text-decoration: inherit;">project_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_python">
+<a href="#team_python" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketaccesscontrolprojectteamresponse">Bucket<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projectnumber_csharp">
+<a href="#projectnumber_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_csharp">
+<a href="#team_csharp" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projectnumber_go">
+<a href="#projectnumber_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_go">
+<a href="#team_go" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projectnumber_nodejs">
+<a href="#projectnumber_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_nodejs">
+<a href="#team_nodejs" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="project_number_python">
+<a href="#project_number_python" style="color: inherit; text-decoration: inherit;">project_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_python">
+<a href="#team_python" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketaccesscontrolresponse">Bucket<wbr>Access<wbr>Control<wbr>Response</h4>
@@ -1846,7 +2010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteamresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketaccesscontrolprojectteamresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1941,7 +2105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteamresponse">Bucket<wbr>Project<wbr>Team<wbr>Response</a></span>
+        <span class="property-type"><a href="#bucketaccesscontrolprojectteamresponse">Bucket<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2036,7 +2200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteamresponse">Bucket<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketaccesscontrolprojectteamresponse">Bucket<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2131,7 +2295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_team_python" style="color: inherit; text-decoration: inherit;">project_<wbr>team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteamresponse">Bucket<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketaccesscontrolprojectteamresponse">Bucket<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2150,170 +2314,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The link to this access-control entry.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="bucketaction">Bucket<wbr>Action</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="storageclass_csharp">
-<a href="#storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="storageclass_go">
-<a href="#storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="storageclass_nodejs">
-<a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="storage_class_python">
-<a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="bucketactionresponse">Bucket<wbr>Action<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="storageclass_csharp">
-<a href="#storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="storageclass_go">
-<a href="#storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="storageclass_nodejs">
-<a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="storage_class_python">
-<a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketbilling">Bucket<wbr>Billing</h4>
@@ -2414,846 +2414,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true, Requester Pays is enabled for this bucket.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="bucketbucketpolicyonly">Bucket<wbr>Bucket<wbr>Policy<wbr>Only</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="enabled_csharp">
-<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lockedtime_csharp">
-<a href="#lockedtime_csharp" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="enabled_go">
-<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lockedtime_go">
-<a href="#lockedtime_go" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="enabled_nodejs">
-<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lockedtime_nodejs">
-<a href="#lockedtime_nodejs" style="color: inherit; text-decoration: inherit;">locked<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="enabled_python">
-<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="locked_time_python">
-<a href="#locked_time_python" style="color: inherit; text-decoration: inherit;">locked_<wbr>time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="bucketbucketpolicyonlyresponse">Bucket<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="enabled_csharp">
-<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="lockedtime_csharp">
-<a href="#lockedtime_csharp" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="enabled_go">
-<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="lockedtime_go">
-<a href="#lockedtime_go" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="enabled_nodejs">
-<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="lockedtime_nodejs">
-<a href="#lockedtime_nodejs" style="color: inherit; text-decoration: inherit;">locked<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="enabled_python">
-<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="locked_time_python">
-<a href="#locked_time_python" style="color: inherit; text-decoration: inherit;">locked_<wbr>time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="bucketcondition">Bucket<wbr>Condition</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="age_csharp">
-<a href="#age_csharp" style="color: inherit; text-decoration: inherit;">Age</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbefore_csharp">
-<a href="#createdbefore_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customtimebefore_csharp">
-<a href="#customtimebefore_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Time<wbr>Before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="dayssincecustomtime_csharp">
-<a href="#dayssincecustomtime_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Custom<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="dayssincenoncurrenttime_csharp">
-<a href="#dayssincenoncurrenttime_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="islive_csharp">
-<a href="#islive_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Live</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="matchespattern_csharp">
-<a href="#matchespattern_csharp" style="color: inherit; text-decoration: inherit;">Matches<wbr>Pattern</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="matchesstorageclass_csharp">
-<a href="#matchesstorageclass_csharp" style="color: inherit; text-decoration: inherit;">Matches<wbr>Storage<wbr>Class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="noncurrenttimebefore_csharp">
-<a href="#noncurrenttimebefore_csharp" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Time<wbr>Before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="numnewerversions_csharp">
-<a href="#numnewerversions_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Newer<wbr>Versions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="age_go">
-<a href="#age_go" style="color: inherit; text-decoration: inherit;">Age</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbefore_go">
-<a href="#createdbefore_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customtimebefore_go">
-<a href="#customtimebefore_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Time<wbr>Before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="dayssincecustomtime_go">
-<a href="#dayssincecustomtime_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Custom<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="dayssincenoncurrenttime_go">
-<a href="#dayssincenoncurrenttime_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="islive_go">
-<a href="#islive_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Live</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="matchespattern_go">
-<a href="#matchespattern_go" style="color: inherit; text-decoration: inherit;">Matches<wbr>Pattern</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="matchesstorageclass_go">
-<a href="#matchesstorageclass_go" style="color: inherit; text-decoration: inherit;">Matches<wbr>Storage<wbr>Class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="noncurrenttimebefore_go">
-<a href="#noncurrenttimebefore_go" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Time<wbr>Before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="numnewerversions_go">
-<a href="#numnewerversions_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Newer<wbr>Versions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="age_nodejs">
-<a href="#age_nodejs" style="color: inherit; text-decoration: inherit;">age</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbefore_nodejs">
-<a href="#createdbefore_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="customtimebefore_nodejs">
-<a href="#customtimebefore_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Time<wbr>Before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="dayssincecustomtime_nodejs">
-<a href="#dayssincecustomtime_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Since<wbr>Custom<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="dayssincenoncurrenttime_nodejs">
-<a href="#dayssincenoncurrenttime_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="islive_nodejs">
-<a href="#islive_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Live</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="matchespattern_nodejs">
-<a href="#matchespattern_nodejs" style="color: inherit; text-decoration: inherit;">matches<wbr>Pattern</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="matchesstorageclass_nodejs">
-<a href="#matchesstorageclass_nodejs" style="color: inherit; text-decoration: inherit;">matches<wbr>Storage<wbr>Class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="noncurrenttimebefore_nodejs">
-<a href="#noncurrenttimebefore_nodejs" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Time<wbr>Before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="numnewerversions_nodejs">
-<a href="#numnewerversions_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Newer<wbr>Versions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="age_python">
-<a href="#age_python" style="color: inherit; text-decoration: inherit;">age</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="created_before_python">
-<a href="#created_before_python" style="color: inherit; text-decoration: inherit;">created_<wbr>before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="custom_time_before_python">
-<a href="#custom_time_before_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>time_<wbr>before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="days_since_custom_time_python">
-<a href="#days_since_custom_time_python" style="color: inherit; text-decoration: inherit;">days_<wbr>since_<wbr>custom_<wbr>time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="days_since_noncurrent_time_python">
-<a href="#days_since_noncurrent_time_python" style="color: inherit; text-decoration: inherit;">days_<wbr>since_<wbr>noncurrent_<wbr>time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="is_live_python">
-<a href="#is_live_python" style="color: inherit; text-decoration: inherit;">is_<wbr>live</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="matches_pattern_python">
-<a href="#matches_pattern_python" style="color: inherit; text-decoration: inherit;">matches_<wbr>pattern</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="matches_storage_class_python">
-<a href="#matches_storage_class_python" style="color: inherit; text-decoration: inherit;">matches_<wbr>storage_<wbr>class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="noncurrent_time_before_python">
-<a href="#noncurrent_time_before_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>time_<wbr>before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="num_newer_versions_python">
-<a href="#num_newer_versions_python" style="color: inherit; text-decoration: inherit;">num_<wbr>newer_<wbr>versions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="bucketconditionresponse">Bucket<wbr>Condition<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="age_csharp">
-<a href="#age_csharp" style="color: inherit; text-decoration: inherit;">Age</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="createdbefore_csharp">
-<a href="#createdbefore_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="customtimebefore_csharp">
-<a href="#customtimebefore_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Time<wbr>Before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="dayssincecustomtime_csharp">
-<a href="#dayssincecustomtime_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Custom<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="dayssincenoncurrenttime_csharp">
-<a href="#dayssincenoncurrenttime_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="islive_csharp">
-<a href="#islive_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Live</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="matchespattern_csharp">
-<a href="#matchespattern_csharp" style="color: inherit; text-decoration: inherit;">Matches<wbr>Pattern</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="matchesstorageclass_csharp">
-<a href="#matchesstorageclass_csharp" style="color: inherit; text-decoration: inherit;">Matches<wbr>Storage<wbr>Class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="noncurrenttimebefore_csharp">
-<a href="#noncurrenttimebefore_csharp" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Time<wbr>Before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="numnewerversions_csharp">
-<a href="#numnewerversions_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Newer<wbr>Versions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="age_go">
-<a href="#age_go" style="color: inherit; text-decoration: inherit;">Age</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="createdbefore_go">
-<a href="#createdbefore_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="customtimebefore_go">
-<a href="#customtimebefore_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Time<wbr>Before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="dayssincecustomtime_go">
-<a href="#dayssincecustomtime_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Custom<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="dayssincenoncurrenttime_go">
-<a href="#dayssincenoncurrenttime_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="islive_go">
-<a href="#islive_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Live</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="matchespattern_go">
-<a href="#matchespattern_go" style="color: inherit; text-decoration: inherit;">Matches<wbr>Pattern</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="matchesstorageclass_go">
-<a href="#matchesstorageclass_go" style="color: inherit; text-decoration: inherit;">Matches<wbr>Storage<wbr>Class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="noncurrenttimebefore_go">
-<a href="#noncurrenttimebefore_go" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Time<wbr>Before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="numnewerversions_go">
-<a href="#numnewerversions_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Newer<wbr>Versions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="age_nodejs">
-<a href="#age_nodejs" style="color: inherit; text-decoration: inherit;">age</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="createdbefore_nodejs">
-<a href="#createdbefore_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="customtimebefore_nodejs">
-<a href="#customtimebefore_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Time<wbr>Before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="dayssincecustomtime_nodejs">
-<a href="#dayssincecustomtime_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Since<wbr>Custom<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="dayssincenoncurrenttime_nodejs">
-<a href="#dayssincenoncurrenttime_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="islive_nodejs">
-<a href="#islive_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Live</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="matchespattern_nodejs">
-<a href="#matchespattern_nodejs" style="color: inherit; text-decoration: inherit;">matches<wbr>Pattern</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="matchesstorageclass_nodejs">
-<a href="#matchesstorageclass_nodejs" style="color: inherit; text-decoration: inherit;">matches<wbr>Storage<wbr>Class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="noncurrenttimebefore_nodejs">
-<a href="#noncurrenttimebefore_nodejs" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Time<wbr>Before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="numnewerversions_nodejs">
-<a href="#numnewerversions_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Newer<wbr>Versions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="age_python">
-<a href="#age_python" style="color: inherit; text-decoration: inherit;">age</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="created_before_python">
-<a href="#created_before_python" style="color: inherit; text-decoration: inherit;">created_<wbr>before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="custom_time_before_python">
-<a href="#custom_time_before_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>time_<wbr>before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="days_since_custom_time_python">
-<a href="#days_since_custom_time_python" style="color: inherit; text-decoration: inherit;">days_<wbr>since_<wbr>custom_<wbr>time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="days_since_noncurrent_time_python">
-<a href="#days_since_noncurrent_time_python" style="color: inherit; text-decoration: inherit;">days_<wbr>since_<wbr>noncurrent_<wbr>time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="is_live_python">
-<a href="#is_live_python" style="color: inherit; text-decoration: inherit;">is_<wbr>live</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="matches_pattern_python">
-<a href="#matches_pattern_python" style="color: inherit; text-decoration: inherit;">matches_<wbr>pattern</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="matches_storage_class_python">
-<a href="#matches_storage_class_python" style="color: inherit; text-decoration: inherit;">matches_<wbr>storage_<wbr>class</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="noncurrent_time_before_python">
-<a href="#noncurrent_time_before_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>time_<wbr>before</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="num_newer_versions_python">
-<a href="#num_newer_versions_python" style="color: inherit; text-decoration: inherit;">num_<wbr>newer_<wbr>versions</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketcorsitem">Bucket<wbr>Cors<wbr>Item</h4>
@@ -3657,7 +2817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucketpolicyonly_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Policy<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketbucketpolicyonly">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketiamconfigurationbucketpolicyonly">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Iam<wbr>Configuration<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3673,7 +2833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniformbucketlevelaccess_csharp" style="color: inherit; text-decoration: inherit;">Uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketuniformbucketlevelaccess">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketiamconfigurationuniformbucketlevelaccess">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Iam<wbr>Configuration<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's uniform bucket-level access configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3685,7 +2845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucketpolicyonly_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Policy<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketbucketpolicyonly">Bucket<wbr>Bucket<wbr>Policy<wbr>Only</a></span>
+        <span class="property-type"><a href="#bucketiamconfigurationbucketpolicyonly">Bucket<wbr>Iam<wbr>Configuration<wbr>Bucket<wbr>Policy<wbr>Only</a></span>
     </dt>
     <dd>{{% md %}}The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3701,7 +2861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniformbucketlevelaccess_go" style="color: inherit; text-decoration: inherit;">Uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketuniformbucketlevelaccess">Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access</a></span>
+        <span class="property-type"><a href="#bucketiamconfigurationuniformbucketlevelaccess">Bucket<wbr>Iam<wbr>Configuration<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}The bucket's uniform bucket-level access configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3713,7 +2873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucketpolicyonly_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Policy<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketbucketpolicyonly">Bucket<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketiamconfigurationbucketpolicyonly">Bucket<wbr>Iam<wbr>Configuration<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3729,7 +2889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniformbucketlevelaccess_nodejs" style="color: inherit; text-decoration: inherit;">uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketuniformbucketlevelaccess">Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketiamconfigurationuniformbucketlevelaccess">Bucket<wbr>Iam<wbr>Configuration<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's uniform bucket-level access configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3741,7 +2901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_policy_only_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>policy_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketbucketpolicyonly">Bucket<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketiamconfigurationbucketpolicyonly">Bucket<wbr>Iam<wbr>Configuration<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3757,9 +2917,173 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniform_bucket_level_access_python" style="color: inherit; text-decoration: inherit;">uniform_<wbr>bucket_<wbr>level_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketuniformbucketlevelaccess">Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketiamconfigurationuniformbucketlevelaccess">Bucket<wbr>Iam<wbr>Configuration<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's uniform bucket-level access configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketiamconfigurationbucketpolicyonly">Bucket<wbr>Iam<wbr>Configuration<wbr>Bucket<wbr>Policy<wbr>Only</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lockedtime_csharp">
+<a href="#lockedtime_csharp" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lockedtime_go">
+<a href="#lockedtime_go" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lockedtime_nodejs">
+<a href="#lockedtime_nodejs" style="color: inherit; text-decoration: inherit;">locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="locked_time_python">
+<a href="#locked_time_python" style="color: inherit; text-decoration: inherit;">locked_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketiamconfigurationbucketpolicyonlyresponse">Bucket<wbr>Iam<wbr>Configuration<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lockedtime_csharp">
+<a href="#lockedtime_csharp" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lockedtime_go">
+<a href="#lockedtime_go" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lockedtime_nodejs">
+<a href="#lockedtime_nodejs" style="color: inherit; text-decoration: inherit;">locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="locked_time_python">
+<a href="#locked_time_python" style="color: inherit; text-decoration: inherit;">locked_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketiamconfigurationresponse">Bucket<wbr>Iam<wbr>Configuration<wbr>Response</h4>
@@ -3771,7 +3095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucketpolicyonly_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Policy<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketbucketpolicyonlyresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketiamconfigurationbucketpolicyonlyresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Iam<wbr>Configuration<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3787,7 +3111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniformbucketlevelaccess_csharp" style="color: inherit; text-decoration: inherit;">Uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketuniformbucketlevelaccessresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketiamconfigurationuniformbucketlevelaccessresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Iam<wbr>Configuration<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's uniform bucket-level access configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3799,7 +3123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucketpolicyonly_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Policy<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketbucketpolicyonlyresponse">Bucket<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Response</a></span>
+        <span class="property-type"><a href="#bucketiamconfigurationbucketpolicyonlyresponse">Bucket<wbr>Iam<wbr>Configuration<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3815,7 +3139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniformbucketlevelaccess_go" style="color: inherit; text-decoration: inherit;">Uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketuniformbucketlevelaccessresponse">Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Response</a></span>
+        <span class="property-type"><a href="#bucketiamconfigurationuniformbucketlevelaccessresponse">Bucket<wbr>Iam<wbr>Configuration<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The bucket's uniform bucket-level access configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3827,7 +3151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucketpolicyonly_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Policy<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketbucketpolicyonlyresponse">Bucket<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketiamconfigurationbucketpolicyonlyresponse">Bucket<wbr>Iam<wbr>Configuration<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3843,7 +3167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniformbucketlevelaccess_nodejs" style="color: inherit; text-decoration: inherit;">uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketuniformbucketlevelaccessresponse">Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketiamconfigurationuniformbucketlevelaccessresponse">Bucket<wbr>Iam<wbr>Configuration<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's uniform bucket-level access configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3855,7 +3179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_policy_only_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>policy_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketbucketpolicyonlyresponse">Bucket<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketiamconfigurationbucketpolicyonlyresponse">Bucket<wbr>Iam<wbr>Configuration<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3871,9 +3195,173 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniform_bucket_level_access_python" style="color: inherit; text-decoration: inherit;">uniform_<wbr>bucket_<wbr>level_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketuniformbucketlevelaccessresponse">Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketiamconfigurationuniformbucketlevelaccessresponse">Bucket<wbr>Iam<wbr>Configuration<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's uniform bucket-level access configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketiamconfigurationuniformbucketlevelaccess">Bucket<wbr>Iam<wbr>Configuration<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lockedtime_csharp">
+<a href="#lockedtime_csharp" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lockedtime_go">
+<a href="#lockedtime_go" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lockedtime_nodejs">
+<a href="#lockedtime_nodejs" style="color: inherit; text-decoration: inherit;">locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="locked_time_python">
+<a href="#locked_time_python" style="color: inherit; text-decoration: inherit;">locked_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketiamconfigurationuniformbucketlevelaccessresponse">Bucket<wbr>Iam<wbr>Configuration<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lockedtime_csharp">
+<a href="#lockedtime_csharp" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lockedtime_go">
+<a href="#lockedtime_go" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lockedtime_nodejs">
+<a href="#lockedtime_nodejs" style="color: inherit; text-decoration: inherit;">locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="locked_time_python">
+<a href="#locked_time_python" style="color: inherit; text-decoration: inherit;">locked_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketlifecycle">Bucket<wbr>Lifecycle</h4>
@@ -3885,7 +3373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_csharp" style="color: inherit; text-decoration: inherit;">Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketruleitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Rule<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3897,7 +3385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_go" style="color: inherit; text-decoration: inherit;">Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketruleitem">[]Bucket<wbr>Rule<wbr>Item</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitem">[]Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3909,7 +3397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketruleitem">Bucket<wbr>Rule<wbr>Item<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitem">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3921,7 +3409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketruleitem">Bucket<wbr>Rule<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitem">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3935,7 +3423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_csharp" style="color: inherit; text-decoration: inherit;">Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketruleitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Rule<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3947,7 +3435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_go" style="color: inherit; text-decoration: inherit;">Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketruleitemresponse">[]Bucket<wbr>Rule<wbr>Item<wbr>Response</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemresponse">[]Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3959,7 +3447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketruleitemresponse">Bucket<wbr>Rule<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemresponse">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3971,9 +3459,1013 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketruleitemresponse">Bucket<wbr>Rule<wbr>Item<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemresponse">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketlifecycleruleitem">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemaction">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="condition_csharp">
+<a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemcondition">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Condition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemaction">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="condition_go">
+<a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemcondition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemaction">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="condition_nodejs">
+<a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemcondition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Condition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemaction">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="condition_python">
+<a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemcondition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Condition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketlifecycleruleitemaction">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="storageclass_csharp">
+<a href="#storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="storageclass_go">
+<a href="#storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="storageclass_nodejs">
+<a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="storage_class_python">
+<a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketlifecycleruleitemactionresponse">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Action<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="storageclass_csharp">
+<a href="#storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="storageclass_go">
+<a href="#storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="storageclass_nodejs">
+<a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="storage_class_python">
+<a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketlifecycleruleitemcondition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Condition</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="age_csharp">
+<a href="#age_csharp" style="color: inherit; text-decoration: inherit;">Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbefore_csharp">
+<a href="#createdbefore_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customtimebefore_csharp">
+<a href="#customtimebefore_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dayssincecustomtime_csharp">
+<a href="#dayssincecustomtime_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Custom<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dayssincenoncurrenttime_csharp">
+<a href="#dayssincenoncurrenttime_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="islive_csharp">
+<a href="#islive_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchespattern_csharp">
+<a href="#matchespattern_csharp" style="color: inherit; text-decoration: inherit;">Matches<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchesstorageclass_csharp">
+<a href="#matchesstorageclass_csharp" style="color: inherit; text-decoration: inherit;">Matches<wbr>Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noncurrenttimebefore_csharp">
+<a href="#noncurrenttimebefore_csharp" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numnewerversions_csharp">
+<a href="#numnewerversions_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Newer<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="age_go">
+<a href="#age_go" style="color: inherit; text-decoration: inherit;">Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbefore_go">
+<a href="#createdbefore_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customtimebefore_go">
+<a href="#customtimebefore_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dayssincecustomtime_go">
+<a href="#dayssincecustomtime_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Custom<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dayssincenoncurrenttime_go">
+<a href="#dayssincenoncurrenttime_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="islive_go">
+<a href="#islive_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchespattern_go">
+<a href="#matchespattern_go" style="color: inherit; text-decoration: inherit;">Matches<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchesstorageclass_go">
+<a href="#matchesstorageclass_go" style="color: inherit; text-decoration: inherit;">Matches<wbr>Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noncurrenttimebefore_go">
+<a href="#noncurrenttimebefore_go" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numnewerversions_go">
+<a href="#numnewerversions_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Newer<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="age_nodejs">
+<a href="#age_nodejs" style="color: inherit; text-decoration: inherit;">age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbefore_nodejs">
+<a href="#createdbefore_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customtimebefore_nodejs">
+<a href="#customtimebefore_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dayssincecustomtime_nodejs">
+<a href="#dayssincecustomtime_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Since<wbr>Custom<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dayssincenoncurrenttime_nodejs">
+<a href="#dayssincenoncurrenttime_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="islive_nodejs">
+<a href="#islive_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchespattern_nodejs">
+<a href="#matchespattern_nodejs" style="color: inherit; text-decoration: inherit;">matches<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchesstorageclass_nodejs">
+<a href="#matchesstorageclass_nodejs" style="color: inherit; text-decoration: inherit;">matches<wbr>Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noncurrenttimebefore_nodejs">
+<a href="#noncurrenttimebefore_nodejs" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numnewerversions_nodejs">
+<a href="#numnewerversions_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Newer<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="age_python">
+<a href="#age_python" style="color: inherit; text-decoration: inherit;">age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_before_python">
+<a href="#created_before_python" style="color: inherit; text-decoration: inherit;">created_<wbr>before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="custom_time_before_python">
+<a href="#custom_time_before_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>time_<wbr>before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="days_since_custom_time_python">
+<a href="#days_since_custom_time_python" style="color: inherit; text-decoration: inherit;">days_<wbr>since_<wbr>custom_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="days_since_noncurrent_time_python">
+<a href="#days_since_noncurrent_time_python" style="color: inherit; text-decoration: inherit;">days_<wbr>since_<wbr>noncurrent_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="is_live_python">
+<a href="#is_live_python" style="color: inherit; text-decoration: inherit;">is_<wbr>live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matches_pattern_python">
+<a href="#matches_pattern_python" style="color: inherit; text-decoration: inherit;">matches_<wbr>pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matches_storage_class_python">
+<a href="#matches_storage_class_python" style="color: inherit; text-decoration: inherit;">matches_<wbr>storage_<wbr>class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noncurrent_time_before_python">
+<a href="#noncurrent_time_before_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>time_<wbr>before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="num_newer_versions_python">
+<a href="#num_newer_versions_python" style="color: inherit; text-decoration: inherit;">num_<wbr>newer_<wbr>versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketlifecycleruleitemconditionresponse">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Condition<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="age_csharp">
+<a href="#age_csharp" style="color: inherit; text-decoration: inherit;">Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="createdbefore_csharp">
+<a href="#createdbefore_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="customtimebefore_csharp">
+<a href="#customtimebefore_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dayssincecustomtime_csharp">
+<a href="#dayssincecustomtime_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Custom<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dayssincenoncurrenttime_csharp">
+<a href="#dayssincenoncurrenttime_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="islive_csharp">
+<a href="#islive_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchespattern_csharp">
+<a href="#matchespattern_csharp" style="color: inherit; text-decoration: inherit;">Matches<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchesstorageclass_csharp">
+<a href="#matchesstorageclass_csharp" style="color: inherit; text-decoration: inherit;">Matches<wbr>Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="noncurrenttimebefore_csharp">
+<a href="#noncurrenttimebefore_csharp" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="numnewerversions_csharp">
+<a href="#numnewerversions_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Newer<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="age_go">
+<a href="#age_go" style="color: inherit; text-decoration: inherit;">Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="createdbefore_go">
+<a href="#createdbefore_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="customtimebefore_go">
+<a href="#customtimebefore_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dayssincecustomtime_go">
+<a href="#dayssincecustomtime_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Custom<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dayssincenoncurrenttime_go">
+<a href="#dayssincenoncurrenttime_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="islive_go">
+<a href="#islive_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchespattern_go">
+<a href="#matchespattern_go" style="color: inherit; text-decoration: inherit;">Matches<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchesstorageclass_go">
+<a href="#matchesstorageclass_go" style="color: inherit; text-decoration: inherit;">Matches<wbr>Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="noncurrenttimebefore_go">
+<a href="#noncurrenttimebefore_go" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="numnewerversions_go">
+<a href="#numnewerversions_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Newer<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="age_nodejs">
+<a href="#age_nodejs" style="color: inherit; text-decoration: inherit;">age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="createdbefore_nodejs">
+<a href="#createdbefore_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="customtimebefore_nodejs">
+<a href="#customtimebefore_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dayssincecustomtime_nodejs">
+<a href="#dayssincecustomtime_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Since<wbr>Custom<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dayssincenoncurrenttime_nodejs">
+<a href="#dayssincenoncurrenttime_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="islive_nodejs">
+<a href="#islive_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchespattern_nodejs">
+<a href="#matchespattern_nodejs" style="color: inherit; text-decoration: inherit;">matches<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchesstorageclass_nodejs">
+<a href="#matchesstorageclass_nodejs" style="color: inherit; text-decoration: inherit;">matches<wbr>Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="noncurrenttimebefore_nodejs">
+<a href="#noncurrenttimebefore_nodejs" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="numnewerversions_nodejs">
+<a href="#numnewerversions_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Newer<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="age_python">
+<a href="#age_python" style="color: inherit; text-decoration: inherit;">age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="created_before_python">
+<a href="#created_before_python" style="color: inherit; text-decoration: inherit;">created_<wbr>before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="custom_time_before_python">
+<a href="#custom_time_before_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>time_<wbr>before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="days_since_custom_time_python">
+<a href="#days_since_custom_time_python" style="color: inherit; text-decoration: inherit;">days_<wbr>since_<wbr>custom_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="days_since_noncurrent_time_python">
+<a href="#days_since_noncurrent_time_python" style="color: inherit; text-decoration: inherit;">days_<wbr>since_<wbr>noncurrent_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="is_live_python">
+<a href="#is_live_python" style="color: inherit; text-decoration: inherit;">is_<wbr>live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matches_pattern_python">
+<a href="#matches_pattern_python" style="color: inherit; text-decoration: inherit;">matches_<wbr>pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matches_storage_class_python">
+<a href="#matches_storage_class_python" style="color: inherit; text-decoration: inherit;">matches_<wbr>storage_<wbr>class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="noncurrent_time_before_python">
+<a href="#noncurrent_time_before_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>time_<wbr>before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="num_newer_versions_python">
+<a href="#num_newer_versions_python" style="color: inherit; text-decoration: inherit;">num_<wbr>newer_<wbr>versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketlifecycleruleitemresponse">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemactionresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Action<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="condition_csharp">
+<a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemconditionresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Condition<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemactionresponse">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Action<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="condition_go">
+<a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemconditionresponse">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Condition<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemactionresponse">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Action<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="condition_nodejs">
+<a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemconditionresponse">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Condition<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemactionresponse">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Action<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="condition_python">
+<a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketlifecycleruleitemconditionresponse">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Item<wbr>Condition<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketlogging">Bucket<wbr>Logging</h4>
@@ -4304,170 +4796,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The ID for the entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="bucketprojectteam">Bucket<wbr>Project<wbr>Team</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="projectnumber_csharp">
-<a href="#projectnumber_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="team_csharp">
-<a href="#team_csharp" style="color: inherit; text-decoration: inherit;">Team</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="projectnumber_go">
-<a href="#projectnumber_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="team_go">
-<a href="#team_go" style="color: inherit; text-decoration: inherit;">Team</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="projectnumber_nodejs">
-<a href="#projectnumber_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="team_nodejs">
-<a href="#team_nodejs" style="color: inherit; text-decoration: inherit;">team</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="project_number_python">
-<a href="#project_number_python" style="color: inherit; text-decoration: inherit;">project_<wbr>number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="team_python">
-<a href="#team_python" style="color: inherit; text-decoration: inherit;">team</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="bucketprojectteamresponse">Bucket<wbr>Project<wbr>Team<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="projectnumber_csharp">
-<a href="#projectnumber_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="team_csharp">
-<a href="#team_csharp" style="color: inherit; text-decoration: inherit;">Team</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="projectnumber_go">
-<a href="#projectnumber_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="team_go">
-<a href="#team_go" style="color: inherit; text-decoration: inherit;">Team</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="projectnumber_nodejs">
-<a href="#projectnumber_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="team_nodejs">
-<a href="#team_nodejs" style="color: inherit; text-decoration: inherit;">team</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_number_python">
-<a href="#project_number_python" style="color: inherit; text-decoration: inherit;">project_<wbr>number</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="team_python">
-<a href="#team_python" style="color: inherit; text-decoration: inherit;">team</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
@@ -4694,334 +5022,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The duration in seconds that objects need to be retained. Retention duration must be greater than zero and less than 100 years. Note that enforcement of retention periods less than a day is not guaranteed. Such periods should only be used for testing purposes.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="bucketruleitem">Bucket<wbr>Rule<wbr>Item</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="action_csharp">
-<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketaction">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Action<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="condition_csharp">
-<a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcondition">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Condition<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="action_go">
-<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketaction">Bucket<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="condition_go">
-<a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcondition">Bucket<wbr>Condition</a></span>
-    </dt>
-    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="action_nodejs">
-<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketaction">Bucket<wbr>Action<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="condition_nodejs">
-<a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcondition">Bucket<wbr>Condition<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="action_python">
-<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketaction">Bucket<wbr>Action<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="condition_python">
-<a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcondition">Bucket<wbr>Condition<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="bucketruleitemresponse">Bucket<wbr>Rule<wbr>Item<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="action_csharp">
-<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketactionresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Action<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="condition_csharp">
-<a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketconditionresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Condition<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="action_go">
-<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketactionresponse">Bucket<wbr>Action<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="condition_go">
-<a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketconditionresponse">Bucket<wbr>Condition<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="action_nodejs">
-<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketactionresponse">Bucket<wbr>Action<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="condition_nodejs">
-<a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketconditionresponse">Bucket<wbr>Condition<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="action_python">
-<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketactionresponse">Bucket<wbr>Action<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="condition_python">
-<a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketconditionresponse">Bucket<wbr>Condition<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="bucketuniformbucketlevelaccess">Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="enabled_csharp">
-<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lockedtime_csharp">
-<a href="#lockedtime_csharp" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="enabled_go">
-<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lockedtime_go">
-<a href="#lockedtime_go" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="enabled_nodejs">
-<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lockedtime_nodejs">
-<a href="#lockedtime_nodejs" style="color: inherit; text-decoration: inherit;">locked<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="enabled_python">
-<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="locked_time_python">
-<a href="#locked_time_python" style="color: inherit; text-decoration: inherit;">locked_<wbr>time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="bucketuniformbucketlevelaccessresponse">Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="enabled_csharp">
-<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="lockedtime_csharp">
-<a href="#lockedtime_csharp" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="enabled_go">
-<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="lockedtime_go">
-<a href="#lockedtime_go" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="enabled_nodejs">
-<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="lockedtime_nodejs">
-<a href="#lockedtime_nodejs" style="color: inherit; text-decoration: inherit;">locked<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="enabled_python">
-<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="locked_time_python">
-<a href="#locked_time_python" style="color: inherit; text-decoration: inherit;">locked_<wbr>time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketversioning">Bucket<wbr>Versioning</h4>
@@ -5388,7 +5388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteam">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Project<wbr>Team<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5507,7 +5507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteam">Bucket<wbr>Project<wbr>Team</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5626,7 +5626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteam">Bucket<wbr>Project<wbr>Team<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5745,7 +5745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_team_python" style="color: inherit; text-decoration: inherit;">project_<wbr>team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteam">Bucket<wbr>Project<wbr>Team<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteam">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5764,6 +5764,170 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The link to this access-control entry.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="objectaccesscontrolprojectteam">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projectnumber_csharp">
+<a href="#projectnumber_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_csharp">
+<a href="#team_csharp" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projectnumber_go">
+<a href="#projectnumber_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_go">
+<a href="#team_go" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projectnumber_nodejs">
+<a href="#projectnumber_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_nodejs">
+<a href="#team_nodejs" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="project_number_python">
+<a href="#project_number_python" style="color: inherit; text-decoration: inherit;">project_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_python">
+<a href="#team_python" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="objectaccesscontrolprojectteamresponse">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projectnumber_csharp">
+<a href="#projectnumber_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_csharp">
+<a href="#team_csharp" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projectnumber_go">
+<a href="#projectnumber_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_go">
+<a href="#team_go" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projectnumber_nodejs">
+<a href="#projectnumber_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_nodejs">
+<a href="#team_nodejs" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="project_number_python">
+<a href="#project_number_python" style="color: inherit; text-decoration: inherit;">project_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_python">
+<a href="#team_python" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="objectaccesscontrolresponse">Object<wbr>Access<wbr>Control<wbr>Response</h4>
@@ -5858,7 +6022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteamresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteamresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5969,7 +6133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteamresponse">Bucket<wbr>Project<wbr>Team<wbr>Response</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteamresponse">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6080,7 +6244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteamresponse">Bucket<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteamresponse">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6191,7 +6355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_team_python" style="color: inherit; text-decoration: inherit;">project_<wbr>team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketprojectteamresponse">Bucket<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteamresponse">Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">

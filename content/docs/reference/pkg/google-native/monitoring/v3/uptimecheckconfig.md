@@ -37,7 +37,7 @@ Creates a new Uptime check configuration.
                       <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.ResourceGroupArgs]</span> = None<span class="p">,</span>
-                      <span class="nx">selected_regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">selected_regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[_monitoring_v3.UptimeCheckConfigSelectedRegionsItem]]</span> = None<span class="p">,</span>
                       <span class="nx">tcp_check</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.TcpCheckArgs]</span> = None<span class="p">,</span>
                       <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -253,7 +253,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#selectedregions_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#uptimecheckconfigselectedregionsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V3.<wbr>Uptime<wbr>Check<wbr>Config<wbr>Selected<wbr>Regions<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions must be provided to include a minimum of 3 locations. Not specifying this field will result in Uptime checks running from all available regions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -361,7 +361,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#selectedregions_go" style="color: inherit; text-decoration: inherit;">Selected<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#uptimecheckconfigselectedregionsitem">[]string</a></span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions must be provided to include a minimum of 3 locations. Not specifying this field will result in Uptime checks running from all available regions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -469,7 +469,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#selectedregions_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#uptimecheckconfigselectedregionsitem">Uptime<wbr>Check<wbr>Config<wbr>Selected<wbr>Regions<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions must be provided to include a minimum of 3 locations. Not specifying this field will result in Uptime checks running from all available regions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -577,7 +577,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#selected_regions_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#uptimecheckconfigselectedregionsitem">Uptime<wbr>Check<wbr>Config<wbr>Selected<wbr>Regions<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions must be provided to include a minimum of 3 locations. Not specifying this field will result in Uptime checks running from all available regions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -844,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matcher_csharp" style="color: inherit; text-decoration: inherit;">Matcher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#contentmatchermatcher">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V3.<wbr>Content<wbr>Matcher<wbr>Matcher</a></span>
     </dt>
     <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -864,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matcher_go" style="color: inherit; text-decoration: inherit;">Matcher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#contentmatchermatcher">Content<wbr>Matcher<wbr>Matcher</a></span>
     </dt>
     <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -884,7 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matcher_nodejs" style="color: inherit; text-decoration: inherit;">matcher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#contentmatchermatcher">Content<wbr>Matcher<wbr>Matcher</a></span>
     </dt>
     <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -904,9 +904,47 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matcher_python" style="color: inherit; text-decoration: inherit;">matcher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#contentmatchermatcher">Content<wbr>Matcher<wbr>Matcher</a></span>
     </dt>
     <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="contentmatchermatcher">Content<wbr>Matcher<wbr>Matcher</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Content<wbr>Matcher<wbr>Option<wbr>Unspecified</dt>
+    <dd>CONTENT_MATCHER_OPTION_UNSPECIFIED{{% md %}}No content matcher type specified (maintained for backward compatibility, but deprecated for future use). Treated as CONTAINS_STRING.{{% /md %}}</dd><dt>Contains<wbr>String</dt>
+    <dd>CONTAINS_STRING{{% md %}}Selects substring matching. The match succeeds if the output contains the content string. This is the default value for checks without a matcher option, or where the value of matcher is CONTENT_MATCHER_OPTION_UNSPECIFIED.{{% /md %}}</dd><dt>Not<wbr>Contains<wbr>String</dt>
+    <dd>NOT_CONTAINS_STRING{{% md %}}Selects negation of substring matching. The match succeeds if the output does NOT contain the content string.{{% /md %}}</dd><dt>Matches<wbr>Regex</dt>
+    <dd>MATCHES_REGEX{{% md %}}Selects regular-expression matching. The match succeeds of the output matches the regular expression specified in the content string. Regex matching is only supported for HTTP/HTTPS checks.{{% /md %}}</dd><dt>Not<wbr>Matches<wbr>Regex</dt>
+    <dd>NOT_MATCHES_REGEX{{% md %}}Selects negation of regular-expression matching. The match succeeds if the output does NOT match the regular expression specified in the content string. Regex matching is only supported for HTTP/HTTPS checks.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Content<wbr>Matcher<wbr>Matcher<wbr>Content<wbr>Matcher<wbr>Option<wbr>Unspecified</dt>
+    <dd>CONTENT_MATCHER_OPTION_UNSPECIFIED{{% md %}}No content matcher type specified (maintained for backward compatibility, but deprecated for future use). Treated as CONTAINS_STRING.{{% /md %}}</dd><dt>Content<wbr>Matcher<wbr>Matcher<wbr>Contains<wbr>String</dt>
+    <dd>CONTAINS_STRING{{% md %}}Selects substring matching. The match succeeds if the output contains the content string. This is the default value for checks without a matcher option, or where the value of matcher is CONTENT_MATCHER_OPTION_UNSPECIFIED.{{% /md %}}</dd><dt>Content<wbr>Matcher<wbr>Matcher<wbr>Not<wbr>Contains<wbr>String</dt>
+    <dd>NOT_CONTAINS_STRING{{% md %}}Selects negation of substring matching. The match succeeds if the output does NOT contain the content string.{{% /md %}}</dd><dt>Content<wbr>Matcher<wbr>Matcher<wbr>Matches<wbr>Regex</dt>
+    <dd>MATCHES_REGEX{{% md %}}Selects regular-expression matching. The match succeeds of the output matches the regular expression specified in the content string. Regex matching is only supported for HTTP/HTTPS checks.{{% /md %}}</dd><dt>Content<wbr>Matcher<wbr>Matcher<wbr>Not<wbr>Matches<wbr>Regex</dt>
+    <dd>NOT_MATCHES_REGEX{{% md %}}Selects negation of regular-expression matching. The match succeeds if the output does NOT match the regular expression specified in the content string. Regex matching is only supported for HTTP/HTTPS checks.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Content<wbr>Matcher<wbr>Option<wbr>Unspecified</dt>
+    <dd>CONTENT_MATCHER_OPTION_UNSPECIFIED{{% md %}}No content matcher type specified (maintained for backward compatibility, but deprecated for future use). Treated as CONTAINS_STRING.{{% /md %}}</dd><dt>Contains<wbr>String</dt>
+    <dd>CONTAINS_STRING{{% md %}}Selects substring matching. The match succeeds if the output contains the content string. This is the default value for checks without a matcher option, or where the value of matcher is CONTENT_MATCHER_OPTION_UNSPECIFIED.{{% /md %}}</dd><dt>Not<wbr>Contains<wbr>String</dt>
+    <dd>NOT_CONTAINS_STRING{{% md %}}Selects negation of substring matching. The match succeeds if the output does NOT contain the content string.{{% /md %}}</dd><dt>Matches<wbr>Regex</dt>
+    <dd>MATCHES_REGEX{{% md %}}Selects regular-expression matching. The match succeeds of the output matches the regular expression specified in the content string. Regex matching is only supported for HTTP/HTTPS checks.{{% /md %}}</dd><dt>Not<wbr>Matches<wbr>Regex</dt>
+    <dd>NOT_MATCHES_REGEX{{% md %}}Selects negation of regular-expression matching. The match succeeds if the output does NOT match the regular expression specified in the content string. Regex matching is only supported for HTTP/HTTPS checks.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CONTENT_MATCHER_OPTION_UNSPECIFIED</dt>
+    <dd>CONTENT_MATCHER_OPTION_UNSPECIFIED{{% md %}}No content matcher type specified (maintained for backward compatibility, but deprecated for future use). Treated as CONTAINS_STRING.{{% /md %}}</dd><dt>CONTAINS_STRING</dt>
+    <dd>CONTAINS_STRING{{% md %}}Selects substring matching. The match succeeds if the output contains the content string. This is the default value for checks without a matcher option, or where the value of matcher is CONTENT_MATCHER_OPTION_UNSPECIFIED.{{% /md %}}</dd><dt>NOT_CONTAINS_STRING</dt>
+    <dd>NOT_CONTAINS_STRING{{% md %}}Selects negation of substring matching. The match succeeds if the output does NOT contain the content string.{{% /md %}}</dd><dt>MATCHES_REGEX</dt>
+    <dd>MATCHES_REGEX{{% md %}}Selects regular-expression matching. The match succeeds of the output matches the regular expression specified in the content string. Regex matching is only supported for HTTP/HTTPS checks.{{% /md %}}</dd><dt>NOT_MATCHES_REGEX</dt>
+    <dd>NOT_MATCHES_REGEX{{% md %}}Selects negation of regular-expression matching. The match succeeds if the output does NOT match the regular expression specified in the content string. Regex matching is only supported for HTTP/HTTPS checks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="contentmatcherresponse">Content<wbr>Matcher<wbr>Response</h4>
@@ -1016,7 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpcheckcontenttype">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V3.<wbr>Http<wbr>Check<wbr>Content<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The content type header to use for the check. The following configurations result in errors: 1. Content type is specified in both the headers field and the content_type field. 2. Request method is GET and content_type is not TYPE_UNSPECIFIED 3. Request method is POST and content_type is TYPE_UNSPECIFIED. 4. Request method is POST and a "Content-Type" header is provided via headers field. The content_type field should be used instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1056,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestmethod_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpcheckrequestmethod">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V3.<wbr>Http<wbr>Check<wbr>Request<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then request_method defaults to GET.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1100,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpcheckcontenttype">Http<wbr>Check<wbr>Content<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The content type header to use for the check. The following configurations result in errors: 1. Content type is specified in both the headers field and the content_type field. 2. Request method is GET and content_type is not TYPE_UNSPECIFIED 3. Request method is POST and content_type is TYPE_UNSPECIFIED. 4. Request method is POST and a "Content-Type" header is provided via headers field. The content_type field should be used instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1140,7 +1178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestmethod_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpcheckrequestmethod">Http<wbr>Check<wbr>Request<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then request_method defaults to GET.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1184,7 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpcheckcontenttype">Http<wbr>Check<wbr>Content<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The content type header to use for the check. The following configurations result in errors: 1. Content type is specified in both the headers field and the content_type field. 2. Request method is GET and content_type is not TYPE_UNSPECIFIED 3. Request method is POST and content_type is TYPE_UNSPECIFIED. 4. Request method is POST and a "Content-Type" header is provided via headers field. The content_type field should be used instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1224,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestmethod_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#httpcheckrequestmethod">Http<wbr>Check<wbr>Request<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then request_method defaults to GET.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1268,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#httpcheckcontenttype">Http<wbr>Check<wbr>Content<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The content type header to use for the check. The following configurations result in errors: 1. Content type is specified in both the headers field and the content_type field. 2. Request method is GET and content_type is not TYPE_UNSPECIFIED 3. Request method is POST and content_type is TYPE_UNSPECIFIED. 4. Request method is POST and a "Content-Type" header is provided via headers field. The content_type field should be used instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1308,7 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_method_python" style="color: inherit; text-decoration: inherit;">request_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#httpcheckrequestmethod">Http<wbr>Check<wbr>Request<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then request_method defaults to GET.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1327,6 +1365,62 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitored_resource is set to uptime_url. If use_ssl is false, setting validate_ssl to true has no effect.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="httpcheckcontenttype">Http<wbr>Check<wbr>Content<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}No content type specified.{{% /md %}}</dd><dt>Url<wbr>Encoded</dt>
+    <dd>URL_ENCODED{{% md %}}body is in URL-encoded form. Equivalent to setting the Content-Type to application/x-www-form-urlencoded in the HTTP request.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Http<wbr>Check<wbr>Content<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}No content type specified.{{% /md %}}</dd><dt>Http<wbr>Check<wbr>Content<wbr>Type<wbr>Url<wbr>Encoded</dt>
+    <dd>URL_ENCODED{{% md %}}body is in URL-encoded form. Equivalent to setting the Content-Type to application/x-www-form-urlencoded in the HTTP request.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}No content type specified.{{% /md %}}</dd><dt>Url<wbr>Encoded</dt>
+    <dd>URL_ENCODED{{% md %}}body is in URL-encoded form. Equivalent to setting the Content-Type to application/x-www-form-urlencoded in the HTTP request.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}No content type specified.{{% /md %}}</dd><dt>URL_ENCODED</dt>
+    <dd>URL_ENCODED{{% md %}}body is in URL-encoded form. Equivalent to setting the Content-Type to application/x-www-form-urlencoded in the HTTP request.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="httpcheckrequestmethod">Http<wbr>Check<wbr>Request<wbr>Method</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Method<wbr>Unspecified</dt>
+    <dd>METHOD_UNSPECIFIED{{% md %}}No request method specified.{{% /md %}}</dd><dt>Get</dt>
+    <dd>GET{{% md %}}GET request.{{% /md %}}</dd><dt>Post</dt>
+    <dd>POST{{% md %}}POST request.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Http<wbr>Check<wbr>Request<wbr>Method<wbr>Method<wbr>Unspecified</dt>
+    <dd>METHOD_UNSPECIFIED{{% md %}}No request method specified.{{% /md %}}</dd><dt>Http<wbr>Check<wbr>Request<wbr>Method<wbr>Get</dt>
+    <dd>GET{{% md %}}GET request.{{% /md %}}</dd><dt>Http<wbr>Check<wbr>Request<wbr>Method<wbr>Post</dt>
+    <dd>POST{{% md %}}POST request.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Method<wbr>Unspecified</dt>
+    <dd>METHOD_UNSPECIFIED{{% md %}}No request method specified.{{% /md %}}</dd><dt>Get</dt>
+    <dd>GET{{% md %}}GET request.{{% /md %}}</dd><dt>Post</dt>
+    <dd>POST{{% md %}}POST request.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>METHOD_UNSPECIFIED</dt>
+    <dd>METHOD_UNSPECIFIED{{% md %}}No request method specified.{{% /md %}}</dd><dt>GET</dt>
+    <dd>GET{{% md %}}GET request.{{% /md %}}</dd><dt>POST</dt>
+    <dd>POST{{% md %}}POST request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httpcheckresponse">Http<wbr>Check<wbr>Response</h4>
@@ -1716,7 +1810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#internalcheckerstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V3.<wbr>Internal<wbr>Checker<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current operational state of the internal checker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1768,7 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#internalcheckerstate">Internal<wbr>Checker<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current operational state of the internal checker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1820,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#internalcheckerstate">Internal<wbr>Checker<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current operational state of the internal checker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1872,7 +1966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#internalcheckerstate">Internal<wbr>Checker<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current operational state of the internal checker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2087,6 +2181,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The current operational state of the internal checker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="internalcheckerstate">Internal<wbr>Checker<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}An internal checker should never be in the unspecified state.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}The checker is being created, provisioned, and configured. A checker in this state can be returned by ListInternalCheckers or GetInternalChecker, as well as by examining the long running Operation (https://cloud.google.com/apis/design/design_patterns#long_running_operations) that created it.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The checker is running and available for use. A checker in this state can be returned by ListInternalCheckers or GetInternalChecker as well as by examining the long running Operation (https://cloud.google.com/apis/design/design_patterns#long_running_operations) that created it. If a checker is being torn down, it is neither visible nor usable, so there is no "deleting" or "down" state.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Internal<wbr>Checker<wbr>State<wbr>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}An internal checker should never be in the unspecified state.{{% /md %}}</dd><dt>Internal<wbr>Checker<wbr>State<wbr>Creating</dt>
+    <dd>CREATING{{% md %}}The checker is being created, provisioned, and configured. A checker in this state can be returned by ListInternalCheckers or GetInternalChecker, as well as by examining the long running Operation (https://cloud.google.com/apis/design/design_patterns#long_running_operations) that created it.{{% /md %}}</dd><dt>Internal<wbr>Checker<wbr>State<wbr>Running</dt>
+    <dd>RUNNING{{% md %}}The checker is running and available for use. A checker in this state can be returned by ListInternalCheckers or GetInternalChecker as well as by examining the long running Operation (https://cloud.google.com/apis/design/design_patterns#long_running_operations) that created it. If a checker is being torn down, it is neither visible nor usable, so there is no "deleting" or "down" state.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified</dt>
+    <dd>UNSPECIFIED{{% md %}}An internal checker should never be in the unspecified state.{{% /md %}}</dd><dt>Creating</dt>
+    <dd>CREATING{{% md %}}The checker is being created, provisioned, and configured. A checker in this state can be returned by ListInternalCheckers or GetInternalChecker, as well as by examining the long running Operation (https://cloud.google.com/apis/design/design_patterns#long_running_operations) that created it.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The checker is running and available for use. A checker in this state can be returned by ListInternalCheckers or GetInternalChecker as well as by examining the long running Operation (https://cloud.google.com/apis/design/design_patterns#long_running_operations) that created it. If a checker is being torn down, it is neither visible nor usable, so there is no "deleting" or "down" state.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED</dt>
+    <dd>UNSPECIFIED{{% md %}}An internal checker should never be in the unspecified state.{{% /md %}}</dd><dt>CREATING</dt>
+    <dd>CREATING{{% md %}}The checker is being created, provisioned, and configured. A checker in this state can be returned by ListInternalCheckers or GetInternalChecker, as well as by examining the long running Operation (https://cloud.google.com/apis/design/design_patterns#long_running_operations) that created it.{{% /md %}}</dd><dt>RUNNING</dt>
+    <dd>RUNNING{{% md %}}The checker is running and available for use. A checker in this state can be returned by ListInternalCheckers or GetInternalChecker as well as by examining the long running Operation (https://cloud.google.com/apis/design/design_patterns#long_running_operations) that created it. If a checker is being torn down, it is neither visible nor usable, so there is no "deleting" or "down" state.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="monitoredresource">Monitored<wbr>Resource</h4>
 
 {{% choosable language csharp %}}
@@ -2268,7 +2392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcegroupresourcetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V3.<wbr>Resource<wbr>Group<wbr>Resource<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The resource type of the group members.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2288,7 +2412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcegroupresourcetype">Resource<wbr>Group<wbr>Resource<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The resource type of the group members.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2308,7 +2432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcegroupresourcetype">Resource<wbr>Group<wbr>Resource<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The resource type of the group members.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2328,9 +2452,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#resourcegroupresourcetype">Resource<wbr>Group<wbr>Resource<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The resource type of the group members.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourcegroupresourcetype">Resource<wbr>Group<wbr>Resource<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Resource<wbr>Type<wbr>Unspecified</dt>
+    <dd>RESOURCE_TYPE_UNSPECIFIED{{% md %}}Default value (not valid).{{% /md %}}</dd><dt>Instance</dt>
+    <dd>INSTANCE{{% md %}}A group of instances from Google Cloud Platform (GCP) or Amazon Web Services (AWS).{{% /md %}}</dd><dt>Aws<wbr>Elb<wbr>Load<wbr>Balancer</dt>
+    <dd>AWS_ELB_LOAD_BALANCER{{% md %}}A group of Amazon ELB load balancers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Resource<wbr>Group<wbr>Resource<wbr>Type<wbr>Resource<wbr>Type<wbr>Unspecified</dt>
+    <dd>RESOURCE_TYPE_UNSPECIFIED{{% md %}}Default value (not valid).{{% /md %}}</dd><dt>Resource<wbr>Group<wbr>Resource<wbr>Type<wbr>Instance</dt>
+    <dd>INSTANCE{{% md %}}A group of instances from Google Cloud Platform (GCP) or Amazon Web Services (AWS).{{% /md %}}</dd><dt>Resource<wbr>Group<wbr>Resource<wbr>Type<wbr>Aws<wbr>Elb<wbr>Load<wbr>Balancer</dt>
+    <dd>AWS_ELB_LOAD_BALANCER{{% md %}}A group of Amazon ELB load balancers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Resource<wbr>Type<wbr>Unspecified</dt>
+    <dd>RESOURCE_TYPE_UNSPECIFIED{{% md %}}Default value (not valid).{{% /md %}}</dd><dt>Instance</dt>
+    <dd>INSTANCE{{% md %}}A group of instances from Google Cloud Platform (GCP) or Amazon Web Services (AWS).{{% /md %}}</dd><dt>Aws<wbr>Elb<wbr>Load<wbr>Balancer</dt>
+    <dd>AWS_ELB_LOAD_BALANCER{{% md %}}A group of Amazon ELB load balancers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RESOURCE_TYPE_UNSPECIFIED</dt>
+    <dd>RESOURCE_TYPE_UNSPECIFIED{{% md %}}Default value (not valid).{{% /md %}}</dd><dt>INSTANCE</dt>
+    <dd>INSTANCE{{% md %}}A group of instances from Google Cloud Platform (GCP) or Amazon Web Services (AWS).{{% /md %}}</dd><dt>AWS_ELB_LOAD_BALANCER</dt>
+    <dd>AWS_ELB_LOAD_BALANCER{{% md %}}A group of Amazon ELB load balancers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcegroupresponse">Resource<wbr>Group<wbr>Response</h4>
@@ -2513,6 +2667,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port on the server against which to run the check. Will be combined with host (specified within the monitored_resource) to construct the full URL. Required.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="uptimecheckconfigselectedregionsitem">Uptime<wbr>Check<wbr>Config<wbr>Selected<wbr>Regions<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Region<wbr>Unspecified</dt>
+    <dd>REGION_UNSPECIFIED{{% md %}}Default value if no region is specified. Will result in Uptime checks running from all regions.{{% /md %}}</dd><dt>Usa</dt>
+    <dd>USA{{% md %}}Allows checks to run from locations within the United States of America.{{% /md %}}</dd><dt>Europe</dt>
+    <dd>EUROPE{{% md %}}Allows checks to run from locations within the continent of Europe.{{% /md %}}</dd><dt>South<wbr>America</dt>
+    <dd>SOUTH_AMERICA{{% md %}}Allows checks to run from locations within the continent of South America.{{% /md %}}</dd><dt>Asia<wbr>Pacific</dt>
+    <dd>ASIA_PACIFIC{{% md %}}Allows checks to run from locations within the Asia Pacific area (ex: Singapore).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Uptime<wbr>Check<wbr>Config<wbr>Selected<wbr>Regions<wbr>Item<wbr>Region<wbr>Unspecified</dt>
+    <dd>REGION_UNSPECIFIED{{% md %}}Default value if no region is specified. Will result in Uptime checks running from all regions.{{% /md %}}</dd><dt>Uptime<wbr>Check<wbr>Config<wbr>Selected<wbr>Regions<wbr>Item<wbr>Usa</dt>
+    <dd>USA{{% md %}}Allows checks to run from locations within the United States of America.{{% /md %}}</dd><dt>Uptime<wbr>Check<wbr>Config<wbr>Selected<wbr>Regions<wbr>Item<wbr>Europe</dt>
+    <dd>EUROPE{{% md %}}Allows checks to run from locations within the continent of Europe.{{% /md %}}</dd><dt>Uptime<wbr>Check<wbr>Config<wbr>Selected<wbr>Regions<wbr>Item<wbr>South<wbr>America</dt>
+    <dd>SOUTH_AMERICA{{% md %}}Allows checks to run from locations within the continent of South America.{{% /md %}}</dd><dt>Uptime<wbr>Check<wbr>Config<wbr>Selected<wbr>Regions<wbr>Item<wbr>Asia<wbr>Pacific</dt>
+    <dd>ASIA_PACIFIC{{% md %}}Allows checks to run from locations within the Asia Pacific area (ex: Singapore).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Region<wbr>Unspecified</dt>
+    <dd>REGION_UNSPECIFIED{{% md %}}Default value if no region is specified. Will result in Uptime checks running from all regions.{{% /md %}}</dd><dt>Usa</dt>
+    <dd>USA{{% md %}}Allows checks to run from locations within the United States of America.{{% /md %}}</dd><dt>Europe</dt>
+    <dd>EUROPE{{% md %}}Allows checks to run from locations within the continent of Europe.{{% /md %}}</dd><dt>South<wbr>America</dt>
+    <dd>SOUTH_AMERICA{{% md %}}Allows checks to run from locations within the continent of South America.{{% /md %}}</dd><dt>Asia<wbr>Pacific</dt>
+    <dd>ASIA_PACIFIC{{% md %}}Allows checks to run from locations within the Asia Pacific area (ex: Singapore).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>REGION_UNSPECIFIED</dt>
+    <dd>REGION_UNSPECIFIED{{% md %}}Default value if no region is specified. Will result in Uptime checks running from all regions.{{% /md %}}</dd><dt>USA</dt>
+    <dd>USA{{% md %}}Allows checks to run from locations within the United States of America.{{% /md %}}</dd><dt>EUROPE</dt>
+    <dd>EUROPE{{% md %}}Allows checks to run from locations within the continent of Europe.{{% /md %}}</dd><dt>SOUTH_AMERICA</dt>
+    <dd>SOUTH_AMERICA{{% md %}}Allows checks to run from locations within the continent of South America.{{% /md %}}</dd><dt>ASIA_PACIFIC</dt>
+    <dd>ASIA_PACIFIC{{% md %}}Allows checks to run from locations within the Asia Pacific area (ex: Singapore).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

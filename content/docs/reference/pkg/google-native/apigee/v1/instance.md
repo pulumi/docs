@@ -34,7 +34,7 @@ Creates an Apigee runtime instance. The instance is accessible from the authoriz
              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">organization_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">peering_cidr_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+             <span class="nx">peering_cidr_range</span><span class="p">:</span> <span class="nx">Optional[_apigee_v1.InstancePeeringCidrRange]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span>
@@ -224,7 +224,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#peeringcidrrange_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Cidr<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancepeeringcidrrange">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Instance<wbr>Peering<wbr>Cidr<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Optional. Size of the CIDR block range that will be reserved by the instance. PAID organizations support `SLASH_16` to `SLASH_20` and defaults to `SLASH_16`. Evaluation organizations support only `SLASH_23`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -292,7 +292,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#peeringcidrrange_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Cidr<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancepeeringcidrrange">Instance<wbr>Peering<wbr>Cidr<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Optional. Size of the CIDR block range that will be reserved by the instance. PAID organizations support `SLASH_16` to `SLASH_20` and defaults to `SLASH_16`. Evaluation organizations support only `SLASH_23`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -360,7 +360,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#peeringcidrrange_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Cidr<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#instancepeeringcidrrange">Instance<wbr>Peering<wbr>Cidr<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Optional. Size of the CIDR block range that will be reserved by the instance. PAID organizations support `SLASH_16` to `SLASH_20` and defaults to `SLASH_16`. Evaluation organizations support only `SLASH_23`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -428,7 +428,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#peering_cidr_range_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>cidr_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#instancepeeringcidrrange">Instance<wbr>Peering<wbr>Cidr<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Optional. Size of the CIDR block range that will be reserved by the instance. PAID organizations support `SLASH_16` to `SLASH_20` and defaults to `SLASH_16`. Evaluation organizations support only `SLASH_23`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -653,6 +653,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="instancepeeringcidrrange">Instance<wbr>Peering<wbr>Cidr<wbr>Range</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Cidr<wbr>Range<wbr>Unspecified</dt>
+    <dd>CIDR_RANGE_UNSPECIFIED{{% md %}}Range not specified.{{% /md %}}</dd><dt>Slash16</dt>
+    <dd>SLASH_16{{% md %}}`/16` CIDR range.{{% /md %}}</dd><dt>Slash17</dt>
+    <dd>SLASH_17{{% md %}}`/17` CIDR range.{{% /md %}}</dd><dt>Slash18</dt>
+    <dd>SLASH_18{{% md %}}`/18` CIDR range.{{% /md %}}</dd><dt>Slash19</dt>
+    <dd>SLASH_19{{% md %}}`/19` CIDR range.{{% /md %}}</dd><dt>Slash20</dt>
+    <dd>SLASH_20{{% md %}}`/20` CIDR range.{{% /md %}}</dd><dt>Slash23</dt>
+    <dd>SLASH_23{{% md %}}`/23` CIDR range. Supported for evaluation only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Instance<wbr>Peering<wbr>Cidr<wbr>Range<wbr>Cidr<wbr>Range<wbr>Unspecified</dt>
+    <dd>CIDR_RANGE_UNSPECIFIED{{% md %}}Range not specified.{{% /md %}}</dd><dt>Instance<wbr>Peering<wbr>Cidr<wbr>Range<wbr>Slash16</dt>
+    <dd>SLASH_16{{% md %}}`/16` CIDR range.{{% /md %}}</dd><dt>Instance<wbr>Peering<wbr>Cidr<wbr>Range<wbr>Slash17</dt>
+    <dd>SLASH_17{{% md %}}`/17` CIDR range.{{% /md %}}</dd><dt>Instance<wbr>Peering<wbr>Cidr<wbr>Range<wbr>Slash18</dt>
+    <dd>SLASH_18{{% md %}}`/18` CIDR range.{{% /md %}}</dd><dt>Instance<wbr>Peering<wbr>Cidr<wbr>Range<wbr>Slash19</dt>
+    <dd>SLASH_19{{% md %}}`/19` CIDR range.{{% /md %}}</dd><dt>Instance<wbr>Peering<wbr>Cidr<wbr>Range<wbr>Slash20</dt>
+    <dd>SLASH_20{{% md %}}`/20` CIDR range.{{% /md %}}</dd><dt>Instance<wbr>Peering<wbr>Cidr<wbr>Range<wbr>Slash23</dt>
+    <dd>SLASH_23{{% md %}}`/23` CIDR range. Supported for evaluation only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Cidr<wbr>Range<wbr>Unspecified</dt>
+    <dd>CIDR_RANGE_UNSPECIFIED{{% md %}}Range not specified.{{% /md %}}</dd><dt>Slash16</dt>
+    <dd>SLASH_16{{% md %}}`/16` CIDR range.{{% /md %}}</dd><dt>Slash17</dt>
+    <dd>SLASH_17{{% md %}}`/17` CIDR range.{{% /md %}}</dd><dt>Slash18</dt>
+    <dd>SLASH_18{{% md %}}`/18` CIDR range.{{% /md %}}</dd><dt>Slash19</dt>
+    <dd>SLASH_19{{% md %}}`/19` CIDR range.{{% /md %}}</dd><dt>Slash20</dt>
+    <dd>SLASH_20{{% md %}}`/20` CIDR range.{{% /md %}}</dd><dt>Slash23</dt>
+    <dd>SLASH_23{{% md %}}`/23` CIDR range. Supported for evaluation only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CIDR_RANGE_UNSPECIFIED</dt>
+    <dd>CIDR_RANGE_UNSPECIFIED{{% md %}}Range not specified.{{% /md %}}</dd><dt>SLASH16</dt>
+    <dd>SLASH_16{{% md %}}`/16` CIDR range.{{% /md %}}</dd><dt>SLASH17</dt>
+    <dd>SLASH_17{{% md %}}`/17` CIDR range.{{% /md %}}</dd><dt>SLASH18</dt>
+    <dd>SLASH_18{{% md %}}`/18` CIDR range.{{% /md %}}</dd><dt>SLASH19</dt>
+    <dd>SLASH_19{{% md %}}`/19` CIDR range.{{% /md %}}</dd><dt>SLASH20</dt>
+    <dd>SLASH_20{{% md %}}`/20` CIDR range.{{% /md %}}</dd><dt>SLASH23</dt>
+    <dd>SLASH_23{{% md %}}`/23` CIDR range. Supported for evaluation only.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

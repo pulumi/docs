@@ -27,7 +27,7 @@ Creates a commitment in the specified project using the data included in the req
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">RegionCommitment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.RegionCommitmentCategory]</span> = None<span class="p">,</span>
                      <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">end_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -35,7 +35,7 @@ Creates a commitment in the specified project using the data included in the req
                      <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">license_resource</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.LicenseResourceCommitmentArgs]</span> = None<span class="p">,</span>
                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.RegionCommitmentPlan]</span> = None<span class="p">,</span>
                      <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -43,9 +43,9 @@ Creates a commitment in the specified project using the data included in the req
                      <span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.ResourceCommitmentArgs]]</span> = None<span class="p">,</span>
                      <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">start_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.RegionCommitmentStatus]</span> = None<span class="p">,</span>
                      <span class="nx">status_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                     <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.RegionCommitmentType]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">RegionCommitment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegionCommitmentArgs</a></span><span class="p">,</span>
@@ -195,7 +195,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regioncommitmentcategory">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Region<wbr>Commitment<wbr>Category</a></span>
     </dt>
     <dd>{{% md %}}The category of the commitment. Category MACHINE specifies commitments composed of machine resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments composed of software licenses, listed in licenseResources. Note that only MACHINE commitments should have a Type specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -259,7 +259,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regioncommitmentplan">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Region<wbr>Commitment<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}The plan for this commitment, which determines duration and discount rate. The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -307,7 +307,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regioncommitmentstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Region<wbr>Commitment<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Status of the commitment with regards to eventual expiration (each commitment has an end date defined). One of the following values: NOT_YET_ACTIVE, ACTIVE, EXPIRED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -323,7 +323,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regioncommitmenttype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Region<wbr>Commitment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of commitment, which affects the discount rate and the eligible resources. Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized machines.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -351,7 +351,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regioncommitmentcategory">Region<wbr>Commitment<wbr>Category</a></span>
     </dt>
     <dd>{{% md %}}The category of the commitment. Category MACHINE specifies commitments composed of machine resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments composed of software licenses, listed in licenseResources. Note that only MACHINE commitments should have a Type specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -415,7 +415,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regioncommitmentplan">Region<wbr>Commitment<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}The plan for this commitment, which determines duration and discount rate. The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -463,7 +463,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regioncommitmentstatus">Region<wbr>Commitment<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Status of the commitment with regards to eventual expiration (each commitment has an end date defined). One of the following values: NOT_YET_ACTIVE, ACTIVE, EXPIRED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -479,7 +479,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regioncommitmenttype">Region<wbr>Commitment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of commitment, which affects the discount rate and the eligible resources. Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized machines.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -507,7 +507,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regioncommitmentcategory">Region<wbr>Commitment<wbr>Category</a></span>
     </dt>
     <dd>{{% md %}}The category of the commitment. Category MACHINE specifies commitments composed of machine resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments composed of software licenses, listed in licenseResources. Note that only MACHINE commitments should have a Type specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -571,7 +571,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regioncommitmentplan">Region<wbr>Commitment<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}The plan for this commitment, which determines duration and discount rate. The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -619,7 +619,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regioncommitmentstatus">Region<wbr>Commitment<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Status of the commitment with regards to eventual expiration (each commitment has an end date defined). One of the following values: NOT_YET_ACTIVE, ACTIVE, EXPIRED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -635,7 +635,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regioncommitmenttype">Region<wbr>Commitment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of commitment, which affects the discount rate and the eligible resources. Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized machines.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -663,7 +663,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#regioncommitmentcategory">Region<wbr>Commitment<wbr>Category</a></span>
     </dt>
     <dd>{{% md %}}The category of the commitment. Category MACHINE specifies commitments composed of machine resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments composed of software licenses, listed in licenseResources. Note that only MACHINE commitments should have a Type specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -727,7 +727,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#regioncommitmentplan">Region<wbr>Commitment<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}The plan for this commitment, which determines duration and discount rate. The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -775,7 +775,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#regioncommitmentstatus">Region<wbr>Commitment<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Status of the commitment with regards to eventual expiration (each commitment has an end date defined). One of the following values: NOT_YET_ACTIVE, ACTIVE, EXPIRED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -791,7 +791,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#regioncommitmenttype">Region<wbr>Commitment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of commitment, which affects the discount rate and the eligible resources. Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized machines.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1042,7 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#allocationspecificskuallocationallocatedinstancepropertiesreserveddiskinterface">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1062,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#allocationspecificskuallocationallocatedinstancepropertiesreserveddiskinterface">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1082,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#allocationspecificskuallocationallocatedinstancepropertiesreserveddiskinterface">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1102,9 +1102,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#allocationspecificskuallocationallocatedinstancepropertiesreserveddiskinterface">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="allocationspecificskuallocationallocatedinstancepropertiesreserveddiskinterface">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Interface</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Nvme</dt>
+    <dd>NVME</dd><dt>Scsi</dt>
+    <dd>SCSI</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Interface<wbr>Nvme</dt>
+    <dd>NVME</dd><dt>Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Interface<wbr>Scsi</dt>
+    <dd>SCSI</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Nvme</dt>
+    <dd>NVME</dd><dt>Scsi</dt>
+    <dd>SCSI</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NVME</dt>
+    <dd>NVME</dd><dt>SCSI</dt>
+    <dd>SCSI</dd></dl>
 {{% /choosable %}}
 
 <h4 id="allocationspecificskuallocationallocatedinstancepropertiesreserveddiskresponse">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Response</h4>
@@ -2001,6 +2027,150 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Any applicable license URI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="regioncommitmentcategory">Region<wbr>Commitment<wbr>Category</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Category<wbr>Unspecified</dt>
+    <dd>CATEGORY_UNSPECIFIED</dd><dt>License</dt>
+    <dd>LICENSE</dd><dt>Machine</dt>
+    <dd>MACHINE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Region<wbr>Commitment<wbr>Category<wbr>Category<wbr>Unspecified</dt>
+    <dd>CATEGORY_UNSPECIFIED</dd><dt>Region<wbr>Commitment<wbr>Category<wbr>License</dt>
+    <dd>LICENSE</dd><dt>Region<wbr>Commitment<wbr>Category<wbr>Machine</dt>
+    <dd>MACHINE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Category<wbr>Unspecified</dt>
+    <dd>CATEGORY_UNSPECIFIED</dd><dt>License</dt>
+    <dd>LICENSE</dd><dt>Machine</dt>
+    <dd>MACHINE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CATEGORY_UNSPECIFIED</dt>
+    <dd>CATEGORY_UNSPECIFIED</dd><dt>LICENSE</dt>
+    <dd>LICENSE</dd><dt>MACHINE</dt>
+    <dd>MACHINE</dd></dl>
+{{% /choosable %}}
+
+<h4 id="regioncommitmentplan">Region<wbr>Commitment<wbr>Plan</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Invalid</dt>
+    <dd>INVALID</dd><dt>Thirty<wbr>Six<wbr>Month</dt>
+    <dd>THIRTY_SIX_MONTH</dd><dt>Twelve<wbr>Month</dt>
+    <dd>TWELVE_MONTH</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Region<wbr>Commitment<wbr>Plan<wbr>Invalid</dt>
+    <dd>INVALID</dd><dt>Region<wbr>Commitment<wbr>Plan<wbr>Thirty<wbr>Six<wbr>Month</dt>
+    <dd>THIRTY_SIX_MONTH</dd><dt>Region<wbr>Commitment<wbr>Plan<wbr>Twelve<wbr>Month</dt>
+    <dd>TWELVE_MONTH</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Invalid</dt>
+    <dd>INVALID</dd><dt>Thirty<wbr>Six<wbr>Month</dt>
+    <dd>THIRTY_SIX_MONTH</dd><dt>Twelve<wbr>Month</dt>
+    <dd>TWELVE_MONTH</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>INVALID</dt>
+    <dd>INVALID</dd><dt>THIRTY_SIX_MONTH</dt>
+    <dd>THIRTY_SIX_MONTH</dd><dt>TWELVE_MONTH</dt>
+    <dd>TWELVE_MONTH</dd></dl>
+{{% /choosable %}}
+
+<h4 id="regioncommitmentstatus">Region<wbr>Commitment<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Expired</dt>
+    <dd>EXPIRED</dd><dt>Not<wbr>Yet<wbr>Active</dt>
+    <dd>NOT_YET_ACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Region<wbr>Commitment<wbr>Status<wbr>Active</dt>
+    <dd>ACTIVE</dd><dt>Region<wbr>Commitment<wbr>Status<wbr>Creating</dt>
+    <dd>CREATING</dd><dt>Region<wbr>Commitment<wbr>Status<wbr>Expired</dt>
+    <dd>EXPIRED</dd><dt>Region<wbr>Commitment<wbr>Status<wbr>Not<wbr>Yet<wbr>Active</dt>
+    <dd>NOT_YET_ACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Active</dt>
+    <dd>ACTIVE</dd><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Expired</dt>
+    <dd>EXPIRED</dd><dt>Not<wbr>Yet<wbr>Active</dt>
+    <dd>NOT_YET_ACTIVE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACTIVE</dt>
+    <dd>ACTIVE</dd><dt>CREATING</dt>
+    <dd>CREATING</dd><dt>EXPIRED</dt>
+    <dd>EXPIRED</dd><dt>NOT_YET_ACTIVE</dt>
+    <dd>NOT_YET_ACTIVE</dd></dl>
+{{% /choosable %}}
+
+<h4 id="regioncommitmenttype">Region<wbr>Commitment<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Accelerator<wbr>Optimized</dt>
+    <dd>ACCELERATOR_OPTIMIZED</dd><dt>Compute<wbr>Optimized</dt>
+    <dd>COMPUTE_OPTIMIZED</dd><dt>General<wbr>Purpose</dt>
+    <dd>GENERAL_PURPOSE</dd><dt>General<wbr>Purpose<wbr>E2</dt>
+    <dd>GENERAL_PURPOSE_E2</dd><dt>General<wbr>Purpose<wbr>N2</dt>
+    <dd>GENERAL_PURPOSE_N2</dd><dt>General<wbr>Purpose<wbr>N2d</dt>
+    <dd>GENERAL_PURPOSE_N2D</dd><dt>Memory<wbr>Optimized</dt>
+    <dd>MEMORY_OPTIMIZED</dd><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Region<wbr>Commitment<wbr>Type<wbr>Accelerator<wbr>Optimized</dt>
+    <dd>ACCELERATOR_OPTIMIZED</dd><dt>Region<wbr>Commitment<wbr>Type<wbr>Compute<wbr>Optimized</dt>
+    <dd>COMPUTE_OPTIMIZED</dd><dt>Region<wbr>Commitment<wbr>Type<wbr>General<wbr>Purpose</dt>
+    <dd>GENERAL_PURPOSE</dd><dt>Region<wbr>Commitment<wbr>Type<wbr>General<wbr>Purpose<wbr>E2</dt>
+    <dd>GENERAL_PURPOSE_E2</dd><dt>Region<wbr>Commitment<wbr>Type<wbr>General<wbr>Purpose<wbr>N2</dt>
+    <dd>GENERAL_PURPOSE_N2</dd><dt>Region<wbr>Commitment<wbr>Type<wbr>General<wbr>Purpose<wbr>N2d</dt>
+    <dd>GENERAL_PURPOSE_N2D</dd><dt>Region<wbr>Commitment<wbr>Type<wbr>Memory<wbr>Optimized</dt>
+    <dd>MEMORY_OPTIMIZED</dd><dt>Region<wbr>Commitment<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Accelerator<wbr>Optimized</dt>
+    <dd>ACCELERATOR_OPTIMIZED</dd><dt>Compute<wbr>Optimized</dt>
+    <dd>COMPUTE_OPTIMIZED</dd><dt>General<wbr>Purpose</dt>
+    <dd>GENERAL_PURPOSE</dd><dt>General<wbr>Purpose<wbr>E2</dt>
+    <dd>GENERAL_PURPOSE_E2</dd><dt>General<wbr>Purpose<wbr>N2</dt>
+    <dd>GENERAL_PURPOSE_N2</dd><dt>General<wbr>Purpose<wbr>N2d</dt>
+    <dd>GENERAL_PURPOSE_N2D</dd><dt>Memory<wbr>Optimized</dt>
+    <dd>MEMORY_OPTIMIZED</dd><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACCELERATOR_OPTIMIZED</dt>
+    <dd>ACCELERATOR_OPTIMIZED</dd><dt>COMPUTE_OPTIMIZED</dt>
+    <dd>COMPUTE_OPTIMIZED</dd><dt>GENERAL_PURPOSE</dt>
+    <dd>GENERAL_PURPOSE</dd><dt>GENERAL_PURPOSE_E2</dt>
+    <dd>GENERAL_PURPOSE_E2</dd><dt>GENERAL_PURPOSE_N2</dt>
+    <dd>GENERAL_PURPOSE_N2</dd><dt>GENERAL_PURPOSE_N2D</dt>
+    <dd>GENERAL_PURPOSE_N2D</dd><dt>MEMORY_OPTIMIZED</dt>
+    <dd>MEMORY_OPTIMIZED</dd><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
 <h4 id="reservation">Reservation</h4>
 
 {{% choosable language csharp %}}
@@ -2090,7 +2260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#reservationstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Reservation<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the reservation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2190,7 +2360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#reservationstatus">Reservation<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the reservation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2290,7 +2460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#reservationstatus">Reservation<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the reservation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2390,7 +2560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#reservationstatus">Reservation<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the reservation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2773,6 +2943,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="reservationstatus">Reservation<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Invalid</dt>
+    <dd>INVALID</dd><dt>Ready</dt>
+    <dd>READY</dd><dt>Updating</dt>
+    <dd>UPDATING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Reservation<wbr>Status<wbr>Creating</dt>
+    <dd>CREATING</dd><dt>Reservation<wbr>Status<wbr>Deleting</dt>
+    <dd>DELETING</dd><dt>Reservation<wbr>Status<wbr>Invalid</dt>
+    <dd>INVALID</dd><dt>Reservation<wbr>Status<wbr>Ready</dt>
+    <dd>READY</dd><dt>Reservation<wbr>Status<wbr>Updating</dt>
+    <dd>UPDATING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Invalid</dt>
+    <dd>INVALID</dd><dt>Ready</dt>
+    <dd>READY</dd><dt>Updating</dt>
+    <dd>UPDATING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CREATING</dt>
+    <dd>CREATING</dd><dt>DELETING</dt>
+    <dd>DELETING</dd><dt>INVALID</dt>
+    <dd>INVALID</dd><dt>READY</dt>
+    <dd>READY</dd><dt>UPDATING</dt>
+    <dd>UPDATING</dd></dl>
+{{% /choosable %}}
+
 <h4 id="resourcecommitment">Resource<wbr>Commitment</h4>
 
 {{% choosable language csharp %}}
@@ -2798,7 +3006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcecommitmenttype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Resource<wbr>Commitment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of resource for which this commitment applies. Possible values are VCPU and MEMORY{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2826,7 +3034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcecommitmenttype">Resource<wbr>Commitment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of resource for which this commitment applies. Possible values are VCPU and MEMORY{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2854,7 +3062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#resourcecommitmenttype">Resource<wbr>Commitment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of resource for which this commitment applies. Possible values are VCPU and MEMORY{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2882,7 +3090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#resourcecommitmenttype">Resource<wbr>Commitment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of resource for which this commitment applies. Possible values are VCPU and MEMORY{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2999,6 +3207,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of resource for which this commitment applies. Possible values are VCPU and MEMORY{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourcecommitmenttype">Resource<wbr>Commitment<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Accelerator</dt>
+    <dd>ACCELERATOR</dd><dt>Local<wbr>Ssd</dt>
+    <dd>LOCAL_SSD</dd><dt>Memory</dt>
+    <dd>MEMORY</dd><dt>Unspecified</dt>
+    <dd>UNSPECIFIED</dd><dt>Vcpu</dt>
+    <dd>VCPU</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Resource<wbr>Commitment<wbr>Type<wbr>Accelerator</dt>
+    <dd>ACCELERATOR</dd><dt>Resource<wbr>Commitment<wbr>Type<wbr>Local<wbr>Ssd</dt>
+    <dd>LOCAL_SSD</dd><dt>Resource<wbr>Commitment<wbr>Type<wbr>Memory</dt>
+    <dd>MEMORY</dd><dt>Resource<wbr>Commitment<wbr>Type<wbr>Unspecified</dt>
+    <dd>UNSPECIFIED</dd><dt>Resource<wbr>Commitment<wbr>Type<wbr>Vcpu</dt>
+    <dd>VCPU</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Accelerator</dt>
+    <dd>ACCELERATOR</dd><dt>Local<wbr>Ssd</dt>
+    <dd>LOCAL_SSD</dd><dt>Memory</dt>
+    <dd>MEMORY</dd><dt>Unspecified</dt>
+    <dd>UNSPECIFIED</dd><dt>Vcpu</dt>
+    <dd>VCPU</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACCELERATOR</dt>
+    <dd>ACCELERATOR</dd><dt>LOCAL_SSD</dt>
+    <dd>LOCAL_SSD</dd><dt>MEMORY</dt>
+    <dd>MEMORY</dd><dt>UNSPECIFIED</dt>
+    <dd>UNSPECIFIED</dd><dt>VCPU</dt>
+    <dd>VCPU</dd></dl>
 {{% /choosable %}}
 
 

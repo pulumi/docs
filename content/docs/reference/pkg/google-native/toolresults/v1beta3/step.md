@@ -42,7 +42,7 @@ Creates a Step. The returned Step will have the id set. May return any of the fo
          <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">run_duration</span><span class="p">:</span> <span class="nx">Optional[_toolresults_v1beta3.DurationArgs]</span> = None<span class="p">,</span>
-         <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_toolresults_v1beta3.StepState]</span> = None<span class="p">,</span>
          <span class="nx">step_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">test_execution_step</span><span class="p">:</span> <span class="nx">Optional[_toolresults_v1beta3.TestExecutionStepArgs]</span> = None<span class="p">,</span>
          <span class="nx">tool_execution_step</span><span class="p">:</span> <span class="nx">Optional[_toolresults_v1beta3.ToolExecutionStepArgs]</span> = None<span class="p">)</span>
@@ -299,7 +299,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#stepstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Tool<wbr>Results.<wbr>V1Beta3.<wbr>Step<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The initial state is IN_PROGRESS. The only legal state transitions are * IN_PROGRESS -> COMPLETE A PRECONDITION_FAILED will be returned if an invalid transition is requested. It is valid to create Step with a state set to COMPLETE. The state can only be set to COMPLETE once. A PRECONDITION_FAILED will be returned if the state is set to COMPLETE multiple times. - In response: always set - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -455,7 +455,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#stepstate">Step<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The initial state is IN_PROGRESS. The only legal state transitions are * IN_PROGRESS -> COMPLETE A PRECONDITION_FAILED will be returned if an invalid transition is requested. It is valid to create Step with a state set to COMPLETE. The state can only be set to COMPLETE once. A PRECONDITION_FAILED will be returned if the state is set to COMPLETE multiple times. - In response: always set - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -611,7 +611,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#stepstate">Step<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The initial state is IN_PROGRESS. The only legal state transitions are * IN_PROGRESS -> COMPLETE A PRECONDITION_FAILED will be returned if an invalid transition is requested. It is valid to create Step with a state set to COMPLETE. The state can only be set to COMPLETE once. A PRECONDITION_FAILED will be returned if the state is set to COMPLETE multiple times. - In response: always set - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -767,7 +767,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#stepstate">Step<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The initial state is IN_PROGRESS. The only legal state transitions are * IN_PROGRESS -> COMPLETE A PRECONDITION_FAILED will be returned if an invalid transition is requested. It is valid to create Step with a state set to COMPLETE. The state can only be set to COMPLETE once. A PRECONDITION_FAILED will be returned if the state is set to COMPLETE multiple times. - In response: always set - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2018,7 +2018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outcomesummary_csharp" style="color: inherit; text-decoration: inherit;">Outcome<wbr>Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#individualoutcomeoutcomesummary">Pulumi.<wbr>Google<wbr>Native.<wbr>Tool<wbr>Results.<wbr>V1Beta3.<wbr>Individual<wbr>Outcome<wbr>Outcome<wbr>Summary</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2054,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outcomesummary_go" style="color: inherit; text-decoration: inherit;">Outcome<wbr>Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#individualoutcomeoutcomesummary">Individual<wbr>Outcome<wbr>Outcome<wbr>Summary</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2090,7 +2090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outcomesummary_nodejs" style="color: inherit; text-decoration: inherit;">outcome<wbr>Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#individualoutcomeoutcomesummary">Individual<wbr>Outcome<wbr>Outcome<wbr>Summary</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2126,7 +2126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outcome_summary_python" style="color: inherit; text-decoration: inherit;">outcome_<wbr>summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#individualoutcomeoutcomesummary">Individual<wbr>Outcome<wbr>Outcome<wbr>Summary</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2145,6 +2145,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="individualoutcomeoutcomesummary">Individual<wbr>Outcome<wbr>Outcome<wbr>Summary</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unset</dt>
+    <dd>unset{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Success</dt>
+    <dd>success{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>Failure</dt>
+    <dd>failure{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>Inconclusive</dt>
+    <dd>inconclusive{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>Skipped</dt>
+    <dd>skipped{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd><dt>Flaky</dt>
+    <dd>flaky{{% md %}}A group of steps that were run with the same configuration had both failure and success outcomes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Individual<wbr>Outcome<wbr>Outcome<wbr>Summary<wbr>Unset</dt>
+    <dd>unset{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Individual<wbr>Outcome<wbr>Outcome<wbr>Summary<wbr>Success</dt>
+    <dd>success{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>Individual<wbr>Outcome<wbr>Outcome<wbr>Summary<wbr>Failure</dt>
+    <dd>failure{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>Individual<wbr>Outcome<wbr>Outcome<wbr>Summary<wbr>Inconclusive</dt>
+    <dd>inconclusive{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>Individual<wbr>Outcome<wbr>Outcome<wbr>Summary<wbr>Skipped</dt>
+    <dd>skipped{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd><dt>Individual<wbr>Outcome<wbr>Outcome<wbr>Summary<wbr>Flaky</dt>
+    <dd>flaky{{% md %}}A group of steps that were run with the same configuration had both failure and success outcomes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unset</dt>
+    <dd>unset{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Success</dt>
+    <dd>success{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>Failure</dt>
+    <dd>failure{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>Inconclusive</dt>
+    <dd>inconclusive{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>Skipped</dt>
+    <dd>skipped{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd><dt>Flaky</dt>
+    <dd>flaky{{% md %}}A group of steps that were run with the same configuration had both failure and success outcomes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSET</dt>
+    <dd>unset{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>SUCCESS</dt>
+    <dd>success{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>FAILURE</dt>
+    <dd>failure{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>INCONCLUSIVE</dt>
+    <dd>inconclusive{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>SKIPPED</dt>
+    <dd>skipped{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd><dt>FLAKY</dt>
+    <dd>flaky{{% md %}}A group of steps that were run with the same configuration had both failure and success outcomes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="individualoutcomeresponse">Individual<wbr>Outcome<wbr>Response</h4>
@@ -2562,7 +2604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#outcomesummary">Pulumi.<wbr>Google<wbr>Native.<wbr>Tool<wbr>Results.<wbr>V1Beta3.<wbr>Outcome<wbr>Summary</a></span>
     </dt>
     <dd>{{% md %}}The simplest way to interpret a result. Required{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2606,7 +2648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_go" style="color: inherit; text-decoration: inherit;">Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#outcomesummary">Outcome<wbr>Summary</a></span>
     </dt>
     <dd>{{% md %}}The simplest way to interpret a result. Required{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2650,7 +2692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_nodejs" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#outcomesummary">Outcome<wbr>Summary</a></span>
     </dt>
     <dd>{{% md %}}The simplest way to interpret a result. Required{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2694,7 +2736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#outcomesummary">Outcome<wbr>Summary</a></span>
     </dt>
     <dd>{{% md %}}The simplest way to interpret a result. Required{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2877,6 +2919,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The simplest way to interpret a result. Required{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="outcomesummary">Outcome<wbr>Summary</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unset</dt>
+    <dd>unset{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Success</dt>
+    <dd>success{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>Failure</dt>
+    <dd>failure{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>Inconclusive</dt>
+    <dd>inconclusive{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>Skipped</dt>
+    <dd>skipped{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd><dt>Flaky</dt>
+    <dd>flaky{{% md %}}A group of steps that were run with the same configuration had both failure and success outcomes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Outcome<wbr>Summary<wbr>Unset</dt>
+    <dd>unset{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Outcome<wbr>Summary<wbr>Success</dt>
+    <dd>success{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>Outcome<wbr>Summary<wbr>Failure</dt>
+    <dd>failure{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>Outcome<wbr>Summary<wbr>Inconclusive</dt>
+    <dd>inconclusive{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>Outcome<wbr>Summary<wbr>Skipped</dt>
+    <dd>skipped{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd><dt>Outcome<wbr>Summary<wbr>Flaky</dt>
+    <dd>flaky{{% md %}}A group of steps that were run with the same configuration had both failure and success outcomes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unset</dt>
+    <dd>unset{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Success</dt>
+    <dd>success{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>Failure</dt>
+    <dd>failure{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>Inconclusive</dt>
+    <dd>inconclusive{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>Skipped</dt>
+    <dd>skipped{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd><dt>Flaky</dt>
+    <dd>flaky{{% md %}}A group of steps that were run with the same configuration had both failure and success outcomes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSET</dt>
+    <dd>unset{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>SUCCESS</dt>
+    <dd>success{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>FAILURE</dt>
+    <dd>failure{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>INCONCLUSIVE</dt>
+    <dd>inconclusive{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>SKIPPED</dt>
+    <dd>skipped{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd><dt>FLAKY</dt>
+    <dd>flaky{{% md %}}A group of steps that were run with the same configuration had both failure and success outcomes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="primarystep">Primary<wbr>Step</h4>
 
 {{% choosable language csharp %}}
@@ -2894,7 +2978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollup_csharp" style="color: inherit; text-decoration: inherit;">Roll<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#primarysteprollup">Pulumi.<wbr>Google<wbr>Native.<wbr>Tool<wbr>Results.<wbr>V1Beta3.<wbr>Primary<wbr>Step<wbr>Roll<wbr>Up</a></span>
     </dt>
     <dd>{{% md %}}Rollup test status of multiple steps that were run with the same configuration as a group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2914,7 +2998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollup_go" style="color: inherit; text-decoration: inherit;">Roll<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#primarysteprollup">Primary<wbr>Step<wbr>Roll<wbr>Up</a></span>
     </dt>
     <dd>{{% md %}}Rollup test status of multiple steps that were run with the same configuration as a group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2934,7 +3018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollup_nodejs" style="color: inherit; text-decoration: inherit;">roll<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#primarysteprollup">Primary<wbr>Step<wbr>Roll<wbr>Up</a></span>
     </dt>
     <dd>{{% md %}}Rollup test status of multiple steps that were run with the same configuration as a group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2954,7 +3038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roll_up_python" style="color: inherit; text-decoration: inherit;">roll_<wbr>up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#primarysteprollup">Primary<wbr>Step<wbr>Roll<wbr>Up</a></span>
     </dt>
     <dd>{{% md %}}Rollup test status of multiple steps that were run with the same configuration as a group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3039,6 +3123,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Rollup test status of multiple steps that were run with the same configuration as a group.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="primarysteprollup">Primary<wbr>Step<wbr>Roll<wbr>Up</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unset</dt>
+    <dd>unset{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Success</dt>
+    <dd>success{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>Failure</dt>
+    <dd>failure{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>Inconclusive</dt>
+    <dd>inconclusive{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>Skipped</dt>
+    <dd>skipped{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd><dt>Flaky</dt>
+    <dd>flaky{{% md %}}A group of steps that were run with the same configuration had both failure and success outcomes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Primary<wbr>Step<wbr>Roll<wbr>Up<wbr>Unset</dt>
+    <dd>unset{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Primary<wbr>Step<wbr>Roll<wbr>Up<wbr>Success</dt>
+    <dd>success{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>Primary<wbr>Step<wbr>Roll<wbr>Up<wbr>Failure</dt>
+    <dd>failure{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>Primary<wbr>Step<wbr>Roll<wbr>Up<wbr>Inconclusive</dt>
+    <dd>inconclusive{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>Primary<wbr>Step<wbr>Roll<wbr>Up<wbr>Skipped</dt>
+    <dd>skipped{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd><dt>Primary<wbr>Step<wbr>Roll<wbr>Up<wbr>Flaky</dt>
+    <dd>flaky{{% md %}}A group of steps that were run with the same configuration had both failure and success outcomes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unset</dt>
+    <dd>unset{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>Success</dt>
+    <dd>success{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>Failure</dt>
+    <dd>failure{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>Inconclusive</dt>
+    <dd>inconclusive{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>Skipped</dt>
+    <dd>skipped{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd><dt>Flaky</dt>
+    <dd>flaky{{% md %}}A group of steps that were run with the same configuration had both failure and success outcomes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSET</dt>
+    <dd>unset{{% md %}}Do not use. For proto versioning only.{{% /md %}}</dd><dt>SUCCESS</dt>
+    <dd>success{{% md %}}The test matrix run was successful, for instance: - All the test cases passed. - Robo did not detect a crash of the application under test.{{% /md %}}</dd><dt>FAILURE</dt>
+    <dd>failure{{% md %}}A run failed, for instance: - One or more test case failed. - A test timed out. - The application under test crashed.{{% /md %}}</dd><dt>INCONCLUSIVE</dt>
+    <dd>inconclusive{{% md %}}Something unexpected happened. The run should still be considered unsuccessful but this is likely a transient problem and re-running the test might be successful.{{% /md %}}</dd><dt>SKIPPED</dt>
+    <dd>skipped{{% md %}}All tests were skipped, for instance: - All device configurations were incompatible.{{% /md %}}</dd><dt>FLAKY</dt>
+    <dd>flaky{{% md %}}A group of steps that were run with the same configuration had both failure and success outcomes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skippeddetail">Skipped<wbr>Detail</h4>
@@ -3595,6 +3721,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="stepstate">Step<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unknown<wbr>State</dt>
+    <dd>unknownState{{% md %}}Should never be in this state. Exists for proto deserialization backward compatibility.{{% /md %}}</dd><dt>Pending</dt>
+    <dd>pending{{% md %}}The Execution/Step is created, ready to run, but not running yet. If an Execution/Step is created without initial state, it is assumed that the Execution/Step is in PENDING state.{{% /md %}}</dd><dt>In<wbr>Progress</dt>
+    <dd>inProgress{{% md %}}The Execution/Step is in progress.{{% /md %}}</dd><dt>Complete</dt>
+    <dd>complete{{% md %}}The finalized, immutable state. Steps/Executions in this state cannot be modified.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Step<wbr>State<wbr>Unknown<wbr>State</dt>
+    <dd>unknownState{{% md %}}Should never be in this state. Exists for proto deserialization backward compatibility.{{% /md %}}</dd><dt>Step<wbr>State<wbr>Pending</dt>
+    <dd>pending{{% md %}}The Execution/Step is created, ready to run, but not running yet. If an Execution/Step is created without initial state, it is assumed that the Execution/Step is in PENDING state.{{% /md %}}</dd><dt>Step<wbr>State<wbr>In<wbr>Progress</dt>
+    <dd>inProgress{{% md %}}The Execution/Step is in progress.{{% /md %}}</dd><dt>Step<wbr>State<wbr>Complete</dt>
+    <dd>complete{{% md %}}The finalized, immutable state. Steps/Executions in this state cannot be modified.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unknown<wbr>State</dt>
+    <dd>unknownState{{% md %}}Should never be in this state. Exists for proto deserialization backward compatibility.{{% /md %}}</dd><dt>Pending</dt>
+    <dd>pending{{% md %}}The Execution/Step is created, ready to run, but not running yet. If an Execution/Step is created without initial state, it is assumed that the Execution/Step is in PENDING state.{{% /md %}}</dd><dt>In<wbr>Progress</dt>
+    <dd>inProgress{{% md %}}The Execution/Step is in progress.{{% /md %}}</dd><dt>Complete</dt>
+    <dd>complete{{% md %}}The finalized, immutable state. Steps/Executions in this state cannot be modified.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNKNOWN_STATE</dt>
+    <dd>unknownState{{% md %}}Should never be in this state. Exists for proto deserialization backward compatibility.{{% /md %}}</dd><dt>PENDING</dt>
+    <dd>pending{{% md %}}The Execution/Step is created, ready to run, but not running yet. If an Execution/Step is created without initial state, it is assumed that the Execution/Step is in PENDING state.{{% /md %}}</dd><dt>IN_PROGRESS</dt>
+    <dd>inProgress{{% md %}}The Execution/Step is in progress.{{% /md %}}</dd><dt>COMPLETE</dt>
+    <dd>complete{{% md %}}The finalized, immutable state. Steps/Executions in this state cannot be modified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="successdetail">Success<wbr>Detail</h4>
@@ -4226,7 +4386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testissuecategory">Pulumi.<wbr>Google<wbr>Native.<wbr>Tool<wbr>Results.<wbr>V1Beta3.<wbr>Test<wbr>Issue<wbr>Category</a></span>
     </dt>
     <dd>{{% md %}}Category of issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4242,7 +4402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testissueseverity">Pulumi.<wbr>Google<wbr>Native.<wbr>Tool<wbr>Results.<wbr>V1Beta3.<wbr>Test<wbr>Issue<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}Severity of issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4250,7 +4410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testissuetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Tool<wbr>Results.<wbr>V1Beta3.<wbr>Test<wbr>Issue<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4270,7 +4430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testissuecategory">Test<wbr>Issue<wbr>Category</a></span>
     </dt>
     <dd>{{% md %}}Category of issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4286,7 +4446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testissueseverity">Test<wbr>Issue<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}Severity of issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4294,7 +4454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testissuetype">Test<wbr>Issue<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4314,7 +4474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testissuecategory">Test<wbr>Issue<wbr>Category</a></span>
     </dt>
     <dd>{{% md %}}Category of issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4330,7 +4490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testissueseverity">Test<wbr>Issue<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}Severity of issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4338,7 +4498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#testissuetype">Test<wbr>Issue<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4358,7 +4518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#testissuecategory">Test<wbr>Issue<wbr>Category</a></span>
     </dt>
     <dd>{{% md %}}Category of issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4374,7 +4534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#testissueseverity">Test<wbr>Issue<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}Severity of issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4382,7 +4542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#testissuetype">Test<wbr>Issue<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4393,6 +4553,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#any">Any<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Warning message with additional details of the issue. Should always be a message from com.google.devtools.toolresults.v1.warnings{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="testissuecategory">Test<wbr>Issue<wbr>Category</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified<wbr>Category</dt>
+    <dd>unspecifiedCategory{{% md %}}Default unspecified category. Do not use. For versioning only.{{% /md %}}</dd><dt>Common</dt>
+    <dd>common{{% md %}}Issue is not specific to a particular test kind (e.g., a native crash).{{% /md %}}</dd><dt>Robo</dt>
+    <dd>robo{{% md %}}Issue is specific to Robo run.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Test<wbr>Issue<wbr>Category<wbr>Unspecified<wbr>Category</dt>
+    <dd>unspecifiedCategory{{% md %}}Default unspecified category. Do not use. For versioning only.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Category<wbr>Common</dt>
+    <dd>common{{% md %}}Issue is not specific to a particular test kind (e.g., a native crash).{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Category<wbr>Robo</dt>
+    <dd>robo{{% md %}}Issue is specific to Robo run.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified<wbr>Category</dt>
+    <dd>unspecifiedCategory{{% md %}}Default unspecified category. Do not use. For versioning only.{{% /md %}}</dd><dt>Common</dt>
+    <dd>common{{% md %}}Issue is not specific to a particular test kind (e.g., a native crash).{{% /md %}}</dd><dt>Robo</dt>
+    <dd>robo{{% md %}}Issue is specific to Robo run.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED_CATEGORY</dt>
+    <dd>unspecifiedCategory{{% md %}}Default unspecified category. Do not use. For versioning only.{{% /md %}}</dd><dt>COMMON</dt>
+    <dd>common{{% md %}}Issue is not specific to a particular test kind (e.g., a native crash).{{% /md %}}</dd><dt>ROBO</dt>
+    <dd>robo{{% md %}}Issue is specific to Robo run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="testissueresponse">Test<wbr>Issue<wbr>Response</h4>
@@ -4571,6 +4761,186 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#anyresponse">Any<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Warning message with additional details of the issue. Should always be a message from com.google.devtools.toolresults.v1.warnings{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="testissueseverity">Test<wbr>Issue<wbr>Severity</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified<wbr>Severity</dt>
+    <dd>unspecifiedSeverity{{% md %}}Default unspecified severity. Do not use. For versioning only.{{% /md %}}</dd><dt>Info</dt>
+    <dd>info{{% md %}}Non critical issue, providing users with some info about the test run.{{% /md %}}</dd><dt>Suggestion</dt>
+    <dd>suggestion{{% md %}}Non critical issue, providing users with some hints on improving their testing experience, e.g., suggesting to use Game Loops.{{% /md %}}</dd><dt>Warning</dt>
+    <dd>warning{{% md %}}Potentially critical issue.{{% /md %}}</dd><dt>Severe</dt>
+    <dd>severe{{% md %}}Critical issue.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Test<wbr>Issue<wbr>Severity<wbr>Unspecified<wbr>Severity</dt>
+    <dd>unspecifiedSeverity{{% md %}}Default unspecified severity. Do not use. For versioning only.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Severity<wbr>Info</dt>
+    <dd>info{{% md %}}Non critical issue, providing users with some info about the test run.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Severity<wbr>Suggestion</dt>
+    <dd>suggestion{{% md %}}Non critical issue, providing users with some hints on improving their testing experience, e.g., suggesting to use Game Loops.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Severity<wbr>Warning</dt>
+    <dd>warning{{% md %}}Potentially critical issue.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Severity<wbr>Severe</dt>
+    <dd>severe{{% md %}}Critical issue.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified<wbr>Severity</dt>
+    <dd>unspecifiedSeverity{{% md %}}Default unspecified severity. Do not use. For versioning only.{{% /md %}}</dd><dt>Info</dt>
+    <dd>info{{% md %}}Non critical issue, providing users with some info about the test run.{{% /md %}}</dd><dt>Suggestion</dt>
+    <dd>suggestion{{% md %}}Non critical issue, providing users with some hints on improving their testing experience, e.g., suggesting to use Game Loops.{{% /md %}}</dd><dt>Warning</dt>
+    <dd>warning{{% md %}}Potentially critical issue.{{% /md %}}</dd><dt>Severe</dt>
+    <dd>severe{{% md %}}Critical issue.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED_SEVERITY</dt>
+    <dd>unspecifiedSeverity{{% md %}}Default unspecified severity. Do not use. For versioning only.{{% /md %}}</dd><dt>INFO</dt>
+    <dd>info{{% md %}}Non critical issue, providing users with some info about the test run.{{% /md %}}</dd><dt>SUGGESTION</dt>
+    <dd>suggestion{{% md %}}Non critical issue, providing users with some hints on improving their testing experience, e.g., suggesting to use Game Loops.{{% /md %}}</dd><dt>WARNING</dt>
+    <dd>warning{{% md %}}Potentially critical issue.{{% /md %}}</dd><dt>SEVERE</dt>
+    <dd>severe{{% md %}}Critical issue.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="testissuetype">Test<wbr>Issue<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unspecified<wbr>Type</dt>
+    <dd>unspecifiedType{{% md %}}Default unspecified type. Do not use. For versioning only.{{% /md %}}</dd><dt>Fatal<wbr>Exception</dt>
+    <dd>fatalException{{% md %}}Issue is a fatal exception.{{% /md %}}</dd><dt>Native<wbr>Crash</dt>
+    <dd>nativeCrash{{% md %}}Issue is a native crash.{{% /md %}}</dd><dt>Anr</dt>
+    <dd>anr{{% md %}}Issue is an ANR crash.{{% /md %}}</dd><dt>Unused<wbr>Robo<wbr>Directive</dt>
+    <dd>unusedRoboDirective{{% md %}}Issue is an unused robo directive.{{% /md %}}</dd><dt>Compatible<wbr>With<wbr>Orchestrator</dt>
+    <dd>compatibleWithOrchestrator{{% md %}}Issue is a suggestion to use orchestrator.{{% /md %}}</dd><dt>Launcher<wbr>Activity<wbr>Not<wbr>Found</dt>
+    <dd>launcherActivityNotFound{{% md %}}Issue with finding a launcher activity{{% /md %}}</dd><dt>Start<wbr>Activity<wbr>Not<wbr>Found</dt>
+    <dd>startActivityNotFound{{% md %}}Issue with resolving a user-provided intent to start an activity{{% /md %}}</dd><dt>Incomplete<wbr>Robo<wbr>Script<wbr>Execution</dt>
+    <dd>incompleteRoboScriptExecution{{% md %}}A Robo script was not fully executed.{{% /md %}}</dd><dt>Complete<wbr>Robo<wbr>Script<wbr>Execution</dt>
+    <dd>completeRoboScriptExecution{{% md %}}A Robo script was fully and successfully executed.{{% /md %}}</dd><dt>Failed<wbr>To<wbr>Install</dt>
+    <dd>failedToInstall{{% md %}}The APK failed to install.{{% /md %}}</dd><dt>Available<wbr>Deep<wbr>Links</dt>
+    <dd>availableDeepLinks{{% md %}}The app-under-test has deep links, but none were provided to Robo.{{% /md %}}</dd><dt>Non<wbr>Sdk<wbr>Api<wbr>Usage<wbr>Violation</dt>
+    <dd>nonSdkApiUsageViolation{{% md %}}App accessed a non-sdk Api.{{% /md %}}</dd><dt>Non<wbr>Sdk<wbr>Api<wbr>Usage<wbr>Report</dt>
+    <dd>nonSdkApiUsageReport{{% md %}}App accessed a non-sdk Api (new detailed report){{% /md %}}</dd><dt>Encountered<wbr>Non<wbr>Android<wbr>Ui<wbr>Widget<wbr>Screen</dt>
+    <dd>encounteredNonAndroidUiWidgetScreen{{% md %}}Robo crawl encountered at least one screen with elements that are not Android UI widgets.{{% /md %}}</dd><dt>Encountered<wbr>Login<wbr>Screen</dt>
+    <dd>encounteredLoginScreen{{% md %}}Robo crawl encountered at least one probable login screen.{{% /md %}}</dd><dt>Performed<wbr>Google<wbr>Login</dt>
+    <dd>performedGoogleLogin{{% md %}}Robo signed in with Google.{{% /md %}}</dd><dt>Ios<wbr>Exception</dt>
+    <dd>iosException{{% md %}}iOS App crashed with an exception.{{% /md %}}</dd><dt>Ios<wbr>Crash</dt>
+    <dd>iosCrash{{% md %}}iOS App crashed without an exception (e.g. killed).{{% /md %}}</dd><dt>Performed<wbr>Monkey<wbr>Actions</dt>
+    <dd>performedMonkeyActions{{% md %}}Robo crawl involved performing some monkey actions.{{% /md %}}</dd><dt>Used<wbr>Robo<wbr>Directive</dt>
+    <dd>usedRoboDirective{{% md %}}Robo crawl used a Robo directive.{{% /md %}}</dd><dt>Used<wbr>Robo<wbr>Ignore<wbr>Directive</dt>
+    <dd>usedRoboIgnoreDirective{{% md %}}Robo crawl used a Robo directive to ignore an UI element.{{% /md %}}</dd><dt>Insufficient<wbr>Coverage</dt>
+    <dd>insufficientCoverage{{% md %}}Robo did not crawl some potentially important parts of the app.{{% /md %}}</dd><dt>In<wbr>App<wbr>Purchases</dt>
+    <dd>inAppPurchases{{% md %}}Robo crawl involved some in-app purchases.{{% /md %}}</dd><dt>Crash<wbr>Dialog<wbr>Error</dt>
+    <dd>crashDialogError{{% md %}}Crash dialog was detected during the test execution{{% /md %}}</dd><dt>Ui<wbr>Elements<wbr>Too<wbr>Deep</dt>
+    <dd>uiElementsTooDeep{{% md %}}UI element depth is greater than the threshold{{% /md %}}</dd><dt>Blank<wbr>Screen</dt>
+    <dd>blankScreen{{% md %}}Blank screen is found in the Robo crawl{{% /md %}}</dd><dt>Overlapping<wbr>Ui<wbr>Elements</dt>
+    <dd>overlappingUiElements{{% md %}}Overlapping UI elements are found in the Robo crawl{{% /md %}}</dd><dt>Unity<wbr>Exception</dt>
+    <dd>unityException{{% md %}}An uncaught Unity exception was detected (these don't crash apps).{{% /md %}}</dd><dt>Device<wbr>Out<wbr>Of<wbr>Memory</dt>
+    <dd>deviceOutOfMemory{{% md %}}Device running out of memory was detected{{% /md %}}</dd><dt>Logcat<wbr>Collection<wbr>Error</dt>
+    <dd>logcatCollectionError{{% md %}}Problems detected while collecting logcat{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Test<wbr>Issue<wbr>Type<wbr>Unspecified<wbr>Type</dt>
+    <dd>unspecifiedType{{% md %}}Default unspecified type. Do not use. For versioning only.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Fatal<wbr>Exception</dt>
+    <dd>fatalException{{% md %}}Issue is a fatal exception.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Native<wbr>Crash</dt>
+    <dd>nativeCrash{{% md %}}Issue is a native crash.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Anr</dt>
+    <dd>anr{{% md %}}Issue is an ANR crash.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Unused<wbr>Robo<wbr>Directive</dt>
+    <dd>unusedRoboDirective{{% md %}}Issue is an unused robo directive.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Compatible<wbr>With<wbr>Orchestrator</dt>
+    <dd>compatibleWithOrchestrator{{% md %}}Issue is a suggestion to use orchestrator.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Launcher<wbr>Activity<wbr>Not<wbr>Found</dt>
+    <dd>launcherActivityNotFound{{% md %}}Issue with finding a launcher activity{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Start<wbr>Activity<wbr>Not<wbr>Found</dt>
+    <dd>startActivityNotFound{{% md %}}Issue with resolving a user-provided intent to start an activity{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Incomplete<wbr>Robo<wbr>Script<wbr>Execution</dt>
+    <dd>incompleteRoboScriptExecution{{% md %}}A Robo script was not fully executed.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Complete<wbr>Robo<wbr>Script<wbr>Execution</dt>
+    <dd>completeRoboScriptExecution{{% md %}}A Robo script was fully and successfully executed.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Failed<wbr>To<wbr>Install</dt>
+    <dd>failedToInstall{{% md %}}The APK failed to install.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Available<wbr>Deep<wbr>Links</dt>
+    <dd>availableDeepLinks{{% md %}}The app-under-test has deep links, but none were provided to Robo.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Non<wbr>Sdk<wbr>Api<wbr>Usage<wbr>Violation</dt>
+    <dd>nonSdkApiUsageViolation{{% md %}}App accessed a non-sdk Api.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Non<wbr>Sdk<wbr>Api<wbr>Usage<wbr>Report</dt>
+    <dd>nonSdkApiUsageReport{{% md %}}App accessed a non-sdk Api (new detailed report){{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Encountered<wbr>Non<wbr>Android<wbr>Ui<wbr>Widget<wbr>Screen</dt>
+    <dd>encounteredNonAndroidUiWidgetScreen{{% md %}}Robo crawl encountered at least one screen with elements that are not Android UI widgets.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Encountered<wbr>Login<wbr>Screen</dt>
+    <dd>encounteredLoginScreen{{% md %}}Robo crawl encountered at least one probable login screen.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Performed<wbr>Google<wbr>Login</dt>
+    <dd>performedGoogleLogin{{% md %}}Robo signed in with Google.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Ios<wbr>Exception</dt>
+    <dd>iosException{{% md %}}iOS App crashed with an exception.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Ios<wbr>Crash</dt>
+    <dd>iosCrash{{% md %}}iOS App crashed without an exception (e.g. killed).{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Performed<wbr>Monkey<wbr>Actions</dt>
+    <dd>performedMonkeyActions{{% md %}}Robo crawl involved performing some monkey actions.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Used<wbr>Robo<wbr>Directive</dt>
+    <dd>usedRoboDirective{{% md %}}Robo crawl used a Robo directive.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Used<wbr>Robo<wbr>Ignore<wbr>Directive</dt>
+    <dd>usedRoboIgnoreDirective{{% md %}}Robo crawl used a Robo directive to ignore an UI element.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Insufficient<wbr>Coverage</dt>
+    <dd>insufficientCoverage{{% md %}}Robo did not crawl some potentially important parts of the app.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>In<wbr>App<wbr>Purchases</dt>
+    <dd>inAppPurchases{{% md %}}Robo crawl involved some in-app purchases.{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Crash<wbr>Dialog<wbr>Error</dt>
+    <dd>crashDialogError{{% md %}}Crash dialog was detected during the test execution{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Ui<wbr>Elements<wbr>Too<wbr>Deep</dt>
+    <dd>uiElementsTooDeep{{% md %}}UI element depth is greater than the threshold{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Blank<wbr>Screen</dt>
+    <dd>blankScreen{{% md %}}Blank screen is found in the Robo crawl{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Overlapping<wbr>Ui<wbr>Elements</dt>
+    <dd>overlappingUiElements{{% md %}}Overlapping UI elements are found in the Robo crawl{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Unity<wbr>Exception</dt>
+    <dd>unityException{{% md %}}An uncaught Unity exception was detected (these don't crash apps).{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Device<wbr>Out<wbr>Of<wbr>Memory</dt>
+    <dd>deviceOutOfMemory{{% md %}}Device running out of memory was detected{{% /md %}}</dd><dt>Test<wbr>Issue<wbr>Type<wbr>Logcat<wbr>Collection<wbr>Error</dt>
+    <dd>logcatCollectionError{{% md %}}Problems detected while collecting logcat{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unspecified<wbr>Type</dt>
+    <dd>unspecifiedType{{% md %}}Default unspecified type. Do not use. For versioning only.{{% /md %}}</dd><dt>Fatal<wbr>Exception</dt>
+    <dd>fatalException{{% md %}}Issue is a fatal exception.{{% /md %}}</dd><dt>Native<wbr>Crash</dt>
+    <dd>nativeCrash{{% md %}}Issue is a native crash.{{% /md %}}</dd><dt>Anr</dt>
+    <dd>anr{{% md %}}Issue is an ANR crash.{{% /md %}}</dd><dt>Unused<wbr>Robo<wbr>Directive</dt>
+    <dd>unusedRoboDirective{{% md %}}Issue is an unused robo directive.{{% /md %}}</dd><dt>Compatible<wbr>With<wbr>Orchestrator</dt>
+    <dd>compatibleWithOrchestrator{{% md %}}Issue is a suggestion to use orchestrator.{{% /md %}}</dd><dt>Launcher<wbr>Activity<wbr>Not<wbr>Found</dt>
+    <dd>launcherActivityNotFound{{% md %}}Issue with finding a launcher activity{{% /md %}}</dd><dt>Start<wbr>Activity<wbr>Not<wbr>Found</dt>
+    <dd>startActivityNotFound{{% md %}}Issue with resolving a user-provided intent to start an activity{{% /md %}}</dd><dt>Incomplete<wbr>Robo<wbr>Script<wbr>Execution</dt>
+    <dd>incompleteRoboScriptExecution{{% md %}}A Robo script was not fully executed.{{% /md %}}</dd><dt>Complete<wbr>Robo<wbr>Script<wbr>Execution</dt>
+    <dd>completeRoboScriptExecution{{% md %}}A Robo script was fully and successfully executed.{{% /md %}}</dd><dt>Failed<wbr>To<wbr>Install</dt>
+    <dd>failedToInstall{{% md %}}The APK failed to install.{{% /md %}}</dd><dt>Available<wbr>Deep<wbr>Links</dt>
+    <dd>availableDeepLinks{{% md %}}The app-under-test has deep links, but none were provided to Robo.{{% /md %}}</dd><dt>Non<wbr>Sdk<wbr>Api<wbr>Usage<wbr>Violation</dt>
+    <dd>nonSdkApiUsageViolation{{% md %}}App accessed a non-sdk Api.{{% /md %}}</dd><dt>Non<wbr>Sdk<wbr>Api<wbr>Usage<wbr>Report</dt>
+    <dd>nonSdkApiUsageReport{{% md %}}App accessed a non-sdk Api (new detailed report){{% /md %}}</dd><dt>Encountered<wbr>Non<wbr>Android<wbr>Ui<wbr>Widget<wbr>Screen</dt>
+    <dd>encounteredNonAndroidUiWidgetScreen{{% md %}}Robo crawl encountered at least one screen with elements that are not Android UI widgets.{{% /md %}}</dd><dt>Encountered<wbr>Login<wbr>Screen</dt>
+    <dd>encounteredLoginScreen{{% md %}}Robo crawl encountered at least one probable login screen.{{% /md %}}</dd><dt>Performed<wbr>Google<wbr>Login</dt>
+    <dd>performedGoogleLogin{{% md %}}Robo signed in with Google.{{% /md %}}</dd><dt>Ios<wbr>Exception</dt>
+    <dd>iosException{{% md %}}iOS App crashed with an exception.{{% /md %}}</dd><dt>Ios<wbr>Crash</dt>
+    <dd>iosCrash{{% md %}}iOS App crashed without an exception (e.g. killed).{{% /md %}}</dd><dt>Performed<wbr>Monkey<wbr>Actions</dt>
+    <dd>performedMonkeyActions{{% md %}}Robo crawl involved performing some monkey actions.{{% /md %}}</dd><dt>Used<wbr>Robo<wbr>Directive</dt>
+    <dd>usedRoboDirective{{% md %}}Robo crawl used a Robo directive.{{% /md %}}</dd><dt>Used<wbr>Robo<wbr>Ignore<wbr>Directive</dt>
+    <dd>usedRoboIgnoreDirective{{% md %}}Robo crawl used a Robo directive to ignore an UI element.{{% /md %}}</dd><dt>Insufficient<wbr>Coverage</dt>
+    <dd>insufficientCoverage{{% md %}}Robo did not crawl some potentially important parts of the app.{{% /md %}}</dd><dt>In<wbr>App<wbr>Purchases</dt>
+    <dd>inAppPurchases{{% md %}}Robo crawl involved some in-app purchases.{{% /md %}}</dd><dt>Crash<wbr>Dialog<wbr>Error</dt>
+    <dd>crashDialogError{{% md %}}Crash dialog was detected during the test execution{{% /md %}}</dd><dt>Ui<wbr>Elements<wbr>Too<wbr>Deep</dt>
+    <dd>uiElementsTooDeep{{% md %}}UI element depth is greater than the threshold{{% /md %}}</dd><dt>Blank<wbr>Screen</dt>
+    <dd>blankScreen{{% md %}}Blank screen is found in the Robo crawl{{% /md %}}</dd><dt>Overlapping<wbr>Ui<wbr>Elements</dt>
+    <dd>overlappingUiElements{{% md %}}Overlapping UI elements are found in the Robo crawl{{% /md %}}</dd><dt>Unity<wbr>Exception</dt>
+    <dd>unityException{{% md %}}An uncaught Unity exception was detected (these don't crash apps).{{% /md %}}</dd><dt>Device<wbr>Out<wbr>Of<wbr>Memory</dt>
+    <dd>deviceOutOfMemory{{% md %}}Device running out of memory was detected{{% /md %}}</dd><dt>Logcat<wbr>Collection<wbr>Error</dt>
+    <dd>logcatCollectionError{{% md %}}Problems detected while collecting logcat{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNSPECIFIED_TYPE</dt>
+    <dd>unspecifiedType{{% md %}}Default unspecified type. Do not use. For versioning only.{{% /md %}}</dd><dt>FATAL_EXCEPTION</dt>
+    <dd>fatalException{{% md %}}Issue is a fatal exception.{{% /md %}}</dd><dt>NATIVE_CRASH</dt>
+    <dd>nativeCrash{{% md %}}Issue is a native crash.{{% /md %}}</dd><dt>ANR</dt>
+    <dd>anr{{% md %}}Issue is an ANR crash.{{% /md %}}</dd><dt>UNUSED_ROBO_DIRECTIVE</dt>
+    <dd>unusedRoboDirective{{% md %}}Issue is an unused robo directive.{{% /md %}}</dd><dt>COMPATIBLE_WITH_ORCHESTRATOR</dt>
+    <dd>compatibleWithOrchestrator{{% md %}}Issue is a suggestion to use orchestrator.{{% /md %}}</dd><dt>LAUNCHER_ACTIVITY_NOT_FOUND</dt>
+    <dd>launcherActivityNotFound{{% md %}}Issue with finding a launcher activity{{% /md %}}</dd><dt>START_ACTIVITY_NOT_FOUND</dt>
+    <dd>startActivityNotFound{{% md %}}Issue with resolving a user-provided intent to start an activity{{% /md %}}</dd><dt>INCOMPLETE_ROBO_SCRIPT_EXECUTION</dt>
+    <dd>incompleteRoboScriptExecution{{% md %}}A Robo script was not fully executed.{{% /md %}}</dd><dt>COMPLETE_ROBO_SCRIPT_EXECUTION</dt>
+    <dd>completeRoboScriptExecution{{% md %}}A Robo script was fully and successfully executed.{{% /md %}}</dd><dt>FAILED_TO_INSTALL</dt>
+    <dd>failedToInstall{{% md %}}The APK failed to install.{{% /md %}}</dd><dt>AVAILABLE_DEEP_LINKS</dt>
+    <dd>availableDeepLinks{{% md %}}The app-under-test has deep links, but none were provided to Robo.{{% /md %}}</dd><dt>NON_SDK_API_USAGE_VIOLATION</dt>
+    <dd>nonSdkApiUsageViolation{{% md %}}App accessed a non-sdk Api.{{% /md %}}</dd><dt>NON_SDK_API_USAGE_REPORT</dt>
+    <dd>nonSdkApiUsageReport{{% md %}}App accessed a non-sdk Api (new detailed report){{% /md %}}</dd><dt>ENCOUNTERED_NON_ANDROID_UI_WIDGET_SCREEN</dt>
+    <dd>encounteredNonAndroidUiWidgetScreen{{% md %}}Robo crawl encountered at least one screen with elements that are not Android UI widgets.{{% /md %}}</dd><dt>ENCOUNTERED_LOGIN_SCREEN</dt>
+    <dd>encounteredLoginScreen{{% md %}}Robo crawl encountered at least one probable login screen.{{% /md %}}</dd><dt>PERFORMED_GOOGLE_LOGIN</dt>
+    <dd>performedGoogleLogin{{% md %}}Robo signed in with Google.{{% /md %}}</dd><dt>IOS_EXCEPTION</dt>
+    <dd>iosException{{% md %}}iOS App crashed with an exception.{{% /md %}}</dd><dt>IOS_CRASH</dt>
+    <dd>iosCrash{{% md %}}iOS App crashed without an exception (e.g. killed).{{% /md %}}</dd><dt>PERFORMED_MONKEY_ACTIONS</dt>
+    <dd>performedMonkeyActions{{% md %}}Robo crawl involved performing some monkey actions.{{% /md %}}</dd><dt>USED_ROBO_DIRECTIVE</dt>
+    <dd>usedRoboDirective{{% md %}}Robo crawl used a Robo directive.{{% /md %}}</dd><dt>USED_ROBO_IGNORE_DIRECTIVE</dt>
+    <dd>usedRoboIgnoreDirective{{% md %}}Robo crawl used a Robo directive to ignore an UI element.{{% /md %}}</dd><dt>INSUFFICIENT_COVERAGE</dt>
+    <dd>insufficientCoverage{{% md %}}Robo did not crawl some potentially important parts of the app.{{% /md %}}</dd><dt>IN_APP_PURCHASES</dt>
+    <dd>inAppPurchases{{% md %}}Robo crawl involved some in-app purchases.{{% /md %}}</dd><dt>CRASH_DIALOG_ERROR</dt>
+    <dd>crashDialogError{{% md %}}Crash dialog was detected during the test execution{{% /md %}}</dd><dt>UI_ELEMENTS_TOO_DEEP</dt>
+    <dd>uiElementsTooDeep{{% md %}}UI element depth is greater than the threshold{{% /md %}}</dd><dt>BLANK_SCREEN</dt>
+    <dd>blankScreen{{% md %}}Blank screen is found in the Robo crawl{{% /md %}}</dd><dt>OVERLAPPING_UI_ELEMENTS</dt>
+    <dd>overlappingUiElements{{% md %}}Overlapping UI elements are found in the Robo crawl{{% /md %}}</dd><dt>UNITY_EXCEPTION</dt>
+    <dd>unityException{{% md %}}An uncaught Unity exception was detected (these don't crash apps).{{% /md %}}</dd><dt>DEVICE_OUT_OF_MEMORY</dt>
+    <dd>deviceOutOfMemory{{% md %}}Device running out of memory was detected{{% /md %}}</dd><dt>LOGCAT_COLLECTION_ERROR</dt>
+    <dd>logcatCollectionError{{% md %}}Problems detected while collecting logcat{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="testsuiteoverview">Test<wbr>Suite<wbr>Overview</h4>

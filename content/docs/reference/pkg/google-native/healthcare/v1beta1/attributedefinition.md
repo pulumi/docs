@@ -29,7 +29,7 @@ Creates a new Attribute definition in the parent consent store.
                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                         <span class="nx">allowed_values</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                         <span class="nx">attribute_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[_healthcare_v1beta1.AttributeDefinitionCategory]</span> = None<span class="p">,</span>
                         <span class="nx">consent_default_values</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                         <span class="nx">consent_store_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">data_mapping_default_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -219,7 +219,7 @@ The AttributeDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#attributedefinitioncategory">Pulumi.<wbr>Google<wbr>Native.<wbr>Healthcare.<wbr>V1Beta1.<wbr>Attribute<wbr>Definition<wbr>Category</a></span>
     </dt>
     <dd>{{% md %}}Required. The category of the attribute. The value of this field cannot be changed after creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -311,7 +311,7 @@ The AttributeDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#attributedefinitioncategory">Attribute<wbr>Definition<wbr>Category</a></span>
     </dt>
     <dd>{{% md %}}Required. The category of the attribute. The value of this field cannot be changed after creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -403,7 +403,7 @@ The AttributeDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#attributedefinitioncategory">Attribute<wbr>Definition<wbr>Category</a></span>
     </dt>
     <dd>{{% md %}}Required. The category of the attribute. The value of this field cannot be changed after creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -495,7 +495,7 @@ The AttributeDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#attributedefinitioncategory">Attribute<wbr>Definition<wbr>Category</a></span>
     </dt>
     <dd>{{% md %}}Required. The category of the attribute. The value of this field cannot be changed after creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -592,6 +592,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="attributedefinitioncategory">Attribute<wbr>Definition<wbr>Category</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Category<wbr>Unspecified</dt>
+    <dd>CATEGORY_UNSPECIFIED{{% md %}}No category specified. This option is invalid.{{% /md %}}</dd><dt>Resource</dt>
+    <dd>RESOURCE{{% md %}}Specify this category when this attribute describes the properties of resources. For example, data anonymity or data type.{{% /md %}}</dd><dt>Request</dt>
+    <dd>REQUEST{{% md %}}Specify this category when this attribute describes the properties of requests. For example, requester's role or requester's organization.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Attribute<wbr>Definition<wbr>Category<wbr>Category<wbr>Unspecified</dt>
+    <dd>CATEGORY_UNSPECIFIED{{% md %}}No category specified. This option is invalid.{{% /md %}}</dd><dt>Attribute<wbr>Definition<wbr>Category<wbr>Resource</dt>
+    <dd>RESOURCE{{% md %}}Specify this category when this attribute describes the properties of resources. For example, data anonymity or data type.{{% /md %}}</dd><dt>Attribute<wbr>Definition<wbr>Category<wbr>Request</dt>
+    <dd>REQUEST{{% md %}}Specify this category when this attribute describes the properties of requests. For example, requester's role or requester's organization.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Category<wbr>Unspecified</dt>
+    <dd>CATEGORY_UNSPECIFIED{{% md %}}No category specified. This option is invalid.{{% /md %}}</dd><dt>Resource</dt>
+    <dd>RESOURCE{{% md %}}Specify this category when this attribute describes the properties of resources. For example, data anonymity or data type.{{% /md %}}</dd><dt>Request</dt>
+    <dd>REQUEST{{% md %}}Specify this category when this attribute describes the properties of requests. For example, requester's role or requester's organization.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CATEGORY_UNSPECIFIED</dt>
+    <dd>CATEGORY_UNSPECIFIED{{% md %}}No category specified. This option is invalid.{{% /md %}}</dd><dt>RESOURCE</dt>
+    <dd>RESOURCE{{% md %}}Specify this category when this attribute describes the properties of resources. For example, data anonymity or data type.{{% /md %}}</dd><dt>REQUEST</dt>
+    <dd>REQUEST{{% md %}}Specify this category when this attribute describes the properties of requests. For example, requester's role or requester's organization.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

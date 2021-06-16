@@ -36,7 +36,7 @@ Creates a new Consent in the parent consent store.
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[_healthcare_v1beta1.GoogleCloudHealthcareV1beta1ConsentPolicyArgs]]</span> = None<span class="p">,</span>
             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_healthcare_v1beta1.ConsentState]</span> = None<span class="p">,</span>
             <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -244,7 +244,7 @@ The Consent resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#consentstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Healthcare.<wbr>V1Beta1.<wbr>Consent<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Required. Indicates the current state of this Consent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -344,7 +344,7 @@ The Consent resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#consentstate">Consent<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Required. Indicates the current state of this Consent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -444,7 +444,7 @@ The Consent resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#consentstate">Consent<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Required. Indicates the current state of this Consent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -544,7 +544,7 @@ The Consent resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#consentstate">Consent<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Required. Indicates the current state of this Consent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -856,6 +856,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The value of the attribute. Must be an acceptable value as defined in the consent store. For example, if the consent store defines "data type" with acceptable values "questionnaire" and "step-count", when the attribute name is data type, this field must contain one of those values.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="consentstate">Consent<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}No state specified.{{% /md %}}</dd><dt>Active</dt>
+    <dd>ACTIVE{{% md %}}The Consent is active and is considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>Archived</dt>
+    <dd>ARCHIVED{{% md %}}When a Consent is updated, the current version is archived and a new one is created with its state set to the updated Consent's previous state.{{% /md %}}</dd><dt>Revoked</dt>
+    <dd>REVOKED{{% md %}}A revoked Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>Draft</dt>
+    <dd>DRAFT{{% md %}}A draft Consent is not considered when evaluating a user's consent on resources unless explicitly specified.{{% /md %}}</dd><dt>Rejected</dt>
+    <dd>REJECTED{{% md %}}When a draft Consent is rejected by a user, it is set to a rejected state. A rejected Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Consent<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}No state specified.{{% /md %}}</dd><dt>Consent<wbr>State<wbr>Active</dt>
+    <dd>ACTIVE{{% md %}}The Consent is active and is considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>Consent<wbr>State<wbr>Archived</dt>
+    <dd>ARCHIVED{{% md %}}When a Consent is updated, the current version is archived and a new one is created with its state set to the updated Consent's previous state.{{% /md %}}</dd><dt>Consent<wbr>State<wbr>Revoked</dt>
+    <dd>REVOKED{{% md %}}A revoked Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>Consent<wbr>State<wbr>Draft</dt>
+    <dd>DRAFT{{% md %}}A draft Consent is not considered when evaluating a user's consent on resources unless explicitly specified.{{% /md %}}</dd><dt>Consent<wbr>State<wbr>Rejected</dt>
+    <dd>REJECTED{{% md %}}When a draft Consent is rejected by a user, it is set to a rejected state. A rejected Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}No state specified.{{% /md %}}</dd><dt>Active</dt>
+    <dd>ACTIVE{{% md %}}The Consent is active and is considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>Archived</dt>
+    <dd>ARCHIVED{{% md %}}When a Consent is updated, the current version is archived and a new one is created with its state set to the updated Consent's previous state.{{% /md %}}</dd><dt>Revoked</dt>
+    <dd>REVOKED{{% md %}}A revoked Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>Draft</dt>
+    <dd>DRAFT{{% md %}}A draft Consent is not considered when evaluating a user's consent on resources unless explicitly specified.{{% /md %}}</dd><dt>Rejected</dt>
+    <dd>REJECTED{{% md %}}When a draft Consent is rejected by a user, it is set to a rejected state. A rejected Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}No state specified.{{% /md %}}</dd><dt>ACTIVE</dt>
+    <dd>ACTIVE{{% md %}}The Consent is active and is considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>ARCHIVED</dt>
+    <dd>ARCHIVED{{% md %}}When a Consent is updated, the current version is archived and a new one is created with its state set to the updated Consent's previous state.{{% /md %}}</dd><dt>REVOKED</dt>
+    <dd>REVOKED{{% md %}}A revoked Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>DRAFT</dt>
+    <dd>DRAFT{{% md %}}A draft Consent is not considered when evaluating a user's consent on resources unless explicitly specified.{{% /md %}}</dd><dt>REJECTED</dt>
+    <dd>REJECTED{{% md %}}When a draft Consent is rejected by a user, it is set to a rejected state. A rejected Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="expr">Expr</h4>

@@ -35,7 +35,7 @@ Creates a NodeGroup resource in the specified project using the data included in
               <span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">location_hint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.NodeGroupMaintenancePolicy]</span> = None<span class="p">,</span>
               <span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.NodeGroupMaintenanceWindowArgs]</span> = None<span class="p">,</span>
               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">node_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -44,7 +44,7 @@ Creates a NodeGroup resource in the specified project using the data included in
               <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-              <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.NodeGroupStatus]</span> = None<span class="p">,</span>
               <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">NodeGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -259,7 +259,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#maintenancepolicy_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodegroupmaintenancepolicy">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Node<wbr>Group<wbr>Maintenance<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For more information, see  Maintenance policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -323,7 +323,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodegroupstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Node<wbr>Group<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -415,7 +415,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#maintenancepolicy_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodegroupmaintenancepolicy">Node<wbr>Group<wbr>Maintenance<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For more information, see  Maintenance policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -479,7 +479,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodegroupstatus">Node<wbr>Group<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -571,7 +571,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#maintenancepolicy_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodegroupmaintenancepolicy">Node<wbr>Group<wbr>Maintenance<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For more information, see  Maintenance policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -635,7 +635,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodegroupstatus">Node<wbr>Group<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -727,7 +727,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#maintenance_policy_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#nodegroupmaintenancepolicy">Node<wbr>Group<wbr>Maintenance<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For more information, see  Maintenance policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -791,7 +791,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#nodegroupstatus">Node<wbr>Group<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1050,7 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodegroupautoscalingpolicymode">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see  Autoscaler modes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1078,7 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodegroupautoscalingpolicymode">Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see  Autoscaler modes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1106,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#nodegroupautoscalingpolicymode">Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see  Autoscaler modes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1134,9 +1134,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#nodegroupautoscalingpolicymode">Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see  Autoscaler modes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="nodegroupautoscalingpolicymode">Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED</dd><dt>Off</dt>
+    <dd>OFF</dd><dt>On</dt>
+    <dd>ON</dd><dt>Only<wbr>Scale<wbr>Out</dt>
+    <dd>ONLY_SCALE_OUT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Mode<wbr>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED</dd><dt>Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Mode<wbr>Off</dt>
+    <dd>OFF</dd><dt>Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Mode<wbr>On</dt>
+    <dd>ON</dd><dt>Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Mode<wbr>Only<wbr>Scale<wbr>Out</dt>
+    <dd>ONLY_SCALE_OUT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Mode<wbr>Unspecified</dt>
+    <dd>MODE_UNSPECIFIED</dd><dt>Off</dt>
+    <dd>OFF</dd><dt>On</dt>
+    <dd>ON</dd><dt>Only<wbr>Scale<wbr>Out</dt>
+    <dd>ONLY_SCALE_OUT</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>MODE_UNSPECIFIED</dt>
+    <dd>MODE_UNSPECIFIED</dd><dt>OFF</dt>
+    <dd>OFF</dd><dt>ON</dt>
+    <dd>ON</dd><dt>ONLY_SCALE_OUT</dt>
+    <dd>ONLY_SCALE_OUT</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodegroupautoscalingpolicyresponse">Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Response</h4>
@@ -1251,6 +1285,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see  Autoscaler modes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="nodegroupmaintenancepolicy">Node<wbr>Group<wbr>Maintenance<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Default</dt>
+    <dd>DEFAULT</dd><dt>Maintenance<wbr>Policy<wbr>Unspecified</dt>
+    <dd>MAINTENANCE_POLICY_UNSPECIFIED</dd><dt>Migrate<wbr>Within<wbr>Node<wbr>Group</dt>
+    <dd>MIGRATE_WITHIN_NODE_GROUP</dd><dt>Restart<wbr>In<wbr>Place</dt>
+    <dd>RESTART_IN_PLACE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Node<wbr>Group<wbr>Maintenance<wbr>Policy<wbr>Default</dt>
+    <dd>DEFAULT</dd><dt>Node<wbr>Group<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Policy<wbr>Unspecified</dt>
+    <dd>MAINTENANCE_POLICY_UNSPECIFIED</dd><dt>Node<wbr>Group<wbr>Maintenance<wbr>Policy<wbr>Migrate<wbr>Within<wbr>Node<wbr>Group</dt>
+    <dd>MIGRATE_WITHIN_NODE_GROUP</dd><dt>Node<wbr>Group<wbr>Maintenance<wbr>Policy<wbr>Restart<wbr>In<wbr>Place</dt>
+    <dd>RESTART_IN_PLACE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Default</dt>
+    <dd>DEFAULT</dd><dt>Maintenance<wbr>Policy<wbr>Unspecified</dt>
+    <dd>MAINTENANCE_POLICY_UNSPECIFIED</dd><dt>Migrate<wbr>Within<wbr>Node<wbr>Group</dt>
+    <dd>MIGRATE_WITHIN_NODE_GROUP</dd><dt>Restart<wbr>In<wbr>Place</dt>
+    <dd>RESTART_IN_PLACE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DEFAULT</dt>
+    <dd>DEFAULT</dd><dt>MAINTENANCE_POLICY_UNSPECIFIED</dt>
+    <dd>MAINTENANCE_POLICY_UNSPECIFIED</dd><dt>MIGRATE_WITHIN_NODE_GROUP</dt>
+    <dd>MIGRATE_WITHIN_NODE_GROUP</dd><dt>RESTART_IN_PLACE</dt>
+    <dd>RESTART_IN_PLACE</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodegroupmaintenancewindow">Node<wbr>Group<wbr>Maintenance<wbr>Window</h4>
@@ -1479,6 +1547,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="nodegroupstatus">Node<wbr>Group<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Invalid</dt>
+    <dd>INVALID</dd><dt>Ready</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Node<wbr>Group<wbr>Status<wbr>Creating</dt>
+    <dd>CREATING</dd><dt>Node<wbr>Group<wbr>Status<wbr>Deleting</dt>
+    <dd>DELETING</dd><dt>Node<wbr>Group<wbr>Status<wbr>Invalid</dt>
+    <dd>INVALID</dd><dt>Node<wbr>Group<wbr>Status<wbr>Ready</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Invalid</dt>
+    <dd>INVALID</dd><dt>Ready</dt>
+    <dd>READY</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CREATING</dt>
+    <dd>CREATING</dd><dt>DELETING</dt>
+    <dd>DELETING</dd><dt>INVALID</dt>
+    <dd>INVALID</dd><dt>READY</dt>
+    <dd>READY</dd></dl>
 {{% /choosable %}}
 
 

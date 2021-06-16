@@ -474,7 +474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deliveryrequirement_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Requirement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#deliveryconfigdeliveryrequirement">Pulumi.<wbr>Google<wbr>Native.<wbr>Pubsublite.<wbr>V1.<wbr>Delivery<wbr>Config<wbr>Delivery<wbr>Requirement</a></span>
     </dt>
     <dd>{{% md %}}The DeliveryRequirement for this subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -486,7 +486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deliveryrequirement_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Requirement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#deliveryconfigdeliveryrequirement">Delivery<wbr>Config<wbr>Delivery<wbr>Requirement</a></span>
     </dt>
     <dd>{{% md %}}The DeliveryRequirement for this subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -498,7 +498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deliveryrequirement_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Requirement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#deliveryconfigdeliveryrequirement">Delivery<wbr>Config<wbr>Delivery<wbr>Requirement</a></span>
     </dt>
     <dd>{{% md %}}The DeliveryRequirement for this subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -510,9 +510,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delivery_requirement_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>requirement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#deliveryconfigdeliveryrequirement">Delivery<wbr>Config<wbr>Delivery<wbr>Requirement</a></span>
     </dt>
     <dd>{{% md %}}The DeliveryRequirement for this subscription.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="deliveryconfigdeliveryrequirement">Delivery<wbr>Config<wbr>Delivery<wbr>Requirement</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Delivery<wbr>Requirement<wbr>Unspecified</dt>
+    <dd>DELIVERY_REQUIREMENT_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>Deliver<wbr>Immediately</dt>
+    <dd>DELIVER_IMMEDIATELY{{% md %}}The server does not wait for a published message to be successfully written to storage before delivering it to subscribers.{{% /md %}}</dd><dt>Deliver<wbr>After<wbr>Stored</dt>
+    <dd>DELIVER_AFTER_STORED{{% md %}}The server will not deliver a published message to subscribers until the message has been successfully written to storage. This will result in higher end-to-end latency, but consistent delivery.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Delivery<wbr>Config<wbr>Delivery<wbr>Requirement<wbr>Delivery<wbr>Requirement<wbr>Unspecified</dt>
+    <dd>DELIVERY_REQUIREMENT_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>Delivery<wbr>Config<wbr>Delivery<wbr>Requirement<wbr>Deliver<wbr>Immediately</dt>
+    <dd>DELIVER_IMMEDIATELY{{% md %}}The server does not wait for a published message to be successfully written to storage before delivering it to subscribers.{{% /md %}}</dd><dt>Delivery<wbr>Config<wbr>Delivery<wbr>Requirement<wbr>Deliver<wbr>After<wbr>Stored</dt>
+    <dd>DELIVER_AFTER_STORED{{% md %}}The server will not deliver a published message to subscribers until the message has been successfully written to storage. This will result in higher end-to-end latency, but consistent delivery.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Delivery<wbr>Requirement<wbr>Unspecified</dt>
+    <dd>DELIVERY_REQUIREMENT_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>Deliver<wbr>Immediately</dt>
+    <dd>DELIVER_IMMEDIATELY{{% md %}}The server does not wait for a published message to be successfully written to storage before delivering it to subscribers.{{% /md %}}</dd><dt>Deliver<wbr>After<wbr>Stored</dt>
+    <dd>DELIVER_AFTER_STORED{{% md %}}The server will not deliver a published message to subscribers until the message has been successfully written to storage. This will result in higher end-to-end latency, but consistent delivery.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DELIVERY_REQUIREMENT_UNSPECIFIED</dt>
+    <dd>DELIVERY_REQUIREMENT_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>DELIVER_IMMEDIATELY</dt>
+    <dd>DELIVER_IMMEDIATELY{{% md %}}The server does not wait for a published message to be successfully written to storage before delivering it to subscribers.{{% /md %}}</dd><dt>DELIVER_AFTER_STORED</dt>
+    <dd>DELIVER_AFTER_STORED{{% md %}}The server will not deliver a published message to subscribers until the message has been successfully written to storage. This will result in higher end-to-end latency, but consistent delivery.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deliveryconfigresponse">Delivery<wbr>Config<wbr>Response</h4>

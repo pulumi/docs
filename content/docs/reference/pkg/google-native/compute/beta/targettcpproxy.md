@@ -34,7 +34,7 @@ Creates a TargetTcpProxy resource in the specified project using the data includ
                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">proxy_bind</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-                   <span class="nx">proxy_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">proxy_header</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.TargetTcpProxyProxyHeader]</span> = None<span class="p">,</span>
                    <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -231,7 +231,7 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#proxyheader_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#targettcpproxyproxyheader">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Target<wbr>Tcp<wbr>Proxy<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -327,7 +327,7 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#proxyheader_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#targettcpproxyproxyheader">Target<wbr>Tcp<wbr>Proxy<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -423,7 +423,7 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#targettcpproxyproxyheader">Target<wbr>Tcp<wbr>Proxy<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -519,7 +519,7 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#targettcpproxyproxyheader">Target<wbr>Tcp<wbr>Proxy<wbr>Proxy<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -608,6 +608,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="targettcpproxyproxyheader">Target<wbr>Tcp<wbr>Proxy<wbr>Proxy<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Proxy<wbr>V1</dt>
+    <dd>PROXY_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Target<wbr>Tcp<wbr>Proxy<wbr>Proxy<wbr>Header<wbr>None</dt>
+    <dd>NONE</dd><dt>Target<wbr>Tcp<wbr>Proxy<wbr>Proxy<wbr>Header<wbr>Proxy<wbr>V1</dt>
+    <dd>PROXY_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE</dd><dt>Proxy<wbr>V1</dt>
+    <dd>PROXY_V1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NONE</dt>
+    <dd>NONE</dd><dt>PROXY_V1</dt>
+    <dd>PROXY_V1</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

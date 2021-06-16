@@ -1165,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commoncharacterstoignore_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Characters<wbr>To<wbr>Ignore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2charstoignorecommoncharacterstoignore">Pulumi.<wbr>Google<wbr>Native.<wbr>DLP.<wbr>V2.<wbr>Google<wbr>Privacy<wbr>Dlp<wbr>V2Chars<wbr>To<wbr>Ignore<wbr>Common<wbr>Characters<wbr>To<wbr>Ignore</a></span>
     </dt>
     <dd>{{% md %}}Common characters to not transform when masking. Useful to avoid removing punctuation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1185,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commoncharacterstoignore_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Characters<wbr>To<wbr>Ignore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2charstoignorecommoncharacterstoignore">Google<wbr>Privacy<wbr>Dlp<wbr>V2Chars<wbr>To<wbr>Ignore<wbr>Common<wbr>Characters<wbr>To<wbr>Ignore</a></span>
     </dt>
     <dd>{{% md %}}Common characters to not transform when masking. Useful to avoid removing punctuation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1205,7 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commoncharacterstoignore_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Characters<wbr>To<wbr>Ignore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2charstoignorecommoncharacterstoignore">Google<wbr>Privacy<wbr>Dlp<wbr>V2Chars<wbr>To<wbr>Ignore<wbr>Common<wbr>Characters<wbr>To<wbr>Ignore</a></span>
     </dt>
     <dd>{{% md %}}Common characters to not transform when masking. Useful to avoid removing punctuation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1225,9 +1225,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#common_characters_to_ignore_python" style="color: inherit; text-decoration: inherit;">common_<wbr>characters_<wbr>to_<wbr>ignore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleprivacydlpv2charstoignorecommoncharacterstoignore">Google<wbr>Privacy<wbr>Dlp<wbr>V2Chars<wbr>To<wbr>Ignore<wbr>Common<wbr>Characters<wbr>To<wbr>Ignore</a></span>
     </dt>
     <dd>{{% md %}}Common characters to not transform when masking. Useful to avoid removing punctuation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleprivacydlpv2charstoignorecommoncharacterstoignore">Google<wbr>Privacy<wbr>Dlp<wbr>V2Chars<wbr>To<wbr>Ignore<wbr>Common<wbr>Characters<wbr>To<wbr>Ignore</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Common<wbr>Chars<wbr>To<wbr>Ignore<wbr>Unspecified</dt>
+    <dd>COMMON_CHARS_TO_IGNORE_UNSPECIFIED{{% md %}}Unused.{{% /md %}}</dd><dt>Numeric</dt>
+    <dd>NUMERIC{{% md %}}0-9{{% /md %}}</dd><dt>Alpha<wbr>Upper<wbr>Case</dt>
+    <dd>ALPHA_UPPER_CASE{{% md %}}A-Z{{% /md %}}</dd><dt>Alpha<wbr>Lower<wbr>Case</dt>
+    <dd>ALPHA_LOWER_CASE{{% md %}}a-z{{% /md %}}</dd><dt>Punctuation</dt>
+    <dd>PUNCTUATION{{% md %}}US Punctuation, one of !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~{{% /md %}}</dd><dt>Whitespace</dt>
+    <dd>WHITESPACE{{% md %}}Whitespace character, one of [ \t\n\x0B\f\r]{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Chars<wbr>To<wbr>Ignore<wbr>Common<wbr>Characters<wbr>To<wbr>Ignore<wbr>Common<wbr>Chars<wbr>To<wbr>Ignore<wbr>Unspecified</dt>
+    <dd>COMMON_CHARS_TO_IGNORE_UNSPECIFIED{{% md %}}Unused.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Chars<wbr>To<wbr>Ignore<wbr>Common<wbr>Characters<wbr>To<wbr>Ignore<wbr>Numeric</dt>
+    <dd>NUMERIC{{% md %}}0-9{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Chars<wbr>To<wbr>Ignore<wbr>Common<wbr>Characters<wbr>To<wbr>Ignore<wbr>Alpha<wbr>Upper<wbr>Case</dt>
+    <dd>ALPHA_UPPER_CASE{{% md %}}A-Z{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Chars<wbr>To<wbr>Ignore<wbr>Common<wbr>Characters<wbr>To<wbr>Ignore<wbr>Alpha<wbr>Lower<wbr>Case</dt>
+    <dd>ALPHA_LOWER_CASE{{% md %}}a-z{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Chars<wbr>To<wbr>Ignore<wbr>Common<wbr>Characters<wbr>To<wbr>Ignore<wbr>Punctuation</dt>
+    <dd>PUNCTUATION{{% md %}}US Punctuation, one of !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Chars<wbr>To<wbr>Ignore<wbr>Common<wbr>Characters<wbr>To<wbr>Ignore<wbr>Whitespace</dt>
+    <dd>WHITESPACE{{% md %}}Whitespace character, one of [ \t\n\x0B\f\r]{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Common<wbr>Chars<wbr>To<wbr>Ignore<wbr>Unspecified</dt>
+    <dd>COMMON_CHARS_TO_IGNORE_UNSPECIFIED{{% md %}}Unused.{{% /md %}}</dd><dt>Numeric</dt>
+    <dd>NUMERIC{{% md %}}0-9{{% /md %}}</dd><dt>Alpha<wbr>Upper<wbr>Case</dt>
+    <dd>ALPHA_UPPER_CASE{{% md %}}A-Z{{% /md %}}</dd><dt>Alpha<wbr>Lower<wbr>Case</dt>
+    <dd>ALPHA_LOWER_CASE{{% md %}}a-z{{% /md %}}</dd><dt>Punctuation</dt>
+    <dd>PUNCTUATION{{% md %}}US Punctuation, one of !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~{{% /md %}}</dd><dt>Whitespace</dt>
+    <dd>WHITESPACE{{% md %}}Whitespace character, one of [ \t\n\x0B\f\r]{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>COMMON_CHARS_TO_IGNORE_UNSPECIFIED</dt>
+    <dd>COMMON_CHARS_TO_IGNORE_UNSPECIFIED{{% md %}}Unused.{{% /md %}}</dd><dt>NUMERIC</dt>
+    <dd>NUMERIC{{% md %}}0-9{{% /md %}}</dd><dt>ALPHA_UPPER_CASE</dt>
+    <dd>ALPHA_UPPER_CASE{{% md %}}A-Z{{% /md %}}</dd><dt>ALPHA_LOWER_CASE</dt>
+    <dd>ALPHA_LOWER_CASE{{% md %}}a-z{{% /md %}}</dd><dt>PUNCTUATION</dt>
+    <dd>PUNCTUATION{{% md %}}US Punctuation, one of !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~{{% /md %}}</dd><dt>WHITESPACE</dt>
+    <dd>WHITESPACE{{% md %}}Whitespace character, one of [ \t\n\x0B\f\r]{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleprivacydlpv2charstoignoreresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Chars<wbr>To<wbr>Ignore<wbr>Response</h4>
@@ -1329,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2conditionoperator">Pulumi.<wbr>Google<wbr>Native.<wbr>DLP.<wbr>V2.<wbr>Google<wbr>Privacy<wbr>Dlp<wbr>V2Condition<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Required. Operator used to compare the field or infoType to the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1357,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2conditionoperator">Google<wbr>Privacy<wbr>Dlp<wbr>V2Condition<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Required. Operator used to compare the field or infoType to the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1385,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2conditionoperator">Google<wbr>Privacy<wbr>Dlp<wbr>V2Condition<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Required. Operator used to compare the field or infoType to the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1413,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleprivacydlpv2conditionoperator">Google<wbr>Privacy<wbr>Dlp<wbr>V2Condition<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Required. Operator used to compare the field or infoType to the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1424,6 +1466,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#googleprivacydlpv2value">Google<wbr>Privacy<wbr>Dlp<wbr>V2Value<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Value to compare against. [Mandatory, except for `EXISTS` tests.]{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleprivacydlpv2conditionoperator">Google<wbr>Privacy<wbr>Dlp<wbr>V2Condition<wbr>Operator</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Relational<wbr>Operator<wbr>Unspecified</dt>
+    <dd>RELATIONAL_OPERATOR_UNSPECIFIED{{% md %}}Unused{{% /md %}}</dd><dt>Equal<wbr>To</dt>
+    <dd>EQUAL_TO{{% md %}}Equal. Attempts to match even with incompatible types.{{% /md %}}</dd><dt>Not<wbr>Equal<wbr>To</dt>
+    <dd>NOT_EQUAL_TO{{% md %}}Not equal to. Attempts to match even with incompatible types.{{% /md %}}</dd><dt>Greater<wbr>Than</dt>
+    <dd>GREATER_THAN{{% md %}}Greater than.{{% /md %}}</dd><dt>Less<wbr>Than</dt>
+    <dd>LESS_THAN{{% md %}}Less than.{{% /md %}}</dd><dt>Greater<wbr>Than<wbr>Or<wbr>Equals</dt>
+    <dd>GREATER_THAN_OR_EQUALS{{% md %}}Greater than or equals.{{% /md %}}</dd><dt>Less<wbr>Than<wbr>Or<wbr>Equals</dt>
+    <dd>LESS_THAN_OR_EQUALS{{% md %}}Less than or equals.{{% /md %}}</dd><dt>Exists</dt>
+    <dd>EXISTS{{% md %}}Exists{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Condition<wbr>Operator<wbr>Relational<wbr>Operator<wbr>Unspecified</dt>
+    <dd>RELATIONAL_OPERATOR_UNSPECIFIED{{% md %}}Unused{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Condition<wbr>Operator<wbr>Equal<wbr>To</dt>
+    <dd>EQUAL_TO{{% md %}}Equal. Attempts to match even with incompatible types.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Condition<wbr>Operator<wbr>Not<wbr>Equal<wbr>To</dt>
+    <dd>NOT_EQUAL_TO{{% md %}}Not equal to. Attempts to match even with incompatible types.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Condition<wbr>Operator<wbr>Greater<wbr>Than</dt>
+    <dd>GREATER_THAN{{% md %}}Greater than.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Condition<wbr>Operator<wbr>Less<wbr>Than</dt>
+    <dd>LESS_THAN{{% md %}}Less than.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Condition<wbr>Operator<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals</dt>
+    <dd>GREATER_THAN_OR_EQUALS{{% md %}}Greater than or equals.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Condition<wbr>Operator<wbr>Less<wbr>Than<wbr>Or<wbr>Equals</dt>
+    <dd>LESS_THAN_OR_EQUALS{{% md %}}Less than or equals.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Condition<wbr>Operator<wbr>Exists</dt>
+    <dd>EXISTS{{% md %}}Exists{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Relational<wbr>Operator<wbr>Unspecified</dt>
+    <dd>RELATIONAL_OPERATOR_UNSPECIFIED{{% md %}}Unused{{% /md %}}</dd><dt>Equal<wbr>To</dt>
+    <dd>EQUAL_TO{{% md %}}Equal. Attempts to match even with incompatible types.{{% /md %}}</dd><dt>Not<wbr>Equal<wbr>To</dt>
+    <dd>NOT_EQUAL_TO{{% md %}}Not equal to. Attempts to match even with incompatible types.{{% /md %}}</dd><dt>Greater<wbr>Than</dt>
+    <dd>GREATER_THAN{{% md %}}Greater than.{{% /md %}}</dd><dt>Less<wbr>Than</dt>
+    <dd>LESS_THAN{{% md %}}Less than.{{% /md %}}</dd><dt>Greater<wbr>Than<wbr>Or<wbr>Equals</dt>
+    <dd>GREATER_THAN_OR_EQUALS{{% md %}}Greater than or equals.{{% /md %}}</dd><dt>Less<wbr>Than<wbr>Or<wbr>Equals</dt>
+    <dd>LESS_THAN_OR_EQUALS{{% md %}}Less than or equals.{{% /md %}}</dd><dt>Exists</dt>
+    <dd>EXISTS{{% md %}}Exists{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RELATIONAL_OPERATOR_UNSPECIFIED</dt>
+    <dd>RELATIONAL_OPERATOR_UNSPECIFIED{{% md %}}Unused{{% /md %}}</dd><dt>EQUAL_TO</dt>
+    <dd>EQUAL_TO{{% md %}}Equal. Attempts to match even with incompatible types.{{% /md %}}</dd><dt>NOT_EQUAL_TO</dt>
+    <dd>NOT_EQUAL_TO{{% md %}}Not equal to. Attempts to match even with incompatible types.{{% /md %}}</dd><dt>GREATER_THAN</dt>
+    <dd>GREATER_THAN{{% md %}}Greater than.{{% /md %}}</dd><dt>LESS_THAN</dt>
+    <dd>LESS_THAN{{% md %}}Less than.{{% /md %}}</dd><dt>GREATER_THAN_OR_EQUALS</dt>
+    <dd>GREATER_THAN_OR_EQUALS{{% md %}}Greater than or equals.{{% /md %}}</dd><dt>LESS_THAN_OR_EQUALS</dt>
+    <dd>LESS_THAN_OR_EQUALS{{% md %}}Less than or equals.{{% /md %}}</dd><dt>EXISTS</dt>
+    <dd>EXISTS{{% md %}}Exists{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleprivacydlpv2conditionresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Condition<wbr>Response</h4>
@@ -2205,7 +2297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commonalphabet_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Alphabet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2cryptoreplaceffxfpeconfigcommonalphabet">Pulumi.<wbr>Google<wbr>Native.<wbr>DLP.<wbr>V2.<wbr>Google<wbr>Privacy<wbr>Dlp<wbr>V2Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Common<wbr>Alphabet</a></span>
     </dt>
     <dd>{{% md %}}Common alphabets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2257,7 +2349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commonalphabet_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Alphabet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2cryptoreplaceffxfpeconfigcommonalphabet">Google<wbr>Privacy<wbr>Dlp<wbr>V2Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Common<wbr>Alphabet</a></span>
     </dt>
     <dd>{{% md %}}Common alphabets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2309,7 +2401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commonalphabet_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Alphabet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2cryptoreplaceffxfpeconfigcommonalphabet">Google<wbr>Privacy<wbr>Dlp<wbr>V2Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Common<wbr>Alphabet</a></span>
     </dt>
     <dd>{{% md %}}Common alphabets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2361,7 +2453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#common_alphabet_python" style="color: inherit; text-decoration: inherit;">common_<wbr>alphabet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleprivacydlpv2cryptoreplaceffxfpeconfigcommonalphabet">Google<wbr>Privacy<wbr>Dlp<wbr>V2Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Common<wbr>Alphabet</a></span>
     </dt>
     <dd>{{% md %}}Common alphabets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2404,6 +2496,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#googleprivacydlpv2infotype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleprivacydlpv2cryptoreplaceffxfpeconfigcommonalphabet">Google<wbr>Privacy<wbr>Dlp<wbr>V2Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Common<wbr>Alphabet</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Ffx<wbr>Common<wbr>Native<wbr>Alphabet<wbr>Unspecified</dt>
+    <dd>FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED{{% md %}}Unused.{{% /md %}}</dd><dt>Numeric</dt>
+    <dd>NUMERIC{{% md %}}`[0-9]` (radix of 10){{% /md %}}</dd><dt>Hexadecimal</dt>
+    <dd>HEXADECIMAL{{% md %}}`[0-9A-F]` (radix of 16){{% /md %}}</dd><dt>Upper<wbr>Case<wbr>Alpha<wbr>Numeric</dt>
+    <dd>UPPER_CASE_ALPHA_NUMERIC{{% md %}}`[0-9A-Z]` (radix of 36){{% /md %}}</dd><dt>Alpha<wbr>Numeric</dt>
+    <dd>ALPHA_NUMERIC{{% md %}}`[0-9A-Za-z]` (radix of 62){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Common<wbr>Alphabet<wbr>Ffx<wbr>Common<wbr>Native<wbr>Alphabet<wbr>Unspecified</dt>
+    <dd>FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED{{% md %}}Unused.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Common<wbr>Alphabet<wbr>Numeric</dt>
+    <dd>NUMERIC{{% md %}}`[0-9]` (radix of 10){{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Common<wbr>Alphabet<wbr>Hexadecimal</dt>
+    <dd>HEXADECIMAL{{% md %}}`[0-9A-F]` (radix of 16){{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Common<wbr>Alphabet<wbr>Upper<wbr>Case<wbr>Alpha<wbr>Numeric</dt>
+    <dd>UPPER_CASE_ALPHA_NUMERIC{{% md %}}`[0-9A-Z]` (radix of 36){{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Common<wbr>Alphabet<wbr>Alpha<wbr>Numeric</dt>
+    <dd>ALPHA_NUMERIC{{% md %}}`[0-9A-Za-z]` (radix of 62){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Ffx<wbr>Common<wbr>Native<wbr>Alphabet<wbr>Unspecified</dt>
+    <dd>FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED{{% md %}}Unused.{{% /md %}}</dd><dt>Numeric</dt>
+    <dd>NUMERIC{{% md %}}`[0-9]` (radix of 10){{% /md %}}</dd><dt>Hexadecimal</dt>
+    <dd>HEXADECIMAL{{% md %}}`[0-9A-F]` (radix of 16){{% /md %}}</dd><dt>Upper<wbr>Case<wbr>Alpha<wbr>Numeric</dt>
+    <dd>UPPER_CASE_ALPHA_NUMERIC{{% md %}}`[0-9A-Z]` (radix of 36){{% /md %}}</dd><dt>Alpha<wbr>Numeric</dt>
+    <dd>ALPHA_NUMERIC{{% md %}}`[0-9A-Za-z]` (radix of 62){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED</dt>
+    <dd>FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED{{% md %}}Unused.{{% /md %}}</dd><dt>NUMERIC</dt>
+    <dd>NUMERIC{{% md %}}`[0-9]` (radix of 10){{% /md %}}</dd><dt>HEXADECIMAL</dt>
+    <dd>HEXADECIMAL{{% md %}}`[0-9A-F]` (radix of 16){{% /md %}}</dd><dt>UPPER_CASE_ALPHA_NUMERIC</dt>
+    <dd>UPPER_CASE_ALPHA_NUMERIC{{% md %}}`[0-9A-Z]` (radix of 36){{% /md %}}</dd><dt>ALPHA_NUMERIC</dt>
+    <dd>ALPHA_NUMERIC{{% md %}}`[0-9A-Za-z]` (radix of 62){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleprivacydlpv2cryptoreplaceffxfpeconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Response</h4>
@@ -3153,7 +3283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logicaloperator_csharp" style="color: inherit; text-decoration: inherit;">Logical<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2expressionslogicaloperator">Pulumi.<wbr>Google<wbr>Native.<wbr>DLP.<wbr>V2.<wbr>Google<wbr>Privacy<wbr>Dlp<wbr>V2Expressions<wbr>Logical<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}The operator to apply to the result of conditions. Default and currently only supported value is `AND`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3173,7 +3303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logicaloperator_go" style="color: inherit; text-decoration: inherit;">Logical<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2expressionslogicaloperator">Google<wbr>Privacy<wbr>Dlp<wbr>V2Expressions<wbr>Logical<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}The operator to apply to the result of conditions. Default and currently only supported value is `AND`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3193,7 +3323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logicaloperator_nodejs" style="color: inherit; text-decoration: inherit;">logical<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2expressionslogicaloperator">Google<wbr>Privacy<wbr>Dlp<wbr>V2Expressions<wbr>Logical<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}The operator to apply to the result of conditions. Default and currently only supported value is `AND`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3213,9 +3343,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logical_operator_python" style="color: inherit; text-decoration: inherit;">logical_<wbr>operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleprivacydlpv2expressionslogicaloperator">Google<wbr>Privacy<wbr>Dlp<wbr>V2Expressions<wbr>Logical<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}The operator to apply to the result of conditions. Default and currently only supported value is `AND`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleprivacydlpv2expressionslogicaloperator">Google<wbr>Privacy<wbr>Dlp<wbr>V2Expressions<wbr>Logical<wbr>Operator</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Logical<wbr>Operator<wbr>Unspecified</dt>
+    <dd>LOGICAL_OPERATOR_UNSPECIFIED{{% md %}}Unused{{% /md %}}</dd><dt>And</dt>
+    <dd>AND{{% md %}}Conditional AND{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Expressions<wbr>Logical<wbr>Operator<wbr>Logical<wbr>Operator<wbr>Unspecified</dt>
+    <dd>LOGICAL_OPERATOR_UNSPECIFIED{{% md %}}Unused{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Expressions<wbr>Logical<wbr>Operator<wbr>And</dt>
+    <dd>AND{{% md %}}Conditional AND{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Logical<wbr>Operator<wbr>Unspecified</dt>
+    <dd>LOGICAL_OPERATOR_UNSPECIFIED{{% md %}}Unused{{% /md %}}</dd><dt>And</dt>
+    <dd>AND{{% md %}}Conditional AND{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LOGICAL_OPERATOR_UNSPECIFIED</dt>
+    <dd>LOGICAL_OPERATOR_UNSPECIFIED{{% md %}}Unused{{% /md %}}</dd><dt>AND_</dt>
+    <dd>AND{{% md %}}Conditional AND{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleprivacydlpv2expressionsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Expressions<wbr>Response</h4>
@@ -5661,7 +5817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parttoextract_csharp" style="color: inherit; text-decoration: inherit;">Part<wbr>To<wbr>Extract</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2timepartconfigparttoextract">Pulumi.<wbr>Google<wbr>Native.<wbr>DLP.<wbr>V2.<wbr>Google<wbr>Privacy<wbr>Dlp<wbr>V2Time<wbr>Part<wbr>Config<wbr>Part<wbr>To<wbr>Extract</a></span>
     </dt>
     <dd>{{% md %}}The part of the time to keep.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5673,7 +5829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parttoextract_go" style="color: inherit; text-decoration: inherit;">Part<wbr>To<wbr>Extract</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2timepartconfigparttoextract">Google<wbr>Privacy<wbr>Dlp<wbr>V2Time<wbr>Part<wbr>Config<wbr>Part<wbr>To<wbr>Extract</a></span>
     </dt>
     <dd>{{% md %}}The part of the time to keep.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5685,7 +5841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parttoextract_nodejs" style="color: inherit; text-decoration: inherit;">part<wbr>To<wbr>Extract</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2timepartconfigparttoextract">Google<wbr>Privacy<wbr>Dlp<wbr>V2Time<wbr>Part<wbr>Config<wbr>Part<wbr>To<wbr>Extract</a></span>
     </dt>
     <dd>{{% md %}}The part of the time to keep.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5697,9 +5853,55 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#part_to_extract_python" style="color: inherit; text-decoration: inherit;">part_<wbr>to_<wbr>extract</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleprivacydlpv2timepartconfigparttoextract">Google<wbr>Privacy<wbr>Dlp<wbr>V2Time<wbr>Part<wbr>Config<wbr>Part<wbr>To<wbr>Extract</a></span>
     </dt>
     <dd>{{% md %}}The part of the time to keep.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleprivacydlpv2timepartconfigparttoextract">Google<wbr>Privacy<wbr>Dlp<wbr>V2Time<wbr>Part<wbr>Config<wbr>Part<wbr>To<wbr>Extract</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Time<wbr>Part<wbr>Unspecified</dt>
+    <dd>TIME_PART_UNSPECIFIED{{% md %}}Unused{{% /md %}}</dd><dt>Year</dt>
+    <dd>YEAR{{% md %}}[0-9999]{{% /md %}}</dd><dt>Month</dt>
+    <dd>MONTH{{% md %}}[1-12]{{% /md %}}</dd><dt>Day<wbr>Of<wbr>Month</dt>
+    <dd>DAY_OF_MONTH{{% md %}}[1-31]{{% /md %}}</dd><dt>Day<wbr>Of<wbr>Week</dt>
+    <dd>DAY_OF_WEEK{{% md %}}[1-7]{{% /md %}}</dd><dt>Week<wbr>Of<wbr>Year</dt>
+    <dd>WEEK_OF_YEAR{{% md %}}[1-53]{{% /md %}}</dd><dt>Hour<wbr>Of<wbr>Day</dt>
+    <dd>HOUR_OF_DAY{{% md %}}[0-23]{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Time<wbr>Part<wbr>Config<wbr>Part<wbr>To<wbr>Extract<wbr>Time<wbr>Part<wbr>Unspecified</dt>
+    <dd>TIME_PART_UNSPECIFIED{{% md %}}Unused{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Time<wbr>Part<wbr>Config<wbr>Part<wbr>To<wbr>Extract<wbr>Year</dt>
+    <dd>YEAR{{% md %}}[0-9999]{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Time<wbr>Part<wbr>Config<wbr>Part<wbr>To<wbr>Extract<wbr>Month</dt>
+    <dd>MONTH{{% md %}}[1-12]{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Time<wbr>Part<wbr>Config<wbr>Part<wbr>To<wbr>Extract<wbr>Day<wbr>Of<wbr>Month</dt>
+    <dd>DAY_OF_MONTH{{% md %}}[1-31]{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Time<wbr>Part<wbr>Config<wbr>Part<wbr>To<wbr>Extract<wbr>Day<wbr>Of<wbr>Week</dt>
+    <dd>DAY_OF_WEEK{{% md %}}[1-7]{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Time<wbr>Part<wbr>Config<wbr>Part<wbr>To<wbr>Extract<wbr>Week<wbr>Of<wbr>Year</dt>
+    <dd>WEEK_OF_YEAR{{% md %}}[1-53]{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Time<wbr>Part<wbr>Config<wbr>Part<wbr>To<wbr>Extract<wbr>Hour<wbr>Of<wbr>Day</dt>
+    <dd>HOUR_OF_DAY{{% md %}}[0-23]{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Time<wbr>Part<wbr>Unspecified</dt>
+    <dd>TIME_PART_UNSPECIFIED{{% md %}}Unused{{% /md %}}</dd><dt>Year</dt>
+    <dd>YEAR{{% md %}}[0-9999]{{% /md %}}</dd><dt>Month</dt>
+    <dd>MONTH{{% md %}}[1-12]{{% /md %}}</dd><dt>Day<wbr>Of<wbr>Month</dt>
+    <dd>DAY_OF_MONTH{{% md %}}[1-31]{{% /md %}}</dd><dt>Day<wbr>Of<wbr>Week</dt>
+    <dd>DAY_OF_WEEK{{% md %}}[1-7]{{% /md %}}</dd><dt>Week<wbr>Of<wbr>Year</dt>
+    <dd>WEEK_OF_YEAR{{% md %}}[1-53]{{% /md %}}</dd><dt>Hour<wbr>Of<wbr>Day</dt>
+    <dd>HOUR_OF_DAY{{% md %}}[0-23]{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TIME_PART_UNSPECIFIED</dt>
+    <dd>TIME_PART_UNSPECIFIED{{% md %}}Unused{{% /md %}}</dd><dt>YEAR</dt>
+    <dd>YEAR{{% md %}}[0-9999]{{% /md %}}</dd><dt>MONTH</dt>
+    <dd>MONTH{{% md %}}[1-12]{{% /md %}}</dd><dt>DAY_OF_MONTH</dt>
+    <dd>DAY_OF_MONTH{{% md %}}[1-31]{{% /md %}}</dd><dt>DAY_OF_WEEK</dt>
+    <dd>DAY_OF_WEEK{{% md %}}[1-7]{{% /md %}}</dd><dt>WEEK_OF_YEAR</dt>
+    <dd>WEEK_OF_YEAR{{% md %}}[1-53]{{% /md %}}</dd><dt>HOUR_OF_DAY</dt>
+    <dd>HOUR_OF_DAY{{% md %}}[0-23]{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleprivacydlpv2timepartconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Time<wbr>Part<wbr>Config<wbr>Response</h4>
@@ -6141,7 +6343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweekvalue_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2valuedayofweekvalue">Pulumi.<wbr>Google<wbr>Native.<wbr>DLP.<wbr>V2.<wbr>Google<wbr>Privacy<wbr>Dlp<wbr>V2Value<wbr>Day<wbr>Of<wbr>Week<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}day of week{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6209,7 +6411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweekvalue_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2valuedayofweekvalue">Google<wbr>Privacy<wbr>Dlp<wbr>V2Value<wbr>Day<wbr>Of<wbr>Week<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}day of week{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6277,7 +6479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweekvalue_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleprivacydlpv2valuedayofweekvalue">Google<wbr>Privacy<wbr>Dlp<wbr>V2Value<wbr>Day<wbr>Of<wbr>Week<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}day of week{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6345,7 +6547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_of_week_value_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleprivacydlpv2valuedayofweekvalue">Google<wbr>Privacy<wbr>Dlp<wbr>V2Value<wbr>Day<wbr>Of<wbr>Week<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}day of week{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6388,6 +6590,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}timestamp{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleprivacydlpv2valuedayofweekvalue">Google<wbr>Privacy<wbr>Dlp<wbr>V2Value<wbr>Day<wbr>Of<wbr>Week<wbr>Value</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Day<wbr>Of<wbr>Week<wbr>Unspecified</dt>
+    <dd>DAY_OF_WEEK_UNSPECIFIED{{% md %}}The day of the week is unspecified.{{% /md %}}</dd><dt>Monday</dt>
+    <dd>MONDAY{{% md %}}Monday{{% /md %}}</dd><dt>Tuesday</dt>
+    <dd>TUESDAY{{% md %}}Tuesday{{% /md %}}</dd><dt>Wednesday</dt>
+    <dd>WEDNESDAY{{% md %}}Wednesday{{% /md %}}</dd><dt>Thursday</dt>
+    <dd>THURSDAY{{% md %}}Thursday{{% /md %}}</dd><dt>Friday</dt>
+    <dd>FRIDAY{{% md %}}Friday{{% /md %}}</dd><dt>Saturday</dt>
+    <dd>SATURDAY{{% md %}}Saturday{{% /md %}}</dd><dt>Sunday</dt>
+    <dd>SUNDAY{{% md %}}Sunday{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Value<wbr>Day<wbr>Of<wbr>Week<wbr>Value<wbr>Day<wbr>Of<wbr>Week<wbr>Unspecified</dt>
+    <dd>DAY_OF_WEEK_UNSPECIFIED{{% md %}}The day of the week is unspecified.{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Value<wbr>Day<wbr>Of<wbr>Week<wbr>Value<wbr>Monday</dt>
+    <dd>MONDAY{{% md %}}Monday{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Value<wbr>Day<wbr>Of<wbr>Week<wbr>Value<wbr>Tuesday</dt>
+    <dd>TUESDAY{{% md %}}Tuesday{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Value<wbr>Day<wbr>Of<wbr>Week<wbr>Value<wbr>Wednesday</dt>
+    <dd>WEDNESDAY{{% md %}}Wednesday{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Value<wbr>Day<wbr>Of<wbr>Week<wbr>Value<wbr>Thursday</dt>
+    <dd>THURSDAY{{% md %}}Thursday{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Value<wbr>Day<wbr>Of<wbr>Week<wbr>Value<wbr>Friday</dt>
+    <dd>FRIDAY{{% md %}}Friday{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Value<wbr>Day<wbr>Of<wbr>Week<wbr>Value<wbr>Saturday</dt>
+    <dd>SATURDAY{{% md %}}Saturday{{% /md %}}</dd><dt>Google<wbr>Privacy<wbr>Dlp<wbr>V2Value<wbr>Day<wbr>Of<wbr>Week<wbr>Value<wbr>Sunday</dt>
+    <dd>SUNDAY{{% md %}}Sunday{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Day<wbr>Of<wbr>Week<wbr>Unspecified</dt>
+    <dd>DAY_OF_WEEK_UNSPECIFIED{{% md %}}The day of the week is unspecified.{{% /md %}}</dd><dt>Monday</dt>
+    <dd>MONDAY{{% md %}}Monday{{% /md %}}</dd><dt>Tuesday</dt>
+    <dd>TUESDAY{{% md %}}Tuesday{{% /md %}}</dd><dt>Wednesday</dt>
+    <dd>WEDNESDAY{{% md %}}Wednesday{{% /md %}}</dd><dt>Thursday</dt>
+    <dd>THURSDAY{{% md %}}Thursday{{% /md %}}</dd><dt>Friday</dt>
+    <dd>FRIDAY{{% md %}}Friday{{% /md %}}</dd><dt>Saturday</dt>
+    <dd>SATURDAY{{% md %}}Saturday{{% /md %}}</dd><dt>Sunday</dt>
+    <dd>SUNDAY{{% md %}}Sunday{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DAY_OF_WEEK_UNSPECIFIED</dt>
+    <dd>DAY_OF_WEEK_UNSPECIFIED{{% md %}}The day of the week is unspecified.{{% /md %}}</dd><dt>MONDAY</dt>
+    <dd>MONDAY{{% md %}}Monday{{% /md %}}</dd><dt>TUESDAY</dt>
+    <dd>TUESDAY{{% md %}}Tuesday{{% /md %}}</dd><dt>WEDNESDAY</dt>
+    <dd>WEDNESDAY{{% md %}}Wednesday{{% /md %}}</dd><dt>THURSDAY</dt>
+    <dd>THURSDAY{{% md %}}Thursday{{% /md %}}</dd><dt>FRIDAY</dt>
+    <dd>FRIDAY{{% md %}}Friday{{% /md %}}</dd><dt>SATURDAY</dt>
+    <dd>SATURDAY{{% md %}}Saturday{{% /md %}}</dd><dt>SUNDAY</dt>
+    <dd>SUNDAY{{% md %}}Sunday{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleprivacydlpv2valueresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Value<wbr>Response</h4>

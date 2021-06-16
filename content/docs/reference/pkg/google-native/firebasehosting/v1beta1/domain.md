@@ -33,7 +33,7 @@ Creates a domain mapping on the specified site.
            <span class="nx">provisioning</span><span class="p">:</span> <span class="nx">Optional[_firebasehosting_v1beta1.DomainProvisioningArgs]</span> = None<span class="p">,</span>
            <span class="nx">site</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">site_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-           <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_firebasehosting_v1beta1.DomainStatus]</span> = None<span class="p">,</span>
            <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -216,7 +216,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#domainstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Firebase<wbr>Hosting.<wbr>V1Beta1.<wbr>Domain<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Additional status of the domain association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -284,7 +284,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#domainstatus">Domain<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Additional status of the domain association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -352,7 +352,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#domainstatus">Domain<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Additional status of the domain association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -420,7 +420,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#domainstatus">Domain<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Additional status of the domain association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -859,7 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certstatus_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#domainprovisioningcertstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Firebase<wbr>Hosting.<wbr>V1Beta1.<wbr>Domain<wbr>Provisioning<wbr>Cert<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The certificate provisioning status; updated when Firebase Hosting provisions an SSL certificate for the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -883,7 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnsstatus_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#domainprovisioningdnsstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Firebase<wbr>Hosting.<wbr>V1Beta1.<wbr>Domain<wbr>Provisioning<wbr>Dns<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The DNS record match status as of the last DNS fetch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -927,7 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certstatus_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#domainprovisioningcertstatus">Domain<wbr>Provisioning<wbr>Cert<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The certificate provisioning status; updated when Firebase Hosting provisions an SSL certificate for the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -951,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnsstatus_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#domainprovisioningdnsstatus">Domain<wbr>Provisioning<wbr>Dns<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The DNS record match status as of the last DNS fetch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -995,7 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certstatus_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#domainprovisioningcertstatus">Domain<wbr>Provisioning<wbr>Cert<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The certificate provisioning status; updated when Firebase Hosting provisions an SSL certificate for the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1019,7 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnsstatus_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#domainprovisioningdnsstatus">Domain<wbr>Provisioning<wbr>Dns<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The DNS record match status as of the last DNS fetch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1063,7 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_status_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#domainprovisioningcertstatus">Domain<wbr>Provisioning<wbr>Cert<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The certificate provisioning status; updated when Firebase Hosting provisions an SSL certificate for the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1087,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_status_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#domainprovisioningdnsstatus">Domain<wbr>Provisioning<wbr>Dns<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The DNS record match status as of the last DNS fetch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1098,6 +1098,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of IPs to which the domain is expected to resolve.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="domainprovisioningcertstatus">Domain<wbr>Provisioning<wbr>Cert<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Cert<wbr>Status<wbr>Unspecified</dt>
+    <dd>CERT_STATUS_UNSPECIFIED{{% md %}}Unspecified certificate provisioning status.{{% /md %}}</dd><dt>Cert<wbr>Pending</dt>
+    <dd>CERT_PENDING{{% md %}}Waiting for certificate challenge to be created.{{% /md %}}</dd><dt>Cert<wbr>Missing</dt>
+    <dd>CERT_MISSING{{% md %}}Waiting for certificate challenge to be met.{{% /md %}}</dd><dt>Cert<wbr>Processing</dt>
+    <dd>CERT_PROCESSING{{% md %}}Certificate challenge met; attempting to acquire/propagate certificate.{{% /md %}}</dd><dt>Cert<wbr>Propagating</dt>
+    <dd>CERT_PROPAGATING{{% md %}}Certificate obtained; propagating to the CDN.{{% /md %}}</dd><dt>Cert<wbr>Active</dt>
+    <dd>CERT_ACTIVE{{% md %}}Certificate provisioned and deployed across the CDN.{{% /md %}}</dd><dt>Cert<wbr>Error</dt>
+    <dd>CERT_ERROR{{% md %}}Certificate provisioning failed in a non-recoverable manner.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Domain<wbr>Provisioning<wbr>Cert<wbr>Status<wbr>Cert<wbr>Status<wbr>Unspecified</dt>
+    <dd>CERT_STATUS_UNSPECIFIED{{% md %}}Unspecified certificate provisioning status.{{% /md %}}</dd><dt>Domain<wbr>Provisioning<wbr>Cert<wbr>Status<wbr>Cert<wbr>Pending</dt>
+    <dd>CERT_PENDING{{% md %}}Waiting for certificate challenge to be created.{{% /md %}}</dd><dt>Domain<wbr>Provisioning<wbr>Cert<wbr>Status<wbr>Cert<wbr>Missing</dt>
+    <dd>CERT_MISSING{{% md %}}Waiting for certificate challenge to be met.{{% /md %}}</dd><dt>Domain<wbr>Provisioning<wbr>Cert<wbr>Status<wbr>Cert<wbr>Processing</dt>
+    <dd>CERT_PROCESSING{{% md %}}Certificate challenge met; attempting to acquire/propagate certificate.{{% /md %}}</dd><dt>Domain<wbr>Provisioning<wbr>Cert<wbr>Status<wbr>Cert<wbr>Propagating</dt>
+    <dd>CERT_PROPAGATING{{% md %}}Certificate obtained; propagating to the CDN.{{% /md %}}</dd><dt>Domain<wbr>Provisioning<wbr>Cert<wbr>Status<wbr>Cert<wbr>Active</dt>
+    <dd>CERT_ACTIVE{{% md %}}Certificate provisioned and deployed across the CDN.{{% /md %}}</dd><dt>Domain<wbr>Provisioning<wbr>Cert<wbr>Status<wbr>Cert<wbr>Error</dt>
+    <dd>CERT_ERROR{{% md %}}Certificate provisioning failed in a non-recoverable manner.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Cert<wbr>Status<wbr>Unspecified</dt>
+    <dd>CERT_STATUS_UNSPECIFIED{{% md %}}Unspecified certificate provisioning status.{{% /md %}}</dd><dt>Cert<wbr>Pending</dt>
+    <dd>CERT_PENDING{{% md %}}Waiting for certificate challenge to be created.{{% /md %}}</dd><dt>Cert<wbr>Missing</dt>
+    <dd>CERT_MISSING{{% md %}}Waiting for certificate challenge to be met.{{% /md %}}</dd><dt>Cert<wbr>Processing</dt>
+    <dd>CERT_PROCESSING{{% md %}}Certificate challenge met; attempting to acquire/propagate certificate.{{% /md %}}</dd><dt>Cert<wbr>Propagating</dt>
+    <dd>CERT_PROPAGATING{{% md %}}Certificate obtained; propagating to the CDN.{{% /md %}}</dd><dt>Cert<wbr>Active</dt>
+    <dd>CERT_ACTIVE{{% md %}}Certificate provisioned and deployed across the CDN.{{% /md %}}</dd><dt>Cert<wbr>Error</dt>
+    <dd>CERT_ERROR{{% md %}}Certificate provisioning failed in a non-recoverable manner.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CERT_STATUS_UNSPECIFIED</dt>
+    <dd>CERT_STATUS_UNSPECIFIED{{% md %}}Unspecified certificate provisioning status.{{% /md %}}</dd><dt>CERT_PENDING</dt>
+    <dd>CERT_PENDING{{% md %}}Waiting for certificate challenge to be created.{{% /md %}}</dd><dt>CERT_MISSING</dt>
+    <dd>CERT_MISSING{{% md %}}Waiting for certificate challenge to be met.{{% /md %}}</dd><dt>CERT_PROCESSING</dt>
+    <dd>CERT_PROCESSING{{% md %}}Certificate challenge met; attempting to acquire/propagate certificate.{{% /md %}}</dd><dt>CERT_PROPAGATING</dt>
+    <dd>CERT_PROPAGATING{{% md %}}Certificate obtained; propagating to the CDN.{{% /md %}}</dd><dt>CERT_ACTIVE</dt>
+    <dd>CERT_ACTIVE{{% md %}}Certificate provisioned and deployed across the CDN.{{% /md %}}</dd><dt>CERT_ERROR</dt>
+    <dd>CERT_ERROR{{% md %}}Certificate provisioning failed in a non-recoverable manner.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="domainprovisioningdnsstatus">Domain<wbr>Provisioning<wbr>Dns<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Dns<wbr>Status<wbr>Unspecified</dt>
+    <dd>DNS_STATUS_UNSPECIFIED{{% md %}}Unspecified DNS status.{{% /md %}}</dd><dt>Dns<wbr>Pending</dt>
+    <dd>DNS_PENDING{{% md %}}No DNS records have been specified for this domain yet.{{% /md %}}</dd><dt>Dns<wbr>Missing</dt>
+    <dd>DNS_MISSING{{% md %}}None of the required DNS records have been detected on the domain.{{% /md %}}</dd><dt>Dns<wbr>Partial<wbr>Match</dt>
+    <dd>DNS_PARTIAL_MATCH{{% md %}}Some of the required DNS records were detected, but not all of them. No extra (non-required) DNS records were detected.{{% /md %}}</dd><dt>Dns<wbr>Match</dt>
+    <dd>DNS_MATCH{{% md %}}All required DNS records were detected. No extra (non-required) DNS records were detected.{{% /md %}}</dd><dt>Dns<wbr>Extraneous<wbr>Match</dt>
+    <dd>DNS_EXTRANEOUS_MATCH{{% md %}}The domain has at least one of the required DNS records, and it has at least one extra (non-required) DNS record.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Domain<wbr>Provisioning<wbr>Dns<wbr>Status<wbr>Dns<wbr>Status<wbr>Unspecified</dt>
+    <dd>DNS_STATUS_UNSPECIFIED{{% md %}}Unspecified DNS status.{{% /md %}}</dd><dt>Domain<wbr>Provisioning<wbr>Dns<wbr>Status<wbr>Dns<wbr>Pending</dt>
+    <dd>DNS_PENDING{{% md %}}No DNS records have been specified for this domain yet.{{% /md %}}</dd><dt>Domain<wbr>Provisioning<wbr>Dns<wbr>Status<wbr>Dns<wbr>Missing</dt>
+    <dd>DNS_MISSING{{% md %}}None of the required DNS records have been detected on the domain.{{% /md %}}</dd><dt>Domain<wbr>Provisioning<wbr>Dns<wbr>Status<wbr>Dns<wbr>Partial<wbr>Match</dt>
+    <dd>DNS_PARTIAL_MATCH{{% md %}}Some of the required DNS records were detected, but not all of them. No extra (non-required) DNS records were detected.{{% /md %}}</dd><dt>Domain<wbr>Provisioning<wbr>Dns<wbr>Status<wbr>Dns<wbr>Match</dt>
+    <dd>DNS_MATCH{{% md %}}All required DNS records were detected. No extra (non-required) DNS records were detected.{{% /md %}}</dd><dt>Domain<wbr>Provisioning<wbr>Dns<wbr>Status<wbr>Dns<wbr>Extraneous<wbr>Match</dt>
+    <dd>DNS_EXTRANEOUS_MATCH{{% md %}}The domain has at least one of the required DNS records, and it has at least one extra (non-required) DNS record.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Dns<wbr>Status<wbr>Unspecified</dt>
+    <dd>DNS_STATUS_UNSPECIFIED{{% md %}}Unspecified DNS status.{{% /md %}}</dd><dt>Dns<wbr>Pending</dt>
+    <dd>DNS_PENDING{{% md %}}No DNS records have been specified for this domain yet.{{% /md %}}</dd><dt>Dns<wbr>Missing</dt>
+    <dd>DNS_MISSING{{% md %}}None of the required DNS records have been detected on the domain.{{% /md %}}</dd><dt>Dns<wbr>Partial<wbr>Match</dt>
+    <dd>DNS_PARTIAL_MATCH{{% md %}}Some of the required DNS records were detected, but not all of them. No extra (non-required) DNS records were detected.{{% /md %}}</dd><dt>Dns<wbr>Match</dt>
+    <dd>DNS_MATCH{{% md %}}All required DNS records were detected. No extra (non-required) DNS records were detected.{{% /md %}}</dd><dt>Dns<wbr>Extraneous<wbr>Match</dt>
+    <dd>DNS_EXTRANEOUS_MATCH{{% md %}}The domain has at least one of the required DNS records, and it has at least one extra (non-required) DNS record.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DNS_STATUS_UNSPECIFIED</dt>
+    <dd>DNS_STATUS_UNSPECIFIED{{% md %}}Unspecified DNS status.{{% /md %}}</dd><dt>DNS_PENDING</dt>
+    <dd>DNS_PENDING{{% md %}}No DNS records have been specified for this domain yet.{{% /md %}}</dd><dt>DNS_MISSING</dt>
+    <dd>DNS_MISSING{{% md %}}None of the required DNS records have been detected on the domain.{{% /md %}}</dd><dt>DNS_PARTIAL_MATCH</dt>
+    <dd>DNS_PARTIAL_MATCH{{% md %}}Some of the required DNS records were detected, but not all of them. No extra (non-required) DNS records were detected.{{% /md %}}</dd><dt>DNS_MATCH</dt>
+    <dd>DNS_MATCH{{% md %}}All required DNS records were detected. No extra (non-required) DNS records were detected.{{% /md %}}</dd><dt>DNS_EXTRANEOUS_MATCH</dt>
+    <dd>DNS_EXTRANEOUS_MATCH{{% md %}}The domain has at least one of the required DNS records, and it has at least one extra (non-required) DNS record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="domainprovisioningresponse">Domain<wbr>Provisioning<wbr>Response</h4>
@@ -1391,7 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#domainredirecttype">Pulumi.<wbr>Google<wbr>Native.<wbr>Firebase<wbr>Hosting.<wbr>V1Beta1.<wbr>Domain<wbr>Redirect<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The redirect status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1411,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#domainredirecttype">Domain<wbr>Redirect<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The redirect status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1431,7 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#domainredirecttype">Domain<wbr>Redirect<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The redirect status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1451,7 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#domainredirecttype">Domain<wbr>Redirect<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The redirect status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1536,6 +1624,70 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The redirect status code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="domainredirecttype">Domain<wbr>Redirect<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Redirect<wbr>Type<wbr>Unspecified</dt>
+    <dd>REDIRECT_TYPE_UNSPECIFIED{{% md %}}The default redirect type; should not be intentionlly used.{{% /md %}}</dd><dt>Moved<wbr>Permanently</dt>
+    <dd>MOVED_PERMANENTLY{{% md %}}The redirect will respond with an HTTP status code of `301 Moved Permanently`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Domain<wbr>Redirect<wbr>Type<wbr>Redirect<wbr>Type<wbr>Unspecified</dt>
+    <dd>REDIRECT_TYPE_UNSPECIFIED{{% md %}}The default redirect type; should not be intentionlly used.{{% /md %}}</dd><dt>Domain<wbr>Redirect<wbr>Type<wbr>Moved<wbr>Permanently</dt>
+    <dd>MOVED_PERMANENTLY{{% md %}}The redirect will respond with an HTTP status code of `301 Moved Permanently`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Redirect<wbr>Type<wbr>Unspecified</dt>
+    <dd>REDIRECT_TYPE_UNSPECIFIED{{% md %}}The default redirect type; should not be intentionlly used.{{% /md %}}</dd><dt>Moved<wbr>Permanently</dt>
+    <dd>MOVED_PERMANENTLY{{% md %}}The redirect will respond with an HTTP status code of `301 Moved Permanently`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>REDIRECT_TYPE_UNSPECIFIED</dt>
+    <dd>REDIRECT_TYPE_UNSPECIFIED{{% md %}}The default redirect type; should not be intentionlly used.{{% /md %}}</dd><dt>MOVED_PERMANENTLY</dt>
+    <dd>MOVED_PERMANENTLY{{% md %}}The redirect will respond with an HTTP status code of `301 Moved Permanently`.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="domainstatus">Domain<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Domain<wbr>Status<wbr>Unspecified</dt>
+    <dd>DOMAIN_STATUS_UNSPECIFIED{{% md %}}Unspecified domain association status.{{% /md %}}</dd><dt>Domain<wbr>Change<wbr>Pending</dt>
+    <dd>DOMAIN_CHANGE_PENDING{{% md %}}An external operation is in progress on the domain association and no further operations can be performed until it is complete. Formerly used for metabase updates. Not currently used{{% /md %}}</dd><dt>Domain<wbr>Active</dt>
+    <dd>DOMAIN_ACTIVE{{% md %}}The domain association is active and no additional action is required.{{% /md %}}</dd><dt>Domain<wbr>Verification<wbr>Required</dt>
+    <dd>DOMAIN_VERIFICATION_REQUIRED{{% md %}}The domain was previously verified in the legacy system. User must reverify the domain through the ownership service.{{% /md %}}</dd><dt>Domain<wbr>Verification<wbr>Lost</dt>
+    <dd>DOMAIN_VERIFICATION_LOST{{% md %}}The domain verification has been lost and the domain is in the grace period before being removed from the Firebase Hosting site.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Domain<wbr>Status<wbr>Domain<wbr>Status<wbr>Unspecified</dt>
+    <dd>DOMAIN_STATUS_UNSPECIFIED{{% md %}}Unspecified domain association status.{{% /md %}}</dd><dt>Domain<wbr>Status<wbr>Domain<wbr>Change<wbr>Pending</dt>
+    <dd>DOMAIN_CHANGE_PENDING{{% md %}}An external operation is in progress on the domain association and no further operations can be performed until it is complete. Formerly used for metabase updates. Not currently used{{% /md %}}</dd><dt>Domain<wbr>Status<wbr>Domain<wbr>Active</dt>
+    <dd>DOMAIN_ACTIVE{{% md %}}The domain association is active and no additional action is required.{{% /md %}}</dd><dt>Domain<wbr>Status<wbr>Domain<wbr>Verification<wbr>Required</dt>
+    <dd>DOMAIN_VERIFICATION_REQUIRED{{% md %}}The domain was previously verified in the legacy system. User must reverify the domain through the ownership service.{{% /md %}}</dd><dt>Domain<wbr>Status<wbr>Domain<wbr>Verification<wbr>Lost</dt>
+    <dd>DOMAIN_VERIFICATION_LOST{{% md %}}The domain verification has been lost and the domain is in the grace period before being removed from the Firebase Hosting site.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Domain<wbr>Status<wbr>Unspecified</dt>
+    <dd>DOMAIN_STATUS_UNSPECIFIED{{% md %}}Unspecified domain association status.{{% /md %}}</dd><dt>Domain<wbr>Change<wbr>Pending</dt>
+    <dd>DOMAIN_CHANGE_PENDING{{% md %}}An external operation is in progress on the domain association and no further operations can be performed until it is complete. Formerly used for metabase updates. Not currently used{{% /md %}}</dd><dt>Domain<wbr>Active</dt>
+    <dd>DOMAIN_ACTIVE{{% md %}}The domain association is active and no additional action is required.{{% /md %}}</dd><dt>Domain<wbr>Verification<wbr>Required</dt>
+    <dd>DOMAIN_VERIFICATION_REQUIRED{{% md %}}The domain was previously verified in the legacy system. User must reverify the domain through the ownership service.{{% /md %}}</dd><dt>Domain<wbr>Verification<wbr>Lost</dt>
+    <dd>DOMAIN_VERIFICATION_LOST{{% md %}}The domain verification has been lost and the domain is in the grace period before being removed from the Firebase Hosting site.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DOMAIN_STATUS_UNSPECIFIED</dt>
+    <dd>DOMAIN_STATUS_UNSPECIFIED{{% md %}}Unspecified domain association status.{{% /md %}}</dd><dt>DOMAIN_CHANGE_PENDING</dt>
+    <dd>DOMAIN_CHANGE_PENDING{{% md %}}An external operation is in progress on the domain association and no further operations can be performed until it is complete. Formerly used for metabase updates. Not currently used{{% /md %}}</dd><dt>DOMAIN_ACTIVE</dt>
+    <dd>DOMAIN_ACTIVE{{% md %}}The domain association is active and no additional action is required.{{% /md %}}</dd><dt>DOMAIN_VERIFICATION_REQUIRED</dt>
+    <dd>DOMAIN_VERIFICATION_REQUIRED{{% md %}}The domain was previously verified in the legacy system. User must reverify the domain through the ownership service.{{% /md %}}</dd><dt>DOMAIN_VERIFICATION_LOST</dt>
+    <dd>DOMAIN_VERIFICATION_LOST{{% md %}}The domain verification has been lost and the domain is in the grace period before being removed from the Firebase Hosting site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

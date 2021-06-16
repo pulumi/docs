@@ -28,7 +28,7 @@ Creates Assured Workload.
 <span class="k">def </span><span class="nx">Workload</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
              <span class="nx">billing_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">compliance_regime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">compliance_regime</span><span class="p">:</span> <span class="nx">Optional[_assuredworkloads_v1.WorkloadComplianceRegime]</span> = None<span class="p">,</span>
              <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">external_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -196,7 +196,7 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#complianceregime_csharp" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Regime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workloadcomplianceregime">Pulumi.<wbr>Google<wbr>Native.<wbr>Assured<wbr>Workloads.<wbr>V1.<wbr>Workload<wbr>Compliance<wbr>Regime</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. Compliance Regime associated with this workload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -296,7 +296,7 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#complianceregime_go" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Regime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workloadcomplianceregime">Workload<wbr>Compliance<wbr>Regime</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. Compliance Regime associated with this workload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -396,7 +396,7 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#complianceregime_nodejs" style="color: inherit; text-decoration: inherit;">compliance<wbr>Regime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#workloadcomplianceregime">Workload<wbr>Compliance<wbr>Regime</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. Compliance Regime associated with this workload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -496,7 +496,7 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#compliance_regime_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>regime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#workloadcomplianceregime">Workload<wbr>Compliance<wbr>Regime</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. Compliance Regime associated with this workload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -957,7 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudassuredworkloadsv1workloadresourcesettingsresourcetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Assured<wbr>Workloads.<wbr>V1.<wbr>Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>Resource<wbr>Settings<wbr>Resource<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -977,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudassuredworkloadsv1workloadresourcesettingsresourcetype">Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>Resource<wbr>Settings<wbr>Resource<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -997,7 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudassuredworkloadsv1workloadresourcesettingsresourcetype">Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>Resource<wbr>Settings<wbr>Resource<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1017,9 +1017,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudassuredworkloadsv1workloadresourcesettingsresourcetype">Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>Resource<wbr>Settings<wbr>Resource<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudassuredworkloadsv1workloadresourcesettingsresourcetype">Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>Resource<wbr>Settings<wbr>Resource<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Resource<wbr>Type<wbr>Unspecified</dt>
+    <dd>RESOURCE_TYPE_UNSPECIFIED{{% md %}}Unknown resource type.{{% /md %}}</dd><dt>Consumer<wbr>Project</dt>
+    <dd>CONSUMER_PROJECT{{% md %}}Consumer project.{{% /md %}}</dd><dt>Encryption<wbr>Keys<wbr>Project</dt>
+    <dd>ENCRYPTION_KEYS_PROJECT{{% md %}}Consumer project containing encryption keys.{{% /md %}}</dd><dt>Keyring</dt>
+    <dd>KEYRING{{% md %}}Keyring resource that hosts encryption keys.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>Resource<wbr>Settings<wbr>Resource<wbr>Type<wbr>Resource<wbr>Type<wbr>Unspecified</dt>
+    <dd>RESOURCE_TYPE_UNSPECIFIED{{% md %}}Unknown resource type.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>Resource<wbr>Settings<wbr>Resource<wbr>Type<wbr>Consumer<wbr>Project</dt>
+    <dd>CONSUMER_PROJECT{{% md %}}Consumer project.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>Resource<wbr>Settings<wbr>Resource<wbr>Type<wbr>Encryption<wbr>Keys<wbr>Project</dt>
+    <dd>ENCRYPTION_KEYS_PROJECT{{% md %}}Consumer project containing encryption keys.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>Resource<wbr>Settings<wbr>Resource<wbr>Type<wbr>Keyring</dt>
+    <dd>KEYRING{{% md %}}Keyring resource that hosts encryption keys.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Resource<wbr>Type<wbr>Unspecified</dt>
+    <dd>RESOURCE_TYPE_UNSPECIFIED{{% md %}}Unknown resource type.{{% /md %}}</dd><dt>Consumer<wbr>Project</dt>
+    <dd>CONSUMER_PROJECT{{% md %}}Consumer project.{{% /md %}}</dd><dt>Encryption<wbr>Keys<wbr>Project</dt>
+    <dd>ENCRYPTION_KEYS_PROJECT{{% md %}}Consumer project containing encryption keys.{{% /md %}}</dd><dt>Keyring</dt>
+    <dd>KEYRING{{% md %}}Keyring resource that hosts encryption keys.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RESOURCE_TYPE_UNSPECIFIED</dt>
+    <dd>RESOURCE_TYPE_UNSPECIFIED{{% md %}}Unknown resource type.{{% /md %}}</dd><dt>CONSUMER_PROJECT</dt>
+    <dd>CONSUMER_PROJECT{{% md %}}Consumer project.{{% /md %}}</dd><dt>ENCRYPTION_KEYS_PROJECT</dt>
+    <dd>ENCRYPTION_KEYS_PROJECT{{% md %}}Consumer project containing encryption keys.{{% /md %}}</dd><dt>KEYRING</dt>
+    <dd>KEYRING{{% md %}}Keyring resource that hosts encryption keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googlecloudassuredworkloadsv1workloadresourcesettingsresponse">Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>Resource<wbr>Settings<wbr>Response</h4>
@@ -1102,6 +1136,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="workloadcomplianceregime">Workload<wbr>Compliance<wbr>Regime</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Compliance<wbr>Regime<wbr>Unspecified</dt>
+    <dd>COMPLIANCE_REGIME_UNSPECIFIED{{% md %}}Unknown compliance regime.{{% /md %}}</dd><dt>Il4</dt>
+    <dd>IL4{{% md %}}Information protection as per DoD IL4 requirements.{{% /md %}}</dd><dt>Cjis</dt>
+    <dd>CJIS{{% md %}}Criminal Justice Information Services (CJIS) Security policies.{{% /md %}}</dd><dt>Fedramp<wbr>High</dt>
+    <dd>FEDRAMP_HIGH{{% md %}}FedRAMP High data protection controls{{% /md %}}</dd><dt>Fedramp<wbr>Moderate</dt>
+    <dd>FEDRAMP_MODERATE{{% md %}}FedRAMP Moderate data protection controls{{% /md %}}</dd><dt>Us<wbr>Regional<wbr>Access</dt>
+    <dd>US_REGIONAL_ACCESS{{% md %}}Assured Workloads For US Regions data protection controls{{% /md %}}</dd><dt>Hipaa</dt>
+    <dd>HIPAA{{% md %}}Health Insurance Portability and Accountability Act controls{{% /md %}}</dd><dt>Hitrust</dt>
+    <dd>HITRUST{{% md %}}Health Information Trust Alliance controls{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Workload<wbr>Compliance<wbr>Regime<wbr>Compliance<wbr>Regime<wbr>Unspecified</dt>
+    <dd>COMPLIANCE_REGIME_UNSPECIFIED{{% md %}}Unknown compliance regime.{{% /md %}}</dd><dt>Workload<wbr>Compliance<wbr>Regime<wbr>Il4</dt>
+    <dd>IL4{{% md %}}Information protection as per DoD IL4 requirements.{{% /md %}}</dd><dt>Workload<wbr>Compliance<wbr>Regime<wbr>Cjis</dt>
+    <dd>CJIS{{% md %}}Criminal Justice Information Services (CJIS) Security policies.{{% /md %}}</dd><dt>Workload<wbr>Compliance<wbr>Regime<wbr>Fedramp<wbr>High</dt>
+    <dd>FEDRAMP_HIGH{{% md %}}FedRAMP High data protection controls{{% /md %}}</dd><dt>Workload<wbr>Compliance<wbr>Regime<wbr>Fedramp<wbr>Moderate</dt>
+    <dd>FEDRAMP_MODERATE{{% md %}}FedRAMP Moderate data protection controls{{% /md %}}</dd><dt>Workload<wbr>Compliance<wbr>Regime<wbr>Us<wbr>Regional<wbr>Access</dt>
+    <dd>US_REGIONAL_ACCESS{{% md %}}Assured Workloads For US Regions data protection controls{{% /md %}}</dd><dt>Workload<wbr>Compliance<wbr>Regime<wbr>Hipaa</dt>
+    <dd>HIPAA{{% md %}}Health Insurance Portability and Accountability Act controls{{% /md %}}</dd><dt>Workload<wbr>Compliance<wbr>Regime<wbr>Hitrust</dt>
+    <dd>HITRUST{{% md %}}Health Information Trust Alliance controls{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Compliance<wbr>Regime<wbr>Unspecified</dt>
+    <dd>COMPLIANCE_REGIME_UNSPECIFIED{{% md %}}Unknown compliance regime.{{% /md %}}</dd><dt>Il4</dt>
+    <dd>IL4{{% md %}}Information protection as per DoD IL4 requirements.{{% /md %}}</dd><dt>Cjis</dt>
+    <dd>CJIS{{% md %}}Criminal Justice Information Services (CJIS) Security policies.{{% /md %}}</dd><dt>Fedramp<wbr>High</dt>
+    <dd>FEDRAMP_HIGH{{% md %}}FedRAMP High data protection controls{{% /md %}}</dd><dt>Fedramp<wbr>Moderate</dt>
+    <dd>FEDRAMP_MODERATE{{% md %}}FedRAMP Moderate data protection controls{{% /md %}}</dd><dt>Us<wbr>Regional<wbr>Access</dt>
+    <dd>US_REGIONAL_ACCESS{{% md %}}Assured Workloads For US Regions data protection controls{{% /md %}}</dd><dt>Hipaa</dt>
+    <dd>HIPAA{{% md %}}Health Insurance Portability and Accountability Act controls{{% /md %}}</dd><dt>Hitrust</dt>
+    <dd>HITRUST{{% md %}}Health Information Trust Alliance controls{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>COMPLIANCE_REGIME_UNSPECIFIED</dt>
+    <dd>COMPLIANCE_REGIME_UNSPECIFIED{{% md %}}Unknown compliance regime.{{% /md %}}</dd><dt>IL4</dt>
+    <dd>IL4{{% md %}}Information protection as per DoD IL4 requirements.{{% /md %}}</dd><dt>CJIS</dt>
+    <dd>CJIS{{% md %}}Criminal Justice Information Services (CJIS) Security policies.{{% /md %}}</dd><dt>FEDRAMP_HIGH</dt>
+    <dd>FEDRAMP_HIGH{{% md %}}FedRAMP High data protection controls{{% /md %}}</dd><dt>FEDRAMP_MODERATE</dt>
+    <dd>FEDRAMP_MODERATE{{% md %}}FedRAMP Moderate data protection controls{{% /md %}}</dd><dt>US_REGIONAL_ACCESS</dt>
+    <dd>US_REGIONAL_ACCESS{{% md %}}Assured Workloads For US Regions data protection controls{{% /md %}}</dd><dt>HIPAA</dt>
+    <dd>HIPAA{{% md %}}Health Insurance Portability and Accountability Act controls{{% /md %}}</dd><dt>HITRUST</dt>
+    <dd>HITRUST{{% md %}}Health Information Trust Alliance controls{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

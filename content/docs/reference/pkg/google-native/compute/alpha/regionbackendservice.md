@@ -46,8 +46,8 @@ Creates a regional BackendService resource in the specified project using the da
                          <span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.BackendServiceIAPArgs]</span> = None<span class="p">,</span>
                          <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.RegionBackendServiceLoadBalancingScheme]</span> = None<span class="p">,</span>
+                         <span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.RegionBackendServiceLocalityLbPolicy]</span> = None<span class="p">,</span>
                          <span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.BackendServiceLogConfigArgs]</span> = None<span class="p">,</span>
                          <span class="nx">max_stream_duration</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.DurationArgs]</span> = None<span class="p">,</span>
                          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -55,14 +55,14 @@ Creates a regional BackendService resource in the specified project using the da
                          <span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.OutlierDetectionArgs]</span> = None<span class="p">,</span>
                          <span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.RegionBackendServiceProtocol]</span> = None<span class="p">,</span>
                          <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">security_settings</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.SecuritySettingsArgs]</span> = None<span class="p">,</span>
                          <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.RegionBackendServiceSessionAffinity]</span> = None<span class="p">,</span>
                          <span class="nx">subsetting</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.SubsettingArgs]</span> = None<span class="p">,</span>
                          <span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -384,7 +384,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#loadbalancingscheme_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionbackendserviceloadbalancingscheme">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Region<wbr>Backend<wbr>Service<wbr>Load<wbr>Balancing<wbr>Scheme</a></span>
     </dt>
     <dd>{{% md %}}Specifies the load balancer type. Choose EXTERNAL for external HTTP(S), SSL Proxy, TCP Proxy and Network Load Balancing. Choose  INTERNAL for Internal TCP/UDP Load Balancing. Choose  INTERNAL_MANAGED for Internal HTTP(S) Load Balancing.  INTERNAL_SELF_MANAGED for Traffic Director. A backend service created for one type of load balancer cannot be used with another. For more information, refer to Choosing a load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -392,7 +392,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#localitylbpolicy_csharp" style="color: inherit; text-decoration: inherit;">Locality<wbr>Lb<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionbackendservicelocalitylbpolicy">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Region<wbr>Backend<wbr>Service<wbr>Locality<wbr>Lb<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used within the scope of the locality. The possible values are:  
 - ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. 
@@ -474,7 +474,7 @@ Backend services for Internal TCP/UDP Load Balancing and Network Load Balancing 
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionbackendserviceprotocol">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Region<wbr>Backend<wbr>Service<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
 
@@ -528,7 +528,7 @@ Must be set to GRPC when the backend service is referenced by a URL map that is 
 <a href="#sessionaffinity_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionbackendservicesessionaffinity">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Region<wbr>Backend<wbr>Service<wbr>Session<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE.
 
@@ -750,7 +750,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#loadbalancingscheme_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionbackendserviceloadbalancingscheme">Region<wbr>Backend<wbr>Service<wbr>Load<wbr>Balancing<wbr>Scheme</a></span>
     </dt>
     <dd>{{% md %}}Specifies the load balancer type. Choose EXTERNAL for external HTTP(S), SSL Proxy, TCP Proxy and Network Load Balancing. Choose  INTERNAL for Internal TCP/UDP Load Balancing. Choose  INTERNAL_MANAGED for Internal HTTP(S) Load Balancing.  INTERNAL_SELF_MANAGED for Traffic Director. A backend service created for one type of load balancer cannot be used with another. For more information, refer to Choosing a load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +758,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#localitylbpolicy_go" style="color: inherit; text-decoration: inherit;">Locality<wbr>Lb<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionbackendservicelocalitylbpolicy">Region<wbr>Backend<wbr>Service<wbr>Locality<wbr>Lb<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used within the scope of the locality. The possible values are:  
 - ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. 
@@ -840,7 +840,7 @@ Backend services for Internal TCP/UDP Load Balancing and Network Load Balancing 
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionbackendserviceprotocol">Region<wbr>Backend<wbr>Service<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
 
@@ -894,7 +894,7 @@ Must be set to GRPC when the backend service is referenced by a URL map that is 
 <a href="#sessionaffinity_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionbackendservicesessionaffinity">Region<wbr>Backend<wbr>Service<wbr>Session<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE.
 
@@ -1116,7 +1116,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#loadbalancingscheme_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionbackendserviceloadbalancingscheme">Region<wbr>Backend<wbr>Service<wbr>Load<wbr>Balancing<wbr>Scheme</a></span>
     </dt>
     <dd>{{% md %}}Specifies the load balancer type. Choose EXTERNAL for external HTTP(S), SSL Proxy, TCP Proxy and Network Load Balancing. Choose  INTERNAL for Internal TCP/UDP Load Balancing. Choose  INTERNAL_MANAGED for Internal HTTP(S) Load Balancing.  INTERNAL_SELF_MANAGED for Traffic Director. A backend service created for one type of load balancer cannot be used with another. For more information, refer to Choosing a load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1124,7 +1124,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#localitylbpolicy_nodejs" style="color: inherit; text-decoration: inherit;">locality<wbr>Lb<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionbackendservicelocalitylbpolicy">Region<wbr>Backend<wbr>Service<wbr>Locality<wbr>Lb<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used within the scope of the locality. The possible values are:  
 - ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. 
@@ -1206,7 +1206,7 @@ Backend services for Internal TCP/UDP Load Balancing and Network Load Balancing 
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionbackendserviceprotocol">Region<wbr>Backend<wbr>Service<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
 
@@ -1260,7 +1260,7 @@ Must be set to GRPC when the backend service is referenced by a URL map that is 
 <a href="#sessionaffinity_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#regionbackendservicesessionaffinity">Region<wbr>Backend<wbr>Service<wbr>Session<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE.
 
@@ -1482,7 +1482,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#load_balancing_scheme_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#regionbackendserviceloadbalancingscheme">Region<wbr>Backend<wbr>Service<wbr>Load<wbr>Balancing<wbr>Scheme</a></span>
     </dt>
     <dd>{{% md %}}Specifies the load balancer type. Choose EXTERNAL for external HTTP(S), SSL Proxy, TCP Proxy and Network Load Balancing. Choose  INTERNAL for Internal TCP/UDP Load Balancing. Choose  INTERNAL_MANAGED for Internal HTTP(S) Load Balancing.  INTERNAL_SELF_MANAGED for Traffic Director. A backend service created for one type of load balancer cannot be used with another. For more information, refer to Choosing a load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1490,7 +1490,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#locality_lb_policy_python" style="color: inherit; text-decoration: inherit;">locality_<wbr>lb_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#regionbackendservicelocalitylbpolicy">Region<wbr>Backend<wbr>Service<wbr>Locality<wbr>Lb<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used within the scope of the locality. The possible values are:  
 - ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. 
@@ -1572,7 +1572,7 @@ Backend services for Internal TCP/UDP Load Balancing and Network Load Balancing 
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#regionbackendserviceprotocol">Region<wbr>Backend<wbr>Service<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
 
@@ -1626,7 +1626,7 @@ Must be set to GRPC when the backend service is referenced by a URL map that is 
 <a href="#session_affinity_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#regionbackendservicesessionaffinity">Region<wbr>Backend<wbr>Service<wbr>Session<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE.
 
@@ -1729,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#balancingmode_csharp" style="color: inherit; text-decoration: inherit;">Balancing<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backendbalancingmode">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Backend<wbr>Balancing<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see  Connection balancing mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1859,7 +1859,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#balancingmode_go" style="color: inherit; text-decoration: inherit;">Balancing<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backendbalancingmode">Backend<wbr>Balancing<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see  Connection balancing mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1989,7 +1989,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#balancingmode_nodejs" style="color: inherit; text-decoration: inherit;">balancing<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backendbalancingmode">Backend<wbr>Balancing<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see  Connection balancing mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2119,7 +2119,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#balancing_mode_python" style="color: inherit; text-decoration: inherit;">balancing_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#backendbalancingmode">Backend<wbr>Balancing<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see  Connection balancing mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2240,6 +2240,36 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="backendbalancingmode">Backend<wbr>Balancing<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Connection</dt>
+    <dd>CONNECTION</dd><dt>Rate</dt>
+    <dd>RATE</dd><dt>Utilization</dt>
+    <dd>UTILIZATION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Backend<wbr>Balancing<wbr>Mode<wbr>Connection</dt>
+    <dd>CONNECTION</dd><dt>Backend<wbr>Balancing<wbr>Mode<wbr>Rate</dt>
+    <dd>RATE</dd><dt>Backend<wbr>Balancing<wbr>Mode<wbr>Utilization</dt>
+    <dd>UTILIZATION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Connection</dt>
+    <dd>CONNECTION</dd><dt>Rate</dt>
+    <dd>RATE</dd><dt>Utilization</dt>
+    <dd>UTILIZATION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CONNECTION</dt>
+    <dd>CONNECTION</dd><dt>RATE</dt>
+    <dd>RATE</dd><dt>UTILIZATION</dt>
+    <dd>UTILIZATION</dd></dl>
 {{% /choosable %}}
 
 <h4 id="backendresponse">Backend<wbr>Response</h4>
@@ -2789,7 +2819,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#cachemode_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backendservicecdnpolicycachemode">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies the cache setting for all responses from this backend. The possible values are:
 
@@ -2895,7 +2925,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#cachemode_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backendservicecdnpolicycachemode">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies the cache setting for all responses from this backend. The possible values are:
 
@@ -3001,7 +3031,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#cachemode_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backendservicecdnpolicycachemode">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies the cache setting for all responses from this backend. The possible values are:
 
@@ -3107,7 +3137,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#cache_mode_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#backendservicecdnpolicycachemode">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies the cache setting for all responses from this backend. The possible values are:
 
@@ -3288,6 +3318,40 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The header field name to match on when bypassing cache. Values are case-insensitive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="backendservicecdnpolicycachemode">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Cache<wbr>All<wbr>Static</dt>
+    <dd>CACHE_ALL_STATIC</dd><dt>Force<wbr>Cache<wbr>All</dt>
+    <dd>FORCE_CACHE_ALL</dd><dt>Invalid<wbr>Cache<wbr>Mode</dt>
+    <dd>INVALID_CACHE_MODE</dd><dt>Use<wbr>Origin<wbr>Headers</dt>
+    <dd>USE_ORIGIN_HEADERS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Mode<wbr>Cache<wbr>All<wbr>Static</dt>
+    <dd>CACHE_ALL_STATIC</dd><dt>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Mode<wbr>Force<wbr>Cache<wbr>All</dt>
+    <dd>FORCE_CACHE_ALL</dd><dt>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Mode<wbr>Invalid<wbr>Cache<wbr>Mode</dt>
+    <dd>INVALID_CACHE_MODE</dd><dt>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Mode<wbr>Use<wbr>Origin<wbr>Headers</dt>
+    <dd>USE_ORIGIN_HEADERS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Cache<wbr>All<wbr>Static</dt>
+    <dd>CACHE_ALL_STATIC</dd><dt>Force<wbr>Cache<wbr>All</dt>
+    <dd>FORCE_CACHE_ALL</dd><dt>Invalid<wbr>Cache<wbr>Mode</dt>
+    <dd>INVALID_CACHE_MODE</dd><dt>Use<wbr>Origin<wbr>Headers</dt>
+    <dd>USE_ORIGIN_HEADERS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CACHE_ALL_STATIC</dt>
+    <dd>CACHE_ALL_STATIC</dd><dt>FORCE_CACHE_ALL</dt>
+    <dd>FORCE_CACHE_ALL</dd><dt>INVALID_CACHE_MODE</dt>
+    <dd>INVALID_CACHE_MODE</dd><dt>USE_ORIGIN_HEADERS</dt>
+    <dd>USE_ORIGIN_HEADERS</dd></dl>
 {{% /choosable %}}
 
 <h4 id="backendservicecdnpolicynegativecachingpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy</h4>
@@ -3889,7 +3953,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#connectionpersistenceonunhealthybackends_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Persistence<wbr>On<wbr>Unhealthy<wbr>Backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backendserviceconnectiontrackingpolicyconnectionpersistenceonunhealthybackends">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Connection<wbr>Persistence<wbr>On<wbr>Unhealthy<wbr>Backends</a></span>
     </dt>
     <dd>{{% md %}}Specifies connection persistence when backends are unhealthy. The default value is DEFAULT_FOR_PROTOCOL.
 
@@ -3917,7 +3981,7 @@ This field will be supported only if the Connection Tracking key is less than 5-
 <a href="#trackingmode_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backendserviceconnectiontrackingpolicytrackingmode">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Tracking<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies the key used for connection tracking. There are two options:
 
@@ -3933,7 +3997,7 @@ PER_SESSION: The Connection Tracking is performed as per the configured Session 
 <a href="#connectionpersistenceonunhealthybackends_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Persistence<wbr>On<wbr>Unhealthy<wbr>Backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backendserviceconnectiontrackingpolicyconnectionpersistenceonunhealthybackends">Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Connection<wbr>Persistence<wbr>On<wbr>Unhealthy<wbr>Backends</a></span>
     </dt>
     <dd>{{% md %}}Specifies connection persistence when backends are unhealthy. The default value is DEFAULT_FOR_PROTOCOL.
 
@@ -3961,7 +4025,7 @@ This field will be supported only if the Connection Tracking key is less than 5-
 <a href="#trackingmode_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backendserviceconnectiontrackingpolicytrackingmode">Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Tracking<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies the key used for connection tracking. There are two options:
 
@@ -3977,7 +4041,7 @@ PER_SESSION: The Connection Tracking is performed as per the configured Session 
 <a href="#connectionpersistenceonunhealthybackends_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Persistence<wbr>On<wbr>Unhealthy<wbr>Backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backendserviceconnectiontrackingpolicyconnectionpersistenceonunhealthybackends">Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Connection<wbr>Persistence<wbr>On<wbr>Unhealthy<wbr>Backends</a></span>
     </dt>
     <dd>{{% md %}}Specifies connection persistence when backends are unhealthy. The default value is DEFAULT_FOR_PROTOCOL.
 
@@ -4005,7 +4069,7 @@ This field will be supported only if the Connection Tracking key is less than 5-
 <a href="#trackingmode_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#backendserviceconnectiontrackingpolicytrackingmode">Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Tracking<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies the key used for connection tracking. There are two options:
 
@@ -4021,7 +4085,7 @@ PER_SESSION: The Connection Tracking is performed as per the configured Session 
 <a href="#connection_persistence_on_unhealthy_backends_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>persistence_<wbr>on_<wbr>unhealthy_<wbr>backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#backendserviceconnectiontrackingpolicyconnectionpersistenceonunhealthybackends">Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Connection<wbr>Persistence<wbr>On<wbr>Unhealthy<wbr>Backends</a></span>
     </dt>
     <dd>{{% md %}}Specifies connection persistence when backends are unhealthy. The default value is DEFAULT_FOR_PROTOCOL.
 
@@ -4049,13 +4113,43 @@ This field will be supported only if the Connection Tracking key is less than 5-
 <a href="#tracking_mode_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#backendserviceconnectiontrackingpolicytrackingmode">Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Tracking<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies the key used for connection tracking. There are two options:
 
 PER_CONNECTION: This is the default mode. The Connection Tracking is performed as per the Connection Key (default Hash Method) for the specific protocol.
 
 PER_SESSION: The Connection Tracking is performed as per the configured Session Affinity. It matches the configured Session Affinity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="backendserviceconnectiontrackingpolicyconnectionpersistenceonunhealthybackends">Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Connection<wbr>Persistence<wbr>On<wbr>Unhealthy<wbr>Backends</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Always<wbr>Persist</dt>
+    <dd>ALWAYS_PERSIST</dd><dt>Default<wbr>For<wbr>Protocol</dt>
+    <dd>DEFAULT_FOR_PROTOCOL</dd><dt>Never<wbr>Persist</dt>
+    <dd>NEVER_PERSIST</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Connection<wbr>Persistence<wbr>On<wbr>Unhealthy<wbr>Backends<wbr>Always<wbr>Persist</dt>
+    <dd>ALWAYS_PERSIST</dd><dt>Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Connection<wbr>Persistence<wbr>On<wbr>Unhealthy<wbr>Backends<wbr>Default<wbr>For<wbr>Protocol</dt>
+    <dd>DEFAULT_FOR_PROTOCOL</dd><dt>Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Connection<wbr>Persistence<wbr>On<wbr>Unhealthy<wbr>Backends<wbr>Never<wbr>Persist</dt>
+    <dd>NEVER_PERSIST</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Always<wbr>Persist</dt>
+    <dd>ALWAYS_PERSIST</dd><dt>Default<wbr>For<wbr>Protocol</dt>
+    <dd>DEFAULT_FOR_PROTOCOL</dd><dt>Never<wbr>Persist</dt>
+    <dd>NEVER_PERSIST</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALWAYS_PERSIST</dt>
+    <dd>ALWAYS_PERSIST</dd><dt>DEFAULT_FOR_PROTOCOL</dt>
+    <dd>DEFAULT_FOR_PROTOCOL</dd><dt>NEVER_PERSIST</dt>
+    <dd>NEVER_PERSIST</dd></dl>
 {{% /choosable %}}
 
 <h4 id="backendserviceconnectiontrackingpolicyresponse">Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Response</h4>
@@ -4234,6 +4328,36 @@ This field will be supported only if the Connection Tracking key is less than 5-
 PER_CONNECTION: This is the default mode. The Connection Tracking is performed as per the Connection Key (default Hash Method) for the specific protocol.
 
 PER_SESSION: The Connection Tracking is performed as per the configured Session Affinity. It matches the configured Session Affinity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="backendserviceconnectiontrackingpolicytrackingmode">Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Tracking<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Invalid<wbr>Tracking<wbr>Mode</dt>
+    <dd>INVALID_TRACKING_MODE</dd><dt>Per<wbr>Connection</dt>
+    <dd>PER_CONNECTION</dd><dt>Per<wbr>Session</dt>
+    <dd>PER_SESSION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Tracking<wbr>Mode<wbr>Invalid<wbr>Tracking<wbr>Mode</dt>
+    <dd>INVALID_TRACKING_MODE</dd><dt>Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Tracking<wbr>Mode<wbr>Per<wbr>Connection</dt>
+    <dd>PER_CONNECTION</dd><dt>Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Tracking<wbr>Mode<wbr>Per<wbr>Session</dt>
+    <dd>PER_SESSION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Invalid<wbr>Tracking<wbr>Mode</dt>
+    <dd>INVALID_TRACKING_MODE</dd><dt>Per<wbr>Connection</dt>
+    <dd>PER_CONNECTION</dd><dt>Per<wbr>Session</dt>
+    <dd>PER_SESSION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>INVALID_TRACKING_MODE</dt>
+    <dd>INVALID_TRACKING_MODE</dd><dt>PER_CONNECTION</dt>
+    <dd>PER_CONNECTION</dd><dt>PER_SESSION</dt>
+    <dd>PER_SESSION</dd></dl>
 {{% /choosable %}}
 
 <h4 id="backendservicefailoverpolicy">Backend<wbr>Service<wbr>Failover<wbr>Policy</h4>
@@ -7464,6 +7588,194 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
     <dd>{{% md %}}This factor is used to determine the ejection threshold for success rate outlier ejection. The ejection threshold is the difference between the mean success rate, and the product of this factor and the standard deviation of the mean success rate: mean - (stdev * success_rate_stdev_factor). This factor is divided by a thousand to get a double. That is, if the desired factor is 1.9, the runtime value should be 1900. Defaults to 1900.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="regionbackendserviceloadbalancingscheme">Region<wbr>Backend<wbr>Service<wbr>Load<wbr>Balancing<wbr>Scheme</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>External</dt>
+    <dd>EXTERNAL</dd><dt>External<wbr>Managed</dt>
+    <dd>EXTERNAL_MANAGED</dd><dt>Internal</dt>
+    <dd>INTERNAL</dd><dt>Internal<wbr>Managed</dt>
+    <dd>INTERNAL_MANAGED</dd><dt>Internal<wbr>Self<wbr>Managed</dt>
+    <dd>INTERNAL_SELF_MANAGED</dd><dt>Invalid<wbr>Load<wbr>Balancing<wbr>Scheme</dt>
+    <dd>INVALID_LOAD_BALANCING_SCHEME</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Region<wbr>Backend<wbr>Service<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>External</dt>
+    <dd>EXTERNAL</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>External<wbr>Managed</dt>
+    <dd>EXTERNAL_MANAGED</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>Internal</dt>
+    <dd>INTERNAL</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>Internal<wbr>Managed</dt>
+    <dd>INTERNAL_MANAGED</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>Internal<wbr>Self<wbr>Managed</dt>
+    <dd>INTERNAL_SELF_MANAGED</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Load<wbr>Balancing<wbr>Scheme<wbr>Invalid<wbr>Load<wbr>Balancing<wbr>Scheme</dt>
+    <dd>INVALID_LOAD_BALANCING_SCHEME</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>External</dt>
+    <dd>EXTERNAL</dd><dt>External<wbr>Managed</dt>
+    <dd>EXTERNAL_MANAGED</dd><dt>Internal</dt>
+    <dd>INTERNAL</dd><dt>Internal<wbr>Managed</dt>
+    <dd>INTERNAL_MANAGED</dd><dt>Internal<wbr>Self<wbr>Managed</dt>
+    <dd>INTERNAL_SELF_MANAGED</dd><dt>Invalid<wbr>Load<wbr>Balancing<wbr>Scheme</dt>
+    <dd>INVALID_LOAD_BALANCING_SCHEME</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EXTERNAL</dt>
+    <dd>EXTERNAL</dd><dt>EXTERNAL_MANAGED</dt>
+    <dd>EXTERNAL_MANAGED</dd><dt>INTERNAL</dt>
+    <dd>INTERNAL</dd><dt>INTERNAL_MANAGED</dt>
+    <dd>INTERNAL_MANAGED</dd><dt>INTERNAL_SELF_MANAGED</dt>
+    <dd>INTERNAL_SELF_MANAGED</dd><dt>INVALID_LOAD_BALANCING_SCHEME</dt>
+    <dd>INVALID_LOAD_BALANCING_SCHEME</dd></dl>
+{{% /choosable %}}
+
+<h4 id="regionbackendservicelocalitylbpolicy">Region<wbr>Backend<wbr>Service<wbr>Locality<wbr>Lb<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Invalid<wbr>Lb<wbr>Policy</dt>
+    <dd>INVALID_LB_POLICY</dd><dt>Least<wbr>Request</dt>
+    <dd>LEAST_REQUEST</dd><dt>Maglev</dt>
+    <dd>MAGLEV</dd><dt>Original<wbr>Destination</dt>
+    <dd>ORIGINAL_DESTINATION</dd><dt>Random</dt>
+    <dd>RANDOM</dd><dt>Ring<wbr>Hash</dt>
+    <dd>RING_HASH</dd><dt>Round<wbr>Robin</dt>
+    <dd>ROUND_ROBIN</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Region<wbr>Backend<wbr>Service<wbr>Locality<wbr>Lb<wbr>Policy<wbr>Invalid<wbr>Lb<wbr>Policy</dt>
+    <dd>INVALID_LB_POLICY</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Locality<wbr>Lb<wbr>Policy<wbr>Least<wbr>Request</dt>
+    <dd>LEAST_REQUEST</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Locality<wbr>Lb<wbr>Policy<wbr>Maglev</dt>
+    <dd>MAGLEV</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Locality<wbr>Lb<wbr>Policy<wbr>Original<wbr>Destination</dt>
+    <dd>ORIGINAL_DESTINATION</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Locality<wbr>Lb<wbr>Policy<wbr>Random</dt>
+    <dd>RANDOM</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Locality<wbr>Lb<wbr>Policy<wbr>Ring<wbr>Hash</dt>
+    <dd>RING_HASH</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Locality<wbr>Lb<wbr>Policy<wbr>Round<wbr>Robin</dt>
+    <dd>ROUND_ROBIN</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Invalid<wbr>Lb<wbr>Policy</dt>
+    <dd>INVALID_LB_POLICY</dd><dt>Least<wbr>Request</dt>
+    <dd>LEAST_REQUEST</dd><dt>Maglev</dt>
+    <dd>MAGLEV</dd><dt>Original<wbr>Destination</dt>
+    <dd>ORIGINAL_DESTINATION</dd><dt>Random</dt>
+    <dd>RANDOM</dd><dt>Ring<wbr>Hash</dt>
+    <dd>RING_HASH</dd><dt>Round<wbr>Robin</dt>
+    <dd>ROUND_ROBIN</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>INVALID_LB_POLICY</dt>
+    <dd>INVALID_LB_POLICY</dd><dt>LEAST_REQUEST</dt>
+    <dd>LEAST_REQUEST</dd><dt>MAGLEV</dt>
+    <dd>MAGLEV</dd><dt>ORIGINAL_DESTINATION</dt>
+    <dd>ORIGINAL_DESTINATION</dd><dt>RANDOM</dt>
+    <dd>RANDOM</dd><dt>RING_HASH</dt>
+    <dd>RING_HASH</dd><dt>ROUND_ROBIN</dt>
+    <dd>ROUND_ROBIN</dd></dl>
+{{% /choosable %}}
+
+<h4 id="regionbackendserviceprotocol">Region<wbr>Backend<wbr>Service<wbr>Protocol</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>All</dt>
+    <dd>ALL</dd><dt>Grpc</dt>
+    <dd>GRPC</dd><dt>Http</dt>
+    <dd>HTTP</dd><dt>Http2</dt>
+    <dd>HTTP2</dd><dt>Https</dt>
+    <dd>HTTPS</dd><dt>Ssl</dt>
+    <dd>SSL</dd><dt>Tcp</dt>
+    <dd>TCP</dd><dt>Udp</dt>
+    <dd>UDP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Region<wbr>Backend<wbr>Service<wbr>Protocol<wbr>All</dt>
+    <dd>ALL</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Protocol<wbr>Grpc</dt>
+    <dd>GRPC</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Protocol<wbr>Http</dt>
+    <dd>HTTP</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Protocol<wbr>Http2</dt>
+    <dd>HTTP2</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Protocol<wbr>Https</dt>
+    <dd>HTTPS</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Protocol<wbr>Ssl</dt>
+    <dd>SSL</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Protocol<wbr>Tcp</dt>
+    <dd>TCP</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Protocol<wbr>Udp</dt>
+    <dd>UDP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>All</dt>
+    <dd>ALL</dd><dt>Grpc</dt>
+    <dd>GRPC</dd><dt>Http</dt>
+    <dd>HTTP</dd><dt>Http2</dt>
+    <dd>HTTP2</dd><dt>Https</dt>
+    <dd>HTTPS</dd><dt>Ssl</dt>
+    <dd>SSL</dd><dt>Tcp</dt>
+    <dd>TCP</dd><dt>Udp</dt>
+    <dd>UDP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALL</dt>
+    <dd>ALL</dd><dt>GRPC</dt>
+    <dd>GRPC</dd><dt>HTTP</dt>
+    <dd>HTTP</dd><dt>HTTP2</dt>
+    <dd>HTTP2</dd><dt>HTTPS</dt>
+    <dd>HTTPS</dd><dt>SSL</dt>
+    <dd>SSL</dd><dt>TCP</dt>
+    <dd>TCP</dd><dt>UDP</dt>
+    <dd>UDP</dd></dl>
+{{% /choosable %}}
+
+<h4 id="regionbackendservicesessionaffinity">Region<wbr>Backend<wbr>Service<wbr>Session<wbr>Affinity</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Client<wbr>Ip</dt>
+    <dd>CLIENT_IP</dd><dt>Client<wbr>Ip<wbr>No<wbr>Destination</dt>
+    <dd>CLIENT_IP_NO_DESTINATION</dd><dt>Client<wbr>Ip<wbr>Port<wbr>Proto</dt>
+    <dd>CLIENT_IP_PORT_PROTO</dd><dt>Client<wbr>Ip<wbr>Proto</dt>
+    <dd>CLIENT_IP_PROTO</dd><dt>Generated<wbr>Cookie</dt>
+    <dd>GENERATED_COOKIE</dd><dt>Header<wbr>Field</dt>
+    <dd>HEADER_FIELD</dd><dt>Http<wbr>Cookie</dt>
+    <dd>HTTP_COOKIE</dd><dt>None</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Region<wbr>Backend<wbr>Service<wbr>Session<wbr>Affinity<wbr>Client<wbr>Ip</dt>
+    <dd>CLIENT_IP</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Session<wbr>Affinity<wbr>Client<wbr>Ip<wbr>No<wbr>Destination</dt>
+    <dd>CLIENT_IP_NO_DESTINATION</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Session<wbr>Affinity<wbr>Client<wbr>Ip<wbr>Port<wbr>Proto</dt>
+    <dd>CLIENT_IP_PORT_PROTO</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Session<wbr>Affinity<wbr>Client<wbr>Ip<wbr>Proto</dt>
+    <dd>CLIENT_IP_PROTO</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Session<wbr>Affinity<wbr>Generated<wbr>Cookie</dt>
+    <dd>GENERATED_COOKIE</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Session<wbr>Affinity<wbr>Header<wbr>Field</dt>
+    <dd>HEADER_FIELD</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Session<wbr>Affinity<wbr>Http<wbr>Cookie</dt>
+    <dd>HTTP_COOKIE</dd><dt>Region<wbr>Backend<wbr>Service<wbr>Session<wbr>Affinity<wbr>None</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Client<wbr>Ip</dt>
+    <dd>CLIENT_IP</dd><dt>Client<wbr>Ip<wbr>No<wbr>Destination</dt>
+    <dd>CLIENT_IP_NO_DESTINATION</dd><dt>Client<wbr>Ip<wbr>Port<wbr>Proto</dt>
+    <dd>CLIENT_IP_PORT_PROTO</dd><dt>Client<wbr>Ip<wbr>Proto</dt>
+    <dd>CLIENT_IP_PROTO</dd><dt>Generated<wbr>Cookie</dt>
+    <dd>GENERATED_COOKIE</dd><dt>Header<wbr>Field</dt>
+    <dd>HEADER_FIELD</dd><dt>Http<wbr>Cookie</dt>
+    <dd>HTTP_COOKIE</dd><dt>None</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CLIENT_IP</dt>
+    <dd>CLIENT_IP</dd><dt>CLIENT_IP_NO_DESTINATION</dt>
+    <dd>CLIENT_IP_NO_DESTINATION</dd><dt>CLIENT_IP_PORT_PROTO</dt>
+    <dd>CLIENT_IP_PORT_PROTO</dd><dt>CLIENT_IP_PROTO</dt>
+    <dd>CLIENT_IP_PROTO</dd><dt>GENERATED_COOKIE</dt>
+    <dd>GENERATED_COOKIE</dd><dt>HEADER_FIELD</dt>
+    <dd>HEADER_FIELD</dd><dt>HTTP_COOKIE</dt>
+    <dd>HTTP_COOKIE</dd><dt>NONE</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
 <h4 id="securitysettings">Security<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
@@ -7685,7 +7997,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subsettingpolicy">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Subsetting<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7697,7 +8009,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subsettingpolicy">Subsetting<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7709,7 +8021,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#subsettingpolicy">Subsetting<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7721,9 +8033,35 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#subsettingpolicy">Subsetting<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="subsettingpolicy">Subsetting<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Consistent<wbr>Hash<wbr>Subsetting</dt>
+    <dd>CONSISTENT_HASH_SUBSETTING</dd><dt>None</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Subsetting<wbr>Policy<wbr>Consistent<wbr>Hash<wbr>Subsetting</dt>
+    <dd>CONSISTENT_HASH_SUBSETTING</dd><dt>Subsetting<wbr>Policy<wbr>None</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Consistent<wbr>Hash<wbr>Subsetting</dt>
+    <dd>CONSISTENT_HASH_SUBSETTING</dd><dt>None</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CONSISTENT_HASH_SUBSETTING</dt>
+    <dd>CONSISTENT_HASH_SUBSETTING</dd><dt>NONE</dt>
+    <dd>NONE</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subsettingresponse">Subsetting<wbr>Response</h4>

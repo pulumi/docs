@@ -39,8 +39,8 @@ Create a new CertificateAuthority in a given Project and Location.
                          <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">subordinate_config</span><span class="p">:</span> <span class="nx">Optional[_privateca_v1beta1.SubordinateConfigArgs]</span> = None<span class="p">,</span>
-                         <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                         <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[_privateca_v1beta1.CertificateAuthorityTier]</span> = None<span class="p">,</span>
+                         <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[_privateca_v1beta1.CertificateAuthorityType]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">CertificateAuthority</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CertificateAuthorityArgs</a></span><span class="p">,</span>
@@ -270,7 +270,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#certificateauthoritytier">Pulumi.<wbr>Google<wbr>Native.<wbr>Privateca.<wbr>V1Beta1.<wbr>Certificate<wbr>Authority<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The Tier of this CertificateAuthority.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -278,7 +278,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#certificateauthoritytype">Pulumi.<wbr>Google<wbr>Native.<wbr>Privateca.<wbr>V1Beta1.<wbr>Certificate<wbr>Authority<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The Type of this CertificateAuthority.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -386,7 +386,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#certificateauthoritytier">Certificate<wbr>Authority<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The Tier of this CertificateAuthority.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +394,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#certificateauthoritytype">Certificate<wbr>Authority<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The Type of this CertificateAuthority.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -502,7 +502,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#certificateauthoritytier">Certificate<wbr>Authority<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The Tier of this CertificateAuthority.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +510,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#certificateauthoritytype">Certificate<wbr>Authority<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The Type of this CertificateAuthority.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -618,7 +618,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#certificateauthoritytier">Certificate<wbr>Authority<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The Tier of this CertificateAuthority.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +626,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#certificateauthoritytype">Certificate<wbr>Authority<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The Type of this CertificateAuthority.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2200,6 +2200,66 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#reusableconfigwrapperresponse">Reusable<wbr>Config<wbr>Wrapper<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. All Certificates issued by the CertificateAuthority will use the provided configuration values, overwriting any requested configuration values.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="certificateauthoritytier">Certificate<wbr>Authority<wbr>Tier</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Tier<wbr>Unspecified</dt>
+    <dd>TIER_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Enterprise</dt>
+    <dd>ENTERPRISE{{% md %}}Enterprise tier.{{% /md %}}</dd><dt>Devops</dt>
+    <dd>DEVOPS{{% md %}}DevOps tier.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Certificate<wbr>Authority<wbr>Tier<wbr>Tier<wbr>Unspecified</dt>
+    <dd>TIER_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Certificate<wbr>Authority<wbr>Tier<wbr>Enterprise</dt>
+    <dd>ENTERPRISE{{% md %}}Enterprise tier.{{% /md %}}</dd><dt>Certificate<wbr>Authority<wbr>Tier<wbr>Devops</dt>
+    <dd>DEVOPS{{% md %}}DevOps tier.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Tier<wbr>Unspecified</dt>
+    <dd>TIER_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Enterprise</dt>
+    <dd>ENTERPRISE{{% md %}}Enterprise tier.{{% /md %}}</dd><dt>Devops</dt>
+    <dd>DEVOPS{{% md %}}DevOps tier.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TIER_UNSPECIFIED</dt>
+    <dd>TIER_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>ENTERPRISE</dt>
+    <dd>ENTERPRISE{{% md %}}Enterprise tier.{{% /md %}}</dd><dt>DEVOPS</dt>
+    <dd>DEVOPS{{% md %}}DevOps tier.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="certificateauthoritytype">Certificate<wbr>Authority<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Self<wbr>Signed</dt>
+    <dd>SELF_SIGNED{{% md %}}Self-signed CA.{{% /md %}}</dd><dt>Subordinate</dt>
+    <dd>SUBORDINATE{{% md %}}Subordinate CA. Could be issued by a Private CA CertificateAuthority or an unmanaged CA.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Certificate<wbr>Authority<wbr>Type<wbr>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Certificate<wbr>Authority<wbr>Type<wbr>Self<wbr>Signed</dt>
+    <dd>SELF_SIGNED{{% md %}}Self-signed CA.{{% /md %}}</dd><dt>Certificate<wbr>Authority<wbr>Type<wbr>Subordinate</dt>
+    <dd>SUBORDINATE{{% md %}}Subordinate CA. Could be issued by a Private CA CertificateAuthority or an unmanaged CA.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Type<wbr>Unspecified</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Self<wbr>Signed</dt>
+    <dd>SELF_SIGNED{{% md %}}Self-signed CA.{{% /md %}}</dd><dt>Subordinate</dt>
+    <dd>SUBORDINATE{{% md %}}Subordinate CA. Could be issued by a Private CA CertificateAuthority or an unmanaged CA.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TYPE_UNSPECIFIED</dt>
+    <dd>TYPE_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>SELF_SIGNED</dt>
+    <dd>SELF_SIGNED{{% md %}}Self-signed CA.{{% /md %}}</dd><dt>SUBORDINATE</dt>
+    <dd>SUBORDINATE{{% md %}}Subordinate CA. Could be issued by a Private CA CertificateAuthority or an unmanaged CA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificateconfig">Certificate<wbr>Config</h4>
@@ -4401,7 +4461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#keyversionspecalgorithm">Pulumi.<wbr>Google<wbr>Native.<wbr>Privateca.<wbr>V1Beta1.<wbr>Key<wbr>Version<wbr>Spec<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Required. The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as `HSM`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4421,7 +4481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#keyversionspecalgorithm">Key<wbr>Version<wbr>Spec<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Required. The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as `HSM`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4441,7 +4501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#keyversionspecalgorithm">Key<wbr>Version<wbr>Spec<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Required. The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as `HSM`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4461,7 +4521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#keyversionspecalgorithm">Key<wbr>Version<wbr>Spec<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Required. The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as `HSM`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4472,6 +4532,60 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The resource name for an existing Cloud KMS CryptoKeyVersion in the format `projects/*/locations/*/keyRings/*/cryptoKeys/*/cryptoKeyVersions/*`. This option enables full flexibility in the key's capabilities and properties.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="keyversionspecalgorithm">Key<wbr>Version<wbr>Spec<wbr>Algorithm</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Sign<wbr>Hash<wbr>Algorithm<wbr>Unspecified</dt>
+    <dd>SIGN_HASH_ALGORITHM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Rsa<wbr>Pss2048Sha256</dt>
+    <dd>RSA_PSS_2048_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PSS_2048_SHA256{{% /md %}}</dd><dt>Rsa<wbr>Pss3072Sha256</dt>
+    <dd>RSA_PSS_3072_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm. RSA_SIGN_PSS_3072_SHA256{{% /md %}}</dd><dt>Rsa<wbr>Pss4096Sha256</dt>
+    <dd>RSA_PSS_4096_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PSS_4096_SHA256{{% /md %}}</dd><dt>Rsa<wbr>Pkcs12048Sha256</dt>
+    <dd>RSA_PKCS1_2048_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PKCS1_2048_SHA256{{% /md %}}</dd><dt>Rsa<wbr>Pkcs13072Sha256</dt>
+    <dd>RSA_PKCS1_3072_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PKCS1_3072_SHA256{{% /md %}}</dd><dt>Rsa<wbr>Pkcs14096Sha256</dt>
+    <dd>RSA_PKCS1_4096_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PKCS1_4096_SHA256{{% /md %}}</dd><dt>Ec<wbr>P256Sha256</dt>
+    <dd>EC_P256_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.EC_SIGN_P256_SHA256{{% /md %}}</dd><dt>Ec<wbr>P384Sha384</dt>
+    <dd>EC_P384_SHA384{{% md %}}maps to CryptoKeyVersionAlgorithm.EC_SIGN_P384_SHA384{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Key<wbr>Version<wbr>Spec<wbr>Algorithm<wbr>Sign<wbr>Hash<wbr>Algorithm<wbr>Unspecified</dt>
+    <dd>SIGN_HASH_ALGORITHM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Key<wbr>Version<wbr>Spec<wbr>Algorithm<wbr>Rsa<wbr>Pss2048Sha256</dt>
+    <dd>RSA_PSS_2048_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PSS_2048_SHA256{{% /md %}}</dd><dt>Key<wbr>Version<wbr>Spec<wbr>Algorithm<wbr>Rsa<wbr>Pss3072Sha256</dt>
+    <dd>RSA_PSS_3072_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm. RSA_SIGN_PSS_3072_SHA256{{% /md %}}</dd><dt>Key<wbr>Version<wbr>Spec<wbr>Algorithm<wbr>Rsa<wbr>Pss4096Sha256</dt>
+    <dd>RSA_PSS_4096_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PSS_4096_SHA256{{% /md %}}</dd><dt>Key<wbr>Version<wbr>Spec<wbr>Algorithm<wbr>Rsa<wbr>Pkcs12048Sha256</dt>
+    <dd>RSA_PKCS1_2048_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PKCS1_2048_SHA256{{% /md %}}</dd><dt>Key<wbr>Version<wbr>Spec<wbr>Algorithm<wbr>Rsa<wbr>Pkcs13072Sha256</dt>
+    <dd>RSA_PKCS1_3072_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PKCS1_3072_SHA256{{% /md %}}</dd><dt>Key<wbr>Version<wbr>Spec<wbr>Algorithm<wbr>Rsa<wbr>Pkcs14096Sha256</dt>
+    <dd>RSA_PKCS1_4096_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PKCS1_4096_SHA256{{% /md %}}</dd><dt>Key<wbr>Version<wbr>Spec<wbr>Algorithm<wbr>Ec<wbr>P256Sha256</dt>
+    <dd>EC_P256_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.EC_SIGN_P256_SHA256{{% /md %}}</dd><dt>Key<wbr>Version<wbr>Spec<wbr>Algorithm<wbr>Ec<wbr>P384Sha384</dt>
+    <dd>EC_P384_SHA384{{% md %}}maps to CryptoKeyVersionAlgorithm.EC_SIGN_P384_SHA384{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Sign<wbr>Hash<wbr>Algorithm<wbr>Unspecified</dt>
+    <dd>SIGN_HASH_ALGORITHM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Rsa<wbr>Pss2048Sha256</dt>
+    <dd>RSA_PSS_2048_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PSS_2048_SHA256{{% /md %}}</dd><dt>Rsa<wbr>Pss3072Sha256</dt>
+    <dd>RSA_PSS_3072_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm. RSA_SIGN_PSS_3072_SHA256{{% /md %}}</dd><dt>Rsa<wbr>Pss4096Sha256</dt>
+    <dd>RSA_PSS_4096_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PSS_4096_SHA256{{% /md %}}</dd><dt>Rsa<wbr>Pkcs12048Sha256</dt>
+    <dd>RSA_PKCS1_2048_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PKCS1_2048_SHA256{{% /md %}}</dd><dt>Rsa<wbr>Pkcs13072Sha256</dt>
+    <dd>RSA_PKCS1_3072_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PKCS1_3072_SHA256{{% /md %}}</dd><dt>Rsa<wbr>Pkcs14096Sha256</dt>
+    <dd>RSA_PKCS1_4096_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PKCS1_4096_SHA256{{% /md %}}</dd><dt>Ec<wbr>P256Sha256</dt>
+    <dd>EC_P256_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.EC_SIGN_P256_SHA256{{% /md %}}</dd><dt>Ec<wbr>P384Sha384</dt>
+    <dd>EC_P384_SHA384{{% md %}}maps to CryptoKeyVersionAlgorithm.EC_SIGN_P384_SHA384{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SIGN_HASH_ALGORITHM_UNSPECIFIED</dt>
+    <dd>SIGN_HASH_ALGORITHM_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>RSA_PSS2048_SHA256</dt>
+    <dd>RSA_PSS_2048_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PSS_2048_SHA256{{% /md %}}</dd><dt>RSA_PSS3072_SHA256</dt>
+    <dd>RSA_PSS_3072_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm. RSA_SIGN_PSS_3072_SHA256{{% /md %}}</dd><dt>RSA_PSS4096_SHA256</dt>
+    <dd>RSA_PSS_4096_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PSS_4096_SHA256{{% /md %}}</dd><dt>RSA_PKCS12048_SHA256</dt>
+    <dd>RSA_PKCS1_2048_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PKCS1_2048_SHA256{{% /md %}}</dd><dt>RSA_PKCS13072_SHA256</dt>
+    <dd>RSA_PKCS1_3072_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PKCS1_3072_SHA256{{% /md %}}</dd><dt>RSA_PKCS14096_SHA256</dt>
+    <dd>RSA_PKCS1_4096_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.RSA_SIGN_PKCS1_4096_SHA256{{% /md %}}</dd><dt>EC_P256_SHA256</dt>
+    <dd>EC_P256_SHA256{{% md %}}maps to CryptoKeyVersionAlgorithm.EC_SIGN_P256_SHA256{{% /md %}}</dd><dt>EC_P384_SHA384</dt>
+    <dd>EC_P384_SHA384{{% md %}}maps to CryptoKeyVersionAlgorithm.EC_SIGN_P384_SHA384{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="keyversionspecresponse">Key<wbr>Version<wbr>Spec<wbr>Response</h4>
@@ -4673,7 +4787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publickeytype">Pulumi.<wbr>Google<wbr>Native.<wbr>Privateca.<wbr>V1Beta1.<wbr>Public<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of public key. If specified, it must match the public key used for the`key` field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4693,7 +4807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publickeytype">Public<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of public key. If specified, it must match the public key used for the`key` field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4713,7 +4827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#publickeytype">Public<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of public key. If specified, it must match the public key used for the`key` field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4733,7 +4847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#publickeytype">Public<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of public key. If specified, it must match the public key used for the`key` field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4818,6 +4932,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The type of public key. If specified, it must match the public key used for the`key` field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="publickeytype">Public<wbr>Key<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Key<wbr>Type<wbr>Unspecified</dt>
+    <dd>KEY_TYPE_UNSPECIFIED{{% md %}}Default unspecified value.{{% /md %}}</dd><dt>Pem<wbr>Rsa<wbr>Key</dt>
+    <dd>PEM_RSA_KEY{{% md %}}A PEM-encoded PKCS#1/RFC 3447 RSAPublicKey structure, or an RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing the former.{{% /md %}}</dd><dt>Pem<wbr>Ec<wbr>Key</dt>
+    <dd>PEM_EC_KEY{{% md %}}An RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing a PEM-encoded compressed NIST P-256/secp256r1/prime256v1 or P-384 key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Public<wbr>Key<wbr>Type<wbr>Key<wbr>Type<wbr>Unspecified</dt>
+    <dd>KEY_TYPE_UNSPECIFIED{{% md %}}Default unspecified value.{{% /md %}}</dd><dt>Public<wbr>Key<wbr>Type<wbr>Pem<wbr>Rsa<wbr>Key</dt>
+    <dd>PEM_RSA_KEY{{% md %}}A PEM-encoded PKCS#1/RFC 3447 RSAPublicKey structure, or an RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing the former.{{% /md %}}</dd><dt>Public<wbr>Key<wbr>Type<wbr>Pem<wbr>Ec<wbr>Key</dt>
+    <dd>PEM_EC_KEY{{% md %}}An RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing a PEM-encoded compressed NIST P-256/secp256r1/prime256v1 or P-384 key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Key<wbr>Type<wbr>Unspecified</dt>
+    <dd>KEY_TYPE_UNSPECIFIED{{% md %}}Default unspecified value.{{% /md %}}</dd><dt>Pem<wbr>Rsa<wbr>Key</dt>
+    <dd>PEM_RSA_KEY{{% md %}}A PEM-encoded PKCS#1/RFC 3447 RSAPublicKey structure, or an RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing the former.{{% /md %}}</dd><dt>Pem<wbr>Ec<wbr>Key</dt>
+    <dd>PEM_EC_KEY{{% md %}}An RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing a PEM-encoded compressed NIST P-256/secp256r1/prime256v1 or P-384 key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>KEY_TYPE_UNSPECIFIED</dt>
+    <dd>KEY_TYPE_UNSPECIFIED{{% md %}}Default unspecified value.{{% /md %}}</dd><dt>PEM_RSA_KEY</dt>
+    <dd>PEM_RSA_KEY{{% md %}}A PEM-encoded PKCS#1/RFC 3447 RSAPublicKey structure, or an RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing the former.{{% /md %}}</dd><dt>PEM_EC_KEY</dt>
+    <dd>PEM_EC_KEY{{% md %}}An RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing a PEM-encoded compressed NIST P-256/secp256r1/prime256v1 or P-384 key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reusableconfigvalues">Reusable<wbr>Config<wbr>Values</h4>

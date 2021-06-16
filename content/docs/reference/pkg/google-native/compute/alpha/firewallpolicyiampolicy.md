@@ -774,7 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logtype_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#auditlogconfiglogtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The log type that this config enables.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -802,7 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logtype_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#auditlogconfiglogtype">Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The log type that this config enables.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -830,7 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logtype_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#auditlogconfiglogtype">Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The log type that this config enables.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -858,9 +858,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#auditlogconfiglogtype">Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The log type that this config enables.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="auditlogconfiglogtype">Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Admin<wbr>Read</dt>
+    <dd>ADMIN_READ</dd><dt>Data<wbr>Read</dt>
+    <dd>DATA_READ</dd><dt>Data<wbr>Write</dt>
+    <dd>DATA_WRITE</dd><dt>Log<wbr>Type<wbr>Unspecified</dt>
+    <dd>LOG_TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type<wbr>Admin<wbr>Read</dt>
+    <dd>ADMIN_READ</dd><dt>Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type<wbr>Data<wbr>Read</dt>
+    <dd>DATA_READ</dd><dt>Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type<wbr>Data<wbr>Write</dt>
+    <dd>DATA_WRITE</dd><dt>Audit<wbr>Log<wbr>Config<wbr>Log<wbr>Type<wbr>Log<wbr>Type<wbr>Unspecified</dt>
+    <dd>LOG_TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Admin<wbr>Read</dt>
+    <dd>ADMIN_READ</dd><dt>Data<wbr>Read</dt>
+    <dd>DATA_READ</dd><dt>Data<wbr>Write</dt>
+    <dd>DATA_WRITE</dd><dt>Log<wbr>Type<wbr>Unspecified</dt>
+    <dd>LOG_TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ADMIN_READ</dt>
+    <dd>ADMIN_READ</dd><dt>DATA_READ</dt>
+    <dd>DATA_READ</dd><dt>DATA_WRITE</dt>
+    <dd>DATA_WRITE</dd><dt>LOG_TYPE_UNSPECIFIED</dt>
+    <dd>LOG_TYPE_UNSPECIFIED</dd></dl>
 {{% /choosable %}}
 
 <h4 id="auditlogconfigresponse">Audit<wbr>Log<wbr>Config<wbr>Response</h4>
@@ -986,7 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissiontype_csharp" style="color: inherit; text-decoration: inherit;">Permission<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#authorizationloggingoptionspermissiontype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the permission that was checked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -998,7 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissiontype_go" style="color: inherit; text-decoration: inherit;">Permission<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#authorizationloggingoptionspermissiontype">Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the permission that was checked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1010,7 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissiontype_nodejs" style="color: inherit; text-decoration: inherit;">permission<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#authorizationloggingoptionspermissiontype">Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the permission that was checked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1022,9 +1056,47 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permission_type_python" style="color: inherit; text-decoration: inherit;">permission_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#authorizationloggingoptionspermissiontype">Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the permission that was checked.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="authorizationloggingoptionspermissiontype">Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Admin<wbr>Read</dt>
+    <dd>ADMIN_READ</dd><dt>Admin<wbr>Write</dt>
+    <dd>ADMIN_WRITE</dd><dt>Data<wbr>Read</dt>
+    <dd>DATA_READ</dd><dt>Data<wbr>Write</dt>
+    <dd>DATA_WRITE</dd><dt>Permission<wbr>Type<wbr>Unspecified</dt>
+    <dd>PERMISSION_TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type<wbr>Admin<wbr>Read</dt>
+    <dd>ADMIN_READ</dd><dt>Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type<wbr>Admin<wbr>Write</dt>
+    <dd>ADMIN_WRITE</dd><dt>Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type<wbr>Data<wbr>Read</dt>
+    <dd>DATA_READ</dd><dt>Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type<wbr>Data<wbr>Write</dt>
+    <dd>DATA_WRITE</dd><dt>Authorization<wbr>Logging<wbr>Options<wbr>Permission<wbr>Type<wbr>Permission<wbr>Type<wbr>Unspecified</dt>
+    <dd>PERMISSION_TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Admin<wbr>Read</dt>
+    <dd>ADMIN_READ</dd><dt>Admin<wbr>Write</dt>
+    <dd>ADMIN_WRITE</dd><dt>Data<wbr>Read</dt>
+    <dd>DATA_READ</dd><dt>Data<wbr>Write</dt>
+    <dd>DATA_WRITE</dd><dt>Permission<wbr>Type<wbr>Unspecified</dt>
+    <dd>PERMISSION_TYPE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ADMIN_READ</dt>
+    <dd>ADMIN_READ</dd><dt>ADMIN_WRITE</dt>
+    <dd>ADMIN_WRITE</dd><dt>DATA_READ</dt>
+    <dd>DATA_READ</dd><dt>DATA_WRITE</dt>
+    <dd>DATA_WRITE</dd><dt>PERMISSION_TYPE_UNSPECIFIED</dt>
+    <dd>PERMISSION_TYPE_UNSPECIFIED</dd></dl>
 {{% /choosable %}}
 
 <h4 id="authorizationloggingoptionsresponse">Authorization<wbr>Logging<wbr>Options<wbr>Response</h4>
@@ -1602,7 +1674,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#iam_csharp" style="color: inherit; text-decoration: inherit;">Iam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conditioniam">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Condition<wbr>Iam</a></span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by the IAM system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1610,7 +1682,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#op_csharp" style="color: inherit; text-decoration: inherit;">Op</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conditionop">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Condition<wbr>Op</a></span>
     </dt>
     <dd>{{% md %}}An operator to apply the subject with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1626,7 +1698,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#sys_csharp" style="color: inherit; text-decoration: inherit;">Sys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conditionsys">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Condition<wbr>Sys</a></span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1646,7 +1718,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#iam_go" style="color: inherit; text-decoration: inherit;">Iam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conditioniam">Condition<wbr>Iam</a></span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by the IAM system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1654,7 +1726,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#op_go" style="color: inherit; text-decoration: inherit;">Op</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conditionop">Condition<wbr>Op</a></span>
     </dt>
     <dd>{{% md %}}An operator to apply the subject with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1670,7 +1742,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#sys_go" style="color: inherit; text-decoration: inherit;">Sys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conditionsys">Condition<wbr>Sys</a></span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1690,7 +1762,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#iam_nodejs" style="color: inherit; text-decoration: inherit;">iam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conditioniam">Condition<wbr>Iam</a></span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by the IAM system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1698,7 +1770,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#op_nodejs" style="color: inherit; text-decoration: inherit;">op</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conditionop">Condition<wbr>Op</a></span>
     </dt>
     <dd>{{% md %}}An operator to apply the subject with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1714,7 +1786,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#sys_nodejs" style="color: inherit; text-decoration: inherit;">sys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#conditionsys">Condition<wbr>Sys</a></span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1734,7 +1806,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#iam_python" style="color: inherit; text-decoration: inherit;">iam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#conditioniam">Condition<wbr>Iam</a></span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by the IAM system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1742,7 +1814,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#op_python" style="color: inherit; text-decoration: inherit;">op</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#conditionop">Condition<wbr>Op</a></span>
     </dt>
     <dd>{{% md %}}An operator to apply the subject with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1758,7 +1830,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#sys_python" style="color: inherit; text-decoration: inherit;">sys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#conditionsys">Condition<wbr>Sys</a></span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1769,6 +1841,98 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The objects of the condition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="conditioniam">Condition<wbr>Iam</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Approver</dt>
+    <dd>APPROVER</dd><dt>Attribution</dt>
+    <dd>ATTRIBUTION</dd><dt>Authority</dt>
+    <dd>AUTHORITY</dd><dt>Credentials<wbr>Type</dt>
+    <dd>CREDENTIALS_TYPE</dd><dt>Creds<wbr>Assertion</dt>
+    <dd>CREDS_ASSERTION</dd><dt>Justification<wbr>Type</dt>
+    <dd>JUSTIFICATION_TYPE</dd><dt>No<wbr>Attr</dt>
+    <dd>NO_ATTR</dd><dt>Security<wbr>Realm</dt>
+    <dd>SECURITY_REALM</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Condition<wbr>Iam<wbr>Approver</dt>
+    <dd>APPROVER</dd><dt>Condition<wbr>Iam<wbr>Attribution</dt>
+    <dd>ATTRIBUTION</dd><dt>Condition<wbr>Iam<wbr>Authority</dt>
+    <dd>AUTHORITY</dd><dt>Condition<wbr>Iam<wbr>Credentials<wbr>Type</dt>
+    <dd>CREDENTIALS_TYPE</dd><dt>Condition<wbr>Iam<wbr>Creds<wbr>Assertion</dt>
+    <dd>CREDS_ASSERTION</dd><dt>Condition<wbr>Iam<wbr>Justification<wbr>Type</dt>
+    <dd>JUSTIFICATION_TYPE</dd><dt>Condition<wbr>Iam<wbr>No<wbr>Attr</dt>
+    <dd>NO_ATTR</dd><dt>Condition<wbr>Iam<wbr>Security<wbr>Realm</dt>
+    <dd>SECURITY_REALM</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Approver</dt>
+    <dd>APPROVER</dd><dt>Attribution</dt>
+    <dd>ATTRIBUTION</dd><dt>Authority</dt>
+    <dd>AUTHORITY</dd><dt>Credentials<wbr>Type</dt>
+    <dd>CREDENTIALS_TYPE</dd><dt>Creds<wbr>Assertion</dt>
+    <dd>CREDS_ASSERTION</dd><dt>Justification<wbr>Type</dt>
+    <dd>JUSTIFICATION_TYPE</dd><dt>No<wbr>Attr</dt>
+    <dd>NO_ATTR</dd><dt>Security<wbr>Realm</dt>
+    <dd>SECURITY_REALM</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>APPROVER</dt>
+    <dd>APPROVER</dd><dt>ATTRIBUTION</dt>
+    <dd>ATTRIBUTION</dd><dt>AUTHORITY</dt>
+    <dd>AUTHORITY</dd><dt>CREDENTIALS_TYPE</dt>
+    <dd>CREDENTIALS_TYPE</dd><dt>CREDS_ASSERTION</dt>
+    <dd>CREDS_ASSERTION</dd><dt>JUSTIFICATION_TYPE</dt>
+    <dd>JUSTIFICATION_TYPE</dd><dt>NO_ATTR</dt>
+    <dd>NO_ATTR</dd><dt>SECURITY_REALM</dt>
+    <dd>SECURITY_REALM</dd></dl>
+{{% /choosable %}}
+
+<h4 id="conditionop">Condition<wbr>Op</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Discharged</dt>
+    <dd>DISCHARGED</dd><dt>Equals<wbr>Value</dt>
+    <dd>EQUALS</dd><dt>In</dt>
+    <dd>IN</dd><dt>Not<wbr>Equals</dt>
+    <dd>NOT_EQUALS</dd><dt>Not<wbr>In</dt>
+    <dd>NOT_IN</dd><dt>No<wbr>Op</dt>
+    <dd>NO_OP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Condition<wbr>Op<wbr>Discharged</dt>
+    <dd>DISCHARGED</dd><dt>Condition<wbr>Op<wbr>Equals</dt>
+    <dd>EQUALS</dd><dt>Condition<wbr>Op<wbr>In</dt>
+    <dd>IN</dd><dt>Condition<wbr>Op<wbr>Not<wbr>Equals</dt>
+    <dd>NOT_EQUALS</dd><dt>Condition<wbr>Op<wbr>Not<wbr>In</dt>
+    <dd>NOT_IN</dd><dt>Condition<wbr>Op<wbr>No<wbr>Op</dt>
+    <dd>NO_OP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Discharged</dt>
+    <dd>DISCHARGED</dd><dt>Equals</dt>
+    <dd>EQUALS</dd><dt>In</dt>
+    <dd>IN</dd><dt>Not<wbr>Equals</dt>
+    <dd>NOT_EQUALS</dd><dt>Not<wbr>In</dt>
+    <dd>NOT_IN</dd><dt>No<wbr>Op</dt>
+    <dd>NO_OP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DISCHARGED</dt>
+    <dd>DISCHARGED</dd><dt>EQUALS</dt>
+    <dd>EQUALS</dd><dt>IN_</dt>
+    <dd>IN</dd><dt>NOT_EQUALS</dt>
+    <dd>NOT_EQUALS</dd><dt>NOT_IN</dt>
+    <dd>NOT_IN</dd><dt>NO_OP</dt>
+    <dd>NO_OP</dd></dl>
 {{% /choosable %}}
 
 <h4 id="conditionresponse">Condition<wbr>Response</h4>
@@ -1947,6 +2111,44 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The objects of the condition.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="conditionsys">Condition<wbr>Sys</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Ip</dt>
+    <dd>IP</dd><dt>Name</dt>
+    <dd>NAME</dd><dt>No<wbr>Attr</dt>
+    <dd>NO_ATTR</dd><dt>Region</dt>
+    <dd>REGION</dd><dt>Service</dt>
+    <dd>SERVICE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Condition<wbr>Sys<wbr>Ip</dt>
+    <dd>IP</dd><dt>Condition<wbr>Sys<wbr>Name</dt>
+    <dd>NAME</dd><dt>Condition<wbr>Sys<wbr>No<wbr>Attr</dt>
+    <dd>NO_ATTR</dd><dt>Condition<wbr>Sys<wbr>Region</dt>
+    <dd>REGION</dd><dt>Condition<wbr>Sys<wbr>Service</dt>
+    <dd>SERVICE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Ip</dt>
+    <dd>IP</dd><dt>Name</dt>
+    <dd>NAME</dd><dt>No<wbr>Attr</dt>
+    <dd>NO_ATTR</dd><dt>Region</dt>
+    <dd>REGION</dd><dt>Service</dt>
+    <dd>SERVICE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>IP</dt>
+    <dd>IP</dd><dt>NAME</dt>
+    <dd>NAME</dd><dt>NO_ATTR</dt>
+    <dd>NO_ATTR</dd><dt>REGION</dt>
+    <dd>REGION</dd><dt>SERVICE</dt>
+    <dd>SERVICE</dd></dl>
 {{% /choosable %}}
 
 <h4 id="expr">Expr</h4>
@@ -2372,7 +2574,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#logname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#logconfigcloudauditoptionslogname">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Log<wbr>Config<wbr>Cloud<wbr>Audit<wbr>Options<wbr>Log<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The log_name to populate in the Cloud Audit Record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2392,7 +2594,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#logname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#logconfigcloudauditoptionslogname">Log<wbr>Config<wbr>Cloud<wbr>Audit<wbr>Options<wbr>Log<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The log_name to populate in the Cloud Audit Record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2412,7 +2614,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#logname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#logconfigcloudauditoptionslogname">Log<wbr>Config<wbr>Cloud<wbr>Audit<wbr>Options<wbr>Log<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The log_name to populate in the Cloud Audit Record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2432,9 +2634,39 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#log_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#logconfigcloudauditoptionslogname">Log<wbr>Config<wbr>Cloud<wbr>Audit<wbr>Options<wbr>Log<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The log_name to populate in the Cloud Audit Record.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="logconfigcloudauditoptionslogname">Log<wbr>Config<wbr>Cloud<wbr>Audit<wbr>Options<wbr>Log<wbr>Name</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Admin<wbr>Activity</dt>
+    <dd>ADMIN_ACTIVITY</dd><dt>Data<wbr>Access</dt>
+    <dd>DATA_ACCESS</dd><dt>Unspecified<wbr>Log<wbr>Name</dt>
+    <dd>UNSPECIFIED_LOG_NAME</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Log<wbr>Config<wbr>Cloud<wbr>Audit<wbr>Options<wbr>Log<wbr>Name<wbr>Admin<wbr>Activity</dt>
+    <dd>ADMIN_ACTIVITY</dd><dt>Log<wbr>Config<wbr>Cloud<wbr>Audit<wbr>Options<wbr>Log<wbr>Name<wbr>Data<wbr>Access</dt>
+    <dd>DATA_ACCESS</dd><dt>Log<wbr>Config<wbr>Cloud<wbr>Audit<wbr>Options<wbr>Log<wbr>Name<wbr>Unspecified<wbr>Log<wbr>Name</dt>
+    <dd>UNSPECIFIED_LOG_NAME</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Admin<wbr>Activity</dt>
+    <dd>ADMIN_ACTIVITY</dd><dt>Data<wbr>Access</dt>
+    <dd>DATA_ACCESS</dd><dt>Unspecified<wbr>Log<wbr>Name</dt>
+    <dd>UNSPECIFIED_LOG_NAME</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ADMIN_ACTIVITY</dt>
+    <dd>ADMIN_ACTIVITY</dd><dt>DATA_ACCESS</dt>
+    <dd>DATA_ACCESS</dd><dt>UNSPECIFIED_LOG_NAME</dt>
+    <dd>UNSPECIFIED_LOG_NAME</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logconfigcloudauditoptionsresponse">Log<wbr>Config<wbr>Cloud<wbr>Audit<wbr>Options<wbr>Response</h4>
@@ -2920,7 +3152,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#logmode_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#logconfigdataaccessoptionslogmode">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Log<wbr>Config<wbr>Data<wbr>Access<wbr>Options<wbr>Log<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2932,7 +3164,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#logmode_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#logconfigdataaccessoptionslogmode">Log<wbr>Config<wbr>Data<wbr>Access<wbr>Options<wbr>Log<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2944,7 +3176,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#logmode_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#logconfigdataaccessoptionslogmode">Log<wbr>Config<wbr>Data<wbr>Access<wbr>Options<wbr>Log<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2956,9 +3188,35 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#log_mode_python" style="color: inherit; text-decoration: inherit;">log_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#logconfigdataaccessoptionslogmode">Log<wbr>Config<wbr>Data<wbr>Access<wbr>Options<wbr>Log<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="logconfigdataaccessoptionslogmode">Log<wbr>Config<wbr>Data<wbr>Access<wbr>Options<wbr>Log<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Log<wbr>Fail<wbr>Closed</dt>
+    <dd>LOG_FAIL_CLOSED</dd><dt>Log<wbr>Mode<wbr>Unspecified</dt>
+    <dd>LOG_MODE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Log<wbr>Config<wbr>Data<wbr>Access<wbr>Options<wbr>Log<wbr>Mode<wbr>Log<wbr>Fail<wbr>Closed</dt>
+    <dd>LOG_FAIL_CLOSED</dd><dt>Log<wbr>Config<wbr>Data<wbr>Access<wbr>Options<wbr>Log<wbr>Mode<wbr>Log<wbr>Mode<wbr>Unspecified</dt>
+    <dd>LOG_MODE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Log<wbr>Fail<wbr>Closed</dt>
+    <dd>LOG_FAIL_CLOSED</dd><dt>Log<wbr>Mode<wbr>Unspecified</dt>
+    <dd>LOG_MODE_UNSPECIFIED</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LOG_FAIL_CLOSED</dt>
+    <dd>LOG_FAIL_CLOSED</dd><dt>LOG_MODE_UNSPECIFIED</dt>
+    <dd>LOG_MODE_UNSPECIFIED</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logconfigdataaccessoptionsresponse">Log<wbr>Config<wbr>Data<wbr>Access<wbr>Options<wbr>Response</h4>
@@ -3134,7 +3392,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#ruleaction">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Required{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3194,7 +3452,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#ruleaction">Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Required{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3254,7 +3512,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#ruleaction">Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Required{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3314,7 +3572,7 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#ruleaction">Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Required{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3365,6 +3623,48 @@ To learn which resources support conditions in their IAM policies, see the [IAM 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A permission is a string of form '..' (e.g., 'storage.buckets.list'). A value of '*' matches all permissions, and a verb part of '*' (e.g., 'storage.buckets.*') matches all verbs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ruleaction">Rule<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Allow</dt>
+    <dd>ALLOW</dd><dt>Allow<wbr>With<wbr>Log</dt>
+    <dd>ALLOW_WITH_LOG</dd><dt>Deny</dt>
+    <dd>DENY</dd><dt>Deny<wbr>With<wbr>Log</dt>
+    <dd>DENY_WITH_LOG</dd><dt>Log</dt>
+    <dd>LOG</dd><dt>No<wbr>Action</dt>
+    <dd>NO_ACTION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Rule<wbr>Action<wbr>Allow</dt>
+    <dd>ALLOW</dd><dt>Rule<wbr>Action<wbr>Allow<wbr>With<wbr>Log</dt>
+    <dd>ALLOW_WITH_LOG</dd><dt>Rule<wbr>Action<wbr>Deny</dt>
+    <dd>DENY</dd><dt>Rule<wbr>Action<wbr>Deny<wbr>With<wbr>Log</dt>
+    <dd>DENY_WITH_LOG</dd><dt>Rule<wbr>Action<wbr>Log</dt>
+    <dd>LOG</dd><dt>Rule<wbr>Action<wbr>No<wbr>Action</dt>
+    <dd>NO_ACTION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Allow</dt>
+    <dd>ALLOW</dd><dt>Allow<wbr>With<wbr>Log</dt>
+    <dd>ALLOW_WITH_LOG</dd><dt>Deny</dt>
+    <dd>DENY</dd><dt>Deny<wbr>With<wbr>Log</dt>
+    <dd>DENY_WITH_LOG</dd><dt>Log</dt>
+    <dd>LOG</dd><dt>No<wbr>Action</dt>
+    <dd>NO_ACTION</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALLOW</dt>
+    <dd>ALLOW</dd><dt>ALLOW_WITH_LOG</dt>
+    <dd>ALLOW_WITH_LOG</dd><dt>DENY</dt>
+    <dd>DENY</dd><dt>DENY_WITH_LOG</dt>
+    <dd>DENY_WITH_LOG</dd><dt>LOG</dt>
+    <dd>LOG</dd><dt>NO_ACTION</dt>
+    <dd>NO_ACTION</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ruleresponse">Rule<wbr>Response</h4>

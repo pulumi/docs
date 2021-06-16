@@ -1545,7 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#parserconfigversion">Pulumi.<wbr>Google<wbr>Native.<wbr>Healthcare.<wbr>V1Beta1.<wbr>Parser<wbr>Config<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Immutable. Determines the version of the unschematized parser to be used when `schema` is not given. This field is immutable after store creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1581,7 +1581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#parserconfigversion">Parser<wbr>Config<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Immutable. Determines the version of the unschematized parser to be used when `schema` is not given. This field is immutable after store creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1617,7 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#parserconfigversion">Parser<wbr>Config<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Immutable. Determines the version of the unschematized parser to be used when `schema` is not given. This field is immutable after store creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1653,7 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#parserconfigversion">Parser<wbr>Config<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Immutable. Determines the version of the unschematized parser to be used when `schema` is not given. This field is immutable after store creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1804,6 +1804,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Immutable. Determines the version of the unschematized parser to be used when `schema` is not given. This field is immutable after store creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="parserconfigversion">Parser<wbr>Config<wbr>Version</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Parser<wbr>Version<wbr>Unspecified</dt>
+    <dd>PARSER_VERSION_UNSPECIFIED{{% md %}}Unspecified parser version, equivalent to V1.{{% /md %}}</dd><dt>V1</dt>
+    <dd>V1{{% md %}}The `parsed_data` includes every given non-empty message field except the Field Separator (MSH-1) field. As a result, the parsed MSH segment starts with the MSH-2 field and the field numbers are off-by-one with respect to the HL7 standard.{{% /md %}}</dd><dt>V2</dt>
+    <dd>V2{{% md %}}The `parsed_data` includes every given non-empty message field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Parser<wbr>Config<wbr>Version<wbr>Parser<wbr>Version<wbr>Unspecified</dt>
+    <dd>PARSER_VERSION_UNSPECIFIED{{% md %}}Unspecified parser version, equivalent to V1.{{% /md %}}</dd><dt>Parser<wbr>Config<wbr>Version<wbr>V1</dt>
+    <dd>V1{{% md %}}The `parsed_data` includes every given non-empty message field except the Field Separator (MSH-1) field. As a result, the parsed MSH segment starts with the MSH-2 field and the field numbers are off-by-one with respect to the HL7 standard.{{% /md %}}</dd><dt>Parser<wbr>Config<wbr>Version<wbr>V2</dt>
+    <dd>V2{{% md %}}The `parsed_data` includes every given non-empty message field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Parser<wbr>Version<wbr>Unspecified</dt>
+    <dd>PARSER_VERSION_UNSPECIFIED{{% md %}}Unspecified parser version, equivalent to V1.{{% /md %}}</dd><dt>V1</dt>
+    <dd>V1{{% md %}}The `parsed_data` includes every given non-empty message field except the Field Separator (MSH-1) field. As a result, the parsed MSH segment starts with the MSH-2 field and the field numbers are off-by-one with respect to the HL7 standard.{{% /md %}}</dd><dt>V2</dt>
+    <dd>V2{{% md %}}The `parsed_data` includes every given non-empty message field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PARSER_VERSION_UNSPECIFIED</dt>
+    <dd>PARSER_VERSION_UNSPECIFIED{{% md %}}Unspecified parser version, equivalent to V1.{{% /md %}}</dd><dt>V1</dt>
+    <dd>V1{{% md %}}The `parsed_data` includes every given non-empty message field except the Field Separator (MSH-1) field. As a result, the parsed MSH segment starts with the MSH-2 field and the field numbers are off-by-one with respect to the HL7 standard.{{% /md %}}</dd><dt>V2</dt>
+    <dd>V2{{% md %}}The `parsed_data` includes every given non-empty message field.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="schemapackage">Schema<wbr>Package</h4>
 
 {{% choosable language csharp %}}
@@ -1829,7 +1859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schematizedparsingtype_csharp" style="color: inherit; text-decoration: inherit;">Schematized<wbr>Parsing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schemapackageschematizedparsingtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Healthcare.<wbr>V1Beta1.<wbr>Schema<wbr>Package<wbr>Schematized<wbr>Parsing<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Determines how messages that fail to parse are handled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1845,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unexpectedsegmenthandling_csharp" style="color: inherit; text-decoration: inherit;">Unexpected<wbr>Segment<wbr>Handling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schemapackageunexpectedsegmenthandling">Pulumi.<wbr>Google<wbr>Native.<wbr>Healthcare.<wbr>V1Beta1.<wbr>Schema<wbr>Package<wbr>Unexpected<wbr>Segment<wbr>Handling</a></span>
     </dt>
     <dd>{{% md %}}Determines how unexpected segments (segments not matched to the schema) are handled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1873,7 +1903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schematizedparsingtype_go" style="color: inherit; text-decoration: inherit;">Schematized<wbr>Parsing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schemapackageschematizedparsingtype">Schema<wbr>Package<wbr>Schematized<wbr>Parsing<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Determines how messages that fail to parse are handled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1889,7 +1919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unexpectedsegmenthandling_go" style="color: inherit; text-decoration: inherit;">Unexpected<wbr>Segment<wbr>Handling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schemapackageunexpectedsegmenthandling">Schema<wbr>Package<wbr>Unexpected<wbr>Segment<wbr>Handling</a></span>
     </dt>
     <dd>{{% md %}}Determines how unexpected segments (segments not matched to the schema) are handled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1917,7 +1947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schematizedparsingtype_nodejs" style="color: inherit; text-decoration: inherit;">schematized<wbr>Parsing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schemapackageschematizedparsingtype">Schema<wbr>Package<wbr>Schematized<wbr>Parsing<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Determines how messages that fail to parse are handled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1933,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unexpectedsegmenthandling_nodejs" style="color: inherit; text-decoration: inherit;">unexpected<wbr>Segment<wbr>Handling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#schemapackageunexpectedsegmenthandling">Schema<wbr>Package<wbr>Unexpected<wbr>Segment<wbr>Handling</a></span>
     </dt>
     <dd>{{% md %}}Determines how unexpected segments (segments not matched to the schema) are handled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1961,7 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schematized_parsing_type_python" style="color: inherit; text-decoration: inherit;">schematized_<wbr>parsing_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#schemapackageschematizedparsingtype">Schema<wbr>Package<wbr>Schematized<wbr>Parsing<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Determines how messages that fail to parse are handled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1977,7 +2007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unexpected_segment_handling_python" style="color: inherit; text-decoration: inherit;">unexpected_<wbr>segment_<wbr>handling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#schemapackageunexpectedsegmenthandling">Schema<wbr>Package<wbr>Unexpected<wbr>Segment<wbr>Handling</a></span>
     </dt>
     <dd>{{% md %}}Determines how unexpected segments (segments not matched to the schema) are handled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2160,6 +2190,70 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Determines how unexpected segments (segments not matched to the schema) are handled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="schemapackageschematizedparsingtype">Schema<wbr>Package<wbr>Schematized<wbr>Parsing<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Schematized<wbr>Parsing<wbr>Type<wbr>Unspecified</dt>
+    <dd>SCHEMATIZED_PARSING_TYPE_UNSPECIFIED{{% md %}}Unspecified schematized parsing type, equivalent to `SOFT_FAIL`.{{% /md %}}</dd><dt>Soft<wbr>Fail</dt>
+    <dd>SOFT_FAIL{{% md %}}Messages that fail to parse are still stored and ACKed but a parser error is stored in place of the schematized data.{{% /md %}}</dd><dt>Hard<wbr>Fail</dt>
+    <dd>HARD_FAIL{{% md %}}Messages that fail to parse are rejected from ingestion/insertion and return an error code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Schema<wbr>Package<wbr>Schematized<wbr>Parsing<wbr>Type<wbr>Schematized<wbr>Parsing<wbr>Type<wbr>Unspecified</dt>
+    <dd>SCHEMATIZED_PARSING_TYPE_UNSPECIFIED{{% md %}}Unspecified schematized parsing type, equivalent to `SOFT_FAIL`.{{% /md %}}</dd><dt>Schema<wbr>Package<wbr>Schematized<wbr>Parsing<wbr>Type<wbr>Soft<wbr>Fail</dt>
+    <dd>SOFT_FAIL{{% md %}}Messages that fail to parse are still stored and ACKed but a parser error is stored in place of the schematized data.{{% /md %}}</dd><dt>Schema<wbr>Package<wbr>Schematized<wbr>Parsing<wbr>Type<wbr>Hard<wbr>Fail</dt>
+    <dd>HARD_FAIL{{% md %}}Messages that fail to parse are rejected from ingestion/insertion and return an error code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Schematized<wbr>Parsing<wbr>Type<wbr>Unspecified</dt>
+    <dd>SCHEMATIZED_PARSING_TYPE_UNSPECIFIED{{% md %}}Unspecified schematized parsing type, equivalent to `SOFT_FAIL`.{{% /md %}}</dd><dt>Soft<wbr>Fail</dt>
+    <dd>SOFT_FAIL{{% md %}}Messages that fail to parse are still stored and ACKed but a parser error is stored in place of the schematized data.{{% /md %}}</dd><dt>Hard<wbr>Fail</dt>
+    <dd>HARD_FAIL{{% md %}}Messages that fail to parse are rejected from ingestion/insertion and return an error code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SCHEMATIZED_PARSING_TYPE_UNSPECIFIED</dt>
+    <dd>SCHEMATIZED_PARSING_TYPE_UNSPECIFIED{{% md %}}Unspecified schematized parsing type, equivalent to `SOFT_FAIL`.{{% /md %}}</dd><dt>SOFT_FAIL</dt>
+    <dd>SOFT_FAIL{{% md %}}Messages that fail to parse are still stored and ACKed but a parser error is stored in place of the schematized data.{{% /md %}}</dd><dt>HARD_FAIL</dt>
+    <dd>HARD_FAIL{{% md %}}Messages that fail to parse are rejected from ingestion/insertion and return an error code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="schemapackageunexpectedsegmenthandling">Schema<wbr>Package<wbr>Unexpected<wbr>Segment<wbr>Handling</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unexpected<wbr>Segment<wbr>Handling<wbr>Mode<wbr>Unspecified</dt>
+    <dd>UNEXPECTED_SEGMENT_HANDLING_MODE_UNSPECIFIED{{% md %}}Unspecified handling mode, equivalent to FAIL.{{% /md %}}</dd><dt>Fail</dt>
+    <dd>FAIL{{% md %}}Unexpected segments fail to parse and return an error.{{% /md %}}</dd><dt>Skip</dt>
+    <dd>SKIP{{% md %}}Unexpected segments do not fail, but are omitted from the output.{{% /md %}}</dd><dt>Parse</dt>
+    <dd>PARSE{{% md %}}Unexpected segments do not fail, but are parsed in place and added to the current group. If a segment has a type definition, it is used, otherwise it is parsed as VARIES.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Schema<wbr>Package<wbr>Unexpected<wbr>Segment<wbr>Handling<wbr>Unexpected<wbr>Segment<wbr>Handling<wbr>Mode<wbr>Unspecified</dt>
+    <dd>UNEXPECTED_SEGMENT_HANDLING_MODE_UNSPECIFIED{{% md %}}Unspecified handling mode, equivalent to FAIL.{{% /md %}}</dd><dt>Schema<wbr>Package<wbr>Unexpected<wbr>Segment<wbr>Handling<wbr>Fail</dt>
+    <dd>FAIL{{% md %}}Unexpected segments fail to parse and return an error.{{% /md %}}</dd><dt>Schema<wbr>Package<wbr>Unexpected<wbr>Segment<wbr>Handling<wbr>Skip</dt>
+    <dd>SKIP{{% md %}}Unexpected segments do not fail, but are omitted from the output.{{% /md %}}</dd><dt>Schema<wbr>Package<wbr>Unexpected<wbr>Segment<wbr>Handling<wbr>Parse</dt>
+    <dd>PARSE{{% md %}}Unexpected segments do not fail, but are parsed in place and added to the current group. If a segment has a type definition, it is used, otherwise it is parsed as VARIES.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unexpected<wbr>Segment<wbr>Handling<wbr>Mode<wbr>Unspecified</dt>
+    <dd>UNEXPECTED_SEGMENT_HANDLING_MODE_UNSPECIFIED{{% md %}}Unspecified handling mode, equivalent to FAIL.{{% /md %}}</dd><dt>Fail</dt>
+    <dd>FAIL{{% md %}}Unexpected segments fail to parse and return an error.{{% /md %}}</dd><dt>Skip</dt>
+    <dd>SKIP{{% md %}}Unexpected segments do not fail, but are omitted from the output.{{% /md %}}</dd><dt>Parse</dt>
+    <dd>PARSE{{% md %}}Unexpected segments do not fail, but are parsed in place and added to the current group. If a segment has a type definition, it is used, otherwise it is parsed as VARIES.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNEXPECTED_SEGMENT_HANDLING_MODE_UNSPECIFIED</dt>
+    <dd>UNEXPECTED_SEGMENT_HANDLING_MODE_UNSPECIFIED{{% md %}}Unspecified handling mode, equivalent to FAIL.{{% /md %}}</dd><dt>FAIL</dt>
+    <dd>FAIL{{% md %}}Unexpected segments fail to parse and return an error.{{% /md %}}</dd><dt>SKIP</dt>
+    <dd>SKIP{{% md %}}Unexpected segments do not fail, but are omitted from the output.{{% /md %}}</dd><dt>PARSE</dt>
+    <dd>PARSE{{% md %}}Unexpected segments do not fail, but are parsed in place and added to the current group. If a segment has a type definition, it is used, otherwise it is parsed as VARIES.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="type">Type</h4>
 
 {{% choosable language csharp %}}
@@ -2185,7 +2279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primitive_csharp" style="color: inherit; text-decoration: inherit;">Primitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#typeprimitive">Pulumi.<wbr>Google<wbr>Native.<wbr>Healthcare.<wbr>V1Beta1.<wbr>Type<wbr>Primitive</a></span>
     </dt>
     <dd>{{% md %}}If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2213,7 +2307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primitive_go" style="color: inherit; text-decoration: inherit;">Primitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#typeprimitive">Type<wbr>Primitive</a></span>
     </dt>
     <dd>{{% md %}}If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2241,7 +2335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primitive_nodejs" style="color: inherit; text-decoration: inherit;">primitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#typeprimitive">Type<wbr>Primitive</a></span>
     </dt>
     <dd>{{% md %}}If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2269,9 +2363,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primitive_python" style="color: inherit; text-decoration: inherit;">primitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#typeprimitive">Type<wbr>Primitive</a></span>
     </dt>
     <dd>{{% md %}}If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="typeprimitive">Type<wbr>Primitive</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Primitive<wbr>Unspecified</dt>
+    <dd>PRIMITIVE_UNSPECIFIED{{% md %}}Not a primitive.{{% /md %}}</dd><dt>String</dt>
+    <dd>STRING{{% md %}}String primitive.{{% /md %}}</dd><dt>Varies</dt>
+    <dd>VARIES{{% md %}}Element that can have unschematized children.{{% /md %}}</dd><dt>Unescaped<wbr>String</dt>
+    <dd>UNESCAPED_STRING{{% md %}}Like STRING, but all delimiters below this element are ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Type<wbr>Primitive<wbr>Primitive<wbr>Unspecified</dt>
+    <dd>PRIMITIVE_UNSPECIFIED{{% md %}}Not a primitive.{{% /md %}}</dd><dt>Type<wbr>Primitive<wbr>String</dt>
+    <dd>STRING{{% md %}}String primitive.{{% /md %}}</dd><dt>Type<wbr>Primitive<wbr>Varies</dt>
+    <dd>VARIES{{% md %}}Element that can have unschematized children.{{% /md %}}</dd><dt>Type<wbr>Primitive<wbr>Unescaped<wbr>String</dt>
+    <dd>UNESCAPED_STRING{{% md %}}Like STRING, but all delimiters below this element are ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Primitive<wbr>Unspecified</dt>
+    <dd>PRIMITIVE_UNSPECIFIED{{% md %}}Not a primitive.{{% /md %}}</dd><dt>String</dt>
+    <dd>STRING{{% md %}}String primitive.{{% /md %}}</dd><dt>Varies</dt>
+    <dd>VARIES{{% md %}}Element that can have unschematized children.{{% /md %}}</dd><dt>Unescaped<wbr>String</dt>
+    <dd>UNESCAPED_STRING{{% md %}}Like STRING, but all delimiters below this element are ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PRIMITIVE_UNSPECIFIED</dt>
+    <dd>PRIMITIVE_UNSPECIFIED{{% md %}}Not a primitive.{{% /md %}}</dd><dt>STRING</dt>
+    <dd>STRING{{% md %}}String primitive.{{% /md %}}</dd><dt>VARIES</dt>
+    <dd>VARIES{{% md %}}Element that can have unschematized children.{{% /md %}}</dd><dt>UNESCAPED_STRING</dt>
+    <dd>UNESCAPED_STRING{{% md %}}Like STRING, but all delimiters below this element are ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="typeresponse">Type<wbr>Response</h4>

@@ -1196,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#endpointnetworktype">Pulumi.<wbr>Google<wbr>Native.<wbr>Network<wbr>Management.<wbr>V1Beta1.<wbr>Endpoint<wbr>Network<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the network where the endpoint is located. Applicable only to source endpoint, as destination network type can be inferred from the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1264,7 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#endpointnetworktype">Endpoint<wbr>Network<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the network where the endpoint is located. Applicable only to source endpoint, as destination network type can be inferred from the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1332,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#endpointnetworktype">Endpoint<wbr>Network<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the network where the endpoint is located. Applicable only to source endpoint, as destination network type can be inferred from the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1400,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#endpointnetworktype">Endpoint<wbr>Network<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the network where the endpoint is located. Applicable only to source endpoint, as destination network type can be inferred from the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1661,6 +1661,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Source port. Only valid when protocol is TCP or UDP.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="endpointnetworktype">Endpoint<wbr>Network<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Network<wbr>Type<wbr>Unspecified</dt>
+    <dd>NETWORK_TYPE_UNSPECIFIED{{% md %}}Default type if unspecified.{{% /md %}}</dd><dt>Gcp<wbr>Network</dt>
+    <dd>GCP_NETWORK{{% md %}}A network hosted within Google Cloud Platform. To receive more detailed output, specify the URI for the source or destination network.{{% /md %}}</dd><dt>Non<wbr>Gcp<wbr>Network</dt>
+    <dd>NON_GCP_NETWORK{{% md %}}A network hosted outside of Google Cloud Platform. This can be an on-premises network, or a network hosted by another cloud provider.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Endpoint<wbr>Network<wbr>Type<wbr>Network<wbr>Type<wbr>Unspecified</dt>
+    <dd>NETWORK_TYPE_UNSPECIFIED{{% md %}}Default type if unspecified.{{% /md %}}</dd><dt>Endpoint<wbr>Network<wbr>Type<wbr>Gcp<wbr>Network</dt>
+    <dd>GCP_NETWORK{{% md %}}A network hosted within Google Cloud Platform. To receive more detailed output, specify the URI for the source or destination network.{{% /md %}}</dd><dt>Endpoint<wbr>Network<wbr>Type<wbr>Non<wbr>Gcp<wbr>Network</dt>
+    <dd>NON_GCP_NETWORK{{% md %}}A network hosted outside of Google Cloud Platform. This can be an on-premises network, or a network hosted by another cloud provider.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Network<wbr>Type<wbr>Unspecified</dt>
+    <dd>NETWORK_TYPE_UNSPECIFIED{{% md %}}Default type if unspecified.{{% /md %}}</dd><dt>Gcp<wbr>Network</dt>
+    <dd>GCP_NETWORK{{% md %}}A network hosted within Google Cloud Platform. To receive more detailed output, specify the URI for the source or destination network.{{% /md %}}</dd><dt>Non<wbr>Gcp<wbr>Network</dt>
+    <dd>NON_GCP_NETWORK{{% md %}}A network hosted outside of Google Cloud Platform. This can be an on-premises network, or a network hosted by another cloud provider.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NETWORK_TYPE_UNSPECIFIED</dt>
+    <dd>NETWORK_TYPE_UNSPECIFIED{{% md %}}Default type if unspecified.{{% /md %}}</dd><dt>GCP_NETWORK</dt>
+    <dd>GCP_NETWORK{{% md %}}A network hosted within Google Cloud Platform. To receive more detailed output, specify the URI for the source or destination network.{{% /md %}}</dd><dt>NON_GCP_NETWORK</dt>
+    <dd>NON_GCP_NETWORK{{% md %}}A network hosted outside of Google Cloud Platform. This can be an on-premises network, or a network hosted by another cloud provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointresponse">Endpoint<wbr>Response</h4>

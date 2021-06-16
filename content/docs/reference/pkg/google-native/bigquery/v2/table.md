@@ -2650,7 +2650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingoptions_csharp" style="color: inherit; text-decoration: inherit;">Training<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tabletrainingoptions">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Table<wbr>Training<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#bqmltrainingruntrainingoptions">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Bqml<wbr>Training<wbr>Run<wbr>Training<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2686,7 +2686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingoptions_go" style="color: inherit; text-decoration: inherit;">Training<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tabletrainingoptions">Table<wbr>Training<wbr>Options</a></span>
+        <span class="property-type"><a href="#bqmltrainingruntrainingoptions">Bqml<wbr>Training<wbr>Run<wbr>Training<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2722,7 +2722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingoptions_nodejs" style="color: inherit; text-decoration: inherit;">training<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tabletrainingoptions">Table<wbr>Training<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#bqmltrainingruntrainingoptions">Bqml<wbr>Training<wbr>Run<wbr>Training<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2758,7 +2758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#training_options_python" style="color: inherit; text-decoration: inherit;">training_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tabletrainingoptions">Table<wbr>Training<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#bqmltrainingruntrainingoptions">Bqml<wbr>Training<wbr>Run<wbr>Training<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2796,7 +2796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingoptions_csharp" style="color: inherit; text-decoration: inherit;">Training<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tabletrainingoptionsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Table<wbr>Training<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bqmltrainingruntrainingoptionsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Bqml<wbr>Training<wbr>Run<wbr>Training<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2832,7 +2832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingoptions_go" style="color: inherit; text-decoration: inherit;">Training<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tabletrainingoptionsresponse">Table<wbr>Training<wbr>Options<wbr>Response</a></span>
+        <span class="property-type"><a href="#bqmltrainingruntrainingoptionsresponse">Bqml<wbr>Training<wbr>Run<wbr>Training<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2868,7 +2868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingoptions_nodejs" style="color: inherit; text-decoration: inherit;">training<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tabletrainingoptionsresponse">Table<wbr>Training<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bqmltrainingruntrainingoptionsresponse">Bqml<wbr>Training<wbr>Run<wbr>Training<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2904,9 +2904,621 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#training_options_python" style="color: inherit; text-decoration: inherit;">training_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tabletrainingoptionsresponse">Table<wbr>Training<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bqmltrainingruntrainingoptionsresponse">Bqml<wbr>Training<wbr>Run<wbr>Training<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bqmltrainingruntrainingoptions">Bqml<wbr>Training<wbr>Run<wbr>Training<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="earlystop_csharp">
+<a href="#earlystop_csharp" style="color: inherit; text-decoration: inherit;">Early<wbr>Stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="l1reg_csharp">
+<a href="#l1reg_csharp" style="color: inherit; text-decoration: inherit;">L1Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="l2reg_csharp">
+<a href="#l2reg_csharp" style="color: inherit; text-decoration: inherit;">L2Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="learnrate_csharp">
+<a href="#learnrate_csharp" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="learnratestrategy_csharp">
+<a href="#learnratestrategy_csharp" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linesearchinitlearnrate_csharp">
+<a href="#linesearchinitlearnrate_csharp" style="color: inherit; text-decoration: inherit;">Line<wbr>Search<wbr>Init<wbr>Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxiteration_csharp">
+<a href="#maxiteration_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Iteration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minrelprogress_csharp">
+<a href="#minrelprogress_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Rel<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warmstart_csharp">
+<a href="#warmstart_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="earlystop_go">
+<a href="#earlystop_go" style="color: inherit; text-decoration: inherit;">Early<wbr>Stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="l1reg_go">
+<a href="#l1reg_go" style="color: inherit; text-decoration: inherit;">L1Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="l2reg_go">
+<a href="#l2reg_go" style="color: inherit; text-decoration: inherit;">L2Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="learnrate_go">
+<a href="#learnrate_go" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="learnratestrategy_go">
+<a href="#learnratestrategy_go" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linesearchinitlearnrate_go">
+<a href="#linesearchinitlearnrate_go" style="color: inherit; text-decoration: inherit;">Line<wbr>Search<wbr>Init<wbr>Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxiteration_go">
+<a href="#maxiteration_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Iteration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minrelprogress_go">
+<a href="#minrelprogress_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Rel<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warmstart_go">
+<a href="#warmstart_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="earlystop_nodejs">
+<a href="#earlystop_nodejs" style="color: inherit; text-decoration: inherit;">early<wbr>Stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="l1reg_nodejs">
+<a href="#l1reg_nodejs" style="color: inherit; text-decoration: inherit;">l1Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="l2reg_nodejs">
+<a href="#l2reg_nodejs" style="color: inherit; text-decoration: inherit;">l2Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="learnrate_nodejs">
+<a href="#learnrate_nodejs" style="color: inherit; text-decoration: inherit;">learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="learnratestrategy_nodejs">
+<a href="#learnratestrategy_nodejs" style="color: inherit; text-decoration: inherit;">learn<wbr>Rate<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linesearchinitlearnrate_nodejs">
+<a href="#linesearchinitlearnrate_nodejs" style="color: inherit; text-decoration: inherit;">line<wbr>Search<wbr>Init<wbr>Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxiteration_nodejs">
+<a href="#maxiteration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Iteration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minrelprogress_nodejs">
+<a href="#minrelprogress_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Rel<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warmstart_nodejs">
+<a href="#warmstart_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="early_stop_python">
+<a href="#early_stop_python" style="color: inherit; text-decoration: inherit;">early_<wbr>stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="l1_reg_python">
+<a href="#l1_reg_python" style="color: inherit; text-decoration: inherit;">l1_<wbr>reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="l2_reg_python">
+<a href="#l2_reg_python" style="color: inherit; text-decoration: inherit;">l2_<wbr>reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="learn_rate_python">
+<a href="#learn_rate_python" style="color: inherit; text-decoration: inherit;">learn_<wbr>rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="learn_rate_strategy_python">
+<a href="#learn_rate_strategy_python" style="color: inherit; text-decoration: inherit;">learn_<wbr>rate_<wbr>strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="line_search_init_learn_rate_python">
+<a href="#line_search_init_learn_rate_python" style="color: inherit; text-decoration: inherit;">line_<wbr>search_<wbr>init_<wbr>learn_<wbr>rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_iteration_python">
+<a href="#max_iteration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>iteration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_rel_progress_python">
+<a href="#min_rel_progress_python" style="color: inherit; text-decoration: inherit;">min_<wbr>rel_<wbr>progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warm_start_python">
+<a href="#warm_start_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bqmltrainingruntrainingoptionsresponse">Bqml<wbr>Training<wbr>Run<wbr>Training<wbr>Options<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="earlystop_csharp">
+<a href="#earlystop_csharp" style="color: inherit; text-decoration: inherit;">Early<wbr>Stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="l1reg_csharp">
+<a href="#l1reg_csharp" style="color: inherit; text-decoration: inherit;">L1Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="l2reg_csharp">
+<a href="#l2reg_csharp" style="color: inherit; text-decoration: inherit;">L2Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learnrate_csharp">
+<a href="#learnrate_csharp" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learnratestrategy_csharp">
+<a href="#learnratestrategy_csharp" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="linesearchinitlearnrate_csharp">
+<a href="#linesearchinitlearnrate_csharp" style="color: inherit; text-decoration: inherit;">Line<wbr>Search<wbr>Init<wbr>Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maxiteration_csharp">
+<a href="#maxiteration_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Iteration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="minrelprogress_csharp">
+<a href="#minrelprogress_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Rel<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="warmstart_csharp">
+<a href="#warmstart_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="earlystop_go">
+<a href="#earlystop_go" style="color: inherit; text-decoration: inherit;">Early<wbr>Stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="l1reg_go">
+<a href="#l1reg_go" style="color: inherit; text-decoration: inherit;">L1Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="l2reg_go">
+<a href="#l2reg_go" style="color: inherit; text-decoration: inherit;">L2Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learnrate_go">
+<a href="#learnrate_go" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learnratestrategy_go">
+<a href="#learnratestrategy_go" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="linesearchinitlearnrate_go">
+<a href="#linesearchinitlearnrate_go" style="color: inherit; text-decoration: inherit;">Line<wbr>Search<wbr>Init<wbr>Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maxiteration_go">
+<a href="#maxiteration_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Iteration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="minrelprogress_go">
+<a href="#minrelprogress_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Rel<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="warmstart_go">
+<a href="#warmstart_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="earlystop_nodejs">
+<a href="#earlystop_nodejs" style="color: inherit; text-decoration: inherit;">early<wbr>Stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="l1reg_nodejs">
+<a href="#l1reg_nodejs" style="color: inherit; text-decoration: inherit;">l1Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="l2reg_nodejs">
+<a href="#l2reg_nodejs" style="color: inherit; text-decoration: inherit;">l2Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learnrate_nodejs">
+<a href="#learnrate_nodejs" style="color: inherit; text-decoration: inherit;">learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learnratestrategy_nodejs">
+<a href="#learnratestrategy_nodejs" style="color: inherit; text-decoration: inherit;">learn<wbr>Rate<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="linesearchinitlearnrate_nodejs">
+<a href="#linesearchinitlearnrate_nodejs" style="color: inherit; text-decoration: inherit;">line<wbr>Search<wbr>Init<wbr>Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maxiteration_nodejs">
+<a href="#maxiteration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Iteration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="minrelprogress_nodejs">
+<a href="#minrelprogress_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Rel<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="warmstart_nodejs">
+<a href="#warmstart_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="early_stop_python">
+<a href="#early_stop_python" style="color: inherit; text-decoration: inherit;">early_<wbr>stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="l1_reg_python">
+<a href="#l1_reg_python" style="color: inherit; text-decoration: inherit;">l1_<wbr>reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="l2_reg_python">
+<a href="#l2_reg_python" style="color: inherit; text-decoration: inherit;">l2_<wbr>reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learn_rate_python">
+<a href="#learn_rate_python" style="color: inherit; text-decoration: inherit;">learn_<wbr>rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learn_rate_strategy_python">
+<a href="#learn_rate_strategy_python" style="color: inherit; text-decoration: inherit;">learn_<wbr>rate_<wbr>strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="line_search_init_learn_rate_python">
+<a href="#line_search_init_learn_rate_python" style="color: inherit; text-decoration: inherit;">line_<wbr>search_<wbr>init_<wbr>learn_<wbr>rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="max_iteration_python">
+<a href="#max_iteration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>iteration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="min_rel_progress_python">
+<a href="#min_rel_progress_python" style="color: inherit; text-decoration: inherit;">min_<wbr>rel_<wbr>progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="warm_start_python">
+<a href="#warm_start_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clustering">Clustering</h4>
@@ -4789,434 +5401,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}[Optional] When hive partition detection is requested, a common prefix for all source uris should be supplied. The prefix must end immediately before the partition key encoding begins. For example, consider files following this data layout. gs://bucket/path_to_table/dt=2019-01-01/country=BR/id=7/file.avro gs://bucket/path_to_table/dt=2018-12-31/country=CA/id=3/file.avro When hive partitioning is requested with either AUTO or STRINGS detection, the common prefix can be either of gs://bucket/path_to_table or gs://bucket/path_to_table/ (trailing slash does not matter).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="jobcategories">Job<wbr>Categories</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="names_csharp">
-<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="names_go">
-<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="names_nodejs">
-<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="names_python">
-<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="jobcategoriesresponse">Job<wbr>Categories<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="names_csharp">
-<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="names_go">
-<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="names_nodejs">
-<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="names_python">
-<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="jobpolicytags">Job<wbr>Policy<wbr>Tags</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="names_csharp">
-<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="names_go">
-<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="names_nodejs">
-<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="names_python">
-<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="jobpolicytagsresponse">Job<wbr>Policy<wbr>Tags<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="names_csharp">
-<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="names_go">
-<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="names_nodejs">
-<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="names_python">
-<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="jobrange">Job<wbr>Range</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="end_csharp">
-<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="interval_csharp">
-<a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="start_csharp">
-<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="end_go">
-<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="interval_go">
-<a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="start_go">
-<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="end_nodejs">
-<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="interval_nodejs">
-<a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="start_nodejs">
-<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="end_python">
-<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="interval_python">
-<a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="start_python">
-<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="jobrangeresponse">Job<wbr>Range<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="end_csharp">
-<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="interval_csharp">
-<a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="start_csharp">
-<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="end_go">
-<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="interval_go">
-<a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="start_go">
-<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="end_nodejs">
-<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="interval_nodejs">
-<a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="start_nodejs">
-<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="end_python">
-<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="interval_python">
-<a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="start_python">
-<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="materializedviewdefinition">Materialized<wbr>View<wbr>Definition</h4>
 
 {{% choosable language csharp %}}
@@ -5518,7 +5702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modeloptions_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablemodeloptions">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Table<wbr>Model<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#modeldefinitionmodeloptions">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Model<wbr>Definition<wbr>Model<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5538,7 +5722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modeloptions_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablemodeloptions">Table<wbr>Model<wbr>Options</a></span>
+        <span class="property-type"><a href="#modeldefinitionmodeloptions">Model<wbr>Definition<wbr>Model<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5558,7 +5742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modeloptions_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablemodeloptions">Table<wbr>Model<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#modeldefinitionmodeloptions">Model<wbr>Definition<wbr>Model<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5578,7 +5762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_options_python" style="color: inherit; text-decoration: inherit;">model_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablemodeloptions">Table<wbr>Model<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#modeldefinitionmodeloptions">Model<wbr>Definition<wbr>Model<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5591,6 +5775,234 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}[Output-only, Beta] Information about ml training runs, each training run comprises of multiple iterations and there may be multiple training runs for the model if warm start is used or if a user decides to continue a previously cancelled query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="modeldefinitionmodeloptions">Model<wbr>Definition<wbr>Model<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="losstype_csharp">
+<a href="#losstype_csharp" style="color: inherit; text-decoration: inherit;">Loss<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modeltype_csharp">
+<a href="#modeltype_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="losstype_go">
+<a href="#losstype_go" style="color: inherit; text-decoration: inherit;">Loss<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modeltype_go">
+<a href="#modeltype_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="losstype_nodejs">
+<a href="#losstype_nodejs" style="color: inherit; text-decoration: inherit;">loss<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modeltype_nodejs">
+<a href="#modeltype_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loss_type_python">
+<a href="#loss_type_python" style="color: inherit; text-decoration: inherit;">loss_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="model_type_python">
+<a href="#model_type_python" style="color: inherit; text-decoration: inherit;">model_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="modeldefinitionmodeloptionsresponse">Model<wbr>Definition<wbr>Model<wbr>Options<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="losstype_csharp">
+<a href="#losstype_csharp" style="color: inherit; text-decoration: inherit;">Loss<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="modeltype_csharp">
+<a href="#modeltype_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="losstype_go">
+<a href="#losstype_go" style="color: inherit; text-decoration: inherit;">Loss<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="modeltype_go">
+<a href="#modeltype_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="losstype_nodejs">
+<a href="#losstype_nodejs" style="color: inherit; text-decoration: inherit;">loss<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="modeltype_nodejs">
+<a href="#modeltype_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="loss_type_python">
+<a href="#loss_type_python" style="color: inherit; text-decoration: inherit;">loss_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="model_type_python">
+<a href="#model_type_python" style="color: inherit; text-decoration: inherit;">model_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="modeldefinitionresponse">Model<wbr>Definition<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -5600,7 +6012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modeloptions_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablemodeloptionsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Table<wbr>Model<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#modeldefinitionmodeloptionsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Model<wbr>Definition<wbr>Model<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5620,7 +6032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modeloptions_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablemodeloptionsresponse">Table<wbr>Model<wbr>Options<wbr>Response</a></span>
+        <span class="property-type"><a href="#modeldefinitionmodeloptionsresponse">Model<wbr>Definition<wbr>Model<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5640,7 +6052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modeloptions_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablemodeloptionsresponse">Table<wbr>Model<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#modeldefinitionmodeloptionsresponse">Model<wbr>Definition<wbr>Model<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5660,7 +6072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_options_python" style="color: inherit; text-decoration: inherit;">model_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablemodeloptionsresponse">Table<wbr>Model<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#modeldefinitionmodeloptionsresponse">Model<wbr>Definition<wbr>Model<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5854,7 +6266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrange">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#rangepartitioningrange">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Range<wbr>Partitioning<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5874,7 +6286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrange">Job<wbr>Range</a></span>
+        <span class="property-type"><a href="#rangepartitioningrange">Range<wbr>Partitioning<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5894,7 +6306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrange">Job<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#rangepartitioningrange">Range<wbr>Partitioning<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5914,9 +6326,237 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrange">Job<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#rangepartitioningrange">Range<wbr>Partitioning<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rangepartitioningrange">Range<wbr>Partitioning<wbr>Range</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="end_csharp">
+<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_csharp">
+<a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="end_go">
+<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_go">
+<a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="end_nodejs">
+<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_nodejs">
+<a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="end_python">
+<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_python">
+<a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rangepartitioningrangeresponse">Range<wbr>Partitioning<wbr>Range<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="end_csharp">
+<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="interval_csharp">
+<a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="end_go">
+<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="interval_go">
+<a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="end_nodejs">
+<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="interval_nodejs">
+<a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="end_python">
+<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="interval_python">
+<a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rangepartitioningresponse">Range<wbr>Partitioning<wbr>Response</h4>
@@ -5936,7 +6576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrangeresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Range<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rangepartitioningrangeresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Range<wbr>Partitioning<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5956,7 +6596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrangeresponse">Job<wbr>Range<wbr>Response</a></span>
+        <span class="property-type"><a href="#rangepartitioningrangeresponse">Range<wbr>Partitioning<wbr>Range<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5976,7 +6616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrangeresponse">Job<wbr>Range<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rangepartitioningrangeresponse">Range<wbr>Partitioning<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5996,7 +6636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrangeresponse">Job<wbr>Range<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rangepartitioningrangeresponse">Range<wbr>Partitioning<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6402,7 +7042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_csharp" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcategories">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Categories<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemacategories">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6450,7 +7090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policytags_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpolicytags">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Policy<wbr>Tags<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemapolicytags">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6486,7 +7126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_go" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcategories">Job<wbr>Categories</a></span>
+        <span class="property-type"><a href="#tablefieldschemacategories">Table<wbr>Field<wbr>Schema<wbr>Categories</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6534,7 +7174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policytags_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpolicytags">Job<wbr>Policy<wbr>Tags</a></span>
+        <span class="property-type"><a href="#tablefieldschemapolicytags">Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6570,7 +7210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcategories">Job<wbr>Categories<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemacategories">Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6618,7 +7258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policytags_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpolicytags">Job<wbr>Policy<wbr>Tags<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemapolicytags">Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6654,7 +7294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcategories">Job<wbr>Categories<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemacategories">Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6702,7 +7342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_tags_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpolicytags">Job<wbr>Policy<wbr>Tags<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemapolicytags">Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6731,6 +7371,206 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}[Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as INTEGER), FLOAT, FLOAT64 (same as FLOAT), NUMERIC, BIGNUMERIC, BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE, TIME, DATETIME, INTERVAL, RECORD (where RECORD indicates that the field contains a nested schema) or STRUCT (same as RECORD).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="tablefieldschemacategories">Table<wbr>Field<wbr>Schema<wbr>Categories</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tablefieldschemacategoriesresponse">Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tablefieldschemapolicytags">Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tablefieldschemapolicytagsresponse">Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="tablefieldschemaresponse">Table<wbr>Field<wbr>Schema<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -6740,7 +7580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_csharp" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcategoriesresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Categories<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemacategoriesresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6788,7 +7628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policytags_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpolicytagsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Policy<wbr>Tags<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemapolicytagsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6824,7 +7664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_go" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcategoriesresponse">Job<wbr>Categories<wbr>Response</a></span>
+        <span class="property-type"><a href="#tablefieldschemacategoriesresponse">Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6872,7 +7712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policytags_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpolicytagsresponse">Job<wbr>Policy<wbr>Tags<wbr>Response</a></span>
+        <span class="property-type"><a href="#tablefieldschemapolicytagsresponse">Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6908,7 +7748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcategoriesresponse">Job<wbr>Categories<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemacategoriesresponse">Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6956,7 +7796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policytags_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpolicytagsresponse">Job<wbr>Policy<wbr>Tags<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemapolicytagsresponse">Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6992,7 +7832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcategoriesresponse">Job<wbr>Categories<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemacategoriesresponse">Table<wbr>Field<wbr>Schema<wbr>Categories<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7040,7 +7880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_tags_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpolicytagsresponse">Job<wbr>Policy<wbr>Tags<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablefieldschemapolicytagsresponse">Table<wbr>Field<wbr>Schema<wbr>Policy<wbr>Tags<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7067,234 +7907,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as INTEGER), FLOAT, FLOAT64 (same as FLOAT), NUMERIC, BIGNUMERIC, BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE, TIME, DATETIME, INTERVAL, RECORD (where RECORD indicates that the field contains a nested schema) or STRUCT (same as RECORD).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="tablemodeloptions">Table<wbr>Model<wbr>Options</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="labels_csharp">
-<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="losstype_csharp">
-<a href="#losstype_csharp" style="color: inherit; text-decoration: inherit;">Loss<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="modeltype_csharp">
-<a href="#modeltype_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="labels_go">
-<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="losstype_go">
-<a href="#losstype_go" style="color: inherit; text-decoration: inherit;">Loss<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="modeltype_go">
-<a href="#modeltype_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="labels_nodejs">
-<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="losstype_nodejs">
-<a href="#losstype_nodejs" style="color: inherit; text-decoration: inherit;">loss<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="modeltype_nodejs">
-<a href="#modeltype_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="labels_python">
-<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="loss_type_python">
-<a href="#loss_type_python" style="color: inherit; text-decoration: inherit;">loss_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="model_type_python">
-<a href="#model_type_python" style="color: inherit; text-decoration: inherit;">model_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="tablemodeloptionsresponse">Table<wbr>Model<wbr>Options<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="labels_csharp">
-<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="losstype_csharp">
-<a href="#losstype_csharp" style="color: inherit; text-decoration: inherit;">Loss<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="modeltype_csharp">
-<a href="#modeltype_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="labels_go">
-<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="losstype_go">
-<a href="#losstype_go" style="color: inherit; text-decoration: inherit;">Loss<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="modeltype_go">
-<a href="#modeltype_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="labels_nodejs">
-<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="losstype_nodejs">
-<a href="#losstype_nodejs" style="color: inherit; text-decoration: inherit;">loss<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="modeltype_nodejs">
-<a href="#modeltype_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="labels_python">
-<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="loss_type_python">
-<a href="#loss_type_python" style="color: inherit; text-decoration: inherit;">loss_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="model_type_python">
-<a href="#model_type_python" style="color: inherit; text-decoration: inherit;">model_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tablereference">Table<wbr>Reference</h4>
@@ -7623,618 +8235,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#tablefieldschemaresponse">Table<wbr>Field<wbr>Schema<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the fields in a table.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="tabletrainingoptions">Table<wbr>Training<wbr>Options</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="earlystop_csharp">
-<a href="#earlystop_csharp" style="color: inherit; text-decoration: inherit;">Early<wbr>Stop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="l1reg_csharp">
-<a href="#l1reg_csharp" style="color: inherit; text-decoration: inherit;">L1Reg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="l2reg_csharp">
-<a href="#l2reg_csharp" style="color: inherit; text-decoration: inherit;">L2Reg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="learnrate_csharp">
-<a href="#learnrate_csharp" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="learnratestrategy_csharp">
-<a href="#learnratestrategy_csharp" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate<wbr>Strategy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="linesearchinitlearnrate_csharp">
-<a href="#linesearchinitlearnrate_csharp" style="color: inherit; text-decoration: inherit;">Line<wbr>Search<wbr>Init<wbr>Learn<wbr>Rate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="maxiteration_csharp">
-<a href="#maxiteration_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="minrelprogress_csharp">
-<a href="#minrelprogress_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Rel<wbr>Progress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="warmstart_csharp">
-<a href="#warmstart_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="earlystop_go">
-<a href="#earlystop_go" style="color: inherit; text-decoration: inherit;">Early<wbr>Stop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="l1reg_go">
-<a href="#l1reg_go" style="color: inherit; text-decoration: inherit;">L1Reg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="l2reg_go">
-<a href="#l2reg_go" style="color: inherit; text-decoration: inherit;">L2Reg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="learnrate_go">
-<a href="#learnrate_go" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="learnratestrategy_go">
-<a href="#learnratestrategy_go" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate<wbr>Strategy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="linesearchinitlearnrate_go">
-<a href="#linesearchinitlearnrate_go" style="color: inherit; text-decoration: inherit;">Line<wbr>Search<wbr>Init<wbr>Learn<wbr>Rate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="maxiteration_go">
-<a href="#maxiteration_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="minrelprogress_go">
-<a href="#minrelprogress_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Rel<wbr>Progress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="warmstart_go">
-<a href="#warmstart_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="earlystop_nodejs">
-<a href="#earlystop_nodejs" style="color: inherit; text-decoration: inherit;">early<wbr>Stop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="l1reg_nodejs">
-<a href="#l1reg_nodejs" style="color: inherit; text-decoration: inherit;">l1Reg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="l2reg_nodejs">
-<a href="#l2reg_nodejs" style="color: inherit; text-decoration: inherit;">l2Reg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="learnrate_nodejs">
-<a href="#learnrate_nodejs" style="color: inherit; text-decoration: inherit;">learn<wbr>Rate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="learnratestrategy_nodejs">
-<a href="#learnratestrategy_nodejs" style="color: inherit; text-decoration: inherit;">learn<wbr>Rate<wbr>Strategy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="linesearchinitlearnrate_nodejs">
-<a href="#linesearchinitlearnrate_nodejs" style="color: inherit; text-decoration: inherit;">line<wbr>Search<wbr>Init<wbr>Learn<wbr>Rate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="maxiteration_nodejs">
-<a href="#maxiteration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="minrelprogress_nodejs">
-<a href="#minrelprogress_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Rel<wbr>Progress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="warmstart_nodejs">
-<a href="#warmstart_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="early_stop_python">
-<a href="#early_stop_python" style="color: inherit; text-decoration: inherit;">early_<wbr>stop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="l1_reg_python">
-<a href="#l1_reg_python" style="color: inherit; text-decoration: inherit;">l1_<wbr>reg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="l2_reg_python">
-<a href="#l2_reg_python" style="color: inherit; text-decoration: inherit;">l2_<wbr>reg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="learn_rate_python">
-<a href="#learn_rate_python" style="color: inherit; text-decoration: inherit;">learn_<wbr>rate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="learn_rate_strategy_python">
-<a href="#learn_rate_strategy_python" style="color: inherit; text-decoration: inherit;">learn_<wbr>rate_<wbr>strategy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="line_search_init_learn_rate_python">
-<a href="#line_search_init_learn_rate_python" style="color: inherit; text-decoration: inherit;">line_<wbr>search_<wbr>init_<wbr>learn_<wbr>rate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="max_iteration_python">
-<a href="#max_iteration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="min_rel_progress_python">
-<a href="#min_rel_progress_python" style="color: inherit; text-decoration: inherit;">min_<wbr>rel_<wbr>progress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="warm_start_python">
-<a href="#warm_start_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="tabletrainingoptionsresponse">Table<wbr>Training<wbr>Options<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="earlystop_csharp">
-<a href="#earlystop_csharp" style="color: inherit; text-decoration: inherit;">Early<wbr>Stop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="l1reg_csharp">
-<a href="#l1reg_csharp" style="color: inherit; text-decoration: inherit;">L1Reg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="l2reg_csharp">
-<a href="#l2reg_csharp" style="color: inherit; text-decoration: inherit;">L2Reg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="learnrate_csharp">
-<a href="#learnrate_csharp" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="learnratestrategy_csharp">
-<a href="#learnratestrategy_csharp" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate<wbr>Strategy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="linesearchinitlearnrate_csharp">
-<a href="#linesearchinitlearnrate_csharp" style="color: inherit; text-decoration: inherit;">Line<wbr>Search<wbr>Init<wbr>Learn<wbr>Rate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="maxiteration_csharp">
-<a href="#maxiteration_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="minrelprogress_csharp">
-<a href="#minrelprogress_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Rel<wbr>Progress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="warmstart_csharp">
-<a href="#warmstart_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="earlystop_go">
-<a href="#earlystop_go" style="color: inherit; text-decoration: inherit;">Early<wbr>Stop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="l1reg_go">
-<a href="#l1reg_go" style="color: inherit; text-decoration: inherit;">L1Reg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="l2reg_go">
-<a href="#l2reg_go" style="color: inherit; text-decoration: inherit;">L2Reg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="learnrate_go">
-<a href="#learnrate_go" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="learnratestrategy_go">
-<a href="#learnratestrategy_go" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate<wbr>Strategy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="linesearchinitlearnrate_go">
-<a href="#linesearchinitlearnrate_go" style="color: inherit; text-decoration: inherit;">Line<wbr>Search<wbr>Init<wbr>Learn<wbr>Rate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="maxiteration_go">
-<a href="#maxiteration_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="minrelprogress_go">
-<a href="#minrelprogress_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Rel<wbr>Progress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="warmstart_go">
-<a href="#warmstart_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="earlystop_nodejs">
-<a href="#earlystop_nodejs" style="color: inherit; text-decoration: inherit;">early<wbr>Stop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="l1reg_nodejs">
-<a href="#l1reg_nodejs" style="color: inherit; text-decoration: inherit;">l1Reg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="l2reg_nodejs">
-<a href="#l2reg_nodejs" style="color: inherit; text-decoration: inherit;">l2Reg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="learnrate_nodejs">
-<a href="#learnrate_nodejs" style="color: inherit; text-decoration: inherit;">learn<wbr>Rate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="learnratestrategy_nodejs">
-<a href="#learnratestrategy_nodejs" style="color: inherit; text-decoration: inherit;">learn<wbr>Rate<wbr>Strategy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="linesearchinitlearnrate_nodejs">
-<a href="#linesearchinitlearnrate_nodejs" style="color: inherit; text-decoration: inherit;">line<wbr>Search<wbr>Init<wbr>Learn<wbr>Rate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="maxiteration_nodejs">
-<a href="#maxiteration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="minrelprogress_nodejs">
-<a href="#minrelprogress_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Rel<wbr>Progress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="warmstart_nodejs">
-<a href="#warmstart_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="early_stop_python">
-<a href="#early_stop_python" style="color: inherit; text-decoration: inherit;">early_<wbr>stop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="l1_reg_python">
-<a href="#l1_reg_python" style="color: inherit; text-decoration: inherit;">l1_<wbr>reg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="l2_reg_python">
-<a href="#l2_reg_python" style="color: inherit; text-decoration: inherit;">l2_<wbr>reg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="learn_rate_python">
-<a href="#learn_rate_python" style="color: inherit; text-decoration: inherit;">learn_<wbr>rate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="learn_rate_strategy_python">
-<a href="#learn_rate_strategy_python" style="color: inherit; text-decoration: inherit;">learn_<wbr>rate_<wbr>strategy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="line_search_init_learn_rate_python">
-<a href="#line_search_init_learn_rate_python" style="color: inherit; text-decoration: inherit;">line_<wbr>search_<wbr>init_<wbr>learn_<wbr>rate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="max_iteration_python">
-<a href="#max_iteration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>iteration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="min_rel_progress_python">
-<a href="#min_rel_progress_python" style="color: inherit; text-decoration: inherit;">min_<wbr>rel_<wbr>progress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="warm_start_python">
-<a href="#warm_start_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timepartitioning">Time<wbr>Partitioning</h4>

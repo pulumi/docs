@@ -18,6 +18,15 @@ Explore the resources and functions of the google-native.servicedirectory/v1beta
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getendpoint" title="GetEndpoint"><span class="symbol function"></span>GetEndpoint</a></li>
+    <li><a href="getnamespace" title="GetNamespace"><span class="symbol function"></span>GetNamespace</a></li>
+    <li><a href="getnamespaceiampolicy" title="GetNamespaceIamPolicy"><span class="symbol function"></span>GetNamespaceIamPolicy</a></li>
+    <li><a href="getnamespaceserviceiampolicy" title="GetNamespaceServiceIamPolicy"><span class="symbol function"></span>GetNamespaceServiceIamPolicy</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -25,6 +34,6 @@ Explore the resources and functions of the google-native.servicedirectory/v1beta
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

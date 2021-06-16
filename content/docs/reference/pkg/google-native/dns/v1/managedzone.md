@@ -44,7 +44,7 @@ Creates a new ManagedZone.
                 <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">reverse_lookup_config</span><span class="p">:</span> <span class="nx">Optional[_dns_v1.ManagedZoneReverseLookupConfigArgs]</span> = None<span class="p">,</span>
                 <span class="nx">service_directory_config</span><span class="p">:</span> <span class="nx">Optional[_dns_v1.ManagedZoneServiceDirectoryConfigArgs]</span> = None<span class="p">,</span>
-                <span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                <span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[_dns_v1.ManagedZoneVisibility]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ManagedZone</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedZoneArgs</a></span><span class="p">,</span>
@@ -314,7 +314,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#managedzonevisibility">Pulumi.<wbr>Google<wbr>Native.<wbr>DNS.<wbr>V1.<wbr>Managed<wbr>Zone<wbr>Visibility</a></span>
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -462,7 +462,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#managedzonevisibility">Managed<wbr>Zone<wbr>Visibility</a></span>
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -610,7 +610,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#managedzonevisibility">Managed<wbr>Zone<wbr>Visibility</a></span>
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -758,7 +758,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#managedzonevisibility">Managed<wbr>Zone<wbr>Visibility</a></span>
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -837,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#dnskeyspecalgorithm">Pulumi.<wbr>Google<wbr>Native.<wbr>DNS.<wbr>V1.<wbr>Dns<wbr>Key<wbr>Spec<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -853,7 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytype_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#dnskeyspeckeytype">Pulumi.<wbr>Google<wbr>Native.<wbr>DNS.<wbr>V1.<wbr>Dns<wbr>Key<wbr>Spec<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, are only used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and are used to sign all other types of resource record sets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -873,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#dnskeyspecalgorithm">Dns<wbr>Key<wbr>Spec<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -889,7 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytype_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#dnskeyspeckeytype">Dns<wbr>Key<wbr>Spec<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, are only used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and are used to sign all other types of resource record sets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -909,7 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#dnskeyspecalgorithm">Dns<wbr>Key<wbr>Spec<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -925,7 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#dnskeyspeckeytype">Dns<wbr>Key<wbr>Spec<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, are only used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and are used to sign all other types of resource record sets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -945,7 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#dnskeyspecalgorithm">Dns<wbr>Key<wbr>Spec<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -961,7 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#dnskeyspeckeytype">Dns<wbr>Key<wbr>Spec<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, are only used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and are used to sign all other types of resource record sets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -972,6 +972,70 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dnskeyspecalgorithm">Dns<wbr>Key<wbr>Spec<wbr>Algorithm</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Rsasha1</dt>
+    <dd>rsasha1</dd><dt>Rsasha256</dt>
+    <dd>rsasha256</dd><dt>Rsasha512</dt>
+    <dd>rsasha512</dd><dt>Ecdsap256sha256</dt>
+    <dd>ecdsap256sha256</dd><dt>Ecdsap384sha384</dt>
+    <dd>ecdsap384sha384</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Dns<wbr>Key<wbr>Spec<wbr>Algorithm<wbr>Rsasha1</dt>
+    <dd>rsasha1</dd><dt>Dns<wbr>Key<wbr>Spec<wbr>Algorithm<wbr>Rsasha256</dt>
+    <dd>rsasha256</dd><dt>Dns<wbr>Key<wbr>Spec<wbr>Algorithm<wbr>Rsasha512</dt>
+    <dd>rsasha512</dd><dt>Dns<wbr>Key<wbr>Spec<wbr>Algorithm<wbr>Ecdsap256sha256</dt>
+    <dd>ecdsap256sha256</dd><dt>Dns<wbr>Key<wbr>Spec<wbr>Algorithm<wbr>Ecdsap384sha384</dt>
+    <dd>ecdsap384sha384</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Rsasha1</dt>
+    <dd>rsasha1</dd><dt>Rsasha256</dt>
+    <dd>rsasha256</dd><dt>Rsasha512</dt>
+    <dd>rsasha512</dd><dt>Ecdsap256sha256</dt>
+    <dd>ecdsap256sha256</dd><dt>Ecdsap384sha384</dt>
+    <dd>ecdsap384sha384</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>RSASHA1</dt>
+    <dd>rsasha1</dd><dt>RSASHA256</dt>
+    <dd>rsasha256</dd><dt>RSASHA512</dt>
+    <dd>rsasha512</dd><dt>ECDSAP256SHA256</dt>
+    <dd>ecdsap256sha256</dd><dt>ECDSAP384SHA384</dt>
+    <dd>ecdsap384sha384</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dnskeyspeckeytype">Dns<wbr>Key<wbr>Spec<wbr>Key<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Key<wbr>Signing</dt>
+    <dd>keySigning</dd><dt>Zone<wbr>Signing</dt>
+    <dd>zoneSigning</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Dns<wbr>Key<wbr>Spec<wbr>Key<wbr>Type<wbr>Key<wbr>Signing</dt>
+    <dd>keySigning</dd><dt>Dns<wbr>Key<wbr>Spec<wbr>Key<wbr>Type<wbr>Zone<wbr>Signing</dt>
+    <dd>zoneSigning</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Key<wbr>Signing</dt>
+    <dd>keySigning</dd><dt>Zone<wbr>Signing</dt>
+    <dd>zoneSigning</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>KEY_SIGNING</dt>
+    <dd>keySigning</dd><dt>ZONE_SIGNING</dt>
+    <dd>zoneSigning</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dnskeyspecresponse">Dns<wbr>Key<wbr>Spec<wbr>Response</h4>
@@ -1145,7 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nonexistence_csharp" style="color: inherit; text-decoration: inherit;">Non<wbr>Existence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#managedzonednssecconfignonexistence">Pulumi.<wbr>Google<wbr>Native.<wbr>DNS.<wbr>V1.<wbr>Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>Non<wbr>Existence</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1153,7 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#managedzonednssecconfigstate">Pulumi.<wbr>Google<wbr>Native.<wbr>DNS.<wbr>V1.<wbr>Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether DNSSEC is enabled, and what mode it is in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1181,7 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nonexistence_go" style="color: inherit; text-decoration: inherit;">Non<wbr>Existence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#managedzonednssecconfignonexistence">Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>Non<wbr>Existence</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1189,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#managedzonednssecconfigstate">Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether DNSSEC is enabled, and what mode it is in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1217,7 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nonexistence_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Existence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#managedzonednssecconfignonexistence">Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>Non<wbr>Existence</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1225,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#managedzonednssecconfigstate">Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether DNSSEC is enabled, and what mode it is in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1253,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#non_existence_python" style="color: inherit; text-decoration: inherit;">non_<wbr>existence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#managedzonednssecconfignonexistence">Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>Non<wbr>Existence</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1261,9 +1325,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#managedzonednssecconfigstate">Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether DNSSEC is enabled, and what mode it is in.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="managedzonednssecconfignonexistence">Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>Non<wbr>Existence</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Nsec</dt>
+    <dd>nsec</dd><dt>Nsec3</dt>
+    <dd>nsec3</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>Non<wbr>Existence<wbr>Nsec</dt>
+    <dd>nsec</dd><dt>Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>Non<wbr>Existence<wbr>Nsec3</dt>
+    <dd>nsec3</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Nsec</dt>
+    <dd>nsec</dd><dt>Nsec3</dt>
+    <dd>nsec3</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NSEC</dt>
+    <dd>nsec</dd><dt>NSEC3</dt>
+    <dd>nsec3</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedzonednssecconfigresponse">Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>Response</h4>
@@ -1412,6 +1502,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies whether DNSSEC is enabled, and what mode it is in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="managedzonednssecconfigstate">Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Off</dt>
+    <dd>off{{% md %}}DNSSEC is disabled; the zone is not signed.{{% /md %}}</dd><dt>On</dt>
+    <dd>on{{% md %}}DNSSEC is enabled; the zone is signed and fully managed.{{% /md %}}</dd><dt>Transfer</dt>
+    <dd>transfer{{% md %}}DNSSEC is enabled, but in a "transfer" mode.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>State<wbr>Off</dt>
+    <dd>off{{% md %}}DNSSEC is disabled; the zone is not signed.{{% /md %}}</dd><dt>Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>State<wbr>On</dt>
+    <dd>on{{% md %}}DNSSEC is enabled; the zone is signed and fully managed.{{% /md %}}</dd><dt>Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>State<wbr>Transfer</dt>
+    <dd>transfer{{% md %}}DNSSEC is enabled, but in a "transfer" mode.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Off</dt>
+    <dd>off{{% md %}}DNSSEC is disabled; the zone is not signed.{{% /md %}}</dd><dt>On</dt>
+    <dd>on{{% md %}}DNSSEC is enabled; the zone is signed and fully managed.{{% /md %}}</dd><dt>Transfer</dt>
+    <dd>transfer{{% md %}}DNSSEC is enabled, but in a "transfer" mode.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>OFF</dt>
+    <dd>off{{% md %}}DNSSEC is disabled; the zone is not signed.{{% /md %}}</dd><dt>ON</dt>
+    <dd>on{{% md %}}DNSSEC is enabled; the zone is signed and fully managed.{{% /md %}}</dd><dt>TRANSFER</dt>
+    <dd>transfer{{% md %}}DNSSEC is enabled, but in a "transfer" mode.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -1503,7 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardingpath_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#managedzoneforwardingconfignameservertargetforwardingpath">Pulumi.<wbr>Google<wbr>Native.<wbr>DNS.<wbr>V1.<wbr>Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Name<wbr>Server<wbr>Target<wbr>Forwarding<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on IP address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1531,7 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardingpath_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#managedzoneforwardingconfignameservertargetforwardingpath">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Name<wbr>Server<wbr>Target<wbr>Forwarding<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on IP address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1559,7 +1679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardingpath_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#managedzoneforwardingconfignameservertargetforwardingpath">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Name<wbr>Server<wbr>Target<wbr>Forwarding<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on IP address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1587,7 +1707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwarding_path_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#managedzoneforwardingconfignameservertargetforwardingpath">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Name<wbr>Server<wbr>Target<wbr>Forwarding<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on IP address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1606,6 +1726,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="managedzoneforwardingconfignameservertargetforwardingpath">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Name<wbr>Server<wbr>Target<wbr>Forwarding<wbr>Path</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Default</dt>
+    <dd>default{{% md %}}Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses forward to the target through the VPC and non-RFC1918 addresses forward to the target through the internet{{% /md %}}</dd><dt>Private</dt>
+    <dd>private{{% md %}}Cloud DNS always forwards to this target through the VPC.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Name<wbr>Server<wbr>Target<wbr>Forwarding<wbr>Path<wbr>Default</dt>
+    <dd>default{{% md %}}Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses forward to the target through the VPC and non-RFC1918 addresses forward to the target through the internet{{% /md %}}</dd><dt>Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Name<wbr>Server<wbr>Target<wbr>Forwarding<wbr>Path<wbr>Private</dt>
+    <dd>private{{% md %}}Cloud DNS always forwards to this target through the VPC.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Default</dt>
+    <dd>default{{% md %}}Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses forward to the target through the VPC and non-RFC1918 addresses forward to the target through the internet{{% /md %}}</dd><dt>Private</dt>
+    <dd>private{{% md %}}Cloud DNS always forwards to this target through the VPC.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DEFAULT</dt>
+    <dd>default{{% md %}}Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses forward to the target through the VPC and non-RFC1918 addresses forward to the target through the internet{{% /md %}}</dd><dt>PRIVATE</dt>
+    <dd>private{{% md %}}Cloud DNS always forwards to this target through the VPC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedzoneforwardingconfignameservertargetresponse">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Name<wbr>Server<wbr>Target<wbr>Response</h4>
@@ -3014,6 +3160,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespaceresponse">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the namespace associated with the zone.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="managedzonevisibility">Managed<wbr>Zone<wbr>Visibility</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Public</dt>
+    <dd>public</dd><dt>Private</dt>
+    <dd>private</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Managed<wbr>Zone<wbr>Visibility<wbr>Public</dt>
+    <dd>public</dd><dt>Managed<wbr>Zone<wbr>Visibility<wbr>Private</dt>
+    <dd>private</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Public</dt>
+    <dd>public</dd><dt>Private</dt>
+    <dd>private</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PUBLIC</dt>
+    <dd>public</dd><dt>PRIVATE</dt>
+    <dd>private</dd></dl>
 {{% /choosable %}}
 
 

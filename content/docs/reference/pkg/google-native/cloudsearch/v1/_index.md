@@ -15,6 +15,12 @@ Explore the resources and functions of the google-native.cloudsearch/v1 module.
     <li><a href="searchapplication" title="SearchApplication"><span class="symbol resource"></span>SearchApplication</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getdatasource" title="GetDataSource"><span class="symbol function"></span>GetDataSource</a></li>
+    <li><a href="getsearchapplication" title="GetSearchApplication"><span class="symbol function"></span>GetSearchApplication</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -22,6 +28,6 @@ Explore the resources and functions of the google-native.cloudsearch/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

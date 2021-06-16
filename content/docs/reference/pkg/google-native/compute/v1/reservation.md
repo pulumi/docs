@@ -39,11 +39,11 @@ Creates a new reservation. For more information, read Reserving zonal resources.
                 <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">specific_reservation</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.AllocationSpecificSKUReservationArgs]</span> = None<span class="p">,</span>
                 <span class="nx">specific_reservation_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-                <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.ReservationStatus]</span> = None<span class="p">,</span>
                 <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Reservation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReservationArgs</a></span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReservationInitArgs</a></span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -91,7 +91,7 @@ Creates a new reservation. For more information, read Reserving zonal resources.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ReservationArgs</a></span>
+        <span class="property-type"><a href="#inputs">ReservationInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -278,7 +278,7 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#reservationstatus">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Reservation<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the reservation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -394,7 +394,7 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#reservationstatus">Reservation<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the reservation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -510,7 +510,7 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#reservationstatus">Reservation<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the reservation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -626,7 +626,7 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#reservationstatus">Reservation<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the reservation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -877,7 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#allocationspecificskuallocationallocatedinstancepropertiesreserveddiskinterface">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -897,7 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#allocationspecificskuallocationallocatedinstancepropertiesreserveddiskinterface">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -917,7 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#allocationspecificskuallocationallocatedinstancepropertiesreserveddiskinterface">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -937,9 +937,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#allocationspecificskuallocationallocatedinstancepropertiesreserveddiskinterface">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="allocationspecificskuallocationallocatedinstancepropertiesreserveddiskinterface">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Interface</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Nvme</dt>
+    <dd>NVME</dd><dt>Scsi</dt>
+    <dd>SCSI</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Interface<wbr>Nvme</dt>
+    <dd>NVME</dd><dt>Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Interface<wbr>Scsi</dt>
+    <dd>SCSI</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Nvme</dt>
+    <dd>NVME</dd><dt>Scsi</dt>
+    <dd>SCSI</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NVME</dt>
+    <dd>NVME</dd><dt>SCSI</dt>
+    <dd>SCSI</dd></dl>
 {{% /choosable %}}
 
 <h4 id="allocationspecificskuallocationallocatedinstancepropertiesreserveddiskresponse">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Response</h4>
@@ -1606,6 +1632,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#allocationspecificskuallocationreservedinstancepropertiesresponse">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Reserved<wbr>Instance<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The instance properties for the reservation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="reservationstatus">Reservation<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Invalid</dt>
+    <dd>INVALID</dd><dt>Ready</dt>
+    <dd>READY</dd><dt>Updating</dt>
+    <dd>UPDATING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Reservation<wbr>Status<wbr>Creating</dt>
+    <dd>CREATING</dd><dt>Reservation<wbr>Status<wbr>Deleting</dt>
+    <dd>DELETING</dd><dt>Reservation<wbr>Status<wbr>Invalid</dt>
+    <dd>INVALID</dd><dt>Reservation<wbr>Status<wbr>Ready</dt>
+    <dd>READY</dd><dt>Reservation<wbr>Status<wbr>Updating</dt>
+    <dd>UPDATING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Creating</dt>
+    <dd>CREATING</dd><dt>Deleting</dt>
+    <dd>DELETING</dd><dt>Invalid</dt>
+    <dd>INVALID</dd><dt>Ready</dt>
+    <dd>READY</dd><dt>Updating</dt>
+    <dd>UPDATING</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CREATING</dt>
+    <dd>CREATING</dd><dt>DELETING</dt>
+    <dd>DELETING</dd><dt>INVALID</dt>
+    <dd>INVALID</dd><dt>READY</dt>
+    <dd>READY</dd><dt>UPDATING</dt>
+    <dd>UPDATING</dd></dl>
 {{% /choosable %}}
 
 

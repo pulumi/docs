@@ -1199,7 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodtype_csharp" style="color: inherit; text-decoration: inherit;">Period<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudchannelv1periodperiodtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Channel.<wbr>V1.<wbr>Google<wbr>Cloud<wbr>Channel<wbr>V1Period<wbr>Period<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Period Type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1219,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodtype_go" style="color: inherit; text-decoration: inherit;">Period<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudchannelv1periodperiodtype">Google<wbr>Cloud<wbr>Channel<wbr>V1Period<wbr>Period<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Period Type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1239,7 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodtype_nodejs" style="color: inherit; text-decoration: inherit;">period<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudchannelv1periodperiodtype">Google<wbr>Cloud<wbr>Channel<wbr>V1Period<wbr>Period<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Period Type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1259,9 +1259,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#period_type_python" style="color: inherit; text-decoration: inherit;">period_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudchannelv1periodperiodtype">Google<wbr>Cloud<wbr>Channel<wbr>V1Period<wbr>Period<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Period Type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudchannelv1periodperiodtype">Google<wbr>Cloud<wbr>Channel<wbr>V1Period<wbr>Period<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Period<wbr>Type<wbr>Unspecified</dt>
+    <dd>PERIOD_TYPE_UNSPECIFIED{{% md %}}Not used.{{% /md %}}</dd><dt>Day</dt>
+    <dd>DAY{{% md %}}Day.{{% /md %}}</dd><dt>Month</dt>
+    <dd>MONTH{{% md %}}Month.{{% /md %}}</dd><dt>Year</dt>
+    <dd>YEAR{{% md %}}Year.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Channel<wbr>V1Period<wbr>Period<wbr>Type<wbr>Period<wbr>Type<wbr>Unspecified</dt>
+    <dd>PERIOD_TYPE_UNSPECIFIED{{% md %}}Not used.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Channel<wbr>V1Period<wbr>Period<wbr>Type<wbr>Day</dt>
+    <dd>DAY{{% md %}}Day.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Channel<wbr>V1Period<wbr>Period<wbr>Type<wbr>Month</dt>
+    <dd>MONTH{{% md %}}Month.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Channel<wbr>V1Period<wbr>Period<wbr>Type<wbr>Year</dt>
+    <dd>YEAR{{% md %}}Year.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Period<wbr>Type<wbr>Unspecified</dt>
+    <dd>PERIOD_TYPE_UNSPECIFIED{{% md %}}Not used.{{% /md %}}</dd><dt>Day</dt>
+    <dd>DAY{{% md %}}Day.{{% /md %}}</dd><dt>Month</dt>
+    <dd>MONTH{{% md %}}Month.{{% /md %}}</dd><dt>Year</dt>
+    <dd>YEAR{{% md %}}Year.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PERIOD_TYPE_UNSPECIFIED</dt>
+    <dd>PERIOD_TYPE_UNSPECIFIED{{% md %}}Not used.{{% /md %}}</dd><dt>DAY</dt>
+    <dd>DAY{{% md %}}Day.{{% /md %}}</dd><dt>MONTH</dt>
+    <dd>MONTH{{% md %}}Month.{{% /md %}}</dd><dt>YEAR</dt>
+    <dd>YEAR{{% md %}}Year.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googlecloudchannelv1periodresponse">Google<wbr>Cloud<wbr>Channel<wbr>V1Period<wbr>Response</h4>
@@ -1485,7 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paymentplan_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudchannelv1renewalsettingspaymentplan">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Channel.<wbr>V1.<wbr>Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Payment<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}Describes how a reseller will be billed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1521,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paymentplan_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudchannelv1renewalsettingspaymentplan">Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Payment<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}Describes how a reseller will be billed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1557,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paymentplan_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudchannelv1renewalsettingspaymentplan">Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Payment<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}Describes how a reseller will be billed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1593,7 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payment_plan_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudchannelv1renewalsettingspaymentplan">Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Payment<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}Describes how a reseller will be billed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1604,6 +1638,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true and enable_renewal = true, the unit (for example seats or licenses) will be set to the number of active units at renewal time.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudchannelv1renewalsettingspaymentplan">Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Payment<wbr>Plan</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Payment<wbr>Plan<wbr>Unspecified</dt>
+    <dd>PAYMENT_PLAN_UNSPECIFIED{{% md %}}Not used.{{% /md %}}</dd><dt>Commitment</dt>
+    <dd>COMMITMENT{{% md %}}Commitment.{{% /md %}}</dd><dt>Flexible</dt>
+    <dd>FLEXIBLE{{% md %}}No commitment.{{% /md %}}</dd><dt>Free</dt>
+    <dd>FREE{{% md %}}Free.{{% /md %}}</dd><dt>Trial</dt>
+    <dd>TRIAL{{% md %}}Trial.{{% /md %}}</dd><dt>Offline</dt>
+    <dd>OFFLINE{{% md %}}Price and ordering not available through API.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Payment<wbr>Plan<wbr>Payment<wbr>Plan<wbr>Unspecified</dt>
+    <dd>PAYMENT_PLAN_UNSPECIFIED{{% md %}}Not used.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Payment<wbr>Plan<wbr>Commitment</dt>
+    <dd>COMMITMENT{{% md %}}Commitment.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Payment<wbr>Plan<wbr>Flexible</dt>
+    <dd>FLEXIBLE{{% md %}}No commitment.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Payment<wbr>Plan<wbr>Free</dt>
+    <dd>FREE{{% md %}}Free.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Payment<wbr>Plan<wbr>Trial</dt>
+    <dd>TRIAL{{% md %}}Trial.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Payment<wbr>Plan<wbr>Offline</dt>
+    <dd>OFFLINE{{% md %}}Price and ordering not available through API.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Payment<wbr>Plan<wbr>Unspecified</dt>
+    <dd>PAYMENT_PLAN_UNSPECIFIED{{% md %}}Not used.{{% /md %}}</dd><dt>Commitment</dt>
+    <dd>COMMITMENT{{% md %}}Commitment.{{% /md %}}</dd><dt>Flexible</dt>
+    <dd>FLEXIBLE{{% md %}}No commitment.{{% /md %}}</dd><dt>Free</dt>
+    <dd>FREE{{% md %}}Free.{{% /md %}}</dd><dt>Trial</dt>
+    <dd>TRIAL{{% md %}}Trial.{{% /md %}}</dd><dt>Offline</dt>
+    <dd>OFFLINE{{% md %}}Price and ordering not available through API.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PAYMENT_PLAN_UNSPECIFIED</dt>
+    <dd>PAYMENT_PLAN_UNSPECIFIED{{% md %}}Not used.{{% /md %}}</dd><dt>COMMITMENT</dt>
+    <dd>COMMITMENT{{% md %}}Commitment.{{% /md %}}</dd><dt>FLEXIBLE</dt>
+    <dd>FLEXIBLE{{% md %}}No commitment.{{% /md %}}</dd><dt>FREE</dt>
+    <dd>FREE{{% md %}}Free.{{% /md %}}</dd><dt>TRIAL</dt>
+    <dd>TRIAL{{% md %}}Trial.{{% /md %}}</dd><dt>OFFLINE</dt>
+    <dd>OFFLINE{{% md %}}Price and ordering not available through API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googlecloudchannelv1renewalsettingsresponse">Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Response</h4>

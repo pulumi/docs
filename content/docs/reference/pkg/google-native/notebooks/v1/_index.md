@@ -19,6 +19,16 @@ Explore the resources and functions of the google-native.notebooks/v1 module.
     <li><a href="schedule" title="Schedule"><span class="symbol resource"></span>Schedule</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getenvironment" title="GetEnvironment"><span class="symbol function"></span>GetEnvironment</a></li>
+    <li><a href="getexecution" title="GetExecution"><span class="symbol function"></span>GetExecution</a></li>
+    <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+    <li><a href="getinstanceiampolicy" title="GetInstanceIamPolicy"><span class="symbol function"></span>GetInstanceIamPolicy</a></li>
+    <li><a href="getruntime" title="GetRuntime"><span class="symbol function"></span>GetRuntime</a></li>
+    <li><a href="getschedule" title="GetSchedule"><span class="symbol function"></span>GetSchedule</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -26,6 +36,6 @@ Explore the resources and functions of the google-native.notebooks/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

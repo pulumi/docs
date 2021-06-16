@@ -40,7 +40,7 @@ Creates a target pool in the specified project and region using the data include
                <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+               <span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.TargetPoolSessionAffinity]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TargetPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TargetPoolArgs</a></span><span class="p">,</span>
@@ -286,7 +286,7 @@ In case where failoverRatio is not set or all the instances in the backup pool a
 <a href="#sessionaffinity_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#targetpoolsessionaffinity">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Target<wbr>Pool<wbr>Session<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Session affinity option, must be one of the following values:
 NONE: Connections from the same client IP may go to any instance in the pool.
@@ -413,7 +413,7 @@ In case where failoverRatio is not set or all the instances in the backup pool a
 <a href="#sessionaffinity_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#targetpoolsessionaffinity">Target<wbr>Pool<wbr>Session<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Session affinity option, must be one of the following values:
 NONE: Connections from the same client IP may go to any instance in the pool.
@@ -540,7 +540,7 @@ In case where failoverRatio is not set or all the instances in the backup pool a
 <a href="#sessionaffinity_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#targetpoolsessionaffinity">Target<wbr>Pool<wbr>Session<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Session affinity option, must be one of the following values:
 NONE: Connections from the same client IP may go to any instance in the pool.
@@ -667,7 +667,7 @@ In case where failoverRatio is not set or all the instances in the backup pool a
 <a href="#session_affinity_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#targetpoolsessionaffinity">Target<wbr>Pool<wbr>Session<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Session affinity option, must be one of the following values:
 NONE: Connections from the same client IP may go to any instance in the pool.
@@ -735,6 +735,60 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="targetpoolsessionaffinity">Target<wbr>Pool<wbr>Session<wbr>Affinity</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Client<wbr>Ip</dt>
+    <dd>CLIENT_IP</dd><dt>Client<wbr>Ip<wbr>No<wbr>Destination</dt>
+    <dd>CLIENT_IP_NO_DESTINATION</dd><dt>Client<wbr>Ip<wbr>Port<wbr>Proto</dt>
+    <dd>CLIENT_IP_PORT_PROTO</dd><dt>Client<wbr>Ip<wbr>Proto</dt>
+    <dd>CLIENT_IP_PROTO</dd><dt>Generated<wbr>Cookie</dt>
+    <dd>GENERATED_COOKIE</dd><dt>Header<wbr>Field</dt>
+    <dd>HEADER_FIELD</dd><dt>Http<wbr>Cookie</dt>
+    <dd>HTTP_COOKIE</dd><dt>None</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Target<wbr>Pool<wbr>Session<wbr>Affinity<wbr>Client<wbr>Ip</dt>
+    <dd>CLIENT_IP</dd><dt>Target<wbr>Pool<wbr>Session<wbr>Affinity<wbr>Client<wbr>Ip<wbr>No<wbr>Destination</dt>
+    <dd>CLIENT_IP_NO_DESTINATION</dd><dt>Target<wbr>Pool<wbr>Session<wbr>Affinity<wbr>Client<wbr>Ip<wbr>Port<wbr>Proto</dt>
+    <dd>CLIENT_IP_PORT_PROTO</dd><dt>Target<wbr>Pool<wbr>Session<wbr>Affinity<wbr>Client<wbr>Ip<wbr>Proto</dt>
+    <dd>CLIENT_IP_PROTO</dd><dt>Target<wbr>Pool<wbr>Session<wbr>Affinity<wbr>Generated<wbr>Cookie</dt>
+    <dd>GENERATED_COOKIE</dd><dt>Target<wbr>Pool<wbr>Session<wbr>Affinity<wbr>Header<wbr>Field</dt>
+    <dd>HEADER_FIELD</dd><dt>Target<wbr>Pool<wbr>Session<wbr>Affinity<wbr>Http<wbr>Cookie</dt>
+    <dd>HTTP_COOKIE</dd><dt>Target<wbr>Pool<wbr>Session<wbr>Affinity<wbr>None</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Client<wbr>Ip</dt>
+    <dd>CLIENT_IP</dd><dt>Client<wbr>Ip<wbr>No<wbr>Destination</dt>
+    <dd>CLIENT_IP_NO_DESTINATION</dd><dt>Client<wbr>Ip<wbr>Port<wbr>Proto</dt>
+    <dd>CLIENT_IP_PORT_PROTO</dd><dt>Client<wbr>Ip<wbr>Proto</dt>
+    <dd>CLIENT_IP_PROTO</dd><dt>Generated<wbr>Cookie</dt>
+    <dd>GENERATED_COOKIE</dd><dt>Header<wbr>Field</dt>
+    <dd>HEADER_FIELD</dd><dt>Http<wbr>Cookie</dt>
+    <dd>HTTP_COOKIE</dd><dt>None</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CLIENT_IP</dt>
+    <dd>CLIENT_IP</dd><dt>CLIENT_IP_NO_DESTINATION</dt>
+    <dd>CLIENT_IP_NO_DESTINATION</dd><dt>CLIENT_IP_PORT_PROTO</dt>
+    <dd>CLIENT_IP_PORT_PROTO</dd><dt>CLIENT_IP_PROTO</dt>
+    <dd>CLIENT_IP_PROTO</dd><dt>GENERATED_COOKIE</dt>
+    <dd>GENERATED_COOKIE</dd><dt>HEADER_FIELD</dt>
+    <dd>HEADER_FIELD</dd><dt>HTTP_COOKIE</dt>
+    <dd>HTTP_COOKIE</dd><dt>NONE</dt>
+    <dd>NONE</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

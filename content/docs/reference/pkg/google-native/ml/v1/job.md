@@ -37,7 +37,7 @@ Creates a training or a batch prediction job.
         <span class="nx">prediction_output</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.GoogleCloudMlV1__PredictionOutputArgs]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.JobState]</span> = None<span class="p">,</span>
         <span class="nx">training_input</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.GoogleCloudMlV1__TrainingInputArgs]</span> = None<span class="p">,</span>
         <span class="nx">training_output</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.GoogleCloudMlV1__TrainingOutputArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -253,7 +253,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Ml.<wbr>V1.<wbr>Job<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The detailed state of a job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -361,7 +361,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobstate">Job<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The detailed state of a job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -469,7 +469,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#jobstate">Job<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The detailed state of a job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -577,7 +577,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#jobstate">Job<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The detailed state of a job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -844,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfigtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Ml.<wbr>V1.<wbr>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of accelerator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -864,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfigtype">Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of accelerator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -884,7 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfigtype">Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of accelerator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -904,7 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfigtype">Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of accelerator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -989,6 +989,60 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of accelerator to use.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudmlv1__acceleratorconfigtype">Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Accelerator<wbr>Type<wbr>Unspecified</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Unspecified accelerator type. Default to no GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Nvidia Tesla K80 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Nvidia Tesla P100 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Nvidia V100 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Nvidia Tesla P4 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Nvidia T4 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>A100</dt>
+    <dd>NVIDIA_TESLA_A100{{% md %}}Nvidia A100 GPU.{{% /md %}}</dd><dt>Tpu<wbr>V2</dt>
+    <dd>TPU_V2{{% md %}}TPU v2.{{% /md %}}</dd><dt>Tpu<wbr>V3</dt>
+    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Accelerator<wbr>Type<wbr>Unspecified</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Unspecified accelerator type. Default to no GPU.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Nvidia Tesla K80 GPU.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Nvidia Tesla P100 GPU.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Nvidia V100 GPU.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Nvidia Tesla P4 GPU.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Nvidia T4 GPU.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Nvidia<wbr>Tesla<wbr>A100</dt>
+    <dd>NVIDIA_TESLA_A100{{% md %}}Nvidia A100 GPU.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Tpu<wbr>V2</dt>
+    <dd>TPU_V2{{% md %}}TPU v2.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Type<wbr>Tpu<wbr>V3</dt>
+    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Accelerator<wbr>Type<wbr>Unspecified</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Unspecified accelerator type. Default to no GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Nvidia Tesla K80 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Nvidia Tesla P100 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Nvidia V100 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Nvidia Tesla P4 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Nvidia T4 GPU.{{% /md %}}</dd><dt>Nvidia<wbr>Tesla<wbr>A100</dt>
+    <dd>NVIDIA_TESLA_A100{{% md %}}Nvidia A100 GPU.{{% /md %}}</dd><dt>Tpu<wbr>V2</dt>
+    <dd>TPU_V2{{% md %}}TPU v2.{{% /md %}}</dd><dt>Tpu<wbr>V3</dt>
+    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ACCELERATOR_TYPE_UNSPECIFIED</dt>
+    <dd>ACCELERATOR_TYPE_UNSPECIFIED{{% md %}}Unspecified accelerator type. Default to no GPU.{{% /md %}}</dd><dt>NVIDIA_TESLA_K80</dt>
+    <dd>NVIDIA_TESLA_K80{{% md %}}Nvidia Tesla K80 GPU.{{% /md %}}</dd><dt>NVIDIA_TESLA_P100</dt>
+    <dd>NVIDIA_TESLA_P100{{% md %}}Nvidia Tesla P100 GPU.{{% /md %}}</dd><dt>NVIDIA_TESLA_V100</dt>
+    <dd>NVIDIA_TESLA_V100{{% md %}}Nvidia V100 GPU.{{% /md %}}</dd><dt>NVIDIA_TESLA_P4</dt>
+    <dd>NVIDIA_TESLA_P4{{% md %}}Nvidia Tesla P4 GPU.{{% /md %}}</dd><dt>NVIDIA_TESLA_T4</dt>
+    <dd>NVIDIA_TESLA_T4{{% md %}}Nvidia T4 GPU.{{% /md %}}</dd><dt>NVIDIA_TESLA_A100</dt>
+    <dd>NVIDIA_TESLA_A100{{% md %}}Nvidia A100 GPU.{{% /md %}}</dd><dt>TPU_V2</dt>
+    <dd>TPU_V2{{% md %}}TPU v2.{{% /md %}}</dd><dt>TPU_V3</dt>
+    <dd>TPU_V3{{% md %}}TPU v3.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googlecloudmlv1__builtinalgorithmoutput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Built<wbr>In<wbr>Algorithm<wbr>Output</h4>
@@ -1612,7 +1666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameteroutputstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Ml.<wbr>V1.<wbr>Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The detailed state of the trial.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1688,7 +1742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameteroutputstate">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The detailed state of the trial.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1764,7 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameteroutputstate">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The detailed state of the trial.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1840,7 +1894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameteroutputstate">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The detailed state of the trial.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2159,6 +2213,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The trial id for these results.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="googlecloudmlv1__hyperparameteroutputstate">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The job state is unspecified.{{% /md %}}</dd><dt>Queued</dt>
+    <dd>QUEUED{{% md %}}The job has been just created and processing has not yet begun.{{% /md %}}</dd><dt>Preparing</dt>
+    <dd>PREPARING{{% md %}}The service is preparing to run the job.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The job is in progress.{{% /md %}}</dd><dt>Succeeded</dt>
+    <dd>SUCCEEDED{{% md %}}The job completed successfully.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The job failed. `error_message` should contain the details of the failure.{{% /md %}}</dd><dt>Cancelling</dt>
+    <dd>CANCELLING{{% md %}}The job is being cancelled. `error_message` should describe the reason for the cancellation.{{% /md %}}</dd><dt>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The job has been cancelled. `error_message` should describe the reason for the cancellation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The job state is unspecified.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>State<wbr>Queued</dt>
+    <dd>QUEUED{{% md %}}The job has been just created and processing has not yet begun.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>State<wbr>Preparing</dt>
+    <dd>PREPARING{{% md %}}The service is preparing to run the job.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>State<wbr>Running</dt>
+    <dd>RUNNING{{% md %}}The job is in progress.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>State<wbr>Succeeded</dt>
+    <dd>SUCCEEDED{{% md %}}The job completed successfully.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>State<wbr>Failed</dt>
+    <dd>FAILED{{% md %}}The job failed. `error_message` should contain the details of the failure.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>State<wbr>Cancelling</dt>
+    <dd>CANCELLING{{% md %}}The job is being cancelled. `error_message` should describe the reason for the cancellation.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>State<wbr>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The job has been cancelled. `error_message` should describe the reason for the cancellation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The job state is unspecified.{{% /md %}}</dd><dt>Queued</dt>
+    <dd>QUEUED{{% md %}}The job has been just created and processing has not yet begun.{{% /md %}}</dd><dt>Preparing</dt>
+    <dd>PREPARING{{% md %}}The service is preparing to run the job.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The job is in progress.{{% /md %}}</dd><dt>Succeeded</dt>
+    <dd>SUCCEEDED{{% md %}}The job completed successfully.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The job failed. `error_message` should contain the details of the failure.{{% /md %}}</dd><dt>Cancelling</dt>
+    <dd>CANCELLING{{% md %}}The job is being cancelled. `error_message` should describe the reason for the cancellation.{{% /md %}}</dd><dt>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The job has been cancelled. `error_message` should describe the reason for the cancellation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The job state is unspecified.{{% /md %}}</dd><dt>QUEUED</dt>
+    <dd>QUEUED{{% md %}}The job has been just created and processing has not yet begun.{{% /md %}}</dd><dt>PREPARING</dt>
+    <dd>PREPARING{{% md %}}The service is preparing to run the job.{{% /md %}}</dd><dt>RUNNING</dt>
+    <dd>RUNNING{{% md %}}The job is in progress.{{% /md %}}</dd><dt>SUCCEEDED</dt>
+    <dd>SUCCEEDED{{% md %}}The job completed successfully.{{% /md %}}</dd><dt>FAILED</dt>
+    <dd>FAILED{{% md %}}The job failed. `error_message` should contain the details of the failure.{{% /md %}}</dd><dt>CANCELLING</dt>
+    <dd>CANCELLING{{% md %}}The job is being cancelled. `error_message` should describe the reason for the cancellation.{{% /md %}}</dd><dt>CANCELLED</dt>
+    <dd>CANCELLED{{% md %}}The job has been cancelled. `error_message` should describe the reason for the cancellation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="googlecloudmlv1__hyperparameterspec">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
@@ -2168,7 +2272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameterspecalgorithm">Pulumi.<wbr>Google<wbr>Native.<wbr>Ml.<wbr>V1.<wbr>Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Optional. The search algorithm specified for the hyperparameter tuning job. Uses the default AI Platform hyperparameter tuning algorithm if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2184,7 +2288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_csharp" style="color: inherit; text-decoration: inherit;">Goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameterspecgoal">Pulumi.<wbr>Google<wbr>Native.<wbr>Ml.<wbr>V1.<wbr>Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Goal</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of goal to use for tuning. Available types are `MAXIMIZE` and `MINIMIZE`. Defaults to `MAXIMIZE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2244,7 +2348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameterspecalgorithm">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Optional. The search algorithm specified for the hyperparameter tuning job. Uses the default AI Platform hyperparameter tuning algorithm if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2260,7 +2364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_go" style="color: inherit; text-decoration: inherit;">Goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameterspecgoal">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Goal</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of goal to use for tuning. Available types are `MAXIMIZE` and `MINIMIZE`. Defaults to `MAXIMIZE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2320,7 +2424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameterspecalgorithm">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Optional. The search algorithm specified for the hyperparameter tuning job. Uses the default AI Platform hyperparameter tuning algorithm if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2336,7 +2440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_nodejs" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameterspecgoal">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Goal</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of goal to use for tuning. Available types are `MAXIMIZE` and `MINIMIZE`. Defaults to `MAXIMIZE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2396,7 +2500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameterspecalgorithm">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Optional. The search algorithm specified for the hyperparameter tuning job. Uses the default AI Platform hyperparameter tuning algorithm if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2412,7 +2516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_python" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameterspecgoal">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Goal</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of goal to use for tuning. Available types are `MAXIMIZE` and `MINIMIZE`. Defaults to `MAXIMIZE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2463,6 +2567,66 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The prior hyperparameter tuning job id that users hope to continue with. The job id will be used to find the corresponding vizier study guid and resume the study.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudmlv1__hyperparameterspecalgorithm">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Algorithm</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Algorithm<wbr>Unspecified</dt>
+    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The default algorithm used by the hyperparameter tuning service. This is a Bayesian optimization algorithm.{{% /md %}}</dd><dt>Grid<wbr>Search</dt>
+    <dd>GRID_SEARCH{{% md %}}Simple grid search within the feasible space. To use grid search, all parameters must be `INTEGER`, `CATEGORICAL`, or `DISCRETE`.{{% /md %}}</dd><dt>Random<wbr>Search</dt>
+    <dd>RANDOM_SEARCH{{% md %}}Simple random search within the feasible space.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Algorithm<wbr>Algorithm<wbr>Unspecified</dt>
+    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The default algorithm used by the hyperparameter tuning service. This is a Bayesian optimization algorithm.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Algorithm<wbr>Grid<wbr>Search</dt>
+    <dd>GRID_SEARCH{{% md %}}Simple grid search within the feasible space. To use grid search, all parameters must be `INTEGER`, `CATEGORICAL`, or `DISCRETE`.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Algorithm<wbr>Random<wbr>Search</dt>
+    <dd>RANDOM_SEARCH{{% md %}}Simple random search within the feasible space.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Algorithm<wbr>Unspecified</dt>
+    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The default algorithm used by the hyperparameter tuning service. This is a Bayesian optimization algorithm.{{% /md %}}</dd><dt>Grid<wbr>Search</dt>
+    <dd>GRID_SEARCH{{% md %}}Simple grid search within the feasible space. To use grid search, all parameters must be `INTEGER`, `CATEGORICAL`, or `DISCRETE`.{{% /md %}}</dd><dt>Random<wbr>Search</dt>
+    <dd>RANDOM_SEARCH{{% md %}}Simple random search within the feasible space.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALGORITHM_UNSPECIFIED</dt>
+    <dd>ALGORITHM_UNSPECIFIED{{% md %}}The default algorithm used by the hyperparameter tuning service. This is a Bayesian optimization algorithm.{{% /md %}}</dd><dt>GRID_SEARCH</dt>
+    <dd>GRID_SEARCH{{% md %}}Simple grid search within the feasible space. To use grid search, all parameters must be `INTEGER`, `CATEGORICAL`, or `DISCRETE`.{{% /md %}}</dd><dt>RANDOM_SEARCH</dt>
+    <dd>RANDOM_SEARCH{{% md %}}Simple random search within the feasible space.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudmlv1__hyperparameterspecgoal">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Goal</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Goal<wbr>Type<wbr>Unspecified</dt>
+    <dd>GOAL_TYPE_UNSPECIFIED{{% md %}}Goal Type will default to maximize.{{% /md %}}</dd><dt>Maximize</dt>
+    <dd>MAXIMIZE{{% md %}}Maximize the goal metric.{{% /md %}}</dd><dt>Minimize</dt>
+    <dd>MINIMIZE{{% md %}}Minimize the goal metric.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Goal<wbr>Goal<wbr>Type<wbr>Unspecified</dt>
+    <dd>GOAL_TYPE_UNSPECIFIED{{% md %}}Goal Type will default to maximize.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Goal<wbr>Maximize</dt>
+    <dd>MAXIMIZE{{% md %}}Maximize the goal metric.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Goal<wbr>Minimize</dt>
+    <dd>MINIMIZE{{% md %}}Minimize the goal metric.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Goal<wbr>Type<wbr>Unspecified</dt>
+    <dd>GOAL_TYPE_UNSPECIFIED{{% md %}}Goal Type will default to maximize.{{% /md %}}</dd><dt>Maximize</dt>
+    <dd>MAXIMIZE{{% md %}}Maximize the goal metric.{{% /md %}}</dd><dt>Minimize</dt>
+    <dd>MINIMIZE{{% md %}}Minimize the goal metric.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>GOAL_TYPE_UNSPECIFIED</dt>
+    <dd>GOAL_TYPE_UNSPECIFIED{{% md %}}Goal Type will default to maximize.{{% /md %}}</dd><dt>MAXIMIZE</dt>
+    <dd>MAXIMIZE{{% md %}}Maximize the goal metric.{{% /md %}}</dd><dt>MINIMIZE</dt>
+    <dd>MINIMIZE{{% md %}}Minimize the goal metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googlecloudmlv1__hyperparameterspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Response</h4>
@@ -2820,7 +2984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletype_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__parameterspecscaletype">Pulumi.<wbr>Google<wbr>Native.<wbr>Ml.<wbr>V1.<wbr>Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Scale<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. How the parameter should be scaled to the hypercube. Leave unset for categorical parameters. Some kind of scaling is strongly recommended for real or integral parameters (e.g., `UNIT_LINEAR_SCALE`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2828,7 +2992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__parameterspectype">Pulumi.<wbr>Google<wbr>Native.<wbr>Ml.<wbr>V1.<wbr>Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2880,7 +3044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletype_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__parameterspecscaletype">Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Scale<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. How the parameter should be scaled to the hypercube. Leave unset for categorical parameters. Some kind of scaling is strongly recommended for real or integral parameters (e.g., `UNIT_LINEAR_SCALE`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2888,7 +3052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__parameterspectype">Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2940,7 +3104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletype_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__parameterspecscaletype">Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Scale<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. How the parameter should be scaled to the hypercube. Leave unset for categorical parameters. Some kind of scaling is strongly recommended for real or integral parameters (e.g., `UNIT_LINEAR_SCALE`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2948,7 +3112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__parameterspectype">Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3000,7 +3164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_type_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudmlv1__parameterspecscaletype">Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Scale<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Optional. How the parameter should be scaled to the hypercube. Leave unset for categorical parameters. Some kind of scaling is strongly recommended for real or integral parameters (e.g., `UNIT_LINEAR_SCALE`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3008,7 +3172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudmlv1__parameterspectype">Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Required. The type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3255,6 +3419,78 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Required. The type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="googlecloudmlv1__parameterspecscaletype">Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Scale<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE{{% md %}}By default, no scaling is applied.{{% /md %}}</dd><dt>Unit<wbr>Linear<wbr>Scale</dt>
+    <dd>UNIT_LINEAR_SCALE{{% md %}}Scales the feasible space to (0, 1) linearly.{{% /md %}}</dd><dt>Unit<wbr>Log<wbr>Scale</dt>
+    <dd>UNIT_LOG_SCALE{{% md %}}Scales the feasible space logarithmically to (0, 1). The entire feasible space must be strictly positive.{{% /md %}}</dd><dt>Unit<wbr>Reverse<wbr>Log<wbr>Scale</dt>
+    <dd>UNIT_REVERSE_LOG_SCALE{{% md %}}Scales the feasible space "reverse" logarithmically to (0, 1). The result is that values close to the top of the feasible space are spread out more than points near the bottom. The entire feasible space must be strictly positive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Scale<wbr>Type<wbr>None</dt>
+    <dd>NONE{{% md %}}By default, no scaling is applied.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Scale<wbr>Type<wbr>Unit<wbr>Linear<wbr>Scale</dt>
+    <dd>UNIT_LINEAR_SCALE{{% md %}}Scales the feasible space to (0, 1) linearly.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Scale<wbr>Type<wbr>Unit<wbr>Log<wbr>Scale</dt>
+    <dd>UNIT_LOG_SCALE{{% md %}}Scales the feasible space logarithmically to (0, 1). The entire feasible space must be strictly positive.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Scale<wbr>Type<wbr>Unit<wbr>Reverse<wbr>Log<wbr>Scale</dt>
+    <dd>UNIT_REVERSE_LOG_SCALE{{% md %}}Scales the feasible space "reverse" logarithmically to (0, 1). The result is that values close to the top of the feasible space are spread out more than points near the bottom. The entire feasible space must be strictly positive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>NONE{{% md %}}By default, no scaling is applied.{{% /md %}}</dd><dt>Unit<wbr>Linear<wbr>Scale</dt>
+    <dd>UNIT_LINEAR_SCALE{{% md %}}Scales the feasible space to (0, 1) linearly.{{% /md %}}</dd><dt>Unit<wbr>Log<wbr>Scale</dt>
+    <dd>UNIT_LOG_SCALE{{% md %}}Scales the feasible space logarithmically to (0, 1). The entire feasible space must be strictly positive.{{% /md %}}</dd><dt>Unit<wbr>Reverse<wbr>Log<wbr>Scale</dt>
+    <dd>UNIT_REVERSE_LOG_SCALE{{% md %}}Scales the feasible space "reverse" logarithmically to (0, 1). The result is that values close to the top of the feasible space are spread out more than points near the bottom. The entire feasible space must be strictly positive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NONE</dt>
+    <dd>NONE{{% md %}}By default, no scaling is applied.{{% /md %}}</dd><dt>UNIT_LINEAR_SCALE</dt>
+    <dd>UNIT_LINEAR_SCALE{{% md %}}Scales the feasible space to (0, 1) linearly.{{% /md %}}</dd><dt>UNIT_LOG_SCALE</dt>
+    <dd>UNIT_LOG_SCALE{{% md %}}Scales the feasible space logarithmically to (0, 1). The entire feasible space must be strictly positive.{{% /md %}}</dd><dt>UNIT_REVERSE_LOG_SCALE</dt>
+    <dd>UNIT_REVERSE_LOG_SCALE{{% md %}}Scales the feasible space "reverse" logarithmically to (0, 1). The result is that values close to the top of the feasible space are spread out more than points near the bottom. The entire feasible space must be strictly positive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudmlv1__parameterspectype">Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Parameter<wbr>Type<wbr>Unspecified</dt>
+    <dd>PARAMETER_TYPE_UNSPECIFIED{{% md %}}You must specify a valid type. Using this unspecified type will result in an error.{{% /md %}}</dd><dt>Double</dt>
+    <dd>DOUBLE{{% md %}}Type for real-valued parameters.{{% /md %}}</dd><dt>Integer</dt>
+    <dd>INTEGER{{% md %}}Type for integral parameters.{{% /md %}}</dd><dt>Categorical</dt>
+    <dd>CATEGORICAL{{% md %}}The parameter is categorical, with a value chosen from the categories field.{{% /md %}}</dd><dt>Discrete</dt>
+    <dd>DISCRETE{{% md %}}The parameter is real valued, with a fixed set of feasible points. If `type==DISCRETE`, feasible_points must be provided, and {`min_value`, `max_value`} will be ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Type<wbr>Parameter<wbr>Type<wbr>Unspecified</dt>
+    <dd>PARAMETER_TYPE_UNSPECIFIED{{% md %}}You must specify a valid type. Using this unspecified type will result in an error.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Type<wbr>Double</dt>
+    <dd>DOUBLE{{% md %}}Type for real-valued parameters.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Type<wbr>Integer</dt>
+    <dd>INTEGER{{% md %}}Type for integral parameters.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Type<wbr>Categorical</dt>
+    <dd>CATEGORICAL{{% md %}}The parameter is categorical, with a value chosen from the categories field.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Type<wbr>Discrete</dt>
+    <dd>DISCRETE{{% md %}}The parameter is real valued, with a fixed set of feasible points. If `type==DISCRETE`, feasible_points must be provided, and {`min_value`, `max_value`} will be ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Parameter<wbr>Type<wbr>Unspecified</dt>
+    <dd>PARAMETER_TYPE_UNSPECIFIED{{% md %}}You must specify a valid type. Using this unspecified type will result in an error.{{% /md %}}</dd><dt>Double</dt>
+    <dd>DOUBLE{{% md %}}Type for real-valued parameters.{{% /md %}}</dd><dt>Integer</dt>
+    <dd>INTEGER{{% md %}}Type for integral parameters.{{% /md %}}</dd><dt>Categorical</dt>
+    <dd>CATEGORICAL{{% md %}}The parameter is categorical, with a value chosen from the categories field.{{% /md %}}</dd><dt>Discrete</dt>
+    <dd>DISCRETE{{% md %}}The parameter is real valued, with a fixed set of feasible points. If `type==DISCRETE`, feasible_points must be provided, and {`min_value`, `max_value`} will be ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PARAMETER_TYPE_UNSPECIFIED</dt>
+    <dd>PARAMETER_TYPE_UNSPECIFIED{{% md %}}You must specify a valid type. Using this unspecified type will result in an error.{{% /md %}}</dd><dt>DOUBLE</dt>
+    <dd>DOUBLE{{% md %}}Type for real-valued parameters.{{% /md %}}</dd><dt>INTEGER</dt>
+    <dd>INTEGER{{% md %}}Type for integral parameters.{{% /md %}}</dd><dt>CATEGORICAL</dt>
+    <dd>CATEGORICAL{{% md %}}The parameter is categorical, with a value chosen from the categories field.{{% /md %}}</dd><dt>DISCRETE</dt>
+    <dd>DISCRETE{{% md %}}The parameter is real valued, with a fixed set of feasible points. If `type==DISCRETE`, feasible_points must be provided, and {`min_value`, `max_value`} will be ignored.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="googlecloudmlv1__predictioninput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input</h4>
 
 {{% choosable language csharp %}}
@@ -3272,7 +3508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataformat_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__predictioninputdataformat">Pulumi.<wbr>Google<wbr>Native.<wbr>Ml.<wbr>V1.<wbr>Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Data<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Required. The format of the input data files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3304,7 +3540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputdataformat_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Data<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__predictioninputoutputdataformat">Pulumi.<wbr>Google<wbr>Native.<wbr>Ml.<wbr>V1.<wbr>Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Output<wbr>Data<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Optional. Format of the output data files, defaults to JSON.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3372,7 +3608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataformat_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__predictioninputdataformat">Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Data<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Required. The format of the input data files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3404,7 +3640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputdataformat_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Data<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__predictioninputoutputdataformat">Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Output<wbr>Data<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Optional. Format of the output data files, defaults to JSON.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3472,7 +3708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataformat_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__predictioninputdataformat">Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Data<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Required. The format of the input data files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3504,7 +3740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputdataformat_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Data<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__predictioninputoutputdataformat">Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Output<wbr>Data<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Optional. Format of the output data files, defaults to JSON.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3572,7 +3808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_format_python" style="color: inherit; text-decoration: inherit;">data_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudmlv1__predictioninputdataformat">Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Data<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Required. The format of the input data files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3604,7 +3840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_data_format_python" style="color: inherit; text-decoration: inherit;">output_<wbr>data_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudmlv1__predictioninputoutputdataformat">Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Output<wbr>Data<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Optional. Format of the output data files, defaults to JSON.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3655,6 +3891,90 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use this field if you want to specify a version of the model to use. The string is formatted the same way as `model_version`, with the addition of the version information: `"projects/YOUR_PROJECT/models/YOUR_MODEL/versions/YOUR_VERSION"`{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudmlv1__predictioninputdataformat">Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Data<wbr>Format</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Data<wbr>Format<wbr>Unspecified</dt>
+    <dd>DATA_FORMAT_UNSPECIFIED{{% md %}}Unspecified format.{{% /md %}}</dd><dt>Json</dt>
+    <dd>JSON{{% md %}}Each line of the file is a JSON dictionary representing one record.{{% /md %}}</dd><dt>Text</dt>
+    <dd>TEXT{{% md %}}Deprecated. Use JSON instead.{{% /md %}}</dd><dt>Tf<wbr>Record</dt>
+    <dd>TF_RECORD{{% md %}}The source file is a TFRecord file. Currently available only for input data.{{% /md %}}</dd><dt>Tf<wbr>Record<wbr>Gzip</dt>
+    <dd>TF_RECORD_GZIP{{% md %}}The source file is a GZIP-compressed TFRecord file. Currently available only for input data.{{% /md %}}</dd><dt>Csv</dt>
+    <dd>CSV{{% md %}}Values are comma-separated rows, with keys in a separate file. Currently available only for output data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Data<wbr>Format<wbr>Data<wbr>Format<wbr>Unspecified</dt>
+    <dd>DATA_FORMAT_UNSPECIFIED{{% md %}}Unspecified format.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Data<wbr>Format<wbr>Json</dt>
+    <dd>JSON{{% md %}}Each line of the file is a JSON dictionary representing one record.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Data<wbr>Format<wbr>Text</dt>
+    <dd>TEXT{{% md %}}Deprecated. Use JSON instead.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Data<wbr>Format<wbr>Tf<wbr>Record</dt>
+    <dd>TF_RECORD{{% md %}}The source file is a TFRecord file. Currently available only for input data.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Data<wbr>Format<wbr>Tf<wbr>Record<wbr>Gzip</dt>
+    <dd>TF_RECORD_GZIP{{% md %}}The source file is a GZIP-compressed TFRecord file. Currently available only for input data.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Data<wbr>Format<wbr>Csv</dt>
+    <dd>CSV{{% md %}}Values are comma-separated rows, with keys in a separate file. Currently available only for output data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Data<wbr>Format<wbr>Unspecified</dt>
+    <dd>DATA_FORMAT_UNSPECIFIED{{% md %}}Unspecified format.{{% /md %}}</dd><dt>Json</dt>
+    <dd>JSON{{% md %}}Each line of the file is a JSON dictionary representing one record.{{% /md %}}</dd><dt>Text</dt>
+    <dd>TEXT{{% md %}}Deprecated. Use JSON instead.{{% /md %}}</dd><dt>Tf<wbr>Record</dt>
+    <dd>TF_RECORD{{% md %}}The source file is a TFRecord file. Currently available only for input data.{{% /md %}}</dd><dt>Tf<wbr>Record<wbr>Gzip</dt>
+    <dd>TF_RECORD_GZIP{{% md %}}The source file is a GZIP-compressed TFRecord file. Currently available only for input data.{{% /md %}}</dd><dt>Csv</dt>
+    <dd>CSV{{% md %}}Values are comma-separated rows, with keys in a separate file. Currently available only for output data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DATA_FORMAT_UNSPECIFIED</dt>
+    <dd>DATA_FORMAT_UNSPECIFIED{{% md %}}Unspecified format.{{% /md %}}</dd><dt>JSON</dt>
+    <dd>JSON{{% md %}}Each line of the file is a JSON dictionary representing one record.{{% /md %}}</dd><dt>TEXT</dt>
+    <dd>TEXT{{% md %}}Deprecated. Use JSON instead.{{% /md %}}</dd><dt>TF_RECORD</dt>
+    <dd>TF_RECORD{{% md %}}The source file is a TFRecord file. Currently available only for input data.{{% /md %}}</dd><dt>TF_RECORD_GZIP</dt>
+    <dd>TF_RECORD_GZIP{{% md %}}The source file is a GZIP-compressed TFRecord file. Currently available only for input data.{{% /md %}}</dd><dt>CSV</dt>
+    <dd>CSV{{% md %}}Values are comma-separated rows, with keys in a separate file. Currently available only for output data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudmlv1__predictioninputoutputdataformat">Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Output<wbr>Data<wbr>Format</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Data<wbr>Format<wbr>Unspecified</dt>
+    <dd>DATA_FORMAT_UNSPECIFIED{{% md %}}Unspecified format.{{% /md %}}</dd><dt>Json</dt>
+    <dd>JSON{{% md %}}Each line of the file is a JSON dictionary representing one record.{{% /md %}}</dd><dt>Text</dt>
+    <dd>TEXT{{% md %}}Deprecated. Use JSON instead.{{% /md %}}</dd><dt>Tf<wbr>Record</dt>
+    <dd>TF_RECORD{{% md %}}The source file is a TFRecord file. Currently available only for input data.{{% /md %}}</dd><dt>Tf<wbr>Record<wbr>Gzip</dt>
+    <dd>TF_RECORD_GZIP{{% md %}}The source file is a GZIP-compressed TFRecord file. Currently available only for input data.{{% /md %}}</dd><dt>Csv</dt>
+    <dd>CSV{{% md %}}Values are comma-separated rows, with keys in a separate file. Currently available only for output data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Output<wbr>Data<wbr>Format<wbr>Data<wbr>Format<wbr>Unspecified</dt>
+    <dd>DATA_FORMAT_UNSPECIFIED{{% md %}}Unspecified format.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Output<wbr>Data<wbr>Format<wbr>Json</dt>
+    <dd>JSON{{% md %}}Each line of the file is a JSON dictionary representing one record.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Output<wbr>Data<wbr>Format<wbr>Text</dt>
+    <dd>TEXT{{% md %}}Deprecated. Use JSON instead.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Output<wbr>Data<wbr>Format<wbr>Tf<wbr>Record</dt>
+    <dd>TF_RECORD{{% md %}}The source file is a TFRecord file. Currently available only for input data.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Output<wbr>Data<wbr>Format<wbr>Tf<wbr>Record<wbr>Gzip</dt>
+    <dd>TF_RECORD_GZIP{{% md %}}The source file is a GZIP-compressed TFRecord file. Currently available only for input data.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Output<wbr>Data<wbr>Format<wbr>Csv</dt>
+    <dd>CSV{{% md %}}Values are comma-separated rows, with keys in a separate file. Currently available only for output data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Data<wbr>Format<wbr>Unspecified</dt>
+    <dd>DATA_FORMAT_UNSPECIFIED{{% md %}}Unspecified format.{{% /md %}}</dd><dt>Json</dt>
+    <dd>JSON{{% md %}}Each line of the file is a JSON dictionary representing one record.{{% /md %}}</dd><dt>Text</dt>
+    <dd>TEXT{{% md %}}Deprecated. Use JSON instead.{{% /md %}}</dd><dt>Tf<wbr>Record</dt>
+    <dd>TF_RECORD{{% md %}}The source file is a TFRecord file. Currently available only for input data.{{% /md %}}</dd><dt>Tf<wbr>Record<wbr>Gzip</dt>
+    <dd>TF_RECORD_GZIP{{% md %}}The source file is a GZIP-compressed TFRecord file. Currently available only for input data.{{% /md %}}</dd><dt>Csv</dt>
+    <dd>CSV{{% md %}}Values are comma-separated rows, with keys in a separate file. Currently available only for output data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DATA_FORMAT_UNSPECIFIED</dt>
+    <dd>DATA_FORMAT_UNSPECIFIED{{% md %}}Unspecified format.{{% /md %}}</dd><dt>JSON</dt>
+    <dd>JSON{{% md %}}Each line of the file is a JSON dictionary representing one record.{{% /md %}}</dd><dt>TEXT</dt>
+    <dd>TEXT{{% md %}}Deprecated. Use JSON instead.{{% /md %}}</dd><dt>TF_RECORD</dt>
+    <dd>TF_RECORD{{% md %}}The source file is a TFRecord file. Currently available only for input data.{{% /md %}}</dd><dt>TF_RECORD_GZIP</dt>
+    <dd>TF_RECORD_GZIP{{% md %}}The source file is a GZIP-compressed TFRecord file. Currently available only for input data.{{% /md %}}</dd><dt>CSV</dt>
+    <dd>CSV{{% md %}}Values are comma-separated rows, with keys in a separate file. Currently available only for output data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googlecloudmlv1__predictioninputresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Response</h4>
@@ -5088,7 +5408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletier_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__traininginputscaletier">Pulumi.<wbr>Google<wbr>Native.<wbr>Ml.<wbr>V1.<wbr>Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Input<wbr>Scale<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Required. Specifies the machine types, the number of replicas for workers and parameter servers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5292,7 +5612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletier_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__traininginputscaletier">Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Input<wbr>Scale<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Required. Specifies the machine types, the number of replicas for workers and parameter servers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5496,7 +5816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletier_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googlecloudmlv1__traininginputscaletier">Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Input<wbr>Scale<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Required. Specifies the machine types, the number of replicas for workers and parameter servers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5700,7 +6020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_tier_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googlecloudmlv1__traininginputscaletier">Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Input<wbr>Scale<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Required. Specifies the machine types, the number of replicas for workers and parameter servers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6571,6 +6891,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Optional. Specifies the type of virtual machine to use for your training job's worker nodes. The supported values are the same as those described in the entry for `masterType`. This value must be consistent with the category of machine type that `masterType` uses. In other words, both must be Compute Engine machine types or both must be legacy machine types. If you use `cloud_tpu` for this value, see special instructions for [configuring a custom TPU machine](/ml-engine/docs/tensorflow/using-tpus#configuring_a_custom_tpu_machine). This value must be present when `scaleTier` is set to `CUSTOM` and `workerCount` is greater than zero.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="googlecloudmlv1__traininginputscaletier">Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Input<wbr>Scale<wbr>Tier</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Basic</dt>
+    <dd>BASIC{{% md %}}A single worker instance. This tier is suitable for learning how to use Cloud ML, and for experimenting with new models using small datasets.{{% /md %}}</dd><dt>Standard1</dt>
+    <dd>STANDARD_1{{% md %}}Many workers and a few parameter servers.{{% /md %}}</dd><dt>Premium1</dt>
+    <dd>PREMIUM_1{{% md %}}A large number of workers with many parameter servers.{{% /md %}}</dd><dt>Basic<wbr>Gpu</dt>
+    <dd>BASIC_GPU{{% md %}}A single worker instance [with a GPU](/ai-platform/training/docs/using-gpus).{{% /md %}}</dd><dt>Basic<wbr>Tpu</dt>
+    <dd>BASIC_TPU{{% md %}}A single worker instance with a [Cloud TPU](/ml-engine/docs/tensorflow/using-tpus).{{% /md %}}</dd><dt>Custom</dt>
+    <dd>CUSTOM{{% md %}}The CUSTOM tier is not a set tier, but rather enables you to use your own cluster specification. When you use this tier, set values to configure your processing cluster according to these guidelines: * You _must_ set `TrainingInput.masterType` to specify the type of machine to use for your master node. This is the only required setting. * You _may_ set `TrainingInput.workerCount` to specify the number of workers to use. If you specify one or more workers, you _must_ also set `TrainingInput.workerType` to specify the type of machine to use for your worker nodes. * You _may_ set `TrainingInput.parameterServerCount` to specify the number of parameter servers to use. If you specify one or more parameter servers, you _must_ also set `TrainingInput.parameterServerType` to specify the type of machine to use for your parameter servers. Note that all of your workers must use the same machine type, which can be different from your parameter server type and master type. Your parameter servers must likewise use the same machine type, which can be different from your worker type and master type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Input<wbr>Scale<wbr>Tier<wbr>Basic</dt>
+    <dd>BASIC{{% md %}}A single worker instance. This tier is suitable for learning how to use Cloud ML, and for experimenting with new models using small datasets.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Input<wbr>Scale<wbr>Tier<wbr>Standard1</dt>
+    <dd>STANDARD_1{{% md %}}Many workers and a few parameter servers.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Input<wbr>Scale<wbr>Tier<wbr>Premium1</dt>
+    <dd>PREMIUM_1{{% md %}}A large number of workers with many parameter servers.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Input<wbr>Scale<wbr>Tier<wbr>Basic<wbr>Gpu</dt>
+    <dd>BASIC_GPU{{% md %}}A single worker instance [with a GPU](/ai-platform/training/docs/using-gpus).{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Input<wbr>Scale<wbr>Tier<wbr>Basic<wbr>Tpu</dt>
+    <dd>BASIC_TPU{{% md %}}A single worker instance with a [Cloud TPU](/ml-engine/docs/tensorflow/using-tpus).{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Input<wbr>Scale<wbr>Tier<wbr>Custom</dt>
+    <dd>CUSTOM{{% md %}}The CUSTOM tier is not a set tier, but rather enables you to use your own cluster specification. When you use this tier, set values to configure your processing cluster according to these guidelines: * You _must_ set `TrainingInput.masterType` to specify the type of machine to use for your master node. This is the only required setting. * You _may_ set `TrainingInput.workerCount` to specify the number of workers to use. If you specify one or more workers, you _must_ also set `TrainingInput.workerType` to specify the type of machine to use for your worker nodes. * You _may_ set `TrainingInput.parameterServerCount` to specify the number of parameter servers to use. If you specify one or more parameter servers, you _must_ also set `TrainingInput.parameterServerType` to specify the type of machine to use for your parameter servers. Note that all of your workers must use the same machine type, which can be different from your parameter server type and master type. Your parameter servers must likewise use the same machine type, which can be different from your worker type and master type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Basic</dt>
+    <dd>BASIC{{% md %}}A single worker instance. This tier is suitable for learning how to use Cloud ML, and for experimenting with new models using small datasets.{{% /md %}}</dd><dt>Standard1</dt>
+    <dd>STANDARD_1{{% md %}}Many workers and a few parameter servers.{{% /md %}}</dd><dt>Premium1</dt>
+    <dd>PREMIUM_1{{% md %}}A large number of workers with many parameter servers.{{% /md %}}</dd><dt>Basic<wbr>Gpu</dt>
+    <dd>BASIC_GPU{{% md %}}A single worker instance [with a GPU](/ai-platform/training/docs/using-gpus).{{% /md %}}</dd><dt>Basic<wbr>Tpu</dt>
+    <dd>BASIC_TPU{{% md %}}A single worker instance with a [Cloud TPU](/ml-engine/docs/tensorflow/using-tpus).{{% /md %}}</dd><dt>Custom</dt>
+    <dd>CUSTOM{{% md %}}The CUSTOM tier is not a set tier, but rather enables you to use your own cluster specification. When you use this tier, set values to configure your processing cluster according to these guidelines: * You _must_ set `TrainingInput.masterType` to specify the type of machine to use for your master node. This is the only required setting. * You _may_ set `TrainingInput.workerCount` to specify the number of workers to use. If you specify one or more workers, you _must_ also set `TrainingInput.workerType` to specify the type of machine to use for your worker nodes. * You _may_ set `TrainingInput.parameterServerCount` to specify the number of parameter servers to use. If you specify one or more parameter servers, you _must_ also set `TrainingInput.parameterServerType` to specify the type of machine to use for your parameter servers. Note that all of your workers must use the same machine type, which can be different from your parameter server type and master type. Your parameter servers must likewise use the same machine type, which can be different from your worker type and master type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>BASIC</dt>
+    <dd>BASIC{{% md %}}A single worker instance. This tier is suitable for learning how to use Cloud ML, and for experimenting with new models using small datasets.{{% /md %}}</dd><dt>STANDARD1</dt>
+    <dd>STANDARD_1{{% md %}}Many workers and a few parameter servers.{{% /md %}}</dd><dt>PREMIUM1</dt>
+    <dd>PREMIUM_1{{% md %}}A large number of workers with many parameter servers.{{% /md %}}</dd><dt>BASIC_GPU</dt>
+    <dd>BASIC_GPU{{% md %}}A single worker instance [with a GPU](/ai-platform/training/docs/using-gpus).{{% /md %}}</dd><dt>BASIC_TPU</dt>
+    <dd>BASIC_TPU{{% md %}}A single worker instance with a [Cloud TPU](/ml-engine/docs/tensorflow/using-tpus).{{% /md %}}</dd><dt>CUSTOM</dt>
+    <dd>CUSTOM{{% md %}}The CUSTOM tier is not a set tier, but rather enables you to use your own cluster specification. When you use this tier, set values to configure your processing cluster according to these guidelines: * You _must_ set `TrainingInput.masterType` to specify the type of machine to use for your master node. This is the only required setting. * You _may_ set `TrainingInput.workerCount` to specify the number of workers to use. If you specify one or more workers, you _must_ also set `TrainingInput.workerType` to specify the type of machine to use for your worker nodes. * You _may_ set `TrainingInput.parameterServerCount` to specify the number of parameter servers to use. If you specify one or more parameter servers, you _must_ also set `TrainingInput.parameterServerType` to specify the type of machine to use for your parameter servers. Note that all of your workers must use the same machine type, which can be different from your parameter server type and master type. Your parameter servers must likewise use the same machine type, which can be different from your worker type and master type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="googlecloudmlv1__trainingoutput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Output</h4>
 
 {{% choosable language csharp %}}
@@ -7053,6 +7415,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#googlecloudmlv1__hyperparameteroutputresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Results for individual Hyperparameter trials. Only set for hyperparameter tuning jobs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobstate">Job<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The job state is unspecified.{{% /md %}}</dd><dt>Queued</dt>
+    <dd>QUEUED{{% md %}}The job has been just created and processing has not yet begun.{{% /md %}}</dd><dt>Preparing</dt>
+    <dd>PREPARING{{% md %}}The service is preparing to run the job.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The job is in progress.{{% /md %}}</dd><dt>Succeeded</dt>
+    <dd>SUCCEEDED{{% md %}}The job completed successfully.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The job failed. `error_message` should contain the details of the failure.{{% /md %}}</dd><dt>Cancelling</dt>
+    <dd>CANCELLING{{% md %}}The job is being cancelled. `error_message` should describe the reason for the cancellation.{{% /md %}}</dd><dt>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The job has been cancelled. `error_message` should describe the reason for the cancellation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Job<wbr>State<wbr>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The job state is unspecified.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Queued</dt>
+    <dd>QUEUED{{% md %}}The job has been just created and processing has not yet begun.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Preparing</dt>
+    <dd>PREPARING{{% md %}}The service is preparing to run the job.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Running</dt>
+    <dd>RUNNING{{% md %}}The job is in progress.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Succeeded</dt>
+    <dd>SUCCEEDED{{% md %}}The job completed successfully.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Failed</dt>
+    <dd>FAILED{{% md %}}The job failed. `error_message` should contain the details of the failure.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Cancelling</dt>
+    <dd>CANCELLING{{% md %}}The job is being cancelled. `error_message` should describe the reason for the cancellation.{{% /md %}}</dd><dt>Job<wbr>State<wbr>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The job has been cancelled. `error_message` should describe the reason for the cancellation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>State<wbr>Unspecified</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The job state is unspecified.{{% /md %}}</dd><dt>Queued</dt>
+    <dd>QUEUED{{% md %}}The job has been just created and processing has not yet begun.{{% /md %}}</dd><dt>Preparing</dt>
+    <dd>PREPARING{{% md %}}The service is preparing to run the job.{{% /md %}}</dd><dt>Running</dt>
+    <dd>RUNNING{{% md %}}The job is in progress.{{% /md %}}</dd><dt>Succeeded</dt>
+    <dd>SUCCEEDED{{% md %}}The job completed successfully.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The job failed. `error_message` should contain the details of the failure.{{% /md %}}</dd><dt>Cancelling</dt>
+    <dd>CANCELLING{{% md %}}The job is being cancelled. `error_message` should describe the reason for the cancellation.{{% /md %}}</dd><dt>Cancelled</dt>
+    <dd>CANCELLED{{% md %}}The job has been cancelled. `error_message` should describe the reason for the cancellation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}The job state is unspecified.{{% /md %}}</dd><dt>QUEUED</dt>
+    <dd>QUEUED{{% md %}}The job has been just created and processing has not yet begun.{{% /md %}}</dd><dt>PREPARING</dt>
+    <dd>PREPARING{{% md %}}The service is preparing to run the job.{{% /md %}}</dd><dt>RUNNING</dt>
+    <dd>RUNNING{{% md %}}The job is in progress.{{% /md %}}</dd><dt>SUCCEEDED</dt>
+    <dd>SUCCEEDED{{% md %}}The job completed successfully.{{% /md %}}</dd><dt>FAILED</dt>
+    <dd>FAILED{{% md %}}The job failed. `error_message` should contain the details of the failure.{{% /md %}}</dd><dt>CANCELLING</dt>
+    <dd>CANCELLING{{% md %}}The job is being cancelled. `error_message` should describe the reason for the cancellation.{{% /md %}}</dd><dt>CANCELLED</dt>
+    <dd>CANCELLED{{% md %}}The job has been cancelled. `error_message` should describe the reason for the cancellation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

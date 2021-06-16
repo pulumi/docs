@@ -20,6 +20,17 @@ Explore the resources and functions of the google-native.spanner/v1 module.
     <li><a href="session" title="Session"><span class="symbol resource"></span>Session</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getbackup" title="GetBackup"><span class="symbol function"></span>GetBackup</a></li>
+    <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
+    <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+    <li><a href="getinstancebackupiampolicy" title="GetInstanceBackupIamPolicy"><span class="symbol function"></span>GetInstanceBackupIamPolicy</a></li>
+    <li><a href="getinstancedatabaseiampolicy" title="GetInstanceDatabaseIamPolicy"><span class="symbol function"></span>GetInstanceDatabaseIamPolicy</a></li>
+    <li><a href="getinstanceiampolicy" title="GetInstanceIamPolicy"><span class="symbol function"></span>GetInstanceIamPolicy</a></li>
+    <li><a href="getsession" title="GetSession"><span class="symbol function"></span>GetSession</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -27,6 +38,6 @@ Explore the resources and functions of the google-native.spanner/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

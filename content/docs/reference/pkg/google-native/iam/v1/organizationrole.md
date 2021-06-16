@@ -34,7 +34,7 @@ Creates a new custom Role.
                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">organization_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">role_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">stage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">stage</span><span class="p">:</span> <span class="nx">Optional[_iam_v1.OrganizationRoleStage]</span> = None<span class="p">,</span>
                      <span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">OrganizationRole</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -225,7 +225,7 @@ The OrganizationRole resource accepts the following [input]({{< relref "/docs/in
 <a href="#stage_csharp" style="color: inherit; text-decoration: inherit;">Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#organizationrolestage">Pulumi.<wbr>Google<wbr>Native.<wbr>IAM.<wbr>V1.<wbr>Organization<wbr>Role<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}The current launch stage of the role. If the `ALPHA` launch stage has been selected for a role, the `stage` field will not be included in the returned definition for the role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -301,7 +301,7 @@ The OrganizationRole resource accepts the following [input]({{< relref "/docs/in
 <a href="#stage_go" style="color: inherit; text-decoration: inherit;">Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#organizationrolestage">Organization<wbr>Role<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}The current launch stage of the role. If the `ALPHA` launch stage has been selected for a role, the `stage` field will not be included in the returned definition for the role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -377,7 +377,7 @@ The OrganizationRole resource accepts the following [input]({{< relref "/docs/in
 <a href="#stage_nodejs" style="color: inherit; text-decoration: inherit;">stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#organizationrolestage">Organization<wbr>Role<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}The current launch stage of the role. If the `ALPHA` launch stage has been selected for a role, the `stage` field will not be included in the returned definition for the role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -453,7 +453,7 @@ The OrganizationRole resource accepts the following [input]({{< relref "/docs/in
 <a href="#stage_python" style="color: inherit; text-decoration: inherit;">stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#organizationrolestage">Organization<wbr>Role<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}The current launch stage of the role. If the `ALPHA` launch stage has been selected for a role, the `stage` field will not be included in the returned definition for the role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,6 +526,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="organizationrolestage">Organization<wbr>Role<wbr>Stage</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Alpha</dt>
+    <dd>ALPHA{{% md %}}The user has indicated this role is currently in an Alpha phase. If this launch stage is selected, the `stage` field will not be included when requesting the definition for a given role.{{% /md %}}</dd><dt>Beta</dt>
+    <dd>BETA{{% md %}}The user has indicated this role is currently in a Beta phase.{{% /md %}}</dd><dt>Ga</dt>
+    <dd>GA{{% md %}}The user has indicated this role is generally available.{{% /md %}}</dd><dt>Deprecated</dt>
+    <dd>DEPRECATED{{% md %}}The user has indicated this role is being deprecated.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}This role is disabled and will not contribute permissions to any members it is granted to in policies.{{% /md %}}</dd><dt>Eap</dt>
+    <dd>EAP{{% md %}}The user has indicated this role is currently in an EAP phase.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Organization<wbr>Role<wbr>Stage<wbr>Alpha</dt>
+    <dd>ALPHA{{% md %}}The user has indicated this role is currently in an Alpha phase. If this launch stage is selected, the `stage` field will not be included when requesting the definition for a given role.{{% /md %}}</dd><dt>Organization<wbr>Role<wbr>Stage<wbr>Beta</dt>
+    <dd>BETA{{% md %}}The user has indicated this role is currently in a Beta phase.{{% /md %}}</dd><dt>Organization<wbr>Role<wbr>Stage<wbr>Ga</dt>
+    <dd>GA{{% md %}}The user has indicated this role is generally available.{{% /md %}}</dd><dt>Organization<wbr>Role<wbr>Stage<wbr>Deprecated</dt>
+    <dd>DEPRECATED{{% md %}}The user has indicated this role is being deprecated.{{% /md %}}</dd><dt>Organization<wbr>Role<wbr>Stage<wbr>Disabled</dt>
+    <dd>DISABLED{{% md %}}This role is disabled and will not contribute permissions to any members it is granted to in policies.{{% /md %}}</dd><dt>Organization<wbr>Role<wbr>Stage<wbr>Eap</dt>
+    <dd>EAP{{% md %}}The user has indicated this role is currently in an EAP phase.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Alpha</dt>
+    <dd>ALPHA{{% md %}}The user has indicated this role is currently in an Alpha phase. If this launch stage is selected, the `stage` field will not be included when requesting the definition for a given role.{{% /md %}}</dd><dt>Beta</dt>
+    <dd>BETA{{% md %}}The user has indicated this role is currently in a Beta phase.{{% /md %}}</dd><dt>Ga</dt>
+    <dd>GA{{% md %}}The user has indicated this role is generally available.{{% /md %}}</dd><dt>Deprecated</dt>
+    <dd>DEPRECATED{{% md %}}The user has indicated this role is being deprecated.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>DISABLED{{% md %}}This role is disabled and will not contribute permissions to any members it is granted to in policies.{{% /md %}}</dd><dt>Eap</dt>
+    <dd>EAP{{% md %}}The user has indicated this role is currently in an EAP phase.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALPHA</dt>
+    <dd>ALPHA{{% md %}}The user has indicated this role is currently in an Alpha phase. If this launch stage is selected, the `stage` field will not be included when requesting the definition for a given role.{{% /md %}}</dd><dt>BETA</dt>
+    <dd>BETA{{% md %}}The user has indicated this role is currently in a Beta phase.{{% /md %}}</dd><dt>GA</dt>
+    <dd>GA{{% md %}}The user has indicated this role is generally available.{{% /md %}}</dd><dt>DEPRECATED</dt>
+    <dd>DEPRECATED{{% md %}}The user has indicated this role is being deprecated.{{% /md %}}</dd><dt>DISABLED</dt>
+    <dd>DISABLED{{% md %}}This role is disabled and will not contribute permissions to any members it is granted to in policies.{{% /md %}}</dd><dt>EAP</dt>
+    <dd>EAP{{% md %}}The user has indicated this role is currently in an EAP phase.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

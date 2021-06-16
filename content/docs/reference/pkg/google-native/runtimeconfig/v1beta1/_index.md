@@ -17,6 +17,14 @@ Explore the resources and functions of the google-native.runtimeconfig/v1beta1 m
     <li><a href="waiter" title="Waiter"><span class="symbol resource"></span>Waiter</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getconfig" title="GetConfig"><span class="symbol function"></span>GetConfig</a></li>
+    <li><a href="getconfigiampolicy" title="GetConfigIamPolicy"><span class="symbol function"></span>GetConfigIamPolicy</a></li>
+    <li><a href="getvariable" title="GetVariable"><span class="symbol function"></span>GetVariable</a></li>
+    <li><a href="getwaiter" title="GetWaiter"><span class="symbol function"></span>GetWaiter</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -24,6 +32,6 @@ Explore the resources and functions of the google-native.runtimeconfig/v1beta1 m
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

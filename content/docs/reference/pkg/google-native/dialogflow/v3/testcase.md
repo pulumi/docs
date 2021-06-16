@@ -3897,7 +3897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audioencoding_csharp" style="color: inherit; text-decoration: inherit;">Audio<wbr>Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3inputaudioconfigaudioencoding">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Audio<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}Required. Audio encoding of the audio content to process.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3921,7 +3921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modelvariant_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3inputaudioconfigmodelvariant">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Model<wbr>Variant</a></span>
     </dt>
     <dd>{{% md %}}Optional. Which variant of the Speech model to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3957,7 +3957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audioencoding_go" style="color: inherit; text-decoration: inherit;">Audio<wbr>Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3inputaudioconfigaudioencoding">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Audio<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}Required. Audio encoding of the audio content to process.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3981,7 +3981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modelvariant_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3inputaudioconfigmodelvariant">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Model<wbr>Variant</a></span>
     </dt>
     <dd>{{% md %}}Optional. Which variant of the Speech model to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4017,7 +4017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audioencoding_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3inputaudioconfigaudioencoding">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Audio<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}Required. Audio encoding of the audio content to process.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4041,7 +4041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modelvariant_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3inputaudioconfigmodelvariant">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Model<wbr>Variant</a></span>
     </dt>
     <dd>{{% md %}}Optional. Which variant of the Speech model to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4077,7 +4077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_encoding_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3inputaudioconfigaudioencoding">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Audio<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}Required. Audio encoding of the audio content to process.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4101,7 +4101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_variant_python" style="color: inherit; text-decoration: inherit;">model_<wbr>variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3inputaudioconfigmodelvariant">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Model<wbr>Variant</a></span>
     </dt>
     <dd>{{% md %}}Optional. Which variant of the Speech model to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4128,6 +4128,90 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If `false` (default), recognition does not cease until the client closes the stream. If `true`, the recognizer will detect a single spoken utterance in input audio. Recognition ceases when it detects the audio's voice has stopped or paused. In this case, once a detected intent is received, the client should close the stream and start a new request with a new stream as needed. Note: This setting is relevant only for streaming methods.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowcxv3inputaudioconfigaudioencoding">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Audio<wbr>Encoding</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Audio<wbr>Encoding<wbr>Unspecified</dt>
+    <dd>AUDIO_ENCODING_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Audio<wbr>Encoding<wbr>Linear16</dt>
+    <dd>AUDIO_ENCODING_LINEAR_16{{% md %}}Uncompressed 16-bit signed little-endian samples (Linear PCM).{{% /md %}}</dd><dt>Audio<wbr>Encoding<wbr>Flac</dt>
+    <dd>AUDIO_ENCODING_FLAC{{% md %}}[`FLAC`](https://xiph.org/flac/documentation.html) (Free Lossless Audio Codec) is the recommended encoding because it is lossless (therefore recognition is not compromised) and requires only about half the bandwidth of `LINEAR16`. `FLAC` stream encoding supports 16-bit and 24-bit samples, however, not all fields in `STREAMINFO` are supported.{{% /md %}}</dd><dt>Audio<wbr>Encoding<wbr>Mulaw</dt>
+    <dd>AUDIO_ENCODING_MULAW{{% md %}}8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.{{% /md %}}</dd><dt>Audio<wbr>Encoding<wbr>Amr</dt>
+    <dd>AUDIO_ENCODING_AMR{{% md %}}Adaptive Multi-Rate Narrowband codec. `sample_rate_hertz` must be 8000.{{% /md %}}</dd><dt>Audio<wbr>Encoding<wbr>Amr<wbr>Wb</dt>
+    <dd>AUDIO_ENCODING_AMR_WB{{% md %}}Adaptive Multi-Rate Wideband codec. `sample_rate_hertz` must be 16000.{{% /md %}}</dd><dt>Audio<wbr>Encoding<wbr>Ogg<wbr>Opus</dt>
+    <dd>AUDIO_ENCODING_OGG_OPUS{{% md %}}Opus encoded audio frames in Ogg container ([OggOpus](https://wiki.xiph.org/OggOpus)). `sample_rate_hertz` must be 16000.{{% /md %}}</dd><dt>Audio<wbr>Encoding<wbr>Speex<wbr>With<wbr>Header<wbr>Byte</dt>
+    <dd>AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE{{% md %}}Although the use of lossy encodings is not recommended, if a very low bitrate encoding is required, `OGG_OPUS` is highly preferred over Speex encoding. The [Speex](https://speex.org/) encoding supported by Dialogflow API has a header byte in each block, as in MIME type `audio/x-speex-with-header-byte`. It is a variant of the RTP Speex encoding defined in [RFC 5574](https://tools.ietf.org/html/rfc5574). The stream is a sequence of blocks, one block per RTP packet. Each block starts with a byte containing the length of the block, in bytes, followed by one or more frames of Speex data, padded to an integral number of bytes (octets) as specified in RFC 5574. In other words, each RTP header is replaced with a single byte containing the block length. Only Speex wideband is supported. `sample_rate_hertz` must be 16000.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Audio<wbr>Encoding<wbr>Audio<wbr>Encoding<wbr>Unspecified</dt>
+    <dd>AUDIO_ENCODING_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Audio<wbr>Encoding<wbr>Audio<wbr>Encoding<wbr>Linear16</dt>
+    <dd>AUDIO_ENCODING_LINEAR_16{{% md %}}Uncompressed 16-bit signed little-endian samples (Linear PCM).{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Audio<wbr>Encoding<wbr>Audio<wbr>Encoding<wbr>Flac</dt>
+    <dd>AUDIO_ENCODING_FLAC{{% md %}}[`FLAC`](https://xiph.org/flac/documentation.html) (Free Lossless Audio Codec) is the recommended encoding because it is lossless (therefore recognition is not compromised) and requires only about half the bandwidth of `LINEAR16`. `FLAC` stream encoding supports 16-bit and 24-bit samples, however, not all fields in `STREAMINFO` are supported.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Audio<wbr>Encoding<wbr>Audio<wbr>Encoding<wbr>Mulaw</dt>
+    <dd>AUDIO_ENCODING_MULAW{{% md %}}8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Audio<wbr>Encoding<wbr>Audio<wbr>Encoding<wbr>Amr</dt>
+    <dd>AUDIO_ENCODING_AMR{{% md %}}Adaptive Multi-Rate Narrowband codec. `sample_rate_hertz` must be 8000.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Audio<wbr>Encoding<wbr>Audio<wbr>Encoding<wbr>Amr<wbr>Wb</dt>
+    <dd>AUDIO_ENCODING_AMR_WB{{% md %}}Adaptive Multi-Rate Wideband codec. `sample_rate_hertz` must be 16000.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Audio<wbr>Encoding<wbr>Audio<wbr>Encoding<wbr>Ogg<wbr>Opus</dt>
+    <dd>AUDIO_ENCODING_OGG_OPUS{{% md %}}Opus encoded audio frames in Ogg container ([OggOpus](https://wiki.xiph.org/OggOpus)). `sample_rate_hertz` must be 16000.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Audio<wbr>Encoding<wbr>Audio<wbr>Encoding<wbr>Speex<wbr>With<wbr>Header<wbr>Byte</dt>
+    <dd>AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE{{% md %}}Although the use of lossy encodings is not recommended, if a very low bitrate encoding is required, `OGG_OPUS` is highly preferred over Speex encoding. The [Speex](https://speex.org/) encoding supported by Dialogflow API has a header byte in each block, as in MIME type `audio/x-speex-with-header-byte`. It is a variant of the RTP Speex encoding defined in [RFC 5574](https://tools.ietf.org/html/rfc5574). The stream is a sequence of blocks, one block per RTP packet. Each block starts with a byte containing the length of the block, in bytes, followed by one or more frames of Speex data, padded to an integral number of bytes (octets) as specified in RFC 5574. In other words, each RTP header is replaced with a single byte containing the block length. Only Speex wideband is supported. `sample_rate_hertz` must be 16000.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Audio<wbr>Encoding<wbr>Unspecified</dt>
+    <dd>AUDIO_ENCODING_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>Audio<wbr>Encoding<wbr>Linear16</dt>
+    <dd>AUDIO_ENCODING_LINEAR_16{{% md %}}Uncompressed 16-bit signed little-endian samples (Linear PCM).{{% /md %}}</dd><dt>Audio<wbr>Encoding<wbr>Flac</dt>
+    <dd>AUDIO_ENCODING_FLAC{{% md %}}[`FLAC`](https://xiph.org/flac/documentation.html) (Free Lossless Audio Codec) is the recommended encoding because it is lossless (therefore recognition is not compromised) and requires only about half the bandwidth of `LINEAR16`. `FLAC` stream encoding supports 16-bit and 24-bit samples, however, not all fields in `STREAMINFO` are supported.{{% /md %}}</dd><dt>Audio<wbr>Encoding<wbr>Mulaw</dt>
+    <dd>AUDIO_ENCODING_MULAW{{% md %}}8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.{{% /md %}}</dd><dt>Audio<wbr>Encoding<wbr>Amr</dt>
+    <dd>AUDIO_ENCODING_AMR{{% md %}}Adaptive Multi-Rate Narrowband codec. `sample_rate_hertz` must be 8000.{{% /md %}}</dd><dt>Audio<wbr>Encoding<wbr>Amr<wbr>Wb</dt>
+    <dd>AUDIO_ENCODING_AMR_WB{{% md %}}Adaptive Multi-Rate Wideband codec. `sample_rate_hertz` must be 16000.{{% /md %}}</dd><dt>Audio<wbr>Encoding<wbr>Ogg<wbr>Opus</dt>
+    <dd>AUDIO_ENCODING_OGG_OPUS{{% md %}}Opus encoded audio frames in Ogg container ([OggOpus](https://wiki.xiph.org/OggOpus)). `sample_rate_hertz` must be 16000.{{% /md %}}</dd><dt>Audio<wbr>Encoding<wbr>Speex<wbr>With<wbr>Header<wbr>Byte</dt>
+    <dd>AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE{{% md %}}Although the use of lossy encodings is not recommended, if a very low bitrate encoding is required, `OGG_OPUS` is highly preferred over Speex encoding. The [Speex](https://speex.org/) encoding supported by Dialogflow API has a header byte in each block, as in MIME type `audio/x-speex-with-header-byte`. It is a variant of the RTP Speex encoding defined in [RFC 5574](https://tools.ietf.org/html/rfc5574). The stream is a sequence of blocks, one block per RTP packet. Each block starts with a byte containing the length of the block, in bytes, followed by one or more frames of Speex data, padded to an integral number of bytes (octets) as specified in RFC 5574. In other words, each RTP header is replaced with a single byte containing the block length. Only Speex wideband is supported. `sample_rate_hertz` must be 16000.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>AUDIO_ENCODING_UNSPECIFIED</dt>
+    <dd>AUDIO_ENCODING_UNSPECIFIED{{% md %}}Not specified.{{% /md %}}</dd><dt>AUDIO_ENCODING_LINEAR16</dt>
+    <dd>AUDIO_ENCODING_LINEAR_16{{% md %}}Uncompressed 16-bit signed little-endian samples (Linear PCM).{{% /md %}}</dd><dt>AUDIO_ENCODING_FLAC</dt>
+    <dd>AUDIO_ENCODING_FLAC{{% md %}}[`FLAC`](https://xiph.org/flac/documentation.html) (Free Lossless Audio Codec) is the recommended encoding because it is lossless (therefore recognition is not compromised) and requires only about half the bandwidth of `LINEAR16`. `FLAC` stream encoding supports 16-bit and 24-bit samples, however, not all fields in `STREAMINFO` are supported.{{% /md %}}</dd><dt>AUDIO_ENCODING_MULAW</dt>
+    <dd>AUDIO_ENCODING_MULAW{{% md %}}8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.{{% /md %}}</dd><dt>AUDIO_ENCODING_AMR</dt>
+    <dd>AUDIO_ENCODING_AMR{{% md %}}Adaptive Multi-Rate Narrowband codec. `sample_rate_hertz` must be 8000.{{% /md %}}</dd><dt>AUDIO_ENCODING_AMR_WB</dt>
+    <dd>AUDIO_ENCODING_AMR_WB{{% md %}}Adaptive Multi-Rate Wideband codec. `sample_rate_hertz` must be 16000.{{% /md %}}</dd><dt>AUDIO_ENCODING_OGG_OPUS</dt>
+    <dd>AUDIO_ENCODING_OGG_OPUS{{% md %}}Opus encoded audio frames in Ogg container ([OggOpus](https://wiki.xiph.org/OggOpus)). `sample_rate_hertz` must be 16000.{{% /md %}}</dd><dt>AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE</dt>
+    <dd>AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE{{% md %}}Although the use of lossy encodings is not recommended, if a very low bitrate encoding is required, `OGG_OPUS` is highly preferred over Speex encoding. The [Speex](https://speex.org/) encoding supported by Dialogflow API has a header byte in each block, as in MIME type `audio/x-speex-with-header-byte`. It is a variant of the RTP Speex encoding defined in [RFC 5574](https://tools.ietf.org/html/rfc5574). The stream is a sequence of blocks, one block per RTP packet. Each block starts with a byte containing the length of the block, in bytes, followed by one or more frames of Speex data, padded to an integral number of bytes (octets) as specified in RFC 5574. In other words, each RTP header is replaced with a single byte containing the block length. Only Speex wideband is supported. `sample_rate_hertz` must be 16000.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowcxv3inputaudioconfigmodelvariant">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Model<wbr>Variant</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Speech<wbr>Model<wbr>Variant<wbr>Unspecified</dt>
+    <dd>SPEECH_MODEL_VARIANT_UNSPECIFIED{{% md %}}No model variant specified. In this case Dialogflow defaults to USE_BEST_AVAILABLE.{{% /md %}}</dd><dt>Use<wbr>Best<wbr>Available</dt>
+    <dd>USE_BEST_AVAILABLE{{% md %}}Use the best available variant of the Speech model that the caller is eligible for. Please see the [Dialogflow docs](https://cloud.google.com/dialogflow/docs/data-logging) for how to make your project eligible for enhanced models.{{% /md %}}</dd><dt>Use<wbr>Standard</dt>
+    <dd>USE_STANDARD{{% md %}}Use standard model variant even if an enhanced model is available. See the [Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models) for details about enhanced models.{{% /md %}}</dd><dt>Use<wbr>Enhanced</dt>
+    <dd>USE_ENHANCED{{% md %}}Use an enhanced model variant: * If an enhanced variant does not exist for the given model and request language, Dialogflow falls back to the standard variant. The [Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models) describes which models have enhanced variants. * If the API caller isn't eligible for enhanced models, Dialogflow returns an error. Please see the [Dialogflow docs](https://cloud.google.com/dialogflow/docs/data-logging) for how to make your project eligible.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Model<wbr>Variant<wbr>Speech<wbr>Model<wbr>Variant<wbr>Unspecified</dt>
+    <dd>SPEECH_MODEL_VARIANT_UNSPECIFIED{{% md %}}No model variant specified. In this case Dialogflow defaults to USE_BEST_AVAILABLE.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Model<wbr>Variant<wbr>Use<wbr>Best<wbr>Available</dt>
+    <dd>USE_BEST_AVAILABLE{{% md %}}Use the best available variant of the Speech model that the caller is eligible for. Please see the [Dialogflow docs](https://cloud.google.com/dialogflow/docs/data-logging) for how to make your project eligible for enhanced models.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Model<wbr>Variant<wbr>Use<wbr>Standard</dt>
+    <dd>USE_STANDARD{{% md %}}Use standard model variant even if an enhanced model is available. See the [Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models) for details about enhanced models.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Model<wbr>Variant<wbr>Use<wbr>Enhanced</dt>
+    <dd>USE_ENHANCED{{% md %}}Use an enhanced model variant: * If an enhanced variant does not exist for the given model and request language, Dialogflow falls back to the standard variant. The [Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models) describes which models have enhanced variants. * If the API caller isn't eligible for enhanced models, Dialogflow returns an error. Please see the [Dialogflow docs](https://cloud.google.com/dialogflow/docs/data-logging) for how to make your project eligible.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Speech<wbr>Model<wbr>Variant<wbr>Unspecified</dt>
+    <dd>SPEECH_MODEL_VARIANT_UNSPECIFIED{{% md %}}No model variant specified. In this case Dialogflow defaults to USE_BEST_AVAILABLE.{{% /md %}}</dd><dt>Use<wbr>Best<wbr>Available</dt>
+    <dd>USE_BEST_AVAILABLE{{% md %}}Use the best available variant of the Speech model that the caller is eligible for. Please see the [Dialogflow docs](https://cloud.google.com/dialogflow/docs/data-logging) for how to make your project eligible for enhanced models.{{% /md %}}</dd><dt>Use<wbr>Standard</dt>
+    <dd>USE_STANDARD{{% md %}}Use standard model variant even if an enhanced model is available. See the [Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models) for details about enhanced models.{{% /md %}}</dd><dt>Use<wbr>Enhanced</dt>
+    <dd>USE_ENHANCED{{% md %}}Use an enhanced model variant: * If an enhanced variant does not exist for the given model and request language, Dialogflow falls back to the standard variant. The [Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models) describes which models have enhanced variants. * If the API caller isn't eligible for enhanced models, Dialogflow returns an error. Please see the [Dialogflow docs](https://cloud.google.com/dialogflow/docs/data-logging) for how to make your project eligible.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SPEECH_MODEL_VARIANT_UNSPECIFIED</dt>
+    <dd>SPEECH_MODEL_VARIANT_UNSPECIFIED{{% md %}}No model variant specified. In this case Dialogflow defaults to USE_BEST_AVAILABLE.{{% /md %}}</dd><dt>USE_BEST_AVAILABLE</dt>
+    <dd>USE_BEST_AVAILABLE{{% md %}}Use the best available variant of the Speech model that the caller is eligible for. Please see the [Dialogflow docs](https://cloud.google.com/dialogflow/docs/data-logging) for how to make your project eligible for enhanced models.{{% /md %}}</dd><dt>USE_STANDARD</dt>
+    <dd>USE_STANDARD{{% md %}}Use standard model variant even if an enhanced model is available. See the [Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models) for details about enhanced models.{{% /md %}}</dd><dt>USE_ENHANCED</dt>
+    <dd>USE_ENHANCED{{% md %}}Use an enhanced model variant: * If an enhanced variant does not exist for the given model and request language, Dialogflow falls back to the standard variant. The [Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models) describes which models have enhanced variants. * If the API caller isn't eligible for enhanced models, Dialogflow returns an error. Please see the [Dialogflow docs](https://cloud.google.com/dialogflow/docs/data-logging) for how to make your project eligible.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddialogflowcxv3inputaudioconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Response</h4>
@@ -7885,7 +7969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testresult_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3testcaseresulttestresult">Pulumi.<wbr>Google<wbr>Native.<wbr>Dialogflow.<wbr>V3.<wbr>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Case<wbr>Result<wbr>Test<wbr>Result</a></span>
     </dt>
     <dd>{{% md %}}Whether the test case passed in the agent environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7929,7 +8013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testresult_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3testcaseresulttestresult">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Case<wbr>Result<wbr>Test<wbr>Result</a></span>
     </dt>
     <dd>{{% md %}}Whether the test case passed in the agent environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7973,7 +8057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testresult_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3testcaseresulttestresult">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Case<wbr>Result<wbr>Test<wbr>Result</a></span>
     </dt>
     <dd>{{% md %}}Whether the test case passed in the agent environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8017,7 +8101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_result_python" style="color: inherit; text-decoration: inherit;">test_<wbr>result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3testcaseresulttestresult">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Case<wbr>Result<wbr>Test<wbr>Result</a></span>
     </dt>
     <dd>{{% md %}}Whether the test case passed in the agent environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8206,6 +8290,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that the test was run.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googleclouddialogflowcxv3testcaseresulttestresult">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Case<wbr>Result<wbr>Test<wbr>Result</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Test<wbr>Result<wbr>Unspecified</dt>
+    <dd>TEST_RESULT_UNSPECIFIED{{% md %}}Not specified. Should never be used.{{% /md %}}</dd><dt>Passed</dt>
+    <dd>PASSED{{% md %}}The test passed.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The test did not pass.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Case<wbr>Result<wbr>Test<wbr>Result<wbr>Test<wbr>Result<wbr>Unspecified</dt>
+    <dd>TEST_RESULT_UNSPECIFIED{{% md %}}Not specified. Should never be used.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Case<wbr>Result<wbr>Test<wbr>Result<wbr>Passed</dt>
+    <dd>PASSED{{% md %}}The test passed.{{% /md %}}</dd><dt>Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Case<wbr>Result<wbr>Test<wbr>Result<wbr>Failed</dt>
+    <dd>FAILED{{% md %}}The test did not pass.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Test<wbr>Result<wbr>Unspecified</dt>
+    <dd>TEST_RESULT_UNSPECIFIED{{% md %}}Not specified. Should never be used.{{% /md %}}</dd><dt>Passed</dt>
+    <dd>PASSED{{% md %}}The test passed.{{% /md %}}</dd><dt>Failed</dt>
+    <dd>FAILED{{% md %}}The test did not pass.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TEST_RESULT_UNSPECIFIED</dt>
+    <dd>TEST_RESULT_UNSPECIFIED{{% md %}}Not specified. Should never be used.{{% /md %}}</dd><dt>PASSED</dt>
+    <dd>PASSED{{% md %}}The test passed.{{% /md %}}</dd><dt>FAILED</dt>
+    <dd>FAILED{{% md %}}The test did not pass.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="googleclouddialogflowcxv3testconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Config</h4>
