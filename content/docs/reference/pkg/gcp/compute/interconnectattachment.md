@@ -173,9 +173,6 @@ class MyStack : Stack
         var network = new Gcp.Compute.Network("network", new Gcp.Compute.NetworkArgs
         {
             AutoCreateSubnetworks = false,
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var address = new Gcp.Compute.Address("address", new Gcp.Compute.AddressArgs
         {
@@ -184,9 +181,6 @@ class MyStack : Stack
             Address = "192.168.1.0",
             PrefixLength = 29,
             Network = network.SelfLink,
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var router = new Gcp.Compute.Router("router", new Gcp.Compute.RouterArgs
         {
@@ -196,9 +190,6 @@ class MyStack : Stack
             {
                 Asn = 16550,
             },
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var ipsec_encrypted_interconnect_attachment = new Gcp.Compute.InterconnectAttachment("ipsec-encrypted-interconnect-attachment", new Gcp.Compute.InterconnectAttachmentArgs
         {
@@ -210,9 +201,6 @@ class MyStack : Stack
             {
                 address.SelfLink,
             },
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
     }
 
@@ -237,7 +225,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		network, err := compute.NewNetwork(ctx, "network", &compute.NetworkArgs{
 			AutoCreateSubnetworks: pulumi.Bool(false),
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -247,7 +235,7 @@ func main() {
 			Address:      pulumi.String("192.168.1.0"),
 			PrefixLength: pulumi.Int(29),
 			Network:      network.SelfLink,
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -257,7 +245,7 @@ func main() {
 			Bgp: &compute.RouterBgpArgs{
 				Asn: pulumi.Int(16550),
 			},
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -269,7 +257,7 @@ func main() {
 			IpsecInternalAddresses: pulumi.StringArray{
 				address.SelfLink,
 			},
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -288,29 +276,25 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
-network = gcp.compute.Network("network", auto_create_subnetworks=False,
-opts=pulumi.ResourceOptions(provider=google_beta))
+network = gcp.compute.Network("network", auto_create_subnetworks=False)
 address = gcp.compute.Address("address",
     address_type="INTERNAL",
     purpose="IPSEC_INTERCONNECT",
     address="192.168.1.0",
     prefix_length=29,
-    network=network.self_link,
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    network=network.self_link)
 router = gcp.compute.Router("router",
     network=network.name,
     encrypted_interconnect_router=True,
     bgp=gcp.compute.RouterBgpArgs(
         asn=16550,
-    ),
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    ))
 ipsec_encrypted_interconnect_attachment = gcp.compute.InterconnectAttachment("ipsec-encrypted-interconnect-attachment",
     edge_availability_domain="AVAILABILITY_DOMAIN_1",
     type="PARTNER",
     router=router.id,
     encryption="IPSEC",
-    ipsec_internal_addresses=[address.self_link],
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    ipsec_internal_addresses=[address.self_link])
 ```
 
 
@@ -324,17 +308,13 @@ ipsec_encrypted_interconnect_attachment = gcp.compute.InterconnectAttachment("ip
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false}, {
-    provider: google_beta,
-});
+const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false});
 const address = new gcp.compute.Address("address", {
     addressType: "INTERNAL",
     purpose: "IPSEC_INTERCONNECT",
     address: "192.168.1.0",
     prefixLength: 29,
     network: network.selfLink,
-}, {
-    provider: google_beta,
 });
 const router = new gcp.compute.Router("router", {
     network: network.name,
@@ -342,8 +322,6 @@ const router = new gcp.compute.Router("router", {
     bgp: {
         asn: 16550,
     },
-}, {
-    provider: google_beta,
 });
 const ipsec_encrypted_interconnect_attachment = new gcp.compute.InterconnectAttachment("ipsec-encrypted-interconnect-attachment", {
     edgeAvailabilityDomain: "AVAILABILITY_DOMAIN_1",
@@ -351,8 +329,6 @@ const ipsec_encrypted_interconnect_attachment = new gcp.compute.InterconnectAtta
     router: router.id,
     encryption: "IPSEC",
     ipsecInternalAddresses: [address.selfLink],
-}, {
-    provider: google_beta,
 });
 ```
 
@@ -604,12 +580,19 @@ domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: NONE is the default value, which means
-that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of
-attachment. IPSEC indicates that the attachment carries only traffic encrypted by an IPsec device such as an HA VPN
-gateway. VMs cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-encrypted Cloud
-Interconnect create the attachment using this option. Not currently available publicly. Default value: "NONE" Possible
-values: ["NONE", "IPSEC"]
+    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect
+attachment:
+NONE is the default value, which means that the attachment carries
+unencrypted traffic. VMs can send traffic to, or receive traffic
+from, this type of attachment.
+IPSEC indicates that the attachment carries only traffic encrypted by
+an IPsec device such as an HA VPN gateway. VMs cannot directly send
+traffic to, or receive traffic from, such an attachment. To use
+IPsec-encrypted Cloud Interconnect create the attachment using this
+option.
+Not currently available publicly.
+Default value is `NONE`.
+Possible values are `NONE` and `IPSEC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interconnect_csharp">
@@ -629,14 +612,22 @@ be set if type is PARTNER.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has
-the encryption option as IPSEC. The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the
-interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP
-address will be allocated from the IP address range specified here. For example, if the HA VPN gateway's interface 0 is
-paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated
-from the IP address specified for this interconnect attachment. If this field is not specified for interconnect
-attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment,
-the HA VPN gateway's IP address will be allocated from regional external IP address pool.
+    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect
+attachment, Used only for interconnect attachment that has the
+encryption option as IPSEC.
+The addresses must be RFC 1918 IP address ranges. When creating HA
+VPN gateway over the interconnect attachment, if the attachment is
+configured to use an RFC 1918 IP address, then the VPN gateway's IP
+address will be allocated from the IP address range specified
+here.
+For example, if the HA VPN gateway's interface 0 is paired to this
+interconnect attachment, then an RFC 1918 IP address for the VPN
+gateway interface 0 will be allocated from the IP address specified
+for this interconnect attachment.
+If this field is not specified for interconnect attachment that has
+encryption option as IPSEC, later on when creating HA VPN gateway on
+this interconnect attachment, the HA VPN gateway's IP address will be
+allocated from regional external IP address pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_csharp">
@@ -787,12 +778,19 @@ domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: NONE is the default value, which means
-that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of
-attachment. IPSEC indicates that the attachment carries only traffic encrypted by an IPsec device such as an HA VPN
-gateway. VMs cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-encrypted Cloud
-Interconnect create the attachment using this option. Not currently available publicly. Default value: "NONE" Possible
-values: ["NONE", "IPSEC"]
+    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect
+attachment:
+NONE is the default value, which means that the attachment carries
+unencrypted traffic. VMs can send traffic to, or receive traffic
+from, this type of attachment.
+IPSEC indicates that the attachment carries only traffic encrypted by
+an IPsec device such as an HA VPN gateway. VMs cannot directly send
+traffic to, or receive traffic from, such an attachment. To use
+IPsec-encrypted Cloud Interconnect create the attachment using this
+option.
+Not currently available publicly.
+Default value is `NONE`.
+Possible values are `NONE` and `IPSEC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interconnect_go">
@@ -812,14 +810,22 @@ be set if type is PARTNER.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has
-the encryption option as IPSEC. The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the
-interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP
-address will be allocated from the IP address range specified here. For example, if the HA VPN gateway's interface 0 is
-paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated
-from the IP address specified for this interconnect attachment. If this field is not specified for interconnect
-attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment,
-the HA VPN gateway's IP address will be allocated from regional external IP address pool.
+    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect
+attachment, Used only for interconnect attachment that has the
+encryption option as IPSEC.
+The addresses must be RFC 1918 IP address ranges. When creating HA
+VPN gateway over the interconnect attachment, if the attachment is
+configured to use an RFC 1918 IP address, then the VPN gateway's IP
+address will be allocated from the IP address range specified
+here.
+For example, if the HA VPN gateway's interface 0 is paired to this
+interconnect attachment, then an RFC 1918 IP address for the VPN
+gateway interface 0 will be allocated from the IP address specified
+for this interconnect attachment.
+If this field is not specified for interconnect attachment that has
+encryption option as IPSEC, later on when creating HA VPN gateway on
+this interconnect attachment, the HA VPN gateway's IP address will be
+allocated from regional external IP address pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_go">
@@ -970,12 +976,19 @@ domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: NONE is the default value, which means
-that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of
-attachment. IPSEC indicates that the attachment carries only traffic encrypted by an IPsec device such as an HA VPN
-gateway. VMs cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-encrypted Cloud
-Interconnect create the attachment using this option. Not currently available publicly. Default value: "NONE" Possible
-values: ["NONE", "IPSEC"]
+    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect
+attachment:
+NONE is the default value, which means that the attachment carries
+unencrypted traffic. VMs can send traffic to, or receive traffic
+from, this type of attachment.
+IPSEC indicates that the attachment carries only traffic encrypted by
+an IPsec device such as an HA VPN gateway. VMs cannot directly send
+traffic to, or receive traffic from, such an attachment. To use
+IPsec-encrypted Cloud Interconnect create the attachment using this
+option.
+Not currently available publicly.
+Default value is `NONE`.
+Possible values are `NONE` and `IPSEC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interconnect_nodejs">
@@ -995,14 +1008,22 @@ be set if type is PARTNER.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has
-the encryption option as IPSEC. The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the
-interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP
-address will be allocated from the IP address range specified here. For example, if the HA VPN gateway's interface 0 is
-paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated
-from the IP address specified for this interconnect attachment. If this field is not specified for interconnect
-attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment,
-the HA VPN gateway's IP address will be allocated from regional external IP address pool.
+    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect
+attachment, Used only for interconnect attachment that has the
+encryption option as IPSEC.
+The addresses must be RFC 1918 IP address ranges. When creating HA
+VPN gateway over the interconnect attachment, if the attachment is
+configured to use an RFC 1918 IP address, then the VPN gateway's IP
+address will be allocated from the IP address range specified
+here.
+For example, if the HA VPN gateway's interface 0 is paired to this
+interconnect attachment, then an RFC 1918 IP address for the VPN
+gateway interface 0 will be allocated from the IP address specified
+for this interconnect attachment.
+If this field is not specified for interconnect attachment that has
+encryption option as IPSEC, later on when creating HA VPN gateway on
+this interconnect attachment, the HA VPN gateway's IP address will be
+allocated from regional external IP address pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_nodejs">
@@ -1153,12 +1174,19 @@ domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: NONE is the default value, which means
-that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of
-attachment. IPSEC indicates that the attachment carries only traffic encrypted by an IPsec device such as an HA VPN
-gateway. VMs cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-encrypted Cloud
-Interconnect create the attachment using this option. Not currently available publicly. Default value: "NONE" Possible
-values: ["NONE", "IPSEC"]
+    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect
+attachment:
+NONE is the default value, which means that the attachment carries
+unencrypted traffic. VMs can send traffic to, or receive traffic
+from, this type of attachment.
+IPSEC indicates that the attachment carries only traffic encrypted by
+an IPsec device such as an HA VPN gateway. VMs cannot directly send
+traffic to, or receive traffic from, such an attachment. To use
+IPsec-encrypted Cloud Interconnect create the attachment using this
+option.
+Not currently available publicly.
+Default value is `NONE`.
+Possible values are `NONE` and `IPSEC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interconnect_python">
@@ -1178,14 +1206,22 @@ be set if type is PARTNER.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has
-the encryption option as IPSEC. The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the
-interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP
-address will be allocated from the IP address range specified here. For example, if the HA VPN gateway's interface 0 is
-paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated
-from the IP address specified for this interconnect attachment. If this field is not specified for interconnect
-attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment,
-the HA VPN gateway's IP address will be allocated from regional external IP address pool.
+    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect
+attachment, Used only for interconnect attachment that has the
+encryption option as IPSEC.
+The addresses must be RFC 1918 IP address ranges. When creating HA
+VPN gateway over the interconnect attachment, if the attachment is
+configured to use an RFC 1918 IP address, then the VPN gateway's IP
+address will be allocated from the IP address range specified
+here.
+For example, if the HA VPN gateway's interface 0 is paired to this
+interconnect attachment, then an RFC 1918 IP address for the VPN
+gateway interface 0 will be allocated from the IP address specified
+for this interconnect attachment.
+If this field is not specified for interconnect attachment that has
+encryption option as IPSEC, later on when creating HA VPN gateway on
+this interconnect attachment, the HA VPN gateway's IP address will be
+allocated from regional external IP address pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_python">
@@ -1895,12 +1931,19 @@ domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: NONE is the default value, which means
-that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of
-attachment. IPSEC indicates that the attachment carries only traffic encrypted by an IPsec device such as an HA VPN
-gateway. VMs cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-encrypted Cloud
-Interconnect create the attachment using this option. Not currently available publicly. Default value: "NONE" Possible
-values: ["NONE", "IPSEC"]
+    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect
+attachment:
+NONE is the default value, which means that the attachment carries
+unencrypted traffic. VMs can send traffic to, or receive traffic
+from, this type of attachment.
+IPSEC indicates that the attachment carries only traffic encrypted by
+an IPsec device such as an HA VPN gateway. VMs cannot directly send
+traffic to, or receive traffic from, such an attachment. To use
+IPsec-encrypted Cloud Interconnect create the attachment using this
+option.
+Not currently available publicly.
+Default value is `NONE`.
+Possible values are `NONE` and `IPSEC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_googlereferenceid_csharp">
@@ -1930,14 +1973,22 @@ be set if type is PARTNER.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has
-the encryption option as IPSEC. The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the
-interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP
-address will be allocated from the IP address range specified here. For example, if the HA VPN gateway's interface 0 is
-paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated
-from the IP address specified for this interconnect attachment. If this field is not specified for interconnect
-attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment,
-the HA VPN gateway's IP address will be allocated from regional external IP address pool.
+    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect
+attachment, Used only for interconnect attachment that has the
+encryption option as IPSEC.
+The addresses must be RFC 1918 IP address ranges. When creating HA
+VPN gateway over the interconnect attachment, if the attachment is
+configured to use an RFC 1918 IP address, then the VPN gateway's IP
+address will be allocated from the IP address range specified
+here.
+For example, if the HA VPN gateway's interface 0 is paired to this
+interconnect attachment, then an RFC 1918 IP address for the VPN
+gateway interface 0 will be allocated from the IP address specified
+for this interconnect attachment.
+If this field is not specified for interconnect attachment that has
+encryption option as IPSEC, later on when creating HA VPN gateway on
+this interconnect attachment, the HA VPN gateway's IP address will be
+allocated from regional external IP address pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_csharp">
@@ -2163,12 +2214,19 @@ domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: NONE is the default value, which means
-that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of
-attachment. IPSEC indicates that the attachment carries only traffic encrypted by an IPsec device such as an HA VPN
-gateway. VMs cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-encrypted Cloud
-Interconnect create the attachment using this option. Not currently available publicly. Default value: "NONE" Possible
-values: ["NONE", "IPSEC"]
+    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect
+attachment:
+NONE is the default value, which means that the attachment carries
+unencrypted traffic. VMs can send traffic to, or receive traffic
+from, this type of attachment.
+IPSEC indicates that the attachment carries only traffic encrypted by
+an IPsec device such as an HA VPN gateway. VMs cannot directly send
+traffic to, or receive traffic from, such an attachment. To use
+IPsec-encrypted Cloud Interconnect create the attachment using this
+option.
+Not currently available publicly.
+Default value is `NONE`.
+Possible values are `NONE` and `IPSEC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_googlereferenceid_go">
@@ -2198,14 +2256,22 @@ be set if type is PARTNER.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has
-the encryption option as IPSEC. The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the
-interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP
-address will be allocated from the IP address range specified here. For example, if the HA VPN gateway's interface 0 is
-paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated
-from the IP address specified for this interconnect attachment. If this field is not specified for interconnect
-attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment,
-the HA VPN gateway's IP address will be allocated from regional external IP address pool.
+    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect
+attachment, Used only for interconnect attachment that has the
+encryption option as IPSEC.
+The addresses must be RFC 1918 IP address ranges. When creating HA
+VPN gateway over the interconnect attachment, if the attachment is
+configured to use an RFC 1918 IP address, then the VPN gateway's IP
+address will be allocated from the IP address range specified
+here.
+For example, if the HA VPN gateway's interface 0 is paired to this
+interconnect attachment, then an RFC 1918 IP address for the VPN
+gateway interface 0 will be allocated from the IP address specified
+for this interconnect attachment.
+If this field is not specified for interconnect attachment that has
+encryption option as IPSEC, later on when creating HA VPN gateway on
+this interconnect attachment, the HA VPN gateway's IP address will be
+allocated from regional external IP address pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_go">
@@ -2431,12 +2497,19 @@ domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: NONE is the default value, which means
-that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of
-attachment. IPSEC indicates that the attachment carries only traffic encrypted by an IPsec device such as an HA VPN
-gateway. VMs cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-encrypted Cloud
-Interconnect create the attachment using this option. Not currently available publicly. Default value: "NONE" Possible
-values: ["NONE", "IPSEC"]
+    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect
+attachment:
+NONE is the default value, which means that the attachment carries
+unencrypted traffic. VMs can send traffic to, or receive traffic
+from, this type of attachment.
+IPSEC indicates that the attachment carries only traffic encrypted by
+an IPsec device such as an HA VPN gateway. VMs cannot directly send
+traffic to, or receive traffic from, such an attachment. To use
+IPsec-encrypted Cloud Interconnect create the attachment using this
+option.
+Not currently available publicly.
+Default value is `NONE`.
+Possible values are `NONE` and `IPSEC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_googlereferenceid_nodejs">
@@ -2466,14 +2539,22 @@ be set if type is PARTNER.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has
-the encryption option as IPSEC. The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the
-interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP
-address will be allocated from the IP address range specified here. For example, if the HA VPN gateway's interface 0 is
-paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated
-from the IP address specified for this interconnect attachment. If this field is not specified for interconnect
-attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment,
-the HA VPN gateway's IP address will be allocated from regional external IP address pool.
+    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect
+attachment, Used only for interconnect attachment that has the
+encryption option as IPSEC.
+The addresses must be RFC 1918 IP address ranges. When creating HA
+VPN gateway over the interconnect attachment, if the attachment is
+configured to use an RFC 1918 IP address, then the VPN gateway's IP
+address will be allocated from the IP address range specified
+here.
+For example, if the HA VPN gateway's interface 0 is paired to this
+interconnect attachment, then an RFC 1918 IP address for the VPN
+gateway interface 0 will be allocated from the IP address specified
+for this interconnect attachment.
+If this field is not specified for interconnect attachment that has
+encryption option as IPSEC, later on when creating HA VPN gateway on
+this interconnect attachment, the HA VPN gateway's IP address will be
+allocated from regional external IP address pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_nodejs">
@@ -2699,12 +2780,19 @@ domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: NONE is the default value, which means
-that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of
-attachment. IPSEC indicates that the attachment carries only traffic encrypted by an IPsec device such as an HA VPN
-gateway. VMs cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-encrypted Cloud
-Interconnect create the attachment using this option. Not currently available publicly. Default value: "NONE" Possible
-values: ["NONE", "IPSEC"]
+    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect
+attachment:
+NONE is the default value, which means that the attachment carries
+unencrypted traffic. VMs can send traffic to, or receive traffic
+from, this type of attachment.
+IPSEC indicates that the attachment carries only traffic encrypted by
+an IPsec device such as an HA VPN gateway. VMs cannot directly send
+traffic to, or receive traffic from, such an attachment. To use
+IPsec-encrypted Cloud Interconnect create the attachment using this
+option.
+Not currently available publicly.
+Default value is `NONE`.
+Possible values are `NONE` and `IPSEC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_google_reference_id_python">
@@ -2734,14 +2822,22 @@ be set if type is PARTNER.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has
-the encryption option as IPSEC. The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the
-interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP
-address will be allocated from the IP address range specified here. For example, if the HA VPN gateway's interface 0 is
-paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated
-from the IP address specified for this interconnect attachment. If this field is not specified for interconnect
-attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment,
-the HA VPN gateway's IP address will be allocated from regional external IP address pool.
+    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect
+attachment, Used only for interconnect attachment that has the
+encryption option as IPSEC.
+The addresses must be RFC 1918 IP address ranges. When creating HA
+VPN gateway over the interconnect attachment, if the attachment is
+configured to use an RFC 1918 IP address, then the VPN gateway's IP
+address will be allocated from the IP address range specified
+here.
+For example, if the HA VPN gateway's interface 0 is paired to this
+interconnect attachment, then an RFC 1918 IP address for the VPN
+gateway interface 0 will be allocated from the IP address specified
+for this interconnect attachment.
+If this field is not specified for interconnect attachment that has
+encryption option as IPSEC, later on when creating HA VPN gateway on
+this interconnect attachment, the HA VPN gateway's IP address will be
+allocated from regional external IP address pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_python">

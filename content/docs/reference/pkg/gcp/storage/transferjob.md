@@ -15,7 +15,7 @@ Creates a new Transfer Job in Google Cloud Storage Transfer.
 To get more information about Google Cloud Storage Transfer, see:
 
 * [Overview](https://cloud.google.com/storage-transfer/docs/overview)
-* [API documentation](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/transferJobs#TransferJob)
+* [API documentation](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/transferJobs)
 * How-to Guides
     * [Configuring Access to Data Sources and Sinks](https://cloud.google.com/storage-transfer/docs/configure-access)
 
@@ -1948,6 +1948,15 @@ is not provided, the provider project is used.
     <dd>{{% md %}}An AWS S3 data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azureblobstoragedatasource_csharp">
+<a href="#azureblobstoragedatasource_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An Azure Blob Storage data source. Structure documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="gcsdatasink_csharp">
 <a href="#gcsdatasink_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Data<wbr>Sink</a>
 </span>
@@ -1972,7 +1981,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An HTTP URL data source. Structure documented below.
+    <dd>{{% md %}}A HTTP URL data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectconditions_csharp">
@@ -2006,6 +2015,15 @@ is not provided, the provider project is used.
     <dd>{{% md %}}An AWS S3 data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azureblobstoragedatasource_go">
+<a href="#azureblobstoragedatasource_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}An Azure Blob Storage data source. Structure documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="gcsdatasink_go">
 <a href="#gcsdatasink_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Data<wbr>Sink</a>
 </span>
@@ -2030,7 +2048,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}An HTTP URL data source. Structure documented below.
+    <dd>{{% md %}}A HTTP URL data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectconditions_go">
@@ -2064,6 +2082,15 @@ is not provided, the provider project is used.
     <dd>{{% md %}}An AWS S3 data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azureblobstoragedatasource_nodejs">
+<a href="#azureblobstoragedatasource_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An Azure Blob Storage data source. Structure documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="gcsdatasink_nodejs">
 <a href="#gcsdatasink_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Data<wbr>Sink</a>
 </span>
@@ -2088,7 +2115,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An HTTP URL data source. Structure documented below.
+    <dd>{{% md %}}A HTTP URL data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectconditions_nodejs">
@@ -2122,6 +2149,15 @@ is not provided, the provider project is used.
     <dd>{{% md %}}An AWS S3 data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azure_blob_storage_data_source_python">
+<a href="#azure_blob_storage_data_source_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage_<wbr>data_<wbr>source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An Azure Blob Storage data source. Structure documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="gcs_data_sink_python">
 <a href="#gcs_data_sink_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>data_<wbr>sink</a>
 </span>
@@ -2146,7 +2182,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An HTTP URL data source. Structure documented below.
+    <dd>{{% md %}}A HTTP URL data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_conditions_python">
@@ -2345,6 +2381,222 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS Secret Access Key.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="transferjobtransferspecazureblobstoragedatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="azurecredentials_csharp">
+<a href="#azurecredentials_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasourceazurecredentials">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source<wbr>Azure<wbr>Credentials<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials used to authenticate API requests to Azure block.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="container_csharp">
+<a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The container to transfer from the Azure Storage account.`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storageaccount_csharp">
+<a href="#storageaccount_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Azure Storage account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="azurecredentials_go">
+<a href="#azurecredentials_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasourceazurecredentials">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source<wbr>Azure<wbr>Credentials</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials used to authenticate API requests to Azure block.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="container_go">
+<a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The container to transfer from the Azure Storage account.`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storageaccount_go">
+<a href="#storageaccount_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Azure Storage account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="azurecredentials_nodejs">
+<a href="#azurecredentials_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasourceazurecredentials">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source<wbr>Azure<wbr>Credentials<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials used to authenticate API requests to Azure block.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="container_nodejs">
+<a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The container to transfer from the Azure Storage account.`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storageaccount_nodejs">
+<a href="#storageaccount_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Azure Storage account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="azure_credentials_python">
+<a href="#azure_credentials_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasourceazurecredentials">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source<wbr>Azure<wbr>Credentials<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Credentials used to authenticate API requests to Azure block.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="container_python">
+<a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The container to transfer from the Azure Storage account.`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="storage_account_python">
+<a href="#storage_account_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the Azure Storage account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="transferjobtransferspecazureblobstoragedatasourceazurecredentials">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source<wbr>Azure<wbr>Credentials</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="sastoken_csharp">
+<a href="#sastoken_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure shared access signature. See [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="sastoken_go">
+<a href="#sastoken_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure shared access signature. See [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="sastoken_nodejs">
+<a href="#sastoken_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure shared access signature. See [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="sas_token_python">
+<a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Azure shared access signature. See [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

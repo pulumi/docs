@@ -47,8 +47,7 @@ class MyStack : Stack
         });
         var primaryPreemptibleNodes = new Gcp.Container.NodePool("primaryPreemptibleNodes", new Gcp.Container.NodePoolArgs
         {
-            Location = "us-central1",
-            Cluster = primary.Name,
+            Cluster = primary.Id,
             NodeCount = 1,
             NodeConfig = new Gcp.Container.Inputs.NodePoolNodeConfigArgs
             {
@@ -99,8 +98,7 @@ func main() {
 			return err
 		}
 		_, err = container.NewNodePool(ctx, "primaryPreemptibleNodes", &container.NodePoolArgs{
-			Location:  pulumi.String("us-central1"),
-			Cluster:   primary.Name,
+			Cluster:   primary.ID(),
 			NodeCount: pulumi.Int(1),
 			NodeConfig: &container.NodePoolNodeConfigArgs{
 				Preemptible:    pulumi.Bool(true),
@@ -137,8 +135,7 @@ primary = gcp.container.Cluster("primary",
     remove_default_node_pool=True,
     initial_node_count=1)
 primary_preemptible_nodes = gcp.container.NodePool("primaryPreemptibleNodes",
-    location="us-central1",
-    cluster=primary.name,
+    cluster=primary.id,
     node_count=1,
     node_config=gcp.container.NodePoolNodeConfigArgs(
         preemptible=True,
@@ -169,8 +166,7 @@ const primary = new gcp.container.Cluster("primary", {
     initialNodeCount: 1,
 });
 const primaryPreemptibleNodes = new gcp.container.NodePool("primaryPreemptibleNodes", {
-    location: "us-central1",
-    cluster: primary.name,
+    cluster: primary.id,
     nodeCount: 1,
     nodeConfig: {
         preemptible: true,
@@ -236,8 +232,7 @@ const primary = new gcp.container.Cluster("primary", {
     },
 });
 const np = new gcp.container.NodePool("np", {
-    location: "us-central1-a",
-    cluster: primary.name,
+    cluster: primary.id,
     nodeConfig: {
         machineType: "e2-medium",
         serviceAccount: _default.email,
@@ -423,7 +418,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
+    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaling_csharp">
@@ -580,7 +575,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
+    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaling_go">
@@ -737,7 +732,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
+    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaling_nodejs">
@@ -894,7 +889,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
+    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaling_python">
@@ -1325,7 +1320,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
+    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initialnodecount_csharp">
@@ -1499,7 +1494,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
+    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initialnodecount_go">
@@ -1673,7 +1668,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
+    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initialnodecount_nodejs">
@@ -1847,7 +1842,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
+    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initial_node_count_python">
