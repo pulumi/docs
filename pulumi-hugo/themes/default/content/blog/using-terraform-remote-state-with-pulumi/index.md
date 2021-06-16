@@ -130,7 +130,7 @@ can do the following:
 3. In the `index.ts` file, create a
     `terraform.state.RemoteStateReference` resource to access the state.
     Note that we can use [Pulumi
-    secrets]({{< relref "managing-secrets-with-pulumi" >}})
+    secrets]({{< relref "/blog/managing-secrets-with-pulumi" >}})
     to ensure that our Terraform Enterprise token is encrypted and never
     stored in plaintext by Pulumi:
 

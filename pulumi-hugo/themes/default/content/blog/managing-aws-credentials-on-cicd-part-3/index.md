@@ -320,7 +320,7 @@ whenever it needs to encrypt or decrypt some data, it will refer to the custom p
 
 For more information on custom secret providers, see
 [Peace of Mind with Cloud Secret Providers]({{< relref "peace-of-mind-with-cloud-secret-providers" >}}) or
-[Managing Secrets with Pulumi]({{< relref "managing-secrets-with-pulumi" >}}).
+[Managing Secrets with Pulumi]({{< relref "/blog/managing-secrets-with-pulumi" >}}).
 
 ## Wrapping Up
 

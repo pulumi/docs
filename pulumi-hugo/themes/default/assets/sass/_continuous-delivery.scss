@@ -1,26 +1,40 @@
-
-// Widget showing a nicely formatted logo grid of our supported CI/CD platforms.
 // Widget showing a nicely formatted logo grid of our supported CI/CD platforms.
 .supported-cicd-platforms {
-    @apply flex flex-row flex-wrap justify-around content-around;
+    @apply flex flex-row flex-wrap;
 
     > a {
-        @apply btn whitespace-normal bg-transparent border border-gray-300 p-2 m-2;
-        @apply flex flex-col justify-between text-center;
+        @apply btn whitespace-normal bg-transparent border border-gray-300 mb-4 p-4 text-center;
 
-        flex: 0 0 150px;
+        width: calc(50% - 1rem);
+        &:not(:nth-child(2n)) {
+            @apply mr-4;
+        }
+
+        @screen md {
+            width: calc(33% - 1rem);
+            &:not(:nth-child(3n)) {
+                @apply mr-4;
+            }
+        }
+
+        @screen xl {
+            width: calc(25% - 1rem);
+            &:not(:nth-child(4n)) {
+                @apply mr-4;
+            }
+        }
 
         &:hover {
-            @apply bg-gray-200;
+            @apply bg-gray-100;
         }
 
         img {
-            max-height: 120px;
-            max-width: 120px;
+            @apply mx-auto w-auto;
+            height: 100px;
         }
 
         h4 {
-            @apply m-0;
+            @apply mt-0 w-full;
         }
     }
 }

@@ -21,67 +21,67 @@ analysis tools, and running unit and integration tests as appropriate. It all "j
 infrastructure the same way it would for your application code.
 
 Pulumi can easily integrate into any continuous integration/continuous delivery (CI/CD) system. If your CI/CD system isn't listed below or you are testing something new, see our guide for using Pulumi
-within a [generic CI/CD system]({{< relref "other" >}}).
+within a [generic CI/CD system]({{< relref "/docs/guides/continuous-delivery/other" >}}).
 
 > Looking to troubleshoot failures related to running Pulumi in CI/CD? Check out our [CI/CD troubleshooting guide]({{< relref "/docs/guides/continuous-delivery/troubleshooting-guide" >}}).
 
 <div class="supported-cicd-platforms">
-    <a href="{{< relref aws-code-services >}}">
+    <a href="{{< relref "/docs/guides/continuous-delivery/aws-code-services" >}}">
         <img src="/logos/tech/ci-cd/aws-codedeploy.svg" alt="AWS Code Services">
         <h4 class="no-anchor">AWS Code Services</h4>
     </a>
-    <a href="{{< relref azure-devops >}}">
+    <a href="{{< relref "/docs/guides/continuous-delivery/azure-devops" >}}">
         <img src="/logos/tech/ci-cd/azure-devops.svg" alt="Azure DevOps">
         <h4 class="no-anchor">Azure DevOps</h4>
     </a>
-    <a href="{{< relref circleci >}}">
+    <a href="{{< relref "/docs/guides/continuous-delivery/circleci" >}}">
         <img src="/logos/tech/ci-cd/circleci.svg" alt="CircleCI">
         <h4 class="no-anchor">CircleCI</h4>
     </a>
-    <a href="{{< relref codefresh >}}">
+    <a href="{{< relref "/docs/guides/continuous-delivery/codefresh" >}}">
         <img src="/logos/tech/ci-cd/codefresh.svg" alt="Codefresh">
         <h4 class="no-anchor">Codefresh</h4>
     </a>
-    <a href="{{< relref github-actions >}}">
+    <a href="{{< relref "/docs/guides/continuous-delivery/github-actions" >}}">
         <img src="/logos/tech/ci-cd/github-actions.svg" alt="GitHub Actions">
         <h4 class="no-anchor">GitHub Actions</h4>
     </a>
-    <a href="{{< relref gitlab-ci >}}">
+    <a href="{{< relref "/docs/guides/continuous-delivery/gitlab-ci" >}}">
         <img src="/logos/tech/ci-cd/gitlab-ci.svg" alt="GitLab CI">
         <h4 class="no-anchor">GitLab CI</h4>
     </a>
-    <a href="{{< relref google-cloud-build >}}">
+    <a href="{{< relref "/docs/guides/continuous-delivery/google-cloud-build" >}}">
         <img src="/logos/tech/ci-cd/google-cloud-build.png" alt="Google Cloud Build">
         <h4 class="no-anchor">Google Cloud Build</h4>
     </a>
-    <a href="{{< relref jenkins >}}">
+    <a href="{{< relref "/docs/guides/continuous-delivery/jenkins" >}}">
         <img src="/logos/tech/ci-cd/jenkins.svg" alt="Jenkins">
         <h4 class="no-anchor">Jenkins</h4>
     </a>
-    <a href="{{< relref octopus-deploy >}}">
+    <a href="{{< relref "/docs/guides/continuous-delivery/octopus-deploy" >}}">
         <img src="/logos/tech/ci-cd/octopus-deploy.svg" alt="Octopus Deploy">
         <h4 class="no-anchor">Octopus Deploy</h4>
     </a>
-    <a href="{{< relref pulumi-kubernetes-operator >}}">
+    <a href="{{< relref "/docs/guides/continuous-delivery/pulumi-kubernetes-operator" >}}">
         <img src="/logos/tech/ci-cd/kubernetes.png" alt="Pulumi Kubernetes Operator">
         <h4 class="no-anchor">Pulumi Kubernetes Operator</h4>
     </a>
-    <a href="{{< relref teamcity >}}">
-            <img src="/logos/tech/ci-cd/teamcity.svg" alt="JetBrains TeamCity">
-            <h4 class="no-anchor">JetBrains TeamCity</h4>
+    <a href="{{< relref "/docs/guides/continuous-delivery/teamcity" >}}">
+        <img src="/logos/tech/ci-cd/teamcity.svg" alt="JetBrains TeamCity">
+        <h4 class="no-anchor">JetBrains TeamCity</h4>
     </a>
-    <a href="{{< relref spinnaker>}}">
+    <a href="{{< relref "/docs/guides/continuous-delivery/spinnake"r>}}">
         <img src="/logos/tech/ci-cd/spinnaker.svg" alt="Spinnaker">
         <h4 class="no-anchor">Spinnaker</h4>
     </a>
-    <a href="{{< relref travis >}}">
+    <a href="{{< relref "/docs/guides/continuous-delivery/travis" >}}">
         <img src="/logos/tech/ci-cd/travis-ci.svg" alt="TravisCI">
         <h4 class="no-anchor">TravisCI</h4>
     </a>
 </div>
 
 > Pulumi can also bridge results from your CI/CD system with GitHub, surfacing the results of stack updates
-> on GitHub pull requests. See the [Pulumi GitHub App]({{< relref "github-app" >}}) for more information.
+> on GitHub pull requests. See the [Pulumi GitHub App]({{< relref "/docs/guides/continuous-delivery/github-app" >}}) for more information.
 
 ### Configuration and Secrets
 
@@ -91,7 +91,7 @@ The source is effectively everything that Pulumi needs to for deployment, with m
 
 Secret configuration values are encrypted on [app.pulumi.com](https://app.pulumi.com) and are safe to check into your
 source code repository. But you can use your own secrets provider, ensuring that only you have access to your
-sensitive information. See [Managing Secrets with Pulumi]({{< relref "managing-secrets-with-pulumi" >}}) for more information.
+sensitive information. See [Managing Secrets with Pulumi]({{< relref "/blog/managing-secrets-with-pulumi" >}}) for more information.
 
 ### Managing Complex Environments
 
@@ -106,5 +106,5 @@ to use one branch-per-[stack]({{< relref "/docs/intro/concepts/stack" >}}). This
 using your usual commit, code review, and approval process, such as GitHub pull requests.
 
 If you are using GitHub pull requests to trigger updates, you will likely want to use the
-[Pulumi GitHub App]({{< relref "github-app" >}}). This gives you interactive infrastructure change previews
+[Pulumi GitHub App]({{< relref "/docs/guides/continuous-delivery/github-app" >}}). This gives you interactive infrastructure change previews
 inside of your Pull Request, making it easier to see, review, and comment on any changes before a deployment occurs.
