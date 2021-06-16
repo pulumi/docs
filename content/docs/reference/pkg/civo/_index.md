@@ -58,6 +58,6 @@ A Pulumi package for creating and managing Civo cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`civo` Terraform Provider](https://github.com/civo/terraform-provider-civo).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>1.0.2</dd>
+	<dd>1.0.3</dd>
 </dl>
 

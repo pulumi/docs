@@ -176,7 +176,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. If you want to remove a default installed application, prefix it with a '-', e.g. -traefik
+    <dd>{{% md %}}A comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. Application names are case-sensitive; the available applications can be listed with the civo CLI: 'civo kubernetes applications ls'. If you want to remove a default installed application, prefix it with a '-', e.g. -Traefik
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetesversion_csharp">
@@ -194,7 +194,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A name for the Kubernetes cluster.
+    <dd>{{% md %}}A name for the Kubernetes cluster, if is not declare the provider will generate one for you.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_csharp">
@@ -252,7 +252,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. If you want to remove a default installed application, prefix it with a '-', e.g. -traefik
+    <dd>{{% md %}}A comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. Application names are case-sensitive; the available applications can be listed with the civo CLI: 'civo kubernetes applications ls'. If you want to remove a default installed application, prefix it with a '-', e.g. -Traefik
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetesversion_go">
@@ -270,7 +270,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A name for the Kubernetes cluster.
+    <dd>{{% md %}}A name for the Kubernetes cluster, if is not declare the provider will generate one for you.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_go">
@@ -328,7 +328,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. If you want to remove a default installed application, prefix it with a '-', e.g. -traefik
+    <dd>{{% md %}}A comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. Application names are case-sensitive; the available applications can be listed with the civo CLI: 'civo kubernetes applications ls'. If you want to remove a default installed application, prefix it with a '-', e.g. -Traefik
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetesversion_nodejs">
@@ -346,7 +346,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A name for the Kubernetes cluster.
+    <dd>{{% md %}}A name for the Kubernetes cluster, if is not declare the provider will generate one for you.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_nodejs">
@@ -404,7 +404,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. If you want to remove a default installed application, prefix it with a '-', e.g. -traefik
+    <dd>{{% md %}}A comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. Application names are case-sensitive; the available applications can be listed with the civo CLI: 'civo kubernetes applications ls'. If you want to remove a default installed application, prefix it with a '-', e.g. -Traefik
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetes_version_python">
@@ -422,7 +422,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A name for the Kubernetes cluster.
+    <dd>{{% md %}}A name for the Kubernetes cluster, if is not declare the provider will generate one for you.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_id_python">
@@ -1084,7 +1084,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. If you want to remove a default installed application, prefix it with a '-', e.g. -traefik
+    <dd>{{% md %}}A comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. Application names are case-sensitive; the available applications can be listed with the civo CLI: 'civo kubernetes applications ls'. If you want to remove a default installed application, prefix it with a '-', e.g. -Traefik
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_builtat_csharp">
@@ -1165,7 +1165,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A name for the Kubernetes cluster.
+    <dd>{{% md %}}A name for the Kubernetes cluster, if is not declare the provider will generate one for you.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_csharp">
@@ -1259,7 +1259,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. If you want to remove a default installed application, prefix it with a '-', e.g. -traefik
+    <dd>{{% md %}}A comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. Application names are case-sensitive; the available applications can be listed with the civo CLI: 'civo kubernetes applications ls'. If you want to remove a default installed application, prefix it with a '-', e.g. -Traefik
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_builtat_go">
@@ -1340,7 +1340,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A name for the Kubernetes cluster.
+    <dd>{{% md %}}A name for the Kubernetes cluster, if is not declare the provider will generate one for you.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_go">
@@ -1434,7 +1434,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. If you want to remove a default installed application, prefix it with a '-', e.g. -traefik
+    <dd>{{% md %}}A comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. Application names are case-sensitive; the available applications can be listed with the civo CLI: 'civo kubernetes applications ls'. If you want to remove a default installed application, prefix it with a '-', e.g. -Traefik
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_builtat_nodejs">
@@ -1515,7 +1515,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A name for the Kubernetes cluster.
+    <dd>{{% md %}}A name for the Kubernetes cluster, if is not declare the provider will generate one for you.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_nodejs">
@@ -1609,7 +1609,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. If you want to remove a default installed application, prefix it with a '-', e.g. -traefik
+    <dd>{{% md %}}A comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. Application names are case-sensitive; the available applications can be listed with the civo CLI: 'civo kubernetes applications ls'. If you want to remove a default installed application, prefix it with a '-', e.g. -Traefik
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_built_at_python">
@@ -1690,7 +1690,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A name for the Kubernetes cluster.
+    <dd>{{% md %}}A name for the Kubernetes cluster, if is not declare the provider will generate one for you.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_id_python">

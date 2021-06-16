@@ -166,33 +166,6 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cidrs_csharp">
-<a href="#cidrs_csharp" style="color: inherit; text-decoration: inherit;">Cidrs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}the IP address of the other end (i.e. not your instance) to affect, or a valid network CIDR (defaults to being globally applied, i.e. 0.0.0.0/0).
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="direction_csharp">
-<a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}will this rule affect ingress traffic
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="endport_csharp">
-<a href="#endport_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The end port where traffic to be allowed.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="firewallid_csharp">
 <a href="#firewallid_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Id</a>
 </span>
@@ -200,24 +173,33 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firewall id
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protocol_csharp">
-<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cidrs_csharp">
+<a href="#cidrs_csharp" style="color: inherit; text-decoration: inherit;">Cidrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}the IP address of the other end (i.e. not your instance) to affect, or a valid network CIDR (defaults to being globally applied, i.e. 0.0.0.0/0).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="direction_csharp">
+<a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This may be one of "tcp", "udp", or "icmp".
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="startport_csharp">
-<a href="#startport_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Port</a>
+    <dd>{{% md %}}will this rule affect ingress traffic
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="endport_csharp">
+<a href="#endport_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start port where traffic to be allowed.
+    <dd>{{% md %}}The end port where traffic to be allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
@@ -229,6 +211,15 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}a string that will be the displayed name/reference for this rule (optional)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This may be one of "tcp", "udp", or "icmp".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
@@ -236,38 +227,20 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region for this rule
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="startport_csharp">
+<a href="#startport_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start port where traffic to be allowed.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="cidrs_go">
-<a href="#cidrs_go" style="color: inherit; text-decoration: inherit;">Cidrs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}the IP address of the other end (i.e. not your instance) to affect, or a valid network CIDR (defaults to being globally applied, i.e. 0.0.0.0/0).
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="direction_go">
-<a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}will this rule affect ingress traffic
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="endport_go">
-<a href="#endport_go" style="color: inherit; text-decoration: inherit;">End<wbr>Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The end port where traffic to be allowed.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="firewallid_go">
 <a href="#firewallid_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Id</a>
@@ -276,24 +249,33 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firewall id
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protocol_go">
-<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cidrs_go">
+<a href="#cidrs_go" style="color: inherit; text-decoration: inherit;">Cidrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}the IP address of the other end (i.e. not your instance) to affect, or a valid network CIDR (defaults to being globally applied, i.e. 0.0.0.0/0).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="direction_go">
+<a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This may be one of "tcp", "udp", or "icmp".
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="startport_go">
-<a href="#startport_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Port</a>
+    <dd>{{% md %}}will this rule affect ingress traffic
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="endport_go">
+<a href="#endport_go" style="color: inherit; text-decoration: inherit;">End<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start port where traffic to be allowed.
+    <dd>{{% md %}}The end port where traffic to be allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
@@ -305,6 +287,15 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}a string that will be the displayed name/reference for this rule (optional)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This may be one of "tcp", "udp", or "icmp".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
@@ -312,38 +303,20 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region for this rule
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="startport_go">
+<a href="#startport_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start port where traffic to be allowed.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="cidrs_nodejs">
-<a href="#cidrs_nodejs" style="color: inherit; text-decoration: inherit;">cidrs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}the IP address of the other end (i.e. not your instance) to affect, or a valid network CIDR (defaults to being globally applied, i.e. 0.0.0.0/0).
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="direction_nodejs">
-<a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}will this rule affect ingress traffic
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="endport_nodejs">
-<a href="#endport_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The end port where traffic to be allowed.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="firewallid_nodejs">
 <a href="#firewallid_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Id</a>
@@ -352,24 +325,33 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firewall id
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protocol_nodejs">
-<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cidrs_nodejs">
+<a href="#cidrs_nodejs" style="color: inherit; text-decoration: inherit;">cidrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}the IP address of the other end (i.e. not your instance) to affect, or a valid network CIDR (defaults to being globally applied, i.e. 0.0.0.0/0).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="direction_nodejs">
+<a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This may be one of "tcp", "udp", or "icmp".
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="startport_nodejs">
-<a href="#startport_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Port</a>
+    <dd>{{% md %}}will this rule affect ingress traffic
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="endport_nodejs">
+<a href="#endport_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start port where traffic to be allowed.
+    <dd>{{% md %}}The end port where traffic to be allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
@@ -381,6 +363,15 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}a string that will be the displayed name/reference for this rule (optional)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This may be one of "tcp", "udp", or "icmp".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
@@ -388,38 +379,20 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region for this rule
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="startport_nodejs">
+<a href="#startport_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start port where traffic to be allowed.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="cidrs_python">
-<a href="#cidrs_python" style="color: inherit; text-decoration: inherit;">cidrs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}the IP address of the other end (i.e. not your instance) to affect, or a valid network CIDR (defaults to being globally applied, i.e. 0.0.0.0/0).
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="direction_python">
-<a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}will this rule affect ingress traffic
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="end_port_python">
-<a href="#end_port_python" style="color: inherit; text-decoration: inherit;">end_<wbr>port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The end port where traffic to be allowed.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="firewall_id_python">
 <a href="#firewall_id_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>id</a>
@@ -428,24 +401,33 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Firewall id
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protocol_python">
-<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cidrs_python">
+<a href="#cidrs_python" style="color: inherit; text-decoration: inherit;">cidrs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}the IP address of the other end (i.e. not your instance) to affect, or a valid network CIDR (defaults to being globally applied, i.e. 0.0.0.0/0).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="direction_python">
+<a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This may be one of "tcp", "udp", or "icmp".
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="start_port_python">
-<a href="#start_port_python" style="color: inherit; text-decoration: inherit;">start_<wbr>port</a>
+    <dd>{{% md %}}will this rule affect ingress traffic
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="end_port_python">
+<a href="#end_port_python" style="color: inherit; text-decoration: inherit;">end_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start port where traffic to be allowed.
+    <dd>{{% md %}}The end port where traffic to be allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
@@ -457,6 +439,15 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}a string that will be the displayed name/reference for this rule (optional)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This may be one of "tcp", "udp", or "icmp".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
@@ -464,6 +455,15 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region for this rule
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="start_port_python">
+<a href="#start_port_python" style="color: inherit; text-decoration: inherit;">start_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The start port where traffic to be allowed.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

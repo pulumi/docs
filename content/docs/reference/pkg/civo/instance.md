@@ -20,7 +20,7 @@ modify, and delete Instances.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -42,16 +42,16 @@ modify, and delete Instances.
              <span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[InstanceArgs]</a></span> = None<span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -63,7 +63,7 @@ modify, and delete Instances.
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
@@ -87,7 +87,7 @@ modify, and delete Instances.
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
@@ -117,7 +117,7 @@ modify, and delete Instances.
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
@@ -141,7 +141,7 @@ modify, and delete Instances.
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
@@ -167,16 +167,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="hostname_csharp">
-<a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Instance hostname.
-{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="firewallid_csharp">
 <a href="#firewallid_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Id</a>
@@ -185,6 +176,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the firewall to use, from the current list. If left blank or not sent, the default firewall will be used (open to all).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hostname_csharp">
+<a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Instance hostname, if is not declare the provider will generate one for you
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialuser_csharp">
@@ -220,7 +220,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This should be either false, true or `move_ip_from:intances_id`.
+    <dd>{{% md %}}This should be either `create`, `none` or `move_ip_from:intances_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
@@ -288,16 +288,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="hostname_go">
-<a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Instance hostname.
-{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="firewallid_go">
 <a href="#firewallid_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Id</a>
@@ -306,6 +297,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the firewall to use, from the current list. If left blank or not sent, the default firewall will be used (open to all).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hostname_go">
+<a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Instance hostname, if is not declare the provider will generate one for you
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialuser_go">
@@ -341,7 +341,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This should be either false, true or `move_ip_from:intances_id`.
+    <dd>{{% md %}}This should be either `create`, `none` or `move_ip_from:intances_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
@@ -409,16 +409,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="hostname_nodejs">
-<a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Instance hostname.
-{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="firewallid_nodejs">
 <a href="#firewallid_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Id</a>
@@ -427,6 +418,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the firewall to use, from the current list. If left blank or not sent, the default firewall will be used (open to all).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hostname_nodejs">
+<a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Instance hostname, if is not declare the provider will generate one for you
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialuser_nodejs">
@@ -462,7 +462,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This should be either false, true or `move_ip_from:intances_id`.
+    <dd>{{% md %}}This should be either `create`, `none` or `move_ip_from:intances_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
@@ -530,16 +530,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="hostname_python">
-<a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Instance hostname.
-{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="firewall_id_python">
 <a href="#firewall_id_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>id</a>
@@ -548,6 +539,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the firewall to use, from the current list. If left blank or not sent, the default firewall will be used (open to all).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hostname_python">
+<a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Instance hostname, if is not declare the provider will generate one for you
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initial_user_python">
@@ -583,7 +583,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This should be either false, true or `move_ip_from:intances_id`.
+    <dd>{{% md %}}This should be either `create`, `none` or `move_ip_from:intances_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
@@ -1287,7 +1287,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Instance hostname.
+    <dd>{{% md %}}The Instance hostname, if is not declare the provider will generate one for you
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initialpassword_csharp">
@@ -1359,7 +1359,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This should be either false, true or `move_ip_from:intances_id`.
+    <dd>{{% md %}}This should be either `create`, `none` or `move_ip_from:intances_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rammb_csharp">
@@ -1505,7 +1505,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Instance hostname.
+    <dd>{{% md %}}The Instance hostname, if is not declare the provider will generate one for you
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initialpassword_go">
@@ -1577,7 +1577,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This should be either false, true or `move_ip_from:intances_id`.
+    <dd>{{% md %}}This should be either `create`, `none` or `move_ip_from:intances_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rammb_go">
@@ -1723,7 +1723,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Instance hostname.
+    <dd>{{% md %}}The Instance hostname, if is not declare the provider will generate one for you
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initialpassword_nodejs">
@@ -1795,7 +1795,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This should be either false, true or `move_ip_from:intances_id`.
+    <dd>{{% md %}}This should be either `create`, `none` or `move_ip_from:intances_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rammb_nodejs">
@@ -1941,7 +1941,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Instance hostname.
+    <dd>{{% md %}}The Instance hostname, if is not declare the provider will generate one for you
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initial_password_python">
@@ -2013,7 +2013,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This should be either false, true or `move_ip_from:intances_id`.
+    <dd>{{% md %}}This should be either `create`, `none` or `move_ip_from:intances_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ram_mb_python">
