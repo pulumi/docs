@@ -128,6 +128,7 @@ const ovf = vsphere.getOvfVmTemplate({
                         <span class="nx">datastore_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">deployment_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">disk_provisioning</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">enable_hidden_properties</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                         <span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">host_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -226,6 +227,14 @@ The following arguments are supported:
     <dd>{{% md %}}The disk provisioning. If set, all the disks in the deployed OVF will have
 the same specified disk type (accepted values {thin, flat, thick, sameAsSource}).
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablehiddenproperties_csharp">
+<a href="#enablehiddenproperties_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hidden<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_csharp">
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -351,6 +360,14 @@ VI infrastructure.
 the same specified disk type (accepted values {thin, flat, thick, sameAsSource}).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablehiddenproperties_go">
+<a href="#enablehiddenproperties_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hidden<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="folder_go">
 <a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
@@ -475,6 +492,14 @@ VI infrastructure.
 the same specified disk type (accepted values {thin, flat, thick, sameAsSource}).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablehiddenproperties_nodejs">
+<a href="#enablehiddenproperties_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Hidden<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="folder_nodejs">
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
@@ -598,6 +623,14 @@ VI infrastructure.
     <dd>{{% md %}}The disk provisioning. If set, all the disks in the deployed OVF will have
 the same specified disk type (accepted values {thin, flat, thick, sameAsSource}).
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_hidden_properties_python">
+<a href="#enable_hidden_properties_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>hidden_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_python">
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -881,6 +914,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="enablehiddenproperties_csharp">
+<a href="#enablehiddenproperties_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hidden<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="folder_csharp">
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
@@ -1143,6 +1184,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enablehiddenproperties_go">
+<a href="#enablehiddenproperties_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hidden<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -1411,6 +1460,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="enablehiddenproperties_nodejs">
+<a href="#enablehiddenproperties_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Hidden<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="folder_nodejs">
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
@@ -1673,6 +1730,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enable_hidden_properties_python">
+<a href="#enable_hidden_properties_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>hidden_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">

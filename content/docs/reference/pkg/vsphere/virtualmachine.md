@@ -74,6 +74,7 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
                    <span class="nx">ovf_deploy</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineOvfDeployArgs]</span> = None<span class="p">,</span>
                    <span class="nx">pci_device_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                    <span class="nx">poweron_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                   <span class="nx">replace_trigger</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">resource_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">run_tools_scripts_after_power_on</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                    <span class="nx">run_tools_scripts_after_resume</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -90,6 +91,8 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
                    <span class="nx">sync_time_with_host</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                    <span class="nx">vapp</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineVappArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">vbs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                   <span class="nx">vvtd_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                    <span class="nx">wait_for_guest_ip_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                    <span class="nx">wait_for_guest_net_routable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                    <span class="nx">wait_for_guest_net_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
@@ -100,7 +103,7 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -115,25 +118,19 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -145,25 +142,19 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -173,35 +164,27 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -213,25 +196,19 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -704,8 +681,7 @@ migration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An alias for both `label` and `path`, the latter when
-using `attach`. Required if not using `label`.
+    <dd>{{% md %}}The name of the virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nestedhvenabled_csharp">
@@ -780,6 +756,18 @@ passthroughs for.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will be trying to power on a VM
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replacetrigger_csharp">
+<a href="#replacetrigger_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Triggers replacement of resource whenever it changes.
+`replace_trigger = sha256(format("%s-%s",data.template_file.cloud_init_metadata.rendered,data.template_file.cloud_init_userdata.rendered))`
+will fingerprint the changes in cloud_init metadata and userdata templates. This will enable a replacement
+of the resource whenever the dependant template renders a new configuration. (Forces a replacement)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtoolsscriptsafterpoweron_csharp">
@@ -938,6 +926,29 @@ is `properties`, which is a key/value map of properties for virtual machines
 imported from OVF or OVA files. See Using vApp properties to supply OVF/OVA
 configuration for
 more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vbsenabled_csharp">
+<a href="#vbsenabled_csharp" style="color: inherit; text-decoration: inherit;">Vbs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Virtualization Based Security. Requires
+`firmware` to be `efi`, and `vvtd_enabled`, `nested_hv_enabled` and
+`efi_secure_boot_enabled` must all have a value of `true`. Supported on
+vSphere 6.7 and higher. Default: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vvtdenabled_csharp">
+<a href="#vvtdenabled_csharp" style="color: inherit; text-decoration: inherit;">Vvtd<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to specify if Intel Virtualization Technology 
+for Directed I/O is enabled for this virtual machine (_I/O MMU_ in the
+vSphere Client). Supported on vSphere 6.7 and higher. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforguestiptimeout_csharp">
@@ -1441,8 +1452,7 @@ migration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An alias for both `label` and `path`, the latter when
-using `attach`. Required if not using `label`.
+    <dd>{{% md %}}The name of the virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nestedhvenabled_go">
@@ -1517,6 +1527,18 @@ passthroughs for.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will be trying to power on a VM
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replacetrigger_go">
+<a href="#replacetrigger_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Triggers replacement of resource whenever it changes.
+`replace_trigger = sha256(format("%s-%s",data.template_file.cloud_init_metadata.rendered,data.template_file.cloud_init_userdata.rendered))`
+will fingerprint the changes in cloud_init metadata and userdata templates. This will enable a replacement
+of the resource whenever the dependant template renders a new configuration. (Forces a replacement)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtoolsscriptsafterpoweron_go">
@@ -1675,6 +1697,29 @@ is `properties`, which is a key/value map of properties for virtual machines
 imported from OVF or OVA files. See Using vApp properties to supply OVF/OVA
 configuration for
 more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vbsenabled_go">
+<a href="#vbsenabled_go" style="color: inherit; text-decoration: inherit;">Vbs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Virtualization Based Security. Requires
+`firmware` to be `efi`, and `vvtd_enabled`, `nested_hv_enabled` and
+`efi_secure_boot_enabled` must all have a value of `true`. Supported on
+vSphere 6.7 and higher. Default: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vvtdenabled_go">
+<a href="#vvtdenabled_go" style="color: inherit; text-decoration: inherit;">Vvtd<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to specify if Intel Virtualization Technology 
+for Directed I/O is enabled for this virtual machine (_I/O MMU_ in the
+vSphere Client). Supported on vSphere 6.7 and higher. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforguestiptimeout_go">
@@ -2178,8 +2223,7 @@ migration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An alias for both `label` and `path`, the latter when
-using `attach`. Required if not using `label`.
+    <dd>{{% md %}}The name of the virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nestedhvenabled_nodejs">
@@ -2254,6 +2298,18 @@ passthroughs for.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will be trying to power on a VM
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replacetrigger_nodejs">
+<a href="#replacetrigger_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Triggers replacement of resource whenever it changes.
+`replace_trigger = sha256(format("%s-%s",data.template_file.cloud_init_metadata.rendered,data.template_file.cloud_init_userdata.rendered))`
+will fingerprint the changes in cloud_init metadata and userdata templates. This will enable a replacement
+of the resource whenever the dependant template renders a new configuration. (Forces a replacement)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtoolsscriptsafterpoweron_nodejs">
@@ -2412,6 +2468,29 @@ is `properties`, which is a key/value map of properties for virtual machines
 imported from OVF or OVA files. See Using vApp properties to supply OVF/OVA
 configuration for
 more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vbsenabled_nodejs">
+<a href="#vbsenabled_nodejs" style="color: inherit; text-decoration: inherit;">vbs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable Virtualization Based Security. Requires
+`firmware` to be `efi`, and `vvtd_enabled`, `nested_hv_enabled` and
+`efi_secure_boot_enabled` must all have a value of `true`. Supported on
+vSphere 6.7 and higher. Default: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vvtdenabled_nodejs">
+<a href="#vvtdenabled_nodejs" style="color: inherit; text-decoration: inherit;">vvtd<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to specify if Intel Virtualization Technology 
+for Directed I/O is enabled for this virtual machine (_I/O MMU_ in the
+vSphere Client). Supported on vSphere 6.7 and higher. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforguestiptimeout_nodejs">
@@ -2915,8 +2994,7 @@ migration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An alias for both `label` and `path`, the latter when
-using `attach`. Required if not using `label`.
+    <dd>{{% md %}}The name of the virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nested_hv_enabled_python">
@@ -2991,6 +3069,18 @@ passthroughs for.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will be trying to power on a VM
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replace_trigger_python">
+<a href="#replace_trigger_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Triggers replacement of resource whenever it changes.
+`replace_trigger = sha256(format("%s-%s",data.template_file.cloud_init_metadata.rendered,data.template_file.cloud_init_userdata.rendered))`
+will fingerprint the changes in cloud_init metadata and userdata templates. This will enable a replacement
+of the resource whenever the dependant template renders a new configuration. (Forces a replacement)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_tools_scripts_after_power_on_python">
@@ -3149,6 +3239,29 @@ is `properties`, which is a key/value map of properties for virtual machines
 imported from OVF or OVA files. See Using vApp properties to supply OVF/OVA
 configuration for
 more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vbs_enabled_python">
+<a href="#vbs_enabled_python" style="color: inherit; text-decoration: inherit;">vbs_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Virtualization Based Security. Requires
+`firmware` to be `efi`, and `vvtd_enabled`, `nested_hv_enabled` and
+`efi_secure_boot_enabled` must all have a value of `true`. Supported on
+vSphere 6.7 and higher. Default: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vvtd_enabled_python">
+<a href="#vvtd_enabled_python" style="color: inherit; text-decoration: inherit;">vvtd_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to specify if Intel Virtualization Technology 
+for Directed I/O is enabled for this virtual machine (_I/O MMU_ in the
+vSphere Client). Supported on vSphere 6.7 and higher. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_for_guest_ip_timeout_python">
@@ -3767,6 +3880,7 @@ Get an existing VirtualMachine resource's state with the given name, ID, and opt
         <span class="nx">pci_device_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">poweron_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">reboot_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">replace_trigger</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">run_tools_scripts_after_power_on</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">run_tools_scripts_after_resume</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -3785,15 +3899,17 @@ Get an existing VirtualMachine resource's state with the given name, ID, and opt
         <span class="nx">uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">vapp</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineVappArgs]</span> = None<span class="p">,</span>
         <span class="nx">vapp_transports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vbs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">vmware_tools_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">vmx_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">vvtd_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">wait_for_guest_ip_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">wait_for_guest_net_routable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">wait_for_guest_net_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> VirtualMachine</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualMachineState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualMachineState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -4406,8 +4522,7 @@ migration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An alias for both `label` and `path`, the latter when
-using `attach`. Required if not using `label`.
+    <dd>{{% md %}}The name of the virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nestedhvenabled_csharp">
@@ -4493,6 +4608,18 @@ passthroughs for.
     <dd>{{% md %}}Value internal to the provider used to determine if a
 configuration set change requires a reboot. This value is only useful during
 an update process and gets reset on refresh.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_replacetrigger_csharp">
+<a href="#state_replacetrigger_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Triggers replacement of resource whenever it changes.
+`replace_trigger = sha256(format("%s-%s",data.template_file.cloud_init_metadata.rendered,data.template_file.cloud_init_userdata.rendered))`
+will fingerprint the changes in cloud_init metadata and userdata templates. This will enable a replacement
+of the resource whenever the dependant template renders a new configuration. (Forces a replacement)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcepoolid_csharp">
@@ -4686,6 +4813,18 @@ machines. A list of vApp transport methods supported by the source virtual
 machine or template.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_vbsenabled_csharp">
+<a href="#state_vbsenabled_csharp" style="color: inherit; text-decoration: inherit;">Vbs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Virtualization Based Security. Requires
+`firmware` to be `efi`, and `vvtd_enabled`, `nested_hv_enabled` and
+`efi_secure_boot_enabled` must all have a value of `true`. Supported on
+vSphere 6.7 and higher. Default: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_vmwaretoolsstatus_csharp">
 <a href="#state_vmwaretoolsstatus_csharp" style="color: inherit; text-decoration: inherit;">Vmware<wbr>Tools<wbr>Status</a>
 </span>
@@ -4704,6 +4843,17 @@ determine the proper course of action for some device operations.
     </dt>
     <dd>{{% md %}}The path of the virtual machine's configuration file in the VM's
 datastore.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vvtdenabled_csharp">
+<a href="#state_vvtdenabled_csharp" style="color: inherit; text-decoration: inherit;">Vvtd<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to specify if Intel Virtualization Technology 
+for Directed I/O is enabled for this virtual machine (_I/O MMU_ in the
+vSphere Client). Supported on vSphere 6.7 and higher. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforguestiptimeout_csharp">
@@ -5255,8 +5405,7 @@ migration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An alias for both `label` and `path`, the latter when
-using `attach`. Required if not using `label`.
+    <dd>{{% md %}}The name of the virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nestedhvenabled_go">
@@ -5342,6 +5491,18 @@ passthroughs for.
     <dd>{{% md %}}Value internal to the provider used to determine if a
 configuration set change requires a reboot. This value is only useful during
 an update process and gets reset on refresh.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_replacetrigger_go">
+<a href="#state_replacetrigger_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Triggers replacement of resource whenever it changes.
+`replace_trigger = sha256(format("%s-%s",data.template_file.cloud_init_metadata.rendered,data.template_file.cloud_init_userdata.rendered))`
+will fingerprint the changes in cloud_init metadata and userdata templates. This will enable a replacement
+of the resource whenever the dependant template renders a new configuration. (Forces a replacement)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcepoolid_go">
@@ -5535,6 +5696,18 @@ machines. A list of vApp transport methods supported by the source virtual
 machine or template.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_vbsenabled_go">
+<a href="#state_vbsenabled_go" style="color: inherit; text-decoration: inherit;">Vbs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Virtualization Based Security. Requires
+`firmware` to be `efi`, and `vvtd_enabled`, `nested_hv_enabled` and
+`efi_secure_boot_enabled` must all have a value of `true`. Supported on
+vSphere 6.7 and higher. Default: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_vmwaretoolsstatus_go">
 <a href="#state_vmwaretoolsstatus_go" style="color: inherit; text-decoration: inherit;">Vmware<wbr>Tools<wbr>Status</a>
 </span>
@@ -5553,6 +5726,17 @@ determine the proper course of action for some device operations.
     </dt>
     <dd>{{% md %}}The path of the virtual machine's configuration file in the VM's
 datastore.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vvtdenabled_go">
+<a href="#state_vvtdenabled_go" style="color: inherit; text-decoration: inherit;">Vvtd<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to specify if Intel Virtualization Technology 
+for Directed I/O is enabled for this virtual machine (_I/O MMU_ in the
+vSphere Client). Supported on vSphere 6.7 and higher. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforguestiptimeout_go">
@@ -6104,8 +6288,7 @@ migration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An alias for both `label` and `path`, the latter when
-using `attach`. Required if not using `label`.
+    <dd>{{% md %}}The name of the virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nestedhvenabled_nodejs">
@@ -6191,6 +6374,18 @@ passthroughs for.
     <dd>{{% md %}}Value internal to the provider used to determine if a
 configuration set change requires a reboot. This value is only useful during
 an update process and gets reset on refresh.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_replacetrigger_nodejs">
+<a href="#state_replacetrigger_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Triggers replacement of resource whenever it changes.
+`replace_trigger = sha256(format("%s-%s",data.template_file.cloud_init_metadata.rendered,data.template_file.cloud_init_userdata.rendered))`
+will fingerprint the changes in cloud_init metadata and userdata templates. This will enable a replacement
+of the resource whenever the dependant template renders a new configuration. (Forces a replacement)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcepoolid_nodejs">
@@ -6384,6 +6579,18 @@ machines. A list of vApp transport methods supported by the source virtual
 machine or template.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_vbsenabled_nodejs">
+<a href="#state_vbsenabled_nodejs" style="color: inherit; text-decoration: inherit;">vbs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable Virtualization Based Security. Requires
+`firmware` to be `efi`, and `vvtd_enabled`, `nested_hv_enabled` and
+`efi_secure_boot_enabled` must all have a value of `true`. Supported on
+vSphere 6.7 and higher. Default: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_vmwaretoolsstatus_nodejs">
 <a href="#state_vmwaretoolsstatus_nodejs" style="color: inherit; text-decoration: inherit;">vmware<wbr>Tools<wbr>Status</a>
 </span>
@@ -6402,6 +6609,17 @@ determine the proper course of action for some device operations.
     </dt>
     <dd>{{% md %}}The path of the virtual machine's configuration file in the VM's
 datastore.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vvtdenabled_nodejs">
+<a href="#state_vvtdenabled_nodejs" style="color: inherit; text-decoration: inherit;">vvtd<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to specify if Intel Virtualization Technology 
+for Directed I/O is enabled for this virtual machine (_I/O MMU_ in the
+vSphere Client). Supported on vSphere 6.7 and higher. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforguestiptimeout_nodejs">
@@ -6953,8 +7171,7 @@ migration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An alias for both `label` and `path`, the latter when
-using `attach`. Required if not using `label`.
+    <dd>{{% md %}}The name of the virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nested_hv_enabled_python">
@@ -7040,6 +7257,18 @@ passthroughs for.
     <dd>{{% md %}}Value internal to the provider used to determine if a
 configuration set change requires a reboot. This value is only useful during
 an update process and gets reset on refresh.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_replace_trigger_python">
+<a href="#state_replace_trigger_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Triggers replacement of resource whenever it changes.
+`replace_trigger = sha256(format("%s-%s",data.template_file.cloud_init_metadata.rendered,data.template_file.cloud_init_userdata.rendered))`
+will fingerprint the changes in cloud_init metadata and userdata templates. This will enable a replacement
+of the resource whenever the dependant template renders a new configuration. (Forces a replacement)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_pool_id_python">
@@ -7233,6 +7462,18 @@ machines. A list of vApp transport methods supported by the source virtual
 machine or template.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_vbs_enabled_python">
+<a href="#state_vbs_enabled_python" style="color: inherit; text-decoration: inherit;">vbs_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Virtualization Based Security. Requires
+`firmware` to be `efi`, and `vvtd_enabled`, `nested_hv_enabled` and
+`efi_secure_boot_enabled` must all have a value of `true`. Supported on
+vSphere 6.7 and higher. Default: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_vmware_tools_status_python">
 <a href="#state_vmware_tools_status_python" style="color: inherit; text-decoration: inherit;">vmware_<wbr>tools_<wbr>status</a>
 </span>
@@ -7251,6 +7492,17 @@ determine the proper course of action for some device operations.
     </dt>
     <dd>{{% md %}}The path of the virtual machine's configuration file in the VM's
 datastore.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vvtd_enabled_python">
+<a href="#state_vvtd_enabled_python" style="color: inherit; text-decoration: inherit;">vvtd_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to specify if Intel Virtualization Technology 
+for Directed I/O is enabled for this virtual machine (_I/O MMU_ in the
+vSphere Client). Supported on vSphere 6.7 and higher. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wait_for_guest_ip_timeout_python">
@@ -8847,7 +9099,16 @@ below.
 <h4 id="virtualmachinedisk">Virtual<wbr>Machine<wbr>Disk</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A label for the disk. Forces a new disk if changed.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attach_csharp">
 <a href="#attach_csharp" style="color: inherit; text-decoration: inherit;">Attach</a>
@@ -8987,35 +9248,6 @@ destroying the virtual machine. Default: `false`.
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="label_csharp">
-<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A label for the disk. Forces a new disk if changed.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An alias for both `label` and `path`, the latter when
-using `attach`. Required if not using `label`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}
-The name attribute for virtual disks will be removed in favor of &#34;label&#34; in
-future releases. To transition existing disks, rename the &#34;name&#34; attribute to
-&#34;label&#34;. When doing so, ensure the value of the attribute stays the same.
-
-Note that &#34;label&#34; does not control the name of a VMDK and does not need to bear
-the name of one on new disks or virtual machines. For more information, see the
-documentation for the label attribute at: 
-
-https://www.terraform.io/docs/providers/vsphere/r/virtual_machine.html#label
-{{% /md %}}</p></dd><dt class="property-optional"
-            title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
@@ -9092,7 +9324,16 @@ directly to the filesystem immediately instead of being buffered. Default:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A label for the disk. Forces a new disk if changed.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attach_go">
 <a href="#attach_go" style="color: inherit; text-decoration: inherit;">Attach</a>
@@ -9232,35 +9473,6 @@ destroying the virtual machine. Default: `false`.
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="label_go">
-<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A label for the disk. Forces a new disk if changed.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An alias for both `label` and `path`, the latter when
-using `attach`. Required if not using `label`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}
-The name attribute for virtual disks will be removed in favor of &#34;label&#34; in
-future releases. To transition existing disks, rename the &#34;name&#34; attribute to
-&#34;label&#34;. When doing so, ensure the value of the attribute stays the same.
-
-Note that &#34;label&#34; does not control the name of a VMDK and does not need to bear
-the name of one on new disks or virtual machines. For more information, see the
-documentation for the label attribute at: 
-
-https://www.terraform.io/docs/providers/vsphere/r/virtual_machine.html#label
-{{% /md %}}</p></dd><dt class="property-optional"
-            title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
@@ -9337,7 +9549,16 @@ directly to the filesystem immediately instead of being buffered. Default:
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A label for the disk. Forces a new disk if changed.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attach_nodejs">
 <a href="#attach_nodejs" style="color: inherit; text-decoration: inherit;">attach</a>
@@ -9477,35 +9698,6 @@ destroying the virtual machine. Default: `false`.
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="label_nodejs">
-<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A label for the disk. Forces a new disk if changed.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An alias for both `label` and `path`, the latter when
-using `attach`. Required if not using `label`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}
-The name attribute for virtual disks will be removed in favor of &#34;label&#34; in
-future releases. To transition existing disks, rename the &#34;name&#34; attribute to
-&#34;label&#34;. When doing so, ensure the value of the attribute stays the same.
-
-Note that &#34;label&#34; does not control the name of a VMDK and does not need to bear
-the name of one on new disks or virtual machines. For more information, see the
-documentation for the label attribute at: 
-
-https://www.terraform.io/docs/providers/vsphere/r/virtual_machine.html#label
-{{% /md %}}</p></dd><dt class="property-optional"
-            title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
@@ -9582,7 +9774,16 @@ directly to the filesystem immediately instead of being buffered. Default:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A label for the disk. Forces a new disk if changed.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attach_python">
 <a href="#attach_python" style="color: inherit; text-decoration: inherit;">attach</a>
@@ -9721,35 +9922,6 @@ destroying the virtual machine. Default: `false`.
     </dt>
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="label_python">
-<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A label for the disk. Forces a new disk if changed.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An alias for both `label` and `path`, the latter when
-using `attach`. Required if not using `label`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}
-The name attribute for virtual disks will be removed in favor of &#34;label&#34; in
-future releases. To transition existing disks, rename the &#34;name&#34; attribute to
-&#34;label&#34;. When doing so, ensure the value of the attribute stays the same.
-
-Note that &#34;label&#34; does not control the name of a VMDK and does not need to bear
-the name of one on new disks or virtual machines. For more information, see the
-documentation for the label attribute at: 
-
-https://www.terraform.io/docs/providers/vsphere/r/virtual_machine.html#label
-{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -10333,6 +10505,14 @@ a static MAC address and set accordingly. Setting this to `true` requires
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablehiddenproperties_csharp">
+<a href="#enablehiddenproperties_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hidden<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipallocationpolicy_csharp">
 <a href="#ipallocationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
 </span>
@@ -10398,6 +10578,14 @@ a static MAC address and set accordingly. Setting this to `true` requires
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablehiddenproperties_go">
+<a href="#enablehiddenproperties_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hidden<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10469,6 +10657,14 @@ a static MAC address and set accordingly. Setting this to `true` requires
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablehiddenproperties_nodejs">
+<a href="#enablehiddenproperties_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Hidden<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipallocationpolicy_nodejs">
 <a href="#ipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policy</a>
 </span>
@@ -10534,6 +10730,14 @@ a static MAC address and set accordingly. Setting this to `true` requires
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_hidden_properties_python">
+<a href="#enable_hidden_properties_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>hidden_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

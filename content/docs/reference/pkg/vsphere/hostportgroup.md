@@ -125,7 +125,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-vsphere/sdk/v3/go/vsphere"
+	"github.com/pulumi/pulumi-vsphere/sdk/v4/go/vsphere"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -300,7 +300,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-vsphere/sdk/v3/go/vsphere"
+	"github.com/pulumi/pulumi-vsphere/sdk/v4/go/vsphere"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -462,7 +462,7 @@ const pg = new vsphere.HostPortGroup("pg", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHostPortGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HostPortGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HostPortGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHostPortGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HostPortGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HostPortGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -477,25 +477,19 @@ const pg = new vsphere.HostPortGroup("pg", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">HostPortGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -507,25 +501,19 @@ const pg = new vsphere.HostPortGroup("pg", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">HostPortGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -535,35 +523,27 @@ const pg = new vsphere.HostPortGroup("pg", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">HostPortGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -575,25 +555,19 @@ const pg = new vsphere.HostPortGroup("pg", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">HostPortGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1313,7 +1287,7 @@ explaining the effective policy for this port group.
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostportgroupports">Pulumi.<wbr>VSphere.<wbr>Outputs.<wbr>Host<wbr>Port<wbr>Group<wbr>Ports</a></span>
+        <span class="property-type"><a href="#hostportgroupport">List&lt;Pulumi.<wbr>VSphere.<wbr>Outputs.<wbr>Host<wbr>Port<wbr>Group<wbr>Port&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of ports that currently exist and are used on this port group.
 {{% /md %}}</dd></dl>
@@ -1354,7 +1328,7 @@ explaining the effective policy for this port group.
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostportgroupports">Host<wbr>Port<wbr>Group<wbr>Ports</a></span>
+        <span class="property-type"><a href="#hostportgroupport">[]Host<wbr>Port<wbr>Group<wbr>Port</a></span>
     </dt>
     <dd>{{% md %}}A list of ports that currently exist and are used on this port group.
 {{% /md %}}</dd></dl>
@@ -1395,7 +1369,7 @@ explaining the effective policy for this port group.
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostportgroupports">Host<wbr>Port<wbr>Group<wbr>Ports</a></span>
+        <span class="property-type"><a href="#hostportgroupport">Host<wbr>Port<wbr>Group<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}A list of ports that currently exist and are used on this port group.
 {{% /md %}}</dd></dl>
@@ -1436,7 +1410,7 @@ explaining the effective policy for this port group.
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostportgroupports">Host<wbr>Port<wbr>Group<wbr>Ports</a></span>
+        <span class="property-type"><a href="#hostportgroupport">Sequence[Host<wbr>Port<wbr>Group<wbr>Port]</a></span>
     </dt>
     <dd>{{% md %}}A list of ports that currently exist and are used on this port group.
 {{% /md %}}</dd></dl>
@@ -1469,7 +1443,7 @@ Get an existing HostPortGroup resource's state with the given name, ID, and opti
         <span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">notify_switches</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-        <span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[HostPortGroupPortsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[HostPortGroupPortArgs]]</span> = None<span class="p">,</span>
         <span class="nx">shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -1481,7 +1455,7 @@ Get an existing HostPortGroup resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostPortGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">HostPortGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HostPortGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostPortGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">HostPortGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HostPortGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1699,7 +1673,7 @@ changed.
 <a href="#state_ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostportgroupports">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Host<wbr>Port<wbr>Group<wbr>Ports<wbr>Args</a></span>
+        <span class="property-type"><a href="#hostportgroupport">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Host<wbr>Port<wbr>Group<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of ports that currently exist and are used on this port group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1894,7 +1868,7 @@ changed.
 <a href="#state_ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostportgroupports">Host<wbr>Port<wbr>Group<wbr>Ports</a></span>
+        <span class="property-type"><a href="#hostportgroupport">[]Host<wbr>Port<wbr>Group<wbr>Port</a></span>
     </dt>
     <dd>{{% md %}}A list of ports that currently exist and are used on this port group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2089,7 +2063,7 @@ changed.
 <a href="#state_ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostportgroupports">Host<wbr>Port<wbr>Group<wbr>Ports<wbr>Args</a></span>
+        <span class="property-type"><a href="#hostportgroupport">Host<wbr>Port<wbr>Group<wbr>Port<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of ports that currently exist and are used on this port group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2284,7 +2258,7 @@ changed.
 <a href="#state_ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostportgroupports">Host<wbr>Port<wbr>Group<wbr>Ports<wbr>Args</a></span>
+        <span class="property-type"><a href="#hostportgroupport">Sequence[Host<wbr>Port<wbr>Group<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ports that currently exist and are used on this port group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2376,7 +2350,7 @@ tagging. Default: `0`.
 
 
 
-<h4 id="hostportgroupports">Host<wbr>Port<wbr>Group<wbr>Ports</h4>
+<h4 id="hostportgroupport">Host<wbr>Port<wbr>Group<wbr>Port</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"

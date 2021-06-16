@@ -29,6 +29,10 @@ meta_desc: "Documentation for the vsphere.DistributedVirtualSwitch resource with
                              <span class="nx">allow_forged_transmits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                              <span class="nx">allow_mac_changes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                              <span class="nx">allow_promiscuous</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                             <span class="nx">backupnfc_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                             <span class="nx">backupnfc_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                             <span class="nx">backupnfc_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                             <span class="nx">backupnfc_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                              <span class="nx">block_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                              <span class="nx">check_beacon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                              <span class="nx">contact_detail</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -122,7 +126,7 @@ meta_desc: "Documentation for the vsphere.DistributedVirtualSwitch resource with
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDistributedVirtualSwitch</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DistributedVirtualSwitchArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DistributedVirtualSwitch</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDistributedVirtualSwitch</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DistributedVirtualSwitchArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DistributedVirtualSwitch</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -137,25 +141,19 @@ meta_desc: "Documentation for the vsphere.DistributedVirtualSwitch resource with
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DistributedVirtualSwitchArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -167,25 +165,19 @@ meta_desc: "Documentation for the vsphere.DistributedVirtualSwitch resource with
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DistributedVirtualSwitchArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -195,35 +187,27 @@ meta_desc: "Documentation for the vsphere.DistributedVirtualSwitch resource with
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DistributedVirtualSwitchArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -235,25 +219,19 @@ meta_desc: "Documentation for the vsphere.DistributedVirtualSwitch resource with
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DistributedVirtualSwitchArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -321,6 +299,42 @@ Control (MAC) address can be changed.
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backupnfcmaximummbit_csharp">
+<a href="#backupnfcmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Backupnfc<wbr>Maximum<wbr>Mbit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed usage for the backupNfc traffic class, in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backupnfcreservationmbit_csharp">
+<a href="#backupnfcreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Backupnfc<wbr>Reservation<wbr>Mbit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of guaranteed bandwidth for the backupNfc traffic class, in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backupnfcsharecount_csharp">
+<a href="#backupnfcsharecount_csharp" style="color: inherit; text-decoration: inherit;">Backupnfc<wbr>Share<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of shares to allocate to the backupNfc traffic class for a custom share level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backupnfcsharelevel_csharp">
+<a href="#backupnfcsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Backupnfc<wbr>Share<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The allocation level for the backupNfc traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockallports_csharp">
@@ -1208,6 +1222,42 @@ Control (MAC) address can be changed.
 flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="backupnfcmaximummbit_go">
+<a href="#backupnfcmaximummbit_go" style="color: inherit; text-decoration: inherit;">Backupnfc<wbr>Maximum<wbr>Mbit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed usage for the backupNfc traffic class, in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backupnfcreservationmbit_go">
+<a href="#backupnfcreservationmbit_go" style="color: inherit; text-decoration: inherit;">Backupnfc<wbr>Reservation<wbr>Mbit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of guaranteed bandwidth for the backupNfc traffic class, in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backupnfcsharecount_go">
+<a href="#backupnfcsharecount_go" style="color: inherit; text-decoration: inherit;">Backupnfc<wbr>Share<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of shares to allocate to the backupNfc traffic class for a custom share level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backupnfcsharelevel_go">
+<a href="#backupnfcsharelevel_go" style="color: inherit; text-decoration: inherit;">Backupnfc<wbr>Share<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The allocation level for the backupNfc traffic class. Can be one of high, low, normal, or custom.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="blockallports_go">
 <a href="#blockallports_go" style="color: inherit; text-decoration: inherit;">Block<wbr>All<wbr>Ports</a>
 </span>
@@ -2093,6 +2143,42 @@ Control (MAC) address can be changed.
 flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="backupnfcmaximummbit_nodejs">
+<a href="#backupnfcmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">backupnfc<wbr>Maximum<wbr>Mbit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed usage for the backupNfc traffic class, in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backupnfcreservationmbit_nodejs">
+<a href="#backupnfcreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">backupnfc<wbr>Reservation<wbr>Mbit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The amount of guaranteed bandwidth for the backupNfc traffic class, in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backupnfcsharecount_nodejs">
+<a href="#backupnfcsharecount_nodejs" style="color: inherit; text-decoration: inherit;">backupnfc<wbr>Share<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The amount of shares to allocate to the backupNfc traffic class for a custom share level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backupnfcsharelevel_nodejs">
+<a href="#backupnfcsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">backupnfc<wbr>Share<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The allocation level for the backupNfc traffic class. Can be one of high, low, normal, or custom.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="blockallports_nodejs">
 <a href="#blockallports_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>All<wbr>Ports</a>
 </span>
@@ -2976,6 +3062,42 @@ Control (MAC) address can be changed.
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backupnfc_maximum_mbit_python">
+<a href="#backupnfc_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">backupnfc_<wbr>maximum_<wbr>mbit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed usage for the backupNfc traffic class, in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backupnfc_reservation_mbit_python">
+<a href="#backupnfc_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">backupnfc_<wbr>reservation_<wbr>mbit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of guaranteed bandwidth for the backupNfc traffic class, in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backupnfc_share_count_python">
+<a href="#backupnfc_share_count_python" style="color: inherit; text-decoration: inherit;">backupnfc_<wbr>share_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of shares to allocate to the backupNfc traffic class for a custom share level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backupnfc_share_level_python">
+<a href="#backupnfc_share_level_python" style="color: inherit; text-decoration: inherit;">backupnfc_<wbr>share_<wbr>level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The allocation level for the backupNfc traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="block_all_ports_python">
@@ -3918,6 +4040,10 @@ Get an existing DistributedVirtualSwitch resource's state with the given name, I
         <span class="nx">allow_forged_transmits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">allow_mac_changes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">allow_promiscuous</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">backupnfc_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">backupnfc_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">backupnfc_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">backupnfc_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">block_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">check_beacon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">config_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -4008,7 +4134,7 @@ Get an existing DistributedVirtualSwitch resource's state with the given name, I
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistributedVirtualSwitch<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DistributedVirtualSwitchState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DistributedVirtualSwitch</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistributedVirtualSwitch<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DistributedVirtualSwitchState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DistributedVirtualSwitch</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -4158,6 +4284,42 @@ Control (MAC) address can be changed.
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backupnfcmaximummbit_csharp">
+<a href="#state_backupnfcmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Backupnfc<wbr>Maximum<wbr>Mbit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed usage for the backupNfc traffic class, in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backupnfcreservationmbit_csharp">
+<a href="#state_backupnfcreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Backupnfc<wbr>Reservation<wbr>Mbit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of guaranteed bandwidth for the backupNfc traffic class, in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backupnfcsharecount_csharp">
+<a href="#state_backupnfcsharecount_csharp" style="color: inherit; text-decoration: inherit;">Backupnfc<wbr>Share<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of shares to allocate to the backupNfc traffic class for a custom share level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backupnfcsharelevel_csharp">
+<a href="#state_backupnfcsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Backupnfc<wbr>Share<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The allocation level for the backupNfc traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blockallports_csharp">
@@ -5054,6 +5216,42 @@ Control (MAC) address can be changed.
 flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_backupnfcmaximummbit_go">
+<a href="#state_backupnfcmaximummbit_go" style="color: inherit; text-decoration: inherit;">Backupnfc<wbr>Maximum<wbr>Mbit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed usage for the backupNfc traffic class, in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backupnfcreservationmbit_go">
+<a href="#state_backupnfcreservationmbit_go" style="color: inherit; text-decoration: inherit;">Backupnfc<wbr>Reservation<wbr>Mbit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of guaranteed bandwidth for the backupNfc traffic class, in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backupnfcsharecount_go">
+<a href="#state_backupnfcsharecount_go" style="color: inherit; text-decoration: inherit;">Backupnfc<wbr>Share<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of shares to allocate to the backupNfc traffic class for a custom share level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backupnfcsharelevel_go">
+<a href="#state_backupnfcsharelevel_go" style="color: inherit; text-decoration: inherit;">Backupnfc<wbr>Share<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The allocation level for the backupNfc traffic class. Can be one of high, low, normal, or custom.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_blockallports_go">
 <a href="#state_blockallports_go" style="color: inherit; text-decoration: inherit;">Block<wbr>All<wbr>Ports</a>
 </span>
@@ -5948,6 +6146,42 @@ Control (MAC) address can be changed.
 flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_backupnfcmaximummbit_nodejs">
+<a href="#state_backupnfcmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">backupnfc<wbr>Maximum<wbr>Mbit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed usage for the backupNfc traffic class, in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backupnfcreservationmbit_nodejs">
+<a href="#state_backupnfcreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">backupnfc<wbr>Reservation<wbr>Mbit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The amount of guaranteed bandwidth for the backupNfc traffic class, in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backupnfcsharecount_nodejs">
+<a href="#state_backupnfcsharecount_nodejs" style="color: inherit; text-decoration: inherit;">backupnfc<wbr>Share<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The amount of shares to allocate to the backupNfc traffic class for a custom share level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backupnfcsharelevel_nodejs">
+<a href="#state_backupnfcsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">backupnfc<wbr>Share<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The allocation level for the backupNfc traffic class. Can be one of high, low, normal, or custom.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_blockallports_nodejs">
 <a href="#state_blockallports_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>All<wbr>Ports</a>
 </span>
@@ -6840,6 +7074,42 @@ Control (MAC) address can be changed.
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backupnfc_maximum_mbit_python">
+<a href="#state_backupnfc_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">backupnfc_<wbr>maximum_<wbr>mbit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed usage for the backupNfc traffic class, in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backupnfc_reservation_mbit_python">
+<a href="#state_backupnfc_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">backupnfc_<wbr>reservation_<wbr>mbit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of guaranteed bandwidth for the backupNfc traffic class, in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backupnfc_share_count_python">
+<a href="#state_backupnfc_share_count_python" style="color: inherit; text-decoration: inherit;">backupnfc_<wbr>share_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of shares to allocate to the backupNfc traffic class for a custom share level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backupnfc_share_level_python">
+<a href="#state_backupnfc_share_level_python" style="color: inherit; text-decoration: inherit;">backupnfc_<wbr>share_<wbr>level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The allocation level for the backupNfc traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_block_all_ports_python">

@@ -60,7 +60,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-vsphere/sdk/v3/go/vsphere"
+	"github.com/pulumi/pulumi-vsphere/sdk/v4/go/vsphere"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -161,7 +161,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-vsphere/sdk/v3/go/vsphere"
+	"github.com/pulumi/pulumi-vsphere/sdk/v4/go/vsphere"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
