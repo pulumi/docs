@@ -70,7 +70,7 @@ within a [generic CI/CD system]({{< relref "/docs/guides/continuous-delivery/oth
         <img src="/logos/tech/ci-cd/teamcity.svg" alt="JetBrains TeamCity">
         <h4 class="no-anchor">JetBrains TeamCity</h4>
     </a>
-    <a href="{{< relref "/docs/guides/continuous-delivery/spinnake"r>}}">
+    <a href="{{< relref "/docs/guides/continuous-delivery/spinnaker">}}">
         <img src="/logos/tech/ci-cd/spinnaker.svg" alt="Spinnaker">
         <h4 class="no-anchor">Spinnaker</h4>
     </a>
