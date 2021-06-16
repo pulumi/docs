@@ -844,7 +844,7 @@ class MyStack : Stack
                 Annotations = 
                 {
                     { "generated-by", "magic-modules" },
-                    { "run.googleapis.com/launch-stage", "ALPHA" },
+                    { "run.googleapis.com/launch-stage", "BETA" },
                 },
             },
             Traffics = 
@@ -944,7 +944,7 @@ func main() {
 			Metadata: &cloudrun.ServiceMetadataArgs{
 				Annotations: pulumi.StringMap{
 					"generated-by":                    pulumi.String("magic-modules"),
-					"run.googleapis.com/launch-stage": pulumi.String("ALPHA"),
+					"run.googleapis.com/launch-stage": pulumi.String("BETA"),
 				},
 			},
 			Traffics: cloudrun.ServiceTrafficArray{
@@ -1013,7 +1013,7 @@ default = gcp.cloudrun.Service("default",
     metadata=gcp.cloudrun.ServiceMetadataArgs(
         annotations={
             "generated-by": "magic-modules",
-            "run.googleapis.com/launch-stage": "ALPHA",
+            "run.googleapis.com/launch-stage": "BETA",
         },
     ),
     traffics=[gcp.cloudrun.ServiceTrafficArgs(
@@ -1080,7 +1080,7 @@ const _default = new gcp.cloudrun.Service("default", {
     metadata: {
         annotations: {
             "generated-by": "magic-modules",
-            "run.googleapis.com/launch-stage": "ALPHA",
+            "run.googleapis.com/launch-stage": "BETA",
         },
     },
     traffics: [{
@@ -1194,7 +1194,7 @@ class MyStack : Stack
                 Annotations = 
                 {
                     { "generated-by", "magic-modules" },
-                    { "run.googleapis.com/launch-stage", "ALPHA" },
+                    { "run.googleapis.com/launch-stage", "BETA" },
                 },
             },
             Traffics = 
@@ -1303,7 +1303,7 @@ func main() {
 			Metadata: &cloudrun.ServiceMetadataArgs{
 				Annotations: pulumi.StringMap{
 					"generated-by":                    pulumi.String("magic-modules"),
-					"run.googleapis.com/launch-stage": pulumi.String("ALPHA"),
+					"run.googleapis.com/launch-stage": pulumi.String("BETA"),
 				},
 			},
 			Traffics: cloudrun.ServiceTrafficArray{
@@ -1377,7 +1377,7 @@ default = gcp.cloudrun.Service("default",
     metadata=gcp.cloudrun.ServiceMetadataArgs(
         annotations={
             "generated-by": "magic-modules",
-            "run.googleapis.com/launch-stage": "ALPHA",
+            "run.googleapis.com/launch-stage": "BETA",
         },
     ),
     traffics=[gcp.cloudrun.ServiceTrafficArgs(
@@ -1449,7 +1449,7 @@ const _default = new gcp.cloudrun.Service("default", {
     metadata: {
         annotations: {
             "generated-by": "magic-modules",
-            "run.googleapis.com/launch-stage": "ALPHA",
+            "run.googleapis.com/launch-stage": "BETA",
         },
     },
     traffics: [{

@@ -827,9 +827,6 @@ class MyStack : Stack
         var network = new Gcp.Compute.Network("network", new Gcp.Compute.NetworkArgs
         {
             AutoCreateSubnetworks = false,
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var address1 = new Gcp.Compute.Address("address1", new Gcp.Compute.AddressArgs
         {
@@ -838,9 +835,6 @@ class MyStack : Stack
             Address = "192.168.1.0",
             PrefixLength = 29,
             Network = network.SelfLink,
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var router = new Gcp.Compute.Router("router", new Gcp.Compute.RouterArgs
         {
@@ -850,9 +844,6 @@ class MyStack : Stack
             {
                 Asn = 16550,
             },
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var attachment1 = new Gcp.Compute.InterconnectAttachment("attachment1", new Gcp.Compute.InterconnectAttachmentArgs
         {
@@ -864,9 +855,6 @@ class MyStack : Stack
             {
                 address1.SelfLink,
             },
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var address2 = new Gcp.Compute.Address("address2", new Gcp.Compute.AddressArgs
         {
@@ -875,9 +863,6 @@ class MyStack : Stack
             Address = "192.168.2.0",
             PrefixLength = 29,
             Network = network.SelfLink,
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var attachment2 = new Gcp.Compute.InterconnectAttachment("attachment2", new Gcp.Compute.InterconnectAttachmentArgs
         {
@@ -889,9 +874,6 @@ class MyStack : Stack
             {
                 address2.SelfLink,
             },
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var vpn_gateway = new Gcp.Compute.HaVpnGateway("vpn-gateway", new Gcp.Compute.HaVpnGatewayArgs
         {
@@ -909,9 +891,6 @@ class MyStack : Stack
                     InterconnectAttachment = attachment2.SelfLink,
                 },
             },
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
     }
 
@@ -936,7 +915,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		network, err := compute.NewNetwork(ctx, "network", &compute.NetworkArgs{
 			AutoCreateSubnetworks: pulumi.Bool(false),
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -946,7 +925,7 @@ func main() {
 			Address:      pulumi.String("192.168.1.0"),
 			PrefixLength: pulumi.Int(29),
 			Network:      network.SelfLink,
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -956,7 +935,7 @@ func main() {
 			Bgp: &compute.RouterBgpArgs{
 				Asn: pulumi.Int(16550),
 			},
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -968,7 +947,7 @@ func main() {
 			IpsecInternalAddresses: pulumi.StringArray{
 				address1.SelfLink,
 			},
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -978,7 +957,7 @@ func main() {
 			Address:      pulumi.String("192.168.2.0"),
 			PrefixLength: pulumi.Int(29),
 			Network:      network.SelfLink,
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -990,7 +969,7 @@ func main() {
 			IpsecInternalAddresses: pulumi.StringArray{
 				address2.SelfLink,
 			},
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -1006,7 +985,7 @@ func main() {
 					InterconnectAttachment: attachment2.SelfLink,
 				},
 			},
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -1025,43 +1004,37 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
-network = gcp.compute.Network("network", auto_create_subnetworks=False,
-opts=pulumi.ResourceOptions(provider=google_beta))
+network = gcp.compute.Network("network", auto_create_subnetworks=False)
 address1 = gcp.compute.Address("address1",
     address_type="INTERNAL",
     purpose="IPSEC_INTERCONNECT",
     address="192.168.1.0",
     prefix_length=29,
-    network=network.self_link,
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    network=network.self_link)
 router = gcp.compute.Router("router",
     network=network.name,
     encrypted_interconnect_router=True,
     bgp=gcp.compute.RouterBgpArgs(
         asn=16550,
-    ),
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    ))
 attachment1 = gcp.compute.InterconnectAttachment("attachment1",
     edge_availability_domain="AVAILABILITY_DOMAIN_1",
     type="PARTNER",
     router=router.id,
     encryption="IPSEC",
-    ipsec_internal_addresses=[address1.self_link],
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    ipsec_internal_addresses=[address1.self_link])
 address2 = gcp.compute.Address("address2",
     address_type="INTERNAL",
     purpose="IPSEC_INTERCONNECT",
     address="192.168.2.0",
     prefix_length=29,
-    network=network.self_link,
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    network=network.self_link)
 attachment2 = gcp.compute.InterconnectAttachment("attachment2",
     edge_availability_domain="AVAILABILITY_DOMAIN_2",
     type="PARTNER",
     router=router.id,
     encryption="IPSEC",
-    ipsec_internal_addresses=[address2.self_link],
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    ipsec_internal_addresses=[address2.self_link])
 vpn_gateway = gcp.compute.HaVpnGateway("vpn-gateway",
     network=network.id,
     vpn_interfaces=[
@@ -1073,8 +1046,7 @@ vpn_gateway = gcp.compute.HaVpnGateway("vpn-gateway",
             id=1,
             interconnect_attachment=attachment2.self_link,
         ),
-    ],
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    ])
 ```
 
 
@@ -1088,17 +1060,13 @@ vpn_gateway = gcp.compute.HaVpnGateway("vpn-gateway",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false}, {
-    provider: google_beta,
-});
+const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false});
 const address1 = new gcp.compute.Address("address1", {
     addressType: "INTERNAL",
     purpose: "IPSEC_INTERCONNECT",
     address: "192.168.1.0",
     prefixLength: 29,
     network: network.selfLink,
-}, {
-    provider: google_beta,
 });
 const router = new gcp.compute.Router("router", {
     network: network.name,
@@ -1106,8 +1074,6 @@ const router = new gcp.compute.Router("router", {
     bgp: {
         asn: 16550,
     },
-}, {
-    provider: google_beta,
 });
 const attachment1 = new gcp.compute.InterconnectAttachment("attachment1", {
     edgeAvailabilityDomain: "AVAILABILITY_DOMAIN_1",
@@ -1115,8 +1081,6 @@ const attachment1 = new gcp.compute.InterconnectAttachment("attachment1", {
     router: router.id,
     encryption: "IPSEC",
     ipsecInternalAddresses: [address1.selfLink],
-}, {
-    provider: google_beta,
 });
 const address2 = new gcp.compute.Address("address2", {
     addressType: "INTERNAL",
@@ -1124,8 +1088,6 @@ const address2 = new gcp.compute.Address("address2", {
     address: "192.168.2.0",
     prefixLength: 29,
     network: network.selfLink,
-}, {
-    provider: google_beta,
 });
 const attachment2 = new gcp.compute.InterconnectAttachment("attachment2", {
     edgeAvailabilityDomain: "AVAILABILITY_DOMAIN_2",
@@ -1133,8 +1095,6 @@ const attachment2 = new gcp.compute.InterconnectAttachment("attachment2", {
     router: router.id,
     encryption: "IPSEC",
     ipsecInternalAddresses: [address2.selfLink],
-}, {
-    provider: google_beta,
 });
 const vpn_gateway = new gcp.compute.HaVpnGateway("vpn-gateway", {
     network: network.id,
@@ -1148,8 +1108,6 @@ const vpn_gateway = new gcp.compute.HaVpnGateway("vpn-gateway", {
             interconnectAttachment: attachment2.selfLink,
         },
     ],
-}, {
-    provider: google_beta,
 });
 ```
 
@@ -2125,7 +2083,13 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}URL of the interconnect attachment resource. When the value
+of this field is present, the VPN Gateway will be used for
+IPsec-encrypted Cloud Interconnect; all Egress or Ingress
+traffic for this VPN Gateway interface will go through the
+specified interconnect attachment resource.
+Not currently available publicly.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2156,7 +2120,13 @@ The external IP address for this VPN gateway interface.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}URL of the interconnect attachment resource. When the value
+of this field is present, the VPN Gateway will be used for
+IPsec-encrypted Cloud Interconnect; all Egress or Ingress
+traffic for this VPN Gateway interface will go through the
+specified interconnect attachment resource.
+Not currently available publicly.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2187,7 +2157,13 @@ The external IP address for this VPN gateway interface.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}URL of the interconnect attachment resource. When the value
+of this field is present, the VPN Gateway will be used for
+IPsec-encrypted Cloud Interconnect; all Egress or Ingress
+traffic for this VPN Gateway interface will go through the
+specified interconnect attachment resource.
+Not currently available publicly.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -2218,7 +2194,13 @@ The external IP address for this VPN gateway interface.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}URL of the interconnect attachment resource. When the value
+of this field is present, the VPN Gateway will be used for
+IPsec-encrypted Cloud Interconnect; all Egress or Ingress
+traffic for this VPN Gateway interface will go through the
+specified interconnect attachment resource.
+Not currently available publicly.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>

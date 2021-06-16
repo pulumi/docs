@@ -527,9 +527,6 @@ class MyStack : Stack
         var network = new Gcp.Compute.Network("network", new Gcp.Compute.NetworkArgs
         {
             AutoCreateSubnetworks = false,
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var ipsec_interconnect_address = new Gcp.Compute.Address("ipsec-interconnect-address", new Gcp.Compute.AddressArgs
         {
@@ -538,9 +535,6 @@ class MyStack : Stack
             Address = "192.168.1.0",
             PrefixLength = 29,
             Network = network.SelfLink,
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
     }
 
@@ -565,7 +559,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		network, err := compute.NewNetwork(ctx, "network", &compute.NetworkArgs{
 			AutoCreateSubnetworks: pulumi.Bool(false),
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -575,7 +569,7 @@ func main() {
 			Address:      pulumi.String("192.168.1.0"),
 			PrefixLength: pulumi.Int(29),
 			Network:      network.SelfLink,
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -594,15 +588,13 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
-network = gcp.compute.Network("network", auto_create_subnetworks=False,
-opts=pulumi.ResourceOptions(provider=google_beta))
+network = gcp.compute.Network("network", auto_create_subnetworks=False)
 ipsec_interconnect_address = gcp.compute.Address("ipsec-interconnect-address",
     address_type="INTERNAL",
     purpose="IPSEC_INTERCONNECT",
     address="192.168.1.0",
     prefix_length=29,
-    network=network.self_link,
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    network=network.self_link)
 ```
 
 
@@ -616,17 +608,13 @@ ipsec_interconnect_address = gcp.compute.Address("ipsec-interconnect-address",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false}, {
-    provider: google_beta,
-});
+const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false});
 const ipsec_interconnect_address = new gcp.compute.Address("ipsec-interconnect-address", {
     addressType: "INTERNAL",
     purpose: "IPSEC_INTERCONNECT",
     address: "192.168.1.0",
     prefixLength: 29,
     network: network.selfLink,
-}, {
-    provider: google_beta,
 });
 ```
 
@@ -856,8 +844,9 @@ except the last character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the network in which to reserve the address. This field can only be used with INTERNAL type with the
-VPC_PEERING and IPSEC_INTERCONNECT purposes.
+    <dd>{{% md %}}The URL of the network in which to reserve the address. This field
+can only be used with INTERNAL type with the VPC_PEERING and
+IPSEC_INTERCONNECT purposes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networktier_csharp">
@@ -902,7 +891,7 @@ ranges, internal load balancers, and similar resources.
 * SHARED_LOADBALANCER_VIP for an address that can be used by multiple
 internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
-* IPSEC_INTERCONNECT (Beta only) for addresses created from a private IP range
+* IPSEC_INTERCONNECT for addresses created from a private IP range
 that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
 Interconnect configuration. These addresses are regional resources.
 This should only be set when using an Internal address.
@@ -995,8 +984,9 @@ except the last character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the network in which to reserve the address. This field can only be used with INTERNAL type with the
-VPC_PEERING and IPSEC_INTERCONNECT purposes.
+    <dd>{{% md %}}The URL of the network in which to reserve the address. This field
+can only be used with INTERNAL type with the VPC_PEERING and
+IPSEC_INTERCONNECT purposes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networktier_go">
@@ -1041,7 +1031,7 @@ ranges, internal load balancers, and similar resources.
 * SHARED_LOADBALANCER_VIP for an address that can be used by multiple
 internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
-* IPSEC_INTERCONNECT (Beta only) for addresses created from a private IP range
+* IPSEC_INTERCONNECT for addresses created from a private IP range
 that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
 Interconnect configuration. These addresses are regional resources.
 This should only be set when using an Internal address.
@@ -1134,8 +1124,9 @@ except the last character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the network in which to reserve the address. This field can only be used with INTERNAL type with the
-VPC_PEERING and IPSEC_INTERCONNECT purposes.
+    <dd>{{% md %}}The URL of the network in which to reserve the address. This field
+can only be used with INTERNAL type with the VPC_PEERING and
+IPSEC_INTERCONNECT purposes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networktier_nodejs">
@@ -1180,7 +1171,7 @@ ranges, internal load balancers, and similar resources.
 * SHARED_LOADBALANCER_VIP for an address that can be used by multiple
 internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
-* IPSEC_INTERCONNECT (Beta only) for addresses created from a private IP range
+* IPSEC_INTERCONNECT for addresses created from a private IP range
 that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
 Interconnect configuration. These addresses are regional resources.
 This should only be set when using an Internal address.
@@ -1273,8 +1264,9 @@ except the last character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL of the network in which to reserve the address. This field can only be used with INTERNAL type with the
-VPC_PEERING and IPSEC_INTERCONNECT purposes.
+    <dd>{{% md %}}The URL of the network in which to reserve the address. This field
+can only be used with INTERNAL type with the VPC_PEERING and
+IPSEC_INTERCONNECT purposes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_tier_python">
@@ -1319,7 +1311,7 @@ ranges, internal load balancers, and similar resources.
 * SHARED_LOADBALANCER_VIP for an address that can be used by multiple
 internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
-* IPSEC_INTERCONNECT (Beta only) for addresses created from a private IP range
+* IPSEC_INTERCONNECT for addresses created from a private IP range
 that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
 Interconnect configuration. These addresses are regional resources.
 This should only be set when using an Internal address.
@@ -1770,8 +1762,9 @@ except the last character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the network in which to reserve the address. This field can only be used with INTERNAL type with the
-VPC_PEERING and IPSEC_INTERCONNECT purposes.
+    <dd>{{% md %}}The URL of the network in which to reserve the address. This field
+can only be used with INTERNAL type with the VPC_PEERING and
+IPSEC_INTERCONNECT purposes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networktier_csharp">
@@ -1816,7 +1809,7 @@ ranges, internal load balancers, and similar resources.
 * SHARED_LOADBALANCER_VIP for an address that can be used by multiple
 internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
-* IPSEC_INTERCONNECT (Beta only) for addresses created from a private IP range
+* IPSEC_INTERCONNECT for addresses created from a private IP range
 that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
 Interconnect configuration. These addresses are regional resources.
 This should only be set when using an Internal address.
@@ -1945,8 +1938,9 @@ except the last character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the network in which to reserve the address. This field can only be used with INTERNAL type with the
-VPC_PEERING and IPSEC_INTERCONNECT purposes.
+    <dd>{{% md %}}The URL of the network in which to reserve the address. This field
+can only be used with INTERNAL type with the VPC_PEERING and
+IPSEC_INTERCONNECT purposes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networktier_go">
@@ -1991,7 +1985,7 @@ ranges, internal load balancers, and similar resources.
 * SHARED_LOADBALANCER_VIP for an address that can be used by multiple
 internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
-* IPSEC_INTERCONNECT (Beta only) for addresses created from a private IP range
+* IPSEC_INTERCONNECT for addresses created from a private IP range
 that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
 Interconnect configuration. These addresses are regional resources.
 This should only be set when using an Internal address.
@@ -2120,8 +2114,9 @@ except the last character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the network in which to reserve the address. This field can only be used with INTERNAL type with the
-VPC_PEERING and IPSEC_INTERCONNECT purposes.
+    <dd>{{% md %}}The URL of the network in which to reserve the address. This field
+can only be used with INTERNAL type with the VPC_PEERING and
+IPSEC_INTERCONNECT purposes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networktier_nodejs">
@@ -2166,7 +2161,7 @@ ranges, internal load balancers, and similar resources.
 * SHARED_LOADBALANCER_VIP for an address that can be used by multiple
 internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
-* IPSEC_INTERCONNECT (Beta only) for addresses created from a private IP range
+* IPSEC_INTERCONNECT for addresses created from a private IP range
 that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
 Interconnect configuration. These addresses are regional resources.
 This should only be set when using an Internal address.
@@ -2295,8 +2290,9 @@ except the last character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL of the network in which to reserve the address. This field can only be used with INTERNAL type with the
-VPC_PEERING and IPSEC_INTERCONNECT purposes.
+    <dd>{{% md %}}The URL of the network in which to reserve the address. This field
+can only be used with INTERNAL type with the VPC_PEERING and
+IPSEC_INTERCONNECT purposes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_tier_python">
@@ -2341,7 +2337,7 @@ ranges, internal load balancers, and similar resources.
 * SHARED_LOADBALANCER_VIP for an address that can be used by multiple
 internal load balancers.
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
-* IPSEC_INTERCONNECT (Beta only) for addresses created from a private IP range
+* IPSEC_INTERCONNECT for addresses created from a private IP range
 that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
 Interconnect configuration. These addresses are regional resources.
 This should only be set when using an Internal address.

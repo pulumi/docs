@@ -199,9 +199,6 @@ class MyStack : Stack
         var network = new Gcp.Compute.Network("network", new Gcp.Compute.NetworkArgs
         {
             AutoCreateSubnetworks = false,
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var encrypted_interconnect_router = new Gcp.Compute.Router("encrypted-interconnect-router", new Gcp.Compute.RouterArgs
         {
@@ -211,9 +208,6 @@ class MyStack : Stack
             {
                 Asn = 64514,
             },
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
     }
 
@@ -238,7 +232,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		network, err := compute.NewNetwork(ctx, "network", &compute.NetworkArgs{
 			AutoCreateSubnetworks: pulumi.Bool(false),
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -248,7 +242,7 @@ func main() {
 			Bgp: &compute.RouterBgpArgs{
 				Asn: pulumi.Int(64514),
 			},
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -267,15 +261,13 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
-network = gcp.compute.Network("network", auto_create_subnetworks=False,
-opts=pulumi.ResourceOptions(provider=google_beta))
+network = gcp.compute.Network("network", auto_create_subnetworks=False)
 encrypted_interconnect_router = gcp.compute.Router("encrypted-interconnect-router",
     network=network.name,
     encrypted_interconnect_router=True,
     bgp=gcp.compute.RouterBgpArgs(
         asn=64514,
-    ),
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    ))
 ```
 
 
@@ -289,17 +281,13 @@ encrypted_interconnect_router = gcp.compute.Router("encrypted-interconnect-route
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false}, {
-    provider: google_beta,
-});
+const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false});
 const encrypted_interconnect_router = new gcp.compute.Router("encrypted-interconnect-router", {
     network: network.name,
     encryptedInterconnectRouter: true,
     bgp: {
         asn: 64514,
     },
-}, {
-    provider: google_beta,
 });
 ```
 
