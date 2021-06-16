@@ -18,7 +18,7 @@ This resource can be imported using an ID made up of the secret name
  $ pulumi import github:index/actionsOrganizationSecret:ActionsOrganizationSecret test_secret test_secret_name
 ```
 
- NOTEthe implementation is limited in that it won't fetch the value of the `plaintext_value` field when importing. You may need to ignore changes for the `plaintext_value` as a workaround.
+ NOTEthe implementation is limited in that it won't fetch the value of the `plaintext_value` or `encrypted_value` fields when importing. You may need to ignore changes for these as a workaround.
 
 
 
@@ -35,6 +35,7 @@ This resource can be imported using an ID made up of the secret name
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ActionsOrganizationSecret</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                              <span class="nx">encrypted_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">plaintext_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">secret_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">selected_repository_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">,</span>
@@ -168,15 +169,6 @@ The ActionsOrganizationSecret resource accepts the following [input]({{< relref 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="plaintextvalue_csharp">
-<a href="#plaintextvalue_csharp" style="color: inherit; text-decoration: inherit;">Plaintext<wbr>Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Plaintext value of the secret to be encrypted
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="secretname_csharp">
 <a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
 </span>
@@ -192,8 +184,24 @@ The ActionsOrganizationSecret resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configures the access that repositories have to the organization secret.
-Must be one of `all`, `private`, `selected`. `selected_repository_ids` is required if set to `selected`.
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryptedvalue_csharp">
+<a href="#encryptedvalue_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encrypted value of the secret using the Github public key in Base64 format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="plaintextvalue_csharp">
+<a href="#plaintextvalue_csharp" style="color: inherit; text-decoration: inherit;">Plaintext<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Plaintext value of the secret to be encrypted
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectedrepositoryids_csharp">
@@ -208,15 +216,6 @@ Must be one of `all`, `private`, `selected`. `selected_repository_ids` is requir
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="plaintextvalue_go">
-<a href="#plaintextvalue_go" style="color: inherit; text-decoration: inherit;">Plaintext<wbr>Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Plaintext value of the secret to be encrypted
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretname_go">
 <a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
@@ -233,8 +232,24 @@ Must be one of `all`, `private`, `selected`. `selected_repository_ids` is requir
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configures the access that repositories have to the organization secret.
-Must be one of `all`, `private`, `selected`. `selected_repository_ids` is required if set to `selected`.
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryptedvalue_go">
+<a href="#encryptedvalue_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encrypted value of the secret using the Github public key in Base64 format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="plaintextvalue_go">
+<a href="#plaintextvalue_go" style="color: inherit; text-decoration: inherit;">Plaintext<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Plaintext value of the secret to be encrypted
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectedrepositoryids_go">
@@ -249,15 +264,6 @@ Must be one of `all`, `private`, `selected`. `selected_repository_ids` is requir
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="plaintextvalue_nodejs">
-<a href="#plaintextvalue_nodejs" style="color: inherit; text-decoration: inherit;">plaintext<wbr>Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Plaintext value of the secret to be encrypted
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretname_nodejs">
 <a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
@@ -274,8 +280,24 @@ Must be one of `all`, `private`, `selected`. `selected_repository_ids` is requir
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configures the access that repositories have to the organization secret.
-Must be one of `all`, `private`, `selected`. `selected_repository_ids` is required if set to `selected`.
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryptedvalue_nodejs">
+<a href="#encryptedvalue_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encrypted value of the secret using the Github public key in Base64 format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="plaintextvalue_nodejs">
+<a href="#plaintextvalue_nodejs" style="color: inherit; text-decoration: inherit;">plaintext<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Plaintext value of the secret to be encrypted
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectedrepositoryids_nodejs">
@@ -290,15 +312,6 @@ Must be one of `all`, `private`, `selected`. `selected_repository_ids` is requir
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="plaintext_value_python">
-<a href="#plaintext_value_python" style="color: inherit; text-decoration: inherit;">plaintext_<wbr>value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Plaintext value of the secret to be encrypted
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_name_python">
 <a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
@@ -315,8 +328,24 @@ Must be one of `all`, `private`, `selected`. `selected_repository_ids` is requir
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Configures the access that repositories have to the organization secret.
-Must be one of `all`, `private`, `selected`. `selected_repository_ids` is required if set to `selected`.
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_value_python">
+<a href="#encrypted_value_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Encrypted value of the secret using the Github public key in Base64 format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="plaintext_value_python">
+<a href="#plaintext_value_python" style="color: inherit; text-decoration: inherit;">plaintext_<wbr>value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Plaintext value of the secret to be encrypted
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selected_repository_ids_python">
@@ -473,6 +502,7 @@ Get an existing ActionsOrganizationSecret resource's state with the given name, 
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">encrypted_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">plaintext_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">secret_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">selected_repository_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">,</span>
@@ -599,6 +629,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Date of actions_secret creation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryptedvalue_csharp">
+<a href="#state_encryptedvalue_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encrypted value of the secret using the Github public key in Base64 format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_plaintextvalue_csharp">
 <a href="#state_plaintextvalue_csharp" style="color: inherit; text-decoration: inherit;">Plaintext<wbr>Value</a>
 </span>
@@ -641,9 +680,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configures the access that repositories have to the organization secret.
-Must be one of `all`, `private`, `selected`. `selected_repository_ids` is required if set to `selected`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -656,6 +693,15 @@ Must be one of `all`, `private`, `selected`. `selected_repository_ids` is requir
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date of actions_secret creation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_encryptedvalue_go">
+<a href="#state_encryptedvalue_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encrypted value of the secret using the Github public key in Base64 format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plaintextvalue_go">
@@ -700,9 +746,7 @@ Must be one of `all`, `private`, `selected`. `selected_repository_ids` is requir
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configures the access that repositories have to the organization secret.
-Must be one of `all`, `private`, `selected`. `selected_repository_ids` is required if set to `selected`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -715,6 +759,15 @@ Must be one of `all`, `private`, `selected`. `selected_repository_ids` is requir
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date of actions_secret creation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_encryptedvalue_nodejs">
+<a href="#state_encryptedvalue_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encrypted value of the secret using the Github public key in Base64 format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plaintextvalue_nodejs">
@@ -759,9 +812,7 @@ Must be one of `all`, `private`, `selected`. `selected_repository_ids` is requir
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configures the access that repositories have to the organization secret.
-Must be one of `all`, `private`, `selected`. `selected_repository_ids` is required if set to `selected`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -774,6 +825,15 @@ Must be one of `all`, `private`, `selected`. `selected_repository_ids` is requir
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date of actions_secret creation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_encrypted_value_python">
+<a href="#state_encrypted_value_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Encrypted value of the secret using the Github public key in Base64 format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plaintext_value_python">
@@ -818,9 +878,7 @@ Must be one of `all`, `private`, `selected`. `selected_repository_ids` is requir
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Configures the access that repositories have to the organization secret.
-Must be one of `all`, `private`, `selected`. `selected_repository_ids` is required if set to `selected`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
