@@ -30,4 +30,4 @@ Once obtained, there are two ways to communicate your authorization tokens to Pu
     ```
 
 Remember to pass `--secret` when setting `confluent:password` so that it is properly encrypted. A full set of configuration parameters
-can be found listed on the [Project README](https://github.com/pulumi/pulumi-confluebt/blob/master/README.md).
+can be found listed on the [Project README](https://github.com/pulumi/pulumi-confluent/blob/master/README.md).
