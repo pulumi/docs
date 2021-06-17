@@ -32,7 +32,7 @@ ClusterRole is a cluster level, logical grouping of PolicyRules that can be refe
                 <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[_rbac_authorization_k8s_io_v1alpha1.PolicyRuleArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ClusterRole</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ClusterRoleArgs]</a></span> = None<span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ClusterRoleInitArgs]</a></span> = None<span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -80,7 +80,7 @@ ClusterRole is a cluster level, logical grouping of PolicyRules that can be refe
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ClusterRoleArgs</a></span>
+        <span class="property-type"><a href="#inputs">ClusterRoleInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">

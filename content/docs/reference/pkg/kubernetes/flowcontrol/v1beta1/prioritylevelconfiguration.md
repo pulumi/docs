@@ -31,7 +31,7 @@ PriorityLevelConfiguration represents the configuration of a priority level.
                                <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_flowcontrol_apiserver_k8s_io_v1beta1.PriorityLevelConfigurationSpecArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">PriorityLevelConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[PriorityLevelConfigurationArgs]</a></span> = None<span class="p">,</span>
+                               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[PriorityLevelConfigurationInitArgs]</a></span> = None<span class="p">,</span>
                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -79,7 +79,7 @@ PriorityLevelConfiguration represents the configuration of a priority level.
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PriorityLevelConfigurationArgs</a></span>
+        <span class="property-type"><a href="#inputs">PriorityLevelConfigurationInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">

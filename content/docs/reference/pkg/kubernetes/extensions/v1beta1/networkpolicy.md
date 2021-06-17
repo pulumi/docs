@@ -31,7 +31,7 @@ DEPRECATED 1.9 - This group version of NetworkPolicy is deprecated by networking
                   <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_extensions_v1beta1.NetworkPolicySpecArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">NetworkPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[NetworkPolicyArgs]</a></span> = None<span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[NetworkPolicyInitArgs]</a></span> = None<span class="p">,</span>
                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -79,7 +79,7 @@ DEPRECATED 1.9 - This group version of NetworkPolicy is deprecated by networking
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">NetworkPolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">NetworkPolicyInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
