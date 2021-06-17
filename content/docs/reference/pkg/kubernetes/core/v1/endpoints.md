@@ -42,7 +42,7 @@ Endpoints is a collection of endpoints that implement the actual service. Exampl
               <span class="nx">subsets</span><span class="p">:</span> <span class="nx">Optional[Sequence[_core_v1.EndpointSubsetArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Endpoints</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[EndpointsArgs]</a></span> = None<span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[EndpointsInitArgs]</a></span> = None<span class="p">,</span>
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -90,7 +90,7 @@ Endpoints is a collection of endpoints that implement the actual service. Exampl
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">EndpointsArgs</a></span>
+        <span class="property-type"><a href="#inputs">EndpointsInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">

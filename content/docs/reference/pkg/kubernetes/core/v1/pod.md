@@ -46,7 +46,7 @@ by setting the 'customTimeouts' option on the resource.
         <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_core_v1.PodSpecArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Pod</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[PodArgs]</a></span> = None<span class="p">,</span>
+        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[PodInitArgs]</a></span> = None<span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -94,7 +94,7 @@ by setting the 'customTimeouts' option on the resource.
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PodArgs</a></span>
+        <span class="property-type"><a href="#inputs">PodInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
