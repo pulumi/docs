@@ -249,7 +249,7 @@ guestbook = ConfigGroup(
 frontend = guestbook.get_resource("v1/Service", "frontend")
 export(
   name="privateIp",
-  value=frontend.spec.clusterIP)
+  value=frontend.spec.cluster_ip)
 ```
 
 {{% /choosable %}}
