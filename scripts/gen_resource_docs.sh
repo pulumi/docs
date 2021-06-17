@@ -13,7 +13,7 @@ INSTALL_RESOURCE_PLUGIN=${2:-}
 INSTALL_RESOURCE_PLUGIN_VERSION=${3:-}
 
 PACKDIR="./content/docs/reference/pkg"
-ABSOLUTEPACKDIR="$(pwd)/content/docs/reference/pkg"
+ABSOLUTEPACKDIR="$(pwd)/content/docs/packages/providers/"
 TOOL_RESDOCGEN="./tools/resourcedocsgen/"
 
 PROVIDERS=(
@@ -84,7 +84,7 @@ generate_docs() {
     echo "Running docs generator from schema for ${provider}..."
     pushd ${TOOL_RESDOCGEN}
     go mod tidy
-    go run . -logtostderr "${ABSOLUTEPACKDIR}/${provider}" "${SCHEMA_FILE}" "${plugin_version}" "${OVERLAY_SCHEMA_FILE}" || exit 3
+    go run . -logtostderr "${ABSOLUTEPACKDIR}/${provider}/resources" "${SCHEMA_FILE}" "${plugin_version}" "${OVERLAY_SCHEMA_FILE}" || exit 3
     popd
 
     echo "Done generating resource docs for ${provider}"
