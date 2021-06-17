@@ -7,7 +7,7 @@ notitle: true
 
 {{< resource-docs-alert "pulumi" >}}
 
-<div class="section" id="pulumi-python-sdk">
+<section id="pulumi-python-sdk">
 <h1>Pulumi Python SDK<a class="headerlink" href="#pulumi-python-sdk" title="Permalink to this headline"></a></h1>
 <p>The Pulumi Python SDK (<cite>pulumi</cite>) is the core package used when writing Pulumi programs in Python. It contains everything
 that you’ll need in order to interact with Pulumi resource providers and express infrastructure using Python code.
@@ -18,7 +18,7 @@ module.</p>
 <a class="reference external" href="/docs/reference/python/#getting-started">Python getting started</a> documentation for details on how to get started with
 Python.</p>
 </div></blockquote>
-<div class="section" id="the-pulumi-python-resource-model">
+<section id="the-pulumi-python-resource-model">
 <h2>The Pulumi Python Resource Model<a class="headerlink" href="#the-pulumi-python-resource-model" title="Permalink to this headline"></a></h2>
 <p>Like most languages usable with Pulumi, Pulumi represents cloud resources as classes and Python programs can instantiate
 those classes. All classes that can be instantiated to produce actual resources derive from the <cite>pulumi.Resource</cite> class.</p>
@@ -431,8 +431,8 @@ the invocation.</p>
 verbose unhandled error logic which emits the source program text and complete stack trace.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="configuration-and-metadata">
+</section>
+<section id="configuration-and-metadata">
 <h2>Configuration and Metadata<a class="headerlink" href="#configuration-and-metadata" title="Permalink to this headline"></a></h2>
 <p>Pulumi programs can receive configuration that is specified by the command-line using <cite>pulumi config</cite>. This
 configuration information can be retrieved at runtime using the <cite>pulumi.Config</cite> class:</p>
@@ -914,8 +914,8 @@ legal JSON string, an error is thrown.</p>
 <dd><p>Returns whether or not we are currently doing a preview.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="outputs-and-inputs">
+</section>
+<section id="outputs-and-inputs">
 <h2>Outputs and Inputs<a class="headerlink" href="#outputs-and-inputs" title="Permalink to this headline"></a></h2>
 <p>Like other languages in the Pulumi ecosystem, all Resources in Python have two kinds of properties: <em>inputs</em> and
 <em>outputs</em>. Inputs are specified as arguments to resource constructors, to be used as inputs to the resource itself.
@@ -1098,8 +1098,8 @@ into one final string. This can be used like so:</p>
 
 </dd></dl>
 
-</div>
-<div class="section" id="logging">
+</section>
+<section id="logging">
 <h2>Logging<a class="headerlink" href="#logging" title="Permalink to this headline"></a></h2>
 <p>The Pulumi SDK contains a few helper functions for logging to the console. Messages logged using these functions are
 sent directly to the Pulumi Engine and rendered with the rest of the CLI output.</p>
@@ -1168,8 +1168,8 @@ with a resource and stream_id if provided.</p>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="stack-exports">
+</section>
+<section id="stack-exports">
 <h2>Stack Exports<a class="headerlink" href="#stack-exports" title="Permalink to this headline"></a></h2>
 <p>Python programs can export values. Exported values are attached to the program’s Stack resource and accessed using the
 <cite>pulumi stack output</cite> CLI command:</p>
@@ -1197,8 +1197,8 @@ with a resource and stream_id if provided.</p>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="module-pulumi.automation">
+</section>
+<section id="module-pulumi.automation">
 <span id="automation-api"></span><h2>Automation API<a class="headerlink" href="#module-pulumi.automation" title="Permalink to this headline"></a></h2>
 <p>The automation module contains the Pulumi Automation API, the programmatic interface for driving Pulumi programs
 without the CLI.
@@ -1430,7 +1430,7 @@ There can only be a single project per workspace. Fails is new project name does
 <dt id="pulumi.automation.LocalWorkspace.serialize_args_for_op">
 <code class="sig-name descname">serialize_args_for_op</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>str<span class="p">]</span><a class="headerlink" href="#pulumi.automation.LocalWorkspace.serialize_args_for_op" title="Permalink to this definition"></a></dt>
 <dd><p>A hook to provide additional args to CLI commands before they are executed.
-Provided with stack name, returns a list of args to append to an invoked command [“–config=…”, ]
+Provided with stack name, returns a list of args to append to an invoked command [”–config=…”, ]
 LocalWorkspace does not utilize this extensibility point.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2053,5 +2053,5 @@ This can be combined with Stack.export_state to edit a stack’s state (such as 
 It has a plaintext value, and an option boolean indicating secretness.</p>
 </dd></dl>
 
-</div>
-</div>
+</section>
+</section>
