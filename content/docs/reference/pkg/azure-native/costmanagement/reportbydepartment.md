@@ -174,8 +174,8 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 report_by_department = azure_native.costmanagement.ReportByDepartment("reportByDepartment",
-    definition=azure_native.costmanagement.ReportDefinitionArgs(
-        dataset={
+    definition={
+        "dataset": {
             "aggregation": {
                 "costSum": azure_native.costmanagement.ReportAggregationArgs(
                     function="Sum",
@@ -193,8 +193,8 @@ report_by_department = azure_native.costmanagement.ReportByDepartment("reportByD
             ),
             "filter": {
                 "and": [
-                    azure_native.costmanagement.ReportFilterArgs(
-                        or_=[
+                    {
+                        "or": [
                             azure_native.costmanagement.ReportFilterArgs(
                                 dimension=azure_native.costmanagement.ReportComparisonExpressionArgs(
                                     name="ResourceLocation",
@@ -216,7 +216,7 @@ report_by_department = azure_native.costmanagement.ReportByDepartment("reportByD
                                 ),
                             ),
                         ],
-                    ),
+                    },
                     azure_native.costmanagement.ReportFilterArgs(
                         dimension=azure_native.costmanagement.ReportComparisonExpressionArgs(
                             name="ResourceGroup",
@@ -238,9 +238,9 @@ report_by_department = azure_native.costmanagement.ReportByDepartment("reportByD
                 ),
             ],
         },
-        timeframe="MonthToDate",
-        type="Usage",
-    ),
+        "timeframe": "MonthToDate",
+        "type": "Usage",
+    },
     delivery_info=azure_native.costmanagement.ReportDeliveryInfoArgs(
         destination=azure_native.costmanagement.ReportDeliveryDestinationArgs(
             container="reports",

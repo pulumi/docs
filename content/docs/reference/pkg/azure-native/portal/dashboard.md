@@ -101,7 +101,70 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	portal "github.com/pulumi/pulumi-azure-native/sdk/go/azure/portal"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := portal.NewDashboard(ctx, "dashboard", &portal.DashboardArgs{
+			DashboardName: pulumi.String("testDashboard"),
+			Lenses: portal.DashboardLensArray{
+				&portal.DashboardLensArgs{
+					Order: pulumi.Int(1),
+					Parts: portal.DashboardPartsArray{
+						&portal.DashboardPartsArgs{
+							Position: &portal.DashboardPartsPositionArgs{
+								ColSpan: pulumi.Int(3),
+								RowSpan: pulumi.Int(4),
+								X:       pulumi.Int(1),
+								Y:       pulumi.Int(2),
+							},
+						},
+						&portal.DashboardPartsArgs{
+							Position: &portal.DashboardPartsPositionArgs{
+								ColSpan: pulumi.Int(6),
+								RowSpan: pulumi.Int(6),
+								X:       pulumi.Int(5),
+								Y:       pulumi.Int(5),
+							},
+						},
+					},
+				},
+				&portal.DashboardLensArgs{
+					Order: pulumi.Int(2),
+					Parts: portal.DashboardPartsArray{},
+				},
+			},
+			Location: pulumi.String("eastus"),
+			Metadata: pulumi.Float64MapMap{
+				"metadata": pulumi.Float64Map{
+					"ColSpan": pulumi.Float64(2),
+					"RowSpan": pulumi.Float64(1),
+					"X":       pulumi.Float64(4),
+					"Y":       pulumi.Float64(3),
+				},
+			},
+			ResourceGroupName: pulumi.String("testRG"),
+			Tags: pulumi.StringMap{
+				"aKey":       pulumi.String("aValue"),
+				"anotherKey": pulumi.String("anotherValue"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -116,9 +179,9 @@ import pulumi_azure_native as azure_native
 dashboard = azure_native.portal.Dashboard("dashboard",
     dashboard_name="testDashboard",
     lenses=[
-        {
-            "order": 1,
-            "parts": [
+        azure_native.portal.DashboardLensArgs(
+            order=1,
+            parts=[
                 azure_native.portal.DashboardPartsArgs(
                     position=azure_native.portal.DashboardPartsPositionArgs(
                         col_span=3,
@@ -136,11 +199,11 @@ dashboard = azure_native.portal.Dashboard("dashboard",
                     ),
                 ),
             ],
-        },
-        {
-            "order": 2,
-            "parts": [],
-        },
+        ),
+        azure_native.portal.DashboardLensArgs(
+            order=2,
+            parts=[],
+        ),
     ],
     location="eastus",
     metadata={
@@ -1549,7 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatasettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatasettingssettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1561,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatasettingssettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1573,7 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatasettingssettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1585,7 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatasettingssettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1681,7 +1744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettingssettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1693,7 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettingssettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1705,7 +1768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettingssettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1717,7 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettingssettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1772,6 +1835,184 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="markdownpartmetadataresponsesettingssettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Settings</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="content_csharp">
+<a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The content of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="markdownsource_csharp">
+<a href="#markdownsource_csharp" style="color: inherit; text-decoration: inherit;">Markdown<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The source of the content of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="markdownuri_csharp">
+<a href="#markdownuri_csharp" style="color: inherit; text-decoration: inherit;">Markdown<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The uri of markdown content.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subtitle_csharp">
+<a href="#subtitle_csharp" style="color: inherit; text-decoration: inherit;">Subtitle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subtitle of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="title_csharp">
+<a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The title of the markdown part.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="content_go">
+<a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The content of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="markdownsource_go">
+<a href="#markdownsource_go" style="color: inherit; text-decoration: inherit;">Markdown<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The source of the content of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="markdownuri_go">
+<a href="#markdownuri_go" style="color: inherit; text-decoration: inherit;">Markdown<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The uri of markdown content.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subtitle_go">
+<a href="#subtitle_go" style="color: inherit; text-decoration: inherit;">Subtitle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subtitle of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="title_go">
+<a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The title of the markdown part.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="content_nodejs">
+<a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The content of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="markdownsource_nodejs">
+<a href="#markdownsource_nodejs" style="color: inherit; text-decoration: inherit;">markdown<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The source of the content of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="markdownuri_nodejs">
+<a href="#markdownuri_nodejs" style="color: inherit; text-decoration: inherit;">markdown<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The uri of markdown content.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subtitle_nodejs">
+<a href="#subtitle_nodejs" style="color: inherit; text-decoration: inherit;">subtitle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subtitle of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="title_nodejs">
+<a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The title of the markdown part.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="content_python">
+<a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The content of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="markdown_source_python">
+<a href="#markdown_source_python" style="color: inherit; text-decoration: inherit;">markdown_<wbr>source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The source of the content of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="markdown_uri_python">
+<a href="#markdown_uri_python" style="color: inherit; text-decoration: inherit;">markdown_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The uri of markdown content.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subtitle_python">
+<a href="#subtitle_python" style="color: inherit; text-decoration: inherit;">subtitle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The subtitle of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="title_python">
+<a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The title of the markdown part.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
@@ -1820,6 +2061,184 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#markdownpartmetadatacontent">Markdown<wbr>Part<wbr>Metadata<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="markdownpartmetadatasettingssettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Settings</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="content_csharp">
+<a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The content of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="markdownsource_csharp">
+<a href="#markdownsource_csharp" style="color: inherit; text-decoration: inherit;">Markdown<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The source of the content of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="markdownuri_csharp">
+<a href="#markdownuri_csharp" style="color: inherit; text-decoration: inherit;">Markdown<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The uri of markdown content.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subtitle_csharp">
+<a href="#subtitle_csharp" style="color: inherit; text-decoration: inherit;">Subtitle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subtitle of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="title_csharp">
+<a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The title of the markdown part.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="content_go">
+<a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The content of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="markdownsource_go">
+<a href="#markdownsource_go" style="color: inherit; text-decoration: inherit;">Markdown<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The source of the content of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="markdownuri_go">
+<a href="#markdownuri_go" style="color: inherit; text-decoration: inherit;">Markdown<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The uri of markdown content.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subtitle_go">
+<a href="#subtitle_go" style="color: inherit; text-decoration: inherit;">Subtitle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subtitle of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="title_go">
+<a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The title of the markdown part.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="content_nodejs">
+<a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The content of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="markdownsource_nodejs">
+<a href="#markdownsource_nodejs" style="color: inherit; text-decoration: inherit;">markdown<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The source of the content of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="markdownuri_nodejs">
+<a href="#markdownuri_nodejs" style="color: inherit; text-decoration: inherit;">markdown<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The uri of markdown content.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subtitle_nodejs">
+<a href="#subtitle_nodejs" style="color: inherit; text-decoration: inherit;">subtitle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subtitle of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="title_nodejs">
+<a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The title of the markdown part.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="content_python">
+<a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The content of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="markdown_source_python">
+<a href="#markdown_source_python" style="color: inherit; text-decoration: inherit;">markdown_<wbr>source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The source of the content of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="markdown_uri_python">
+<a href="#markdown_uri_python" style="color: inherit; text-decoration: inherit;">markdown_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The uri of markdown content.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subtitle_python">
+<a href="#subtitle_python" style="color: inherit; text-decoration: inherit;">subtitle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The subtitle of the markdown part.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="title_python">
+<a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The title of the markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

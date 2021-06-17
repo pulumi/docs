@@ -30,6 +30,6 @@ Explore the resources and functions of the azure-native.sqlvirtualmachine module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.12.0</dd>
+	<dd>1.13.0</dd>
 </dl>
 

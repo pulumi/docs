@@ -47,6 +47,7 @@ class MyStack : Stack
             ServiceBusNamespace = "sbn",
             SharedAccessKey = "someSecretvalue",
             TimestampPropertyName = "someTimestampProperty",
+            Type = "EarliestAvailable",
         });
     }
 
@@ -84,6 +85,7 @@ func main() {
 			ServiceBusNamespace:   pulumi.String("sbn"),
 			SharedAccessKey:       pulumi.String("someSecretvalue"),
 			TimestampPropertyName: pulumi.String("someTimestampProperty"),
+			Type:                  pulumi.String("EarliestAvailable"),
 		})
 		if err != nil {
 			return err
@@ -117,7 +119,8 @@ event_hub_event_source = azure_native.timeseriesinsights.EventHubEventSource("ev
     resource_group_name="rg1",
     service_bus_namespace="sbn",
     shared_access_key="someSecretvalue",
-    timestamp_property_name="someTimestampProperty")
+    timestamp_property_name="someTimestampProperty",
+    type="EarliestAvailable")
 
 ```
 
@@ -145,6 +148,150 @@ const eventHubEventSource = new azure_native.timeseriesinsights.EventHubEventSou
     serviceBusNamespace: "sbn",
     sharedAccessKey: "someSecretvalue",
     timestampPropertyName: "someTimestampProperty",
+    type: "EarliestAvailable",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+### EventSourcesCreateEventHubWithCustomEnquedTime
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var eventHubEventSource = new AzureNative.TimeSeriesInsights.EventHubEventSource("eventHubEventSource", new AzureNative.TimeSeriesInsights.EventHubEventSourceArgs
+        {
+            ConsumerGroupName = "cgn",
+            EnvironmentName = "env1",
+            EventHubName = "ehn",
+            EventSourceName = "es1",
+            EventSourceResourceId = "somePathInArm",
+            KeyName = "managementKey",
+            Kind = "Microsoft.EventHub",
+            Location = "West US",
+            ResourceGroupName = "rg1",
+            ServiceBusNamespace = "sbn",
+            SharedAccessKey = "someSecretvalue",
+            Time = "2017-04-01T19:20:33.2288820Z",
+            TimestampPropertyName = "someTimestampProperty",
+            Type = "CustomEnqueuedTime",
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	timeseriesinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/timeseriesinsights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := timeseriesinsights.NewEventHubEventSource(ctx, "eventHubEventSource", &timeseriesinsights.EventHubEventSourceArgs{
+			ConsumerGroupName:     pulumi.String("cgn"),
+			EnvironmentName:       pulumi.String("env1"),
+			EventHubName:          pulumi.String("ehn"),
+			EventSourceName:       pulumi.String("es1"),
+			EventSourceResourceId: pulumi.String("somePathInArm"),
+			KeyName:               pulumi.String("managementKey"),
+			Kind:                  pulumi.String("Microsoft.EventHub"),
+			Location:              pulumi.String("West US"),
+			ResourceGroupName:     pulumi.String("rg1"),
+			ServiceBusNamespace:   pulumi.String("sbn"),
+			SharedAccessKey:       pulumi.String("someSecretvalue"),
+			Time:                  pulumi.String("2017-04-01T19:20:33.2288820Z"),
+			TimestampPropertyName: pulumi.String("someTimestampProperty"),
+			Type:                  pulumi.String("CustomEnqueuedTime"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+event_hub_event_source = azure_native.timeseriesinsights.EventHubEventSource("eventHubEventSource",
+    consumer_group_name="cgn",
+    environment_name="env1",
+    event_hub_name="ehn",
+    event_source_name="es1",
+    event_source_resource_id="somePathInArm",
+    key_name="managementKey",
+    kind="Microsoft.EventHub",
+    location="West US",
+    resource_group_name="rg1",
+    service_bus_namespace="sbn",
+    shared_access_key="someSecretvalue",
+    time="2017-04-01T19:20:33.2288820Z",
+    timestamp_property_name="someTimestampProperty",
+    type="CustomEnqueuedTime")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const eventHubEventSource = new azure_native.timeseriesinsights.EventHubEventSource("eventHubEventSource", {
+    consumerGroupName: "cgn",
+    environmentName: "env1",
+    eventHubName: "ehn",
+    eventSourceName: "es1",
+    eventSourceResourceId: "somePathInArm",
+    keyName: "managementKey",
+    kind: "Microsoft.EventHub",
+    location: "West US",
+    resourceGroupName: "rg1",
+    serviceBusNamespace: "sbn",
+    sharedAccessKey: "someSecretvalue",
+    time: "2017-04-01T19:20:33.2288820Z",
+    timestampPropertyName: "someTimestampProperty",
+    type: "CustomEnqueuedTime",
 });
 
 ```
@@ -185,7 +332,9 @@ const eventHubEventSource = new azure_native.timeseriesinsights.EventHubEventSou
                         <span class="nx">service_bus_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">shared_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-                        <span class="nx">timestamp_property_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                        <span class="nx">time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">timestamp_property_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[Union[str, IngressStartAtType]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">EventHubEventSource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventHubEventSourceArgs</a></span><span class="p">,</span>
@@ -411,13 +560,29 @@ The EventHubEventSource resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}Key-value pairs of additional properties for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="time_csharp">
+<a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="timestamppropertyname_csharp">
 <a href="#timestamppropertyname_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ingressstartattype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Ingress<wbr>Start<wbr>At<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the ingressStartAt, It can be "EarliestAvailable", "EventSourceCreationTime", "CustomEnqueuedTime".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -519,13 +684,29 @@ The EventHubEventSource resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}Key-value pairs of additional properties for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="time_go">
+<a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="timestamppropertyname_go">
 <a href="#timestamppropertyname_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ingressstartattype">Ingress<wbr>Start<wbr>At<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the ingressStartAt, It can be "EarliestAvailable", "EventSourceCreationTime", "CustomEnqueuedTime".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -627,13 +808,29 @@ The EventHubEventSource resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}Key-value pairs of additional properties for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="time_nodejs">
+<a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="timestamppropertyname_nodejs">
 <a href="#timestamppropertyname_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ingressstartattype">Ingress<wbr>Start<wbr>At<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the ingressStartAt, It can be "EarliestAvailable", "EventSourceCreationTime", "CustomEnqueuedTime".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -735,13 +932,29 @@ The EventHubEventSource resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}Key-value pairs of additional properties for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="time_python">
+<a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="timestamp_property_name_python">
 <a href="#timestamp_property_name_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>property_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#ingressstartattype">Ingress<wbr>Start<wbr>At<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the ingressStartAt, It can be "EarliestAvailable", "EventSourceCreationTime", "CustomEnqueuedTime".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -784,15 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -828,15 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -872,15 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -916,15 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -936,6 +1117,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="ingressstartattype">Ingress<wbr>Start<wbr>At<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Earliest<wbr>Available</dt>
+    <dd>EarliestAvailable</dd><dt>Event<wbr>Source<wbr>Creation<wbr>Time</dt>
+    <dd>EventSourceCreationTime</dd><dt>Custom<wbr>Enqueued<wbr>Time</dt>
+    <dd>CustomEnqueuedTime</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Ingress<wbr>Start<wbr>At<wbr>Type<wbr>Earliest<wbr>Available</dt>
+    <dd>EarliestAvailable</dd><dt>Ingress<wbr>Start<wbr>At<wbr>Type<wbr>Event<wbr>Source<wbr>Creation<wbr>Time</dt>
+    <dd>EventSourceCreationTime</dd><dt>Ingress<wbr>Start<wbr>At<wbr>Type<wbr>Custom<wbr>Enqueued<wbr>Time</dt>
+    <dd>CustomEnqueuedTime</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Earliest<wbr>Available</dt>
+    <dd>EarliestAvailable</dd><dt>Event<wbr>Source<wbr>Creation<wbr>Time</dt>
+    <dd>EventSourceCreationTime</dd><dt>Custom<wbr>Enqueued<wbr>Time</dt>
+    <dd>CustomEnqueuedTime</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EARLIEST_AVAILABLE</dt>
+    <dd>EarliestAvailable</dd><dt>EVENT_SOURCE_CREATION_TIME</dt>
+    <dd>EventSourceCreationTime</dd><dt>CUSTOM_ENQUEUED_TIME</dt>
+    <dd>CustomEnqueuedTime</dd></dl>
+{{% /choosable %}}
 
 <h4 id="localtimestamp">Local<wbr>Timestamp</h4>
 
