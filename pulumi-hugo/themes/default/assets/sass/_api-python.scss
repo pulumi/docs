@@ -22,8 +22,11 @@ div.section[id^="pulumi"] {
     }
 }
 
-// We rely on the Python docs that begin with `<div class="section" id="foo">` to target these styles.
-div.section[id]:not([id=""]) {
+// This selector is for the Pulumi Python SDK page.
+section[id="pulumi-python-sdk"] {
+    // Add a custom property just so that we can run tests to validate its presence.
+    --pulumi-python-sdk: true;
+
     // Don't show the header link - there's an anchorjs link on this header that does the
     // job just as well.
     h1[id$="\B6"],
