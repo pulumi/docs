@@ -259,13 +259,13 @@ import * as awsx from "@pulumi/awsx";
 import * as eks from "@pulumi/eks";
 
 // Create a VPC for our cluster.
-const vpc = new awsx.ec2.Vpc("my-vpc");
-const allVpcSubnets = vpc.privateSubnetIds.concat(vpc.publicSubnetIds);
+const vpc = new awsx.ec2.Vpc("my-vpc", {});
 
 // Create an EKS cluster inside of the VPC.
-const cluster2 = new eks.Cluster("my-cluster", {
+const cluster = new eks.Cluster("my-cluster", {
     vpcId: vpc.id,
-    subnetIds: allVpcSubnets,
+    publicSubnetIds: vpc.publicSubnetIds,
+    privateSubnetIds: vpc.privateSubnetIds,
     nodeAssociatePublicIpAddress: false,
 });
 
