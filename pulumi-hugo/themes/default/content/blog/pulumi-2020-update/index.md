@@ -47,7 +47,7 @@ The remaining areas of focus between now and launch include:
 
 * Making reference policy packs available for AWS, Azure, GCP, and Kubernetes. These packs will be usable out-of-the-box with a collection of some of the most important configurable rules we've seen, in addition to being a starting point for creating your packs.
 
-[CrossGuard is ready to try today]({{< relref "/docs/get-started/crossguard" >}}), and [we've begun blogging about some example use cases]({{< relref "/blog/manage-infrastructure-with-pac" >}}) that you may find interesting.
+[CrossGuard is ready to try today]({{< relref "/docs/guides/crossguard/get-started" >}}), and [we've begun blogging about some example use cases]({{< relref "/blog/manage-infrastructure-with-pac" >}}) that you may find interesting.
 
 ## Other Goodies
 

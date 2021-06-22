@@ -121,7 +121,7 @@ If you prefer to manage the virtual environment on your own (for example, using 
 runtime: python
 ```
 
-When managing the virtual environment on your own and [running the Policy Pack locally]({{< relref "/docs/get-started/crossguard/authoring-a-policy-pack#running-locally" >}}) against a Pulumi program, you'll need to run any `pulumi` commands (such as `pulumi up`) from an activated virtual environment shell (or, if using a tool like [Pipenv](https://github.com/pypa/pipenv), prefix any `pulumi` commands with `pipenv run pulumi ...`). If the Pulumi program is also Python, both the Policy Pack and Pulumi program can use the same virtual environment.
+When managing the virtual environment on your own and [running the Policy Pack locally]({{< relref "/docs/guides/crossguard/get-started#authoring-a-policy-pack#running-locally" >}}) against a Pulumi program, you'll need to run any `pulumi` commands (such as `pulumi up`) from an activated virtual environment shell (or, if using a tool like [Pipenv](https://github.com/pypa/pipenv), prefix any `pulumi` commands with `pipenv run pulumi ...`). If the Pulumi program is also Python, both the Policy Pack and Pulumi program can use the same virtual environment.
 
 Enforced Policy Packs that are published to the Pulumi Console will automatically create a virtual environment, install dependencies in the virtual environment, and use the virtual environment when running against a Pulumi stack.
 

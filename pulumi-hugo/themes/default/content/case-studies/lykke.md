@@ -10,7 +10,7 @@ customer_logo: /logos/customers/lykke_logo.svg
 customer_url: https://lykke.com/
 
 exec_summary: |
-    [Lykke](https://lykke.com/) is a Swiss fintech company bridging the gap between traditional finance and Blockchain. Lykke operates a commission-free exchange for digital assets and cryptocurrencies. Lykke developers rely on scalable blockchain infrastructure and leverage Pulumi to define reusable components and services and create abstractions needed to support its ecosystem of products.  Using Pulumi, Lykke has been able to rapidly lower the time-to-market for its services and deliver innovative new capabilities for the fast-growing cryptocurrency market, shipping its new product to production customers in a matter of months. Pulumi also helped Lykke adopt cloud-native architectures faster and migrate to managed services, which helped reduce costs by at least 20%. 
+    [Lykke](https://lykke.com/) is a Swiss fintech company bridging the gap between traditional finance and Blockchain. Lykke operates a commission-free exchange for digital assets and cryptocurrencies. Lykke developers rely on scalable blockchain infrastructure and leverage Pulumi to define reusable components and services and create abstractions needed to support its ecosystem of products.  Using Pulumi, Lykke has been able to rapidly lower the time-to-market for its services and deliver innovative new capabilities for the fast-growing cryptocurrency market, shipping its new product to production customers in a matter of months. Pulumi also helped Lykke adopt cloud-native architectures faster and migrate to managed services, which helped reduce costs by at least 20%.
 
 sections:
     - label: Exec Summary
@@ -65,5 +65,5 @@ Check out the following articles to get started:
 
 - [AWS Identity and Access Management with Pulumi]({{< relref "/docs/guides/crosswalk/aws/iam" >}})
 - [AWS Lambda with Pulumi]({{< relref "/docs/guides/crosswalk/aws/lambda" >}})
-- [Get Started with Pulumi Policy as Code]({{< relref "/docs/get-started/crossguard" >}})
+- [Get Started with Pulumi Policy as Code]({{< relref "/docs/guides/crossguard/get-started" >}})
 - [Get Started with Kubernetes with Pulumi]({{< relref "/docs/guides/crosswalk/kubernetes" >}})

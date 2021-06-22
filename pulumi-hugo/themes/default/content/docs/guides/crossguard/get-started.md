@@ -5,10 +5,10 @@ meta_desc: Pulumi CrossGuard is a product that provides gated deployments via Po
 linktitle: Get Started
 weight: 1
 aliases: [
-    "/docs/get-started/policy-as-code/",
-    "/docs/get-started/crossguard/",
-    "/docs/get-started/crossguard/authoring-a-policy-pack/",
-    "/docs/get-started/crossguard/enforcing-a-policy-pack/"
+    "/docs/get-started/policy-as-code",
+    "/docs/get-started/crossguard",
+    "/docs/get-started/crossguard/authoring-a-policy-pack",
+    "/docs/get-started/crossguard/enforcing-a-policy-pack"
 ]
 
 menu:
