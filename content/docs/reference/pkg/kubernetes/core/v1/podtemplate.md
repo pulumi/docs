@@ -31,7 +31,7 @@ PodTemplate describes a template for creating copies of a predefined pod.
                 <span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[_core_v1.PodTemplateSpecArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">PodTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[PodTemplateArgs]</a></span> = None<span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[PodTemplateInitArgs]</a></span> = None<span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -79,7 +79,7 @@ PodTemplate describes a template for creating copies of a predefined pod.
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PodTemplateArgs</a></span>
+        <span class="property-type"><a href="#inputs">PodTemplateInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">

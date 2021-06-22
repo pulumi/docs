@@ -31,7 +31,7 @@ FlowSchema defines the schema of a group of flows. Note that a flow is made up o
                <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_flowcontrol_apiserver_k8s_io_v1beta1.FlowSchemaSpecArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">FlowSchema</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[FlowSchemaArgs]</a></span> = None<span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[FlowSchemaInitArgs]</a></span> = None<span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -79,7 +79,7 @@ FlowSchema defines the schema of a group of flows. Note that a flow is made up o
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">FlowSchemaArgs</a></span>
+        <span class="property-type"><a href="#inputs">FlowSchemaInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">

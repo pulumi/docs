@@ -33,7 +33,7 @@ ServiceAccount binds together: * a name, understood by users, and perhaps by per
                    <span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[_core_v1.ObjectReferenceArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ServiceAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ServiceAccountArgs]</a></span> = None<span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ServiceAccountInitArgs]</a></span> = None<span class="p">,</span>
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -81,7 +81,7 @@ ServiceAccount binds together: * a name, understood by users, and perhaps by per
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ServiceAccountArgs</a></span>
+        <span class="property-type"><a href="#inputs">ServiceAccountInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">

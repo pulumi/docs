@@ -31,7 +31,7 @@ PodSecurityPolicy governs the ability to make requests that affect the Security 
                       <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_policy_v1beta1.PodSecurityPolicySpecArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">PodSecurityPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[PodSecurityPolicyArgs]</a></span> = None<span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[PodSecurityPolicyInitArgs]</a></span> = None<span class="p">,</span>
                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -79,7 +79,7 @@ PodSecurityPolicy governs the ability to make requests that affect the Security 
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PodSecurityPolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">PodSecurityPolicyInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">

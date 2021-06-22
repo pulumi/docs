@@ -42,7 +42,7 @@ They are consumed by the kube-scheduler if the CSIStorageCapacity beta feature g
                        <span class="nx">storage_class_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">CSIStorageCapacity</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CSIStorageCapacityArgs</a></span><span class="p">,</span>
+                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CSIStorageCapacityInitArgs</a></span><span class="p">,</span>
                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -90,7 +90,7 @@ They are consumed by the kube-scheduler if the CSIStorageCapacity beta feature g
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">CSIStorageCapacityArgs</a></span>
+        <span class="property-type"><a href="#inputs">CSIStorageCapacityInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">

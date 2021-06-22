@@ -31,7 +31,7 @@ IngressClass represents the class of the Ingress, referenced by the Ingress Spec
                  <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_networking_k8s_io_v1beta1.IngressClassSpecArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">IngressClass</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[IngressClassArgs]</a></span> = None<span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[IngressClassInitArgs]</a></span> = None<span class="p">,</span>
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -79,7 +79,7 @@ IngressClass represents the class of the Ingress, referenced by the Ingress Spec
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">IngressClassArgs</a></span>
+        <span class="property-type"><a href="#inputs">IngressClassInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
