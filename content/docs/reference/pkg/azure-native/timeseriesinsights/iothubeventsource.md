@@ -119,6 +119,105 @@ const ioTHubEventSource = new azure_native.timeseriesinsights.IoTHubEventSource(
 
 
 
+### EventSourcesCreateEventHubWithCustomEnquedTime
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ioTHubEventSource = new AzureNative.TimeSeriesInsights.IoTHubEventSource("ioTHubEventSource", new AzureNative.TimeSeriesInsights.IoTHubEventSourceArgs
+        {
+            EnvironmentName = "env1",
+            EventSourceName = "es1",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	timeseriesinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/timeseriesinsights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := timeseriesinsights.NewIoTHubEventSource(ctx, "ioTHubEventSource", &timeseriesinsights.IoTHubEventSourceArgs{
+			EnvironmentName:   pulumi.String("env1"),
+			EventSourceName:   pulumi.String("es1"),
+			ResourceGroupName: pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+io_t_hub_event_source = azure_native.timeseriesinsights.IoTHubEventSource("ioTHubEventSource",
+    environment_name="env1",
+    event_source_name="es1",
+    resource_group_name="rg1")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const ioTHubEventSource = new azure_native.timeseriesinsights.IoTHubEventSource("ioTHubEventSource", {
+    environmentName: "env1",
+    eventSourceName: "es1",
+    resourceGroupName: "rg1",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -148,7 +247,9 @@ const ioTHubEventSource = new azure_native.timeseriesinsights.IoTHubEventSource(
                       <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">shared_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-                      <span class="nx">timestamp_property_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                      <span class="nx">time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">timestamp_property_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[Union[str, IngressStartAtType]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">IoTHubEventSource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IoTHubEventSourceArgs</a></span><span class="p">,</span>
@@ -366,13 +467,29 @@ The IoTHubEventSource resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}Key-value pairs of additional properties for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="time_csharp">
+<a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="timestamppropertyname_csharp">
 <a href="#timestamppropertyname_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ingressstartattype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Ingress<wbr>Start<wbr>At<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the ingressStartAt, It can be "EarliestAvailable", "EventSourceCreationTime", "CustomEnqueuedTime".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -466,13 +583,29 @@ The IoTHubEventSource resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}Key-value pairs of additional properties for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="time_go">
+<a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="timestamppropertyname_go">
 <a href="#timestamppropertyname_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ingressstartattype">Ingress<wbr>Start<wbr>At<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the ingressStartAt, It can be "EarliestAvailable", "EventSourceCreationTime", "CustomEnqueuedTime".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -566,13 +699,29 @@ The IoTHubEventSource resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}Key-value pairs of additional properties for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="time_nodejs">
+<a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="timestamppropertyname_nodejs">
 <a href="#timestamppropertyname_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ingressstartattype">Ingress<wbr>Start<wbr>At<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the ingressStartAt, It can be "EarliestAvailable", "EventSourceCreationTime", "CustomEnqueuedTime".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -666,13 +815,29 @@ The IoTHubEventSource resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}Key-value pairs of additional properties for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="time_python">
+<a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="timestamp_property_name_python">
 <a href="#timestamp_property_name_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>property_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#ingressstartattype">Ingress<wbr>Start<wbr>At<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the ingressStartAt, It can be "EarliestAvailable", "EventSourceCreationTime", "CustomEnqueuedTime".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -715,15 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -759,15 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -803,15 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -847,15 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -867,6 +1000,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="ingressstartattype">Ingress<wbr>Start<wbr>At<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Earliest<wbr>Available</dt>
+    <dd>EarliestAvailable</dd><dt>Event<wbr>Source<wbr>Creation<wbr>Time</dt>
+    <dd>EventSourceCreationTime</dd><dt>Custom<wbr>Enqueued<wbr>Time</dt>
+    <dd>CustomEnqueuedTime</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Ingress<wbr>Start<wbr>At<wbr>Type<wbr>Earliest<wbr>Available</dt>
+    <dd>EarliestAvailable</dd><dt>Ingress<wbr>Start<wbr>At<wbr>Type<wbr>Event<wbr>Source<wbr>Creation<wbr>Time</dt>
+    <dd>EventSourceCreationTime</dd><dt>Ingress<wbr>Start<wbr>At<wbr>Type<wbr>Custom<wbr>Enqueued<wbr>Time</dt>
+    <dd>CustomEnqueuedTime</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Earliest<wbr>Available</dt>
+    <dd>EarliestAvailable</dd><dt>Event<wbr>Source<wbr>Creation<wbr>Time</dt>
+    <dd>EventSourceCreationTime</dd><dt>Custom<wbr>Enqueued<wbr>Time</dt>
+    <dd>CustomEnqueuedTime</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EARLIEST_AVAILABLE</dt>
+    <dd>EarliestAvailable</dd><dt>EVENT_SOURCE_CREATION_TIME</dt>
+    <dd>EventSourceCreationTime</dd><dt>CUSTOM_ENQUEUED_TIME</dt>
+    <dd>CustomEnqueuedTime</dd></dl>
+{{% /choosable %}}
 
 <h4 id="localtimestamp">Local<wbr>Timestamp</h4>
 

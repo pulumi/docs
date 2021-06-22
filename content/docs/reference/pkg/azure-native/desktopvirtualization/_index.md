@@ -18,6 +18,7 @@ Explore the resources and functions of the azure-native.desktopvirtualization mo
     <li><a href="privateendpointconnectionbyhostpool" title="PrivateEndpointConnectionByHostPool"><span class="symbol resource"></span>PrivateEndpointConnectionByHostPool</a></li>
     <li><a href="privateendpointconnectionbyworkspace" title="PrivateEndpointConnectionByWorkspace"><span class="symbol resource"></span>PrivateEndpointConnectionByWorkspace</a></li>
     <li><a href="scalingplan" title="ScalingPlan"><span class="symbol resource"></span>ScalingPlan</a></li>
+    <li><a href="sessionhostconfiguration" title="SessionHostConfiguration"><span class="symbol resource"></span>SessionHostConfiguration</a></li>
     <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
 </ul>
 
@@ -30,6 +31,7 @@ Explore the resources and functions of the azure-native.desktopvirtualization mo
     <li><a href="getprivateendpointconnectionbyhostpool" title="GetPrivateEndpointConnectionByHostPool"><span class="symbol function"></span>GetPrivateEndpointConnectionByHostPool</a></li>
     <li><a href="getprivateendpointconnectionbyworkspace" title="GetPrivateEndpointConnectionByWorkspace"><span class="symbol function"></span>GetPrivateEndpointConnectionByWorkspace</a></li>
     <li><a href="getscalingplan" title="GetScalingPlan"><span class="symbol function"></span>GetScalingPlan</a></li>
+    <li><a href="getsessionhostconfiguration" title="GetSessionHostConfiguration"><span class="symbol function"></span>GetSessionHostConfiguration</a></li>
     <li><a href="getworkspace" title="GetWorkspace"><span class="symbol function"></span>GetWorkspace</a></li>
 </ul>
 
@@ -40,6 +42,6 @@ Explore the resources and functions of the azure-native.desktopvirtualization mo
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.12.0</dd>
+	<dd>1.13.0</dd>
 </dl>
 

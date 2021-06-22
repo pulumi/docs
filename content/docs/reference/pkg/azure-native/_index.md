@@ -36,7 +36,6 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="azurestack/" title="azurestack"><span class="symbol module"></span>azurestack</a></li>
     <li><a href="azurestackhci/" title="azurestackhci"><span class="symbol module"></span>azurestackhci</a></li>
     <li><a href="batch/" title="batch"><span class="symbol module"></span>batch</a></li>
-    <li><a href="batchai/" title="batchai"><span class="symbol module"></span>batchai</a></li>
     <li><a href="billing/" title="billing"><span class="symbol module"></span>billing</a></li>
     <li><a href="blockchain/" title="blockchain"><span class="symbol module"></span>blockchain</a></li>
     <li><a href="blueprint/" title="blueprint"><span class="symbol module"></span>blueprint</a></li>
@@ -196,6 +195,6 @@ A native Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.12.0</dd>
+	<dd>1.13.0</dd>
 </dl>
 

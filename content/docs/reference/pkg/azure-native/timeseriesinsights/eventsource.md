@@ -128,6 +128,113 @@ const eventSource = new azure_native.timeseriesinsights.EventSource("eventSource
 
 
 
+### EventSourcesCreateEventHubWithCustomEnquedTime
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var eventSource = new AzureNative.TimeSeriesInsights.EventSource("eventSource", new AzureNative.TimeSeriesInsights.EventSourceArgs
+        {
+            EnvironmentName = "env1",
+            EventSourceName = "es1",
+            Kind = "Microsoft.EventHub",
+            Location = "West US",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	timeseriesinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/timeseriesinsights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := timeseriesinsights.NewEventSource(ctx, "eventSource", &timeseriesinsights.EventSourceArgs{
+			EnvironmentName:   pulumi.String("env1"),
+			EventSourceName:   pulumi.String("es1"),
+			Kind:              pulumi.String("Microsoft.EventHub"),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+event_source = azure_native.timeseriesinsights.EventSource("eventSource",
+    environment_name="env1",
+    event_source_name="es1",
+    kind="Microsoft.EventHub",
+    location="West US",
+    resource_group_name="rg1")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const eventSource = new azure_native.timeseriesinsights.EventSource("eventSource", {
+    environmentName: "env1",
+    eventSourceName: "es1",
+    kind: "Microsoft.EventHub",
+    location: "West US",
+    resourceGroupName: "rg1",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 

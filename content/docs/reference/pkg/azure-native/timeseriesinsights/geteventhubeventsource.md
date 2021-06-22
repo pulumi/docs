@@ -273,6 +273,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="time_csharp">
+<a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="timestamppropertyname_csharp">
 <a href="#timestamppropertyname_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Property<wbr>Name</a>
 </span>
@@ -380,6 +388,14 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="time_go">
+<a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timestamppropertyname_go">
 <a href="#timestamppropertyname_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Property<wbr>Name</a>
@@ -489,6 +505,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="time_nodejs">
+<a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="timestamppropertyname_nodejs">
 <a href="#timestamppropertyname_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Property<wbr>Name</a>
 </span>
@@ -596,6 +620,14 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="time_python">
+<a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timestamp_property_name_python">
 <a href="#timestamp_property_name_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>property_<wbr>name</a>
