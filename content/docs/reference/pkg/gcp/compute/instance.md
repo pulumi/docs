@@ -290,6 +290,7 @@ const defaultInstance = new gcp.compute.Instance("defaultInstance", {
              <span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">network_performance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceNetworkPerformanceConfigArgs]</span> = None<span class="p">,</span>
              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">reservation_affinity</span><span class="p">:</span> <span class="nx">Optional[InstanceReservationAffinityArgs]</span> = None<span class="p">,</span>
              <span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -616,6 +617,19 @@ using `pulumi stack` commands, depending on your use case.
 Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="networkperformanceconfig_csharp">
+<a href="#networkperformanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancenetworkperformanceconfig">Instance<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance. Structure is
+documented below. **Note**: `machine_type` must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+in order for this setting to take effect.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -894,6 +908,19 @@ using `pulumi stack` commands, depending on your use case.
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkperformanceconfig_go">
+<a href="#networkperformanceconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancenetworkperformanceconfig">Instance<wbr>Network<wbr>Performance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance. Structure is
+documented below. **Note**: `machine_type` must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+in order for this setting to take effect.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
@@ -1176,6 +1203,19 @@ using `pulumi stack` commands, depending on your use case.
 Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="networkperformanceconfig_nodejs">
+<a href="#networkperformanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Performance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancenetworkperformanceconfig">Instance<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance. Structure is
+documented below. **Note**: `machine_type` must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+in order for this setting to take effect.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -1454,6 +1494,19 @@ using `pulumi stack` commands, depending on your use case.
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_performance_config_python">
+<a href="#network_performance_config_python" style="color: inherit; text-decoration: inherit;">network_<wbr>performance_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancenetworkperformanceconfig">Instance<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance. Structure is
+documented below. **Note**: `machine_type` must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+in order for this setting to take effect.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
@@ -1891,6 +1944,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">network_performance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceNetworkPerformanceConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">reservation_affinity</span><span class="p">:</span> <span class="nx">Optional[InstanceReservationAffinityArgs]</span> = None<span class="p">,</span>
         <span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2247,6 +2301,19 @@ Changing this forces a new resource to be created.
 be specified multiple times. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_networkperformanceconfig_csharp">
+<a href="#state_networkperformanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancenetworkperformanceconfig">Instance<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance. Structure is
+documented below. **Note**: `machine_type` must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+in order for this setting to take effect.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -2588,6 +2655,19 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Networks to attach to the instance. This can
 be specified multiple times. Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_networkperformanceconfig_go">
+<a href="#state_networkperformanceconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancenetworkperformanceconfig">Instance<wbr>Network<wbr>Performance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance. Structure is
+documented below. **Note**: `machine_type` must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+in order for this setting to take effect.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
@@ -2933,6 +3013,19 @@ Changing this forces a new resource to be created.
 be specified multiple times. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_networkperformanceconfig_nodejs">
+<a href="#state_networkperformanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Performance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancenetworkperformanceconfig">Instance<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance. Structure is
+documented below. **Note**: `machine_type` must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+in order for this setting to take effect.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -3274,6 +3367,19 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Networks to attach to the instance. This can
 be specified multiple times. Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_network_performance_config_python">
+<a href="#state_network_performance_config_python" style="color: inherit; text-decoration: inherit;">network_<wbr>performance_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancenetworkperformanceconfig">Instance<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance. Structure is
+documented below. **Note**: `machine_type` must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+in order for this setting to take effect.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
@@ -4980,6 +5086,64 @@ range. If left unspecified, the primary range of the subnetwork will be used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="instancenetworkperformanceconfig">Instance<wbr>Network<wbr>Performance<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="totalegressbandwidthtier_csharp">
+<a href="#totalegressbandwidthtier_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Egress<wbr>Bandwidth<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The egress bandwidth tier to enable.
+Possible values: TIER_1, DEFAULT
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="totalegressbandwidthtier_go">
+<a href="#totalegressbandwidthtier_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Egress<wbr>Bandwidth<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The egress bandwidth tier to enable.
+Possible values: TIER_1, DEFAULT
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="totalegressbandwidthtier_nodejs">
+<a href="#totalegressbandwidthtier_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Egress<wbr>Bandwidth<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The egress bandwidth tier to enable.
+Possible values: TIER_1, DEFAULT
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="total_egress_bandwidth_tier_python">
+<a href="#total_egress_bandwidth_tier_python" style="color: inherit; text-decoration: inherit;">total_<wbr>egress_<wbr>bandwidth_<wbr>tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The egress bandwidth tier to enable.
+Possible values: TIER_1, DEFAULT
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity</h4>
 
 {{% choosable language csharp %}}
@@ -5178,7 +5342,8 @@ Defaults to true.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeaffinities_csharp">
 <a href="#nodeaffinities_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinities</a>
@@ -5236,7 +5401,8 @@ Defaults to true.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeaffinities_go">
 <a href="#nodeaffinities_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinities</a>
@@ -5294,7 +5460,8 @@ Defaults to true.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeaffinities_nodejs">
 <a href="#nodeaffinities_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Affinities</a>
@@ -5352,7 +5519,8 @@ Defaults to true.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_affinities_python">
 <a href="#node_affinities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinities</a>

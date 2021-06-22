@@ -299,6 +299,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="advancedmachinefeatures_csharp">
+<a href="#advancedmachinefeatures_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Machine<wbr>Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplateadvancedmachinefeature">List&lt;Get<wbr>Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Feature&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="canipforward_csharp">
 <a href="#canipforward_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Ip<wbr>Forward</a>
 </span>
@@ -457,6 +465,16 @@ this template. This can be specified multiple times for multiple networks.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="networkperformanceconfigs_csharp">
+<a href="#networkperformanceconfigs_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatenetworkperformanceconfig">List&lt;Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Performance<wbr>Config&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The network performance configuration setting
+for the instance, if set. Structure is documented below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -574,6 +592,14 @@ this blank, the provider will auto-generate a unique name.
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="advancedmachinefeatures_go">
+<a href="#advancedmachinefeatures_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Machine<wbr>Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplateadvancedmachinefeature">[]Get<wbr>Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Feature</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="canipforward_go">
 <a href="#canipforward_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Ip<wbr>Forward</a>
@@ -733,6 +759,16 @@ this template. This can be specified multiple times for multiple networks.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="networkperformanceconfigs_go">
+<a href="#networkperformanceconfigs_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatenetworkperformanceconfig">[]Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Performance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The network performance configuration setting
+for the instance, if set. Structure is documented below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -850,6 +886,14 @@ this blank, the provider will auto-generate a unique name.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="advancedmachinefeatures_nodejs">
+<a href="#advancedmachinefeatures_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Machine<wbr>Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplateadvancedmachinefeature">Get<wbr>Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Feature[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="canipforward_nodejs">
 <a href="#canipforward_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Ip<wbr>Forward</a>
@@ -1009,6 +1053,16 @@ this template. This can be specified multiple times for multiple networks.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="networkperformanceconfigs_nodejs">
+<a href="#networkperformanceconfigs_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Performance<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatenetworkperformanceconfig">Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Performance<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}The network performance configuration setting
+for the instance, if set. Structure is documented below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -1126,6 +1180,14 @@ this blank, the provider will auto-generate a unique name.
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="advanced_machine_features_python">
+<a href="#advanced_machine_features_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>machine_<wbr>features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplateadvancedmachinefeature">Sequence[Get<wbr>Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Feature]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="can_ip_forward_python">
 <a href="#can_ip_forward_python" style="color: inherit; text-decoration: inherit;">can_<wbr>ip_<wbr>forward</a>
@@ -1285,6 +1347,16 @@ this template. This can be specified multiple times for multiple networks.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="network_performance_configs_python">
+<a href="#network_performance_configs_python" style="color: inherit; text-decoration: inherit;">network_<wbr>performance_<wbr>configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatenetworkperformanceconfig">Sequence[Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Performance<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}The network performance configuration setting
+for the instance, if set. Structure is documented below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -1405,6 +1477,90 @@ this blank, the provider will auto-generate a unique name.
 
 ## Supporting Types
 
+
+<h4 id="getinstancetemplateadvancedmachinefeature">Get<wbr>Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Feature</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablenestedvirtualization_csharp">
+<a href="#enablenestedvirtualization_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Nested<wbr>Virtualization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threadspercore_csharp">
+<a href="#threadspercore_csharp" style="color: inherit; text-decoration: inherit;">Threads<wbr>Per<wbr>Core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablenestedvirtualization_go">
+<a href="#enablenestedvirtualization_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Nested<wbr>Virtualization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threadspercore_go">
+<a href="#threadspercore_go" style="color: inherit; text-decoration: inherit;">Threads<wbr>Per<wbr>Core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablenestedvirtualization_nodejs">
+<a href="#enablenestedvirtualization_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Nested<wbr>Virtualization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threadspercore_nodejs">
+<a href="#threadspercore_nodejs" style="color: inherit; text-decoration: inherit;">threads<wbr>Per<wbr>Core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enable_nested_virtualization_python">
+<a href="#enable_nested_virtualization_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nested_<wbr>virtualization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threads_per_core_python">
+<a href="#threads_per_core_python" style="color: inherit; text-decoration: inherit;">threads_<wbr>per_<wbr>core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="getinstancetemplateconfidentialinstanceconfig">Get<wbr>Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</h4>
 
@@ -2815,6 +2971,62 @@ error.
     <dd>{{% md %}}The subnetwork secondary range name specifying
 the secondary range from which to allocate the IP CIDR range for this alias IP
 range. If left unspecified, the primary range of the subnetwork will be used.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getinstancetemplatenetworkperformanceconfig">Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Performance<wbr>Config</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="totalegressbandwidthtier_csharp">
+<a href="#totalegressbandwidthtier_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Egress<wbr>Bandwidth<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The egress bandwidth tier for the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="totalegressbandwidthtier_go">
+<a href="#totalegressbandwidthtier_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Egress<wbr>Bandwidth<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The egress bandwidth tier for the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="totalegressbandwidthtier_nodejs">
+<a href="#totalegressbandwidthtier_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Egress<wbr>Bandwidth<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The egress bandwidth tier for the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="total_egress_bandwidth_tier_python">
+<a href="#total_egress_bandwidth_tier_python" style="color: inherit; text-decoration: inherit;">total_<wbr>egress_<wbr>bandwidth_<wbr>tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The egress bandwidth tier for the instance.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

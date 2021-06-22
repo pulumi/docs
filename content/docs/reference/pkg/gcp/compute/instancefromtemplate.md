@@ -248,6 +248,7 @@ const tplInstanceFromTemplate = new gcp.compute.InstanceFromTemplate("tplInstanc
                          <span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromTemplateNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
+                         <span class="nx">network_performance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateNetworkPerformanceConfigArgs]</span> = None<span class="p">,</span>
                          <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">reservation_affinity</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateReservationAffinityArgs]</span> = None<span class="p">,</span>
                          <span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -564,6 +565,16 @@ Changing this forces a new resource to be created.
     <dd>{{% md %}}The networks attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="networkperformanceconfig_csharp">
+<a href="#networkperformanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkperformanceconfig">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance. If not specified, the instance will be created with its
+default network performance configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -827,6 +838,16 @@ Changing this forces a new resource to be created.
         <span class="property-type"><a href="#instancefromtemplatenetworkinterface">[]Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkperformanceconfig_go">
+<a href="#networkperformanceconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkperformanceconfig">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Performance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance. If not specified, the instance will be created with its
+default network performance configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
@@ -1094,6 +1115,16 @@ Changing this forces a new resource to be created.
     <dd>{{% md %}}The networks attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="networkperformanceconfig_nodejs">
+<a href="#networkperformanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Performance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkperformanceconfig">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance. If not specified, the instance will be created with its
+default network performance configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -1357,6 +1388,16 @@ Changing this forces a new resource to be created.
         <span class="property-type"><a href="#instancefromtemplatenetworkinterface">Sequence[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_performance_config_python">
+<a href="#network_performance_config_python" style="color: inherit; text-decoration: inherit;">network_<wbr>performance_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkperformanceconfig">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance. If not specified, the instance will be created with its
+default network performance configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
@@ -1790,6 +1831,7 @@ Get an existing InstanceFromTemplate resource's state with the given name, ID, a
         <span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromTemplateNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">network_performance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateNetworkPerformanceConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">reservation_affinity</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateReservationAffinityArgs]</span> = None<span class="p">,</span>
         <span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2126,6 +2168,16 @@ Changing this forces a new resource to be created.
     <dd>{{% md %}}The networks attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_networkperformanceconfig_csharp">
+<a href="#state_networkperformanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkperformanceconfig">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance. If not specified, the instance will be created with its
+default network performance configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -2452,6 +2504,16 @@ Changing this forces a new resource to be created.
         <span class="property-type"><a href="#instancefromtemplatenetworkinterface">[]Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_networkperformanceconfig_go">
+<a href="#state_networkperformanceconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkperformanceconfig">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Performance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance. If not specified, the instance will be created with its
+default network performance configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
@@ -2782,6 +2844,16 @@ Changing this forces a new resource to be created.
     <dd>{{% md %}}The networks attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_networkperformanceconfig_nodejs">
+<a href="#state_networkperformanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Performance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkperformanceconfig">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance. If not specified, the instance will be created with its
+default network performance configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -3108,6 +3180,16 @@ Changing this forces a new resource to be created.
         <span class="property-type"><a href="#instancefromtemplatenetworkinterface">Sequence[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_network_performance_config_python">
+<a href="#state_network_performance_config_python" style="color: inherit; text-decoration: inherit;">network_<wbr>performance_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkperformanceconfig">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance. If not specified, the instance will be created with its
+default network performance configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
@@ -4465,6 +4547,56 @@ Changing this forces a new resource to be created.
             title="Optional">
         <span id="subnetwork_range_name_python">
 <a href="#subnetwork_range_name_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>range_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancefromtemplatenetworkperformanceconfig">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Performance<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="totalegressbandwidthtier_csharp">
+<a href="#totalegressbandwidthtier_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Egress<wbr>Bandwidth<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="totalegressbandwidthtier_go">
+<a href="#totalegressbandwidthtier_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Egress<wbr>Bandwidth<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="totalegressbandwidthtier_nodejs">
+<a href="#totalegressbandwidthtier_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Egress<wbr>Bandwidth<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="total_egress_bandwidth_tier_python">
+<a href="#total_egress_bandwidth_tier_python" style="color: inherit; text-decoration: inherit;">total_<wbr>egress_<wbr>bandwidth_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

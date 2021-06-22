@@ -948,9 +948,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and // be a valid
-with length <2000 characters.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -962,9 +960,7 @@ with length <2000 characters.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and // be a valid
-with length <2000 characters.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -976,9 +972,7 @@ with length <2000 characters.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and // be a valid
-with length <2000 characters.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -990,9 +984,7 @@ with length <2000 characters.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and // be a valid
-with length <2000 characters.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="membershipendpoint">Membership<wbr>Endpoint</h4>

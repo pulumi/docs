@@ -97,6 +97,7 @@ Explore the resources and functions of the gcp.compute module.
     <li><a href="sslpolicy" title="SSLPolicy"><span class="symbol resource"></span>SSLPolicy</a></li>
     <li><a href="securitypolicy" title="SecurityPolicy"><span class="symbol resource"></span>SecurityPolicy</a></li>
     <li><a href="securityscanconfig" title="SecurityScanConfig"><span class="symbol resource"></span>SecurityScanConfig</a></li>
+    <li><a href="serviceattachment" title="ServiceAttachment"><span class="symbol resource"></span>ServiceAttachment</a></li>
     <li><a href="sharedvpchostproject" title="SharedVPCHostProject"><span class="symbol resource"></span>SharedVPCHostProject</a></li>
     <li><a href="sharedvpcserviceproject" title="SharedVPCServiceProject"><span class="symbol resource"></span>SharedVPCServiceProject</a></li>
     <li><a href="snapshot" title="Snapshot"><span class="symbol resource"></span>Snapshot</a></li>
@@ -158,6 +159,6 @@ Explore the resources and functions of the gcp.compute module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.9.0</dd>
+	<dd>5.10.0</dd>
 </dl>
 

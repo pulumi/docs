@@ -643,6 +643,7 @@ const defaultInstanceTemplate = new gcp.compute.InstanceTemplate("defaultInstanc
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">InstanceTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">advanced_machine_features</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateAdvancedMachineFeaturesArgs]</span> = None<span class="p">,</span>
                      <span class="nx">can_ip_forward</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                      <span class="nx">confidential_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateConfidentialInstanceConfigArgs]</span> = None<span class="p">,</span>
                      <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -658,6 +659,7 @@ const defaultInstanceTemplate = new gcp.compute.InstanceTemplate("defaultInstanc
                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceTemplateNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">network_performance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateNetworkPerformanceConfigArgs]</span> = None<span class="p">,</span>
                      <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">reservation_affinity</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateReservationAffinityArgs]</span> = None<span class="p">,</span>
@@ -814,6 +816,15 @@ documented below.
     <dd>{{% md %}}The machine type to create.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="advancedmachinefeatures_csharp">
+<a href="#advancedmachinefeatures_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Machine<wbr>Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="canipforward_csharp">
 <a href="#canipforward_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Ip<wbr>Forward</a>
 </span>
@@ -944,6 +955,20 @@ this template. This can be specified multiple times for multiple networks.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="networkperformanceconfig_csharp">
+<a href="#networkperformanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatenetworkperformanceconfig">Instance<wbr>Template<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance created from the
+template. Structure is documented below. **Note**: `machine_type`
+must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+in order for this setting to take effect.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -1037,6 +1062,15 @@ documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="advancedmachinefeatures_go">
+<a href="#advancedmachinefeatures_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Machine<wbr>Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features</a></span>
+    </dt>
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canipforward_go">
@@ -1169,6 +1203,20 @@ this template. This can be specified multiple times for multiple networks.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="networkperformanceconfig_go">
+<a href="#networkperformanceconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatenetworkperformanceconfig">Instance<wbr>Template<wbr>Network<wbr>Performance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance created from the
+template. Structure is documented below. **Note**: `machine_type`
+must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+in order for this setting to take effect.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -1262,6 +1310,15 @@ documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="advancedmachinefeatures_nodejs">
+<a href="#advancedmachinefeatures_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Machine<wbr>Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canipforward_nodejs">
@@ -1394,6 +1451,20 @@ this template. This can be specified multiple times for multiple networks.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="networkperformanceconfig_nodejs">
+<a href="#networkperformanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Performance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatenetworkperformanceconfig">Instance<wbr>Template<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance created from the
+template. Structure is documented below. **Note**: `machine_type`
+must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+in order for this setting to take effect.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -1487,6 +1558,15 @@ documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="advanced_machine_features_python">
+<a href="#advanced_machine_features_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>machine_<wbr>features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_ip_forward_python">
@@ -1617,6 +1697,20 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}Networks to attach to instances created from
 this template. This can be specified multiple times for multiple networks.
 Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_performance_config_python">
+<a href="#network_performance_config_python" style="color: inherit; text-decoration: inherit;">network_<wbr>performance_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatenetworkperformanceconfig">Instance<wbr>Template<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance created from the
+template. Structure is documented below. **Note**: `machine_type`
+must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+in order for this setting to take effect.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
@@ -1870,6 +1964,7 @@ Get an existing InstanceTemplate resource's state with the given name, ID, and o
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">advanced_machine_features</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateAdvancedMachineFeaturesArgs]</span> = None<span class="p">,</span>
         <span class="nx">can_ip_forward</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">confidential_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateConfidentialInstanceConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1886,6 +1981,7 @@ Get an existing InstanceTemplate resource's state with the given name, ID, and o
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceTemplateNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">network_performance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateNetworkPerformanceConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">reservation_affinity</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateReservationAffinityArgs]</span> = None<span class="p">,</span>
@@ -2006,6 +2102,15 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_advancedmachinefeatures_csharp">
+<a href="#state_advancedmachinefeatures_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Machine<wbr>Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_canipforward_csharp">
 <a href="#state_canipforward_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Ip<wbr>Forward</a>
@@ -2166,6 +2271,20 @@ this template. This can be specified multiple times for multiple networks.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_networkperformanceconfig_csharp">
+<a href="#state_networkperformanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatenetworkperformanceconfig">Instance<wbr>Template<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance created from the
+template. Structure is documented below. **Note**: `machine_type`
+must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+in order for this setting to take effect.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -2258,6 +2377,15 @@ this configuration option are detailed below.
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_advancedmachinefeatures_go">
+<a href="#state_advancedmachinefeatures_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Machine<wbr>Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features</a></span>
+    </dt>
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_canipforward_go">
 <a href="#state_canipforward_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Ip<wbr>Forward</a>
@@ -2418,6 +2546,20 @@ this template. This can be specified multiple times for multiple networks.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_networkperformanceconfig_go">
+<a href="#state_networkperformanceconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatenetworkperformanceconfig">Instance<wbr>Template<wbr>Network<wbr>Performance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance created from the
+template. Structure is documented below. **Note**: `machine_type`
+must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+in order for this setting to take effect.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -2510,6 +2652,15 @@ this configuration option are detailed below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_advancedmachinefeatures_nodejs">
+<a href="#state_advancedmachinefeatures_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Machine<wbr>Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_canipforward_nodejs">
 <a href="#state_canipforward_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Ip<wbr>Forward</a>
@@ -2670,6 +2821,20 @@ this template. This can be specified multiple times for multiple networks.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_networkperformanceconfig_nodejs">
+<a href="#state_networkperformanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Performance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatenetworkperformanceconfig">Instance<wbr>Template<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance created from the
+template. Structure is documented below. **Note**: `machine_type`
+must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+in order for this setting to take effect.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -2762,6 +2927,15 @@ this configuration option are detailed below.
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_advanced_machine_features_python">
+<a href="#state_advanced_machine_features_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>machine_<wbr>features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_can_ip_forward_python">
 <a href="#state_can_ip_forward_python" style="color: inherit; text-decoration: inherit;">can_<wbr>ip_<wbr>forward</a>
@@ -2922,6 +3096,20 @@ this template. This can be specified multiple times for multiple networks.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_network_performance_config_python">
+<a href="#state_network_performance_config_python" style="color: inherit; text-decoration: inherit;">network_<wbr>performance_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatenetworkperformanceconfig">Instance<wbr>Template<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures network performance settings for the instance created from the
+template. Structure is documented below. **Note**: `machine_type`
+must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+in order for this setting to take effect.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -3020,6 +3208,96 @@ this configuration option are detailed below.
 ## Supporting Types
 
 
+
+<h4 id="instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enablenestedvirtualization_csharp">
+<a href="#enablenestedvirtualization_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Nested<wbr>Virtualization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Defines whether the instance should have nested virtualization  enabled. Defaults to false.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadspercore_csharp">
+<a href="#threadspercore_csharp" style="color: inherit; text-decoration: inherit;">Threads<wbr>Per<wbr>Core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}he number of threads per physical core. To disable [simultaneous multithreading (SMT)](https://cloud.google.com/compute/docs/instances/disabling-smt) set this to 1.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enablenestedvirtualization_go">
+<a href="#enablenestedvirtualization_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Nested<wbr>Virtualization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Defines whether the instance should have nested virtualization  enabled. Defaults to false.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadspercore_go">
+<a href="#threadspercore_go" style="color: inherit; text-decoration: inherit;">Threads<wbr>Per<wbr>Core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}he number of threads per physical core. To disable [simultaneous multithreading (SMT)](https://cloud.google.com/compute/docs/instances/disabling-smt) set this to 1.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enablenestedvirtualization_nodejs">
+<a href="#enablenestedvirtualization_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Nested<wbr>Virtualization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Defines whether the instance should have nested virtualization  enabled. Defaults to false.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadspercore_nodejs">
+<a href="#threadspercore_nodejs" style="color: inherit; text-decoration: inherit;">threads<wbr>Per<wbr>Core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}he number of threads per physical core. To disable [simultaneous multithreading (SMT)](https://cloud.google.com/compute/docs/instances/disabling-smt) set this to 1.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enable_nested_virtualization_python">
+<a href="#enable_nested_virtualization_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nested_<wbr>virtualization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Defines whether the instance should have nested virtualization  enabled. Defaults to false.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threads_per_core_python">
+<a href="#threads_per_core_python" style="color: inherit; text-decoration: inherit;">threads_<wbr>per_<wbr>core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}he number of threads per physical core. To disable [simultaneous multithreading (SMT)](https://cloud.google.com/compute/docs/instances/disabling-smt) set this to 1.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</h4>
 
@@ -4432,6 +4710,60 @@ error.
     <dd>{{% md %}}The subnetwork secondary range name specifying
 the secondary range from which to allocate the IP CIDR range for this alias IP
 range. If left unspecified, the primary range of the subnetwork will be used.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancetemplatenetworkperformanceconfig">Instance<wbr>Template<wbr>Network<wbr>Performance<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="totalegressbandwidthtier_csharp">
+<a href="#totalegressbandwidthtier_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Egress<wbr>Bandwidth<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The egress bandwidth tier to enable. Possible values: TIER_1, DEFAULT
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="totalegressbandwidthtier_go">
+<a href="#totalegressbandwidthtier_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Egress<wbr>Bandwidth<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The egress bandwidth tier to enable. Possible values: TIER_1, DEFAULT
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="totalegressbandwidthtier_nodejs">
+<a href="#totalegressbandwidthtier_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Egress<wbr>Bandwidth<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The egress bandwidth tier to enable. Possible values: TIER_1, DEFAULT
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="total_egress_bandwidth_tier_python">
+<a href="#total_egress_bandwidth_tier_python" style="color: inherit; text-decoration: inherit;">total_<wbr>egress_<wbr>bandwidth_<wbr>tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The egress bandwidth tier to enable. Possible values: TIER_1, DEFAULT
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

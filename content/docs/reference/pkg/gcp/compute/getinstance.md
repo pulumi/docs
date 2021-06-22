@@ -545,6 +545,15 @@ The following output properties are available:
     <dd>{{% md %}}The networks attached to the instance. Structure is documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="networkperformanceconfigs_csharp">
+<a href="#networkperformanceconfigs_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancenetworkperformanceconfig">List&lt;Get<wbr>Instance<wbr>Network<wbr>Performance<wbr>Config&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The network performance configuration setting for the instance, if set. Structure is documented below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="reservationaffinities_csharp">
 <a href="#reservationaffinities_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinities</a>
 </span>
@@ -850,6 +859,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancenetworkinterface">[]Get<wbr>Instance<wbr>Network<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance. Structure is documented below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="networkperformanceconfigs_go">
+<a href="#networkperformanceconfigs_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancenetworkperformanceconfig">[]Get<wbr>Instance<wbr>Network<wbr>Performance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The network performance configuration setting for the instance, if set. Structure is documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reservationaffinities_go">
@@ -1159,6 +1177,15 @@ The following output properties are available:
     <dd>{{% md %}}The networks attached to the instance. Structure is documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="networkperformanceconfigs_nodejs">
+<a href="#networkperformanceconfigs_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Performance<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancenetworkperformanceconfig">Get<wbr>Instance<wbr>Network<wbr>Performance<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}The network performance configuration setting for the instance, if set. Structure is documented below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="reservationaffinities_nodejs">
 <a href="#reservationaffinities_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Affinities</a>
 </span>
@@ -1464,6 +1491,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancenetworkinterface">Sequence[Get<wbr>Instance<wbr>Network<wbr>Interface]</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance. Structure is documented below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="network_performance_configs_python">
+<a href="#network_performance_configs_python" style="color: inherit; text-decoration: inherit;">network_<wbr>performance_<wbr>configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancenetworkperformanceconfig">Sequence[Get<wbr>Instance<wbr>Network<wbr>Performance<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}The network performance configuration setting for the instance, if set. Structure is documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reservation_affinities_python">
@@ -2953,6 +2989,62 @@ range.
     <dd>{{% md %}}The subnetwork secondary range name specifying
 the secondary range from which to allocate the IP CIDR range for this alias IP
 range.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getinstancenetworkperformanceconfig">Get<wbr>Instance<wbr>Network<wbr>Performance<wbr>Config</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="totalegressbandwidthtier_csharp">
+<a href="#totalegressbandwidthtier_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Egress<wbr>Bandwidth<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The egress bandwidth tier for the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="totalegressbandwidthtier_go">
+<a href="#totalegressbandwidthtier_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Egress<wbr>Bandwidth<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The egress bandwidth tier for the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="totalegressbandwidthtier_nodejs">
+<a href="#totalegressbandwidthtier_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Egress<wbr>Bandwidth<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The egress bandwidth tier for the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="total_egress_bandwidth_tier_python">
+<a href="#total_egress_bandwidth_tier_python" style="color: inherit; text-decoration: inherit;">total_<wbr>egress_<wbr>bandwidth_<wbr>tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The egress bandwidth tier for the instance.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
