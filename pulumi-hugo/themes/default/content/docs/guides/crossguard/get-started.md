@@ -1,15 +1,40 @@
 ---
-title: Authoring a Policy Pack
-meta_desc: This page provides an overview on how to author a Policy Pack to enforce best practices
-           and security compliance when creating coud resources.
-linktitle: Authoring a Policy Pack
+title: Get Started with Policy as Code
+meta_desc: Pulumi CrossGuard is a product that provides gated deployments via Policy as Code. Enforce best practices
+           and security compliance when creating cloud resources.
+linktitle: Get Started
 weight: 1
+aliases: [
+    "/docs/get-started/policy-as-code/",
+    "/docs/get-started/crossguard/",
+    "/docs/get-started/crossguard/authoring-a-policy-pack/",
+    "/docs/get-started/crossguard/enforcing-a-policy-pack/"
+]
+
 menu:
-  getstarted:
-    parent: pac
-aliases: ["/docs/get-started/policy-as-code/authoring-a-policy-pack/"]
+  userguides:
+    parent: crossguard
 ---
-<!-- markdownlint-disable emphasis ul -->
+
+Pulumi CrossGuard is a product that provides gated deployments via Policy as Code.
+
+Often organizations want to empower developers to manage their infrastructure yet are concerned about giving them full access. CrossGuard allows administrators to provide autonomy to their developers while ensuring compliance to defined organization policies.
+
+Using Policy as Code, users can express business or security rules as functions that are executed against resources in their stacks. Then using CrossGuard, organization administrators can apply these rules to particular stacks within their organization. When policies are executed as part of your Pulumi deployments, any violation will gate or block that update from proceeding.
+
+Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. Learn more about [language support for policies]({{< relref "/docs/guides/crossguard#languages" >}}).
+
+## Terminology
+
+* **Policy Pack** - a set of related policies - i.e. “Security”, “Cost Optimization”, “Data Location”. The categorization of policies into a policy pack is left up to the user.
+* **Policy** - an individual policy - i.e. “prohibit use of instances larger than t3.medium”.
+* **Enforcement Level** - the impact of a policy violation - i.e. “mandatory” or “advisory”.
+
+Learn more about [Policy as Code core concepts]({{< relref "/docs/guides/crossguard/core-concepts" >}}).
+
+## Creating a Policy Pack
+
+Let's start with authoring your first Policy Pack.
 
 Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. [More information on language support for policies]({{< relref "/docs/guides/crossguard#languages" >}}).
 
@@ -19,8 +44,8 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
 
 1. Install prerequisites.
 
-   - [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-   - [Install Node.js](https://nodejs.org/en/download/)
+   * [Install Pulumi]({{< relref "/docs/get-started/install" >}})
+   * [Install Node.js](https://nodejs.org/en/download/)
 
 1. Create a directory for your new Policy Pack, and change into it.
 
@@ -72,8 +97,8 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
 
 1. Install prerequisites.
 
-   - [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-   - [Install Python](https://www.python.org/downloads/)
+   * [Install Pulumi]({{< relref "/docs/get-started/install" >}})
+   * [Install Python](https://www.python.org/downloads/)
 
 1. Create a directory for your new Policy Pack, and change into it.
 
@@ -135,7 +160,7 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
 
 You can find more example Policy Packs in the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). [Policy Pack best practices]({{< relref "/docs/guides/crossguard/best-practices" >}}) details the best practices for writing a Policy Pack.
 
-## Running Locally {#running-locally}
+### Running Locally {#running-locally}
 
 Now let's take a look at how to run the Policy Pack locally against a Pulumi program.
 
@@ -246,6 +271,47 @@ Now let's take a look at how to run the Policy Pack locally against a Pulumi pro
 
 Now that your Policy Pack is ready to go, let's enforce the pack across your organization.
 
-{{< get-started-stepper >}}
+## Enforcing a Policy Pack
 
-<!-- markdownlint-enable emphasis ul -->
+{{% notes type="info" %}}
+Server-side enforcement of policy packs across an organization is only available in **Pulumi Enterprise**. See [pricing]({{<relref "/pricing">}}) for more details.
+{{% /notes %}}
+
+Once you’ve validated the behavior of your policies, an organization administrator can publish them to the Pulumi Console to be enforced across your organization. Any Pulumi client (a developer’s workstation, CI/CD tool, etc) that interacts with a stack via the Pulumi Console will have policy enforcement during the execution of `preview` and `update`. Policy Packs are versioned by the Pulumi Console so that updated policies can be published and applied as ready and also reverted to previous versions as needed.
+
+1. From within the Policy Pack directory, run the following command to publish your pack:
+
+    ```sh
+    $ pulumi policy publish <org-name>
+    ```
+
+    The output will tell you what version of the Policy Pack you just published. The Pulumi service provides a monotonic version number for Policy Packs.
+
+    ```
+    Obtaining policy metadata from policy plugin
+    Compressing policy pack
+    Uploading policy pack to Pulumi service
+    Publishing my-policy-pack to myorg
+    Published as version 1.0.0
+    ```
+
+    The Policy Pack version is specified in the `package.json` file for TypeScript/JavaScript (Node.js) packs and in the `PulumiPolicy.yaml` file for Python packs. A version can only be used one time and once published the version can never be used by that Policy Pack again.
+
+    <!-- markdownlint-disable ul -->
+1. You can enable this Policy Pack to your organization’s default Policy Group by running:
+
+    ```sh
+    $ pulumi policy enable <org-name>/<policy-pack-name> <latest|version>
+    ```
+
+    For example, to enable the Policy Pack created in the previous step:
+
+    ```sh
+    $ pulumi policy enable myorg/my-policy-pack latest
+    ```
+
+    The CLI by default enables the Policy Pack to your default Policy Group. If you would like to add the Policy Pack to a different Policy Group, you can use the `--policy-group` flag.
+
+## Next Steps
+
+Now that you have published your first Policy Pack, you now have all the tools needed to enforce compliance amongst your organization. For more example Policy Packs, you can check out the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). You can also find more documentation in the [CrossGuard guide]({{< relref "/docs/guides/crossguard" >}}).

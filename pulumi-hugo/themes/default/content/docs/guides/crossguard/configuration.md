@@ -2,7 +2,7 @@
 title: Configurable Policy Packs
 meta_desc: Configuration allows you to write flexible policies that can be reused across you organization.
 linktitle: Configuration
-weight: 2
+weight: 3
 
 menu:
   userguides:

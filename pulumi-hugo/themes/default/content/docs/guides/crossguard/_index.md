@@ -28,7 +28,7 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
 ## Getting Started
 
 To get started with Pulumi CrossGuard, [download and install Pulumi]({{< relref "/docs/get-started/install" >}}). Afterwards,
-try the [Getting Started tutorial]({{< relref "/docs/get-started/crossguard" >}}).
+try the [Getting Started tutorial]({{< relref "./get-started" >}}).
 
 ## Pulumi CrossGuard policies for AWS (AWSGuard)
 
