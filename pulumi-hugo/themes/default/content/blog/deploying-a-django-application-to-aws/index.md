@@ -4,7 +4,7 @@ date: 2020-08-28
 meta_desc: Using Pulumi to create and deploy a simple Django MySQL application to AWS
 meta_image: meta.png
 authors: ["vova-ivanov"]
-tags: ["aws", "python", "containers"]
+tags: ["aws", "python", "containers", "docker", "mysql"]
 ---
 
 In this blog post, we will finish swapping out the frontend and backend of our [Python AWS application]({{< relref "/blog/creating-a-python-aws-application-using-flask-and-redis" >}}). Although Flask and Redis are different from Django and MySQL in many ways, the underlying infrastructure behind their deployment is nonetheless very similar, and can be effortlessly updated as we transition from one to the other.

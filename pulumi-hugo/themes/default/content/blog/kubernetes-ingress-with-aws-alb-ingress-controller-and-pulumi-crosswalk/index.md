@@ -5,7 +5,7 @@ date: "2019-07-09"
 meta_desc: "In this post, we work through a simple example of running ALB based Kubernetes Ingresses with Pulumi EKS, AWS, and AWSX packages."
 meta_image: "featured-img-albingresscontroller.png"
 authors: ["nishi-davidson"]
-tags: ["Kubernetes"]
+tags: ["Kubernetes", "eks"]
 ---
 
 [Kubernetes Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)

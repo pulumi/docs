@@ -44,8 +44,16 @@
         </div>
         <hr class="my-8">
         <ul class="list-none p-0 mb-4 inline-flex flex-wrap text-xs">
+            {{/* Only show the top N blog tags. We create a dict of them first so they're in alphabetical order. */}}
+            {{/* Note, we could have just deleted the other tags, but this will change over time. Also, we want  */}}
+            {{/* to preserve the metadata -- some day we might even have a "View More ..." link at the bottom... */}}
+            {{ $topTags := dict }}
+            {{ range first 40 .Site.Taxonomies.tags.ByCount }}
+                {{ $topTags = merge $topTags (dict .Name .Count) }}
+            {{ end }}
             {{ range $tag, $_ := .Site.Taxonomies.tags }}
-                {{ if $tag }}
+                {{ $count := index $topTags $tag }}
+                {{ if gt $count 0 }}
                     <li>
                         <a data-track="blog-tag-{{ $tag | urlize }}" class="tag tag-blog text-xs {{ if eq (lower $tag) (urlize ((lower $.Title))) }} active {{ end }}" href="{{ .Page.Permalink }}">
                             {{ $tag }}

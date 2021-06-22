@@ -8,6 +8,7 @@ authors:
 tags:
     - guest-post
     - testing
+    - elasticsearch
 
 ---
 

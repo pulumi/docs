@@ -4,7 +4,7 @@ date: "2020-12-01"
 meta_desc: "Pulumi container images now available on Amazon ECR Public"
 meta_image: "pulumi-images-ecr.png"
 authors: ["paul-stack"]
-tags: ["aws", "containers"]
+tags: ["aws", "containers", "ecr"]
 ---
 
 At re:Invent, the AWS team unveiled the new Amazon Elastic Container Registry Public (Amazon ECR Public), creating a new

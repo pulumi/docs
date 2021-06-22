@@ -5,7 +5,7 @@ draft: false
 meta_desc: "Implementing and deploying an OAuth server for Netlify CMS on Fargate."
 meta_image: cms-oauth.png
 authors: ["zephyr-zhou"]
-tags: ["aws","github-actions"]
+tags: ["aws","github-actions", "netlify", "oauth", "ecs", "fargate"]
 ---
 
 In our [previous post]({{< relref "/blog/deploying-netlify-cms-on-aws" >}}), we deployed our CMS app on AWS instead of Netlify. We couldn't use [Netlify's Identity Service](https://docs.netlify.com/visitor-access/identity/#enable-identity-in-the-ui), which manages GitHub access to Netlify CMS, because we deployed on AWS. As a result, we needed to implement an external [OAuth Server](https://www.netlifycms.org/docs/external-oauth-clients/#header).

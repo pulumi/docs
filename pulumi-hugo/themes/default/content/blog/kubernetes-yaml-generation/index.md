@@ -8,6 +8,7 @@ authors:
     - levi-blackstone
 tags:
     - kubernetes
+    - yaml
     
 ---
 

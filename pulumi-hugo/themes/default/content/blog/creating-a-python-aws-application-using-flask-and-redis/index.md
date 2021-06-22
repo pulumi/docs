@@ -4,7 +4,7 @@ date: 2020-08-13T15:06:26-07:00
 meta_desc: A tutorial on how to create a Python AWS application using Flask, Redis, and Pulumi.
 meta_image: meta.png
 authors: ["vova-ivanov"]
-tags: ["aws", "python", "containers"]
+tags: ["aws", "python", "containers", "docker", "ecs"]
 ---
 
 *Meet Vova Ivanov---one of the Pulumi summer interns. He'll be writing about his experiences learning Pulumi while modernizing a web app and its underlying infrastructure.*

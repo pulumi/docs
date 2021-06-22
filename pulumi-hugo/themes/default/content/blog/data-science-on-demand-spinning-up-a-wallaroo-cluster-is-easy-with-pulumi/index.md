@@ -5,7 +5,7 @@ date: "2018-11-02"
 meta_desc: "Find out how Wallaroo powered their cluster provisioning with Pulumi, for data science on demand."
 meta_image: "tty-fast.gif"
 authors: ["marc-holmes", "simon-zelazny"]
-tags: ["guest-post"]
+tags: ["guest-post", "data-science"]
 ---
 
 *This guest post is from Simon Zelazny of

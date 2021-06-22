@@ -9,6 +9,8 @@ authors:
 tags:
 - guest-post
 - automation-api
+- observability
+- honeycomb
 
 meta_image: "reaktor.png"
 ---

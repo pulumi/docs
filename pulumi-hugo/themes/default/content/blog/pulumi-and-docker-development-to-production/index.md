@@ -1,7 +1,7 @@
 ---
 title: "Pulumi and Docker: Development to Production"
 authors: ["sean-gillespie"]
-tags: ["containers","Kubernetes","containers"]
+tags: ["containers","Kubernetes","docker"]
 date: "2019-05-15"
 meta_desc: "Use Pulumi's infrastructure as software capability to define your Docker resources without running YAML or Docker Compose."
 

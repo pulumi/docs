@@ -2,7 +2,7 @@
 title: "Day 2 Kubernetes: Migrate EKS Node Groups with Zero Downtime"
 h1: "Day 2 Kubernetes: Migrating EKS Node Groups with Zero Downtime"
 authors: ["mike-metral"]
-tags: ["Kubernetes"]
+tags: ["Kubernetes", "eks"]
 meta_desc: "Use Pulumi's for Day 2 Kubernetes. Spin up a new EKS cluster, add one more node groups, and migrate the workloads with zero downtime using code and kubectl."
 date: "2019-07-23"
 

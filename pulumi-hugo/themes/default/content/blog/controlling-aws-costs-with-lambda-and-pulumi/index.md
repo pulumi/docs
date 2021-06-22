@@ -2,7 +2,7 @@
 date: "2020-04-09"
 title: "Controlling AWS Costs with Pulumi and AWS Lambda"
 authors: ["paul-stack"]
-tags: ["AWS", "serverless"]
+tags: ["aws", "serverless", "lambda"]
 meta_desc: "Learn how to use Pulumi and AWS Lambda to create and deploy an application that can control cloud costs."
 meta_image: "cost.png"
 ---

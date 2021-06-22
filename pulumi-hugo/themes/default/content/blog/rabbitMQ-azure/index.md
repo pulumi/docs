@@ -8,6 +8,7 @@ authors:
 tags:
     - Azure
     - .NET
+    - rabbitmq
 
 ---
 

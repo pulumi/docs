@@ -4,7 +4,7 @@ date: "2019-06-10"
 meta_desc: "Pulumi Crosswalk for AWS is an open source library of infrastructure-as-code components that make it easier to get from zero to production on AWS."
 meta_image: "crosswalk-for-aws.png"
 authors: ["luke-hoban"]
-tags: ["Serverless","AWS","containers","pulumi-news","Kubernetes","containers"]
+tags: ["Serverless","AWS","containers","pulumi-news","Kubernetes","containers", "eks", "lambda", "api-gateway", "docker"]
 ---
 
 Amazon Web Services provides an incredible platform for developers to

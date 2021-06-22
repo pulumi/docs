@@ -8,6 +8,7 @@ authors:
     - kostis-kapelonis
 tags:
     - continuous-delivery
+    - codefresh
     - Kubernetes
 
 ---

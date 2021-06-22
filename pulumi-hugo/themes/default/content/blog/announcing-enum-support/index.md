@@ -7,6 +7,11 @@ authors:
 - komal-ali
 tags:
 - features
+- enums
+- python
+- go
+- c#
+- typescript
 ---
 
 Here at Pulumi, we believe in leveraging the best features of programming languages to create a delightful development experience for our users. Today, we continue our contributions in this area by announcing cross-language support for `enum` types in our provider SDKs, available in all Pulumi languages - Python, TypeScript, .NET and Go.

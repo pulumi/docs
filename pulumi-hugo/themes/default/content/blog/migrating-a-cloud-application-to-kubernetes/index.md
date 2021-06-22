@@ -4,7 +4,7 @@ date: 2020-09-14
 meta_desc: Using Pulumi to integrate applications with Kubernetes for on-demand scalability and freedom of design.
 meta_image: meta.png
 authors: ["vova-ivanov"]
-tags: ["aws", "typescript", "containers", "kubernetes"]
+tags: ["aws", "typescript", "containers", "kubernetes", "docker"]
 ---
 
 In this blog post, we will explore and demonstrate the advantages of Kubernetes by converting and deploying our [PERN application]({{< relref "/blog/deploying-a-pern-stack-application-to-aws" >}}) to Amazon EKS. With the help of Pulumi, the process becomes greatly simplified and allows us to focus more on the big picture of designing our cloud architecture.

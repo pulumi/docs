@@ -7,6 +7,7 @@ authors:
     - sophia-parafina
 tags:
     - architecture-as-code
+    - virtual-machines
 ---
 
 In a [previous article]({{< relref "/blog/architecture-as-code-intro" >}}), we presented an overview of four infrastructure patterns for deploying modern applications. The article reviewed virtual machines, serverless, Kubernetes, and microservices. In this post, we'll examine virtual machines in-depth.

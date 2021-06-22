@@ -4,7 +4,7 @@ date: 2019-12-02
 meta_desc: "Today we are announcing Pulumi CrossGuard, a Policy as Code solution that enforces custom infrastructure policies, is available for all users to preview."
 meta_image: crossguard.svg
 authors: ["erin-krengel"]
-tags: ["policy-as-code", "features"]
+tags: ["policy-as-code", "features", "pulumi-news"]
 ---
 
 Over the past few months, we have been hard at work on Pulumi CrossGuard, a Policy as Code solution. Using CrossGuard, you can express flexible business and security rules using code. CrossGuard enables organization administrators to enforce these policies across their organization or just on specific stacks. CrossGuard allows you to verify or enforce custom policies on changes before they are applied to your resources. CrossGuard is 100% open source and available to all users of Pulumi, including the Community Edition. Advanced organization-wide policy management features are available to Team Pro and Enterprise customers.
