@@ -266,7 +266,7 @@ It is just as easy to look up an existing resource using `get` and use that for 
 import * as aws from "@pulumi/aws";
 
 // Look up an S3 bucket that already exists in our account.
-const docsBucket = new aws.s3.Bucket.get("docs", "arn:aws:s3:::docs-4f64efc");
+const docsBucket = aws.s3.Bucket.get("docs", "arn:aws:s3:::docs-4f64efc");
 
 // Create an AWS Lambda event handler on our bucket using magic functions.
 docsBucket.onObjectCreated("docsHandler", (e) => {
@@ -285,7 +285,7 @@ where neither was actually provisioned by Pulumi:
 import * as aws from "@pulumi/aws";
 
 // Look up an S3 bucket that already exists in our account.
-const docsBucket = new aws.s3.Bucket.get("docs", "arn:aws:s3:::docs-4f64efc");
+const docsBucket = aws.s3.Bucket.get("docs", "arn:aws:s3:::docs-4f64efc");
 
 // Look up an existing AWS Lambda Function, provisioned outside of Pulumi.
 const docsHandlerFunc = aws.lambda.Function.get("docsHandlerFunc", "docsHandlerFunc-19d51dc");
