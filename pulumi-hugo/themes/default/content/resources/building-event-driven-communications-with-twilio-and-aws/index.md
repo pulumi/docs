@@ -1,6 +1,6 @@
 ---
 # Name of the webinar.
-title: "Building Event-driven communications with Twilio and AWS"
+title: "Building Communication Workflows with Twilio and AWS"
 meta_desc: "In this session, the Twilio team will show you how they use Pulumi and how you can create powerful scheduling tools for your customer communications."
 
 # A featured webinar will display first in the list.
@@ -39,7 +39,7 @@ url_slug: "building-event-driven-communications-with-twilio-and-aws"
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Building Event-driven communications with Twilio, Pulumi, and AWS"
+    title: "Building Communication Workflows with Twilio, Pulumi, and AWS"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
@@ -52,18 +52,18 @@ hero:
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Building Event-driven communications with Twilio, Pulumi, and AWS"
+    title: "Building Communication Workflows with Twilio, Pulumi, and AWS"
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2021-07-27T10:00:00-07:00
     # Duration of the webinar.
-    duration: "2 hours"
+    duration: "1 hour"
     # Datetime of the webinar.
     datetime: "TUE JUL 27, 2021"
     # Description of the webinar.
     description: |
-        With Twilio Studio, you can build communications workflows to engage your customers, but, what if you wanted to schedule regular outreach or trigger a communications workflow based on some event in AWS? In this session, the Twilio team will show you how they use Pulumi to manage infrastructure and how you can use Infrastructure as Code to create powerful scheduling tools for your customer communications.
+        With Twilio, you can build powerful customer engagement workflows, but what if you want to persist your data? In this session, the Twilio team will show you how to create simple to powerful communication workflows using Pulumi for infrastructure management and AWS for persisting data.
 
     # The webinar presenters
     presenters:
