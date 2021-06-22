@@ -73,6 +73,7 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">datastore_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">deployment_manager_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">dialogflow_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">dialogflow_cx_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">dns_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">essential_contacts_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">eventarc_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -81,6 +82,7 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">firestore_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">game_services_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">gke_hub_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">gkehub_feature_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">healthcare_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">iam_beta_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">iam_credentials_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -601,6 +603,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dialogflowcxcustomendpoint_csharp">
+<a href="#dialogflowcxcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Dialogflow<wbr>Cx<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dnscustomendpoint_csharp">
 <a href="#dnscustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Custom<wbr>Endpoint</a>
 </span>
@@ -659,6 +669,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="gkehubcustomendpoint_csharp">
 <a href="#gkehubcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Gke<wbr>Hub<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gkehubfeaturecustomendpoint_csharp">
+<a href="#gkehubfeaturecustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Gkehub<wbr>Feature<wbr>Custom<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1389,6 +1407,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dialogflowcxcustomendpoint_go">
+<a href="#dialogflowcxcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Dialogflow<wbr>Cx<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dnscustomendpoint_go">
 <a href="#dnscustomendpoint_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Custom<wbr>Endpoint</a>
 </span>
@@ -1447,6 +1473,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="gkehubcustomendpoint_go">
 <a href="#gkehubcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Gke<wbr>Hub<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gkehubfeaturecustomendpoint_go">
+<a href="#gkehubfeaturecustomendpoint_go" style="color: inherit; text-decoration: inherit;">Gkehub<wbr>Feature<wbr>Custom<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2177,6 +2211,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dialogflowcxcustomendpoint_nodejs">
+<a href="#dialogflowcxcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">dialogflow<wbr>Cx<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dnscustomendpoint_nodejs">
 <a href="#dnscustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Custom<wbr>Endpoint</a>
 </span>
@@ -2235,6 +2277,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="gkehubcustomendpoint_nodejs">
 <a href="#gkehubcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Hub<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gkehubfeaturecustomendpoint_nodejs">
+<a href="#gkehubfeaturecustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">gkehub<wbr>Feature<wbr>Custom<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2965,6 +3015,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dialogflow_cx_custom_endpoint_python">
+<a href="#dialogflow_cx_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">dialogflow_<wbr>cx_<wbr>custom_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dns_custom_endpoint_python">
 <a href="#dns_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>custom_<wbr>endpoint</a>
 </span>
@@ -3023,6 +3081,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="gke_hub_custom_endpoint_python">
 <a href="#gke_hub_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>hub_<wbr>custom_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gkehub_feature_custom_endpoint_python">
+<a href="#gkehub_feature_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">gkehub_<wbr>feature_<wbr>custom_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

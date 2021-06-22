@@ -1688,7 +1688,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#triggertransportpubsub">List&lt;Trigger<wbr>Transport<wbr>Pubsub<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
-The `pubsub` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1702,7 +1701,6 @@ The `pubsub` block supports:
         <span class="property-type"><a href="#triggertransportpubsub">[]Trigger<wbr>Transport<wbr>Pubsub</a></span>
     </dt>
     <dd>{{% md %}}The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
-The `pubsub` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1716,7 +1714,6 @@ The `pubsub` block supports:
         <span class="property-type"><a href="#triggertransportpubsub">Trigger<wbr>Transport<wbr>Pubsub<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
-The `pubsub` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1730,7 +1727,6 @@ The `pubsub` block supports:
         <span class="property-type"><a href="#triggertransportpubsub">Sequence[Trigger<wbr>Transport<wbr>Pubsub<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
-The `pubsub` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

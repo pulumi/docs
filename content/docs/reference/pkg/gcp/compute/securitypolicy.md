@@ -232,6 +232,7 @@ const policy = new gcp.compute.SecurityPolicy("policy", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">SecurityPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">adaptive_protection_config</span><span class="p">:</span> <span class="nx">Optional[SecurityPolicyAdaptiveProtectionConfigArgs]</span> = None<span class="p">,</span>
                    <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -365,6 +366,15 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="adaptiveprotectionconfig_csharp">
+<a href="#adaptiveprotectionconfig_csharp" style="color: inherit; text-decoration: inherit;">Adaptive<wbr>Protection<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -407,6 +417,15 @@ security policy, a default rule with action "allow" will be added. Structure is 
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="adaptiveprotectionconfig_go">
+<a href="#adaptiveprotectionconfig_go" style="color: inherit; text-decoration: inherit;">Adaptive<wbr>Protection<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -451,6 +470,15 @@ security policy, a default rule with action "allow" will be added. Structure is 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="adaptiveprotectionconfig_nodejs">
+<a href="#adaptiveprotectionconfig_nodejs" style="color: inherit; text-decoration: inherit;">adaptive<wbr>Protection<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -493,6 +521,15 @@ security policy, a default rule with action "allow" will be added. Structure is 
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="adaptive_protection_config_python">
+<a href="#adaptive_protection_config_python" style="color: inherit; text-decoration: inherit;">adaptive_<wbr>protection_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -677,6 +714,7 @@ Get an existing SecurityPolicy resource's state with the given name, ID, and opt
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">adaptive_protection_config</span><span class="p">:</span> <span class="nx">Optional[SecurityPolicyAdaptiveProtectionConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -795,6 +833,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_adaptiveprotectionconfig_csharp">
+<a href="#state_adaptiveprotectionconfig_csharp" style="color: inherit; text-decoration: inherit;">Adaptive<wbr>Protection<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -855,6 +902,15 @@ security policy, a default rule with action "allow" will be added. Structure is 
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_adaptiveprotectionconfig_go">
+<a href="#state_adaptiveprotectionconfig_go" style="color: inherit; text-decoration: inherit;">Adaptive<wbr>Protection<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -917,6 +973,15 @@ security policy, a default rule with action "allow" will be added. Structure is 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_adaptiveprotectionconfig_nodejs">
+<a href="#state_adaptiveprotectionconfig_nodejs" style="color: inherit; text-decoration: inherit;">adaptive<wbr>Protection<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -977,6 +1042,15 @@ security policy, a default rule with action "allow" will be added. Structure is 
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_adaptive_protection_config_python">
+<a href="#state_adaptive_protection_config_python" style="color: inherit; text-decoration: inherit;">adaptive_<wbr>protection_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1044,6 +1118,150 @@ security policy, a default rule with action "allow" will be added. Structure is 
 ## Supporting Types
 
 
+
+<h4 id="securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="layer7ddosdefenseconfig_csharp">
+<a href="#layer7ddosdefenseconfig_csharp" style="color: inherit; text-decoration: inherit;">Layer7Ddos<wbr>Defense<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="layer7ddosdefenseconfig_go">
+<a href="#layer7ddosdefenseconfig_go" style="color: inherit; text-decoration: inherit;">Layer7Ddos<wbr>Defense<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="layer7ddosdefenseconfig_nodejs">
+<a href="#layer7ddosdefenseconfig_nodejs" style="color: inherit; text-decoration: inherit;">layer7Ddos<wbr>Defense<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="layer7_ddos_defense_config_python">
+<a href="#layer7_ddos_defense_config_python" style="color: inherit; text-decoration: inherit;">layer7_<wbr>ddos_<wbr>defense_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enable_csharp">
+<a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}) If set to true, enables CAAP for L7 DDoS detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rulevisibility_csharp">
+<a href="#rulevisibility_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}) Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enable_go">
+<a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}) If set to true, enables CAAP for L7 DDoS detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rulevisibility_go">
+<a href="#rulevisibility_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}) Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enable_nodejs">
+<a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}) If set to true, enables CAAP for L7 DDoS detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rulevisibility_nodejs">
+<a href="#rulevisibility_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}) Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enable_python">
+<a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}) If set to true, enables CAAP for L7 DDoS detection.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rule_visibility_python">
+<a href="#rule_visibility_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}) Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="securitypolicyrule">Security<wbr>Policy<wbr>Rule</h4>
 

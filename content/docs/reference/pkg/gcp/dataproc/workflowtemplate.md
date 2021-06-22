@@ -528,7 +528,6 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
-The `secondary_worker_config` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -614,7 +613,6 @@ The `secondary_worker_config` block supports:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
-The `secondary_worker_config` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -700,7 +698,6 @@ The `secondary_worker_config` block supports:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
-The `secondary_worker_config` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -786,7 +783,6 @@ The `secondary_worker_config` block supports:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
-The `secondary_worker_config` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -1117,7 +1113,6 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
-The `secondary_worker_config` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
@@ -1219,7 +1214,6 @@ The `secondary_worker_config` block supports:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
-The `secondary_worker_config` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -1321,7 +1315,6 @@ The `secondary_worker_config` block supports:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
-The `secondary_worker_config` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
@@ -1423,7 +1416,6 @@ The `secondary_worker_config` block supports:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
-The `secondary_worker_config` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
@@ -1510,7 +1502,6 @@ The `secondary_worker_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The step id. The id must be unique among all jobs within the template. The step id is used as prefix for job id, as job `goog-dataproc-workflow-step-id` label, and in field from other steps. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
-The `placement` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadoopjob_csharp">
@@ -1538,7 +1529,6 @@ The `placement` block supports:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
-The `secondary_worker_config` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pigjob_csharp">
@@ -1624,7 +1614,6 @@ The `secondary_worker_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The step id. The id must be unique among all jobs within the template. The step id is used as prefix for job id, as job `goog-dataproc-workflow-step-id` label, and in field from other steps. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
-The `placement` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadoopjob_go">
@@ -1652,7 +1641,6 @@ The `placement` block supports:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
-The `secondary_worker_config` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pigjob_go">
@@ -1738,7 +1726,6 @@ The `secondary_worker_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The step id. The id must be unique among all jobs within the template. The step id is used as prefix for job id, as job `goog-dataproc-workflow-step-id` label, and in field from other steps. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
-The `placement` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadoopjob_nodejs">
@@ -1766,7 +1753,6 @@ The `placement` block supports:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
-The `secondary_worker_config` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pigjob_nodejs">
@@ -1852,7 +1838,6 @@ The `secondary_worker_config` block supports:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The step id. The id must be unique among all jobs within the template. The step id is used as prefix for job id, as job `goog-dataproc-workflow-step-id` label, and in field from other steps. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
-The `placement` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadoop_job_python">
@@ -1880,7 +1865,6 @@ The `placement` block supports:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
-The `secondary_worker_config` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pig_job_python">
@@ -2274,7 +2258,6 @@ The `secondary_worker_config` block supports:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2288,7 +2271,6 @@ The `query_list` block supports:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2302,7 +2284,6 @@ The `query_list` block supports:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2316,7 +2297,6 @@ The `query_list` block supports:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2377,7 +2357,6 @@ The `query_list` block supports:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
-The `logging_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2436,7 +2415,6 @@ The `logging_config` block supports:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
-The `logging_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2495,7 +2473,6 @@ The `logging_config` block supports:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
-The `logging_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2554,7 +2531,6 @@ The `logging_config` block supports:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
-The `logging_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2570,7 +2546,6 @@ The `logging_config` block supports:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
-The `parameters` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2584,7 +2559,6 @@ The `parameters` block supports:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
-The `parameters` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2598,7 +2572,6 @@ The `parameters` block supports:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
-The `parameters` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2612,7 +2585,6 @@ The `parameters` block supports:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
-The `parameters` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2682,7 +2654,6 @@ The `parameters` block supports:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
-The `logging_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2750,7 +2721,6 @@ The `logging_config` block supports:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
-The `logging_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2818,7 +2788,6 @@ The `logging_config` block supports:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
-The `logging_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2886,7 +2855,6 @@ The `logging_config` block supports:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
-The `logging_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2902,7 +2870,6 @@ The `logging_config` block supports:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2916,7 +2883,6 @@ The `query_list` block supports:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2930,7 +2896,6 @@ The `query_list` block supports:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2944,7 +2909,6 @@ The `query_list` block supports:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2960,7 +2924,6 @@ The `query_list` block supports:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
-The `parameters` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2974,7 +2937,6 @@ The `parameters` block supports:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
-The `parameters` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2988,7 +2950,6 @@ The `parameters` block supports:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
-The `parameters` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3002,7 +2963,6 @@ The `parameters` block supports:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
-The `parameters` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3288,7 +3248,6 @@ The `parameters` block supports:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3302,7 +3261,6 @@ The `query_list` block supports:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3316,7 +3274,6 @@ The `query_list` block supports:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3330,7 +3287,6 @@ The `query_list` block supports:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3346,7 +3302,6 @@ The `query_list` block supports:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
-The `parameters` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3360,7 +3315,6 @@ The `parameters` block supports:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
-The `parameters` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3374,7 +3328,6 @@ The `parameters` block supports:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
-The `parameters` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3388,7 +3341,6 @@ The `parameters` block supports:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
-The `parameters` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3467,7 +3419,6 @@ The `parameters` block supports:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
-The `logging_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3544,7 +3495,6 @@ The `logging_config` block supports:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
-The `logging_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3621,7 +3571,6 @@ The `logging_config` block supports:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
-The `logging_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3698,7 +3647,6 @@ The `logging_config` block supports:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
-The `logging_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3714,7 +3662,6 @@ The `logging_config` block supports:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3728,7 +3675,6 @@ The `query_list` block supports:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3742,7 +3688,6 @@ The `query_list` block supports:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3756,7 +3701,6 @@ The `query_list` block supports:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3781,7 +3725,6 @@ The `query_list` block supports:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Maximum number of times in total a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. Maximum value is 240
-The `spark_job` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3804,7 +3747,6 @@ The `spark_job` block supports:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Maximum number of times in total a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. Maximum value is 240
-The `spark_job` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3827,7 +3769,6 @@ The `spark_job` block supports:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Maximum number of times in total a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. Maximum value is 240
-The `spark_job` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3850,7 +3791,6 @@ The `spark_job` block supports:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Maximum number of times in total a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. Maximum value is 240
-The `spark_job` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4172,7 +4112,6 @@ The `spark_job` block supports:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4186,7 +4125,6 @@ The `query_list` block supports:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4200,7 +4138,6 @@ The `query_list` block supports:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4214,7 +4151,6 @@ The `query_list` block supports:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4464,7 +4400,6 @@ The `query_list` block supports:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4478,7 +4413,6 @@ The `query_list` block supports:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4492,7 +4426,6 @@ The `query_list` block supports:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4506,7 +4439,6 @@ The `query_list` block supports:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4567,7 +4499,6 @@ The `query_list` block supports:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
-The `logging_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4626,7 +4557,6 @@ The `logging_config` block supports:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
-The `logging_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4685,7 +4615,6 @@ The `logging_config` block supports:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
-The `logging_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4744,7 +4673,6 @@ The `logging_config` block supports:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
-The `logging_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4760,7 +4688,6 @@ The `logging_config` block supports:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4774,7 +4701,6 @@ The `query_list` block supports:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4788,7 +4714,6 @@ The `query_list` block supports:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4802,7 +4727,6 @@ The `query_list` block supports:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
-The `query_list` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4818,7 +4742,6 @@ The `query_list` block supports:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
-The `parameters` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4832,7 +4755,6 @@ The `parameters` block supports:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
-The `parameters` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4846,7 +4768,6 @@ The `parameters` block supports:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
-The `parameters` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4860,7 +4781,6 @@ The `parameters` block supports:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
-The `parameters` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4903,7 +4823,6 @@ The `parameters` block supports:
         <span class="property-type"><a href="#workflowtemplateparametervalidation">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Validation rules to be applied to this parameter's value.
-The `validation` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4944,7 +4863,6 @@ The `validation` block supports:
         <span class="property-type"><a href="#workflowtemplateparametervalidation">Workflow<wbr>Template<wbr>Parameter<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}Optional. Validation rules to be applied to this parameter's value.
-The `validation` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4985,7 +4903,6 @@ The `validation` block supports:
         <span class="property-type"><a href="#workflowtemplateparametervalidation">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Validation rules to be applied to this parameter's value.
-The `validation` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5026,7 +4943,6 @@ The `validation` block supports:
         <span class="property-type"><a href="#workflowtemplateparametervalidation">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Validation rules to be applied to this parameter's value.
-The `validation` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5051,7 +4967,6 @@ The `validation` block supports:
         <span class="property-type"><a href="#workflowtemplateparametervalidationvalues">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.
-The `gke_cluster_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5074,7 +4989,6 @@ The `gke_cluster_config` block supports:
         <span class="property-type"><a href="#workflowtemplateparametervalidationvalues">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.
-The `gke_cluster_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5097,7 +5011,6 @@ The `gke_cluster_config` block supports:
         <span class="property-type"><a href="#workflowtemplateparametervalidationvalues">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.
-The `gke_cluster_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5120,7 +5033,6 @@ The `gke_cluster_config` block supports:
         <span class="property-type"><a href="#workflowtemplateparametervalidationvalues">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.
-The `gke_cluster_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5136,7 +5048,6 @@ The `gke_cluster_config` block supports:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Required. RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).
-The `values` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5150,7 +5061,6 @@ The `values` block supports:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Required. RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).
-The `values` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5164,7 +5074,6 @@ The `values` block supports:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).
-The `values` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5178,7 +5087,6 @@ The `values` block supports:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).
-The `values` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5194,7 +5102,6 @@ The `values` block supports:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.
-The `gke_cluster_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5208,7 +5115,6 @@ The `gke_cluster_config` block supports:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.
-The `gke_cluster_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5222,7 +5128,6 @@ The `gke_cluster_config` block supports:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.
-The `gke_cluster_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5236,7 +5141,6 @@ The `gke_cluster_config` block supports:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.
-The `gke_cluster_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5261,7 +5165,6 @@ The `gke_cluster_config` block supports:
         <span class="property-type"><a href="#workflowtemplateplacementmanagedcluster">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A cluster that is managed by the workflow.
-The `config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5284,7 +5187,6 @@ The `config` block supports:
         <span class="property-type"><a href="#workflowtemplateplacementmanagedcluster">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster</a></span>
     </dt>
     <dd>{{% md %}}A cluster that is managed by the workflow.
-The `config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5307,7 +5209,6 @@ The `config` block supports:
         <span class="property-type"><a href="#workflowtemplateplacementmanagedcluster">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A cluster that is managed by the workflow.
-The `config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5330,7 +5231,6 @@ The `config` block supports:
         <span class="property-type"><a href="#workflowtemplateplacementmanagedcluster">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A cluster that is managed by the workflow.
-The `config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5355,7 +5255,6 @@ The `config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
-The `node_group_affinity` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5378,7 +5277,6 @@ The `node_group_affinity` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
-The `node_group_affinity` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5401,7 +5299,6 @@ The `node_group_affinity` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
-The `node_group_affinity` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5424,7 +5321,6 @@ The `node_group_affinity` block supports:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
-The `node_group_affinity` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5458,7 +5354,6 @@ The `node_group_affinity` block supports:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
-The `secondary_worker_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5490,7 +5385,6 @@ The `secondary_worker_config` block supports:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
-The `secondary_worker_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5522,7 +5416,6 @@ The `secondary_worker_config` block supports:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
-The `secondary_worker_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5554,7 +5447,6 @@ The `secondary_worker_config` block supports:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
-The `secondary_worker_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6128,7 +6020,6 @@ The `secondary_worker_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The autoscaling policy used by the cluster. Only resource names including projectid and location (region) are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` Note that the policy must be in the same project and Dataproc region.
-The `encryption_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6142,7 +6033,6 @@ The `encryption_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The autoscaling policy used by the cluster. Only resource names including projectid and location (region) are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` Note that the policy must be in the same project and Dataproc region.
-The `encryption_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6156,7 +6046,6 @@ The `encryption_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The autoscaling policy used by the cluster. Only resource names including projectid and location (region) are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` Note that the policy must be in the same project and Dataproc region.
-The `encryption_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6170,7 +6059,6 @@ The `encryption_config` block supports:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The autoscaling policy used by the cluster. Only resource names including projectid and location (region) are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` Note that the policy must be in the same project and Dataproc region.
-The `encryption_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6186,7 +6074,6 @@ The `encryption_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
-The `endpoint_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6200,7 +6087,6 @@ The `endpoint_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
-The `endpoint_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6214,7 +6100,6 @@ The `endpoint_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
-The `endpoint_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6228,7 +6113,6 @@ The `endpoint_config` block supports:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
-The `endpoint_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6254,7 +6138,6 @@ The `endpoint_config` block supports:
     </dt>
     <dd>{{% md %}}-
 Output only. The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
-The `gce_cluster_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6278,7 +6161,6 @@ The `gce_cluster_config` block supports:
     </dt>
     <dd>{{% md %}}-
 Output only. The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
-The `gce_cluster_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6302,7 +6184,6 @@ The `gce_cluster_config` block supports:
     </dt>
     <dd>{{% md %}}-
 Output only. The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
-The `gce_cluster_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6326,7 +6207,6 @@ The `gce_cluster_config` block supports:
     </dt>
     <dd>{{% md %}}-
 Output only. The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
-The `gce_cluster_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6432,7 +6312,6 @@ The `gce_cluster_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
-The `node_group_affinity` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6536,7 +6415,6 @@ The `node_group_affinity` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
-The `node_group_affinity` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6640,7 +6518,6 @@ The `node_group_affinity` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
-The `node_group_affinity` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6744,7 +6621,6 @@ The `node_group_affinity` block supports:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
-The `node_group_affinity` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6760,7 +6636,6 @@ The `node_group_affinity` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The URI of a sole-tenant /zones/us-central1-a/nodeGroups/node-group-1` * `node-group-1`
-The `reservation_affinity` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6774,7 +6649,6 @@ The `reservation_affinity` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The URI of a sole-tenant /zones/us-central1-a/nodeGroups/node-group-1` * `node-group-1`
-The `reservation_affinity` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6788,7 +6662,6 @@ The `reservation_affinity` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The URI of a sole-tenant /zones/us-central1-a/nodeGroups/node-group-1` * `node-group-1`
-The `reservation_affinity` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6802,7 +6675,6 @@ The `reservation_affinity` block supports:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The URI of a sole-tenant /zones/us-central1-a/nodeGroups/node-group-1` * `node-group-1`
-The `reservation_affinity` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6836,7 +6708,6 @@ The `reservation_affinity` block supports:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.
-The `gke_cluster_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6868,7 +6739,6 @@ The `gke_cluster_config` block supports:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.
-The `gke_cluster_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6900,7 +6770,6 @@ The `gke_cluster_config` block supports:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.
-The `gke_cluster_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6932,7 +6801,6 @@ The `gke_cluster_config` block supports:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.
-The `gke_cluster_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6948,7 +6816,6 @@ The `gke_cluster_config` block supports:
         <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggkeclusterconfignamespacedgkedeploymenttarget">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gke<wbr>Cluster<wbr>Config<wbr>Namespaced<wbr>Gke<wbr>Deployment<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. A target for the deployment.
-The `namespaced_gke_deployment_target` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6962,7 +6829,6 @@ The `namespaced_gke_deployment_target` block supports:
         <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggkeclusterconfignamespacedgkedeploymenttarget">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gke<wbr>Cluster<wbr>Config<wbr>Namespaced<wbr>Gke<wbr>Deployment<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Optional. A target for the deployment.
-The `namespaced_gke_deployment_target` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6976,7 +6842,6 @@ The `namespaced_gke_deployment_target` block supports:
         <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggkeclusterconfignamespacedgkedeploymenttarget">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gke<wbr>Cluster<wbr>Config<wbr>Namespaced<wbr>Gke<wbr>Deployment<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. A target for the deployment.
-The `namespaced_gke_deployment_target` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6990,7 +6855,6 @@ The `namespaced_gke_deployment_target` block supports:
         <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggkeclusterconfignamespacedgkedeploymenttarget">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gke<wbr>Cluster<wbr>Config<wbr>Namespaced<wbr>Gke<wbr>Deployment<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. A target for the deployment.
-The `namespaced_gke_deployment_target` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7015,7 +6879,6 @@ The `namespaced_gke_deployment_target` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
-The `initialization_actions` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7038,7 +6901,6 @@ The `initialization_actions` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
-The `initialization_actions` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7061,7 +6923,6 @@ The `initialization_actions` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
-The `initialization_actions` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7084,7 +6945,6 @@ The `initialization_actions` block supports:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
-The `initialization_actions` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7109,7 +6969,6 @@ The `initialization_actions` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)). Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.
-The `lifecycle_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7132,7 +6991,6 @@ The `lifecycle_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)). Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.
-The `lifecycle_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7155,7 +7013,6 @@ The `lifecycle_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)). Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.
-The `lifecycle_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7178,7 +7035,6 @@ The `lifecycle_config` block supports:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)). Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.
-The `lifecycle_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7222,7 +7078,6 @@ The `lifecycle_config` block supports:
     </dt>
     <dd>{{% md %}}-
 Output only. The time when cluster became idle (most recent job finished) and became eligible for deletion due to idleness (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)).
-The `metastore_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7264,7 +7119,6 @@ The `metastore_config` block supports:
     </dt>
     <dd>{{% md %}}-
 Output only. The time when cluster became idle (most recent job finished) and became eligible for deletion due to idleness (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)).
-The `metastore_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7306,7 +7160,6 @@ The `metastore_config` block supports:
     </dt>
     <dd>{{% md %}}-
 Output only. The time when cluster became idle (most recent job finished) and became eligible for deletion due to idleness (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)).
-The `metastore_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7348,7 +7201,6 @@ The `metastore_config` block supports:
     </dt>
     <dd>{{% md %}}-
 Output only. The time when cluster became idle (most recent job finished) and became eligible for deletion due to idleness (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)).
-The `metastore_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7421,7 +7273,6 @@ Output only. Specifies that this instance group contains preemptible instances.
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
-The `accelerators` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_csharp">
@@ -7519,7 +7370,6 @@ Output only. Specifies that this instance group contains preemptible instances.
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
-The `accelerators` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_go">
@@ -7617,7 +7467,6 @@ Output only. Specifies that this instance group contains preemptible instances.
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
-The `accelerators` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_nodejs">
@@ -7715,7 +7564,6 @@ Output only. Specifies that this instance group contains preemptible instances.
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
-The `accelerators` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_cpu_platform_python">
@@ -7767,7 +7615,6 @@ The `accelerators` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
-The `disk_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7790,7 +7637,6 @@ The `disk_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
-The `disk_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7813,7 +7659,6 @@ The `disk_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
-The `disk_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7836,7 +7681,6 @@ The `disk_config` block supports:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
-The `disk_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7870,7 +7714,6 @@ The `disk_config` block supports:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
-The `autoscaling_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7902,7 +7745,6 @@ The `autoscaling_config` block supports:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
-The `autoscaling_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7934,7 +7776,6 @@ The `autoscaling_config` block supports:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
-The `autoscaling_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7966,7 +7807,6 @@ The `autoscaling_config` block supports:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
-The `autoscaling_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8064,7 +7904,6 @@ The `autoscaling_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Resource name of an existing Dataproc Metastore service. Example: * `projects/`
-The `security_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8078,7 +7917,6 @@ The `security_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Resource name of an existing Dataproc Metastore service. Example: * `projects/`
-The `security_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8092,7 +7930,6 @@ The `security_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Resource name of an existing Dataproc Metastore service. Example: * `projects/`
-The `security_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8106,7 +7943,6 @@ The `security_config` block supports:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Resource name of an existing Dataproc Metastore service. Example: * `projects/`
-The `security_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8179,7 +8015,6 @@ Output only. Specifies that this instance group contains preemptible instances.
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
-The `accelerators` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_csharp">
@@ -8277,7 +8112,6 @@ Output only. Specifies that this instance group contains preemptible instances.
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
-The `accelerators` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_go">
@@ -8375,7 +8209,6 @@ Output only. Specifies that this instance group contains preemptible instances.
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
-The `accelerators` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_nodejs">
@@ -8473,7 +8306,6 @@ Output only. Specifies that this instance group contains preemptible instances.
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
-The `accelerators` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_cpu_platform_python">
@@ -8525,7 +8357,6 @@ The `accelerators` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
-The `disk_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8548,7 +8379,6 @@ The `disk_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
-The `disk_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8571,7 +8401,6 @@ The `disk_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
-The `disk_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8594,7 +8423,6 @@ The `disk_config` block supports:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
-The `disk_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8628,7 +8456,6 @@ The `disk_config` block supports:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
-The `autoscaling_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8660,7 +8487,6 @@ The `autoscaling_config` block supports:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
-The `autoscaling_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8692,7 +8518,6 @@ The `autoscaling_config` block supports:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
-The `autoscaling_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8724,7 +8549,6 @@ The `autoscaling_config` block supports:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
-The `autoscaling_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8822,7 +8646,6 @@ The `autoscaling_config` block supports:
         <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecurityconfigkerberosconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kerberos related configuration.
-The `kerberos_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8836,7 +8659,6 @@ The `kerberos_config` block supports:
         <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecurityconfigkerberosconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kerberos related configuration.
-The `kerberos_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8850,7 +8672,6 @@ The `kerberos_config` block supports:
         <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecurityconfigkerberosconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kerberos related configuration.
-The `kerberos_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8864,7 +8685,6 @@ The `kerberos_config` block supports:
         <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecurityconfigkerberosconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kerberos related configuration.
-The `kerberos_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -9006,7 +8826,6 @@ The `kerberos_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the password to the user provided truststore. For the self-signed certificate, this password is generated by Dataproc.
-The `software_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -9146,7 +8965,6 @@ The `software_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the password to the user provided truststore. For the self-signed certificate, this password is generated by Dataproc.
-The `software_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -9286,7 +9104,6 @@ The `software_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the password to the user provided truststore. For the self-signed certificate, this password is generated by Dataproc.
-The `software_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -9426,7 +9243,6 @@ The `software_config` block supports:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the password to the user provided truststore. For the self-signed certificate, this password is generated by Dataproc.
-The `software_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -9589,7 +9405,6 @@ Output only. Specifies that this instance group contains preemptible instances.
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
-The `accelerators` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_csharp">
@@ -9687,7 +9502,6 @@ Output only. Specifies that this instance group contains preemptible instances.
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
-The `accelerators` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_go">
@@ -9785,7 +9599,6 @@ Output only. Specifies that this instance group contains preemptible instances.
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
-The `accelerators` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_nodejs">
@@ -9883,7 +9696,6 @@ Output only. Specifies that this instance group contains preemptible instances.
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
-The `accelerators` block supports:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_cpu_platform_python">
@@ -9935,7 +9747,6 @@ The `accelerators` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
-The `disk_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -9958,7 +9769,6 @@ The `disk_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
-The `disk_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -9981,7 +9791,6 @@ The `disk_config` block supports:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
-The `disk_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -10004,7 +9813,6 @@ The `disk_config` block supports:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
-The `disk_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -10038,7 +9846,6 @@ The `disk_config` block supports:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
-The `autoscaling_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -10070,7 +9877,6 @@ The `autoscaling_config` block supports:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
-The `autoscaling_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -10102,7 +9908,6 @@ The `autoscaling_config` block supports:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
-The `autoscaling_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -10134,7 +9939,6 @@ The `autoscaling_config` block supports:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.
-The `autoscaling_config` block supports:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
