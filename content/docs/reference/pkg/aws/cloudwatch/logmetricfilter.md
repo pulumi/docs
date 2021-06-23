@@ -855,6 +855,15 @@ for extracting metric data out of ingested log events.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of fields to use as dimensions for the metric. Up to 3 dimensions are allowed. Conflicts with `default_value`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit to assign to the metric. If you omit this, the unit is set as `None`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -904,6 +913,15 @@ for extracting metric data out of ingested log events.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of fields to use as dimensions for the metric. Up to 3 dimensions are allowed. Conflicts with `default_value`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit to assign to the metric. If you omit this, the unit is set as `None`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -953,6 +971,15 @@ for extracting metric data out of ingested log events.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of fields to use as dimensions for the metric. Up to 3 dimensions are allowed. Conflicts with `default_value`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit to assign to the metric. If you omit this, the unit is set as `None`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1002,6 +1029,15 @@ for extracting metric data out of ingested log events.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of fields to use as dimensions for the metric. Up to 3 dimensions are allowed. Conflicts with `default_value`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unit to assign to the metric. If you omit this, the unit is set as `None`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

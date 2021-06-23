@@ -146,6 +146,7 @@ const example = new aws.datasync.NfsLocation("example", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">NfsLocation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">mount_options</span><span class="p">:</span> <span class="nx">Optional[NfsLocationMountOptionsArgs]</span> = None<span class="p">,</span>
                 <span class="nx">on_prem_config</span><span class="p">:</span> <span class="nx">Optional[NfsLocationOnPremConfigArgs]</span> = None<span class="p">,</span>
                 <span class="nx">server_hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">subdirectory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -307,6 +308,15 @@ The NfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mountoptions_csharp">
+<a href="#mountoptions_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfslocationmountoptions">Nfs<wbr>Location<wbr>Mount<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the NFS Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -354,6 +364,15 @@ The NfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mountoptions_go">
+<a href="#mountoptions_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfslocationmountoptions">Nfs<wbr>Location<wbr>Mount<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the NFS Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -405,6 +424,15 @@ The NfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mountoptions_nodejs">
+<a href="#mountoptions_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfslocationmountoptions">Nfs<wbr>Location<wbr>Mount<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the NFS Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -452,6 +480,15 @@ The NfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfslocationmountoptions">Nfs<wbr>Location<wbr>Mount<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the NFS Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -613,6 +650,7 @@ Get an existing NfsLocation resource's state with the given name, ID, and option
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">mount_options</span><span class="p">:</span> <span class="nx">Optional[NfsLocationMountOptionsArgs]</span> = None<span class="p">,</span>
         <span class="nx">on_prem_config</span><span class="p">:</span> <span class="nx">Optional[NfsLocationOnPremConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">server_hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">subdirectory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -740,6 +778,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_mountoptions_csharp">
+<a href="#state_mountoptions_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfslocationmountoptions">Nfs<wbr>Location<wbr>Mount<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the NFS Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_onpremconfig_csharp">
 <a href="#state_onpremconfig_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Prem<wbr>Config</a>
 </span>
@@ -804,6 +851,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_mountoptions_go">
+<a href="#state_mountoptions_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfslocationmountoptions">Nfs<wbr>Location<wbr>Mount<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the NFS Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onpremconfig_go">
@@ -872,6 +928,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_mountoptions_nodejs">
+<a href="#state_mountoptions_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfslocationmountoptions">Nfs<wbr>Location<wbr>Mount<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the NFS Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_onpremconfig_nodejs">
 <a href="#state_onpremconfig_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Prem<wbr>Config</a>
 </span>
@@ -938,6 +1003,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_mount_options_python">
+<a href="#state_mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfslocationmountoptions">Nfs<wbr>Location<wbr>Mount<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the NFS Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_on_prem_config_python">
 <a href="#state_on_prem_config_python" style="color: inherit; text-decoration: inherit;">on_<wbr>prem_<wbr>config</a>
 </span>
@@ -1000,6 +1074,60 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="nfslocationmountoptions">Nfs<wbr>Location<wbr>Mount<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific NFS version that you want DataSync to use for mounting your NFS share. Valid values: `AUTOMATIC`, `NFS3`, `NFS4_0` and `NFS4_1`. Default: `AUTOMATIC`
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific NFS version that you want DataSync to use for mounting your NFS share. Valid values: `AUTOMATIC`, `NFS3`, `NFS4_0` and `NFS4_1`. Default: `AUTOMATIC`
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific NFS version that you want DataSync to use for mounting your NFS share. Valid values: `AUTOMATIC`, `NFS3`, `NFS4_0` and `NFS4_1`. Default: `AUTOMATIC`
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The specific NFS version that you want DataSync to use for mounting your NFS share. Valid values: `AUTOMATIC`, `NFS3`, `NFS4_0` and `NFS4_1`. Default: `AUTOMATIC`
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="nfslocationonpremconfig">Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</h4>
 

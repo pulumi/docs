@@ -1587,7 +1587,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of column names for the table.
+    <dd>{{% md %}}Set of column names for the table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedcolumnnames_csharp">
@@ -1643,7 +1643,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of column names for the table.
+    <dd>{{% md %}}Set of column names for the table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedcolumnnames_go">
@@ -1699,7 +1699,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of column names for the table.
+    <dd>{{% md %}}Set of column names for the table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedcolumnnames_nodejs">
@@ -1755,7 +1755,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of column names for the table.
+    <dd>{{% md %}}Set of column names for the table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excluded_column_names_python">

@@ -807,6 +807,9 @@ const fooSpotFleetRequest = new aws.ec2.SpotFleetRequest("fooSpotFleetRequest", 
                      <span class="nx">launch_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpotFleetRequestLaunchSpecificationArgs]]</span> = None<span class="p">,</span>
                      <span class="nx">launch_template_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpotFleetRequestLaunchTemplateConfigArgs]]</span> = None<span class="p">,</span>
                      <span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">on_demand_allocation_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">on_demand_max_total_price</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">on_demand_target_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                      <span class="nx">replace_unhealthy_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                      <span class="nx">spot_maintenance_strategies</span><span class="p">:</span> <span class="nx">Optional[SpotFleetRequestSpotMaintenanceStrategiesArgs]</span> = None<span class="p">,</span>
                      <span class="nx">spot_price</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1054,6 +1057,33 @@ across different markets and instance types. Conflicts with `launch_template_con
     <dd>{{% md %}}A list of elastic load balancer names to add to the Spot fleet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ondemandallocationstrategy_csharp">
+<a href="#ondemandallocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Allocation<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The order of the launch template overrides to use in fulfilling On-Demand capacity. the possible values are: `lowestPrice` and `prioritized`. the default is `lowestPrice`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ondemandmaxtotalprice_csharp">
+<a href="#ondemandmaxtotalprice_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Max<wbr>Total<wbr>Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum amount per hour for On-Demand Instances that you're willing to pay. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ondemandtargetcapacity_csharp">
+<a href="#ondemandtargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Target<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of On-Demand units to request. If the request type is `maintain`, you can specify a target capacity of 0 and add capacity later.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="replaceunhealthyinstances_csharp">
 <a href="#replaceunhealthyinstances_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>Unhealthy<wbr>Instances</a>
 </span>
@@ -1256,6 +1286,33 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the Spot fleet.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ondemandallocationstrategy_go">
+<a href="#ondemandallocationstrategy_go" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Allocation<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The order of the launch template overrides to use in fulfilling On-Demand capacity. the possible values are: `lowestPrice` and `prioritized`. the default is `lowestPrice`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ondemandmaxtotalprice_go">
+<a href="#ondemandmaxtotalprice_go" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Max<wbr>Total<wbr>Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum amount per hour for On-Demand Instances that you're willing to pay. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ondemandtargetcapacity_go">
+<a href="#ondemandtargetcapacity_go" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Target<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of On-Demand units to request. If the request type is `maintain`, you can specify a target capacity of 0 and add capacity later.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replaceunhealthyinstances_go">
@@ -1462,6 +1519,33 @@ across different markets and instance types. Conflicts with `launch_template_con
     <dd>{{% md %}}A list of elastic load balancer names to add to the Spot fleet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ondemandallocationstrategy_nodejs">
+<a href="#ondemandallocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Allocation<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The order of the launch template overrides to use in fulfilling On-Demand capacity. the possible values are: `lowestPrice` and `prioritized`. the default is `lowestPrice`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ondemandmaxtotalprice_nodejs">
+<a href="#ondemandmaxtotalprice_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Max<wbr>Total<wbr>Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum amount per hour for On-Demand Instances that you're willing to pay. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ondemandtargetcapacity_nodejs">
+<a href="#ondemandtargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Target<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of On-Demand units to request. If the request type is `maintain`, you can specify a target capacity of 0 and add capacity later.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="replaceunhealthyinstances_nodejs">
 <a href="#replaceunhealthyinstances_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Unhealthy<wbr>Instances</a>
 </span>
@@ -1664,6 +1748,33 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the Spot fleet.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="on_demand_allocation_strategy_python">
+<a href="#on_demand_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>allocation_<wbr>strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The order of the launch template overrides to use in fulfilling On-Demand capacity. the possible values are: `lowestPrice` and `prioritized`. the default is `lowestPrice`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="on_demand_max_total_price_python">
+<a href="#on_demand_max_total_price_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>max_<wbr>total_<wbr>price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The maximum amount per hour for On-Demand Instances that you're willing to pay. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="on_demand_target_capacity_python">
+<a href="#on_demand_target_capacity_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>target_<wbr>capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of On-Demand units to request. If the request type is `maintain`, you can specify a target capacity of 0 and add capacity later.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_unhealthy_instances_python">
@@ -1909,6 +2020,9 @@ Get an existing SpotFleetRequest resource's state with the given name, ID, and o
         <span class="nx">launch_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpotFleetRequestLaunchSpecificationArgs]]</span> = None<span class="p">,</span>
         <span class="nx">launch_template_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpotFleetRequestLaunchTemplateConfigArgs]]</span> = None<span class="p">,</span>
         <span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">on_demand_allocation_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">on_demand_max_total_price</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">on_demand_target_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">replace_unhealthy_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">spot_maintenance_strategies</span><span class="p">:</span> <span class="nx">Optional[SpotFleetRequestSpotMaintenanceStrategiesArgs]</span> = None<span class="p">,</span>
         <span class="nx">spot_price</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2137,6 +2251,33 @@ across different markets and instance types. Conflicts with `launch_template_con
     <dd>{{% md %}}A list of elastic load balancer names to add to the Spot fleet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ondemandallocationstrategy_csharp">
+<a href="#state_ondemandallocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Allocation<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The order of the launch template overrides to use in fulfilling On-Demand capacity. the possible values are: `lowestPrice` and `prioritized`. the default is `lowestPrice`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ondemandmaxtotalprice_csharp">
+<a href="#state_ondemandmaxtotalprice_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Max<wbr>Total<wbr>Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum amount per hour for On-Demand Instances that you're willing to pay. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ondemandtargetcapacity_csharp">
+<a href="#state_ondemandtargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Target<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of On-Demand units to request. If the request type is `maintain`, you can specify a target capacity of 0 and add capacity later.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_replaceunhealthyinstances_csharp">
 <a href="#state_replaceunhealthyinstances_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>Unhealthy<wbr>Instances</a>
 </span>
@@ -2356,6 +2497,33 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the Spot fleet.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ondemandallocationstrategy_go">
+<a href="#state_ondemandallocationstrategy_go" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Allocation<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The order of the launch template overrides to use in fulfilling On-Demand capacity. the possible values are: `lowestPrice` and `prioritized`. the default is `lowestPrice`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ondemandmaxtotalprice_go">
+<a href="#state_ondemandmaxtotalprice_go" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Max<wbr>Total<wbr>Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum amount per hour for On-Demand Instances that you're willing to pay. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ondemandtargetcapacity_go">
+<a href="#state_ondemandtargetcapacity_go" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Target<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of On-Demand units to request. If the request type is `maintain`, you can specify a target capacity of 0 and add capacity later.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replaceunhealthyinstances_go">
@@ -2579,6 +2747,33 @@ across different markets and instance types. Conflicts with `launch_template_con
     <dd>{{% md %}}A list of elastic load balancer names to add to the Spot fleet.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ondemandallocationstrategy_nodejs">
+<a href="#state_ondemandallocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Allocation<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The order of the launch template overrides to use in fulfilling On-Demand capacity. the possible values are: `lowestPrice` and `prioritized`. the default is `lowestPrice`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ondemandmaxtotalprice_nodejs">
+<a href="#state_ondemandmaxtotalprice_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Max<wbr>Total<wbr>Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum amount per hour for On-Demand Instances that you're willing to pay. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ondemandtargetcapacity_nodejs">
+<a href="#state_ondemandtargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Target<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of On-Demand units to request. If the request type is `maintain`, you can specify a target capacity of 0 and add capacity later.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_replaceunhealthyinstances_nodejs">
 <a href="#state_replaceunhealthyinstances_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Unhealthy<wbr>Instances</a>
 </span>
@@ -2798,6 +2993,33 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the Spot fleet.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_on_demand_allocation_strategy_python">
+<a href="#state_on_demand_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>allocation_<wbr>strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The order of the launch template overrides to use in fulfilling On-Demand capacity. the possible values are: `lowestPrice` and `prioritized`. the default is `lowestPrice`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_on_demand_max_total_price_python">
+<a href="#state_on_demand_max_total_price_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>max_<wbr>total_<wbr>price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The maximum amount per hour for On-Demand Instances that you're willing to pay. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_on_demand_target_capacity_python">
+<a href="#state_on_demand_target_capacity_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>target_<wbr>capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of On-Demand units to request. If the request type is `maintain`, you can specify a target capacity of 0 and add capacity later.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replace_unhealthy_instances_python">
