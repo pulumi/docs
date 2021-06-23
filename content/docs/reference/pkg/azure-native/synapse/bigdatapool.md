@@ -2422,25 +2422,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>None</dt>
     <dd>None</dd><dt>Memory<wbr>Optimized</dt>
-    <dd>MemoryOptimized</dd></dl>
+    <dd>MemoryOptimized</dd><dt>Hardware<wbr>Accelerated<wbr>FPGA</dt>
+    <dd>HardwareAcceleratedFPGA</dd><dt>Hardware<wbr>Accelerated<wbr>GPU</dt>
+    <dd>HardwareAcceleratedGPU</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Node<wbr>Size<wbr>Family<wbr>None</dt>
     <dd>None</dd><dt>Node<wbr>Size<wbr>Family<wbr>Memory<wbr>Optimized</dt>
-    <dd>MemoryOptimized</dd></dl>
+    <dd>MemoryOptimized</dd><dt>Node<wbr>Size<wbr>Family<wbr>Hardware<wbr>Accelerated<wbr>FPGA</dt>
+    <dd>HardwareAcceleratedFPGA</dd><dt>Node<wbr>Size<wbr>Family<wbr>Hardware<wbr>Accelerated<wbr>GPU</dt>
+    <dd>HardwareAcceleratedGPU</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>None</dt>
     <dd>None</dd><dt>Memory<wbr>Optimized</dt>
-    <dd>MemoryOptimized</dd></dl>
+    <dd>MemoryOptimized</dd><dt>Hardware<wbr>Accelerated<wbr>FPGA</dt>
+    <dd>HardwareAcceleratedFPGA</dd><dt>Hardware<wbr>Accelerated<wbr>GPU</dt>
+    <dd>HardwareAcceleratedGPU</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>NONE</dt>
     <dd>None</dd><dt>MEMORY_OPTIMIZED</dt>
-    <dd>MemoryOptimized</dd></dl>
+    <dd>MemoryOptimized</dd><dt>HARDWARE_ACCELERATED_FPGA</dt>
+    <dd>HardwareAcceleratedFPGA</dd><dt>HARDWARE_ACCELERATED_GPU</dt>
+    <dd>HardwareAcceleratedGPU</dd></dl>
 {{% /choosable %}}
 ## Import
 

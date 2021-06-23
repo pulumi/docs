@@ -231,7 +231,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag of the saved search.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The ETag of the saved search. To override an existing saved search, use "*" or specify the current Etag{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="functionalias_csharp">
 <a href="#functionalias_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Alias</a>
@@ -323,7 +323,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag of the saved search.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The ETag of the saved search. To override an existing saved search, use "*" or specify the current Etag{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="functionalias_go">
 <a href="#functionalias_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Alias</a>
@@ -415,7 +415,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag of the saved search.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The ETag of the saved search. To override an existing saved search, use "*" or specify the current Etag{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="functionalias_nodejs">
 <a href="#functionalias_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Alias</a>
@@ -507,7 +507,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ETag of the saved search.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The ETag of the saved search. To override an existing saved search, use "*" or specify the current Etag{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="function_alias_python">
 <a href="#function_alias_python" style="color: inherit; text-decoration: inherit;">function_<wbr>alias</a>

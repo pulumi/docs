@@ -8219,18 +8219,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="publicipaddresssku">Public<wbr>IPAddress<wbr>Sku</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="publicipaddressskuname_csharp">
-<a href="#publicipaddressskuname_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Sku<wbr>Name</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicipaddressskuname">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Public<wbr>IPAddress<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Specify public IP sku name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="publicipaddressskutier_csharp">
-<a href="#publicipaddressskutier_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Sku<wbr>Tier</a>
+        <span id="tier_csharp">
+<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicipaddressskutier">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Public<wbr>IPAddress<wbr>Sku<wbr>Tier</a></span>
@@ -8239,18 +8239,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="publicipaddressskuname_go">
-<a href="#publicipaddressskuname_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Sku<wbr>Name</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicipaddressskuname">Public<wbr>IPAddress<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Specify public IP sku name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="publicipaddressskutier_go">
-<a href="#publicipaddressskutier_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Sku<wbr>Tier</a>
+        <span id="tier_go">
+<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicipaddressskutier">Public<wbr>IPAddress<wbr>Sku<wbr>Tier</a></span>
@@ -8259,18 +8259,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="publicipaddressskuname_nodejs">
-<a href="#publicipaddressskuname_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress<wbr>Sku<wbr>Name</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicipaddressskuname">Public<wbr>IPAddress<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Specify public IP sku name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="publicipaddressskutier_nodejs">
-<a href="#publicipaddressskutier_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress<wbr>Sku<wbr>Tier</a>
+        <span id="tier_nodejs">
+<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicipaddressskutier">Public<wbr>IPAddress<wbr>Sku<wbr>Tier</a></span>
@@ -8279,18 +8279,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="public_ip_address_sku_name_python">
-<a href="#public_ip_address_sku_name_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>sku_<wbr>name</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#publicipaddressskuname">Public<wbr>IPAddress<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Specify public IP sku name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="public_ip_address_sku_tier_python">
-<a href="#public_ip_address_sku_tier_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>sku_<wbr>tier</a>
+        <span id="tier_python">
+<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#publicipaddressskutier">Public<wbr>IPAddress<wbr>Sku<wbr>Tier</a></span>
@@ -8327,18 +8327,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="publicipaddressskuresponse">Public<wbr>IPAddress<wbr>Sku<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="publicipaddressskuname_csharp">
-<a href="#publicipaddressskuname_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Sku<wbr>Name</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify public IP sku name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="publicipaddressskutier_csharp">
-<a href="#publicipaddressskutier_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Sku<wbr>Tier</a>
+        <span id="tier_csharp">
+<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -8347,18 +8347,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="publicipaddressskuname_go">
-<a href="#publicipaddressskuname_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Sku<wbr>Name</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify public IP sku name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="publicipaddressskutier_go">
-<a href="#publicipaddressskutier_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Sku<wbr>Tier</a>
+        <span id="tier_go">
+<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -8367,18 +8367,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="publicipaddressskuname_nodejs">
-<a href="#publicipaddressskuname_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress<wbr>Sku<wbr>Name</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify public IP sku name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="publicipaddressskutier_nodejs">
-<a href="#publicipaddressskutier_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress<wbr>Sku<wbr>Tier</a>
+        <span id="tier_nodejs">
+<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -8387,18 +8387,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="public_ip_address_sku_name_python">
-<a href="#public_ip_address_sku_name_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>sku_<wbr>name</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify public IP sku name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="public_ip_address_sku_tier_python">
-<a href="#public_ip_address_sku_tier_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>sku_<wbr>tier</a>
+        <span id="tier_python">
+<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
