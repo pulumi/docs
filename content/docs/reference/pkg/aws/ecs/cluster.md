@@ -11,6 +11,125 @@ meta_desc: "Documentation for the aws.ecs.Cluster resource with examples, input 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides an ECS cluster.
+## Example W/Log Configuration
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleKey = new aws.kms.Key("exampleKey", {
+    description: "example",
+    deletionWindowInDays: 7,
+});
+const exampleLogGroup = new aws.cloudwatch.LogGroup("exampleLogGroup", {});
+const test = new aws.ecs.Cluster("test", {configuration: {
+    executeCommandConfiguration: {
+        kmsKeyId: exampleKey.arn,
+        logging: "OVERRIDE",
+        logConfiguration: {
+            cloudWatchEncryptionEnabled: true,
+            cloudWatchLogGroupName: exampleLogGroup.name,
+        },
+    },
+}});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_key = aws.kms.Key("exampleKey",
+    description="example",
+    deletion_window_in_days=7)
+example_log_group = aws.cloudwatch.LogGroup("exampleLogGroup")
+test = aws.ecs.Cluster("test", configuration=aws.ecs.ClusterConfigurationArgs(
+    execute_command_configuration=aws.ecs.ClusterConfigurationExecuteCommandConfigurationArgs(
+        kms_key_id=example_key.arn,
+        logging="OVERRIDE",
+        log_configuration=aws.ecs.ClusterConfigurationExecuteCommandConfigurationLogConfigurationArgs(
+            cloud_watch_encryption_enabled=True,
+            cloud_watch_log_group_name=example_log_group.name,
+        ),
+    ),
+))
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleKey = new Aws.Kms.Key("exampleKey", new Aws.Kms.KeyArgs
+        {
+            Description = "example",
+            DeletionWindowInDays = 7,
+        });
+        var exampleLogGroup = new Aws.CloudWatch.LogGroup("exampleLogGroup", new Aws.CloudWatch.LogGroupArgs
+        {
+        });
+        var test = new Aws.Ecs.Cluster("test", new Aws.Ecs.ClusterArgs
+        {
+            Configuration = new Aws.Ecs.Inputs.ClusterConfigurationArgs
+            {
+                ExecuteCommandConfiguration = new Aws.Ecs.Inputs.ClusterConfigurationExecuteCommandConfigurationArgs
+                {
+                    KmsKeyId = exampleKey.Arn,
+                    Logging = "OVERRIDE",
+                    LogConfiguration = new Aws.Ecs.Inputs.ClusterConfigurationExecuteCommandConfigurationLogConfigurationArgs
+                    {
+                        CloudWatchEncryptionEnabled = true,
+                        CloudWatchLogGroupName = exampleLogGroup.Name,
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecs"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kms"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleKey, err := kms.NewKey(ctx, "exampleKey", &kms.KeyArgs{
+			Description:          pulumi.String("example"),
+			DeletionWindowInDays: pulumi.Int(7),
+		})
+		if err != nil {
+			return err
+		}
+		exampleLogGroup, err := cloudwatch.NewLogGroup(ctx, "exampleLogGroup", nil)
+		if err != nil {
+			return err
+		}
+		_, err = ecs.NewCluster(ctx, "test", &ecs.ClusterArgs{
+			Configuration: &ecs.ClusterConfigurationArgs{
+				ExecuteCommandConfiguration: &ecs.ClusterConfigurationExecuteCommandConfigurationArgs{
+					KmsKeyId: exampleKey.Arn,
+					Logging:  pulumi.String("OVERRIDE"),
+					LogConfiguration: &ecs.ClusterConfigurationExecuteCommandConfigurationLogConfigurationArgs{
+						CloudWatchEncryptionEnabled: pulumi.Bool(true),
+						CloudWatchLogGroupName:      exampleLogGroup.Name,
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 {{% examples %}}
 
@@ -140,6 +259,7 @@ const foo = new aws.ecs.Cluster("foo", {
 <span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">capacity_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+            <span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[ClusterConfigurationArgs]</span> = None<span class="p">,</span>
             <span class="nx">default_capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterDefaultCapacityProviderStrategyArgs]]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterSettingArgs]]</span> = None<span class="p">,</span>
@@ -283,6 +403,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="configuration_csharp">
+<a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconfiguration">Cluster<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The execute command configuration for the cluster. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="defaultcapacityproviderstrategies_csharp">
 <a href="#defaultcapacityproviderstrategies_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Capacity<wbr>Provider<wbr>Strategies</a>
 </span>
@@ -337,6 +466,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="configuration_go">
+<a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconfiguration">Cluster<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The execute command configuration for the cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultcapacityproviderstrategies_go">
@@ -395,6 +533,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="configuration_nodejs">
+<a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconfiguration">Cluster<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The execute command configuration for the cluster. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="defaultcapacityproviderstrategies_nodejs">
 <a href="#defaultcapacityproviderstrategies_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Capacity<wbr>Provider<wbr>Strategies</a>
 </span>
@@ -449,6 +596,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="configuration_python">
+<a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconfiguration">Cluster<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The execute command configuration for the cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_capacity_provider_strategies_python">
@@ -604,6 +760,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">capacity_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[ClusterConfigurationArgs]</span> = None<span class="p">,</span>
         <span class="nx">default_capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterDefaultCapacityProviderStrategyArgs]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterSettingArgs]]</span> = None<span class="p">,</span>
@@ -739,6 +896,15 @@ The following state arguments are supported:
     <dd>{{% md %}}List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_configuration_csharp">
+<a href="#state_configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconfiguration">Cluster<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The execute command configuration for the cluster. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_defaultcapacityproviderstrategies_csharp">
 <a href="#state_defaultcapacityproviderstrategies_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Capacity<wbr>Provider<wbr>Strategies</a>
 </span>
@@ -802,6 +968,15 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_configuration_go">
+<a href="#state_configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconfiguration">Cluster<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The execute command configuration for the cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultcapacityproviderstrategies_go">
@@ -869,6 +1044,15 @@ The following state arguments are supported:
     <dd>{{% md %}}List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_configuration_nodejs">
+<a href="#state_configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconfiguration">Cluster<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The execute command configuration for the cluster. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_defaultcapacityproviderstrategies_nodejs">
 <a href="#state_defaultcapacityproviderstrategies_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Capacity<wbr>Provider<wbr>Strategies</a>
 </span>
@@ -934,6 +1118,15 @@ The following state arguments are supported:
     <dd>{{% md %}}List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_configuration_python">
+<a href="#state_configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconfiguration">Cluster<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The execute command configuration for the cluster. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_default_capacity_provider_strategies_python">
 <a href="#state_default_capacity_provider_strategies_python" style="color: inherit; text-decoration: inherit;">default_<wbr>capacity_<wbr>provider_<wbr>strategies</a>
 </span>
@@ -986,6 +1179,384 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="clusterconfiguration">Cluster<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="executecommandconfiguration_csharp">
+<a href="#executecommandconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Execute<wbr>Command<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the execute command configuration. Detailed below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="executecommandconfiguration_go">
+<a href="#executecommandconfiguration_go" style="color: inherit; text-decoration: inherit;">Execute<wbr>Command<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the execute command configuration. Detailed below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="executecommandconfiguration_nodejs">
+<a href="#executecommandconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">execute<wbr>Command<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the execute command configuration. Detailed below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="execute_command_configuration_python">
+<a href="#execute_command_configuration_python" style="color: inherit; text-decoration: inherit;">execute_<wbr>command_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the execute command configuration. Detailed below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clusterconfigurationexecutecommandconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_csharp">
+<a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Key Management Service key ID to encrypt the data between the local client and the container.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logconfiguration_csharp">
+<a href="#logconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfigurationlogconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration<wbr>Log<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The log configuration for the results of the execute command actions Required when `logging` is `OVERRIDE`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logging_csharp">
+<a href="#logging_csharp" style="color: inherit; text-decoration: inherit;">Logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The log setting to use for redirecting logs for your execute command results. Valid values are `NONE`, `DEFAULT`, and `OVERRIDE`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_go">
+<a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Key Management Service key ID to encrypt the data between the local client and the container.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logconfiguration_go">
+<a href="#logconfiguration_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfigurationlogconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration<wbr>Log<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The log configuration for the results of the execute command actions Required when `logging` is `OVERRIDE`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logging_go">
+<a href="#logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The log setting to use for redirecting logs for your execute command results. Valid values are `NONE`, `DEFAULT`, and `OVERRIDE`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_nodejs">
+<a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Key Management Service key ID to encrypt the data between the local client and the container.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logconfiguration_nodejs">
+<a href="#logconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfigurationlogconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration<wbr>Log<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The log configuration for the results of the execute command actions Required when `logging` is `OVERRIDE`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logging_nodejs">
+<a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The log setting to use for redirecting logs for your execute command results. Valid values are `NONE`, `DEFAULT`, and `OVERRIDE`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_id_python">
+<a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS Key Management Service key ID to encrypt the data between the local client and the container.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="log_configuration_python">
+<a href="#log_configuration_python" style="color: inherit; text-decoration: inherit;">log_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfigurationlogconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration<wbr>Log<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The log configuration for the results of the execute command actions Required when `logging` is `OVERRIDE`. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logging_python">
+<a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The log setting to use for redirecting logs for your execute command results. Valid values are `NONE`, `DEFAULT`, and `OVERRIDE`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clusterconfigurationexecutecommandconfigurationlogconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration<wbr>Log<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cloudwatchencryptionenabled_csharp">
+<a href="#cloudwatchencryptionenabled_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Watch<wbr>Encryption<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cloudwatchloggroupname_csharp">
+<a href="#cloudwatchloggroupname_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Watch<wbr>Log<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the CloudWatch log group to send logs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3bucketencryptionenabled_csharp">
+<a href="#s3bucketencryptionenabled_csharp" style="color: inherit; text-decoration: inherit;">S3Bucket<wbr>Encryption<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to enable encryption on the logs sent to S3. If not specified, encryption will be disabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3bucketname_csharp">
+<a href="#s3bucketname_csharp" style="color: inherit; text-decoration: inherit;">S3Bucket<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the S3 bucket to send logs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3keyprefix_csharp">
+<a href="#s3keyprefix_csharp" style="color: inherit; text-decoration: inherit;">S3Key<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional folder in the S3 bucket to place logs in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cloudwatchencryptionenabled_go">
+<a href="#cloudwatchencryptionenabled_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Watch<wbr>Encryption<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cloudwatchloggroupname_go">
+<a href="#cloudwatchloggroupname_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Watch<wbr>Log<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the CloudWatch log group to send logs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3bucketencryptionenabled_go">
+<a href="#s3bucketencryptionenabled_go" style="color: inherit; text-decoration: inherit;">S3Bucket<wbr>Encryption<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to enable encryption on the logs sent to S3. If not specified, encryption will be disabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3bucketname_go">
+<a href="#s3bucketname_go" style="color: inherit; text-decoration: inherit;">S3Bucket<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the S3 bucket to send logs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3keyprefix_go">
+<a href="#s3keyprefix_go" style="color: inherit; text-decoration: inherit;">S3Key<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional folder in the S3 bucket to place logs in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cloudwatchencryptionenabled_nodejs">
+<a href="#cloudwatchencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Watch<wbr>Encryption<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cloudwatchloggroupname_nodejs">
+<a href="#cloudwatchloggroupname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Watch<wbr>Log<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the CloudWatch log group to send logs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3bucketencryptionenabled_nodejs">
+<a href="#s3bucketencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">s3Bucket<wbr>Encryption<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to enable encryption on the logs sent to S3. If not specified, encryption will be disabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3bucketname_nodejs">
+<a href="#s3bucketname_nodejs" style="color: inherit; text-decoration: inherit;">s3Bucket<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the S3 bucket to send logs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3keyprefix_nodejs">
+<a href="#s3keyprefix_nodejs" style="color: inherit; text-decoration: inherit;">s3Key<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional folder in the S3 bucket to place logs in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cloud_watch_encryption_enabled_python">
+<a href="#cloud_watch_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>watch_<wbr>encryption_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cloud_watch_log_group_name_python">
+<a href="#cloud_watch_log_group_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>watch_<wbr>log_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the CloudWatch log group to send logs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3_bucket_encryption_enabled_python">
+<a href="#s3_bucket_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket_<wbr>encryption_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to enable encryption on the logs sent to S3. If not specified, encryption will be disabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3_bucket_name_python">
+<a href="#s3_bucket_name_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the S3 bucket to send logs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3_key_prefix_python">
+<a href="#s3_key_prefix_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>key_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional folder in the S3 bucket to place logs in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="clusterdefaultcapacityproviderstrategy">Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy</h4>
 

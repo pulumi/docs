@@ -334,7 +334,7 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration. If you leave
-this blank, this provider will auto-generate a unique name.
+this blank, this provider will auto-generate a unique name. Conflicts with `name_prefix`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_csharp">
@@ -526,7 +526,7 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration. If you leave
-this blank, this provider will auto-generate a unique name.
+this blank, this provider will auto-generate a unique name. Conflicts with `name_prefix`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_go">
@@ -718,7 +718,7 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration. If you leave
-this blank, this provider will auto-generate a unique name.
+this blank, this provider will auto-generate a unique name. Conflicts with `name_prefix`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_nodejs">
@@ -910,7 +910,7 @@ with launched instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration. If you leave
-this blank, this provider will auto-generate a unique name.
+this blank, this provider will auto-generate a unique name. Conflicts with `name_prefix`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_prefix_python">
@@ -1348,7 +1348,7 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration. If you leave
-this blank, this provider will auto-generate a unique name.
+this blank, this provider will auto-generate a unique name. Conflicts with `name_prefix`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_csharp">
@@ -1549,7 +1549,7 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration. If you leave
-this blank, this provider will auto-generate a unique name.
+this blank, this provider will auto-generate a unique name. Conflicts with `name_prefix`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_go">
@@ -1750,7 +1750,7 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration. If you leave
-this blank, this provider will auto-generate a unique name.
+this blank, this provider will auto-generate a unique name. Conflicts with `name_prefix`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_nodejs">
@@ -1951,7 +1951,7 @@ with launched instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the launch configuration. If you leave
-this blank, this provider will auto-generate a unique name.
+this blank, this provider will auto-generate a unique name. Conflicts with `name_prefix`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_prefix_python">

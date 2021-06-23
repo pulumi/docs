@@ -28,6 +28,7 @@ Explore the resources and functions of the aws.servicecatalog module.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getconstraint" title="GetConstraint"><span class="symbol function"></span>GetConstraint</a></li>
+    <li><a href="getportfolio" title="GetPortfolio"><span class="symbol function"></span>GetPortfolio</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -39,6 +40,6 @@ Explore the resources and functions of the aws.servicecatalog module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.8.0</dd>
+	<dd>4.9.0</dd>
 </dl>
 

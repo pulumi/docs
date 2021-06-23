@@ -1189,7 +1189,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
+    <dd>{{% md %}}Set of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedcolumnnames_csharp">
@@ -1198,7 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
+    <dd>{{% md %}}Set of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wildcard_csharp">
@@ -1247,7 +1247,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
+    <dd>{{% md %}}Set of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedcolumnnames_go">
@@ -1256,7 +1256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
+    <dd>{{% md %}}Set of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wildcard_go">
@@ -1305,7 +1305,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
+    <dd>{{% md %}}Set of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedcolumnnames_nodejs">
@@ -1314,7 +1314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
+    <dd>{{% md %}}Set of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wildcard_nodejs">
@@ -1363,7 +1363,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
+    <dd>{{% md %}}Set of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excluded_column_names_python">
@@ -1372,7 +1372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
+    <dd>{{% md %}}Set of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wildcard_python">

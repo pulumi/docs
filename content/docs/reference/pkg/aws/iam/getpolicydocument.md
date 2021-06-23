@@ -1345,7 +1345,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of principal. Valid values include `AWS`, `Service`, `Federated`, and `CanonicalUser`.
+    <dd>{{% md %}}Type of principal. Valid values include `AWS`, `Service`, `Federated`, `CanonicalUser` and `*`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1367,7 +1367,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of principal. Valid values include `AWS`, `Service`, `Federated`, and `CanonicalUser`.
+    <dd>{{% md %}}Type of principal. Valid values include `AWS`, `Service`, `Federated`, `CanonicalUser` and `*`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1389,7 +1389,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of principal. Valid values include `AWS`, `Service`, `Federated`, and `CanonicalUser`.
+    <dd>{{% md %}}Type of principal. Valid values include `AWS`, `Service`, `Federated`, `CanonicalUser` and `*`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1411,7 +1411,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of principal. Valid values include `AWS`, `Service`, `Federated`, and `CanonicalUser`.
+    <dd>{{% md %}}Type of principal. Valid values include `AWS`, `Service`, `Federated`, `CanonicalUser` and `*`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1437,7 +1437,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of principal. Valid values include `AWS`, `Service`, `Federated`, and `CanonicalUser`.
+    <dd>{{% md %}}Type of principal. Valid values include `AWS`, `Service`, `Federated`, `CanonicalUser` and `*`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1459,7 +1459,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of principal. Valid values include `AWS`, `Service`, `Federated`, and `CanonicalUser`.
+    <dd>{{% md %}}Type of principal. Valid values include `AWS`, `Service`, `Federated`, `CanonicalUser` and `*`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1481,7 +1481,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of principal. Valid values include `AWS`, `Service`, `Federated`, and `CanonicalUser`.
+    <dd>{{% md %}}Type of principal. Valid values include `AWS`, `Service`, `Federated`, `CanonicalUser` and `*`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1503,7 +1503,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of principal. Valid values include `AWS`, `Service`, `Federated`, and `CanonicalUser`.
+    <dd>{{% md %}}Type of principal. Valid values include `AWS`, `Service`, `Federated`, `CanonicalUser` and `*`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

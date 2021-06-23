@@ -23,6 +23,7 @@ Explore the resources and functions of the aws.appmesh module.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getmesh" title="GetMesh"><span class="symbol function"></span>GetMesh</a></li>
+    <li><a href="getvirtualservice" title="GetVirtualService"><span class="symbol function"></span>GetVirtualService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -34,6 +35,6 @@ Explore the resources and functions of the aws.appmesh module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.8.0</dd>
+	<dd>4.9.0</dd>
 </dl>
 
