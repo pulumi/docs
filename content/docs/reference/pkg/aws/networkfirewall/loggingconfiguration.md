@@ -594,7 +594,7 @@ The LoggingConfiguration resource accepts the following [input]({{< relref "/doc
 <a href="#loggingconfiguration_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigurationloggingconfiguration">Logging<wbr>Configuration<wbr>Logging<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#loggingconfigurationloggingconfiguration">Logging<wbr>Configuration<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing how AWS Network Firewall performs logging for a firewall. See Logging Configuration below for details.
 {{% /md %}}</dd></dl>
@@ -864,7 +864,7 @@ The following state arguments are supported:
 <a href="#state_loggingconfiguration_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigurationloggingconfiguration">Logging<wbr>Configuration<wbr>Logging<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#loggingconfigurationloggingconfiguration">Logging<wbr>Configuration<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing how AWS Network Firewall performs logging for a firewall. See Logging Configuration below for details.
 {{% /md %}}</dd></dl>
@@ -932,7 +932,7 @@ The following state arguments are supported:
 <a href="#logdestinationconfigs_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Destination<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigurationloggingconfigurationlogdestinationconfig">List&lt;Logging<wbr>Configuration<wbr>Logging<wbr>Configuration<wbr>Log<wbr>Destination<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#loggingconfigurationloggingconfigurationlogdestinationconfig">List&lt;Logging<wbr>Configuration<wbr>Logging<wbr>Configuration<wbr>Log<wbr>Destination<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only two blocks can be specified; one for `FLOW` logs and one for `ALERT` logs.
 {{% /md %}}</dd></dl>
@@ -958,7 +958,7 @@ The following state arguments are supported:
 <a href="#logdestinationconfigs_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Destination<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigurationloggingconfigurationlogdestinationconfig">Logging<wbr>Configuration<wbr>Logging<wbr>Configuration<wbr>Log<wbr>Destination<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#loggingconfigurationloggingconfigurationlogdestinationconfig">Logging<wbr>Configuration<wbr>Logging<wbr>Configuration<wbr>Log<wbr>Destination<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only two blocks can be specified; one for `FLOW` logs and one for `ALERT` logs.
 {{% /md %}}</dd></dl>
@@ -971,7 +971,7 @@ The following state arguments are supported:
 <a href="#log_destination_configs_python" style="color: inherit; text-decoration: inherit;">log_<wbr>destination_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigurationloggingconfigurationlogdestinationconfig">Sequence[Logging<wbr>Configuration<wbr>Logging<wbr>Configuration<wbr>Log<wbr>Destination<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loggingconfigurationloggingconfigurationlogdestinationconfig">Sequence[Logging<wbr>Configuration<wbr>Logging<wbr>Configuration<wbr>Log<wbr>Destination<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only two blocks can be specified; one for `FLOW` logs and one for `ALERT` logs.
 {{% /md %}}</dd></dl>

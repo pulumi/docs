@@ -782,7 +782,7 @@ The MaintenanceWindowTask resource accepts the following [input]({{< relref "/do
 <a href="#targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktarget">[]Maintenance<wbr>Window<wbr>Task<wbr>Target</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktarget">[]Maintenance<wbr>Window<wbr>Task<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
 {{% /md %}}</dd><dt class="property-optional"
@@ -791,7 +791,7 @@ The MaintenanceWindowTask resource accepts the following [input]({{< relref "/do
 <a href="#taskinvocationparameters_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Invocation<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with parameters for task execution.
 {{% /md %}}</dd></dl>
@@ -1358,7 +1358,7 @@ The following state arguments are supported:
 <a href="#state_targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktarget">[]Maintenance<wbr>Window<wbr>Task<wbr>Target</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktarget">[]Maintenance<wbr>Window<wbr>Task<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1376,7 +1376,7 @@ The following state arguments are supported:
 <a href="#state_taskinvocationparameters_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Invocation<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with parameters for task execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1710,7 +1710,7 @@ The following state arguments are supported:
 <a href="#automationparameters_csharp" style="color: inherit; text-decoration: inherit;">Automation<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for an AUTOMATION task type. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1719,7 +1719,7 @@ The following state arguments are supported:
 <a href="#lambdaparameters_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Lambda<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Lambda<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for a LAMBDA task type. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1728,7 +1728,7 @@ The following state arguments are supported:
 <a href="#runcommandparameters_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Command<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for a RUN_COMMAND task type. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1737,7 +1737,7 @@ The following state arguments are supported:
 <a href="#stepfunctionsparameters_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Functions<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Step<wbr>Functions<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Step<wbr>Functions<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for a STEP_FUNCTIONS task type. Documented below.
 {{% /md %}}</dd></dl>
@@ -1790,7 +1790,7 @@ The following state arguments are supported:
 <a href="#automationparameters_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for an AUTOMATION task type. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1799,7 +1799,7 @@ The following state arguments are supported:
 <a href="#lambdaparameters_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Lambda<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Lambda<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for a LAMBDA task type. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1808,7 +1808,7 @@ The following state arguments are supported:
 <a href="#runcommandparameters_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Command<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for a RUN_COMMAND task type. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1817,7 +1817,7 @@ The following state arguments are supported:
 <a href="#stepfunctionsparameters_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Functions<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Step<wbr>Functions<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Step<wbr>Functions<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for a STEP_FUNCTIONS task type. Documented below.
 {{% /md %}}</dd></dl>
@@ -1830,7 +1830,7 @@ The following state arguments are supported:
 <a href="#automation_parameters_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for an AUTOMATION task type. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1839,7 +1839,7 @@ The following state arguments are supported:
 <a href="#lambda_parameters_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Lambda<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Lambda<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for a LAMBDA task type. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1848,7 +1848,7 @@ The following state arguments are supported:
 <a href="#run_command_parameters_python" style="color: inherit; text-decoration: inherit;">run_<wbr>command_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for a RUN_COMMAND task type. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1857,7 +1857,7 @@ The following state arguments are supported:
 <a href="#step_functions_parameters_python" style="color: inherit; text-decoration: inherit;">step_<wbr>functions_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Step<wbr>Functions<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Step<wbr>Functions<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for a STEP_FUNCTIONS task type. Documented below.
 {{% /md %}}</dd></dl>
@@ -1881,7 +1881,7 @@ The following state arguments are supported:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparametersparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparametersparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the RUN_COMMAND task execution. Documented below.
 {{% /md %}}</dd></dl>
@@ -1925,7 +1925,7 @@ The following state arguments are supported:
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparametersparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparametersparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the RUN_COMMAND task execution. Documented below.
 {{% /md %}}</dd></dl>
@@ -1947,7 +1947,7 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparametersparameter">Sequence[Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparametersparameter">Sequence[Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the RUN_COMMAND task execution. Documented below.
 {{% /md %}}</dd></dl>
@@ -2178,7 +2178,7 @@ The following state arguments are supported:
 <a href="#cloudwatchconfig_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameterscloudwatchconfig">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Cloudwatch<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameterscloudwatchconfig">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Cloudwatch<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for sending command output to CloudWatch Logs. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2223,7 +2223,7 @@ The following state arguments are supported:
 <a href="#notificationconfig_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Notification<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Notification<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configurations for sending notifications about command status changes on a per-instance basis. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2250,7 +2250,7 @@ The following state arguments are supported:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the RUN_COMMAND task execution. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2384,7 +2384,7 @@ The following state arguments are supported:
 <a href="#cloudwatchconfig_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameterscloudwatchconfig">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Cloudwatch<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameterscloudwatchconfig">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Cloudwatch<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for sending command output to CloudWatch Logs. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2429,7 +2429,7 @@ The following state arguments are supported:
 <a href="#notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Notification<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Notification<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configurations for sending notifications about command status changes on a per-instance basis. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2456,7 +2456,7 @@ The following state arguments are supported:
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the RUN_COMMAND task execution. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2487,7 +2487,7 @@ The following state arguments are supported:
 <a href="#cloudwatch_config_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameterscloudwatchconfig">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Cloudwatch<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameterscloudwatchconfig">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Cloudwatch<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for sending command output to CloudWatch Logs. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2532,7 +2532,7 @@ The following state arguments are supported:
 <a href="#notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Notification<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Notification<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configurations for sending notifications about command status changes on a per-instance basis. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2559,7 +2559,7 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersparameter">Sequence[Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersparameter">Sequence[Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the RUN_COMMAND task execution. Documented below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -317,7 +317,7 @@ The ByteMatchSet resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#bytematchtuples_go" style="color: inherit; text-decoration: inherit;">Byte<wbr>Match<wbr>Tuples</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bytematchsetbytematchtuple">[]Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple</a></span>
+        <span class="property-type"><a href="#bytematchsetbytematchtuple">[]Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -587,7 +587,7 @@ The following state arguments are supported:
 <a href="#state_bytematchtuples_go" style="color: inherit; text-decoration: inherit;">Byte<wbr>Match<wbr>Tuples</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bytematchsetbytematchtuple">[]Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple</a></span>
+        <span class="property-type"><a href="#bytematchsetbytematchtuple">[]Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -664,7 +664,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bytematchsetbytematchtuplefieldtomatch">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#bytematchsetbytematchtuplefieldtomatch">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}Settings for the ByteMatchTuple. FieldToMatch documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -744,7 +744,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bytematchsetbytematchtuplefieldtomatch">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#bytematchsetbytematchtuplefieldtomatch">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}Settings for the ByteMatchTuple. FieldToMatch documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -784,7 +784,7 @@ The following state arguments are supported:
 <a href="#field_to_match_python" style="color: inherit; text-decoration: inherit;">field_<wbr>to_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bytematchsetbytematchtuplefieldtomatch">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#bytematchsetbytematchtuplefieldtomatch">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}Settings for the ByteMatchTuple. FieldToMatch documented below.
 {{% /md %}}</dd><dt class="property-required"

@@ -760,7 +760,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#inputrecordtables_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Record<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransforminputrecordtable">[]MLTransform<wbr>Input<wbr>Record<wbr>Table</a></span>
+        <span class="property-type"><a href="#mltransforminputrecordtable">[]MLTransform<wbr>Input<wbr>Record<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS Glue table definitions used by the transform. see Input Record Tables.
 {{% /md %}}</dd><dt class="property-required"
@@ -769,7 +769,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransformparameters">MLTransform<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#mltransformparameters">MLTransform<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The algorithmic parameters that are specific to the transform type used. Conditionally dependent on the transform type. see Parameters.
 {{% /md %}}</dd><dt class="property-required"
@@ -1598,7 +1598,7 @@ The following state arguments are supported:
 <a href="#state_inputrecordtables_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Record<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransforminputrecordtable">[]MLTransform<wbr>Input<wbr>Record<wbr>Table</a></span>
+        <span class="property-type"><a href="#mltransforminputrecordtable">[]MLTransform<wbr>Input<wbr>Record<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS Glue table definitions used by the transform. see Input Record Tables.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1652,7 +1652,7 @@ The following state arguments are supported:
 <a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransformparameters">MLTransform<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#mltransformparameters">MLTransform<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The algorithmic parameters that are specific to the transform type used. Conditionally dependent on the transform type. see Parameters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1670,7 +1670,7 @@ The following state arguments are supported:
 <a href="#state_schemas_go" style="color: inherit; text-decoration: inherit;">Schemas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransformschema">[]MLTransform<wbr>Schema</a></span>
+        <span class="property-type"><a href="#mltransformschema">[]MLTransform<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The object that represents the schema that this transform accepts. see Schema.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2185,7 +2185,7 @@ The following state arguments are supported:
 <a href="#findmatchesparameters_csharp" style="color: inherit; text-decoration: inherit;">Find<wbr>Matches<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransformparametersfindmatchesparameters">MLTransform<wbr>Parameters<wbr>Find<wbr>Matches<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#mltransformparametersfindmatchesparameters">MLTransform<wbr>Parameters<wbr>Find<wbr>Matches<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the find matches algorithm. see Find Matches Parameters.
 {{% /md %}}</dd><dt class="property-required"
@@ -2229,7 +2229,7 @@ The following state arguments are supported:
 <a href="#findmatchesparameters_nodejs" style="color: inherit; text-decoration: inherit;">find<wbr>Matches<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransformparametersfindmatchesparameters">MLTransform<wbr>Parameters<wbr>Find<wbr>Matches<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#mltransformparametersfindmatchesparameters">MLTransform<wbr>Parameters<wbr>Find<wbr>Matches<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the find matches algorithm. see Find Matches Parameters.
 {{% /md %}}</dd><dt class="property-required"
@@ -2251,7 +2251,7 @@ The following state arguments are supported:
 <a href="#find_matches_parameters_python" style="color: inherit; text-decoration: inherit;">find_<wbr>matches_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransformparametersfindmatchesparameters">MLTransform<wbr>Parameters<wbr>Find<wbr>Matches<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#mltransformparametersfindmatchesparameters">MLTransform<wbr>Parameters<wbr>Find<wbr>Matches<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the find matches algorithm. see Find Matches Parameters.
 {{% /md %}}</dd><dt class="property-required"

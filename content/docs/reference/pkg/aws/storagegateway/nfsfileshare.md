@@ -492,7 +492,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#cacheattributes_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsfilesharecacheattributes">Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#nfsfilesharecacheattributes">Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Refresh cache information. see Cache Attributes for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -546,7 +546,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#nfsfilesharedefaults_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>File<wbr>Share<wbr>Defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults</a></span>
+        <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1465,7 +1465,7 @@ The following state arguments are supported:
 <a href="#state_cacheattributes_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsfilesharecacheattributes">Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#nfsfilesharecacheattributes">Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Refresh cache information. see Cache Attributes for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1555,7 +1555,7 @@ The following state arguments are supported:
 <a href="#state_nfsfilesharedefaults_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>File<wbr>Share<wbr>Defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults</a></span>
+        <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
 {{% /md %}}</dd><dt class="property-optional"

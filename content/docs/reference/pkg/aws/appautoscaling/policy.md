@@ -1025,7 +1025,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#stepscalingpolicyconfiguration_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Scaling<wbr>Policy<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1034,7 +1034,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#targettrackingscalingpolicyconfiguration_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
 {{% /md %}}</dd></dl>
@@ -1535,7 +1535,7 @@ The following state arguments are supported:
 <a href="#state_stepscalingpolicyconfiguration_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Scaling<wbr>Policy<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1544,7 +1544,7 @@ The following state arguments are supported:
 <a href="#state_targettrackingscalingpolicyconfiguration_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
 {{% /md %}}</dd></dl>
@@ -1756,7 +1756,7 @@ The following state arguments are supported:
 <a href="#stepadjustments_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Adjustments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepscalingpolicyconfigurationstepadjustment">List&lt;Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfigurationstepadjustment">List&lt;Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of adjustments that manage scaling. These have the following structure:
 {{% /md %}}</dd></dl>
@@ -1854,7 +1854,7 @@ The following state arguments are supported:
 <a href="#stepadjustments_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Adjustments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepscalingpolicyconfigurationstepadjustment">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfigurationstepadjustment">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment[]</a></span>
     </dt>
     <dd>{{% md %}}A set of adjustments that manage scaling. These have the following structure:
 {{% /md %}}</dd></dl>
@@ -1903,7 +1903,7 @@ The following state arguments are supported:
 <a href="#step_adjustments_python" style="color: inherit; text-decoration: inherit;">step_<wbr>adjustments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepscalingpolicyconfigurationstepadjustment">Sequence[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfigurationstepadjustment">Sequence[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment]</a></span>
     </dt>
     <dd>{{% md %}}A set of adjustments that manage scaling. These have the following structure:
 {{% /md %}}</dd></dl>
@@ -2053,7 +2053,7 @@ The following state arguments are supported:
 <a href="#customizedmetricspecification_csharp" style="color: inherit; text-decoration: inherit;">Customized<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A custom CloudWatch metric. Documentation can be found  at: [AWS Customized Metric Specification](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CustomizedMetricSpecification.html). See supported fields below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2071,7 +2071,7 @@ The following state arguments are supported:
 <a href="#predefinedmetricspecification_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. See supported fields below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2169,7 +2169,7 @@ The following state arguments are supported:
 <a href="#customizedmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">customized<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A custom CloudWatch metric. Documentation can be found  at: [AWS Customized Metric Specification](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CustomizedMetricSpecification.html). See supported fields below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2187,7 +2187,7 @@ The following state arguments are supported:
 <a href="#predefinedmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. See supported fields below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2227,7 +2227,7 @@ The following state arguments are supported:
 <a href="#customized_metric_specification_python" style="color: inherit; text-decoration: inherit;">customized_<wbr>metric_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A custom CloudWatch metric. Documentation can be found  at: [AWS Customized Metric Specification](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CustomizedMetricSpecification.html). See supported fields below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2245,7 +2245,7 @@ The following state arguments are supported:
 <a href="#predefined_metric_specification_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>metric_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. See supported fields below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2305,7 +2305,7 @@ The following state arguments are supported:
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">List&lt;Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">List&lt;Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with the dimensions of the metric if the metric was published with dimensions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2403,7 +2403,7 @@ The following state arguments are supported:
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with the dimensions of the metric if the metric was published with dimensions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2452,7 +2452,7 @@ The following state arguments are supported:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">Sequence[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">Sequence[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with the dimensions of the metric if the metric was published with dimensions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -391,7 +391,7 @@ The ParameterGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametergroupparameter">[]Parameter<wbr>Group<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#parametergroupparameter">[]Parameter<wbr>Group<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of ElastiCache parameters to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -864,7 +864,7 @@ The following state arguments are supported:
 <a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametergroupparameter">[]Parameter<wbr>Group<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#parametergroupparameter">[]Parameter<wbr>Group<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of ElastiCache parameters to apply.
 {{% /md %}}</dd><dt class="property-optional"

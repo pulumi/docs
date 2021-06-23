@@ -333,7 +333,7 @@ The EfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#ec2config_go" style="color: inherit; text-decoration: inherit;">Ec2Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config</a></span>
+        <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing EC2 configurations for connecting to the EFS File System.
 {{% /md %}}</dd><dt class="property-required"
@@ -810,7 +810,7 @@ The following state arguments are supported:
 <a href="#state_ec2config_go" style="color: inherit; text-decoration: inherit;">Ec2Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config</a></span>
+        <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing EC2 configurations for connecting to the EFS File System.
 {{% /md %}}</dd><dt class="property-optional"

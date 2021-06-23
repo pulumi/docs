@@ -409,7 +409,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#authenticationoptions_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointauthenticationoption">[]Endpoint<wbr>Authentication<wbr>Option</a></span>
+        <span class="property-type"><a href="#endpointauthenticationoption">[]Endpoint<wbr>Authentication<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the authentication method to be used to authenticate clients.
 {{% /md %}}</dd><dt class="property-required"
@@ -427,7 +427,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#connectionlogoptions_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Log<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options</a></span>
+        <span class="property-type"><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the client connection logging options.
 {{% /md %}}</dd><dt class="property-required"
@@ -1114,7 +1114,7 @@ The following state arguments are supported:
 <a href="#state_authenticationoptions_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointauthenticationoption">[]Endpoint<wbr>Authentication<wbr>Option</a></span>
+        <span class="property-type"><a href="#endpointauthenticationoption">[]Endpoint<wbr>Authentication<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the authentication method to be used to authenticate clients.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1132,7 +1132,7 @@ The following state arguments are supported:
 <a href="#state_connectionlogoptions_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Log<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options</a></span>
+        <span class="property-type"><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the client connection logging options.
 {{% /md %}}</dd><dt class="property-optional"

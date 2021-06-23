@@ -379,7 +379,7 @@ The BucketLifecycleConfiguration resource accepts the following [input]({{< relr
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleconfigurationrule">[]Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule</a></span>
+        <span class="property-type"><a href="#bucketlifecycleconfigurationrule">[]Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) containing lifecycle rules for the bucket.
 {{% /md %}}</dd></dl>
@@ -649,7 +649,7 @@ The following state arguments are supported:
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleconfigurationrule">[]Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule</a></span>
+        <span class="property-type"><a href="#bucketlifecycleconfigurationrule">[]Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) containing lifecycle rules for the bucket.
 {{% /md %}}</dd></dl>
@@ -726,7 +726,7 @@ The following state arguments are supported:
 <a href="#abortincompletemultipartupload_csharp" style="color: inherit; text-decoration: inherit;">Abort<wbr>Incomplete<wbr>Multipart<wbr>Upload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleconfigurationruleabortincompletemultipartupload">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketlifecycleconfigurationruleabortincompletemultipartupload">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Abort<wbr>Incomplete<wbr>Multipart<wbr>Upload</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings for abort incomplete multipart upload.
 {{% /md %}}</dd><dt class="property-optional"
@@ -735,7 +735,7 @@ The following state arguments are supported:
 <a href="#expiration_csharp" style="color: inherit; text-decoration: inherit;">Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleconfigurationruleexpiration">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketlifecycleconfigurationruleexpiration">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings for expiration of objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -744,7 +744,7 @@ The following state arguments are supported:
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleconfigurationrulefilter">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketlifecycleconfigurationrulefilter">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings for filtering.
 {{% /md %}}</dd><dt class="property-optional"
@@ -824,7 +824,7 @@ The following state arguments are supported:
 <a href="#abortincompletemultipartupload_nodejs" style="color: inherit; text-decoration: inherit;">abort<wbr>Incomplete<wbr>Multipart<wbr>Upload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleconfigurationruleabortincompletemultipartupload">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketlifecycleconfigurationruleabortincompletemultipartupload">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Abort<wbr>Incomplete<wbr>Multipart<wbr>Upload</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings for abort incomplete multipart upload.
 {{% /md %}}</dd><dt class="property-optional"
@@ -833,7 +833,7 @@ The following state arguments are supported:
 <a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleconfigurationruleexpiration">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketlifecycleconfigurationruleexpiration">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings for expiration of objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -842,7 +842,7 @@ The following state arguments are supported:
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleconfigurationrulefilter">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketlifecycleconfigurationrulefilter">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings for filtering.
 {{% /md %}}</dd><dt class="property-optional"
@@ -873,7 +873,7 @@ The following state arguments are supported:
 <a href="#abort_incomplete_multipart_upload_python" style="color: inherit; text-decoration: inherit;">abort_<wbr>incomplete_<wbr>multipart_<wbr>upload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleconfigurationruleabortincompletemultipartupload">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketlifecycleconfigurationruleabortincompletemultipartupload">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Abort<wbr>Incomplete<wbr>Multipart<wbr>Upload</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings for abort incomplete multipart upload.
 {{% /md %}}</dd><dt class="property-optional"
@@ -882,7 +882,7 @@ The following state arguments are supported:
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleconfigurationruleexpiration">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketlifecycleconfigurationruleexpiration">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings for expiration of objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -891,7 +891,7 @@ The following state arguments are supported:
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleconfigurationrulefilter">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketlifecycleconfigurationrulefilter">Bucket<wbr>Lifecycle<wbr>Configuration<wbr>Rule<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings for filtering.
 {{% /md %}}</dd><dt class="property-optional"

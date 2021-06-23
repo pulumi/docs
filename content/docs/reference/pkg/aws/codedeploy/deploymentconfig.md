@@ -652,7 +652,7 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
 <a href="#minimumhealthyhosts_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Healthy<wbr>Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></span>
+        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -661,7 +661,7 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
 <a href="#trafficroutingconfig_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Routing<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
 {{% /md %}}</dd></dl>
@@ -1051,7 +1051,7 @@ The following state arguments are supported:
 <a href="#state_minimumhealthyhosts_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Healthy<wbr>Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></span>
+        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1060,7 +1060,7 @@ The following state arguments are supported:
 <a href="#state_trafficroutingconfig_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Routing<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
 {{% /md %}}</dd></dl>
@@ -1284,7 +1284,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 <a href="#timebasedcanary_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Based<wbr>Canary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary</a></span>
     </dt>
     <dd>{{% md %}}The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1293,7 +1293,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 <a href="#timebasedlinear_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Based<wbr>Linear</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear</a></span>
     </dt>
     <dd>{{% md %}}The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1346,7 +1346,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 <a href="#timebasedcanary_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Based<wbr>Canary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary</a></span>
     </dt>
     <dd>{{% md %}}The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1355,7 +1355,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 <a href="#timebasedlinear_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Based<wbr>Linear</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear</a></span>
     </dt>
     <dd>{{% md %}}The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1377,7 +1377,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 <a href="#time_based_canary_python" style="color: inherit; text-decoration: inherit;">time_<wbr>based_<wbr>canary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary</a></span>
     </dt>
     <dd>{{% md %}}The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1386,7 +1386,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 <a href="#time_based_linear_python" style="color: inherit; text-decoration: inherit;">time_<wbr>based_<wbr>linear</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear</a></span>
     </dt>
     <dd>{{% md %}}The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
 {{% /md %}}</dd><dt class="property-optional"

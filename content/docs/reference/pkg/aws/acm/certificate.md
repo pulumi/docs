@@ -671,7 +671,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options</a></span>
+        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block used to set certificate options. Detailed below.
 * Importing an existing certificate
@@ -1438,7 +1438,7 @@ The following state arguments are supported:
 <a href="#state_domainvalidationoptions_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedomainvalidationoption">[]Certificate<wbr>Domain<wbr>Validation<wbr>Option</a></span>
+        <span class="property-type"><a href="#certificatedomainvalidationoption">[]Certificate<wbr>Domain<wbr>Validation<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of domain validation objects which can be used to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if `DNS`-validation was used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1447,7 +1447,7 @@ The following state arguments are supported:
 <a href="#state_options_go" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options</a></span>
+        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block used to set certificate options. Detailed below.
 * Importing an existing certificate

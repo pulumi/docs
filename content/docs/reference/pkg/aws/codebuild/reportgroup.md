@@ -442,7 +442,7 @@ The ReportGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#exportconfig_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportgroupexportconfig">Report<wbr>Group<wbr>Export<wbr>Config</a></span>
+        <span class="property-type"><a href="#reportgroupexportconfig">Report<wbr>Group<wbr>Export<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where the raw data of this Report Group is exported. see Export Config documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -979,7 +979,7 @@ The following state arguments are supported:
 <a href="#state_exportconfig_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportgroupexportconfig">Report<wbr>Group<wbr>Export<wbr>Config</a></span>
+        <span class="property-type"><a href="#reportgroupexportconfig">Report<wbr>Group<wbr>Export<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where the raw data of this Report Group is exported. see Export Config documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1200,7 +1200,7 @@ The following state arguments are supported:
 <a href="#s3destination_csharp" style="color: inherit; text-decoration: inherit;">S3Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportgroupexportconfigs3destination">Report<wbr>Group<wbr>Export<wbr>Config<wbr>S3Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportgroupexportconfigs3destination">Report<wbr>Group<wbr>Export<wbr>Config<wbr>S3Destination</a></span>
     </dt>
     <dd>{{% md %}}contains information about the S3 bucket where the run of a report is exported. see S3 Destination documented below.
 {{% /md %}}</dd></dl>
@@ -1244,7 +1244,7 @@ The following state arguments are supported:
 <a href="#s3destination_nodejs" style="color: inherit; text-decoration: inherit;">s3Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportgroupexportconfigs3destination">Report<wbr>Group<wbr>Export<wbr>Config<wbr>S3Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportgroupexportconfigs3destination">Report<wbr>Group<wbr>Export<wbr>Config<wbr>S3Destination</a></span>
     </dt>
     <dd>{{% md %}}contains information about the S3 bucket where the run of a report is exported. see S3 Destination documented below.
 {{% /md %}}</dd></dl>
@@ -1266,7 +1266,7 @@ The following state arguments are supported:
 <a href="#s3_destination_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportgroupexportconfigs3destination">Report<wbr>Group<wbr>Export<wbr>Config<wbr>S3Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportgroupexportconfigs3destination">Report<wbr>Group<wbr>Export<wbr>Config<wbr>S3Destination</a></span>
     </dt>
     <dd>{{% md %}}contains information about the S3 bucket where the run of a report is exported. see S3 Destination documented below.
 {{% /md %}}</dd></dl>

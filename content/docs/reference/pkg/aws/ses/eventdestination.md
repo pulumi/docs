@@ -636,7 +636,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#cloudwatchdestinations_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">[]Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination</a></span>
+        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">[]Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}CloudWatch destination for the events
 {{% /md %}}</dd><dt class="property-optional"
@@ -654,7 +654,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#kinesisdestination_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationkinesisdestination">Event<wbr>Destination<wbr>Kinesis<wbr>Destination</a></span>
+        <span class="property-type"><a href="#eventdestinationkinesisdestination">Event<wbr>Destination<wbr>Kinesis<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Send the events to a kinesis firehose destination
 {{% /md %}}</dd><dt class="property-optional"
@@ -672,7 +672,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#snsdestination_go" style="color: inherit; text-decoration: inherit;">Sns<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationsnsdestination">Event<wbr>Destination<wbr>Sns<wbr>Destination</a></span>
+        <span class="property-type"><a href="#eventdestinationsnsdestination">Event<wbr>Destination<wbr>Sns<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Send the events to an SNS Topic destination
 {{% /md %}}</dd></dl>
@@ -1128,7 +1128,7 @@ The following state arguments are supported:
 <a href="#state_cloudwatchdestinations_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">[]Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination</a></span>
+        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">[]Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}CloudWatch destination for the events
 {{% /md %}}</dd><dt class="property-optional"
@@ -1155,7 +1155,7 @@ The following state arguments are supported:
 <a href="#state_kinesisdestination_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationkinesisdestination">Event<wbr>Destination<wbr>Kinesis<wbr>Destination</a></span>
+        <span class="property-type"><a href="#eventdestinationkinesisdestination">Event<wbr>Destination<wbr>Kinesis<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Send the events to a kinesis firehose destination
 {{% /md %}}</dd><dt class="property-optional"
@@ -1182,7 +1182,7 @@ The following state arguments are supported:
 <a href="#state_snsdestination_go" style="color: inherit; text-decoration: inherit;">Sns<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationsnsdestination">Event<wbr>Destination<wbr>Sns<wbr>Destination</a></span>
+        <span class="property-type"><a href="#eventdestinationsnsdestination">Event<wbr>Destination<wbr>Sns<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Send the events to an SNS Topic destination
 {{% /md %}}</dd></dl>

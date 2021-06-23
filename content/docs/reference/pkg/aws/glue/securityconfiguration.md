@@ -324,7 +324,7 @@ The SecurityConfiguration resource accepts the following [input]({{< relref "/do
 <a href="#encryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfigurationencryptionconfiguration">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#securityconfigurationencryptionconfiguration">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -594,7 +594,7 @@ The following state arguments are supported:
 <a href="#state_encryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfigurationencryptionconfiguration">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#securityconfigurationencryptionconfiguration">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -671,7 +671,7 @@ The following state arguments are supported:
 <a href="#cloudwatchencryption_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfigurationencryptionconfigurationcloudwatchencryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Cloudwatch<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityconfigurationencryptionconfigurationcloudwatchencryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Cloudwatch<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -679,7 +679,7 @@ The following state arguments are supported:
 <a href="#jobbookmarksencryption_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Bookmarks<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfigurationencryptionconfigurationjobbookmarksencryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Job<wbr>Bookmarks<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityconfigurationencryptionconfigurationjobbookmarksencryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Job<wbr>Bookmarks<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -687,7 +687,7 @@ The following state arguments are supported:
 <a href="#s3encryption_csharp" style="color: inherit; text-decoration: inherit;">S3Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfigurationencryptionconfigurations3encryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>S3Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityconfigurationencryptionconfigurations3encryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>S3Encryption</a></span>
     </dt>
     <dd>{{% md %}}A `s3_encryption ` block as described below, which contains encryption configuration for S3 data.
 {{% /md %}}</dd></dl>
@@ -729,7 +729,7 @@ The following state arguments are supported:
 <a href="#cloudwatchencryption_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfigurationencryptionconfigurationcloudwatchencryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Cloudwatch<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityconfigurationencryptionconfigurationcloudwatchencryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Cloudwatch<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -737,7 +737,7 @@ The following state arguments are supported:
 <a href="#jobbookmarksencryption_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Bookmarks<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfigurationencryptionconfigurationjobbookmarksencryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Job<wbr>Bookmarks<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityconfigurationencryptionconfigurationjobbookmarksencryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Job<wbr>Bookmarks<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -745,7 +745,7 @@ The following state arguments are supported:
 <a href="#s3encryption_nodejs" style="color: inherit; text-decoration: inherit;">s3Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfigurationencryptionconfigurations3encryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>S3Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityconfigurationencryptionconfigurations3encryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>S3Encryption</a></span>
     </dt>
     <dd>{{% md %}}A `s3_encryption ` block as described below, which contains encryption configuration for S3 data.
 {{% /md %}}</dd></dl>
@@ -758,7 +758,7 @@ The following state arguments are supported:
 <a href="#cloudwatch_encryption_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfigurationencryptionconfigurationcloudwatchencryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Cloudwatch<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityconfigurationencryptionconfigurationcloudwatchencryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Cloudwatch<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -766,7 +766,7 @@ The following state arguments are supported:
 <a href="#job_bookmarks_encryption_python" style="color: inherit; text-decoration: inherit;">job_<wbr>bookmarks_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfigurationencryptionconfigurationjobbookmarksencryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Job<wbr>Bookmarks<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityconfigurationencryptionconfigurationjobbookmarksencryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Job<wbr>Bookmarks<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -774,7 +774,7 @@ The following state arguments are supported:
 <a href="#s3_encryption_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfigurationencryptionconfigurations3encryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>S3Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityconfigurationencryptionconfigurations3encryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>S3Encryption</a></span>
     </dt>
     <dd>{{% md %}}A `s3_encryption ` block as described below, which contains encryption configuration for S3 data.
 {{% /md %}}</dd></dl>

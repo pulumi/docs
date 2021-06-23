@@ -516,7 +516,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#abortstatement_go" style="color: inherit; text-decoration: inherit;">Abort<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botabortstatement">Bot<wbr>Abort<wbr>Statement</a></span>
+        <span class="property-type"><a href="#botabortstatement">Bot<wbr>Abort<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.
 {{% /md %}}</dd><dt class="property-required"
@@ -534,7 +534,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#intents_go" style="color: inherit; text-decoration: inherit;">Intents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botintent">[]Bot<wbr>Intent</a></span>
+        <span class="property-type"><a href="#botintent">[]Bot<wbr>Intent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -543,7 +543,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#clarificationprompt_go" style="color: inherit; text-decoration: inherit;">Clarification<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botclarificationprompt">Bot<wbr>Clarification<wbr>Prompt</a></span>
+        <span class="property-type"><a href="#botclarificationprompt">Bot<wbr>Clarification<wbr>Prompt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The message that Amazon Lex uses when it doesn't understand the user's request. Attributes are documented under prompt.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1567,7 +1567,7 @@ failure_reason response element.
 <a href="#state_abortstatement_go" style="color: inherit; text-decoration: inherit;">Abort<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botabortstatement">Bot<wbr>Abort<wbr>Statement</a></span>
+        <span class="property-type"><a href="#botabortstatement">Bot<wbr>Abort<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1603,7 +1603,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_clarificationprompt_go" style="color: inherit; text-decoration: inherit;">Clarification<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botclarificationprompt">Bot<wbr>Clarification<wbr>Prompt</a></span>
+        <span class="property-type"><a href="#botclarificationprompt">Bot<wbr>Clarification<wbr>Prompt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The message that Amazon Lex uses when it doesn't understand the user's request. Attributes are documented under prompt.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1675,7 +1675,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_intents_go" style="color: inherit; text-decoration: inherit;">Intents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botintent">[]Bot<wbr>Intent</a></span>
+        <span class="property-type"><a href="#botintent">[]Bot<wbr>Intent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2166,7 +2166,7 @@ failure_reason response element.
 <a href="#messages_csharp" style="color: inherit; text-decoration: inherit;">Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botabortstatementmessage">List&lt;Bot<wbr>Abort<wbr>Statement<wbr>Message<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#botabortstatementmessage">List&lt;Bot<wbr>Abort<wbr>Statement<wbr>Message&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type. You
 can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes
@@ -2218,7 +2218,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botabortstatementmessage">Bot<wbr>Abort<wbr>Statement<wbr>Message<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#botabortstatementmessage">Bot<wbr>Abort<wbr>Statement<wbr>Message[]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type. You
 can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes
@@ -2244,7 +2244,7 @@ slot values into the response card. For more information, see
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botabortstatementmessage">Sequence[Bot<wbr>Abort<wbr>Statement<wbr>Message<wbr>Args]</a></span>
+        <span class="property-type"><a href="#botabortstatementmessage">Sequence[Bot<wbr>Abort<wbr>Statement<wbr>Message]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type. You
 can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes
@@ -2411,7 +2411,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#messages_csharp" style="color: inherit; text-decoration: inherit;">Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botclarificationpromptmessage">List&lt;Bot<wbr>Clarification<wbr>Prompt<wbr>Message<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#botclarificationpromptmessage">List&lt;Bot<wbr>Clarification<wbr>Prompt<wbr>Message&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type. You
 can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes
@@ -2481,7 +2481,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botclarificationpromptmessage">Bot<wbr>Clarification<wbr>Prompt<wbr>Message<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#botclarificationpromptmessage">Bot<wbr>Clarification<wbr>Prompt<wbr>Message[]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type. You
 can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes
@@ -2516,7 +2516,7 @@ slot values into the response card. For more information, see
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botclarificationpromptmessage">Sequence[Bot<wbr>Clarification<wbr>Prompt<wbr>Message<wbr>Args]</a></span>
+        <span class="property-type"><a href="#botclarificationpromptmessage">Sequence[Bot<wbr>Clarification<wbr>Prompt<wbr>Message]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type. You
 can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes

@@ -431,7 +431,7 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
 <a href="#notification_go" style="color: inherit; text-decoration: inherit;">Notification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultnotification">Vault<wbr>Notification</a></span>
+        <span class="property-type"><a href="#vaultnotification">Vault<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The notifications for the Vault. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -926,7 +926,7 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
 <a href="#state_notification_go" style="color: inherit; text-decoration: inherit;">Notification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultnotification">Vault<wbr>Notification</a></span>
+        <span class="property-type"><a href="#vaultnotification">Vault<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The notifications for the Vault. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"

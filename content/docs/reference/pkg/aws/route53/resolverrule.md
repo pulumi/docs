@@ -514,7 +514,7 @@ This argument should only be specified for `FORWARD` type rules.
 <a href="#targetips_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverruletargetip">[]Resolver<wbr>Rule<wbr>Target<wbr>Ip</a></span>
+        <span class="property-type"><a href="#resolverruletargetip">[]Resolver<wbr>Rule<wbr>Target<wbr>Ip<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) indicating the IPs that you want Resolver to forward DNS queries to (documented below).
 This argument should only be specified for `FORWARD` type rules.
@@ -1148,7 +1148,7 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 <a href="#state_targetips_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverruletargetip">[]Resolver<wbr>Rule<wbr>Target<wbr>Ip</a></span>
+        <span class="property-type"><a href="#resolverruletargetip">[]Resolver<wbr>Rule<wbr>Target<wbr>Ip<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) indicating the IPs that you want Resolver to forward DNS queries to (documented below).
 This argument should only be specified for `FORWARD` type rules.

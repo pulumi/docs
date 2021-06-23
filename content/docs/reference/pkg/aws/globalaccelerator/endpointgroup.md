@@ -391,7 +391,7 @@ the provider will only perform drift detection of its value when present in a co
 <a href="#endpointconfigurations_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupendpointconfiguration">[]Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#endpointgroupendpointconfiguration">[]Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoint objects. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -446,7 +446,7 @@ the provider will only perform drift detection of its value when present in a co
 <a href="#portoverrides_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupportoverride">[]Endpoint<wbr>Group<wbr>Port<wbr>Override</a></span>
+        <span class="property-type"><a href="#endpointgroupportoverride">[]Endpoint<wbr>Group<wbr>Port<wbr>Override<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1007,7 +1007,7 @@ the provider will only perform drift detection of its value when present in a co
 <a href="#state_endpointconfigurations_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupendpointconfiguration">[]Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#endpointgroupendpointconfiguration">[]Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoint objects. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1071,7 +1071,7 @@ the provider will only perform drift detection of its value when present in a co
 <a href="#state_portoverrides_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupportoverride">[]Endpoint<wbr>Group<wbr>Port<wbr>Override</a></span>
+        <span class="property-type"><a href="#endpointgroupportoverride">[]Endpoint<wbr>Group<wbr>Port<wbr>Override<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"

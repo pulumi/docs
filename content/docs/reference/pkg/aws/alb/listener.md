@@ -1284,7 +1284,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#defaultactions_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultaction">[]Listener<wbr>Default<wbr>Action</a></span>
+        <span class="property-type"><a href="#listenerdefaultaction">[]Listener<wbr>Default<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for default actions. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1886,7 +1886,7 @@ The following state arguments are supported:
 <a href="#state_defaultactions_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultaction">[]Listener<wbr>Default<wbr>Action</a></span>
+        <span class="property-type"><a href="#listenerdefaultaction">[]Listener<wbr>Default<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for default actions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2161,7 +2161,7 @@ The following state arguments are supported:
 <a href="#authenticatecognito_csharp" style="color: inherit; text-decoration: inherit;">Authenticate<wbr>Cognito</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionauthenticatecognito">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionauthenticatecognito">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for using Amazon Cognito to authenticate users. Specify only when `type` is `authenticate-cognito`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2170,7 +2170,7 @@ The following state arguments are supported:
 <a href="#authenticateoidc_csharp" style="color: inherit; text-decoration: inherit;">Authenticate<wbr>Oidc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionauthenticateoidc">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionauthenticateoidc">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when `type` is `authenticate-oidc`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2179,7 +2179,7 @@ The following state arguments are supported:
 <a href="#fixedresponse_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionfixedresponse">Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionfixedresponse">Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2188,7 +2188,7 @@ The following state arguments are supported:
 <a href="#forward_csharp" style="color: inherit; text-decoration: inherit;">Forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionforward">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Args</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionforward">Listener<wbr>Default<wbr>Action<wbr>Forward</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2206,7 +2206,7 @@ The following state arguments are supported:
 <a href="#redirect_csharp" style="color: inherit; text-decoration: inherit;">Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionredirect">Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionredirect">Listener<wbr>Default<wbr>Action<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for creating a redirect action. Required if `type` is `redirect`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2313,7 +2313,7 @@ The following state arguments are supported:
 <a href="#authenticatecognito_nodejs" style="color: inherit; text-decoration: inherit;">authenticate<wbr>Cognito</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionauthenticatecognito">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionauthenticatecognito">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for using Amazon Cognito to authenticate users. Specify only when `type` is `authenticate-cognito`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2322,7 +2322,7 @@ The following state arguments are supported:
 <a href="#authenticateoidc_nodejs" style="color: inherit; text-decoration: inherit;">authenticate<wbr>Oidc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionauthenticateoidc">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionauthenticateoidc">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when `type` is `authenticate-oidc`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2331,7 +2331,7 @@ The following state arguments are supported:
 <a href="#fixedresponse_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionfixedresponse">Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionfixedresponse">Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2340,7 +2340,7 @@ The following state arguments are supported:
 <a href="#forward_nodejs" style="color: inherit; text-decoration: inherit;">forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionforward">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Args</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionforward">Listener<wbr>Default<wbr>Action<wbr>Forward</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2358,7 +2358,7 @@ The following state arguments are supported:
 <a href="#redirect_nodejs" style="color: inherit; text-decoration: inherit;">redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionredirect">Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionredirect">Listener<wbr>Default<wbr>Action<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for creating a redirect action. Required if `type` is `redirect`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2389,7 +2389,7 @@ The following state arguments are supported:
 <a href="#authenticate_cognito_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>cognito</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionauthenticatecognito">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionauthenticatecognito">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for using Amazon Cognito to authenticate users. Specify only when `type` is `authenticate-cognito`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2398,7 +2398,7 @@ The following state arguments are supported:
 <a href="#authenticate_oidc_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>oidc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionauthenticateoidc">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionauthenticateoidc">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when `type` is `authenticate-oidc`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2407,7 +2407,7 @@ The following state arguments are supported:
 <a href="#fixed_response_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionfixedresponse">Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionfixedresponse">Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2416,7 +2416,7 @@ The following state arguments are supported:
 <a href="#forward_python" style="color: inherit; text-decoration: inherit;">forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionforward">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Args</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionforward">Listener<wbr>Default<wbr>Action<wbr>Forward</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2434,7 +2434,7 @@ The following state arguments are supported:
 <a href="#redirect_python" style="color: inherit; text-decoration: inherit;">redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionredirect">Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionredirect">Listener<wbr>Default<wbr>Action<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for creating a redirect action. Required if `type` is `redirect`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3304,7 +3304,7 @@ The following state arguments are supported:
 <a href="#targetgroups_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionforwardtargetgroup">List&lt;Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionforwardtargetgroup">List&lt;Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of 1-5 target group blocks. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3313,7 +3313,7 @@ The following state arguments are supported:
 <a href="#stickiness_csharp" style="color: inherit; text-decoration: inherit;">Stickiness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionforwardstickiness">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionforwardstickiness">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for target group stickiness for the rule. Detailed below.
 {{% /md %}}</dd></dl>
@@ -3348,7 +3348,7 @@ The following state arguments are supported:
 <a href="#targetgroups_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionforwardtargetgroup">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionforwardtargetgroup">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}Set of 1-5 target group blocks. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3357,7 +3357,7 @@ The following state arguments are supported:
 <a href="#stickiness_nodejs" style="color: inherit; text-decoration: inherit;">stickiness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionforwardstickiness">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionforwardstickiness">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for target group stickiness for the rule. Detailed below.
 {{% /md %}}</dd></dl>
@@ -3370,7 +3370,7 @@ The following state arguments are supported:
 <a href="#target_groups_python" style="color: inherit; text-decoration: inherit;">target_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionforwardtargetgroup">Sequence[Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionforwardtargetgroup">Sequence[Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group]</a></span>
     </dt>
     <dd>{{% md %}}Set of 1-5 target group blocks. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3379,7 +3379,7 @@ The following state arguments are supported:
 <a href="#stickiness_python" style="color: inherit; text-decoration: inherit;">stickiness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionforwardstickiness">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionforwardstickiness">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for target group stickiness for the rule. Detailed below.
 {{% /md %}}</dd></dl>

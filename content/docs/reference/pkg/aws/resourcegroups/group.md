@@ -354,7 +354,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resourcequery_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupresourcequery">Group<wbr>Resource<wbr>Query</a></span>
+        <span class="property-type"><a href="#groupresourcequery">Group<wbr>Resource<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `resource_query` block. Resource queries are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -808,7 +808,7 @@ The following state arguments are supported:
 <a href="#state_resourcequery_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupresourcequery">Group<wbr>Resource<wbr>Query</a></span>
+        <span class="property-type"><a href="#groupresourcequery">Group<wbr>Resource<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `resource_query` block. Resource queries are documented below.
 {{% /md %}}</dd><dt class="property-optional"

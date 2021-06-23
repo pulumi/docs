@@ -564,7 +564,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#elasticsearchsettings_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings</a></span>
+        <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -582,7 +582,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kafkasettings_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings</a></span>
+        <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -591,7 +591,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kinesissettings_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings</a></span>
+        <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -609,7 +609,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#mongodbsettings_go" style="color: inherit; text-decoration: inherit;">Mongodb<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings</a></span>
+        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -636,7 +636,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#s3settings_go" style="color: inherit; text-decoration: inherit;">S3Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings</a></span>
+        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1519,7 +1519,7 @@ The following state arguments are supported:
 <a href="#state_elasticsearchsettings_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings</a></span>
+        <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1573,7 +1573,7 @@ The following state arguments are supported:
 <a href="#state_kafkasettings_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings</a></span>
+        <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1582,7 +1582,7 @@ The following state arguments are supported:
 <a href="#state_kinesissettings_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings</a></span>
+        <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1600,7 +1600,7 @@ The following state arguments are supported:
 <a href="#state_mongodbsettings_go" style="color: inherit; text-decoration: inherit;">Mongodb<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings</a></span>
+        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1627,7 +1627,7 @@ The following state arguments are supported:
 <a href="#state_s3settings_go" style="color: inherit; text-decoration: inherit;">S3Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings</a></span>
+        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

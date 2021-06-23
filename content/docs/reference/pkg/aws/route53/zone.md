@@ -604,7 +604,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#vpcs_go" style="color: inherit; text-decoration: inherit;">Vpcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonevpc">[]Zone<wbr>Vpc</a></span>
+        <span class="property-type"><a href="#zonevpc">[]Zone<wbr>Vpc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any `aws.route53.ZoneAssociation` resource specifying the same zone ID. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1166,7 +1166,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 <a href="#state_vpcs_go" style="color: inherit; text-decoration: inherit;">Vpcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonevpc">[]Zone<wbr>Vpc</a></span>
+        <span class="property-type"><a href="#zonevpc">[]Zone<wbr>Vpc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any `aws.route53.ZoneAssociation` resource specifying the same zone ID. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -877,7 +877,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#grants_go" style="color: inherit; text-decoration: inherit;">Grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectcopygrant">[]Object<wbr>Copy<wbr>Grant</a></span>
+        <span class="property-type"><a href="#objectcopygrant">[]Object<wbr>Copy<wbr>Grant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for header grants. Documented below. Conflicts with `acl`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2792,7 +2792,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_grants_go" style="color: inherit; text-decoration: inherit;">Grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectcopygrant">[]Object<wbr>Copy<wbr>Grant</a></span>
+        <span class="property-type"><a href="#objectcopygrant">[]Object<wbr>Copy<wbr>Grant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for header grants. Documented below. Conflicts with `acl`.
 {{% /md %}}</dd><dt class="property-optional"

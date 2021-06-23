@@ -683,7 +683,7 @@ The following state arguments are supported:
 <a href="#state_throttlesettings_go" style="color: inherit; text-decoration: inherit;">Throttle<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings</a></span>
+        <span class="property-type"><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account-Level throttle settings. See exported fields below.
 {{% /md %}}</dd></dl>

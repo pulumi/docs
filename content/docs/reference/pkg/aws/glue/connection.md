@@ -496,7 +496,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#physicalconnectionrequirements_go" style="color: inherit; text-decoration: inherit;">Physical<wbr>Connection<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionphysicalconnectionrequirements">Connection<wbr>Physical<wbr>Connection<wbr>Requirements</a></span>
+        <span class="property-type"><a href="#connectionphysicalconnectionrequirements">Connection<wbr>Physical<wbr>Connection<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
 {{% /md %}}</dd></dl>
@@ -1006,7 +1006,7 @@ The following state arguments are supported:
 <a href="#state_physicalconnectionrequirements_go" style="color: inherit; text-decoration: inherit;">Physical<wbr>Connection<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionphysicalconnectionrequirements">Connection<wbr>Physical<wbr>Connection<wbr>Requirements</a></span>
+        <span class="property-type"><a href="#connectionphysicalconnectionrequirements">Connection<wbr>Physical<wbr>Connection<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
 {{% /md %}}</dd></dl>

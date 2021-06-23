@@ -317,7 +317,7 @@ The IpSet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ipsetdescriptors_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Descriptors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsetipsetdescriptor">[]Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor</a></span>
+        <span class="property-type"><a href="#ipsetipsetdescriptor">[]Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -642,7 +642,7 @@ The following state arguments are supported:
 <a href="#state_ipsetdescriptors_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Descriptors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsetipsetdescriptor">[]Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor</a></span>
+        <span class="property-type"><a href="#ipsetipsetdescriptor">[]Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.
 {{% /md %}}</dd><dt class="property-optional"

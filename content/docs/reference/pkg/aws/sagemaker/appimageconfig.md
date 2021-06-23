@@ -421,7 +421,7 @@ The AppImageConfig resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kernelgatewayimageconfig_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Gateway<wbr>Image<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config</a></span>
+        <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app. See Kernel Gateway Image Config details below.
 {{% /md %}}</dd></dl>
@@ -746,7 +746,7 @@ The following state arguments are supported:
 <a href="#state_kernelgatewayimageconfig_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Gateway<wbr>Image<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config</a></span>
+        <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app. See Kernel Gateway Image Config details below.
 {{% /md %}}</dd></dl>
@@ -832,7 +832,7 @@ The following state arguments are supported:
 <a href="#kernelspec_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigkernelspec">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>Kernel<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigkernelspec">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>Kernel<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default branch for the Git repository. See Kernel Spec details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -841,7 +841,7 @@ The following state arguments are supported:
 <a href="#filesystemconfig_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigfilesystemconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigfilesystemconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>File<wbr>System<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The URL where the Git repository is located. See File System Config details below.
 {{% /md %}}</dd></dl>
@@ -876,7 +876,7 @@ The following state arguments are supported:
 <a href="#kernelspec_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigkernelspec">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>Kernel<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigkernelspec">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>Kernel<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default branch for the Git repository. See Kernel Spec details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -885,7 +885,7 @@ The following state arguments are supported:
 <a href="#filesystemconfig_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigfilesystemconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigfilesystemconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>File<wbr>System<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The URL where the Git repository is located. See File System Config details below.
 {{% /md %}}</dd></dl>
@@ -898,7 +898,7 @@ The following state arguments are supported:
 <a href="#kernel_spec_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigkernelspec">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>Kernel<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigkernelspec">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>Kernel<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default branch for the Git repository. See Kernel Spec details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -907,7 +907,7 @@ The following state arguments are supported:
 <a href="#file_system_config_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigfilesystemconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#appimageconfigkernelgatewayimageconfigfilesystemconfig">App<wbr>Image<wbr>Config<wbr>Kernel<wbr>Gateway<wbr>Image<wbr>Config<wbr>File<wbr>System<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The URL where the Git repository is located. See File System Config details below.
 {{% /md %}}</dd></dl>

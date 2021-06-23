@@ -450,7 +450,7 @@ parameter. Each parameter block supports fields documented below.
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remediationconfigurationparameter">[]Remediation<wbr>Configuration<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#remediationconfigurationparameter">[]Remediation<wbr>Configuration<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 parameter. Each parameter block supports fields documented below.
@@ -909,7 +909,7 @@ parameter. Each parameter block supports fields documented below.
 <a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remediationconfigurationparameter">[]Remediation<wbr>Configuration<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#remediationconfigurationparameter">[]Remediation<wbr>Configuration<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 parameter. Each parameter block supports fields documented below.

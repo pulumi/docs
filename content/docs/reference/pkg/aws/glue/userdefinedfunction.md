@@ -433,7 +433,7 @@ The UserDefinedFunction resource accepts the following [input]({{< relref "/docs
 <a href="#resourceuris_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userdefinedfunctionresourceuri">[]User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Uri</a></span>
+        <span class="property-type"><a href="#userdefinedfunctionresourceuri">[]User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Uri<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration block for Resource URIs. See resource uris below for more details.
 {{% /md %}}</dd></dl>
@@ -986,7 +986,7 @@ The following state arguments are supported:
 <a href="#state_resourceuris_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userdefinedfunctionresourceuri">[]User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Uri</a></span>
+        <span class="property-type"><a href="#userdefinedfunctionresourceuri">[]User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Uri<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration block for Resource URIs. See resource uris below for more details.
 {{% /md %}}</dd></dl>

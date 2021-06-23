@@ -404,7 +404,7 @@ The ResourceDataSync resource accepts the following [input]({{< relref "/docs/in
 <a href="#s3destination_go" style="color: inherit; text-decoration: inherit;">S3Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcedatasyncs3destination">Resource<wbr>Data<wbr>Sync<wbr>S3Destination</a></span>
+        <span class="property-type"><a href="#resourcedatasyncs3destination">Resource<wbr>Data<wbr>Sync<wbr>S3Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Amazon S3 configuration details for the sync.
 {{% /md %}}</dd><dt class="property-optional"
@@ -683,7 +683,7 @@ The following state arguments are supported:
 <a href="#state_s3destination_go" style="color: inherit; text-decoration: inherit;">S3Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcedatasyncs3destination">Resource<wbr>Data<wbr>Sync<wbr>S3Destination</a></span>
+        <span class="property-type"><a href="#resourcedatasyncs3destination">Resource<wbr>Data<wbr>Sync<wbr>S3Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Amazon S3 configuration details for the sync.
 {{% /md %}}</dd></dl>

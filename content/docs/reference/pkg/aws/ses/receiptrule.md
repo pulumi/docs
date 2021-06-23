@@ -476,7 +476,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#addheaderactions_go" style="color: inherit; text-decoration: inherit;">Add<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleaddheaderaction">[]Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action</a></span>
+        <span class="property-type"><a href="#receiptruleaddheaderaction">[]Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -494,7 +494,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#bounceactions_go" style="color: inherit; text-decoration: inherit;">Bounce<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulebounceaction">[]Receipt<wbr>Rule<wbr>Bounce<wbr>Action</a></span>
+        <span class="property-type"><a href="#receiptrulebounceaction">[]Receipt<wbr>Rule<wbr>Bounce<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -512,7 +512,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#lambdaactions_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulelambdaaction">[]Receipt<wbr>Rule<wbr>Lambda<wbr>Action</a></span>
+        <span class="property-type"><a href="#receiptrulelambdaaction">[]Receipt<wbr>Rule<wbr>Lambda<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -539,7 +539,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#s3actions_go" style="color: inherit; text-decoration: inherit;">S3Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrules3action">[]Receipt<wbr>Rule<wbr>S3Action</a></span>
+        <span class="property-type"><a href="#receiptrules3action">[]Receipt<wbr>Rule<wbr>S3Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -557,7 +557,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#snsactions_go" style="color: inherit; text-decoration: inherit;">Sns<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulesnsaction">[]Receipt<wbr>Rule<wbr>Sns<wbr>Action</a></span>
+        <span class="property-type"><a href="#receiptrulesnsaction">[]Receipt<wbr>Rule<wbr>Sns<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -566,7 +566,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#stopactions_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulestopaction">[]Receipt<wbr>Rule<wbr>Stop<wbr>Action</a></span>
+        <span class="property-type"><a href="#receiptrulestopaction">[]Receipt<wbr>Rule<wbr>Stop<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -584,7 +584,7 @@ The ReceiptRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#workmailactions_go" style="color: inherit; text-decoration: inherit;">Workmail<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleworkmailaction">[]Receipt<wbr>Rule<wbr>Workmail<wbr>Action</a></span>
+        <span class="property-type"><a href="#receiptruleworkmailaction">[]Receipt<wbr>Rule<wbr>Workmail<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
 {{% /md %}}</dd></dl>
@@ -1227,7 +1227,7 @@ The following state arguments are supported:
 <a href="#state_addheaderactions_go" style="color: inherit; text-decoration: inherit;">Add<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleaddheaderaction">[]Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action</a></span>
+        <span class="property-type"><a href="#receiptruleaddheaderaction">[]Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1254,7 +1254,7 @@ The following state arguments are supported:
 <a href="#state_bounceactions_go" style="color: inherit; text-decoration: inherit;">Bounce<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulebounceaction">[]Receipt<wbr>Rule<wbr>Bounce<wbr>Action</a></span>
+        <span class="property-type"><a href="#receiptrulebounceaction">[]Receipt<wbr>Rule<wbr>Bounce<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1272,7 +1272,7 @@ The following state arguments are supported:
 <a href="#state_lambdaactions_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulelambdaaction">[]Receipt<wbr>Rule<wbr>Lambda<wbr>Action</a></span>
+        <span class="property-type"><a href="#receiptrulelambdaaction">[]Receipt<wbr>Rule<wbr>Lambda<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1308,7 +1308,7 @@ The following state arguments are supported:
 <a href="#state_s3actions_go" style="color: inherit; text-decoration: inherit;">S3Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrules3action">[]Receipt<wbr>Rule<wbr>S3Action</a></span>
+        <span class="property-type"><a href="#receiptrules3action">[]Receipt<wbr>Rule<wbr>S3Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1326,7 +1326,7 @@ The following state arguments are supported:
 <a href="#state_snsactions_go" style="color: inherit; text-decoration: inherit;">Sns<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulesnsaction">[]Receipt<wbr>Rule<wbr>Sns<wbr>Action</a></span>
+        <span class="property-type"><a href="#receiptrulesnsaction">[]Receipt<wbr>Rule<wbr>Sns<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1335,7 +1335,7 @@ The following state arguments are supported:
 <a href="#state_stopactions_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulestopaction">[]Receipt<wbr>Rule<wbr>Stop<wbr>Action</a></span>
+        <span class="property-type"><a href="#receiptrulestopaction">[]Receipt<wbr>Rule<wbr>Stop<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1353,7 +1353,7 @@ The following state arguments are supported:
 <a href="#state_workmailactions_go" style="color: inherit; text-decoration: inherit;">Workmail<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleworkmailaction">[]Receipt<wbr>Rule<wbr>Workmail<wbr>Action</a></span>
+        <span class="property-type"><a href="#receiptruleworkmailaction">[]Receipt<wbr>Rule<wbr>Workmail<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
 {{% /md %}}</dd></dl>

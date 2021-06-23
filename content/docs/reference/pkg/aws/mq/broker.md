@@ -637,7 +637,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokeruser">[]Broker<wbr>User</a></span>
+        <span class="property-type"><a href="#brokeruser">[]Broker<wbr>User<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for broker users. For `engine_type` of `RabbitMQ`, Amazon MQ does not return broker users preventing this resource from making user updates and drift detection. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -673,7 +673,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for broker configuration. Applies to `engine_type` of `ActiveMQ` only. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -691,7 +691,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#encryptionoptions_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options</a></span>
+        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -700,7 +700,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#ldapservermetadata_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Server<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerldapservermetadata">Broker<wbr>Ldap<wbr>Server<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#brokerldapservermetadata">Broker<wbr>Ldap<wbr>Server<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the LDAP server used to authenticate and authorize connections to the broker. Not supported for `engine_type` `RabbitMQ`. Detailed below. (Currently, AWS may not process changes to LDAP server metadata.)
 {{% /md %}}</dd><dt class="property-optional"
@@ -709,7 +709,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs</a></span>
+        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the logging configuration of the broker. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -718,7 +718,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#maintenancewindowstarttime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
+        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the maintenance window start time. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1729,7 +1729,7 @@ The following state arguments are supported:
 <a href="#state_configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for broker configuration. Applies to `engine_type` of `ActiveMQ` only. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1747,7 +1747,7 @@ The following state arguments are supported:
 <a href="#state_encryptionoptions_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options</a></span>
+        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1783,7 +1783,7 @@ The following state arguments are supported:
 <a href="#state_instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerinstance">[]Broker<wbr>Instance</a></span>
+        <span class="property-type"><a href="#brokerinstance">[]Broker<wbr>Instance<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of information about allocated brokers (both active & standby).
 * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
@@ -1803,7 +1803,7 @@ The following state arguments are supported:
 <a href="#state_ldapservermetadata_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Server<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerldapservermetadata">Broker<wbr>Ldap<wbr>Server<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#brokerldapservermetadata">Broker<wbr>Ldap<wbr>Server<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the LDAP server used to authenticate and authorize connections to the broker. Not supported for `engine_type` `RabbitMQ`. Detailed below. (Currently, AWS may not process changes to LDAP server metadata.)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1812,7 +1812,7 @@ The following state arguments are supported:
 <a href="#state_logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs</a></span>
+        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the logging configuration of the broker. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1821,7 +1821,7 @@ The following state arguments are supported:
 <a href="#state_maintenancewindowstarttime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
+        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the maintenance window start time. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1884,7 +1884,7 @@ The following state arguments are supported:
 <a href="#state_users_go" style="color: inherit; text-decoration: inherit;">Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokeruser">[]Broker<wbr>User</a></span>
+        <span class="property-type"><a href="#brokeruser">[]Broker<wbr>User<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for broker users. For `engine_type` of `RabbitMQ`, Amazon MQ does not return broker users preventing this resource from making user updates and drift detection. Detailed below.
 {{% /md %}}</dd></dl>

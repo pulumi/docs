@@ -747,7 +747,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
 <a href="#retrystrategy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
@@ -775,7 +775,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
 {{% /md %}}</dd></dl>
@@ -1413,7 +1413,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
 <a href="#state_retrystrategy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
@@ -1450,7 +1450,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 <a href="#state_timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1720,7 +1720,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 <a href="#evaluateonexits_csharp" style="color: inherit; text-decoration: inherit;">Evaluate<wbr>On<wbr>Exits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitionretrystrategyevaluateonexit">List&lt;Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Evaluate<wbr>On<wbr>Exit<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategyevaluateonexit">List&lt;Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Evaluate<wbr>On<wbr>Exit&gt;</a></span>
     </dt>
     <dd>{{% md %}}The evaluate on exit conditions under which the job should be retried or failed. If this parameter is specified, then the `attempts` parameter must also be specified. You may specify up to 5 configuration blocks.
 {{% /md %}}</dd></dl>
@@ -1764,7 +1764,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 <a href="#evaluateonexits_nodejs" style="color: inherit; text-decoration: inherit;">evaluate<wbr>On<wbr>Exits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitionretrystrategyevaluateonexit">Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Evaluate<wbr>On<wbr>Exit<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategyevaluateonexit">Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Evaluate<wbr>On<wbr>Exit[]</a></span>
     </dt>
     <dd>{{% md %}}The evaluate on exit conditions under which the job should be retried or failed. If this parameter is specified, then the `attempts` parameter must also be specified. You may specify up to 5 configuration blocks.
 {{% /md %}}</dd></dl>
@@ -1786,7 +1786,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 <a href="#evaluate_on_exits_python" style="color: inherit; text-decoration: inherit;">evaluate_<wbr>on_<wbr>exits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitionretrystrategyevaluateonexit">Sequence[Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Evaluate<wbr>On<wbr>Exit<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategyevaluateonexit">Sequence[Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Evaluate<wbr>On<wbr>Exit]</a></span>
     </dt>
     <dd>{{% md %}}The evaluate on exit conditions under which the job should be retried or failed. If this parameter is specified, then the `attempts` parameter must also be specified. You may specify up to 5 configuration blocks.
 {{% /md %}}</dd></dl>

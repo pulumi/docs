@@ -832,7 +832,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#smbactivedirectorysettings_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Active<wbr>Directory<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings</a></span>
+        <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1933,7 +1933,7 @@ The following state arguments are supported:
 <a href="#state_gatewaynetworkinterfaces_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaygatewaynetworkinterface">[]Gateway<wbr>Gateway<wbr>Network<wbr>Interface</a></span>
+        <span class="property-type"><a href="#gatewaygatewaynetworkinterface">[]Gateway<wbr>Gateway<wbr>Network<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1987,7 +1987,7 @@ The following state arguments are supported:
 <a href="#state_smbactivedirectorysettings_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Active<wbr>Directory<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings</a></span>
+        <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 {{% /md %}}</dd><dt class="property-optional"

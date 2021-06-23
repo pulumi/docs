@@ -1666,7 +1666,7 @@ Defaults to `false`.
 <a href="#state_dnsentries_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointdnsentry">[]Vpc<wbr>Endpoint<wbr>Dns<wbr>Entry</a></span>
+        <span class="property-type"><a href="#vpcendpointdnsentry">[]Vpc<wbr>Endpoint<wbr>Dns<wbr>Entry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
 {{% /md %}}</dd><dt class="property-optional"

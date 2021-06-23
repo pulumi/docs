@@ -1210,7 +1210,7 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#inlinepolicies_go" style="color: inherit; text-decoration: inherit;">Inline<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roleinlinepolicy">[]Role<wbr>Inline<wbr>Policy</a></span>
+        <span class="property-type"><a href="#roleinlinepolicy">[]Role<wbr>Inline<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. Defined below. If no blocks are configured, the provider will ignore any managing any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2006,7 +2006,7 @@ The following state arguments are supported:
 <a href="#state_inlinepolicies_go" style="color: inherit; text-decoration: inherit;">Inline<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roleinlinepolicy">[]Role<wbr>Inline<wbr>Policy</a></span>
+        <span class="property-type"><a href="#roleinlinepolicy">[]Role<wbr>Inline<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. Defined below. If no blocks are configured, the provider will ignore any managing any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies.
 {{% /md %}}</dd><dt class="property-optional"

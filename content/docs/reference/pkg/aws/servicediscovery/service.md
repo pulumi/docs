@@ -439,7 +439,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dnsconfig_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicednsconfig">Service<wbr>Dns<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicednsconfig">Service<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -448,7 +448,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#healthcheckconfig_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehealthcheckconfig">Service<wbr>Health<wbr>Check<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicehealthcheckconfig">Service<wbr>Health<wbr>Check<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -457,7 +457,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#healthcheckcustomconfig_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Custom<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehealthcheckcustomconfig">Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicehealthcheckcustomconfig">Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains settings for ECS managed health checks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -986,7 +986,7 @@ The following state arguments are supported:
 <a href="#state_dnsconfig_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicednsconfig">Service<wbr>Dns<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicednsconfig">Service<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -995,7 +995,7 @@ The following state arguments are supported:
 <a href="#state_healthcheckconfig_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehealthcheckconfig">Service<wbr>Health<wbr>Check<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicehealthcheckconfig">Service<wbr>Health<wbr>Check<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1004,7 +1004,7 @@ The following state arguments are supported:
 <a href="#state_healthcheckcustomconfig_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Custom<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehealthcheckcustomconfig">Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicehealthcheckcustomconfig">Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A complex type that contains settings for ECS managed health checks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1234,7 +1234,7 @@ The following state arguments are supported:
 <a href="#dnsrecords_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicednsconfigdnsrecord">List&lt;Service<wbr>Dns<wbr>Config<wbr>Dns<wbr>Record<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicednsconfigdnsrecord">List&lt;Service<wbr>Dns<wbr>Config<wbr>Dns<wbr>Record&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array that contains one DnsRecord object for each resource record set.
 {{% /md %}}</dd><dt class="property-required"
@@ -1296,7 +1296,7 @@ The following state arguments are supported:
 <a href="#dnsrecords_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicednsconfigdnsrecord">Service<wbr>Dns<wbr>Config<wbr>Dns<wbr>Record<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicednsconfigdnsrecord">Service<wbr>Dns<wbr>Config<wbr>Dns<wbr>Record[]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains one DnsRecord object for each resource record set.
 {{% /md %}}</dd><dt class="property-required"
@@ -1327,7 +1327,7 @@ The following state arguments are supported:
 <a href="#dns_records_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicednsconfigdnsrecord">Sequence[Service<wbr>Dns<wbr>Config<wbr>Dns<wbr>Record<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicednsconfigdnsrecord">Sequence[Service<wbr>Dns<wbr>Config<wbr>Dns<wbr>Record]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains one DnsRecord object for each resource record set.
 {{% /md %}}</dd><dt class="property-required"

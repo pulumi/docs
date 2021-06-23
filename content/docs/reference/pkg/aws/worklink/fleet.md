@@ -357,7 +357,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#identityprovider_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider</a></span>
+        <span class="property-type"><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -375,7 +375,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetnetwork">Fleet<wbr>Network</a></span>
+        <span class="property-type"><a href="#fleetnetwork">Fleet<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the company network configuration for the fleet. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1023,7 +1023,7 @@ The following state arguments are supported:
 <a href="#state_identityprovider_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider</a></span>
+        <span class="property-type"><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1050,7 +1050,7 @@ The following state arguments are supported:
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetnetwork">Fleet<wbr>Network</a></span>
+        <span class="property-type"><a href="#fleetnetwork">Fleet<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the company network configuration for the fleet. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"

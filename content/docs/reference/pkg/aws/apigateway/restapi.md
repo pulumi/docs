@@ -330,7 +330,7 @@ The RestApi resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#endpointconfiguration_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restapiendpointconfiguration">Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#restapiendpointconfiguration">Rest<wbr>Api<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining API endpoint configuration including endpoint type. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1182,7 +1182,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
 <a href="#state_endpointconfiguration_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restapiendpointconfiguration">Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#restapiendpointconfiguration">Rest<wbr>Api<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining API endpoint configuration including endpoint type. Defined below.
 {{% /md %}}</dd><dt class="property-optional"

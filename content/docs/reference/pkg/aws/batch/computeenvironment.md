@@ -779,7 +779,7 @@ The ComputeEnvironment resource accepts the following [input]({{< relref "/docs/
 <a href="#computeresources_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeenvironmentcomputeresources">Compute<wbr>Environment<wbr>Compute<wbr>Resources</a></span>
+        <span class="property-type"><a href="#computeenvironmentcomputeresources">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1455,7 +1455,7 @@ The following state arguments are supported:
 <a href="#state_computeresources_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeenvironmentcomputeresources">Compute<wbr>Environment<wbr>Compute<wbr>Resources</a></span>
+        <span class="property-type"><a href="#computeenvironmentcomputeresources">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1874,7 +1874,7 @@ The following state arguments are supported:
 <a href="#launchtemplate_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeenvironmentcomputeresourceslaunchtemplate">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeenvironmentcomputeresourceslaunchtemplate">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}The launch template to use for your compute resources. See details below. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2152,7 +2152,7 @@ The following state arguments are supported:
 <a href="#launchtemplate_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeenvironmentcomputeresourceslaunchtemplate">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeenvironmentcomputeresourceslaunchtemplate">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}The launch template to use for your compute resources. See details below. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2291,7 +2291,7 @@ The following state arguments are supported:
 <a href="#launch_template_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeenvironmentcomputeresourceslaunchtemplate">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeenvironmentcomputeresourceslaunchtemplate">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}The launch template to use for your compute resources. See details below. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"

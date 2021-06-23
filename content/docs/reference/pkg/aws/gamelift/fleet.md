@@ -455,7 +455,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ec2inboundpermissions_go" style="color: inherit; text-decoration: inherit;">Ec2Inbound<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetec2inboundpermission">[]Fleet<wbr>Ec2Inbound<wbr>Permission</a></span>
+        <span class="property-type"><a href="#fleetec2inboundpermission">[]Fleet<wbr>Ec2Inbound<wbr>Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -509,7 +509,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resourcecreationlimitpolicy_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Creation<wbr>Limit<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy</a></span>
+        <span class="property-type"><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -518,7 +518,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#runtimeconfiguration_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instructions for launching server processes on each instance in the fleet. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1265,7 +1265,7 @@ The following state arguments are supported:
 <a href="#state_ec2inboundpermissions_go" style="color: inherit; text-decoration: inherit;">Ec2Inbound<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetec2inboundpermission">[]Fleet<wbr>Ec2Inbound<wbr>Permission</a></span>
+        <span class="property-type"><a href="#fleetec2inboundpermission">[]Fleet<wbr>Ec2Inbound<wbr>Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1345,7 +1345,7 @@ The following state arguments are supported:
 <a href="#state_resourcecreationlimitpolicy_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Creation<wbr>Limit<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy</a></span>
+        <span class="property-type"><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1354,7 +1354,7 @@ The following state arguments are supported:
 <a href="#state_runtimeconfiguration_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instructions for launching server processes on each instance in the fleet. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1960,7 +1960,7 @@ The following state arguments are supported:
 <a href="#serverprocesses_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Processes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetruntimeconfigurationserverprocess">List&lt;Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#fleetruntimeconfigurationserverprocess">List&lt;Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of server process configurations that describe which server processes to run on each instance in a fleet. See below.
 {{% /md %}}</dd></dl>
@@ -2022,7 +2022,7 @@ The following state arguments are supported:
 <a href="#serverprocesses_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Processes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetruntimeconfigurationserverprocess">Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#fleetruntimeconfigurationserverprocess">Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of server process configurations that describe which server processes to run on each instance in a fleet. See below.
 {{% /md %}}</dd></dl>
@@ -2053,7 +2053,7 @@ The following state arguments are supported:
 <a href="#server_processes_python" style="color: inherit; text-decoration: inherit;">server_<wbr>processes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetruntimeconfigurationserverprocess">Sequence[Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fleetruntimeconfigurationserverprocess">Sequence[Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process]</a></span>
     </dt>
     <dd>{{% md %}}Collection of server process configurations that describe which server processes to run on each instance in a fleet. See below.
 {{% /md %}}</dd></dl>

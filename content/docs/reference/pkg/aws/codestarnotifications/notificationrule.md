@@ -526,7 +526,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 <a href="#targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationruletarget">[]Notification<wbr>Rule<wbr>Target</a></span>
+        <span class="property-type"><a href="#notificationruletarget">[]Notification<wbr>Rule<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
 {{% /md %}}</dd></dl>
@@ -1077,7 +1077,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 <a href="#state_targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationruletarget">[]Notification<wbr>Rule<wbr>Target</a></span>
+        <span class="property-type"><a href="#notificationruletarget">[]Notification<wbr>Rule<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
 {{% /md %}}</dd></dl>

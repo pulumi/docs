@@ -344,7 +344,7 @@ The XssMatchSet resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#xssmatchtuples_go" style="color: inherit; text-decoration: inherit;">Xss<wbr>Match<wbr>Tuples</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#xssmatchsetxssmatchtuple">[]Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple</a></span>
+        <span class="property-type"><a href="#xssmatchsetxssmatchtuple">[]Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parts of web requests that you want to inspect for cross-site scripting attacks.
 {{% /md %}}</dd></dl>
@@ -669,7 +669,7 @@ The following state arguments are supported:
 <a href="#state_xssmatchtuples_go" style="color: inherit; text-decoration: inherit;">Xss<wbr>Match<wbr>Tuples</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#xssmatchsetxssmatchtuple">[]Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple</a></span>
+        <span class="property-type"><a href="#xssmatchsetxssmatchtuple">[]Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parts of web requests that you want to inspect for cross-site scripting attacks.
 {{% /md %}}</dd></dl>
@@ -755,7 +755,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#xssmatchsetxssmatchtuplefieldtomatch">Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#xssmatchsetxssmatchtuplefieldtomatch">Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}Specifies where in a web request to look for cross-site scripting attacks.
 {{% /md %}}</dd><dt class="property-required"
@@ -807,7 +807,7 @@ for all supported values.
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#xssmatchsetxssmatchtuplefieldtomatch">Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#xssmatchsetxssmatchtuplefieldtomatch">Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}Specifies where in a web request to look for cross-site scripting attacks.
 {{% /md %}}</dd><dt class="property-required"
@@ -833,7 +833,7 @@ for all supported values.
 <a href="#field_to_match_python" style="color: inherit; text-decoration: inherit;">field_<wbr>to_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#xssmatchsetxssmatchtuplefieldtomatch">Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#xssmatchsetxssmatchtuplefieldtomatch">Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}Specifies where in a web request to look for cross-site scripting attacks.
 {{% /md %}}</dd><dt class="property-required"

@@ -622,7 +622,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#certificateauthorityconfiguration_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfiguration">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfiguration">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing algorithms and certificate subject information. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -649,7 +649,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#revocationconfiguration_go" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthorityrevocationconfiguration">Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#certificateauthorityrevocationconfiguration">Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing revocation configuration. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1463,7 +1463,7 @@ The following state arguments are supported:
 <a href="#state_certificateauthorityconfiguration_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfiguration">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfiguration">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing algorithms and certificate subject information. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1526,7 +1526,7 @@ The following state arguments are supported:
 <a href="#state_revocationconfiguration_go" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthorityrevocationconfiguration">Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#certificateauthorityrevocationconfiguration">Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing revocation configuration. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1891,7 +1891,7 @@ The following state arguments are supported:
 <a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfigurationsubject">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Subject<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfigurationsubject">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Subject</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that contains X.500 distinguished name information. At least one nested attribute must be specified.
 {{% /md %}}</dd></dl>
@@ -1953,7 +1953,7 @@ The following state arguments are supported:
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfigurationsubject">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Subject<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfigurationsubject">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Subject</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that contains X.500 distinguished name information. At least one nested attribute must be specified.
 {{% /md %}}</dd></dl>
@@ -1984,7 +1984,7 @@ The following state arguments are supported:
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfigurationsubject">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Subject<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfigurationsubject">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Subject</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that contains X.500 distinguished name information. At least one nested attribute must be specified.
 {{% /md %}}</dd></dl>
@@ -2485,7 +2485,7 @@ The following state arguments are supported:
 <a href="#crlconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Crl<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthorityrevocationconfigurationcrlconfiguration">Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateauthorityrevocationconfigurationcrlconfiguration">Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority. Defined below.
 {{% /md %}}</dd></dl>
@@ -2511,7 +2511,7 @@ The following state arguments are supported:
 <a href="#crlconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">crl<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthorityrevocationconfigurationcrlconfiguration">Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateauthorityrevocationconfigurationcrlconfiguration">Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority. Defined below.
 {{% /md %}}</dd></dl>
@@ -2524,7 +2524,7 @@ The following state arguments are supported:
 <a href="#crl_configuration_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthorityrevocationconfigurationcrlconfiguration">Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateauthorityrevocationconfigurationcrlconfiguration">Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority. Defined below.
 {{% /md %}}</dd></dl>

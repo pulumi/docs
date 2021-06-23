@@ -766,7 +766,7 @@ The following state arguments are supported:
 <a href="#state_hlsingests_go" style="color: inherit; text-decoration: inherit;">Hls<wbr>Ingests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channelhlsingest">[]Channel<wbr>Hls<wbr>Ingest</a></span>
+        <span class="property-type"><a href="#channelhlsingest">[]Channel<wbr>Hls<wbr>Ingest<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A single item list of HLS ingest information
 {{% /md %}}</dd><dt class="property-optional"
@@ -924,7 +924,7 @@ The following state arguments are supported:
 <a href="#ingestendpoints_csharp" style="color: inherit; text-decoration: inherit;">Ingest<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channelhlsingestingestendpoint">List&lt;Channel<wbr>Hls<wbr>Ingest<wbr>Ingest<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#channelhlsingestingestendpoint">List&lt;Channel<wbr>Hls<wbr>Ingest<wbr>Ingest<wbr>Endpoint&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of the ingest endpoints
 {{% /md %}}</dd></dl>
@@ -950,7 +950,7 @@ The following state arguments are supported:
 <a href="#ingestendpoints_nodejs" style="color: inherit; text-decoration: inherit;">ingest<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channelhlsingestingestendpoint">Channel<wbr>Hls<wbr>Ingest<wbr>Ingest<wbr>Endpoint<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#channelhlsingestingestendpoint">Channel<wbr>Hls<wbr>Ingest<wbr>Ingest<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}A list of the ingest endpoints
 {{% /md %}}</dd></dl>
@@ -963,7 +963,7 @@ The following state arguments are supported:
 <a href="#ingest_endpoints_python" style="color: inherit; text-decoration: inherit;">ingest_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channelhlsingestingestendpoint">Sequence[Channel<wbr>Hls<wbr>Ingest<wbr>Ingest<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#channelhlsingestingestendpoint">Sequence[Channel<wbr>Hls<wbr>Ingest<wbr>Ingest<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}A list of the ingest endpoints
 {{% /md %}}</dd></dl>

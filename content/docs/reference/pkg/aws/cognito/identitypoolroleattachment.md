@@ -552,7 +552,7 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 <a href="#rolemappings_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">[]Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">[]Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A List of Role Mapping.
 {{% /md %}}</dd></dl>
@@ -850,7 +850,7 @@ The following state arguments are supported:
 <a href="#state_rolemappings_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">[]Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">[]Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A List of Role Mapping.
 {{% /md %}}</dd><dt class="property-optional"
@@ -972,7 +972,7 @@ The following state arguments are supported:
 <a href="#mappingrules_csharp" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">List&lt;Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">List&lt;Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Rules Configuration to be used for mapping users to roles. You can specify up to 25 rules per identity provider. Rules are evaluated in order. The first one to match specifies the role.
 {{% /md %}}</dd></dl>
@@ -1052,7 +1052,7 @@ The following state arguments are supported:
 <a href="#mappingrules_nodejs" style="color: inherit; text-decoration: inherit;">mapping<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The Rules Configuration to be used for mapping users to roles. You can specify up to 25 rules per identity provider. Rules are evaluated in order. The first one to match specifies the role.
 {{% /md %}}</dd></dl>
@@ -1092,7 +1092,7 @@ The following state arguments are supported:
 <a href="#mapping_rules_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">Sequence[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">Sequence[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The Rules Configuration to be used for mapping users to roles. You can specify up to 25 rules per identity provider. Rules are evaluated in order. The first one to match specifies the role.
 {{% /md %}}</dd></dl>

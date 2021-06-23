@@ -1115,7 +1115,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#catalogtargets_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlercatalogtarget">[]Crawler<wbr>Catalog<wbr>Target</a></span>
+        <span class="property-type"><a href="#crawlercatalogtarget">[]Crawler<wbr>Catalog<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1150,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dynamodbtargets_go" style="color: inherit; text-decoration: inherit;">Dynamodb<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerdynamodbtarget">[]Crawler<wbr>Dynamodb<wbr>Target</a></span>
+        <span class="property-type"><a href="#crawlerdynamodbtarget">[]Crawler<wbr>Dynamodb<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of nested DynamoDB target arguments. See Dynamodb Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1159,7 +1159,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#jdbctargets_go" style="color: inherit; text-decoration: inherit;">Jdbc<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerjdbctarget">[]Crawler<wbr>Jdbc<wbr>Target</a></span>
+        <span class="property-type"><a href="#crawlerjdbctarget">[]Crawler<wbr>Jdbc<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of nested JBDC target arguments. See JDBC Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1168,7 +1168,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#lineageconfiguration_go" style="color: inherit; text-decoration: inherit;">Lineage<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerlineageconfiguration">Crawler<wbr>Lineage<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#crawlerlineageconfiguration">Crawler<wbr>Lineage<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies data lineage configuration settings for the crawler. See Lineage Configuration below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1177,7 +1177,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#mongodbtargets_go" style="color: inherit; text-decoration: inherit;">Mongodb<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlermongodbtarget">[]Crawler<wbr>Mongodb<wbr>Target</a></span>
+        <span class="property-type"><a href="#crawlermongodbtarget">[]Crawler<wbr>Mongodb<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List nested MongoDB target arguments. See MongoDB Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1195,7 +1195,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#recrawlpolicy_go" style="color: inherit; text-decoration: inherit;">Recrawl<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerrecrawlpolicy">Crawler<wbr>Recrawl<wbr>Policy</a></span>
+        <span class="property-type"><a href="#crawlerrecrawlpolicy">Crawler<wbr>Recrawl<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run.. See Recrawl Policy below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1204,7 +1204,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#s3targets_go" style="color: inherit; text-decoration: inherit;">S3Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlers3target">[]Crawler<wbr>S3Target</a></span>
+        <span class="property-type"><a href="#crawlers3target">[]Crawler<wbr>S3Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List nested Amazon S3 target arguments. See S3 Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1222,7 +1222,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#schemachangepolicy_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Change<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerschemachangepolicy">Crawler<wbr>Schema<wbr>Change<wbr>Policy</a></span>
+        <span class="property-type"><a href="#crawlerschemachangepolicy">Crawler<wbr>Schema<wbr>Change<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy for the crawler's update and deletion behavior. See Schema Change Policy below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2047,7 +2047,7 @@ The following state arguments are supported:
 <a href="#state_catalogtargets_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlercatalogtarget">[]Crawler<wbr>Catalog<wbr>Target</a></span>
+        <span class="property-type"><a href="#crawlercatalogtarget">[]Crawler<wbr>Catalog<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2091,7 +2091,7 @@ The following state arguments are supported:
 <a href="#state_dynamodbtargets_go" style="color: inherit; text-decoration: inherit;">Dynamodb<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerdynamodbtarget">[]Crawler<wbr>Dynamodb<wbr>Target</a></span>
+        <span class="property-type"><a href="#crawlerdynamodbtarget">[]Crawler<wbr>Dynamodb<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of nested DynamoDB target arguments. See Dynamodb Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2100,7 +2100,7 @@ The following state arguments are supported:
 <a href="#state_jdbctargets_go" style="color: inherit; text-decoration: inherit;">Jdbc<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerjdbctarget">[]Crawler<wbr>Jdbc<wbr>Target</a></span>
+        <span class="property-type"><a href="#crawlerjdbctarget">[]Crawler<wbr>Jdbc<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of nested JBDC target arguments. See JDBC Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2109,7 +2109,7 @@ The following state arguments are supported:
 <a href="#state_lineageconfiguration_go" style="color: inherit; text-decoration: inherit;">Lineage<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerlineageconfiguration">Crawler<wbr>Lineage<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#crawlerlineageconfiguration">Crawler<wbr>Lineage<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies data lineage configuration settings for the crawler. See Lineage Configuration below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2118,7 +2118,7 @@ The following state arguments are supported:
 <a href="#state_mongodbtargets_go" style="color: inherit; text-decoration: inherit;">Mongodb<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlermongodbtarget">[]Crawler<wbr>Mongodb<wbr>Target</a></span>
+        <span class="property-type"><a href="#crawlermongodbtarget">[]Crawler<wbr>Mongodb<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List nested MongoDB target arguments. See MongoDB Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2136,7 +2136,7 @@ The following state arguments are supported:
 <a href="#state_recrawlpolicy_go" style="color: inherit; text-decoration: inherit;">Recrawl<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerrecrawlpolicy">Crawler<wbr>Recrawl<wbr>Policy</a></span>
+        <span class="property-type"><a href="#crawlerrecrawlpolicy">Crawler<wbr>Recrawl<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run.. See Recrawl Policy below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2154,7 +2154,7 @@ The following state arguments are supported:
 <a href="#state_s3targets_go" style="color: inherit; text-decoration: inherit;">S3Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlers3target">[]Crawler<wbr>S3Target</a></span>
+        <span class="property-type"><a href="#crawlers3target">[]Crawler<wbr>S3Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List nested Amazon S3 target arguments. See S3 Target below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2172,7 +2172,7 @@ The following state arguments are supported:
 <a href="#state_schemachangepolicy_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Change<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crawlerschemachangepolicy">Crawler<wbr>Schema<wbr>Change<wbr>Policy</a></span>
+        <span class="property-type"><a href="#crawlerschemachangepolicy">Crawler<wbr>Schema<wbr>Change<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy for the crawler's update and deletion behavior. See Schema Change Policy below.
 {{% /md %}}</dd><dt class="property-optional"

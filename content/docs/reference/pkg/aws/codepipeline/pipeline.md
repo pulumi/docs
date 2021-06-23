@@ -826,7 +826,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#artifactstore_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store</a></span>
+        <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -844,7 +844,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#stages_go" style="color: inherit; text-decoration: inherit;">Stages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinestage">[]Pipeline<wbr>Stage</a></span>
+        <span class="property-type"><a href="#pipelinestage">[]Pipeline<wbr>Stage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A stage block. Stages are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1299,7 +1299,7 @@ The following state arguments are supported:
 <a href="#state_artifactstore_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store</a></span>
+        <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1326,7 +1326,7 @@ The following state arguments are supported:
 <a href="#state_stages_go" style="color: inherit; text-decoration: inherit;">Stages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinestage">[]Pipeline<wbr>Stage</a></span>
+        <span class="property-type"><a href="#pipelinestage">[]Pipeline<wbr>Stage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A stage block. Stages are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1520,7 +1520,7 @@ The following state arguments are supported:
 <a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineartifactstoreencryptionkey">Pipeline<wbr>Artifact<wbr>Store<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelineartifactstoreencryptionkey">Pipeline<wbr>Artifact<wbr>Store<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The encryption key block AWS CodePipeline uses to encrypt the data in the artifact store, such as an AWS Key Management Service (AWS KMS) key. If you don't specify a key, AWS CodePipeline uses the default key for Amazon Simple Storage Service (Amazon S3). An `encryption_key` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1600,7 +1600,7 @@ The following state arguments are supported:
 <a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineartifactstoreencryptionkey">Pipeline<wbr>Artifact<wbr>Store<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelineartifactstoreencryptionkey">Pipeline<wbr>Artifact<wbr>Store<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The encryption key block AWS CodePipeline uses to encrypt the data in the artifact store, such as an AWS Key Management Service (AWS KMS) key. If you don't specify a key, AWS CodePipeline uses the default key for Amazon Simple Storage Service (Amazon S3). An `encryption_key` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1640,7 +1640,7 @@ The following state arguments are supported:
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineartifactstoreencryptionkey">Pipeline<wbr>Artifact<wbr>Store<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelineartifactstoreencryptionkey">Pipeline<wbr>Artifact<wbr>Store<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The encryption key block AWS CodePipeline uses to encrypt the data in the artifact store, such as an AWS Key Management Service (AWS KMS) key. If you don't specify a key, AWS CodePipeline uses the default key for Amazon Simple Storage Service (Amazon S3). An `encryption_key` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1754,7 +1754,7 @@ The following state arguments are supported:
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinestageaction">List&lt;Pipeline<wbr>Stage<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#pipelinestageaction">List&lt;Pipeline<wbr>Stage<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}The action(s) to include in the stage. Defined as an `action` block below
 {{% /md %}}</dd><dt class="property-required"
@@ -1798,7 +1798,7 @@ The following state arguments are supported:
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinestageaction">Pipeline<wbr>Stage<wbr>Action<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#pipelinestageaction">Pipeline<wbr>Stage<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}The action(s) to include in the stage. Defined as an `action` block below
 {{% /md %}}</dd><dt class="property-required"
@@ -1820,7 +1820,7 @@ The following state arguments are supported:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinestageaction">Sequence[Pipeline<wbr>Stage<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinestageaction">Sequence[Pipeline<wbr>Stage<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}The action(s) to include in the stage. Defined as an `action` block below
 {{% /md %}}</dd><dt class="property-required"

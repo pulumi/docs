@@ -385,7 +385,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationtemplatesetting">[]Configuration<wbr>Template<wbr>Setting</a></span>
+        <span class="property-type"><a href="#configurationtemplatesetting">[]Configuration<wbr>Template<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -815,7 +815,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#state_settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationtemplatesetting">[]Configuration<wbr>Template<wbr>Setting</a></span>
+        <span class="property-type"><a href="#configurationtemplatesetting">[]Configuration<wbr>Template<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed

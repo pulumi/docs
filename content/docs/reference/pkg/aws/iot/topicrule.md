@@ -698,7 +698,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#cloudwatchalarm_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Alarm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -706,7 +706,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#cloudwatchmetric_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -723,7 +723,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dynamodb_go" style="color: inherit; text-decoration: inherit;">Dynamodb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb</a></span>
+        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -731,7 +731,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dynamodbv2s_go" style="color: inherit; text-decoration: inherit;">Dynamodbv2s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodbv2">[]Topic<wbr>Rule<wbr>Dynamodbv2</a></span>
+        <span class="property-type"><a href="#topicruledynamodbv2">[]Topic<wbr>Rule<wbr>Dynamodbv2Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -739,7 +739,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#elasticsearch_go" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -747,7 +747,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#erroraction_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroraction">Topic<wbr>Rule<wbr>Error<wbr>Action</a></span>
+        <span class="property-type"><a href="#topicruleerroraction">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -756,7 +756,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#firehose_go" style="color: inherit; text-decoration: inherit;">Firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose</a></span>
+        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -764,7 +764,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#iotanalytics_go" style="color: inherit; text-decoration: inherit;">Iot<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotanalytic">[]Topic<wbr>Rule<wbr>Iot<wbr>Analytic</a></span>
+        <span class="property-type"><a href="#topicruleiotanalytic">[]Topic<wbr>Rule<wbr>Iot<wbr>Analytic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -772,7 +772,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#iotevents_go" style="color: inherit; text-decoration: inherit;">Iot<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotevent">[]Topic<wbr>Rule<wbr>Iot<wbr>Event</a></span>
+        <span class="property-type"><a href="#topicruleiotevent">[]Topic<wbr>Rule<wbr>Iot<wbr>Event<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -780,7 +780,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#kinesis_go" style="color: inherit; text-decoration: inherit;">Kinesis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis</a></span>
+        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -788,7 +788,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#lambda_go" style="color: inherit; text-decoration: inherit;">Lambda</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda</a></span>
+        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -805,7 +805,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#republish_go" style="color: inherit; text-decoration: inherit;">Republish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish</a></span>
+        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -813,7 +813,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#s3_go" style="color: inherit; text-decoration: inherit;">S3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3</a></span>
+        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -821,7 +821,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sns_go" style="color: inherit; text-decoration: inherit;">Sns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns</a></span>
+        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -829,7 +829,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sqs_go" style="color: inherit; text-decoration: inherit;">Sqs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs</a></span>
+        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -837,7 +837,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#stepfunctions_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulestepfunction">[]Topic<wbr>Rule<wbr>Step<wbr>Function</a></span>
+        <span class="property-type"><a href="#topicrulestepfunction">[]Topic<wbr>Rule<wbr>Step<wbr>Function<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1713,7 +1713,7 @@ The following state arguments are supported:
 <a href="#state_cloudwatchalarm_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Alarm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1721,7 +1721,7 @@ The following state arguments are supported:
 <a href="#state_cloudwatchmetric_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1738,7 +1738,7 @@ The following state arguments are supported:
 <a href="#state_dynamodb_go" style="color: inherit; text-decoration: inherit;">Dynamodb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb</a></span>
+        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1746,7 +1746,7 @@ The following state arguments are supported:
 <a href="#state_dynamodbv2s_go" style="color: inherit; text-decoration: inherit;">Dynamodbv2s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodbv2">[]Topic<wbr>Rule<wbr>Dynamodbv2</a></span>
+        <span class="property-type"><a href="#topicruledynamodbv2">[]Topic<wbr>Rule<wbr>Dynamodbv2Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1754,7 +1754,7 @@ The following state arguments are supported:
 <a href="#state_elasticsearch_go" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1771,7 +1771,7 @@ The following state arguments are supported:
 <a href="#state_erroraction_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroraction">Topic<wbr>Rule<wbr>Error<wbr>Action</a></span>
+        <span class="property-type"><a href="#topicruleerroraction">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1780,7 +1780,7 @@ The following state arguments are supported:
 <a href="#state_firehose_go" style="color: inherit; text-decoration: inherit;">Firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose</a></span>
+        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1788,7 +1788,7 @@ The following state arguments are supported:
 <a href="#state_iotanalytics_go" style="color: inherit; text-decoration: inherit;">Iot<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotanalytic">[]Topic<wbr>Rule<wbr>Iot<wbr>Analytic</a></span>
+        <span class="property-type"><a href="#topicruleiotanalytic">[]Topic<wbr>Rule<wbr>Iot<wbr>Analytic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1796,7 +1796,7 @@ The following state arguments are supported:
 <a href="#state_iotevents_go" style="color: inherit; text-decoration: inherit;">Iot<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotevent">[]Topic<wbr>Rule<wbr>Iot<wbr>Event</a></span>
+        <span class="property-type"><a href="#topicruleiotevent">[]Topic<wbr>Rule<wbr>Iot<wbr>Event<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1804,7 +1804,7 @@ The following state arguments are supported:
 <a href="#state_kinesis_go" style="color: inherit; text-decoration: inherit;">Kinesis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis</a></span>
+        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1812,7 +1812,7 @@ The following state arguments are supported:
 <a href="#state_lambda_go" style="color: inherit; text-decoration: inherit;">Lambda</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda</a></span>
+        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1829,7 +1829,7 @@ The following state arguments are supported:
 <a href="#state_republish_go" style="color: inherit; text-decoration: inherit;">Republish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish</a></span>
+        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1837,7 +1837,7 @@ The following state arguments are supported:
 <a href="#state_s3_go" style="color: inherit; text-decoration: inherit;">S3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3</a></span>
+        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1845,7 +1845,7 @@ The following state arguments are supported:
 <a href="#state_sns_go" style="color: inherit; text-decoration: inherit;">Sns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns</a></span>
+        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1871,7 +1871,7 @@ The following state arguments are supported:
 <a href="#state_sqs_go" style="color: inherit; text-decoration: inherit;">Sqs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs</a></span>
+        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1879,7 +1879,7 @@ The following state arguments are supported:
 <a href="#state_stepfunctions_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulestepfunction">[]Topic<wbr>Rule<wbr>Step<wbr>Function</a></span>
+        <span class="property-type"><a href="#topicrulestepfunction">[]Topic<wbr>Rule<wbr>Step<wbr>Function<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3113,7 +3113,7 @@ The following state arguments are supported:
 <a href="#putitem_csharp" style="color: inherit; text-decoration: inherit;">Put<wbr>Item</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodbv2putitem">Topic<wbr>Rule<wbr>Dynamodbv2Put<wbr>Item<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruledynamodbv2putitem">Topic<wbr>Rule<wbr>Dynamodbv2Put<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
 {{% /md %}}</dd></dl>
@@ -3157,7 +3157,7 @@ The following state arguments are supported:
 <a href="#putitem_nodejs" style="color: inherit; text-decoration: inherit;">put<wbr>Item</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodbv2putitem">Topic<wbr>Rule<wbr>Dynamodbv2Put<wbr>Item<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruledynamodbv2putitem">Topic<wbr>Rule<wbr>Dynamodbv2Put<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
 {{% /md %}}</dd></dl>
@@ -3179,7 +3179,7 @@ The following state arguments are supported:
 <a href="#put_item_python" style="color: inherit; text-decoration: inherit;">put_<wbr>item</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodbv2putitem">Topic<wbr>Rule<wbr>Dynamodbv2Put<wbr>Item<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruledynamodbv2putitem">Topic<wbr>Rule<wbr>Dynamodbv2Put<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
 {{% /md %}}</dd></dl>
@@ -3446,7 +3446,7 @@ The following state arguments are supported:
 <a href="#cloudwatchalarm_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Alarm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioncloudwatchalarm">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Alarm<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchalarm">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Alarm</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3454,7 +3454,7 @@ The following state arguments are supported:
 <a href="#cloudwatchmetric_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioncloudwatchmetric">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Metric<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchmetric">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Metric</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3462,7 +3462,7 @@ The following state arguments are supported:
 <a href="#dynamodb_csharp" style="color: inherit; text-decoration: inherit;">Dynamodb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractiondynamodb">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodb<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodb">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3470,7 +3470,7 @@ The following state arguments are supported:
 <a href="#dynamodbv2_csharp" style="color: inherit; text-decoration: inherit;">Dynamodbv2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractiondynamodbv2">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3478,7 +3478,7 @@ The following state arguments are supported:
 <a href="#elasticsearch_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionelasticsearch">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Elasticsearch<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionelasticsearch">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3486,7 +3486,7 @@ The following state arguments are supported:
 <a href="#firehose_csharp" style="color: inherit; text-decoration: inherit;">Firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionfirehose">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Firehose<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionfirehose">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Firehose</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3494,7 +3494,7 @@ The following state arguments are supported:
 <a href="#iotanalytics_csharp" style="color: inherit; text-decoration: inherit;">Iot<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioniotanalytics">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Analytics<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractioniotanalytics">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Analytics</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3502,7 +3502,7 @@ The following state arguments are supported:
 <a href="#iotevents_csharp" style="color: inherit; text-decoration: inherit;">Iot<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioniotevents">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Events<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractioniotevents">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Events</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3510,7 +3510,7 @@ The following state arguments are supported:
 <a href="#kinesis_csharp" style="color: inherit; text-decoration: inherit;">Kinesis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionkinesis">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Kinesis<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionkinesis">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Kinesis</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3518,7 +3518,7 @@ The following state arguments are supported:
 <a href="#lambda_csharp" style="color: inherit; text-decoration: inherit;">Lambda</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionlambda">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Lambda<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionlambda">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Lambda</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3526,7 +3526,7 @@ The following state arguments are supported:
 <a href="#republish_csharp" style="color: inherit; text-decoration: inherit;">Republish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionrepublish">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Republish<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionrepublish">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Republish</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3534,7 +3534,7 @@ The following state arguments are supported:
 <a href="#s3_csharp" style="color: inherit; text-decoration: inherit;">S3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractions3">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>S3Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractions3">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3542,7 +3542,7 @@ The following state arguments are supported:
 <a href="#sns_csharp" style="color: inherit; text-decoration: inherit;">Sns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionsns">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sns<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionsns">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sns</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3550,7 +3550,7 @@ The following state arguments are supported:
 <a href="#sqs_csharp" style="color: inherit; text-decoration: inherit;">Sqs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionsqs">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sqs<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionsqs">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sqs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3558,7 +3558,7 @@ The following state arguments are supported:
 <a href="#stepfunctions_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionstepfunctions">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Step<wbr>Functions<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionstepfunctions">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Step<wbr>Functions</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3694,7 +3694,7 @@ The following state arguments are supported:
 <a href="#cloudwatchalarm_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Alarm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioncloudwatchalarm">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Alarm<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchalarm">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Alarm</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3702,7 +3702,7 @@ The following state arguments are supported:
 <a href="#cloudwatchmetric_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioncloudwatchmetric">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Metric<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchmetric">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Metric</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3710,7 +3710,7 @@ The following state arguments are supported:
 <a href="#dynamodb_nodejs" style="color: inherit; text-decoration: inherit;">dynamodb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractiondynamodb">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodb<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodb">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3718,7 +3718,7 @@ The following state arguments are supported:
 <a href="#dynamodbv2_nodejs" style="color: inherit; text-decoration: inherit;">dynamodbv2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractiondynamodbv2">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3726,7 +3726,7 @@ The following state arguments are supported:
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionelasticsearch">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Elasticsearch<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionelasticsearch">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3734,7 +3734,7 @@ The following state arguments are supported:
 <a href="#firehose_nodejs" style="color: inherit; text-decoration: inherit;">firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionfirehose">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Firehose<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionfirehose">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Firehose</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3742,7 +3742,7 @@ The following state arguments are supported:
 <a href="#iotanalytics_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioniotanalytics">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Analytics<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractioniotanalytics">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Analytics</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3750,7 +3750,7 @@ The following state arguments are supported:
 <a href="#iotevents_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioniotevents">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Events<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractioniotevents">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Events</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3758,7 +3758,7 @@ The following state arguments are supported:
 <a href="#kinesis_nodejs" style="color: inherit; text-decoration: inherit;">kinesis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionkinesis">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Kinesis<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionkinesis">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Kinesis</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3766,7 +3766,7 @@ The following state arguments are supported:
 <a href="#lambda_nodejs" style="color: inherit; text-decoration: inherit;">lambda</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionlambda">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Lambda<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionlambda">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Lambda</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3774,7 +3774,7 @@ The following state arguments are supported:
 <a href="#republish_nodejs" style="color: inherit; text-decoration: inherit;">republish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionrepublish">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Republish<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionrepublish">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Republish</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3782,7 +3782,7 @@ The following state arguments are supported:
 <a href="#s3_nodejs" style="color: inherit; text-decoration: inherit;">s3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractions3">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>S3Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractions3">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3790,7 +3790,7 @@ The following state arguments are supported:
 <a href="#sns_nodejs" style="color: inherit; text-decoration: inherit;">sns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionsns">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sns<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionsns">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sns</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3798,7 +3798,7 @@ The following state arguments are supported:
 <a href="#sqs_nodejs" style="color: inherit; text-decoration: inherit;">sqs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionsqs">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sqs<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionsqs">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sqs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3806,7 +3806,7 @@ The following state arguments are supported:
 <a href="#stepfunctions_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionstepfunctions">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Step<wbr>Functions<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionstepfunctions">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Step<wbr>Functions</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3818,7 +3818,7 @@ The following state arguments are supported:
 <a href="#cloudwatch_alarm_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>alarm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioncloudwatchalarm">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Alarm<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchalarm">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Alarm</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3826,7 +3826,7 @@ The following state arguments are supported:
 <a href="#cloudwatch_metric_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioncloudwatchmetric">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Metric<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchmetric">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Metric</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3834,7 +3834,7 @@ The following state arguments are supported:
 <a href="#dynamodb_python" style="color: inherit; text-decoration: inherit;">dynamodb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractiondynamodb">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodb<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodb">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3842,7 +3842,7 @@ The following state arguments are supported:
 <a href="#dynamodbv2_python" style="color: inherit; text-decoration: inherit;">dynamodbv2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractiondynamodbv2">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3850,7 +3850,7 @@ The following state arguments are supported:
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionelasticsearch">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Elasticsearch<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionelasticsearch">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3858,7 +3858,7 @@ The following state arguments are supported:
 <a href="#firehose_python" style="color: inherit; text-decoration: inherit;">firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionfirehose">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Firehose<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionfirehose">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Firehose</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3866,7 +3866,7 @@ The following state arguments are supported:
 <a href="#iot_analytics_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioniotanalytics">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Analytics<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractioniotanalytics">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Analytics</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3874,7 +3874,7 @@ The following state arguments are supported:
 <a href="#iot_events_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioniotevents">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Events<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractioniotevents">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Events</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3882,7 +3882,7 @@ The following state arguments are supported:
 <a href="#kinesis_python" style="color: inherit; text-decoration: inherit;">kinesis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionkinesis">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Kinesis<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionkinesis">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Kinesis</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3890,7 +3890,7 @@ The following state arguments are supported:
 <a href="#lambda__python" style="color: inherit; text-decoration: inherit;">lambda_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionlambda">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Lambda<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionlambda">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Lambda</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3898,7 +3898,7 @@ The following state arguments are supported:
 <a href="#republish_python" style="color: inherit; text-decoration: inherit;">republish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionrepublish">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Republish<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionrepublish">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Republish</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3906,7 +3906,7 @@ The following state arguments are supported:
 <a href="#s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractions3">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>S3Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractions3">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3914,7 +3914,7 @@ The following state arguments are supported:
 <a href="#sns_python" style="color: inherit; text-decoration: inherit;">sns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionsns">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sns<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionsns">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sns</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3922,7 +3922,7 @@ The following state arguments are supported:
 <a href="#sqs_python" style="color: inherit; text-decoration: inherit;">sqs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionsqs">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sqs<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionsqs">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sqs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3930,7 +3930,7 @@ The following state arguments are supported:
 <a href="#step_functions_python" style="color: inherit; text-decoration: inherit;">step_<wbr>functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionstepfunctions">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Step<wbr>Functions<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionstepfunctions">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Step<wbr>Functions</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4727,7 +4727,7 @@ The following state arguments are supported:
 <a href="#putitem_csharp" style="color: inherit; text-decoration: inherit;">Put<wbr>Item</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractiondynamodbv2putitem">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Put<wbr>Item<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2putitem">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Put<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
 {{% /md %}}</dd></dl>
@@ -4771,7 +4771,7 @@ The following state arguments are supported:
 <a href="#putitem_nodejs" style="color: inherit; text-decoration: inherit;">put<wbr>Item</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractiondynamodbv2putitem">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Put<wbr>Item<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2putitem">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Put<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
 {{% /md %}}</dd></dl>
@@ -4793,7 +4793,7 @@ The following state arguments are supported:
 <a href="#put_item_python" style="color: inherit; text-decoration: inherit;">put_<wbr>item</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractiondynamodbv2putitem">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Put<wbr>Item<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2putitem">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Put<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
 {{% /md %}}</dd></dl>

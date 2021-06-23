@@ -503,7 +503,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#filtergroups_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfiltergroup">[]Webhook<wbr>Filter<wbr>Group</a></span>
+        <span class="property-type"><a href="#webhookfiltergroup">[]Webhook<wbr>Filter<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
 {{% /md %}}</dd></dl>
@@ -939,7 +939,7 @@ The following state arguments are supported:
 <a href="#state_filtergroups_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfiltergroup">[]Webhook<wbr>Filter<wbr>Group</a></span>
+        <span class="property-type"><a href="#webhookfiltergroup">[]Webhook<wbr>Filter<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1115,7 +1115,7 @@ The following state arguments are supported:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfiltergroupfilter">List&lt;Webhook<wbr>Filter<wbr>Group<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#webhookfiltergroupfilter">List&lt;Webhook<wbr>Filter<wbr>Group<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}A webhook filter for the group. Filter blocks are documented below.
 {{% /md %}}</dd></dl>
@@ -1141,7 +1141,7 @@ The following state arguments are supported:
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfiltergroupfilter">Webhook<wbr>Filter<wbr>Group<wbr>Filter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#webhookfiltergroupfilter">Webhook<wbr>Filter<wbr>Group<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}A webhook filter for the group. Filter blocks are documented below.
 {{% /md %}}</dd></dl>
@@ -1154,7 +1154,7 @@ The following state arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfiltergroupfilter">Sequence[Webhook<wbr>Filter<wbr>Group<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webhookfiltergroupfilter">Sequence[Webhook<wbr>Filter<wbr>Group<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}A webhook filter for the group. Filter blocks are documented below.
 {{% /md %}}</dd></dl>

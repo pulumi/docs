@@ -566,7 +566,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#homedirectorymappings_go" style="color: inherit; text-decoration: inherit;">Home<wbr>Directory<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userhomedirectorymapping">[]User<wbr>Home<wbr>Directory<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#userhomedirectorymapping">[]User<wbr>Home<wbr>Directory<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. See Home Directory Mappings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -593,7 +593,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#posixprofile_go" style="color: inherit; text-decoration: inherit;">Posix<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userposixprofile">User<wbr>Posix<wbr>Profile</a></span>
+        <span class="property-type"><a href="#userposixprofile">User<wbr>Posix<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users' access to your Amazon EFS file systems. See Posix Profile below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1160,7 +1160,7 @@ The following state arguments are supported:
 <a href="#state_homedirectorymappings_go" style="color: inherit; text-decoration: inherit;">Home<wbr>Directory<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userhomedirectorymapping">[]User<wbr>Home<wbr>Directory<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#userhomedirectorymapping">[]User<wbr>Home<wbr>Directory<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. See Home Directory Mappings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1187,7 +1187,7 @@ The following state arguments are supported:
 <a href="#state_posixprofile_go" style="color: inherit; text-decoration: inherit;">Posix<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userposixprofile">User<wbr>Posix<wbr>Profile</a></span>
+        <span class="property-type"><a href="#userposixprofile">User<wbr>Posix<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users' access to your Amazon EFS file systems. See Posix Profile below.
 {{% /md %}}</dd><dt class="property-optional"

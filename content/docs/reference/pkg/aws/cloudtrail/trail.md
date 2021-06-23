@@ -1305,7 +1305,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#eventselectors_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traileventselector">[]Trail<wbr>Event<wbr>Selector</a></span>
+        <span class="property-type"><a href="#traileventselector">[]Trail<wbr>Event<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of an event selector for enabling data event logging. See details below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1323,7 +1323,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#insightselectors_go" style="color: inherit; text-decoration: inherit;">Insight<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trailinsightselector">[]Trail<wbr>Insight<wbr>Selector</a></span>
+        <span class="property-type"><a href="#trailinsightselector">[]Trail<wbr>Insight<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for identifying unusual operational activity. See details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2185,7 +2185,7 @@ The following state arguments are supported:
 <a href="#state_eventselectors_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traileventselector">[]Trail<wbr>Event<wbr>Selector</a></span>
+        <span class="property-type"><a href="#traileventselector">[]Trail<wbr>Event<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of an event selector for enabling data event logging. See details below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2212,7 +2212,7 @@ The following state arguments are supported:
 <a href="#state_insightselectors_go" style="color: inherit; text-decoration: inherit;">Insight<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trailinsightselector">[]Trail<wbr>Insight<wbr>Selector</a></span>
+        <span class="property-type"><a href="#trailinsightselector">[]Trail<wbr>Insight<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for identifying unusual operational activity. See details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2649,7 +2649,7 @@ The following state arguments are supported:
 <a href="#dataresources_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traileventselectordataresource">List&lt;Trail<wbr>Event<wbr>Selector<wbr>Data<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#traileventselectordataresource">List&lt;Trail<wbr>Event<wbr>Selector<wbr>Data<wbr>Resource&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for data events. See details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2711,7 +2711,7 @@ The following state arguments are supported:
 <a href="#dataresources_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traileventselectordataresource">Trail<wbr>Event<wbr>Selector<wbr>Data<wbr>Resource<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#traileventselectordataresource">Trail<wbr>Event<wbr>Selector<wbr>Data<wbr>Resource[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for data events. See details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2742,7 +2742,7 @@ The following state arguments are supported:
 <a href="#data_resources_python" style="color: inherit; text-decoration: inherit;">data_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traileventselectordataresource">Sequence[Trail<wbr>Event<wbr>Selector<wbr>Data<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#traileventselectordataresource">Sequence[Trail<wbr>Event<wbr>Selector<wbr>Data<wbr>Resource]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for data events. See details below.
 {{% /md %}}</dd><dt class="property-optional"

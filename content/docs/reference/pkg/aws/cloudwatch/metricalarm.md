@@ -1185,7 +1185,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 <a href="#metricqueries_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalarmmetricquery">[]Metric<wbr>Alarm<wbr>Metric<wbr>Query</a></span>
+        <span class="property-type"><a href="#metricalarmmetricquery">[]Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enables you to create an alarm based on a metric math expression. You may specify at most 20.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2319,7 +2319,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 <a href="#state_metricqueries_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalarmmetricquery">[]Metric<wbr>Alarm<wbr>Metric<wbr>Query</a></span>
+        <span class="property-type"><a href="#metricalarmmetricquery">[]Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enables you to create an alarm based on a metric math expression. You may specify at most 20.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2927,7 +2927,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalarmmetricquerymetric">Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Metric<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricalarmmetricquerymetric">Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Metric</a></span>
     </dt>
     <dd>{{% md %}}The metric to be returned, along with statistics, period, and units. Use this parameter only if this object is retrieving a metric and not performing a math expression on returned data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3025,7 +3025,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalarmmetricquerymetric">Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Metric<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricalarmmetricquerymetric">Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Metric</a></span>
     </dt>
     <dd>{{% md %}}The metric to be returned, along with statistics, period, and units. Use this parameter only if this object is retrieving a metric and not performing a math expression on returned data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3074,7 +3074,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalarmmetricquerymetric">Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Metric<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricalarmmetricquerymetric">Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Metric</a></span>
     </dt>
     <dd>{{% md %}}The metric to be returned, along with statistics, period, and units. Use this parameter only if this object is retrieving a metric and not performing a math expression on returned data.
 {{% /md %}}</dd><dt class="property-optional"

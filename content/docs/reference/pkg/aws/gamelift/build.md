@@ -360,7 +360,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#storagelocation_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#buildstoragelocation">Build<wbr>Storage<wbr>Location</a></span>
+        <span class="property-type"><a href="#buildstoragelocation">Build<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information indicating where your game build files are stored. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -842,7 +842,7 @@ The following state arguments are supported:
 <a href="#state_storagelocation_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#buildstoragelocation">Build<wbr>Storage<wbr>Location</a></span>
+        <span class="property-type"><a href="#buildstoragelocation">Build<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information indicating where your game build files are stored. See below.
 {{% /md %}}</dd><dt class="property-optional"

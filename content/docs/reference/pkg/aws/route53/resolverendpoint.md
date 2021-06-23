@@ -402,7 +402,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverendpointipaddress">[]Resolver<wbr>Endpoint<wbr>Ip<wbr>Address</a></span>
+        <span class="property-type"><a href="#resolverendpointipaddress">[]Resolver<wbr>Endpoint<wbr>Ip<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
@@ -942,7 +942,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 <a href="#state_ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverendpointipaddress">[]Resolver<wbr>Endpoint<wbr>Ip<wbr>Address</a></span>
+        <span class="property-type"><a href="#resolverendpointipaddress">[]Resolver<wbr>Endpoint<wbr>Ip<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.

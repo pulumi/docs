@@ -891,7 +891,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#capacityproviderstrategies_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Provider<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecapacityproviderstrategy">[]Service<wbr>Capacity<wbr>Provider<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#servicecapacityproviderstrategy">[]Service<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Capacity provider strategy to use for the service. Can be one or more.  Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -909,7 +909,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#deploymentcircuitbreaker_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Circuit<wbr>Breaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedeploymentcircuitbreaker">Service<wbr>Deployment<wbr>Circuit<wbr>Breaker</a></span>
+        <span class="property-type"><a href="#servicedeploymentcircuitbreaker">Service<wbr>Deployment<wbr>Circuit<wbr>Breaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for deployment circuit breaker. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -918,7 +918,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#deploymentcontroller_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller</a></span>
+        <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for deployment controller configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1008,7 +1008,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#loadbalancers_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceloadbalancer">[]Service<wbr>Load<wbr>Balancer</a></span>
+        <span class="property-type"><a href="#serviceloadbalancer">[]Service<wbr>Load<wbr>Balancer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for load balancers. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1026,7 +1026,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#networkconfiguration_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1035,7 +1035,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#orderedplacementstrategies_go" style="color: inherit; text-decoration: inherit;">Ordered<wbr>Placement<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceorderedplacementstrategy">[]Service<wbr>Ordered<wbr>Placement<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#serviceorderedplacementstrategy">[]Service<wbr>Ordered<wbr>Placement<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1044,7 +1044,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#placementconstraints_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceplacementconstraint">[]Service<wbr>Placement<wbr>Constraint</a></span>
+        <span class="property-type"><a href="#serviceplacementconstraint">[]Service<wbr>Placement<wbr>Constraint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1080,7 +1080,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#serviceregistries_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries</a></span>
+        <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service discovery registries for the service. The maximum number of `service_registries` blocks is `1`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2045,7 +2045,7 @@ The following state arguments are supported:
 <a href="#state_capacityproviderstrategies_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Provider<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecapacityproviderstrategy">[]Service<wbr>Capacity<wbr>Provider<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#servicecapacityproviderstrategy">[]Service<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Capacity provider strategy to use for the service. Can be one or more.  Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2063,7 +2063,7 @@ The following state arguments are supported:
 <a href="#state_deploymentcircuitbreaker_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Circuit<wbr>Breaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedeploymentcircuitbreaker">Service<wbr>Deployment<wbr>Circuit<wbr>Breaker</a></span>
+        <span class="property-type"><a href="#servicedeploymentcircuitbreaker">Service<wbr>Deployment<wbr>Circuit<wbr>Breaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for deployment circuit breaker. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2072,7 +2072,7 @@ The following state arguments are supported:
 <a href="#state_deploymentcontroller_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller</a></span>
+        <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for deployment controller configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2162,7 +2162,7 @@ The following state arguments are supported:
 <a href="#state_loadbalancers_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceloadbalancer">[]Service<wbr>Load<wbr>Balancer</a></span>
+        <span class="property-type"><a href="#serviceloadbalancer">[]Service<wbr>Load<wbr>Balancer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for load balancers. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2180,7 +2180,7 @@ The following state arguments are supported:
 <a href="#state_networkconfiguration_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2189,7 +2189,7 @@ The following state arguments are supported:
 <a href="#state_orderedplacementstrategies_go" style="color: inherit; text-decoration: inherit;">Ordered<wbr>Placement<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceorderedplacementstrategy">[]Service<wbr>Ordered<wbr>Placement<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#serviceorderedplacementstrategy">[]Service<wbr>Ordered<wbr>Placement<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2198,7 +2198,7 @@ The following state arguments are supported:
 <a href="#state_placementconstraints_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceplacementconstraint">[]Service<wbr>Placement<wbr>Constraint</a></span>
+        <span class="property-type"><a href="#serviceplacementconstraint">[]Service<wbr>Placement<wbr>Constraint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2234,7 +2234,7 @@ The following state arguments are supported:
 <a href="#state_serviceregistries_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries</a></span>
+        <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service discovery registries for the service. The maximum number of `service_registries` blocks is `1`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

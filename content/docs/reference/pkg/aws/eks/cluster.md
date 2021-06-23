@@ -576,7 +576,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vpcconfig_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustervpcconfig">Cluster<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustervpcconfig">Cluster<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.
 {{% /md %}}</dd><dt class="property-optional"
@@ -594,7 +594,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryptionconfig_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -603,7 +603,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kubernetesnetworkconfig_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Network<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkubernetesnetworkconfig">Cluster<wbr>Kubernetes<wbr>Network<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterkubernetesnetworkconfig">Cluster<wbr>Kubernetes<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, this provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1427,7 +1427,7 @@ The following state arguments are supported:
 <a href="#state_certificateauthority_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificateauthority">Cluster<wbr>Certificate<wbr>Authority</a></span>
+        <span class="property-type"><a href="#clustercertificateauthority">Cluster<wbr>Certificate<wbr>Authority<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1454,7 +1454,7 @@ The following state arguments are supported:
 <a href="#state_encryptionconfig_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1472,7 +1472,7 @@ The following state arguments are supported:
 <a href="#state_identities_go" style="color: inherit; text-decoration: inherit;">Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteridentity">[]Cluster<wbr>Identity</a></span>
+        <span class="property-type"><a href="#clusteridentity">[]Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attribute block containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1481,7 +1481,7 @@ The following state arguments are supported:
 <a href="#state_kubernetesnetworkconfig_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Network<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkubernetesnetworkconfig">Cluster<wbr>Kubernetes<wbr>Network<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterkubernetesnetworkconfig">Cluster<wbr>Kubernetes<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, this provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1553,7 +1553,7 @@ The following state arguments are supported:
 <a href="#state_vpcconfig_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustervpcconfig">Cluster<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustervpcconfig">Cluster<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.
 {{% /md %}}</dd></dl>
@@ -1927,7 +1927,7 @@ The following state arguments are supported:
 <a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterencryptionconfigprovider">Cluster<wbr>Encryption<wbr>Config<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterencryptionconfigprovider">Cluster<wbr>Encryption<wbr>Config<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with provider for encryption. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1971,7 +1971,7 @@ The following state arguments are supported:
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterencryptionconfigprovider">Cluster<wbr>Encryption<wbr>Config<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterencryptionconfigprovider">Cluster<wbr>Encryption<wbr>Config<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with provider for encryption. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1993,7 +1993,7 @@ The following state arguments are supported:
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterencryptionconfigprovider">Cluster<wbr>Encryption<wbr>Config<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterencryptionconfigprovider">Cluster<wbr>Encryption<wbr>Config<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with provider for encryption. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2071,7 +2071,7 @@ The following state arguments are supported:
 <a href="#oidcs_csharp" style="color: inherit; text-decoration: inherit;">Oidcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteridentityoidc">List&lt;Cluster<wbr>Identity<wbr>Oidc<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusteridentityoidc">List&lt;Cluster<wbr>Identity<wbr>Oidc&gt;</a></span>
     </dt>
     <dd>{{% md %}}Nested block containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2097,7 +2097,7 @@ The following state arguments are supported:
 <a href="#oidcs_nodejs" style="color: inherit; text-decoration: inherit;">oidcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteridentityoidc">Cluster<wbr>Identity<wbr>Oidc<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clusteridentityoidc">Cluster<wbr>Identity<wbr>Oidc[]</a></span>
     </dt>
     <dd>{{% md %}}Nested block containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2110,7 +2110,7 @@ The following state arguments are supported:
 <a href="#oidcs_python" style="color: inherit; text-decoration: inherit;">oidcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteridentityoidc">Sequence[Cluster<wbr>Identity<wbr>Oidc<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusteridentityoidc">Sequence[Cluster<wbr>Identity<wbr>Oidc]</a></span>
     </dt>
     <dd>{{% md %}}Nested block containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
 {{% /md %}}</dd></dl>

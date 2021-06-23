@@ -592,7 +592,7 @@ The BudgetAction resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#actionthreshold_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetactionactionthreshold">Budget<wbr>Action<wbr>Action<wbr>Threshold</a></span>
+        <span class="property-type"><a href="#budgetactionactionthreshold">Budget<wbr>Action<wbr>Action<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger threshold of the action. See Action Threshold.
 {{% /md %}}</dd><dt class="property-required"
@@ -628,7 +628,7 @@ The BudgetAction resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#definition_go" style="color: inherit; text-decoration: inherit;">Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetactiondefinition">Budget<wbr>Action<wbr>Definition</a></span>
+        <span class="property-type"><a href="#budgetactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies all of the type-specific parameters. See Definition.
 {{% /md %}}</dd><dt class="property-required"
@@ -655,7 +655,7 @@ The BudgetAction resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#subscribers_go" style="color: inherit; text-decoration: inherit;">Subscribers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetactionsubscriber">[]Budget<wbr>Action<wbr>Subscriber</a></span>
+        <span class="property-type"><a href="#budgetactionsubscriber">[]Budget<wbr>Action<wbr>Subscriber<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of subscribers. See Subscriber.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1277,7 +1277,7 @@ The following state arguments are supported:
 <a href="#state_actionthreshold_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetactionactionthreshold">Budget<wbr>Action<wbr>Action<wbr>Threshold</a></span>
+        <span class="property-type"><a href="#budgetactionactionthreshold">Budget<wbr>Action<wbr>Action<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger threshold of the action. See Action Threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1322,7 +1322,7 @@ The following state arguments are supported:
 <a href="#state_definition_go" style="color: inherit; text-decoration: inherit;">Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetactiondefinition">Budget<wbr>Action<wbr>Definition</a></span>
+        <span class="property-type"><a href="#budgetactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies all of the type-specific parameters. See Definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1358,7 +1358,7 @@ The following state arguments are supported:
 <a href="#state_subscribers_go" style="color: inherit; text-decoration: inherit;">Subscribers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetactionsubscriber">[]Budget<wbr>Action<wbr>Subscriber</a></span>
+        <span class="property-type"><a href="#budgetactionsubscriber">[]Budget<wbr>Action<wbr>Subscriber<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of subscribers. See Subscriber.
 {{% /md %}}</dd></dl>
@@ -1696,7 +1696,7 @@ The following state arguments are supported:
 <a href="#iamactiondefinition_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Action<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetactiondefinitioniamactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Iam<wbr>Action<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetactiondefinitioniamactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Iam<wbr>Action<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}The AWS Identity and Access Management (IAM) action definition details. See IAM Action Definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1705,7 +1705,7 @@ The following state arguments are supported:
 <a href="#scpactiondefinition_csharp" style="color: inherit; text-decoration: inherit;">Scp<wbr>Action<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetactiondefinitionscpactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Scp<wbr>Action<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetactiondefinitionscpactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Scp<wbr>Action<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}The service control policies (SCPs) action definition details. See SCP Action Definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1714,7 +1714,7 @@ The following state arguments are supported:
 <a href="#ssmactiondefinition_csharp" style="color: inherit; text-decoration: inherit;">Ssm<wbr>Action<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetactiondefinitionssmactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Ssm<wbr>Action<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetactiondefinitionssmactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Ssm<wbr>Action<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}The AWS Systems Manager (SSM) action definition details. See SSM Action Definition.
 {{% /md %}}</dd></dl>
@@ -1758,7 +1758,7 @@ The following state arguments are supported:
 <a href="#iamactiondefinition_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Action<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetactiondefinitioniamactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Iam<wbr>Action<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetactiondefinitioniamactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Iam<wbr>Action<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}The AWS Identity and Access Management (IAM) action definition details. See IAM Action Definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1767,7 +1767,7 @@ The following state arguments are supported:
 <a href="#scpactiondefinition_nodejs" style="color: inherit; text-decoration: inherit;">scp<wbr>Action<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetactiondefinitionscpactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Scp<wbr>Action<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetactiondefinitionscpactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Scp<wbr>Action<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}The service control policies (SCPs) action definition details. See SCP Action Definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1776,7 +1776,7 @@ The following state arguments are supported:
 <a href="#ssmactiondefinition_nodejs" style="color: inherit; text-decoration: inherit;">ssm<wbr>Action<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetactiondefinitionssmactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Ssm<wbr>Action<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetactiondefinitionssmactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Ssm<wbr>Action<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}The AWS Systems Manager (SSM) action definition details. See SSM Action Definition.
 {{% /md %}}</dd></dl>
@@ -1789,7 +1789,7 @@ The following state arguments are supported:
 <a href="#iam_action_definition_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>action_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetactiondefinitioniamactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Iam<wbr>Action<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetactiondefinitioniamactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Iam<wbr>Action<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}The AWS Identity and Access Management (IAM) action definition details. See IAM Action Definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1798,7 +1798,7 @@ The following state arguments are supported:
 <a href="#scp_action_definition_python" style="color: inherit; text-decoration: inherit;">scp_<wbr>action_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetactiondefinitionscpactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Scp<wbr>Action<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetactiondefinitionscpactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Scp<wbr>Action<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}The service control policies (SCPs) action definition details. See SCP Action Definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1807,7 +1807,7 @@ The following state arguments are supported:
 <a href="#ssm_action_definition_python" style="color: inherit; text-decoration: inherit;">ssm_<wbr>action_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetactiondefinitionssmactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Ssm<wbr>Action<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetactiondefinitionssmactiondefinition">Budget<wbr>Action<wbr>Definition<wbr>Ssm<wbr>Action<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}The AWS Systems Manager (SSM) action definition details. See SSM Action Definition.
 {{% /md %}}</dd></dl>

@@ -398,7 +398,7 @@ if there is a resolution list for the slot, otherwise null is returned. Defaults
 <a href="#enumerationvalues_go" style="color: inherit; text-decoration: inherit;">Enumeration<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slottypeenumerationvalue">[]Slot<wbr>Type<wbr>Enumeration<wbr>Value</a></span>
+        <span class="property-type"><a href="#slottypeenumerationvalue">[]Slot<wbr>Type<wbr>Enumeration<wbr>Value<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of EnumerationValue objects that defines the values that
 the slot type can take. Each value can have a list of synonyms, which are additional values that help
@@ -1034,7 +1034,7 @@ update. Defaults to `false`.
 <a href="#state_enumerationvalues_go" style="color: inherit; text-decoration: inherit;">Enumeration<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slottypeenumerationvalue">[]Slot<wbr>Type<wbr>Enumeration<wbr>Value</a></span>
+        <span class="property-type"><a href="#slottypeenumerationvalue">[]Slot<wbr>Type<wbr>Enumeration<wbr>Value<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of EnumerationValue objects that defines the values that
 the slot type can take. Each value can have a list of synonyms, which are additional values that help

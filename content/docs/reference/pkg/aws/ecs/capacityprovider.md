@@ -372,7 +372,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
 <a href="#autoscalinggroupprovider_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Group<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider</a></span>
+        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the provider for the ECS auto scaling group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -763,7 +763,7 @@ The following state arguments are supported:
 <a href="#state_autoscalinggroupprovider_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Group<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider</a></span>
+        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the provider for the ECS auto scaling group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -915,7 +915,7 @@ The following state arguments are supported:
 <a href="#managedscaling_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling<wbr>Args</a></span>
+        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling</a></span>
     </dt>
     <dd>{{% md %}}- Configuration block defining the parameters of the auto scaling. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -977,7 +977,7 @@ The following state arguments are supported:
 <a href="#managedscaling_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling<wbr>Args</a></span>
+        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling</a></span>
     </dt>
     <dd>{{% md %}}- Configuration block defining the parameters of the auto scaling. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1008,7 +1008,7 @@ The following state arguments are supported:
 <a href="#managed_scaling_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling<wbr>Args</a></span>
+        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling</a></span>
     </dt>
     <dd>{{% md %}}- Configuration block defining the parameters of the auto scaling. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

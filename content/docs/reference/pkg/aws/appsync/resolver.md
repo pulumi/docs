@@ -574,7 +574,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#cachingconfig_go" style="color: inherit; text-decoration: inherit;">Caching<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolvercachingconfig">Resolver<wbr>Caching<wbr>Config</a></span>
+        <span class="property-type"><a href="#resolvercachingconfig">Resolver<wbr>Caching<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CachingConfig.
 {{% /md %}}</dd><dt class="property-optional"
@@ -601,7 +601,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#pipelineconfig_go" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config</a></span>
+        <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The PipelineConfig.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1140,7 +1140,7 @@ The following state arguments are supported:
 <a href="#state_cachingconfig_go" style="color: inherit; text-decoration: inherit;">Caching<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolvercachingconfig">Resolver<wbr>Caching<wbr>Config</a></span>
+        <span class="property-type"><a href="#resolvercachingconfig">Resolver<wbr>Caching<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CachingConfig.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1176,7 +1176,7 @@ The following state arguments are supported:
 <a href="#state_pipelineconfig_go" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config</a></span>
+        <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The PipelineConfig.
 {{% /md %}}</dd><dt class="property-optional"

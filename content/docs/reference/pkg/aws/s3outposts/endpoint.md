@@ -815,7 +815,7 @@ The following state arguments are supported:
 <a href="#state_networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointnetworkinterface">[]Endpoint<wbr>Network<wbr>Interface</a></span>
+        <span class="property-type"><a href="#endpointnetworkinterface">[]Endpoint<wbr>Network<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of nested attributes for associated Elastic Network Interfaces (ENIs).
 {{% /md %}}</dd><dt class="property-optional"

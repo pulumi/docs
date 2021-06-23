@@ -377,7 +377,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#resourcespec_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appresourcespec">App<wbr>Resource<wbr>Spec</a></span>
+        <span class="property-type"><a href="#appresourcespec">App<wbr>Resource<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.See Resource Spec below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -878,7 +878,7 @@ The following state arguments are supported:
 <a href="#state_resourcespec_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appresourcespec">App<wbr>Resource<wbr>Spec</a></span>
+        <span class="property-type"><a href="#appresourcespec">App<wbr>Resource<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.See Resource Spec below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -387,7 +387,7 @@ The IpGroup resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipgrouprule">[]Ip<wbr>Group<wbr>Rule</a></span>
+        <span class="property-type"><a href="#ipgrouprule">[]Ip<wbr>Group<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more pairs specifying the IP group rule (in CIDR format) from which web requests originate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -768,7 +768,7 @@ The following state arguments are supported:
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipgrouprule">[]Ip<wbr>Group<wbr>Rule</a></span>
+        <span class="property-type"><a href="#ipgrouprule">[]Ip<wbr>Group<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more pairs specifying the IP group rule (in CIDR format) from which web requests originate.
 {{% /md %}}</dd><dt class="property-optional"

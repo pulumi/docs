@@ -1337,7 +1337,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#rulegroup_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group</a></span>
+        <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1921,7 +1921,7 @@ The following state arguments are supported:
 <a href="#state_rulegroup_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group</a></span>
+        <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2178,7 +2178,7 @@ The following state arguments are supported:
 <a href="#rulessource_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the stateful or stateless rules for the rule group. See Rules Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2187,7 +2187,7 @@ The following state arguments are supported:
 <a href="#rulevariables_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines additional settings available to use in the rules defined in the rule group. Can only be specified for **stateful** rule groups. See Rule Variables below for details.
 {{% /md %}}</dd></dl>
@@ -2222,7 +2222,7 @@ The following state arguments are supported:
 <a href="#rulessource_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the stateful or stateless rules for the rule group. See Rules Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2231,7 +2231,7 @@ The following state arguments are supported:
 <a href="#rulevariables_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines additional settings available to use in the rules defined in the rule group. Can only be specified for **stateful** rule groups. See Rule Variables below for details.
 {{% /md %}}</dd></dl>
@@ -2244,7 +2244,7 @@ The following state arguments are supported:
 <a href="#rules_source_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the stateful or stateless rules for the rule group. See Rules Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2253,7 +2253,7 @@ The following state arguments are supported:
 <a href="#rule_variables_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines additional settings available to use in the rules defined in the rule group. Can only be specified for **stateful** rule groups. See Rule Variables below for details.
 {{% /md %}}</dd></dl>
@@ -2268,7 +2268,7 @@ The following state arguments are supported:
 <a href="#ipsets_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipset">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipset">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define IP address information. See IP Sets below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2277,7 +2277,7 @@ The following state arguments are supported:
 <a href="#portsets_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportset">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportset">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define port range information. See Port Sets below for details.
 {{% /md %}}</dd></dl>
@@ -2312,7 +2312,7 @@ The following state arguments are supported:
 <a href="#ipsets_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define IP address information. See IP Sets below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2321,7 +2321,7 @@ The following state arguments are supported:
 <a href="#portsets_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define port range information. See Port Sets below for details.
 {{% /md %}}</dd></dl>
@@ -2334,7 +2334,7 @@ The following state arguments are supported:
 <a href="#ip_sets_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipset">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipset">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define IP address information. See IP Sets below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2343,7 +2343,7 @@ The following state arguments are supported:
 <a href="#port_sets_python" style="color: inherit; text-decoration: inherit;">port_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportset">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportset">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define port range information. See Port Sets below for details.
 {{% /md %}}</dd></dl>
@@ -2358,7 +2358,7 @@ The following state arguments are supported:
 <a href="#ipset_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipsetipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipsetipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Ip<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of IP addresses. See IP Set below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -2402,7 +2402,7 @@ The following state arguments are supported:
 <a href="#ipset_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipsetipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipsetipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Ip<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of IP addresses. See IP Set below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -2424,7 +2424,7 @@ The following state arguments are supported:
 <a href="#ip_set_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipsetipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipsetipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Ip<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of IP addresses. See IP Set below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -2511,7 +2511,7 @@ The following state arguments are supported:
 <a href="#portset_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportsetportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Port<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportsetportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Port<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of port ranges. See Port Set below for details.
 {{% /md %}}</dd></dl>
@@ -2555,7 +2555,7 @@ The following state arguments are supported:
 <a href="#portset_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportsetportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Port<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportsetportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Port<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of port ranges. See Port Set below for details.
 {{% /md %}}</dd></dl>
@@ -2577,7 +2577,7 @@ The following state arguments are supported:
 <a href="#port_set_python" style="color: inherit; text-decoration: inherit;">port_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportsetportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Port<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportsetportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Port<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of port ranges. See Port Set below for details.
 {{% /md %}}</dd></dl>
@@ -2646,7 +2646,7 @@ The following state arguments are supported:
 <a href="#rulessourcelist_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Source<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcerulessourcelist">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Rules<wbr>Source<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcerulessourcelist">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Rules<wbr>Source<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateful** inspection criteria for a domain list rule group. See Rules Source List below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2664,7 +2664,7 @@ The following state arguments are supported:
 <a href="#statefulrules_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulrule">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulrule">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing **stateful** inspection criteria for 5-tuple rules to be used together in a rule group. See Stateful Rule below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2673,7 +2673,7 @@ The following state arguments are supported:
 <a href="#statelessrulesandcustomactions_csharp" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactions">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactions">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateless** inspection criteria for a stateless rule group. See Stateless Rules and Custom Actions below for details.
 {{% /md %}}</dd></dl>
@@ -2726,7 +2726,7 @@ The following state arguments are supported:
 <a href="#rulessourcelist_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Source<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcerulessourcelist">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Rules<wbr>Source<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcerulessourcelist">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Rules<wbr>Source<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateful** inspection criteria for a domain list rule group. See Rules Source List below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2744,7 +2744,7 @@ The following state arguments are supported:
 <a href="#statefulrules_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulrule">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulrule">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing **stateful** inspection criteria for 5-tuple rules to be used together in a rule group. See Stateful Rule below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2753,7 +2753,7 @@ The following state arguments are supported:
 <a href="#statelessrulesandcustomactions_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactions">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactions">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateless** inspection criteria for a stateless rule group. See Stateless Rules and Custom Actions below for details.
 {{% /md %}}</dd></dl>
@@ -2766,7 +2766,7 @@ The following state arguments are supported:
 <a href="#rules_source_list_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>source_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcerulessourcelist">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Rules<wbr>Source<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcerulessourcelist">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Rules<wbr>Source<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateful** inspection criteria for a domain list rule group. See Rules Source List below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2784,7 +2784,7 @@ The following state arguments are supported:
 <a href="#stateful_rules_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulrule">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulrule">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing **stateful** inspection criteria for 5-tuple rules to be used together in a rule group. See Stateful Rule below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2793,7 +2793,7 @@ The following state arguments are supported:
 <a href="#stateless_rules_and_custom_actions_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>rules_<wbr>and_<wbr>custom_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactions">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactions">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateless** inspection criteria for a stateless rule group. See Stateless Rules and Custom Actions below for details.
 {{% /md %}}</dd></dl>
@@ -2943,7 +2943,7 @@ The following state arguments are supported:
 <a href="#header_csharp" style="color: inherit; text-decoration: inherit;">Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleheader">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Header<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleheader">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing the stateful 5-tuple inspection criteria for the rule, used to inspect traffic flows. See Header below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -2952,7 +2952,7 @@ The following state arguments are supported:
 <a href="#ruleoptions_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleruleoption">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Rule<wbr>Option<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleruleoption">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Rule<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing additional settings for a stateful rule. See Rule Option below for details.
 {{% /md %}}</dd></dl>
@@ -3005,7 +3005,7 @@ The following state arguments are supported:
 <a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleheader">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Header<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleheader">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing the stateful 5-tuple inspection criteria for the rule, used to inspect traffic flows. See Header below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -3014,7 +3014,7 @@ The following state arguments are supported:
 <a href="#ruleoptions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleruleoption">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Rule<wbr>Option<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleruleoption">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Rule<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing additional settings for a stateful rule. See Rule Option below for details.
 {{% /md %}}</dd></dl>
@@ -3036,7 +3036,7 @@ The following state arguments are supported:
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleheader">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Header<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleheader">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing the stateful 5-tuple inspection criteria for the rule, used to inspect traffic flows. See Header below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -3045,7 +3045,7 @@ The following state arguments are supported:
 <a href="#rule_options_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleruleoption">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Rule<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleruleoption">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Rule<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing additional settings for a stateful rule. See Rule Option below for details.
 {{% /md %}}</dd></dl>
@@ -3388,7 +3388,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#statelessrules_csharp" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessrule">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessrule">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the stateless rules for use in the stateless rule group. See Stateless Rule below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3397,7 +3397,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#customactions_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomaction">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomaction">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing custom action definitions that are available for use by the set of `stateless rule`. See Custom Action below for details.
 {{% /md %}}</dd></dl>
@@ -3432,7 +3432,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#statelessrules_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessrule">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessrule">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the stateless rules for use in the stateless rule group. See Stateless Rule below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3441,7 +3441,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#customactions_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing custom action definitions that are available for use by the set of `stateless rule`. See Custom Action below for details.
 {{% /md %}}</dd></dl>
@@ -3454,7 +3454,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#stateless_rules_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessrule">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessrule">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the stateless rules for use in the stateless rule group. See Stateless Rule below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3463,7 +3463,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#custom_actions_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomaction">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomaction">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing custom action definitions that are available for use by the set of `stateless rule`. See Custom Action below for details.
 {{% /md %}}</dd></dl>
@@ -3478,7 +3478,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#actiondefinition_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -3522,7 +3522,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#actiondefinition_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -3544,7 +3544,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#action_definition_python" style="color: inherit; text-decoration: inherit;">action_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -3568,7 +3568,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#publishmetricaction_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Metric<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
 {{% /md %}}</dd></dl>
@@ -3594,7 +3594,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#publishmetricaction_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Metric<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
 {{% /md %}}</dd></dl>
@@ -3607,7 +3607,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#publish_metric_action_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>metric_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
 {{% /md %}}</dd></dl>
@@ -3622,7 +3622,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricactiondimension">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricactiondimension">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for details.
 {{% /md %}}</dd></dl>
@@ -3648,7 +3648,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricactiondimension">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricactiondimension">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for details.
 {{% /md %}}</dd></dl>
@@ -3661,7 +3661,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricactiondimension">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricactiondimension">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for details.
 {{% /md %}}</dd></dl>
@@ -3739,7 +3739,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#ruledefinition_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}A configuration block defining the stateless 5-tuple packet inspection criteria and the action to take on a packet that matches the criteria. See Rule Definition below for details.
 {{% /md %}}</dd></dl>
@@ -3783,7 +3783,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#ruledefinition_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}A configuration block defining the stateless 5-tuple packet inspection criteria and the action to take on a packet that matches the criteria. See Rule Definition below for details.
 {{% /md %}}</dd></dl>
@@ -3805,7 +3805,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#rule_definition_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}A configuration block defining the stateless 5-tuple packet inspection criteria and the action to take on a packet that matches the criteria. See Rule Definition below for details.
 {{% /md %}}</dd></dl>
@@ -3829,7 +3829,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#matchattributes_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributes">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributes">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing criteria for AWS Network Firewall to use to inspect an individual packet in stateless rule inspection. See Match Attributes below for details.
 {{% /md %}}</dd></dl>
@@ -3873,7 +3873,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#matchattributes_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributes">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributes">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing criteria for AWS Network Firewall to use to inspect an individual packet in stateless rule inspection. See Match Attributes below for details.
 {{% /md %}}</dd></dl>
@@ -3895,7 +3895,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#match_attributes_python" style="color: inherit; text-decoration: inherit;">match_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributes">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributes">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing criteria for AWS Network Firewall to use to inspect an individual packet in stateless rule inspection. See Match Attributes below for details.
 {{% /md %}}</dd></dl>
@@ -3910,7 +3910,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#destinationports_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestinationport">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Port<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestinationport">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Port&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination ports to inspect for. If not specified, this matches with any destination port. See Destination Port below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3919,7 +3919,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#destinations_csharp" style="color: inherit; text-decoration: inherit;">Destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestination">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestination">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any destination address. See Destination below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3937,7 +3937,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#sourceports_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessourceport">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Port<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessourceport">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Port&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source ports to inspect for. If not specified, this matches with any source port. See Source Port below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3946,7 +3946,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessource">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessource">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. See Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3955,7 +3955,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#tcpflags_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributestcpflag">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Tcp<wbr>Flag<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributestcpflag">List&lt;Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Tcp<wbr>Flag&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the TCP flags and masks to inspect for. If not specified, this matches with any settings.
 {{% /md %}}</dd></dl>
@@ -4026,7 +4026,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#destinationports_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestinationport">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Port<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestinationport">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination ports to inspect for. If not specified, this matches with any destination port. See Destination Port below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4035,7 +4035,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#destinations_nodejs" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestination">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestination">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any destination address. See Destination below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4053,7 +4053,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#sourceports_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessourceport">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Port<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessourceport">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source ports to inspect for. If not specified, this matches with any source port. See Source Port below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4062,7 +4062,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. See Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4071,7 +4071,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#tcpflags_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributestcpflag">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Tcp<wbr>Flag<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributestcpflag">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Tcp<wbr>Flag[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the TCP flags and masks to inspect for. If not specified, this matches with any settings.
 {{% /md %}}</dd></dl>
@@ -4084,7 +4084,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestinationport">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestinationport">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Port]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination ports to inspect for. If not specified, this matches with any destination port. See Destination Port below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4093,7 +4093,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestination">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestination">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any destination address. See Destination below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4111,7 +4111,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#source_ports_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessourceport">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessourceport">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Port]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source ports to inspect for. If not specified, this matches with any source port. See Source Port below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4120,7 +4120,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessource">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessource">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. See Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4129,7 +4129,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#tcp_flags_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributestcpflag">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Tcp<wbr>Flag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributestcpflag">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Tcp<wbr>Flag]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the TCP flags and masks to inspect for. If not specified, this matches with any settings.
 {{% /md %}}</dd></dl>

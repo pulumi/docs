@@ -1297,7 +1297,7 @@ The following state arguments are supported:
 <a href="#state_privatednsnameconfigurations_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">[]Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">[]Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
 {{% /md %}}</dd><dt class="property-optional"

@@ -879,7 +879,7 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
 <a href="#tlsconfig_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config</a></span>
+        <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block specifying the TLS configuration for an integration. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1727,7 +1727,7 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
 <a href="#state_tlsconfig_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config</a></span>
+        <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block specifying the TLS configuration for an integration. Defined below.
 {{% /md %}}</dd><dt class="property-optional"

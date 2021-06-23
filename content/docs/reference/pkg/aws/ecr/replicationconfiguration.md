@@ -317,7 +317,7 @@ The ReplicationConfiguration resource accepts the following [input]({{< relref "
 <a href="#replicationconfiguration_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationconfigurationreplicationconfiguration">Replication<wbr>Configuration<wbr>Replication<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#replicationconfigurationreplicationconfiguration">Replication<wbr>Configuration<wbr>Replication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Replication configuration for a registry. See Replication Configuration.
 {{% /md %}}</dd></dl>
@@ -605,7 +605,7 @@ The following state arguments are supported:
 <a href="#state_replicationconfiguration_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationconfigurationreplicationconfiguration">Replication<wbr>Configuration<wbr>Replication<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#replicationconfigurationreplicationconfiguration">Replication<wbr>Configuration<wbr>Replication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Replication configuration for a registry. See Replication Configuration.
 {{% /md %}}</dd></dl>
@@ -673,7 +673,7 @@ The following state arguments are supported:
 <a href="#rule_csharp" style="color: inherit; text-decoration: inherit;">Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationconfigurationreplicationconfigurationrule">Replication<wbr>Configuration<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#replicationconfigurationreplicationconfigurationrule">Replication<wbr>Configuration<wbr>Replication<wbr>Configuration<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The replication rules for a replication configuration. See Rule.
 {{% /md %}}</dd></dl>
@@ -699,7 +699,7 @@ The following state arguments are supported:
 <a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationconfigurationreplicationconfigurationrule">Replication<wbr>Configuration<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#replicationconfigurationreplicationconfigurationrule">Replication<wbr>Configuration<wbr>Replication<wbr>Configuration<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The replication rules for a replication configuration. See Rule.
 {{% /md %}}</dd></dl>
@@ -712,7 +712,7 @@ The following state arguments are supported:
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationconfigurationreplicationconfigurationrule">Replication<wbr>Configuration<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#replicationconfigurationreplicationconfigurationrule">Replication<wbr>Configuration<wbr>Replication<wbr>Configuration<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The replication rules for a replication configuration. See Rule.
 {{% /md %}}</dd></dl>
@@ -727,7 +727,7 @@ The following state arguments are supported:
 <a href="#destinations_csharp" style="color: inherit; text-decoration: inherit;">Destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationconfigurationreplicationconfigurationruledestination">List&lt;Replication<wbr>Configuration<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#replicationconfigurationreplicationconfigurationruledestination">List&lt;Replication<wbr>Configuration<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination&gt;</a></span>
     </dt>
     <dd>{{% md %}}the details of a replication destination. See Destination.
 {{% /md %}}</dd></dl>
@@ -753,7 +753,7 @@ The following state arguments are supported:
 <a href="#destinations_nodejs" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationconfigurationreplicationconfigurationruledestination">Replication<wbr>Configuration<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#replicationconfigurationreplicationconfigurationruledestination">Replication<wbr>Configuration<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination[]</a></span>
     </dt>
     <dd>{{% md %}}the details of a replication destination. See Destination.
 {{% /md %}}</dd></dl>
@@ -766,7 +766,7 @@ The following state arguments are supported:
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationconfigurationreplicationconfigurationruledestination">Sequence[Replication<wbr>Configuration<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#replicationconfigurationreplicationconfigurationruledestination">Sequence[Replication<wbr>Configuration<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination]</a></span>
     </dt>
     <dd>{{% md %}}the details of a replication destination. See Destination.
 {{% /md %}}</dd></dl>

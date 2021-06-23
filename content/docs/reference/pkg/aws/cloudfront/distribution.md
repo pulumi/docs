@@ -1023,7 +1023,7 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
 <a href="#defaultcachebehavior_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Cache<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
@@ -1042,7 +1042,7 @@ one).
 <a href="#origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigin">[]Distribution<wbr>Origin</a></span>
+        <span class="property-type"><a href="#distributionorigin">[]Distribution<wbr>Origin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
@@ -1052,7 +1052,7 @@ distribution (multiples allowed).
 <a href="#restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions</a></span>
+        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
@@ -1062,7 +1062,7 @@ configuration for this distribution (maximum one).
 <a href="#viewercertificate_go" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
@@ -1093,7 +1093,7 @@ distribution.
 <a href="#customerrorresponses_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncustomerrorresponse">[]Distribution<wbr>Custom<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#distributioncustomerrorresponse">[]Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1132,7 +1132,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 <a href="#loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config</a></span>
+        <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
@@ -1143,7 +1143,7 @@ to your distribution (maximum one).
 <a href="#orderedcachebehaviors_go" style="color: inherit; text-decoration: inherit;">Ordered<wbr>Cache<wbr>Behaviors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehavior">[]Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehavior">[]Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -1154,7 +1154,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 <a href="#origingroups_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroup">[]Distribution<wbr>Origin<wbr>Group</a></span>
+        <span class="property-type"><a href="#distributionorigingroup">[]Distribution<wbr>Origin<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
@@ -2612,7 +2612,7 @@ distribution.
 <a href="#state_customerrorresponses_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncustomerrorresponse">[]Distribution<wbr>Custom<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#distributioncustomerrorresponse">[]Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2621,7 +2621,7 @@ distribution.
 <a href="#state_defaultcachebehavior_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Cache<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
@@ -2720,7 +2720,7 @@ currently in progress.
 <a href="#state_loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config</a></span>
+        <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
@@ -2731,7 +2731,7 @@ to your distribution (maximum one).
 <a href="#state_orderedcachebehaviors_go" style="color: inherit; text-decoration: inherit;">Ordered<wbr>Cache<wbr>Behaviors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehavior">[]Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehavior">[]Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -2742,7 +2742,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 <a href="#state_origingroups_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroup">[]Distribution<wbr>Origin<wbr>Group</a></span>
+        <span class="property-type"><a href="#distributionorigingroup">[]Distribution<wbr>Origin<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
@@ -2752,7 +2752,7 @@ distribution (multiples allowed).
 <a href="#state_origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigin">[]Distribution<wbr>Origin</a></span>
+        <span class="property-type"><a href="#distributionorigin">[]Distribution<wbr>Origin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
@@ -2772,7 +2772,7 @@ distribution (multiples allowed).
 <a href="#state_restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions</a></span>
+        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
@@ -2822,7 +2822,7 @@ CloudFront system.
 <a href="#state_trustedkeygroups_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Key<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedkeygroup">[]Distribution<wbr>Trusted<wbr>Key<wbr>Group</a></span>
+        <span class="property-type"><a href="#distributiontrustedkeygroup">[]Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
@@ -2832,7 +2832,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 <a href="#state_trustedsigners_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedsigner">[]Distribution<wbr>Trusted<wbr>Signer</a></span>
+        <span class="property-type"><a href="#distributiontrustedsigner">[]Distribution<wbr>Trusted<wbr>Signer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
@@ -2842,7 +2842,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 <a href="#state_viewercertificate_go" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
@@ -3780,7 +3780,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 <a href="#forwardedvalues_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
@@ -3790,7 +3790,7 @@ handles query strings, cookies and headers (maximum one).
 <a href="#functionassociations_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorfunctionassociation">List&lt;Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorfunctionassociation">List&lt;Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association&gt;</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a cloudfront
 function with specific actions (maximum 2).
@@ -3800,7 +3800,7 @@ function with specific actions (maximum 2).
 <a href="#lambdafunctionassociations_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Function<wbr>Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">List&lt;Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">List&lt;Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association&gt;</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
@@ -4166,7 +4166,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 <a href="#forwardedvalues_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
@@ -4176,7 +4176,7 @@ handles query strings, cookies and headers (maximum one).
 <a href="#functionassociations_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorfunctionassociation">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorfunctionassociation">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association[]</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a cloudfront
 function with specific actions (maximum 2).
@@ -4186,7 +4186,7 @@ function with specific actions (maximum 2).
 <a href="#lambdafunctionassociations_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Function<wbr>Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association[]</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
@@ -4359,7 +4359,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 <a href="#forwarded_values_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
@@ -4369,7 +4369,7 @@ handles query strings, cookies and headers (maximum one).
 <a href="#function_associations_python" style="color: inherit; text-decoration: inherit;">function_<wbr>associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorfunctionassociation">Sequence[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorfunctionassociation">Sequence[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association]</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a cloudfront
 function with specific actions (maximum 2).
@@ -4379,7 +4379,7 @@ function with specific actions (maximum 2).
 <a href="#lambda_function_associations_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>function_<wbr>associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">Sequence[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">Sequence[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association]</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
@@ -4470,7 +4470,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 <a href="#cookies_csharp" style="color: inherit; text-decoration: inherit;">Cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
@@ -4564,7 +4564,7 @@ value of `true` for `query_string`, all query string keys are cached.
 <a href="#cookies_nodejs" style="color: inherit; text-decoration: inherit;">cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
@@ -4611,7 +4611,7 @@ value of `true` for `query_string`, all query string keys are cached.
 <a href="#cookies_python" style="color: inherit; text-decoration: inherit;">cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
@@ -5226,7 +5226,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 <a href="#forwardedvalues_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
@@ -5236,7 +5236,7 @@ handles query strings, cookies and headers (maximum one).
 <a href="#functionassociations_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorfunctionassociation">List&lt;Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorfunctionassociation">List&lt;Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association&gt;</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a cloudfront
 function with specific actions (maximum 2).
@@ -5246,7 +5246,7 @@ function with specific actions (maximum 2).
 <a href="#lambdafunctionassociations_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Function<wbr>Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">List&lt;Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">List&lt;Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association&gt;</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
@@ -5632,7 +5632,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 <a href="#forwardedvalues_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
@@ -5642,7 +5642,7 @@ handles query strings, cookies and headers (maximum one).
 <a href="#functionassociations_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorfunctionassociation">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorfunctionassociation">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association[]</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a cloudfront
 function with specific actions (maximum 2).
@@ -5652,7 +5652,7 @@ function with specific actions (maximum 2).
 <a href="#lambdafunctionassociations_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Function<wbr>Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association[]</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
@@ -5835,7 +5835,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 <a href="#forwarded_values_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
@@ -5845,7 +5845,7 @@ handles query strings, cookies and headers (maximum one).
 <a href="#function_associations_python" style="color: inherit; text-decoration: inherit;">function_<wbr>associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorfunctionassociation">Sequence[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorfunctionassociation">Sequence[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Function<wbr>Association]</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a cloudfront
 function with specific actions (maximum 2).
@@ -5855,7 +5855,7 @@ function with specific actions (maximum 2).
 <a href="#lambda_function_associations_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>function_<wbr>associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">Sequence[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">Sequence[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association]</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
@@ -5946,7 +5946,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 <a href="#cookies_csharp" style="color: inherit; text-decoration: inherit;">Cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
@@ -6040,7 +6040,7 @@ value of `true` for `query_string`, all query string keys are cached.
 <a href="#cookies_nodejs" style="color: inherit; text-decoration: inherit;">cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
@@ -6087,7 +6087,7 @@ value of `true` for `query_string`, all query string keys are cached.
 <a href="#cookies_python" style="color: inherit; text-decoration: inherit;">cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
@@ -6507,7 +6507,7 @@ web site of your custom origin.
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigincustomheader">List&lt;Distribution<wbr>Origin<wbr>Custom<wbr>Header<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#distributionorigincustomheader">List&lt;Distribution<wbr>Origin<wbr>Custom<wbr>Header&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more sub-resources with `name` and
 `value` parameters that specify header data that will be sent to the origin
@@ -6518,7 +6518,7 @@ web site of your custom origin.
 <a href="#customoriginconfig_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Origin<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigincustomoriginconfig">Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionorigincustomoriginconfig">Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront custom
 origin configuration information. If an S3
@@ -6540,7 +6540,7 @@ custom origin.
 <a href="#originshield_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Shield</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionoriginoriginshield">Distribution<wbr>Origin<wbr>Origin<wbr>Shield<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionoriginoriginshield">Distribution<wbr>Origin<wbr>Origin<wbr>Shield</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront Origin Shield
 configuration information. Using Origin Shield can help reduce the load on your origin. For more information, see [Using Origin Shield](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html) in the Amazon CloudFront Developer Guide.
@@ -6550,7 +6550,7 @@ configuration information. Using Origin Shield can help reduce the load on your 
 <a href="#s3originconfig_csharp" style="color: inherit; text-decoration: inherit;">S3Origin<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigins3originconfig">Distribution<wbr>Origin<wbr>S3Origin<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionorigins3originconfig">Distribution<wbr>Origin<wbr>S3Origin<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront S3 origin
 configuration information. If a custom origin is required, use
@@ -6697,7 +6697,7 @@ web site of your custom origin.
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigincustomheader">Distribution<wbr>Origin<wbr>Custom<wbr>Header<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#distributionorigincustomheader">Distribution<wbr>Origin<wbr>Custom<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}One or more sub-resources with `name` and
 `value` parameters that specify header data that will be sent to the origin
@@ -6708,7 +6708,7 @@ web site of your custom origin.
 <a href="#customoriginconfig_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Origin<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigincustomoriginconfig">Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionorigincustomoriginconfig">Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront custom
 origin configuration information. If an S3
@@ -6730,7 +6730,7 @@ custom origin.
 <a href="#originshield_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Shield</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionoriginoriginshield">Distribution<wbr>Origin<wbr>Origin<wbr>Shield<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionoriginoriginshield">Distribution<wbr>Origin<wbr>Origin<wbr>Shield</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront Origin Shield
 configuration information. Using Origin Shield can help reduce the load on your origin. For more information, see [Using Origin Shield](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html) in the Amazon CloudFront Developer Guide.
@@ -6740,7 +6740,7 @@ configuration information. Using Origin Shield can help reduce the load on your 
 <a href="#s3originconfig_nodejs" style="color: inherit; text-decoration: inherit;">s3Origin<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigins3originconfig">Distribution<wbr>Origin<wbr>S3Origin<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionorigins3originconfig">Distribution<wbr>Origin<wbr>S3Origin<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront S3 origin
 configuration information. If a custom origin is required, use
@@ -6792,7 +6792,7 @@ web site of your custom origin.
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigincustomheader">Sequence[Distribution<wbr>Origin<wbr>Custom<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionorigincustomheader">Sequence[Distribution<wbr>Origin<wbr>Custom<wbr>Header]</a></span>
     </dt>
     <dd>{{% md %}}One or more sub-resources with `name` and
 `value` parameters that specify header data that will be sent to the origin
@@ -6803,7 +6803,7 @@ web site of your custom origin.
 <a href="#custom_origin_config_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>origin_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigincustomoriginconfig">Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionorigincustomoriginconfig">Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront custom
 origin configuration information. If an S3
@@ -6825,7 +6825,7 @@ custom origin.
 <a href="#origin_shield_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>shield</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionoriginoriginshield">Distribution<wbr>Origin<wbr>Origin<wbr>Shield<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionoriginoriginshield">Distribution<wbr>Origin<wbr>Origin<wbr>Shield</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront Origin Shield
 configuration information. Using Origin Shield can help reduce the load on your origin. For more information, see [Using Origin Shield](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html) in the Amazon CloudFront Developer Guide.
@@ -6835,7 +6835,7 @@ configuration information. Using Origin Shield can help reduce the load on your 
 <a href="#s3_origin_config_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>origin_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigins3originconfig">Distribution<wbr>Origin<wbr>S3Origin<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionorigins3originconfig">Distribution<wbr>Origin<wbr>S3Origin<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront S3 origin
 configuration information. If a custom origin is required, use
@@ -7180,7 +7180,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#failovercriteria_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}The failover criteria for when to failover to the secondary origin
 {{% /md %}}</dd><dt class="property-required"
@@ -7189,7 +7189,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroupmember">List&lt;Distribution<wbr>Origin<wbr>Group<wbr>Member<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#distributionorigingroupmember">List&lt;Distribution<wbr>Origin<wbr>Group<wbr>Member&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.
 {{% /md %}}</dd><dt class="property-required"
@@ -7242,7 +7242,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#failovercriteria_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}The failover criteria for when to failover to the secondary origin
 {{% /md %}}</dd><dt class="property-required"
@@ -7251,7 +7251,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroupmember">Distribution<wbr>Origin<wbr>Group<wbr>Member<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#distributionorigingroupmember">Distribution<wbr>Origin<wbr>Group<wbr>Member[]</a></span>
     </dt>
     <dd>{{% md %}}Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.
 {{% /md %}}</dd><dt class="property-required"
@@ -7273,7 +7273,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#failover_criteria_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}The failover criteria for when to failover to the secondary origin
 {{% /md %}}</dd><dt class="property-required"
@@ -7282,7 +7282,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroupmember">Sequence[Distribution<wbr>Origin<wbr>Group<wbr>Member<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionorigingroupmember">Sequence[Distribution<wbr>Origin<wbr>Group<wbr>Member]</a></span>
     </dt>
     <dd>{{% md %}}Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.
 {{% /md %}}</dd><dt class="property-required"
@@ -7562,7 +7562,7 @@ identity][5] to associate with the origin.
 <a href="#georestriction_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7586,7 +7586,7 @@ identity][5] to associate with the origin.
 <a href="#georestriction_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7598,7 +7598,7 @@ identity][5] to associate with the origin.
 <a href="#geo_restriction_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7727,7 +7727,7 @@ distribute your content (`blacklist`).
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedkeygroupitem">List&lt;Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#distributiontrustedkeygroupitem">List&lt;Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of nested attributes for each trusted signer
 {{% /md %}}</dd></dl>
@@ -7771,7 +7771,7 @@ distribute your content (`blacklist`).
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedkeygroupitem">Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Item<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#distributiontrustedkeygroupitem">Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}List of nested attributes for each trusted signer
 {{% /md %}}</dd></dl>
@@ -7793,7 +7793,7 @@ distribute your content (`blacklist`).
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedkeygroupitem">Sequence[Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributiontrustedkeygroupitem">Sequence[Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}List of nested attributes for each trusted signer
 {{% /md %}}</dd></dl>
@@ -7907,7 +7907,7 @@ distribute your content (`blacklist`).
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedsigneritem">List&lt;Distribution<wbr>Trusted<wbr>Signer<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#distributiontrustedsigneritem">List&lt;Distribution<wbr>Trusted<wbr>Signer<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of nested attributes for each trusted signer
 {{% /md %}}</dd></dl>
@@ -7951,7 +7951,7 @@ distribute your content (`blacklist`).
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedsigneritem">Distribution<wbr>Trusted<wbr>Signer<wbr>Item<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#distributiontrustedsigneritem">Distribution<wbr>Trusted<wbr>Signer<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}List of nested attributes for each trusted signer
 {{% /md %}}</dd></dl>
@@ -7973,7 +7973,7 @@ distribute your content (`blacklist`).
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedsigneritem">Sequence[Distribution<wbr>Trusted<wbr>Signer<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributiontrustedsigneritem">Sequence[Distribution<wbr>Trusted<wbr>Signer<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}List of nested attributes for each trusted signer
 {{% /md %}}</dd></dl>

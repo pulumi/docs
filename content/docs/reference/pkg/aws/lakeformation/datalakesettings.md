@@ -440,7 +440,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
 <a href="#createdatabasedefaultpermissions_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Database<wbr>Default<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission</a></span>
+        <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -449,7 +449,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
 <a href="#createtabledefaultpermissions_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Table<wbr>Default<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission</a></span>
+        <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -821,7 +821,7 @@ The following state arguments are supported:
 <a href="#state_createdatabasedefaultpermissions_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Database<wbr>Default<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission</a></span>
+        <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -830,7 +830,7 @@ The following state arguments are supported:
 <a href="#state_createtabledefaultpermissions_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Table<wbr>Default<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission</a></span>
+        <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

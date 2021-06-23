@@ -800,7 +800,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#accesslogs_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -921,7 +921,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#subnetmappings_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancersubnetmapping">[]Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#loadbalancersubnetmapping">[]Load<wbr>Balancer<wbr>Subnet<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A subnet mapping block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1879,7 +1879,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_accesslogs_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2027,7 +2027,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#state_subnetmappings_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancersubnetmapping">[]Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#loadbalancersubnetmapping">[]Load<wbr>Balancer<wbr>Subnet<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A subnet mapping block as documented below.
 {{% /md %}}</dd><dt class="property-optional"

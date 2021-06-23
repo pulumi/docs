@@ -366,7 +366,7 @@ The DistributionConfiguration resource accepts the following [input]({{< relref 
 <a href="#distributions_go" style="color: inherit; text-decoration: inherit;">Distributions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionconfigurationdistribution">[]Distribution<wbr>Configuration<wbr>Distribution</a></span>
+        <span class="property-type"><a href="#distributionconfigurationdistribution">[]Distribution<wbr>Configuration<wbr>Distribution<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks with distribution settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -921,7 +921,7 @@ The following state arguments are supported:
 <a href="#state_distributions_go" style="color: inherit; text-decoration: inherit;">Distributions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionconfigurationdistribution">[]Distribution<wbr>Configuration<wbr>Distribution</a></span>
+        <span class="property-type"><a href="#distributionconfigurationdistribution">[]Distribution<wbr>Configuration<wbr>Distribution<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks with distribution settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1133,7 +1133,7 @@ The following state arguments are supported:
 <a href="#amidistributionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ami<wbr>Distribution<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfiguration">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfiguration">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1195,7 +1195,7 @@ The following state arguments are supported:
 <a href="#amidistributionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ami<wbr>Distribution<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfiguration">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfiguration">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1226,7 +1226,7 @@ The following state arguments are supported:
 <a href="#ami_distribution_configuration_python" style="color: inherit; text-decoration: inherit;">ami_<wbr>distribution_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfiguration">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfiguration">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1277,7 +1277,7 @@ The following state arguments are supported:
 <a href="#launchpermission_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfigurationlaunchpermission">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration<wbr>Launch<wbr>Permission<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfigurationlaunchpermission">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration<wbr>Launch<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of EC2 launch permissions to apply to the distributed AMI. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1393,7 +1393,7 @@ The following state arguments are supported:
 <a href="#launchpermission_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfigurationlaunchpermission">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration<wbr>Launch<wbr>Permission<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfigurationlaunchpermission">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration<wbr>Launch<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of EC2 launch permissions to apply to the distributed AMI. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1451,7 +1451,7 @@ The following state arguments are supported:
 <a href="#launch_permission_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfigurationlaunchpermission">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration<wbr>Launch<wbr>Permission<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionconfigurationdistributionamidistributionconfigurationlaunchpermission">Distribution<wbr>Configuration<wbr>Distribution<wbr>Ami<wbr>Distribution<wbr>Configuration<wbr>Launch<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of EC2 launch permissions to apply to the distributed AMI. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

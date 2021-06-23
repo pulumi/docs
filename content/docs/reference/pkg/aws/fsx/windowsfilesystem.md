@@ -691,7 +691,7 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
 <a href="#selfmanagedactivedirectory_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Managed<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsfilesystemselfmanagedactivedirectory">Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory</a></span>
+        <span class="property-type"><a href="#windowsfilesystemselfmanagedactivedirectory">Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with `active_directory_id`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1865,7 +1865,7 @@ The following state arguments are supported:
 <a href="#state_selfmanagedactivedirectory_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Managed<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsfilesystemselfmanagedactivedirectory">Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory</a></span>
+        <span class="property-type"><a href="#windowsfilesystemselfmanagedactivedirectory">Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with `active_directory_id`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
