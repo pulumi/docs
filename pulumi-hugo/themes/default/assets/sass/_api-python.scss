@@ -11,6 +11,8 @@
 // the two kinds of pages that Sphinx emits: the first kind is a module page, containing
 // information on on members within a module, and the second kind is a table of contents.
 
+/* purgecss start ignore */
+
 // Use the same icon that AnchorJS uses for anchor links.
 $anchorjs-font: 1em/1 anchorjs-icons;
 $anchorjs-content: "\e9cb";
@@ -134,3 +136,4 @@ section[id="pulumi-python-sdk"] {
         word-break: break-word;
     }
 }
+/* purgecss end ignore */
