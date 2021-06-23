@@ -3538,44 +3538,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specify the version of amazon S3. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="avrocompressioncodec">Avro<wbr>Compression<wbr>Codec</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>None</dt>
-    <dd>none</dd><dt>Deflate</dt>
-    <dd>deflate</dd><dt>Snappy</dt>
-    <dd>snappy</dd><dt>Xz</dt>
-    <dd>xz</dd><dt>Bzip2</dt>
-    <dd>bzip2</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Avro<wbr>Compression<wbr>Codec<wbr>None</dt>
-    <dd>none</dd><dt>Avro<wbr>Compression<wbr>Codec<wbr>Deflate</dt>
-    <dd>deflate</dd><dt>Avro<wbr>Compression<wbr>Codec<wbr>Snappy</dt>
-    <dd>snappy</dd><dt>Avro<wbr>Compression<wbr>Codec<wbr>Xz</dt>
-    <dd>xz</dd><dt>Avro<wbr>Compression<wbr>Codec<wbr>Bzip2</dt>
-    <dd>bzip2</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>None</dt>
-    <dd>none</dd><dt>Deflate</dt>
-    <dd>deflate</dd><dt>Snappy</dt>
-    <dd>snappy</dd><dt>Xz</dt>
-    <dd>xz</dd><dt>Bzip2</dt>
-    <dd>bzip2</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>NONE</dt>
-    <dd>none</dd><dt>DEFLATE</dt>
-    <dd>deflate</dd><dt>SNAPPY</dt>
-    <dd>snappy</dd><dt>XZ</dt>
-    <dd>xz</dd><dt>BZIP2</dt>
-    <dd>bzip2</dd></dl>
-{{% /choosable %}}
-
 <h4 id="avrodataset">Avro<wbr>Dataset</h4>
 
 {{% choosable language csharp %}}
@@ -3609,9 +3571,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#avrocompressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Avro<wbr>Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#avrocompressioncodec">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Avro<wbr>Compression<wbr>Codec</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data avroCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avrocompressionlevel_csharp">
 <a href="#avrocompressionlevel_csharp" style="color: inherit; text-decoration: inherit;">Avro<wbr>Compression<wbr>Level</a>
@@ -3693,9 +3655,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#avrocompressioncodec_go" style="color: inherit; text-decoration: inherit;">Avro<wbr>Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#avrocompressioncodec">Avro<wbr>Compression<wbr>Codec</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data avroCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avrocompressionlevel_go">
 <a href="#avrocompressionlevel_go" style="color: inherit; text-decoration: inherit;">Avro<wbr>Compression<wbr>Level</a>
@@ -3777,9 +3739,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#avrocompressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">avro<wbr>Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#avrocompressioncodec">Avro<wbr>Compression<wbr>Codec</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data avroCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avrocompressionlevel_nodejs">
 <a href="#avrocompressionlevel_nodejs" style="color: inherit; text-decoration: inherit;">avro<wbr>Compression<wbr>Level</a>
@@ -3861,9 +3823,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#avro_compression_codec_python" style="color: inherit; text-decoration: inherit;">avro_<wbr>compression_<wbr>codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#avrocompressioncodec">Avro<wbr>Compression<wbr>Codec</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data avroCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avro_compression_level_python">
 <a href="#avro_compression_level_python" style="color: inherit; text-decoration: inherit;">avro_<wbr>compression_<wbr>level</a>
@@ -3947,9 +3909,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#avrocompressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Avro<wbr>Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data avroCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avrocompressionlevel_csharp">
 <a href="#avrocompressionlevel_csharp" style="color: inherit; text-decoration: inherit;">Avro<wbr>Compression<wbr>Level</a>
@@ -4031,9 +3993,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#avrocompressioncodec_go" style="color: inherit; text-decoration: inherit;">Avro<wbr>Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data avroCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avrocompressionlevel_go">
 <a href="#avrocompressionlevel_go" style="color: inherit; text-decoration: inherit;">Avro<wbr>Compression<wbr>Level</a>
@@ -4115,9 +4077,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#avrocompressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">avro<wbr>Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data avroCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avrocompressionlevel_nodejs">
 <a href="#avrocompressionlevel_nodejs" style="color: inherit; text-decoration: inherit;">avro<wbr>Compression<wbr>Level</a>
@@ -4199,9 +4161,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#avro_compression_codec_python" style="color: inherit; text-decoration: inherit;">avro_<wbr>compression_<wbr>codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data avroCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avro_compression_level_python">
 <a href="#avro_compression_level_python" style="color: inherit; text-decoration: inherit;">avro_<wbr>compression_<wbr>level</a>
@@ -42140,40 +42102,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
     <dd>{{% md %}}This property will be retired. Please consider using schema + table properties instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="orccompressioncodec">Orc<wbr>Compression<wbr>Codec</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>None</dt>
-    <dd>none</dd><dt>Zlib</dt>
-    <dd>zlib</dd><dt>Snappy</dt>
-    <dd>snappy</dd><dt>Lzo</dt>
-    <dd>lzo</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Orc<wbr>Compression<wbr>Codec<wbr>None</dt>
-    <dd>none</dd><dt>Orc<wbr>Compression<wbr>Codec<wbr>Zlib</dt>
-    <dd>zlib</dd><dt>Orc<wbr>Compression<wbr>Codec<wbr>Snappy</dt>
-    <dd>snappy</dd><dt>Orc<wbr>Compression<wbr>Codec<wbr>Lzo</dt>
-    <dd>lzo</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>None</dt>
-    <dd>none</dd><dt>Zlib</dt>
-    <dd>zlib</dd><dt>Snappy</dt>
-    <dd>snappy</dd><dt>Lzo</dt>
-    <dd>lzo</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>NONE</dt>
-    <dd>none</dd><dt>ZLIB</dt>
-    <dd>zlib</dd><dt>SNAPPY</dt>
-    <dd>snappy</dd><dt>LZO</dt>
-    <dd>lzo</dd></dl>
-{{% /choosable %}}
-
 <h4 id="orcdataset">Orc<wbr>Dataset</h4>
 
 {{% choosable language csharp %}}
@@ -42223,9 +42151,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#orccompressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Orc<wbr>Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#orccompressioncodec">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Orc<wbr>Compression<wbr>Codec</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data orcCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -42299,9 +42227,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#orccompressioncodec_go" style="color: inherit; text-decoration: inherit;">Orc<wbr>Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#orccompressioncodec">Orc<wbr>Compression<wbr>Codec</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data orcCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -42375,9 +42303,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#orccompressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">orc<wbr>Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#orccompressioncodec">Orc<wbr>Compression<wbr>Codec</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data orcCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -42451,9 +42379,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#orc_compression_codec_python" style="color: inherit; text-decoration: inherit;">orc_<wbr>compression_<wbr>codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#orccompressioncodec">Orc<wbr>Compression<wbr>Codec</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data orcCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -42529,9 +42457,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#orccompressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Orc<wbr>Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data orcCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -42605,9 +42533,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#orccompressioncodec_go" style="color: inherit; text-decoration: inherit;">Orc<wbr>Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data orcCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -42681,9 +42609,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#orccompressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">orc<wbr>Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data orcCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -42757,9 +42685,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#orc_compression_codec_python" style="color: inherit; text-decoration: inherit;">orc_<wbr>compression_<wbr>codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data orcCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>

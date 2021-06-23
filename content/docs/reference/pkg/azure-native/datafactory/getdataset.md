@@ -1771,9 +1771,9 @@ The following output properties are available:
 <a href="#avrocompressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Avro<wbr>Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data avroCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avrocompressionlevel_csharp">
 <a href="#avrocompressionlevel_csharp" style="color: inherit; text-decoration: inherit;">Avro<wbr>Compression<wbr>Level</a>
@@ -1855,9 +1855,9 @@ The following output properties are available:
 <a href="#avrocompressioncodec_go" style="color: inherit; text-decoration: inherit;">Avro<wbr>Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data avroCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avrocompressionlevel_go">
 <a href="#avrocompressionlevel_go" style="color: inherit; text-decoration: inherit;">Avro<wbr>Compression<wbr>Level</a>
@@ -1939,9 +1939,9 @@ The following output properties are available:
 <a href="#avrocompressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">avro<wbr>Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data avroCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avrocompressionlevel_nodejs">
 <a href="#avrocompressionlevel_nodejs" style="color: inherit; text-decoration: inherit;">avro<wbr>Compression<wbr>Level</a>
@@ -2023,9 +2023,9 @@ The following output properties are available:
 <a href="#avro_compression_codec_python" style="color: inherit; text-decoration: inherit;">avro_<wbr>compression_<wbr>codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data avroCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avro_compression_level_python">
 <a href="#avro_compression_level_python" style="color: inherit; text-decoration: inherit;">avro_<wbr>compression_<wbr>level</a>
@@ -21223,9 +21223,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#orccompressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Orc<wbr>Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data orcCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -21299,9 +21299,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#orccompressioncodec_go" style="color: inherit; text-decoration: inherit;">Orc<wbr>Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data orcCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -21375,9 +21375,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#orccompressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">orc<wbr>Compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data orcCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -21451,9 +21451,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#orc_compression_codec_python" style="color: inherit; text-decoration: inherit;">orc_<wbr>compression_<wbr>codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The data orcCompressionCodec. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>

@@ -134,10 +134,10 @@ metadata = azure_native.securityinsights.Metadata("metadata",
         name="User Name",
     ),
     content_id="c00ee137-7475-47c8-9cce-ec6f0f1bedd0",
-    dependencies=azure_native.securityinsights.MetadataDependenciesArgs(
-        criteria=[
-            azure_native.securityinsights.MetadataDependenciesArgs(
-                criteria=[
+    dependencies={
+        "criteria": [
+            {
+                "criteria": [
                     azure_native.securityinsights.MetadataDependenciesArgs(
                         content_id="045d06d0-ee72-4794-aba4-cf5646e4c756",
                         kind="dataConnector",
@@ -153,8 +153,8 @@ metadata = azure_native.securityinsights.Metadata("metadata",
                         version="2.0",
                     ),
                 ],
-                operator="OR",
-            ),
+                "operator": "OR",
+            },
             azure_native.securityinsights.MetadataDependenciesArgs(
                 content_id="31ee11cc-9989-4de8-b176-5e0ef5c4dbab",
                 kind="playbook",
@@ -165,8 +165,8 @@ metadata = azure_native.securityinsights.Metadata("metadata",
                 kind="parser",
             ),
         ],
-        operator="AND",
-    ),
+        "operator": "AND",
+    },
     kind="analyticRule",
     metadata_name="metadataName",
     operational_insights_resource_provider="Microsoft.OperationalInsights",
