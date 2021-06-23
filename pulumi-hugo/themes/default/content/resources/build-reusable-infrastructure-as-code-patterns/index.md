@@ -7,7 +7,7 @@ meta_desc: "In this workshop, we’ll guide you through an example of building a
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -48,7 +48,7 @@ main:
     # Webinar title.
     title: "How to Build Reusable Infrastructure as Code Patterns"
     # URL for embedding a URL for ungated webinars.
-    youtube_url: ""
+    youtube_url: "https://www.youtube.com/embed/3BaDCrCw5FM"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2021-06-17T09:00:00-07:00
     # Duration of the webinar.
@@ -64,8 +64,8 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Lee Briggs
-          role: Community Engineer, Pulumi
+        - name: Matt Stratton
+          role: Staff Developer Advocate, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
