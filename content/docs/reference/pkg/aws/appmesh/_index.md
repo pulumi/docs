@@ -35,6 +35,6 @@ Explore the resources and functions of the aws.appmesh module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.9.0</dd>
+	<dd>4.9.1</dd>
 </dl>
 

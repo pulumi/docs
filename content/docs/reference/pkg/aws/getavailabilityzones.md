@@ -46,12 +46,12 @@ class MyStack : Stack
         }));
         var primary = new Aws.Ec2.Subnet("primary", new Aws.Ec2.SubnetArgs
         {
-            AvailabilityZone = available.Apply(available => available.Names[0]),
+            AvailabilityZone = available.Apply(available => available.Names?[0]),
         });
         // ...
         var secondary = new Aws.Ec2.Subnet("secondary", new Aws.Ec2.SubnetArgs
         {
-            AvailabilityZone = available.Apply(available => available.Names[1]),
+            AvailabilityZone = available.Apply(available => available.Names?[1]),
         });
         // ...
     }
@@ -131,9 +131,9 @@ import * as aws from "@pulumi/aws";
 const available = aws.getAvailabilityZones({
     state: "available",
 });
-const primary = new aws.ec2.Subnet("primary", {availabilityZone: available.then(available => available.names[0])});
+const primary = new aws.ec2.Subnet("primary", {availabilityZone: available.then(available => available.names?[0])});
 // ...
-const secondary = new aws.ec2.Subnet("secondary", {availabilityZone: available.then(available => available.names[1])});
+const secondary = new aws.ec2.Subnet("secondary", {availabilityZone: available.then(available => available.names?[1])});
 // ...
 ```
 

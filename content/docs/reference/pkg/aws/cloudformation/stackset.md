@@ -179,9 +179,9 @@ func main() {
 			return err
 		}
 		_, err = iam.NewRolePolicy(ctx, "aWSCloudFormationStackSetAdministrationRoleExecutionPolicyRolePolicy", &iam.RolePolicyArgs{
-			Policy: aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.ApplyT(func(aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument iam.GetPolicyDocumentResult) (string, error) {
+			Policy: pulumi.String(aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.ApplyT(func(aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument iam.GetPolicyDocumentResult) (string, error) {
 				return aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.Json, nil
-			}).(pulumi.StringOutput),
+			}).(pulumi.StringOutput)),
 			Role: aWSCloudFormationStackSetAdministrationRole.Name,
 		})
 		if err != nil {
@@ -304,7 +304,7 @@ const aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument =
     }],
 }));
 const aWSCloudFormationStackSetAdministrationRoleExecutionPolicyRolePolicy = new aws.iam.RolePolicy("aWSCloudFormationStackSetAdministrationRoleExecutionPolicyRolePolicy", {
-    policy: aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.json,
+    policy: aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.apply(aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument => aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.json),
     role: aWSCloudFormationStackSetAdministrationRole.name,
 });
 ```

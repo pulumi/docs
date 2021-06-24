@@ -73,20 +73,13 @@ func main() {
 		_, err = serverlessrepository.NewCloudFormationStack(ctx, "exampleCloudFormationStack", &serverlessrepository.CloudFormationStackArgs{
 			ApplicationId:   pulumi.String(exampleApplication.ApplicationId),
 			SemanticVersion: pulumi.String(exampleApplication.SemanticVersion),
-			Capabilities:    toPulumiStringArray(exampleApplication.RequiredCapabilities),
+			Capabilities:    interface{}(exampleApplication.RequiredCapabilities),
 		})
 		if err != nil {
 			return err
 		}
 		return nil
 	})
-}
-func toPulumiStringArray(arr []string) pulumi.StringArray {
-	var pulumiArr pulumi.StringArray
-	for _, v := range arr {
-		pulumiArr = append(pulumiArr, pulumi.String(v))
-	}
-	return pulumiArr
 }
 ```
 

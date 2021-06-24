@@ -87,13 +87,13 @@ class MyStack : Stack
         {
             VpcId = fooVpc.Id,
             CidrBlock = "10.1.1.0/24",
-            AvailabilityZone = available.Apply(available => available.Names[0]),
+            AvailabilityZone = available.Apply(available => available.Names?[0]),
         });
         var bar = new Aws.Ec2.Subnet("bar", new Aws.Ec2.SubnetArgs
         {
             VpcId = fooVpc.Id,
             CidrBlock = "10.1.2.0/24",
-            AvailabilityZone = available.Apply(available => available.Names[1]),
+            AvailabilityZone = available.Apply(available => available.Names?[1]),
         });
         var fooLoadBalancer = new Aws.Alb.LoadBalancer("fooLoadBalancer", new Aws.Alb.LoadBalancerArgs
         {
@@ -318,12 +318,12 @@ const available = aws.getAvailabilityZones({});
 const fooSubnet = new aws.ec2.Subnet("fooSubnet", {
     vpcId: fooVpc.id,
     cidrBlock: "10.1.1.0/24",
-    availabilityZone: available.then(available => available.names[0]),
+    availabilityZone: available.then(available => available.names?[0]),
 });
 const bar = new aws.ec2.Subnet("bar", {
     vpcId: fooVpc.id,
     cidrBlock: "10.1.2.0/24",
-    availabilityZone: available.then(available => available.names[1]),
+    availabilityZone: available.then(available => available.names?[1]),
 });
 const fooLoadBalancer = new aws.alb.LoadBalancer("fooLoadBalancer", {
     internal: true,

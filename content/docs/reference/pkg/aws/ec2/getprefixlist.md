@@ -59,7 +59,7 @@ class MyStack : Stack
             Egress = false,
             Protocol = "tcp",
             RuleAction = "allow",
-            CidrBlock = privateS3PrefixList.Apply(privateS3PrefixList => privateS3PrefixList.CidrBlocks[0]),
+            CidrBlock = privateS3PrefixList.Apply(privateS3PrefixList => privateS3PrefixList.CidrBlocks?[0]),
             FromPort = 443,
             ToPort = 443,
         });
@@ -168,7 +168,7 @@ const privateS3NetworkAclRule = new aws.ec2.NetworkAclRule("privateS3NetworkAclR
     egress: false,
     protocol: "tcp",
     ruleAction: "allow",
-    cidrBlock: privateS3PrefixList.cidrBlocks[0],
+    cidrBlock: privateS3PrefixList.apply(privateS3PrefixList => privateS3PrefixList.cidrBlocks?[0]),
     fromPort: 443,
     toPort: 443,
 });

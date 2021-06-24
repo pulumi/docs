@@ -44,7 +44,7 @@ class MyStack : Stack
                     {
                         new Aws.Ecr.Inputs.ReplicationConfigurationReplicationConfigurationRuleDestinationArgs
                         {
-                            Region = exampleRegions.Apply(exampleRegions => exampleRegions.Names[0]),
+                            Region = exampleRegions.Apply(exampleRegions => exampleRegions.Names?[0]),
                             RegistryId = current.Apply(current => current.AccountId),
                         },
                     },
@@ -139,7 +139,7 @@ const exampleRegions = aws.getRegions({});
 const exampleReplicationConfiguration = new aws.ecr.ReplicationConfiguration("exampleReplicationConfiguration", {replicationConfiguration: {
     rule: {
         destinations: [{
-            region: exampleRegions.then(exampleRegions => exampleRegions.names[0]),
+            region: exampleRegions.then(exampleRegions => exampleRegions.names?[0]),
             registryId: current.then(current => current.accountId),
         }],
     },

@@ -253,9 +253,9 @@ func main() {
 		}
 		exampleBucketPolicy, err := s3.NewBucketPolicy(ctx, "exampleBucketPolicy", &s3.BucketPolicyArgs{
 			Bucket: exampleBucket.ID(),
-			Policy: acmpcaBucketAccess.ApplyT(func(acmpcaBucketAccess iam.GetPolicyDocumentResult) (string, error) {
+			Policy: pulumi.String(acmpcaBucketAccess.ApplyT(func(acmpcaBucketAccess iam.GetPolicyDocumentResult) (string, error) {
 				return acmpcaBucketAccess.Json, nil
-			}).(pulumi.StringOutput),
+			}).(pulumi.StringOutput)),
 		})
 		if err != nil {
 			return err
@@ -368,7 +368,7 @@ const acmpcaBucketAccess = pulumi.all([exampleBucket.arn, exampleBucket.arn]).ap
 }));
 const exampleBucketPolicy = new aws.s3.BucketPolicy("exampleBucketPolicy", {
     bucket: exampleBucket.id,
-    policy: acmpcaBucketAccess.json,
+    policy: acmpcaBucketAccess.apply(acmpcaBucketAccess => acmpcaBucketAccess.json),
 });
 const exampleCertificateAuthority = new aws.acmpca.CertificateAuthority("exampleCertificateAuthority", {
     certificateAuthorityConfiguration: {

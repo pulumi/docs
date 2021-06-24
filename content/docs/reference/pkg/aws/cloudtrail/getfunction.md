@@ -13,6 +13,110 @@ meta_desc: "Documentation for the aws.cloudtrail.getFunction function with examp
 Provides information about a CloudFront Function.
 
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var functionName = config.Require("functionName");
+        var existing = Output.Create(Aws.CloudTrail.GetFunction.InvokeAsync(new Aws.CloudTrail.GetFunctionArgs
+        {
+            Name = functionName,
+        }));
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudtrail"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		functionName := cfg.Require("functionName")
+		_, err := cloudtrail.GetFunction(ctx, &cloudtrail.GetFunctionArgs{
+			Name: functionName,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+config = pulumi.Config()
+function_name = config.require("functionName")
+existing = aws.cloudtrail.get_function(name=function_name)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const config = new pulumi.Config();
+const functionName = config.require("functionName");
+const existing = aws.cloudtrail.getFunction({
+    name: functionName,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Using getFunction {#using}
