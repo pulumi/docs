@@ -56,6 +56,18 @@ To view a stack's details:
 
 You can see other details such as who applied the update and when, as well as counts of added, updated, and unchanged resources. If your stack is integrated with a CI/CD pipeline, such as [GitHub Actions]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}), you also see useful links to data like your Git commit hash, mapped branch, and pull request ID.
 
+### Transferring Stacks
+
+Stack admins can transfer their stacks between personal accounts and organizations or between organizations.
+
+If transferring to an organization, the **Allow organization members to create stacks and transfer stacks to this organization** setting must be turned on from the **Access Management** page in the organization's settings.
+
+To transfer a stack:
+
+1. Navigate to the stack, and then the stack's **Settings**.
+1. Select **Transfer stack**.
+1. Provide the personal account or organization name and select **Transfer**.
+
 #### Custom Stack Tags
 
 ![Stack tags](/images/docs/reference/service/stack-tags.png)

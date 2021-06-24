@@ -50,7 +50,7 @@ To create a webhook:
 1. Navigate to the organization's **Settings**.
 1. Navigate to **Integrations**.
 1. Select **Create webhook**.
-1. Provide provide a _Display Name_, _Payload URL_, and optionally a _Secret_.
+1. Provide a _Display Name_, _Payload URL_, and optionally a _Secret_.
 
 ![Stack webhooks](/images/docs/reference/service/webhooks/stack-webhooks.png)
 
