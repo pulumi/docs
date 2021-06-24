@@ -91,3 +91,23 @@ reference:
     parent: cli
     url: /docs/reference/cli/pulumi_whoami/
     weight: 18
+
+  - name: Node.js
+    parent: Pulumi SDK
+    url: /docs/reference/pkg/nodejs/pulumi/pulumi
+    weight: 1
+
+  - name: Python
+    parent: Pulumi SDK
+    url: /docs/reference/pkg/python/pulumi
+    weight: 2
+
+  - name: Go
+    parent: Pulumi SDK
+    url: https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi
+    weight: 3
+
+  - name: .NET Core
+    parent: Pulumi SDK
+    url: /docs/reference/pkg/dotnet/Pulumi/Pulumi.html
+    weight: 4
