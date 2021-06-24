@@ -33,26 +33,30 @@ will be notified whenever a stack is updated or changed. Organization
 webhooks will be notified for events happening within each of the organization's
 stacks.
 
-> There are some restrictions for the number of webhooks that can be registered
-> when using the Pulumi Team editions. [Contact us]({{< relref "/about#contact-us" >}})
-> if you need the limit increased.
+{{% notes "info" %}}
+There are some restrictions for the number of webhooks that can be registered
+when using the Pulumi Team editions. [Contact us]({{< relref "/about#contact-us" >}})
+if you need the limit increased.
+{{% /notes %}}
 
 The Webhooks management page is on the Stack or Organization Settings tab.
 
 ![Organization webhooks](/images/docs/reference/service/webhooks/org-webhooks.png)
 
-### Creating a Webhook
+### Create a Webhook
 
-To create a new webhook, provide a _display name_, _webhook
-URL_, and an optional _shared secret_.
+To create a webhook:
+
+1. Navigate to the organization's **Settings**.
+1. Navigate to **Integrations**.
+1. Select **Create webhook**.
+1. Provide provide a _Display Name_, _Payload URL_, and optionally a _Secret_.
 
 ![Stack webhooks](/images/docs/reference/service/webhooks/stack-webhooks.png)
 
-If a shared secret is provided, webhook deliveries will contain a signature
+If a secret is provided, webhook deliveries will contain a signature
 in the HTTP request header that can be used to authenticate messages as coming from
 the Pulumi Console.
-
-For details on how to verify payload signatures, see the _Headers_ section below.
 
 ## Event Notifications
 
@@ -64,8 +68,6 @@ that organization.
 | --- | --- |
 | `stack_update` | Whenever a stack is updated. |
 | `stack_preview` | Whenever a stack update is previewed. |
-
-<p></p>
 
 The following events are only delivered to organization-based webhooks.
 
@@ -90,8 +92,6 @@ Payloads contain several headers.
 | `Pulumi-Webhook-ID` | Unique ID for each webhook sent which you can reference when looking at delivery logs in the Pulumi Console. |
 | `Pulumi-Webhook-Kind` | The kind of webhook event, e.g. `stack_update`. |
 | `Pulumi-Webhook-Signature` | Only set if the webhook has a shared secret. HMAC hex digest of the request payload, using the `sha256` hash function and the webhook secret as the HMAC key. |
-
-<p></p>
 
 The following snippets show how to compute and verify the webhook signature.
 For examples in other languages, see [danharper/hmac-examples](https://github.com/danharper/hmac-examples).
@@ -164,9 +164,11 @@ Most payloads contain `user` and `organization` fields. `user` contains the
 identity of the user who triggered the webhook. For example, the person who initiated
 the stack update or performed the action.
 
-> The Pulumi Webhook payloads are under development, and may be changed from
-> time to time. See the [Pulumi Community Slack](https://slack.pulumi.com/) for
-> any announcements or changes.
+{{% notes "warning" %}}
+The Pulumi Webhook payloads are under development, and may be changed from
+time to time. See the [Pulumi Community Slack](https://slack.pulumi.com/) for
+any announcements or changes.
+{{% /notes %}}
 
 ### Stack Creation
 

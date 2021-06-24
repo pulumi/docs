@@ -18,17 +18,16 @@ The Pulumi Console automatically manages deployment state and gives you a compre
 * View stack outputs and configurations
 * Review your stack activity, resources, and settings
 
-## Creating a New Project
+## Creating a Project
 
-If you have been added to a Pulumi organization with no existing projects, the Console displays the **Create project** button upon signing in.
+To create a project:
 
-![New Pulumi project](/images/docs/reference/service/new-project.png)
-
-Select **Create Project** to get started with your project. The confirmation page gives you installation, setup, and stack deployment instructions.
-
-To create a new project via the CLI, see [pulumi new]({{< relref "/docs/reference/cli/pulumi_new" >}}).
-
-{{< get-started-note >}}
+1. Navigate to **Projects**.
+1. Select **Create project**.
+1. Select a cloud and a language and use the **Next** button.
+1. Optionally, change your project name and project description.
+1. Select **Create project**.
+1. Follow the provided CLI command instructions.
 
 ## Managing your Stacks
 
@@ -36,33 +35,50 @@ Every Pulumi program is deployed to a [stack]({{< relref "/docs/intro/concepts/s
 
 ### Viewing your organization stacks
 
-Once signed in, select your organization from the drop-down list on the upper left corner of the screen.
-
 ![Stack outputs and configuration](/images/docs/reference/service/organization-stacks.png)
 
-The **Projects** tab displays a card-based view of your stacks with relevant details including the project name and description, language, stack name, last update information, and resource count. This example shows an organization backed by GitHub and sorts the stacks by their GitHub repositories. By default, stacks are grouped by [project]({{< relref "/docs/intro/concepts/project" >}}), but you may group them by [tag]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}). Select the stack name to get more details on a specific stack.
+To view an organization's stacks:
 
-If you have been added to a Pulumi organization with existing projects and stacks, the Console displays a list of _Stacks_ and a _Recent Activity_ stream when you sign in. The lists are collapsible and are sorted according to the most recent updates. Select a specific stack update or activity for a more detailed view.
+1. Navigate to **Projects**.
+1. Optionally, adjust the grouping by selecting the **Group By** and **Sort By** controls.
+1. To view a stacks details select the name of the stack.
+1. To view a specific stack update, navigate to **Activity** and select it from the list.
 
 ### Stack Detailed View
 
-Selecting a specific stack update takes you to the Stack tab. This tab displays your stack's outputs, configuration values, and tags and renders a web-based view of the resulting output when you run `pulumi config` and `pulumi stack output` from the command line.
+To view a stack's details:
+
+1. Navigate to **Projects** and then a specific stack.
+1. Navigate to **Activity**.
+1. Review the stack's outputs, configuration values, and tags.
 
 ![Stack outputs and configuration](/images/docs/reference/service/stack-outputs-and-configuration.png)
 
-You can see other details such as who applied the update and when, as well as counts of added, updated, and unchanged resources. If your stack is integrated with your workflow, such as [GitHub Actions]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}), you should also see useful links to data like your Git commit hash, mapped branch, and pull request ID.
+You can see other details such as who applied the update and when, as well as counts of added, updated, and unchanged resources. If your stack is integrated with a CI/CD pipeline, such as [GitHub Actions]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}), you also see useful links to data like your Git commit hash, mapped branch, and pull request ID.
 
-#### Stack tags
-
-Custom [stack tags]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}) can be managed within the Stack tab. Select the **New** button to create a new tag, the pencil to edit an existing tag, or the trash can to permanently delete a tag.
+#### Custom Stack Tags
 
 ![Stack tags](/images/docs/reference/service/stack-tags.png)
 
+To create a custom tag:
+
+1. Navigate to **Projects** and then a specific stack.
+1. Select **New tag**.
+
+To modify or delete a custom tag:
+
+1. Navigate to **Projects** and then a specific stack.
+1. To modify a custom tag, use the pencil icon.
+1. To delete a custom tag, use the trash can icon.
+
 #### Activity
 
-By default, the Activity tab gives you a card-based list of stack updates sorted by date.
+To view stack activity:
 
-Selecting "Details" from the Stack update tab, or selecting a specific activity from the login screen, gives you a detailed view of that specific update. The Activity tab provides insights into the operations that were performed on your stack resources during an update. This tab can include three tabs, depending on your setup: Changes, Timeline, and Configuration.
+1. Navigate to **Projects** and then a specific stack.
+1. Navigate to **Activity**.
+1. Review insights and operations that were performed on your stack resources during the update.
+1. Navigate to **Changes**, **Timeline**, or **Configuration** for more details.
 
 ##### Changes
 
@@ -86,7 +102,11 @@ This displays the same configuration details that you can find in the Stack view
 
 #### Resources View
 
-Select a resource link from **Activity > Timeline** to drill into a specific resource's properties and dependencies, if any. The **Resources** tab lets you toggle between a list and a graph view.
+To view a stack's resources:
+
+1. Navigate to **Projects** and then a specific stack.
+1. Navigate to **Resources**.
+1. Select **List View** or **Graph View** to toggle between a list view and a graph view.
 
 ##### List View
 
@@ -104,7 +124,13 @@ Select an individual resources to view its list of properties and dependencies.
 
 ### Deleting a stack
 
-When drilling into a specific stack, organization members with [sufficient permissions]({{< relref "/docs/intro/console/organization-roles#stack-deletion" >}}) have the additional option of being able to delete the stack. Note that this removes the stack entirely from the Pulumi Service, along with all of its update history.
+Deleting a stack removes the stack entirely from the Pulumi Service, along with all of its update history.
+
+To delete a stack:
+
+1. Navigate to **Projects** and then a specific stack.
+1. Navigate to the stack's **Settings**.
+1. Follow the instructions in the _Danger Zone_.
 
 ## Related Blogs
 

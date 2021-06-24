@@ -24,12 +24,12 @@ So that code is delivered to production -- meaning less of a lag between commits
 The assistant contains a guided experience to help teams configure a VCS as well as automate it with a
 CI/CD pipeline.
 
-The wizard has two options to help you to get started with integrations:
+The assistant has two options to help you to get started with integrations:
 
 * Use a single service that provides both a version control system and CI/CD pipelines
 * Or, just get the starter workflow for a CI/CD service of your choice customized for your stack
 
-![Start Workflow Wizard](/images/docs/reference/console/start-workflow-wizard.png)
+![Start Workflow Assistant](/images/docs/reference/console/start-workflow-wizard.png)
 
 The assistant also offers best practice hints for stacks that do not have a VCS configuration.
 Here's how the assistant helps teams throughout the Console:
@@ -43,14 +43,19 @@ CI/CD pipeline and which ones were not.
 ## Using The Same Service For VCS and CI/CD
 
 There are several benefits for a team to choose a single service for all of their team collaboration needs.
-This section reviews how the wizard helps your team configure VCS and CI/CD regardless of the VCS or identity provider
+This section reviews how the assistant helps your team configure VCS and CI/CD regardless of the VCS or identity provider
 you use to connect to Pulumi.
 
 ### Configuring a VCS
 
-> VCS configuration applies to the Pulumi project in which your stack is created.
+VCS configuration applies to the Pulumi project in which your stack is created.
 
-Select an identity you wish to use to setup VCS, as well as a CI/CD pipeline for the stack.
+{{% notes "info" %}}
+If your identity isn't tied to a VCS service (for example, if you're using SAML or email), you will still be able to get a customized CI/CD
+workflow for your stack.
+{{% /notes %}}
+
+#### VCS Identity Options
 
 Services such as Atlassian Bitbucket, GitHub, GitLab offer both a version control system as well as a CI/CD service.
 
@@ -60,40 +65,34 @@ Services such as Atlassian Bitbucket, GitHub, GitLab offer both a version contro
 
 This might be a convenient option if your team wishes to keep everything related to your Pulumi project on a single service.
 
-{{% notes "info" %}}
-If your identity isn't tied to a VCS service (for example, if you're using SAML or email), you will still be able to get a customized CI/CD
-workflow for your stack.
-{{% /notes %}}
+To configure VCS using the CI/CD Assistant:
 
-After you choose an identity, the wizard will provide you with a quick link
-to create a new repository in the target service as well as the instructions for
-ensuring that Pulumi correctly recognizes the VCS configuration.
-
-Complete each step and check-off the appropriate step. When all of the tasks under the
-**Configure VCS** step are complete, select the **Next** button. The wizard will confirm
-that your VCS configuration has been recognized and will automatically move you to the
-next step.
+1. Select a VCS identity, and CI/CD pipeline.
+1. Navigate to the link provided by the assistant.
+1. Create a new repository using your selected service.
+1. Follow the VCS configuration instructions and check off the boxes as you complete each step.
+1. After each step, select the **Next** button to move to the next step.
 
 ### Configure CI/CD secrets
 
 Now that your Pulumi project is configured to use a VCS your team can collaborate with you easily.
 Most importantly, your Pulumi project is safe from accidents on your local machine!
 
-If you start the CI/CD integration wizard having configured the VCS for your project already,
-the wizard will skip to the next step automatically. You can see the repository that your project
-is integrated with by selecting the Configure VCS step marker.
+If you start the CI/CD integration assistant having configured the VCS for your project already,
+the assistant will skip to the next step automatically. You can see the repository that your project
+is integrated with by selecting the **Configure VCS** step marker.
 
 The **Configure CI/CD** step will help you configure secrets that will be used by your Pulumi stack.
-For supported services, the wizard will provide a convenient link to the respective location
+For supported services, the assistant will provide a convenient link to the respective location
 where you can configure the secrets.
 
-The wizard provides a convenient way to create a [Pulumi Access Token]({{< relref "/docs/intro/console/accounts#access-tokens" >}})
+The assistant provides a convenient way to create a [Pulumi Access Token]({{< relref "/docs/intro/console/accounts#access-tokens" >}})
 without needing to leave the page.
 
 ![Pulumi Access Token](/images/docs/reference/console/pulumi-access-token.png)
 
-In the following example the wizard is being used to configure a GitHub Actions workflow.
-So the wizard provides a direct link to configure secrets for your workflow.
+In the following example the assistant is being used to configure a GitHub Actions workflow.
+So the assistant provides a direct link to configure secrets for your workflow.
 
 > See the [Cloud Providers]({{< relref "/docs/intro/cloud-providers" >}}) page to find the setup page for your cloud provider.
 
@@ -109,7 +108,7 @@ the correct stack configuration.
 Be sure to commit the new workflow file to a separate branch and not directly to your primary branch. This will create a new pull request for you.
 {{% /notes %}}
 
-The workflow configuration provided by the wizard is configured to run a `pulumi preview` for pull request builds.
+The workflow configuration provided by the assistant is configured to run a `pulumi preview` for pull request builds.
 Pull request builds help you catch problems _before_ the changes are merged -- a very important consideration for infrastructure
 that is likely hosting services critical to your business.
 
@@ -127,7 +126,7 @@ If your pull request build failed, use the [CI/CD troubleshooting guide]({{< rel
 ## Skip the line and get the workflow directly
 
 If you want to access the workflow for a specific CI/CD service and configure VCS on your own,
-you can do that by simply selecting a service from the drop-down to get started. You will
+you can do that by selecting a service from the drop-down to get started. You will
 still get a workflow template that is customized to your stack.
 
 {{% notes "info" %}}

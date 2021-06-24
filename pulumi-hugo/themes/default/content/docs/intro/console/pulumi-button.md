@@ -18,7 +18,7 @@ For example, select the `Deploy` button to configure and create a new empty Java
 
 [![Deploy](https://get.pulumi.com/new/button.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/templates/javascript)
 
-To create a "Deploy with Pulumi" button:
+To create a _Deploy with Pulumi_ button:
 
  1. Include optional template metadata in your `Pulumi.yaml`.
  2. Create a button in Markdown or HTML.

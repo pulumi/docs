@@ -32,20 +32,19 @@ following:
 ## Profile
 
 Your Pulumi user account profile is used to identify you across the Pulumi
-Console.  Your account display name, avatar URL, and email address are
-obtained from the identity provider you used for signing up. For example, your
-GitHub identity.
+Console. Your account display name, avatar URL, and email address are
+obtained from the identity provider you used for signing up.
 
-To edit your profile information, navigate to **Profile Settings** by selecting
-your avatar, then **Settings**. The **Profile** tab is displayed by default.
+### Editing Your Profile
+
+To edit your profile information:
+
+1. Select your profile picture.
+1. Select **Settings**.
+1. Use the **Edit profile** button.
+1. Save your changes.
 
 ![User-profile page](/images/docs/reference/service/user-profile-page.png)
-
-From this tab, you can:
-
-* Update your display name and Avatar URL
-* Update the email address associated with your Pulumi account
-* Add third party identities for [collaborating with other developers]({{< relref "/docs/intro/console/organization-roles" >}})
 
 ### Adding New Identities{#adding-new-identities}
 
@@ -74,7 +73,23 @@ When you run [`pulumi login`]({{< relref "/docs/reference/cli/pulumi_login" >}})
 
 ![Access tokens](/images/docs/reference/service/access-tokens.png)
 
-You can create additional access tokens on this tab by selecting **Create token**. Similarly, you may remove an unused token by highlighting it on the list and selecting "Remove access token".
+### Creating Access Tokens
+
+To create an access token:
+
+1. Select your profile picture.
+1. Select **Settings**.
+1. Navigate to **Access Tokens**.
+1. Select **Create token**.
+
+### Deleting Access Tokens
+
+To delete an access token:
+
+1. Select your profile picture.
+1. Select **Settings**.
+1. Navigate to **Access Tokens**.
+1. Use the trash can icon to delete a token.
 
 ## Subscription
 

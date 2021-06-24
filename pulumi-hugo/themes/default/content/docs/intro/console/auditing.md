@@ -29,24 +29,29 @@ The logs capture the UNIX timestamp of the event, the user
 who invoked the action, the event that took place, and the source IP
 of the call the user made.
 
-## Viewing Audit Logs in the Console
+## View Audit Logs
 
-Audit logs are available to organizations with an Enterprise level subscription
-only. If you are an organization admin, you can view your organization's audit logs
-by selecting your organization from the organization drop down, then selecting the **Settings** tab.
-On the left nav-bar you should see a tab called **Audit Logs**. Audit Logs allow you to view
-the most recent audit logs for your organization.
+Audit logs are an Enterprise feature. Only organization admins can view audit logs.
+
+To view audit logs:
+
+1. Navigate to the organization's **Settings**.
+1. Navigate to **Audit Logs**.
+
+This will show the most recent events in descending order. You can
+also filter logs by a particular user by selecting their profile picture.
 
 <img src="/images/docs/guides/self-hosted/auditlogs.png">
 
-This will show the most recent events in decending order. You can
-also filter logs by a particular user by selecting your user avatar. Doing so will
-filter out the events performed by the user you selected.
+## Export Audit Logs Using the Console
 
-Audit logs can also be exported to a downloadable csv format. The logs can be exported through the UI Console
-by selecting the `Download` button in the upper left hand corner of the audit logs view.
+To export audit logs using the console:
 
-## Exporting Audit Logs through the API
+1. Navigate to the organization's **Settings**.
+1. Navigate to **Audit Logs**.
+1. Select **Download**.
+
+## Exporting Audit Logs Using the API
 
 The audit logs can be exported through the API using the following endpoint. A `startTime`
 query parameter must be passed and is used to query audit records _before_ the specified
@@ -56,8 +61,7 @@ query parameter must be passed and is used to query audit records _before_ the s
 GET https://api.pulumi.com/api/orgs/${org}/auditlogs/export?startTime=${time}
 ```
 
-Optionally, a user to filter by can also be specified as a query parameter to filter audit logs
-pertaining only to a specifc user.
+Query parameters can be used to filter records involving a specific user.
 
 ```
 GET https://api.pulumi.com/api/orgs/${org}/auditlogs/export?startTime=${time}&userFilter=${user}
@@ -153,8 +157,6 @@ Custom defined keys:
 | authenticationFailure | indicates whether the event occurred  due to an authentication failure, the value will either be "true" or "false"      |
 
 ## List of Audit Log Events
-
-This is a list of the audit log events currently being recorded.
 
 | Event                                      | Description                                                                                                                                                       |
 |--------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|

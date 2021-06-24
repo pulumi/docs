@@ -28,10 +28,18 @@ assigned the team member role. To change a team member's role, use the ellipsis 
 
 ### Creating a Team{#creating-a-team}
 
-Organization admins can add a new team by going to the organization's **Teams** tab and
-selecting **Create team**. Organization members can also be granted permissions to create teams
-from the **Access** section of the organization **Settings** tab. Any member who creates a team
-will automatically be assigned the team admin role.
+By default, all organization admins can create new teams.
+
+To create a team:
+
+1. Navigate to **Teams**.
+1. Select **Create team**.
+
+To give members permission to create teams:
+
+1. Navigate to the organization's **Settings**.
+1. Navigate to **Access Management**.
+1. Use the toggle to turn on the **Allow organization members to create teams** setting.
 
 #### GitHub-based Teams
 

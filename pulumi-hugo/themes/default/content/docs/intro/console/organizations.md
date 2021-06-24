@@ -15,8 +15,7 @@ An organization is the primary grouping unit for stacks within the Pulumi Consol
 When you sign into the Pulumi Console, a personal account is automatically
 created for you and subscribed to the Pulumi Community plan.
 
-You can however be a member of multiple Pulumi organizations, and collaborate
-with other developers.
+You can be a member of multiple Pulumi organizations.
 
 If you're a Pulumi organization admin, you have the
 ability to:
@@ -27,14 +26,16 @@ ability to:
 * Assign [organization roles]({{< relref "/docs/intro/console/organization-roles" >}}) for role-based access control (RBAC)
 to your organization's stacks
 
-## Creating a New Organization
+## Creating an Organization
+
+To create an organization:
+
+1. Select the organization menu at the top of the page.
+1. Select **New organization...**
+1. Provide an organization name, and agree to the terms of service and privacy policy.
+1. Select **Start free trial**.
 
 You can create a new Pulumi organization directly from the Pulumi Console.
-
-<a class="btn btn-secondary" href="https://app.pulumi.com/site/trial"
-target="_blank">
-    Create organziation
-</a>
 
 ## Organization Types
 
@@ -46,12 +47,10 @@ an organization admin, you must be a member of the backing third-party identity
 provider in order
 to join a Pulumi organization.
 
-For example, if a Pulumi organization, `https://app.pulumi.com/robot-co`, is backed by
-a GitHub organization,
-`https://github.com/robot-co`, then only members of `https://github.com/robot-co` may be
-added to `https://app.pulumi.com/robot-co`.
-Similarly, as soon as someone loses access to the GitHub organization, they will no
-longer have access to the Pulumi organization it is backing.
+For example, if a Pulumi organization, is backed by a GitHub organization, then only members
+of that GitHub organization may be added to the Pulumi organization. Similarly, as soon as
+someone loses access to the GitHub organization, they will no longer have access to the
+Pulumi organization.
 
 {{% notes %}}
 See [Organization Roles]({{< relref "/docs/intro/console/organization-roles" >}}) or
@@ -113,10 +112,7 @@ to learn more.
 Pulumi Enterprise provides more options for identity and access, including
 support for any SAML 2.0-based identity provider.
 
-[Learn more]({{< relref "/docs/guides/saml" >}}) about configuring a SAML-based
-organization on Pulumi. Or refer to one
-of our guides:
-
+* [SAML-based configuration guide]({{< relref "/docs/guides/saml" >}})
 * [Azure Active Directory]({{< relref "/docs/guides/saml/aad" >}})
 * [G Suite]({{< relref "/docs/guides/saml/gsuite" >}})
 * [Okta]({{< relref "/docs/guides/saml/okta" >}})
@@ -145,19 +141,23 @@ org, ensure that all of your members are actually a member of the corresponding 
 changed to inherit from.
 
 To switch an organization's backing identity you must be an organization admin.
-Navigate to the organization's **Settings** page. Then navigate to **Access Management**
-and select the **Membership Requirements** button to get started with changing your
-organization's identity.
+
+To change an organization's membership requirements:
+
+1. Navigate to the organization's **Settings**.
+1. Navigate to **Access Management**.
+1. Select **Change requirements**.
 
 ## Switching Organizations
 
 The Organization drop-down list displays all of the organizations your account is
 associated with, and lets you add a new organization backed by a third
-party identity provider. To switch to a different organization:
+party identity provider.
 
-1. Select the organization drop-down list in the upper left corner of the Console screen
-next to the Pulumi logo.
-1. Select your organization name. The organization page view is dependent on your role within the Pulumi organization.
+To switch to your personal account or a different organization:
+
+1. Select the organization menu at the top of the page.
+1. Select your organization name.
 
 <img class="lg:max-w-xl" src="/images/docs/reference/service/organization-view.png" alt="Stack Outputs and Configuration">
 

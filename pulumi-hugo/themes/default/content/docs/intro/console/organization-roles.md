@@ -67,4 +67,10 @@ stack admins can delete stacks, and whether stack admins can move stacks to othe
 
 ### Team Permissions
 
-Organization admins can toggler whether members have the ability to create teams.
+By default only organization admins can create teams.
+
+To allow all members to create teams:
+
+1. Navigate to the organization's **Settings**.
+1. Navigate to **Access Management**.
+1. Use the toggle to turn on the **Allow organization members to create teams** setting.
