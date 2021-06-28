@@ -253,8 +253,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_csharp">
@@ -358,7 +357,7 @@ UTC time in HH:mm:ss format.
 <a href="#pg_go" style="color: inherit; text-decoration: inherit;">Pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpg">Pg<wbr>Pg</a></span>
+        <span class="property-type"><a href="#pgpg">Pg<wbr>Pg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
 {{% /md %}}</dd><dt class="property-optional"
@@ -367,7 +366,7 @@ UTC time in HH:mm:ss format.
 <a href="#pguserconfig_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfig">Pg<wbr>Pg<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#pgpguserconfig">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines PostgreSQL specific additional configuration options. The following 
 configuration options available:
@@ -385,8 +384,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_go">
@@ -407,7 +405,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgserviceintegration">[]Pg<wbr>Service<wbr>Integration</a></span>
+        <span class="property-type"><a href="#pgserviceintegration">[]Pg<wbr>Service<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -517,8 +515,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_nodejs">
@@ -649,8 +646,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_vpc_id_python">
@@ -1255,8 +1251,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
@@ -1403,7 +1398,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_components_go" style="color: inherit; text-decoration: inherit;">Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgcomponent">[]Pg<wbr>Component</a></span>
+        <span class="property-type"><a href="#pgcomponent">[]Pg<wbr>Component<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd><dt class="property-optional"
@@ -1432,7 +1427,7 @@ UTC time in HH:mm:ss format.
 <a href="#state_pg_go" style="color: inherit; text-decoration: inherit;">Pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpg">Pg<wbr>Pg</a></span>
+        <span class="property-type"><a href="#pgpg">Pg<wbr>Pg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1441,7 +1436,7 @@ UTC time in HH:mm:ss format.
 <a href="#state_pguserconfig_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfig">Pg<wbr>Pg<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#pgpguserconfig">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines PostgreSQL specific additional configuration options. The following 
 configuration options available:
@@ -1459,8 +1454,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
@@ -1501,7 +1495,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgserviceintegration">[]Pg<wbr>Service<wbr>Integration</a></span>
+        <span class="property-type"><a href="#pgserviceintegration">[]Pg<wbr>Service<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -1663,8 +1657,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
@@ -1867,8 +1860,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
@@ -2620,7 +2612,7 @@ is only started if previous backup has already completed.
 <a href="#migration_csharp" style="color: inherit; text-decoration: inherit;">Migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigmigration">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigmigration">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}migrate data from existing server, has the following options:
 {{% /md %}}</dd><dt class="property-optional"
@@ -2629,7 +2621,7 @@ is only started if previous backup has already completed.
 <a href="#pg_csharp" style="color: inherit; text-decoration: inherit;">Pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpg">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpg">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2666,7 +2658,7 @@ This has effect only when a new service is being created.
 <a href="#pgbouncer_csharp" style="color: inherit; text-decoration: inherit;">Pgbouncer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpgbouncer">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpgbouncer">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</a></span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2675,7 +2667,7 @@ This has effect only when a new service is being created.
 <a href="#pglookout_csharp" style="color: inherit; text-decoration: inherit;">Pglookout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpglookout">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpglookout">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout</a></span>
     </dt>
     <dd>{{% md %}}PGLookout settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2684,7 +2676,7 @@ This has effect only when a new service is being created.
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigprivateaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigprivateaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2693,7 +2685,7 @@ This has effect only when a new service is being created.
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigprivatelinkaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigprivatelinkaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2712,7 +2704,7 @@ effect only when a new service is being created.
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpublicaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpublicaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
 {{% /md %}}</dd><dt class="property-optional"
@@ -2762,7 +2754,7 @@ also needs to support synchronous replication.
 <a href="#timescaledb_csharp" style="color: inherit; text-decoration: inherit;">Timescaledb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigtimescaledb">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigtimescaledb">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb</a></span>
     </dt>
     <dd>{{% md %}}TimescaleDB extension configuration values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3070,7 +3062,7 @@ is only started if previous backup has already completed.
 <a href="#migration_nodejs" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigmigration">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigmigration">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}migrate data from existing server, has the following options:
 {{% /md %}}</dd><dt class="property-optional"
@@ -3079,7 +3071,7 @@ is only started if previous backup has already completed.
 <a href="#pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpg">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpg">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3116,7 +3108,7 @@ This has effect only when a new service is being created.
 <a href="#pgbouncer_nodejs" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpgbouncer">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpgbouncer">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</a></span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3125,7 +3117,7 @@ This has effect only when a new service is being created.
 <a href="#pglookout_nodejs" style="color: inherit; text-decoration: inherit;">pglookout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpglookout">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpglookout">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout</a></span>
     </dt>
     <dd>{{% md %}}PGLookout settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3134,7 +3126,7 @@ This has effect only when a new service is being created.
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigprivateaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigprivateaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3143,7 +3135,7 @@ This has effect only when a new service is being created.
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigprivatelinkaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigprivatelinkaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3162,7 +3154,7 @@ effect only when a new service is being created.
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpublicaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpublicaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
 {{% /md %}}</dd><dt class="property-optional"
@@ -3212,7 +3204,7 @@ also needs to support synchronous replication.
 <a href="#timescaledb_nodejs" style="color: inherit; text-decoration: inherit;">timescaledb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigtimescaledb">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigtimescaledb">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb</a></span>
     </dt>
     <dd>{{% md %}}TimescaleDB extension configuration values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3295,7 +3287,7 @@ is only started if previous backup has already completed.
 <a href="#migration_python" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigmigration">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigmigration">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}migrate data from existing server, has the following options:
 {{% /md %}}</dd><dt class="property-optional"
@@ -3304,7 +3296,7 @@ is only started if previous backup has already completed.
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpg">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpg">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3341,7 +3333,7 @@ This has effect only when a new service is being created.
 <a href="#pgbouncer_python" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpgbouncer">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpgbouncer">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</a></span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3350,7 +3342,7 @@ This has effect only when a new service is being created.
 <a href="#pglookout_python" style="color: inherit; text-decoration: inherit;">pglookout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpglookout">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpglookout">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout</a></span>
     </dt>
     <dd>{{% md %}}PGLookout settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3359,7 +3351,7 @@ This has effect only when a new service is being created.
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigprivateaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigprivateaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3368,7 +3360,7 @@ This has effect only when a new service is being created.
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigprivatelinkaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigprivatelinkaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3387,7 +3379,7 @@ effect only when a new service is being created.
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpublicaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpublicaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
 {{% /md %}}</dd><dt class="property-optional"
@@ -3437,7 +3429,7 @@ also needs to support synchronous replication.
 <a href="#timescaledb_python" style="color: inherit; text-decoration: inherit;">timescaledb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigtimescaledb">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigtimescaledb">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb</a></span>
     </dt>
     <dd>{{% md %}}TimescaleDB extension configuration values.
 {{% /md %}}</dd><dt class="property-optional"

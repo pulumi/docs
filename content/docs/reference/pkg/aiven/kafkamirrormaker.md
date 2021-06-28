@@ -404,8 +404,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_csharp">
@@ -489,7 +488,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#kafkamirrormaker_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker</a></span>
+        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
 {{% /md %}}</dd><dt class="property-optional"
@@ -498,7 +497,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#kafkamirrormakeruserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options.
 The following configuration options available:
@@ -536,8 +535,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_go">
@@ -558,7 +556,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakerserviceintegration">[]Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration</a></span>
+        <span class="property-type"><a href="#kafkamirrormakerserviceintegration">[]Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -668,8 +666,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_nodejs">
@@ -800,8 +797,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_vpc_id_python">
@@ -1406,8 +1402,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
@@ -1554,7 +1549,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_components_go" style="color: inherit; text-decoration: inherit;">Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakercomponent">[]Kafka<wbr>Mirror<wbr>Maker<wbr>Component</a></span>
+        <span class="property-type"><a href="#kafkamirrormakercomponent">[]Kafka<wbr>Mirror<wbr>Maker<wbr>Component<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd><dt class="property-optional"
@@ -1563,7 +1558,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_kafkamirrormaker_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker</a></span>
+        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
 {{% /md %}}</dd><dt class="property-optional"
@@ -1572,7 +1567,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_kafkamirrormakeruserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options.
 The following configuration options available:
@@ -1610,8 +1605,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
@@ -1652,7 +1646,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakerserviceintegration">[]Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration</a></span>
+        <span class="property-type"><a href="#kafkamirrormakerserviceintegration">[]Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -1814,8 +1808,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
@@ -2018,8 +2011,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
@@ -2413,7 +2405,7 @@ deletion is done.
 <a href="#kafkamirrormaker_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
 {{% /md %}}</dd></dl>
@@ -2457,7 +2449,7 @@ deletion is done.
 <a href="#kafkamirrormaker_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
 {{% /md %}}</dd></dl>
@@ -2479,7 +2471,7 @@ deletion is done.
 <a href="#kafka_mirrormaker_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
 {{% /md %}}</dd></dl>

@@ -409,8 +409,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_csharp">
@@ -494,7 +493,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#kafkaconnect_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectkafkaconnect">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect</a></span>
+        <span class="property-type"><a href="#kafkaconnectkafkaconnect">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet for 
 service nodes that are in a project VPC or another type of private network.
@@ -504,7 +503,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#kafkaconnectuserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfig">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfig">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines kafka Connect specific additional configuration options. 
 The following configuration options available:
@@ -542,8 +541,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_go">
@@ -564,7 +562,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectserviceintegration">[]Kafka<wbr>Connect<wbr>Service<wbr>Integration</a></span>
+        <span class="property-type"><a href="#kafkaconnectserviceintegration">[]Kafka<wbr>Connect<wbr>Service<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -675,8 +673,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_nodejs">
@@ -808,8 +805,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_vpc_id_python">
@@ -1415,8 +1411,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
@@ -1563,7 +1558,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_components_go" style="color: inherit; text-decoration: inherit;">Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectcomponent">[]Kafka<wbr>Connect<wbr>Component</a></span>
+        <span class="property-type"><a href="#kafkaconnectcomponent">[]Kafka<wbr>Connect<wbr>Component<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd><dt class="property-optional"
@@ -1572,7 +1567,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_kafkaconnect_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectkafkaconnect">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect</a></span>
+        <span class="property-type"><a href="#kafkaconnectkafkaconnect">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet for 
 service nodes that are in a project VPC or another type of private network.
@@ -1582,7 +1577,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#state_kafkaconnectuserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfig">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfig">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines kafka Connect specific additional configuration options. 
 The following configuration options available:
@@ -1620,8 +1615,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
@@ -1662,7 +1656,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectserviceintegration">[]Kafka<wbr>Connect<wbr>Service<wbr>Integration</a></span>
+        <span class="property-type"><a href="#kafkaconnectserviceintegration">[]Kafka<wbr>Connect<wbr>Service<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -1825,8 +1819,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
@@ -2030,8 +2023,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
@@ -2425,7 +2417,7 @@ deletion is done.
 <a href="#kafkaconnect_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigkafkaconnect">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigkafkaconnect">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet for 
 service nodes that are in a project VPC or another type of private network.
@@ -2435,7 +2427,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigprivateaccess">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigprivateaccess">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2444,7 +2436,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigprivatelinkaccess">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigprivatelinkaccess">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -2453,7 +2445,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigpublicaccess">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigpublicaccess">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
 {{% /md %}}</dd></dl>
@@ -2525,7 +2517,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#kafkaconnect_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigkafkaconnect">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigkafkaconnect">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet for 
 service nodes that are in a project VPC or another type of private network.
@@ -2535,7 +2527,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigprivateaccess">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigprivateaccess">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2544,7 +2536,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigprivatelinkaccess">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigprivatelinkaccess">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -2553,7 +2545,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigpublicaccess">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigpublicaccess">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
 {{% /md %}}</dd></dl>
@@ -2575,7 +2567,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigkafkaconnect">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigkafkaconnect">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet for 
 service nodes that are in a project VPC or another type of private network.
@@ -2585,7 +2577,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigprivateaccess">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigprivateaccess">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2594,7 +2586,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigprivatelinkaccess">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigprivatelinkaccess">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -2603,7 +2595,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigpublicaccess">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaconnectkafkaconnectuserconfigpublicaccess">Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
 {{% /md %}}</dd></dl>

@@ -442,8 +442,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_csharp">
@@ -536,7 +535,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#kafka_go" style="color: inherit; text-decoration: inherit;">Kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka</a></span>
+        <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd><dt class="property-optional"
@@ -545,7 +544,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#kafkauserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines Kafka specific additional configuration options. The following 
 configuration options available:
@@ -583,8 +582,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_go">
@@ -605,7 +603,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaserviceintegration">[]Kafka<wbr>Service<wbr>Integration</a></span>
+        <span class="property-type"><a href="#kafkaserviceintegration">[]Kafka<wbr>Service<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -724,8 +722,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_nodejs">
@@ -865,8 +862,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_vpc_id_python">
@@ -1481,8 +1477,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
@@ -1629,7 +1624,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_components_go" style="color: inherit; text-decoration: inherit;">Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkacomponent">[]Kafka<wbr>Component</a></span>
+        <span class="property-type"><a href="#kafkacomponent">[]Kafka<wbr>Component<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd><dt class="property-optional"
@@ -1647,7 +1642,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_kafka_go" style="color: inherit; text-decoration: inherit;">Kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka</a></span>
+        <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd><dt class="property-optional"
@@ -1656,7 +1651,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_kafkauserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines Kafka specific additional configuration options. The following 
 configuration options available:
@@ -1694,8 +1689,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
@@ -1736,7 +1730,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaserviceintegration">[]Kafka<wbr>Service<wbr>Integration</a></span>
+        <span class="property-type"><a href="#kafkaserviceintegration">[]Kafka<wbr>Service<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -1907,8 +1901,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
@@ -2120,8 +2113,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
@@ -2722,7 +2714,7 @@ deletion is done.
 <a href="#kafka_csharp" style="color: inherit; text-decoration: inherit;">Kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigkafka">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigkafka">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd><dt class="property-optional"
@@ -2731,7 +2723,7 @@ deletion is done.
 <a href="#kafkaauthenticationmethods_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigkafkaauthenticationmethods">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigkafkaauthenticationmethods">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods</a></span>
     </dt>
     <dd>{{% md %}}Kafka authentication methods
 {{% /md %}}</dd><dt class="property-optional"
@@ -2749,7 +2741,7 @@ deletion is done.
 <a href="#kafkaconnectconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigkafkaconnectconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigkafkaconnectconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect configuration values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2767,7 +2759,7 @@ deletion is done.
 <a href="#kafkarestconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigkafkarestconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigkafkarestconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka-REST configuration
 {{% /md %}}</dd><dt class="property-optional"
@@ -2785,7 +2777,7 @@ deletion is done.
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigprivateaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigprivateaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
 {{% /md %}}</dd><dt class="property-optional"
@@ -2794,7 +2786,7 @@ deletion is done.
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigprivatelinkaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigprivatelinkaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -2803,7 +2795,7 @@ deletion is done.
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigpublicaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigpublicaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
 {{% /md %}}</dd><dt class="property-optional"
@@ -2821,7 +2813,7 @@ deletion is done.
 <a href="#schemaregistryconfig_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigschemaregistryconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigschemaregistryconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Schema Registry configuration
 {{% /md %}}</dd></dl>
@@ -2982,7 +2974,7 @@ deletion is done.
 <a href="#kafka_nodejs" style="color: inherit; text-decoration: inherit;">kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigkafka">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigkafka">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd><dt class="property-optional"
@@ -2991,7 +2983,7 @@ deletion is done.
 <a href="#kafkaauthenticationmethods_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigkafkaauthenticationmethods">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigkafkaauthenticationmethods">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods</a></span>
     </dt>
     <dd>{{% md %}}Kafka authentication methods
 {{% /md %}}</dd><dt class="property-optional"
@@ -3009,7 +3001,7 @@ deletion is done.
 <a href="#kafkaconnectconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigkafkaconnectconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigkafkaconnectconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect configuration values
 {{% /md %}}</dd><dt class="property-optional"
@@ -3027,7 +3019,7 @@ deletion is done.
 <a href="#kafkarestconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigkafkarestconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigkafkarestconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka-REST configuration
 {{% /md %}}</dd><dt class="property-optional"
@@ -3045,7 +3037,7 @@ deletion is done.
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigprivateaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigprivateaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
 {{% /md %}}</dd><dt class="property-optional"
@@ -3054,7 +3046,7 @@ deletion is done.
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigprivatelinkaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigprivatelinkaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -3063,7 +3055,7 @@ deletion is done.
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigpublicaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigpublicaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
 {{% /md %}}</dd><dt class="property-optional"
@@ -3081,7 +3073,7 @@ deletion is done.
 <a href="#schemaregistryconfig_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigschemaregistryconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigschemaregistryconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Schema Registry configuration
 {{% /md %}}</dd></dl>
@@ -3112,7 +3104,7 @@ deletion is done.
 <a href="#kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigkafka">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigkafka">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd><dt class="property-optional"
@@ -3121,7 +3113,7 @@ deletion is done.
 <a href="#kafka_authentication_methods_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigkafkaauthenticationmethods">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigkafkaauthenticationmethods">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods</a></span>
     </dt>
     <dd>{{% md %}}Kafka authentication methods
 {{% /md %}}</dd><dt class="property-optional"
@@ -3139,7 +3131,7 @@ deletion is done.
 <a href="#kafka_connect_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigkafkaconnectconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigkafkaconnectconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect configuration values
 {{% /md %}}</dd><dt class="property-optional"
@@ -3157,7 +3149,7 @@ deletion is done.
 <a href="#kafka_rest_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigkafkarestconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigkafkarestconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka-REST configuration
 {{% /md %}}</dd><dt class="property-optional"
@@ -3175,7 +3167,7 @@ deletion is done.
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigprivateaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigprivateaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
 {{% /md %}}</dd><dt class="property-optional"
@@ -3184,7 +3176,7 @@ deletion is done.
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigprivatelinkaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigprivatelinkaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -3193,7 +3185,7 @@ deletion is done.
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigpublicaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigpublicaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
 {{% /md %}}</dd><dt class="property-optional"
@@ -3211,7 +3203,7 @@ deletion is done.
 <a href="#schema_registry_config_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkakafkauserconfigschemaregistryconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigschemaregistryconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Schema Registry configuration
 {{% /md %}}</dd></dl>

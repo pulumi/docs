@@ -489,7 +489,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cassandra_go" style="color: inherit; text-decoration: inherit;">Cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandra">Service<wbr>Cassandra</a></span>
+        <span class="property-type"><a href="#servicecassandra">Service<wbr>Cassandra<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cassandra specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -498,7 +498,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cassandrauserconfig_go" style="color: inherit; text-decoration: inherit;">Cassandra<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandrauserconfig">Service<wbr>Cassandra<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicecassandrauserconfig">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cassandra specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -516,7 +516,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#elasticsearch_go" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearch">Service<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#serviceelasticsearch">Service<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -525,7 +525,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#elasticsearchuserconfig_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfig">Service<wbr>Elasticsearch<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfig">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -534,7 +534,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#grafana_go" style="color: inherit; text-decoration: inherit;">Grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafana">Service<wbr>Grafana</a></span>
+        <span class="property-type"><a href="#servicegrafana">Service<wbr>Grafana<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Grafana specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -543,7 +543,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#grafanauserconfig_go" style="color: inherit; text-decoration: inherit;">Grafana<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfig">Service<wbr>Grafana<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfig">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Grafana specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -552,7 +552,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#influxdb_go" style="color: inherit; text-decoration: inherit;">Influxdb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdb">Service<wbr>Influxdb</a></span>
+        <span class="property-type"><a href="#serviceinfluxdb">Service<wbr>Influxdb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}InfluxDB specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -561,7 +561,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#influxdbuserconfig_go" style="color: inherit; text-decoration: inherit;">Influxdb<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfig">Service<wbr>Influxdb<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfig">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}InfluxDB specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -570,7 +570,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kafka_go" style="color: inherit; text-decoration: inherit;">Kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafka">Service<wbr>Kafka</a></span>
+        <span class="property-type"><a href="#servicekafka">Service<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -579,7 +579,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kafkaconnect_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnect">Service<wbr>Kafka<wbr>Connect</a></span>
+        <span class="property-type"><a href="#servicekafkaconnect">Service<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -588,7 +588,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kafkaconnectuserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfig">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfig">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -597,7 +597,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kafkamirrormaker_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkamirrormaker">Service<wbr>Kafka<wbr>Mirrormaker</a></span>
+        <span class="property-type"><a href="#servicekafkamirrormaker">Service<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -606,7 +606,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kafkamirrormakeruserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkamirrormakeruserconfig">Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicekafkamirrormakeruserconfig">Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -615,7 +615,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kafkauserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfig">Service<wbr>Kafka<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -642,7 +642,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysql">Service<wbr>Mysql</a></span>
+        <span class="property-type"><a href="#servicemysql">Service<wbr>Mysql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}MySQL specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -651,7 +651,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#mysqluserconfig_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfig">Service<wbr>Mysql<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfig">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}MySQL specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -660,7 +660,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#pg_go" style="color: inherit; text-decoration: inherit;">Pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepg">Service<wbr>Pg</a></span>
+        <span class="property-type"><a href="#servicepg">Service<wbr>Pg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PostgreSQL specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -669,7 +669,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#pguserconfig_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfig">Service<wbr>Pg<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicepguserconfig">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PostgreSQL specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -696,7 +696,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#redis_go" style="color: inherit; text-decoration: inherit;">Redis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredis">Service<wbr>Redis</a></span>
+        <span class="property-type"><a href="#serviceredis">Service<wbr>Redis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -705,7 +705,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#redisuserconfig_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfig">Service<wbr>Redis<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfig">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redis specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -714,7 +714,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceintegration">[]Service<wbr>Service<wbr>Integration</a></span>
+        <span class="property-type"><a href="#serviceserviceintegration">[]Service<wbr>Service<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -2090,7 +2090,7 @@ The following state arguments are supported:
 <a href="#state_cassandra_go" style="color: inherit; text-decoration: inherit;">Cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandra">Service<wbr>Cassandra</a></span>
+        <span class="property-type"><a href="#servicecassandra">Service<wbr>Cassandra<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cassandra specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2099,7 +2099,7 @@ The following state arguments are supported:
 <a href="#state_cassandrauserconfig_go" style="color: inherit; text-decoration: inherit;">Cassandra<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandrauserconfig">Service<wbr>Cassandra<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicecassandrauserconfig">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cassandra specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2117,7 +2117,7 @@ The following state arguments are supported:
 <a href="#state_components_go" style="color: inherit; text-decoration: inherit;">Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomponent">[]Service<wbr>Component</a></span>
+        <span class="property-type"><a href="#servicecomponent">[]Service<wbr>Component<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd><dt class="property-optional"
@@ -2126,7 +2126,7 @@ The following state arguments are supported:
 <a href="#state_elasticsearch_go" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearch">Service<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#serviceelasticsearch">Service<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2135,7 +2135,7 @@ The following state arguments are supported:
 <a href="#state_elasticsearchuserconfig_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfig">Service<wbr>Elasticsearch<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfig">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2144,7 +2144,7 @@ The following state arguments are supported:
 <a href="#state_grafana_go" style="color: inherit; text-decoration: inherit;">Grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafana">Service<wbr>Grafana</a></span>
+        <span class="property-type"><a href="#servicegrafana">Service<wbr>Grafana<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Grafana specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2153,7 +2153,7 @@ The following state arguments are supported:
 <a href="#state_grafanauserconfig_go" style="color: inherit; text-decoration: inherit;">Grafana<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfig">Service<wbr>Grafana<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfig">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Grafana specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2162,7 +2162,7 @@ The following state arguments are supported:
 <a href="#state_influxdb_go" style="color: inherit; text-decoration: inherit;">Influxdb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdb">Service<wbr>Influxdb</a></span>
+        <span class="property-type"><a href="#serviceinfluxdb">Service<wbr>Influxdb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}InfluxDB specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2171,7 +2171,7 @@ The following state arguments are supported:
 <a href="#state_influxdbuserconfig_go" style="color: inherit; text-decoration: inherit;">Influxdb<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfig">Service<wbr>Influxdb<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfig">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}InfluxDB specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2180,7 +2180,7 @@ The following state arguments are supported:
 <a href="#state_kafka_go" style="color: inherit; text-decoration: inherit;">Kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafka">Service<wbr>Kafka</a></span>
+        <span class="property-type"><a href="#servicekafka">Service<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2189,7 +2189,7 @@ The following state arguments are supported:
 <a href="#state_kafkaconnect_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnect">Service<wbr>Kafka<wbr>Connect</a></span>
+        <span class="property-type"><a href="#servicekafkaconnect">Service<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2198,7 +2198,7 @@ The following state arguments are supported:
 <a href="#state_kafkaconnectuserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfig">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfig">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2207,7 +2207,7 @@ The following state arguments are supported:
 <a href="#state_kafkamirrormaker_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkamirrormaker">Service<wbr>Kafka<wbr>Mirrormaker</a></span>
+        <span class="property-type"><a href="#servicekafkamirrormaker">Service<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2216,7 +2216,7 @@ The following state arguments are supported:
 <a href="#state_kafkamirrormakeruserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkamirrormakeruserconfig">Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicekafkamirrormakeruserconfig">Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2225,7 +2225,7 @@ The following state arguments are supported:
 <a href="#state_kafkauserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfig">Service<wbr>Kafka<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2252,7 +2252,7 @@ The following state arguments are supported:
 <a href="#state_mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysql">Service<wbr>Mysql</a></span>
+        <span class="property-type"><a href="#servicemysql">Service<wbr>Mysql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}MySQL specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2261,7 +2261,7 @@ The following state arguments are supported:
 <a href="#state_mysqluserconfig_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfig">Service<wbr>Mysql<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfig">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}MySQL specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2270,7 +2270,7 @@ The following state arguments are supported:
 <a href="#state_pg_go" style="color: inherit; text-decoration: inherit;">Pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepg">Service<wbr>Pg</a></span>
+        <span class="property-type"><a href="#servicepg">Service<wbr>Pg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PostgreSQL specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2279,7 +2279,7 @@ The following state arguments are supported:
 <a href="#state_pguserconfig_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfig">Service<wbr>Pg<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicepguserconfig">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PostgreSQL specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2315,7 +2315,7 @@ The following state arguments are supported:
 <a href="#state_redis_go" style="color: inherit; text-decoration: inherit;">Redis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredis">Service<wbr>Redis</a></span>
+        <span class="property-type"><a href="#serviceredis">Service<wbr>Redis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2324,7 +2324,7 @@ The following state arguments are supported:
 <a href="#state_redisuserconfig_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfig">Service<wbr>Redis<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfig">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redis specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2342,7 +2342,7 @@ The following state arguments are supported:
 <a href="#state_serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceintegration">[]Service<wbr>Service<wbr>Integration</a></span>
+        <span class="property-type"><a href="#serviceserviceintegration">[]Service<wbr>Service<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -3112,7 +3112,7 @@ The following state arguments are supported:
 <a href="#cassandra_csharp" style="color: inherit; text-decoration: inherit;">Cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandrauserconfigcassandra">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecassandrauserconfigcassandra">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3136,7 +3136,7 @@ The following state arguments are supported:
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandrauserconfigprivateaccess">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecassandrauserconfigprivateaccess">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3152,7 +3152,7 @@ The following state arguments are supported:
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandrauserconfigpublicaccess">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecassandrauserconfigpublicaccess">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3232,7 +3232,7 @@ The following state arguments are supported:
 <a href="#cassandra_nodejs" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandrauserconfigcassandra">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecassandrauserconfigcassandra">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3256,7 +3256,7 @@ The following state arguments are supported:
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandrauserconfigprivateaccess">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecassandrauserconfigprivateaccess">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3272,7 +3272,7 @@ The following state arguments are supported:
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandrauserconfigpublicaccess">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecassandrauserconfigpublicaccess">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3292,7 +3292,7 @@ The following state arguments are supported:
 <a href="#cassandra_python" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandrauserconfigcassandra">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecassandrauserconfigcassandra">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3316,7 +3316,7 @@ The following state arguments are supported:
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandrauserconfigprivateaccess">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecassandrauserconfigprivateaccess">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3332,7 +3332,7 @@ The following state arguments are supported:
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandrauserconfigpublicaccess">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecassandrauserconfigpublicaccess">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3844,7 +3844,7 @@ The following state arguments are supported:
 <a href="#elasticsearch_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigelasticsearch">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigelasticsearch">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3860,7 +3860,7 @@ The following state arguments are supported:
 <a href="#indexpatterns_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigindexpattern">List&lt;Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigindexpattern">List&lt;Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3868,7 +3868,7 @@ The following state arguments are supported:
 <a href="#indextemplate_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigindextemplate">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigindextemplate">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3884,7 +3884,7 @@ The following state arguments are supported:
 <a href="#kibana_csharp" style="color: inherit; text-decoration: inherit;">Kibana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigkibana">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigkibana">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3900,7 +3900,7 @@ The following state arguments are supported:
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivateaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivateaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3908,7 +3908,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivatelinkaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivatelinkaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3924,7 +3924,7 @@ The following state arguments are supported:
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigpublicaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigpublicaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4092,7 +4092,7 @@ The following state arguments are supported:
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigelasticsearch">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigelasticsearch">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4108,7 +4108,7 @@ The following state arguments are supported:
 <a href="#indexpatterns_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigindexpattern">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigindexpattern">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4116,7 +4116,7 @@ The following state arguments are supported:
 <a href="#indextemplate_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigindextemplate">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigindextemplate">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4132,7 +4132,7 @@ The following state arguments are supported:
 <a href="#kibana_nodejs" style="color: inherit; text-decoration: inherit;">kibana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigkibana">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigkibana">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4148,7 +4148,7 @@ The following state arguments are supported:
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivateaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivateaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4156,7 +4156,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivatelinkaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivatelinkaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4172,7 +4172,7 @@ The following state arguments are supported:
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigpublicaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigpublicaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4216,7 +4216,7 @@ The following state arguments are supported:
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigelasticsearch">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigelasticsearch">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4232,7 +4232,7 @@ The following state arguments are supported:
 <a href="#index_patterns_python" style="color: inherit; text-decoration: inherit;">index_<wbr>patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigindexpattern">Sequence[Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigindexpattern">Sequence[Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4240,7 +4240,7 @@ The following state arguments are supported:
 <a href="#index_template_python" style="color: inherit; text-decoration: inherit;">index_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigindextemplate">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigindextemplate">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4256,7 +4256,7 @@ The following state arguments are supported:
 <a href="#kibana_python" style="color: inherit; text-decoration: inherit;">kibana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigkibana">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigkibana">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4272,7 +4272,7 @@ The following state arguments are supported:
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivateaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivateaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4280,7 +4280,7 @@ The following state arguments are supported:
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivatelinkaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivatelinkaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4296,7 +4296,7 @@ The following state arguments are supported:
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigpublicaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigpublicaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5836,7 +5836,7 @@ The following state arguments are supported:
 <a href="#authgenericoauth_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Generic<wbr>Oauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigauthgenericoauth">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigauthgenericoauth">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5844,7 +5844,7 @@ The following state arguments are supported:
 <a href="#authgithub_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigauthgithub">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigauthgithub">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5852,7 +5852,7 @@ The following state arguments are supported:
 <a href="#authgitlab_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigauthgitlab">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigauthgitlab">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5860,7 +5860,7 @@ The following state arguments are supported:
 <a href="#authgoogle_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigauthgoogle">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigauthgoogle">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5932,7 +5932,7 @@ The following state arguments are supported:
 <a href="#externalimagestorage_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Image<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigexternalimagestorage">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigexternalimagestorage">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5964,7 +5964,7 @@ The following state arguments are supported:
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigprivateaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigprivateaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5972,7 +5972,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigprivatelinkaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigprivatelinkaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5988,7 +5988,7 @@ The following state arguments are supported:
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigpublicaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigpublicaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6012,7 +6012,7 @@ The following state arguments are supported:
 <a href="#smtpserver_csharp" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigsmtpserver">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigsmtpserver">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6340,7 +6340,7 @@ The following state arguments are supported:
 <a href="#authgenericoauth_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Generic<wbr>Oauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigauthgenericoauth">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigauthgenericoauth">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6348,7 +6348,7 @@ The following state arguments are supported:
 <a href="#authgithub_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigauthgithub">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigauthgithub">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6356,7 +6356,7 @@ The following state arguments are supported:
 <a href="#authgitlab_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigauthgitlab">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigauthgitlab">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6364,7 +6364,7 @@ The following state arguments are supported:
 <a href="#authgoogle_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigauthgoogle">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigauthgoogle">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6436,7 +6436,7 @@ The following state arguments are supported:
 <a href="#externalimagestorage_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Image<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigexternalimagestorage">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigexternalimagestorage">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6468,7 +6468,7 @@ The following state arguments are supported:
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigprivateaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigprivateaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6476,7 +6476,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigprivatelinkaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigprivatelinkaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6492,7 +6492,7 @@ The following state arguments are supported:
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigpublicaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigpublicaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6516,7 +6516,7 @@ The following state arguments are supported:
 <a href="#smtpserver_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigsmtpserver">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigsmtpserver">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6592,7 +6592,7 @@ The following state arguments are supported:
 <a href="#auth_generic_oauth_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>generic_<wbr>oauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigauthgenericoauth">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigauthgenericoauth">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6600,7 +6600,7 @@ The following state arguments are supported:
 <a href="#auth_github_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigauthgithub">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigauthgithub">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6608,7 +6608,7 @@ The following state arguments are supported:
 <a href="#auth_gitlab_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigauthgitlab">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigauthgitlab">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6616,7 +6616,7 @@ The following state arguments are supported:
 <a href="#auth_google_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigauthgoogle">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigauthgoogle">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6688,7 +6688,7 @@ The following state arguments are supported:
 <a href="#external_image_storage_python" style="color: inherit; text-decoration: inherit;">external_<wbr>image_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigexternalimagestorage">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigexternalimagestorage">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6720,7 +6720,7 @@ The following state arguments are supported:
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigprivateaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigprivateaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6728,7 +6728,7 @@ The following state arguments are supported:
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigprivatelinkaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigprivatelinkaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6744,7 +6744,7 @@ The following state arguments are supported:
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigpublicaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigpublicaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6768,7 +6768,7 @@ The following state arguments are supported:
 <a href="#smtp_server_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigsmtpserver">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigsmtpserver">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8338,7 +8338,7 @@ The following state arguments are supported:
 <a href="#influxdb_csharp" style="color: inherit; text-decoration: inherit;">Influxdb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfiginfluxdb">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfiginfluxdb">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8354,7 +8354,7 @@ The following state arguments are supported:
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivateaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivateaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8362,7 +8362,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivatelinkaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivatelinkaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8378,7 +8378,7 @@ The following state arguments are supported:
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfigpublicaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfigpublicaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8490,7 +8490,7 @@ The following state arguments are supported:
 <a href="#influxdb_nodejs" style="color: inherit; text-decoration: inherit;">influxdb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfiginfluxdb">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfiginfluxdb">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8506,7 +8506,7 @@ The following state arguments are supported:
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivateaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivateaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8514,7 +8514,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivatelinkaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivatelinkaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8530,7 +8530,7 @@ The following state arguments are supported:
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfigpublicaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfigpublicaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8566,7 +8566,7 @@ The following state arguments are supported:
 <a href="#influxdb_python" style="color: inherit; text-decoration: inherit;">influxdb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfiginfluxdb">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfiginfluxdb">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8582,7 +8582,7 @@ The following state arguments are supported:
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivateaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivateaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8590,7 +8590,7 @@ The following state arguments are supported:
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivatelinkaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivatelinkaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8606,7 +8606,7 @@ The following state arguments are supported:
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfigpublicaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfigpublicaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9150,7 +9150,7 @@ The following state arguments are supported:
 <a href="#kafkaconnect_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfigkafkaconnect">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigkafkaconnect">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9158,7 +9158,7 @@ The following state arguments are supported:
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivateaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivateaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9166,7 +9166,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9174,7 +9174,7 @@ The following state arguments are supported:
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfigpublicaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigpublicaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9238,7 +9238,7 @@ The following state arguments are supported:
 <a href="#kafkaconnect_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfigkafkaconnect">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigkafkaconnect">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9246,7 +9246,7 @@ The following state arguments are supported:
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivateaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivateaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9254,7 +9254,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9262,7 +9262,7 @@ The following state arguments are supported:
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfigpublicaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigpublicaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9282,7 +9282,7 @@ The following state arguments are supported:
 <a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfigkafkaconnect">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigkafkaconnect">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9290,7 +9290,7 @@ The following state arguments are supported:
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivateaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivateaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9298,7 +9298,7 @@ The following state arguments are supported:
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9306,7 +9306,7 @@ The following state arguments are supported:
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfigpublicaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigpublicaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9912,7 +9912,7 @@ The following state arguments are supported:
 <a href="#kafkamirrormaker_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkamirrormakeruserconfigkafkamirrormaker">Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkamirrormakeruserconfigkafkamirrormaker">Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9952,7 +9952,7 @@ The following state arguments are supported:
 <a href="#kafkamirrormaker_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkamirrormakeruserconfigkafkamirrormaker">Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkamirrormakeruserconfigkafkamirrormaker">Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9972,7 +9972,7 @@ The following state arguments are supported:
 <a href="#kafka_mirrormaker_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkamirrormakeruserconfigkafkamirrormaker">Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkamirrormakeruserconfigkafkamirrormaker">Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10276,7 +10276,7 @@ The following state arguments are supported:
 <a href="#kafka_csharp" style="color: inherit; text-decoration: inherit;">Kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigkafka">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigkafka">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10284,7 +10284,7 @@ The following state arguments are supported:
 <a href="#kafkaauthenticationmethods_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigkafkaauthenticationmethods">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigkafkaauthenticationmethods">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10300,7 +10300,7 @@ The following state arguments are supported:
 <a href="#kafkaconnectconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigkafkaconnectconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigkafkaconnectconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10316,7 +10316,7 @@ The following state arguments are supported:
 <a href="#kafkarestconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigkafkarestconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigkafkarestconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10332,7 +10332,7 @@ The following state arguments are supported:
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigprivateaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigprivateaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10340,7 +10340,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10348,7 +10348,7 @@ The following state arguments are supported:
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigpublicaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigpublicaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10364,7 +10364,7 @@ The following state arguments are supported:
 <a href="#schemaregistryconfig_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigschemaregistryconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigschemaregistryconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10508,7 +10508,7 @@ The following state arguments are supported:
 <a href="#kafka_nodejs" style="color: inherit; text-decoration: inherit;">kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigkafka">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigkafka">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10516,7 +10516,7 @@ The following state arguments are supported:
 <a href="#kafkaauthenticationmethods_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigkafkaauthenticationmethods">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigkafkaauthenticationmethods">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10532,7 +10532,7 @@ The following state arguments are supported:
 <a href="#kafkaconnectconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigkafkaconnectconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigkafkaconnectconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10548,7 +10548,7 @@ The following state arguments are supported:
 <a href="#kafkarestconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigkafkarestconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigkafkarestconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10564,7 +10564,7 @@ The following state arguments are supported:
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigprivateaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigprivateaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10572,7 +10572,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10580,7 +10580,7 @@ The following state arguments are supported:
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigpublicaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigpublicaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10596,7 +10596,7 @@ The following state arguments are supported:
 <a href="#schemaregistryconfig_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigschemaregistryconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigschemaregistryconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10624,7 +10624,7 @@ The following state arguments are supported:
 <a href="#kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigkafka">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigkafka">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10632,7 +10632,7 @@ The following state arguments are supported:
 <a href="#kafka_authentication_methods_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigkafkaauthenticationmethods">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigkafkaauthenticationmethods">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10648,7 +10648,7 @@ The following state arguments are supported:
 <a href="#kafka_connect_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigkafkaconnectconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigkafkaconnectconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10664,7 +10664,7 @@ The following state arguments are supported:
 <a href="#kafka_rest_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigkafkarestconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigkafkarestconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10680,7 +10680,7 @@ The following state arguments are supported:
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigprivateaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigprivateaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10688,7 +10688,7 @@ The following state arguments are supported:
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10696,7 +10696,7 @@ The following state arguments are supported:
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigpublicaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigpublicaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10712,7 +10712,7 @@ The following state arguments are supported:
 <a href="#schema_registry_config_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigschemaregistryconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigschemaregistryconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13158,7 +13158,7 @@ The following state arguments are supported:
 <a href="#migration_csharp" style="color: inherit; text-decoration: inherit;">Migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigmigration">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigmigration">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13166,7 +13166,7 @@ The following state arguments are supported:
 <a href="#mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigmysql">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigmysql">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13182,7 +13182,7 @@ The following state arguments are supported:
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigprivateaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigprivateaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13190,7 +13190,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigprivatelinkaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigprivatelinkaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13206,7 +13206,7 @@ The following state arguments are supported:
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigpublicaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigpublicaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13406,7 +13406,7 @@ The following state arguments are supported:
 <a href="#migration_nodejs" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigmigration">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigmigration">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13414,7 +13414,7 @@ The following state arguments are supported:
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigmysql">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigmysql">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13430,7 +13430,7 @@ The following state arguments are supported:
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigprivateaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigprivateaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13438,7 +13438,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigprivatelinkaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigprivatelinkaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13454,7 +13454,7 @@ The following state arguments are supported:
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigpublicaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigpublicaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13530,7 +13530,7 @@ The following state arguments are supported:
 <a href="#migration_python" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigmigration">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigmigration">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13538,7 +13538,7 @@ The following state arguments are supported:
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigmysql">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigmysql">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13554,7 +13554,7 @@ The following state arguments are supported:
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigprivateaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigprivateaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13562,7 +13562,7 @@ The following state arguments are supported:
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigprivatelinkaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigprivatelinkaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13578,7 +13578,7 @@ The following state arguments are supported:
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigpublicaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigpublicaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15228,7 +15228,7 @@ The following state arguments are supported:
 <a href="#migration_csharp" style="color: inherit; text-decoration: inherit;">Migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigmigration">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigmigration">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15236,7 +15236,7 @@ The following state arguments are supported:
 <a href="#pg_csharp" style="color: inherit; text-decoration: inherit;">Pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigpg">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pg<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigpg">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15268,7 +15268,7 @@ The following state arguments are supported:
 <a href="#pgbouncer_csharp" style="color: inherit; text-decoration: inherit;">Pgbouncer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigpgbouncer">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigpgbouncer">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15276,7 +15276,7 @@ The following state arguments are supported:
 <a href="#pglookout_csharp" style="color: inherit; text-decoration: inherit;">Pglookout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigpglookout">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigpglookout">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15284,7 +15284,7 @@ The following state arguments are supported:
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigprivateaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigprivateaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15292,7 +15292,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigprivatelinkaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigprivatelinkaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15308,7 +15308,7 @@ The following state arguments are supported:
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigpublicaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigpublicaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15348,7 +15348,7 @@ The following state arguments are supported:
 <a href="#timescaledb_csharp" style="color: inherit; text-decoration: inherit;">Timescaledb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigtimescaledb">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigtimescaledb">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15604,7 +15604,7 @@ The following state arguments are supported:
 <a href="#migration_nodejs" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigmigration">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigmigration">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15612,7 +15612,7 @@ The following state arguments are supported:
 <a href="#pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigpg">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pg<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigpg">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15644,7 +15644,7 @@ The following state arguments are supported:
 <a href="#pgbouncer_nodejs" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigpgbouncer">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigpgbouncer">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15652,7 +15652,7 @@ The following state arguments are supported:
 <a href="#pglookout_nodejs" style="color: inherit; text-decoration: inherit;">pglookout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigpglookout">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigpglookout">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15660,7 +15660,7 @@ The following state arguments are supported:
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigprivateaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigprivateaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15668,7 +15668,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigprivatelinkaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigprivatelinkaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15684,7 +15684,7 @@ The following state arguments are supported:
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigpublicaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigpublicaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15724,7 +15724,7 @@ The following state arguments are supported:
 <a href="#timescaledb_nodejs" style="color: inherit; text-decoration: inherit;">timescaledb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigtimescaledb">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigtimescaledb">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15792,7 +15792,7 @@ The following state arguments are supported:
 <a href="#migration_python" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigmigration">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigmigration">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15800,7 +15800,7 @@ The following state arguments are supported:
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigpg">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pg<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigpg">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15832,7 +15832,7 @@ The following state arguments are supported:
 <a href="#pgbouncer_python" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigpgbouncer">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigpgbouncer">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15840,7 +15840,7 @@ The following state arguments are supported:
 <a href="#pglookout_python" style="color: inherit; text-decoration: inherit;">pglookout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigpglookout">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigpglookout">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15848,7 +15848,7 @@ The following state arguments are supported:
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigprivateaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigprivateaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15856,7 +15856,7 @@ The following state arguments are supported:
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigprivatelinkaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigprivatelinkaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15872,7 +15872,7 @@ The following state arguments are supported:
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigpublicaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigpublicaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15912,7 +15912,7 @@ The following state arguments are supported:
 <a href="#timescaledb_python" style="color: inherit; text-decoration: inherit;">timescaledb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigtimescaledb">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicepguserconfigtimescaledb">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18206,7 +18206,7 @@ The following state arguments are supported:
 <a href="#migration_csharp" style="color: inherit; text-decoration: inherit;">Migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfigmigration">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfigmigration">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18214,7 +18214,7 @@ The following state arguments are supported:
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfigprivateaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfigprivateaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18222,7 +18222,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfigprivatelinkaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfigprivatelinkaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18238,7 +18238,7 @@ The following state arguments are supported:
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfigpublicaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfigpublicaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18454,7 +18454,7 @@ The following state arguments are supported:
 <a href="#migration_nodejs" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfigmigration">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfigmigration">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18462,7 +18462,7 @@ The following state arguments are supported:
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfigprivateaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfigprivateaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18470,7 +18470,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfigprivatelinkaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfigprivatelinkaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18486,7 +18486,7 @@ The following state arguments are supported:
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfigpublicaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfigpublicaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18578,7 +18578,7 @@ The following state arguments are supported:
 <a href="#migration_python" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfigmigration">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfigmigration">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18586,7 +18586,7 @@ The following state arguments are supported:
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfigprivateaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfigprivateaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18594,7 +18594,7 @@ The following state arguments are supported:
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfigprivatelinkaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfigprivatelinkaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18610,7 +18610,7 @@ The following state arguments are supported:
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfigpublicaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfigpublicaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
