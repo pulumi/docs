@@ -844,7 +844,7 @@ Only relevant for the DDI product.
 <a href="#ipwhitelists_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Whitelists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#teamipwhitelist">[]Team<wbr>Ip<wbr>Whitelist</a></span>
+        <span class="property-type"><a href="#teamipwhitelist">[]Team<wbr>Ip<wbr>Whitelist<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP addresses to whitelist for this key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2096,7 +2096,7 @@ Only relevant for the DDI product.
 <a href="#state_ipwhitelists_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Whitelists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#teamipwhitelist">[]Team<wbr>Ip<wbr>Whitelist</a></span>
+        <span class="property-type"><a href="#teamipwhitelist">[]Team<wbr>Ip<wbr>Whitelist<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP addresses to whitelist for this key.
 {{% /md %}}</dd><dt class="property-optional"

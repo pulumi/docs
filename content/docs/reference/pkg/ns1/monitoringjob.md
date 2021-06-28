@@ -639,7 +639,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringjobrule">[]Monitoring<wbr>Job<wbr>Rule</a></span>
+        <span class="property-type"><a href="#monitoringjobrule">[]Monitoring<wbr>Job<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 {{% /md %}}</dd></dl>
@@ -1394,7 +1394,7 @@ job. See NS1 API docs for supported values.
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringjobrule">[]Monitoring<wbr>Job<wbr>Rule</a></span>
+        <span class="property-type"><a href="#monitoringjobrule">[]Monitoring<wbr>Job<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 {{% /md %}}</dd></dl>

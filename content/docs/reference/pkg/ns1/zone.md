@@ -423,7 +423,7 @@ secondary. Conflicts with `secondaries`.
 <a href="#secondaries_go" style="color: inherit; text-decoration: inherit;">Secondaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesecondary">[]Zone<wbr>Secondary</a></span>
+        <span class="property-type"><a href="#zonesecondary">[]Zone<wbr>Secondary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of secondary servers. This makes the zone a
 primary. Conflicts with `primary` and `additional_primaries`.
@@ -1245,7 +1245,7 @@ secondary. Conflicts with `secondaries`.
 <a href="#state_secondaries_go" style="color: inherit; text-decoration: inherit;">Secondaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesecondary">[]Zone<wbr>Secondary</a></span>
+        <span class="property-type"><a href="#zonesecondary">[]Zone<wbr>Secondary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of secondary servers. This makes the zone a
 primary. Conflicts with `primary` and `additional_primaries`.
