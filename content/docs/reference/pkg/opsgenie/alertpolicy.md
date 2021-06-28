@@ -286,25 +286,19 @@ const testAlertPolicy = new opsgenie.AlertPolicy("testAlertPolicy", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AlertPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -316,25 +310,19 @@ const testAlertPolicy = new opsgenie.AlertPolicy("testAlertPolicy", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AlertPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -346,33 +334,25 @@ const testAlertPolicy = new opsgenie.AlertPolicy("testAlertPolicy", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AlertPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -384,25 +364,19 @@ const testAlertPolicy = new opsgenie.AlertPolicy("testAlertPolicy", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AlertPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -670,7 +644,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyfilter">[]Alert<wbr>Policy<wbr>Filter</a></span>
+        <span class="property-type"><a href="#alertpolicyfilter">[]Alert<wbr>Policy<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A alert filter which will be applied. This filter can be empty: `filter {}` - this means `match-all`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -742,7 +716,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#responders_go" style="color: inherit; text-decoration: inherit;">Responders</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyresponder">[]Alert<wbr>Policy<wbr>Responder</a></span>
+        <span class="property-type"><a href="#alertpolicyresponder">[]Alert<wbr>Policy<wbr>Responder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Responders to add to the alerts original responders value as a list of teams, users or the reserved word none or all. If `ignore_original_responders` field is set to `true`, this will replace the original responders. The possible values for responders are: `user`, `team`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -778,7 +752,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#timerestrictions_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicytimerestriction">[]Alert<wbr>Policy<wbr>Time<wbr>Restriction</a></span>
+        <span class="property-type"><a href="#alertpolicytimerestriction">[]Alert<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time restrictions specified in this field must be met for this policy to work. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -1597,7 +1571,7 @@ The following state arguments are supported:
 <a href="#state_filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyfilter">[]Alert<wbr>Policy<wbr>Filter</a></span>
+        <span class="property-type"><a href="#alertpolicyfilter">[]Alert<wbr>Policy<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A alert filter which will be applied. This filter can be empty: `filter {}` - this means `match-all`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1678,7 +1652,7 @@ The following state arguments are supported:
 <a href="#state_responders_go" style="color: inherit; text-decoration: inherit;">Responders</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyresponder">[]Alert<wbr>Policy<wbr>Responder</a></span>
+        <span class="property-type"><a href="#alertpolicyresponder">[]Alert<wbr>Policy<wbr>Responder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Responders to add to the alerts original responders value as a list of teams, users or the reserved word none or all. If `ignore_original_responders` field is set to `true`, this will replace the original responders. The possible values for responders are: `user`, `team`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1714,7 +1688,7 @@ The following state arguments are supported:
 <a href="#state_timerestrictions_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicytimerestriction">[]Alert<wbr>Policy<wbr>Time<wbr>Restriction</a></span>
+        <span class="property-type"><a href="#alertpolicytimerestriction">[]Alert<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time restrictions specified in this field must be met for this policy to work. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -2106,7 +2080,7 @@ The following state arguments are supported:
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyfiltercondition">List&lt;Alert<wbr>Policy<wbr>Filter<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#alertpolicyfiltercondition">List&lt;Alert<wbr>Policy<wbr>Filter<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}Conditions applied to filter. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2150,7 +2124,7 @@ The following state arguments are supported:
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyfiltercondition">Alert<wbr>Policy<wbr>Filter<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#alertpolicyfiltercondition">Alert<wbr>Policy<wbr>Filter<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}Conditions applied to filter. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2172,7 +2146,7 @@ The following state arguments are supported:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyfiltercondition">Sequence[Alert<wbr>Policy<wbr>Filter<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertpolicyfiltercondition">Sequence[Alert<wbr>Policy<wbr>Filter<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}Conditions applied to filter. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2234,7 +2208,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates behaviour of the given operation. Default:`false`
+    <dd>{{% md %}}Indicates behaviour of the given operation. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_csharp">
@@ -2292,7 +2266,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates behaviour of the given operation. Default:`false`
+    <dd>{{% md %}}Indicates behaviour of the given operation. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_go">
@@ -2350,7 +2324,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates behaviour of the given operation. Default:`false`
+    <dd>{{% md %}}Indicates behaviour of the given operation. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_nodejs">
@@ -2408,7 +2382,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates behaviour of the given operation. Default:`false`
+    <dd>{{% md %}}Indicates behaviour of the given operation. Default: `false`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_python">
@@ -2601,7 +2575,7 @@ The following state arguments are supported:
 <a href="#restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicytimerestrictionrestriction">List&lt;Alert<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Restriction<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#alertpolicytimerestrictionrestriction">List&lt;Alert<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Restriction&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of days and hours definitions for field type = `weekday-and-time-of-day`. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -2645,7 +2619,7 @@ The following state arguments are supported:
 <a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicytimerestrictionrestriction">Alert<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Restriction<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#alertpolicytimerestrictionrestriction">Alert<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Restriction[]</a></span>
     </dt>
     <dd>{{% md %}}List of days and hours definitions for field type = `weekday-and-time-of-day`. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -2667,7 +2641,7 @@ The following state arguments are supported:
 <a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicytimerestrictionrestriction">Sequence[Alert<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Restriction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertpolicytimerestrictionrestriction">Sequence[Alert<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Restriction]</a></span>
     </dt>
     <dd>{{% md %}}List of days and hours definitions for field type = `weekday-and-time-of-day`. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -2909,22 +2883,16 @@ The following state arguments are supported:
 ## Import
 
 
-Alert policies can be imported using the `team id` and `policy_id`, e.g.
+Alert policies can be imported using the `team_id/policy_id`, e.g.
 
 ```sh
- $ pulumi import opsgenie:index/alertPolicy:AlertPolicy test teamId/Id`
-```
-
- For this example- Team Id = `c827c472-31f2-497b-9ec6-8ec855d7d94c` - Alert Policy Id = `2d1a78d0-c13e-47d3-af0a-8b6d0cc2b7b1`
-
-```sh
- $ pulumi import opsgenie:index/alertPolicy:AlertPolicy test c827c472-31f2-497b-9ec6-8ec855d7d94c/2d1a78d0-c13e-47d3-af0a-8b6d0cc2b7b1`
+ $ pulumi import opsgenie:index/alertPolicy:AlertPolicy test team_id/policy_id`
 ```
 
  You can import global polices using only policy identifier
 
 ```sh
- $ pulumi import opsgenie:index/alertPolicy:AlertPolicy test c827c472-31f2-497b-9ec6-8ec855d7d94c`
+ $ pulumi import opsgenie:index/alertPolicy:AlertPolicy test policy_id`
 ```
 
 

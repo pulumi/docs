@@ -269,25 +269,19 @@ const test = new opsgenie.Escalation("test", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EscalationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -299,25 +293,19 @@ const test = new opsgenie.Escalation("test", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EscalationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -329,33 +317,25 @@ const test = new opsgenie.Escalation("test", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EscalationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -367,25 +347,19 @@ const test = new opsgenie.Escalation("test", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EscalationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -455,7 +429,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#escalationrule">[]Escalation<wbr>Rule</a></span>
+        <span class="property-type"><a href="#escalationrule">[]Escalation<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of the escalation rules.
 {{% /md %}}</dd><dt class="property-optional"
@@ -491,7 +465,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#repeats_go" style="color: inherit; text-decoration: inherit;">Repeats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#escalationrepeat">[]Escalation<wbr>Repeat</a></span>
+        <span class="property-type"><a href="#escalationrepeat">[]Escalation<wbr>Repeat<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Repeat preferences of the escalation including repeat interval, count, reverting acknowledge and seen states back and closing an alert automatically as soon as repeats are completed
 {{% /md %}}</dd></dl>
@@ -863,7 +837,7 @@ The following state arguments are supported:
 <a href="#state_repeats_go" style="color: inherit; text-decoration: inherit;">Repeats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#escalationrepeat">[]Escalation<wbr>Repeat</a></span>
+        <span class="property-type"><a href="#escalationrepeat">[]Escalation<wbr>Repeat<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Repeat preferences of the escalation including repeat interval, count, reverting acknowledge and seen states back and closing an alert automatically as soon as repeats are completed
 {{% /md %}}</dd><dt class="property-optional"
@@ -872,7 +846,7 @@ The following state arguments are supported:
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#escalationrule">[]Escalation<wbr>Rule</a></span>
+        <span class="property-type"><a href="#escalationrule">[]Escalation<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of the escalation rules.
 {{% /md %}}</dd></dl>
@@ -1167,7 +1141,7 @@ The following state arguments are supported:
 <a href="#recipients_csharp" style="color: inherit; text-decoration: inherit;">Recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#escalationrulerecipient">List&lt;Escalation<wbr>Rule<wbr>Recipient<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#escalationrulerecipient">List&lt;Escalation<wbr>Rule<wbr>Recipient&gt;</a></span>
     </dt>
     <dd>{{% md %}}Object of schedule, team, or users which will be notified in escalation. The possible values for participants are: `user`, `schedule`, `team`.
 {{% /md %}}</dd></dl>
@@ -1247,7 +1221,7 @@ The following state arguments are supported:
 <a href="#recipients_nodejs" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#escalationrulerecipient">Escalation<wbr>Rule<wbr>Recipient<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#escalationrulerecipient">Escalation<wbr>Rule<wbr>Recipient[]</a></span>
     </dt>
     <dd>{{% md %}}Object of schedule, team, or users which will be notified in escalation. The possible values for participants are: `user`, `schedule`, `team`.
 {{% /md %}}</dd></dl>
@@ -1287,7 +1261,7 @@ The following state arguments are supported:
 <a href="#recipients_python" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#escalationrulerecipient">Sequence[Escalation<wbr>Rule<wbr>Recipient<wbr>Args]</a></span>
+        <span class="property-type"><a href="#escalationrulerecipient">Sequence[Escalation<wbr>Rule<wbr>Recipient]</a></span>
     </dt>
     <dd>{{% md %}}Object of schedule, team, or users which will be notified in escalation. The possible values for participants are: `user`, `schedule`, `team`.
 {{% /md %}}</dd></dl>
@@ -1381,10 +1355,10 @@ The following state arguments are supported:
 ## Import
 
 
-Escalations can be imported using the `id`, e.g.
+Escalations can be imported using the `escalation_id`, e.g.
 
 ```sh
- $ pulumi import opsgenie:index/escalation:Escalation test 812be1a1-32c8-4666-a7fb-03ecc385106c`
+ $ pulumi import opsgenie:index/escalation:Escalation test escalation_id`
 ```
 
 

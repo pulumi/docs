@@ -305,25 +305,19 @@ const testOpsgenieIndex_emailIntegrationEmailIntegration = new opsgenie.EmailInt
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EmailIntegrationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -335,25 +329,19 @@ const testOpsgenieIndex_emailIntegrationEmailIntegration = new opsgenie.EmailInt
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EmailIntegrationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -365,33 +353,25 @@ const testOpsgenieIndex_emailIntegrationEmailIntegration = new opsgenie.EmailInt
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EmailIntegrationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -403,25 +383,19 @@ const testOpsgenieIndex_emailIntegrationEmailIntegration = new opsgenie.EmailInt
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EmailIntegrationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -462,7 +436,7 @@ The EmailIntegration resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Defaults to false.
+    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -497,7 +471,7 @@ The EmailIntegration resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Defaults to false.
+    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Default: `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -528,7 +502,7 @@ The EmailIntegration resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Defaults to false.
+    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -553,7 +527,7 @@ The EmailIntegration resource accepts the following [input]({{< relref "/docs/in
 <a href="#responders_go" style="color: inherit; text-decoration: inherit;">Responders</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailintegrationresponder">[]Email<wbr>Integration<wbr>Responder</a></span>
+        <span class="property-type"><a href="#emailintegrationresponder">[]Email<wbr>Integration<wbr>Responder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -563,7 +537,7 @@ The EmailIntegration resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Defaults to false.
+    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Default: `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -594,7 +568,7 @@ The EmailIntegration resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Defaults to false.
+    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -629,7 +603,7 @@ The EmailIntegration resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Defaults to false.
+    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Default: `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -660,7 +634,7 @@ The EmailIntegration resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Defaults to false.
+    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -695,7 +669,7 @@ The EmailIntegration resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Defaults to false.
+    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Default: `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -913,7 +887,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Defaults to false.
+    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -948,7 +922,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Defaults to false.
+    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Default: `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -979,7 +953,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Defaults to false.
+    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1004,7 +978,7 @@ The following state arguments are supported:
 <a href="#state_responders_go" style="color: inherit; text-decoration: inherit;">Responders</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailintegrationresponder">[]Email<wbr>Integration<wbr>Responder</a></span>
+        <span class="property-type"><a href="#emailintegrationresponder">[]Email<wbr>Integration<wbr>Responder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1014,7 +988,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Defaults to false.
+    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Default: `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1045,7 +1019,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Defaults to false.
+    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1080,7 +1054,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Defaults to false.
+    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Default: `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1111,7 +1085,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Defaults to false.
+    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -1146,7 +1120,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Defaults to false.
+    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Default: `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1254,7 +1228,7 @@ The following state arguments are supported:
 Email Integrations can be imported using the `id`, e.g.
 
 ```sh
- $ pulumi import opsgenie:index/emailIntegration:EmailIntegration test 812be1a1-32c8-4666-a7fb-03ecc385106c`
+ $ pulumi import opsgenie:index/emailIntegration:EmailIntegration test id`
 ```
 
 
