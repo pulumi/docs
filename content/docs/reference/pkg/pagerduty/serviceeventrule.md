@@ -647,7 +647,7 @@ The ServiceEventRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactions">Service<wbr>Event<wbr>Rule<wbr>Actions</a></span>
+        <span class="property-type"><a href="#serviceeventruleactions">Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to apply to an event if the conditions match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -656,7 +656,7 @@ The ServiceEventRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleconditions">Service<wbr>Event<wbr>Rule<wbr>Conditions</a></span>
+        <span class="property-type"><a href="#serviceeventruleconditions">Service<wbr>Event<wbr>Rule<wbr>Conditions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Conditions evaluated to check if an event matches this event rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -683,7 +683,7 @@ The ServiceEventRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#timeframe_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Frame</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruletimeframe">Service<wbr>Event<wbr>Rule<wbr>Time<wbr>Frame</a></span>
+        <span class="property-type"><a href="#serviceeventruletimeframe">Service<wbr>Event<wbr>Rule<wbr>Time<wbr>Frame<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules).
 {{% /md %}}</dd><dt class="property-optional"
@@ -692,7 +692,7 @@ The ServiceEventRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#variables_go" style="color: inherit; text-decoration: inherit;">Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventrulevariable">[]Service<wbr>Event<wbr>Rule<wbr>Variable</a></span>
+        <span class="property-type"><a href="#serviceeventrulevariable">[]Service<wbr>Event<wbr>Rule<wbr>Variable<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Populate variables from event payloads and use those variables in other event actions. *NOTE: A rule can have multiple `variable` objects.*
 {{% /md %}}</dd></dl>
@@ -1093,7 +1093,7 @@ The following state arguments are supported:
 <a href="#state_actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactions">Service<wbr>Event<wbr>Rule<wbr>Actions</a></span>
+        <span class="property-type"><a href="#serviceeventruleactions">Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to apply to an event if the conditions match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1102,7 +1102,7 @@ The following state arguments are supported:
 <a href="#state_conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleconditions">Service<wbr>Event<wbr>Rule<wbr>Conditions</a></span>
+        <span class="property-type"><a href="#serviceeventruleconditions">Service<wbr>Event<wbr>Rule<wbr>Conditions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Conditions evaluated to check if an event matches this event rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1138,7 +1138,7 @@ The following state arguments are supported:
 <a href="#state_timeframe_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Frame</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruletimeframe">Service<wbr>Event<wbr>Rule<wbr>Time<wbr>Frame</a></span>
+        <span class="property-type"><a href="#serviceeventruletimeframe">Service<wbr>Event<wbr>Rule<wbr>Time<wbr>Frame<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1147,7 +1147,7 @@ The following state arguments are supported:
 <a href="#state_variables_go" style="color: inherit; text-decoration: inherit;">Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventrulevariable">[]Service<wbr>Event<wbr>Rule<wbr>Variable</a></span>
+        <span class="property-type"><a href="#serviceeventrulevariable">[]Service<wbr>Event<wbr>Rule<wbr>Variable<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Populate variables from event payloads and use those variables in other event actions. *NOTE: A rule can have multiple `variable` objects.*
 {{% /md %}}</dd></dl>
@@ -1305,7 +1305,7 @@ The following state arguments are supported:
 <a href="#annotates_csharp" style="color: inherit; text-decoration: inherit;">Annotates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionsannotate">List&lt;Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Annotate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionsannotate">List&lt;Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Annotate&gt;</a></span>
     </dt>
     <dd>{{% md %}}Note added to the event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1314,7 +1314,7 @@ The following state arguments are supported:
 <a href="#eventactions_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionseventaction">List&lt;Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Event<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionseventaction">List&lt;Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Event<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}An object with a single `value` field. The value sets whether the resulting alert status is `trigger` or `resolve`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1323,7 +1323,7 @@ The following state arguments are supported:
 <a href="#extractions_csharp" style="color: inherit; text-decoration: inherit;">Extractions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionsextraction">List&lt;Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Extraction<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionsextraction">List&lt;Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Extraction&gt;</a></span>
     </dt>
     <dd>{{% md %}}Allows you to copy important data from one event field to another. Extraction objects may use *either* of the following field structures:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1332,7 +1332,7 @@ The following state arguments are supported:
 <a href="#priorities_csharp" style="color: inherit; text-decoration: inherit;">Priorities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionspriority">List&lt;Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Priority<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionspriority">List&lt;Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Priority&gt;</a></span>
     </dt>
     <dd>{{% md %}}The ID of the priority applied to the event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1341,7 +1341,7 @@ The following state arguments are supported:
 <a href="#severities_csharp" style="color: inherit; text-decoration: inherit;">Severities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionsseverity">List&lt;Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Severity<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionsseverity">List&lt;Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Severity&gt;</a></span>
     </dt>
     <dd>{{% md %}}The [severity level](https://support.pagerduty.com/docs/rulesets#section-set-severity-with-event-rules) of the event. Can be either `info`,`error`,`warning`, or `critical`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1350,7 +1350,7 @@ The following state arguments are supported:
 <a href="#suppresses_csharp" style="color: inherit; text-decoration: inherit;">Suppresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionssuppress">List&lt;Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Suppress<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionssuppress">List&lt;Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Suppress&gt;</a></span>
     </dt>
     <dd>{{% md %}}Controls whether an alert is [suppressed](https://support.pagerduty.com/docs/rulesets#section-suppress-but-create-triggering-thresholds-with-event-rules) (does not create an incident).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1359,7 +1359,7 @@ The following state arguments are supported:
 <a href="#suspends_csharp" style="color: inherit; text-decoration: inherit;">Suspends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionssuspend">List&lt;Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Suspend<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionssuspend">List&lt;Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Suspend&gt;</a></span>
     </dt>
     <dd>{{% md %}}An object with a single `value` field. The value sets the length of time to suspend the resulting alert before triggering.
 {{% /md %}}</dd></dl>
@@ -1439,7 +1439,7 @@ The following state arguments are supported:
 <a href="#annotates_nodejs" style="color: inherit; text-decoration: inherit;">annotates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionsannotate">Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Annotate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionsannotate">Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Annotate[]</a></span>
     </dt>
     <dd>{{% md %}}Note added to the event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1448,7 +1448,7 @@ The following state arguments are supported:
 <a href="#eventactions_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionseventaction">Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Event<wbr>Action<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionseventaction">Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Event<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}An object with a single `value` field. The value sets whether the resulting alert status is `trigger` or `resolve`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1457,7 +1457,7 @@ The following state arguments are supported:
 <a href="#extractions_nodejs" style="color: inherit; text-decoration: inherit;">extractions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionsextraction">Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Extraction<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionsextraction">Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Extraction[]</a></span>
     </dt>
     <dd>{{% md %}}Allows you to copy important data from one event field to another. Extraction objects may use *either* of the following field structures:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1466,7 +1466,7 @@ The following state arguments are supported:
 <a href="#priorities_nodejs" style="color: inherit; text-decoration: inherit;">priorities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionspriority">Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Priority<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionspriority">Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Priority[]</a></span>
     </dt>
     <dd>{{% md %}}The ID of the priority applied to the event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1475,7 +1475,7 @@ The following state arguments are supported:
 <a href="#severities_nodejs" style="color: inherit; text-decoration: inherit;">severities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionsseverity">Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Severity<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionsseverity">Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Severity[]</a></span>
     </dt>
     <dd>{{% md %}}The [severity level](https://support.pagerduty.com/docs/rulesets#section-set-severity-with-event-rules) of the event. Can be either `info`,`error`,`warning`, or `critical`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1484,7 +1484,7 @@ The following state arguments are supported:
 <a href="#suppresses_nodejs" style="color: inherit; text-decoration: inherit;">suppresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionssuppress">Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Suppress<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionssuppress">Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Suppress[]</a></span>
     </dt>
     <dd>{{% md %}}Controls whether an alert is [suppressed](https://support.pagerduty.com/docs/rulesets#section-suppress-but-create-triggering-thresholds-with-event-rules) (does not create an incident).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1493,7 +1493,7 @@ The following state arguments are supported:
 <a href="#suspends_nodejs" style="color: inherit; text-decoration: inherit;">suspends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionssuspend">Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Suspend<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionssuspend">Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Suspend[]</a></span>
     </dt>
     <dd>{{% md %}}An object with a single `value` field. The value sets the length of time to suspend the resulting alert before triggering.
 {{% /md %}}</dd></dl>
@@ -1506,7 +1506,7 @@ The following state arguments are supported:
 <a href="#annotates_python" style="color: inherit; text-decoration: inherit;">annotates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionsannotate">Sequence[Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Annotate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionsannotate">Sequence[Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Annotate]</a></span>
     </dt>
     <dd>{{% md %}}Note added to the event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1515,7 +1515,7 @@ The following state arguments are supported:
 <a href="#event_actions_python" style="color: inherit; text-decoration: inherit;">event_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionseventaction">Sequence[Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Event<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionseventaction">Sequence[Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Event<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}An object with a single `value` field. The value sets whether the resulting alert status is `trigger` or `resolve`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1524,7 +1524,7 @@ The following state arguments are supported:
 <a href="#extractions_python" style="color: inherit; text-decoration: inherit;">extractions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionsextraction">Sequence[Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Extraction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionsextraction">Sequence[Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Extraction]</a></span>
     </dt>
     <dd>{{% md %}}Allows you to copy important data from one event field to another. Extraction objects may use *either* of the following field structures:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1533,7 +1533,7 @@ The following state arguments are supported:
 <a href="#priorities_python" style="color: inherit; text-decoration: inherit;">priorities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionspriority">Sequence[Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Priority<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionspriority">Sequence[Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Priority]</a></span>
     </dt>
     <dd>{{% md %}}The ID of the priority applied to the event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1542,7 +1542,7 @@ The following state arguments are supported:
 <a href="#severities_python" style="color: inherit; text-decoration: inherit;">severities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionsseverity">Sequence[Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Severity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionsseverity">Sequence[Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Severity]</a></span>
     </dt>
     <dd>{{% md %}}The [severity level](https://support.pagerduty.com/docs/rulesets#section-set-severity-with-event-rules) of the event. Can be either `info`,`error`,`warning`, or `critical`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1551,7 +1551,7 @@ The following state arguments are supported:
 <a href="#suppresses_python" style="color: inherit; text-decoration: inherit;">suppresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionssuppress">Sequence[Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Suppress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionssuppress">Sequence[Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Suppress]</a></span>
     </dt>
     <dd>{{% md %}}Controls whether an alert is [suppressed](https://support.pagerduty.com/docs/rulesets#section-suppress-but-create-triggering-thresholds-with-event-rules) (does not create an incident).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1560,7 +1560,7 @@ The following state arguments are supported:
 <a href="#suspends_python" style="color: inherit; text-decoration: inherit;">suspends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleactionssuspend">Sequence[Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Suspend<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceeventruleactionssuspend">Sequence[Service<wbr>Event<wbr>Rule<wbr>Actions<wbr>Suspend]</a></span>
     </dt>
     <dd>{{% md %}}An object with a single `value` field. The value sets the length of time to suspend the resulting alert before triggering.
 {{% /md %}}</dd></dl>
@@ -2178,7 +2178,7 @@ The following state arguments are supported:
 <a href="#subconditions_csharp" style="color: inherit; text-decoration: inherit;">Subconditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleconditionssubcondition">List&lt;Service<wbr>Event<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceeventruleconditionssubcondition">List&lt;Service<wbr>Event<wbr>Rule<wbr>Conditions<wbr>Subcondition&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sub-conditions that define the the condition.
 {{% /md %}}</dd></dl>
@@ -2222,7 +2222,7 @@ The following state arguments are supported:
 <a href="#subconditions_nodejs" style="color: inherit; text-decoration: inherit;">subconditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleconditionssubcondition">Service<wbr>Event<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceeventruleconditionssubcondition">Service<wbr>Event<wbr>Rule<wbr>Conditions<wbr>Subcondition[]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-conditions that define the the condition.
 {{% /md %}}</dd></dl>
@@ -2244,7 +2244,7 @@ The following state arguments are supported:
 <a href="#subconditions_python" style="color: inherit; text-decoration: inherit;">subconditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleconditionssubcondition">Sequence[Service<wbr>Event<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceeventruleconditionssubcondition">Sequence[Service<wbr>Event<wbr>Rule<wbr>Conditions<wbr>Subcondition]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-conditions that define the the condition.
 {{% /md %}}</dd></dl>
@@ -2268,7 +2268,7 @@ The following state arguments are supported:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleconditionssubconditionparameter">List&lt;Service<wbr>Event<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceeventruleconditionssubconditionparameter">List&lt;Service<wbr>Event<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Parameter for the sub-condition. It requires both a `path` and `value` to be set. The `path` value must be a [PagerDuty Common Event Format (PD-CEF)](https://support.pagerduty.com/docs/pd-cef) field.
 {{% /md %}}</dd></dl>
@@ -2312,7 +2312,7 @@ The following state arguments are supported:
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleconditionssubconditionparameter">Service<wbr>Event<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceeventruleconditionssubconditionparameter">Service<wbr>Event<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}Parameter for the sub-condition. It requires both a `path` and `value` to be set. The `path` value must be a [PagerDuty Common Event Format (PD-CEF)](https://support.pagerduty.com/docs/pd-cef) field.
 {{% /md %}}</dd></dl>
@@ -2334,7 +2334,7 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruleconditionssubconditionparameter">Sequence[Service<wbr>Event<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceeventruleconditionssubconditionparameter">Sequence[Service<wbr>Event<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}Parameter for the sub-condition. It requires both a `path` and `value` to be set. The `path` value must be a [PagerDuty Common Event Format (PD-CEF)](https://support.pagerduty.com/docs/pd-cef) field.
 {{% /md %}}</dd></dl>
@@ -2439,7 +2439,7 @@ The following state arguments are supported:
 <a href="#activebetweens_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Betweens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruletimeframeactivebetween">List&lt;Service<wbr>Event<wbr>Rule<wbr>Time<wbr>Frame<wbr>Active<wbr>Between<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceeventruletimeframeactivebetween">List&lt;Service<wbr>Event<wbr>Rule<wbr>Time<wbr>Frame<wbr>Active<wbr>Between&gt;</a></span>
     </dt>
     <dd>{{% md %}}Values for executing the rule during a specific time period.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2448,7 +2448,7 @@ The following state arguments are supported:
 <a href="#scheduledweeklies_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Weeklies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruletimeframescheduledweekly">List&lt;Service<wbr>Event<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceeventruletimeframescheduledweekly">List&lt;Service<wbr>Event<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly&gt;</a></span>
     </dt>
     <dd>{{% md %}}Values for executing the rule on a recurring schedule.
 {{% /md %}}</dd></dl>
@@ -2483,7 +2483,7 @@ The following state arguments are supported:
 <a href="#activebetweens_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Betweens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruletimeframeactivebetween">Service<wbr>Event<wbr>Rule<wbr>Time<wbr>Frame<wbr>Active<wbr>Between<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceeventruletimeframeactivebetween">Service<wbr>Event<wbr>Rule<wbr>Time<wbr>Frame<wbr>Active<wbr>Between[]</a></span>
     </dt>
     <dd>{{% md %}}Values for executing the rule during a specific time period.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2492,7 +2492,7 @@ The following state arguments are supported:
 <a href="#scheduledweeklies_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Weeklies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruletimeframescheduledweekly">Service<wbr>Event<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceeventruletimeframescheduledweekly">Service<wbr>Event<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly[]</a></span>
     </dt>
     <dd>{{% md %}}Values for executing the rule on a recurring schedule.
 {{% /md %}}</dd></dl>
@@ -2505,7 +2505,7 @@ The following state arguments are supported:
 <a href="#active_betweens_python" style="color: inherit; text-decoration: inherit;">active_<wbr>betweens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruletimeframeactivebetween">Sequence[Service<wbr>Event<wbr>Rule<wbr>Time<wbr>Frame<wbr>Active<wbr>Between<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceeventruletimeframeactivebetween">Sequence[Service<wbr>Event<wbr>Rule<wbr>Time<wbr>Frame<wbr>Active<wbr>Between]</a></span>
     </dt>
     <dd>{{% md %}}Values for executing the rule during a specific time period.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2514,7 +2514,7 @@ The following state arguments are supported:
 <a href="#scheduled_weeklies_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>weeklies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventruletimeframescheduledweekly">Sequence[Service<wbr>Event<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceeventruletimeframescheduledweekly">Sequence[Service<wbr>Event<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly]</a></span>
     </dt>
     <dd>{{% md %}}Values for executing the rule on a recurring schedule.
 {{% /md %}}</dd></dl>
@@ -2790,7 +2790,7 @@ The following state arguments are supported:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventrulevariableparameter">List&lt;Service<wbr>Event<wbr>Rule<wbr>Variable<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceeventrulevariableparameter">List&lt;Service<wbr>Event<wbr>Rule<wbr>Variable<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parameters for performing the operation to populate the variable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2852,7 +2852,7 @@ The following state arguments are supported:
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventrulevariableparameter">Service<wbr>Event<wbr>Rule<wbr>Variable<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceeventrulevariableparameter">Service<wbr>Event<wbr>Rule<wbr>Variable<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}The parameters for performing the operation to populate the variable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2883,7 +2883,7 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceeventrulevariableparameter">Sequence[Service<wbr>Event<wbr>Rule<wbr>Variable<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceeventrulevariableparameter">Sequence[Service<wbr>Event<wbr>Rule<wbr>Variable<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}The parameters for performing the operation to populate the variable.
 {{% /md %}}</dd><dt class="property-optional"

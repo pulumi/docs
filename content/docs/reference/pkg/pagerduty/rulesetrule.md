@@ -242,7 +242,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactions">Ruleset<wbr>Rule<wbr>Actions</a></span>
+        <span class="property-type"><a href="#rulesetruleactions">Ruleset<wbr>Rule<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to apply to an event if the conditions match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -251,7 +251,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditions">Ruleset<wbr>Rule<wbr>Conditions</a></span>
+        <span class="property-type"><a href="#rulesetruleconditions">Ruleset<wbr>Rule<wbr>Conditions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Conditions evaluated to check if an event matches this event rule. Is always empty for the catch all rule, though.
 {{% /md %}}</dd><dt class="property-optional"
@@ -278,7 +278,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#timeframe_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Frame</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframe">Ruleset<wbr>Rule<wbr>Time<wbr>Frame</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframe">Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules).
 {{% /md %}}</dd><dt class="property-optional"
@@ -287,7 +287,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#variables_go" style="color: inherit; text-decoration: inherit;">Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetrulevariable">[]Ruleset<wbr>Rule<wbr>Variable</a></span>
+        <span class="property-type"><a href="#rulesetrulevariable">[]Ruleset<wbr>Rule<wbr>Variable<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Populate variables from event payloads and use those variables in other event actions. *NOTE: A rule can have multiple `variable` objects.*
 {{% /md %}}</dd></dl>
@@ -688,7 +688,7 @@ The following state arguments are supported:
 <a href="#state_actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactions">Ruleset<wbr>Rule<wbr>Actions</a></span>
+        <span class="property-type"><a href="#rulesetruleactions">Ruleset<wbr>Rule<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to apply to an event if the conditions match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -697,7 +697,7 @@ The following state arguments are supported:
 <a href="#state_conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditions">Ruleset<wbr>Rule<wbr>Conditions</a></span>
+        <span class="property-type"><a href="#rulesetruleconditions">Ruleset<wbr>Rule<wbr>Conditions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Conditions evaluated to check if an event matches this event rule. Is always empty for the catch all rule, though.
 {{% /md %}}</dd><dt class="property-optional"
@@ -733,7 +733,7 @@ The following state arguments are supported:
 <a href="#state_timeframe_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Frame</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframe">Ruleset<wbr>Rule<wbr>Time<wbr>Frame</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframe">Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules).
 {{% /md %}}</dd><dt class="property-optional"
@@ -742,7 +742,7 @@ The following state arguments are supported:
 <a href="#state_variables_go" style="color: inherit; text-decoration: inherit;">Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetrulevariable">[]Ruleset<wbr>Rule<wbr>Variable</a></span>
+        <span class="property-type"><a href="#rulesetrulevariable">[]Ruleset<wbr>Rule<wbr>Variable<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Populate variables from event payloads and use those variables in other event actions. *NOTE: A rule can have multiple `variable` objects.*
 {{% /md %}}</dd></dl>
@@ -900,7 +900,7 @@ The following state arguments are supported:
 <a href="#annotates_csharp" style="color: inherit; text-decoration: inherit;">Annotates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsannotate">List&lt;Ruleset<wbr>Rule<wbr>Actions<wbr>Annotate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsannotate">List&lt;Ruleset<wbr>Rule<wbr>Actions<wbr>Annotate&gt;</a></span>
     </dt>
     <dd>{{% md %}}Note added to the event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -909,7 +909,7 @@ The following state arguments are supported:
 <a href="#eventactions_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionseventaction">List&lt;Ruleset<wbr>Rule<wbr>Actions<wbr>Event<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesetruleactionseventaction">List&lt;Ruleset<wbr>Rule<wbr>Actions<wbr>Event<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}An object with a single `value` field. The value sets whether the resulting alert status is `trigger` or `resolve`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -918,7 +918,7 @@ The following state arguments are supported:
 <a href="#extractions_csharp" style="color: inherit; text-decoration: inherit;">Extractions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsextraction">List&lt;Ruleset<wbr>Rule<wbr>Actions<wbr>Extraction<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsextraction">List&lt;Ruleset<wbr>Rule<wbr>Actions<wbr>Extraction&gt;</a></span>
     </dt>
     <dd>{{% md %}}Allows you to copy important data from one event field to another. Extraction objects may use *either* of the following field structures:
 {{% /md %}}</dd><dt class="property-optional"
@@ -927,7 +927,7 @@ The following state arguments are supported:
 <a href="#priorities_csharp" style="color: inherit; text-decoration: inherit;">Priorities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionspriority">List&lt;Ruleset<wbr>Rule<wbr>Actions<wbr>Priority<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesetruleactionspriority">List&lt;Ruleset<wbr>Rule<wbr>Actions<wbr>Priority&gt;</a></span>
     </dt>
     <dd>{{% md %}}The ID of the priority applied to the event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -936,7 +936,7 @@ The following state arguments are supported:
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsroute">List&lt;Ruleset<wbr>Rule<wbr>Actions<wbr>Route<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsroute">List&lt;Ruleset<wbr>Rule<wbr>Actions<wbr>Route&gt;</a></span>
     </dt>
     <dd>{{% md %}}The ID of the service where the event will be routed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -945,7 +945,7 @@ The following state arguments are supported:
 <a href="#severities_csharp" style="color: inherit; text-decoration: inherit;">Severities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsseverity">List&lt;Ruleset<wbr>Rule<wbr>Actions<wbr>Severity<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsseverity">List&lt;Ruleset<wbr>Rule<wbr>Actions<wbr>Severity&gt;</a></span>
     </dt>
     <dd>{{% md %}}The [severity level](https://support.pagerduty.com/docs/rulesets#section-set-severity-with-event-rules) of the event. Can be either `info`,`error`,`warning`, or `critical`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -954,7 +954,7 @@ The following state arguments are supported:
 <a href="#suppresses_csharp" style="color: inherit; text-decoration: inherit;">Suppresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionssuppress">List&lt;Ruleset<wbr>Rule<wbr>Actions<wbr>Suppress<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesetruleactionssuppress">List&lt;Ruleset<wbr>Rule<wbr>Actions<wbr>Suppress&gt;</a></span>
     </dt>
     <dd>{{% md %}}Controls whether an alert is [suppressed](https://support.pagerduty.com/docs/rulesets#section-suppress-but-create-triggering-thresholds-with-event-rules) (does not create an incident). Note: If a threshold is set, the rule must also have a `route` action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -963,7 +963,7 @@ The following state arguments are supported:
 <a href="#suspends_csharp" style="color: inherit; text-decoration: inherit;">Suspends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionssuspend">List&lt;Ruleset<wbr>Rule<wbr>Actions<wbr>Suspend<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesetruleactionssuspend">List&lt;Ruleset<wbr>Rule<wbr>Actions<wbr>Suspend&gt;</a></span>
     </dt>
     <dd>{{% md %}}An object with a single `value` field. The value sets the length of time to suspend the resulting alert before triggering. Note: A rule with a `suspend` action must also have a `route` action.
 {{% /md %}}</dd></dl>
@@ -1052,7 +1052,7 @@ The following state arguments are supported:
 <a href="#annotates_nodejs" style="color: inherit; text-decoration: inherit;">annotates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsannotate">Ruleset<wbr>Rule<wbr>Actions<wbr>Annotate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsannotate">Ruleset<wbr>Rule<wbr>Actions<wbr>Annotate[]</a></span>
     </dt>
     <dd>{{% md %}}Note added to the event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1061,7 +1061,7 @@ The following state arguments are supported:
 <a href="#eventactions_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionseventaction">Ruleset<wbr>Rule<wbr>Actions<wbr>Event<wbr>Action<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionseventaction">Ruleset<wbr>Rule<wbr>Actions<wbr>Event<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}An object with a single `value` field. The value sets whether the resulting alert status is `trigger` or `resolve`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1070,7 +1070,7 @@ The following state arguments are supported:
 <a href="#extractions_nodejs" style="color: inherit; text-decoration: inherit;">extractions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsextraction">Ruleset<wbr>Rule<wbr>Actions<wbr>Extraction<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsextraction">Ruleset<wbr>Rule<wbr>Actions<wbr>Extraction[]</a></span>
     </dt>
     <dd>{{% md %}}Allows you to copy important data from one event field to another. Extraction objects may use *either* of the following field structures:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1079,7 +1079,7 @@ The following state arguments are supported:
 <a href="#priorities_nodejs" style="color: inherit; text-decoration: inherit;">priorities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionspriority">Ruleset<wbr>Rule<wbr>Actions<wbr>Priority<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionspriority">Ruleset<wbr>Rule<wbr>Actions<wbr>Priority[]</a></span>
     </dt>
     <dd>{{% md %}}The ID of the priority applied to the event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1088,7 +1088,7 @@ The following state arguments are supported:
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsroute">Ruleset<wbr>Rule<wbr>Actions<wbr>Route<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsroute">Ruleset<wbr>Rule<wbr>Actions<wbr>Route[]</a></span>
     </dt>
     <dd>{{% md %}}The ID of the service where the event will be routed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1097,7 +1097,7 @@ The following state arguments are supported:
 <a href="#severities_nodejs" style="color: inherit; text-decoration: inherit;">severities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsseverity">Ruleset<wbr>Rule<wbr>Actions<wbr>Severity<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsseverity">Ruleset<wbr>Rule<wbr>Actions<wbr>Severity[]</a></span>
     </dt>
     <dd>{{% md %}}The [severity level](https://support.pagerduty.com/docs/rulesets#section-set-severity-with-event-rules) of the event. Can be either `info`,`error`,`warning`, or `critical`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1106,7 +1106,7 @@ The following state arguments are supported:
 <a href="#suppresses_nodejs" style="color: inherit; text-decoration: inherit;">suppresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionssuppress">Ruleset<wbr>Rule<wbr>Actions<wbr>Suppress<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionssuppress">Ruleset<wbr>Rule<wbr>Actions<wbr>Suppress[]</a></span>
     </dt>
     <dd>{{% md %}}Controls whether an alert is [suppressed](https://support.pagerduty.com/docs/rulesets#section-suppress-but-create-triggering-thresholds-with-event-rules) (does not create an incident). Note: If a threshold is set, the rule must also have a `route` action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1115,7 +1115,7 @@ The following state arguments are supported:
 <a href="#suspends_nodejs" style="color: inherit; text-decoration: inherit;">suspends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionssuspend">Ruleset<wbr>Rule<wbr>Actions<wbr>Suspend<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionssuspend">Ruleset<wbr>Rule<wbr>Actions<wbr>Suspend[]</a></span>
     </dt>
     <dd>{{% md %}}An object with a single `value` field. The value sets the length of time to suspend the resulting alert before triggering. Note: A rule with a `suspend` action must also have a `route` action.
 {{% /md %}}</dd></dl>
@@ -1128,7 +1128,7 @@ The following state arguments are supported:
 <a href="#annotates_python" style="color: inherit; text-decoration: inherit;">annotates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsannotate">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Annotate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsannotate">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Annotate]</a></span>
     </dt>
     <dd>{{% md %}}Note added to the event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1137,7 +1137,7 @@ The following state arguments are supported:
 <a href="#event_actions_python" style="color: inherit; text-decoration: inherit;">event_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionseventaction">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Event<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionseventaction">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Event<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}An object with a single `value` field. The value sets whether the resulting alert status is `trigger` or `resolve`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1146,7 +1146,7 @@ The following state arguments are supported:
 <a href="#extractions_python" style="color: inherit; text-decoration: inherit;">extractions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsextraction">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Extraction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsextraction">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Extraction]</a></span>
     </dt>
     <dd>{{% md %}}Allows you to copy important data from one event field to another. Extraction objects may use *either* of the following field structures:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1155,7 +1155,7 @@ The following state arguments are supported:
 <a href="#priorities_python" style="color: inherit; text-decoration: inherit;">priorities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionspriority">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Priority<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionspriority">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Priority]</a></span>
     </dt>
     <dd>{{% md %}}The ID of the priority applied to the event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1164,7 +1164,7 @@ The following state arguments are supported:
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsroute">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Route<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsroute">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Route]</a></span>
     </dt>
     <dd>{{% md %}}The ID of the service where the event will be routed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1173,7 +1173,7 @@ The following state arguments are supported:
 <a href="#severities_python" style="color: inherit; text-decoration: inherit;">severities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsseverity">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Severity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsseverity">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Severity]</a></span>
     </dt>
     <dd>{{% md %}}The [severity level](https://support.pagerduty.com/docs/rulesets#section-set-severity-with-event-rules) of the event. Can be either `info`,`error`,`warning`, or `critical`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1182,7 +1182,7 @@ The following state arguments are supported:
 <a href="#suppresses_python" style="color: inherit; text-decoration: inherit;">suppresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionssuppress">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Suppress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionssuppress">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Suppress]</a></span>
     </dt>
     <dd>{{% md %}}Controls whether an alert is [suppressed](https://support.pagerduty.com/docs/rulesets#section-suppress-but-create-triggering-thresholds-with-event-rules) (does not create an incident). Note: If a threshold is set, the rule must also have a `route` action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1191,7 +1191,7 @@ The following state arguments are supported:
 <a href="#suspends_python" style="color: inherit; text-decoration: inherit;">suspends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionssuspend">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Suspend<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionssuspend">Sequence[Ruleset<wbr>Rule<wbr>Actions<wbr>Suspend]</a></span>
     </dt>
     <dd>{{% md %}}An object with a single `value` field. The value sets the length of time to suspend the resulting alert before triggering. Note: A rule with a `suspend` action must also have a `route` action.
 {{% /md %}}</dd></dl>
@@ -1863,7 +1863,7 @@ The following state arguments are supported:
 <a href="#subconditions_csharp" style="color: inherit; text-decoration: inherit;">Subconditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditionssubcondition">List&lt;Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesetruleconditionssubcondition">List&lt;Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sub-conditions that define the the condition.
 {{% /md %}}</dd></dl>
@@ -1907,7 +1907,7 @@ The following state arguments are supported:
 <a href="#subconditions_nodejs" style="color: inherit; text-decoration: inherit;">subconditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditionssubcondition">Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulesetruleconditionssubcondition">Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition[]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-conditions that define the the condition.
 {{% /md %}}</dd></dl>
@@ -1929,7 +1929,7 @@ The following state arguments are supported:
 <a href="#subconditions_python" style="color: inherit; text-decoration: inherit;">subconditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditionssubcondition">Sequence[Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleconditionssubcondition">Sequence[Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-conditions that define the the condition.
 {{% /md %}}</dd></dl>
@@ -1953,7 +1953,7 @@ The following state arguments are supported:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditionssubconditionparameter">List&lt;Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesetruleconditionssubconditionparameter">List&lt;Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Parameter for the sub-condition. It requires both a `path` and `value` to be set.
 {{% /md %}}</dd></dl>
@@ -1997,7 +1997,7 @@ The following state arguments are supported:
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditionssubconditionparameter">Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulesetruleconditionssubconditionparameter">Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}Parameter for the sub-condition. It requires both a `path` and `value` to be set.
 {{% /md %}}</dd></dl>
@@ -2019,7 +2019,7 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditionssubconditionparameter">Sequence[Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruleconditionssubconditionparameter">Sequence[Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}Parameter for the sub-condition. It requires both a `path` and `value` to be set.
 {{% /md %}}</dd></dl>
@@ -2120,7 +2120,7 @@ The following state arguments are supported:
 <a href="#activebetweens_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Betweens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframeactivebetween">List&lt;Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Active<wbr>Between<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframeactivebetween">List&lt;Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Active<wbr>Between&gt;</a></span>
     </dt>
     <dd>{{% md %}}Values for executing the rule during a specific time period.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2129,7 +2129,7 @@ The following state arguments are supported:
 <a href="#scheduledweeklies_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Weeklies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframescheduledweekly">List&lt;Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframescheduledweekly">List&lt;Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly&gt;</a></span>
     </dt>
     <dd>{{% md %}}Values for executing the rule on a recurring schedule.
 {{% /md %}}</dd></dl>
@@ -2164,7 +2164,7 @@ The following state arguments are supported:
 <a href="#activebetweens_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Betweens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframeactivebetween">Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Active<wbr>Between<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframeactivebetween">Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Active<wbr>Between[]</a></span>
     </dt>
     <dd>{{% md %}}Values for executing the rule during a specific time period.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2173,7 +2173,7 @@ The following state arguments are supported:
 <a href="#scheduledweeklies_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Weeklies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframescheduledweekly">Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframescheduledweekly">Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly[]</a></span>
     </dt>
     <dd>{{% md %}}Values for executing the rule on a recurring schedule.
 {{% /md %}}</dd></dl>
@@ -2186,7 +2186,7 @@ The following state arguments are supported:
 <a href="#active_betweens_python" style="color: inherit; text-decoration: inherit;">active_<wbr>betweens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframeactivebetween">Sequence[Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Active<wbr>Between<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframeactivebetween">Sequence[Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Active<wbr>Between]</a></span>
     </dt>
     <dd>{{% md %}}Values for executing the rule during a specific time period.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2195,7 +2195,7 @@ The following state arguments are supported:
 <a href="#scheduled_weeklies_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>weeklies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframescheduledweekly">Sequence[Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframescheduledweekly">Sequence[Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly]</a></span>
     </dt>
     <dd>{{% md %}}Values for executing the rule on a recurring schedule.
 {{% /md %}}</dd></dl>
@@ -2462,7 +2462,7 @@ The following state arguments are supported:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetrulevariableparameter">List&lt;Ruleset<wbr>Rule<wbr>Variable<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesetrulevariableparameter">List&lt;Ruleset<wbr>Rule<wbr>Variable<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2518,7 +2518,7 @@ The following state arguments are supported:
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetrulevariableparameter">Ruleset<wbr>Rule<wbr>Variable<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulesetrulevariableparameter">Ruleset<wbr>Rule<wbr>Variable<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2546,7 +2546,7 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetrulevariableparameter">Sequence[Ruleset<wbr>Rule<wbr>Variable<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesetrulevariableparameter">Sequence[Ruleset<wbr>Rule<wbr>Variable<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -490,7 +490,7 @@ The ResponsePlay resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#responders_go" style="color: inherit; text-decoration: inherit;">Responders</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responseplayresponder">[]Response<wbr>Play<wbr>Responder</a></span>
+        <span class="property-type"><a href="#responseplayresponder">[]Response<wbr>Play<wbr>Responder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A user and/or escalation policy to be requested as a responder to any incident on which this response play is run. There can be multiple responders defined on a single response play.
 {{% /md %}}</dd><dt class="property-optional"
@@ -517,7 +517,7 @@ The ResponsePlay resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#subscribers_go" style="color: inherit; text-decoration: inherit;">Subscribers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responseplaysubscriber">[]Response<wbr>Play<wbr>Subscriber</a></span>
+        <span class="property-type"><a href="#responseplaysubscriber">[]Response<wbr>Play<wbr>Subscriber<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A user and/or team to be added as a subscriber to any incident on which this response play is run. There can be multiple subscribers defined on a single response play.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1126,7 +1126,7 @@ The following state arguments are supported:
 <a href="#state_responders_go" style="color: inherit; text-decoration: inherit;">Responders</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responseplayresponder">[]Response<wbr>Play<wbr>Responder</a></span>
+        <span class="property-type"><a href="#responseplayresponder">[]Response<wbr>Play<wbr>Responder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A user and/or escalation policy to be requested as a responder to any incident on which this response play is run. There can be multiple responders defined on a single response play.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1153,7 +1153,7 @@ The following state arguments are supported:
 <a href="#state_subscribers_go" style="color: inherit; text-decoration: inherit;">Subscribers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responseplaysubscriber">[]Response<wbr>Play<wbr>Subscriber</a></span>
+        <span class="property-type"><a href="#responseplaysubscriber">[]Response<wbr>Play<wbr>Subscriber<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A user and/or team to be added as a subscriber to any incident on which this response play is run. There can be multiple subscribers defined on a single response play.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1435,7 +1435,7 @@ The following state arguments are supported:
 <a href="#escalationrules_csharp" style="color: inherit; text-decoration: inherit;">Escalation<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responseplayresponderescalationrule">List&lt;Response<wbr>Play<wbr>Responder<wbr>Escalation<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#responseplayresponderescalationrule">List&lt;Response<wbr>Play<wbr>Responder<wbr>Escalation<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The escalation rules
 {{% /md %}}</dd><dt class="property-optional"
@@ -1480,7 +1480,7 @@ The following state arguments are supported:
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responseplayresponderservice">List&lt;Response<wbr>Play<wbr>Responder<wbr>Service<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#responseplayresponderservice">List&lt;Response<wbr>Play<wbr>Responder<wbr>Service&gt;</a></span>
     </dt>
     <dd>{{% md %}}There can be multiple services associated with a policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1489,7 +1489,7 @@ The following state arguments are supported:
 <a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responseplayresponderteam">List&lt;Response<wbr>Play<wbr>Responder<wbr>Team<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#responseplayresponderteam">List&lt;Response<wbr>Play<wbr>Responder<wbr>Team&gt;</a></span>
     </dt>
     <dd>{{% md %}}Teams associated with the policy. Account must have the `teams` ability to use this parameter. There can be multiple teams associated with a policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1605,7 +1605,7 @@ The following state arguments are supported:
 <a href="#escalationrules_nodejs" style="color: inherit; text-decoration: inherit;">escalation<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responseplayresponderescalationrule">Response<wbr>Play<wbr>Responder<wbr>Escalation<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#responseplayresponderescalationrule">Response<wbr>Play<wbr>Responder<wbr>Escalation<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The escalation rules
 {{% /md %}}</dd><dt class="property-optional"
@@ -1650,7 +1650,7 @@ The following state arguments are supported:
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responseplayresponderservice">Response<wbr>Play<wbr>Responder<wbr>Service<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#responseplayresponderservice">Response<wbr>Play<wbr>Responder<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}There can be multiple services associated with a policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1659,7 +1659,7 @@ The following state arguments are supported:
 <a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responseplayresponderteam">Response<wbr>Play<wbr>Responder<wbr>Team<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#responseplayresponderteam">Response<wbr>Play<wbr>Responder<wbr>Team[]</a></span>
     </dt>
     <dd>{{% md %}}Teams associated with the policy. Account must have the `teams` ability to use this parameter. There can be multiple teams associated with a policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1690,7 +1690,7 @@ The following state arguments are supported:
 <a href="#escalation_rules_python" style="color: inherit; text-decoration: inherit;">escalation_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responseplayresponderescalationrule">Sequence[Response<wbr>Play<wbr>Responder<wbr>Escalation<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#responseplayresponderescalationrule">Sequence[Response<wbr>Play<wbr>Responder<wbr>Escalation<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The escalation rules
 {{% /md %}}</dd><dt class="property-optional"
@@ -1735,7 +1735,7 @@ The following state arguments are supported:
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responseplayresponderservice">Sequence[Response<wbr>Play<wbr>Responder<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#responseplayresponderservice">Sequence[Response<wbr>Play<wbr>Responder<wbr>Service]</a></span>
     </dt>
     <dd>{{% md %}}There can be multiple services associated with a policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1744,7 +1744,7 @@ The following state arguments are supported:
 <a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responseplayresponderteam">Sequence[Response<wbr>Play<wbr>Responder<wbr>Team<wbr>Args]</a></span>
+        <span class="property-type"><a href="#responseplayresponderteam">Sequence[Response<wbr>Play<wbr>Responder<wbr>Team]</a></span>
     </dt>
     <dd>{{% md %}}Teams associated with the policy. Account must have the `teams` ability to use this parameter. There can be multiple teams associated with a policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1768,7 +1768,7 @@ The following state arguments are supported:
 <a href="#targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responseplayresponderescalationruletarget">List&lt;Response<wbr>Play<wbr>Responder<wbr>Escalation<wbr>Rule<wbr>Target<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#responseplayresponderescalationruletarget">List&lt;Response<wbr>Play<wbr>Responder<wbr>Escalation<wbr>Rule<wbr>Target&gt;</a></span>
     </dt>
     <dd>{{% md %}}The targets an incident should be assigned to upon reaching this rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1830,7 +1830,7 @@ The following state arguments are supported:
 <a href="#targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responseplayresponderescalationruletarget">Response<wbr>Play<wbr>Responder<wbr>Escalation<wbr>Rule<wbr>Target<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#responseplayresponderescalationruletarget">Response<wbr>Play<wbr>Responder<wbr>Escalation<wbr>Rule<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}The targets an incident should be assigned to upon reaching this rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1861,7 +1861,7 @@ The following state arguments are supported:
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responseplayresponderescalationruletarget">Sequence[Response<wbr>Play<wbr>Responder<wbr>Escalation<wbr>Rule<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#responseplayresponderescalationruletarget">Sequence[Response<wbr>Play<wbr>Responder<wbr>Escalation<wbr>Rule<wbr>Target]</a></span>
     </dt>
     <dd>{{% md %}}The targets an incident should be assigned to upon reaching this rule.
 {{% /md %}}</dd><dt class="property-optional"

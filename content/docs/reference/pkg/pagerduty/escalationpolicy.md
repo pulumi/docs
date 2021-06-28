@@ -414,7 +414,7 @@ The EscalationPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#escalationpolicyrule">[]Escalation<wbr>Policy<wbr>Rule</a></span>
+        <span class="property-type"><a href="#escalationpolicyrule">[]Escalation<wbr>Policy<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Escalation rule block. Escalation rules documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -817,7 +817,7 @@ The following state arguments are supported:
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#escalationpolicyrule">[]Escalation<wbr>Policy<wbr>Rule</a></span>
+        <span class="property-type"><a href="#escalationpolicyrule">[]Escalation<wbr>Policy<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Escalation rule block. Escalation rules documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -955,7 +955,7 @@ The following state arguments are supported:
 <a href="#targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#escalationpolicyruletarget">List&lt;Escalation<wbr>Policy<wbr>Rule<wbr>Target<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#escalationpolicyruletarget">List&lt;Escalation<wbr>Policy<wbr>Rule<wbr>Target&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1015,7 +1015,7 @@ The following state arguments are supported:
 <a href="#targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#escalationpolicyruletarget">Escalation<wbr>Policy<wbr>Rule<wbr>Target<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#escalationpolicyruletarget">Escalation<wbr>Policy<wbr>Rule<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1045,7 +1045,7 @@ The following state arguments are supported:
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#escalationpolicyruletarget">Sequence[Escalation<wbr>Policy<wbr>Rule<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#escalationpolicyruletarget">Sequence[Escalation<wbr>Policy<wbr>Rule<wbr>Target]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
