@@ -297,7 +297,7 @@ The ObjectStorageKey resource accepts the following [input]({{< relref "/docs/in
 <a href="#bucketaccesses_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectstoragekeybucketaccess">[]Object<wbr>Storage<wbr>Key<wbr>Bucket<wbr>Access</a></span>
+        <span class="property-type"><a href="#objectstoragekeybucketaccess">[]Object<wbr>Storage<wbr>Key<wbr>Bucket<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines this key as a Limited Access Key. Limited Access Keys restrict this Object Storage key’s access to only the bucket(s) declared in this array and define their bucket-level permissions. Not providing this block will not limit this Object Storage Key.
 {{% /md %}}</dd></dl>
@@ -705,7 +705,7 @@ The following state arguments are supported:
 <a href="#state_bucketaccesses_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectstoragekeybucketaccess">[]Object<wbr>Storage<wbr>Key<wbr>Bucket<wbr>Access</a></span>
+        <span class="property-type"><a href="#objectstoragekeybucketaccess">[]Object<wbr>Storage<wbr>Key<wbr>Bucket<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines this key as a Limited Access Key. Limited Access Keys restrict this Object Storage key’s access to only the bucket(s) declared in this array and define their bucket-level permissions. Not providing this block will not limit this Object Storage Key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -874,7 +874,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This Limited Access Key’s permissions for the selected bucket. Can be one of `"read_write"` or `"read_only"`. *Changing `permissions` forces the creation of a new Object Storage Key.*.
+    <dd>{{% md %}}This Limited Access Key’s permissions for the selected bucket. *Changing `permissions` forces the creation of a new Object Storage Key.* (`read_write`, `read_only`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -905,7 +905,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This Limited Access Key’s permissions for the selected bucket. Can be one of `"read_write"` or `"read_only"`. *Changing `permissions` forces the creation of a new Object Storage Key.*.
+    <dd>{{% md %}}This Limited Access Key’s permissions for the selected bucket. *Changing `permissions` forces the creation of a new Object Storage Key.* (`read_write`, `read_only`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -936,7 +936,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This Limited Access Key’s permissions for the selected bucket. Can be one of `"read_write"` or `"read_only"`. *Changing `permissions` forces the creation of a new Object Storage Key.*.
+    <dd>{{% md %}}This Limited Access Key’s permissions for the selected bucket. *Changing `permissions` forces the creation of a new Object Storage Key.* (`read_write`, `read_only`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -967,7 +967,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This Limited Access Key’s permissions for the selected bucket. Can be one of `"read_write"` or `"read_only"`. *Changing `permissions` forces the creation of a new Object Storage Key.*.
+    <dd>{{% md %}}This Limited Access Key’s permissions for the selected bucket. *Changing `permissions` forces the creation of a new Object Storage Key.* (`read_write`, `read_only`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

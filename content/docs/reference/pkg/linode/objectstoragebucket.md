@@ -405,7 +405,7 @@ The ObjectStorageBucket resource accepts the following [input]({{< relref "/docs
 <a href="#cert_go" style="color: inherit; text-decoration: inherit;">Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert</a></span>
+        <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cert used by this Object Storage Bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -423,7 +423,7 @@ The ObjectStorageBucket resource accepts the following [input]({{< relref "/docs
 <a href="#lifecyclerules_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectstoragebucketlifecyclerule">[]Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule</a></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecyclerule">[]Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Lifecycle rules to be applied to the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -916,7 +916,7 @@ The following state arguments are supported:
 <a href="#state_cert_go" style="color: inherit; text-decoration: inherit;">Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert</a></span>
+        <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cert used by this Object Storage Bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -952,7 +952,7 @@ The following state arguments are supported:
 <a href="#state_lifecyclerules_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectstoragebucketlifecyclerule">[]Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule</a></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecyclerule">[]Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Lifecycle rules to be applied to the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1272,7 +1272,7 @@ The following state arguments are supported:
 <a href="#expiration_csharp" style="color: inherit; text-decoration: inherit;">Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectstoragebucketlifecycleruleexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecycleruleexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1289,7 +1289,7 @@ The following state arguments are supported:
 <a href="#noncurrentversionexpiration_csharp" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Version<wbr>Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectstoragebucketlifecyclerulenoncurrentversionexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecyclerulenoncurrentversionexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1384,7 +1384,7 @@ The following state arguments are supported:
 <a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectstoragebucketlifecycleruleexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecycleruleexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1401,7 +1401,7 @@ The following state arguments are supported:
 <a href="#noncurrentversionexpiration_nodejs" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Version<wbr>Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectstoragebucketlifecyclerulenoncurrentversionexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecyclerulenoncurrentversionexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1440,7 +1440,7 @@ The following state arguments are supported:
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectstoragebucketlifecycleruleexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecycleruleexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1457,7 +1457,7 @@ The following state arguments are supported:
 <a href="#noncurrent_version_expiration_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>version_<wbr>expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectstoragebucketlifecyclerulenoncurrentversionexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecyclerulenoncurrentversionexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

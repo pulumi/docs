@@ -36,6 +36,7 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">lke_node_ready_poll_ms</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">max_retry_delay_ms</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">min_retry_delay_ms</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">skip_instance_delete_poll</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">skip_instance_ready_poll</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">ua_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -232,6 +233,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Minimum delay in milliseconds before retrying a request.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="skipinstancedeletepoll_csharp">
+<a href="#skipinstancedeletepoll_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Instance<wbr>Delete<wbr>Poll</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Skip waiting for a linode_instance resource to finish deleting.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="skipinstancereadypoll_csharp">
 <a href="#skipinstancereadypoll_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Instance<wbr>Ready<wbr>Poll</a>
 </span>
@@ -324,6 +334,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum delay in milliseconds before retrying a request.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipinstancedeletepoll_go">
+<a href="#skipinstancedeletepoll_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Instance<wbr>Delete<wbr>Poll</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Skip waiting for a linode_instance resource to finish deleting.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipinstancereadypoll_go">
@@ -420,6 +439,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Minimum delay in milliseconds before retrying a request.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="skipinstancedeletepoll_nodejs">
+<a href="#skipinstancedeletepoll_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Instance<wbr>Delete<wbr>Poll</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Skip waiting for a linode_instance resource to finish deleting.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="skipinstancereadypoll_nodejs">
 <a href="#skipinstancereadypoll_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Instance<wbr>Ready<wbr>Poll</a>
 </span>
@@ -512,6 +540,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum delay in milliseconds before retrying a request.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skip_instance_delete_poll_python">
+<a href="#skip_instance_delete_poll_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>instance_<wbr>delete_<wbr>poll</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Skip waiting for a linode_instance resource to finish deleting.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skip_instance_ready_poll_python">

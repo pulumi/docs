@@ -478,7 +478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of IP address.
+    <dd>{{% md %}}The type of IP address. (`ipv4`, `ipv6`, `ipv6/pool`, `ipv6/range`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -544,7 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of IP address.
+    <dd>{{% md %}}The type of IP address. (`ipv4`, `ipv6`, `ipv6/pool`, `ipv6/range`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -610,7 +610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of IP address.
+    <dd>{{% md %}}The type of IP address. (`ipv4`, `ipv6`, `ipv6/pool`, `ipv6/range`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -676,7 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of IP address.
+    <dd>{{% md %}}The type of IP address. (`ipv4`, `ipv6`, `ipv6/pool`, `ipv6/range`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -895,7 +895,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of IP address.
+    <dd>{{% md %}}The type of IP address. (`ipv4`, `ipv6`, `ipv6/pool`, `ipv6/range`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -980,7 +980,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of IP address.
+    <dd>{{% md %}}The type of IP address. (`ipv4`, `ipv6`, `ipv6/pool`, `ipv6/range`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1065,7 +1065,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of IP address.
+    <dd>{{% md %}}The type of IP address. (`ipv4`, `ipv6`, `ipv6/pool`, `ipv6/range`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1150,7 +1150,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of IP address.
+    <dd>{{% md %}}The type of IP address. (`ipv4`, `ipv6`, `ipv6/pool`, `ipv6/range`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

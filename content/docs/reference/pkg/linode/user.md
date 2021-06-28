@@ -417,7 +417,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#domaingrants_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userdomaingrant">[]User<wbr>Domain<wbr>Grant</a></span>
+        <span class="property-type"><a href="#userdomaingrant">[]User<wbr>Domain<wbr>Grant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The domains the user has permissions access to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -426,7 +426,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#globalgrants_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userglobalgrants">User<wbr>Global<wbr>Grants</a></span>
+        <span class="property-type"><a href="#userglobalgrants">User<wbr>Global<wbr>Grants<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A structure containing the Account-level grants a User has.
 {{% /md %}}</dd><dt class="property-optional"
@@ -435,7 +435,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#imagegrants_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userimagegrant">[]User<wbr>Image<wbr>Grant</a></span>
+        <span class="property-type"><a href="#userimagegrant">[]User<wbr>Image<wbr>Grant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The images the user has permissions access to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -444,7 +444,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#linodegrants_go" style="color: inherit; text-decoration: inherit;">Linode<wbr>Grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userlinodegrant">[]User<wbr>Linode<wbr>Grant</a></span>
+        <span class="property-type"><a href="#userlinodegrant">[]User<wbr>Linode<wbr>Grant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Linodes the user has permissions access to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -453,7 +453,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#longviewgrants_go" style="color: inherit; text-decoration: inherit;">Longview<wbr>Grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userlongviewgrant">[]User<wbr>Longview<wbr>Grant</a></span>
+        <span class="property-type"><a href="#userlongviewgrant">[]User<wbr>Longview<wbr>Grant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The longview the user has permissions access to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -462,7 +462,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#nodebalancergrants_go" style="color: inherit; text-decoration: inherit;">Nodebalancer<wbr>Grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernodebalancergrant">[]User<wbr>Nodebalancer<wbr>Grant</a></span>
+        <span class="property-type"><a href="#usernodebalancergrant">[]User<wbr>Nodebalancer<wbr>Grant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The NodeBalancers the user has permissions access to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -480,7 +480,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#stackscriptgrants_go" style="color: inherit; text-decoration: inherit;">Stackscript<wbr>Grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userstackscriptgrant">[]User<wbr>Stackscript<wbr>Grant</a></span>
+        <span class="property-type"><a href="#userstackscriptgrant">[]User<wbr>Stackscript<wbr>Grant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The StackScripts the user has permissions access to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -489,7 +489,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#volumegrants_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uservolumegrant">[]User<wbr>Volume<wbr>Grant</a></span>
+        <span class="property-type"><a href="#uservolumegrant">[]User<wbr>Volume<wbr>Grant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The volumes the user has permissions access to.
 {{% /md %}}</dd></dl>
@@ -1094,7 +1094,7 @@ The following state arguments are supported:
 <a href="#state_domaingrants_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userdomaingrant">[]User<wbr>Domain<wbr>Grant</a></span>
+        <span class="property-type"><a href="#userdomaingrant">[]User<wbr>Domain<wbr>Grant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The domains the user has permissions access to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1112,7 +1112,7 @@ The following state arguments are supported:
 <a href="#state_globalgrants_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userglobalgrants">User<wbr>Global<wbr>Grants</a></span>
+        <span class="property-type"><a href="#userglobalgrants">User<wbr>Global<wbr>Grants<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A structure containing the Account-level grants a User has.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1121,7 +1121,7 @@ The following state arguments are supported:
 <a href="#state_imagegrants_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userimagegrant">[]User<wbr>Image<wbr>Grant</a></span>
+        <span class="property-type"><a href="#userimagegrant">[]User<wbr>Image<wbr>Grant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The images the user has permissions access to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1130,7 +1130,7 @@ The following state arguments are supported:
 <a href="#state_linodegrants_go" style="color: inherit; text-decoration: inherit;">Linode<wbr>Grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userlinodegrant">[]User<wbr>Linode<wbr>Grant</a></span>
+        <span class="property-type"><a href="#userlinodegrant">[]User<wbr>Linode<wbr>Grant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Linodes the user has permissions access to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1139,7 +1139,7 @@ The following state arguments are supported:
 <a href="#state_longviewgrants_go" style="color: inherit; text-decoration: inherit;">Longview<wbr>Grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userlongviewgrant">[]User<wbr>Longview<wbr>Grant</a></span>
+        <span class="property-type"><a href="#userlongviewgrant">[]User<wbr>Longview<wbr>Grant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The longview the user has permissions access to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1148,7 +1148,7 @@ The following state arguments are supported:
 <a href="#state_nodebalancergrants_go" style="color: inherit; text-decoration: inherit;">Nodebalancer<wbr>Grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernodebalancergrant">[]User<wbr>Nodebalancer<wbr>Grant</a></span>
+        <span class="property-type"><a href="#usernodebalancergrant">[]User<wbr>Nodebalancer<wbr>Grant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The NodeBalancers the user has permissions access to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1175,7 +1175,7 @@ The following state arguments are supported:
 <a href="#state_stackscriptgrants_go" style="color: inherit; text-decoration: inherit;">Stackscript<wbr>Grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userstackscriptgrant">[]User<wbr>Stackscript<wbr>Grant</a></span>
+        <span class="property-type"><a href="#userstackscriptgrant">[]User<wbr>Stackscript<wbr>Grant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The StackScripts the user has permissions access to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1202,7 +1202,7 @@ The following state arguments are supported:
 <a href="#state_volumegrants_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uservolumegrant">[]User<wbr>Volume<wbr>Grant</a></span>
+        <span class="property-type"><a href="#uservolumegrant">[]User<wbr>Volume<wbr>Grant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The volumes the user has permissions access to.
 {{% /md %}}</dd></dl>

@@ -241,7 +241,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default behavior for inbound traffic.
+    <dd>{{% md %}}The default behavior for inbound traffic. (`ACCEPT`, `DROP`)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="inbounds_csharp">
@@ -276,7 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default behavior for outbound traffic. This setting can be overridden by updating the outbound.action property for an individual Firewall Rule.
+    <dd>{{% md %}}The default behavior for outbound traffic. (`ACCEPT`, `DROP`)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outbounds_csharp">
@@ -293,7 +293,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the firewall.
+    <dd>{{% md %}}The status of the firewall. (`enabled`, `disabled`, `deleted`)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
@@ -341,7 +341,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default behavior for inbound traffic.
+    <dd>{{% md %}}The default behavior for inbound traffic. (`ACCEPT`, `DROP`)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="inbounds_go">
@@ -376,7 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default behavior for outbound traffic. This setting can be overridden by updating the outbound.action property for an individual Firewall Rule.
+    <dd>{{% md %}}The default behavior for outbound traffic. (`ACCEPT`, `DROP`)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outbounds_go">
@@ -393,7 +393,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the firewall.
+    <dd>{{% md %}}The status of the firewall. (`enabled`, `disabled`, `deleted`)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
@@ -441,7 +441,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default behavior for inbound traffic.
+    <dd>{{% md %}}The default behavior for inbound traffic. (`ACCEPT`, `DROP`)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="inbounds_nodejs">
@@ -476,7 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default behavior for outbound traffic. This setting can be overridden by updating the outbound.action property for an individual Firewall Rule.
+    <dd>{{% md %}}The default behavior for outbound traffic. (`ACCEPT`, `DROP`)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outbounds_nodejs">
@@ -493,7 +493,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the firewall.
+    <dd>{{% md %}}The status of the firewall. (`enabled`, `disabled`, `deleted`)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
@@ -541,7 +541,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The default behavior for inbound traffic.
+    <dd>{{% md %}}The default behavior for inbound traffic. (`ACCEPT`, `DROP`)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="inbounds_python">
@@ -576,7 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The default behavior for outbound traffic. This setting can be overridden by updating the outbound.action property for an individual Firewall Rule.
+    <dd>{{% md %}}The default behavior for outbound traffic. (`ACCEPT`, `DROP`)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outbounds_python">
@@ -593,7 +593,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the firewall.
+    <dd>{{% md %}}The status of the firewall. (`enabled`, `disabled`, `deleted`)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
@@ -866,7 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The network protocol this rule controls.
+    <dd>{{% md %}}The network protocol this rule controls. (`TCP`, `UDP`, `ICMP`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -924,7 +924,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The network protocol this rule controls.
+    <dd>{{% md %}}The network protocol this rule controls. (`TCP`, `UDP`, `ICMP`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -982,7 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The network protocol this rule controls.
+    <dd>{{% md %}}The network protocol this rule controls. (`TCP`, `UDP`, `ICMP`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1040,7 +1040,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The network protocol this rule controls.
+    <dd>{{% md %}}The network protocol this rule controls. (`TCP`, `UDP`, `ICMP`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1102,7 +1102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The network protocol this rule controls.
+    <dd>{{% md %}}The network protocol this rule controls. (`TCP`, `UDP`, `ICMP`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1160,7 +1160,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The network protocol this rule controls.
+    <dd>{{% md %}}The network protocol this rule controls. (`TCP`, `UDP`, `ICMP`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1218,7 +1218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The network protocol this rule controls.
+    <dd>{{% md %}}The network protocol this rule controls. (`TCP`, `UDP`, `ICMP`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1276,7 +1276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The network protocol this rule controls.
+    <dd>{{% md %}}The network protocol this rule controls. (`TCP`, `UDP`, `ICMP`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

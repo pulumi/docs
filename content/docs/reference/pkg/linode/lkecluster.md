@@ -34,7 +34,7 @@ class MyStack : Stack
     {
         var my_cluster = new Linode.LkeCluster("my-cluster", new Linode.LkeClusterArgs
         {
-            K8sVersion = "1.17",
+            K8sVersion = "1.20",
             Label = "my-cluster",
             Pools = 
             {
@@ -72,7 +72,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := linode.NewLkeCluster(ctx, "my_cluster", &linode.LkeClusterArgs{
-			K8sVersion: pulumi.String("1.17"),
+			K8sVersion: pulumi.String("1.20"),
 			Label:      pulumi.String("my-cluster"),
 			Pools: linode.LkeClusterPoolArray{
 				&linode.LkeClusterPoolArgs{
@@ -104,7 +104,7 @@ import pulumi
 import pulumi_linode as linode
 
 my_cluster = linode.LkeCluster("my-cluster",
-    k8s_version="1.17",
+    k8s_version="1.20",
     label="my-cluster",
     pools=[linode.LkeClusterPoolArgs(
         count=3,
@@ -126,7 +126,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
 const my_cluster = new linode.LkeCluster("my-cluster", {
-    k8sVersion: "1.17",
+    k8sVersion: "1.20",
     label: "my-cluster",
     pools: [{
         count: 3,
@@ -366,7 +366,7 @@ The LkeCluster resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#pools_go" style="color: inherit; text-decoration: inherit;">Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lkeclusterpool">[]Lke<wbr>Cluster<wbr>Pool</a></span>
+        <span class="property-type"><a href="#lkeclusterpool">[]Lke<wbr>Cluster<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional nested attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -530,7 +530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -569,7 +569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -608,7 +608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -647,7 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -847,7 +847,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -903,7 +903,7 @@ The following state arguments are supported:
 <a href="#state_pools_go" style="color: inherit; text-decoration: inherit;">Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lkeclusterpool">[]Lke<wbr>Cluster<wbr>Pool</a></span>
+        <span class="property-type"><a href="#lkeclusterpool">[]Lke<wbr>Cluster<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional nested attributes:
 {{% /md %}}</dd><dt class="property-optional"
@@ -923,7 +923,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -999,7 +999,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -1075,7 +1075,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -1117,7 +1117,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Linode Type for all of the nodes in the Node Pool.
+    <dd>{{% md %}}A Linode Type for all of the nodes in the Node Pool. See all node types [here](https://api.linode.com/v4/linode/types).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
@@ -1133,7 +1133,7 @@ The following state arguments are supported:
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lkeclusterpoolnode">List&lt;Lke<wbr>Cluster<wbr>Pool<wbr>Node<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#lkeclusterpoolnode">List&lt;Lke<wbr>Cluster<wbr>Pool<wbr>Node&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1156,7 +1156,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Linode Type for all of the nodes in the Node Pool.
+    <dd>{{% md %}}A Linode Type for all of the nodes in the Node Pool. See all node types [here](https://api.linode.com/v4/linode/types).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
@@ -1195,7 +1195,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Linode Type for all of the nodes in the Node Pool.
+    <dd>{{% md %}}A Linode Type for all of the nodes in the Node Pool. See all node types [here](https://api.linode.com/v4/linode/types).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
@@ -1211,7 +1211,7 @@ The following state arguments are supported:
 <a href="#nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lkeclusterpoolnode">Lke<wbr>Cluster<wbr>Pool<wbr>Node<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#lkeclusterpoolnode">Lke<wbr>Cluster<wbr>Pool<wbr>Node[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1234,7 +1234,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A Linode Type for all of the nodes in the Node Pool.
+    <dd>{{% md %}}A Linode Type for all of the nodes in the Node Pool. See all node types [here](https://api.linode.com/v4/linode/types).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
@@ -1250,7 +1250,7 @@ The following state arguments are supported:
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lkeclusterpoolnode">Sequence[Lke<wbr>Cluster<wbr>Pool<wbr>Node<wbr>Args]</a></span>
+        <span class="property-type"><a href="#lkeclusterpoolnode">Sequence[Lke<wbr>Cluster<wbr>Pool<wbr>Node]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1284,7 +1284,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1315,7 +1315,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1346,7 +1346,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1377,7 +1377,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
