@@ -328,7 +328,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallrule">[]Firewall<wbr>Rule</a></span>
+        <span class="property-type"><a href="#firewallrule">[]Firewall<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of a Rule from this Firewall.
 {{% /md %}}</dd></dl>
@@ -635,7 +635,7 @@ The following state arguments are supported:
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallrule">[]Firewall<wbr>Rule</a></span>
+        <span class="property-type"><a href="#firewallrule">[]Firewall<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of a Rule from this Firewall.
 {{% /md %}}</dd></dl>
@@ -732,7 +732,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Protocol of the Firewall Rule. `tcp`, `icmp`, `udp`
+    <dd>{{% md %}}Protocol of the Firewall Rule. `tcp`, `icmp`, `udp`, `gre`, `esp`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationips_csharp">
@@ -781,7 +781,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Protocol of the Firewall Rule. `tcp`, `icmp`, `udp`
+    <dd>{{% md %}}Protocol of the Firewall Rule. `tcp`, `icmp`, `udp`, `gre`, `esp`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationips_go">
@@ -830,7 +830,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Protocol of the Firewall Rule. `tcp`, `icmp`, `udp`
+    <dd>{{% md %}}Protocol of the Firewall Rule. `tcp`, `icmp`, `udp`, `gre`, `esp`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationips_nodejs">
@@ -879,7 +879,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Protocol of the Firewall Rule. `tcp`, `icmp`, `udp`
+    <dd>{{% md %}}Protocol of the Firewall Rule. `tcp`, `icmp`, `udp`, `gre`, `esp`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_ips_python">

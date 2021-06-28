@@ -12,6 +12,73 @@ meta_desc: "Documentation for the hcloud.getCertificate function with examples, 
 
 Provides details about a specific Hetzner Cloud Certificate.
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as hcloud from "@pulumi/hcloud";
+
+const sampleCertificate1 = pulumi.output(hcloud.getCertificate({
+    name: "sample-certificate-1",
+}, { async: true }));
+const sampleCertificate2 = pulumi.output(hcloud.getCertificate({
+    id: 4711,
+}, { async: true }));
+```
+```python
+import pulumi
+import pulumi_hcloud as hcloud
+
+sample_certificate1 = hcloud.get_certificate(name="sample-certificate-1")
+sample_certificate2 = hcloud.get_certificate(id=4711)
+```
+```csharp
+using Pulumi;
+using HCloud = Pulumi.HCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sampleCertificate1 = Output.Create(HCloud.GetCertificate.InvokeAsync(new HCloud.GetCertificateArgs
+        {
+            Name = "sample-certificate-1",
+        }));
+        var sampleCertificate2 = Output.Create(HCloud.GetCertificate.InvokeAsync(new HCloud.GetCertificateArgs
+        {
+            Id = 4711,
+        }));
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-hcloud/sdk/go/hcloud"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "sample-certificate-1"
+		_, err := hcloud.LookupCertificate(ctx, &hcloud.LookupCertificateArgs{
+			Name: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt1 := 4711
+		_, err = hcloud.LookupCertificate(ctx, &hcloud.LookupCertificateArgs{
+			Id: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 

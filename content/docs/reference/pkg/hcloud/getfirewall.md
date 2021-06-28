@@ -12,6 +12,73 @@ meta_desc: "Documentation for the hcloud.getFirewall function with examples, inp
 
 Provides details about a specific Hetzner Cloud Firewall.
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as hcloud from "@pulumi/hcloud";
+
+const sampleFirewall1 = pulumi.output(hcloud.getFirewall({
+    name: "sample-firewall-1",
+}, { async: true }));
+const sampleFirewall2 = pulumi.output(hcloud.getFirewall({
+    id: 4711,
+}, { async: true }));
+```
+```python
+import pulumi
+import pulumi_hcloud as hcloud
+
+sample_firewall1 = hcloud.get_firewall(name="sample-firewall-1")
+sample_firewall2 = hcloud.get_firewall(id=4711)
+```
+```csharp
+using Pulumi;
+using HCloud = Pulumi.HCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sampleFirewall1 = Output.Create(HCloud.GetFirewall.InvokeAsync(new HCloud.GetFirewallArgs
+        {
+            Name = "sample-firewall-1",
+        }));
+        var sampleFirewall2 = Output.Create(HCloud.GetFirewall.InvokeAsync(new HCloud.GetFirewallArgs
+        {
+            Id = 4711,
+        }));
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-hcloud/sdk/go/hcloud"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "sample-firewall-1"
+		_, err := hcloud.LookupFirewall(ctx, &hcloud.LookupFirewallArgs{
+			Name: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt1 := 4711
+		_, err = hcloud.LookupFirewall(ctx, &hcloud.LookupFirewallArgs{
+			Id: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 
@@ -562,7 +629,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Required, string) Protocol of the Firewall Rule. `tcp`, `icmp`, `udp`
+    <dd>{{% md %}}(Required, string) Protocol of the Firewall Rule. `tcp`, `icmp`, `udp`, `gre`, `esp`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceips_csharp">
@@ -611,7 +678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Required, string) Protocol of the Firewall Rule. `tcp`, `icmp`, `udp`
+    <dd>{{% md %}}(Required, string) Protocol of the Firewall Rule. `tcp`, `icmp`, `udp`, `gre`, `esp`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceips_go">
@@ -660,7 +727,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Required, string) Protocol of the Firewall Rule. `tcp`, `icmp`, `udp`
+    <dd>{{% md %}}(Required, string) Protocol of the Firewall Rule. `tcp`, `icmp`, `udp`, `gre`, `esp`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceips_nodejs">
@@ -709,7 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Required, string) Protocol of the Firewall Rule. `tcp`, `icmp`, `udp`
+    <dd>{{% md %}}(Required, string) Protocol of the Firewall Rule. `tcp`, `icmp`, `udp`, `gre`, `esp`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_ips_python">

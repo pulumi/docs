@@ -397,7 +397,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servernetwork">[]Server<wbr>Network<wbr>Type</a></span>
+        <span class="property-type"><a href="#servernetwork">[]Server<wbr>Network<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1360,7 +1360,7 @@ The following state arguments are supported:
 <a href="#state_networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servernetwork">[]Server<wbr>Network<wbr>Type</a></span>
+        <span class="property-type"><a href="#servernetwork">[]Server<wbr>Network<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
