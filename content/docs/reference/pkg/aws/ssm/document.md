@@ -450,7 +450,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#attachmentssources_go" style="color: inherit; text-decoration: inherit;">Attachments<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentattachmentssource">[]Document<wbr>Attachments<wbr>Source</a></span>
+        <span class="property-type"><a href="#documentattachmentssource">[]Document<wbr>Attachments<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks describing attachments sources to a version of a document. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1599,7 +1599,7 @@ The following state arguments are supported:
 <a href="#state_attachmentssources_go" style="color: inherit; text-decoration: inherit;">Attachments<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentattachmentssource">[]Document<wbr>Attachments<wbr>Source</a></span>
+        <span class="property-type"><a href="#documentattachmentssource">[]Document<wbr>Attachments<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks describing attachments sources to a version of a document. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1716,7 +1716,7 @@ The following state arguments are supported:
 <a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentparameter">[]Document<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#documentparameter">[]Document<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters that are available to this document.
 {{% /md %}}</dd><dt class="property-optional"

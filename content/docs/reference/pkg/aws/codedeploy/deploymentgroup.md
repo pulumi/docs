@@ -346,212 +346,6 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
 
 
 
-### Blue Green Deployments with ECS
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var exampleApplication = new Aws.CodeDeploy.Application("exampleApplication", new Aws.CodeDeploy.ApplicationArgs
-        {
-            ComputePlatform = "ECS",
-        });
-        var exampleDeploymentGroup = new Aws.CodeDeploy.DeploymentGroup("exampleDeploymentGroup", new Aws.CodeDeploy.DeploymentGroupArgs
-        {
-            AppName = exampleApplication.Name,
-            DeploymentConfigName = "CodeDeployDefault.ECSAllAtOnce",
-            DeploymentGroupName = "example",
-            ServiceRoleArn = aws_iam_role.Example.Arn,
-            AutoRollbackConfiguration = new Aws.CodeDeploy.Inputs.DeploymentGroupAutoRollbackConfigurationArgs
-            {
-                Enabled = true,
-                Events = 
-                {
-                    "DEPLOYMENT_FAILURE",
-                },
-            },
-            BlueGreenDeploymentConfig = new Aws.CodeDeploy.Inputs.DeploymentGroupBlueGreenDeploymentConfigArgs
-            {
-                DeploymentReadyOption = new Aws.CodeDeploy.Inputs.DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs
-                {
-                    ActionOnTimeout = "CONTINUE_DEPLOYMENT",
-                },
-                TerminateBlueInstancesOnDeploymentSuccess = new Aws.CodeDeploy.Inputs.DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs
-                {
-                    Action = "TERMINATE",
-                    TerminationWaitTimeInMinutes = 5,
-                },
-            },
-            DeploymentStyle = new Aws.CodeDeploy.Inputs.DeploymentGroupDeploymentStyleArgs
-            {
-                DeploymentOption = "WITH_TRAFFIC_CONTROL",
-                DeploymentType = "BLUE_GREEN",
-            },
-            EcsService = new Aws.CodeDeploy.Inputs.DeploymentGroupEcsServiceArgs
-            {
-                ClusterName = aws_ecs_cluster.Example.Name,
-                ServiceName = aws_ecs_service.Example.Name,
-            },
-            LoadBalancerInfo = new Aws.CodeDeploy.Inputs.DeploymentGroupLoadBalancerInfoArgs
-            {
-                TargetGroupPairInfo = new Aws.CodeDeploy.Inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs
-                {
-                    ProdTrafficRoute = new Aws.CodeDeploy.Inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs
-                    {
-                        ListenerArns = 
-                        {
-                            aws_lb_listener.Example.Arn,
-                        },
-                    },
-                    TargetGroups = 
-                    {
-                        new Aws.CodeDeploy.Inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupArgs
-                        {
-                            Name = aws_lb_target_group.Blue.Name,
-                        },
-                        new Aws.CodeDeploy.Inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupArgs
-                        {
-                            Name = aws_lb_target_group.Green.Name,
-                        },
-                    },
-                },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example_application = aws.codedeploy.Application("exampleApplication", compute_platform="ECS")
-example_deployment_group = aws.codedeploy.DeploymentGroup("exampleDeploymentGroup",
-    app_name=example_application.name,
-    deployment_config_name="CodeDeployDefault.ECSAllAtOnce",
-    deployment_group_name="example",
-    service_role_arn=aws_iam_role["example"]["arn"],
-    auto_rollback_configuration=aws.codedeploy.DeploymentGroupAutoRollbackConfigurationArgs(
-        enabled=True,
-        events=["DEPLOYMENT_FAILURE"],
-    ),
-    blue_green_deployment_config=aws.codedeploy.DeploymentGroupBlueGreenDeploymentConfigArgs(
-        deployment_ready_option=aws.codedeploy.DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs(
-            action_on_timeout="CONTINUE_DEPLOYMENT",
-        ),
-        terminate_blue_instances_on_deployment_success=aws.codedeploy.DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs(
-            action="TERMINATE",
-            termination_wait_time_in_minutes=5,
-        ),
-    ),
-    deployment_style=aws.codedeploy.DeploymentGroupDeploymentStyleArgs(
-        deployment_option="WITH_TRAFFIC_CONTROL",
-        deployment_type="BLUE_GREEN",
-    ),
-    ecs_service=aws.codedeploy.DeploymentGroupEcsServiceArgs(
-        cluster_name=aws_ecs_cluster["example"]["name"],
-        service_name=aws_ecs_service["example"]["name"],
-    ),
-    load_balancer_info=aws.codedeploy.DeploymentGroupLoadBalancerInfoArgs(
-        target_group_pair_info=aws.codedeploy.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs(
-            prod_traffic_route=aws.codedeploy.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs(
-                listener_arns=[aws_lb_listener["example"]["arn"]],
-            ),
-            target_groups=[
-                aws.codedeploy.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupArgs(
-                    name=aws_lb_target_group["blue"]["name"],
-                ),
-                aws.codedeploy.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupArgs(
-                    name=aws_lb_target_group["green"]["name"],
-                ),
-            ],
-        ),
-    ))
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const exampleApplication = new aws.codedeploy.Application("exampleApplication", {computePlatform: "ECS"});
-const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploymentGroup", {
-    appName: exampleApplication.name,
-    deploymentConfigName: "CodeDeployDefault.ECSAllAtOnce",
-    deploymentGroupName: "example",
-    serviceRoleArn: aws_iam_role.example.arn,
-    autoRollbackConfiguration: {
-        enabled: true,
-        events: ["DEPLOYMENT_FAILURE"],
-    },
-    blueGreenDeploymentConfig: {
-        deploymentReadyOption: {
-            actionOnTimeout: "CONTINUE_DEPLOYMENT",
-        },
-        terminateBlueInstancesOnDeploymentSuccess: {
-            action: "TERMINATE",
-            terminationWaitTimeInMinutes: 5,
-        },
-    },
-    deploymentStyle: {
-        deploymentOption: "WITH_TRAFFIC_CONTROL",
-        deploymentType: "BLUE_GREEN",
-    },
-    ecsService: {
-        clusterName: aws_ecs_cluster.example.name,
-        serviceName: aws_ecs_service.example.name,
-    },
-    loadBalancerInfo: {
-        targetGroupPairInfo: {
-            prodTrafficRoute: {
-                listenerArns: [aws_lb_listener.example.arn],
-            },
-            targetGroups: [
-                {
-                    name: aws_lb_target_group.blue.name,
-                },
-                {
-                    name: aws_lb_target_group.green.name,
-                },
-            ],
-        },
-    },
-});
-```
-
-
-{{< /example >}}
-
-
-
-
 ### Blue Green Deployments with Servers and Classic ELB
 
 
@@ -1102,7 +896,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#alarmconfiguration_go" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of alarms associated with the deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1111,7 +905,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#autorollbackconfiguration_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Rollback<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1129,7 +923,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#bluegreendeploymentconfig_go" style="color: inherit; text-decoration: inherit;">Blue<wbr>Green<wbr>Deployment<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1147,7 +941,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#deploymentstyle_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style</a></span>
+        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1156,7 +950,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#ec2tagfilters_go" style="color: inherit; text-decoration: inherit;">Ec2Tag<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagfilter">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagfilter">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1165,7 +959,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#ec2tagsets_go" style="color: inherit; text-decoration: inherit;">Ec2Tag<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagset">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagset">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1174,7 +968,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#ecsservice_go" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service</a></span>
+        <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the ECS services for a deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1183,7 +977,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#loadbalancerinfo_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Single configuration block of the load balancer to use in a blue/green deployment (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1192,7 +986,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#onpremisesinstancetagfilters_go" style="color: inherit; text-decoration: inherit;">On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">[]Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter</a></span>
+        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">[]Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1219,7 +1013,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#triggerconfigurations_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">[]Deployment<wbr>Group<wbr>Trigger<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">[]Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
 {{% /md %}}</dd></dl>
@@ -2038,7 +1832,7 @@ The following state arguments are supported:
 <a href="#state_alarmconfiguration_go" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of alarms associated with the deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2065,7 +1859,7 @@ The following state arguments are supported:
 <a href="#state_autorollbackconfiguration_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Rollback<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2083,7 +1877,7 @@ The following state arguments are supported:
 <a href="#state_bluegreendeploymentconfig_go" style="color: inherit; text-decoration: inherit;">Blue<wbr>Green<wbr>Deployment<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2128,7 +1922,7 @@ The following state arguments are supported:
 <a href="#state_deploymentstyle_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style</a></span>
+        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2137,7 +1931,7 @@ The following state arguments are supported:
 <a href="#state_ec2tagfilters_go" style="color: inherit; text-decoration: inherit;">Ec2Tag<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagfilter">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagfilter">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2146,7 +1940,7 @@ The following state arguments are supported:
 <a href="#state_ec2tagsets_go" style="color: inherit; text-decoration: inherit;">Ec2Tag<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagset">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagset">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2155,7 +1949,7 @@ The following state arguments are supported:
 <a href="#state_ecsservice_go" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service</a></span>
+        <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the ECS services for a deployment group (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2164,7 +1958,7 @@ The following state arguments are supported:
 <a href="#state_loadbalancerinfo_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Single configuration block of the load balancer to use in a blue/green deployment (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2173,7 +1967,7 @@ The following state arguments are supported:
 <a href="#state_onpremisesinstancetagfilters_go" style="color: inherit; text-decoration: inherit;">On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">[]Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter</a></span>
+        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">[]Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2209,7 +2003,7 @@ The following state arguments are supported:
 <a href="#state_triggerconfigurations_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">[]Deployment<wbr>Group<wbr>Trigger<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">[]Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
 {{% /md %}}</dd></dl>
@@ -2825,7 +2619,7 @@ The following state arguments are supported:
 <a href="#deploymentreadyoption_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Ready<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2834,7 +2628,7 @@ The following state arguments are supported:
 <a href="#greenfleetprovisioningoption_csharp" style="color: inherit; text-decoration: inherit;">Green<wbr>Fleet<wbr>Provisioning<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2843,7 +2637,7 @@ The following state arguments are supported:
 <a href="#terminateblueinstancesondeploymentsuccess_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</a></span>
     </dt>
     <dd>{{% md %}}Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).
 {{% /md %}}</dd></dl>
@@ -2887,7 +2681,7 @@ The following state arguments are supported:
 <a href="#deploymentreadyoption_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Ready<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2896,7 +2690,7 @@ The following state arguments are supported:
 <a href="#greenfleetprovisioningoption_nodejs" style="color: inherit; text-decoration: inherit;">green<wbr>Fleet<wbr>Provisioning<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2905,7 +2699,7 @@ The following state arguments are supported:
 <a href="#terminateblueinstancesondeploymentsuccess_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</a></span>
     </dt>
     <dd>{{% md %}}Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).
 {{% /md %}}</dd></dl>
@@ -2918,7 +2712,7 @@ The following state arguments are supported:
 <a href="#deployment_ready_option_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>ready_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2927,7 +2721,7 @@ The following state arguments are supported:
 <a href="#green_fleet_provisioning_option_python" style="color: inherit; text-decoration: inherit;">green_<wbr>fleet_<wbr>provisioning_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2936,7 +2730,7 @@ The following state arguments are supported:
 <a href="#terminate_blue_instances_on_deployment_success_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>blue_<wbr>instances_<wbr>on_<wbr>deployment_<wbr>success</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</a></span>
     </dt>
     <dd>{{% md %}}Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).
 {{% /md %}}</dd></dl>
@@ -3425,7 +3219,7 @@ The following state arguments are supported:
 <a href="#ec2tagfilters_csharp" style="color: inherit; text-decoration: inherit;">Ec2Tag<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd></dl>
@@ -3451,7 +3245,7 @@ The following state arguments are supported:
 <a href="#ec2tagfilters_nodejs" style="color: inherit; text-decoration: inherit;">ec2Tag<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd></dl>
@@ -3464,7 +3258,7 @@ The following state arguments are supported:
 <a href="#ec2_tag_filters_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">Sequence[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">Sequence[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd></dl>
@@ -3695,7 +3489,7 @@ The following state arguments are supported:
 <a href="#elbinfos_csharp" style="color: inherit; text-decoration: inherit;">Elb<wbr>Infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">List&lt;Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">List&lt;Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3704,7 +3498,7 @@ The following state arguments are supported:
 <a href="#targetgroupinfos_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">List&lt;Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">List&lt;Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info&gt;</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elb_info` and `target_group_pair_info`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3713,7 +3507,7 @@ The following state arguments are supported:
 <a href="#targetgrouppairinfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Pair<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with `elb_info` and `target_group_info`.
 {{% /md %}}</dd></dl>
@@ -3757,7 +3551,7 @@ The following state arguments are supported:
 <a href="#elbinfos_nodejs" style="color: inherit; text-decoration: inherit;">elb<wbr>Infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info[]</a></span>
     </dt>
     <dd>{{% md %}}The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3766,7 +3560,7 @@ The following state arguments are supported:
 <a href="#targetgroupinfos_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info[]</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elb_info` and `target_group_pair_info`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3775,7 +3569,7 @@ The following state arguments are supported:
 <a href="#targetgrouppairinfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Pair<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with `elb_info` and `target_group_info`.
 {{% /md %}}</dd></dl>
@@ -3788,7 +3582,7 @@ The following state arguments are supported:
 <a href="#elb_infos_python" style="color: inherit; text-decoration: inherit;">elb_<wbr>infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">Sequence[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">Sequence[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info]</a></span>
     </dt>
     <dd>{{% md %}}The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3797,7 +3591,7 @@ The following state arguments are supported:
 <a href="#target_group_infos_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">Sequence[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">Sequence[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info]</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elb_info` and `target_group_pair_info`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3806,7 +3600,7 @@ The following state arguments are supported:
 <a href="#target_group_pair_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>pair_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with `elb_info` and `target_group_info`.
 {{% /md %}}</dd></dl>
@@ -3929,7 +3723,7 @@ The following state arguments are supported:
 <a href="#prodtrafficroute_csharp" style="color: inherit; text-decoration: inherit;">Prod<wbr>Traffic<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the production traffic route (documented below).
 {{% /md %}}</dd><dt class="property-required"
@@ -3938,7 +3732,7 @@ The following state arguments are supported:
 <a href="#targetgroups_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">List&lt;Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">List&lt;Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks for a target group within a target group pair (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3947,7 +3741,7 @@ The following state arguments are supported:
 <a href="#testtrafficroute_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Traffic<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the test traffic route (documented below).
 {{% /md %}}</dd></dl>
@@ -3991,7 +3785,7 @@ The following state arguments are supported:
 <a href="#prodtrafficroute_nodejs" style="color: inherit; text-decoration: inherit;">prod<wbr>Traffic<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the production traffic route (documented below).
 {{% /md %}}</dd><dt class="property-required"
@@ -4000,7 +3794,7 @@ The following state arguments are supported:
 <a href="#targetgroups_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks for a target group within a target group pair (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4009,7 +3803,7 @@ The following state arguments are supported:
 <a href="#testtrafficroute_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Traffic<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the test traffic route (documented below).
 {{% /md %}}</dd></dl>
@@ -4022,7 +3816,7 @@ The following state arguments are supported:
 <a href="#prod_traffic_route_python" style="color: inherit; text-decoration: inherit;">prod_<wbr>traffic_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the production traffic route (documented below).
 {{% /md %}}</dd><dt class="property-required"
@@ -4031,7 +3825,7 @@ The following state arguments are supported:
 <a href="#target_groups_python" style="color: inherit; text-decoration: inherit;">target_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">Sequence[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">Sequence[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group]</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks for a target group within a target group pair (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4040,7 +3834,7 @@ The following state arguments are supported:
 <a href="#test_traffic_route_python" style="color: inherit; text-decoration: inherit;">test_<wbr>traffic_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the test traffic route (documented below).
 {{% /md %}}</dd></dl>

@@ -120,103 +120,6 @@ const example = new aws.glue.Connection("example", {
 
 
 
-### VPC Connection
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Glue.Connection("example", new Aws.Glue.ConnectionArgs
-        {
-            ConnectionProperties = 
-            {
-                { "JDBC_CONNECTION_URL", $"jdbc:mysql://{aws_rds_cluster.Example.Endpoint}/exampledatabase" },
-                { "PASSWORD", "examplepassword" },
-                { "USERNAME", "exampleusername" },
-            },
-            PhysicalConnectionRequirements = new Aws.Glue.Inputs.ConnectionPhysicalConnectionRequirementsArgs
-            {
-                AvailabilityZone = aws_subnet.Example.Availability_zone,
-                SecurityGroupIdLists = 
-                {
-                    aws_security_group.Example.Id,
-                },
-                SubnetId = aws_subnet.Example.Id,
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.glue.Connection("example",
-    connection_properties={
-        "JDBC_CONNECTION_URL": f"jdbc:mysql://{aws_rds_cluster['example']['endpoint']}/exampledatabase",
-        "PASSWORD": "examplepassword",
-        "USERNAME": "exampleusername",
-    },
-    physical_connection_requirements=aws.glue.ConnectionPhysicalConnectionRequirementsArgs(
-        availability_zone=aws_subnet["example"]["availability_zone"],
-        security_group_id_lists=[aws_security_group["example"]["id"]],
-        subnet_id=aws_subnet["example"]["id"],
-    ))
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.glue.Connection("example", {
-    connectionProperties: {
-        JDBC_CONNECTION_URL: `jdbc:mysql://${aws_rds_cluster.example.endpoint}/exampledatabase`,
-        PASSWORD: "examplepassword",
-        USERNAME: "exampleusername",
-    },
-    physicalConnectionRequirements: {
-        availabilityZone: aws_subnet.example.availability_zone,
-        securityGroupIdLists: [aws_security_group.example.id],
-        subnetId: aws_subnet.example.id,
-    },
-});
-```
-
-
-{{< /example >}}
-
-
-
-
 
 {{% /examples %}}
 
@@ -496,7 +399,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#physicalconnectionrequirements_go" style="color: inherit; text-decoration: inherit;">Physical<wbr>Connection<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionphysicalconnectionrequirements">Connection<wbr>Physical<wbr>Connection<wbr>Requirements</a></span>
+        <span class="property-type"><a href="#connectionphysicalconnectionrequirements">Connection<wbr>Physical<wbr>Connection<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
 {{% /md %}}</dd></dl>
@@ -1006,7 +909,7 @@ The following state arguments are supported:
 <a href="#state_physicalconnectionrequirements_go" style="color: inherit; text-decoration: inherit;">Physical<wbr>Connection<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionphysicalconnectionrequirements">Connection<wbr>Physical<wbr>Connection<wbr>Requirements</a></span>
+        <span class="property-type"><a href="#connectionphysicalconnectionrequirements">Connection<wbr>Physical<wbr>Connection<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
 {{% /md %}}</dd></dl>

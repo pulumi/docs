@@ -465,7 +465,7 @@ The VpcPeeringConnectionAccepter resource accepts the following [input]({{< relr
 <a href="#accepter_go" style="color: inherit; text-decoration: inherit;">Accepter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionaccepteraccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Accepter</a></span>
+        <span class="property-type"><a href="#vpcpeeringconnectionaccepteraccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Accepter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the accepter VPC.
@@ -484,7 +484,7 @@ The VpcPeeringConnectionAccepter resource accepts the following [input]({{< relr
 <a href="#requester_go" style="color: inherit; text-decoration: inherit;">Requester</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionaccepterrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Requester</a></span>
+        <span class="property-type"><a href="#vpcpeeringconnectionaccepterrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Requester<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the requester VPC.
@@ -1121,7 +1121,7 @@ The following state arguments are supported:
 <a href="#state_accepter_go" style="color: inherit; text-decoration: inherit;">Accepter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionaccepteraccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Accepter</a></span>
+        <span class="property-type"><a href="#vpcpeeringconnectionaccepteraccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Accepter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the accepter VPC.
@@ -1167,7 +1167,7 @@ The following state arguments are supported:
 <a href="#state_requester_go" style="color: inherit; text-decoration: inherit;">Requester</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionaccepterrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Requester</a></span>
+        <span class="property-type"><a href="#vpcpeeringconnectionaccepterrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Requester<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the requester VPC.

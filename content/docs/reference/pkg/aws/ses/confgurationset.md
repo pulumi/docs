@@ -387,7 +387,7 @@ The ConfgurationSet resource accepts the following [input]({{< relref "/docs/int
 <a href="#deliveryoptions_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#confgurationsetdeliveryoptions">Confguration<wbr>Set<wbr>Delivery<wbr>Options</a></span>
+        <span class="property-type"><a href="#confgurationsetdeliveryoptions">Confguration<wbr>Set<wbr>Delivery<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -832,7 +832,7 @@ The following state arguments are supported:
 <a href="#state_deliveryoptions_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#confgurationsetdeliveryoptions">Confguration<wbr>Set<wbr>Delivery<wbr>Options</a></span>
+        <span class="property-type"><a href="#confgurationsetdeliveryoptions">Confguration<wbr>Set<wbr>Delivery<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

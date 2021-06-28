@@ -627,7 +627,7 @@ use the default behavior, which is an exponential backoff
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsetting">[]Environment<wbr>Setting</a></span>
+        <span class="property-type"><a href="#environmentsetting">[]Environment<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -1801,7 +1801,7 @@ out.
 <a href="#state_allsettings_go" style="color: inherit; text-decoration: inherit;">All<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentallsetting">[]Environment<wbr>All<wbr>Setting</a></span>
+        <span class="property-type"><a href="#environmentallsetting">[]Environment<wbr>All<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
@@ -1944,7 +1944,7 @@ use the default behavior, which is an exponential backoff
 <a href="#state_settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsetting">[]Environment<wbr>Setting</a></span>
+        <span class="property-type"><a href="#environmentsetting">[]Environment<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed

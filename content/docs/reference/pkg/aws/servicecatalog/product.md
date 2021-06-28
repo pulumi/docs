@@ -427,7 +427,7 @@ The Product resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#provisioningartifactparameters_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Artifact<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#productprovisioningartifactparameters">Product<wbr>Provisioning<wbr>Artifact<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#productprovisioningartifactparameters">Product<wbr>Provisioning<wbr>Artifact<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for provisioning artifact (i.e., version) parameters. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1314,7 +1314,7 @@ The following state arguments are supported:
 <a href="#state_provisioningartifactparameters_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Artifact<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#productprovisioningartifactparameters">Product<wbr>Provisioning<wbr>Artifact<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#productprovisioningartifactparameters">Product<wbr>Provisioning<wbr>Artifact<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for provisioning artifact (i.e., version) parameters. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

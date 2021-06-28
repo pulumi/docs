@@ -497,7 +497,7 @@ The CachePolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parametersincachekeyandforwardedtoorigin_go" style="color: inherit; text-decoration: inherit;">Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigin">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigin">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
 {{% /md %}}</dd></dl>
@@ -952,7 +952,7 @@ The following state arguments are supported:
 <a href="#state_parametersincachekeyandforwardedtoorigin_go" style="color: inherit; text-decoration: inherit;">Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigin">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigin">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
 {{% /md %}}</dd></dl>
@@ -1110,7 +1110,7 @@ The following state arguments are supported:
 <a href="#cookiesconfig_csharp" style="color: inherit; text-decoration: inherit;">Cookies<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
 {{% /md %}}</dd><dt class="property-required"
@@ -1119,7 +1119,7 @@ The following state arguments are supported:
 <a href="#headersconfig_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
 {{% /md %}}</dd><dt class="property-required"
@@ -1128,7 +1128,7 @@ The following state arguments are supported:
 <a href="#querystringsconfig_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1208,7 +1208,7 @@ The following state arguments are supported:
 <a href="#cookiesconfig_nodejs" style="color: inherit; text-decoration: inherit;">cookies<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
 {{% /md %}}</dd><dt class="property-required"
@@ -1217,7 +1217,7 @@ The following state arguments are supported:
 <a href="#headersconfig_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
 {{% /md %}}</dd><dt class="property-required"
@@ -1226,7 +1226,7 @@ The following state arguments are supported:
 <a href="#querystringsconfig_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Strings<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1257,7 +1257,7 @@ The following state arguments are supported:
 <a href="#cookies_config_python" style="color: inherit; text-decoration: inherit;">cookies_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
 {{% /md %}}</dd><dt class="property-required"
@@ -1266,7 +1266,7 @@ The following state arguments are supported:
 <a href="#headers_config_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
 {{% /md %}}</dd><dt class="property-required"
@@ -1275,7 +1275,7 @@ The following state arguments are supported:
 <a href="#query_strings_config_python" style="color: inherit; text-decoration: inherit;">query_<wbr>strings_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1310,15 +1310,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookies_csharp">
 <a href="#cookies_csharp" style="color: inherit; text-decoration: inherit;">Cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfigcookies">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Cookies<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfigcookies">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Cookies</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Object that contains a list of cookie names. See Items for more information.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1330,7 +1332,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookies_go">
 <a href="#cookies_go" style="color: inherit; text-decoration: inherit;">Cookies</a>
@@ -1338,7 +1341,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfigcookies">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Cookies</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Object that contains a list of cookie names. See Items for more information.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1350,15 +1354,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookies_nodejs">
 <a href="#cookies_nodejs" style="color: inherit; text-decoration: inherit;">cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfigcookies">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Cookies<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfigcookies">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Cookies</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Object that contains a list of cookie names. See Items for more information.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1370,15 +1376,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookies_python">
 <a href="#cookies_python" style="color: inherit; text-decoration: inherit;">cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfigcookies">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Cookies<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtoorigincookiesconfigcookies">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Cookies</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Object that contains a list of cookie names. See Items for more information.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cachepolicyparametersincachekeyandforwardedtoorigincookiesconfigcookies">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Cookies<wbr>Config<wbr>Cookies</h4>
@@ -1392,7 +1400,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of item names (cookies, headers, or query strings).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1404,7 +1413,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of item names (cookies, headers, or query strings).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1416,7 +1426,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of item names (cookies, headers, or query strings).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1428,7 +1439,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of item names (cookies, headers, or query strings).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cachepolicyparametersincachekeyandforwardedtooriginheadersconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config</h4>
@@ -1442,15 +1454,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfigheaders">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfigheaders">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Headers</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Object that contains a list of header names. See Items for more information.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1462,7 +1476,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -1470,7 +1485,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfigheaders">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Headers</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Object that contains a list of header names. See Items for more information.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1482,15 +1498,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfigheaders">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfigheaders">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Headers</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Object that contains a list of header names. See Items for more information.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1502,15 +1520,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfigheaders">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginheadersconfigheaders">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Headers</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Object that contains a list of header names. See Items for more information.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cachepolicyparametersincachekeyandforwardedtooriginheadersconfigheaders">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Headers<wbr>Config<wbr>Headers</h4>
@@ -1524,7 +1544,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of item names (cookies, headers, or query strings).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1536,7 +1557,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of item names (cookies, headers, or query strings).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1548,7 +1570,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of item names (cookies, headers, or query strings).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1560,7 +1583,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of item names (cookies, headers, or query strings).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfig">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config</h4>
@@ -1574,15 +1598,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines whether any URL query strings in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystrings_csharp">
 <a href="#querystrings_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfigquerystrings">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfigquerystrings">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Object that contains a list of query string names. See Items for more information.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1594,7 +1620,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines whether any URL query strings in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystrings_go">
 <a href="#querystrings_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings</a>
@@ -1602,7 +1629,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfigquerystrings">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Object that contains a list of query string names. See Items for more information.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1614,15 +1642,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines whether any URL query strings in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystrings_nodejs">
 <a href="#querystrings_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfigquerystrings">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfigquerystrings">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Object that contains a list of query string names. See Items for more information.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1634,15 +1664,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines whether any URL query strings in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_strings_python">
 <a href="#query_strings_python" style="color: inherit; text-decoration: inherit;">query_<wbr>strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfigquerystrings">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfigquerystrings">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Object that contains a list of query string names. See Items for more information.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cachepolicyparametersincachekeyandforwardedtooriginquerystringsconfigquerystrings">Cache<wbr>Policy<wbr>Parameters<wbr>In<wbr>Cache<wbr>Key<wbr>And<wbr>Forwarded<wbr>To<wbr>Origin<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings</h4>
@@ -1656,7 +1688,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of item names (cookies, headers, or query strings).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1668,7 +1701,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of item names (cookies, headers, or query strings).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1680,7 +1714,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of item names (cookies, headers, or query strings).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1692,7 +1727,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of item names (cookies, headers, or query strings).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

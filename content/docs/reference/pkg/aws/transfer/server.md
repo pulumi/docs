@@ -373,196 +373,6 @@ const example = new aws.transfer.Server("example", {
 
 
 
-### VPC Endpoint
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Transfer.Server("example", new Aws.Transfer.ServerArgs
-        {
-            EndpointType = "VPC",
-            EndpointDetails = new Aws.Transfer.Inputs.ServerEndpointDetailsArgs
-            {
-                AddressAllocationIds = 
-                {
-                    aws_eip.Example.Id,
-                },
-                SubnetIds = 
-                {
-                    aws_subnet.Example.Id,
-                },
-                VpcId = aws_vpc.Example.Id,
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.transfer.Server("example",
-    endpoint_type="VPC",
-    endpoint_details=aws.transfer.ServerEndpointDetailsArgs(
-        address_allocation_ids=[aws_eip["example"]["id"]],
-        subnet_ids=[aws_subnet["example"]["id"]],
-        vpc_id=aws_vpc["example"]["id"],
-    ))
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.transfer.Server("example", {
-    endpointType: "VPC",
-    endpointDetails: {
-        addressAllocationIds: [aws_eip.example.id],
-        subnetIds: [aws_subnet.example.id],
-        vpcId: aws_vpc.example.id,
-    },
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-### Protocols
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Transfer.Server("example", new Aws.Transfer.ServerArgs
-        {
-            EndpointType = "VPC",
-            EndpointDetails = new Aws.Transfer.Inputs.ServerEndpointDetailsArgs
-            {
-                SubnetIds = 
-                {
-                    aws_subnet.Example.Id,
-                },
-                VpcId = aws_vpc.Example.Id,
-            },
-            Protocols = 
-            {
-                "FTP",
-                "FTPS",
-            },
-            Certificate = aws_acm_certificate.Example.Arn,
-            IdentityProviderType = "API_GATEWAY",
-            Url = $"{aws_api_gateway_deployment.Example.Invoke_url}{aws_api_gateway_resource.Example.Path}",
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.transfer.Server("example",
-    endpoint_type="VPC",
-    endpoint_details=aws.transfer.ServerEndpointDetailsArgs(
-        subnet_ids=[aws_subnet["example"]["id"]],
-        vpc_id=aws_vpc["example"]["id"],
-    ),
-    protocols=[
-        "FTP",
-        "FTPS",
-    ],
-    certificate=aws_acm_certificate["example"]["arn"],
-    identity_provider_type="API_GATEWAY",
-    url=f"{aws_api_gateway_deployment['example']['invoke_url']}{aws_api_gateway_resource['example']['path']}")
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.transfer.Server("example", {
-    endpointType: "VPC",
-    endpointDetails: {
-        subnetIds: [aws_subnet.example.id],
-        vpcId: aws_vpc.example.id,
-    },
-    protocols: [
-        "FTP",
-        "FTPS",
-    ],
-    certificate: aws_acm_certificate.example.arn,
-    identityProviderType: "API_GATEWAY",
-    url: `${aws_api_gateway_deployment.example.invoke_url}${aws_api_gateway_resource.example.path}`,
-});
-```
-
-
-{{< /example >}}
-
-
-
-
 
 {{% /examples %}}
 
@@ -877,7 +687,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#endpointdetails_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details</a></span>
+        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1751,7 +1561,7 @@ The following state arguments are supported:
 <a href="#state_endpointdetails_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details</a></span>
+        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"

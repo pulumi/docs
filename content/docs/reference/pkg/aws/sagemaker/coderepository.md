@@ -466,7 +466,7 @@ The CodeRepository resource accepts the following [input]({{< relref "/docs/intr
 <a href="#gitconfig_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#coderepositorygitconfig">Code<wbr>Repository<wbr>Git<wbr>Config</a></span>
+        <span class="property-type"><a href="#coderepositorygitconfig">Code<wbr>Repository<wbr>Git<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies details about the repository. see Git Config details below.
 {{% /md %}}</dd></dl>
@@ -791,7 +791,7 @@ The following state arguments are supported:
 <a href="#state_gitconfig_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#coderepositorygitconfig">Code<wbr>Repository<wbr>Git<wbr>Config</a></span>
+        <span class="property-type"><a href="#coderepositorygitconfig">Code<wbr>Repository<wbr>Git<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies details about the repository. see Git Config details below.
 {{% /md %}}</dd></dl>

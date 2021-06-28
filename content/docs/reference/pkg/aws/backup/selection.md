@@ -289,90 +289,6 @@ const example = new aws.backup.Selection("example", {
 
 
 
-### Selecting Backups By Resource
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Backup.Selection("example", new Aws.Backup.SelectionArgs
-        {
-            IamRoleArn = aws_iam_role.Example.Arn,
-            PlanId = aws_backup_plan.Example.Id,
-            Resources = 
-            {
-                aws_db_instance.Example.Arn,
-                aws_ebs_volume.Example.Arn,
-                aws_efs_file_system.Example.Arn,
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.backup.Selection("example",
-    iam_role_arn=aws_iam_role["example"]["arn"],
-    plan_id=aws_backup_plan["example"]["id"],
-    resources=[
-        aws_db_instance["example"]["arn"],
-        aws_ebs_volume["example"]["arn"],
-        aws_efs_file_system["example"]["arn"],
-    ])
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.backup.Selection("example", {
-    iamRoleArn: aws_iam_role.example.arn,
-    planId: aws_backup_plan.example.id,
-    resources: [
-        aws_db_instance.example.arn,
-        aws_ebs_volume.example.arn,
-        aws_efs_file_system.example.arn,
-    ],
-});
-```
-
-
-{{< /example >}}
-
-
-
-
 
 {{% /examples %}}
 
@@ -614,7 +530,7 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#selectiontags_go" style="color: inherit; text-decoration: inherit;">Selection<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectionselectiontag">[]Selection<wbr>Selection<wbr>Tag</a></span>
+        <span class="property-type"><a href="#selectionselectiontag">[]Selection<wbr>Selection<wbr>Tag<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tag-based conditions used to specify a set of resources to assign to a backup plan.
 {{% /md %}}</dd></dl>
@@ -995,7 +911,7 @@ The following state arguments are supported:
 <a href="#state_selectiontags_go" style="color: inherit; text-decoration: inherit;">Selection<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectionselectiontag">[]Selection<wbr>Selection<wbr>Tag</a></span>
+        <span class="property-type"><a href="#selectionselectiontag">[]Selection<wbr>Selection<wbr>Tag<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tag-based conditions used to specify a set of resources to assign to a backup plan.
 {{% /md %}}</dd></dl>

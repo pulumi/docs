@@ -724,7 +724,7 @@ The FunctionEventInvokeConfig resource accepts the following [input]({{< relref 
 <a href="#destinationconfig_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfig">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</a></span>
+        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfig">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1096,7 +1096,7 @@ The following state arguments are supported:
 <a href="#state_destinationconfig_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfig">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</a></span>
+        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfig">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1254,7 +1254,7 @@ The following state arguments are supported:
 <a href="#onfailure_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonfailure">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure<wbr>Args</a></span>
+        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonfailure">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for failed asynchronous invocations. See below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1263,7 +1263,7 @@ The following state arguments are supported:
 <a href="#onsuccess_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Success</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonsuccess">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success<wbr>Args</a></span>
+        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonsuccess">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for successful asynchronous invocations. See below for details.
 {{% /md %}}</dd></dl>
@@ -1298,7 +1298,7 @@ The following state arguments are supported:
 <a href="#onfailure_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonfailure">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure<wbr>Args</a></span>
+        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonfailure">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for failed asynchronous invocations. See below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1307,7 +1307,7 @@ The following state arguments are supported:
 <a href="#onsuccess_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Success</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonsuccess">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success<wbr>Args</a></span>
+        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonsuccess">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for successful asynchronous invocations. See below for details.
 {{% /md %}}</dd></dl>
@@ -1320,7 +1320,7 @@ The following state arguments are supported:
 <a href="#on_failure_python" style="color: inherit; text-decoration: inherit;">on_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonfailure">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure<wbr>Args</a></span>
+        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonfailure">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for failed asynchronous invocations. See below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1329,7 +1329,7 @@ The following state arguments are supported:
 <a href="#on_success_python" style="color: inherit; text-decoration: inherit;">on_<wbr>success</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonsuccess">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success<wbr>Args</a></span>
+        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonsuccess">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for successful asynchronous invocations. See below for details.
 {{% /md %}}</dd></dl>

@@ -2080,7 +2080,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
 <a href="#state_cachenodes_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercachenode">[]Cluster<wbr>Cache<wbr>Node</a></span>
+        <span class="property-type"><a href="#clustercachenode">[]Cluster<wbr>Cache<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and `availability_zone`.
 {{% /md %}}</dd><dt class="property-optional"

@@ -661,7 +661,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#cacheattributes_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smbfilesharecacheattributes">Smb<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#smbfilesharecacheattributes">Smb<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Refresh cache information. see Cache Attributes for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1828,7 +1828,7 @@ The following state arguments are supported:
 <a href="#state_cacheattributes_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smbfilesharecacheattributes">Smb<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#smbfilesharecacheattributes">Smb<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Refresh cache information. see Cache Attributes for more details.
 {{% /md %}}</dd><dt class="property-optional"

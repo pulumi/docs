@@ -723,7 +723,7 @@ The MetricStream resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#excludefilters_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricstreamexcludefilter">[]Metric<wbr>Stream<wbr>Exclude<wbr>Filter</a></span>
+        <span class="property-type"><a href="#metricstreamexcludefilter">[]Metric<wbr>Stream<wbr>Exclude<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of exclusive metric filters. If you specify this parameter, the stream sends metrics from all metric namespaces except for the namespaces that you specify here. Conflicts with `include_filter`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -732,7 +732,7 @@ The MetricStream resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#includefilters_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricstreamincludefilter">[]Metric<wbr>Stream<wbr>Include<wbr>Filter</a></span>
+        <span class="property-type"><a href="#metricstreamincludefilter">[]Metric<wbr>Stream<wbr>Include<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of inclusive metric filters. If you specify this parameter, the stream sends only the metrics from the metric namespaces that you specify here. Conflicts with `exclude_filter`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1423,7 +1423,7 @@ The following state arguments are supported:
 <a href="#state_excludefilters_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricstreamexcludefilter">[]Metric<wbr>Stream<wbr>Exclude<wbr>Filter</a></span>
+        <span class="property-type"><a href="#metricstreamexcludefilter">[]Metric<wbr>Stream<wbr>Exclude<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of exclusive metric filters. If you specify this parameter, the stream sends metrics from all metric namespaces except for the namespaces that you specify here. Conflicts with `include_filter`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1441,7 +1441,7 @@ The following state arguments are supported:
 <a href="#state_includefilters_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricstreamincludefilter">[]Metric<wbr>Stream<wbr>Include<wbr>Filter</a></span>
+        <span class="property-type"><a href="#metricstreamincludefilter">[]Metric<wbr>Stream<wbr>Include<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of inclusive metric filters. If you specify this parameter, the stream sends only the metrics from the metric namespaces that you specify here. Conflicts with `exclude_filter`.
 {{% /md %}}</dd><dt class="property-optional"

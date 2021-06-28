@@ -396,7 +396,7 @@ the peering connection (a maximum of one).
 <a href="#accepter_go" style="color: inherit; text-decoration: inherit;">Accepter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionaccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Type</a></span>
+        <span class="property-type"><a href="#vpcpeeringconnectionaccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
@@ -435,7 +435,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
 <a href="#requester_go" style="color: inherit; text-decoration: inherit;">Requester</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Requester</a></span>
+        <span class="property-type"><a href="#vpcpeeringconnectionrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Requester<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
@@ -978,7 +978,7 @@ the peering connection (a maximum of one).
 <a href="#state_accepter_go" style="color: inherit; text-decoration: inherit;">Accepter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionaccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Type</a></span>
+        <span class="property-type"><a href="#vpcpeeringconnectionaccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
@@ -1026,7 +1026,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
 <a href="#state_requester_go" style="color: inherit; text-decoration: inherit;">Requester</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Requester</a></span>
+        <span class="property-type"><a href="#vpcpeeringconnectionrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Requester<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).

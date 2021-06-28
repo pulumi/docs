@@ -412,111 +412,6 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sampleCompute
 
 
 
-### Fargate Type
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var sample = new Aws.Batch.ComputeEnvironment("sample", new Aws.Batch.ComputeEnvironmentArgs
-        {
-            ComputeEnvironmentName = "sample",
-            ComputeResources = new Aws.Batch.Inputs.ComputeEnvironmentComputeResourcesArgs
-            {
-                MaxVcpus = 16,
-                SecurityGroupIds = 
-                {
-                    aws_security_group.Sample.Id,
-                },
-                Subnets = 
-                {
-                    aws_subnet.Sample.Id,
-                },
-                Type = "FARGATE",
-            },
-            ServiceRole = aws_iam_role.Aws_batch_service_role.Arn,
-            Type = "MANAGED",
-        }, new CustomResourceOptions
-        {
-            DependsOn = 
-            {
-                aws_iam_role_policy_attachment.Aws_batch_service_role,
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-sample = aws.batch.ComputeEnvironment("sample",
-    compute_environment_name="sample",
-    compute_resources=aws.batch.ComputeEnvironmentComputeResourcesArgs(
-        max_vcpus=16,
-        security_group_ids=[aws_security_group["sample"]["id"]],
-        subnets=[aws_subnet["sample"]["id"]],
-        type="FARGATE",
-    ),
-    service_role=aws_iam_role["aws_batch_service_role"]["arn"],
-    type="MANAGED",
-    opts=pulumi.ResourceOptions(depends_on=[aws_iam_role_policy_attachment["aws_batch_service_role"]]))
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const sample = new aws.batch.ComputeEnvironment("sample", {
-    computeEnvironmentName: "sample",
-    computeResources: {
-        maxVcpus: 16,
-        securityGroupIds: [aws_security_group.sample.id],
-        subnets: [aws_subnet.sample.id],
-        type: "FARGATE",
-    },
-    serviceRole: aws_iam_role.aws_batch_service_role.arn,
-    type: "MANAGED",
-}, {
-    dependsOn: [aws_iam_role_policy_attachment.aws_batch_service_role],
-});
-```
-
-
-{{< /example >}}
-
-
-
-
 
 {{% /examples %}}
 
@@ -779,7 +674,7 @@ The ComputeEnvironment resource accepts the following [input]({{< relref "/docs/
 <a href="#computeresources_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeenvironmentcomputeresources">Compute<wbr>Environment<wbr>Compute<wbr>Resources</a></span>
+        <span class="property-type"><a href="#computeenvironmentcomputeresources">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1455,7 +1350,7 @@ The following state arguments are supported:
 <a href="#state_computeresources_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeenvironmentcomputeresources">Compute<wbr>Environment<wbr>Compute<wbr>Resources</a></span>
+        <span class="property-type"><a href="#computeenvironmentcomputeresources">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1874,7 +1769,7 @@ The following state arguments are supported:
 <a href="#launchtemplate_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeenvironmentcomputeresourceslaunchtemplate">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeenvironmentcomputeresourceslaunchtemplate">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}The launch template to use for your compute resources. See details below. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2152,7 +2047,7 @@ The following state arguments are supported:
 <a href="#launchtemplate_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeenvironmentcomputeresourceslaunchtemplate">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeenvironmentcomputeresourceslaunchtemplate">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}The launch template to use for your compute resources. See details below. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2291,7 +2186,7 @@ The following state arguments are supported:
 <a href="#launch_template_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeenvironmentcomputeresourceslaunchtemplate">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeenvironmentcomputeresourceslaunchtemplate">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}The launch template to use for your compute resources. See details below. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"

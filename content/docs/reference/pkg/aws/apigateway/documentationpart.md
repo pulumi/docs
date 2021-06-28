@@ -323,7 +323,7 @@ The DocumentationPart resource accepts the following [input]({{< relref "/docs/i
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentationpartlocation">Documentation<wbr>Part<wbr>Location</a></span>
+        <span class="property-type"><a href="#documentationpartlocation">Documentation<wbr>Part<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the targeted API entity of the to-be-created documentation part. See below.
 {{% /md %}}</dd><dt class="property-required"
@@ -630,7 +630,7 @@ The following state arguments are supported:
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentationpartlocation">Documentation<wbr>Part<wbr>Location</a></span>
+        <span class="property-type"><a href="#documentationpartlocation">Documentation<wbr>Part<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the targeted API entity of the to-be-created documentation part. See below.
 {{% /md %}}</dd><dt class="property-optional"

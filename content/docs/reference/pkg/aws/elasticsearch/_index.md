@@ -13,6 +13,7 @@ Explore the resources and functions of the aws.elasticsearch module.
 <ul class="api">
     <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
     <li><a href="domainpolicy" title="DomainPolicy"><span class="symbol resource"></span>DomainPolicy</a></li>
+    <li><a href="domainsamloptions" title="DomainSamlOptions"><span class="symbol resource"></span>DomainSamlOptions</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -29,6 +30,6 @@ Explore the resources and functions of the aws.elasticsearch module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.9.0</dd>
+	<dd>4.10.0</dd>
 </dl>
 

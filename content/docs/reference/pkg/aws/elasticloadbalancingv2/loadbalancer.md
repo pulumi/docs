@@ -22,198 +22,6 @@ Provides a Load Balancer resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-### Application Load Balancer
-
-
-{{< example csharp >}}
-
-```csharp
-using System.Linq;
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var test = new Aws.LB.LoadBalancer("test", new Aws.LB.LoadBalancerArgs
-        {
-            Internal = false,
-            LoadBalancerType = "application",
-            SecurityGroups = 
-            {
-                aws_security_group.Lb_sg.Id,
-            },
-            Subnets = aws_subnet.Public.Select(__item => __item.Id).ToList(),
-            EnableDeletionProtection = true,
-            AccessLogs = new Aws.LB.Inputs.LoadBalancerAccessLogsArgs
-            {
-                Bucket = aws_s3_bucket.Lb_logs.Bucket,
-                Prefix = "test-lb",
-                Enabled = true,
-            },
-            Tags = 
-            {
-                { "Environment", "production" },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-test = aws.lb.LoadBalancer("test",
-    internal=False,
-    load_balancer_type="application",
-    security_groups=[aws_security_group["lb_sg"]["id"]],
-    subnets=[__item["id"] for __item in aws_subnet["public"]],
-    enable_deletion_protection=True,
-    access_logs=aws.lb.LoadBalancerAccessLogsArgs(
-        bucket=aws_s3_bucket["lb_logs"]["bucket"],
-        prefix="test-lb",
-        enabled=True,
-    ),
-    tags={
-        "Environment": "production",
-    })
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const test = new aws.lb.LoadBalancer("test", {
-    internal: false,
-    loadBalancerType: "application",
-    securityGroups: [aws_security_group.lb_sg.id],
-    subnets: aws_subnet["public"].map(__item => __item.id),
-    enableDeletionProtection: true,
-    accessLogs: {
-        bucket: aws_s3_bucket.lb_logs.bucket,
-        prefix: "test-lb",
-        enabled: true,
-    },
-    tags: {
-        Environment: "production",
-    },
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-### Network Load Balancer
-
-
-{{< example csharp >}}
-
-```csharp
-using System.Linq;
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var test = new Aws.LB.LoadBalancer("test", new Aws.LB.LoadBalancerArgs
-        {
-            Internal = false,
-            LoadBalancerType = "network",
-            Subnets = aws_subnet.Public.Select(__item => __item.Id).ToList(),
-            EnableDeletionProtection = true,
-            Tags = 
-            {
-                { "Environment", "production" },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-test = aws.lb.LoadBalancer("test",
-    internal=False,
-    load_balancer_type="network",
-    subnets=[__item["id"] for __item in aws_subnet["public"]],
-    enable_deletion_protection=True,
-    tags={
-        "Environment": "production",
-    })
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const test = new aws.lb.LoadBalancer("test", {
-    internal: false,
-    loadBalancerType: "network",
-    subnets: aws_subnet["public"].map(__item => __item.id),
-    enableDeletionProtection: true,
-    tags: {
-        Environment: "production",
-    },
-});
-```
-
-
-{{< /example >}}
-
-
-
-
 ### Specifying Elastic IPs
 
 
@@ -801,7 +609,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#accesslogs_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -922,7 +730,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#subnetmappings_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancersubnetmapping">[]Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#loadbalancersubnetmapping">[]Load<wbr>Balancer<wbr>Subnet<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A subnet mapping block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1880,7 +1688,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_accesslogs_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2028,7 +1836,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#state_subnetmappings_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancersubnetmapping">[]Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#loadbalancersubnetmapping">[]Load<wbr>Balancer<wbr>Subnet<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A subnet mapping block as documented below.
 {{% /md %}}</dd><dt class="property-optional"

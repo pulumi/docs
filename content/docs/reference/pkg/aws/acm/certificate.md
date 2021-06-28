@@ -305,78 +305,6 @@ const cert = new aws.acm.Certificate("cert", {
 
 
 
-### Referencing domain_validation_options With for_each Based Resources
-
-
-{{< example csharp >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = []
-for range in [{"key": k, "value": v} for [k, v] in enumerate({dvo.domainName: {
-    name: dvo.resourceRecordName,
-    record: dvo.resourceRecordValue,
-    type: dvo.resourceRecordType,
-} for dvo in aws_acm_certificate.example.domain_validation_options})]:
-    example.append(aws.route53.Record(f"example-{range['key']}",
-        allow_overwrite=True,
-        name=range["value"]["name"],
-        records=[range["value"]["record"]],
-        ttl=60,
-        type=range["value"]["type"],
-        zone_id=aws_route53_zone["example"]["zone_id"]))
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example: aws.route53.Record[];
-for (const range of Object.entries(.reduce((__obj, dvo) => { ...__obj, [dvo.domainName]: {
-    name: dvo.resourceRecordName,
-    record: dvo.resourceRecordValue,
-    type: dvo.resourceRecordType,
-} })).map(([k, v]) => {key: k, value: v})) {
-    example.push(new aws.route53.Record(`example-${range.key}`, {
-        allowOverwrite: true,
-        name: range.value.name,
-        records: [range.value.record],
-        ttl: 60,
-        type: range.value.type,
-        zoneId: aws_route53_zone.example.zone_id,
-    }));
-}
-```
-
-
-{{< /example >}}
-
-
-
-
 
 {{% /examples %}}
 
@@ -671,7 +599,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options</a></span>
+        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block used to set certificate options. Detailed below.
 * Importing an existing certificate
@@ -1438,7 +1366,7 @@ The following state arguments are supported:
 <a href="#state_domainvalidationoptions_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedomainvalidationoption">[]Certificate<wbr>Domain<wbr>Validation<wbr>Option</a></span>
+        <span class="property-type"><a href="#certificatedomainvalidationoption">[]Certificate<wbr>Domain<wbr>Validation<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of domain validation objects which can be used to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if `DNS`-validation was used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1447,7 +1375,7 @@ The following state arguments are supported:
 <a href="#state_options_go" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options</a></span>
+        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block used to set certificate options. Detailed below.
 * Importing an existing certificate

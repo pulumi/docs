@@ -498,7 +498,7 @@ The DeliveryChannel resource accepts the following [input]({{< relref "/docs/int
 <a href="#snapshotdeliveryproperties_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Delivery<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties</a></span>
+        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options for how AWS Config delivers configuration snapshots. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -879,7 +879,7 @@ The following state arguments are supported:
 <a href="#state_snapshotdeliveryproperties_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Delivery<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties</a></span>
+        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options for how AWS Config delivers configuration snapshots. See below
 {{% /md %}}</dd><dt class="property-optional"

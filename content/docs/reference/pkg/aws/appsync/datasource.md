@@ -573,7 +573,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#dynamodbconfig_go" style="color: inherit; text-decoration: inherit;">Dynamodb<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedynamodbconfig">Data<wbr>Source<wbr>Dynamodb<wbr>Config</a></span>
+        <span class="property-type"><a href="#datasourcedynamodbconfig">Data<wbr>Source<wbr>Dynamodb<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DynamoDB settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -582,7 +582,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#elasticsearchconfig_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceelasticsearchconfig">Data<wbr>Source<wbr>Elasticsearch<wbr>Config</a></span>
+        <span class="property-type"><a href="#datasourceelasticsearchconfig">Data<wbr>Source<wbr>Elasticsearch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Amazon Elasticsearch settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -591,7 +591,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#httpconfig_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcehttpconfig">Data<wbr>Source<wbr>Http<wbr>Config</a></span>
+        <span class="property-type"><a href="#datasourcehttpconfig">Data<wbr>Source<wbr>Http<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HTTP settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -600,7 +600,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#lambdaconfig_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcelambdaconfig">Data<wbr>Source<wbr>Lambda<wbr>Config</a></span>
+        <span class="property-type"><a href="#datasourcelambdaconfig">Data<wbr>Source<wbr>Lambda<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWS Lambda settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1148,7 +1148,7 @@ The following state arguments are supported:
 <a href="#state_dynamodbconfig_go" style="color: inherit; text-decoration: inherit;">Dynamodb<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedynamodbconfig">Data<wbr>Source<wbr>Dynamodb<wbr>Config</a></span>
+        <span class="property-type"><a href="#datasourcedynamodbconfig">Data<wbr>Source<wbr>Dynamodb<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DynamoDB settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1157,7 +1157,7 @@ The following state arguments are supported:
 <a href="#state_elasticsearchconfig_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceelasticsearchconfig">Data<wbr>Source<wbr>Elasticsearch<wbr>Config</a></span>
+        <span class="property-type"><a href="#datasourceelasticsearchconfig">Data<wbr>Source<wbr>Elasticsearch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Amazon Elasticsearch settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1166,7 +1166,7 @@ The following state arguments are supported:
 <a href="#state_httpconfig_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcehttpconfig">Data<wbr>Source<wbr>Http<wbr>Config</a></span>
+        <span class="property-type"><a href="#datasourcehttpconfig">Data<wbr>Source<wbr>Http<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HTTP settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1175,7 +1175,7 @@ The following state arguments are supported:
 <a href="#state_lambdaconfig_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcelambdaconfig">Data<wbr>Source<wbr>Lambda<wbr>Config</a></span>
+        <span class="property-type"><a href="#datasourcelambdaconfig">Data<wbr>Source<wbr>Lambda<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWS Lambda settings. See below
 {{% /md %}}</dd><dt class="property-optional"

@@ -26,161 +26,21 @@ This data source is only available in a us-east-1 or ap-south-1 provider.
 
 {{< example csharp >}}
 
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = Output.Create(Aws.Pricing.GetProduct.InvokeAsync(new Aws.Pricing.GetProductArgs
-        {
-            Filters = 
-            {
-                new Aws.Pricing.Inputs.GetProductFilterArgs
-                {
-                    Field = "instanceType",
-                    Value = "c5.xlarge",
-                },
-                new Aws.Pricing.Inputs.GetProductFilterArgs
-                {
-                    Field = "operatingSystem",
-                    Value = "Linux",
-                },
-                new Aws.Pricing.Inputs.GetProductFilterArgs
-                {
-                    Field = "location",
-                    Value = "US East (N. Virginia)",
-                },
-                new Aws.Pricing.Inputs.GetProductFilterArgs
-                {
-                    Field = "preInstalledSw",
-                    Value = "NA",
-                },
-                new Aws.Pricing.Inputs.GetProductFilterArgs
-                {
-                    Field = "licenseModel",
-                    Value = "No License required",
-                },
-                new Aws.Pricing.Inputs.GetProductFilterArgs
-                {
-                    Field = "tenancy",
-                    Value = "Shared",
-                },
-                new Aws.Pricing.Inputs.GetProductFilterArgs
-                {
-                    Field = "capacitystatus",
-                    Value = "Used",
-                },
-            },
-            ServiceCode = "AmazonEC2",
-        }));
-    }
-
-}
-```
-
+Coming soon!
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/pricing"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := pricing.GetProduct(ctx, &pricing.GetProductArgs{
-			Filters: []pricing.GetProductFilter{
-				pricing.GetProductFilter{
-					Field: "instanceType",
-					Value: "c5.xlarge",
-				},
-				pricing.GetProductFilter{
-					Field: "operatingSystem",
-					Value: "Linux",
-				},
-				pricing.GetProductFilter{
-					Field: "location",
-					Value: "US East (N. Virginia)",
-				},
-				pricing.GetProductFilter{
-					Field: "preInstalledSw",
-					Value: "NA",
-				},
-				pricing.GetProductFilter{
-					Field: "licenseModel",
-					Value: "No License required",
-				},
-				pricing.GetProductFilter{
-					Field: "tenancy",
-					Value: "Shared",
-				},
-				pricing.GetProductFilter{
-					Field: "capacitystatus",
-					Value: "Used",
-				},
-			},
-			ServiceCode: "AmazonEC2",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
+Coming soon!
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.pricing.get_product(filters=[
-        aws.pricing.GetProductFilterArgs(
-            field="instanceType",
-            value="c5.xlarge",
-        ),
-        aws.pricing.GetProductFilterArgs(
-            field="operatingSystem",
-            value="Linux",
-        ),
-        aws.pricing.GetProductFilterArgs(
-            field="location",
-            value="US East (N. Virginia)",
-        ),
-        aws.pricing.GetProductFilterArgs(
-            field="preInstalledSw",
-            value="NA",
-        ),
-        aws.pricing.GetProductFilterArgs(
-            field="licenseModel",
-            value="No License required",
-        ),
-        aws.pricing.GetProductFilterArgs(
-            field="tenancy",
-            value="Shared",
-        ),
-        aws.pricing.GetProductFilterArgs(
-            field="capacitystatus",
-            value="Used",
-        ),
-    ],
-    service_code="AmazonEC2")
-```
-
+Coming soon!
 
 {{< /example >}}
 

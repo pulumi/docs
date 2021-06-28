@@ -892,7 +892,7 @@ The EventConnection resource accepts the following [input]({{< relref "/docs/int
 <a href="#authparameters_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used for authorization. A maximum of 1 are allowed. Documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1337,7 +1337,7 @@ The following state arguments are supported:
 <a href="#state_authparameters_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used for authorization. A maximum of 1 are allowed. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1513,7 +1513,7 @@ The following state arguments are supported:
 <a href="#apikey_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersapikey">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Api<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersapikey">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Api<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Parameters used for API_KEY authorization. An API key to include in the header for each authentication request. A maximum of 1 are allowed. Conflicts with `basic` and `oauth`. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1522,7 +1522,7 @@ The following state arguments are supported:
 <a href="#basic_csharp" style="color: inherit; text-decoration: inherit;">Basic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersbasic">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Basic<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersbasic">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Basic</a></span>
     </dt>
     <dd>{{% md %}}Parameters used for BASIC authorization. A maximum of 1 are allowed. Conflicts with `api_key` and `oauth`. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1531,7 +1531,7 @@ The following state arguments are supported:
 <a href="#invocationhttpparameters_csharp" style="color: inherit; text-decoration: inherit;">Invocation<wbr>Http<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Invocation Http Parameters are additional credentials used to sign each Invocation of the ApiDestination created from this Connection. If the ApiDestination Rule Target has additional HttpParameters, the values will be merged together, with the Connection Invocation Http Parameters taking precedence. Secret values are stored and managed by AWS Secrets Manager. A maximum of 1 are allowed. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1540,7 +1540,7 @@ The following state arguments are supported:
 <a href="#oauth_csharp" style="color: inherit; text-decoration: inherit;">Oauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersoauth">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersoauth">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth</a></span>
     </dt>
     <dd>{{% md %}}Parameters used for OAUTH_CLIENT_CREDENTIALS authorization. A maximum of 1 are allowed. Conflicts with `basic` and `api_key`. Documented below.
 {{% /md %}}</dd></dl>
@@ -1593,7 +1593,7 @@ The following state arguments are supported:
 <a href="#apikey_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersapikey">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Api<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersapikey">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Api<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Parameters used for API_KEY authorization. An API key to include in the header for each authentication request. A maximum of 1 are allowed. Conflicts with `basic` and `oauth`. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1602,7 +1602,7 @@ The following state arguments are supported:
 <a href="#basic_nodejs" style="color: inherit; text-decoration: inherit;">basic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersbasic">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Basic<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersbasic">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Basic</a></span>
     </dt>
     <dd>{{% md %}}Parameters used for BASIC authorization. A maximum of 1 are allowed. Conflicts with `api_key` and `oauth`. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1611,7 +1611,7 @@ The following state arguments are supported:
 <a href="#invocationhttpparameters_nodejs" style="color: inherit; text-decoration: inherit;">invocation<wbr>Http<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Invocation Http Parameters are additional credentials used to sign each Invocation of the ApiDestination created from this Connection. If the ApiDestination Rule Target has additional HttpParameters, the values will be merged together, with the Connection Invocation Http Parameters taking precedence. Secret values are stored and managed by AWS Secrets Manager. A maximum of 1 are allowed. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1620,7 +1620,7 @@ The following state arguments are supported:
 <a href="#oauth_nodejs" style="color: inherit; text-decoration: inherit;">oauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersoauth">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersoauth">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth</a></span>
     </dt>
     <dd>{{% md %}}Parameters used for OAUTH_CLIENT_CREDENTIALS authorization. A maximum of 1 are allowed. Conflicts with `basic` and `api_key`. Documented below.
 {{% /md %}}</dd></dl>
@@ -1633,7 +1633,7 @@ The following state arguments are supported:
 <a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersapikey">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Api<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersapikey">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Api<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Parameters used for API_KEY authorization. An API key to include in the header for each authentication request. A maximum of 1 are allowed. Conflicts with `basic` and `oauth`. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1642,7 +1642,7 @@ The following state arguments are supported:
 <a href="#basic_python" style="color: inherit; text-decoration: inherit;">basic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersbasic">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Basic<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersbasic">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Basic</a></span>
     </dt>
     <dd>{{% md %}}Parameters used for BASIC authorization. A maximum of 1 are allowed. Conflicts with `api_key` and `oauth`. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1651,7 +1651,7 @@ The following state arguments are supported:
 <a href="#invocation_http_parameters_python" style="color: inherit; text-decoration: inherit;">invocation_<wbr>http_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Invocation Http Parameters are additional credentials used to sign each Invocation of the ApiDestination created from this Connection. If the ApiDestination Rule Target has additional HttpParameters, the values will be merged together, with the Connection Invocation Http Parameters taking precedence. Secret values are stored and managed by AWS Secrets Manager. A maximum of 1 are allowed. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1660,7 +1660,7 @@ The following state arguments are supported:
 <a href="#oauth_python" style="color: inherit; text-decoration: inherit;">oauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersoauth">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersoauth">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth</a></span>
     </dt>
     <dd>{{% md %}}Parameters used for OAUTH_CLIENT_CREDENTIALS authorization. A maximum of 1 are allowed. Conflicts with `basic` and `api_key`. Documented below.
 {{% /md %}}</dd></dl>
@@ -1855,7 +1855,7 @@ The following state arguments are supported:
 <a href="#bodies_csharp" style="color: inherit; text-decoration: inherit;">Bodies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparametersbody">List&lt;Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Body<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparametersbody">List&lt;Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Body&gt;</a></span>
     </dt>
     <dd>{{% md %}}Contains additional body string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1864,7 +1864,7 @@ The following state arguments are supported:
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparametersheader">List&lt;Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Header<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparametersheader">List&lt;Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Header&gt;</a></span>
     </dt>
     <dd>{{% md %}}Contains additional header parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1873,7 +1873,7 @@ The following state arguments are supported:
 <a href="#querystrings_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparametersquerystring">List&lt;Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Query<wbr>String<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparametersquerystring">List&lt;Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Query<wbr>String&gt;</a></span>
     </dt>
     <dd>{{% md %}}Contains additional query string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
 {{% /md %}}</dd></dl>
@@ -1917,7 +1917,7 @@ The following state arguments are supported:
 <a href="#bodies_nodejs" style="color: inherit; text-decoration: inherit;">bodies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparametersbody">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Body<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparametersbody">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Body[]</a></span>
     </dt>
     <dd>{{% md %}}Contains additional body string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1926,7 +1926,7 @@ The following state arguments are supported:
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparametersheader">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Header<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparametersheader">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}Contains additional header parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1935,7 +1935,7 @@ The following state arguments are supported:
 <a href="#querystrings_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparametersquerystring">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Query<wbr>String<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparametersquerystring">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Query<wbr>String[]</a></span>
     </dt>
     <dd>{{% md %}}Contains additional query string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
 {{% /md %}}</dd></dl>
@@ -1948,7 +1948,7 @@ The following state arguments are supported:
 <a href="#bodies_python" style="color: inherit; text-decoration: inherit;">bodies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparametersbody">Sequence[Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Body<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparametersbody">Sequence[Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Body]</a></span>
     </dt>
     <dd>{{% md %}}Contains additional body string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1957,7 +1957,7 @@ The following state arguments are supported:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparametersheader">Sequence[Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparametersheader">Sequence[Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Header]</a></span>
     </dt>
     <dd>{{% md %}}Contains additional header parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1966,7 +1966,7 @@ The following state arguments are supported:
 <a href="#query_strings_python" style="color: inherit; text-decoration: inherit;">query_<wbr>strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparametersquerystring">Sequence[Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Query<wbr>String<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersinvocationhttpparametersquerystring">Sequence[Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Invocation<wbr>Http<wbr>Parameters<wbr>Query<wbr>String]</a></span>
     </dt>
     <dd>{{% md %}}Contains additional query string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
 {{% /md %}}</dd></dl>
@@ -2377,7 +2377,7 @@ The following state arguments are supported:
 <a href="#oauthhttpparameters_csharp" style="color: inherit; text-decoration: inherit;">Oauth<wbr>Http<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}OAuth Http Parameters are additional credentials used to sign the request to the authorization endpoint to exchange the OAuth Client information for an access token. Secret values are stored and managed by AWS Secrets Manager. A maximum of 1 are allowed. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2386,7 +2386,7 @@ The following state arguments are supported:
 <a href="#clientparameters_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersoauthclientparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Client<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersoauthclientparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Client<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Contains the client parameters for OAuth authorization. Contains the following two parameters.
 {{% /md %}}</dd></dl>
@@ -2457,7 +2457,7 @@ The following state arguments are supported:
 <a href="#oauthhttpparameters_nodejs" style="color: inherit; text-decoration: inherit;">oauth<wbr>Http<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}OAuth Http Parameters are additional credentials used to sign the request to the authorization endpoint to exchange the OAuth Client information for an access token. Secret values are stored and managed by AWS Secrets Manager. A maximum of 1 are allowed. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2466,7 +2466,7 @@ The following state arguments are supported:
 <a href="#clientparameters_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersoauthclientparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Client<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersoauthclientparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Client<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Contains the client parameters for OAuth authorization. Contains the following two parameters.
 {{% /md %}}</dd></dl>
@@ -2497,7 +2497,7 @@ The following state arguments are supported:
 <a href="#oauth_http_parameters_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>http_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}OAuth Http Parameters are additional credentials used to sign the request to the authorization endpoint to exchange the OAuth Client information for an access token. Secret values are stored and managed by AWS Secrets Manager. A maximum of 1 are allowed. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2506,7 +2506,7 @@ The following state arguments are supported:
 <a href="#client_parameters_python" style="color: inherit; text-decoration: inherit;">client_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersoauthclientparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Client<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersoauthclientparameters">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Client<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Contains the client parameters for OAuth authorization. Contains the following two parameters.
 {{% /md %}}</dd></dl>
@@ -2611,7 +2611,7 @@ The following state arguments are supported:
 <a href="#bodies_csharp" style="color: inherit; text-decoration: inherit;">Bodies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparametersbody">List&lt;Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Body<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparametersbody">List&lt;Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Body&gt;</a></span>
     </dt>
     <dd>{{% md %}}Contains additional body string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
 {{% /md %}}</dd><dt class="property-optional"
@@ -2620,7 +2620,7 @@ The following state arguments are supported:
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparametersheader">List&lt;Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Header<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparametersheader">List&lt;Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Header&gt;</a></span>
     </dt>
     <dd>{{% md %}}Contains additional header parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
 {{% /md %}}</dd><dt class="property-optional"
@@ -2629,7 +2629,7 @@ The following state arguments are supported:
 <a href="#querystrings_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparametersquerystring">List&lt;Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Query<wbr>String<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparametersquerystring">List&lt;Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Query<wbr>String&gt;</a></span>
     </dt>
     <dd>{{% md %}}Contains additional query string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
 {{% /md %}}</dd></dl>
@@ -2673,7 +2673,7 @@ The following state arguments are supported:
 <a href="#bodies_nodejs" style="color: inherit; text-decoration: inherit;">bodies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparametersbody">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Body<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparametersbody">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Body[]</a></span>
     </dt>
     <dd>{{% md %}}Contains additional body string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
 {{% /md %}}</dd><dt class="property-optional"
@@ -2682,7 +2682,7 @@ The following state arguments are supported:
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparametersheader">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Header<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparametersheader">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}Contains additional header parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
 {{% /md %}}</dd><dt class="property-optional"
@@ -2691,7 +2691,7 @@ The following state arguments are supported:
 <a href="#querystrings_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparametersquerystring">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Query<wbr>String<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparametersquerystring">Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Query<wbr>String[]</a></span>
     </dt>
     <dd>{{% md %}}Contains additional query string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
 {{% /md %}}</dd></dl>
@@ -2704,7 +2704,7 @@ The following state arguments are supported:
 <a href="#bodies_python" style="color: inherit; text-decoration: inherit;">bodies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparametersbody">Sequence[Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Body<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparametersbody">Sequence[Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Body]</a></span>
     </dt>
     <dd>{{% md %}}Contains additional body string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
 {{% /md %}}</dd><dt class="property-optional"
@@ -2713,7 +2713,7 @@ The following state arguments are supported:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparametersheader">Sequence[Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparametersheader">Sequence[Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Header]</a></span>
     </dt>
     <dd>{{% md %}}Contains additional header parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
 {{% /md %}}</dd><dt class="property-optional"
@@ -2722,7 +2722,7 @@ The following state arguments are supported:
 <a href="#query_strings_python" style="color: inherit; text-decoration: inherit;">query_<wbr>strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparametersquerystring">Sequence[Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Query<wbr>String<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventconnectionauthparametersoauthoauthhttpparametersquerystring">Sequence[Event<wbr>Connection<wbr>Auth<wbr>Parameters<wbr>Oauth<wbr>Oauth<wbr>Http<wbr>Parameters<wbr>Query<wbr>String]</a></span>
     </dt>
     <dd>{{% md %}}Contains additional query string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
 {{% /md %}}</dd></dl>

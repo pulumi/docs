@@ -355,7 +355,7 @@ The S3Location resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#s3config_go" style="color: inherit; text-decoration: inherit;">S3Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#s3locations3config">S3Location<wbr>S3Config</a></span>
+        <span class="property-type"><a href="#s3locations3config">S3Location<wbr>S3Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing information for connecting to S3.
 {{% /md %}}</dd><dt class="property-required"
@@ -915,7 +915,7 @@ The following state arguments are supported:
 <a href="#state_s3config_go" style="color: inherit; text-decoration: inherit;">S3Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#s3locations3config">S3Location<wbr>S3Config</a></span>
+        <span class="property-type"><a href="#s3locations3config">S3Location<wbr>S3Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing information for connecting to S3.
 {{% /md %}}</dd><dt class="property-optional"

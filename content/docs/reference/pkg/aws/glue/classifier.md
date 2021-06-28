@@ -639,7 +639,7 @@ The Classifier resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#csvclassifier_go" style="color: inherit; text-decoration: inherit;">Csv<wbr>Classifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifiercsvclassifier">Classifier<wbr>Csv<wbr>Classifier</a></span>
+        <span class="property-type"><a href="#classifiercsvclassifier">Classifier<wbr>Csv<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for Csv content. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -648,7 +648,7 @@ The Classifier resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#grokclassifier_go" style="color: inherit; text-decoration: inherit;">Grok<wbr>Classifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifiergrokclassifier">Classifier<wbr>Grok<wbr>Classifier</a></span>
+        <span class="property-type"><a href="#classifiergrokclassifier">Classifier<wbr>Grok<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier that uses grok patterns. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -657,7 +657,7 @@ The Classifier resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#jsonclassifier_go" style="color: inherit; text-decoration: inherit;">Json<wbr>Classifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifierjsonclassifier">Classifier<wbr>Json<wbr>Classifier</a></span>
+        <span class="property-type"><a href="#classifierjsonclassifier">Classifier<wbr>Json<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for JSON content. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -675,7 +675,7 @@ The Classifier resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#xmlclassifier_go" style="color: inherit; text-decoration: inherit;">Xml<wbr>Classifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifierxmlclassifier">Classifier<wbr>Xml<wbr>Classifier</a></span>
+        <span class="property-type"><a href="#classifierxmlclassifier">Classifier<wbr>Xml<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for XML content. Defined below.
 {{% /md %}}</dd></dl>
@@ -1020,7 +1020,7 @@ The following state arguments are supported:
 <a href="#state_csvclassifier_go" style="color: inherit; text-decoration: inherit;">Csv<wbr>Classifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifiercsvclassifier">Classifier<wbr>Csv<wbr>Classifier</a></span>
+        <span class="property-type"><a href="#classifiercsvclassifier">Classifier<wbr>Csv<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for Csv content. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1029,7 +1029,7 @@ The following state arguments are supported:
 <a href="#state_grokclassifier_go" style="color: inherit; text-decoration: inherit;">Grok<wbr>Classifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifiergrokclassifier">Classifier<wbr>Grok<wbr>Classifier</a></span>
+        <span class="property-type"><a href="#classifiergrokclassifier">Classifier<wbr>Grok<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier that uses grok patterns. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1038,7 +1038,7 @@ The following state arguments are supported:
 <a href="#state_jsonclassifier_go" style="color: inherit; text-decoration: inherit;">Json<wbr>Classifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifierjsonclassifier">Classifier<wbr>Json<wbr>Classifier</a></span>
+        <span class="property-type"><a href="#classifierjsonclassifier">Classifier<wbr>Json<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for JSON content. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1056,7 +1056,7 @@ The following state arguments are supported:
 <a href="#state_xmlclassifier_go" style="color: inherit; text-decoration: inherit;">Xml<wbr>Classifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifierxmlclassifier">Classifier<wbr>Xml<wbr>Classifier</a></span>
+        <span class="property-type"><a href="#classifierxmlclassifier">Classifier<wbr>Xml<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for XML content. Defined below.
 {{% /md %}}</dd></dl>

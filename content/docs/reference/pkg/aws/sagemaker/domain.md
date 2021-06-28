@@ -12,433 +12,6 @@ meta_desc: "Documentation for the aws.sagemaker.Domain resource with examples, i
 
 Provides a Sagemaker Domain resource.
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-### Basic usage
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var exampleDomain = new Aws.Sagemaker.Domain("exampleDomain", new Aws.Sagemaker.DomainArgs
-        {
-            DomainName = "example",
-            AuthMode = "IAM",
-            VpcId = aws_vpc.Test.Id,
-            SubnetIds = 
-            {
-                aws_subnet.Test.Id,
-            },
-            DefaultUserSettings = new Aws.Sagemaker.Inputs.DomainDefaultUserSettingsArgs
-            {
-                ExecutionRole = aws_iam_role.Test.Arn,
-            },
-        });
-        var examplePolicyDocument = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
-        {
-            Statements = 
-            {
-                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
-                {
-                    Actions = 
-                    {
-                        "sts:AssumeRole",
-                    },
-                    Principals = 
-                    {
-                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
-                        {
-                            Type = "Service",
-                            Identifiers = 
-                            {
-                                "sagemaker.amazonaws.com",
-                            },
-                        },
-                    },
-                },
-            },
-        }));
-        var exampleRole = new Aws.Iam.Role("exampleRole", new Aws.Iam.RoleArgs
-        {
-            Path = "/",
-            AssumeRolePolicy = examplePolicyDocument.Apply(examplePolicyDocument => examplePolicyDocument.Json),
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sagemaker.NewDomain(ctx, "exampleDomain", &sagemaker.DomainArgs{
-			DomainName: pulumi.String("example"),
-			AuthMode:   pulumi.String("IAM"),
-			VpcId:      pulumi.Any(aws_vpc.Test.Id),
-			SubnetIds: pulumi.StringArray{
-				pulumi.Any(aws_subnet.Test.Id),
-			},
-			DefaultUserSettings: &sagemaker.DomainDefaultUserSettingsArgs{
-				ExecutionRole: pulumi.Any(aws_iam_role.Test.Arn),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		examplePolicyDocument, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
-			Statements: []iam.GetPolicyDocumentStatement{
-				iam.GetPolicyDocumentStatement{
-					Actions: []string{
-						"sts:AssumeRole",
-					},
-					Principals: []iam.GetPolicyDocumentStatementPrincipal{
-						iam.GetPolicyDocumentStatementPrincipal{
-							Type: "Service",
-							Identifiers: []string{
-								"sagemaker.amazonaws.com",
-							},
-						},
-					},
-				},
-			},
-		}, nil)
-		if err != nil {
-			return err
-		}
-		_, err = iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
-			Path:             pulumi.String("/"),
-			AssumeRolePolicy: pulumi.String(examplePolicyDocument.Json),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example_domain = aws.sagemaker.Domain("exampleDomain",
-    domain_name="example",
-    auth_mode="IAM",
-    vpc_id=aws_vpc["test"]["id"],
-    subnet_ids=[aws_subnet["test"]["id"]],
-    default_user_settings=aws.sagemaker.DomainDefaultUserSettingsArgs(
-        execution_role=aws_iam_role["test"]["arn"],
-    ))
-example_policy_document = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
-    actions=["sts:AssumeRole"],
-    principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
-        type="Service",
-        identifiers=["sagemaker.amazonaws.com"],
-    )],
-)])
-example_role = aws.iam.Role("exampleRole",
-    path="/",
-    assume_role_policy=example_policy_document.json)
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const exampleDomain = new aws.sagemaker.Domain("exampleDomain", {
-    domainName: "example",
-    authMode: "IAM",
-    vpcId: aws_vpc.test.id,
-    subnetIds: [aws_subnet.test.id],
-    defaultUserSettings: {
-        executionRole: aws_iam_role.test.arn,
-    },
-});
-const examplePolicyDocument = aws.iam.getPolicyDocument({
-    statements: [{
-        actions: ["sts:AssumeRole"],
-        principals: [{
-            type: "Service",
-            identifiers: ["sagemaker.amazonaws.com"],
-        }],
-    }],
-});
-const exampleRole = new aws.iam.Role("exampleRole", {
-    path: "/",
-    assumeRolePolicy: examplePolicyDocument.then(examplePolicyDocument => examplePolicyDocument.json),
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-### Using Custom Images
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var testImage = new Aws.Sagemaker.Image("testImage", new Aws.Sagemaker.ImageArgs
-        {
-            ImageName = "example",
-            RoleArn = aws_iam_role.Test.Arn,
-        });
-        var testAppImageConfig = new Aws.Sagemaker.AppImageConfig("testAppImageConfig", new Aws.Sagemaker.AppImageConfigArgs
-        {
-            AppImageConfigName = "example",
-            KernelGatewayImageConfig = new Aws.Sagemaker.Inputs.AppImageConfigKernelGatewayImageConfigArgs
-            {
-                KernelSpec = new Aws.Sagemaker.Inputs.AppImageConfigKernelGatewayImageConfigKernelSpecArgs
-                {
-                    Name = "example",
-                },
-            },
-        });
-        var testImageVersion = new Aws.Sagemaker.ImageVersion("testImageVersion", new Aws.Sagemaker.ImageVersionArgs
-        {
-            ImageName = testImage.Id,
-            BaseImage = "base-image",
-        });
-        var testDomain = new Aws.Sagemaker.Domain("testDomain", new Aws.Sagemaker.DomainArgs
-        {
-            DomainName = "example",
-            AuthMode = "IAM",
-            VpcId = aws_vpc.Test.Id,
-            SubnetIds = 
-            {
-                aws_subnet.Test.Id,
-            },
-            DefaultUserSettings = new Aws.Sagemaker.Inputs.DomainDefaultUserSettingsArgs
-            {
-                ExecutionRole = aws_iam_role.Test.Arn,
-                KernelGatewayAppSettings = new Aws.Sagemaker.Inputs.DomainDefaultUserSettingsKernelGatewayAppSettingsArgs
-                {
-                    CustomImages = 
-                    {
-                        new Aws.Sagemaker.Inputs.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs
-                        {
-                            AppImageConfigName = testAppImageConfig.AppImageConfigName,
-                            ImageName = testImageVersion.ImageName,
-                        },
-                    },
-                },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		testImage, err := sagemaker.NewImage(ctx, "testImage", &sagemaker.ImageArgs{
-			ImageName: pulumi.String("example"),
-			RoleArn:   pulumi.Any(aws_iam_role.Test.Arn),
-		})
-		if err != nil {
-			return err
-		}
-		testAppImageConfig, err := sagemaker.NewAppImageConfig(ctx, "testAppImageConfig", &sagemaker.AppImageConfigArgs{
-			AppImageConfigName: pulumi.String("example"),
-			KernelGatewayImageConfig: &sagemaker.AppImageConfigKernelGatewayImageConfigArgs{
-				KernelSpec: &sagemaker.AppImageConfigKernelGatewayImageConfigKernelSpecArgs{
-					Name: pulumi.String("example"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		testImageVersion, err := sagemaker.NewImageVersion(ctx, "testImageVersion", &sagemaker.ImageVersionArgs{
-			ImageName: testImage.ID(),
-			BaseImage: pulumi.String("base-image"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = sagemaker.NewDomain(ctx, "testDomain", &sagemaker.DomainArgs{
-			DomainName: pulumi.String("example"),
-			AuthMode:   pulumi.String("IAM"),
-			VpcId:      pulumi.Any(aws_vpc.Test.Id),
-			SubnetIds: pulumi.StringArray{
-				pulumi.Any(aws_subnet.Test.Id),
-			},
-			DefaultUserSettings: &sagemaker.DomainDefaultUserSettingsArgs{
-				ExecutionRole: pulumi.Any(aws_iam_role.Test.Arn),
-				KernelGatewayAppSettings: &sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsArgs{
-					CustomImages: sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArray{
-						&sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs{
-							AppImageConfigName: testAppImageConfig.AppImageConfigName,
-							ImageName:          testImageVersion.ImageName,
-						},
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-test_image = aws.sagemaker.Image("testImage",
-    image_name="example",
-    role_arn=aws_iam_role["test"]["arn"])
-test_app_image_config = aws.sagemaker.AppImageConfig("testAppImageConfig",
-    app_image_config_name="example",
-    kernel_gateway_image_config=aws.sagemaker.AppImageConfigKernelGatewayImageConfigArgs(
-        kernel_spec=aws.sagemaker.AppImageConfigKernelGatewayImageConfigKernelSpecArgs(
-            name="example",
-        ),
-    ))
-test_image_version = aws.sagemaker.ImageVersion("testImageVersion",
-    image_name=test_image.id,
-    base_image="base-image")
-test_domain = aws.sagemaker.Domain("testDomain",
-    domain_name="example",
-    auth_mode="IAM",
-    vpc_id=aws_vpc["test"]["id"],
-    subnet_ids=[aws_subnet["test"]["id"]],
-    default_user_settings=aws.sagemaker.DomainDefaultUserSettingsArgs(
-        execution_role=aws_iam_role["test"]["arn"],
-        kernel_gateway_app_settings=aws.sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsArgs(
-            custom_images=[aws.sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs(
-                app_image_config_name=test_app_image_config.app_image_config_name,
-                image_name=test_image_version.image_name,
-            )],
-        ),
-    ))
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const testImage = new aws.sagemaker.Image("testImage", {
-    imageName: "example",
-    roleArn: aws_iam_role.test.arn,
-});
-const testAppImageConfig = new aws.sagemaker.AppImageConfig("testAppImageConfig", {
-    appImageConfigName: "example",
-    kernelGatewayImageConfig: {
-        kernelSpec: {
-            name: "example",
-        },
-    },
-});
-const testImageVersion = new aws.sagemaker.ImageVersion("testImageVersion", {
-    imageName: testImage.id,
-    baseImage: "base-image",
-});
-const testDomain = new aws.sagemaker.Domain("testDomain", {
-    domainName: "example",
-    authMode: "IAM",
-    vpcId: aws_vpc.test.id,
-    subnetIds: [aws_subnet.test.id],
-    defaultUserSettings: {
-        executionRole: aws_iam_role.test.arn,
-        kernelGatewayAppSettings: {
-            customImages: [{
-                appImageConfigName: testAppImageConfig.appImageConfigName,
-                imageName: testImageVersion.imageName,
-            }],
-        },
-    },
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Create a Domain Resource {#create}
@@ -689,7 +262,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#defaultusersettings_go" style="color: inherit; text-decoration: inherit;">Default<wbr>User<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettings">Domain<wbr>Default<wbr>User<wbr>Settings</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default user settings. See Default User Settings below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1420,7 +993,7 @@ The following state arguments are supported:
 <a href="#state_defaultusersettings_go" style="color: inherit; text-decoration: inherit;">Default<wbr>User<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettings">Domain<wbr>Default<wbr>User<wbr>Settings</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default user settings. See Default User Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1776,7 +1349,7 @@ The following state arguments are supported:
 <a href="#jupyterserverappsettings_csharp" style="color: inherit; text-decoration: inherit;">Jupyter<wbr>Server<wbr>App<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingsjupyterserverappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingsjupyterserverappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The Jupyter server's app settings. See Jupyter Server App Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1785,7 +1358,7 @@ The following state arguments are supported:
 <a href="#kernelgatewayappsettings_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Gateway<wbr>App<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The kernel gateway app settings. See Kernel Gateway App Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1803,7 +1376,7 @@ The following state arguments are supported:
 <a href="#sharingsettings_csharp" style="color: inherit; text-decoration: inherit;">Sharing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingssharingsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingssharingsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The sharing settings. See Sharing Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1812,7 +1385,7 @@ The following state arguments are supported:
 <a href="#tensorboardappsettings_csharp" style="color: inherit; text-decoration: inherit;">Tensor<wbr>Board<wbr>App<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingstensorboardappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingstensorboardappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The TensorBoard app settings. See TensorBoard App Settings below.
 {{% /md %}}</dd></dl>
@@ -1892,7 +1465,7 @@ The following state arguments are supported:
 <a href="#jupyterserverappsettings_nodejs" style="color: inherit; text-decoration: inherit;">jupyter<wbr>Server<wbr>App<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingsjupyterserverappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingsjupyterserverappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The Jupyter server's app settings. See Jupyter Server App Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1901,7 +1474,7 @@ The following state arguments are supported:
 <a href="#kernelgatewayappsettings_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Gateway<wbr>App<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The kernel gateway app settings. See Kernel Gateway App Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1919,7 +1492,7 @@ The following state arguments are supported:
 <a href="#sharingsettings_nodejs" style="color: inherit; text-decoration: inherit;">sharing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingssharingsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingssharingsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The sharing settings. See Sharing Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1928,7 +1501,7 @@ The following state arguments are supported:
 <a href="#tensorboardappsettings_nodejs" style="color: inherit; text-decoration: inherit;">tensor<wbr>Board<wbr>App<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingstensorboardappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingstensorboardappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The TensorBoard app settings. See TensorBoard App Settings below.
 {{% /md %}}</dd></dl>
@@ -1950,7 +1523,7 @@ The following state arguments are supported:
 <a href="#jupyter_server_app_settings_python" style="color: inherit; text-decoration: inherit;">jupyter_<wbr>server_<wbr>app_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingsjupyterserverappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingsjupyterserverappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The Jupyter server's app settings. See Jupyter Server App Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1959,7 +1532,7 @@ The following state arguments are supported:
 <a href="#kernel_gateway_app_settings_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>gateway_<wbr>app_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The kernel gateway app settings. See Kernel Gateway App Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1977,7 +1550,7 @@ The following state arguments are supported:
 <a href="#sharing_settings_python" style="color: inherit; text-decoration: inherit;">sharing_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingssharingsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingssharingsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The sharing settings. See Sharing Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1986,7 +1559,7 @@ The following state arguments are supported:
 <a href="#tensor_board_app_settings_python" style="color: inherit; text-decoration: inherit;">tensor_<wbr>board_<wbr>app_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingstensorboardappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingstensorboardappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The TensorBoard app settings. See TensorBoard App Settings below.
 {{% /md %}}</dd></dl>
@@ -2001,7 +1574,7 @@ The following state arguments are supported:
 <a href="#defaultresourcespec_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingsjupyterserverappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingsjupyterserverappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd></dl>
@@ -2027,7 +1600,7 @@ The following state arguments are supported:
 <a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingsjupyterserverappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingsjupyterserverappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd></dl>
@@ -2040,7 +1613,7 @@ The following state arguments are supported:
 <a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingsjupyterserverappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingsjupyterserverappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd></dl>
@@ -2145,7 +1718,7 @@ The following state arguments are supported:
 <a href="#customimages_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingscustomimage">List&lt;Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingscustomimage">List&lt;Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2154,7 +1727,7 @@ The following state arguments are supported:
 <a href="#defaultresourcespec_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd></dl>
@@ -2189,7 +1762,7 @@ The following state arguments are supported:
 <a href="#customimages_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingscustomimage">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingscustomimage">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image[]</a></span>
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2198,7 +1771,7 @@ The following state arguments are supported:
 <a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd></dl>
@@ -2211,7 +1784,7 @@ The following state arguments are supported:
 <a href="#custom_images_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingscustomimage">Sequence[Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingscustomimage">Sequence[Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image]</a></span>
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2220,7 +1793,7 @@ The following state arguments are supported:
 <a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd></dl>
@@ -2577,7 +2150,7 @@ The following state arguments are supported:
 <a href="#defaultresourcespec_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingstensorboardappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingstensorboardappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd></dl>
@@ -2603,7 +2176,7 @@ The following state arguments are supported:
 <a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingstensorboardappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingstensorboardappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd></dl>
@@ -2616,7 +2189,7 @@ The following state arguments are supported:
 <a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingstensorboardappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#domaindefaultusersettingstensorboardappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd></dl>

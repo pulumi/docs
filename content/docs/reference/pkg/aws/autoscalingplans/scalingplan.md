@@ -198,7 +198,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#applicationsource_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanapplicationsource">Scaling<wbr>Plan<wbr>Application<wbr>Source</a></span>
+        <span class="property-type"><a href="#scalingplanapplicationsource">Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A CloudFormation stack or set of tags. You can create one scaling plan per application source.
 {{% /md %}}</dd><dt class="property-required"
@@ -207,7 +207,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#scalinginstructions_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Instructions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstruction">[]Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstruction">[]Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -551,7 +551,7 @@ The following state arguments are supported:
 <a href="#state_applicationsource_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanapplicationsource">Scaling<wbr>Plan<wbr>Application<wbr>Source</a></span>
+        <span class="property-type"><a href="#scalingplanapplicationsource">Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A CloudFormation stack or set of tags. You can create one scaling plan per application source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -569,7 +569,7 @@ The following state arguments are supported:
 <a href="#state_scalinginstructions_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Instructions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstruction">[]Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstruction">[]Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -691,7 +691,7 @@ The following state arguments are supported:
 <a href="#tagfilters_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanapplicationsourcetagfilter">List&lt;Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Tag<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scalingplanapplicationsourcetagfilter">List&lt;Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Tag<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of tags.
 {{% /md %}}</dd></dl>
@@ -735,7 +735,7 @@ The following state arguments are supported:
 <a href="#tagfilters_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanapplicationsourcetagfilter">Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Tag<wbr>Filter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#scalingplanapplicationsourcetagfilter">Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Tag<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}A set of tags.
 {{% /md %}}</dd></dl>
@@ -757,7 +757,7 @@ The following state arguments are supported:
 <a href="#tag_filters_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanapplicationsourcetagfilter">Sequence[Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Tag<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalingplanapplicationsourcetagfilter">Sequence[Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Tag<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}A set of tags.
 {{% /md %}}</dd></dl>
@@ -907,7 +907,7 @@ The following state arguments are supported:
 <a href="#targettrackingconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Tracking<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfiguration">List&lt;Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfiguration">List&lt;Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}The structure that defines new target tracking configurations. Each of these structures includes a specific scaling metric and a target value for the metric, along with various parameters to use with dynamic scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_TargetTrackingConfiguration.html).
@@ -917,7 +917,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#customizedloadmetricspecification_csharp" style="color: inherit; text-decoration: inherit;">Customized<wbr>Load<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructioncustomizedloadmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Customized<wbr>Load<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructioncustomizedloadmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Customized<wbr>Load<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}The customized load metric to use for predictive scaling. You must specify either `customized_load_metric_specification` or `predefined_load_metric_specification` when configuring predictive scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedLoadMetricSpecification.html).
@@ -936,7 +936,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#predefinedloadmetricspecification_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Load<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructionpredefinedloadmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructionpredefinedloadmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}The predefined load metric to use for predictive scaling. You must specify either `predefined_load_metric_specification` or `customized_load_metric_specification` when configuring predictive scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedLoadMetricSpecification.html).
@@ -1175,7 +1175,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#targettrackingconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Tracking<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfiguration">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfiguration">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}The structure that defines new target tracking configurations. Each of these structures includes a specific scaling metric and a target value for the metric, along with various parameters to use with dynamic scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_TargetTrackingConfiguration.html).
@@ -1185,7 +1185,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#customizedloadmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">customized<wbr>Load<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructioncustomizedloadmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Customized<wbr>Load<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructioncustomizedloadmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Customized<wbr>Load<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}The customized load metric to use for predictive scaling. You must specify either `customized_load_metric_specification` or `predefined_load_metric_specification` when configuring predictive scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedLoadMetricSpecification.html).
@@ -1204,7 +1204,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#predefinedloadmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Load<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructionpredefinedloadmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructionpredefinedloadmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}The predefined load metric to use for predictive scaling. You must specify either `predefined_load_metric_specification` or `customized_load_metric_specification` when configuring predictive scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedLoadMetricSpecification.html).
@@ -1309,7 +1309,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#target_tracking_configurations_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tracking_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfiguration">Sequence[Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfiguration">Sequence[Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}The structure that defines new target tracking configurations. Each of these structures includes a specific scaling metric and a target value for the metric, along with various parameters to use with dynamic scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_TargetTrackingConfiguration.html).
@@ -1319,7 +1319,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#customized_load_metric_specification_python" style="color: inherit; text-decoration: inherit;">customized_<wbr>load_<wbr>metric_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructioncustomizedloadmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Customized<wbr>Load<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructioncustomizedloadmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Customized<wbr>Load<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}The customized load metric to use for predictive scaling. You must specify either `customized_load_metric_specification` or `predefined_load_metric_specification` when configuring predictive scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedLoadMetricSpecification.html).
@@ -1338,7 +1338,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
 <a href="#predefined_load_metric_specification_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>load_<wbr>metric_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructionpredefinedloadmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructionpredefinedloadmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}The predefined load metric to use for predictive scaling. You must specify either `predefined_load_metric_specification` or `customized_load_metric_specification` when configuring predictive scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedLoadMetricSpecification.html).
@@ -1697,7 +1697,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 <a href="#customizedscalingmetricspecification_csharp" style="color: inherit; text-decoration: inherit;">Customized<wbr>Scaling<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationcustomizedscalingmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Scaling<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationcustomizedscalingmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Scaling<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A customized metric. You can specify either `customized_scaling_metric_specification` or `predefined_scaling_metric_specification`.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedScalingMetricSpecification.html).
@@ -1726,7 +1726,7 @@ This value is used only if the resource is an Auto Scaling group.
 <a href="#predefinedscalingmetricspecification_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Scaling<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationpredefinedscalingmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationpredefinedscalingmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. You can specify either `predefined_scaling_metric_specification` or `customized_scaling_metric_specification`.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedScalingMetricSpecification.html).
@@ -1841,7 +1841,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#customizedscalingmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">customized<wbr>Scaling<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationcustomizedscalingmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Scaling<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationcustomizedscalingmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Scaling<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A customized metric. You can specify either `customized_scaling_metric_specification` or `predefined_scaling_metric_specification`.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedScalingMetricSpecification.html).
@@ -1870,7 +1870,7 @@ This value is used only if the resource is an Auto Scaling group.
 <a href="#predefinedscalingmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Scaling<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationpredefinedscalingmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationpredefinedscalingmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. You can specify either `predefined_scaling_metric_specification` or `customized_scaling_metric_specification`.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedScalingMetricSpecification.html).
@@ -1913,7 +1913,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 <a href="#customized_scaling_metric_specification_python" style="color: inherit; text-decoration: inherit;">customized_<wbr>scaling_<wbr>metric_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationcustomizedscalingmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Scaling<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationcustomizedscalingmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Scaling<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A customized metric. You can specify either `customized_scaling_metric_specification` or `predefined_scaling_metric_specification`.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedScalingMetricSpecification.html).
@@ -1942,7 +1942,7 @@ This value is used only if the resource is an Auto Scaling group.
 <a href="#predefined_scaling_metric_specification_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>scaling_<wbr>metric_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationpredefinedscalingmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalingplanscalinginstructiontargettrackingconfigurationpredefinedscalingmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. You can specify either `predefined_scaling_metric_specification` or `customized_scaling_metric_specification`.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedScalingMetricSpecification.html).

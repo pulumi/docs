@@ -1044,7 +1044,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#destinationconfig_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsourcemappingdestinationconfig">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config</a></span>
+        <span class="property-type"><a href="#eventsourcemappingdestinationconfig">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1126,7 +1126,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#selfmanagedeventsource_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Managed<wbr>Event<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsourcemappingselfmanagedeventsource">Event<wbr>Source<wbr>Mapping<wbr>Self<wbr>Managed<wbr>Event<wbr>Source</a></span>
+        <span class="property-type"><a href="#eventsourcemappingselfmanagedeventsource">Event<wbr>Source<wbr>Mapping<wbr>Self<wbr>Managed<wbr>Event<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1134,7 +1134,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#sourceaccessconfigurations_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Access<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsourcemappingsourceaccessconfiguration">[]Event<wbr>Source<wbr>Mapping<wbr>Source<wbr>Access<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#eventsourcemappingsourceaccessconfiguration">[]Event<wbr>Source<wbr>Mapping<wbr>Source<wbr>Access<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2173,7 +2173,7 @@ The following state arguments are supported:
 <a href="#state_destinationconfig_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsourcemappingdestinationconfig">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config</a></span>
+        <span class="property-type"><a href="#eventsourcemappingdestinationconfig">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2291,7 +2291,7 @@ The following state arguments are supported:
 <a href="#state_selfmanagedeventsource_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Managed<wbr>Event<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsourcemappingselfmanagedeventsource">Event<wbr>Source<wbr>Mapping<wbr>Self<wbr>Managed<wbr>Event<wbr>Source</a></span>
+        <span class="property-type"><a href="#eventsourcemappingselfmanagedeventsource">Event<wbr>Source<wbr>Mapping<wbr>Self<wbr>Managed<wbr>Event<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2299,7 +2299,7 @@ The following state arguments are supported:
 <a href="#state_sourceaccessconfigurations_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Access<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsourcemappingsourceaccessconfiguration">[]Event<wbr>Source<wbr>Mapping<wbr>Source<wbr>Access<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#eventsourcemappingsourceaccessconfiguration">[]Event<wbr>Source<wbr>Mapping<wbr>Source<wbr>Access<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2825,7 +2825,7 @@ The following state arguments are supported:
 <a href="#onfailure_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsourcemappingdestinationconfigonfailure">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>On<wbr>Failure<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsourcemappingdestinationconfigonfailure">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>On<wbr>Failure</a></span>
     </dt>
     <dd>{{% md %}}The destination configuration for failed invocations. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2851,7 +2851,7 @@ The following state arguments are supported:
 <a href="#onfailure_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsourcemappingdestinationconfigonfailure">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>On<wbr>Failure<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsourcemappingdestinationconfigonfailure">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>On<wbr>Failure</a></span>
     </dt>
     <dd>{{% md %}}The destination configuration for failed invocations. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2864,7 +2864,7 @@ The following state arguments are supported:
 <a href="#on_failure_python" style="color: inherit; text-decoration: inherit;">on_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsourcemappingdestinationconfigonfailure">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>On<wbr>Failure<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsourcemappingdestinationconfigonfailure">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>On<wbr>Failure</a></span>
     </dt>
     <dd>{{% md %}}The destination configuration for failed invocations. Detailed below.
 {{% /md %}}</dd></dl>

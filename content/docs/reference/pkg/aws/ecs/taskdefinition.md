@@ -1286,7 +1286,7 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#ephemeralstorage_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionephemeralstorage">Task<wbr>Definition<wbr>Ephemeral<wbr>Storage</a></span>
+        <span class="property-type"><a href="#taskdefinitionephemeralstorage">Task<wbr>Definition<wbr>Ephemeral<wbr>Storage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1304,7 +1304,7 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#inferenceaccelerators_go" style="color: inherit; text-decoration: inherit;">Inference<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">[]Task<wbr>Definition<wbr>Inference<wbr>Accelerator</a></span>
+        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">[]Task<wbr>Definition<wbr>Inference<wbr>Accelerator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Inference Accelerators settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1349,7 +1349,7 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#placementconstraints_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionplacementconstraint">[]Task<wbr>Definition<wbr>Placement<wbr>Constraint</a></span>
+        <span class="property-type"><a href="#taskdefinitionplacementconstraint">[]Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1358,7 +1358,7 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#proxyconfiguration_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionproxyconfiguration">Task<wbr>Definition<wbr>Proxy<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#taskdefinitionproxyconfiguration">Task<wbr>Definition<wbr>Proxy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the App Mesh proxy. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1403,7 +1403,7 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#volumes_go" style="color: inherit; text-decoration: inherit;">Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolume">[]Task<wbr>Definition<wbr>Volume</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolume">[]Task<wbr>Definition<wbr>Volume<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for volumes that containers in your task may use. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2203,7 +2203,7 @@ The following state arguments are supported:
 <a href="#state_ephemeralstorage_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionephemeralstorage">Task<wbr>Definition<wbr>Ephemeral<wbr>Storage</a></span>
+        <span class="property-type"><a href="#taskdefinitionephemeralstorage">Task<wbr>Definition<wbr>Ephemeral<wbr>Storage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2230,7 +2230,7 @@ The following state arguments are supported:
 <a href="#state_inferenceaccelerators_go" style="color: inherit; text-decoration: inherit;">Inference<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">[]Task<wbr>Definition<wbr>Inference<wbr>Accelerator</a></span>
+        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">[]Task<wbr>Definition<wbr>Inference<wbr>Accelerator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Inference Accelerators settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2275,7 +2275,7 @@ The following state arguments are supported:
 <a href="#state_placementconstraints_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionplacementconstraint">[]Task<wbr>Definition<wbr>Placement<wbr>Constraint</a></span>
+        <span class="property-type"><a href="#taskdefinitionplacementconstraint">[]Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2284,7 +2284,7 @@ The following state arguments are supported:
 <a href="#state_proxyconfiguration_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionproxyconfiguration">Task<wbr>Definition<wbr>Proxy<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#taskdefinitionproxyconfiguration">Task<wbr>Definition<wbr>Proxy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the App Mesh proxy. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2338,7 +2338,7 @@ The following state arguments are supported:
 <a href="#state_volumes_go" style="color: inherit; text-decoration: inherit;">Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolume">[]Task<wbr>Definition<wbr>Volume</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolume">[]Task<wbr>Definition<wbr>Volume<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for volumes that containers in your task may use. Detailed below.
 {{% /md %}}</dd></dl>
@@ -3082,7 +3082,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#dockervolumeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Volume<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumedockervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Docker<wbr>Volume<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumedockervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Docker<wbr>Volume<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to configure a docker volume. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3091,7 +3091,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#efsvolumeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Efs<wbr>Volume<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for an EFS volume. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3100,7 +3100,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#fsxwindowsfileservervolumeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for an FSX Windows File Server volume. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3182,7 +3182,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#dockervolumeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Volume<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumedockervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Docker<wbr>Volume<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumedockervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Docker<wbr>Volume<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to configure a docker volume. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3191,7 +3191,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#efsvolumeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">efs<wbr>Volume<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for an EFS volume. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3200,7 +3200,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#fsxwindowsfileservervolumeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for an FSX Windows File Server volume. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3232,7 +3232,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#docker_volume_configuration_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>volume_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumedockervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Docker<wbr>Volume<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumedockervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Docker<wbr>Volume<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to configure a docker volume. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3241,7 +3241,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#efs_volume_configuration_python" style="color: inherit; text-decoration: inherit;">efs_<wbr>volume_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for an EFS volume. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3250,7 +3250,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#fsx_windows_file_server_volume_configuration_python" style="color: inherit; text-decoration: inherit;">fsx_<wbr>windows_<wbr>file_<wbr>server_<wbr>volume_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for an FSX Windows File Server volume. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3481,7 +3481,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#authorizationconfig_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3579,7 +3579,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#authorizationconfig_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3628,7 +3628,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#authorization_config_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3760,7 +3760,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#authorizationconfig_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3822,7 +3822,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#authorizationconfig_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3853,7 +3853,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#authorization_config_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
 {{% /md %}}</dd><dt class="property-required"

@@ -469,7 +469,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#accesslogsettings_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings</a></span>
+        <span class="property-type"><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enables access logs for the API stage. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1272,7 +1272,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 <a href="#state_accesslogsettings_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings</a></span>
+        <span class="property-type"><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enables access logs for the API stage. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

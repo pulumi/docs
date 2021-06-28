@@ -330,7 +330,7 @@ The S3BucketAssociation resource accepts the following [input]({{< relref "/docs
 <a href="#classificationtype_go" style="color: inherit; text-decoration: inherit;">Classification<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#s3bucketassociationclassificationtype">S3Bucket<wbr>Association<wbr>Classification<wbr>Type</a></span>
+        <span class="property-type"><a href="#s3bucketassociationclassificationtype">S3Bucket<wbr>Association<wbr>Classification<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of how Amazon Macie classifies the S3 objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -674,7 +674,7 @@ The following state arguments are supported:
 <a href="#state_classificationtype_go" style="color: inherit; text-decoration: inherit;">Classification<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#s3bucketassociationclassificationtype">S3Bucket<wbr>Association<wbr>Classification<wbr>Type</a></span>
+        <span class="property-type"><a href="#s3bucketassociationclassificationtype">S3Bucket<wbr>Association<wbr>Classification<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of how Amazon Macie classifies the S3 objects.
 {{% /md %}}</dd><dt class="property-optional"

@@ -36,7 +36,7 @@ class MyStack : Stack
         var org = Output.Create(Aws.Organizations.GetOrganization.InvokeAsync());
         var ou = org.Apply(org => Output.Create(Aws.Organizations.GetOrganizationalUnits.InvokeAsync(new Aws.Organizations.GetOrganizationalUnitsArgs
         {
-            ParentId = org.Roots[0].Id,
+            ParentId = org.Roots?[0]?.Id,
         })));
     }
 
@@ -101,7 +101,7 @@ import * as aws from "@pulumi/aws";
 
 const org = aws.organizations.getOrganization({});
 const ou = org.then(org => aws.organizations.getOrganizationalUnits({
-    parentId: org.roots[0].id,
+    parentId: org.roots?[0]?.id,
 }));
 ```
 

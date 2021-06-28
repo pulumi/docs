@@ -573,7 +573,7 @@ The ScheduledAction resource accepts the following [input]({{< relref "/docs/int
 <a href="#scalabletargetaction_go" style="color: inherit; text-decoration: inherit;">Scalable<wbr>Target<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledactionscalabletargetaction">Scheduled<wbr>Action<wbr>Scalable<wbr>Target<wbr>Action</a></span>
+        <span class="property-type"><a href="#scheduledactionscalabletargetaction">Scheduled<wbr>Action<wbr>Scalable<wbr>Target<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The new minimum and maximum capacity. You can set both values or just one. See below
 {{% /md %}}</dd><dt class="property-required"
@@ -1175,7 +1175,7 @@ The following state arguments are supported:
 <a href="#state_scalabletargetaction_go" style="color: inherit; text-decoration: inherit;">Scalable<wbr>Target<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledactionscalabletargetaction">Scheduled<wbr>Action<wbr>Scalable<wbr>Target<wbr>Action</a></span>
+        <span class="property-type"><a href="#scheduledactionscalabletargetaction">Scheduled<wbr>Action<wbr>Scalable<wbr>Target<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The new minimum and maximum capacity. You can set both values or just one. See below
 {{% /md %}}</dd><dt class="property-optional"

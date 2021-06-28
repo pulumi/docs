@@ -628,7 +628,7 @@ Defaults to `NONE`.
 <a href="#requestparameters_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerequestparameter">[]Route<wbr>Request<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#routerequestparameter">[]Route<wbr>Request<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request parameters for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1271,7 +1271,7 @@ Defaults to `NONE`.
 <a href="#state_requestparameters_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerequestparameter">[]Route<wbr>Request<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#routerequestparameter">[]Route<wbr>Request<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request parameters for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd><dt class="property-optional"

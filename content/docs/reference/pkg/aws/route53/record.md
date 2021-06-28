@@ -19,86 +19,6 @@ Provides a Route53 record resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-### Simple routing policy
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var www = new Aws.Route53.Record("www", new Aws.Route53.RecordArgs
-        {
-            ZoneId = aws_route53_zone.Primary.Zone_id,
-            Name = "www.example.com",
-            Type = "A",
-            Ttl = 300,
-            Records = 
-            {
-                aws_eip.Lb.Public_ip,
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-www = aws.route53.Record("www",
-    zone_id=aws_route53_zone["primary"]["zone_id"],
-    name="www.example.com",
-    type="A",
-    ttl=300,
-    records=[aws_eip["lb"]["public_ip"]])
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const www = new aws.route53.Record("www", {
-    zoneId: aws_route53_zone.primary.zone_id,
-    name: "www.example.com",
-    type: "A",
-    ttl: "300",
-    records: [aws_eip.lb.public_ip],
-});
-```
-
-
-{{< /example >}}
-
-
-
-
 ### Weighted routing policy
 
 
@@ -921,7 +841,7 @@ Alias record documented below.
 <a href="#aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordalias">[]Record<wbr>Alias</a></span>
+        <span class="property-type"><a href="#recordalias">[]Record<wbr>Alias<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
@@ -940,7 +860,7 @@ Alias record documented below.
 <a href="#failoverroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Routing<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordfailoverroutingpolicy">[]Record<wbr>Failover<wbr>Routing<wbr>Policy</a></span>
+        <span class="property-type"><a href="#recordfailoverroutingpolicy">[]Record<wbr>Failover<wbr>Routing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -949,7 +869,7 @@ Alias record documented below.
 <a href="#geolocationroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Geolocation<wbr>Routing<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordgeolocationroutingpolicy">[]Record<wbr>Geolocation<wbr>Routing<wbr>Policy</a></span>
+        <span class="property-type"><a href="#recordgeolocationroutingpolicy">[]Record<wbr>Geolocation<wbr>Routing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -967,7 +887,7 @@ Alias record documented below.
 <a href="#latencyroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Latency<wbr>Routing<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordlatencyroutingpolicy">[]Record<wbr>Latency<wbr>Routing<wbr>Policy</a></span>
+        <span class="property-type"><a href="#recordlatencyroutingpolicy">[]Record<wbr>Latency<wbr>Routing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1012,7 +932,7 @@ Alias record documented below.
 <a href="#weightedroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Routing<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordweightedroutingpolicy">[]Record<wbr>Weighted<wbr>Routing<wbr>Policy</a></span>
+        <span class="property-type"><a href="#recordweightedroutingpolicy">[]Record<wbr>Weighted<wbr>Routing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd></dl>
@@ -1658,7 +1578,7 @@ Alias record documented below.
 <a href="#state_aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordalias">[]Record<wbr>Alias</a></span>
+        <span class="property-type"><a href="#recordalias">[]Record<wbr>Alias<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
@@ -1677,7 +1597,7 @@ Alias record documented below.
 <a href="#state_failoverroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Routing<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordfailoverroutingpolicy">[]Record<wbr>Failover<wbr>Routing<wbr>Policy</a></span>
+        <span class="property-type"><a href="#recordfailoverroutingpolicy">[]Record<wbr>Failover<wbr>Routing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1695,7 +1615,7 @@ Alias record documented below.
 <a href="#state_geolocationroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Geolocation<wbr>Routing<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordgeolocationroutingpolicy">[]Record<wbr>Geolocation<wbr>Routing<wbr>Policy</a></span>
+        <span class="property-type"><a href="#recordgeolocationroutingpolicy">[]Record<wbr>Geolocation<wbr>Routing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1713,7 +1633,7 @@ Alias record documented below.
 <a href="#state_latencyroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Latency<wbr>Routing<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordlatencyroutingpolicy">[]Record<wbr>Latency<wbr>Routing<wbr>Policy</a></span>
+        <span class="property-type"><a href="#recordlatencyroutingpolicy">[]Record<wbr>Latency<wbr>Routing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1776,7 +1696,7 @@ Alias record documented below.
 <a href="#state_weightedroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Routing<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordweightedroutingpolicy">[]Record<wbr>Weighted<wbr>Routing<wbr>Policy</a></span>
+        <span class="property-type"><a href="#recordweightedroutingpolicy">[]Record<wbr>Weighted<wbr>Routing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd><dt class="property-optional"

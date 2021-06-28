@@ -819,7 +819,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogging">Cluster<wbr>Logging</a></span>
+        <span class="property-type"><a href="#clusterlogging">Cluster<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Logging, documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -913,7 +913,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#snapshotcopy_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersnapshotcopy">Cluster<wbr>Snapshot<wbr>Copy</a></span>
+        <span class="property-type"><a href="#clustersnapshotcopy">Cluster<wbr>Snapshot<wbr>Copy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of automatic copy of snapshots from one region to another. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2439,7 +2439,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <a href="#state_logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogging">Cluster<wbr>Logging</a></span>
+        <span class="property-type"><a href="#clusterlogging">Cluster<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Logging, documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2542,7 +2542,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 <a href="#state_snapshotcopy_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersnapshotcopy">Cluster<wbr>Snapshot<wbr>Copy</a></span>
+        <span class="property-type"><a href="#clustersnapshotcopy">Cluster<wbr>Snapshot<wbr>Copy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of automatic copy of snapshots from one region to another. Documented below.
 {{% /md %}}</dd><dt class="property-optional"

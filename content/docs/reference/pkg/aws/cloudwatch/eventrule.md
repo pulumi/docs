@@ -217,7 +217,7 @@ const snsTopicPolicy = awsLogins.arn.apply(arn => aws.iam.getPolicyDocument({
 }));
 const _default = new aws.sns.TopicPolicy("default", {
     arn: awsLogins.arn,
-    policy: snsTopicPolicy.json,
+    policy: snsTopicPolicy.apply(snsTopicPolicy => snsTopicPolicy.json),
 });
 ```
 

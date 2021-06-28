@@ -201,7 +201,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#catalogdata_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositorycatalogdata">Repository<wbr>Catalog<wbr>Data</a></span>
+        <span class="property-type"><a href="#repositorycatalogdata">Repository<wbr>Catalog<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Catalog data configuration for the repository. See below for schema.
 {{% /md %}}</dd><dt class="property-optional"
@@ -642,7 +642,7 @@ The following state arguments are supported:
 <a href="#state_catalogdata_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositorycatalogdata">Repository<wbr>Catalog<wbr>Data</a></span>
+        <span class="property-type"><a href="#repositorycatalogdata">Repository<wbr>Catalog<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Catalog data configuration for the repository. See below for schema.
 {{% /md %}}</dd><dt class="property-optional"

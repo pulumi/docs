@@ -856,312 +856,6 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
 
 
 
-### Elasticsearch Destination With VPC
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var testCluster = new Aws.ElasticSearch.Domain("testCluster", new Aws.ElasticSearch.DomainArgs
-        {
-            ClusterConfig = new Aws.ElasticSearch.Inputs.DomainClusterConfigArgs
-            {
-                InstanceCount = 2,
-                ZoneAwarenessEnabled = true,
-                InstanceType = "t2.small.elasticsearch",
-            },
-            EbsOptions = new Aws.ElasticSearch.Inputs.DomainEbsOptionsArgs
-            {
-                EbsEnabled = true,
-                VolumeSize = 10,
-            },
-            VpcOptions = new Aws.ElasticSearch.Inputs.DomainVpcOptionsArgs
-            {
-                SecurityGroupIds = 
-                {
-                    aws_security_group.First.Id,
-                },
-                SubnetIds = 
-                {
-                    aws_subnet.First.Id,
-                    aws_subnet.Second.Id,
-                },
-            },
-        });
-        var firehose_elasticsearch = new Aws.Iam.RolePolicy("firehose-elasticsearch", new Aws.Iam.RolePolicyArgs
-        {
-            Role = aws_iam_role.Firehose.Id,
-            Policy = Output.Tuple(testCluster.Arn, testCluster.Arn).Apply(values =>
-            {
-                var testClusterArn = values.Item1;
-                var testClusterArn1 = values.Item2;
-                return @$"{{
-  ""Version"": ""2012-10-17"",
-  ""Statement"": [
-    {{
-      ""Effect"": ""Allow"",
-      ""Action"": [
-        ""es:*""
-      ],
-      ""Resource"": [
-        ""{testClusterArn}"",
-        ""{testClusterArn1}/*""
-      ]
-        }},
-        {{
-          ""Effect"": ""Allow"",
-          ""Action"": [
-            ""ec2:DescribeVpcs"",
-            ""ec2:DescribeVpcAttribute"",
-            ""ec2:DescribeSubnets"",
-            ""ec2:DescribeSecurityGroups"",
-            ""ec2:DescribeNetworkInterfaces"",
-            ""ec2:CreateNetworkInterface"",
-            ""ec2:CreateNetworkInterfacePermission"",
-            ""ec2:DeleteNetworkInterface""
-          ],
-          ""Resource"": [
-            ""*""
-          ]
-        }}
-  ]
-}}
-";
-            }),
-        });
-        var test = new Aws.Kinesis.FirehoseDeliveryStream("test", new Aws.Kinesis.FirehoseDeliveryStreamArgs
-        {
-            Destination = "elasticsearch",
-            S3Configuration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamS3ConfigurationArgs
-            {
-                RoleArn = aws_iam_role.Firehose.Arn,
-                BucketArn = aws_s3_bucket.Bucket.Arn,
-            },
-            ElasticsearchConfiguration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationArgs
-            {
-                DomainArn = testCluster.Arn,
-                RoleArn = aws_iam_role.Firehose.Arn,
-                IndexName = "test",
-                TypeName = "test",
-                VpcConfig = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs
-                {
-                    SubnetIds = 
-                    {
-                        aws_subnet.First.Id,
-                        aws_subnet.Second.Id,
-                    },
-                    SecurityGroupIds = 
-                    {
-                        aws_security_group.First.Id,
-                    },
-                    RoleArn = aws_iam_role.Firehose.Arn,
-                },
-            },
-        }, new CustomResourceOptions
-        {
-            DependsOn = 
-            {
-                firehose_elasticsearch,
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-test_cluster = aws.elasticsearch.Domain("testCluster",
-    cluster_config=aws.elasticsearch.DomainClusterConfigArgs(
-        instance_count=2,
-        zone_awareness_enabled=True,
-        instance_type="t2.small.elasticsearch",
-    ),
-    ebs_options=aws.elasticsearch.DomainEbsOptionsArgs(
-        ebs_enabled=True,
-        volume_size=10,
-    ),
-    vpc_options=aws.elasticsearch.DomainVpcOptionsArgs(
-        security_group_ids=[aws_security_group["first"]["id"]],
-        subnet_ids=[
-            aws_subnet["first"]["id"],
-            aws_subnet["second"]["id"],
-        ],
-    ))
-firehose_elasticsearch = aws.iam.RolePolicy("firehose-elasticsearch",
-    role=aws_iam_role["firehose"]["id"],
-    policy=pulumi.Output.all(test_cluster.arn, test_cluster.arn).apply(lambda testClusterArn, testClusterArn1: f"""{{
-  "Version": "2012-10-17",
-  "Statement": [
-    {{
-      "Effect": "Allow",
-      "Action": [
-        "es:*"
-      ],
-      "Resource": [
-        "{test_cluster_arn}",
-        "{test_cluster_arn1}/*"
-      ]
-        }},
-        {{
-          "Effect": "Allow",
-          "Action": [
-            "ec2:DescribeVpcs",
-            "ec2:DescribeVpcAttribute",
-            "ec2:DescribeSubnets",
-            "ec2:DescribeSecurityGroups",
-            "ec2:DescribeNetworkInterfaces",
-            "ec2:CreateNetworkInterface",
-            "ec2:CreateNetworkInterfacePermission",
-            "ec2:DeleteNetworkInterface"
-          ],
-          "Resource": [
-            "*"
-          ]
-        }}
-  ]
-}}
-"""))
-test = aws.kinesis.FirehoseDeliveryStream("test",
-    destination="elasticsearch",
-    s3_configuration=aws.kinesis.FirehoseDeliveryStreamS3ConfigurationArgs(
-        role_arn=aws_iam_role["firehose"]["arn"],
-        bucket_arn=aws_s3_bucket["bucket"]["arn"],
-    ),
-    elasticsearch_configuration=aws.kinesis.FirehoseDeliveryStreamElasticsearchConfigurationArgs(
-        domain_arn=test_cluster.arn,
-        role_arn=aws_iam_role["firehose"]["arn"],
-        index_name="test",
-        type_name="test",
-        vpc_config={
-            "subnet_ids": [
-                aws_subnet["first"]["id"],
-                aws_subnet["second"]["id"],
-            ],
-            "security_group_ids": [aws_security_group["first"]["id"]],
-            "role_arn": aws_iam_role["firehose"]["arn"],
-        },
-    ),
-    opts=pulumi.ResourceOptions(depends_on=[firehose_elasticsearch]))
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const testCluster = new aws.elasticsearch.Domain("testCluster", {
-    clusterConfig: {
-        instanceCount: 2,
-        zoneAwarenessEnabled: true,
-        instanceType: "t2.small.elasticsearch",
-    },
-    ebsOptions: {
-        ebsEnabled: true,
-        volumeSize: 10,
-    },
-    vpcOptions: {
-        securityGroupIds: [aws_security_group.first.id],
-        subnetIds: [
-            aws_subnet.first.id,
-            aws_subnet.second.id,
-        ],
-    },
-});
-const firehose_elasticsearch = new aws.iam.RolePolicy("firehose-elasticsearch", {
-    role: aws_iam_role.firehose.id,
-    policy: pulumi.interpolate`{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "es:*"
-      ],
-      "Resource": [
-        "${testCluster.arn}",
-        "${testCluster.arn}/*"
-      ]
-        },
-        {
-          "Effect": "Allow",
-          "Action": [
-            "ec2:DescribeVpcs",
-            "ec2:DescribeVpcAttribute",
-            "ec2:DescribeSubnets",
-            "ec2:DescribeSecurityGroups",
-            "ec2:DescribeNetworkInterfaces",
-            "ec2:CreateNetworkInterface",
-            "ec2:CreateNetworkInterfacePermission",
-            "ec2:DeleteNetworkInterface"
-          ],
-          "Resource": [
-            "*"
-          ]
-        }
-  ]
-}
-`,
-});
-const test = new aws.kinesis.FirehoseDeliveryStream("test", {
-    destination: "elasticsearch",
-    s3Configuration: {
-        roleArn: aws_iam_role.firehose.arn,
-        bucketArn: aws_s3_bucket.bucket.arn,
-    },
-    elasticsearchConfiguration: {
-        domainArn: testCluster.arn,
-        roleArn: aws_iam_role.firehose.arn,
-        indexName: "test",
-        typeName: "test",
-        vpcConfig: {
-            subnetIds: [
-                aws_subnet.first.id,
-                aws_subnet.second.id,
-            ],
-            securityGroupIds: [aws_security_group.first.id],
-            roleArn: aws_iam_role.firehose.arn,
-        },
-    },
-}, {
-    dependsOn: [firehose_elasticsearch],
-});
-```
-
-
-{{< /example >}}
-
-
-
-
 ### Splunk Destination
 
 
@@ -1845,7 +1539,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#elasticsearchconfiguration_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if elasticsearch is the destination. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1854,7 +1548,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#extendeds3configuration_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>S3Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1863,7 +1557,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#httpendpointconfiguration_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Endpoint<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if http_endpoint is the destination. requires the user to also specify a `s3_configuration` block.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1872,7 +1566,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#kinesissourceconfiguration_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Source<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1891,7 +1585,7 @@ AWS account and region the Stream is created in.
 <a href="#redshiftconfiguration_go" style="color: inherit; text-decoration: inherit;">Redshift<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if redshift is the destination.
 Using `redshift_configuration` requires the user to also specify a
@@ -1902,7 +1596,7 @@ Using `redshift_configuration` requires the user to also specify a
 <a href="#s3configuration_go" style="color: inherit; text-decoration: inherit;">S3Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.
@@ -1912,7 +1606,7 @@ is redshift). More details are given below.
 <a href="#serversideencryption_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
@@ -1922,7 +1616,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#splunkconfiguration_go" style="color: inherit; text-decoration: inherit;">Splunk<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if splunk is the destination. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2604,7 +2298,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_elasticsearchconfiguration_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if elasticsearch is the destination. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2613,7 +2307,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_extendeds3configuration_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>S3Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2622,7 +2316,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_httpendpointconfiguration_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Endpoint<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if http_endpoint is the destination. requires the user to also specify a `s3_configuration` block.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2631,7 +2325,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_kinesissourceconfiguration_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Source<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2650,7 +2344,7 @@ AWS account and region the Stream is created in.
 <a href="#state_redshiftconfiguration_go" style="color: inherit; text-decoration: inherit;">Redshift<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if redshift is the destination.
 Using `redshift_configuration` requires the user to also specify a
@@ -2661,7 +2355,7 @@ Using `redshift_configuration` requires the user to also specify a
 <a href="#state_s3configuration_go" style="color: inherit; text-decoration: inherit;">S3Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.
@@ -2671,7 +2365,7 @@ is redshift). More details are given below.
 <a href="#state_serversideencryption_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
@@ -2681,7 +2375,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_splunkconfiguration_go" style="color: inherit; text-decoration: inherit;">Splunk<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if splunk is the destination. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3048,7 +2742,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#cloudwatchloggingoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -3084,7 +2778,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#processingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3120,7 +2814,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#vpcconfig_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationvpcconfig">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Vpc<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationvpcconfig">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The VPC configuration for the delivery stream to connect to Elastic Search associated with the VPC. More details are given below
 {{% /md %}}</dd></dl>
@@ -3290,7 +2984,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -3326,7 +3020,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#processingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3362,7 +3056,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#vpcconfig_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationvpcconfig">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Vpc<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationvpcconfig">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The VPC configuration for the delivery stream to connect to Elastic Search associated with the VPC. More details are given below
 {{% /md %}}</dd></dl>
@@ -3411,7 +3105,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -3447,7 +3141,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#processing_configuration_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3483,7 +3177,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationvpcconfig">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Vpc<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationvpcconfig">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The VPC configuration for the delivery stream to connect to Elastic Search associated with the VPC. More details are given below
 {{% /md %}}</dd></dl>
@@ -3633,7 +3327,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#processors_csharp" style="color: inherit; text-decoration: inherit;">Processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -3677,7 +3371,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#processors_nodejs" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -3699,7 +3393,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -3723,7 +3417,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -3767,7 +3461,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -3789,7 +3483,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -4089,7 +3783,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatchloggingoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4107,7 +3801,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#dataformatconversionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Format<wbr>Conversion<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument for the serializer, deserializer, and schema for converting data from the JSON format to the Parquet or ORC format before writing it to Amazon S3. More details given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4144,7 +3838,7 @@ be used.
 <a href="#processingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4153,7 +3847,7 @@ be used.
 <a href="#s3backupconfiguration_csharp" style="color: inherit; text-decoration: inherit;">S3Backup<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4335,7 +4029,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4353,7 +4047,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#dataformatconversionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Format<wbr>Conversion<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument for the serializer, deserializer, and schema for converting data from the JSON format to the Parquet or ORC format before writing it to Amazon S3. More details given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4390,7 +4084,7 @@ be used.
 <a href="#processingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4399,7 +4093,7 @@ be used.
 <a href="#s3backupconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4458,7 +4152,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4476,7 +4170,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#data_format_conversion_configuration_python" style="color: inherit; text-decoration: inherit;">data_<wbr>format_<wbr>conversion_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument for the serializer, deserializer, and schema for converting data from the JSON format to the Parquet or ORC format before writing it to Amazon S3. More details given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4513,7 +4207,7 @@ be used.
 <a href="#processing_configuration_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4522,7 +4216,7 @@ be used.
 <a href="#s3_backup_configuration_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4672,7 +4366,7 @@ be used.
 <a href="#inputformatconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Format<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the deserializer that you want Kinesis Data Firehose to use to convert the format of your data from JSON. More details below.
 {{% /md %}}</dd><dt class="property-required"
@@ -4681,7 +4375,7 @@ be used.
 <a href="#outputformatconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Format<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the serializer that you want Kinesis Data Firehose to use to convert the format of your data to the Parquet or ORC format. More details below.
 {{% /md %}}</dd><dt class="property-required"
@@ -4690,7 +4384,7 @@ be used.
 <a href="#schemaconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Schema<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Schema<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the AWS Glue Data Catalog table that contains the column information. More details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4752,7 +4446,7 @@ be used.
 <a href="#inputformatconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Format<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the deserializer that you want Kinesis Data Firehose to use to convert the format of your data from JSON. More details below.
 {{% /md %}}</dd><dt class="property-required"
@@ -4761,7 +4455,7 @@ be used.
 <a href="#outputformatconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Format<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the serializer that you want Kinesis Data Firehose to use to convert the format of your data to the Parquet or ORC format. More details below.
 {{% /md %}}</dd><dt class="property-required"
@@ -4770,7 +4464,7 @@ be used.
 <a href="#schemaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Schema<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Schema<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the AWS Glue Data Catalog table that contains the column information. More details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4792,7 +4486,7 @@ be used.
 <a href="#input_format_configuration_python" style="color: inherit; text-decoration: inherit;">input_<wbr>format_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the deserializer that you want Kinesis Data Firehose to use to convert the format of your data from JSON. More details below.
 {{% /md %}}</dd><dt class="property-required"
@@ -4801,7 +4495,7 @@ be used.
 <a href="#output_format_configuration_python" style="color: inherit; text-decoration: inherit;">output_<wbr>format_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the serializer that you want Kinesis Data Firehose to use to convert the format of your data to the Parquet or ORC format. More details below.
 {{% /md %}}</dd><dt class="property-required"
@@ -4810,7 +4504,7 @@ be used.
 <a href="#schema_configuration_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Schema<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Schema<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the AWS Glue Data Catalog table that contains the column information. More details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4834,7 +4528,7 @@ be used.
 <a href="#deserializer_csharp" style="color: inherit; text-decoration: inherit;">Deserializer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies which deserializer to use. You can choose either the Apache Hive JSON SerDe or the OpenX JSON SerDe. More details below.
 {{% /md %}}</dd></dl>
@@ -4860,7 +4554,7 @@ be used.
 <a href="#deserializer_nodejs" style="color: inherit; text-decoration: inherit;">deserializer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies which deserializer to use. You can choose either the Apache Hive JSON SerDe or the OpenX JSON SerDe. More details below.
 {{% /md %}}</dd></dl>
@@ -4873,7 +4567,7 @@ be used.
 <a href="#deserializer_python" style="color: inherit; text-decoration: inherit;">deserializer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies which deserializer to use. You can choose either the Apache Hive JSON SerDe or the OpenX JSON SerDe. More details below.
 {{% /md %}}</dd></dl>
@@ -4888,7 +4582,7 @@ be used.
 <a href="#hivejsonserde_csharp" style="color: inherit; text-decoration: inherit;">Hive<wbr>Json<wbr>Ser<wbr>De</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the native Hive / HCatalog JsonSerDe. More details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4897,7 +4591,7 @@ be used.
 <a href="#openxjsonserde_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>XJson<wbr>Ser<wbr>De</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the OpenX SerDe. More details below.
 {{% /md %}}</dd></dl>
@@ -4932,7 +4626,7 @@ be used.
 <a href="#hivejsonserde_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Json<wbr>Ser<wbr>De</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the native Hive / HCatalog JsonSerDe. More details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4941,7 +4635,7 @@ be used.
 <a href="#openxjsonserde_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>XJson<wbr>Ser<wbr>De</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the OpenX SerDe. More details below.
 {{% /md %}}</dd></dl>
@@ -4954,7 +4648,7 @@ be used.
 <a href="#hive_json_ser_de_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>json_<wbr>ser_<wbr>de</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the native Hive / HCatalog JsonSerDe. More details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4963,7 +4657,7 @@ be used.
 <a href="#open_x_json_ser_de_python" style="color: inherit; text-decoration: inherit;">open_<wbr>x_<wbr>json_<wbr>ser_<wbr>de</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the OpenX SerDe. More details below.
 {{% /md %}}</dd></dl>
@@ -5158,7 +4852,7 @@ be used.
 <a href="#serializer_csharp" style="color: inherit; text-decoration: inherit;">Serializer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies which serializer to use. You can choose either the ORC SerDe or the Parquet SerDe. More details below.
 {{% /md %}}</dd></dl>
@@ -5184,7 +4878,7 @@ be used.
 <a href="#serializer_nodejs" style="color: inherit; text-decoration: inherit;">serializer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies which serializer to use. You can choose either the ORC SerDe or the Parquet SerDe. More details below.
 {{% /md %}}</dd></dl>
@@ -5197,7 +4891,7 @@ be used.
 <a href="#serializer_python" style="color: inherit; text-decoration: inherit;">serializer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies which serializer to use. You can choose either the ORC SerDe or the Parquet SerDe. More details below.
 {{% /md %}}</dd></dl>
@@ -5212,7 +4906,7 @@ be used.
 <a href="#orcserde_csharp" style="color: inherit; text-decoration: inherit;">Orc<wbr>Ser<wbr>De</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies converting data to the ORC format before storing it in Amazon S3. For more information, see [Apache ORC](https://orc.apache.org/docs/). More details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5221,7 +4915,7 @@ be used.
 <a href="#parquetserde_csharp" style="color: inherit; text-decoration: inherit;">Parquet<wbr>Ser<wbr>De</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies converting data to the Parquet format before storing it in Amazon S3. For more information, see [Apache Parquet](https://parquet.apache.org/documentation/latest/). More details below.
 {{% /md %}}</dd></dl>
@@ -5256,7 +4950,7 @@ be used.
 <a href="#orcserde_nodejs" style="color: inherit; text-decoration: inherit;">orc<wbr>Ser<wbr>De</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies converting data to the ORC format before storing it in Amazon S3. For more information, see [Apache ORC](https://orc.apache.org/docs/). More details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5265,7 +4959,7 @@ be used.
 <a href="#parquetserde_nodejs" style="color: inherit; text-decoration: inherit;">parquet<wbr>Ser<wbr>De</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies converting data to the Parquet format before storing it in Amazon S3. For more information, see [Apache Parquet](https://parquet.apache.org/documentation/latest/). More details below.
 {{% /md %}}</dd></dl>
@@ -5278,7 +4972,7 @@ be used.
 <a href="#orc_ser_de_python" style="color: inherit; text-decoration: inherit;">orc_<wbr>ser_<wbr>de</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies converting data to the ORC format before storing it in Amazon S3. For more information, see [Apache ORC](https://orc.apache.org/docs/). More details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5287,7 +4981,7 @@ be used.
 <a href="#parquet_ser_de_python" style="color: inherit; text-decoration: inherit;">parquet_<wbr>ser_<wbr>de</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies converting data to the Parquet format before storing it in Amazon S3. For more information, see [Apache Parquet](https://parquet.apache.org/documentation/latest/). More details below.
 {{% /md %}}</dd></dl>
@@ -6157,7 +5851,7 @@ be used.
 <a href="#processors_csharp" style="color: inherit; text-decoration: inherit;">Processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -6201,7 +5895,7 @@ be used.
 <a href="#processors_nodejs" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -6223,7 +5917,7 @@ be used.
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -6247,7 +5941,7 @@ be used.
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -6291,7 +5985,7 @@ be used.
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -6313,7 +6007,7 @@ be used.
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -6455,7 +6149,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatchloggingoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -6611,7 +6305,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -6689,7 +6383,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -6894,7 +6588,7 @@ be used.
 <a href="#cloudwatchloggingoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6912,7 +6606,7 @@ be used.
 <a href="#processingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6921,7 +6615,7 @@ be used.
 <a href="#requestconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The request configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7100,7 +6794,7 @@ be used.
 <a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7118,7 +6812,7 @@ be used.
 <a href="#processingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7127,7 +6821,7 @@ be used.
 <a href="#requestconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The request configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7203,7 +6897,7 @@ be used.
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7221,7 +6915,7 @@ be used.
 <a href="#processing_configuration_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7230,7 +6924,7 @@ be used.
 <a href="#request_configuration_python" style="color: inherit; text-decoration: inherit;">request_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The request configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7407,7 +7101,7 @@ be used.
 <a href="#processors_csharp" style="color: inherit; text-decoration: inherit;">Processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -7451,7 +7145,7 @@ be used.
 <a href="#processors_nodejs" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -7473,7 +7167,7 @@ be used.
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -7497,7 +7191,7 @@ be used.
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -7541,7 +7235,7 @@ be used.
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -7563,7 +7257,7 @@ be used.
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -7668,7 +7362,7 @@ be used.
 <a href="#commonattributes_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfigurationcommonattribute">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Common<wbr>Attribute<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfigurationcommonattribute">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Common<wbr>Attribute&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the metadata sent to the HTTP endpoint destination. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -7712,7 +7406,7 @@ be used.
 <a href="#commonattributes_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfigurationcommonattribute">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Common<wbr>Attribute<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfigurationcommonattribute">Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Common<wbr>Attribute[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the metadata sent to the HTTP endpoint destination. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -7734,7 +7428,7 @@ be used.
 <a href="#common_attributes_python" style="color: inherit; text-decoration: inherit;">common_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfigurationcommonattribute">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Common<wbr>Attribute<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamhttpendpointconfigurationrequestconfigurationcommonattribute">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Http<wbr>Endpoint<wbr>Configuration<wbr>Request<wbr>Configuration<wbr>Common<wbr>Attribute]</a></span>
     </dt>
     <dd>{{% md %}}Describes the metadata sent to the HTTP endpoint destination. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -7983,7 +7677,7 @@ be used.
 <a href="#cloudwatchloggingoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -8010,7 +7704,7 @@ be used.
 <a href="#processingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8028,7 +7722,7 @@ be used.
 <a href="#s3backupconfiguration_csharp" style="color: inherit; text-decoration: inherit;">S3Backup<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8207,7 +7901,7 @@ be used.
 <a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -8234,7 +7928,7 @@ be used.
 <a href="#processingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8252,7 +7946,7 @@ be used.
 <a href="#s3backupconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8319,7 +8013,7 @@ be used.
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -8346,7 +8040,7 @@ be used.
 <a href="#processing_configuration_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8364,7 +8058,7 @@ be used.
 <a href="#s3_backup_configuration_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8523,7 +8217,7 @@ be used.
 <a href="#processors_csharp" style="color: inherit; text-decoration: inherit;">Processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -8567,7 +8261,7 @@ be used.
 <a href="#processors_nodejs" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -8589,7 +8283,7 @@ be used.
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -8613,7 +8307,7 @@ be used.
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -8657,7 +8351,7 @@ be used.
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -8679,7 +8373,7 @@ be used.
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -8821,7 +8515,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatchloggingoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -8977,7 +8671,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -9055,7 +8749,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -9261,7 +8955,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatchloggingoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -9417,7 +9111,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -9495,7 +9189,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd><dt class="property-optional"
@@ -9808,7 +9502,7 @@ be used.
 <a href="#cloudwatchloggingoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9835,7 +9529,7 @@ be used.
 <a href="#processingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9960,7 +9654,7 @@ be used.
 <a href="#cloudwatchloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9987,7 +9681,7 @@ be used.
 <a href="#processingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10036,7 +9730,7 @@ be used.
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10063,7 +9757,7 @@ be used.
 <a href="#processing_configuration_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10231,7 +9925,7 @@ be used.
 <a href="#processors_csharp" style="color: inherit; text-decoration: inherit;">Processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -10275,7 +9969,7 @@ be used.
 <a href="#processors_nodejs" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -10297,7 +9991,7 @@ be used.
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd></dl>
@@ -10321,7 +10015,7 @@ be used.
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -10365,7 +10059,7 @@ be used.
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>
@@ -10387,7 +10081,7 @@ be used.
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd></dl>

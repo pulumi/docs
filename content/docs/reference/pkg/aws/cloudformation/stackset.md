@@ -179,9 +179,9 @@ func main() {
 			return err
 		}
 		_, err = iam.NewRolePolicy(ctx, "aWSCloudFormationStackSetAdministrationRoleExecutionPolicyRolePolicy", &iam.RolePolicyArgs{
-			Policy: aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.ApplyT(func(aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument iam.GetPolicyDocumentResult) (string, error) {
+			Policy: pulumi.String(aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.ApplyT(func(aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument iam.GetPolicyDocumentResult) (string, error) {
 				return aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.Json, nil
-			}).(pulumi.StringOutput),
+			}).(pulumi.StringOutput)),
 			Role: aWSCloudFormationStackSetAdministrationRole.Name,
 		})
 		if err != nil {
@@ -304,7 +304,7 @@ const aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument =
     }],
 }));
 const aWSCloudFormationStackSetAdministrationRoleExecutionPolicyRolePolicy = new aws.iam.RolePolicy("aWSCloudFormationStackSetAdministrationRoleExecutionPolicyRolePolicy", {
-    policy: aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.json,
+    policy: aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.apply(aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument => aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.json),
     role: aWSCloudFormationStackSetAdministrationRole.name,
 });
 ```
@@ -599,7 +599,7 @@ The StackSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#autodeployment_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stacksetautodeployment">Stack<wbr>Set<wbr>Auto<wbr>Deployment</a></span>
+        <span class="property-type"><a href="#stacksetautodeployment">Stack<wbr>Set<wbr>Auto<wbr>Deployment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing the auto-deployment model for your StackSet. This can only be defined when using the `SERVICE_MANAGED` permission model.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1340,7 +1340,7 @@ The following state arguments are supported:
 <a href="#state_autodeployment_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stacksetautodeployment">Stack<wbr>Set<wbr>Auto<wbr>Deployment</a></span>
+        <span class="property-type"><a href="#stacksetautodeployment">Stack<wbr>Set<wbr>Auto<wbr>Deployment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing the auto-deployment model for your StackSet. This can only be defined when using the `SERVICE_MANAGED` permission model.
 {{% /md %}}</dd><dt class="property-optional"

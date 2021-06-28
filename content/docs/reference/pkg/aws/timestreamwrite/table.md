@@ -449,7 +449,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#retentionproperties_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableretentionproperties">Table<wbr>Retention<wbr>Properties</a></span>
+        <span class="property-type"><a href="#tableretentionproperties">Table<wbr>Retention<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retention duration for the memory store and magnetic store. See Retention Properties below for more details. If not provided, `magnetic_store_retention_period_in_days` default to 73000 and `memory_store_retention_period_in_hours` defaults to 6.
 {{% /md %}}</dd><dt class="property-optional"
@@ -872,7 +872,7 @@ The following state arguments are supported:
 <a href="#state_retentionproperties_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableretentionproperties">Table<wbr>Retention<wbr>Properties</a></span>
+        <span class="property-type"><a href="#tableretentionproperties">Table<wbr>Retention<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retention duration for the memory store and magnetic store. See Retention Properties below for more details. If not provided, `magnetic_store_retention_period_in_days` default to 73000 and `memory_store_retention_period_in_hours` defaults to 6.
 {{% /md %}}</dd><dt class="property-optional"

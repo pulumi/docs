@@ -25,21 +25,63 @@ This data source can be used to fetch information about AWS Glue Data Catalog En
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Glue.GetDataCatalogEncryptionSettings.InvokeAsync(new Aws.Glue.GetDataCatalogEncryptionSettingsArgs
+        {
+            Id = "123456789123",
+        }));
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := glue.LookupDataCatalogEncryptionSettings(ctx, &glue.LookupDataCatalogEncryptionSettingsArgs{
+			Id: "123456789123",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.glue.get_data_catalog_encryption_settings(id="123456789123")
+```
+
 
 {{< /example >}}
 

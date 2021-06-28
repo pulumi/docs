@@ -363,7 +363,7 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
 <a href="#targetdatabase_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogdatabasetargetdatabase">Catalog<wbr>Database<wbr>Target<wbr>Database</a></span>
+        <span class="property-type"><a href="#catalogdatabasetargetdatabase">Catalog<wbr>Database<wbr>Target<wbr>Database<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a target database for resource linking. See `target_database` below.
 {{% /md %}}</dd></dl>
@@ -836,7 +836,7 @@ The following state arguments are supported:
 <a href="#state_targetdatabase_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogdatabasetargetdatabase">Catalog<wbr>Database<wbr>Target<wbr>Database</a></span>
+        <span class="property-type"><a href="#catalogdatabasetargetdatabase">Catalog<wbr>Database<wbr>Target<wbr>Database<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a target database for resource linking. See `target_database` below.
 {{% /md %}}</dd></dl>

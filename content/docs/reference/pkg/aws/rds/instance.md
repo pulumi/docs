@@ -1439,7 +1439,7 @@ for more information on using Replication.
 <a href="#restoretopointintime_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>To<wbr>Point<wbr>In<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancerestoretopointintime">Instance<wbr>Restore<wbr>To<wbr>Point<wbr>In<wbr>Time</a></span>
+        <span class="property-type"><a href="#instancerestoretopointintime">Instance<wbr>Restore<wbr>To<wbr>Point<wbr>In<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block for restoring a DB instance to an arbitrary point in time. Requires the `identifier` argument to be set with the name of the new DB instance to be created. See Restore To Point In Time below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1448,7 +1448,7 @@ for more information on using Replication.
 <a href="#s3import_go" style="color: inherit; text-decoration: inherit;">S3Import</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instances3import">Instance<wbr>S3Import</a></span>
+        <span class="property-type"><a href="#instances3import">Instance<wbr>S3Import<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4343,7 +4343,7 @@ for more information on using Replication.
 <a href="#state_restoretopointintime_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>To<wbr>Point<wbr>In<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancerestoretopointintime">Instance<wbr>Restore<wbr>To<wbr>Point<wbr>In<wbr>Time</a></span>
+        <span class="property-type"><a href="#instancerestoretopointintime">Instance<wbr>Restore<wbr>To<wbr>Point<wbr>In<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block for restoring a DB instance to an arbitrary point in time. Requires the `identifier` argument to be set with the name of the new DB instance to be created. See Restore To Point In Time below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4352,7 +4352,7 @@ for more information on using Replication.
 <a href="#state_s3import_go" style="color: inherit; text-decoration: inherit;">S3Import</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instances3import">Instance<wbr>S3Import</a></span>
+        <span class="property-type"><a href="#instances3import">Instance<wbr>S3Import<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)
 {{% /md %}}</dd><dt class="property-optional"

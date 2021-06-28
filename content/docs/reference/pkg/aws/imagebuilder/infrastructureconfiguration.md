@@ -12,146 +12,6 @@ meta_desc: "Documentation for the aws.imagebuilder.InfrastructureConfiguration r
 
 Manages an Image Builder Infrastructure Configuration.
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.ImageBuilder.InfrastructureConfiguration("example", new Aws.ImageBuilder.InfrastructureConfigurationArgs
-        {
-            Description = "example description",
-            InstanceProfileName = aws_iam_instance_profile.Example.Name,
-            InstanceTypes = 
-            {
-                "t2.nano",
-                "t3.micro",
-            },
-            KeyPair = aws_key_pair.Example.Key_name,
-            SecurityGroupIds = 
-            {
-                aws_security_group.Example.Id,
-            },
-            SnsTopicArn = aws_sns_topic.Example.Arn,
-            SubnetId = aws_subnet.Main.Id,
-            TerminateInstanceOnFailure = true,
-            Logging = new Aws.ImageBuilder.Inputs.InfrastructureConfigurationLoggingArgs
-            {
-                S3Logs = new Aws.ImageBuilder.Inputs.InfrastructureConfigurationLoggingS3LogsArgs
-                {
-                    S3BucketName = aws_s3_bucket.Example.Bucket,
-                    S3KeyPrefix = "logs",
-                },
-            },
-            Tags = 
-            {
-                { "foo", "bar" },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.imagebuilder.InfrastructureConfiguration("example",
-    description="example description",
-    instance_profile_name=aws_iam_instance_profile["example"]["name"],
-    instance_types=[
-        "t2.nano",
-        "t3.micro",
-    ],
-    key_pair=aws_key_pair["example"]["key_name"],
-    security_group_ids=[aws_security_group["example"]["id"]],
-    sns_topic_arn=aws_sns_topic["example"]["arn"],
-    subnet_id=aws_subnet["main"]["id"],
-    terminate_instance_on_failure=True,
-    logging=aws.imagebuilder.InfrastructureConfigurationLoggingArgs(
-        s3_logs=aws.imagebuilder.InfrastructureConfigurationLoggingS3LogsArgs(
-            s3_bucket_name=aws_s3_bucket["example"]["bucket"],
-            s3_key_prefix="logs",
-        ),
-    ),
-    tags={
-        "foo": "bar",
-    })
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.imagebuilder.InfrastructureConfiguration("example", {
-    description: "example description",
-    instanceProfileName: aws_iam_instance_profile.example.name,
-    instanceTypes: [
-        "t2.nano",
-        "t3.micro",
-    ],
-    keyPair: aws_key_pair.example.key_name,
-    securityGroupIds: [aws_security_group.example.id],
-    snsTopicArn: aws_sns_topic.example.arn,
-    subnetId: aws_subnet.main.id,
-    terminateInstanceOnFailure: true,
-    logging: {
-        s3Logs: {
-            s3BucketName: aws_s3_bucket.example.bucket,
-            s3KeyPrefix: "logs",
-        },
-    },
-    tags: {
-        foo: "bar",
-    },
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Create a InfrastructureConfiguration Resource {#create}
@@ -469,7 +329,7 @@ The InfrastructureConfiguration resource accepts the following [input]({{< relre
 <a href="#logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infrastructureconfigurationlogging">Infrastructure<wbr>Configuration<wbr>Logging</a></span>
+        <span class="property-type"><a href="#infrastructureconfigurationlogging">Infrastructure<wbr>Configuration<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with logging settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1311,7 +1171,7 @@ The following state arguments are supported:
 <a href="#state_logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infrastructureconfigurationlogging">Infrastructure<wbr>Configuration<wbr>Logging</a></span>
+        <span class="property-type"><a href="#infrastructureconfigurationlogging">Infrastructure<wbr>Configuration<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with logging settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1703,7 +1563,7 @@ The following state arguments are supported:
 <a href="#s3logs_csharp" style="color: inherit; text-decoration: inherit;">S3Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infrastructureconfigurationloggings3logs">Infrastructure<wbr>Configuration<wbr>Logging<wbr>S3Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#infrastructureconfigurationloggings3logs">Infrastructure<wbr>Configuration<wbr>Logging<wbr>S3Logs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 logging settings. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1729,7 +1589,7 @@ The following state arguments are supported:
 <a href="#s3logs_nodejs" style="color: inherit; text-decoration: inherit;">s3Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infrastructureconfigurationloggings3logs">Infrastructure<wbr>Configuration<wbr>Logging<wbr>S3Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#infrastructureconfigurationloggings3logs">Infrastructure<wbr>Configuration<wbr>Logging<wbr>S3Logs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 logging settings. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1742,7 +1602,7 @@ The following state arguments are supported:
 <a href="#s3_logs_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infrastructureconfigurationloggings3logs">Infrastructure<wbr>Configuration<wbr>Logging<wbr>S3Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#infrastructureconfigurationloggings3logs">Infrastructure<wbr>Configuration<wbr>Logging<wbr>S3Logs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 logging settings. Detailed below.
 {{% /md %}}</dd></dl>

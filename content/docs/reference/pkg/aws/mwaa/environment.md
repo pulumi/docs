@@ -12,467 +12,6 @@ meta_desc: "Documentation for the aws.mwaa.Environment resource with examples, i
 
 Creates a MWAA Environment resource.
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-### Basic Usage
-
-
-{{< example csharp >}}
-
-```csharp
-using System.Linq;
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Mwaa.Environment("example", new Aws.Mwaa.EnvironmentArgs
-        {
-            DagS3Path = "dags/",
-            ExecutionRoleArn = aws_iam_role.Example.Arn,
-            NetworkConfiguration = new Aws.Mwaa.Inputs.EnvironmentNetworkConfigurationArgs
-            {
-                SecurityGroupIds = 
-                {
-                    aws_security_group.Example.Id,
-                },
-                SubnetIds = aws_subnet.Private.Select(__item => __item.Id).ToList(),
-            },
-            SourceBucketArn = aws_s3_bucket.Example.Arn,
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.mwaa.Environment("example",
-    dag_s3_path="dags/",
-    execution_role_arn=aws_iam_role["example"]["arn"],
-    network_configuration=aws.mwaa.EnvironmentNetworkConfigurationArgs(
-        security_group_ids=[aws_security_group["example"]["id"]],
-        subnet_ids=[__item["id"] for __item in aws_subnet["private"]],
-    ),
-    source_bucket_arn=aws_s3_bucket["example"]["arn"])
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.mwaa.Environment("example", {
-    dagS3Path: "dags/",
-    executionRoleArn: aws_iam_role.example.arn,
-    networkConfiguration: {
-        securityGroupIds: [aws_security_group.example.id],
-        subnetIds: aws_subnet["private"].map(__item => __item.id),
-    },
-    sourceBucketArn: aws_s3_bucket.example.arn,
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-### Example with Airflow configuration options
-
-
-{{< example csharp >}}
-
-```csharp
-using System.Linq;
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Mwaa.Environment("example", new Aws.Mwaa.EnvironmentArgs
-        {
-            AirflowConfigurationOptions = 
-            {
-                { "core.default_task_retries", "16" },
-                { "core.parallelism", "1" },
-            },
-            DagS3Path = "dags/",
-            ExecutionRoleArn = aws_iam_role.Example.Arn,
-            NetworkConfiguration = new Aws.Mwaa.Inputs.EnvironmentNetworkConfigurationArgs
-            {
-                SecurityGroupIds = 
-                {
-                    aws_security_group.Example.Id,
-                },
-                SubnetIds = aws_subnet.Private.Select(__item => __item.Id).ToList(),
-            },
-            SourceBucketArn = aws_s3_bucket.Example.Arn,
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.mwaa.Environment("example",
-    airflow_configuration_options={
-        "core.default_task_retries": "16",
-        "core.parallelism": "1",
-    },
-    dag_s3_path="dags/",
-    execution_role_arn=aws_iam_role["example"]["arn"],
-    network_configuration=aws.mwaa.EnvironmentNetworkConfigurationArgs(
-        security_group_ids=[aws_security_group["example"]["id"]],
-        subnet_ids=[__item["id"] for __item in aws_subnet["private"]],
-    ),
-    source_bucket_arn=aws_s3_bucket["example"]["arn"])
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.mwaa.Environment("example", {
-    airflowConfigurationOptions: {
-        "core.default_task_retries": 16,
-        "core.parallelism": 1,
-    },
-    dagS3Path: "dags/",
-    executionRoleArn: aws_iam_role.example.arn,
-    networkConfiguration: {
-        securityGroupIds: [aws_security_group.example.id],
-        subnetIds: aws_subnet["private"].map(__item => __item.id),
-    },
-    sourceBucketArn: aws_s3_bucket.example.arn,
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-### Example with logging configurations
-
-
-{{< example csharp >}}
-
-```csharp
-using System.Linq;
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Mwaa.Environment("example", new Aws.Mwaa.EnvironmentArgs
-        {
-            DagS3Path = "dags/",
-            ExecutionRoleArn = aws_iam_role.Example.Arn,
-            LoggingConfiguration = new Aws.Mwaa.Inputs.EnvironmentLoggingConfigurationArgs
-            {
-                DagProcessingLogs = new Aws.Mwaa.Inputs.EnvironmentLoggingConfigurationDagProcessingLogsArgs
-                {
-                    Enabled = true,
-                    LogLevel = "DEBUG",
-                },
-                SchedulerLogs = new Aws.Mwaa.Inputs.EnvironmentLoggingConfigurationSchedulerLogsArgs
-                {
-                    Enabled = true,
-                    LogLevel = "INFO",
-                },
-                TaskLogs = new Aws.Mwaa.Inputs.EnvironmentLoggingConfigurationTaskLogsArgs
-                {
-                    Enabled = true,
-                    LogLevel = "WARNING",
-                },
-                WebserverLogs = new Aws.Mwaa.Inputs.EnvironmentLoggingConfigurationWebserverLogsArgs
-                {
-                    Enabled = true,
-                    LogLevel = "ERROR",
-                },
-                WorkerLogs = new Aws.Mwaa.Inputs.EnvironmentLoggingConfigurationWorkerLogsArgs
-                {
-                    Enabled = true,
-                    LogLevel = "CRITICAL",
-                },
-            },
-            NetworkConfiguration = new Aws.Mwaa.Inputs.EnvironmentNetworkConfigurationArgs
-            {
-                SecurityGroupIds = 
-                {
-                    aws_security_group.Example.Id,
-                },
-                SubnetIds = aws_subnet.Private.Select(__item => __item.Id).ToList(),
-            },
-            SourceBucketArn = aws_s3_bucket.Example.Arn,
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.mwaa.Environment("example",
-    dag_s3_path="dags/",
-    execution_role_arn=aws_iam_role["example"]["arn"],
-    logging_configuration=aws.mwaa.EnvironmentLoggingConfigurationArgs(
-        dag_processing_logs=aws.mwaa.EnvironmentLoggingConfigurationDagProcessingLogsArgs(
-            enabled=True,
-            log_level="DEBUG",
-        ),
-        scheduler_logs=aws.mwaa.EnvironmentLoggingConfigurationSchedulerLogsArgs(
-            enabled=True,
-            log_level="INFO",
-        ),
-        task_logs=aws.mwaa.EnvironmentLoggingConfigurationTaskLogsArgs(
-            enabled=True,
-            log_level="WARNING",
-        ),
-        webserver_logs=aws.mwaa.EnvironmentLoggingConfigurationWebserverLogsArgs(
-            enabled=True,
-            log_level="ERROR",
-        ),
-        worker_logs=aws.mwaa.EnvironmentLoggingConfigurationWorkerLogsArgs(
-            enabled=True,
-            log_level="CRITICAL",
-        ),
-    ),
-    network_configuration=aws.mwaa.EnvironmentNetworkConfigurationArgs(
-        security_group_ids=[aws_security_group["example"]["id"]],
-        subnet_ids=[__item["id"] for __item in aws_subnet["private"]],
-    ),
-    source_bucket_arn=aws_s3_bucket["example"]["arn"])
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.mwaa.Environment("example", {
-    dagS3Path: "dags/",
-    executionRoleArn: aws_iam_role.example.arn,
-    loggingConfiguration: {
-        dagProcessingLogs: {
-            enabled: true,
-            logLevel: "DEBUG",
-        },
-        schedulerLogs: {
-            enabled: true,
-            logLevel: "INFO",
-        },
-        taskLogs: {
-            enabled: true,
-            logLevel: "WARNING",
-        },
-        webserverLogs: {
-            enabled: true,
-            logLevel: "ERROR",
-        },
-        workerLogs: {
-            enabled: true,
-            logLevel: "CRITICAL",
-        },
-    },
-    networkConfiguration: {
-        securityGroupIds: [aws_security_group.example.id],
-        subnetIds: aws_subnet["private"].map(__item => __item.id),
-    },
-    sourceBucketArn: aws_s3_bucket.example.arn,
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-### Example with tags
-
-
-{{< example csharp >}}
-
-```csharp
-using System.Linq;
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Mwaa.Environment("example", new Aws.Mwaa.EnvironmentArgs
-        {
-            DagS3Path = "dags/",
-            ExecutionRoleArn = aws_iam_role.Example.Arn,
-            NetworkConfiguration = new Aws.Mwaa.Inputs.EnvironmentNetworkConfigurationArgs
-            {
-                SecurityGroupIds = 
-                {
-                    aws_security_group.Example.Id,
-                },
-                SubnetIds = aws_subnet.Private.Select(__item => __item.Id).ToList(),
-            },
-            SourceBucketArn = aws_s3_bucket.Example.Arn,
-            Tags = 
-            {
-                { "Name", "example" },
-                { "Environment", "production" },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.mwaa.Environment("example",
-    dag_s3_path="dags/",
-    execution_role_arn=aws_iam_role["example"]["arn"],
-    network_configuration=aws.mwaa.EnvironmentNetworkConfigurationArgs(
-        security_group_ids=[aws_security_group["example"]["id"]],
-        subnet_ids=[__item["id"] for __item in aws_subnet["private"]],
-    ),
-    source_bucket_arn=aws_s3_bucket["example"]["arn"],
-    tags={
-        "Name": "example",
-        "Environment": "production",
-    })
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.mwaa.Environment("example", {
-    dagS3Path: "dags/",
-    executionRoleArn: aws_iam_role.example.arn,
-    networkConfiguration: {
-        securityGroupIds: [aws_security_group.example.id],
-        subnetIds: aws_subnet["private"].map(__item => __item.id),
-    },
-    sourceBucketArn: aws_s3_bucket.example.arn,
-    tags: {
-        Name: "example",
-        Environment: "production",
-    },
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Create a Environment Resource {#create}
@@ -842,7 +381,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#networkconfiguration_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentnetworkconfiguration">Environment<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#environmentnetworkconfiguration">Environment<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -896,7 +435,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#loggingconfiguration_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfiguration">Environment<wbr>Logging<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#environmentloggingconfiguration">Environment<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Apache Airflow logs you want to send to Amazon CloudWatch Logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2109,7 +1648,7 @@ The following state arguments are supported:
 <a href="#state_lastupdateds_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updateds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentlastupdated">[]Environment<wbr>Last<wbr>Updated</a></span>
+        <span class="property-type"><a href="#environmentlastupdated">[]Environment<wbr>Last<wbr>Updated<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2117,7 +1656,7 @@ The following state arguments are supported:
 <a href="#state_loggingconfiguration_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfiguration">Environment<wbr>Logging<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#environmentloggingconfiguration">Environment<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Apache Airflow logs you want to send to Amazon CloudWatch Logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2153,7 +1692,7 @@ The following state arguments are supported:
 <a href="#state_networkconfiguration_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentnetworkconfiguration">Environment<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#environmentnetworkconfiguration">Environment<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2771,7 +2310,7 @@ The following state arguments are supported:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentlastupdatederror">List&lt;Environment<wbr>Last<wbr>Updated<wbr>Error<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentlastupdatederror">List&lt;Environment<wbr>Last<wbr>Updated<wbr>Error&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2833,7 +2372,7 @@ The following state arguments are supported:
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentlastupdatederror">Environment<wbr>Last<wbr>Updated<wbr>Error<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#environmentlastupdatederror">Environment<wbr>Last<wbr>Updated<wbr>Error[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2864,7 +2403,7 @@ The following state arguments are supported:
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentlastupdatederror">Sequence[Environment<wbr>Last<wbr>Updated<wbr>Error<wbr>Args]</a></span>
+        <span class="property-type"><a href="#environmentlastupdatederror">Sequence[Environment<wbr>Last<wbr>Updated<wbr>Error]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2969,7 +2508,7 @@ The following state arguments are supported:
 <a href="#dagprocessinglogs_csharp" style="color: inherit; text-decoration: inherit;">Dag<wbr>Processing<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationdagprocessinglogs">Environment<wbr>Logging<wbr>Configuration<wbr>Dag<wbr>Processing<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationdagprocessinglogs">Environment<wbr>Logging<wbr>Configuration<wbr>Dag<wbr>Processing<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2978,7 +2517,7 @@ The following state arguments are supported:
 <a href="#schedulerlogs_csharp" style="color: inherit; text-decoration: inherit;">Scheduler<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationschedulerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Scheduler<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationschedulerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Scheduler<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the schedulers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2987,7 +2526,7 @@ The following state arguments are supported:
 <a href="#tasklogs_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationtasklogs">Environment<wbr>Logging<wbr>Configuration<wbr>Task<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationtasklogs">Environment<wbr>Logging<wbr>Configuration<wbr>Task<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for DAG tasks. See Module logging configuration for more information. Enabled by default with `INFO` log level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2996,7 +2535,7 @@ The following state arguments are supported:
 <a href="#webserverlogs_csharp" style="color: inherit; text-decoration: inherit;">Webserver<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationwebserverlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Webserver<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationwebserverlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Webserver<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the webservers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3005,7 +2544,7 @@ The following state arguments are supported:
 <a href="#workerlogs_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationworkerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Worker<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationworkerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Worker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the workers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd></dl>
@@ -3067,7 +2606,7 @@ The following state arguments are supported:
 <a href="#dagprocessinglogs_nodejs" style="color: inherit; text-decoration: inherit;">dag<wbr>Processing<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationdagprocessinglogs">Environment<wbr>Logging<wbr>Configuration<wbr>Dag<wbr>Processing<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationdagprocessinglogs">Environment<wbr>Logging<wbr>Configuration<wbr>Dag<wbr>Processing<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3076,7 +2615,7 @@ The following state arguments are supported:
 <a href="#schedulerlogs_nodejs" style="color: inherit; text-decoration: inherit;">scheduler<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationschedulerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Scheduler<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationschedulerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Scheduler<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the schedulers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3085,7 +2624,7 @@ The following state arguments are supported:
 <a href="#tasklogs_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationtasklogs">Environment<wbr>Logging<wbr>Configuration<wbr>Task<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationtasklogs">Environment<wbr>Logging<wbr>Configuration<wbr>Task<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for DAG tasks. See Module logging configuration for more information. Enabled by default with `INFO` log level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3094,7 +2633,7 @@ The following state arguments are supported:
 <a href="#webserverlogs_nodejs" style="color: inherit; text-decoration: inherit;">webserver<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationwebserverlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Webserver<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationwebserverlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Webserver<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the webservers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3103,7 +2642,7 @@ The following state arguments are supported:
 <a href="#workerlogs_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationworkerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Worker<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationworkerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Worker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the workers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd></dl>
@@ -3116,7 +2655,7 @@ The following state arguments are supported:
 <a href="#dag_processing_logs_python" style="color: inherit; text-decoration: inherit;">dag_<wbr>processing_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationdagprocessinglogs">Environment<wbr>Logging<wbr>Configuration<wbr>Dag<wbr>Processing<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationdagprocessinglogs">Environment<wbr>Logging<wbr>Configuration<wbr>Dag<wbr>Processing<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3125,7 +2664,7 @@ The following state arguments are supported:
 <a href="#scheduler_logs_python" style="color: inherit; text-decoration: inherit;">scheduler_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationschedulerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Scheduler<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationschedulerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Scheduler<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the schedulers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3134,7 +2673,7 @@ The following state arguments are supported:
 <a href="#task_logs_python" style="color: inherit; text-decoration: inherit;">task_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationtasklogs">Environment<wbr>Logging<wbr>Configuration<wbr>Task<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationtasklogs">Environment<wbr>Logging<wbr>Configuration<wbr>Task<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for DAG tasks. See Module logging configuration for more information. Enabled by default with `INFO` log level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3143,7 +2682,7 @@ The following state arguments are supported:
 <a href="#webserver_logs_python" style="color: inherit; text-decoration: inherit;">webserver_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationwebserverlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Webserver<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationwebserverlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Webserver<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the webservers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3152,7 +2691,7 @@ The following state arguments are supported:
 <a href="#worker_logs_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationworkerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Worker<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationworkerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Worker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the workers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd></dl>

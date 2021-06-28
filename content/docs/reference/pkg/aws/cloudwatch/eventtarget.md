@@ -1039,7 +1039,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#batchtarget_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target</a></span>
+        <span class="property-type"><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1048,7 +1048,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#deadletterconfig_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config</a></span>
+        <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1057,7 +1057,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#ecstarget_go" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target</a></span>
+        <span class="property-type"><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1075,7 +1075,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#httptarget_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargethttptarget">Event<wbr>Target<wbr>Http<wbr>Target</a></span>
+        <span class="property-type"><a href="#eventtargethttptarget">Event<wbr>Target<wbr>Http<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an API Gateway REST endpoint. Documented below. A maximum of 1 is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1102,7 +1102,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#inputtransformer_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Transformer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer</a></span>
+        <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1111,7 +1111,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#kinesistarget_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target</a></span>
+        <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1120,7 +1120,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1138,7 +1138,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#runcommandtargets_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Command<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetruncommandtarget">[]Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target</a></span>
+        <span class="property-type"><a href="#eventtargetruncommandtarget">[]Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1147,7 +1147,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sqstarget_go" style="color: inherit; text-decoration: inherit;">Sqs<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target</a></span>
+        <span class="property-type"><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1818,7 +1818,7 @@ The following state arguments are supported:
 <a href="#state_batchtarget_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target</a></span>
+        <span class="property-type"><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1827,7 +1827,7 @@ The following state arguments are supported:
 <a href="#state_deadletterconfig_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config</a></span>
+        <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1836,7 +1836,7 @@ The following state arguments are supported:
 <a href="#state_ecstarget_go" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target</a></span>
+        <span class="property-type"><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1854,7 +1854,7 @@ The following state arguments are supported:
 <a href="#state_httptarget_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargethttptarget">Event<wbr>Target<wbr>Http<wbr>Target</a></span>
+        <span class="property-type"><a href="#eventtargethttptarget">Event<wbr>Target<wbr>Http<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an API Gateway REST endpoint. Documented below. A maximum of 1 is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1881,7 +1881,7 @@ The following state arguments are supported:
 <a href="#state_inputtransformer_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Transformer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer</a></span>
+        <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1890,7 +1890,7 @@ The following state arguments are supported:
 <a href="#state_kinesistarget_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target</a></span>
+        <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1899,7 +1899,7 @@ The following state arguments are supported:
 <a href="#state_retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1926,7 +1926,7 @@ The following state arguments are supported:
 <a href="#state_runcommandtargets_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Command<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetruncommandtarget">[]Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target</a></span>
+        <span class="property-type"><a href="#eventtargetruncommandtarget">[]Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1935,7 +1935,7 @@ The following state arguments are supported:
 <a href="#state_sqstarget_go" style="color: inherit; text-decoration: inherit;">Sqs<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target</a></span>
+        <span class="property-type"><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2507,7 +2507,7 @@ The following state arguments are supported:
 <a href="#networkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetecstargetnetworkconfiguration">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventtargetecstargetnetworkconfiguration">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2623,7 +2623,7 @@ The following state arguments are supported:
 <a href="#networkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetecstargetnetworkconfiguration">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventtargetecstargetnetworkconfiguration">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2681,7 +2681,7 @@ The following state arguments are supported:
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetecstargetnetworkconfiguration">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventtargetecstargetnetworkconfiguration">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.
 {{% /md %}}</dd><dt class="property-optional"

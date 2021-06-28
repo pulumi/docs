@@ -326,7 +326,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#routingstrategy_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasroutingstrategy">Alias<wbr>Routing<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#aliasroutingstrategy">Alias<wbr>Routing<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the fleet and/or routing type to use for the alias.
 {{% /md %}}</dd><dt class="property-optional"
@@ -780,7 +780,7 @@ The following state arguments are supported:
 <a href="#state_routingstrategy_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasroutingstrategy">Alias<wbr>Routing<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#aliasroutingstrategy">Alias<wbr>Routing<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the fleet and/or routing type to use for the alias.
 {{% /md %}}</dd><dt class="property-optional"

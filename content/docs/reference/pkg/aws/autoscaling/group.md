@@ -435,181 +435,6 @@ const exampleGroup = new aws.autoscaling.Group("exampleGroup", {
 
 
 
-### Mixed Instances Policy with Spot Instances and Capacity Rebalance
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var exampleLaunchTemplate = new Aws.Ec2.LaunchTemplate("exampleLaunchTemplate", new Aws.Ec2.LaunchTemplateArgs
-        {
-            NamePrefix = "example",
-            ImageId = data.Aws_ami.Example.Id,
-            InstanceType = "c5.large",
-        });
-        var exampleGroup = new Aws.AutoScaling.Group("exampleGroup", new Aws.AutoScaling.GroupArgs
-        {
-            CapacityRebalance = true,
-            DesiredCapacity = 12,
-            MaxSize = 15,
-            MinSize = 12,
-            VpcZoneIdentifiers = 
-            {
-                aws_subnet.Example1.Id,
-                aws_subnet.Example2.Id,
-            },
-            MixedInstancesPolicy = new Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyArgs
-            {
-                InstancesDistribution = new Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyInstancesDistributionArgs
-                {
-                    OnDemandBaseCapacity = 0,
-                    OnDemandPercentageAboveBaseCapacity = 25,
-                    SpotAllocationStrategy = "capacity-optimized",
-                },
-                LaunchTemplate = new Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyLaunchTemplateArgs
-                {
-                    LaunchTemplateSpecification = new Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs
-                    {
-                        LaunchTemplateId = exampleLaunchTemplate.Id,
-                    },
-                    Overrides = 
-                    {
-                        new Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyLaunchTemplateOverrideArgs
-                        {
-                            InstanceType = "c4.large",
-                            WeightedCapacity = "3",
-                        },
-                        new Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyLaunchTemplateOverrideArgs
-                        {
-                            InstanceType = "c3.large",
-                            WeightedCapacity = "2",
-                        },
-                    },
-                },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example_launch_template = aws.ec2.LaunchTemplate("exampleLaunchTemplate",
-    name_prefix="example",
-    image_id=data["aws_ami"]["example"]["id"],
-    instance_type="c5.large")
-example_group = aws.autoscaling.Group("exampleGroup",
-    capacity_rebalance=True,
-    desired_capacity=12,
-    max_size=15,
-    min_size=12,
-    vpc_zone_identifiers=[
-        aws_subnet["example1"]["id"],
-        aws_subnet["example2"]["id"],
-    ],
-    mixed_instances_policy=aws.autoscaling.GroupMixedInstancesPolicyArgs(
-        instances_distribution=aws.autoscaling.GroupMixedInstancesPolicyInstancesDistributionArgs(
-            on_demand_base_capacity=0,
-            on_demand_percentage_above_base_capacity=25,
-            spot_allocation_strategy="capacity-optimized",
-        ),
-        launch_template={
-            "launchTemplateSpecification": {
-                "launchTemplateId": example_launch_template.id,
-            },
-            "overrides": [
-                {
-                    "instance_type": "c4.large",
-                    "weightedCapacity": "3",
-                },
-                {
-                    "instance_type": "c3.large",
-                    "weightedCapacity": "2",
-                },
-            ],
-        },
-    ))
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const exampleLaunchTemplate = new aws.ec2.LaunchTemplate("exampleLaunchTemplate", {
-    namePrefix: "example",
-    imageId: data.aws_ami.example.id,
-    instanceType: "c5.large",
-});
-const exampleGroup = new aws.autoscaling.Group("exampleGroup", {
-    capacityRebalance: true,
-    desiredCapacity: 12,
-    maxSize: 15,
-    minSize: 12,
-    vpcZoneIdentifiers: [
-        aws_subnet.example1.id,
-        aws_subnet.example2.id,
-    ],
-    mixedInstancesPolicy: {
-        instancesDistribution: {
-            onDemandBaseCapacity: 0,
-            onDemandPercentageAboveBaseCapacity: 25,
-            spotAllocationStrategy: "capacity-optimized",
-        },
-        launchTemplate: {
-            launchTemplateSpecification: {
-                launchTemplateId: exampleLaunchTemplate.id,
-            },
-            overrides: [
-                {
-                    instanceType: "c4.large",
-                    weightedCapacity: "3",
-                },
-                {
-                    instanceType: "c3.large",
-                    weightedCapacity: "2",
-                },
-            ],
-        },
-    },
-});
-```
-
-
-{{< /example >}}
-
-
-
-
 ### Mixed Instances Policy with Instance level LaunchTemplateSpecification Overrides
 
 
@@ -1869,7 +1694,7 @@ behavior and potentially leaves resources dangling.
 <a href="#initiallifecyclehooks_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Lifecycle<wbr>Hooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupinitiallifecyclehook">[]Group<wbr>Initial<wbr>Lifecycle<wbr>Hook</a></span>
+        <span class="property-type"><a href="#groupinitiallifecyclehook">[]Group<wbr>Initial<wbr>Lifecycle<wbr>Hook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
@@ -1884,7 +1709,7 @@ a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.L
 <a href="#instancerefresh_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupinstancerefresh">Group<wbr>Instance<wbr>Refresh</a></span>
+        <span class="property-type"><a href="#groupinstancerefresh">Group<wbr>Instance<wbr>Refresh<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If this block is configured, start an
 [Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
@@ -1904,7 +1729,7 @@ when this Auto Scaling Group is updated. Defined below.
 <a href="#launchtemplate_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template</a></span>
+        <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1953,7 +1778,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
 <a href="#mixedinstancespolicy_go" style="color: inherit; text-decoration: inherit;">Mixed<wbr>Instances<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2020,7 +1845,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouptag">[]Group<wbr>Tag</a></span>
+        <span class="property-type"><a href="#grouptag">[]Group<wbr>Tag<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2091,7 +1916,7 @@ precedence over `min_elb_capacity` behavior.)
 <a href="#warmpool_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupwarmpool">Group<wbr>Warm<wbr>Pool</a></span>
+        <span class="property-type"><a href="#groupwarmpool">Group<wbr>Warm<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If this block is configured, add a [Warm Pool](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html)
 to the specified Auto Scaling group. Defined below
@@ -3480,7 +3305,7 @@ behavior and potentially leaves resources dangling.
 <a href="#state_initiallifecyclehooks_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Lifecycle<wbr>Hooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupinitiallifecyclehook">[]Group<wbr>Initial<wbr>Lifecycle<wbr>Hook</a></span>
+        <span class="property-type"><a href="#groupinitiallifecyclehook">[]Group<wbr>Initial<wbr>Lifecycle<wbr>Hook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
@@ -3495,7 +3320,7 @@ a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.L
 <a href="#state_instancerefresh_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupinstancerefresh">Group<wbr>Instance<wbr>Refresh</a></span>
+        <span class="property-type"><a href="#groupinstancerefresh">Group<wbr>Instance<wbr>Refresh<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If this block is configured, start an
 [Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
@@ -3515,7 +3340,7 @@ when this Auto Scaling Group is updated. Defined below.
 <a href="#state_launchtemplate_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template</a></span>
+        <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3582,7 +3407,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
 <a href="#state_mixedinstancespolicy_go" style="color: inherit; text-decoration: inherit;">Mixed<wbr>Instances<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3649,7 +3474,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouptag">[]Group<wbr>Tag</a></span>
+        <span class="property-type"><a href="#grouptag">[]Group<wbr>Tag<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3720,7 +3545,7 @@ precedence over `min_elb_capacity` behavior.)
 <a href="#state_warmpool_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupwarmpool">Group<wbr>Warm<wbr>Pool</a></span>
+        <span class="property-type"><a href="#groupwarmpool">Group<wbr>Warm<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If this block is configured, add a [Warm Pool](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html)
 to the specified Auto Scaling group. Defined below
@@ -4698,7 +4523,7 @@ to the specified Auto Scaling group. Defined below
 <a href="#preferences_csharp" style="color: inherit; text-decoration: inherit;">Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupinstancerefreshpreferences">Group<wbr>Instance<wbr>Refresh<wbr>Preferences<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupinstancerefreshpreferences">Group<wbr>Instance<wbr>Refresh<wbr>Preferences</a></span>
     </dt>
     <dd>{{% md %}}Override default parameters for Instance Refresh.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4760,7 +4585,7 @@ to the specified Auto Scaling group. Defined below
 <a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupinstancerefreshpreferences">Group<wbr>Instance<wbr>Refresh<wbr>Preferences<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupinstancerefreshpreferences">Group<wbr>Instance<wbr>Refresh<wbr>Preferences</a></span>
     </dt>
     <dd>{{% md %}}Override default parameters for Instance Refresh.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4791,7 +4616,7 @@ to the specified Auto Scaling group. Defined below
 <a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupinstancerefreshpreferences">Group<wbr>Instance<wbr>Refresh<wbr>Preferences<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupinstancerefreshpreferences">Group<wbr>Instance<wbr>Refresh<wbr>Preferences</a></span>
     </dt>
     <dd>{{% md %}}Override default parameters for Instance Refresh.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5031,7 +4856,7 @@ to the specified Auto Scaling group. Defined below
 <a href="#launchtemplate_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplate">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplate">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5040,7 +4865,7 @@ to the specified Auto Scaling group. Defined below
 <a href="#instancesdistribution_csharp" style="color: inherit; text-decoration: inherit;">Instances<wbr>Distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicyinstancesdistribution">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicyinstancesdistribution">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.
 {{% /md %}}</dd></dl>
@@ -5075,7 +4900,7 @@ to the specified Auto Scaling group. Defined below
 <a href="#launchtemplate_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplate">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplate">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5084,7 +4909,7 @@ to the specified Auto Scaling group. Defined below
 <a href="#instancesdistribution_nodejs" style="color: inherit; text-decoration: inherit;">instances<wbr>Distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicyinstancesdistribution">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicyinstancesdistribution">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.
 {{% /md %}}</dd></dl>
@@ -5097,7 +4922,7 @@ to the specified Auto Scaling group. Defined below
 <a href="#launch_template_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplate">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplate">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5106,7 +4931,7 @@ to the specified Auto Scaling group. Defined below
 <a href="#instances_distribution_python" style="color: inherit; text-decoration: inherit;">instances_<wbr>distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicyinstancesdistribution">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicyinstancesdistribution">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.
 {{% /md %}}</dd></dl>
@@ -5355,7 +5180,7 @@ to the specified Auto Scaling group. Defined below
 <a href="#launchtemplatespecification_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5364,7 +5189,7 @@ to the specified Auto Scaling group. Defined below
 <a href="#overrides_csharp" style="color: inherit; text-decoration: inherit;">Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverride">List&lt;Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverride">List&lt;Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of nested arguments provides the ability to specify multiple instance types. This will override the same parameter in the launch template. For on-demand instances, Auto Scaling considers the order of preference of instance types to launch based on the order specified in the overrides list. Defined below.
 {{% /md %}}</dd></dl>
@@ -5399,7 +5224,7 @@ to the specified Auto Scaling group. Defined below
 <a href="#launchtemplatespecification_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5408,7 +5233,7 @@ to the specified Auto Scaling group. Defined below
 <a href="#overrides_nodejs" style="color: inherit; text-decoration: inherit;">overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverride">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverride">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}List of nested arguments provides the ability to specify multiple instance types. This will override the same parameter in the launch template. For on-demand instances, Auto Scaling considers the order of preference of instance types to launch based on the order specified in the overrides list. Defined below.
 {{% /md %}}</dd></dl>
@@ -5421,7 +5246,7 @@ to the specified Auto Scaling group. Defined below
 <a href="#launch_template_specification_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5430,7 +5255,7 @@ to the specified Auto Scaling group. Defined below
 <a href="#overrides_python" style="color: inherit; text-decoration: inherit;">overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverride">Sequence[Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverride">Sequence[Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override]</a></span>
     </dt>
     <dd>{{% md %}}List of nested arguments provides the ability to specify multiple instance types. This will override the same parameter in the launch template. For on-demand instances, Auto Scaling considers the order of preference of instance types to launch based on the order specified in the overrides list. Defined below.
 {{% /md %}}</dd></dl>
@@ -5580,7 +5405,7 @@ to the specified Auto Scaling group. Defined below
 <a href="#launchtemplatespecification_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverridelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverridelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5642,7 +5467,7 @@ to the specified Auto Scaling group. Defined below
 <a href="#launchtemplatespecification_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverridelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverridelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5673,7 +5498,7 @@ to the specified Auto Scaling group. Defined below
 <a href="#launch_template_specification_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverridelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverridelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"

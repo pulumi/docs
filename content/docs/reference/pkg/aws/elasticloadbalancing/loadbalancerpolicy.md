@@ -525,7 +525,7 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#policyattributes_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">[]Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute</a></span>
+        <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">[]Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy attribute to apply to the policy.
 {{% /md %}}</dd></dl>
@@ -851,7 +851,7 @@ The following state arguments are supported:
 <a href="#state_policyattributes_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">[]Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute</a></span>
+        <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">[]Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy attribute to apply to the policy.
 {{% /md %}}</dd><dt class="property-optional"

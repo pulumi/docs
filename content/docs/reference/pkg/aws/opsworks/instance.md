@@ -11,6 +11,7 @@ meta_desc: "Documentation for the aws.opsworks.Instance resource with examples, 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides an OpsWorks instance resource.
+
 ## Block devices
 
 Each of the `*_block_device` attributes controls a portion of the AWS
@@ -64,123 +65,6 @@ identified by the `virtual_name` in the format `"ephemeral{0..N}"`.
 resources cannot be automatically detected by this provider. After making updates
 to block device configuration, resource recreation can be manually triggered by
 using the [`up` command with the --replace argument](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
-
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var my_instance = new Aws.OpsWorks.Instance("my-instance", new Aws.OpsWorks.InstanceArgs
-        {
-            StackId = aws_opsworks_stack.Main.Id,
-            LayerIds = 
-            {
-                aws_opsworks_custom_layer.My_layer.Id,
-            },
-            InstanceType = "t2.micro",
-            Os = "Amazon Linux 2015.09",
-            State = "stopped",
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/opsworks"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := opsworks.NewInstance(ctx, "my_instance", &opsworks.InstanceArgs{
-			StackId: pulumi.Any(aws_opsworks_stack.Main.Id),
-			LayerIds: pulumi.StringArray{
-				pulumi.Any(aws_opsworks_custom_layer.My - layer.Id),
-			},
-			InstanceType: pulumi.String("t2.micro"),
-			Os:           pulumi.String("Amazon Linux 2015.09"),
-			State:        pulumi.String("stopped"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-my_instance = aws.opsworks.Instance("my-instance",
-    stack_id=aws_opsworks_stack["main"]["id"],
-    layer_ids=[aws_opsworks_custom_layer["my-layer"]["id"]],
-    instance_type="t2.micro",
-    os="Amazon Linux 2015.09",
-    state="stopped")
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const my_instance = new aws.opsworks.Instance("my-instance", {
-    stackId: aws_opsworks_stack.main.id,
-    layerIds: [aws_opsworks_custom_layer["my-layer"].id],
-    instanceType: "t2.micro",
-    os: "Amazon Linux 2015.09",
-    state: "stopped",
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
 
 
 
@@ -851,7 +735,7 @@ by default.
 <a href="#ebsblockdevices_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceebsblockdevice">[]Instance<wbr>Ebs<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#instanceebsblockdevice">[]Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
@@ -886,7 +770,7 @@ instance.  See Block Devices below for details.
 <a href="#ephemeralblockdevices_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceephemeralblockdevice">[]Instance<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#instanceephemeralblockdevice">[]Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -1043,7 +927,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#rootblockdevices_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancerootblockdevice">[]Instance<wbr>Root<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#instancerootblockdevice">[]Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -2663,7 +2547,7 @@ by default.
 <a href="#state_ebsblockdevices_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceebsblockdevice">[]Instance<wbr>Ebs<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#instanceebsblockdevice">[]Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
@@ -2707,7 +2591,7 @@ instance.  See Block Devices below for details.
 <a href="#state_ephemeralblockdevices_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceephemeralblockdevice">[]Instance<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#instanceephemeralblockdevice">[]Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -2873,7 +2757,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_rootblockdevices_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancerootblockdevice">[]Instance<wbr>Root<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#instancerootblockdevice">[]Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.

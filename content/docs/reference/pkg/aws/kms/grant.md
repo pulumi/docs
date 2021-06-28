@@ -482,7 +482,7 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 <a href="#constraints_go" style="color: inherit; text-decoration: inherit;">Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grantconstraint">[]Grant<wbr>Constraint</a></span>
+        <span class="property-type"><a href="#grantconstraint">[]Grant<wbr>Constraint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1043,7 +1043,7 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 <a href="#state_constraints_go" style="color: inherit; text-decoration: inherit;">Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grantconstraint">[]Grant<wbr>Constraint</a></span>
+        <span class="property-type"><a href="#grantconstraint">[]Grant<wbr>Constraint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
 {{% /md %}}</dd><dt class="property-optional"

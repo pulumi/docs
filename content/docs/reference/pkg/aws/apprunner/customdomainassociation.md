@@ -740,7 +740,7 @@ The following state arguments are supported:
 <a href="#state_certificatevalidationrecords_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Validation<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdomainassociationcertificatevalidationrecord">[]Custom<wbr>Domain<wbr>Association<wbr>Certificate<wbr>Validation<wbr>Record</a></span>
+        <span class="property-type"><a href="#customdomainassociationcertificatevalidationrecord">[]Custom<wbr>Domain<wbr>Association<wbr>Certificate<wbr>Validation<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A set of certificate CNAME records used for this domain name. See Certificate Validation Records below for more details.
 {{% /md %}}</dd><dt class="property-optional"

@@ -331,7 +331,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#triggers_go" style="color: inherit; text-decoration: inherit;">Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggertrigger">[]Trigger<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#triggertrigger">[]Trigger<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -652,7 +652,7 @@ The following state arguments are supported:
 <a href="#state_triggers_go" style="color: inherit; text-decoration: inherit;">Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggertrigger">[]Trigger<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#triggertrigger">[]Trigger<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

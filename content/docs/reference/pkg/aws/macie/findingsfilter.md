@@ -12,128 +12,6 @@ meta_desc: "Documentation for the aws.macie.FindingsFilter resource with example
 
 Provides a resource to manage an [Amazon Macie Findings Filter](https://docs.aws.amazon.com/macie/latest/APIReference/findingsfilters-id.html).
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Macie2.Account("example", new Aws.Macie2.AccountArgs
-        {
-        });
-        var test = new Aws.Macie.FindingsFilter("test", new Aws.Macie.FindingsFilterArgs
-        {
-            Description = "DESCRIPTION",
-            Position = 1,
-            Action = "ARCHIVE",
-            FindingCriteria = new Aws.Macie.Inputs.FindingsFilterFindingCriteriaArgs
-            {
-                Criterions = 
-                {
-                    new Aws.Macie.Inputs.FindingsFilterFindingCriteriaCriterionArgs
-                    {
-                        Field = "region",
-                        Eqs = 
-                        {
-                            data.Aws_region.Current.Name,
-                        },
-                    },
-                },
-            },
-        }, new CustomResourceOptions
-        {
-            DependsOn = 
-            {
-                aws_macie2_account.Test,
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.macie2.Account("example")
-test = aws.macie.FindingsFilter("test",
-    description="DESCRIPTION",
-    position=1,
-    action="ARCHIVE",
-    finding_criteria=aws.macie.FindingsFilterFindingCriteriaArgs(
-        criterions=[aws.macie.FindingsFilterFindingCriteriaCriterionArgs(
-            field="region",
-            eqs=[data["aws_region"]["current"]["name"]],
-        )],
-    ),
-    opts=pulumi.ResourceOptions(depends_on=[aws_macie2_account["test"]]))
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.macie2.Account("example", {});
-const test = new aws.macie.FindingsFilter("test", {
-    description: "DESCRIPTION",
-    position: 1,
-    action: "ARCHIVE",
-    findingCriteria: {
-        criterions: [{
-            field: "region",
-            eqs: [data.aws_region.current.name],
-        }],
-    },
-}, {
-    dependsOn: [aws_macie2_account.test],
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Create a FindingsFilter Resource {#create}
@@ -372,7 +250,7 @@ The FindingsFilter resource accepts the following [input]({{< relref "/docs/intr
 <a href="#findingcriteria_go" style="color: inherit; text-decoration: inherit;">Finding<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#findingsfilterfindingcriteria">Findings<wbr>Filter<wbr>Finding<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#findingsfilterfindingcriteria">Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The criteria to use to filter findings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -920,7 +798,7 @@ The following state arguments are supported:
 <a href="#state_findingcriteria_go" style="color: inherit; text-decoration: inherit;">Finding<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#findingsfilterfindingcriteria">Findings<wbr>Filter<wbr>Finding<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#findingsfilterfindingcriteria">Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The criteria to use to filter findings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1153,7 +1031,7 @@ The following state arguments are supported:
 <a href="#criterions_csharp" style="color: inherit; text-decoration: inherit;">Criterions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#findingsfilterfindingcriteriacriterion">List&lt;Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Criterion<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#findingsfilterfindingcriteriacriterion">List&lt;Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Criterion&gt;</a></span>
     </dt>
     <dd>{{% md %}}A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)
 {{% /md %}}</dd></dl>
@@ -1179,7 +1057,7 @@ The following state arguments are supported:
 <a href="#criterions_nodejs" style="color: inherit; text-decoration: inherit;">criterions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#findingsfilterfindingcriteriacriterion">Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Criterion<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#findingsfilterfindingcriteriacriterion">Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Criterion[]</a></span>
     </dt>
     <dd>{{% md %}}A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)
 {{% /md %}}</dd></dl>
@@ -1192,7 +1070,7 @@ The following state arguments are supported:
 <a href="#criterions_python" style="color: inherit; text-decoration: inherit;">criterions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#findingsfilterfindingcriteriacriterion">Sequence[Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Criterion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#findingsfilterfindingcriteriacriterion">Sequence[Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Criterion]</a></span>
     </dt>
     <dd>{{% md %}}A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)
 {{% /md %}}</dd></dl>

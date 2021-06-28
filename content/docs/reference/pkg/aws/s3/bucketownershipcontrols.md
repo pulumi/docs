@@ -310,7 +310,7 @@ The BucketOwnershipControls resource accepts the following [input]({{< relref "/
 <a href="#rule_go" style="color: inherit; text-decoration: inherit;">Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketownershipcontrolsrule">Bucket<wbr>Ownership<wbr>Controls<wbr>Rule</a></span>
+        <span class="property-type"><a href="#bucketownershipcontrolsrule">Bucket<wbr>Ownership<wbr>Controls<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Ownership Controls rules. Detailed below.
 {{% /md %}}</dd></dl>
@@ -580,7 +580,7 @@ The following state arguments are supported:
 <a href="#state_rule_go" style="color: inherit; text-decoration: inherit;">Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketownershipcontrolsrule">Bucket<wbr>Ownership<wbr>Controls<wbr>Rule</a></span>
+        <span class="property-type"><a href="#bucketownershipcontrolsrule">Bucket<wbr>Ownership<wbr>Controls<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Ownership Controls rules. Detailed below.
 {{% /md %}}</dd></dl>

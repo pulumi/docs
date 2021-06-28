@@ -12,141 +12,6 @@ meta_desc: "Documentation for the aws.rds.Proxy resource with examples, input pr
 
 Provides an RDS DB proxy resource. For additional information, see the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy.html).
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Rds.Proxy("example", new Aws.Rds.ProxyArgs
-        {
-            DebugLogging = false,
-            EngineFamily = "MYSQL",
-            IdleClientTimeout = 1800,
-            RequireTls = true,
-            RoleArn = aws_iam_role.Example.Arn,
-            VpcSecurityGroupIds = 
-            {
-                aws_security_group.Example.Id,
-            },
-            VpcSubnetIds = 
-            {
-                aws_subnet.Example.Id,
-            },
-            Auths = 
-            {
-                new Aws.Rds.Inputs.ProxyAuthArgs
-                {
-                    AuthScheme = "SECRETS",
-                    Description = "example",
-                    IamAuth = "DISABLED",
-                    SecretArn = aws_secretsmanager_secret.Example.Arn,
-                },
-            },
-            Tags = 
-            {
-                { "Name", "example" },
-                { "Key", "value" },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.rds.Proxy("example",
-    debug_logging=False,
-    engine_family="MYSQL",
-    idle_client_timeout=1800,
-    require_tls=True,
-    role_arn=aws_iam_role["example"]["arn"],
-    vpc_security_group_ids=[aws_security_group["example"]["id"]],
-    vpc_subnet_ids=[aws_subnet["example"]["id"]],
-    auths=[aws.rds.ProxyAuthArgs(
-        auth_scheme="SECRETS",
-        description="example",
-        iam_auth="DISABLED",
-        secret_arn=aws_secretsmanager_secret["example"]["arn"],
-    )],
-    tags={
-        "Name": "example",
-        "Key": "value",
-    })
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.rds.Proxy("example", {
-    debugLogging: false,
-    engineFamily: "MYSQL",
-    idleClientTimeout: 1800,
-    requireTls: true,
-    roleArn: aws_iam_role.example.arn,
-    vpcSecurityGroupIds: [aws_security_group.example.id],
-    vpcSubnetIds: [aws_subnet.example.id],
-    auths: [{
-        authScheme: "SECRETS",
-        description: "example",
-        iamAuth: "DISABLED",
-        secretArn: aws_secretsmanager_secret.example.arn,
-    }],
-    tags: {
-        Name: "example",
-        Key: "value",
-    },
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Create a Proxy Resource {#create}
@@ -408,7 +273,7 @@ The Proxy resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#auths_go" style="color: inherit; text-decoration: inherit;">Auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxyauth">[]Proxy<wbr>Auth</a></span>
+        <span class="property-type"><a href="#proxyauth">[]Proxy<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with authorization mechanisms to connect to the associated instances or clusters. Described below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1112,7 +977,7 @@ The following state arguments are supported:
 <a href="#state_auths_go" style="color: inherit; text-decoration: inherit;">Auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxyauth">[]Proxy<wbr>Auth</a></span>
+        <span class="property-type"><a href="#proxyauth">[]Proxy<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with authorization mechanisms to connect to the associated instances or clusters. Described below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -510,7 +510,7 @@ The ConfigurationAggregator resource accepts the following [input]({{< relref "/
 <a href="#accountaggregationsource_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Aggregation<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source</a></span>
+        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The account(s) to aggregate config data from as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -528,7 +528,7 @@ The ConfigurationAggregator resource accepts the following [input]({{< relref "/
 <a href="#organizationaggregationsource_go" style="color: inherit; text-decoration: inherit;">Organization<wbr>Aggregation<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source</a></span>
+        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The organization to aggregate config data from as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -937,7 +937,7 @@ The following state arguments are supported:
 <a href="#state_accountaggregationsource_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Aggregation<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source</a></span>
+        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The account(s) to aggregate config data from as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -964,7 +964,7 @@ The following state arguments are supported:
 <a href="#state_organizationaggregationsource_go" style="color: inherit; text-decoration: inherit;">Organization<wbr>Aggregation<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source</a></span>
+        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The organization to aggregate config data from as documented below.
 {{% /md %}}</dd><dt class="property-optional"
