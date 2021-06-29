@@ -10,7 +10,7 @@ aliases:
 ---
 {{% notes "info" %}}
 Audit Logs are only available to organizations using Pulumi Enterprise.
-To learn more about our plans, visit our [pricing page]({{< relref "/pricing" >}}).
+To learn more about our editions, visit our [pricing page]({{< relref "/pricing" >}}).
 {{% /notes %}}
 
 ## Overview

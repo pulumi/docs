@@ -65,7 +65,7 @@ which now supports a `--version` flag to export older checkpoint files too.
 
 ## Reverse Stack Permissions View
 
-The Team Pro and Enterprise editions support [role-based access control]({{< relref "/docs/intro/console/stack-permissions" >}})
+The Enterprise Edition supports [role-based access control]({{< relref "/docs/intro/console/stack-permissions" >}})
 using [teams]({{< relref "/docs/intro/console/teams" >}}). But a common problem we've heard from people in large organizations
 is that it can be difficult to review exactly *_what_* access someone has to a stack and *_why_*.
 

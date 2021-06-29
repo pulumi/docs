@@ -20,23 +20,20 @@ In your browser, navigate to <a href="https://app.pulumi.com" target="_blank">ap
 <a class="btn btn-secondary" href="https://app.pulumi.com/signup" target="_blank">Sign up</a>
 
 When you sign into the Pulumi Console, an personal account is automatically
-created on the **Community** plan. The Pulumi Community plan is free forever for unlimited individual use.
+created on the **Individual** Edition. The Pulumi Individual Edition is free forever for unlimited individual use.
 
 You can create an unlimited number of stacks, encrypt configuration and resource secrets, and browse stack history. To collaborate with other developers or use advanced features like [SAML SSO]({{< relref "/docs/guides/saml" >}}), you'll need to create a Pulumi [organization]({{< relref "organizations" >}}).
 
-The following plans are also available as upgrade options:
+The following editions are also available as upgrade options:
 
-* **Pulumi Team Starter** is ideal for teams just getting started deploying cloud
-applications and infrastructure.
-
-* **Pulumi Team Pro** is ideal for medium to large teams using Pulumi for multiple projects
-or clouds.
+* **Pulumi Team** is ideal for teams of all sizes from just getting started deploying cloud
+applications and infrastructure to managing multiple projects and/or clouds.
 
 * **Pulumi Enterprise** is ideal for large organizations running cloud software at
 scale, with advanced or custom needs.
 
 For more information about the specific differences and capabilities offered for the
-Pulumi Team and Enterprise plans, refer to the [pricing page]({{< relref "/pricing" >}}).
+Pulumi Team and Enterprise editions, refer to the [pricing page]({{< relref "/pricing" >}}).
 
 Explore the following sections to learn more about the features and benefits of using the Pulumi Console.
 

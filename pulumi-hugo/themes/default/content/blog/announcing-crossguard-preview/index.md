@@ -7,7 +7,7 @@ authors: ["erin-krengel"]
 tags: ["policy-as-code", "features", "pulumi-news"]
 ---
 
-Over the past few months, we have been hard at work on Pulumi CrossGuard, a Policy as Code solution. Using CrossGuard, you can express flexible business and security rules using code. CrossGuard enables organization administrators to enforce these policies across their organization or just on specific stacks. CrossGuard allows you to verify or enforce custom policies on changes before they are applied to your resources. CrossGuard is 100% open source and available to all users of Pulumi, including the Community Edition. Advanced organization-wide policy management features are available to Team Pro and Enterprise customers.
+Over the past few months, we have been hard at work on Pulumi CrossGuard, a Policy as Code solution. Using CrossGuard, you can express flexible business and security rules using code. CrossGuard enables organization administrators to enforce these policies across their organization or just on specific stacks. CrossGuard allows you to verify or enforce custom policies on changes before they are applied to your resources. CrossGuard is 100% open source and available to all users of Pulumi, including the Individual Edition. Advanced organization-wide policy management features are available to Enterprise customers.
 
 <!--more-->
 
@@ -26,7 +26,7 @@ The key features available during the CrossGuard preview are:
 * [Policy SDK](https://github.com/pulumi/pulumi-policy) to express custom policies using TypeScript or JavaScript
 * [Run Policy Packs locally]({{< relref "/docs/guides/crossguard/get-started#running-locally" >}}) using the `--policy-pack` flag, available to all users
 * [AWSGuard](https://github.com/pulumi/pulumi-awsguard) codifies best practices for AWS
-* [Enforce Policy Packs]({{< relref "/docs/guides/crossguard/get-started#enforcing-a-policy-pack" >}}) across your organization or particular stacks in the Pulumi Console, for Team Pro and Enterprise users
+* [Enforce Policy Packs]({{< relref "/docs/guides/crossguard/get-started#enforcing-a-policy-pack" >}}) across your organization or particular stacks in the Pulumi Console, for Team and Enterprise users
 * View policy errors and Policy Packs for an update in the Pulumi Console
 
 ## Pulumi CrossGuard for Everyone
@@ -88,7 +88,7 @@ While this is a simple demonstration of what you can do with Policy as Code, the
 
 ## Try it Today
 
-Pulumi CrossGuard empowers everyone to build better, safer applications and infrastructure. Today, Pulumi CrossGuard is available to preview for all Pulumi users. For Team Pro and Enterprise organizations, administrators can opt-in to the preview via the "Policies" tab in the [Pulumi Console](https://app.pulumi.com/). To get started with CrossGuard today, here are some resources:
+Pulumi CrossGuard empowers everyone to build better, safer applications and infrastructure. Today, Pulumi CrossGuard is available to preview for all Pulumi users. For Enterprise organizations, administrators can opt-in to the preview via the "Policies" tab in the [Pulumi Console](https://app.pulumi.com/). To get started with CrossGuard today, here are some resources:
 
 * If haven't played around with Pulumi yet, here is [Pulumi's Getting Started tutorial]({{< relref "/docs/get-started" >}}).
 * [Policy as Code Getting Started tutorial]({{< relref "/docs/guides/crossguard/get-started" >}})

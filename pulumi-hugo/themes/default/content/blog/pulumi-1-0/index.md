@@ -40,7 +40,7 @@ Using Pulumi in conjunction with the Pulumi service delivers the following addit
 * **REST API and Webhooks**: a fully programmable web API for advanced automation scenarios.
 * **CI/CD Integrations**: automated deployment integrations with Azure DevOps, AWS Code Services, CircleCI, Codefresh, GitHub, GitLab, Google Cloud Build, Jenkins, Travis, and others.
 
-The Pulumi service is available as a free Community Edition as well as advanced Team and Enterprise SaaS editions for larger teams looking for robust enterprise capabilities.
+The Pulumi Service is available as a free Individual Edition as well as advanced Team and Enterprise SaaS editions for larger teams looking for robust enterprise capabilities.
 
 ## Why Pulumi?
 

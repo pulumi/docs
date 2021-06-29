@@ -93,7 +93,7 @@ To delete an access token:
 
 ## Subscription
 
-This tab provides details on your subscription information, which is the Pulumi Community Edition by default. It also provides ways to contact Pulumi for additional support.
+This tab provides details on your subscription information, which is the Pulumi Individual Edition by default. It also provides ways to contact Pulumi for additional support.
 
 ## Integrations
 

@@ -72,12 +72,16 @@
                     @apply text-lg;
                 }
             }
+
+            .compare-table-link {
+                @apply underline text-blue-600;
+            }
         }
     }
 }
 
 .pricing-faq {
-    @each $filter-type in "product" "billing" {
+    @each $filter-type in "product" "billing" "pricing" {
         #faq-#{$filter-type}:target {
             ~ #faq-headers {
                 li {
@@ -89,17 +93,27 @@
                 }
 
                 li[data-faq-label="#{$filter-type}"] {
-                    @apply border-b-4 border-solid border-gray-400;
+                    @apply border-b-4 border-solid border-blue-600;
 
                     a {
                         @apply text-black;
                     }
                 }
+
+                @if $filter-type != "pricing" {
+                    li[data-faq-label="pricing"] {
+                        @apply border-none;
+
+                        a {
+                            @apply text-gray-500;
+                        }
+                    }
+                }
             }
 
 
-            @if $filter-type != "product" {
-                ~ ul[data-faq-type="faq-product"] {
+            @if $filter-type != "pricing" {
+                ~ ul[data-faq-type="faq-pricing"] {
                     @apply hidden;
                 }
             }

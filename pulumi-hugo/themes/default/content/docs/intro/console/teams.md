@@ -13,8 +13,8 @@ aliases:
 ---
 
 {{% notes "info" %}}
-Teams are only available to organizations using Pulumi Team Pro or Pulumi Enterprise.
-To learn more about our plans visit our [pricing page]({{< relref "/pricing" >}}).
+Teams are only available to organizations using Pulumi Enterprise.
+To learn more about our editions visit our [pricing page]({{< relref "/pricing" >}}).
 {{% /notes %}}
 
 The Pulumi Console offers role-based access control (RBAC) using teams. Teams allow organization admins to assign a set of stack permissions

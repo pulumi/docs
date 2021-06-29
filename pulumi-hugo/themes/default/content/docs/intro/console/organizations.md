@@ -13,7 +13,7 @@ aliases:
 
 An organization is the primary grouping unit for stacks within the Pulumi Console.
 When you sign into the Pulumi Console, a personal account is automatically
-created for you and subscribed to the Pulumi Community plan.
+created for you and subscribed to the Pulumi Individual Edition.
 
 You can be a member of multiple Pulumi organizations.
 
@@ -171,6 +171,6 @@ and Settings tabs.
 | Dashboard | An overview of the organization including recently updated stacks, recent activity, and a resource count graph. |
 | Projects | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management]({{< relref "/docs/intro/console/project-and-stack-management" >}}). |
 | Members | A list of active members of the Pulumi organization. |
-| Teams | A [Team Pro]({{< relref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
+| Teams | An [Enterprise]({{< relref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
 | Policies | Lists of organization policies and policy groups. Policies allow you to set guardrails to enforce best practices and compliance. |
 | Settings | Organization settings including subscription and payment information and history, stack permissions, and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |

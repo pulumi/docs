@@ -394,4 +394,45 @@
             bottom: 15rem;
         }
     }
+
+    &.pricing-small-dots {
+        .dot-background-container {
+            @apply w-24 h-full relative;
+
+            .dot-background-overlay {
+                @apply w-full h-full absolute top-0 left-0 z-0;
+                background-color: rgba(255,255,255,0.5);
+            }
+
+            .dot-background {
+                @apply absolute left-1 top-0;
+            }
+        }
+
+        .circle-left {
+            @apply rounded-full absolute bg-yellow-600;
+            width: 19rem;
+            height: 19rem;
+            left: -9.5rem;
+            top: -9.5rem;
+        }
+    }
+
+    &.pricing-compare {
+        .circle-right {
+            @apply rounded-full absolute bg-salmon-600;
+            width: 12.5rem;
+            height: 12.5rem;
+            right: -6.25rem;
+            top: 6.25rem;
+        }
+
+        .circle-left {
+            @apply rounded-full absolute bg-purple-600;
+            width: 12.5rem;
+            height: 12.5rem;
+            left: -6.25rem;
+            bottom: 25rem;
+        }
+    }
 }

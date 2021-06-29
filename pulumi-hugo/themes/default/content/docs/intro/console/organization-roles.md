@@ -14,14 +14,9 @@ organization.
 
 ## Organization Membership
 
-{{% notes "info" %}}
-This only applies to organizations on the per-member subscription plan.
-Organizations billed per stack have slightly different rules regarding membership.
-{{% /notes %}}
-
 To become a member of a Pulumi organization, you must be invited by an existing Pulumi
 organization administrator, or you must submit a request to the administrator for approval.
-In addition, depending on the [Pulumi plans]({{< ref "docs/intro/console#pulumi-plans" >}}),
+In addition, depending on the [Pulumi edition]({{< ref "docs/intro/console#pulumi-plans" >}}),
 you must also be a member of the third-party organization or group backing the Pulumi organization.
 
 For example, to become a member of a Pulumi organization backed by a GitLab Group,
