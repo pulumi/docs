@@ -873,7 +873,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#api_go" style="color: inherit; text-decoration: inherit;">Api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapi">Application<wbr>Api</a></span>
+        <span class="property-type"><a href="#applicationapi">Application<wbr>Api<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `api` block as documented below, which configures API related settings for this Application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -882,7 +882,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#approles_go" style="color: inherit; text-decoration: inherit;">App<wbr>Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapprole">[]Application<wbr>App<wbr>Role<wbr>Type</a></span>
+        <span class="property-type"><a href="#applicationapprole">[]Application<wbr>App<wbr>Role<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information see [official documentation on Application Roles](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -972,7 +972,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#oauth2permissions_go" style="color: inherit; text-decoration: inherit;">Oauth2Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoauth2permission">[]Application<wbr>Oauth2Permission</a></span>
+        <span class="property-type"><a href="#applicationoauth2permission">[]Application<wbr>Oauth2Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by `oauth2_permissions` blocks as documented below. This block is deprecated and has been replaced by the `oauth2_permission_scope` block in the `api` block.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] The `oauth2_permissions` block has been renamed to `oauth2_permission_scope` and moved to the `api` block. `oauth2_permissions` will be removed in version 2.0 of the AzureAD provider.{{% /md %}}</p></dd><dt class="property-optional"
@@ -981,7 +981,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#optionalclaims_go" style="color: inherit; text-decoration: inherit;">Optional<wbr>Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoptionalclaims">Application<wbr>Optional<wbr>Claims</a></span>
+        <span class="property-type"><a href="#applicationoptionalclaims">Application<wbr>Optional<wbr>Claims<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd><dt class="property-optional"
@@ -1025,7 +1025,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#requiredresourceaccesses_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Resource<wbr>Accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrequiredresourceaccess">[]Application<wbr>Required<wbr>Resource<wbr>Access</a></span>
+        <span class="property-type"><a href="#applicationrequiredresourceaccess">[]Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1052,7 +1052,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#web_go" style="color: inherit; text-decoration: inherit;">Web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationweb">Application<wbr>Web</a></span>
+        <span class="property-type"><a href="#applicationweb">Application<wbr>Web<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `web` block as documented below, which configures web related settings for this Application.
 {{% /md %}}</dd></dl>
@@ -1934,7 +1934,7 @@ The following state arguments are supported:
 <a href="#state_api_go" style="color: inherit; text-decoration: inherit;">Api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapi">Application<wbr>Api</a></span>
+        <span class="property-type"><a href="#applicationapi">Application<wbr>Api<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `api` block as documented below, which configures API related settings for this Application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1943,7 +1943,7 @@ The following state arguments are supported:
 <a href="#state_approles_go" style="color: inherit; text-decoration: inherit;">App<wbr>Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapprole">[]Application<wbr>App<wbr>Role<wbr>Type</a></span>
+        <span class="property-type"><a href="#applicationapprole">[]Application<wbr>App<wbr>Role<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information see [official documentation on Application Roles](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2042,7 +2042,7 @@ The following state arguments are supported:
 <a href="#state_oauth2permissions_go" style="color: inherit; text-decoration: inherit;">Oauth2Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoauth2permission">[]Application<wbr>Oauth2Permission</a></span>
+        <span class="property-type"><a href="#applicationoauth2permission">[]Application<wbr>Oauth2Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by `oauth2_permissions` blocks as documented below. This block is deprecated and has been replaced by the `oauth2_permission_scope` block in the `api` block.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] The `oauth2_permissions` block has been renamed to `oauth2_permission_scope` and moved to the `api` block. `oauth2_permissions` will be removed in version 2.0 of the AzureAD provider.{{% /md %}}</p></dd><dt class="property-optional"
@@ -2060,7 +2060,7 @@ The following state arguments are supported:
 <a href="#state_optionalclaims_go" style="color: inherit; text-decoration: inherit;">Optional<wbr>Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoptionalclaims">Application<wbr>Optional<wbr>Claims</a></span>
+        <span class="property-type"><a href="#applicationoptionalclaims">Application<wbr>Optional<wbr>Claims<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd><dt class="property-optional"
@@ -2104,7 +2104,7 @@ The following state arguments are supported:
 <a href="#state_requiredresourceaccesses_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Resource<wbr>Accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrequiredresourceaccess">[]Application<wbr>Required<wbr>Resource<wbr>Access</a></span>
+        <span class="property-type"><a href="#applicationrequiredresourceaccess">[]Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2131,7 +2131,7 @@ The following state arguments are supported:
 <a href="#state_web_go" style="color: inherit; text-decoration: inherit;">Web</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationweb">Application<wbr>Web</a></span>
+        <span class="property-type"><a href="#applicationweb">Application<wbr>Web<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `web` block as documented below, which configures web related settings for this Application.
 {{% /md %}}</dd></dl>
@@ -2575,7 +2575,7 @@ The following state arguments are supported:
 <a href="#oauth2permissionscopes_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Permission<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapioauth2permissionscope">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Api<wbr>Oauth2Permission<wbr>Scope<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationapioauth2permissionscope">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Api<wbr>Oauth2Permission<wbr>Scope&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `oauth2_permission_scope` blocks as documented below, to describe delegated permissions exposed by the web API represented by this Application.
 {{% /md %}}</dd></dl>
@@ -2601,7 +2601,7 @@ The following state arguments are supported:
 <a href="#oauth2permissionscopes_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Permission<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapioauth2permissionscope">Application<wbr>Api<wbr>Oauth2Permission<wbr>Scope<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationapioauth2permissionscope">Application<wbr>Api<wbr>Oauth2Permission<wbr>Scope[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `oauth2_permission_scope` blocks as documented below, to describe delegated permissions exposed by the web API represented by this Application.
 {{% /md %}}</dd></dl>
@@ -2614,7 +2614,7 @@ The following state arguments are supported:
 <a href="#oauth2_permission_scopes_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>permission_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapioauth2permissionscope">Sequence[Application<wbr>Api<wbr>Oauth2Permission<wbr>Scope<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationapioauth2permissionscope">Sequence[Application<wbr>Api<wbr>Oauth2Permission<wbr>Scope]</a></span>
     </dt>
     <dd>{{% md %}}One or more `oauth2_permission_scope` blocks as documented below, to describe delegated permissions exposed by the web API represented by this Application.
 {{% /md %}}</dd></dl>
@@ -3511,7 +3511,7 @@ The following state arguments are supported:
 <a href="#accesstokens_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoptionalclaimsaccesstoken">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationoptionalclaimsaccesstoken">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3519,7 +3519,7 @@ The following state arguments are supported:
 <a href="#idtokens_csharp" style="color: inherit; text-decoration: inherit;">Id<wbr>Tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoptionalclaimsidtoken">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationoptionalclaimsidtoken">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3551,7 +3551,7 @@ The following state arguments are supported:
 <a href="#accesstokens_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoptionalclaimsaccesstoken">Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationoptionalclaimsaccesstoken">Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3559,7 +3559,7 @@ The following state arguments are supported:
 <a href="#idtokens_nodejs" style="color: inherit; text-decoration: inherit;">id<wbr>Tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoptionalclaimsidtoken">Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationoptionalclaimsidtoken">Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3571,7 +3571,7 @@ The following state arguments are supported:
 <a href="#access_tokens_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoptionalclaimsaccesstoken">Sequence[Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationoptionalclaimsaccesstoken">Sequence[Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3579,7 +3579,7 @@ The following state arguments are supported:
 <a href="#id_tokens_python" style="color: inherit; text-decoration: inherit;">id_<wbr>tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoptionalclaimsidtoken">Sequence[Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationoptionalclaimsidtoken">Sequence[Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3917,7 +3917,7 @@ The following state arguments are supported:
 <a href="#resourceaccesses_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrequiredresourceaccessresourceaccess">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationrequiredresourceaccessresourceaccess">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of `resource_access` blocks as documented below, describing OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -3961,7 +3961,7 @@ The following state arguments are supported:
 <a href="#resourceaccesses_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrequiredresourceaccessresourceaccess">Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationrequiredresourceaccessresourceaccess">Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `resource_access` blocks as documented below, describing OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -3983,7 +3983,7 @@ The following state arguments are supported:
 <a href="#resource_accesses_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrequiredresourceaccessresourceaccess">Sequence[Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationrequiredresourceaccessresourceaccess">Sequence[Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `resource_access` blocks as documented below, describing OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -4106,7 +4106,7 @@ The following state arguments are supported:
 <a href="#implicitgrant_csharp" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Grant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationwebimplicitgrant">Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Web<wbr>Implicit<wbr>Grant<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationwebimplicitgrant">Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Web<wbr>Implicit<wbr>Grant</a></span>
     </dt>
     <dd>{{% md %}}An `implicit_grant` block as documented above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4186,7 +4186,7 @@ The following state arguments are supported:
 <a href="#implicitgrant_nodejs" style="color: inherit; text-decoration: inherit;">implicit<wbr>Grant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationwebimplicitgrant">Application<wbr>Web<wbr>Implicit<wbr>Grant<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationwebimplicitgrant">Application<wbr>Web<wbr>Implicit<wbr>Grant</a></span>
     </dt>
     <dd>{{% md %}}An `implicit_grant` block as documented above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4226,7 +4226,7 @@ The following state arguments are supported:
 <a href="#implicit_grant_python" style="color: inherit; text-decoration: inherit;">implicit_<wbr>grant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationwebimplicitgrant">Application<wbr>Web<wbr>Implicit<wbr>Grant<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationwebimplicitgrant">Application<wbr>Web<wbr>Implicit<wbr>Grant</a></span>
     </dt>
     <dd>{{% md %}}An `implicit_grant` block as documented above.
 {{% /md %}}</dd><dt class="property-optional"

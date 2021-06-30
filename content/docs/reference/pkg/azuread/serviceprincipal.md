@@ -399,7 +399,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
 <a href="#oauth2permissionscopes_go" style="color: inherit; text-decoration: inherit;">Oauth2Permission<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipaloauth2permissionscope">[]Service<wbr>Principal<wbr>Oauth2Permission<wbr>Scope</a></span>
+        <span class="property-type"><a href="#serviceprincipaloauth2permissionscope">[]Service<wbr>Principal<wbr>Oauth2Permission<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 delegated permissions exposed by the associated Application. Each permission is covered by an `oauth2_permission_scopes` block as documented below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -408,7 +408,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
 <a href="#oauth2permissions_go" style="color: inherit; text-decoration: inherit;">Oauth2Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipaloauth2permission">[]Service<wbr>Principal<wbr>Oauth2Permission</a></span>
+        <span class="property-type"><a href="#serviceprincipaloauth2permission">[]Service<wbr>Principal<wbr>Oauth2Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(**Deprecated**) A collection of OAuth 2.0 permissions exposed by the associated Application. Each permission is covered by an `oauth2_permissions` block as documented below. Deprecated in favour of `oauth2_permission_scopes`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] The `oauth2_permissions` block has been renamed to `oauth2_permission_scopes` and moved to the `api` block. `oauth2_permissions` will be removed in version 2.0 of the AzureAD provider.{{% /md %}}</p></dd><dt class="property-optional"
@@ -909,7 +909,7 @@ The following state arguments are supported:
 <a href="#state_approles_go" style="color: inherit; text-decoration: inherit;">App<wbr>Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalapprole">[]Service<wbr>Principal<wbr>App<wbr>Role</a></span>
+        <span class="property-type"><a href="#serviceprincipalapprole">[]Service<wbr>Principal<wbr>App<wbr>Role<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of `app_roles` blocks as documented below. For more information [official documentation](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
 {{% /md %}}</dd><dt class="property-optional"
@@ -936,7 +936,7 @@ The following state arguments are supported:
 <a href="#state_oauth2permissionscopes_go" style="color: inherit; text-decoration: inherit;">Oauth2Permission<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipaloauth2permissionscope">[]Service<wbr>Principal<wbr>Oauth2Permission<wbr>Scope</a></span>
+        <span class="property-type"><a href="#serviceprincipaloauth2permissionscope">[]Service<wbr>Principal<wbr>Oauth2Permission<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 delegated permissions exposed by the associated Application. Each permission is covered by an `oauth2_permission_scopes` block as documented below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -945,7 +945,7 @@ The following state arguments are supported:
 <a href="#state_oauth2permissions_go" style="color: inherit; text-decoration: inherit;">Oauth2Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipaloauth2permission">[]Service<wbr>Principal<wbr>Oauth2Permission</a></span>
+        <span class="property-type"><a href="#serviceprincipaloauth2permission">[]Service<wbr>Principal<wbr>Oauth2Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(**Deprecated**) A collection of OAuth 2.0 permissions exposed by the associated Application. Each permission is covered by an `oauth2_permissions` block as documented below. Deprecated in favour of `oauth2_permission_scopes`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] The `oauth2_permissions` block has been renamed to `oauth2_permission_scopes` and moved to the `api` block. `oauth2_permissions` will be removed in version 2.0 of the AzureAD provider.{{% /md %}}</p></dd><dt class="property-optional"
