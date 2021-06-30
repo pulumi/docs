@@ -291,25 +291,19 @@ const testServiceIncidentRule = new opsgenie.ServiceIncidentRule("testServiceInc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceIncidentRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -321,25 +315,19 @@ const testServiceIncidentRule = new opsgenie.ServiceIncidentRule("testServiceInc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceIncidentRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -351,33 +339,25 @@ const testServiceIncidentRule = new opsgenie.ServiceIncidentRule("testServiceInc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceIncidentRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -389,25 +369,19 @@ const testServiceIncidentRule = new opsgenie.ServiceIncidentRule("testServiceInc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceIncidentRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -450,7 +424,7 @@ The ServiceIncidentRule resource accepts the following [input]({{< relref "/docs
 <a href="#incidentrules_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentrule">[]Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentrule">[]Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the rule configuration for this incident rule. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -720,7 +694,7 @@ The following state arguments are supported:
 <a href="#state_incidentrules_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentrule">[]Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentrule">[]Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the rule configuration for this incident rule. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -797,7 +771,7 @@ The following state arguments are supported:
 <a href="#incidentproperties_csharp" style="color: inherit; text-decoration: inherit;">Incident<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentproperty">List&lt;Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentproperty">List&lt;Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property&gt;</a></span>
     </dt>
     <dd>{{% md %}}Properties for incident rule. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -808,14 +782,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Condition type, supported types are: "match-all", "match-any-condition", "match-all-conditions". Default: "match-all"
+    <dd>{{% md %}}A Condition type, supported types are: `match-all`, `match-any-condition`, `match-all-conditions`. Default: `match-all`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_csharp">
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentrulecondition">List&lt;Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentrulecondition">List&lt;Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}Conditions applied to incident. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -839,7 +813,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Condition type, supported types are: "match-all", "match-any-condition", "match-all-conditions". Default: "match-all"
+    <dd>{{% md %}}A Condition type, supported types are: `match-all`, `match-any-condition`, `match-all-conditions`. Default: `match-all`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_go">
@@ -859,7 +833,7 @@ The following state arguments are supported:
 <a href="#incidentproperties_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentproperty">Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentproperty">Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property[]</a></span>
     </dt>
     <dd>{{% md %}}Properties for incident rule. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -870,14 +844,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Condition type, supported types are: "match-all", "match-any-condition", "match-all-conditions". Default: "match-all"
+    <dd>{{% md %}}A Condition type, supported types are: `match-all`, `match-any-condition`, `match-all-conditions`. Default: `match-all`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_nodejs">
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentrulecondition">Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentrulecondition">Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}Conditions applied to incident. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -890,7 +864,7 @@ The following state arguments are supported:
 <a href="#incident_properties_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentproperty">Sequence[Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentproperty">Sequence[Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property]</a></span>
     </dt>
     <dd>{{% md %}}Properties for incident rule. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -901,14 +875,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A Condition type, supported types are: "match-all", "match-any-condition", "match-all-conditions". Default: "match-all"
+    <dd>{{% md %}}A Condition type, supported types are: `match-all`, `match-any-condition`, `match-all-conditions`. Default: `match-all`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_python">
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentrulecondition">Sequence[Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentrulecondition">Sequence[Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}Conditions applied to incident. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -925,7 +899,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are "message", "alias", "description", "source", "entity", "tags", "actions", "details", "extra-properties", "recipients", "teams", "priority"
+    <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are `message`, `alias`, `description`, `source`, `entity`, `tags`, `actions`, `details`, `extra-properties`, `recipients`, `teams`, `priority`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_csharp">
@@ -934,7 +908,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are "matches", "contains", "starts-with", "ends-with", "equals", "contains-key", "contains-value", "greater-than", "less-than", "is-empty", "equals-ignore-whitespace".
+    <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are `matches`, `contains`, `starts-with`, `ends-with`, `equals`, `contains-key`, `contains-value`, `greater-than`, `less-than`, `is-empty`, `equals-ignore-whitespace`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedvalue_csharp">
@@ -973,7 +947,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are "message", "alias", "description", "source", "entity", "tags", "actions", "details", "extra-properties", "recipients", "teams", "priority"
+    <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are `message`, `alias`, `description`, `source`, `entity`, `tags`, `actions`, `details`, `extra-properties`, `recipients`, `teams`, `priority`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_go">
@@ -982,7 +956,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are "matches", "contains", "starts-with", "ends-with", "equals", "contains-key", "contains-value", "greater-than", "less-than", "is-empty", "equals-ignore-whitespace".
+    <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are `matches`, `contains`, `starts-with`, `ends-with`, `equals`, `contains-key`, `contains-value`, `greater-than`, `less-than`, `is-empty`, `equals-ignore-whitespace`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedvalue_go">
@@ -1021,7 +995,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are "message", "alias", "description", "source", "entity", "tags", "actions", "details", "extra-properties", "recipients", "teams", "priority"
+    <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are `message`, `alias`, `description`, `source`, `entity`, `tags`, `actions`, `details`, `extra-properties`, `recipients`, `teams`, `priority`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_nodejs">
@@ -1030,7 +1004,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are "matches", "contains", "starts-with", "ends-with", "equals", "contains-key", "contains-value", "greater-than", "less-than", "is-empty", "equals-ignore-whitespace".
+    <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are `matches`, `contains`, `starts-with`, `ends-with`, `equals`, `contains-key`, `contains-value`, `greater-than`, `less-than`, `is-empty`, `equals-ignore-whitespace`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedvalue_nodejs">
@@ -1069,7 +1043,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are "message", "alias", "description", "source", "entity", "tags", "actions", "details", "extra-properties", "recipients", "teams", "priority"
+    <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are `message`, `alias`, `description`, `source`, `entity`, `tags`, `actions`, `details`, `extra-properties`, `recipients`, `teams`, `priority`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_python">
@@ -1078,7 +1052,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are "matches", "contains", "starts-with", "ends-with", "equals", "contains-key", "contains-value", "greater-than", "less-than", "is-empty", "equals-ignore-whitespace".
+    <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are `matches`, `contains`, `starts-with`, `ends-with`, `equals`, `contains-key`, `contains-value`, `greater-than`, `less-than`, `is-empty`, `equals-ignore-whitespace`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expected_value_python">
@@ -1128,14 +1102,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Priority level of the alert. Possible values are P1, P2, P3, P4 and P5
+    <dd>{{% md %}}Priority level of the alert. Possible values are `P1`, `P2`, `P3`, `P4` and `P5`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stakeholderproperties_csharp">
 <a href="#stakeholderproperties_csharp" style="color: inherit; text-decoration: inherit;">Stakeholder<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentpropertystakeholderproperty">List&lt;Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property<wbr>Stakeholder<wbr>Property<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentpropertystakeholderproperty">List&lt;Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property<wbr>Stakeholder<wbr>Property&gt;</a></span>
     </dt>
     <dd>{{% md %}}DEtails about stakeholders for this rule. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1186,7 +1160,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Priority level of the alert. Possible values are P1, P2, P3, P4 and P5
+    <dd>{{% md %}}Priority level of the alert. Possible values are `P1`, `P2`, `P3`, `P4` and `P5`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stakeholderproperties_go">
@@ -1244,14 +1218,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Priority level of the alert. Possible values are P1, P2, P3, P4 and P5
+    <dd>{{% md %}}Priority level of the alert. Possible values are `P1`, `P2`, `P3`, `P4` and `P5`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stakeholderproperties_nodejs">
 <a href="#stakeholderproperties_nodejs" style="color: inherit; text-decoration: inherit;">stakeholder<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentpropertystakeholderproperty">Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property<wbr>Stakeholder<wbr>Property<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentpropertystakeholderproperty">Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property<wbr>Stakeholder<wbr>Property[]</a></span>
     </dt>
     <dd>{{% md %}}DEtails about stakeholders for this rule. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1302,14 +1276,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Priority level of the alert. Possible values are P1, P2, P3, P4 and P5
+    <dd>{{% md %}}Priority level of the alert. Possible values are `P1`, `P2`, `P3`, `P4` and `P5`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stakeholder_properties_python">
 <a href="#stakeholder_properties_python" style="color: inherit; text-decoration: inherit;">stakeholder_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentpropertystakeholderproperty">Sequence[Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property<wbr>Stakeholder<wbr>Property<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentpropertystakeholderproperty">Sequence[Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property<wbr>Stakeholder<wbr>Property]</a></span>
     </dt>
     <dd>{{% md %}}DEtails about stakeholders for this rule. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1473,7 +1447,7 @@ The following state arguments are supported:
 Service Incident Rule can be imported using the `service_id/service_incident_rule_id`, e.g.
 
 ```sh
- $ pulumi import opsgenie:index/serviceIncidentRule:ServiceIncidentRule this 812be1a1-32c8-4666-a7fb-03ecc385106c/b84ed86f-6ce3-4388-91ac-7638ac0a8052`
+ $ pulumi import opsgenie:index/serviceIncidentRule:ServiceIncidentRule this service_id/service_incident_rule_id`
 ```
 
 

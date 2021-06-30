@@ -742,25 +742,19 @@ const testAction = new opsgenie.IntegrationAction("testAction", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IntegrationActionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -772,25 +766,19 @@ const testAction = new opsgenie.IntegrationAction("testAction", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IntegrationActionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -802,33 +790,25 @@ const testAction = new opsgenie.IntegrationAction("testAction", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IntegrationActionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -840,25 +820,19 @@ const testAction = new opsgenie.IntegrationAction("testAction", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IntegrationActionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -941,7 +915,7 @@ The IntegrationAction resource accepts the following [input]({{< relref "/docs/i
 <a href="#acknowledges_go" style="color: inherit; text-decoration: inherit;">Acknowledges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionacknowledge">[]Integration<wbr>Action<wbr>Acknowledge</a></span>
+        <span class="property-type"><a href="#integrationactionacknowledge">[]Integration<wbr>Action<wbr>Acknowledge<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -949,7 +923,7 @@ The IntegrationAction resource accepts the following [input]({{< relref "/docs/i
 <a href="#addnotes_go" style="color: inherit; text-decoration: inherit;">Add<wbr>Notes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionaddnote">[]Integration<wbr>Action<wbr>Add<wbr>Note</a></span>
+        <span class="property-type"><a href="#integrationactionaddnote">[]Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -957,7 +931,7 @@ The IntegrationAction resource accepts the following [input]({{< relref "/docs/i
 <a href="#closes_go" style="color: inherit; text-decoration: inherit;">Closes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionclose">[]Integration<wbr>Action<wbr>Close</a></span>
+        <span class="property-type"><a href="#integrationactionclose">[]Integration<wbr>Action<wbr>Close<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -965,7 +939,7 @@ The IntegrationAction resource accepts the following [input]({{< relref "/docs/i
 <a href="#creates_go" style="color: inherit; text-decoration: inherit;">Creates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreate">[]Integration<wbr>Action<wbr>Create</a></span>
+        <span class="property-type"><a href="#integrationactioncreate">[]Integration<wbr>Action<wbr>Create<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -973,7 +947,7 @@ The IntegrationAction resource accepts the following [input]({{< relref "/docs/i
 <a href="#ignores_go" style="color: inherit; text-decoration: inherit;">Ignores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionignore">[]Integration<wbr>Action<wbr>Ignore</a></span>
+        <span class="property-type"><a href="#integrationactionignore">[]Integration<wbr>Action<wbr>Ignore<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1330,7 +1304,7 @@ The following state arguments are supported:
 <a href="#state_acknowledges_go" style="color: inherit; text-decoration: inherit;">Acknowledges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionacknowledge">[]Integration<wbr>Action<wbr>Acknowledge</a></span>
+        <span class="property-type"><a href="#integrationactionacknowledge">[]Integration<wbr>Action<wbr>Acknowledge<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1338,7 +1312,7 @@ The following state arguments are supported:
 <a href="#state_addnotes_go" style="color: inherit; text-decoration: inherit;">Add<wbr>Notes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionaddnote">[]Integration<wbr>Action<wbr>Add<wbr>Note</a></span>
+        <span class="property-type"><a href="#integrationactionaddnote">[]Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1346,7 +1320,7 @@ The following state arguments are supported:
 <a href="#state_closes_go" style="color: inherit; text-decoration: inherit;">Closes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionclose">[]Integration<wbr>Action<wbr>Close</a></span>
+        <span class="property-type"><a href="#integrationactionclose">[]Integration<wbr>Action<wbr>Close<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1354,7 +1328,7 @@ The following state arguments are supported:
 <a href="#state_creates_go" style="color: inherit; text-decoration: inherit;">Creates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreate">[]Integration<wbr>Action<wbr>Create</a></span>
+        <span class="property-type"><a href="#integrationactioncreate">[]Integration<wbr>Action<wbr>Create<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1362,7 +1336,7 @@ The following state arguments are supported:
 <a href="#state_ignores_go" style="color: inherit; text-decoration: inherit;">Ignores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionignore">[]Integration<wbr>Action<wbr>Ignore</a></span>
+        <span class="property-type"><a href="#integrationactionignore">[]Integration<wbr>Action<wbr>Ignore<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1518,7 +1492,7 @@ The following state arguments are supported:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionacknowledgefilter">List&lt;Integration<wbr>Action<wbr>Acknowledge<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#integrationactionacknowledgefilter">List&lt;Integration<wbr>Action<wbr>Acknowledge<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -1658,7 +1632,7 @@ The following state arguments are supported:
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionacknowledgefilter">Integration<wbr>Action<wbr>Acknowledge<wbr>Filter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#integrationactionacknowledgefilter">Integration<wbr>Action<wbr>Acknowledge<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -1728,7 +1702,7 @@ The following state arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionacknowledgefilter">Sequence[Integration<wbr>Action<wbr>Acknowledge<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionacknowledgefilter">Sequence[Integration<wbr>Action<wbr>Acknowledge<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -1791,7 +1765,7 @@ The following state arguments are supported:
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionacknowledgefiltercondition">List&lt;Integration<wbr>Action<wbr>Acknowledge<wbr>Filter<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#integrationactionacknowledgefiltercondition">List&lt;Integration<wbr>Action<wbr>Acknowledge<wbr>Filter<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1833,7 +1807,7 @@ The following state arguments are supported:
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionacknowledgefiltercondition">Integration<wbr>Action<wbr>Acknowledge<wbr>Filter<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#integrationactionacknowledgefiltercondition">Integration<wbr>Action<wbr>Acknowledge<wbr>Filter<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1854,7 +1828,7 @@ The following state arguments are supported:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionacknowledgefiltercondition">Sequence[Integration<wbr>Action<wbr>Acknowledge<wbr>Filter<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionacknowledgefiltercondition">Sequence[Integration<wbr>Action<wbr>Acknowledge<wbr>Filter<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2100,7 +2074,7 @@ The following state arguments are supported:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionaddnotefilter">List&lt;Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#integrationactionaddnotefilter">List&lt;Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -2240,7 +2214,7 @@ The following state arguments are supported:
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionaddnotefilter">Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#integrationactionaddnotefilter">Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -2310,7 +2284,7 @@ The following state arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionaddnotefilter">Sequence[Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionaddnotefilter">Sequence[Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -2373,7 +2347,7 @@ The following state arguments are supported:
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionaddnotefiltercondition">List&lt;Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#integrationactionaddnotefiltercondition">List&lt;Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2415,7 +2389,7 @@ The following state arguments are supported:
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionaddnotefiltercondition">Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#integrationactionaddnotefiltercondition">Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2436,7 +2410,7 @@ The following state arguments are supported:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionaddnotefiltercondition">Sequence[Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionaddnotefiltercondition">Sequence[Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2682,7 +2656,7 @@ The following state arguments are supported:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionclosefilter">List&lt;Integration<wbr>Action<wbr>Close<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#integrationactionclosefilter">List&lt;Integration<wbr>Action<wbr>Close<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -2822,7 +2796,7 @@ The following state arguments are supported:
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionclosefilter">Integration<wbr>Action<wbr>Close<wbr>Filter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#integrationactionclosefilter">Integration<wbr>Action<wbr>Close<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -2892,7 +2866,7 @@ The following state arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionclosefilter">Sequence[Integration<wbr>Action<wbr>Close<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionclosefilter">Sequence[Integration<wbr>Action<wbr>Close<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -2955,7 +2929,7 @@ The following state arguments are supported:
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionclosefiltercondition">List&lt;Integration<wbr>Action<wbr>Close<wbr>Filter<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#integrationactionclosefiltercondition">List&lt;Integration<wbr>Action<wbr>Close<wbr>Filter<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2997,7 +2971,7 @@ The following state arguments are supported:
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionclosefiltercondition">Integration<wbr>Action<wbr>Close<wbr>Filter<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#integrationactionclosefiltercondition">Integration<wbr>Action<wbr>Close<wbr>Filter<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3018,7 +2992,7 @@ The following state arguments are supported:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionclosefiltercondition">Sequence[Integration<wbr>Action<wbr>Close<wbr>Filter<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionclosefiltercondition">Sequence[Integration<wbr>Action<wbr>Close<wbr>Filter<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3316,7 +3290,7 @@ The following state arguments are supported:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreatefilter">List&lt;Integration<wbr>Action<wbr>Create<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#integrationactioncreatefilter">List&lt;Integration<wbr>Action<wbr>Create<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -3406,7 +3380,7 @@ The following state arguments are supported:
 <a href="#responders_csharp" style="color: inherit; text-decoration: inherit;">Responders</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreateresponder">List&lt;Integration<wbr>Action<wbr>Create<wbr>Responder<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#integrationactioncreateresponder">List&lt;Integration<wbr>Action<wbr>Create<wbr>Responder&gt;</a></span>
     </dt>
     <dd>{{% md %}}User, schedule, teams or escalation names to calculate which users will receive notifications of the alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3734,7 +3708,7 @@ The following state arguments are supported:
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreatefilter">Integration<wbr>Action<wbr>Create<wbr>Filter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#integrationactioncreatefilter">Integration<wbr>Action<wbr>Create<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -3824,7 +3798,7 @@ The following state arguments are supported:
 <a href="#responders_nodejs" style="color: inherit; text-decoration: inherit;">responders</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreateresponder">Integration<wbr>Action<wbr>Create<wbr>Responder<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#integrationactioncreateresponder">Integration<wbr>Action<wbr>Create<wbr>Responder[]</a></span>
     </dt>
     <dd>{{% md %}}User, schedule, teams or escalation names to calculate which users will receive notifications of the alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3943,7 +3917,7 @@ The following state arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreatefilter">Sequence[Integration<wbr>Action<wbr>Create<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactioncreatefilter">Sequence[Integration<wbr>Action<wbr>Create<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -4033,7 +4007,7 @@ The following state arguments are supported:
 <a href="#responders_python" style="color: inherit; text-decoration: inherit;">responders</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreateresponder">Sequence[Integration<wbr>Action<wbr>Create<wbr>Responder<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactioncreateresponder">Sequence[Integration<wbr>Action<wbr>Create<wbr>Responder]</a></span>
     </dt>
     <dd>{{% md %}}User, schedule, teams or escalation names to calculate which users will receive notifications of the alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4093,7 +4067,7 @@ The following state arguments are supported:
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreatefiltercondition">List&lt;Integration<wbr>Action<wbr>Create<wbr>Filter<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#integrationactioncreatefiltercondition">List&lt;Integration<wbr>Action<wbr>Create<wbr>Filter<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4135,7 +4109,7 @@ The following state arguments are supported:
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreatefiltercondition">Integration<wbr>Action<wbr>Create<wbr>Filter<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#integrationactioncreatefiltercondition">Integration<wbr>Action<wbr>Create<wbr>Filter<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4156,7 +4130,7 @@ The following state arguments are supported:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreatefiltercondition">Sequence[Integration<wbr>Action<wbr>Create<wbr>Filter<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactioncreatefiltercondition">Sequence[Integration<wbr>Action<wbr>Create<wbr>Filter<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4483,7 +4457,7 @@ The following state arguments are supported:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionignorefilter">List&lt;Integration<wbr>Action<wbr>Ignore<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#integrationactionignorefilter">List&lt;Integration<wbr>Action<wbr>Ignore<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -4569,7 +4543,7 @@ The following state arguments are supported:
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionignorefilter">Integration<wbr>Action<wbr>Ignore<wbr>Filter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#integrationactionignorefilter">Integration<wbr>Action<wbr>Ignore<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -4612,7 +4586,7 @@ The following state arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionignorefilter">Sequence[Integration<wbr>Action<wbr>Ignore<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionignorefilter">Sequence[Integration<wbr>Action<wbr>Ignore<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -4657,7 +4631,7 @@ The following state arguments are supported:
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionignorefiltercondition">List&lt;Integration<wbr>Action<wbr>Ignore<wbr>Filter<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#integrationactionignorefiltercondition">List&lt;Integration<wbr>Action<wbr>Ignore<wbr>Filter<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4699,7 +4673,7 @@ The following state arguments are supported:
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionignorefiltercondition">Integration<wbr>Action<wbr>Ignore<wbr>Filter<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#integrationactionignorefiltercondition">Integration<wbr>Action<wbr>Ignore<wbr>Filter<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4720,7 +4694,7 @@ The following state arguments are supported:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionignorefiltercondition">Sequence[Integration<wbr>Action<wbr>Ignore<wbr>Filter<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionignorefiltercondition">Sequence[Integration<wbr>Action<wbr>Ignore<wbr>Filter<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

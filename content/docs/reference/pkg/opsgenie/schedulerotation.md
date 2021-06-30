@@ -238,25 +238,19 @@ const test = new opsgenie.ScheduleRotation("test", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ScheduleRotationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -268,25 +262,19 @@ const test = new opsgenie.ScheduleRotation("test", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ScheduleRotationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -298,33 +286,25 @@ const test = new opsgenie.ScheduleRotation("test", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ScheduleRotationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -336,25 +316,19 @@ const test = new opsgenie.ScheduleRotation("test", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ScheduleRotationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -450,7 +424,7 @@ The ScheduleRotation resource accepts the following [input]({{< relref "/docs/in
 <a href="#participants_go" style="color: inherit; text-decoration: inherit;">Participants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulerotationparticipant">[]Schedule<wbr>Rotation<wbr>Participant</a></span>
+        <span class="property-type"><a href="#schedulerotationparticipant">[]Schedule<wbr>Rotation<wbr>Participant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of escalations, teams, users or the reserved word none which will be used in schedule. Each of them can be used multiple times and will be rotated in the order they given. "user,escalation,team,none"
 {{% /md %}}</dd><dt class="property-required"
@@ -513,7 +487,7 @@ The ScheduleRotation resource accepts the following [input]({{< relref "/docs/in
 <a href="#timerestrictions_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulerotationtimerestriction">[]Schedule<wbr>Rotation<wbr>Time<wbr>Restriction</a></span>
+        <span class="property-type"><a href="#schedulerotationtimerestriction">[]Schedule<wbr>Rotation<wbr>Time<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -965,7 +939,7 @@ The following state arguments are supported:
 <a href="#state_participants_go" style="color: inherit; text-decoration: inherit;">Participants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulerotationparticipant">[]Schedule<wbr>Rotation<wbr>Participant</a></span>
+        <span class="property-type"><a href="#schedulerotationparticipant">[]Schedule<wbr>Rotation<wbr>Participant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of escalations, teams, users or the reserved word none which will be used in schedule. Each of them can be used multiple times and will be rotated in the order they given. "user,escalation,team,none"
 {{% /md %}}</dd><dt class="property-optional"
@@ -992,7 +966,7 @@ The following state arguments are supported:
 <a href="#state_timerestrictions_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulerotationtimerestriction">[]Schedule<wbr>Rotation<wbr>Time<wbr>Restriction</a></span>
+        <span class="property-type"><a href="#schedulerotationtimerestriction">[]Schedule<wbr>Rotation<wbr>Time<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1273,7 +1247,7 @@ The following state arguments are supported:
 <a href="#restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulerotationtimerestrictionrestriction">List&lt;Schedule<wbr>Rotation<wbr>Time<wbr>Restriction<wbr>Restriction<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#schedulerotationtimerestrictionrestriction">List&lt;Schedule<wbr>Rotation<wbr>Time<wbr>Restriction<wbr>Restriction&gt;</a></span>
     </dt>
     <dd>{{% md %}}It is a restriction object which is described below. This can be used only if time restriction type is `weekday-and-time-of-day`.
 {{% /md %}}</dd></dl>
@@ -1317,7 +1291,7 @@ The following state arguments are supported:
 <a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulerotationtimerestrictionrestriction">Schedule<wbr>Rotation<wbr>Time<wbr>Restriction<wbr>Restriction<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#schedulerotationtimerestrictionrestriction">Schedule<wbr>Rotation<wbr>Time<wbr>Restriction<wbr>Restriction[]</a></span>
     </dt>
     <dd>{{% md %}}It is a restriction object which is described below. This can be used only if time restriction type is `weekday-and-time-of-day`.
 {{% /md %}}</dd></dl>
@@ -1339,7 +1313,7 @@ The following state arguments are supported:
 <a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulerotationtimerestrictionrestriction">Sequence[Schedule<wbr>Rotation<wbr>Time<wbr>Restriction<wbr>Restriction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#schedulerotationtimerestrictionrestriction">Sequence[Schedule<wbr>Rotation<wbr>Time<wbr>Restriction<wbr>Restriction]</a></span>
     </dt>
     <dd>{{% md %}}It is a restriction object which is described below. This can be used only if time restriction type is `weekday-and-time-of-day`.
 {{% /md %}}</dd></dl>
@@ -1581,18 +1555,10 @@ The following state arguments are supported:
 ## Import
 
 
-Schedule Rotations can be imported using the `id` and `schedule_id`, e.g.
+Schedule Rotations can be imported using the `schedule_id/rotation_id`, e.g.
 
 ```sh
- $ pulumi import opsgenie:index/scheduleRotation:ScheduleRotation * `opsgenie_schedule_rotation.test schedule_id/id`
-```
-
- For this example- Schedule Id = `c827c472-31f2-497b-9ec6-8ec855d7d94c`
-
-- Rotation Id = `2d1a78d0-c13e-47d3-af0a-8b6d0cc2b7b1`
-
-```sh
- $ pulumi import opsgenie:index/scheduleRotation:ScheduleRotation test c827c472-31f2-497b-9ec6-8ec855d7d94c/2d1a78d0-c13e-47d3-af0a-8b6d0cc2b7b1`
+ $ pulumi import opsgenie:index/scheduleRotation:ScheduleRotation * `opsgenie_schedule_rotation.test schedule_id/rotation_id`
 ```
 
 

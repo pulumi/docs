@@ -254,25 +254,19 @@ const test3 = new opsgenie.ApiIntegration("test3", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ApiIntegrationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -284,25 +278,19 @@ const test3 = new opsgenie.ApiIntegration("test3", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ApiIntegrationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -314,33 +302,25 @@ const test3 = new opsgenie.ApiIntegration("test3", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ApiIntegrationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -352,25 +332,19 @@ const test3 = new opsgenie.ApiIntegration("test3", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ApiIntegrationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -393,7 +367,7 @@ The ApiIntegration resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This parameter is for configuring the write access of integration. If write access is restricted, the integration will not be authorized to write within any domain. Defaults to true.
+    <dd>{{% md %}}This parameter is for configuring the write access of integration. If write access is restricted, the integration will not be authorized to write within any domain. Default: `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
@@ -402,7 +376,7 @@ The ApiIntegration resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This parameter is for specifying whether the integration will be enabled or not. Defaults to true
+    <dd>{{% md %}}This parameter is for specifying whether the integration will be enabled or not. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
@@ -419,7 +393,7 @@ The ApiIntegration resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Defaults to false.
+    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -455,7 +429,7 @@ The ApiIntegration resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Defaults to false.
+    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
@@ -486,7 +460,7 @@ The ApiIntegration resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This parameter is for configuring the write access of integration. If write access is restricted, the integration will not be authorized to write within any domain. Defaults to true.
+    <dd>{{% md %}}This parameter is for configuring the write access of integration. If write access is restricted, the integration will not be authorized to write within any domain. Default: `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
@@ -495,7 +469,7 @@ The ApiIntegration resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This parameter is for specifying whether the integration will be enabled or not. Defaults to true
+    <dd>{{% md %}}This parameter is for specifying whether the integration will be enabled or not. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_go">
@@ -512,7 +486,7 @@ The ApiIntegration resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Defaults to false.
+    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -537,7 +511,7 @@ The ApiIntegration resource accepts the following [input]({{< relref "/docs/intr
 <a href="#responders_go" style="color: inherit; text-decoration: inherit;">Responders</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiintegrationresponder">[]Api<wbr>Integration<wbr>Responder</a></span>
+        <span class="property-type"><a href="#apiintegrationresponder">[]Api<wbr>Integration<wbr>Responder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User, schedule, teams or escalation names to calculate which users will receive the notifications of the alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -548,7 +522,7 @@ The ApiIntegration resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Defaults to false.
+    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
@@ -579,7 +553,7 @@ The ApiIntegration resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}This parameter is for configuring the write access of integration. If write access is restricted, the integration will not be authorized to write within any domain. Defaults to true.
+    <dd>{{% md %}}This parameter is for configuring the write access of integration. If write access is restricted, the integration will not be authorized to write within any domain. Default: `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
@@ -588,7 +562,7 @@ The ApiIntegration resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}This parameter is for specifying whether the integration will be enabled or not. Defaults to true
+    <dd>{{% md %}}This parameter is for specifying whether the integration will be enabled or not. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
@@ -605,7 +579,7 @@ The ApiIntegration resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Defaults to false.
+    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -641,7 +615,7 @@ The ApiIntegration resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Defaults to false.
+    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
@@ -672,7 +646,7 @@ The ApiIntegration resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This parameter is for configuring the write access of integration. If write access is restricted, the integration will not be authorized to write within any domain. Defaults to true.
+    <dd>{{% md %}}This parameter is for configuring the write access of integration. If write access is restricted, the integration will not be authorized to write within any domain. Default: `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
@@ -681,7 +655,7 @@ The ApiIntegration resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This parameter is for specifying whether the integration will be enabled or not. Defaults to true
+    <dd>{{% md %}}This parameter is for specifying whether the integration will be enabled or not. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_python">
@@ -698,7 +672,7 @@ The ApiIntegration resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Defaults to false.
+    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -734,7 +708,7 @@ The ApiIntegration resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Defaults to false.
+    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
@@ -992,7 +966,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This parameter is for configuring the write access of integration. If write access is restricted, the integration will not be authorized to write within any domain. Defaults to true.
+    <dd>{{% md %}}This parameter is for configuring the write access of integration. If write access is restricted, the integration will not be authorized to write within any domain. Default: `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apikey_csharp">
@@ -1010,7 +984,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This parameter is for specifying whether the integration will be enabled or not. Defaults to true
+    <dd>{{% md %}}This parameter is for specifying whether the integration will be enabled or not. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headers_csharp">
@@ -1027,7 +1001,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Defaults to false.
+    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1063,7 +1037,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Defaults to false.
+    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
@@ -1094,7 +1068,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This parameter is for configuring the write access of integration. If write access is restricted, the integration will not be authorized to write within any domain. Defaults to true.
+    <dd>{{% md %}}This parameter is for configuring the write access of integration. If write access is restricted, the integration will not be authorized to write within any domain. Default: `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apikey_go">
@@ -1112,7 +1086,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This parameter is for specifying whether the integration will be enabled or not. Defaults to true
+    <dd>{{% md %}}This parameter is for specifying whether the integration will be enabled or not. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headers_go">
@@ -1129,7 +1103,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Defaults to false.
+    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1154,7 +1128,7 @@ The following state arguments are supported:
 <a href="#state_responders_go" style="color: inherit; text-decoration: inherit;">Responders</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiintegrationresponder">[]Api<wbr>Integration<wbr>Responder</a></span>
+        <span class="property-type"><a href="#apiintegrationresponder">[]Api<wbr>Integration<wbr>Responder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User, schedule, teams or escalation names to calculate which users will receive the notifications of the alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1165,7 +1139,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Defaults to false.
+    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
@@ -1196,7 +1170,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}This parameter is for configuring the write access of integration. If write access is restricted, the integration will not be authorized to write within any domain. Defaults to true.
+    <dd>{{% md %}}This parameter is for configuring the write access of integration. If write access is restricted, the integration will not be authorized to write within any domain. Default: `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apikey_nodejs">
@@ -1214,7 +1188,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}This parameter is for specifying whether the integration will be enabled or not. Defaults to true
+    <dd>{{% md %}}This parameter is for specifying whether the integration will be enabled or not. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headers_nodejs">
@@ -1231,7 +1205,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Defaults to false.
+    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1267,7 +1241,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Defaults to false.
+    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
@@ -1298,7 +1272,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This parameter is for configuring the write access of integration. If write access is restricted, the integration will not be authorized to write within any domain. Defaults to true.
+    <dd>{{% md %}}This parameter is for configuring the write access of integration. If write access is restricted, the integration will not be authorized to write within any domain. Default: `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_api_key_python">
@@ -1316,7 +1290,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This parameter is for specifying whether the integration will be enabled or not. Defaults to true
+    <dd>{{% md %}}This parameter is for specifying whether the integration will be enabled or not. Default: `true`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headers_python">
@@ -1333,7 +1307,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Defaults to false.
+    <dd>{{% md %}}If enabled, the integration will ignore recipients sent in request payloads. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -1369,7 +1343,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Defaults to false.
+    <dd>{{% md %}}If enabled, notifications that come from alerts will be suppressed. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
@@ -1492,10 +1466,10 @@ The following state arguments are supported:
 ## Import
 
 
-API Integrations can be imported using the `id`, e.g.
+API Integrations can be imported using the `integration_id`, e.g.
 
 ```sh
- $ pulumi import opsgenie:index/apiIntegration:ApiIntegration defaultintegration 812be1a1-32c8-4666-a7fb-03ecc385106c`
+ $ pulumi import opsgenie:index/apiIntegration:ApiIntegration this integration_id`
 ```
 
 

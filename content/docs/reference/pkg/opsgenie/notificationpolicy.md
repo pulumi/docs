@@ -59,25 +59,19 @@ Manages a Notification Policy within Opsgenie.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NotificationPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -89,25 +83,19 @@ Manages a Notification Policy within Opsgenie.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NotificationPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -119,33 +107,25 @@ Manages a Notification Policy within Opsgenie.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NotificationPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -157,25 +137,19 @@ Manages a Notification Policy within Opsgenie.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NotificationPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -299,7 +273,7 @@ The NotificationPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicyfilter">[]Notification<wbr>Policy<wbr>Filter</a></span>
+        <span class="property-type"><a href="#notificationpolicyfilter">[]Notification<wbr>Policy<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A notification filter which will be applied. This filter can be empty: `filter {}` - this means `match-all`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -317,7 +291,7 @@ The NotificationPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#autocloseactions_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Close<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicyautocloseaction">[]Notification<wbr>Policy<wbr>Auto<wbr>Close<wbr>Action</a></span>
+        <span class="property-type"><a href="#notificationpolicyautocloseaction">[]Notification<wbr>Policy<wbr>Auto<wbr>Close<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto Restart Action of the policy. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -326,7 +300,7 @@ The NotificationPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#autorestartactions_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Restart<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicyautorestartaction">[]Notification<wbr>Policy<wbr>Auto<wbr>Restart<wbr>Action</a></span>
+        <span class="property-type"><a href="#notificationpolicyautorestartaction">[]Notification<wbr>Policy<wbr>Auto<wbr>Restart<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto Restart Action of the policy. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -335,7 +309,7 @@ The NotificationPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#deduplicationactions_go" style="color: inherit; text-decoration: inherit;">De<wbr>Duplication<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicydeduplicationaction">[]Notification<wbr>Policy<wbr>De<wbr>Duplication<wbr>Action</a></span>
+        <span class="property-type"><a href="#notificationpolicydeduplicationaction">[]Notification<wbr>Policy<wbr>De<wbr>Duplication<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deduplication Action of the policy. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -344,7 +318,7 @@ The NotificationPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#delayactions_go" style="color: inherit; text-decoration: inherit;">Delay<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicydelayaction">[]Notification<wbr>Policy<wbr>Delay<wbr>Action</a></span>
+        <span class="property-type"><a href="#notificationpolicydelayaction">[]Notification<wbr>Policy<wbr>Delay<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delay notifications. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -389,7 +363,7 @@ The NotificationPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#timerestrictions_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicytimerestriction">[]Notification<wbr>Policy<wbr>Time<wbr>Restriction</a></span>
+        <span class="property-type"><a href="#notificationpolicytimerestriction">[]Notification<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time restrictions specified in this field must be met for this policy to work. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -902,7 +876,7 @@ The following state arguments are supported:
 <a href="#state_autocloseactions_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Close<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicyautocloseaction">[]Notification<wbr>Policy<wbr>Auto<wbr>Close<wbr>Action</a></span>
+        <span class="property-type"><a href="#notificationpolicyautocloseaction">[]Notification<wbr>Policy<wbr>Auto<wbr>Close<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto Restart Action of the policy. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -911,7 +885,7 @@ The following state arguments are supported:
 <a href="#state_autorestartactions_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Restart<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicyautorestartaction">[]Notification<wbr>Policy<wbr>Auto<wbr>Restart<wbr>Action</a></span>
+        <span class="property-type"><a href="#notificationpolicyautorestartaction">[]Notification<wbr>Policy<wbr>Auto<wbr>Restart<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto Restart Action of the policy. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -920,7 +894,7 @@ The following state arguments are supported:
 <a href="#state_deduplicationactions_go" style="color: inherit; text-decoration: inherit;">De<wbr>Duplication<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicydeduplicationaction">[]Notification<wbr>Policy<wbr>De<wbr>Duplication<wbr>Action</a></span>
+        <span class="property-type"><a href="#notificationpolicydeduplicationaction">[]Notification<wbr>Policy<wbr>De<wbr>Duplication<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deduplication Action of the policy. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -929,7 +903,7 @@ The following state arguments are supported:
 <a href="#state_delayactions_go" style="color: inherit; text-decoration: inherit;">Delay<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicydelayaction">[]Notification<wbr>Policy<wbr>Delay<wbr>Action</a></span>
+        <span class="property-type"><a href="#notificationpolicydelayaction">[]Notification<wbr>Policy<wbr>Delay<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delay notifications. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -947,7 +921,7 @@ The following state arguments are supported:
 <a href="#state_filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicyfilter">[]Notification<wbr>Policy<wbr>Filter</a></span>
+        <span class="property-type"><a href="#notificationpolicyfilter">[]Notification<wbr>Policy<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A notification filter which will be applied. This filter can be empty: `filter {}` - this means `match-all`. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -992,7 +966,7 @@ The following state arguments are supported:
 <a href="#state_timerestrictions_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicytimerestriction">[]Notification<wbr>Policy<wbr>Time<wbr>Restriction</a></span>
+        <span class="property-type"><a href="#notificationpolicytimerestriction">[]Notification<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time restrictions specified in this field must be met for this policy to work. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -1222,7 +1196,7 @@ The following state arguments are supported:
 <a href="#durations_csharp" style="color: inherit; text-decoration: inherit;">Durations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicyautocloseactionduration">List&lt;Notification<wbr>Policy<wbr>Auto<wbr>Close<wbr>Action<wbr>Duration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#notificationpolicyautocloseactionduration">List&lt;Notification<wbr>Policy<wbr>Auto<wbr>Close<wbr>Action<wbr>Duration&gt;</a></span>
     </dt>
     <dd>{{% md %}}Duration of this action. If `delay_option` = `for-duration` this has to be set. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -1248,7 +1222,7 @@ The following state arguments are supported:
 <a href="#durations_nodejs" style="color: inherit; text-decoration: inherit;">durations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicyautocloseactionduration">Notification<wbr>Policy<wbr>Auto<wbr>Close<wbr>Action<wbr>Duration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#notificationpolicyautocloseactionduration">Notification<wbr>Policy<wbr>Auto<wbr>Close<wbr>Action<wbr>Duration[]</a></span>
     </dt>
     <dd>{{% md %}}Duration of this action. If `delay_option` = `for-duration` this has to be set. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -1261,7 +1235,7 @@ The following state arguments are supported:
 <a href="#durations_python" style="color: inherit; text-decoration: inherit;">durations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicyautocloseactionduration">Sequence[Notification<wbr>Policy<wbr>Auto<wbr>Close<wbr>Action<wbr>Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#notificationpolicyautocloseactionduration">Sequence[Notification<wbr>Policy<wbr>Auto<wbr>Close<wbr>Action<wbr>Duration]</a></span>
     </dt>
     <dd>{{% md %}}Duration of this action. If `delay_option` = `for-duration` this has to be set. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -1366,7 +1340,7 @@ The following state arguments are supported:
 <a href="#durations_csharp" style="color: inherit; text-decoration: inherit;">Durations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicyautorestartactionduration">List&lt;Notification<wbr>Policy<wbr>Auto<wbr>Restart<wbr>Action<wbr>Duration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#notificationpolicyautorestartactionduration">List&lt;Notification<wbr>Policy<wbr>Auto<wbr>Restart<wbr>Action<wbr>Duration&gt;</a></span>
     </dt>
     <dd>{{% md %}}Duration of this action. If `delay_option` = `for-duration` this has to be set. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1410,7 +1384,7 @@ The following state arguments are supported:
 <a href="#durations_nodejs" style="color: inherit; text-decoration: inherit;">durations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicyautorestartactionduration">Notification<wbr>Policy<wbr>Auto<wbr>Restart<wbr>Action<wbr>Duration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#notificationpolicyautorestartactionduration">Notification<wbr>Policy<wbr>Auto<wbr>Restart<wbr>Action<wbr>Duration[]</a></span>
     </dt>
     <dd>{{% md %}}Duration of this action. If `delay_option` = `for-duration` this has to be set. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1432,7 +1406,7 @@ The following state arguments are supported:
 <a href="#durations_python" style="color: inherit; text-decoration: inherit;">durations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicyautorestartactionduration">Sequence[Notification<wbr>Policy<wbr>Auto<wbr>Restart<wbr>Action<wbr>Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#notificationpolicyautorestartactionduration">Sequence[Notification<wbr>Policy<wbr>Auto<wbr>Restart<wbr>Action<wbr>Duration]</a></span>
     </dt>
     <dd>{{% md %}}Duration of this action. If `delay_option` = `for-duration` this has to be set. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1564,7 +1538,7 @@ The following state arguments are supported:
 <a href="#durations_csharp" style="color: inherit; text-decoration: inherit;">Durations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicydeduplicationactionduration">List&lt;Notification<wbr>Policy<wbr>De<wbr>Duplication<wbr>Action<wbr>Duration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#notificationpolicydeduplicationactionduration">List&lt;Notification<wbr>Policy<wbr>De<wbr>Duplication<wbr>Action<wbr>Duration&gt;</a></span>
     </dt>
     <dd>{{% md %}}Duration of this action. If `delay_option` = `for-duration` this has to be set. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -1626,7 +1600,7 @@ The following state arguments are supported:
 <a href="#durations_nodejs" style="color: inherit; text-decoration: inherit;">durations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicydeduplicationactionduration">Notification<wbr>Policy<wbr>De<wbr>Duplication<wbr>Action<wbr>Duration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#notificationpolicydeduplicationactionduration">Notification<wbr>Policy<wbr>De<wbr>Duplication<wbr>Action<wbr>Duration[]</a></span>
     </dt>
     <dd>{{% md %}}Duration of this action. If `delay_option` = `for-duration` this has to be set. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -1657,7 +1631,7 @@ The following state arguments are supported:
 <a href="#durations_python" style="color: inherit; text-decoration: inherit;">durations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicydeduplicationactionduration">Sequence[Notification<wbr>Policy<wbr>De<wbr>Duplication<wbr>Action<wbr>Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#notificationpolicydeduplicationactionduration">Sequence[Notification<wbr>Policy<wbr>De<wbr>Duplication<wbr>Action<wbr>Duration]</a></span>
     </dt>
     <dd>{{% md %}}Duration of this action. If `delay_option` = `for-duration` this has to be set. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -1771,7 +1745,7 @@ The following state arguments are supported:
 <a href="#durations_csharp" style="color: inherit; text-decoration: inherit;">Durations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicydelayactionduration">List&lt;Notification<wbr>Policy<wbr>Delay<wbr>Action<wbr>Duration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#notificationpolicydelayactionduration">List&lt;Notification<wbr>Policy<wbr>Delay<wbr>Action<wbr>Duration&gt;</a></span>
     </dt>
     <dd>{{% md %}}Duration of this action. If `delay_option` = `for-duration` this has to be set. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1851,7 +1825,7 @@ The following state arguments are supported:
 <a href="#durations_nodejs" style="color: inherit; text-decoration: inherit;">durations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicydelayactionduration">Notification<wbr>Policy<wbr>Delay<wbr>Action<wbr>Duration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#notificationpolicydelayactionduration">Notification<wbr>Policy<wbr>Delay<wbr>Action<wbr>Duration[]</a></span>
     </dt>
     <dd>{{% md %}}Duration of this action. If `delay_option` = `for-duration` this has to be set. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1891,7 +1865,7 @@ The following state arguments are supported:
 <a href="#durations_python" style="color: inherit; text-decoration: inherit;">durations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicydelayactionduration">Sequence[Notification<wbr>Policy<wbr>Delay<wbr>Action<wbr>Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#notificationpolicydelayactionduration">Sequence[Notification<wbr>Policy<wbr>Delay<wbr>Action<wbr>Duration]</a></span>
     </dt>
     <dd>{{% md %}}Duration of this action. If `delay_option` = `for-duration` this has to be set. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2014,7 +1988,7 @@ The following state arguments are supported:
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicyfiltercondition">List&lt;Notification<wbr>Policy<wbr>Filter<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#notificationpolicyfiltercondition">List&lt;Notification<wbr>Policy<wbr>Filter<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}Conditions applied to filter. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2058,7 +2032,7 @@ The following state arguments are supported:
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicyfiltercondition">Notification<wbr>Policy<wbr>Filter<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#notificationpolicyfiltercondition">Notification<wbr>Policy<wbr>Filter<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}Conditions applied to filter. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2080,7 +2054,7 @@ The following state arguments are supported:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicyfiltercondition">Sequence[Notification<wbr>Policy<wbr>Filter<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#notificationpolicyfiltercondition">Sequence[Notification<wbr>Policy<wbr>Filter<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}Conditions applied to filter. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2347,7 +2321,7 @@ The following state arguments are supported:
 <a href="#restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicytimerestrictionrestriction">List&lt;Notification<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Restriction<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#notificationpolicytimerestrictionrestriction">List&lt;Notification<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Restriction&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of days and hours definitions for field type = `weekday-and-time-of-day`. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -2391,7 +2365,7 @@ The following state arguments are supported:
 <a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicytimerestrictionrestriction">Notification<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Restriction<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#notificationpolicytimerestrictionrestriction">Notification<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Restriction[]</a></span>
     </dt>
     <dd>{{% md %}}List of days and hours definitions for field type = `weekday-and-time-of-day`. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -2413,7 +2387,7 @@ The following state arguments are supported:
 <a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpolicytimerestrictionrestriction">Sequence[Notification<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Restriction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#notificationpolicytimerestrictionrestriction">Sequence[Notification<wbr>Policy<wbr>Time<wbr>Restriction<wbr>Restriction]</a></span>
     </dt>
     <dd>{{% md %}}List of days and hours definitions for field type = `weekday-and-time-of-day`. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -2655,16 +2629,10 @@ The following state arguments are supported:
 ## Import
 
 
-Notification policies can be imported using the `team id` and `id`, e.g.
+Notification policies can be imported using the `team_id` and `notification_policy_id`, e.g.
 
 ```sh
- $ pulumi import opsgenie:index/notificationPolicy:NotificationPolicy test teamId/Id`
-```
-
- For this example- Team Id = `c827c472-31f2-497b-9ec6-8ec855d7d94c` - Notification Policy Id = `2d1a78d0-c13e-47d3-af0a-8b6d0cc2b7b1`
-
-```sh
- $ pulumi import opsgenie:index/notificationPolicy:NotificationPolicy test c827c472-31f2-497b-9ec6-8ec855d7d94c/2d1a78d0-c13e-47d3-af0a-8b6d0cc2b7b1`
+ $ pulumi import opsgenie:index/notificationPolicy:NotificationPolicy test team_id/notification_policy_id`
 ```
 
 
