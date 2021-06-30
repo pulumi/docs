@@ -379,7 +379,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
 <a href="#healthcheck_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerservicehealthcheck">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#loadbalancerservicehealthcheck">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of health check configurations when `protocol` is `http` or `https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -388,7 +388,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
 <a href="#http_go" style="color: inherit; text-decoration: inherit;">Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerservicehttp">Load<wbr>Balancer<wbr>Service<wbr>Http</a></span>
+        <span class="property-type"><a href="#loadbalancerservicehttp">Load<wbr>Balancer<wbr>Service<wbr>Http<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations when `protocol` is `http` or `https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -816,7 +816,7 @@ The following state arguments are supported:
 <a href="#state_healthcheck_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerservicehealthcheck">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#loadbalancerservicehealthcheck">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of health check configurations when `protocol` is `http` or `https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -825,7 +825,7 @@ The following state arguments are supported:
 <a href="#state_http_go" style="color: inherit; text-decoration: inherit;">Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerservicehttp">Load<wbr>Balancer<wbr>Service<wbr>Http</a></span>
+        <span class="property-type"><a href="#loadbalancerservicehttp">Load<wbr>Balancer<wbr>Service<wbr>Http<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations when `protocol` is `http` or `https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1055,7 +1055,7 @@ The following state arguments are supported:
 <a href="#http_csharp" style="color: inherit; text-decoration: inherit;">Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerservicehealthcheckhttp">Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerservicehealthcheckhttp">Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations. Required if `protocol` is `http`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1171,7 +1171,7 @@ The following state arguments are supported:
 <a href="#http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerservicehealthcheckhttp">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerservicehealthcheckhttp">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations. Required if `protocol` is `http`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1229,7 +1229,7 @@ The following state arguments are supported:
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerservicehealthcheckhttp">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerservicehealthcheckhttp">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations. Required if `protocol` is `http`.
 {{% /md %}}</dd><dt class="property-optional"

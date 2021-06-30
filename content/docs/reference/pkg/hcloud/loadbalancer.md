@@ -383,7 +383,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm</a></span>
+        <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -428,7 +428,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancertarget">[]Load<wbr>Balancer<wbr>Target<wbr>Type</a></span>
+        <span class="property-type"><a href="#loadbalancertarget">[]Load<wbr>Balancer<wbr>Target<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of targets of the Load Balancer.
 {{% /md %}}</dd></dl>
@@ -1003,7 +1003,7 @@ The following state arguments are supported:
 <a href="#state_algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm</a></span>
+        <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1091,7 +1091,7 @@ The following state arguments are supported:
 <a href="#state_targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancertarget">[]Load<wbr>Balancer<wbr>Target<wbr>Type</a></span>
+        <span class="property-type"><a href="#loadbalancertarget">[]Load<wbr>Balancer<wbr>Target<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of targets of the Load Balancer.
 {{% /md %}}</dd></dl>
