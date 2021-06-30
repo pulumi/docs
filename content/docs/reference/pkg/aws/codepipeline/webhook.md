@@ -657,7 +657,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfilter">[]Webhook<wbr>Filter</a></span>
+        <span class="property-type"><a href="#webhookfilter">[]Webhook<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks. Filter blocks are documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -684,7 +684,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#authenticationconfiguration_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1195,7 +1195,7 @@ The following state arguments are supported:
 <a href="#state_authenticationconfiguration_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1204,7 +1204,7 @@ The following state arguments are supported:
 <a href="#state_filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfilter">[]Webhook<wbr>Filter</a></span>
+        <span class="property-type"><a href="#webhookfilter">[]Webhook<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks. Filter blocks are documented below.
 {{% /md %}}</dd><dt class="property-optional"

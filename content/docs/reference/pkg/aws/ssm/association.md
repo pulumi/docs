@@ -12,95 +12,6 @@ meta_desc: "Documentation for the aws.ssm.Association resource with examples, in
 
 Associates an SSM Document to an instance or EC2 tag.
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Ssm.Association("example", new Aws.Ssm.AssociationArgs
-        {
-            Targets = 
-            {
-                new Aws.Ssm.Inputs.AssociationTargetArgs
-                {
-                    Key = "InstanceIds",
-                    Values = 
-                    {
-                        aws_instance.Example.Id,
-                    },
-                },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.ssm.Association("example", targets=[aws.ssm.AssociationTargetArgs(
-    key="InstanceIds",
-    values=[aws_instance["example"]["id"]],
-)])
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.ssm.Association("example", {targets: [{
-    key: "InstanceIds",
-    values: [aws_instance.example.id],
-}]});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Create a Association Resource {#create}
@@ -463,7 +374,7 @@ The Association resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#outputlocation_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location</a></span>
+        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An output location block. Output Location is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -490,7 +401,7 @@ The Association resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationtarget">[]Association<wbr>Target</a></span>
+        <span class="property-type"><a href="#associationtarget">[]Association<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 {{% /md %}}</dd></dl>
@@ -1195,7 +1106,7 @@ The following state arguments are supported:
 <a href="#state_outputlocation_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location</a></span>
+        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An output location block. Output Location is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1222,7 +1133,7 @@ The following state arguments are supported:
 <a href="#state_targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationtarget">[]Association<wbr>Target</a></span>
+        <span class="property-type"><a href="#associationtarget">[]Association<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 {{% /md %}}</dd></dl>

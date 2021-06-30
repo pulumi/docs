@@ -323,7 +323,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#encryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -667,7 +667,7 @@ The following state arguments are supported:
 <a href="#state_encryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"

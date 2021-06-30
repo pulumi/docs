@@ -329,165 +329,6 @@ const instance = new aws.iam.Role("instance", {
 
 
 
-### Example of Exclusive Inline Policies
-
-
-{{< example csharp >}}
-
-```csharp
-using System.Collections.Generic;
-using System.Text.Json;
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var inlinePolicy = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
-        {
-            Statements = 
-            {
-                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
-                {
-                    Actions = 
-                    {
-                        "ec2:DescribeAccountAttributes",
-                    },
-                    Resources = 
-                    {
-                        "*",
-                    },
-                },
-            },
-        }));
-        var example = new Aws.Iam.Role("example", new Aws.Iam.RoleArgs
-        {
-            AssumeRolePolicy = data.Aws_iam_policy_document.Instance_assume_role_policy.Json,
-            InlinePolicies = 
-            {
-                new Aws.Iam.Inputs.RoleInlinePolicyArgs
-                {
-                    Name = "my_inline_policy",
-                    Policy = JsonSerializer.Serialize(new Dictionary<string, object?>
-                    {
-                        { "Version", "2012-10-17" },
-                        { "Statement", new[]
-                            {
-                                new Dictionary<string, object?>
-                                {
-                                    { "Action", new[]
-                                        {
-                                            "ec2:Describe*",
-                                        }
-                                     },
-                                    { "Effect", "Allow" },
-                                    { "Resource", "*" },
-                                },
-                            }
-                         },
-                    }),
-                },
-                new Aws.Iam.Inputs.RoleInlinePolicyArgs
-                {
-                    Name = "policy-8675309",
-                    Policy = inlinePolicy.Apply(inlinePolicy => inlinePolicy.Json),
-                },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import json
-import pulumi_aws as aws
-
-inline_policy = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
-    actions=["ec2:DescribeAccountAttributes"],
-    resources=["*"],
-)])
-example = aws.iam.Role("example",
-    assume_role_policy=data["aws_iam_policy_document"]["instance_assume_role_policy"]["json"],
-    inline_policies=[
-        aws.iam.RoleInlinePolicyArgs(
-            name="my_inline_policy",
-            policy=json.dumps({
-                "Version": "2012-10-17",
-                "Statement": [{
-                    "Action": ["ec2:Describe*"],
-                    "Effect": "Allow",
-                    "Resource": "*",
-                }],
-            }),
-        ),
-        aws.iam.RoleInlinePolicyArgs(
-            name="policy-8675309",
-            policy=inline_policy.json,
-        ),
-    ])
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const inlinePolicy = aws.iam.getPolicyDocument({
-    statements: [{
-        actions: ["ec2:DescribeAccountAttributes"],
-        resources: ["*"],
-    }],
-});
-const example = new aws.iam.Role("example", {
-    assumeRolePolicy: data.aws_iam_policy_document.instance_assume_role_policy.json,
-    inlinePolicies: [
-        {
-            name: "my_inline_policy",
-            policy: JSON.stringify({
-                Version: "2012-10-17",
-                Statement: [{
-                    Action: ["ec2:Describe*"],
-                    Effect: "Allow",
-                    Resource: "*",
-                }],
-            }),
-        },
-        {
-            name: "policy-8675309",
-            policy: inlinePolicy.then(inlinePolicy => inlinePolicy.json),
-        },
-    ],
-});
-```
-
-
-{{< /example >}}
-
-
-
-
 ### Example of Removing Inline Policies
 
 
@@ -1210,7 +1051,7 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#inlinepolicies_go" style="color: inherit; text-decoration: inherit;">Inline<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roleinlinepolicy">[]Role<wbr>Inline<wbr>Policy</a></span>
+        <span class="property-type"><a href="#roleinlinepolicy">[]Role<wbr>Inline<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. Defined below. If no blocks are configured, the provider will ignore any managing any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2006,7 +1847,7 @@ The following state arguments are supported:
 <a href="#state_inlinepolicies_go" style="color: inherit; text-decoration: inherit;">Inline<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roleinlinepolicy">[]Role<wbr>Inline<wbr>Policy</a></span>
+        <span class="property-type"><a href="#roleinlinepolicy">[]Role<wbr>Inline<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. Defined below. If no blocks are configured, the provider will ignore any managing any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies.
 {{% /md %}}</dd><dt class="property-optional"

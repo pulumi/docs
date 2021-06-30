@@ -350,7 +350,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#reservationplansettings_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Plan<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></span>
+        <span class="property-type"><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A detail pricing plan of the  reserved queue. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -860,7 +860,7 @@ The following state arguments are supported:
 <a href="#state_reservationplansettings_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Plan<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></span>
+        <span class="property-type"><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A detail pricing plan of the  reserved queue. See below.
 {{% /md %}}</dd><dt class="property-optional"

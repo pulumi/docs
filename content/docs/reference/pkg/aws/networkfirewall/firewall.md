@@ -407,7 +407,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#subnetmappings_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallsubnetmapping">[]Firewall<wbr>Subnet<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#firewallsubnetmapping">[]Firewall<wbr>Subnet<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the public subnets. Each subnet must belong to a different Availability Zone in the VPC. AWS Network Firewall creates a firewall endpoint in each subnet. See Subnet Mapping below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -1147,7 +1147,7 @@ The following state arguments are supported:
 <a href="#state_firewallstatuses_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallfirewallstatus">[]Firewall<wbr>Firewall<wbr>Status</a></span>
+        <span class="property-type"><a href="#firewallfirewallstatus">[]Firewall<wbr>Firewall<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested list of information about the current status of the firewall.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1174,7 +1174,7 @@ The following state arguments are supported:
 <a href="#state_subnetmappings_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallsubnetmapping">[]Firewall<wbr>Subnet<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#firewallsubnetmapping">[]Firewall<wbr>Subnet<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the public subnets. Each subnet must belong to a different Availability Zone in the VPC. AWS Network Firewall creates a firewall endpoint in each subnet. See Subnet Mapping below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1476,7 +1476,7 @@ The following state arguments are supported:
 <a href="#syncstates_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>States</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallfirewallstatussyncstate">List&lt;Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallfirewallstatussyncstate">List&lt;Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of subnets configured for use by the firewall.
 {{% /md %}}</dd></dl>
@@ -1502,7 +1502,7 @@ The following state arguments are supported:
 <a href="#syncstates_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>States</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallfirewallstatussyncstate">Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallfirewallstatussyncstate">Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State[]</a></span>
     </dt>
     <dd>{{% md %}}Set of subnets configured for use by the firewall.
 {{% /md %}}</dd></dl>
@@ -1515,7 +1515,7 @@ The following state arguments are supported:
 <a href="#sync_states_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>states</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallfirewallstatussyncstate">Sequence[Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallfirewallstatussyncstate">Sequence[Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}Set of subnets configured for use by the firewall.
 {{% /md %}}</dd></dl>
@@ -1530,7 +1530,7 @@ The following state arguments are supported:
 <a href="#attachments_csharp" style="color: inherit; text-decoration: inherit;">Attachments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallfirewallstatussyncstateattachment">List&lt;Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Attachment<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallfirewallstatussyncstateattachment">List&lt;Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Attachment&gt;</a></span>
     </dt>
     <dd>{{% md %}}Nested list describing the attachment status of the firewall's association with a single VPC subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1574,7 +1574,7 @@ The following state arguments are supported:
 <a href="#attachments_nodejs" style="color: inherit; text-decoration: inherit;">attachments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallfirewallstatussyncstateattachment">Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Attachment<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallfirewallstatussyncstateattachment">Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Attachment[]</a></span>
     </dt>
     <dd>{{% md %}}Nested list describing the attachment status of the firewall's association with a single VPC subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1596,7 +1596,7 @@ The following state arguments are supported:
 <a href="#attachments_python" style="color: inherit; text-decoration: inherit;">attachments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallfirewallstatussyncstateattachment">Sequence[Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Attachment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallfirewallstatussyncstateattachment">Sequence[Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Attachment]</a></span>
     </dt>
     <dd>{{% md %}}Nested list describing the attachment status of the firewall's association with a single VPC subnet.
 {{% /md %}}</dd><dt class="property-optional"

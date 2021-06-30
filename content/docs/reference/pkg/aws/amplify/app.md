@@ -371,7 +371,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#autobranchcreationconfig_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Branch<wbr>Creation<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appautobranchcreationconfig">App<wbr>Auto<wbr>Branch<wbr>Creation<wbr>Config</a></span>
+        <span class="property-type"><a href="#appautobranchcreationconfig">App<wbr>Auto<wbr>Branch<wbr>Creation<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The automated branch creation configuration for an Amplify app. An `auto_branch_creation_config` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -407,7 +407,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#customrules_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appcustomrule">[]App<wbr>Custom<wbr>Rule</a></span>
+        <span class="property-type"><a href="#appcustomrule">[]App<wbr>Custom<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom rewrite and redirect rules for an Amplify app. A `custom_rule` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1417,7 +1417,7 @@ The following state arguments are supported:
 <a href="#state_autobranchcreationconfig_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Branch<wbr>Creation<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appautobranchcreationconfig">App<wbr>Auto<wbr>Branch<wbr>Creation<wbr>Config</a></span>
+        <span class="property-type"><a href="#appautobranchcreationconfig">App<wbr>Auto<wbr>Branch<wbr>Creation<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The automated branch creation configuration for an Amplify app. An `auto_branch_creation_config` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1453,7 +1453,7 @@ The following state arguments are supported:
 <a href="#state_customrules_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appcustomrule">[]App<wbr>Custom<wbr>Rule</a></span>
+        <span class="property-type"><a href="#appcustomrule">[]App<wbr>Custom<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom rewrite and redirect rules for an Amplify app. A `custom_rule` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1561,7 +1561,7 @@ The following state arguments are supported:
 <a href="#state_productionbranches_go" style="color: inherit; text-decoration: inherit;">Production<wbr>Branches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appproductionbranch">[]App<wbr>Production<wbr>Branch</a></span>
+        <span class="property-type"><a href="#appproductionbranch">[]App<wbr>Production<wbr>Branch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the information about a production branch for an Amplify app. A `production_branch` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"

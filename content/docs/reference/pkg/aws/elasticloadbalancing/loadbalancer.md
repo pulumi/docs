@@ -21,6 +21,7 @@ provides both a standalone ELB Attachment resource
 `instances` defined in-line. At this time you cannot use an ELB with in-line
 instances in conjunction with a ELB Attachment resources. Doing so will cause a
 conflict and will overwrite attachments.
+
 ## Note on ECDSA Key Algorithm
 
 If the ARN of the `ssl_certificate_id` that is pointed to references a
@@ -28,212 +29,6 @@ certificate that was signed by an ECDSA key, note that ELB only supports the
 P256 and P384 curves.  Using a certificate signed by a key using a different
 curve could produce the error `ERR_SSL_VERSION_OR_CIPHER_MISMATCH` in your
 browser.
-
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        // Create a new load balancer
-        var bar = new Aws.Elb.LoadBalancer("bar", new Aws.Elb.LoadBalancerArgs
-        {
-            AvailabilityZones = 
-            {
-                "us-west-2a",
-                "us-west-2b",
-                "us-west-2c",
-            },
-            AccessLogs = new Aws.Elb.Inputs.LoadBalancerAccessLogsArgs
-            {
-                Bucket = "foo",
-                BucketPrefix = "bar",
-                Interval = 60,
-            },
-            Listeners = 
-            {
-                new Aws.Elb.Inputs.LoadBalancerListenerArgs
-                {
-                    InstancePort = 8000,
-                    InstanceProtocol = "http",
-                    LbPort = 80,
-                    LbProtocol = "http",
-                },
-                new Aws.Elb.Inputs.LoadBalancerListenerArgs
-                {
-                    InstancePort = 8000,
-                    InstanceProtocol = "http",
-                    LbPort = 443,
-                    LbProtocol = "https",
-                    SslCertificateId = "arn:aws:iam::123456789012:server-certificate/certName",
-                },
-            },
-            HealthCheck = new Aws.Elb.Inputs.LoadBalancerHealthCheckArgs
-            {
-                HealthyThreshold = 2,
-                UnhealthyThreshold = 2,
-                Timeout = 3,
-                Target = "HTTP:8000/",
-                Interval = 30,
-            },
-            Instances = 
-            {
-                aws_instance.Foo.Id,
-            },
-            CrossZoneLoadBalancing = true,
-            IdleTimeout = 400,
-            ConnectionDraining = true,
-            ConnectionDrainingTimeout = 400,
-            Tags = 
-            {
-                { "Name", "foobar-elb" },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-# Create a new load balancer
-bar = aws.elb.LoadBalancer("bar",
-    availability_zones=[
-        "us-west-2a",
-        "us-west-2b",
-        "us-west-2c",
-    ],
-    access_logs=aws.elb.LoadBalancerAccessLogsArgs(
-        bucket="foo",
-        bucket_prefix="bar",
-        interval=60,
-    ),
-    listeners=[
-        aws.elb.LoadBalancerListenerArgs(
-            instance_port=8000,
-            instance_protocol="http",
-            lb_port=80,
-            lb_protocol="http",
-        ),
-        aws.elb.LoadBalancerListenerArgs(
-            instance_port=8000,
-            instance_protocol="http",
-            lb_port=443,
-            lb_protocol="https",
-            ssl_certificate_id="arn:aws:iam::123456789012:server-certificate/certName",
-        ),
-    ],
-    health_check=aws.elb.LoadBalancerHealthCheckArgs(
-        healthy_threshold=2,
-        unhealthy_threshold=2,
-        timeout=3,
-        target="HTTP:8000/",
-        interval=30,
-    ),
-    instances=[aws_instance["foo"]["id"]],
-    cross_zone_load_balancing=True,
-    idle_timeout=400,
-    connection_draining=True,
-    connection_draining_timeout=400,
-    tags={
-        "Name": "foobar-elb",
-    })
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-// Create a new load balancer
-const bar = new aws.elb.LoadBalancer("bar", {
-    availabilityZones: [
-        "us-west-2a",
-        "us-west-2b",
-        "us-west-2c",
-    ],
-    accessLogs: {
-        bucket: "foo",
-        bucketPrefix: "bar",
-        interval: 60,
-    },
-    listeners: [
-        {
-            instancePort: 8000,
-            instanceProtocol: "http",
-            lbPort: 80,
-            lbProtocol: "http",
-        },
-        {
-            instancePort: 8000,
-            instanceProtocol: "http",
-            lbPort: 443,
-            lbProtocol: "https",
-            sslCertificateId: "arn:aws:iam::123456789012:server-certificate/certName",
-        },
-    ],
-    healthCheck: {
-        healthyThreshold: 2,
-        unhealthyThreshold: 2,
-        timeout: 3,
-        target: "HTTP:8000/",
-        interval: 30,
-    },
-    instances: [aws_instance.foo.id],
-    crossZoneLoadBalancing: true,
-    idleTimeout: 400,
-    connectionDraining: true,
-    connectionDrainingTimeout: 400,
-    tags: {
-        Name: "foobar-elb",
-    },
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
 
 
 
@@ -558,7 +353,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#listeners_go" style="color: inherit; text-decoration: inherit;">Listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerlistener">[]Load<wbr>Balancer<wbr>Listener</a></span>
+        <span class="property-type"><a href="#loadbalancerlistener">[]Load<wbr>Balancer<wbr>Listener<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of listener blocks. Listeners documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -567,7 +362,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#accesslogs_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -612,7 +407,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#healthcheck_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A health_check block. Health Check documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1585,7 +1380,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_accesslogs_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1648,7 +1443,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_healthcheck_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A health_check block. Health Check documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1684,7 +1479,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_listeners_go" style="color: inherit; text-decoration: inherit;">Listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerlistener">[]Load<wbr>Balancer<wbr>Listener</a></span>
+        <span class="property-type"><a href="#loadbalancerlistener">[]Load<wbr>Balancer<wbr>Listener<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of listener blocks. Listeners documented below.
 {{% /md %}}</dd><dt class="property-optional"

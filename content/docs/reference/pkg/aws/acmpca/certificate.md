@@ -318,7 +318,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#validity_go" style="color: inherit; text-decoration: inherit;">Validity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatevalidity">Certificate<wbr>Validity</a></span>
+        <span class="property-type"><a href="#certificatevalidity">Certificate<wbr>Validity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures end of the validity period for the certificate. See validity block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -873,7 +873,7 @@ The following state arguments are supported:
 <a href="#state_validity_go" style="color: inherit; text-decoration: inherit;">Validity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatevalidity">Certificate<wbr>Validity</a></span>
+        <span class="property-type"><a href="#certificatevalidity">Certificate<wbr>Validity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures end of the validity period for the certificate. See validity block below.
 {{% /md %}}</dd></dl>

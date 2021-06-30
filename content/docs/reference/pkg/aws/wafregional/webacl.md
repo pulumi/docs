@@ -731,7 +731,7 @@ The WebAcl resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webacldefaultaction">Web<wbr>Acl<wbr>Default<wbr>Action</a></span>
+        <span class="property-type"><a href="#webacldefaultaction">Web<wbr>Acl<wbr>Default<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action that you want AWS WAF Regional to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL.
 {{% /md %}}</dd><dt class="property-required"
@@ -749,7 +749,7 @@ The WebAcl resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#loggingconfiguration_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfiguration">Web<wbr>Acl<wbr>Logging<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#webaclloggingconfiguration">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to enable WAF logging. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -767,7 +767,7 @@ The WebAcl resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclrule">[]Web<wbr>Acl<wbr>Rule</a></span>
+        <span class="property-type"><a href="#webaclrule">[]Web<wbr>Acl<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing rules for the web ACL. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1241,7 +1241,7 @@ The following state arguments are supported:
 <a href="#state_defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webacldefaultaction">Web<wbr>Acl<wbr>Default<wbr>Action</a></span>
+        <span class="property-type"><a href="#webacldefaultaction">Web<wbr>Acl<wbr>Default<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action that you want AWS WAF Regional to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1250,7 +1250,7 @@ The following state arguments are supported:
 <a href="#state_loggingconfiguration_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfiguration">Web<wbr>Acl<wbr>Logging<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#webaclloggingconfiguration">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to enable WAF logging. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1277,7 +1277,7 @@ The following state arguments are supported:
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclrule">[]Web<wbr>Acl<wbr>Rule</a></span>
+        <span class="property-type"><a href="#webaclrule">[]Web<wbr>Acl<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing rules for the web ACL. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1534,7 +1534,7 @@ The following state arguments are supported:
 <a href="#redactedfields_csharp" style="color: inherit; text-decoration: inherit;">Redacted<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfigurationredactedfields">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Args</a></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationredactedfields">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing parts of the request that you want redacted from the logs. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1578,7 +1578,7 @@ The following state arguments are supported:
 <a href="#redactedfields_nodejs" style="color: inherit; text-decoration: inherit;">redacted<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfigurationredactedfields">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Args</a></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationredactedfields">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing parts of the request that you want redacted from the logs. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1600,7 +1600,7 @@ The following state arguments are supported:
 <a href="#redacted_fields_python" style="color: inherit; text-decoration: inherit;">redacted_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfigurationredactedfields">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Args</a></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationredactedfields">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing parts of the request that you want redacted from the logs. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1615,7 +1615,7 @@ The following state arguments are supported:
 <a href="#fieldtomatches_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>To<wbr>Matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsfieldtomatch">List&lt;Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Field<wbr>To<wbr>Match<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsfieldtomatch">List&lt;Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Field<wbr>To<wbr>Match&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks for fields to redact. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1641,7 +1641,7 @@ The following state arguments are supported:
 <a href="#fieldtomatches_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsfieldtomatch">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Field<wbr>To<wbr>Match<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsfieldtomatch">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Field<wbr>To<wbr>Match[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks for fields to redact. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1654,7 +1654,7 @@ The following state arguments are supported:
 <a href="#field_to_matches_python" style="color: inherit; text-decoration: inherit;">field_<wbr>to_<wbr>matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsfieldtomatch">Sequence[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Field<wbr>To<wbr>Match<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsfieldtomatch">Sequence[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Field<wbr>To<wbr>Match]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks for fields to redact. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1778,7 +1778,7 @@ Rules with a lower value are evaluated before rules with a higher value.
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclruleaction">Web<wbr>Acl<wbr>Rule<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#webaclruleaction">Web<wbr>Acl<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Not used if `type` is `GROUP`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1787,7 +1787,7 @@ Rules with a lower value are evaluated before rules with a higher value.
 <a href="#overrideaction_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclruleoverrideaction">Web<wbr>Acl<wbr>Rule<wbr>Override<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#webaclruleoverrideaction">Web<wbr>Acl<wbr>Rule<wbr>Override<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the override the action that a group requests CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Only used if `type` is `GROUP`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1878,7 +1878,7 @@ Rules with a lower value are evaluated before rules with a higher value.
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclruleaction">Web<wbr>Acl<wbr>Rule<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#webaclruleaction">Web<wbr>Acl<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Not used if `type` is `GROUP`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1887,7 +1887,7 @@ Rules with a lower value are evaluated before rules with a higher value.
 <a href="#overrideaction_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclruleoverrideaction">Web<wbr>Acl<wbr>Rule<wbr>Override<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#webaclruleoverrideaction">Web<wbr>Acl<wbr>Rule<wbr>Override<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the override the action that a group requests CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Only used if `type` is `GROUP`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1928,7 +1928,7 @@ Rules with a lower value are evaluated before rules with a higher value.
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclruleaction">Web<wbr>Acl<wbr>Rule<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#webaclruleaction">Web<wbr>Acl<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Not used if `type` is `GROUP`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1937,7 +1937,7 @@ Rules with a lower value are evaluated before rules with a higher value.
 <a href="#override_action_python" style="color: inherit; text-decoration: inherit;">override_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclruleoverrideaction">Web<wbr>Acl<wbr>Rule<wbr>Override<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#webaclruleoverrideaction">Web<wbr>Acl<wbr>Rule<wbr>Override<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the override the action that a group requests CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Only used if `type` is `GROUP`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

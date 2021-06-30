@@ -747,7 +747,7 @@ definition after you have created the resource.
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableattribute">[]Table<wbr>Attribute</a></span>
+        <span class="property-type"><a href="#tableattribute">[]Table<wbr>Attribute<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
 {{% /md %}}</dd><dt class="property-required"
@@ -775,7 +775,7 @@ defined as an attribute in the resource.
 <a href="#globalsecondaryindexes_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Secondary<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableglobalsecondaryindex">[]Table<wbr>Global<wbr>Secondary<wbr>Index</a></span>
+        <span class="property-type"><a href="#tableglobalsecondaryindex">[]Table<wbr>Global<wbr>Secondary<wbr>Index<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describe a GSI for the table;
 subject to the normal limits on the number of GSIs, projected
@@ -786,7 +786,7 @@ attributes, etc.
 <a href="#localsecondaryindexes_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Secondary<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablelocalsecondaryindex">[]Table<wbr>Local<wbr>Secondary<wbr>Index</a></span>
+        <span class="property-type"><a href="#tablelocalsecondaryindex">[]Table<wbr>Local<wbr>Secondary<wbr>Index<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describe an LSI on the table;
 these can only be allocated *at creation* so you cannot change this
@@ -806,7 +806,7 @@ definition after you have created the resource.
 <a href="#pointintimerecovery_go" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time<wbr>Recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablepointintimerecovery">Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></span>
+        <span class="property-type"><a href="#tablepointintimerecovery">Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Point-in-time recovery options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -833,7 +833,7 @@ definition after you have created the resource.
 <a href="#replicas_go" style="color: inherit; text-decoration: inherit;">Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablereplica">[]Table<wbr>Replica</a></span>
+        <span class="property-type"><a href="#tablereplica">[]Table<wbr>Replica<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -842,7 +842,7 @@ definition after you have created the resource.
 <a href="#serversideencryption_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableserversideencryption">Table<wbr>Server<wbr>Side<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#tableserversideencryption">Table<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn't specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -887,7 +887,7 @@ definition after you have created the resource.
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablettl">Table<wbr>Ttl</a></span>
+        <span class="property-type"><a href="#tablettl">Table<wbr>Ttl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines ttl, has two properties, and can only be specified once:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1754,7 +1754,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableattribute">[]Table<wbr>Attribute</a></span>
+        <span class="property-type"><a href="#tableattribute">[]Table<wbr>Attribute<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1772,7 +1772,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_globalsecondaryindexes_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Secondary<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableglobalsecondaryindex">[]Table<wbr>Global<wbr>Secondary<wbr>Index</a></span>
+        <span class="property-type"><a href="#tableglobalsecondaryindex">[]Table<wbr>Global<wbr>Secondary<wbr>Index<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describe a GSI for the table;
 subject to the normal limits on the number of GSIs, projected
@@ -1793,7 +1793,7 @@ defined as an attribute in the resource.
 <a href="#state_localsecondaryindexes_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Secondary<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablelocalsecondaryindex">[]Table<wbr>Local<wbr>Secondary<wbr>Index</a></span>
+        <span class="property-type"><a href="#tablelocalsecondaryindex">[]Table<wbr>Local<wbr>Secondary<wbr>Index<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describe an LSI on the table;
 these can only be allocated *at creation* so you cannot change this
@@ -1813,7 +1813,7 @@ definition after you have created the resource.
 <a href="#state_pointintimerecovery_go" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time<wbr>Recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablepointintimerecovery">Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></span>
+        <span class="property-type"><a href="#tablepointintimerecovery">Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Point-in-time recovery options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1840,7 +1840,7 @@ definition after you have created the resource.
 <a href="#state_replicas_go" style="color: inherit; text-decoration: inherit;">Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablereplica">[]Table<wbr>Replica</a></span>
+        <span class="property-type"><a href="#tablereplica">[]Table<wbr>Replica<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1849,7 +1849,7 @@ definition after you have created the resource.
 <a href="#state_serversideencryption_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableserversideencryption">Table<wbr>Server<wbr>Side<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#tableserversideencryption">Table<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn't specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1915,7 +1915,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablettl">Table<wbr>Ttl</a></span>
+        <span class="property-type"><a href="#tablettl">Table<wbr>Ttl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines ttl, has two properties, and can only be specified once:
 {{% /md %}}</dd><dt class="property-optional"

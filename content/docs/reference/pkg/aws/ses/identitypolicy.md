@@ -166,7 +166,7 @@ const examplePolicyDocument = exampleDomainIdentity.arn.apply(arn => aws.iam.get
 }));
 const exampleIdentityPolicy = new aws.ses.IdentityPolicy("exampleIdentityPolicy", {
     identity: exampleDomainIdentity.arn,
-    policy: examplePolicyDocument.json,
+    policy: examplePolicyDocument.apply(examplePolicyDocument => examplePolicyDocument.json),
 });
 ```
 

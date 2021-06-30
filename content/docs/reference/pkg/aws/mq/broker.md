@@ -18,238 +18,6 @@ Provides an Amazon MQ broker resource. This resources also manages users for the
 
 > **NOTE:** Changes to an MQ Broker can occur when you change a parameter, such as `configuration` or `user`, and are reflected in the next maintenance window. Because of this, the provider may report a difference in its planning phase because a modification has not yet taken place. You can use the `apply_immediately` flag to instruct the service to apply the change immediately (see documentation below). Using `apply_immediately` can result in a brief downtime as the broker reboots.
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-### Basic Example
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Mq.Broker("example", new Aws.Mq.BrokerArgs
-        {
-            BrokerName = "example",
-            Configuration = new Aws.Mq.Inputs.BrokerConfigurationArgs
-            {
-                Id = aws_mq_configuration.Test.Id,
-                Revision = aws_mq_configuration.Test.Latest_revision,
-            },
-            EngineType = "ActiveMQ",
-            EngineVersion = "5.15.9",
-            HostInstanceType = "mq.t2.micro",
-            SecurityGroups = 
-            {
-                aws_security_group.Test.Id,
-            },
-            Users = 
-            {
-                new Aws.Mq.Inputs.BrokerUserArgs
-                {
-                    Username = "ExampleUser",
-                    Password = "MindTheGap",
-                },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.mq.Broker("example",
-    broker_name="example",
-    configuration=aws.mq.BrokerConfigurationArgs(
-        id=aws_mq_configuration["test"]["id"],
-        revision=aws_mq_configuration["test"]["latest_revision"],
-    ),
-    engine_type="ActiveMQ",
-    engine_version="5.15.9",
-    host_instance_type="mq.t2.micro",
-    security_groups=[aws_security_group["test"]["id"]],
-    users=[aws.mq.BrokerUserArgs(
-        username="ExampleUser",
-        password="MindTheGap",
-    )])
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.mq.Broker("example", {
-    brokerName: "example",
-    configuration: {
-        id: aws_mq_configuration.test.id,
-        revision: aws_mq_configuration.test.latest_revision,
-    },
-    engineType: "ActiveMQ",
-    engineVersion: "5.15.9",
-    hostInstanceType: "mq.t2.micro",
-    securityGroups: [aws_security_group.test.id],
-    users: [{
-        username: "ExampleUser",
-        password: "MindTheGap",
-    }],
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-### High-throughput Optimized Example
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Mq.Broker("example", new Aws.Mq.BrokerArgs
-        {
-            BrokerName = "example",
-            Configuration = new Aws.Mq.Inputs.BrokerConfigurationArgs
-            {
-                Id = aws_mq_configuration.Test.Id,
-                Revision = aws_mq_configuration.Test.Latest_revision,
-            },
-            EngineType = "ActiveMQ",
-            EngineVersion = "5.15.9",
-            StorageType = "ebs",
-            HostInstanceType = "mq.m5.large",
-            SecurityGroups = 
-            {
-                aws_security_group.Test.Id,
-            },
-            Users = 
-            {
-                new Aws.Mq.Inputs.BrokerUserArgs
-                {
-                    Username = "ExampleUser",
-                    Password = "MindTheGap",
-                },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.mq.Broker("example",
-    broker_name="example",
-    configuration=aws.mq.BrokerConfigurationArgs(
-        id=aws_mq_configuration["test"]["id"],
-        revision=aws_mq_configuration["test"]["latest_revision"],
-    ),
-    engine_type="ActiveMQ",
-    engine_version="5.15.9",
-    storage_type="ebs",
-    host_instance_type="mq.m5.large",
-    security_groups=[aws_security_group["test"]["id"]],
-    users=[aws.mq.BrokerUserArgs(
-        username="ExampleUser",
-        password="MindTheGap",
-    )])
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.mq.Broker("example", {
-    brokerName: "example",
-    configuration: {
-        id: aws_mq_configuration.test.id,
-        revision: aws_mq_configuration.test.latest_revision,
-    },
-    engineType: "ActiveMQ",
-    engineVersion: "5.15.9",
-    storageType: "ebs",
-    hostInstanceType: "mq.m5.large",
-    securityGroups: [aws_security_group.test.id],
-    users: [{
-        username: "ExampleUser",
-        password: "MindTheGap",
-    }],
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Create a Broker Resource {#create}
@@ -637,7 +405,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokeruser">[]Broker<wbr>User</a></span>
+        <span class="property-type"><a href="#brokeruser">[]Broker<wbr>User<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for broker users. For `engine_type` of `RabbitMQ`, Amazon MQ does not return broker users preventing this resource from making user updates and drift detection. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -673,7 +441,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for broker configuration. Applies to `engine_type` of `ActiveMQ` only. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -691,7 +459,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#encryptionoptions_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options</a></span>
+        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -700,7 +468,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#ldapservermetadata_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Server<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerldapservermetadata">Broker<wbr>Ldap<wbr>Server<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#brokerldapservermetadata">Broker<wbr>Ldap<wbr>Server<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the LDAP server used to authenticate and authorize connections to the broker. Not supported for `engine_type` `RabbitMQ`. Detailed below. (Currently, AWS may not process changes to LDAP server metadata.)
 {{% /md %}}</dd><dt class="property-optional"
@@ -709,7 +477,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs</a></span>
+        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the logging configuration of the broker. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -718,7 +486,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#maintenancewindowstarttime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
+        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the maintenance window start time. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1729,7 +1497,7 @@ The following state arguments are supported:
 <a href="#state_configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for broker configuration. Applies to `engine_type` of `ActiveMQ` only. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1747,7 +1515,7 @@ The following state arguments are supported:
 <a href="#state_encryptionoptions_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options</a></span>
+        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1783,7 +1551,7 @@ The following state arguments are supported:
 <a href="#state_instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerinstance">[]Broker<wbr>Instance</a></span>
+        <span class="property-type"><a href="#brokerinstance">[]Broker<wbr>Instance<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of information about allocated brokers (both active & standby).
 * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
@@ -1803,7 +1571,7 @@ The following state arguments are supported:
 <a href="#state_ldapservermetadata_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Server<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerldapservermetadata">Broker<wbr>Ldap<wbr>Server<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#brokerldapservermetadata">Broker<wbr>Ldap<wbr>Server<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the LDAP server used to authenticate and authorize connections to the broker. Not supported for `engine_type` `RabbitMQ`. Detailed below. (Currently, AWS may not process changes to LDAP server metadata.)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1812,7 +1580,7 @@ The following state arguments are supported:
 <a href="#state_logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs</a></span>
+        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the logging configuration of the broker. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1821,7 +1589,7 @@ The following state arguments are supported:
 <a href="#state_maintenancewindowstarttime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
+        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the maintenance window start time. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1884,7 +1652,7 @@ The following state arguments are supported:
 <a href="#state_users_go" style="color: inherit; text-decoration: inherit;">Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokeruser">[]Broker<wbr>User</a></span>
+        <span class="property-type"><a href="#brokeruser">[]Broker<wbr>User<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for broker users. For `engine_type` of `RabbitMQ`, Amazon MQ does not return broker users preventing this resource from making user updates and drift detection. Detailed below.
 {{% /md %}}</dd></dl>

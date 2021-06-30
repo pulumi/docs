@@ -743,7 +743,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
 <a href="#fulfillmentactivity_go" style="color: inherit; text-decoration: inherit;">Fulfillment<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity</a></span>
+        <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the intent is fulfilled. For example, after a
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
@@ -754,7 +754,7 @@ places an order with a local pizza store. Attributes are documented under fulfil
 <a href="#conclusionstatement_go" style="color: inherit; text-decoration: inherit;">Conclusion<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement</a></span>
+        <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The statement that you want Amazon Lex to convey to the user
 after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
@@ -767,7 +767,7 @@ mutually exclusive. You can specify only one. Attributes are documented under st
 <a href="#confirmationprompt_go" style="color: inherit; text-decoration: inherit;">Confirmation<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt</a></span>
+        <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prompts the user to confirm the intent. This question should
 have a yes or no answer. You you must provide both the `rejection_statement` and `confirmation_prompt`,
@@ -797,7 +797,7 @@ resource is created and on each update. Defaults to `false`.
 <a href="#dialogcodehook_go" style="color: inherit; text-decoration: inherit;">Dialog<wbr>Code<wbr>Hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook</a></span>
+        <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a Lambda function to invoke for each user input. You can
 invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
@@ -807,7 +807,7 @@ invoke this Lambda function to personalize user interaction. Attributes are docu
 <a href="#followupprompt_go" style="color: inherit; text-decoration: inherit;">Follow<wbr>Up<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt</a></span>
+        <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Amazon Lex uses this prompt to solicit additional activity after
 fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
@@ -840,7 +840,7 @@ in the Alexa Skills Kit.
 <a href="#rejectionstatement_go" style="color: inherit; text-decoration: inherit;">Rejection<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement</a></span>
+        <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
@@ -862,7 +862,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
 <a href="#slots_go" style="color: inherit; text-decoration: inherit;">Slots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslot">[]Intent<wbr>Slot</a></span>
+        <span class="property-type"><a href="#intentslot">[]Intent<wbr>Slot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An list of intent slots. At runtime, Amazon Lex elicits required slot values
 from the user using prompts defined in the slots. Attributes are documented under slot.
@@ -1721,7 +1721,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_conclusionstatement_go" style="color: inherit; text-decoration: inherit;">Conclusion<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement</a></span>
+        <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The statement that you want Amazon Lex to convey to the user
 after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
@@ -1734,7 +1734,7 @@ mutually exclusive. You can specify only one. Attributes are documented under st
 <a href="#state_confirmationprompt_go" style="color: inherit; text-decoration: inherit;">Confirmation<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt</a></span>
+        <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prompts the user to confirm the intent. This question should
 have a yes or no answer. You you must provide both the `rejection_statement` and `confirmation_prompt`,
@@ -1773,7 +1773,7 @@ resource is created and on each update. Defaults to `false`.
 <a href="#state_dialogcodehook_go" style="color: inherit; text-decoration: inherit;">Dialog<wbr>Code<wbr>Hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook</a></span>
+        <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a Lambda function to invoke for each user input. You can
 invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
@@ -1783,7 +1783,7 @@ invoke this Lambda function to personalize user interaction. Attributes are docu
 <a href="#state_followupprompt_go" style="color: inherit; text-decoration: inherit;">Follow<wbr>Up<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt</a></span>
+        <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Amazon Lex uses this prompt to solicit additional activity after
 fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
@@ -1795,7 +1795,7 @@ exclusive. You can specify only one. Attributes are documented under follow_up_p
 <a href="#state_fulfillmentactivity_go" style="color: inherit; text-decoration: inherit;">Fulfillment<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity</a></span>
+        <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the intent is fulfilled. For example, after a
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
@@ -1836,7 +1836,7 @@ in the Alexa Skills Kit.
 <a href="#state_rejectionstatement_go" style="color: inherit; text-decoration: inherit;">Rejection<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement</a></span>
+        <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
@@ -1858,7 +1858,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
 <a href="#state_slots_go" style="color: inherit; text-decoration: inherit;">Slots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslot">[]Intent<wbr>Slot</a></span>
+        <span class="property-type"><a href="#intentslot">[]Intent<wbr>Slot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An list of intent slots. At runtime, Amazon Lex elicits required slot values
 from the user using prompts defined in the slots. Attributes are documented under slot.
@@ -2250,7 +2250,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
 <a href="#messages_csharp" style="color: inherit; text-decoration: inherit;">Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconclusionstatementmessage">List&lt;Intent<wbr>Conclusion<wbr>Statement<wbr>Message<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#intentconclusionstatementmessage">List&lt;Intent<wbr>Conclusion<wbr>Statement<wbr>Message&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -2302,7 +2302,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconclusionstatementmessage">Intent<wbr>Conclusion<wbr>Statement<wbr>Message<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#intentconclusionstatementmessage">Intent<wbr>Conclusion<wbr>Statement<wbr>Message[]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -2328,7 +2328,7 @@ slot values into the response card. For more information, see
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconclusionstatementmessage">Sequence[Intent<wbr>Conclusion<wbr>Statement<wbr>Message<wbr>Args]</a></span>
+        <span class="property-type"><a href="#intentconclusionstatementmessage">Sequence[Intent<wbr>Conclusion<wbr>Statement<wbr>Message]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -2495,7 +2495,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#messages_csharp" style="color: inherit; text-decoration: inherit;">Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconfirmationpromptmessage">List&lt;Intent<wbr>Confirmation<wbr>Prompt<wbr>Message<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#intentconfirmationpromptmessage">List&lt;Intent<wbr>Confirmation<wbr>Prompt<wbr>Message&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -2565,7 +2565,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconfirmationpromptmessage">Intent<wbr>Confirmation<wbr>Prompt<wbr>Message<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#intentconfirmationpromptmessage">Intent<wbr>Confirmation<wbr>Prompt<wbr>Message[]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -2600,7 +2600,7 @@ slot values into the response card. For more information, see
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconfirmationpromptmessage">Sequence[Intent<wbr>Confirmation<wbr>Prompt<wbr>Message<wbr>Args]</a></span>
+        <span class="property-type"><a href="#intentconfirmationpromptmessage">Sequence[Intent<wbr>Confirmation<wbr>Prompt<wbr>Message]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -2856,7 +2856,7 @@ to invoke your Lambda function. For more information, see
 <a href="#prompt_csharp" style="color: inherit; text-decoration: inherit;">Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt</a></span>
     </dt>
     <dd>{{% md %}}Prompts for information from the user. Attributes are documented under prompt.
 {{% /md %}}</dd><dt class="property-required"
@@ -2865,7 +2865,7 @@ to invoke your Lambda function. For more information, see
 <a href="#rejectionstatement_csharp" style="color: inherit; text-decoration: inherit;">Rejection<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement</a></span>
     </dt>
     <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
@@ -2904,7 +2904,7 @@ documented below under statement.
 <a href="#prompt_nodejs" style="color: inherit; text-decoration: inherit;">prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt</a></span>
     </dt>
     <dd>{{% md %}}Prompts for information from the user. Attributes are documented under prompt.
 {{% /md %}}</dd><dt class="property-required"
@@ -2913,7 +2913,7 @@ documented below under statement.
 <a href="#rejectionstatement_nodejs" style="color: inherit; text-decoration: inherit;">rejection<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement</a></span>
     </dt>
     <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
@@ -2928,7 +2928,7 @@ documented below under statement.
 <a href="#prompt_python" style="color: inherit; text-decoration: inherit;">prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt</a></span>
     </dt>
     <dd>{{% md %}}Prompts for information from the user. Attributes are documented under prompt.
 {{% /md %}}</dd><dt class="property-required"
@@ -2937,7 +2937,7 @@ documented below under statement.
 <a href="#rejection_statement_python" style="color: inherit; text-decoration: inherit;">rejection_<wbr>statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement</a></span>
     </dt>
     <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
@@ -2963,7 +2963,7 @@ documented below under statement.
 <a href="#messages_csharp" style="color: inherit; text-decoration: inherit;">Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptpromptmessage">List&lt;Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Message<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptpromptmessage">List&lt;Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Message&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -3033,7 +3033,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptpromptmessage">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Message<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptpromptmessage">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Message[]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -3068,7 +3068,7 @@ slot values into the response card. For more information, see
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptpromptmessage">Sequence[Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Message<wbr>Args]</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptpromptmessage">Sequence[Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Message]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -3226,7 +3226,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#messages_csharp" style="color: inherit; text-decoration: inherit;">Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptrejectionstatementmessage">List&lt;Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Message<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptrejectionstatementmessage">List&lt;Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Message&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -3278,7 +3278,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptrejectionstatementmessage">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Message<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptrejectionstatementmessage">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Message[]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -3304,7 +3304,7 @@ slot values into the response card. For more information, see
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptrejectionstatementmessage">Sequence[Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Message<wbr>Args]</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptrejectionstatementmessage">Sequence[Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Message]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -3472,7 +3472,7 @@ returning the slot data to the client application.
 <a href="#codehook_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfulfillmentactivitycodehook">Intent<wbr>Fulfillment<wbr>Activity<wbr>Code<wbr>Hook<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentfulfillmentactivitycodehook">Intent<wbr>Fulfillment<wbr>Activity<wbr>Code<wbr>Hook</a></span>
     </dt>
     <dd>{{% md %}}A description of the Lambda function that is run to fulfill the intent.
 Required if type is CodeHook. Attributes are documented under code_hook.
@@ -3520,7 +3520,7 @@ returning the slot data to the client application.
 <a href="#codehook_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfulfillmentactivitycodehook">Intent<wbr>Fulfillment<wbr>Activity<wbr>Code<wbr>Hook<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentfulfillmentactivitycodehook">Intent<wbr>Fulfillment<wbr>Activity<wbr>Code<wbr>Hook</a></span>
     </dt>
     <dd>{{% md %}}A description of the Lambda function that is run to fulfill the intent.
 Required if type is CodeHook. Attributes are documented under code_hook.
@@ -3544,7 +3544,7 @@ returning the slot data to the client application.
 <a href="#code_hook_python" style="color: inherit; text-decoration: inherit;">code_<wbr>hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfulfillmentactivitycodehook">Intent<wbr>Fulfillment<wbr>Activity<wbr>Code<wbr>Hook<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentfulfillmentactivitycodehook">Intent<wbr>Fulfillment<wbr>Activity<wbr>Code<wbr>Hook</a></span>
     </dt>
     <dd>{{% md %}}A description of the Lambda function that is run to fulfill the intent.
 Required if type is CodeHook. Attributes are documented under code_hook.
@@ -3658,7 +3658,7 @@ to invoke your Lambda function. For more information, see
 <a href="#messages_csharp" style="color: inherit; text-decoration: inherit;">Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentrejectionstatementmessage">List&lt;Intent<wbr>Rejection<wbr>Statement<wbr>Message<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#intentrejectionstatementmessage">List&lt;Intent<wbr>Rejection<wbr>Statement<wbr>Message&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -3710,7 +3710,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentrejectionstatementmessage">Intent<wbr>Rejection<wbr>Statement<wbr>Message<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#intentrejectionstatementmessage">Intent<wbr>Rejection<wbr>Statement<wbr>Message[]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -3736,7 +3736,7 @@ slot values into the response card. For more information, see
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentrejectionstatementmessage">Sequence[Intent<wbr>Rejection<wbr>Statement<wbr>Message<wbr>Args]</a></span>
+        <span class="property-type"><a href="#intentrejectionstatementmessage">Sequence[Intent<wbr>Rejection<wbr>Statement<wbr>Message]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -3974,7 +3974,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
 <a href="#valueelicitationprompt_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Elicitation<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslotvalueelicitationprompt">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentslotvalueelicitationprompt">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt</a></span>
     </dt>
     <dd>{{% md %}}The prompt that Amazon Lex uses to elicit the slot value
 from the user. Attributes are documented under prompt.
@@ -4162,7 +4162,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
 <a href="#valueelicitationprompt_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Elicitation<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslotvalueelicitationprompt">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentslotvalueelicitationprompt">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt</a></span>
     </dt>
     <dd>{{% md %}}The prompt that Amazon Lex uses to elicit the slot value
 from the user. Attributes are documented under prompt.
@@ -4256,7 +4256,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
 <a href="#value_elicitation_prompt_python" style="color: inherit; text-decoration: inherit;">value_<wbr>elicitation_<wbr>prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslotvalueelicitationprompt">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentslotvalueelicitationprompt">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt</a></span>
     </dt>
     <dd>{{% md %}}The prompt that Amazon Lex uses to elicit the slot value
 from the user. Attributes are documented under prompt.
@@ -4281,7 +4281,7 @@ from the user. Attributes are documented under prompt.
 <a href="#messages_csharp" style="color: inherit; text-decoration: inherit;">Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslotvalueelicitationpromptmessage">List&lt;Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Message<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#intentslotvalueelicitationpromptmessage">List&lt;Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Message&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -4351,7 +4351,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslotvalueelicitationpromptmessage">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Message<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#intentslotvalueelicitationpromptmessage">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Message[]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -4386,7 +4386,7 @@ slot values into the response card. For more information, see
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslotvalueelicitationpromptmessage">Sequence[Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Message<wbr>Args]</a></span>
+        <span class="property-type"><a href="#intentslotvalueelicitationpromptmessage">Sequence[Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Message]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).

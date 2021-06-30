@@ -1239,7 +1239,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
 <a href="#lambdafunctions_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationlambdafunction">[]Bucket<wbr>Notification<wbr>Lambda<wbr>Function</a></span>
+        <span class="property-type"><a href="#bucketnotificationlambdafunction">[]Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1248,7 +1248,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
 <a href="#queues_go" style="color: inherit; text-decoration: inherit;">Queues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationqueue">[]Bucket<wbr>Notification<wbr>Queue</a></span>
+        <span class="property-type"><a href="#bucketnotificationqueue">[]Bucket<wbr>Notification<wbr>Queue<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1257,7 +1257,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
 <a href="#topics_go" style="color: inherit; text-decoration: inherit;">Topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationtopic">[]Bucket<wbr>Notification<wbr>Topic</a></span>
+        <span class="property-type"><a href="#bucketnotificationtopic">[]Bucket<wbr>Notification<wbr>Topic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
 {{% /md %}}</dd></dl>
@@ -1583,7 +1583,7 @@ The following state arguments are supported:
 <a href="#state_lambdafunctions_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationlambdafunction">[]Bucket<wbr>Notification<wbr>Lambda<wbr>Function</a></span>
+        <span class="property-type"><a href="#bucketnotificationlambdafunction">[]Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1592,7 +1592,7 @@ The following state arguments are supported:
 <a href="#state_queues_go" style="color: inherit; text-decoration: inherit;">Queues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationqueue">[]Bucket<wbr>Notification<wbr>Queue</a></span>
+        <span class="property-type"><a href="#bucketnotificationqueue">[]Bucket<wbr>Notification<wbr>Queue<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1601,7 +1601,7 @@ The following state arguments are supported:
 <a href="#state_topics_go" style="color: inherit; text-decoration: inherit;">Topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationtopic">[]Bucket<wbr>Notification<wbr>Topic</a></span>
+        <span class="property-type"><a href="#bucketnotificationtopic">[]Bucket<wbr>Notification<wbr>Topic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
 {{% /md %}}</dd></dl>

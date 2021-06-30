@@ -150,7 +150,7 @@ func main() {
 		thisAuthorizer, err := apigateway.NewAuthorizer(ctx, "thisAuthorizer", &apigateway.AuthorizerArgs{
 			Type:         pulumi.String("COGNITO_USER_POOLS"),
 			RestApi:      thisRestApi.ID(),
-			ProviderArns: toPulumiStringArray(thisUserPools.Arns),
+			ProviderArns: interface{}(thisUserPools.Arns),
 		})
 		if err != nil {
 			return err
@@ -170,13 +170,6 @@ func main() {
 		}
 		return nil
 	})
-}
-func toPulumiStringArray(arr []string) pulumi.StringArray {
-	var pulumiArr pulumi.StringArray
-	for _, v := range arr {
-		pulumiArr = append(pulumiArr, pulumi.String(v))
-	}
-	return pulumiArr
 }
 ```
 

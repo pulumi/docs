@@ -483,7 +483,7 @@ The InstanceFleet resource accepts the following [input]({{< relref "/docs/intro
 <a href="#instancetypeconfigs_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetinstancetypeconfig">[]Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancefleetinstancetypeconfig">[]Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for instance fleet
 {{% /md %}}</dd><dt class="property-optional"
@@ -492,7 +492,7 @@ The InstanceFleet resource accepts the following [input]({{< relref "/docs/intro
 <a href="#launchspecifications_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetlaunchspecifications">Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</a></span>
+        <span class="property-type"><a href="#instancefleetlaunchspecifications">Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for launch specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -983,7 +983,7 @@ The following state arguments are supported:
 <a href="#state_instancetypeconfigs_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetinstancetypeconfig">[]Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancefleetinstancetypeconfig">[]Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for instance fleet
 {{% /md %}}</dd><dt class="property-optional"
@@ -992,7 +992,7 @@ The following state arguments are supported:
 <a href="#state_launchspecifications_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetlaunchspecifications">Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</a></span>
+        <span class="property-type"><a href="#instancefleetlaunchspecifications">Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for launch specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -1234,7 +1234,7 @@ The following state arguments are supported:
 <a href="#configurations_csharp" style="color: inherit; text-decoration: inherit;">Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetinstancetypeconfigconfiguration">List&lt;Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instancefleetinstancetypeconfigconfiguration">List&lt;Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1243,7 +1243,7 @@ The following state arguments are supported:
 <a href="#ebsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetinstancetypeconfigebsconfig">List&lt;Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instancefleetinstancetypeconfigebsconfig">List&lt;Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1350,7 +1350,7 @@ The following state arguments are supported:
 <a href="#configurations_nodejs" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetinstancetypeconfigconfiguration">Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instancefleetinstancetypeconfigconfiguration">Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1359,7 +1359,7 @@ The following state arguments are supported:
 <a href="#ebsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetinstancetypeconfigebsconfig">Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instancefleetinstancetypeconfigebsconfig">Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1408,7 +1408,7 @@ The following state arguments are supported:
 <a href="#configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetinstancetypeconfigconfiguration">Sequence[Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefleetinstancetypeconfigconfiguration">Sequence[Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1417,7 +1417,7 @@ The following state arguments are supported:
 <a href="#ebs_configs_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetinstancetypeconfigebsconfig">Sequence[Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefleetinstancetypeconfigebsconfig">Sequence[Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1693,7 +1693,7 @@ The following state arguments are supported:
 <a href="#ondemandspecifications_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetlaunchspecificationsondemandspecification">List&lt;Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instancefleetlaunchspecificationsondemandspecification">List&lt;Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for on demand instances launch specifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -1702,7 +1702,7 @@ The following state arguments are supported:
 <a href="#spotspecifications_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetlaunchspecificationsspotspecification">List&lt;Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instancefleetlaunchspecificationsspotspecification">List&lt;Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for spot instances launch specifications
 {{% /md %}}</dd></dl>
@@ -1737,7 +1737,7 @@ The following state arguments are supported:
 <a href="#ondemandspecifications_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetlaunchspecificationsondemandspecification">Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instancefleetlaunchspecificationsondemandspecification">Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for on demand instances launch specifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -1746,7 +1746,7 @@ The following state arguments are supported:
 <a href="#spotspecifications_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetlaunchspecificationsspotspecification">Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instancefleetlaunchspecificationsspotspecification">Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for spot instances launch specifications
 {{% /md %}}</dd></dl>
@@ -1759,7 +1759,7 @@ The following state arguments are supported:
 <a href="#on_demand_specifications_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetlaunchspecificationsondemandspecification">Sequence[Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefleetlaunchspecificationsondemandspecification">Sequence[Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for on demand instances launch specifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -1768,7 +1768,7 @@ The following state arguments are supported:
 <a href="#spot_specifications_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefleetlaunchspecificationsspotspecification">Sequence[Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefleetlaunchspecificationsspotspecification">Sequence[Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for spot instances launch specifications
 {{% /md %}}</dd></dl>

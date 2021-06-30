@@ -15,212 +15,6 @@ Manages Lake Formation principals designated as data lake administrators and lis
 > **NOTE:** Lake Formation introduces fine-grained access control for data in your data lake. Part of the changes include the `IAMAllowedPrincipals` principal in order to make Lake Formation backwards compatible with existing IAM and Glue permissions. For more information, see [Changing the Default Security Settings for Your Data Lake](https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html) and [Upgrading AWS Glue Data Permissions to the AWS Lake Formation Model](https://docs.aws.amazon.com/lake-formation/latest/dg/upgrade-glue-lake-formation.html).
 
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-### Data Lake Admins
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.LakeFormation.DataLakeSettings("example", new Aws.LakeFormation.DataLakeSettingsArgs
-        {
-            Admins = 
-            {
-                aws_iam_user.Test.Arn,
-                aws_iam_role.Test.Arn,
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.lakeformation.DataLakeSettings("example", admins=[
-    aws_iam_user["test"]["arn"],
-    aws_iam_role["test"]["arn"],
-])
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.lakeformation.DataLakeSettings("example", {admins: [
-    aws_iam_user.test.arn,
-    aws_iam_role.test.arn,
-]});
-```
-
-
-{{< /example >}}
-
-
-
-
-### Create Default Permissions
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.LakeFormation.DataLakeSettings("example", new Aws.LakeFormation.DataLakeSettingsArgs
-        {
-            Admins = 
-            {
-                aws_iam_user.Test.Arn,
-                aws_iam_role.Test.Arn,
-            },
-            CreateDatabaseDefaultPermissions = 
-            {
-                new Aws.LakeFormation.Inputs.DataLakeSettingsCreateDatabaseDefaultPermissionArgs
-                {
-                    Permissions = 
-                    {
-                        "SELECT",
-                        "ALTER",
-                        "DROP",
-                    },
-                    Principal = aws_iam_user.Test.Arn,
-                },
-            },
-            CreateTableDefaultPermissions = 
-            {
-                new Aws.LakeFormation.Inputs.DataLakeSettingsCreateTableDefaultPermissionArgs
-                {
-                    Permissions = 
-                    {
-                        "ALL",
-                    },
-                    Principal = aws_iam_role.Test.Arn,
-                },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.lakeformation.DataLakeSettings("example",
-    admins=[
-        aws_iam_user["test"]["arn"],
-        aws_iam_role["test"]["arn"],
-    ],
-    create_database_default_permissions=[aws.lakeformation.DataLakeSettingsCreateDatabaseDefaultPermissionArgs(
-        permissions=[
-            "SELECT",
-            "ALTER",
-            "DROP",
-        ],
-        principal=aws_iam_user["test"]["arn"],
-    )],
-    create_table_default_permissions=[aws.lakeformation.DataLakeSettingsCreateTableDefaultPermissionArgs(
-        permissions=["ALL"],
-        principal=aws_iam_role["test"]["arn"],
-    )])
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.lakeformation.DataLakeSettings("example", {
-    admins: [
-        aws_iam_user.test.arn,
-        aws_iam_role.test.arn,
-    ],
-    createDatabaseDefaultPermissions: [{
-        permissions: [
-            "SELECT",
-            "ALTER",
-            "DROP",
-        ],
-        principal: aws_iam_user.test.arn,
-    }],
-    createTableDefaultPermissions: [{
-        permissions: ["ALL"],
-        principal: aws_iam_role.test.arn,
-    }],
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Create a DataLakeSettings Resource {#create}
@@ -440,7 +234,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
 <a href="#createdatabasedefaultpermissions_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Database<wbr>Default<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission</a></span>
+        <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -449,7 +243,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
 <a href="#createtabledefaultpermissions_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Table<wbr>Default<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission</a></span>
+        <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -821,7 +615,7 @@ The following state arguments are supported:
 <a href="#state_createdatabasedefaultpermissions_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Database<wbr>Default<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission</a></span>
+        <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -830,7 +624,7 @@ The following state arguments are supported:
 <a href="#state_createtabledefaultpermissions_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Table<wbr>Default<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission</a></span>
+        <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

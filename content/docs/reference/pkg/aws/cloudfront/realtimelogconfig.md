@@ -472,7 +472,7 @@ The RealtimeLogConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realtimelogconfigendpoint">Realtime<wbr>Log<wbr>Config<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#realtimelogconfigendpoint">Realtime<wbr>Log<wbr>Config<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis data streams where real-time log data is sent.
 {{% /md %}}</dd><dt class="property-required"
@@ -871,7 +871,7 @@ The following state arguments are supported:
 <a href="#state_endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realtimelogconfigendpoint">Realtime<wbr>Log<wbr>Config<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#realtimelogconfigendpoint">Realtime<wbr>Log<wbr>Config<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis data streams where real-time log data is sent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1020,7 +1020,7 @@ The following state arguments are supported:
 <a href="#kinesisstreamconfig_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Stream<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realtimelogconfigendpointkinesisstreamconfig">Realtime<wbr>Log<wbr>Config<wbr>Endpoint<wbr>Kinesis<wbr>Stream<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#realtimelogconfigendpointkinesisstreamconfig">Realtime<wbr>Log<wbr>Config<wbr>Endpoint<wbr>Kinesis<wbr>Stream<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis data stream configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -1064,7 +1064,7 @@ The following state arguments are supported:
 <a href="#kinesisstreamconfig_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Stream<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realtimelogconfigendpointkinesisstreamconfig">Realtime<wbr>Log<wbr>Config<wbr>Endpoint<wbr>Kinesis<wbr>Stream<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#realtimelogconfigendpointkinesisstreamconfig">Realtime<wbr>Log<wbr>Config<wbr>Endpoint<wbr>Kinesis<wbr>Stream<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis data stream configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -1086,7 +1086,7 @@ The following state arguments are supported:
 <a href="#kinesis_stream_config_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>stream_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realtimelogconfigendpointkinesisstreamconfig">Realtime<wbr>Log<wbr>Config<wbr>Endpoint<wbr>Kinesis<wbr>Stream<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#realtimelogconfigendpointkinesisstreamconfig">Realtime<wbr>Log<wbr>Config<wbr>Endpoint<wbr>Kinesis<wbr>Stream<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis data stream configuration.
 {{% /md %}}</dd><dt class="property-required"

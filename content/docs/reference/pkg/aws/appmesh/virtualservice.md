@@ -475,7 +475,7 @@ The VirtualService resource accepts the following [input]({{< relref "/docs/intr
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec</a></span>
+        <span class="property-type"><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual service specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1131,7 +1131,7 @@ The following state arguments are supported:
 <a href="#state_spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec</a></span>
+        <span class="property-type"><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual service specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1361,7 +1361,7 @@ The following state arguments are supported:
 <a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovider">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualservicespecprovider">Virtual<wbr>Service<wbr>Spec<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.
 {{% /md %}}</dd></dl>
@@ -1387,7 +1387,7 @@ The following state arguments are supported:
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovider">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualservicespecprovider">Virtual<wbr>Service<wbr>Spec<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.
 {{% /md %}}</dd></dl>
@@ -1400,7 +1400,7 @@ The following state arguments are supported:
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovider">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualservicespecprovider">Virtual<wbr>Service<wbr>Spec<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.
 {{% /md %}}</dd></dl>
@@ -1415,7 +1415,7 @@ The following state arguments are supported:
 <a href="#virtualnode_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovidervirtualnode">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualservicespecprovidervirtualnode">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}The virtual node associated with a virtual service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1424,7 +1424,7 @@ The following state arguments are supported:
 <a href="#virtualrouter_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Router</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovidervirtualrouter">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualservicespecprovidervirtualrouter">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router</a></span>
     </dt>
     <dd>{{% md %}}The virtual router associated with a virtual service.
 {{% /md %}}</dd></dl>
@@ -1459,7 +1459,7 @@ The following state arguments are supported:
 <a href="#virtualnode_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovidervirtualnode">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualservicespecprovidervirtualnode">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}The virtual node associated with a virtual service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1468,7 +1468,7 @@ The following state arguments are supported:
 <a href="#virtualrouter_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Router</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovidervirtualrouter">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualservicespecprovidervirtualrouter">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router</a></span>
     </dt>
     <dd>{{% md %}}The virtual router associated with a virtual service.
 {{% /md %}}</dd></dl>
@@ -1481,7 +1481,7 @@ The following state arguments are supported:
 <a href="#virtual_node_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovidervirtualnode">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualservicespecprovidervirtualnode">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}The virtual node associated with a virtual service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1490,7 +1490,7 @@ The following state arguments are supported:
 <a href="#virtual_router_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>router</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovidervirtualrouter">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualservicespecprovidervirtualrouter">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router</a></span>
     </dt>
     <dd>{{% md %}}The virtual router associated with a virtual service.
 {{% /md %}}</dd></dl>

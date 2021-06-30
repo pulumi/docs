@@ -959,7 +959,7 @@ The ReplicationGroup resource accepts the following [input]({{< relref "/docs/in
 <a href="#clustermode_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationgroupclustermode">Replication<wbr>Group<wbr>Cluster<wbr>Mode</a></span>
+        <span class="property-type"><a href="#replicationgroupclustermode">Replication<wbr>Group<wbr>Cluster<wbr>Mode<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Create a native Redis cluster. `automatic_failover_enabled` must be set to true. Cluster Mode documented below. Only 1 `cluster_mode` block is allowed. One of `number_cache_clusters` or `cluster_mode` is required. Note that configuring this block does not enable cluster mode, i.e. data sharding, this requires using a parameter group that has the parameter `cluster-enabled` set to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2625,7 +2625,7 @@ The following state arguments are supported:
 <a href="#state_clustermode_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationgroupclustermode">Replication<wbr>Group<wbr>Cluster<wbr>Mode</a></span>
+        <span class="property-type"><a href="#replicationgroupclustermode">Replication<wbr>Group<wbr>Cluster<wbr>Mode<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Create a native Redis cluster. `automatic_failover_enabled` must be set to true. Cluster Mode documented below. Only 1 `cluster_mode` block is allowed. One of `number_cache_clusters` or `cluster_mode` is required. Note that configuring this block does not enable cluster mode, i.e. data sharding, this requires using a parameter group that has the parameter `cluster-enabled` set to true.
 {{% /md %}}</dd><dt class="property-optional"

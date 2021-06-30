@@ -402,7 +402,7 @@ The RegexPatternSet resource accepts the following [input]({{< relref "/docs/int
 <a href="#regularexpressions_go" style="color: inherit; text-decoration: inherit;">Regular<wbr>Expressions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regexpatternsetregularexpression">[]Regex<wbr>Pattern<wbr>Set<wbr>Regular<wbr>Expression</a></span>
+        <span class="property-type"><a href="#regexpatternsetregularexpression">[]Regex<wbr>Pattern<wbr>Set<wbr>Regular<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more blocks of regular expression patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`. See Regular Expression below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -915,7 +915,7 @@ The following state arguments are supported:
 <a href="#state_regularexpressions_go" style="color: inherit; text-decoration: inherit;">Regular<wbr>Expressions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regexpatternsetregularexpression">[]Regex<wbr>Pattern<wbr>Set<wbr>Regular<wbr>Expression</a></span>
+        <span class="property-type"><a href="#regexpatternsetregularexpression">[]Regex<wbr>Pattern<wbr>Set<wbr>Regular<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more blocks of regular expression patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`. See Regular Expression below for details.
 {{% /md %}}</dd><dt class="property-optional"

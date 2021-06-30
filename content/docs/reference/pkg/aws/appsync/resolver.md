@@ -12,300 +12,6 @@ meta_desc: "Documentation for the aws.appsync.Resolver resource with examples, i
 
 Provides an AppSync Resolver.
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var testGraphQLApi = new Aws.AppSync.GraphQLApi("testGraphQLApi", new Aws.AppSync.GraphQLApiArgs
-        {
-            AuthenticationType = "API_KEY",
-            Schema = @"type Mutation {
-	putPost(id: ID!, title: String!): Post
-}
-
-type Post {
-	id: ID!
-	title: String!
-}
-
-type Query {
-	singlePost(id: ID!): Post
-}
-
-schema {
-	query: Query
-	mutation: Mutation
-}
-",
-        });
-        var testDataSource = new Aws.AppSync.DataSource("testDataSource", new Aws.AppSync.DataSourceArgs
-        {
-            ApiId = testGraphQLApi.Id,
-            Name = "tf_example",
-            Type = "HTTP",
-            HttpConfig = new Aws.AppSync.Inputs.DataSourceHttpConfigArgs
-            {
-                Endpoint = "http://example.com",
-            },
-        });
-        // UNIT type resolver (default)
-        var testResolver = new Aws.AppSync.Resolver("testResolver", new Aws.AppSync.ResolverArgs
-        {
-            ApiId = testGraphQLApi.Id,
-            Field = "singlePost",
-            Type = "Query",
-            DataSource = testDataSource.Name,
-            RequestTemplate = @"{
-    ""version"": ""2018-05-29"",
-    ""method"": ""GET"",
-    ""resourcePath"": ""/"",
-    ""params"":{
-        ""headers"": $utils.http.copyheaders($ctx.request.headers)
-    }
-}
-",
-            ResponseTemplate = @"#if($ctx.result.statusCode == 200)
-    $ctx.result.body
-#else
-    $utils.appendError($ctx.result.body, $ctx.result.statusCode)
-#end
-",
-            CachingConfig = new Aws.AppSync.Inputs.ResolverCachingConfigArgs
-            {
-                CachingKeys = 
-                {
-                    "$context.identity.sub",
-                    "$context.arguments.id",
-                },
-                Ttl = 60,
-            },
-        });
-        // PIPELINE type resolver
-        var mutationPipelineTest = new Aws.AppSync.Resolver("mutationPipelineTest", new Aws.AppSync.ResolverArgs
-        {
-            Type = "Mutation",
-            ApiId = testGraphQLApi.Id,
-            Field = "pipelineTest",
-            RequestTemplate = "{}",
-            ResponseTemplate = "$util.toJson($ctx.result)",
-            Kind = "PIPELINE",
-            PipelineConfig = new Aws.AppSync.Inputs.ResolverPipelineConfigArgs
-            {
-                Functions = 
-                {
-                    aws_appsync_function.Test1.Function_id,
-                    aws_appsync_function.Test2.Function_id,
-                    aws_appsync_function.Test3.Function_id,
-                },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-test_graph_ql_api = aws.appsync.GraphQLApi("testGraphQLApi",
-    authentication_type="API_KEY",
-    schema="""type Mutation {
-	putPost(id: ID!, title: String!): Post
-}
-
-type Post {
-	id: ID!
-	title: String!
-}
-
-type Query {
-	singlePost(id: ID!): Post
-}
-
-schema {
-	query: Query
-	mutation: Mutation
-}
-""")
-test_data_source = aws.appsync.DataSource("testDataSource",
-    api_id=test_graph_ql_api.id,
-    name="tf_example",
-    type="HTTP",
-    http_config=aws.appsync.DataSourceHttpConfigArgs(
-        endpoint="http://example.com",
-    ))
-# UNIT type resolver (default)
-test_resolver = aws.appsync.Resolver("testResolver",
-    api_id=test_graph_ql_api.id,
-    field="singlePost",
-    type="Query",
-    data_source=test_data_source.name,
-    request_template="""{
-    "version": "2018-05-29",
-    "method": "GET",
-    "resourcePath": "/",
-    "params":{
-        "headers": $utils.http.copyheaders($ctx.request.headers)
-    }
-}
-""",
-    response_template="""#if($ctx.result.statusCode == 200)
-    $ctx.result.body
-#else
-    $utils.appendError($ctx.result.body, $ctx.result.statusCode)
-#end
-""",
-    caching_config=aws.appsync.ResolverCachingConfigArgs(
-        caching_keys=[
-            "$context.identity.sub",
-            "$context.arguments.id",
-        ],
-        ttl=60,
-    ))
-# PIPELINE type resolver
-mutation_pipeline_test = aws.appsync.Resolver("mutationPipelineTest",
-    type="Mutation",
-    api_id=test_graph_ql_api.id,
-    field="pipelineTest",
-    request_template="{}",
-    response_template="$util.toJson($ctx.result)",
-    kind="PIPELINE",
-    pipeline_config=aws.appsync.ResolverPipelineConfigArgs(
-        functions=[
-            aws_appsync_function["test1"]["function_id"],
-            aws_appsync_function["test2"]["function_id"],
-            aws_appsync_function["test3"]["function_id"],
-        ],
-    ))
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const testGraphQLApi = new aws.appsync.GraphQLApi("testGraphQLApi", {
-    authenticationType: "API_KEY",
-    schema: `type Mutation {
-	putPost(id: ID!, title: String!): Post
-}
-
-type Post {
-	id: ID!
-	title: String!
-}
-
-type Query {
-	singlePost(id: ID!): Post
-}
-
-schema {
-	query: Query
-	mutation: Mutation
-}
-`,
-});
-const testDataSource = new aws.appsync.DataSource("testDataSource", {
-    apiId: testGraphQLApi.id,
-    name: "tf_example",
-    type: "HTTP",
-    httpConfig: {
-        endpoint: "http://example.com",
-    },
-});
-// UNIT type resolver (default)
-const testResolver = new aws.appsync.Resolver("testResolver", {
-    apiId: testGraphQLApi.id,
-    field: "singlePost",
-    type: "Query",
-    dataSource: testDataSource.name,
-    requestTemplate: `{
-    "version": "2018-05-29",
-    "method": "GET",
-    "resourcePath": "/",
-    "params":{
-        "headers": $utils.http.copyheaders($ctx.request.headers)
-    }
-}
-`,
-    responseTemplate: `#if($ctx.result.statusCode == 200)
-    $ctx.result.body
-#else
-    $utils.appendError($ctx.result.body, $ctx.result.statusCode)
-#end
-`,
-    cachingConfig: {
-        cachingKeys: [
-            `$context.identity.sub`,
-            `$context.arguments.id`,
-        ],
-        ttl: 60,
-    },
-});
-// PIPELINE type resolver
-const mutationPipelineTest = new aws.appsync.Resolver("mutationPipelineTest", {
-    type: "Mutation",
-    apiId: testGraphQLApi.id,
-    field: "pipelineTest",
-    requestTemplate: "{}",
-    responseTemplate: `$util.toJson($ctx.result)`,
-    kind: "PIPELINE",
-    pipelineConfig: {
-        functions: [
-            aws_appsync_function.test1.function_id,
-            aws_appsync_function.test2.function_id,
-            aws_appsync_function.test3.function_id,
-        ],
-    },
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Create a Resolver Resource {#create}
@@ -574,7 +280,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#cachingconfig_go" style="color: inherit; text-decoration: inherit;">Caching<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolvercachingconfig">Resolver<wbr>Caching<wbr>Config</a></span>
+        <span class="property-type"><a href="#resolvercachingconfig">Resolver<wbr>Caching<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CachingConfig.
 {{% /md %}}</dd><dt class="property-optional"
@@ -601,7 +307,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#pipelineconfig_go" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config</a></span>
+        <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The PipelineConfig.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1140,7 +846,7 @@ The following state arguments are supported:
 <a href="#state_cachingconfig_go" style="color: inherit; text-decoration: inherit;">Caching<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolvercachingconfig">Resolver<wbr>Caching<wbr>Config</a></span>
+        <span class="property-type"><a href="#resolvercachingconfig">Resolver<wbr>Caching<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CachingConfig.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1176,7 +882,7 @@ The following state arguments are supported:
 <a href="#state_pipelineconfig_go" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config</a></span>
+        <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The PipelineConfig.
 {{% /md %}}</dd><dt class="property-optional"

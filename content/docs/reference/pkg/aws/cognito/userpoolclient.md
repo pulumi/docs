@@ -863,7 +863,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#analyticsconfiguration_go" style="color: inherit; text-decoration: inherit;">Analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -971,7 +971,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tokenvalidityunits_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Validity<wbr>Units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units</a></span>
+        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for units in which the validity times are represented in. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1799,7 +1799,7 @@ The following state arguments are supported:
 <a href="#state_analyticsconfiguration_go" style="color: inherit; text-decoration: inherit;">Analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1916,7 +1916,7 @@ The following state arguments are supported:
 <a href="#state_tokenvalidityunits_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Validity<wbr>Units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units</a></span>
+        <span class="property-type"><a href="#userpoolclienttokenvalidityunits">User<wbr>Pool<wbr>Client<wbr>Token<wbr>Validity<wbr>Units<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for units in which the validity times are represented in. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

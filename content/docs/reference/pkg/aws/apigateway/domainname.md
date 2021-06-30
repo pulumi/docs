@@ -959,7 +959,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
 <a href="#endpointconfiguration_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining API endpoint information including type. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -968,7 +968,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
 <a href="#mutualtlsauthentication_go" style="color: inherit; text-decoration: inherit;">Mutual<wbr>Tls<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1996,7 +1996,7 @@ that can be used to create a Route53 alias record for the distribution.
 <a href="#state_endpointconfiguration_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining API endpoint information including type. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2005,7 +2005,7 @@ that can be used to create a Route53 alias record for the distribution.
 <a href="#state_mutualtlsauthentication_go" style="color: inherit; text-decoration: inherit;">Mutual<wbr>Tls<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name. Defined below.
 {{% /md %}}</dd><dt class="property-optional"

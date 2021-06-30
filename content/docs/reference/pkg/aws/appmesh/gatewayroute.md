@@ -417,7 +417,7 @@ The GatewayRoute resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespec">Gateway<wbr>Route<wbr>Spec</a></span>
+        <span class="property-type"><a href="#gatewayroutespec">Gateway<wbr>Route<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gateway route specification to apply.
 {{% /md %}}</dd><dt class="property-required"
@@ -1110,7 +1110,7 @@ The following state arguments are supported:
 <a href="#state_spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespec">Gateway<wbr>Route<wbr>Spec</a></span>
+        <span class="property-type"><a href="#gatewayroutespec">Gateway<wbr>Route<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gateway route specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1367,7 +1367,7 @@ The following state arguments are supported:
 <a href="#grpcroute_csharp" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespecgrpcroute">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespecgrpcroute">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The specification of a gRPC gateway route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1376,7 +1376,7 @@ The following state arguments are supported:
 <a href="#http2route_csharp" style="color: inherit; text-decoration: inherit;">Http2Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttp2route">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttp2route">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route</a></span>
     </dt>
     <dd>{{% md %}}The specification of an HTTP/2 gateway route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1385,7 +1385,7 @@ The following state arguments are supported:
 <a href="#httproute_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttproute">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttproute">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The specification of an HTTP gateway route.
 {{% /md %}}</dd></dl>
@@ -1429,7 +1429,7 @@ The following state arguments are supported:
 <a href="#grpcroute_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespecgrpcroute">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespecgrpcroute">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The specification of a gRPC gateway route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1438,7 +1438,7 @@ The following state arguments are supported:
 <a href="#http2route_nodejs" style="color: inherit; text-decoration: inherit;">http2Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttp2route">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttp2route">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route</a></span>
     </dt>
     <dd>{{% md %}}The specification of an HTTP/2 gateway route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1447,7 +1447,7 @@ The following state arguments are supported:
 <a href="#httproute_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttproute">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttproute">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The specification of an HTTP gateway route.
 {{% /md %}}</dd></dl>
@@ -1460,7 +1460,7 @@ The following state arguments are supported:
 <a href="#grpc_route_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespecgrpcroute">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespecgrpcroute">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The specification of a gRPC gateway route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1469,7 +1469,7 @@ The following state arguments are supported:
 <a href="#http2_route_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttp2route">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttp2route">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route</a></span>
     </dt>
     <dd>{{% md %}}The specification of an HTTP/2 gateway route.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1478,7 +1478,7 @@ The following state arguments are supported:
 <a href="#http_route_python" style="color: inherit; text-decoration: inherit;">http_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttproute">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttproute">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The specification of an HTTP gateway route.
 {{% /md %}}</dd></dl>
@@ -1493,7 +1493,7 @@ The following state arguments are supported:
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespecgrpcrouteaction">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespecgrpcrouteaction">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd><dt class="property-required"
@@ -1502,7 +1502,7 @@ The following state arguments are supported:
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespecgrpcroutematch">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespecgrpcroutematch">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a request match.
 {{% /md %}}</dd></dl>
@@ -1537,7 +1537,7 @@ The following state arguments are supported:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespecgrpcrouteaction">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespecgrpcrouteaction">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd><dt class="property-required"
@@ -1546,7 +1546,7 @@ The following state arguments are supported:
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespecgrpcroutematch">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespecgrpcroutematch">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a request match.
 {{% /md %}}</dd></dl>
@@ -1559,7 +1559,7 @@ The following state arguments are supported:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespecgrpcrouteaction">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespecgrpcrouteaction">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd><dt class="property-required"
@@ -1568,7 +1568,7 @@ The following state arguments are supported:
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespecgrpcroutematch">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespecgrpcroutematch">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a request match.
 {{% /md %}}</dd></dl>
@@ -1583,7 +1583,7 @@ The following state arguments are supported:
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespecgrpcrouteactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespecgrpcrouteactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}The target that traffic is routed to when a request matches the gateway route.
 {{% /md %}}</dd></dl>
@@ -1609,7 +1609,7 @@ The following state arguments are supported:
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespecgrpcrouteactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespecgrpcrouteactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}The target that traffic is routed to when a request matches the gateway route.
 {{% /md %}}</dd></dl>
@@ -1622,7 +1622,7 @@ The following state arguments are supported:
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespecgrpcrouteactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespecgrpcrouteactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}The target that traffic is routed to when a request matches the gateway route.
 {{% /md %}}</dd></dl>
@@ -1637,7 +1637,7 @@ The following state arguments are supported:
 <a href="#virtualservice_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespecgrpcrouteactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespecgrpcrouteactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The virtual service gateway route target.
 {{% /md %}}</dd></dl>
@@ -1663,7 +1663,7 @@ The following state arguments are supported:
 <a href="#virtualservice_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespecgrpcrouteactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespecgrpcrouteactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The virtual service gateway route target.
 {{% /md %}}</dd></dl>
@@ -1676,7 +1676,7 @@ The following state arguments are supported:
 <a href="#virtual_service_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespecgrpcrouteactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespecgrpcrouteactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The virtual service gateway route target.
 {{% /md %}}</dd></dl>
@@ -1799,7 +1799,7 @@ The following state arguments are supported:
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttp2routeaction">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttp2routeaction">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd><dt class="property-required"
@@ -1808,7 +1808,7 @@ The following state arguments are supported:
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttp2routematch">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttp2routematch">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a request match.
 {{% /md %}}</dd></dl>
@@ -1843,7 +1843,7 @@ The following state arguments are supported:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttp2routeaction">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttp2routeaction">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd><dt class="property-required"
@@ -1852,7 +1852,7 @@ The following state arguments are supported:
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttp2routematch">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttp2routematch">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a request match.
 {{% /md %}}</dd></dl>
@@ -1865,7 +1865,7 @@ The following state arguments are supported:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttp2routeaction">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttp2routeaction">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd><dt class="property-required"
@@ -1874,7 +1874,7 @@ The following state arguments are supported:
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttp2routematch">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttp2routematch">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a request match.
 {{% /md %}}</dd></dl>
@@ -1889,7 +1889,7 @@ The following state arguments are supported:
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttp2routeactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttp2routeactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}The target that traffic is routed to when a request matches the gateway route.
 {{% /md %}}</dd></dl>
@@ -1915,7 +1915,7 @@ The following state arguments are supported:
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttp2routeactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttp2routeactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}The target that traffic is routed to when a request matches the gateway route.
 {{% /md %}}</dd></dl>
@@ -1928,7 +1928,7 @@ The following state arguments are supported:
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttp2routeactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttp2routeactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}The target that traffic is routed to when a request matches the gateway route.
 {{% /md %}}</dd></dl>
@@ -1943,7 +1943,7 @@ The following state arguments are supported:
 <a href="#virtualservice_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttp2routeactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttp2routeactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The virtual service gateway route target.
 {{% /md %}}</dd></dl>
@@ -1969,7 +1969,7 @@ The following state arguments are supported:
 <a href="#virtualservice_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttp2routeactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttp2routeactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The virtual service gateway route target.
 {{% /md %}}</dd></dl>
@@ -1982,7 +1982,7 @@ The following state arguments are supported:
 <a href="#virtual_service_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttp2routeactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttp2routeactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The virtual service gateway route target.
 {{% /md %}}</dd></dl>
@@ -2105,7 +2105,7 @@ The following state arguments are supported:
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttprouteaction">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttprouteaction">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd><dt class="property-required"
@@ -2114,7 +2114,7 @@ The following state arguments are supported:
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttproutematch">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttproutematch">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a request match.
 {{% /md %}}</dd></dl>
@@ -2149,7 +2149,7 @@ The following state arguments are supported:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttprouteaction">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttprouteaction">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd><dt class="property-required"
@@ -2158,7 +2158,7 @@ The following state arguments are supported:
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttproutematch">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttproutematch">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a request match.
 {{% /md %}}</dd></dl>
@@ -2171,7 +2171,7 @@ The following state arguments are supported:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttprouteaction">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttprouteaction">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd><dt class="property-required"
@@ -2180,7 +2180,7 @@ The following state arguments are supported:
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttproutematch">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttproutematch">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a request match.
 {{% /md %}}</dd></dl>
@@ -2195,7 +2195,7 @@ The following state arguments are supported:
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttprouteactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttprouteactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}The target that traffic is routed to when a request matches the gateway route.
 {{% /md %}}</dd></dl>
@@ -2221,7 +2221,7 @@ The following state arguments are supported:
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttprouteactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttprouteactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}The target that traffic is routed to when a request matches the gateway route.
 {{% /md %}}</dd></dl>
@@ -2234,7 +2234,7 @@ The following state arguments are supported:
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttprouteactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttprouteactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}The target that traffic is routed to when a request matches the gateway route.
 {{% /md %}}</dd></dl>
@@ -2249,7 +2249,7 @@ The following state arguments are supported:
 <a href="#virtualservice_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttprouteactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttprouteactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The virtual service gateway route target.
 {{% /md %}}</dd></dl>
@@ -2275,7 +2275,7 @@ The following state arguments are supported:
 <a href="#virtualservice_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttprouteactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttprouteactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The virtual service gateway route target.
 {{% /md %}}</dd></dl>
@@ -2288,7 +2288,7 @@ The following state arguments are supported:
 <a href="#virtual_service_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayroutespechttprouteactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewayroutespechttprouteactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The virtual service gateway route target.
 {{% /md %}}</dd></dl>

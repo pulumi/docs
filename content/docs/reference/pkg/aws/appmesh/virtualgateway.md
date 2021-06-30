@@ -562,7 +562,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspec">Virtual<wbr>Gateway<wbr>Spec</a></span>
+        <span class="property-type"><a href="#virtualgatewayspec">Virtual<wbr>Gateway<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual gateway specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1218,7 +1218,7 @@ The following state arguments are supported:
 <a href="#state_spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspec">Virtual<wbr>Gateway<wbr>Spec</a></span>
+        <span class="property-type"><a href="#virtualgatewayspec">Virtual<wbr>Gateway<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual gateway specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1448,7 +1448,7 @@ The following state arguments are supported:
 <a href="#listener_csharp" style="color: inherit; text-decoration: inherit;">Listener</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistener">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistener">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener</a></span>
     </dt>
     <dd>{{% md %}}The listeners that the mesh endpoint is expected to receive inbound traffic from. You can specify one listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1457,7 +1457,7 @@ The following state arguments are supported:
 <a href="#backenddefaults_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaults">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaults">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults</a></span>
     </dt>
     <dd>{{% md %}}The defaults for backends.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1466,7 +1466,7 @@ The following state arguments are supported:
 <a href="#logging_csharp" style="color: inherit; text-decoration: inherit;">Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclogging">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclogging">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}The inbound and outbound access logging information for the virtual gateway.
 {{% /md %}}</dd></dl>
@@ -1510,7 +1510,7 @@ The following state arguments are supported:
 <a href="#listener_nodejs" style="color: inherit; text-decoration: inherit;">listener</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistener">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistener">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener</a></span>
     </dt>
     <dd>{{% md %}}The listeners that the mesh endpoint is expected to receive inbound traffic from. You can specify one listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1519,7 +1519,7 @@ The following state arguments are supported:
 <a href="#backenddefaults_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaults">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaults">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults</a></span>
     </dt>
     <dd>{{% md %}}The defaults for backends.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1528,7 +1528,7 @@ The following state arguments are supported:
 <a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclogging">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclogging">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}The inbound and outbound access logging information for the virtual gateway.
 {{% /md %}}</dd></dl>
@@ -1541,7 +1541,7 @@ The following state arguments are supported:
 <a href="#listener_python" style="color: inherit; text-decoration: inherit;">listener</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistener">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistener">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener</a></span>
     </dt>
     <dd>{{% md %}}The listeners that the mesh endpoint is expected to receive inbound traffic from. You can specify one listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1550,7 +1550,7 @@ The following state arguments are supported:
 <a href="#backend_defaults_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaults">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaults">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults</a></span>
     </dt>
     <dd>{{% md %}}The defaults for backends.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1559,7 +1559,7 @@ The following state arguments are supported:
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclogging">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclogging">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}The inbound and outbound access logging information for the virtual gateway.
 {{% /md %}}</dd></dl>
@@ -1574,7 +1574,7 @@ The following state arguments are supported:
 <a href="#clientpolicy_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicy">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicy">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The default client policy for virtual gateway backends.
 {{% /md %}}</dd></dl>
@@ -1600,7 +1600,7 @@ The following state arguments are supported:
 <a href="#clientpolicy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicy">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicy">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The default client policy for virtual gateway backends.
 {{% /md %}}</dd></dl>
@@ -1613,7 +1613,7 @@ The following state arguments are supported:
 <a href="#client_policy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicy">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicy">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The default client policy for virtual gateway backends.
 {{% /md %}}</dd></dl>
@@ -1628,7 +1628,7 @@ The following state arguments are supported:
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytls">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytls">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
 {{% /md %}}</dd></dl>
@@ -1654,7 +1654,7 @@ The following state arguments are supported:
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytls">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytls">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
 {{% /md %}}</dd></dl>
@@ -1667,7 +1667,7 @@ The following state arguments are supported:
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytls">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytls">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
 {{% /md %}}</dd></dl>
@@ -1682,7 +1682,7 @@ The following state arguments are supported:
 <a href="#validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1691,7 +1691,7 @@ The following state arguments are supported:
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1762,7 +1762,7 @@ The following state arguments are supported:
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1771,7 +1771,7 @@ The following state arguments are supported:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1802,7 +1802,7 @@ The following state arguments are supported:
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1811,7 +1811,7 @@ The following state arguments are supported:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1844,7 +1844,7 @@ The following state arguments are supported:
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1853,7 +1853,7 @@ The following state arguments are supported:
 <a href="#sds_csharp" style="color: inherit; text-decoration: inherit;">Sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatesds">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatesds">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -1888,7 +1888,7 @@ The following state arguments are supported:
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1897,7 +1897,7 @@ The following state arguments are supported:
 <a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatesds">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatesds">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -1910,7 +1910,7 @@ The following state arguments are supported:
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1919,7 +1919,7 @@ The following state arguments are supported:
 <a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatesds">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatesds">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -2078,7 +2078,7 @@ The following state arguments are supported:
 <a href="#trust_csharp" style="color: inherit; text-decoration: inherit;">Trust</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2087,7 +2087,7 @@ The following state arguments are supported:
 <a href="#subjectalternativenames_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}The SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
@@ -2122,7 +2122,7 @@ The following state arguments are supported:
 <a href="#trust_nodejs" style="color: inherit; text-decoration: inherit;">trust</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2131,7 +2131,7 @@ The following state arguments are supported:
 <a href="#subjectalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}The SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
@@ -2144,7 +2144,7 @@ The following state arguments are supported:
 <a href="#trust_python" style="color: inherit; text-decoration: inherit;">trust</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2153,7 +2153,7 @@ The following state arguments are supported:
 <a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}The SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
@@ -2168,7 +2168,7 @@ The following state arguments are supported:
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a SAN's match.
 {{% /md %}}</dd></dl>
@@ -2194,7 +2194,7 @@ The following state arguments are supported:
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a SAN's match.
 {{% /md %}}</dd></dl>
@@ -2207,7 +2207,7 @@ The following state arguments are supported:
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a SAN's match.
 {{% /md %}}</dd></dl>
@@ -2276,7 +2276,7 @@ The following state arguments are supported:
 <a href="#acm_csharp" style="color: inherit; text-decoration: inherit;">Acm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2285,7 +2285,7 @@ The following state arguments are supported:
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2294,7 +2294,7 @@ The following state arguments are supported:
 <a href="#sds_csharp" style="color: inherit; text-decoration: inherit;">Sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustsds">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustsds">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -2338,7 +2338,7 @@ The following state arguments are supported:
 <a href="#acm_nodejs" style="color: inherit; text-decoration: inherit;">acm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2347,7 +2347,7 @@ The following state arguments are supported:
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2356,7 +2356,7 @@ The following state arguments are supported:
 <a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustsds">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustsds">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -2369,7 +2369,7 @@ The following state arguments are supported:
 <a href="#acm_python" style="color: inherit; text-decoration: inherit;">acm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2378,7 +2378,7 @@ The following state arguments are supported:
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2387,7 +2387,7 @@ The following state arguments are supported:
 <a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustsds">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustsds">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -2564,7 +2564,7 @@ The following state arguments are supported:
 <a href="#portmapping_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerportmapping">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerportmapping">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2573,7 +2573,7 @@ The following state arguments are supported:
 <a href="#connectionpool_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpool">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpool">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}The connection pool information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2582,7 +2582,7 @@ The following state arguments are supported:
 <a href="#healthcheck_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerhealthcheck">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerhealthcheck">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}The health check information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2591,7 +2591,7 @@ The following state arguments are supported:
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertls">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertls">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) properties for the listener
 {{% /md %}}</dd></dl>
@@ -2644,7 +2644,7 @@ The following state arguments are supported:
 <a href="#portmapping_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerportmapping">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerportmapping">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2653,7 +2653,7 @@ The following state arguments are supported:
 <a href="#connectionpool_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpool">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpool">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}The connection pool information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2662,7 +2662,7 @@ The following state arguments are supported:
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerhealthcheck">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerhealthcheck">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}The health check information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2671,7 +2671,7 @@ The following state arguments are supported:
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertls">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertls">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) properties for the listener
 {{% /md %}}</dd></dl>
@@ -2684,7 +2684,7 @@ The following state arguments are supported:
 <a href="#port_mapping_python" style="color: inherit; text-decoration: inherit;">port_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerportmapping">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerportmapping">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2693,7 +2693,7 @@ The following state arguments are supported:
 <a href="#connection_pool_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpool">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpool">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}The connection pool information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2702,7 +2702,7 @@ The following state arguments are supported:
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerhealthcheck">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerhealthcheck">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}The health check information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2711,7 +2711,7 @@ The following state arguments are supported:
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertls">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertls">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) properties for the listener
 {{% /md %}}</dd></dl>
@@ -2726,7 +2726,7 @@ The following state arguments are supported:
 <a href="#grpc_csharp" style="color: inherit; text-decoration: inherit;">Grpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolgrpc">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolgrpc">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for gRPC listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2735,7 +2735,7 @@ The following state arguments are supported:
 <a href="#http_csharp" style="color: inherit; text-decoration: inherit;">Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2744,7 +2744,7 @@ The following state arguments are supported:
 <a href="#http2_csharp" style="color: inherit; text-decoration: inherit;">Http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp2">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp2">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP2 listeners.
 {{% /md %}}</dd></dl>
@@ -2788,7 +2788,7 @@ The following state arguments are supported:
 <a href="#grpc_nodejs" style="color: inherit; text-decoration: inherit;">grpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolgrpc">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolgrpc">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for gRPC listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2797,7 +2797,7 @@ The following state arguments are supported:
 <a href="#http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2806,7 +2806,7 @@ The following state arguments are supported:
 <a href="#http2_nodejs" style="color: inherit; text-decoration: inherit;">http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp2">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp2">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP2 listeners.
 {{% /md %}}</dd></dl>
@@ -2819,7 +2819,7 @@ The following state arguments are supported:
 <a href="#grpc_python" style="color: inherit; text-decoration: inherit;">grpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolgrpc">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolgrpc">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for gRPC listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2828,7 +2828,7 @@ The following state arguments are supported:
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2837,7 +2837,7 @@ The following state arguments are supported:
 <a href="#http2_python" style="color: inherit; text-decoration: inherit;">http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp2">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp2">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP2 listeners.
 {{% /md %}}</dd></dl>
@@ -3410,7 +3410,7 @@ The following state arguments are supported:
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -3428,7 +3428,7 @@ The following state arguments are supported:
 <a href="#validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
@@ -3472,7 +3472,7 @@ The following state arguments are supported:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -3490,7 +3490,7 @@ The following state arguments are supported:
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
@@ -3503,7 +3503,7 @@ The following state arguments are supported:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -3521,7 +3521,7 @@ The following state arguments are supported:
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
@@ -3536,7 +3536,7 @@ The following state arguments are supported:
 <a href="#acm_csharp" style="color: inherit; text-decoration: inherit;">Acm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificateacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificateacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}An AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3545,7 +3545,7 @@ The following state arguments are supported:
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3554,7 +3554,7 @@ The following state arguments are supported:
 <a href="#sds_csharp" style="color: inherit; text-decoration: inherit;">Sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatesds">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatesds">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -3598,7 +3598,7 @@ The following state arguments are supported:
 <a href="#acm_nodejs" style="color: inherit; text-decoration: inherit;">acm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificateacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificateacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}An AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3607,7 +3607,7 @@ The following state arguments are supported:
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3616,7 +3616,7 @@ The following state arguments are supported:
 <a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatesds">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatesds">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -3629,7 +3629,7 @@ The following state arguments are supported:
 <a href="#acm_python" style="color: inherit; text-decoration: inherit;">acm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificateacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificateacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}An AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3638,7 +3638,7 @@ The following state arguments are supported:
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3647,7 +3647,7 @@ The following state arguments are supported:
 <a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatesds">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatesds">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -3860,7 +3860,7 @@ The following state arguments are supported:
 <a href="#trust_csharp" style="color: inherit; text-decoration: inherit;">Trust</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3869,7 +3869,7 @@ The following state arguments are supported:
 <a href="#subjectalternativenames_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenames">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenames">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}The SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
@@ -3904,7 +3904,7 @@ The following state arguments are supported:
 <a href="#trust_nodejs" style="color: inherit; text-decoration: inherit;">trust</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3913,7 +3913,7 @@ The following state arguments are supported:
 <a href="#subjectalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenames">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenames">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}The SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
@@ -3926,7 +3926,7 @@ The following state arguments are supported:
 <a href="#trust_python" style="color: inherit; text-decoration: inherit;">trust</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3935,7 +3935,7 @@ The following state arguments are supported:
 <a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenames">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenames">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}The SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
@@ -3950,7 +3950,7 @@ The following state arguments are supported:
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a SAN's match.
 {{% /md %}}</dd></dl>
@@ -3976,7 +3976,7 @@ The following state arguments are supported:
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a SAN's match.
 {{% /md %}}</dd></dl>
@@ -3989,7 +3989,7 @@ The following state arguments are supported:
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a SAN's match.
 {{% /md %}}</dd></dl>
@@ -4058,7 +4058,7 @@ The following state arguments are supported:
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4067,7 +4067,7 @@ The following state arguments are supported:
 <a href="#sds_csharp" style="color: inherit; text-decoration: inherit;">Sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustsds">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustsds">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -4102,7 +4102,7 @@ The following state arguments are supported:
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4111,7 +4111,7 @@ The following state arguments are supported:
 <a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustsds">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustsds">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -4124,7 +4124,7 @@ The following state arguments are supported:
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4133,7 +4133,7 @@ The following state arguments are supported:
 <a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustsds">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustsds">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -4256,7 +4256,7 @@ The following state arguments are supported:
 <a href="#accesslog_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslog">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslog">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log</a></span>
     </dt>
     <dd>{{% md %}}The access log configuration for a virtual gateway.
 {{% /md %}}</dd></dl>
@@ -4282,7 +4282,7 @@ The following state arguments are supported:
 <a href="#accesslog_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslog">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslog">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log</a></span>
     </dt>
     <dd>{{% md %}}The access log configuration for a virtual gateway.
 {{% /md %}}</dd></dl>
@@ -4295,7 +4295,7 @@ The following state arguments are supported:
 <a href="#access_log_python" style="color: inherit; text-decoration: inherit;">access_<wbr>log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslog">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslog">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log</a></span>
     </dt>
     <dd>{{% md %}}The access log configuration for a virtual gateway.
 {{% /md %}}</dd></dl>
@@ -4310,7 +4310,7 @@ The following state arguments are supported:
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslogfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslogfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The file object to send virtual gateway access logs to.
 {{% /md %}}</dd></dl>
@@ -4336,7 +4336,7 @@ The following state arguments are supported:
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslogfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslogfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The file object to send virtual gateway access logs to.
 {{% /md %}}</dd></dl>
@@ -4349,7 +4349,7 @@ The following state arguments are supported:
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslogfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslogfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The file object to send virtual gateway access logs to.
 {{% /md %}}</dd></dl>

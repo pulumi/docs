@@ -424,7 +424,7 @@ The NetworkAcl resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#egress_go" style="color: inherit; text-decoration: inherit;">Egress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclegress">[]Network<wbr>Acl<wbr>Egress</a></span>
+        <span class="property-type"><a href="#networkaclegress">[]Network<wbr>Acl<wbr>Egress<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies an egress rule. Parameters defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -433,7 +433,7 @@ The NetworkAcl resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#ingress_go" style="color: inherit; text-decoration: inherit;">Ingress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclingress">[]Network<wbr>Acl<wbr>Ingress</a></span>
+        <span class="property-type"><a href="#networkaclingress">[]Network<wbr>Acl<wbr>Ingress<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies an ingress rule. Parameters defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -934,7 +934,7 @@ The following state arguments are supported:
 <a href="#state_egress_go" style="color: inherit; text-decoration: inherit;">Egress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclegress">[]Network<wbr>Acl<wbr>Egress</a></span>
+        <span class="property-type"><a href="#networkaclegress">[]Network<wbr>Acl<wbr>Egress<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies an egress rule. Parameters defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -943,7 +943,7 @@ The following state arguments are supported:
 <a href="#state_ingress_go" style="color: inherit; text-decoration: inherit;">Ingress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclingress">[]Network<wbr>Acl<wbr>Ingress</a></span>
+        <span class="property-type"><a href="#networkaclingress">[]Network<wbr>Acl<wbr>Ingress<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies an ingress rule. Parameters defined below.
 {{% /md %}}</dd><dt class="property-optional"

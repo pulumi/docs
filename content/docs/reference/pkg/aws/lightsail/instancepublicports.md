@@ -342,7 +342,7 @@ The InstancePublicPorts resource accepts the following [input]({{< relref "/docs
 <a href="#portinfos_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancepublicportsportinfo">[]Instance<wbr>Public<wbr>Ports<wbr>Port<wbr>Info</a></span>
+        <span class="property-type"><a href="#instancepublicportsportinfo">[]Instance<wbr>Public<wbr>Ports<wbr>Port<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with port information. AWS closes all currently open ports that are not included in the `port_info`. Detailed below.
 {{% /md %}}</dd></dl>
@@ -612,7 +612,7 @@ The following state arguments are supported:
 <a href="#state_portinfos_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancepublicportsportinfo">[]Instance<wbr>Public<wbr>Ports<wbr>Port<wbr>Info</a></span>
+        <span class="property-type"><a href="#instancepublicportsportinfo">[]Instance<wbr>Public<wbr>Ports<wbr>Port<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with port information. AWS closes all currently open ports that are not included in the `port_info`. Detailed below.
 {{% /md %}}</dd></dl>

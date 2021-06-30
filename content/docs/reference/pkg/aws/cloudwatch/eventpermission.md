@@ -452,7 +452,7 @@ The EventPermission resource accepts the following [input]({{< relref "/docs/int
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventpermissioncondition">Event<wbr>Permission<wbr>Condition</a></span>
+        <span class="property-type"><a href="#eventpermissioncondition">Event<wbr>Permission<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -815,7 +815,7 @@ The following state arguments are supported:
 <a href="#state_condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventpermissioncondition">Event<wbr>Permission<wbr>Condition</a></span>
+        <span class="property-type"><a href="#eventpermissioncondition">Event<wbr>Permission<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
 {{% /md %}}</dd><dt class="property-optional"

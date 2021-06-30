@@ -404,7 +404,7 @@ The Mesh resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshspec">Mesh<wbr>Spec</a></span>
+        <span class="property-type"><a href="#meshspec">Mesh<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service mesh specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1023,7 +1023,7 @@ The following state arguments are supported:
 <a href="#state_spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshspec">Mesh<wbr>Spec</a></span>
+        <span class="property-type"><a href="#meshspec">Mesh<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service mesh specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1235,7 +1235,7 @@ The following state arguments are supported:
 <a href="#egressfilter_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshspecegressfilter">Mesh<wbr>Spec<wbr>Egress<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#meshspecegressfilter">Mesh<wbr>Spec<wbr>Egress<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}The egress filter rules for the service mesh.
 {{% /md %}}</dd></dl>
@@ -1261,7 +1261,7 @@ The following state arguments are supported:
 <a href="#egressfilter_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshspecegressfilter">Mesh<wbr>Spec<wbr>Egress<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#meshspecegressfilter">Mesh<wbr>Spec<wbr>Egress<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}The egress filter rules for the service mesh.
 {{% /md %}}</dd></dl>
@@ -1274,7 +1274,7 @@ The following state arguments are supported:
 <a href="#egress_filter_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshspecegressfilter">Mesh<wbr>Spec<wbr>Egress<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#meshspecegressfilter">Mesh<wbr>Spec<wbr>Egress<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}The egress filter rules for the service mesh.
 {{% /md %}}</dd></dl>

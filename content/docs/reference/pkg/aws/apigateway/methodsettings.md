@@ -223,7 +223,7 @@ The MethodSettings resource accepts the following [input]({{< relref "/docs/intr
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings</a></span>
+        <span class="property-type"><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings block, see below.
 {{% /md %}}</dd><dt class="property-required"
@@ -567,7 +567,7 @@ The following state arguments are supported:
 <a href="#state_settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings</a></span>
+        <span class="property-type"><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings block, see below.
 {{% /md %}}</dd><dt class="property-optional"

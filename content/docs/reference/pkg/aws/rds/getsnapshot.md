@@ -169,7 +169,7 @@ const latestProdSnapshot = prod.id.apply(id => aws.rds.getSnapshot({
 const dev = new aws.rds.Instance("dev", {
     instanceClass: "db.t2.micro",
     name: "mydbdev",
-    snapshotIdentifier: latestProdSnapshot.id,
+    snapshotIdentifier: latestProdSnapshot.apply(latestProdSnapshot => latestProdSnapshot.id),
 });
 ```
 

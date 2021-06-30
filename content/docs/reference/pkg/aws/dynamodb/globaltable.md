@@ -477,7 +477,7 @@ The GlobalTable resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#replicas_go" style="color: inherit; text-decoration: inherit;">Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaltablereplica">[]Global<wbr>Table<wbr>Replica</a></span>
+        <span class="property-type"><a href="#globaltablereplica">[]Global<wbr>Table<wbr>Replica<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Underlying DynamoDB Table. At least 1 replica must be defined. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -811,7 +811,7 @@ The following state arguments are supported:
 <a href="#state_replicas_go" style="color: inherit; text-decoration: inherit;">Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaltablereplica">[]Global<wbr>Table<wbr>Replica</a></span>
+        <span class="property-type"><a href="#globaltablereplica">[]Global<wbr>Table<wbr>Replica<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Underlying DynamoDB Table. At least 1 replica must be defined. See below.
 {{% /md %}}</dd></dl>

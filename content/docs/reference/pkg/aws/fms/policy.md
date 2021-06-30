@@ -482,7 +482,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#securityservicepolicydata_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Service<wbr>Policy<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policysecurityservicepolicydata">Policy<wbr>Security<wbr>Service<wbr>Policy<wbr>Data</a></span>
+        <span class="property-type"><a href="#policysecurityservicepolicydata">Policy<wbr>Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The objects to include in Security Service Policy Data. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -500,7 +500,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#excludemap_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyexcludemap">Policy<wbr>Exclude<wbr>Map</a></span>
+        <span class="property-type"><a href="#policyexcludemap">Policy<wbr>Exclude<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to exclude from this policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -509,7 +509,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#includemap_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyincludemap">Policy<wbr>Include<wbr>Map</a></span>
+        <span class="property-type"><a href="#policyincludemap">Policy<wbr>Include<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to include for this policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1143,7 +1143,7 @@ The following state arguments are supported:
 <a href="#state_excludemap_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyexcludemap">Policy<wbr>Exclude<wbr>Map</a></span>
+        <span class="property-type"><a href="#policyexcludemap">Policy<wbr>Exclude<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to exclude from this policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1161,7 +1161,7 @@ The following state arguments are supported:
 <a href="#state_includemap_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyincludemap">Policy<wbr>Include<wbr>Map</a></span>
+        <span class="property-type"><a href="#policyincludemap">Policy<wbr>Include<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to include for this policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1224,7 +1224,7 @@ The following state arguments are supported:
 <a href="#state_securityservicepolicydata_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Service<wbr>Policy<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policysecurityservicepolicydata">Policy<wbr>Security<wbr>Service<wbr>Policy<wbr>Data</a></span>
+        <span class="property-type"><a href="#policysecurityservicepolicydata">Policy<wbr>Security<wbr>Service<wbr>Policy<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The objects to include in Security Service Policy Data. Documented below.
 {{% /md %}}</dd></dl>

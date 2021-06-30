@@ -38,7 +38,7 @@ class MyStack : Stack
         }));
         var cloudhsmV2Hsm = new Aws.CloudHsmV2.Hsm("cloudhsmV2Hsm", new Aws.CloudHsmV2.HsmArgs
         {
-            SubnetId = cluster.Apply(cluster => cluster.SubnetIds[0]),
+            SubnetId = cluster.Apply(cluster => cluster.SubnetIds?[0]),
             ClusterId = cluster.Apply(cluster => cluster.ClusterId),
         });
     }
@@ -111,7 +111,7 @@ const cluster = aws.cloudhsmv2.getCluster({
     clusterId: _var.cloudhsm_cluster_id,
 });
 const cloudhsmV2Hsm = new aws.cloudhsmv2.Hsm("cloudhsmV2Hsm", {
-    subnetId: cluster.then(cluster => cluster.subnetIds[0]),
+    subnetId: cluster.then(cluster => cluster.subnetIds?[0]),
     clusterId: cluster.then(cluster => cluster.clusterId),
 });
 ```

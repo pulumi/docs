@@ -885,7 +885,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggeraction">[]Trigger<wbr>Action</a></span>
+        <span class="property-type"><a href="#triggeraction">[]Trigger<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of actions initiated by this trigger when it fires. See Actions Below.
 {{% /md %}}</dd><dt class="property-required"
@@ -930,7 +930,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#predicate_go" style="color: inherit; text-decoration: inherit;">Predicate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate</a></span>
+        <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. See Predicate Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1539,7 +1539,7 @@ The following state arguments are supported:
 <a href="#state_actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggeraction">[]Trigger<wbr>Action</a></span>
+        <span class="property-type"><a href="#triggeraction">[]Trigger<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of actions initiated by this trigger when it fires. See Actions Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1584,7 +1584,7 @@ The following state arguments are supported:
 <a href="#state_predicate_go" style="color: inherit; text-decoration: inherit;">Predicate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate</a></span>
+        <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. See Predicate Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1910,7 +1910,7 @@ The following state arguments are supported:
 <a href="#notificationproperty_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggeractionnotificationproperty">Trigger<wbr>Action<wbr>Notification<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggeractionnotificationproperty">Trigger<wbr>Action<wbr>Notification<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}Specifies configuration properties of a job run notification. See Notification Property details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2026,7 +2026,7 @@ The following state arguments are supported:
 <a href="#notificationproperty_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggeractionnotificationproperty">Trigger<wbr>Action<wbr>Notification<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggeractionnotificationproperty">Trigger<wbr>Action<wbr>Notification<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}Specifies configuration properties of a job run notification. See Notification Property details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2084,7 +2084,7 @@ The following state arguments are supported:
 <a href="#notification_property_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggeractionnotificationproperty">Trigger<wbr>Action<wbr>Notification<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggeractionnotificationproperty">Trigger<wbr>Action<wbr>Notification<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}Specifies configuration properties of a job run notification. See Notification Property details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2171,7 +2171,7 @@ The following state arguments are supported:
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpredicatecondition">List&lt;Trigger<wbr>Predicate<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpredicatecondition">List&lt;Trigger<wbr>Predicate<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of the conditions that determine when the trigger will fire. See Conditions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2215,7 +2215,7 @@ The following state arguments are supported:
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpredicatecondition">Trigger<wbr>Predicate<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#triggerpredicatecondition">Trigger<wbr>Predicate<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A list of the conditions that determine when the trigger will fire. See Conditions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2237,7 +2237,7 @@ The following state arguments are supported:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpredicatecondition">Sequence[Trigger<wbr>Predicate<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpredicatecondition">Sequence[Trigger<wbr>Predicate<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}A list of the conditions that determine when the trigger will fire. See Conditions.
 {{% /md %}}</dd><dt class="property-optional"

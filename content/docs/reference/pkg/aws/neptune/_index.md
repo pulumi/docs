@@ -12,6 +12,7 @@ Explore the resources and functions of the aws.neptune module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="clusterendpoint" title="ClusterEndpoint"><span class="symbol resource"></span>ClusterEndpoint</a></li>
     <li><a href="clusterinstance" title="ClusterInstance"><span class="symbol resource"></span>ClusterInstance</a></li>
     <li><a href="clusterparametergroup" title="ClusterParameterGroup"><span class="symbol resource"></span>ClusterParameterGroup</a></li>
     <li><a href="clustersnapshot" title="ClusterSnapshot"><span class="symbol resource"></span>ClusterSnapshot</a></li>
@@ -35,6 +36,6 @@ Explore the resources and functions of the aws.neptune module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.9.0</dd>
+	<dd>4.10.0</dd>
 </dl>
 

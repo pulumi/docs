@@ -472,7 +472,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfiguration">Cluster<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#clusterconfiguration">Cluster<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The execute command configuration for the cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -481,7 +481,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#defaultcapacityproviderstrategies_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Capacity<wbr>Provider<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">[]Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">[]Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -499,7 +499,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersetting">[]Cluster<wbr>Setting</a></span>
+        <span class="property-type"><a href="#clustersetting">[]Cluster<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -974,7 +974,7 @@ The following state arguments are supported:
 <a href="#state_configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfiguration">Cluster<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#clusterconfiguration">Cluster<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The execute command configuration for the cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -983,7 +983,7 @@ The following state arguments are supported:
 <a href="#state_defaultcapacityproviderstrategies_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Capacity<wbr>Provider<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">[]Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">[]Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1001,7 +1001,7 @@ The following state arguments are supported:
 <a href="#state_settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersetting">[]Cluster<wbr>Setting</a></span>
+        <span class="property-type"><a href="#clustersetting">[]Cluster<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1189,7 +1189,7 @@ The following state arguments are supported:
 <a href="#executecommandconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Execute<wbr>Command<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The details of the execute command configuration. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1215,7 +1215,7 @@ The following state arguments are supported:
 <a href="#executecommandconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">execute<wbr>Command<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The details of the execute command configuration. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1228,7 +1228,7 @@ The following state arguments are supported:
 <a href="#execute_command_configuration_python" style="color: inherit; text-decoration: inherit;">execute_<wbr>command_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The details of the execute command configuration. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1252,7 +1252,7 @@ The following state arguments are supported:
 <a href="#logconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfigurationlogconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration<wbr>Log<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfigurationlogconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration<wbr>Log<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The log configuration for the results of the execute command actions Required when `logging` is `OVERRIDE`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1314,7 +1314,7 @@ The following state arguments are supported:
 <a href="#logconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfigurationlogconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration<wbr>Log<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfigurationlogconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration<wbr>Log<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The log configuration for the results of the execute command actions Required when `logging` is `OVERRIDE`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1345,7 +1345,7 @@ The following state arguments are supported:
 <a href="#log_configuration_python" style="color: inherit; text-decoration: inherit;">log_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfigurationlogconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration<wbr>Log<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterconfigurationexecutecommandconfigurationlogconfiguration">Cluster<wbr>Configuration<wbr>Execute<wbr>Command<wbr>Configuration<wbr>Log<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The log configuration for the results of the execute command actions Required when `logging` is `OVERRIDE`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

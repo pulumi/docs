@@ -22,6 +22,103 @@ Get permissions for a principal to access metadata in the Data Catalog and data 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
+### Permissions For A Lake Formation S3 Resource
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = Output.Create(Aws.LakeFormation.GetPermissions.InvokeAsync(new Aws.LakeFormation.GetPermissionsArgs
+        {
+            Principal = aws_iam_role.Workflow_role.Arn,
+            DataLocation = new Aws.LakeFormation.Inputs.GetPermissionsDataLocationArgs
+            {
+                Arn = aws_lakeformation_resource.Test.Arn,
+            },
+        }));
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lakeformation"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := lakeformation.LookupPermissions(ctx, &lakeformation.LookupPermissionsArgs{
+			Principal: aws_iam_role.Workflow_role.Arn,
+			DataLocation: lakeformation.GetPermissionsDataLocation{
+				Arn: aws_lakeformation_resource.Test.Arn,
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+test = aws.lakeformation.get_permissions(principal=aws_iam_role["workflow_role"]["arn"],
+    data_location=aws.lakeformation.GetPermissionsDataLocationArgs(
+        arn=aws_lakeformation_resource["test"]["arn"],
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const test = aws.lakeformation.getPermissions({
+    principal: aws_iam_role.workflow_role.arn,
+    dataLocation: {
+        arn: aws_lakeformation_resource.test.arn,
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Permissions For A Glue Catalog Database
 
 

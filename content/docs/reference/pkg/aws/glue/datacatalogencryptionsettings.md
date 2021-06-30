@@ -315,7 +315,7 @@ The DataCatalogEncryptionSettings resource accepts the following [input]({{< rel
 <a href="#datacatalogencryptionsettings_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Catalog<wbr>Encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettings">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings</a></span>
+        <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettings">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security configuration to set. see Data Catalog Encryption Settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -594,7 +594,7 @@ The following state arguments are supported:
 <a href="#state_datacatalogencryptionsettings_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Catalog<wbr>Encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettings">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings</a></span>
+        <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettings">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security configuration to set. see Data Catalog Encryption Settings.
 {{% /md %}}</dd></dl>
@@ -662,7 +662,7 @@ The following state arguments are supported:
 <a href="#connectionpasswordencryption_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Password<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsconnectionpasswordencryption">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Connection<wbr>Password<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsconnectionpasswordencryption">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Connection<wbr>Password<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}When connection password protection is enabled, the Data Catalog uses a customer-provided key to encrypt the password as part of CreateConnection or UpdateConnection and store it in the ENCRYPTED_PASSWORD field in the connection properties. You can enable catalog encryption or only password encryption. see Connection Password Encryption.
 {{% /md %}}</dd><dt class="property-required"
@@ -671,7 +671,7 @@ The following state arguments are supported:
 <a href="#encryptionatrest_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>At<wbr>Rest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsencryptionatrest">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Encryption<wbr>At<wbr>Rest<wbr>Args</a></span>
+        <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsencryptionatrest">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Encryption<wbr>At<wbr>Rest</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encryption-at-rest configuration for the Data Catalog. see Encryption At Rest.
 {{% /md %}}</dd></dl>
@@ -706,7 +706,7 @@ The following state arguments are supported:
 <a href="#connectionpasswordencryption_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Password<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsconnectionpasswordencryption">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Connection<wbr>Password<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsconnectionpasswordencryption">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Connection<wbr>Password<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}When connection password protection is enabled, the Data Catalog uses a customer-provided key to encrypt the password as part of CreateConnection or UpdateConnection and store it in the ENCRYPTED_PASSWORD field in the connection properties. You can enable catalog encryption or only password encryption. see Connection Password Encryption.
 {{% /md %}}</dd><dt class="property-required"
@@ -715,7 +715,7 @@ The following state arguments are supported:
 <a href="#encryptionatrest_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>At<wbr>Rest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsencryptionatrest">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Encryption<wbr>At<wbr>Rest<wbr>Args</a></span>
+        <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsencryptionatrest">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Encryption<wbr>At<wbr>Rest</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encryption-at-rest configuration for the Data Catalog. see Encryption At Rest.
 {{% /md %}}</dd></dl>
@@ -728,7 +728,7 @@ The following state arguments are supported:
 <a href="#connection_password_encryption_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>password_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsconnectionpasswordencryption">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Connection<wbr>Password<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsconnectionpasswordencryption">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Connection<wbr>Password<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}When connection password protection is enabled, the Data Catalog uses a customer-provided key to encrypt the password as part of CreateConnection or UpdateConnection and store it in the ENCRYPTED_PASSWORD field in the connection properties. You can enable catalog encryption or only password encryption. see Connection Password Encryption.
 {{% /md %}}</dd><dt class="property-required"
@@ -737,7 +737,7 @@ The following state arguments are supported:
 <a href="#encryption_at_rest_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>at_<wbr>rest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsencryptionatrest">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Encryption<wbr>At<wbr>Rest<wbr>Args</a></span>
+        <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsencryptionatrest">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Encryption<wbr>At<wbr>Rest</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encryption-at-rest configuration for the Data Catalog. see Encryption At Rest.
 {{% /md %}}</dd></dl>

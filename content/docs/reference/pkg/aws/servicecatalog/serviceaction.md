@@ -312,7 +312,7 @@ The ServiceAction resource accepts the following [input]({{< relref "/docs/intro
 <a href="#definition_go" style="color: inherit; text-decoration: inherit;">Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceactiondefinition">Service<wbr>Action<wbr>Definition</a></span>
+        <span class="property-type"><a href="#serviceactiondefinition">Service<wbr>Action<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Self-service action definition configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -665,7 +665,7 @@ The following state arguments are supported:
 <a href="#state_definition_go" style="color: inherit; text-decoration: inherit;">Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceactiondefinition">Service<wbr>Action<wbr>Definition</a></span>
+        <span class="property-type"><a href="#serviceactiondefinition">Service<wbr>Action<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Self-service action definition configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -365,7 +365,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#activatedrules_go" style="color: inherit; text-decoration: inherit;">Activated<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegroupactivatedrule">[]Rule<wbr>Group<wbr>Activated<wbr>Rule</a></span>
+        <span class="property-type"><a href="#rulegroupactivatedrule">[]Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of activated rules, see below
 {{% /md %}}</dd><dt class="property-optional"
@@ -783,7 +783,7 @@ The following state arguments are supported:
 <a href="#state_activatedrules_go" style="color: inherit; text-decoration: inherit;">Activated<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegroupactivatedrule">[]Rule<wbr>Group<wbr>Activated<wbr>Rule</a></span>
+        <span class="property-type"><a href="#rulegroupactivatedrule">[]Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of activated rules, see below
 {{% /md %}}</dd><dt class="property-optional"
@@ -968,7 +968,7 @@ The following state arguments are supported:
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegroupactivatedruleaction">Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegroupactivatedruleaction">Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -1048,7 +1048,7 @@ The following state arguments are supported:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegroupactivatedruleaction">Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegroupactivatedruleaction">Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -1088,7 +1088,7 @@ The following state arguments are supported:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegroupactivatedruleaction">Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulegroupactivatedruleaction">Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.
 {{% /md %}}</dd><dt class="property-required"

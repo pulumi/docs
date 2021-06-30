@@ -815,7 +815,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#capacityreservationspecification_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -842,7 +842,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#creditspecification_go" style="color: inherit; text-decoration: inherit;">Credit<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancecreditspecification">Instance<wbr>Credit<wbr>Specification</a></span>
+        <span class="property-type"><a href="#instancecreditspecification">Instance<wbr>Credit<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for customizing the credit specification of the instance. See Credit Specification below for more details. the provider will only perform drift detection of its value when present in a configuration. Removing this configuration on existing instances will only stop managing it. It will not change the configuration back to the default for the instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -860,7 +860,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ebsblockdevices_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceebsblockdevice">[]Instance<wbr>Ebs<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#instanceebsblockdevice">[]Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -878,7 +878,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#enclaveoptions_go" style="color: inherit; text-decoration: inherit;">Enclave<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceenclaveoptions">Instance<wbr>Enclave<wbr>Options</a></span>
+        <span class="property-type"><a href="#instanceenclaveoptions">Instance<wbr>Enclave<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -887,7 +887,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ephemeralblockdevices_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceephemeralblockdevice">[]Instance<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#instanceephemeralblockdevice">[]Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -968,7 +968,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#metadataoptions_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancemetadataoptions">Instance<wbr>Metadata<wbr>Options</a></span>
+        <span class="property-type"><a href="#instancemetadataoptions">Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options of the instance. See Metadata Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -986,7 +986,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkinterface">[]Instance<wbr>Network<wbr>Interface</a></span>
+        <span class="property-type"><a href="#instancenetworkinterface">[]Instance<wbr>Network<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1013,7 +1013,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#rootblockdevice_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Block<wbr>Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2785,7 +2785,7 @@ The following state arguments are supported:
 <a href="#state_capacityreservationspecification_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2812,7 +2812,7 @@ The following state arguments are supported:
 <a href="#state_creditspecification_go" style="color: inherit; text-decoration: inherit;">Credit<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancecreditspecification">Instance<wbr>Credit<wbr>Specification</a></span>
+        <span class="property-type"><a href="#instancecreditspecification">Instance<wbr>Credit<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for customizing the credit specification of the instance. See Credit Specification below for more details. the provider will only perform drift detection of its value when present in a configuration. Removing this configuration on existing instances will only stop managing it. It will not change the configuration back to the default for the instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2830,7 +2830,7 @@ The following state arguments are supported:
 <a href="#state_ebsblockdevices_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceebsblockdevice">[]Instance<wbr>Ebs<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#instanceebsblockdevice">[]Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2848,7 +2848,7 @@ The following state arguments are supported:
 <a href="#state_enclaveoptions_go" style="color: inherit; text-decoration: inherit;">Enclave<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceenclaveoptions">Instance<wbr>Enclave<wbr>Options</a></span>
+        <span class="property-type"><a href="#instanceenclaveoptions">Instance<wbr>Enclave<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2857,7 +2857,7 @@ The following state arguments are supported:
 <a href="#state_ephemeralblockdevices_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceephemeralblockdevice">[]Instance<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#instanceephemeralblockdevice">[]Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2956,7 +2956,7 @@ The following state arguments are supported:
 <a href="#state_metadataoptions_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancemetadataoptions">Instance<wbr>Metadata<wbr>Options</a></span>
+        <span class="property-type"><a href="#instancemetadataoptions">Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options of the instance. See Metadata Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2974,7 +2974,7 @@ The following state arguments are supported:
 <a href="#state_networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkinterface">[]Instance<wbr>Network<wbr>Interface</a></span>
+        <span class="property-type"><a href="#instancenetworkinterface">[]Instance<wbr>Network<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3055,7 +3055,7 @@ The following state arguments are supported:
 <a href="#state_rootblockdevice_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Block<wbr>Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4023,7 +4023,7 @@ The following state arguments are supported:
 <a href="#capacityreservationtarget_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancecapacityreservationspecificationcapacityreservationtarget">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecificationcapacityreservationtarget">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
 {{% /md %}}</dd></dl>
@@ -4067,7 +4067,7 @@ The following state arguments are supported:
 <a href="#capacityreservationtarget_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancecapacityreservationspecificationcapacityreservationtarget">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecificationcapacityreservationtarget">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
 {{% /md %}}</dd></dl>
@@ -4089,7 +4089,7 @@ The following state arguments are supported:
 <a href="#capacity_reservation_target_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancecapacityreservationspecificationcapacityreservationtarget">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecificationcapacityreservationtarget">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
 {{% /md %}}</dd></dl>

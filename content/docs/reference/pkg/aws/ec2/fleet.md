@@ -406,7 +406,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#launchtemplateconfig_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfig">Fleet<wbr>Launch<wbr>Template<wbr>Config</a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfig">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing EC2 Launch Template configurations. Defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -415,7 +415,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#targetcapacityspecification_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Capacity<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleettargetcapacityspecification">Fleet<wbr>Target<wbr>Capacity<wbr>Specification</a></span>
+        <span class="property-type"><a href="#fleettargetcapacityspecification">Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing target capacity configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -433,7 +433,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ondemandoptions_go" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetondemandoptions">Fleet<wbr>On<wbr>Demand<wbr>Options</a></span>
+        <span class="property-type"><a href="#fleetondemandoptions">Fleet<wbr>On<wbr>Demand<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing On-Demand configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -451,7 +451,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#spotoptions_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetspotoptions">Fleet<wbr>Spot<wbr>Options</a></span>
+        <span class="property-type"><a href="#fleetspotoptions">Fleet<wbr>Spot<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing Spot configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1010,7 +1010,7 @@ The following state arguments are supported:
 <a href="#state_launchtemplateconfig_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfig">Fleet<wbr>Launch<wbr>Template<wbr>Config</a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfig">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing EC2 Launch Template configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1019,7 +1019,7 @@ The following state arguments are supported:
 <a href="#state_ondemandoptions_go" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetondemandoptions">Fleet<wbr>On<wbr>Demand<wbr>Options</a></span>
+        <span class="property-type"><a href="#fleetondemandoptions">Fleet<wbr>On<wbr>Demand<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing On-Demand configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1037,7 +1037,7 @@ The following state arguments are supported:
 <a href="#state_spotoptions_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetspotoptions">Fleet<wbr>Spot<wbr>Options</a></span>
+        <span class="property-type"><a href="#fleetspotoptions">Fleet<wbr>Spot<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing Spot configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1062,7 +1062,7 @@ The following state arguments are supported:
 <a href="#state_targetcapacityspecification_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Capacity<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleettargetcapacityspecification">Fleet<wbr>Target<wbr>Capacity<wbr>Specification</a></span>
+        <span class="property-type"><a href="#fleettargetcapacityspecification">Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing target capacity configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1315,7 +1315,7 @@ The following state arguments are supported:
 <a href="#launchtemplatespecification_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfiglaunchtemplatespecification">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfiglaunchtemplatespecification">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing EC2 Launch Template to use. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1324,7 +1324,7 @@ The following state arguments are supported:
 <a href="#overrides_csharp" style="color: inherit; text-decoration: inherit;">Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfigoverride">List&lt;Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfigoverride">List&lt;Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Override&gt;</a></span>
     </dt>
     <dd>{{% md %}}Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.
 {{% /md %}}</dd></dl>
@@ -1359,7 +1359,7 @@ The following state arguments are supported:
 <a href="#launchtemplatespecification_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfiglaunchtemplatespecification">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfiglaunchtemplatespecification">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing EC2 Launch Template to use. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1368,7 +1368,7 @@ The following state arguments are supported:
 <a href="#overrides_nodejs" style="color: inherit; text-decoration: inherit;">overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfigoverride">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Override<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfigoverride">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.
 {{% /md %}}</dd></dl>
@@ -1381,7 +1381,7 @@ The following state arguments are supported:
 <a href="#launch_template_specification_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfiglaunchtemplatespecification">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfiglaunchtemplatespecification">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing EC2 Launch Template to use. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1390,7 +1390,7 @@ The following state arguments are supported:
 <a href="#overrides_python" style="color: inherit; text-decoration: inherit;">overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfigoverride">Sequence[Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfigoverride">Sequence[Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Override]</a></span>
     </dt>
     <dd>{{% md %}}Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.
 {{% /md %}}</dd></dl>
@@ -1846,7 +1846,7 @@ The following state arguments are supported:
 <a href="#maintenancestrategies_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategies">Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies<wbr>Args</a></span>
+        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategies">Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
 {{% /md %}}</dd></dl>
@@ -1926,7 +1926,7 @@ The following state arguments are supported:
 <a href="#maintenancestrategies_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategies">Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies<wbr>Args</a></span>
+        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategies">Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
 {{% /md %}}</dd></dl>
@@ -1966,7 +1966,7 @@ The following state arguments are supported:
 <a href="#maintenance_strategies_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategies">Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies<wbr>Args</a></span>
+        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategies">Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
 {{% /md %}}</dd></dl>
@@ -1981,7 +1981,7 @@ The following state arguments are supported:
 <a href="#capacityrebalance_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Rebalance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategiescapacityrebalance">Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance<wbr>Args</a></span>
+        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategiescapacityrebalance">Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing the capacity rebalance for your fleet request. Defined below.
 {{% /md %}}</dd></dl>
@@ -2007,7 +2007,7 @@ The following state arguments are supported:
 <a href="#capacityrebalance_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Rebalance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategiescapacityrebalance">Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance<wbr>Args</a></span>
+        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategiescapacityrebalance">Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing the capacity rebalance for your fleet request. Defined below.
 {{% /md %}}</dd></dl>
@@ -2020,7 +2020,7 @@ The following state arguments are supported:
 <a href="#capacity_rebalance_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>rebalance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategiescapacityrebalance">Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance<wbr>Args</a></span>
+        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategiescapacityrebalance">Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing the capacity rebalance for your fleet request. Defined below.
 {{% /md %}}</dd></dl>

@@ -415,7 +415,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#featuredefinitions_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupfeaturedefinition">[]Feature<wbr>Group<wbr>Feature<wbr>Definition</a></span>
+        <span class="property-type"><a href="#featuregroupfeaturedefinition">[]Feature<wbr>Group<wbr>Feature<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of Feature names and types. See Feature Definition Below.
 {{% /md %}}</dd><dt class="property-required"
@@ -460,7 +460,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#offlinestoreconfig_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Store<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupofflinestoreconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config</a></span>
+        <span class="property-type"><a href="#featuregroupofflinestoreconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Offline Feature Store Configuration. See Offline Store Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -469,7 +469,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#onlinestoreconfig_go" style="color: inherit; text-decoration: inherit;">Online<wbr>Store<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregrouponlinestoreconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config</a></span>
+        <span class="property-type"><a href="#featuregrouponlinestoreconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Online Feature Store Configuration. See Online Store Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1045,7 +1045,7 @@ The following state arguments are supported:
 <a href="#state_featuredefinitions_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupfeaturedefinition">[]Feature<wbr>Group<wbr>Feature<wbr>Definition</a></span>
+        <span class="property-type"><a href="#featuregroupfeaturedefinition">[]Feature<wbr>Group<wbr>Feature<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of Feature names and types. See Feature Definition Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1063,7 +1063,7 @@ The following state arguments are supported:
 <a href="#state_offlinestoreconfig_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Store<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupofflinestoreconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config</a></span>
+        <span class="property-type"><a href="#featuregroupofflinestoreconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Offline Feature Store Configuration. See Offline Store Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1072,7 +1072,7 @@ The following state arguments are supported:
 <a href="#state_onlinestoreconfig_go" style="color: inherit; text-decoration: inherit;">Online<wbr>Store<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregrouponlinestoreconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config</a></span>
+        <span class="property-type"><a href="#featuregrouponlinestoreconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Online Feature Store Configuration. See Online Store Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1428,7 +1428,7 @@ The following state arguments are supported:
 <a href="#s3storageconfig_csharp" style="color: inherit; text-decoration: inherit;">S3Storage<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupofflinestoreconfigs3storageconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>S3Storage<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuregroupofflinestoreconfigs3storageconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>S3Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Storage (Amazon S3) location of OfflineStore. See S3 Storage Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1437,7 +1437,7 @@ The following state arguments are supported:
 <a href="#datacatalogconfig_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Catalog<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupofflinestoreconfigdatacatalogconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Data<wbr>Catalog<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuregroupofflinestoreconfigdatacatalogconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Data<wbr>Catalog<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The meta data of the Glue table that is autogenerated when an OfflineStore is created. See Data Catalog Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1490,7 +1490,7 @@ The following state arguments are supported:
 <a href="#s3storageconfig_nodejs" style="color: inherit; text-decoration: inherit;">s3Storage<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupofflinestoreconfigs3storageconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>S3Storage<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuregroupofflinestoreconfigs3storageconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>S3Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Storage (Amazon S3) location of OfflineStore. See S3 Storage Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1499,7 +1499,7 @@ The following state arguments are supported:
 <a href="#datacatalogconfig_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Catalog<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupofflinestoreconfigdatacatalogconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Data<wbr>Catalog<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuregroupofflinestoreconfigdatacatalogconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Data<wbr>Catalog<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The meta data of the Glue table that is autogenerated when an OfflineStore is created. See Data Catalog Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1521,7 +1521,7 @@ The following state arguments are supported:
 <a href="#s3_storage_config_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>storage_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupofflinestoreconfigs3storageconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>S3Storage<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuregroupofflinestoreconfigs3storageconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>S3Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Storage (Amazon S3) location of OfflineStore. See S3 Storage Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1530,7 +1530,7 @@ The following state arguments are supported:
 <a href="#data_catalog_config_python" style="color: inherit; text-decoration: inherit;">data_<wbr>catalog_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupofflinestoreconfigdatacatalogconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Data<wbr>Catalog<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuregroupofflinestoreconfigdatacatalogconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Data<wbr>Catalog<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The meta data of the Glue table that is autogenerated when an OfflineStore is created. See Data Catalog Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1779,7 +1779,7 @@ The following state arguments are supported:
 <a href="#securityconfig_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregrouponlinestoreconfigsecurityconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Security<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuregrouponlinestoreconfigsecurityconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Security<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Security config for at-rest encryption of your OnlineStore. See Security Config Below.
 {{% /md %}}</dd></dl>
@@ -1823,7 +1823,7 @@ The following state arguments are supported:
 <a href="#securityconfig_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregrouponlinestoreconfigsecurityconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Security<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuregrouponlinestoreconfigsecurityconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Security<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Security config for at-rest encryption of your OnlineStore. See Security Config Below.
 {{% /md %}}</dd></dl>
@@ -1845,7 +1845,7 @@ The following state arguments are supported:
 <a href="#security_config_python" style="color: inherit; text-decoration: inherit;">security_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregrouponlinestoreconfigsecurityconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Security<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuregrouponlinestoreconfigsecurityconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Security<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Security config for at-rest encryption of your OnlineStore. See Security Config Below.
 {{% /md %}}</dd></dl>

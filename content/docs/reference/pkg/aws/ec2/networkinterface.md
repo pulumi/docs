@@ -12,110 +12,6 @@ meta_desc: "Documentation for the aws.ec2.NetworkInterface resource with example
 
 Provides an Elastic network interface (ENI) resource.
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var test = new Aws.Ec2.NetworkInterface("test", new Aws.Ec2.NetworkInterfaceArgs
-        {
-            SubnetId = aws_subnet.Public_a.Id,
-            PrivateIps = 
-            {
-                "10.0.0.50",
-            },
-            SecurityGroups = 
-            {
-                aws_security_group.Web.Id,
-            },
-            Attachments = 
-            {
-                new Aws.Ec2.Inputs.NetworkInterfaceAttachmentArgs
-                {
-                    Instance = aws_instance.Test.Id,
-                    DeviceIndex = 1,
-                },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-test = aws.ec2.NetworkInterface("test",
-    subnet_id=aws_subnet["public_a"]["id"],
-    private_ips=["10.0.0.50"],
-    security_groups=[aws_security_group["web"]["id"]],
-    attachments=[aws.ec2.NetworkInterfaceAttachmentArgs(
-        instance=aws_instance["test"]["id"],
-        device_index=1,
-    )])
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const test = new aws.ec2.NetworkInterface("test", {
-    subnetId: aws_subnet.public_a.id,
-    privateIps: ["10.0.0.50"],
-    securityGroups: [aws_security_group.web.id],
-    attachments: [{
-        instance: aws_instance.test.id,
-        deviceIndex: 1,
-    }],
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Create a NetworkInterface Resource {#create}
@@ -405,7 +301,7 @@ The NetworkInterface resource accepts the following [input]({{< relref "/docs/in
 <a href="#attachments_go" style="color: inherit; text-decoration: inherit;">Attachments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceattachment">[]Network<wbr>Interface<wbr>Attachment<wbr>Type</a></span>
+        <span class="property-type"><a href="#networkinterfaceattachment">[]Network<wbr>Interface<wbr>Attachment<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Block to define the attachment of the ENI. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1202,7 +1098,7 @@ The following state arguments are supported:
 <a href="#state_attachments_go" style="color: inherit; text-decoration: inherit;">Attachments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceattachment">[]Network<wbr>Interface<wbr>Attachment<wbr>Type</a></span>
+        <span class="property-type"><a href="#networkinterfaceattachment">[]Network<wbr>Interface<wbr>Attachment<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Block to define the attachment of the ENI. Documented below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -383,7 +383,7 @@ not public (yet).
 <a href="#assumerole_go" style="color: inherit; text-decoration: inherit;">Assume<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerassumerole">Provider<wbr>Assume<wbr>Role</a></span>
+        <span class="property-type"><a href="#providerassumerole">Provider<wbr>Assume<wbr>Role<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -391,7 +391,7 @@ not public (yet).
 <a href="#defaulttags_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerdefaulttags">Provider<wbr>Default<wbr>Tags</a></span>
+        <span class="property-type"><a href="#providerdefaulttags">Provider<wbr>Default<wbr>Tags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with settings to default resource tags across all resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -400,7 +400,7 @@ not public (yet).
 <a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerendpoint">[]Provider<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#providerendpoint">[]Provider<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -416,7 +416,7 @@ not public (yet).
 <a href="#ignoretags_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerignoretags">Provider<wbr>Ignore<wbr>Tags</a></span>
+        <span class="property-type"><a href="#providerignoretags">Provider<wbr>Ignore<wbr>Tags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with settings to ignore resource tags across all resources.
 {{% /md %}}</dd><dt class="property-optional"

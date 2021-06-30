@@ -428,7 +428,7 @@ The BucketMetric resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketmetricfilter">Bucket<wbr>Metric<wbr>Filter</a></span>
+        <span class="property-type"><a href="#bucketmetricfilter">Bucket<wbr>Metric<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Object filtering](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -735,7 +735,7 @@ The following state arguments are supported:
 <a href="#state_filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketmetricfilter">Bucket<wbr>Metric<wbr>Filter</a></span>
+        <span class="property-type"><a href="#bucketmetricfilter">Bucket<wbr>Metric<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Object filtering](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
 {{% /md %}}</dd><dt class="property-optional"

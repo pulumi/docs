@@ -14,124 +14,6 @@ Manages an NFS Location within AWS DataSync.
 
 > **NOTE:** The DataSync Agents must be available before creating this resource.
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.DataSync.NfsLocation("example", new Aws.DataSync.NfsLocationArgs
-        {
-            ServerHostname = "nfs.example.com",
-            Subdirectory = "/exported/path",
-            OnPremConfig = new Aws.DataSync.Inputs.NfsLocationOnPremConfigArgs
-            {
-                AgentArns = 
-                {
-                    aws_datasync_agent.Example.Arn,
-                },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/datasync"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datasync.NewNfsLocation(ctx, "example", &datasync.NfsLocationArgs{
-			ServerHostname: pulumi.String("nfs.example.com"),
-			Subdirectory:   pulumi.String("/exported/path"),
-			OnPremConfig: &datasync.NfsLocationOnPremConfigArgs{
-				AgentArns: pulumi.StringArray{
-					pulumi.Any(aws_datasync_agent.Example.Arn),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.datasync.NfsLocation("example",
-    server_hostname="nfs.example.com",
-    subdirectory="/exported/path",
-    on_prem_config=aws.datasync.NfsLocationOnPremConfigArgs(
-        agent_arns=[aws_datasync_agent["example"]["arn"]],
-    ))
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.datasync.NfsLocation("example", {
-    serverHostname: "nfs.example.com",
-    subdirectory: "/exported/path",
-    onPremConfig: {
-        agentArns: [aws_datasync_agent.example.arn],
-    },
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Create a NfsLocation Resource {#create}
@@ -343,7 +225,7 @@ The NfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#onpremconfig_go" style="color: inherit; text-decoration: inherit;">On<wbr>Prem<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfslocationonpremconfig">Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></span>
+        <span class="property-type"><a href="#nfslocationonpremconfig">Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing information for connecting to the NFS File System.
 {{% /md %}}</dd><dt class="property-required"
@@ -370,7 +252,7 @@ The NfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#mountoptions_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfslocationmountoptions">Nfs<wbr>Location<wbr>Mount<wbr>Options</a></span>
+        <span class="property-type"><a href="#nfslocationmountoptions">Nfs<wbr>Location<wbr>Mount<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the NFS Server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -857,7 +739,7 @@ The following state arguments are supported:
 <a href="#state_mountoptions_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfslocationmountoptions">Nfs<wbr>Location<wbr>Mount<wbr>Options</a></span>
+        <span class="property-type"><a href="#nfslocationmountoptions">Nfs<wbr>Location<wbr>Mount<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the NFS Server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -866,7 +748,7 @@ The following state arguments are supported:
 <a href="#state_onpremconfig_go" style="color: inherit; text-decoration: inherit;">On<wbr>Prem<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfslocationonpremconfig">Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></span>
+        <span class="property-type"><a href="#nfslocationonpremconfig">Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing information for connecting to the NFS File System.
 {{% /md %}}</dd><dt class="property-optional"

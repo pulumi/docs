@@ -19,113 +19,6 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-
-
-
-{{< example csharp >}}
-
-```csharp
-using System.Linq;
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Eks.NodeGroup("example", new Aws.Eks.NodeGroupArgs
-        {
-            ClusterName = aws_eks_cluster.Example.Name,
-            NodeRoleArn = aws_iam_role.Example.Arn,
-            SubnetIds = aws_subnet.Example.Select(__item => __item.Id).ToList(),
-            ScalingConfig = new Aws.Eks.Inputs.NodeGroupScalingConfigArgs
-            {
-                DesiredSize = 1,
-                MaxSize = 1,
-                MinSize = 1,
-            },
-        }, new CustomResourceOptions
-        {
-            DependsOn = 
-            {
-                aws_iam_role_policy_attachment.Example_AmazonEKSWorkerNodePolicy,
-                aws_iam_role_policy_attachment.Example_AmazonEKS_CNI_Policy,
-                aws_iam_role_policy_attachment.Example_AmazonEC2ContainerRegistryReadOnly,
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.eks.NodeGroup("example",
-    cluster_name=aws_eks_cluster["example"]["name"],
-    node_role_arn=aws_iam_role["example"]["arn"],
-    subnet_ids=[__item["id"] for __item in aws_subnet["example"]],
-    scaling_config=aws.eks.NodeGroupScalingConfigArgs(
-        desired_size=1,
-        max_size=1,
-        min_size=1,
-    ),
-    opts=pulumi.ResourceOptions(depends_on=[
-            aws_iam_role_policy_attachment["example-AmazonEKSWorkerNodePolicy"],
-            aws_iam_role_policy_attachment["example-AmazonEKS_CNI_Policy"],
-            aws_iam_role_policy_attachment["example-AmazonEC2ContainerRegistryReadOnly"],
-        ]))
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.eks.NodeGroup("example", {
-    clusterName: aws_eks_cluster.example.name,
-    nodeRoleArn: aws_iam_role.example.arn,
-    subnetIds: aws_subnet.example.map(__item => __item.id),
-    scalingConfig: {
-        desiredSize: 1,
-        maxSize: 1,
-        minSize: 1,
-    },
-}, {
-    dependsOn: [
-        aws_iam_role_policy_attachment["example-AmazonEKSWorkerNodePolicy"],
-        aws_iam_role_policy_attachment["example-AmazonEKS_CNI_Policy"],
-        aws_iam_role_policy_attachment["example-AmazonEC2ContainerRegistryReadOnly"],
-    ],
-});
-```
-
-
-{{< /example >}}
-
-
-
-
 ### Ignoring Changes to Desired Size
 
 
@@ -777,7 +670,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#scalingconfig_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with scaling settings. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
@@ -849,7 +742,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#launchtemplate_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegrouplaunchtemplate">Node<wbr>Group<wbr>Launch<wbr>Template</a></span>
+        <span class="property-type"><a href="#nodegrouplaunchtemplate">Node<wbr>Group<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Launch Template settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -885,7 +778,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#remoteaccess_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access</a></span>
+        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with remote access settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -912,7 +805,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#taints_go" style="color: inherit; text-decoration: inherit;">Taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegrouptaint">[]Node<wbr>Group<wbr>Taint</a></span>
+        <span class="property-type"><a href="#nodegrouptaint">[]Node<wbr>Group<wbr>Taint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1868,7 +1761,7 @@ The following state arguments are supported:
 <a href="#state_launchtemplate_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegrouplaunchtemplate">Node<wbr>Group<wbr>Launch<wbr>Template</a></span>
+        <span class="property-type"><a href="#nodegrouplaunchtemplate">Node<wbr>Group<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Launch Template settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1913,7 +1806,7 @@ The following state arguments are supported:
 <a href="#state_remoteaccess_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access</a></span>
+        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with remote access settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1922,7 +1815,7 @@ The following state arguments are supported:
 <a href="#state_resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupresource">[]Node<wbr>Group<wbr>Resource</a></span>
+        <span class="property-type"><a href="#nodegroupresource">[]Node<wbr>Group<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about underlying resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1931,7 +1824,7 @@ The following state arguments are supported:
 <a href="#state_scalingconfig_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with scaling settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1976,7 +1869,7 @@ The following state arguments are supported:
 <a href="#state_taints_go" style="color: inherit; text-decoration: inherit;">Taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegrouptaint">[]Node<wbr>Group<wbr>Taint</a></span>
+        <span class="property-type"><a href="#nodegrouptaint">[]Node<wbr>Group<wbr>Taint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2629,7 +2522,7 @@ The following state arguments are supported:
 <a href="#autoscalinggroups_csharp" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupresourceautoscalinggroup">List&lt;Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nodegroupresourceautoscalinggroup">List&lt;Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about AutoScaling Groups.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2673,7 +2566,7 @@ The following state arguments are supported:
 <a href="#autoscalinggroups_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupresourceautoscalinggroup">Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#nodegroupresourceautoscalinggroup">Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about AutoScaling Groups.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2695,7 +2588,7 @@ The following state arguments are supported:
 <a href="#autoscaling_groups_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupresourceautoscalinggroup">Sequence[Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodegroupresourceautoscalinggroup">Sequence[Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group]</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about AutoScaling Groups.
 {{% /md %}}</dd><dt class="property-optional"

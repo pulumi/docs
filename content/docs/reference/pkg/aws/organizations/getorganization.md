@@ -20,94 +20,6 @@ Get information about the organization that the user's account belongs to
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-### List all account IDs for the organization
-
-
-{{< example csharp >}}
-
-```csharp
-using System.Linq;
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = Output.Create(Aws.Organizations.GetOrganization.InvokeAsync());
-        this.AccountIds = example.Apply(example => example.Accounts.Select(__item => __item.Id).ToList());
-    }
-
-    [Output("accountIds")]
-    public Output<string> AccountIds { get; set; }
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/organizations"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := organizations.LookupOrganization(ctx, nil, nil)
-		if err != nil {
-			return err
-		}
-		var splat0 []string
-		for _, val0 := range example.Accounts {
-			splat0 = append(splat0, val0.Id)
-		}
-		ctx.Export("accountIds", splat0)
-		return nil
-	})
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.organizations.get_organization()
-pulumi.export("accountIds", [__item.id for __item in example.accounts])
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = aws.organizations.getOrganization({});
-export const accountIds = example.then(example => example.accounts.map(__item => __item.id));
-```
-
-
-{{< /example >}}
-
-
-
-
 ### SNS topic that can be interacted by the organization only
 
 
@@ -288,7 +200,7 @@ const snsTopicPolicyPolicyDocument = pulumi.all([example, snsTopic.arn]).apply((
 }));
 const snsTopicPolicyTopicPolicy = new aws.sns.TopicPolicy("snsTopicPolicyTopicPolicy", {
     arn: snsTopic.arn,
-    policy: snsTopicPolicyPolicyDocument.json,
+    policy: snsTopicPolicyPolicyDocument.apply(snsTopicPolicyPolicyDocument => snsTopicPolicyPolicyDocument.json),
 });
 ```
 

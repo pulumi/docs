@@ -159,6 +159,7 @@ const defaultCluster = new aws.neptune.Cluster("default", {
             <span class="nx">backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
             <span class="nx">cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">cluster_identifier_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">copy_tags_to_snapshot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">enable_cloudwatch_logs_exports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -351,6 +352,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifier`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="copytagstosnapshot_csharp">
+<a href="#copytagstosnapshot_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Tags<wbr>To<wbr>Snapshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, tags are copied to any snapshot of the DB cluster that is created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionprotection_csharp">
@@ -582,6 +592,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifier`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="copytagstosnapshot_go">
+<a href="#copytagstosnapshot_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Tags<wbr>To<wbr>Snapshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, tags are copied to any snapshot of the DB cluster that is created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="deletionprotection_go">
 <a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
 </span>
@@ -811,6 +830,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifier`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="copytagstosnapshot_nodejs">
+<a href="#copytagstosnapshot_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Tags<wbr>To<wbr>Snapshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set to true, tags are copied to any snapshot of the DB cluster that is created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="deletionprotection_nodejs">
 <a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
 </span>
@@ -1038,6 +1066,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifier`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="copy_tags_to_snapshot_python">
+<a href="#copy_tags_to_snapshot_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>tags_<wbr>to_<wbr>snapshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, tags are copied to any snapshot of the DB cluster that is created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletion_protection_python">
@@ -1516,6 +1553,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
         <span class="nx">cluster_identifier_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">cluster_members</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">cluster_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">copy_tags_to_snapshot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">enable_cloudwatch_logs_exports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1721,6 +1759,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Neptune Cluster Resource ID
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_copytagstosnapshot_csharp">
+<a href="#state_copytagstosnapshot_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Tags<wbr>To<wbr>Snapshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, tags are copied to any snapshot of the DB cluster that is created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletionprotection_csharp">
@@ -2006,6 +2053,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Neptune Cluster Resource ID
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_copytagstosnapshot_go">
+<a href="#state_copytagstosnapshot_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Tags<wbr>To<wbr>Snapshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, tags are copied to any snapshot of the DB cluster that is created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_deletionprotection_go">
 <a href="#state_deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
 </span>
@@ -2289,6 +2345,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Neptune Cluster Resource ID
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_copytagstosnapshot_nodejs">
+<a href="#state_copytagstosnapshot_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Tags<wbr>To<wbr>Snapshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set to true, tags are copied to any snapshot of the DB cluster that is created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_deletionprotection_nodejs">
 <a href="#state_deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
 </span>
@@ -2570,6 +2635,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Neptune Cluster Resource ID
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_copy_tags_to_snapshot_python">
+<a href="#state_copy_tags_to_snapshot_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>tags_<wbr>to_<wbr>snapshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, tags are copied to any snapshot of the DB cluster that is created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletion_protection_python">

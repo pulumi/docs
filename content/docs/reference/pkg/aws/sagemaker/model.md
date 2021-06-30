@@ -434,7 +434,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#containers_go" style="color: inherit; text-decoration: inherit;">Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelcontainer">[]Model<wbr>Container</a></span>
+        <span class="property-type"><a href="#modelcontainer">[]Model<wbr>Container<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies containers in the inference pipeline. If not specified, the `primary_container` argument is required. Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -461,7 +461,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#primarycontainer_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelprimarycontainer">Model<wbr>Primary<wbr>Container</a></span>
+        <span class="property-type"><a href="#modelprimarycontainer">Model<wbr>Primary<wbr>Container<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the `container` argument is required. Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -488,7 +488,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#vpcconfig_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelvpcconfig">Model<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#modelvpcconfig">Model<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
 {{% /md %}}</dd></dl>
@@ -972,7 +972,7 @@ The following state arguments are supported:
 <a href="#state_containers_go" style="color: inherit; text-decoration: inherit;">Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelcontainer">[]Model<wbr>Container</a></span>
+        <span class="property-type"><a href="#modelcontainer">[]Model<wbr>Container<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies containers in the inference pipeline. If not specified, the `primary_container` argument is required. Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1008,7 +1008,7 @@ The following state arguments are supported:
 <a href="#state_primarycontainer_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelprimarycontainer">Model<wbr>Primary<wbr>Container</a></span>
+        <span class="property-type"><a href="#modelprimarycontainer">Model<wbr>Primary<wbr>Container<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the `container` argument is required. Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1035,7 +1035,7 @@ The following state arguments are supported:
 <a href="#state_vpcconfig_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelvpcconfig">Model<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#modelvpcconfig">Model<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
 {{% /md %}}</dd></dl>
@@ -1257,7 +1257,7 @@ A list of key value pairs.
 <a href="#imageconfig_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelcontainerimageconfig">Model<wbr>Container<wbr>Image<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelcontainerimageconfig">Model<wbr>Container<wbr>Image<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1375,7 +1375,7 @@ A list of key value pairs.
 <a href="#imageconfig_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelcontainerimageconfig">Model<wbr>Container<wbr>Image<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelcontainerimageconfig">Model<wbr>Container<wbr>Image<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1434,7 +1434,7 @@ A list of key value pairs.
 <a href="#image_config_python" style="color: inherit; text-decoration: inherit;">image_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelcontainerimageconfig">Model<wbr>Container<wbr>Image<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelcontainerimageconfig">Model<wbr>Container<wbr>Image<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1549,7 +1549,7 @@ A list of key value pairs.
 <a href="#imageconfig_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelprimarycontainerimageconfig">Model<wbr>Primary<wbr>Container<wbr>Image<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelprimarycontainerimageconfig">Model<wbr>Primary<wbr>Container<wbr>Image<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1667,7 +1667,7 @@ A list of key value pairs.
 <a href="#imageconfig_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelprimarycontainerimageconfig">Model<wbr>Primary<wbr>Container<wbr>Image<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelprimarycontainerimageconfig">Model<wbr>Primary<wbr>Container<wbr>Image<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1726,7 +1726,7 @@ A list of key value pairs.
 <a href="#image_config_python" style="color: inherit; text-decoration: inherit;">image_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelprimarycontainerimageconfig">Model<wbr>Primary<wbr>Container<wbr>Image<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelprimarycontainerimageconfig">Model<wbr>Primary<wbr>Container<wbr>Image<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
 {{% /md %}}</dd><dt class="property-optional"

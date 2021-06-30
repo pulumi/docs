@@ -55,9 +55,28 @@ class MyStack : Stack
                             { "Effect", "Allow" },
                             { "Principal", new Dictionary<string, object?>
                             {
-                                { "Service", "api-service.dnssec.route53.aws.internal" },
+                                { "Service", "dnssec-route53.amazonaws.com" },
                             } },
-                            { "Sid", "Route 53 DNSSEC Permissions" },
+                            { "Sid", "Allow Route 53 DNSSEC Service" },
+                            { "Resource", "*" },
+                        },
+                        new Dictionary<string, object?>
+                        {
+                            { "Action", "kms:CreateGrant" },
+                            { "Effect", "Allow" },
+                            { "Principal", new Dictionary<string, object?>
+                            {
+                                { "Service", "dnssec-route53.amazonaws.com" },
+                            } },
+                            { "Sid", "Allow Route 53 DNSSEC Service to CreateGrant" },
+                            { "Resource", "*" },
+                            { "Condition", new Dictionary<string, object?>
+                            {
+                                { "Bool", new Dictionary<string, object?>
+                                {
+                                    { "kms:GrantIsForAWSResource", "true" },
+                                } },
+                            } },
                         },
                         new Dictionary<string, object?>
                         {
@@ -86,6 +105,12 @@ class MyStack : Stack
         var exampleHostedZoneDnsSec = new Aws.Route53.HostedZoneDnsSec("exampleHostedZoneDnsSec", new Aws.Route53.HostedZoneDnsSecArgs
         {
             HostedZoneId = exampleKeySigningKey.HostedZoneId,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                exampleKeySigningKey,
+            },
         });
     }
 
@@ -121,9 +146,24 @@ func main() {
 					},
 					"Effect": "Allow",
 					"Principal": map[string]interface{}{
-						"Service": "api-service.dnssec.route53.aws.internal",
+						"Service": "dnssec-route53.amazonaws.com",
 					},
-					"Sid": "Route 53 DNSSEC Permissions",
+					"Sid":      "Allow Route 53 DNSSEC Service",
+					"Resource": "*",
+				},
+				map[string]interface{}{
+					"Action": "kms:CreateGrant",
+					"Effect": "Allow",
+					"Principal": map[string]interface{}{
+						"Service": "dnssec-route53.amazonaws.com",
+					},
+					"Sid":      "Allow Route 53 DNSSEC Service to CreateGrant",
+					"Resource": "*",
+					"Condition": map[string]interface{}{
+						"Bool": map[string]interface{}{
+							"kms:GrantIsForAWSResource": "true",
+						},
+					},
 				},
 				map[string]interface{}{
 					"Action": "kms:*",
@@ -163,7 +203,9 @@ func main() {
 		}
 		_, err = route53.NewHostedZoneDnsSec(ctx, "exampleHostedZoneDnsSec", &route53.HostedZoneDnsSecArgs{
 			HostedZoneId: exampleKeySigningKey.HostedZoneId,
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			exampleKeySigningKey,
+		}))
 		if err != nil {
 			return err
 		}
@@ -197,9 +239,24 @@ example_key = aws.kms.Key("exampleKey",
                 ],
                 "Effect": "Allow",
                 "Principal": {
-                    "Service": "api-service.dnssec.route53.aws.internal",
+                    "Service": "dnssec-route53.amazonaws.com",
                 },
-                "Sid": "Route 53 DNSSEC Permissions",
+                "Sid": "Allow Route 53 DNSSEC Service",
+                "Resource": "*",
+            },
+            {
+                "Action": "kms:CreateGrant",
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": "dnssec-route53.amazonaws.com",
+                },
+                "Sid": "Allow Route 53 DNSSEC Service to CreateGrant",
+                "Resource": "*",
+                "Condition": {
+                    "Bool": {
+                        "kms:GrantIsForAWSResource": "true",
+                    },
+                },
             },
             {
                 "Action": "kms:*",
@@ -217,7 +274,8 @@ example_zone = aws.route53.Zone("exampleZone")
 example_key_signing_key = aws.route53.KeySigningKey("exampleKeySigningKey",
     hosted_zone_id=aws_route53_zone["test"]["id"],
     key_management_service_arn=aws_kms_key["test"]["arn"])
-example_hosted_zone_dns_sec = aws.route53.HostedZoneDnsSec("exampleHostedZoneDnsSec", hosted_zone_id=example_key_signing_key.hosted_zone_id)
+example_hosted_zone_dns_sec = aws.route53.HostedZoneDnsSec("exampleHostedZoneDnsSec", hosted_zone_id=example_key_signing_key.hosted_zone_id,
+opts=pulumi.ResourceOptions(depends_on=[example_key_signing_key]))
 ```
 
 
@@ -245,9 +303,24 @@ const exampleKey = new aws.kms.Key("exampleKey", {
                 ],
                 Effect: "Allow",
                 Principal: {
-                    Service: "api-service.dnssec.route53.aws.internal",
+                    Service: "dnssec-route53.amazonaws.com",
                 },
-                Sid: "Route 53 DNSSEC Permissions",
+                Sid: "Allow Route 53 DNSSEC Service",
+                Resource: "*",
+            },
+            {
+                Action: "kms:CreateGrant",
+                Effect: "Allow",
+                Principal: {
+                    Service: "dnssec-route53.amazonaws.com",
+                },
+                Sid: "Allow Route 53 DNSSEC Service to CreateGrant",
+                Resource: "*",
+                Condition: {
+                    Bool: {
+                        "kms:GrantIsForAWSResource": "true",
+                    },
+                },
             },
             {
                 Action: "kms:*",
@@ -267,7 +340,9 @@ const exampleKeySigningKey = new aws.route53.KeySigningKey("exampleKeySigningKey
     hostedZoneId: aws_route53_zone.test.id,
     keyManagementServiceArn: aws_kms_key.test.arn,
 });
-const exampleHostedZoneDnsSec = new aws.route53.HostedZoneDnsSec("exampleHostedZoneDnsSec", {hostedZoneId: exampleKeySigningKey.hostedZoneId});
+const exampleHostedZoneDnsSec = new aws.route53.HostedZoneDnsSec("exampleHostedZoneDnsSec", {hostedZoneId: exampleKeySigningKey.hostedZoneId}, {
+    dependsOn: [exampleKeySigningKey],
+});
 ```
 
 

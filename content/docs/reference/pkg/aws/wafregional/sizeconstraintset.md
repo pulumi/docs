@@ -322,7 +322,7 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#sizeconstraints_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">[]Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint</a></span>
+        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">[]Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
 {{% /md %}}</dd></dl>
@@ -641,7 +641,7 @@ The following state arguments are supported:
 <a href="#state_sizeconstraints_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">[]Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint</a></span>
+        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">[]Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
 {{% /md %}}</dd></dl>
@@ -736,7 +736,7 @@ See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_S
 <a href="#fieldtomatch_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}Specifies where in a web request to look for the size constraint.
 {{% /md %}}</dd><dt class="property-required"
@@ -832,7 +832,7 @@ See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_S
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}Specifies where in a web request to look for the size constraint.
 {{% /md %}}</dd><dt class="property-required"
@@ -880,7 +880,7 @@ See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_S
 <a href="#field_to_match_python" style="color: inherit; text-decoration: inherit;">field_<wbr>to_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}Specifies where in a web request to look for the size constraint.
 {{% /md %}}</dd><dt class="property-required"

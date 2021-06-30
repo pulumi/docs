@@ -16,6 +16,7 @@ Explore the resources and functions of the aws.cloudwatch module.
     <li><a href="eventapidestination" title="EventApiDestination"><span class="symbol resource"></span>EventApiDestination</a></li>
     <li><a href="eventarchive" title="EventArchive"><span class="symbol resource"></span>EventArchive</a></li>
     <li><a href="eventbus" title="EventBus"><span class="symbol resource"></span>EventBus</a></li>
+    <li><a href="eventbuspolicy" title="EventBusPolicy"><span class="symbol resource"></span>EventBusPolicy</a></li>
     <li><a href="eventconnection" title="EventConnection"><span class="symbol resource"></span>EventConnection</a></li>
     <li><a href="eventpermission" title="EventPermission"><span class="symbol resource"></span>EventPermission</a></li>
     <li><a href="eventrule" title="EventRule"><span class="symbol resource"></span>EventRule</a></li>
@@ -48,6 +49,6 @@ Explore the resources and functions of the aws.cloudwatch module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.9.0</dd>
+	<dd>4.10.0</dd>
 </dl>
 

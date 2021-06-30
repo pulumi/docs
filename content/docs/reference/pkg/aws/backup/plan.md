@@ -362,7 +362,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrule">[]Plan<wbr>Rule</a></span>
+        <span class="property-type"><a href="#planrule">[]Plan<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -371,7 +371,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#advancedbackupsettings_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Backup<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planadvancedbackupsetting">[]Plan<wbr>Advanced<wbr>Backup<wbr>Setting</a></span>
+        <span class="property-type"><a href="#planadvancedbackupsetting">[]Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that specifies backup options for each resource type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -835,7 +835,7 @@ The following state arguments are supported:
 <a href="#state_advancedbackupsettings_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Backup<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planadvancedbackupsetting">[]Plan<wbr>Advanced<wbr>Backup<wbr>Setting</a></span>
+        <span class="property-type"><a href="#planadvancedbackupsetting">[]Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that specifies backup options for each resource type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -862,7 +862,7 @@ The following state arguments are supported:
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrule">[]Plan<wbr>Rule</a></span>
+        <span class="property-type"><a href="#planrule">[]Plan<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1164,7 +1164,7 @@ The following state arguments are supported:
 <a href="#copyactions_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulecopyaction">List&lt;Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#planrulecopyaction">List&lt;Plan<wbr>Rule<wbr>Copy<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with copy operation settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1182,7 +1182,7 @@ The following state arguments are supported:
 <a href="#lifecycle_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle<wbr>Args</a></span>
+        <span class="property-type"><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1334,7 +1334,7 @@ The following state arguments are supported:
 <a href="#copyactions_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulecopyaction">Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#planrulecopyaction">Plan<wbr>Rule<wbr>Copy<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with copy operation settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1352,7 +1352,7 @@ The following state arguments are supported:
 <a href="#lifecycle_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle<wbr>Args</a></span>
+        <span class="property-type"><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1419,7 +1419,7 @@ The following state arguments are supported:
 <a href="#copy_actions_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulecopyaction">Sequence[Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#planrulecopyaction">Sequence[Plan<wbr>Rule<wbr>Copy<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with copy operation settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1437,7 +1437,7 @@ The following state arguments are supported:
 <a href="#lifecycle_python" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle<wbr>Args</a></span>
+        <span class="property-type"><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1488,7 +1488,7 @@ The following state arguments are supported:
 <a href="#lifecycle_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulecopyactionlifecycle">Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Lifecycle<wbr>Args</a></span>
+        <span class="property-type"><a href="#planrulecopyactionlifecycle">Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
 {{% /md %}}</dd></dl>
@@ -1532,7 +1532,7 @@ The following state arguments are supported:
 <a href="#lifecycle_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulecopyactionlifecycle">Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Lifecycle<wbr>Args</a></span>
+        <span class="property-type"><a href="#planrulecopyactionlifecycle">Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
 {{% /md %}}</dd></dl>
@@ -1554,7 +1554,7 @@ The following state arguments are supported:
 <a href="#lifecycle_python" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulecopyactionlifecycle">Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Lifecycle<wbr>Args</a></span>
+        <span class="property-type"><a href="#planrulecopyactionlifecycle">Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
 {{% /md %}}</dd></dl>

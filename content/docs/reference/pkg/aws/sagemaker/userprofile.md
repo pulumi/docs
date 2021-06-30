@@ -387,7 +387,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#usersettings_go" style="color: inherit; text-decoration: inherit;">User<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettings">User<wbr>Profile<wbr>User<wbr>Settings</a></span>
+        <span class="property-type"><a href="#userprofileusersettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The user settings. See User Settings below.
 {{% /md %}}</dd></dl>
@@ -952,7 +952,7 @@ The following state arguments are supported:
 <a href="#state_usersettings_go" style="color: inherit; text-decoration: inherit;">User<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettings">User<wbr>Profile<wbr>User<wbr>Settings</a></span>
+        <span class="property-type"><a href="#userprofileusersettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The user settings. See User Settings below.
 {{% /md %}}</dd></dl>
@@ -1155,7 +1155,7 @@ The following state arguments are supported:
 <a href="#jupyterserverappsettings_csharp" style="color: inherit; text-decoration: inherit;">Jupyter<wbr>Server<wbr>App<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The Jupyter server's app settings. See Jupyter Server App Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1164,7 +1164,7 @@ The following state arguments are supported:
 <a href="#kernelgatewayappsettings_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Gateway<wbr>App<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The kernel gateway app settings. See Kernel Gateway App Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1182,7 +1182,7 @@ The following state arguments are supported:
 <a href="#sharingsettings_csharp" style="color: inherit; text-decoration: inherit;">Sharing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingssharingsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingssharingsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The sharing settings. See Sharing Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1191,7 +1191,7 @@ The following state arguments are supported:
 <a href="#tensorboardappsettings_csharp" style="color: inherit; text-decoration: inherit;">Tensor<wbr>Board<wbr>App<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The TensorBoard app settings. See TensorBoard App Settings below.
 {{% /md %}}</dd></dl>
@@ -1271,7 +1271,7 @@ The following state arguments are supported:
 <a href="#jupyterserverappsettings_nodejs" style="color: inherit; text-decoration: inherit;">jupyter<wbr>Server<wbr>App<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The Jupyter server's app settings. See Jupyter Server App Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1280,7 +1280,7 @@ The following state arguments are supported:
 <a href="#kernelgatewayappsettings_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Gateway<wbr>App<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The kernel gateway app settings. See Kernel Gateway App Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1298,7 +1298,7 @@ The following state arguments are supported:
 <a href="#sharingsettings_nodejs" style="color: inherit; text-decoration: inherit;">sharing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingssharingsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingssharingsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The sharing settings. See Sharing Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1307,7 +1307,7 @@ The following state arguments are supported:
 <a href="#tensorboardappsettings_nodejs" style="color: inherit; text-decoration: inherit;">tensor<wbr>Board<wbr>App<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The TensorBoard app settings. See TensorBoard App Settings below.
 {{% /md %}}</dd></dl>
@@ -1329,7 +1329,7 @@ The following state arguments are supported:
 <a href="#jupyter_server_app_settings_python" style="color: inherit; text-decoration: inherit;">jupyter_<wbr>server_<wbr>app_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The Jupyter server's app settings. See Jupyter Server App Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1338,7 +1338,7 @@ The following state arguments are supported:
 <a href="#kernel_gateway_app_settings_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>gateway_<wbr>app_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The kernel gateway app settings. See Kernel Gateway App Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1356,7 +1356,7 @@ The following state arguments are supported:
 <a href="#sharing_settings_python" style="color: inherit; text-decoration: inherit;">sharing_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingssharingsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingssharingsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The sharing settings. See Sharing Settings below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1365,7 +1365,7 @@ The following state arguments are supported:
 <a href="#tensor_board_app_settings_python" style="color: inherit; text-decoration: inherit;">tensor_<wbr>board_<wbr>app_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The TensorBoard app settings. See TensorBoard App Settings below.
 {{% /md %}}</dd></dl>
@@ -1380,7 +1380,7 @@ The following state arguments are supported:
 <a href="#defaultresourcespec_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd></dl>
@@ -1406,7 +1406,7 @@ The following state arguments are supported:
 <a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd></dl>
@@ -1419,7 +1419,7 @@ The following state arguments are supported:
 <a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd></dl>
@@ -1524,7 +1524,7 @@ The following state arguments are supported:
 <a href="#defaultresourcespec_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1533,7 +1533,7 @@ The following state arguments are supported:
 <a href="#customimages_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingscustomimage">List&lt;User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingscustomimage">List&lt;User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
 {{% /md %}}</dd></dl>
@@ -1568,7 +1568,7 @@ The following state arguments are supported:
 <a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1577,7 +1577,7 @@ The following state arguments are supported:
 <a href="#customimages_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingscustomimage">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingscustomimage">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image[]</a></span>
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
 {{% /md %}}</dd></dl>
@@ -1590,7 +1590,7 @@ The following state arguments are supported:
 <a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1599,7 +1599,7 @@ The following state arguments are supported:
 <a href="#custom_images_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingscustomimage">Sequence[User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingscustomimage">Sequence[User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image]</a></span>
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
 {{% /md %}}</dd></dl>
@@ -1956,7 +1956,7 @@ The following state arguments are supported:
 <a href="#defaultresourcespec_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd></dl>
@@ -1982,7 +1982,7 @@ The following state arguments are supported:
 <a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd></dl>
@@ -1995,7 +1995,7 @@ The following state arguments are supported:
 <a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#userprofileusersettingstensorboardappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd></dl>

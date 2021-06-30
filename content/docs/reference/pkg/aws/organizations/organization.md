@@ -937,7 +937,7 @@ The following state arguments are supported:
 <a href="#state_accounts_go" style="color: inherit; text-decoration: inherit;">Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationaccount">[]Organization<wbr>Account</a></span>
+        <span class="property-type"><a href="#organizationaccount">[]Organization<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1009,7 +1009,7 @@ The following state arguments are supported:
 <a href="#state_nonmasteraccounts_go" style="color: inherit; text-decoration: inherit;">Non<wbr>Master<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationnonmasteraccount">[]Organization<wbr>Non<wbr>Master<wbr>Account</a></span>
+        <span class="property-type"><a href="#organizationnonmasteraccount">[]Organization<wbr>Non<wbr>Master<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1018,7 +1018,7 @@ The following state arguments are supported:
 <a href="#state_roots_go" style="color: inherit; text-decoration: inherit;">Roots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationroot">[]Organization<wbr>Root</a></span>
+        <span class="property-type"><a href="#organizationroot">[]Organization<wbr>Root<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of organization roots. All elements have these attributes:
 {{% /md %}}</dd></dl>
@@ -1653,7 +1653,7 @@ The following state arguments are supported:
 <a href="#policytypes_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationrootpolicytype">List&lt;Organization<wbr>Root<wbr>Policy<wbr>Type<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#organizationrootpolicytype">List&lt;Organization<wbr>Root<wbr>Policy<wbr>Type&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of policy types enabled for this root. All elements have these attributes:
 {{% /md %}}</dd></dl>
@@ -1733,7 +1733,7 @@ The following state arguments are supported:
 <a href="#policytypes_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationrootpolicytype">Organization<wbr>Root<wbr>Policy<wbr>Type<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#organizationrootpolicytype">Organization<wbr>Root<wbr>Policy<wbr>Type[]</a></span>
     </dt>
     <dd>{{% md %}}List of policy types enabled for this root. All elements have these attributes:
 {{% /md %}}</dd></dl>
@@ -1773,7 +1773,7 @@ The following state arguments are supported:
 <a href="#policy_types_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationrootpolicytype">Sequence[Organization<wbr>Root<wbr>Policy<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#organizationrootpolicytype">Sequence[Organization<wbr>Root<wbr>Policy<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}List of policy types enabled for this root. All elements have these attributes:
 {{% /md %}}</dd></dl>

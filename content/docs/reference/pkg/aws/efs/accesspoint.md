@@ -313,7 +313,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#posixuser_go" style="color: inherit; text-decoration: inherit;">Posix<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointposixuser">Access<wbr>Point<wbr>Posix<wbr>User</a></span>
+        <span class="property-type"><a href="#accesspointposixuser">Access<wbr>Point<wbr>Posix<wbr>User<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Operating system user and group applied to all file system requests made using the access point. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -322,7 +322,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#rootdirectory_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointrootdirectory">Access<wbr>Point<wbr>Root<wbr>Directory</a></span>
+        <span class="property-type"><a href="#accesspointrootdirectory">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Directory on the Amazon EFS file system that the access point provides access to. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -845,7 +845,7 @@ The following state arguments are supported:
 <a href="#state_posixuser_go" style="color: inherit; text-decoration: inherit;">Posix<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointposixuser">Access<wbr>Point<wbr>Posix<wbr>User</a></span>
+        <span class="property-type"><a href="#accesspointposixuser">Access<wbr>Point<wbr>Posix<wbr>User<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Operating system user and group applied to all file system requests made using the access point. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -854,7 +854,7 @@ The following state arguments are supported:
 <a href="#state_rootdirectory_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointrootdirectory">Access<wbr>Point<wbr>Root<wbr>Directory</a></span>
+        <span class="property-type"><a href="#accesspointrootdirectory">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Directory on the Amazon EFS file system that the access point provides access to. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1166,7 +1166,7 @@ The following state arguments are supported:
 <a href="#creationinfo_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointrootdirectorycreationinfo">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesspointrootdirectorycreationinfo">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1210,7 +1210,7 @@ The following state arguments are supported:
 <a href="#creationinfo_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointrootdirectorycreationinfo">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesspointrootdirectorycreationinfo">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1232,7 +1232,7 @@ The following state arguments are supported:
 <a href="#creation_info_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspointrootdirectorycreationinfo">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesspointrootdirectorycreationinfo">Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.
 {{% /md %}}</dd><dt class="property-optional"

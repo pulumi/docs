@@ -514,7 +514,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#rotationrules_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretrotationrules">Secret<wbr>Rotation<wbr>Rules</a></span>
+        <span class="property-type"><a href="#secretrotationrules">Secret<wbr>Rotation<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A structure that defines the rotation configuration for this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -1190,7 +1190,7 @@ The following state arguments are supported:
 <a href="#state_rotationrules_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretrotationrules">Secret<wbr>Rotation<wbr>Rules</a></span>
+        <span class="property-type"><a href="#secretrotationrules">Secret<wbr>Rotation<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A structure that defines the rotation configuration for this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional"

@@ -630,7 +630,7 @@ The GangliaLayer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#ebsvolumes_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ganglialayerebsvolume">[]Ganglia<wbr>Layer<wbr>Ebs<wbr>Volume</a></span>
+        <span class="property-type"><a href="#ganglialayerebsvolume">[]Ganglia<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1768,7 +1768,7 @@ The following state arguments are supported:
 <a href="#state_ebsvolumes_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ganglialayerebsvolume">[]Ganglia<wbr>Layer<wbr>Ebs<wbr>Volume</a></span>
+        <span class="property-type"><a href="#ganglialayerebsvolume">[]Ganglia<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"

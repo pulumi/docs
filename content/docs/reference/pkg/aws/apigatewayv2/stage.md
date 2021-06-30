@@ -388,7 +388,7 @@ Supported only for WebSocket APIs.
 <a href="#accesslogsettings_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings</a></span>
+        <span class="property-type"><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
 Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
@@ -417,7 +417,7 @@ Supported only for WebSocket APIs.
 <a href="#defaultroutesettings_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stagedefaultroutesettings">Stage<wbr>Default<wbr>Route<wbr>Settings</a></span>
+        <span class="property-type"><a href="#stagedefaultroutesettings">Stage<wbr>Default<wbr>Route<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default route settings for the stage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -453,7 +453,7 @@ Supported only for WebSocket APIs.
 <a href="#routesettings_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stageroutesetting">[]Stage<wbr>Route<wbr>Setting</a></span>
+        <span class="property-type"><a href="#stageroutesetting">[]Stage<wbr>Route<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Route settings for the stage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1180,7 +1180,7 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
 <a href="#state_accesslogsettings_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings</a></span>
+        <span class="property-type"><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
 Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
@@ -1227,7 +1227,7 @@ Supported only for WebSocket APIs.
 <a href="#state_defaultroutesettings_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stagedefaultroutesettings">Stage<wbr>Default<wbr>Route<wbr>Settings</a></span>
+        <span class="property-type"><a href="#stagedefaultroutesettings">Stage<wbr>Default<wbr>Route<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default route settings for the stage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1284,7 +1284,7 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
 <a href="#state_routesettings_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stageroutesetting">[]Stage<wbr>Route<wbr>Setting</a></span>
+        <span class="property-type"><a href="#stageroutesetting">[]Stage<wbr>Route<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Route settings for the stage.
 {{% /md %}}</dd><dt class="property-optional"

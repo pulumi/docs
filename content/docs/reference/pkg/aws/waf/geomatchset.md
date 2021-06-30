@@ -317,7 +317,7 @@ The GeoMatchSet resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#geomatchconstraints_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Match<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">[]Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint</a></span>
+        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">[]Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
 {{% /md %}}</dd><dt class="property-optional"
@@ -642,7 +642,7 @@ The following state arguments are supported:
 <a href="#state_geomatchconstraints_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Match<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">[]Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint</a></span>
+        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">[]Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
 {{% /md %}}</dd><dt class="property-optional"

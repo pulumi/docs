@@ -42,7 +42,7 @@ class MyStack : Stack
         {
             Ami = "ami-abb07bcb",
             InstanceType = "t2.micro",
-            SubnetId = network.Apply(network => network.Outputs.SubnetId),
+            SubnetId = network.Apply(network => network.Outputs?.SubnetId),
             Tags = 
             {
                 { "Name", "HelloWorld" },
@@ -129,7 +129,7 @@ const network = aws.cloudformation.getStack({
 const web = new aws.ec2.Instance("web", {
     ami: "ami-abb07bcb",
     instanceType: "t2.micro",
-    subnetId: network.then(network => network.outputs.SubnetId),
+    subnetId: network.then(network => network.outputs?.SubnetId),
     tags: {
         Name: "HelloWorld",
     },

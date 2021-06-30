@@ -332,7 +332,7 @@ The Host resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#vpcconfiguration_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostvpcconfiguration">Host<wbr>Vpc<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#hostvpcconfiguration">Host<wbr>Vpc<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VPC configuration to be provisioned for the host. A VPC must be configured, and the infrastructure to be represented by the host must already be connected to the VPC.
 {{% /md %}}</dd></dl>
@@ -786,7 +786,7 @@ The following state arguments are supported:
 <a href="#state_vpcconfiguration_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostvpcconfiguration">Host<wbr>Vpc<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#hostvpcconfiguration">Host<wbr>Vpc<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VPC configuration to be provisioned for the host. A VPC must be configured, and the infrastructure to be represented by the host must already be connected to the VPC.
 {{% /md %}}</dd></dl>

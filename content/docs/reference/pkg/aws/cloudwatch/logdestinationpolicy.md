@@ -169,7 +169,7 @@ const testDestinationPolicyPolicyDocument = testDestination.arn.apply(arn => aws
 }));
 const testDestinationPolicyLogDestinationPolicy = new aws.cloudwatch.LogDestinationPolicy("testDestinationPolicyLogDestinationPolicy", {
     destinationName: testDestination.name,
-    accessPolicy: testDestinationPolicyPolicyDocument.json,
+    accessPolicy: testDestinationPolicyPolicyDocument.apply(testDestinationPolicyPolicyDocument => testDestinationPolicyPolicyDocument.json),
 });
 ```
 

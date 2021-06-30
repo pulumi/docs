@@ -375,7 +375,7 @@ The VirtualRouter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualrouterspec">Virtual<wbr>Router<wbr>Spec</a></span>
+        <span class="property-type"><a href="#virtualrouterspec">Virtual<wbr>Router<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual router specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1031,7 +1031,7 @@ The following state arguments are supported:
 <a href="#state_spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualrouterspec">Virtual<wbr>Router<wbr>Spec</a></span>
+        <span class="property-type"><a href="#virtualrouterspec">Virtual<wbr>Router<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual router specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1261,7 +1261,7 @@ The following state arguments are supported:
 <a href="#listener_csharp" style="color: inherit; text-decoration: inherit;">Listener</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualrouterspeclistener">Virtual<wbr>Router<wbr>Spec<wbr>Listener<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualrouterspeclistener">Virtual<wbr>Router<wbr>Spec<wbr>Listener</a></span>
     </dt>
     <dd>{{% md %}}The listeners that the virtual router is expected to receive inbound traffic from.
 Currently only one listener is supported per virtual router.
@@ -1289,7 +1289,7 @@ Currently only one listener is supported per virtual router.
 <a href="#listener_nodejs" style="color: inherit; text-decoration: inherit;">listener</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualrouterspeclistener">Virtual<wbr>Router<wbr>Spec<wbr>Listener<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualrouterspeclistener">Virtual<wbr>Router<wbr>Spec<wbr>Listener</a></span>
     </dt>
     <dd>{{% md %}}The listeners that the virtual router is expected to receive inbound traffic from.
 Currently only one listener is supported per virtual router.
@@ -1303,7 +1303,7 @@ Currently only one listener is supported per virtual router.
 <a href="#listener_python" style="color: inherit; text-decoration: inherit;">listener</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualrouterspeclistener">Virtual<wbr>Router<wbr>Spec<wbr>Listener<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualrouterspeclistener">Virtual<wbr>Router<wbr>Spec<wbr>Listener</a></span>
     </dt>
     <dd>{{% md %}}The listeners that the virtual router is expected to receive inbound traffic from.
 Currently only one listener is supported per virtual router.
@@ -1319,7 +1319,7 @@ Currently only one listener is supported per virtual router.
 <a href="#portmapping_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualrouterspeclistenerportmapping">Virtual<wbr>Router<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualrouterspeclistenerportmapping">Virtual<wbr>Router<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
 {{% /md %}}</dd></dl>
@@ -1345,7 +1345,7 @@ Currently only one listener is supported per virtual router.
 <a href="#portmapping_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualrouterspeclistenerportmapping">Virtual<wbr>Router<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualrouterspeclistenerportmapping">Virtual<wbr>Router<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
 {{% /md %}}</dd></dl>
@@ -1358,7 +1358,7 @@ Currently only one listener is supported per virtual router.
 <a href="#port_mapping_python" style="color: inherit; text-decoration: inherit;">port_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualrouterspeclistenerportmapping">Virtual<wbr>Router<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualrouterspeclistenerportmapping">Virtual<wbr>Router<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
 {{% /md %}}</dd></dl>

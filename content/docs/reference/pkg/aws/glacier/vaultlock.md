@@ -169,7 +169,7 @@ const examplePolicyDocument = exampleVault.arn.apply(arn => aws.iam.getPolicyDoc
 }));
 const exampleVaultLock = new aws.glacier.VaultLock("exampleVaultLock", {
     completeLock: false,
-    policy: examplePolicyDocument.json,
+    policy: examplePolicyDocument.apply(examplePolicyDocument => examplePolicyDocument.json),
     vaultName: exampleVault.name,
 });
 ```

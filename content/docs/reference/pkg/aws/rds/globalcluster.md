@@ -1620,7 +1620,7 @@ The following state arguments are supported:
 <a href="#state_globalclustermembers_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Cluster<wbr>Members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclusterglobalclustermember">[]Global<wbr>Cluster<wbr>Global<wbr>Cluster<wbr>Member</a></span>
+        <span class="property-type"><a href="#globalclusterglobalclustermember">[]Global<wbr>Cluster<wbr>Global<wbr>Cluster<wbr>Member<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of objects containing Global Cluster members.
 {{% /md %}}</dd><dt class="property-optional"

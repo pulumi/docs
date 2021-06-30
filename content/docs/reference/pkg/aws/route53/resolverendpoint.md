@@ -12,171 +12,6 @@ meta_desc: "Documentation for the aws.route53.ResolverEndpoint resource with exa
 
 Provides a Route 53 Resolver endpoint resource.
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var foo = new Aws.Route53.ResolverEndpoint("foo", new Aws.Route53.ResolverEndpointArgs
-        {
-            Direction = "INBOUND",
-            SecurityGroupIds = 
-            {
-                aws_security_group.Sg1.Id,
-                aws_security_group.Sg2.Id,
-            },
-            IpAddresses = 
-            {
-                new Aws.Route53.Inputs.ResolverEndpointIpAddressArgs
-                {
-                    SubnetId = aws_subnet.Sn1.Id,
-                },
-                new Aws.Route53.Inputs.ResolverEndpointIpAddressArgs
-                {
-                    SubnetId = aws_subnet.Sn2.Id,
-                    Ip = "10.0.64.4",
-                },
-            },
-            Tags = 
-            {
-                { "Environment", "Prod" },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := route53.NewResolverEndpoint(ctx, "foo", &route53.ResolverEndpointArgs{
-			Direction: pulumi.String("INBOUND"),
-			SecurityGroupIds: pulumi.StringArray{
-				pulumi.Any(aws_security_group.Sg1.Id),
-				pulumi.Any(aws_security_group.Sg2.Id),
-			},
-			IpAddresses: route53.ResolverEndpointIpAddressArray{
-				&route53.ResolverEndpointIpAddressArgs{
-					SubnetId: pulumi.Any(aws_subnet.Sn1.Id),
-				},
-				&route53.ResolverEndpointIpAddressArgs{
-					SubnetId: pulumi.Any(aws_subnet.Sn2.Id),
-					Ip:       pulumi.String("10.0.64.4"),
-				},
-			},
-			Tags: pulumi.StringMap{
-				"Environment": pulumi.String("Prod"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-foo = aws.route53.ResolverEndpoint("foo",
-    direction="INBOUND",
-    security_group_ids=[
-        aws_security_group["sg1"]["id"],
-        aws_security_group["sg2"]["id"],
-    ],
-    ip_addresses=[
-        aws.route53.ResolverEndpointIpAddressArgs(
-            subnet_id=aws_subnet["sn1"]["id"],
-        ),
-        aws.route53.ResolverEndpointIpAddressArgs(
-            subnet_id=aws_subnet["sn2"]["id"],
-            ip="10.0.64.4",
-        ),
-    ],
-    tags={
-        "Environment": "Prod",
-    })
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const foo = new aws.route53.ResolverEndpoint("foo", {
-    direction: "INBOUND",
-    securityGroupIds: [
-        aws_security_group.sg1.id,
-        aws_security_group.sg2.id,
-    ],
-    ipAddresses: [
-        {
-            subnetId: aws_subnet.sn1.id,
-        },
-        {
-            subnetId: aws_subnet.sn2.id,
-            ip: "10.0.64.4",
-        },
-    ],
-    tags: {
-        Environment: "Prod",
-    },
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Create a ResolverEndpoint Resource {#create}
@@ -402,7 +237,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverendpointipaddress">[]Resolver<wbr>Endpoint<wbr>Ip<wbr>Address</a></span>
+        <span class="property-type"><a href="#resolverendpointipaddress">[]Resolver<wbr>Endpoint<wbr>Ip<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
@@ -942,7 +777,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 <a href="#state_ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverendpointipaddress">[]Resolver<wbr>Endpoint<wbr>Ip<wbr>Address</a></span>
+        <span class="property-type"><a href="#resolverendpointipaddress">[]Resolver<wbr>Endpoint<wbr>Ip<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.

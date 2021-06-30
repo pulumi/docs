@@ -655,7 +655,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#healthcheck_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetgrouphealthcheck">Target<wbr>Group<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#targetgrouphealthcheck">Target<wbr>Group<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Health Check configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -754,7 +754,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#stickiness_go" style="color: inherit; text-decoration: inherit;">Stickiness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness</a></span>
+        <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Stickiness configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1590,7 +1590,7 @@ The following state arguments are supported:
 <a href="#state_healthcheck_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetgrouphealthcheck">Target<wbr>Group<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#targetgrouphealthcheck">Target<wbr>Group<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Health Check configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1689,7 +1689,7 @@ The following state arguments are supported:
 <a href="#state_stickiness_go" style="color: inherit; text-decoration: inherit;">Stickiness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness</a></span>
+        <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Stickiness configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2101,7 +2101,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable `stickiness`. Default is `true`.
+    <dd>{{% md %}}Boolean to enable / disable `stickiness`. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthythreshold_csharp">
@@ -2186,7 +2186,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable `stickiness`. Default is `true`.
+    <dd>{{% md %}}Boolean to enable / disable `stickiness`. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthythreshold_go">
@@ -2271,7 +2271,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to enable `stickiness`. Default is `true`.
+    <dd>{{% md %}}Boolean to enable / disable `stickiness`. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthythreshold_nodejs">
@@ -2356,7 +2356,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable `stickiness`. Default is `true`.
+    <dd>{{% md %}}Boolean to enable / disable `stickiness`. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthy_threshold_python">
@@ -2443,7 +2443,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of sticky sessions. The only current possible values are `lb_cookie` for ALBs and `source_ip` for NLBs.
+    <dd>{{% md %}}The type of sticky sessions. The only current possible values are `lb_cookie`, `app_cookie` for ALBs, and `source_ip` for NLBs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookieduration_csharp">
@@ -2455,13 +2455,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Only used when the type is `lb_cookie`. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cookiename_csharp">
+<a href="#cookiename_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the application based cookie. AWSALB, AWSALBAPP, and AWSALBTG prefixes are reserved and cannot be used. Only needed when type is `app_cookie`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable `stickiness`. Default is `true`.
+    <dd>{{% md %}}Boolean to enable / disable `stickiness`. Default is `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2474,7 +2483,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of sticky sessions. The only current possible values are `lb_cookie` for ALBs and `source_ip` for NLBs.
+    <dd>{{% md %}}The type of sticky sessions. The only current possible values are `lb_cookie`, `app_cookie` for ALBs, and `source_ip` for NLBs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookieduration_go">
@@ -2486,13 +2495,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Only used when the type is `lb_cookie`. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cookiename_go">
+<a href="#cookiename_go" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the application based cookie. AWSALB, AWSALBAPP, and AWSALBTG prefixes are reserved and cannot be used. Only needed when type is `app_cookie`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable `stickiness`. Default is `true`.
+    <dd>{{% md %}}Boolean to enable / disable `stickiness`. Default is `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2505,7 +2523,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of sticky sessions. The only current possible values are `lb_cookie` for ALBs and `source_ip` for NLBs.
+    <dd>{{% md %}}The type of sticky sessions. The only current possible values are `lb_cookie`, `app_cookie` for ALBs, and `source_ip` for NLBs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookieduration_nodejs">
@@ -2517,13 +2535,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Only used when the type is `lb_cookie`. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cookiename_nodejs">
+<a href="#cookiename_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the application based cookie. AWSALB, AWSALBAPP, and AWSALBTG prefixes are reserved and cannot be used. Only needed when type is `app_cookie`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to enable `stickiness`. Default is `true`.
+    <dd>{{% md %}}Boolean to enable / disable `stickiness`. Default is `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2536,7 +2563,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of sticky sessions. The only current possible values are `lb_cookie` for ALBs and `source_ip` for NLBs.
+    <dd>{{% md %}}The type of sticky sessions. The only current possible values are `lb_cookie`, `app_cookie` for ALBs, and `source_ip` for NLBs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookie_duration_python">
@@ -2548,13 +2575,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Only used when the type is `lb_cookie`. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cookie_name_python">
+<a href="#cookie_name_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the application based cookie. AWSALB, AWSALBAPP, and AWSALBTG prefixes are reserved and cannot be used. Only needed when type is `app_cookie`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable `stickiness`. Default is `true`.
+    <dd>{{% md %}}Boolean to enable / disable `stickiness`. Default is `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

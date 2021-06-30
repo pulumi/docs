@@ -320,203 +320,6 @@ const exampleFunction = new aws.lambda.Function("exampleFunction", {layers: [exa
 
 
 
-### Lambda File Systems
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        // EFS file system
-        var efsForLambda = new Aws.Efs.FileSystem("efsForLambda", new Aws.Efs.FileSystemArgs
-        {
-            Tags = 
-            {
-                { "Name", "efs_for_lambda" },
-            },
-        });
-        // Mount target connects the file system to the subnet
-        var alpha = new Aws.Efs.MountTarget("alpha", new Aws.Efs.MountTargetArgs
-        {
-            FileSystemId = efsForLambda.Id,
-            SubnetId = aws_subnet.Subnet_for_lambda.Id,
-            SecurityGroups = 
-            {
-                aws_security_group.Sg_for_lambda.Id,
-            },
-        });
-        // EFS access point used by lambda file system
-        var accessPointForLambda = new Aws.Efs.AccessPoint("accessPointForLambda", new Aws.Efs.AccessPointArgs
-        {
-            FileSystemId = efsForLambda.Id,
-            RootDirectory = new Aws.Efs.Inputs.AccessPointRootDirectoryArgs
-            {
-                Path = "/lambda",
-                CreationInfo = new Aws.Efs.Inputs.AccessPointRootDirectoryCreationInfoArgs
-                {
-                    OwnerGid = 1000,
-                    OwnerUid = 1000,
-                    Permissions = "777",
-                },
-            },
-            PosixUser = new Aws.Efs.Inputs.AccessPointPosixUserArgs
-            {
-                Gid = 1000,
-                Uid = 1000,
-            },
-        });
-        // A lambda function connected to an EFS file system
-        // ... other configuration ...
-        var example = new Aws.Lambda.Function("example", new Aws.Lambda.FunctionArgs
-        {
-            FileSystemConfig = new Aws.Lambda.Inputs.FunctionFileSystemConfigArgs
-            {
-                Arn = accessPointForLambda.Arn,
-                LocalMountPath = "/mnt/efs",
-            },
-            VpcConfig = new Aws.Lambda.Inputs.FunctionVpcConfigArgs
-            {
-                SubnetIds = 
-                {
-                    aws_subnet.Subnet_for_lambda.Id,
-                },
-                SecurityGroupIds = 
-                {
-                    aws_security_group.Sg_for_lambda.Id,
-                },
-            },
-        }, new CustomResourceOptions
-        {
-            DependsOn = 
-            {
-                alpha,
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-# EFS file system
-efs_for_lambda = aws.efs.FileSystem("efsForLambda", tags={
-    "Name": "efs_for_lambda",
-})
-# Mount target connects the file system to the subnet
-alpha = aws.efs.MountTarget("alpha",
-    file_system_id=efs_for_lambda.id,
-    subnet_id=aws_subnet["subnet_for_lambda"]["id"],
-    security_groups=[aws_security_group["sg_for_lambda"]["id"]])
-# EFS access point used by lambda file system
-access_point_for_lambda = aws.efs.AccessPoint("accessPointForLambda",
-    file_system_id=efs_for_lambda.id,
-    root_directory=aws.efs.AccessPointRootDirectoryArgs(
-        path="/lambda",
-        creation_info=aws.efs.AccessPointRootDirectoryCreationInfoArgs(
-            owner_gid=1000,
-            owner_uid=1000,
-            permissions="777",
-        ),
-    ),
-    posix_user=aws.efs.AccessPointPosixUserArgs(
-        gid=1000,
-        uid=1000,
-    ))
-# A lambda function connected to an EFS file system
-# ... other configuration ...
-example = aws.lambda_.Function("example",
-    file_system_config=aws.lambda..FunctionFileSystemConfigArgs(
-        arn=access_point_for_lambda.arn,
-        local_mount_path="/mnt/efs",
-    ),
-    vpc_config=aws.lambda..FunctionVpcConfigArgs(
-        subnet_ids=[aws_subnet["subnet_for_lambda"]["id"]],
-        security_group_ids=[aws_security_group["sg_for_lambda"]["id"]],
-    ),
-    opts=pulumi.ResourceOptions(depends_on=[alpha]))
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-// EFS file system
-const efsForLambda = new aws.efs.FileSystem("efsForLambda", {tags: {
-    Name: "efs_for_lambda",
-}});
-// Mount target connects the file system to the subnet
-const alpha = new aws.efs.MountTarget("alpha", {
-    fileSystemId: efsForLambda.id,
-    subnetId: aws_subnet.subnet_for_lambda.id,
-    securityGroups: [aws_security_group.sg_for_lambda.id],
-});
-// EFS access point used by lambda file system
-const accessPointForLambda = new aws.efs.AccessPoint("accessPointForLambda", {
-    fileSystemId: efsForLambda.id,
-    rootDirectory: {
-        path: "/lambda",
-        creationInfo: {
-            ownerGid: 1000,
-            ownerUid: 1000,
-            permissions: "777",
-        },
-    },
-    posixUser: {
-        gid: 1000,
-        uid: 1000,
-    },
-});
-// A lambda function connected to an EFS file system
-// ... other configuration ...
-const example = new aws.lambda.Function("example", {
-    fileSystemConfig: {
-        arn: accessPointForLambda.arn,
-        localMountPath: "/mnt/efs",
-    },
-    vpcConfig: {
-        subnetIds: [aws_subnet.subnet_for_lambda.id],
-        securityGroupIds: [aws_security_group.sg_for_lambda.id],
-    },
-}, {
-    dependsOn: [alpha],
-});
-```
-
-
-{{< /example >}}
-
-
-
-
 
 {{% /examples %}}
 
@@ -969,7 +772,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#deadletterconfig_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
+        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -987,7 +790,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
+        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -996,7 +799,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#filesystemconfig_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1014,7 +817,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#imageconfig_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1167,7 +970,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tracingconfig_go" style="color: inherit; text-decoration: inherit;">Tracing<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
+        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1176,7 +979,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vpcconfig_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2537,7 +2340,7 @@ The following state arguments are supported:
 <a href="#state_deadletterconfig_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
+        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2555,7 +2358,7 @@ The following state arguments are supported:
 <a href="#state_environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
+        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2564,7 +2367,7 @@ The following state arguments are supported:
 <a href="#state_filesystemconfig_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2582,7 +2385,7 @@ The following state arguments are supported:
 <a href="#state_imageconfig_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2798,7 +2601,7 @@ The following state arguments are supported:
 <a href="#state_tracingconfig_go" style="color: inherit; text-decoration: inherit;">Tracing<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
+        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2817,7 +2620,7 @@ The following state arguments are supported:
 <a href="#state_vpcconfig_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>

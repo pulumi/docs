@@ -12,622 +12,6 @@ meta_desc: "Documentation for the aws.codebuild.Project resource with examples, 
 
 Provides a CodeBuild Project resource. See also the `aws.codebuild.Webhook` resource, which manages the webhook to the source (e.g. the "rebuild every time a code change is pushed" option in the CodeBuild web console).
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var exampleBucket = new Aws.S3.Bucket("exampleBucket", new Aws.S3.BucketArgs
-        {
-            Acl = "private",
-        });
-        var exampleRole = new Aws.Iam.Role("exampleRole", new Aws.Iam.RoleArgs
-        {
-            AssumeRolePolicy = @"{
-  ""Version"": ""2012-10-17"",
-  ""Statement"": [
-    {
-      ""Effect"": ""Allow"",
-      ""Principal"": {
-        ""Service"": ""codebuild.amazonaws.com""
-      },
-      ""Action"": ""sts:AssumeRole""
-    }
-  ]
-}
-",
-        });
-        var exampleRolePolicy = new Aws.Iam.RolePolicy("exampleRolePolicy", new Aws.Iam.RolePolicyArgs
-        {
-            Role = exampleRole.Name,
-            Policy = Output.Tuple(exampleBucket.Arn, exampleBucket.Arn).Apply(values =>
-            {
-                var exampleBucketArn = values.Item1;
-                var exampleBucketArn1 = values.Item2;
-                return @$"{{
-  ""Version"": ""2012-10-17"",
-  ""Statement"": [
-    {{
-      ""Effect"": ""Allow"",
-      ""Resource"": [
-        ""*""
-      ],
-      ""Action"": [
-        ""logs:CreateLogGroup"",
-        ""logs:CreateLogStream"",
-        ""logs:PutLogEvents""
-      ]
-    }},
-    {{
-      ""Effect"": ""Allow"",
-      ""Action"": [
-        ""ec2:CreateNetworkInterface"",
-        ""ec2:DescribeDhcpOptions"",
-        ""ec2:DescribeNetworkInterfaces"",
-        ""ec2:DeleteNetworkInterface"",
-        ""ec2:DescribeSubnets"",
-        ""ec2:DescribeSecurityGroups"",
-        ""ec2:DescribeVpcs""
-      ],
-      ""Resource"": ""*""
-    }},
-    {{
-      ""Effect"": ""Allow"",
-      ""Action"": [
-        ""ec2:CreateNetworkInterfacePermission""
-      ],
-      ""Resource"": [
-        ""arn:aws:ec2:us-east-1:123456789012:network-interface/*""
-      ],
-      ""Condition"": {{
-        ""StringEquals"": {{
-          ""ec2:Subnet"": [
-            ""{aws_subnet.Example1.Arn}"",
-            ""{aws_subnet.Example2.Arn}""
-          ],
-          ""ec2:AuthorizedService"": ""codebuild.amazonaws.com""
-        }}
-      }}
-    }},
-    {{
-      ""Effect"": ""Allow"",
-      ""Action"": [
-        ""s3:*""
-      ],
-      ""Resource"": [
-        ""{exampleBucketArn}"",
-        ""{exampleBucketArn1}/*""
-      ]
-    }}
-  ]
-}}
-";
-            }),
-        });
-        var exampleProject = new Aws.CodeBuild.Project("exampleProject", new Aws.CodeBuild.ProjectArgs
-        {
-            Description = "test_codebuild_project",
-            BuildTimeout = 5,
-            ServiceRole = exampleRole.Arn,
-            Artifacts = new Aws.CodeBuild.Inputs.ProjectArtifactsArgs
-            {
-                Type = "NO_ARTIFACTS",
-            },
-            Cache = new Aws.CodeBuild.Inputs.ProjectCacheArgs
-            {
-                Type = "S3",
-                Location = exampleBucket.BucketName,
-            },
-            Environment = new Aws.CodeBuild.Inputs.ProjectEnvironmentArgs
-            {
-                ComputeType = "BUILD_GENERAL1_SMALL",
-                Image = "aws/codebuild/standard:1.0",
-                Type = "LINUX_CONTAINER",
-                ImagePullCredentialsType = "CODEBUILD",
-                EnvironmentVariables = 
-                {
-                    new Aws.CodeBuild.Inputs.ProjectEnvironmentEnvironmentVariableArgs
-                    {
-                        Name = "SOME_KEY1",
-                        Value = "SOME_VALUE1",
-                    },
-                    new Aws.CodeBuild.Inputs.ProjectEnvironmentEnvironmentVariableArgs
-                    {
-                        Name = "SOME_KEY2",
-                        Value = "SOME_VALUE2",
-                        Type = "PARAMETER_STORE",
-                    },
-                },
-            },
-            LogsConfig = new Aws.CodeBuild.Inputs.ProjectLogsConfigArgs
-            {
-                CloudwatchLogs = new Aws.CodeBuild.Inputs.ProjectLogsConfigCloudwatchLogsArgs
-                {
-                    GroupName = "log-group",
-                    StreamName = "log-stream",
-                },
-                S3Logs = new Aws.CodeBuild.Inputs.ProjectLogsConfigS3LogsArgs
-                {
-                    Status = "ENABLED",
-                    Location = exampleBucket.Id.Apply(id => $"{id}/build-log"),
-                },
-            },
-            Source = new Aws.CodeBuild.Inputs.ProjectSourceArgs
-            {
-                Type = "GITHUB",
-                Location = "https://github.com/mitchellh/packer.git",
-                GitCloneDepth = 1,
-                GitSubmodulesConfig = new Aws.CodeBuild.Inputs.ProjectSourceGitSubmodulesConfigArgs
-                {
-                    FetchSubmodules = true,
-                },
-            },
-            SourceVersion = "master",
-            VpcConfig = new Aws.CodeBuild.Inputs.ProjectVpcConfigArgs
-            {
-                VpcId = aws_vpc.Example.Id,
-                Subnets = 
-                {
-                    aws_subnet.Example1.Id,
-                    aws_subnet.Example2.Id,
-                },
-                SecurityGroupIds = 
-                {
-                    aws_security_group.Example1.Id,
-                    aws_security_group.Example2.Id,
-                },
-            },
-            Tags = 
-            {
-                { "Environment", "Test" },
-            },
-        });
-        var project_with_cache = new Aws.CodeBuild.Project("project-with-cache", new Aws.CodeBuild.ProjectArgs
-        {
-            Description = "test_codebuild_project_cache",
-            BuildTimeout = 5,
-            QueuedTimeout = 5,
-            ServiceRole = exampleRole.Arn,
-            Artifacts = new Aws.CodeBuild.Inputs.ProjectArtifactsArgs
-            {
-                Type = "NO_ARTIFACTS",
-            },
-            Cache = new Aws.CodeBuild.Inputs.ProjectCacheArgs
-            {
-                Type = "LOCAL",
-                Modes = 
-                {
-                    "LOCAL_DOCKER_LAYER_CACHE",
-                    "LOCAL_SOURCE_CACHE",
-                },
-            },
-            Environment = new Aws.CodeBuild.Inputs.ProjectEnvironmentArgs
-            {
-                ComputeType = "BUILD_GENERAL1_SMALL",
-                Image = "aws/codebuild/standard:1.0",
-                Type = "LINUX_CONTAINER",
-                ImagePullCredentialsType = "CODEBUILD",
-                EnvironmentVariables = 
-                {
-                    new Aws.CodeBuild.Inputs.ProjectEnvironmentEnvironmentVariableArgs
-                    {
-                        Name = "SOME_KEY1",
-                        Value = "SOME_VALUE1",
-                    },
-                },
-            },
-            Source = new Aws.CodeBuild.Inputs.ProjectSourceArgs
-            {
-                Type = "GITHUB",
-                Location = "https://github.com/mitchellh/packer.git",
-                GitCloneDepth = 1,
-            },
-            Tags = 
-            {
-                { "Environment", "Test" },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-example_bucket = aws.s3.Bucket("exampleBucket", acl="private")
-example_role = aws.iam.Role("exampleRole", assume_role_policy="""{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "codebuild.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-""")
-example_role_policy = aws.iam.RolePolicy("exampleRolePolicy",
-    role=example_role.name,
-    policy=pulumi.Output.all(example_bucket.arn, example_bucket.arn).apply(lambda exampleBucketArn, exampleBucketArn1: f"""{{
-  "Version": "2012-10-17",
-  "Statement": [
-    {{
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ],
-      "Action": [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-      ]
-    }},
-    {{
-      "Effect": "Allow",
-      "Action": [
-        "ec2:CreateNetworkInterface",
-        "ec2:DescribeDhcpOptions",
-        "ec2:DescribeNetworkInterfaces",
-        "ec2:DeleteNetworkInterface",
-        "ec2:DescribeSubnets",
-        "ec2:DescribeSecurityGroups",
-        "ec2:DescribeVpcs"
-      ],
-      "Resource": "*"
-    }},
-    {{
-      "Effect": "Allow",
-      "Action": [
-        "ec2:CreateNetworkInterfacePermission"
-      ],
-      "Resource": [
-        "arn:aws:ec2:us-east-1:123456789012:network-interface/*"
-      ],
-      "Condition": {{
-        "StringEquals": {{
-          "ec2:Subnet": [
-            "{aws_subnet["example1"]["arn"]}",
-            "{aws_subnet["example2"]["arn"]}"
-          ],
-          "ec2:AuthorizedService": "codebuild.amazonaws.com"
-        }}
-      }}
-    }},
-    {{
-      "Effect": "Allow",
-      "Action": [
-        "s3:*"
-      ],
-      "Resource": [
-        "{example_bucket_arn}",
-        "{example_bucket_arn1}/*"
-      ]
-    }}
-  ]
-}}
-"""))
-example_project = aws.codebuild.Project("exampleProject",
-    description="test_codebuild_project",
-    build_timeout=5,
-    service_role=example_role.arn,
-    artifacts=aws.codebuild.ProjectArtifactsArgs(
-        type="NO_ARTIFACTS",
-    ),
-    cache=aws.codebuild.ProjectCacheArgs(
-        type="S3",
-        location=example_bucket.bucket,
-    ),
-    environment=aws.codebuild.ProjectEnvironmentArgs(
-        compute_type="BUILD_GENERAL1_SMALL",
-        image="aws/codebuild/standard:1.0",
-        type="LINUX_CONTAINER",
-        image_pull_credentials_type="CODEBUILD",
-        environment_variables=[
-            {
-                "name": "SOME_KEY1",
-                "value": "SOME_VALUE1",
-            },
-            {
-                "name": "SOME_KEY2",
-                "value": "SOME_VALUE2",
-                "type": "PARAMETER_STORE",
-            },
-        ],
-    ),
-    logs_config=aws.codebuild.ProjectLogsConfigArgs(
-        cloudwatch_logs=aws.codebuild.ProjectLogsConfigCloudwatchLogsArgs(
-            group_name="log-group",
-            stream_name="log-stream",
-        ),
-        s3_logs=aws.codebuild.ProjectLogsConfigS3LogsArgs(
-            status="ENABLED",
-            location=example_bucket.id.apply(lambda id: f"{id}/build-log"),
-        ),
-    ),
-    source=aws.codebuild.ProjectSourceArgs(
-        type="GITHUB",
-        location="https://github.com/mitchellh/packer.git",
-        git_clone_depth=1,
-        git_submodules_config=aws.codebuild.ProjectSourceGitSubmodulesConfigArgs(
-            fetch_submodules=True,
-        ),
-    ),
-    source_version="master",
-    vpc_config=aws.codebuild.ProjectVpcConfigArgs(
-        vpc_id=aws_vpc["example"]["id"],
-        subnets=[
-            aws_subnet["example1"]["id"],
-            aws_subnet["example2"]["id"],
-        ],
-        security_group_ids=[
-            aws_security_group["example1"]["id"],
-            aws_security_group["example2"]["id"],
-        ],
-    ),
-    tags={
-        "Environment": "Test",
-    })
-project_with_cache = aws.codebuild.Project("project-with-cache",
-    description="test_codebuild_project_cache",
-    build_timeout=5,
-    queued_timeout=5,
-    service_role=example_role.arn,
-    artifacts=aws.codebuild.ProjectArtifactsArgs(
-        type="NO_ARTIFACTS",
-    ),
-    cache=aws.codebuild.ProjectCacheArgs(
-        type="LOCAL",
-        modes=[
-            "LOCAL_DOCKER_LAYER_CACHE",
-            "LOCAL_SOURCE_CACHE",
-        ],
-    ),
-    environment=aws.codebuild.ProjectEnvironmentArgs(
-        compute_type="BUILD_GENERAL1_SMALL",
-        image="aws/codebuild/standard:1.0",
-        type="LINUX_CONTAINER",
-        image_pull_credentials_type="CODEBUILD",
-        environment_variables=[{
-            "name": "SOME_KEY1",
-            "value": "SOME_VALUE1",
-        }],
-    ),
-    source=aws.codebuild.ProjectSourceArgs(
-        type="GITHUB",
-        location="https://github.com/mitchellh/packer.git",
-        git_clone_depth=1,
-    ),
-    tags={
-        "Environment": "Test",
-    })
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const exampleBucket = new aws.s3.Bucket("exampleBucket", {acl: "private"});
-const exampleRole = new aws.iam.Role("exampleRole", {assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "codebuild.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-`});
-const exampleRolePolicy = new aws.iam.RolePolicy("exampleRolePolicy", {
-    role: exampleRole.name,
-    policy: pulumi.interpolate`{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ],
-      "Action": [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-      ]
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "ec2:CreateNetworkInterface",
-        "ec2:DescribeDhcpOptions",
-        "ec2:DescribeNetworkInterfaces",
-        "ec2:DeleteNetworkInterface",
-        "ec2:DescribeSubnets",
-        "ec2:DescribeSecurityGroups",
-        "ec2:DescribeVpcs"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "ec2:CreateNetworkInterfacePermission"
-      ],
-      "Resource": [
-        "arn:aws:ec2:us-east-1:123456789012:network-interface/*"
-      ],
-      "Condition": {
-        "StringEquals": {
-          "ec2:Subnet": [
-            "${aws_subnet.example1.arn}",
-            "${aws_subnet.example2.arn}"
-          ],
-          "ec2:AuthorizedService": "codebuild.amazonaws.com"
-        }
-      }
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "s3:*"
-      ],
-      "Resource": [
-        "${exampleBucket.arn}",
-        "${exampleBucket.arn}/*"
-      ]
-    }
-  ]
-}
-`,
-});
-const exampleProject = new aws.codebuild.Project("exampleProject", {
-    description: "test_codebuild_project",
-    buildTimeout: "5",
-    serviceRole: exampleRole.arn,
-    artifacts: {
-        type: "NO_ARTIFACTS",
-    },
-    cache: {
-        type: "S3",
-        location: exampleBucket.bucket,
-    },
-    environment: {
-        computeType: "BUILD_GENERAL1_SMALL",
-        image: "aws/codebuild/standard:1.0",
-        type: "LINUX_CONTAINER",
-        imagePullCredentialsType: "CODEBUILD",
-        environmentVariables: [
-            {
-                name: "SOME_KEY1",
-                value: "SOME_VALUE1",
-            },
-            {
-                name: "SOME_KEY2",
-                value: "SOME_VALUE2",
-                type: "PARAMETER_STORE",
-            },
-        ],
-    },
-    logsConfig: {
-        cloudwatchLogs: {
-            groupName: "log-group",
-            streamName: "log-stream",
-        },
-        s3Logs: {
-            status: "ENABLED",
-            location: pulumi.interpolate`${exampleBucket.id}/build-log`,
-        },
-    },
-    source: {
-        type: "GITHUB",
-        location: "https://github.com/mitchellh/packer.git",
-        gitCloneDepth: 1,
-        gitSubmodulesConfig: {
-            fetchSubmodules: true,
-        },
-    },
-    sourceVersion: "master",
-    vpcConfig: {
-        vpcId: aws_vpc.example.id,
-        subnets: [
-            aws_subnet.example1.id,
-            aws_subnet.example2.id,
-        ],
-        securityGroupIds: [
-            aws_security_group.example1.id,
-            aws_security_group.example2.id,
-        ],
-    },
-    tags: {
-        Environment: "Test",
-    },
-});
-const project_with_cache = new aws.codebuild.Project("project-with-cache", {
-    description: "test_codebuild_project_cache",
-    buildTimeout: "5",
-    queuedTimeout: "5",
-    serviceRole: exampleRole.arn,
-    artifacts: {
-        type: "NO_ARTIFACTS",
-    },
-    cache: {
-        type: "LOCAL",
-        modes: [
-            "LOCAL_DOCKER_LAYER_CACHE",
-            "LOCAL_SOURCE_CACHE",
-        ],
-    },
-    environment: {
-        computeType: "BUILD_GENERAL1_SMALL",
-        image: "aws/codebuild/standard:1.0",
-        type: "LINUX_CONTAINER",
-        imagePullCredentialsType: "CODEBUILD",
-        environmentVariables: [{
-            name: "SOME_KEY1",
-            value: "SOME_VALUE1",
-        }],
-    },
-    source: {
-        type: "GITHUB",
-        location: "https://github.com/mitchellh/packer.git",
-        gitCloneDepth: 1,
-    },
-    tags: {
-        Environment: "Test",
-    },
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Create a Project Resource {#create}
@@ -989,7 +373,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#artifacts_go" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts</a></span>
+        <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
@@ -998,7 +382,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment</a></span>
+        <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1016,7 +400,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsource">Project<wbr>Source</a></span>
+        <span class="property-type"><a href="#projectsource">Project<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1034,7 +418,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#buildbatchconfig_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Batch<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the batch build options for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1052,7 +436,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cache_go" style="color: inherit; text-decoration: inherit;">Cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectcache">Project<wbr>Cache</a></span>
+        <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1088,7 +472,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#filesystemlocations_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectfilesystemlocation">[]Project<wbr>File<wbr>System<wbr>Location</a></span>
+        <span class="property-type"><a href="#projectfilesystemlocation">[]Project<wbr>File<wbr>System<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A set of file system locations to to mount inside the build. File system locations are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1097,7 +481,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#logsconfig_go" style="color: inherit; text-decoration: inherit;">Logs<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1124,7 +508,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#secondaryartifacts_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondaryartifact">[]Project<wbr>Secondary<wbr>Artifact</a></span>
+        <span class="property-type"><a href="#projectsecondaryartifact">[]Project<wbr>Secondary<wbr>Artifact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1133,7 +517,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#secondarysources_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysource">[]Project<wbr>Secondary<wbr>Source</a></span>
+        <span class="property-type"><a href="#projectsecondarysource">[]Project<wbr>Secondary<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1169,7 +553,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vpcconfig_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2063,7 +1447,7 @@ The following state arguments are supported:
 <a href="#state_artifacts_go" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts</a></span>
+        <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2090,7 +1474,7 @@ The following state arguments are supported:
 <a href="#state_buildbatchconfig_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Batch<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the batch build options for the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2108,7 +1492,7 @@ The following state arguments are supported:
 <a href="#state_cache_go" style="color: inherit; text-decoration: inherit;">Cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectcache">Project<wbr>Cache</a></span>
+        <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2144,7 +1528,7 @@ The following state arguments are supported:
 <a href="#state_environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment</a></span>
+        <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2153,7 +1537,7 @@ The following state arguments are supported:
 <a href="#state_filesystemlocations_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectfilesystemlocation">[]Project<wbr>File<wbr>System<wbr>Location</a></span>
+        <span class="property-type"><a href="#projectfilesystemlocation">[]Project<wbr>File<wbr>System<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A set of file system locations to to mount inside the build. File system locations are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2162,7 +1546,7 @@ The following state arguments are supported:
 <a href="#state_logsconfig_go" style="color: inherit; text-decoration: inherit;">Logs<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2189,7 +1573,7 @@ The following state arguments are supported:
 <a href="#state_secondaryartifacts_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondaryartifact">[]Project<wbr>Secondary<wbr>Artifact</a></span>
+        <span class="property-type"><a href="#projectsecondaryartifact">[]Project<wbr>Secondary<wbr>Artifact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2198,7 +1582,7 @@ The following state arguments are supported:
 <a href="#state_secondarysources_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysource">[]Project<wbr>Secondary<wbr>Source</a></span>
+        <span class="property-type"><a href="#projectsecondarysource">[]Project<wbr>Secondary<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2216,7 +1600,7 @@ The following state arguments are supported:
 <a href="#state_source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsource">Project<wbr>Source</a></span>
+        <span class="property-type"><a href="#projectsource">Project<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2252,7 +1636,7 @@ The following state arguments are supported:
 <a href="#state_vpcconfig_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -3058,7 +2442,7 @@ The following state arguments are supported:
 <a href="#restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectbuildbatchconfigrestrictions">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Restrictions<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectbuildbatchconfigrestrictions">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Restrictions</a></span>
     </dt>
     <dd>{{% md %}}Specifies the restrictions for the batch build.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3138,7 +2522,7 @@ The following state arguments are supported:
 <a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectbuildbatchconfigrestrictions">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Restrictions<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectbuildbatchconfigrestrictions">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Restrictions</a></span>
     </dt>
     <dd>{{% md %}}Specifies the restrictions for the batch build.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3178,7 +2562,7 @@ The following state arguments are supported:
 <a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectbuildbatchconfigrestrictions">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Restrictions<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectbuildbatchconfigrestrictions">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Restrictions</a></span>
     </dt>
     <dd>{{% md %}}Specifies the restrictions for the batch build.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3454,7 +2838,7 @@ The following state arguments are supported:
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironmentenvironmentvariable">List&lt;Project<wbr>Environment<wbr>Environment<wbr>Variable<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#projectenvironmentenvironmentvariable">List&lt;Project<wbr>Environment<wbr>Environment<wbr>Variable&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3481,7 +2865,7 @@ The following state arguments are supported:
 <a href="#registrycredential_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironmentregistrycredential">Project<wbr>Environment<wbr>Registry<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectenvironmentregistrycredential">Project<wbr>Environment<wbr>Registry<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -3606,7 +2990,7 @@ The following state arguments are supported:
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironmentenvironmentvariable">Project<wbr>Environment<wbr>Environment<wbr>Variable<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#projectenvironmentenvironmentvariable">Project<wbr>Environment<wbr>Environment<wbr>Variable[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3633,7 +3017,7 @@ The following state arguments are supported:
 <a href="#registrycredential_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironmentregistrycredential">Project<wbr>Environment<wbr>Registry<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectenvironmentregistrycredential">Project<wbr>Environment<wbr>Registry<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -3682,7 +3066,7 @@ The following state arguments are supported:
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironmentenvironmentvariable">Sequence[Project<wbr>Environment<wbr>Environment<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectenvironmentenvironmentvariable">Sequence[Project<wbr>Environment<wbr>Environment<wbr>Variable]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3709,7 +3093,7 @@ The following state arguments are supported:
 <a href="#registry_credential_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironmentregistrycredential">Project<wbr>Environment<wbr>Registry<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectenvironmentregistrycredential">Project<wbr>Environment<wbr>Registry<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -4138,7 +3522,7 @@ The following state arguments are supported:
 <a href="#cloudwatchlogs_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfigcloudwatchlogs">Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectlogsconfigcloudwatchlogs">Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4147,7 +3531,7 @@ The following state arguments are supported:
 <a href="#s3logs_csharp" style="color: inherit; text-decoration: inherit;">S3Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfigs3logs">Project<wbr>Logs<wbr>Config<wbr>S3Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectlogsconfigs3logs">Project<wbr>Logs<wbr>Config<wbr>S3Logs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -4182,7 +3566,7 @@ The following state arguments are supported:
 <a href="#cloudwatchlogs_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfigcloudwatchlogs">Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectlogsconfigcloudwatchlogs">Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4191,7 +3575,7 @@ The following state arguments are supported:
 <a href="#s3logs_nodejs" style="color: inherit; text-decoration: inherit;">s3Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfigs3logs">Project<wbr>Logs<wbr>Config<wbr>S3Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectlogsconfigs3logs">Project<wbr>Logs<wbr>Config<wbr>S3Logs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -4204,7 +3588,7 @@ The following state arguments are supported:
 <a href="#cloudwatch_logs_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfigcloudwatchlogs">Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectlogsconfigcloudwatchlogs">Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4213,7 +3597,7 @@ The following state arguments are supported:
 <a href="#s3_logs_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfigs3logs">Project<wbr>Logs<wbr>Config<wbr>S3Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectlogsconfigs3logs">Project<wbr>Logs<wbr>Config<wbr>S3Logs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -4840,7 +4224,7 @@ The following state arguments are supported:
 <a href="#auth_csharp" style="color: inherit; text-decoration: inherit;">Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourceauth">Project<wbr>Secondary<wbr>Source<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsecondarysourceauth">Project<wbr>Secondary<wbr>Source<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -4849,7 +4233,7 @@ The following state arguments are supported:
 <a href="#buildstatusconfig_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Status<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourcebuildstatusconfig">Project<wbr>Secondary<wbr>Source<wbr>Build<wbr>Status<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsecondarysourcebuildstatusconfig">Project<wbr>Secondary<wbr>Source<wbr>Build<wbr>Status<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4876,7 +4260,7 @@ The following state arguments are supported:
 <a href="#gitsubmodulesconfig_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Submodules<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourcegitsubmodulesconfig">Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsecondarysourcegitsubmodulesconfig">Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5028,7 +4412,7 @@ The following state arguments are supported:
 <a href="#auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourceauth">Project<wbr>Secondary<wbr>Source<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsecondarysourceauth">Project<wbr>Secondary<wbr>Source<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -5037,7 +4421,7 @@ The following state arguments are supported:
 <a href="#buildstatusconfig_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Status<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourcebuildstatusconfig">Project<wbr>Secondary<wbr>Source<wbr>Build<wbr>Status<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsecondarysourcebuildstatusconfig">Project<wbr>Secondary<wbr>Source<wbr>Build<wbr>Status<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5064,7 +4448,7 @@ The following state arguments are supported:
 <a href="#gitsubmodulesconfig_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Submodules<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourcegitsubmodulesconfig">Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsecondarysourcegitsubmodulesconfig">Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5122,7 +4506,7 @@ The following state arguments are supported:
 <a href="#auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourceauth">Project<wbr>Secondary<wbr>Source<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsecondarysourceauth">Project<wbr>Secondary<wbr>Source<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -5131,7 +4515,7 @@ The following state arguments are supported:
 <a href="#build_status_config_python" style="color: inherit; text-decoration: inherit;">build_<wbr>status_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourcebuildstatusconfig">Project<wbr>Secondary<wbr>Source<wbr>Build<wbr>Status<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsecondarysourcebuildstatusconfig">Project<wbr>Secondary<wbr>Source<wbr>Build<wbr>Status<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5158,7 +4542,7 @@ The following state arguments are supported:
 <a href="#git_submodules_config_python" style="color: inherit; text-decoration: inherit;">git_<wbr>submodules_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourcegitsubmodulesconfig">Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsecondarysourcegitsubmodulesconfig">Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5443,7 +4827,7 @@ The following state arguments are supported:
 <a href="#auth_csharp" style="color: inherit; text-decoration: inherit;">Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourceauth">Project<wbr>Source<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsourceauth">Project<wbr>Source<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -5452,7 +4836,7 @@ The following state arguments are supported:
 <a href="#buildstatusconfig_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Status<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourcebuildstatusconfig">Project<wbr>Source<wbr>Build<wbr>Status<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsourcebuildstatusconfig">Project<wbr>Source<wbr>Build<wbr>Status<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5479,7 +4863,7 @@ The following state arguments are supported:
 <a href="#gitsubmodulesconfig_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Submodules<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourcegitsubmodulesconfig">Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsourcegitsubmodulesconfig">Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5613,7 +4997,7 @@ The following state arguments are supported:
 <a href="#auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourceauth">Project<wbr>Source<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsourceauth">Project<wbr>Source<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -5622,7 +5006,7 @@ The following state arguments are supported:
 <a href="#buildstatusconfig_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Status<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourcebuildstatusconfig">Project<wbr>Source<wbr>Build<wbr>Status<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsourcebuildstatusconfig">Project<wbr>Source<wbr>Build<wbr>Status<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5649,7 +5033,7 @@ The following state arguments are supported:
 <a href="#gitsubmodulesconfig_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Submodules<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourcegitsubmodulesconfig">Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsourcegitsubmodulesconfig">Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5698,7 +5082,7 @@ The following state arguments are supported:
 <a href="#auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourceauth">Project<wbr>Source<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsourceauth">Project<wbr>Source<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -5707,7 +5091,7 @@ The following state arguments are supported:
 <a href="#build_status_config_python" style="color: inherit; text-decoration: inherit;">build_<wbr>status_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourcebuildstatusconfig">Project<wbr>Source<wbr>Build<wbr>Status<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsourcebuildstatusconfig">Project<wbr>Source<wbr>Build<wbr>Status<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5734,7 +5118,7 @@ The following state arguments are supported:
 <a href="#git_submodules_config_python" style="color: inherit; text-decoration: inherit;">git_<wbr>submodules_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourcegitsubmodulesconfig">Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsourcegitsubmodulesconfig">Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
