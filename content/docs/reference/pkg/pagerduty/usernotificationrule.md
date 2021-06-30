@@ -505,7 +505,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
 <a href="#contactmethod_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method</a></span>
+        <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd><dt class="property-required"
@@ -849,7 +849,7 @@ The following state arguments are supported:
 <a href="#state_contactmethod_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method</a></span>
+        <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd><dt class="property-optional"

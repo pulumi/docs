@@ -303,7 +303,7 @@ The Ruleset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#team_go" style="color: inherit; text-decoration: inherit;">Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetteam">Ruleset<wbr>Team</a></span>
+        <span class="property-type"><a href="#rulesetteam">Ruleset<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the team that owns the ruleset. If none is specified, only admins have access.
 {{% /md %}}</dd></dl>
@@ -674,7 +674,7 @@ The following state arguments are supported:
 <a href="#state_team_go" style="color: inherit; text-decoration: inherit;">Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetteam">Ruleset<wbr>Team</a></span>
+        <span class="property-type"><a href="#rulesetteam">Ruleset<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the team that owns the ruleset. If none is specified, only admins have access.
 {{% /md %}}</dd><dt class="property-optional"

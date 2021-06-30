@@ -386,7 +386,7 @@ The ServiceDependency resource accepts the following [input]({{< relref "/docs/i
 <a href="#dependencies_go" style="color: inherit; text-decoration: inherit;">Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependency">[]Service<wbr>Dependency<wbr>Dependency</a></span>
+        <span class="property-type"><a href="#servicedependencydependency">[]Service<wbr>Dependency<wbr>Dependency<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
 {{% /md %}}</dd></dl>
@@ -619,7 +619,7 @@ The following state arguments are supported:
 <a href="#state_dependencies_go" style="color: inherit; text-decoration: inherit;">Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependency">[]Service<wbr>Dependency<wbr>Dependency</a></span>
+        <span class="property-type"><a href="#servicedependencydependency">[]Service<wbr>Dependency<wbr>Dependency<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
 {{% /md %}}</dd></dl>
@@ -669,7 +669,7 @@ The following state arguments are supported:
 <a href="#dependentservices_csharp" style="color: inherit; text-decoration: inherit;">Dependent<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependencydependentservice">List&lt;Service<wbr>Dependency<wbr>Dependency<wbr>Dependent<wbr>Service<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicedependencydependencydependentservice">List&lt;Service<wbr>Dependency<wbr>Dependency<wbr>Dependent<wbr>Service&gt;</a></span>
     </dt>
     <dd>{{% md %}}The service that id dependent on the supporting service.
 {{% /md %}}</dd><dt class="property-required"
@@ -678,7 +678,7 @@ The following state arguments are supported:
 <a href="#supportingservices_csharp" style="color: inherit; text-decoration: inherit;">Supporting<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependencysupportingservice">List&lt;Service<wbr>Dependency<wbr>Dependency<wbr>Supporting<wbr>Service<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicedependencydependencysupportingservice">List&lt;Service<wbr>Dependency<wbr>Dependency<wbr>Supporting<wbr>Service&gt;</a></span>
     </dt>
     <dd>{{% md %}}The service that supports  the  dependent service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -729,7 +729,7 @@ The following state arguments are supported:
 <a href="#dependentservices_nodejs" style="color: inherit; text-decoration: inherit;">dependent<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependencydependentservice">Service<wbr>Dependency<wbr>Dependency<wbr>Dependent<wbr>Service<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicedependencydependencydependentservice">Service<wbr>Dependency<wbr>Dependency<wbr>Dependent<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}The service that id dependent on the supporting service.
 {{% /md %}}</dd><dt class="property-required"
@@ -738,7 +738,7 @@ The following state arguments are supported:
 <a href="#supportingservices_nodejs" style="color: inherit; text-decoration: inherit;">supporting<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependencysupportingservice">Service<wbr>Dependency<wbr>Dependency<wbr>Supporting<wbr>Service<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicedependencydependencysupportingservice">Service<wbr>Dependency<wbr>Dependency<wbr>Supporting<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}The service that supports  the  dependent service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -759,7 +759,7 @@ The following state arguments are supported:
 <a href="#dependent_services_python" style="color: inherit; text-decoration: inherit;">dependent_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependencydependentservice">Sequence[Service<wbr>Dependency<wbr>Dependency<wbr>Dependent<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicedependencydependencydependentservice">Sequence[Service<wbr>Dependency<wbr>Dependency<wbr>Dependent<wbr>Service]</a></span>
     </dt>
     <dd>{{% md %}}The service that id dependent on the supporting service.
 {{% /md %}}</dd><dt class="property-required"
@@ -768,7 +768,7 @@ The following state arguments are supported:
 <a href="#supporting_services_python" style="color: inherit; text-decoration: inherit;">supporting_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependencysupportingservice">Sequence[Service<wbr>Dependency<wbr>Dependency<wbr>Supporting<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicedependencydependencysupportingservice">Sequence[Service<wbr>Dependency<wbr>Dependency<wbr>Supporting<wbr>Service]</a></span>
     </dt>
     <dd>{{% md %}}The service that supports  the  dependent service.
 {{% /md %}}</dd><dt class="property-optional"

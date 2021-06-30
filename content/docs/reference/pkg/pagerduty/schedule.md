@@ -353,7 +353,7 @@ If you do pass the `overflow` parameter, you will get one schedule entry returne
 <a href="#layers_go" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulelayer">[]Schedule<wbr>Layer</a></span>
+        <span class="property-type"><a href="#schedulelayer">[]Schedule<wbr>Layer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A schedule layer block. Schedule layers documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -751,7 +751,7 @@ If you do pass the `overflow` parameter, you will get one schedule entry returne
 <a href="#state_layers_go" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulelayer">[]Schedule<wbr>Layer</a></span>
+        <span class="property-type"><a href="#schedulelayer">[]Schedule<wbr>Layer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A schedule layer block. Schedule layers documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -969,7 +969,7 @@ If you do pass the `overflow` parameter, you will get one schedule entry returne
 <a href="#restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulelayerrestriction">List&lt;Schedule<wbr>Layer<wbr>Restriction<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#schedulelayerrestriction">List&lt;Schedule<wbr>Layer<wbr>Restriction&gt;</a></span>
     </dt>
     <dd>{{% md %}}A schedule layer restriction block. Restriction blocks documented below.
 {{% /md %}}</dd></dl>
@@ -1121,7 +1121,7 @@ If you do pass the `overflow` parameter, you will get one schedule entry returne
 <a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulelayerrestriction">Schedule<wbr>Layer<wbr>Restriction<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#schedulelayerrestriction">Schedule<wbr>Layer<wbr>Restriction[]</a></span>
     </dt>
     <dd>{{% md %}}A schedule layer restriction block. Restriction blocks documented below.
 {{% /md %}}</dd></dl>
@@ -1197,7 +1197,7 @@ If you do pass the `overflow` parameter, you will get one schedule entry returne
 <a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulelayerrestriction">Sequence[Schedule<wbr>Layer<wbr>Restriction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#schedulelayerrestriction">Sequence[Schedule<wbr>Layer<wbr>Restriction]</a></span>
     </dt>
     <dd>{{% md %}}A schedule layer restriction block. Restriction blocks documented below.
 {{% /md %}}</dd></dl>
