@@ -277,7 +277,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
@@ -361,7 +361,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
@@ -445,7 +445,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
@@ -529,7 +529,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
@@ -588,7 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The linode type for all of the nodes in the Node Pool.
+    <dd>{{% md %}}The linode type for all of the nodes in the Node Pool. See all node types [here](https://api.linode.com/v4/linode/types).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -628,7 +628,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The linode type for all of the nodes in the Node Pool.
+    <dd>{{% md %}}The linode type for all of the nodes in the Node Pool. See all node types [here](https://api.linode.com/v4/linode/types).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -668,7 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The linode type for all of the nodes in the Node Pool.
+    <dd>{{% md %}}The linode type for all of the nodes in the Node Pool. See all node types [here](https://api.linode.com/v4/linode/types).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -708,7 +708,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The linode type for all of the nodes in the Node Pool.
+    <dd>{{% md %}}The linode type for all of the nodes in the Node Pool. See all node types [here](https://api.linode.com/v4/linode/types).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -743,7 +743,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -774,7 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -805,7 +805,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -836,7 +836,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the node.
+    <dd>{{% md %}}The status of the node. (`ready`, `not_ready`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

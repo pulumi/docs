@@ -13,6 +13,7 @@ meta_desc: "Documentation for the linode.Image resource with examples, input pro
 Provides a Linode Image resource.  This can be used to create, modify, and delete Linodes Images.  Linode Images are snapshots of a Linode Instance Disk which can then be used to provision more Linode Instances.  Images can be used across regions.
 
 For more information, see [Linode's documentation on Images](https://www.linode.com/docs/platform/disk-images/linode-images/) and the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/createImage).
+
 ## Attributes
 
 This resource exports the following attributes:
@@ -35,158 +36,6 @@ This resource exports the following attributes:
 
 * `vendor` - The upstream distribution vendor. Nil for private Images.
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Linode = Pulumi.Linode;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var foo = new Linode.Instance("foo", new Linode.InstanceArgs
-        {
-            Type = "g6-nanode-1",
-            Region = "us-central",
-        });
-        var bar = new Linode.Image("bar", new Linode.ImageArgs
-        {
-            Label = "foo-sda-image",
-            Description = "Image taken from foo",
-            DiskId = foo.Disks.Apply(disks => disks[0].Id),
-            LinodeId = foo.Id,
-        });
-        var barBased = new Linode.Instance("barBased", new Linode.InstanceArgs
-        {
-            Type = foo.Type,
-            Region = "eu-west",
-            Image = bar.Id,
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-linode/sdk/v3/go/linode"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		foo, err := linode.NewInstance(ctx, "foo", &linode.InstanceArgs{
-			Type:   pulumi.String("g6-nanode-1"),
-			Region: pulumi.String("us-central"),
-		})
-		if err != nil {
-			return err
-		}
-		bar, err := linode.NewImage(ctx, "bar", &linode.ImageArgs{
-			Label:       pulumi.String("foo-sda-image"),
-			Description: pulumi.String("Image taken from foo"),
-			DiskId: pulumi.Int(foo.Disks.ApplyT(func(disks []linode.InstanceDisk) (int, error) {
-				return disks[0].Id, nil
-			}).(pulumi.IntOutput)),
-			LinodeId: foo.ID(),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = linode.NewInstance(ctx, "barBased", &linode.InstanceArgs{
-			Type:   foo.Type,
-			Region: pulumi.String("eu-west"),
-			Image:  bar.ID(),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_linode as linode
-
-foo = linode.Instance("foo",
-    type="g6-nanode-1",
-    region="us-central")
-bar = linode.Image("bar",
-    label="foo-sda-image",
-    description="Image taken from foo",
-    disk_id=foo.disks[0].id,
-    linode_id=foo.id)
-bar_based = linode.Instance("barBased",
-    type=foo.type,
-    region="eu-west",
-    image=bar.id)
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as linode from "@pulumi/linode";
-
-const foo = new linode.Instance("foo", {
-    type: "g6-nanode-1",
-    region: "us-central",
-});
-const bar = new linode.Image("bar", {
-    label: "foo-sda-image",
-    description: "Image taken from foo",
-    diskId: foo.disks.apply(disks => disks[0].id),
-    linodeId: foo.id,
-});
-const barBased = new linode.Instance("barBased", {
-    type: foo.type,
-    region: "eu-west",
-    image: bar.id,
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Create a Image Resource {#create}
@@ -203,8 +52,11 @@ const barBased = new linode.Instance("barBased", {
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">disk_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">file_hash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">file_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-          <span class="nx">linode_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
+          <span class="nx">linode_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">,</span>
@@ -334,15 +186,6 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="diskid_csharp">
-<a href="#diskid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
 </span>
@@ -350,15 +193,6 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short description of the Image. Labels cannot contain special characters.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="linodeid_csharp">
-<a href="#linodeid_csharp" style="color: inherit; text-decoration: inherit;">Linode<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Linode that this Image will be created from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -368,20 +202,56 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of this Image.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="diskid_go">
-<a href="#diskid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Id</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="diskid_csharp">
+<a href="#diskid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filehash_csharp">
+<a href="#filehash_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The MD5 hash of the file to be uploaded. This is used to trigger file updates.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filepath_csharp">
+<a href="#filepath_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path of the image file to be uploaded.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linodeid_csharp">
+<a href="#linodeid_csharp" style="color: inherit; text-decoration: inherit;">Linode<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Linode that this Image will be created from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the image. See all regions [here](https://api.linode.com/v4/regions).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -390,15 +260,6 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short description of the Image. Labels cannot contain special characters.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="linodeid_go">
-<a href="#linodeid_go" style="color: inherit; text-decoration: inherit;">Linode<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Linode that this Image will be created from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -408,20 +269,56 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of this Image.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="diskid_go">
+<a href="#diskid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filehash_go">
+<a href="#filehash_go" style="color: inherit; text-decoration: inherit;">File<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The MD5 hash of the file to be uploaded. This is used to trigger file updates.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filepath_go">
+<a href="#filepath_go" style="color: inherit; text-decoration: inherit;">File<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path of the image file to be uploaded.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linodeid_go">
+<a href="#linodeid_go" style="color: inherit; text-decoration: inherit;">Linode<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Linode that this Image will be created from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the image. See all regions [here](https://api.linode.com/v4/regions).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="diskid_nodejs">
-<a href="#diskid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -430,15 +327,6 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short description of the Image. Labels cannot contain special characters.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="linodeid_nodejs">
-<a href="#linodeid_nodejs" style="color: inherit; text-decoration: inherit;">linode<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Linode that this Image will be created from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -448,20 +336,56 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of this Image.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="diskid_nodejs">
+<a href="#diskid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filehash_nodejs">
+<a href="#filehash_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The MD5 hash of the file to be uploaded. This is used to trigger file updates.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filepath_nodejs">
+<a href="#filepath_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path of the image file to be uploaded.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linodeid_nodejs">
+<a href="#linodeid_nodejs" style="color: inherit; text-decoration: inherit;">linode<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Linode that this Image will be created from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the image. See all regions [here](https://api.linode.com/v4/regions).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="disk_id_python">
-<a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -470,15 +394,6 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short description of the Image. Labels cannot contain special characters.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="linode_id_python">
-<a href="#linode_id_python" style="color: inherit; text-decoration: inherit;">linode_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Linode that this Image will be created from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -488,6 +403,51 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A detailed description of this Image.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disk_id_python">
+<a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="file_hash_python">
+<a href="#file_hash_python" style="color: inherit; text-decoration: inherit;">file_<wbr>hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The MD5 hash of the file to be uploaded. This is used to trigger file updates.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="file_path_python">
+<a href="#file_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The path of the image file to be uploaded.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linode_id_python">
+<a href="#linode_id_python" style="color: inherit; text-decoration: inherit;">linode_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Linode that this Image will be created from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region of the image. See all regions [here](https://api.linode.com/v4/regions).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -561,6 +521,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum size this Image needs to deploy. Size is in MB.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current status of this Image.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
@@ -648,6 +617,15 @@ a deleted Linode.
     <dd>{{% md %}}The minimum size this Image needs to deploy. Size is in MB.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current status of this Image.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -731,6 +709,15 @@ a deleted Linode.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum size this Image needs to deploy. Size is in MB.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current status of this Image.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
@@ -818,6 +805,15 @@ a deleted Linode.
     <dd>{{% md %}}The minimum size this Image needs to deploy. Size is in MB.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The current status of this Image.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -860,10 +856,14 @@ Get an existing Image resource's state with the given name, ID, and optional ext
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">disk_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">expiry</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">file_hash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">file_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">is_public</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">linode_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">vendor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Image</code></pre></div>
 {{% /choosable %}}
@@ -1032,6 +1032,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Only Images created automatically (from a deleted Linode; type=automatic) will expire.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_filehash_csharp">
+<a href="#state_filehash_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The MD5 hash of the file to be uploaded. This is used to trigger file updates.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_filepath_csharp">
+<a href="#state_filepath_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path of the image file to be uploaded.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ispublic_csharp">
 <a href="#state_ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
 </span>
@@ -1059,6 +1077,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Linode that this Image will be created from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the image. See all regions [here](https://api.linode.com/v4/regions).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_size_csharp">
 <a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
@@ -1066,6 +1093,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum size this Image needs to deploy. Size is in MB.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current status of this Image.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
@@ -1145,6 +1181,24 @@ a deleted Linode.
     <dd>{{% md %}}Only Images created automatically (from a deleted Linode; type=automatic) will expire.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_filehash_go">
+<a href="#state_filehash_go" style="color: inherit; text-decoration: inherit;">File<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The MD5 hash of the file to be uploaded. This is used to trigger file updates.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_filepath_go">
+<a href="#state_filepath_go" style="color: inherit; text-decoration: inherit;">File<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path of the image file to be uploaded.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ispublic_go">
 <a href="#state_ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
 </span>
@@ -1172,6 +1226,15 @@ a deleted Linode.
     <dd>{{% md %}}The ID of the Linode that this Image will be created from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the image. See all regions [here](https://api.linode.com/v4/regions).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_size_go">
 <a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
@@ -1179,6 +1242,15 @@ a deleted Linode.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum size this Image needs to deploy. Size is in MB.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current status of this Image.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
@@ -1258,6 +1330,24 @@ a deleted Linode.
     <dd>{{% md %}}Only Images created automatically (from a deleted Linode; type=automatic) will expire.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_filehash_nodejs">
+<a href="#state_filehash_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The MD5 hash of the file to be uploaded. This is used to trigger file updates.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_filepath_nodejs">
+<a href="#state_filepath_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path of the image file to be uploaded.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ispublic_nodejs">
 <a href="#state_ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
 </span>
@@ -1285,6 +1375,15 @@ a deleted Linode.
     <dd>{{% md %}}The ID of the Linode that this Image will be created from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the image. See all regions [here](https://api.linode.com/v4/regions).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_size_nodejs">
 <a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
@@ -1292,6 +1391,15 @@ a deleted Linode.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum size this Image needs to deploy. Size is in MB.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current status of this Image.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
@@ -1371,6 +1479,24 @@ a deleted Linode.
     <dd>{{% md %}}Only Images created automatically (from a deleted Linode; type=automatic) will expire.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_file_hash_python">
+<a href="#state_file_hash_python" style="color: inherit; text-decoration: inherit;">file_<wbr>hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The MD5 hash of the file to be uploaded. This is used to trigger file updates.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_file_path_python">
+<a href="#state_file_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The path of the image file to be uploaded.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_is_public_python">
 <a href="#state_is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
 </span>
@@ -1398,6 +1524,15 @@ a deleted Linode.
     <dd>{{% md %}}The ID of the Linode that this Image will be created from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region of the image. See all regions [here](https://api.linode.com/v4/regions).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_size_python">
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
@@ -1405,6 +1540,15 @@ a deleted Linode.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum size this Image needs to deploy. Size is in MB.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The current status of this Image.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">

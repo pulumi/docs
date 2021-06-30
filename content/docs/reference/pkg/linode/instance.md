@@ -707,7 +707,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceinterface">List&lt;Instance<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with.
+    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with. If an explicit config or disk is defined, interfaces
+must be declared in the config block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
@@ -808,7 +809,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#alerts_go" style="color: inherit; text-decoration: inherit;">Alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts</a></span>
+        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for alert triggers on this Linode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -862,7 +863,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#configs_go" style="color: inherit; text-decoration: inherit;">Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfig">[]Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instanceconfig">[]Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration profiles define the VM settings and boot behavior of the Linode Instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -871,7 +872,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedisk">[]Instance<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instancedisk">[]Instance<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,9 +898,10 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#interfaces_go" style="color: inherit; text-decoration: inherit;">Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceinterface">[]Instance<wbr>Interface</a></span>
+        <span class="property-type"><a href="#instanceinterface">[]Instance<wbr>Interface<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with.
+    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with. If an explicit config or disk is defined, interfaces
+must be declared in the config block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
@@ -1091,7 +1093,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceinterface">Instance<wbr>Interface<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with.
+    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with. If an explicit config or disk is defined, interfaces
+must be declared in the config block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
@@ -1283,7 +1286,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceinterface">Sequence[Instance<wbr>Interface<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with.
+    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with. If an explicit config or disk is defined, interfaces
+must be declared in the config block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
@@ -1947,7 +1951,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceinterface">List&lt;Instance<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with.
+    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with. If an explicit config or disk is defined, interfaces
+must be declared in the config block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_csharp">
@@ -2105,7 +2110,7 @@ Instances in a region.
 <a href="#state_alerts_go" style="color: inherit; text-decoration: inherit;">Alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts</a></span>
+        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for alert triggers on this Linode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2141,7 +2146,7 @@ Instances in a region.
 <a href="#state_backups_go" style="color: inherit; text-decoration: inherit;">Backups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebackups">Instance<wbr>Backups</a></span>
+        <span class="property-type"><a href="#instancebackups">Instance<wbr>Backups<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about this Linode's backups status.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2168,7 +2173,7 @@ Instances in a region.
 <a href="#state_configs_go" style="color: inherit; text-decoration: inherit;">Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfig">[]Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instanceconfig">[]Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration profiles define the VM settings and boot behavior of the Linode Instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2177,7 +2182,7 @@ Instances in a region.
 <a href="#state_disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedisk">[]Instance<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instancedisk">[]Instance<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2203,9 +2208,10 @@ Instances in a region.
 <a href="#state_interfaces_go" style="color: inherit; text-decoration: inherit;">Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceinterface">[]Instance<wbr>Interface</a></span>
+        <span class="property-type"><a href="#instanceinterface">[]Instance<wbr>Interface<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with.
+    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with. If an explicit config or disk is defined, interfaces
+must be declared in the config block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_go">
@@ -2287,7 +2293,7 @@ Instances in a region.
 <a href="#state_specs_go" style="color: inherit; text-decoration: inherit;">Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs</a></span>
+        <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the resources available to this Linode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2463,7 +2469,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceinterface">Instance<wbr>Interface<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with.
+    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with. If an explicit config or disk is defined, interfaces
+must be declared in the config block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_nodejs">
@@ -2721,7 +2728,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceinterface">Sequence[Instance<wbr>Interface<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with.
+    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with. If an explicit config or disk is defined, interfaces
+must be declared in the config block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_address_python">
@@ -3076,7 +3084,7 @@ Instances in a region.
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebackupsschedule">Instance<wbr>Backups<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancebackupsschedule">Instance<wbr>Backups<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3116,7 +3124,7 @@ Instances in a region.
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebackupsschedule">Instance<wbr>Backups<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancebackupsschedule">Instance<wbr>Backups<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3136,7 +3144,7 @@ Instances in a region.
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebackupsschedule">Instance<wbr>Backups<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancebackupsschedule">Instance<wbr>Backups<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3250,7 +3258,7 @@ Instances in a region.
 <a href="#devices_csharp" style="color: inherit; text-decoration: inherit;">Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevices">Instance<wbr>Config<wbr>Devices<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevices">Instance<wbr>Config<wbr>Devices</a></span>
     </dt>
     <dd>{{% md %}}A list of `disk` or `volume` attachments for this `config`.  If the `boot_config_label` omits a `devices` block, the Linode will not be booted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3259,7 +3267,7 @@ Instances in a region.
 <a href="#helpers_csharp" style="color: inherit; text-decoration: inherit;">Helpers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfighelpers">Instance<wbr>Config<wbr>Helpers<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfighelpers">Instance<wbr>Config<wbr>Helpers</a></span>
     </dt>
     <dd>{{% md %}}Helpers enabled when booting to this Linode Config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3268,7 +3276,7 @@ Instances in a region.
 <a href="#interfaces_csharp" style="color: inherit; text-decoration: inherit;">Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfiginterface">List&lt;Instance<wbr>Config<wbr>Interface<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceconfiginterface">List&lt;Instance<wbr>Config<wbr>Interface&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3436,7 +3444,7 @@ Instances in a region.
 <a href="#devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevices">Instance<wbr>Config<wbr>Devices<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevices">Instance<wbr>Config<wbr>Devices</a></span>
     </dt>
     <dd>{{% md %}}A list of `disk` or `volume` attachments for this `config`.  If the `boot_config_label` omits a `devices` block, the Linode will not be booted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3445,7 +3453,7 @@ Instances in a region.
 <a href="#helpers_nodejs" style="color: inherit; text-decoration: inherit;">helpers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfighelpers">Instance<wbr>Config<wbr>Helpers<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfighelpers">Instance<wbr>Config<wbr>Helpers</a></span>
     </dt>
     <dd>{{% md %}}Helpers enabled when booting to this Linode Config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3454,7 +3462,7 @@ Instances in a region.
 <a href="#interfaces_nodejs" style="color: inherit; text-decoration: inherit;">interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfiginterface">Instance<wbr>Config<wbr>Interface<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instanceconfiginterface">Instance<wbr>Config<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3529,7 +3537,7 @@ Instances in a region.
 <a href="#devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevices">Instance<wbr>Config<wbr>Devices<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevices">Instance<wbr>Config<wbr>Devices</a></span>
     </dt>
     <dd>{{% md %}}A list of `disk` or `volume` attachments for this `config`.  If the `boot_config_label` omits a `devices` block, the Linode will not be booted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3538,7 +3546,7 @@ Instances in a region.
 <a href="#helpers_python" style="color: inherit; text-decoration: inherit;">helpers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfighelpers">Instance<wbr>Config<wbr>Helpers<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfighelpers">Instance<wbr>Config<wbr>Helpers</a></span>
     </dt>
     <dd>{{% md %}}Helpers enabled when booting to this Linode Config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3547,7 +3555,7 @@ Instances in a region.
 <a href="#interfaces_python" style="color: inherit; text-decoration: inherit;">interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfiginterface">Sequence[Instance<wbr>Config<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceconfiginterface">Sequence[Instance<wbr>Config<wbr>Interface]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3606,7 +3614,7 @@ Instances in a region.
 <a href="#sda_csharp" style="color: inherit; text-decoration: inherit;">Sda</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda</a></span>
     </dt>
     <dd>{{% md %}}... `sdh` - (Optional) The SDA-SDH slots, represent the Linux block device nodes for the first 8 disks attached to the Linode.  Each device must be suplied sequentially.  The device can be either a Disk or a Volume identified by `disk_label` or `volume_id`. Only one disk identifier is permitted per slot. Devices mapped from `sde` through `sdh` are unavailable in `"fullvirt"` `virt_mode`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3615,7 +3623,7 @@ Instances in a region.
 <a href="#sdb_csharp" style="color: inherit; text-decoration: inherit;">Sdb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdb">Instance<wbr>Config<wbr>Devices<wbr>Sdb<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdb">Instance<wbr>Config<wbr>Devices<wbr>Sdb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3623,7 +3631,7 @@ Instances in a region.
 <a href="#sdc_csharp" style="color: inherit; text-decoration: inherit;">Sdc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdc">Instance<wbr>Config<wbr>Devices<wbr>Sdc<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdc">Instance<wbr>Config<wbr>Devices<wbr>Sdc</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3631,7 +3639,7 @@ Instances in a region.
 <a href="#sdd_csharp" style="color: inherit; text-decoration: inherit;">Sdd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdd">Instance<wbr>Config<wbr>Devices<wbr>Sdd<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdd">Instance<wbr>Config<wbr>Devices<wbr>Sdd</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3639,7 +3647,7 @@ Instances in a region.
 <a href="#sde_csharp" style="color: inherit; text-decoration: inherit;">Sde</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessde">Instance<wbr>Config<wbr>Devices<wbr>Sde<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessde">Instance<wbr>Config<wbr>Devices<wbr>Sde</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3647,7 +3655,7 @@ Instances in a region.
 <a href="#sdf_csharp" style="color: inherit; text-decoration: inherit;">Sdf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdf">Instance<wbr>Config<wbr>Devices<wbr>Sdf<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdf">Instance<wbr>Config<wbr>Devices<wbr>Sdf</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3655,7 +3663,7 @@ Instances in a region.
 <a href="#sdg_csharp" style="color: inherit; text-decoration: inherit;">Sdg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdg">Instance<wbr>Config<wbr>Devices<wbr>Sdg<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdg">Instance<wbr>Config<wbr>Devices<wbr>Sdg</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3663,7 +3671,7 @@ Instances in a region.
 <a href="#sdh_csharp" style="color: inherit; text-decoration: inherit;">Sdh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdh">Instance<wbr>Config<wbr>Devices<wbr>Sdh<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdh">Instance<wbr>Config<wbr>Devices<wbr>Sdh</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3744,7 +3752,7 @@ Instances in a region.
 <a href="#sda_nodejs" style="color: inherit; text-decoration: inherit;">sda</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda</a></span>
     </dt>
     <dd>{{% md %}}... `sdh` - (Optional) The SDA-SDH slots, represent the Linux block device nodes for the first 8 disks attached to the Linode.  Each device must be suplied sequentially.  The device can be either a Disk or a Volume identified by `disk_label` or `volume_id`. Only one disk identifier is permitted per slot. Devices mapped from `sde` through `sdh` are unavailable in `"fullvirt"` `virt_mode`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3753,7 +3761,7 @@ Instances in a region.
 <a href="#sdb_nodejs" style="color: inherit; text-decoration: inherit;">sdb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdb">Instance<wbr>Config<wbr>Devices<wbr>Sdb<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdb">Instance<wbr>Config<wbr>Devices<wbr>Sdb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3761,7 +3769,7 @@ Instances in a region.
 <a href="#sdc_nodejs" style="color: inherit; text-decoration: inherit;">sdc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdc">Instance<wbr>Config<wbr>Devices<wbr>Sdc<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdc">Instance<wbr>Config<wbr>Devices<wbr>Sdc</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3769,7 +3777,7 @@ Instances in a region.
 <a href="#sdd_nodejs" style="color: inherit; text-decoration: inherit;">sdd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdd">Instance<wbr>Config<wbr>Devices<wbr>Sdd<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdd">Instance<wbr>Config<wbr>Devices<wbr>Sdd</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3777,7 +3785,7 @@ Instances in a region.
 <a href="#sde_nodejs" style="color: inherit; text-decoration: inherit;">sde</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessde">Instance<wbr>Config<wbr>Devices<wbr>Sde<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessde">Instance<wbr>Config<wbr>Devices<wbr>Sde</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3785,7 +3793,7 @@ Instances in a region.
 <a href="#sdf_nodejs" style="color: inherit; text-decoration: inherit;">sdf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdf">Instance<wbr>Config<wbr>Devices<wbr>Sdf<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdf">Instance<wbr>Config<wbr>Devices<wbr>Sdf</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3793,7 +3801,7 @@ Instances in a region.
 <a href="#sdg_nodejs" style="color: inherit; text-decoration: inherit;">sdg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdg">Instance<wbr>Config<wbr>Devices<wbr>Sdg<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdg">Instance<wbr>Config<wbr>Devices<wbr>Sdg</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3801,7 +3809,7 @@ Instances in a region.
 <a href="#sdh_nodejs" style="color: inherit; text-decoration: inherit;">sdh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdh">Instance<wbr>Config<wbr>Devices<wbr>Sdh<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdh">Instance<wbr>Config<wbr>Devices<wbr>Sdh</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3813,7 +3821,7 @@ Instances in a region.
 <a href="#sda_python" style="color: inherit; text-decoration: inherit;">sda</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda</a></span>
     </dt>
     <dd>{{% md %}}... `sdh` - (Optional) The SDA-SDH slots, represent the Linux block device nodes for the first 8 disks attached to the Linode.  Each device must be suplied sequentially.  The device can be either a Disk or a Volume identified by `disk_label` or `volume_id`. Only one disk identifier is permitted per slot. Devices mapped from `sde` through `sdh` are unavailable in `"fullvirt"` `virt_mode`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3822,7 +3830,7 @@ Instances in a region.
 <a href="#sdb_python" style="color: inherit; text-decoration: inherit;">sdb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdb">Instance<wbr>Config<wbr>Devices<wbr>Sdb<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdb">Instance<wbr>Config<wbr>Devices<wbr>Sdb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3830,7 +3838,7 @@ Instances in a region.
 <a href="#sdc_python" style="color: inherit; text-decoration: inherit;">sdc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdc">Instance<wbr>Config<wbr>Devices<wbr>Sdc<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdc">Instance<wbr>Config<wbr>Devices<wbr>Sdc</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3838,7 +3846,7 @@ Instances in a region.
 <a href="#sdd_python" style="color: inherit; text-decoration: inherit;">sdd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdd">Instance<wbr>Config<wbr>Devices<wbr>Sdd<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdd">Instance<wbr>Config<wbr>Devices<wbr>Sdd</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3846,7 +3854,7 @@ Instances in a region.
 <a href="#sde_python" style="color: inherit; text-decoration: inherit;">sde</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessde">Instance<wbr>Config<wbr>Devices<wbr>Sde<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessde">Instance<wbr>Config<wbr>Devices<wbr>Sde</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3854,7 +3862,7 @@ Instances in a region.
 <a href="#sdf_python" style="color: inherit; text-decoration: inherit;">sdf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdf">Instance<wbr>Config<wbr>Devices<wbr>Sdf<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdf">Instance<wbr>Config<wbr>Devices<wbr>Sdf</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3862,7 +3870,7 @@ Instances in a region.
 <a href="#sdg_python" style="color: inherit; text-decoration: inherit;">sdg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdg">Instance<wbr>Config<wbr>Devices<wbr>Sdg<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdg">Instance<wbr>Config<wbr>Devices<wbr>Sdg</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3870,7 +3878,7 @@ Instances in a region.
 <a href="#sdh_python" style="color: inherit; text-decoration: inherit;">sdh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdh">Instance<wbr>Config<wbr>Devices<wbr>Sdh<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdh">Instance<wbr>Config<wbr>Devices<wbr>Sdh</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

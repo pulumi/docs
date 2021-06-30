@@ -416,7 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of a specific Backup.
+    <dd>{{% md %}}The current state of a specific Backup. (`paused`, `pending`, `running`, `needsPostProcessing`, `successful`, `failed`, `userAborted`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
@@ -425,7 +425,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time.
+    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time. (`auto`, `snapshot`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_csharp">
@@ -500,7 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of a specific Backup.
+    <dd>{{% md %}}The current state of a specific Backup. (`paused`, `pending`, `running`, `needsPostProcessing`, `successful`, `failed`, `userAborted`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
@@ -509,7 +509,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time.
+    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time. (`auto`, `snapshot`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_go">
@@ -584,7 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of a specific Backup.
+    <dd>{{% md %}}The current state of a specific Backup. (`paused`, `pending`, `running`, `needsPostProcessing`, `successful`, `failed`, `userAborted`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
@@ -593,7 +593,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time.
+    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time. (`auto`, `snapshot`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_nodejs">
@@ -668,7 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current state of a specific Backup.
+    <dd>{{% md %}}The current state of a specific Backup. (`paused`, `pending`, `running`, `needsPostProcessing`, `successful`, `failed`, `userAborted`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
@@ -677,7 +677,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time.
+    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time. (`auto`, `snapshot`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_python">
@@ -884,7 +884,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of a specific Backup.
+    <dd>{{% md %}}The current state of a specific Backup. (`paused`, `pending`, `running`, `needsPostProcessing`, `successful`, `failed`, `userAborted`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
@@ -893,7 +893,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time.
+    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time. (`auto`, `snapshot`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_csharp">
@@ -968,7 +968,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of a specific Backup.
+    <dd>{{% md %}}The current state of a specific Backup. (`paused`, `pending`, `running`, `needsPostProcessing`, `successful`, `failed`, `userAborted`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
@@ -977,7 +977,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time.
+    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time. (`auto`, `snapshot`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_go">
@@ -1052,7 +1052,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of a specific Backup.
+    <dd>{{% md %}}The current state of a specific Backup. (`paused`, `pending`, `running`, `needsPostProcessing`, `successful`, `failed`, `userAborted`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
@@ -1061,7 +1061,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time.
+    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time. (`auto`, `snapshot`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_nodejs">
@@ -1136,7 +1136,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current state of a specific Backup.
+    <dd>{{% md %}}The current state of a specific Backup. (`paused`, `pending`, `running`, `needsPostProcessing`, `successful`, `failed`, `userAborted`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
@@ -1145,7 +1145,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time.
+    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time. (`auto`, `snapshot`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_python">
@@ -1352,7 +1352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of a specific Backup.
+    <dd>{{% md %}}The current state of a specific Backup. (`paused`, `pending`, `running`, `needsPostProcessing`, `successful`, `failed`, `userAborted`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
@@ -1361,7 +1361,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time.
+    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time. (`auto`, `snapshot`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_csharp">
@@ -1436,7 +1436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of a specific Backup.
+    <dd>{{% md %}}The current state of a specific Backup. (`paused`, `pending`, `running`, `needsPostProcessing`, `successful`, `failed`, `userAborted`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
@@ -1445,7 +1445,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time.
+    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time. (`auto`, `snapshot`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_go">
@@ -1520,7 +1520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of a specific Backup.
+    <dd>{{% md %}}The current state of a specific Backup. (`paused`, `pending`, `running`, `needsPostProcessing`, `successful`, `failed`, `userAborted`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
@@ -1529,7 +1529,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time.
+    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time. (`auto`, `snapshot`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_nodejs">
@@ -1604,7 +1604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current state of a specific Backup.
+    <dd>{{% md %}}The current state of a specific Backup. (`paused`, `pending`, `running`, `needsPostProcessing`, `successful`, `failed`, `userAborted`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
@@ -1613,7 +1613,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time.
+    <dd>{{% md %}}This indicates whether the Backup is an automatic Backup or manual snapshot taken by the User at a specific point in time. (`auto`, `snapshot`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_python">

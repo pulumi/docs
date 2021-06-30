@@ -355,7 +355,7 @@ The NodeBalancerConfig resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
+    <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends. (`roundrobin`, `leastconn`, `source`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="check_csharp">
@@ -364,7 +364,7 @@ The NodeBalancerConfig resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
+    <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected. (`none`, `connection`, `http`, `http_body`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkattempts_csharp">
@@ -446,7 +446,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
+    <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (`http`, `https`, `tcp`) (Defaults to `http`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyprotocol_csharp">
@@ -455,7 +455,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
+    <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. (`none`, `v1`, `v2`) (Defaults to `none`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcert_csharp">
@@ -482,7 +482,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
+    <dd>{{% md %}}Controls how session stickiness is handled on this port. (`none`, `table`, `http_cookie`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -504,7 +504,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
+    <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends. (`roundrobin`, `leastconn`, `source`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="check_go">
@@ -513,7 +513,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
+    <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected. (`none`, `connection`, `http`, `http_body`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkattempts_go">
@@ -595,7 +595,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
+    <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (`http`, `https`, `tcp`) (Defaults to `http`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyprotocol_go">
@@ -604,7 +604,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
+    <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. (`none`, `v1`, `v2`) (Defaults to `none`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcert_go">
@@ -631,7 +631,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
+    <dd>{{% md %}}Controls how session stickiness is handled on this port. (`none`, `table`, `http_cookie`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -653,7 +653,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
+    <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends. (`roundrobin`, `leastconn`, `source`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="check_nodejs">
@@ -662,7 +662,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
+    <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected. (`none`, `connection`, `http`, `http_body`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkattempts_nodejs">
@@ -744,7 +744,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
+    <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (`http`, `https`, `tcp`) (Defaults to `http`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyprotocol_nodejs">
@@ -753,7 +753,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
+    <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. (`none`, `v1`, `v2`) (Defaults to `none`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcert_nodejs">
@@ -780,7 +780,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
+    <dd>{{% md %}}Controls how session stickiness is handled on this port. (`none`, `table`, `http_cookie`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -802,7 +802,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
+    <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends. (`roundrobin`, `leastconn`, `source`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="check_python">
@@ -811,7 +811,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
+    <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected. (`none`, `connection`, `http`, `http_body`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="check_attempts_python">
@@ -893,7 +893,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
+    <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (`http`, `https`, `tcp`) (Defaults to `http`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_protocol_python">
@@ -902,7 +902,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
+    <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. (`none`, `v1`, `v2`) (Defaults to `none`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_cert_python">
@@ -929,7 +929,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
+    <dd>{{% md %}}Controls how session stickiness is handled on this port. (`none`, `table`, `http_cookie`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1261,7 +1261,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
+    <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends. (`roundrobin`, `leastconn`, `source`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_check_csharp">
@@ -1270,7 +1270,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
+    <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected. (`none`, `connection`, `http`, `http_body`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkattempts_csharp">
@@ -1371,7 +1371,7 @@ periodically as checks are performed against backends.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
+    <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (`http`, `https`, `tcp`) (Defaults to `http`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyprotocol_csharp">
@@ -1380,7 +1380,7 @@ periodically as checks are performed against backends.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
+    <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. (`none`, `v1`, `v2`) (Defaults to `none`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcert_csharp">
@@ -1427,7 +1427,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
+    <dd>{{% md %}}Controls how session stickiness is handled on this port. (`none`, `table`, `http_cookie`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1440,7 +1440,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
+    <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends. (`roundrobin`, `leastconn`, `source`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_check_go">
@@ -1449,7 +1449,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
+    <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected. (`none`, `connection`, `http`, `http_body`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkattempts_go">
@@ -1520,7 +1520,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_nodestatuses_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodebalancerconfignodestatus">[]Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status</a></span>
+        <span class="property-type"><a href="#nodebalancerconfignodestatus">[]Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A structure containing information about the health of the backends for this port. This information is updated
 periodically as checks are performed against backends.
@@ -1550,7 +1550,7 @@ periodically as checks are performed against backends.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
+    <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (`http`, `https`, `tcp`) (Defaults to `http`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyprotocol_go">
@@ -1559,7 +1559,7 @@ periodically as checks are performed against backends.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
+    <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. (`none`, `v1`, `v2`) (Defaults to `none`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcert_go">
@@ -1606,7 +1606,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
+    <dd>{{% md %}}Controls how session stickiness is handled on this port. (`none`, `table`, `http_cookie`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1619,7 +1619,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
+    <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends. (`roundrobin`, `leastconn`, `source`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_check_nodejs">
@@ -1628,7 +1628,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
+    <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected. (`none`, `connection`, `http`, `http_body`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkattempts_nodejs">
@@ -1729,7 +1729,7 @@ periodically as checks are performed against backends.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
+    <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (`http`, `https`, `tcp`) (Defaults to `http`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyprotocol_nodejs">
@@ -1738,7 +1738,7 @@ periodically as checks are performed against backends.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
+    <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. (`none`, `v1`, `v2`) (Defaults to `none`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcert_nodejs">
@@ -1785,7 +1785,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
+    <dd>{{% md %}}Controls how session stickiness is handled on this port. (`none`, `table`, `http_cookie`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1798,7 +1798,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
+    <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends. (`roundrobin`, `leastconn`, `source`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_check_python">
@@ -1807,7 +1807,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
+    <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected. (`none`, `connection`, `http`, `http_body`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_check_attempts_python">
@@ -1908,7 +1908,7 @@ periodically as checks are performed against backends.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
+    <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (`http`, `https`, `tcp`) (Defaults to `http`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxy_protocol_python">
@@ -1917,7 +1917,7 @@ periodically as checks are performed against backends.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
+    <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. (`none`, `v1`, `v2`) (Defaults to `none`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_cert_python">
@@ -1964,7 +1964,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
+    <dd>{{% md %}}Controls how session stickiness is handled on this port. (`none`, `table`, `http_cookie`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

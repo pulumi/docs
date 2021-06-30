@@ -512,7 +512,7 @@ parameters during deployment.
 <a href="#userdefinedfields_go" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackscriptuserdefinedfield">[]Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field</a></span>
+        <span class="property-type"><a href="#stackscriptuserdefinedfield">[]Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
@@ -1283,7 +1283,7 @@ parameters during deployment.
 <a href="#state_userdefinedfields_go" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackscriptuserdefinedfield">[]Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field</a></span>
+        <span class="property-type"><a href="#stackscriptuserdefinedfield">[]Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
