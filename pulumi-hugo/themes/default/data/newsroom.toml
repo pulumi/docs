@@ -1,4 +1,10 @@
 [[releases]]
+date = "24th June 2021"
+title = "Fenergo Adopts Pulumi Cloud Engineering Platform to Accelerate Innovation Using The Modern Cloud"
+summary = "Financial services lifecycle management software leader adopted cloud engineering to successfully transition from building on-premise software to delivering modern cloud applications"
+url = "https://info.pulumi.com/press-release/fenergo-adopts-pulumi"
+
+[[releases]]
 date = "20th April 2021"
 title = "New Pulumi Cloud Engineering Platform Smashes Silos Among Developer, Infrastructure, and Security Teams"
 summary = "New capabilities -- including native providers for all major clouds, Pulumi Packages and an Automation API -- enable cloud engineering best practices, increase collaboration, and accelerate innovation with the freedom to use any language, for any workload, on any cloud"
