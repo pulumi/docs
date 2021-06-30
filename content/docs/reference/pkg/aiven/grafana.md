@@ -400,8 +400,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_csharp">
@@ -485,7 +484,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#grafana_go" style="color: inherit; text-decoration: inherit;">Grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafana">Grafana<wbr>Grafana</a></span>
+        <span class="property-type"><a href="#grafanagrafana">Grafana<wbr>Grafana<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
@@ -495,7 +494,7 @@ are in a project VPC or another type of private network.
 <a href="#grafanauserconfig_go" style="color: inherit; text-decoration: inherit;">Grafana<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfig">Grafana<wbr>Grafana<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfig">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines Grafana specific additional configuration options. The following 
 configuration options available:
@@ -533,8 +532,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_go">
@@ -555,7 +553,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanaserviceintegration">[]Grafana<wbr>Service<wbr>Integration</a></span>
+        <span class="property-type"><a href="#grafanaserviceintegration">[]Grafana<wbr>Service<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -666,8 +664,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_nodejs">
@@ -799,8 +796,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_vpc_id_python">
@@ -1406,8 +1402,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
@@ -1554,7 +1549,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_components_go" style="color: inherit; text-decoration: inherit;">Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanacomponent">[]Grafana<wbr>Component</a></span>
+        <span class="property-type"><a href="#grafanacomponent">[]Grafana<wbr>Component<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd><dt class="property-optional"
@@ -1563,7 +1558,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_grafana_go" style="color: inherit; text-decoration: inherit;">Grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafana">Grafana<wbr>Grafana</a></span>
+        <span class="property-type"><a href="#grafanagrafana">Grafana<wbr>Grafana<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
@@ -1573,7 +1568,7 @@ are in a project VPC or another type of private network.
 <a href="#state_grafanauserconfig_go" style="color: inherit; text-decoration: inherit;">Grafana<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfig">Grafana<wbr>Grafana<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfig">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines Grafana specific additional configuration options. The following 
 configuration options available:
@@ -1611,8 +1606,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
@@ -1653,7 +1647,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanaserviceintegration">[]Grafana<wbr>Service<wbr>Integration</a></span>
+        <span class="property-type"><a href="#grafanaserviceintegration">[]Grafana<wbr>Service<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -1816,8 +1810,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
@@ -2021,8 +2014,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
@@ -2463,7 +2455,7 @@ built-in login.
 <a href="#authgenericoauth_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Generic<wbr>Oauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgenericoauth">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgenericoauth">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth</a></span>
     </dt>
     <dd>{{% md %}}Generic OAuth integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2472,7 +2464,7 @@ built-in login.
 <a href="#authgithub_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgithub">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgithub">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
 {{% /md %}}</dd><dt class="property-optional"
@@ -2481,7 +2473,7 @@ built-in login.
 <a href="#authgitlab_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgitlab">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgitlab">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}GitLab Auth integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2490,7 +2482,7 @@ built-in login.
 <a href="#authgoogle_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgoogle">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgoogle">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}Google Auth integration
 {{% /md %}}</dd><dt class="property-optional"
@@ -2574,7 +2566,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#externalimagestorage_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Image<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigexternalimagestorage">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigexternalimagestorage">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}External image store settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2610,7 +2602,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigprivateaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigprivateaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2618,7 +2610,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigprivatelinkaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigprivatelinkaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -2637,7 +2629,7 @@ effect only when a new service is being created.
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigpublicaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigpublicaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2665,7 +2657,7 @@ when a new service is being created.
 <a href="#smtpserver_csharp" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigsmtpserver">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigsmtpserver">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}SMTP server settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3045,7 +3037,7 @@ built-in login.
 <a href="#authgenericoauth_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Generic<wbr>Oauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgenericoauth">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgenericoauth">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth</a></span>
     </dt>
     <dd>{{% md %}}Generic OAuth integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3054,7 +3046,7 @@ built-in login.
 <a href="#authgithub_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgithub">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgithub">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
 {{% /md %}}</dd><dt class="property-optional"
@@ -3063,7 +3055,7 @@ built-in login.
 <a href="#authgitlab_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgitlab">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgitlab">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}GitLab Auth integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3072,7 +3064,7 @@ built-in login.
 <a href="#authgoogle_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgoogle">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgoogle">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}Google Auth integration
 {{% /md %}}</dd><dt class="property-optional"
@@ -3156,7 +3148,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#externalimagestorage_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Image<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigexternalimagestorage">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigexternalimagestorage">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}External image store settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -3192,7 +3184,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigprivateaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigprivateaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3200,7 +3192,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigprivatelinkaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigprivatelinkaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -3219,7 +3211,7 @@ effect only when a new service is being created.
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigpublicaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigpublicaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3247,7 +3239,7 @@ when a new service is being created.
 <a href="#smtpserver_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigsmtpserver">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigsmtpserver">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}SMTP server settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3336,7 +3328,7 @@ built-in login.
 <a href="#auth_generic_oauth_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>generic_<wbr>oauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgenericoauth">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgenericoauth">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth</a></span>
     </dt>
     <dd>{{% md %}}Generic OAuth integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3345,7 +3337,7 @@ built-in login.
 <a href="#auth_github_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgithub">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgithub">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
 {{% /md %}}</dd><dt class="property-optional"
@@ -3354,7 +3346,7 @@ built-in login.
 <a href="#auth_gitlab_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgitlab">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgitlab">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}GitLab Auth integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3363,7 +3355,7 @@ built-in login.
 <a href="#auth_google_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgoogle">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgoogle">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}Google Auth integration
 {{% /md %}}</dd><dt class="property-optional"
@@ -3447,7 +3439,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#external_image_storage_python" style="color: inherit; text-decoration: inherit;">external_<wbr>image_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigexternalimagestorage">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigexternalimagestorage">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}External image store settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -3483,7 +3475,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigprivateaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigprivateaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3491,7 +3483,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigprivatelinkaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigprivatelinkaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -3510,7 +3502,7 @@ effect only when a new service is being created.
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigpublicaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigpublicaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3538,7 +3530,7 @@ when a new service is being created.
 <a href="#smtp_server_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigsmtpserver">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigsmtpserver">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}SMTP server settings.
 {{% /md %}}</dd><dt class="property-optional"

@@ -468,7 +468,7 @@ They should be defined using reference as shown above to set up dependencies cor
 <a href="#acls_go" style="color: inherit; text-decoration: inherit;">Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchaclacl">[]Elastic<wbr>Search<wbr>Acl<wbr>Acl</a></span>
+        <span class="property-type"><a href="#elasticsearchaclacl">[]Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of Elasticsearch ACLs
 {{% /md %}}</dd><dt class="property-optional"
@@ -842,7 +842,7 @@ They should be defined using reference as shown above to set up dependencies cor
 <a href="#state_acls_go" style="color: inherit; text-decoration: inherit;">Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchaclacl">[]Elastic<wbr>Search<wbr>Acl<wbr>Acl</a></span>
+        <span class="property-type"><a href="#elasticsearchaclacl">[]Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of Elasticsearch ACLs
 {{% /md %}}</dd><dt class="property-optional"
@@ -1009,7 +1009,7 @@ They should be defined using reference as shown above to set up dependencies cor
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchaclaclrule">List&lt;Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#elasticsearchaclaclrule">List&lt;Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1049,7 +1049,7 @@ They should be defined using reference as shown above to set up dependencies cor
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchaclaclrule">Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#elasticsearchaclaclrule">Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1069,7 +1069,7 @@ They should be defined using reference as shown above to set up dependencies cor
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchaclaclrule">Sequence[Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elasticsearchaclaclrule">Sequence[Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">

@@ -348,7 +348,7 @@ created instead.
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkatopicconfig">Kafka<wbr>Topic<wbr>Config</a></span>
+        <span class="property-type"><a href="#kafkatopicconfig">Kafka<wbr>Topic<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka topic configuration
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -385,7 +385,7 @@ created instead.
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkatopictag">[]Kafka<wbr>Topic<wbr>Tag</a></span>
+        <span class="property-type"><a href="#kafkatopictag">[]Kafka<wbr>Topic<wbr>Tag<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Topic tag
 {{% /md %}}</dd><dt class="property-optional"
@@ -966,7 +966,7 @@ created instead.
 <a href="#state_config_go" style="color: inherit; text-decoration: inherit;">Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkatopicconfig">Kafka<wbr>Topic<wbr>Config</a></span>
+        <span class="property-type"><a href="#kafkatopicconfig">Kafka<wbr>Topic<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka topic configuration
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1042,7 +1042,7 @@ the topic being deleted and new one created instead.
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkatopictag">[]Kafka<wbr>Topic<wbr>Tag</a></span>
+        <span class="property-type"><a href="#kafkatopictag">[]Kafka<wbr>Topic<wbr>Tag<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Topic tag
 {{% /md %}}</dd><dt class="property-optional"

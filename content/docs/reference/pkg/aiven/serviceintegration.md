@@ -559,7 +559,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#dashboarduserconfig_go" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dashboard specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -568,7 +568,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#datadoguserconfig_go" style="color: inherit; text-decoration: inherit;">Datadog<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dashboard specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -598,7 +598,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#externalawscloudwatchlogsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}External AWS Cloudwatch logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -607,7 +607,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#externalawscloudwatchmetricsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}External AWS cloudwatch metrics specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -616,7 +616,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#externalelasticsearchlogsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}External Elasticsearch logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -625,7 +625,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#externalgooglecloudlogginguserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}External Google Cloud Logging specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -634,7 +634,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#kafkaconnectuserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -643,7 +643,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#kafkalogsuserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -652,7 +652,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#kafkamirrormakeruserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 2 integration specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -661,7 +661,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#logsuserconfig_go" style="color: inherit; text-decoration: inherit;">Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationlogsuserconfig">Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationlogsuserconfig">Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log integration specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -670,7 +670,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#m3aggregatoruserconfig_go" style="color: inherit; text-decoration: inherit;">M3aggregator<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}M3 aggregator specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -679,7 +679,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#m3coordinatoruserconfig_go" style="color: inherit; text-decoration: inherit;">M3coordinator<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}M3 coordinator specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -688,7 +688,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#metricsuserconfig_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metrics specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -697,7 +697,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#mirrormakeruserconfig_go" style="color: inherit; text-decoration: inherit;">Mirrormaker<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 1 integration specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -706,7 +706,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#prometheususerconfig_go" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prometheus coordinator specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -715,7 +715,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#readreplicauserconfig_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Replica<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PG Read replica specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -724,7 +724,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#rsysloguserconfig_go" style="color: inherit; text-decoration: inherit;">Rsyslog<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RSyslog specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -733,7 +733,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#schemaregistryproxyuserconfig_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationschemaregistryproxyuserconfig">Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationschemaregistryproxyuserconfig">Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema registry proxy specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -742,7 +742,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#signalfxuserconfig_go" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Signalfx specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1695,7 +1695,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_dashboarduserconfig_go" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dashboard specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1704,7 +1704,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_datadoguserconfig_go" style="color: inherit; text-decoration: inherit;">Datadog<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dashboard specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1734,7 +1734,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_externalawscloudwatchlogsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}External AWS Cloudwatch logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1743,7 +1743,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_externalawscloudwatchmetricsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}External AWS cloudwatch metrics specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1752,7 +1752,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_externalelasticsearchlogsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}External Elasticsearch logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1761,7 +1761,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_externalgooglecloudlogginguserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}External Google Cloud Logging specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1782,7 +1782,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_kafkaconnectuserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1791,7 +1791,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_kafkalogsuserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1800,7 +1800,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_kafkamirrormakeruserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 2 integration specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1809,7 +1809,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_logsuserconfig_go" style="color: inherit; text-decoration: inherit;">Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationlogsuserconfig">Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationlogsuserconfig">Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log integration specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1818,7 +1818,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_m3aggregatoruserconfig_go" style="color: inherit; text-decoration: inherit;">M3aggregator<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}M3 aggregator specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1827,7 +1827,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_m3coordinatoruserconfig_go" style="color: inherit; text-decoration: inherit;">M3coordinator<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}M3 coordinator specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1836,7 +1836,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_metricsuserconfig_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metrics specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1845,7 +1845,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_mirrormakeruserconfig_go" style="color: inherit; text-decoration: inherit;">Mirrormaker<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 1 integration specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1863,7 +1863,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_prometheususerconfig_go" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prometheus coordinator specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1872,7 +1872,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_readreplicauserconfig_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Replica<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PG Read replica specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1881,7 +1881,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_rsysloguserconfig_go" style="color: inherit; text-decoration: inherit;">Rsyslog<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RSyslog specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1890,7 +1890,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_schemaregistryproxyuserconfig_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationschemaregistryproxyuserconfig">Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationschemaregistryproxyuserconfig">Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema registry proxy specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1899,7 +1899,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_signalfxuserconfig_go" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Signalfx specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2420,7 +2420,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#datadogtags_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationdatadoguserconfigdatadogtag">List&lt;Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceintegrationdatadoguserconfigdatadogtag">List&lt;Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2540,7 +2540,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#datadogtags_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationdatadoguserconfigdatadogtag">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceintegrationdatadoguserconfigdatadogtag">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2600,7 +2600,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#datadog_tags_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationdatadoguserconfigdatadogtag">Sequence[Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceintegrationdatadoguserconfigdatadogtag">Sequence[Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2744,7 +2744,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#droppedmetrics_csharp" style="color: inherit; text-decoration: inherit;">Dropped<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfigdroppedmetric">List&lt;Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Dropped<wbr>Metric<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfigdroppedmetric">List&lt;Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Dropped<wbr>Metric&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2752,7 +2752,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#extrametrics_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfigextrametric">List&lt;Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Extra<wbr>Metric<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfigextrametric">List&lt;Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Extra<wbr>Metric&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2784,7 +2784,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#droppedmetrics_nodejs" style="color: inherit; text-decoration: inherit;">dropped<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfigdroppedmetric">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Dropped<wbr>Metric<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfigdroppedmetric">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Dropped<wbr>Metric[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2792,7 +2792,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#extrametrics_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfigextrametric">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Extra<wbr>Metric<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfigextrametric">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Extra<wbr>Metric[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2804,7 +2804,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#dropped_metrics_python" style="color: inherit; text-decoration: inherit;">dropped_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfigdroppedmetric">Sequence[Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Dropped<wbr>Metric<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfigdroppedmetric">Sequence[Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Dropped<wbr>Metric]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2812,7 +2812,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#extra_metrics_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfigextrametric">Sequence[Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Extra<wbr>Metric<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfigextrametric">Sequence[Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Extra<wbr>Metric]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2990,7 +2990,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#kafkaconnect_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfigkafkaconnect">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfigkafkaconnect">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3014,7 +3014,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#kafkaconnect_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfigkafkaconnect">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfigkafkaconnect">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3026,7 +3026,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfigkafkaconnect">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfigkafkaconnect">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3392,7 +3392,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#sourcemysql_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysql">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysql">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3480,7 +3480,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#sourcemysql_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysql">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysql">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3524,7 +3524,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#source_mysql_python" style="color: inherit; text-decoration: inherit;">source_<wbr>mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysql">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysql">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3546,7 +3546,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#telegraf_csharp" style="color: inherit; text-decoration: inherit;">Telegraf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3570,7 +3570,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#telegraf_nodejs" style="color: inherit; text-decoration: inherit;">telegraf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3582,7 +3582,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#telegraf_python" style="color: inherit; text-decoration: inherit;">telegraf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4112,7 +4112,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#sourcemysql_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysql">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysql">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4136,7 +4136,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#sourcemysql_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysql">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysql">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4148,7 +4148,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#source_mysql_python" style="color: inherit; text-decoration: inherit;">source_<wbr>mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysql">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysql">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4162,7 +4162,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#telegraf_csharp" style="color: inherit; text-decoration: inherit;">Telegraf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4186,7 +4186,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#telegraf_nodejs" style="color: inherit; text-decoration: inherit;">telegraf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4198,7 +4198,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#telegraf_python" style="color: inherit; text-decoration: inherit;">telegraf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

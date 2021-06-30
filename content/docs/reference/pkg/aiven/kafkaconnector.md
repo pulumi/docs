@@ -1100,7 +1100,7 @@ The following state arguments are supported:
 <a href="#state_tasks_go" style="color: inherit; text-decoration: inherit;">Tasks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaconnectortask">[]Kafka<wbr>Connector<wbr>Task</a></span>
+        <span class="property-type"><a href="#kafkaconnectortask">[]Kafka<wbr>Connector<wbr>Task<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of tasks of a connector, each element contains `connector` 
 (Related connector name) and `task` (Task id / number).

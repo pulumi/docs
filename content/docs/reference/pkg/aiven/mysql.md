@@ -417,8 +417,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_csharp">
@@ -525,7 +524,7 @@ UTC time in HH:mm:ss format.
 <a href="#mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysql">My<wbr>Sql<wbr>Mysql</a></span>
+        <span class="property-type"><a href="#mysqlmysql">My<wbr>Sql<wbr>Mysql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
@@ -535,7 +534,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#mysqluserconfig_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfig">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfig">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines MySQL specific additional configuration options. The following 
 configuration options available:
@@ -553,8 +552,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_go">
@@ -575,7 +573,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlserviceintegration">[]My<wbr>Sql<wbr>Service<wbr>Integration</a></span>
+        <span class="property-type"><a href="#mysqlserviceintegration">[]My<wbr>Sql<wbr>Service<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}can be used to define service integrations that must exist
 immediately upon service creation. By the time of writing the only such integration is
@@ -689,8 +687,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_nodejs">
@@ -825,8 +822,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_vpc_id_python">
@@ -1435,8 +1431,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
@@ -1586,7 +1581,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_components_go" style="color: inherit; text-decoration: inherit;">Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlcomponent">[]My<wbr>Sql<wbr>Component</a></span>
+        <span class="property-type"><a href="#mysqlcomponent">[]My<wbr>Sql<wbr>Component<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd><dt class="property-optional"
@@ -1615,7 +1610,7 @@ UTC time in HH:mm:ss format.
 <a href="#state_mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysql">My<wbr>Sql<wbr>Mysql</a></span>
+        <span class="property-type"><a href="#mysqlmysql">My<wbr>Sql<wbr>Mysql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
@@ -1625,7 +1620,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#state_mysqluserconfig_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfig">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfig">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines MySQL specific additional configuration options. The following 
 configuration options available:
@@ -1643,8 +1638,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
@@ -1685,7 +1679,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlserviceintegration">[]My<wbr>Sql<wbr>Service<wbr>Integration</a></span>
+        <span class="property-type"><a href="#mysqlserviceintegration">[]My<wbr>Sql<wbr>Service<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}can be used to define service integrations that must exist
 immediately upon service creation. By the time of writing the only such integration is
@@ -1851,8 +1845,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
@@ -2059,8 +2052,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
@@ -2520,7 +2512,7 @@ default for example if using the MySQL Debezium Kafka connector.
 <a href="#migration_csharp" style="color: inherit; text-decoration: inherit;">Migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigmigration">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigmigration">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}Migrate data from existing server
 {{% /md %}}</dd><dt class="property-optional"
@@ -2529,7 +2521,7 @@ default for example if using the MySQL Debezium Kafka connector.
 <a href="#mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigmysql">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigmysql">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
@@ -2548,7 +2540,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigprivateaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigprivateaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
 {{% /md %}}</dd><dt class="property-optional"
@@ -2557,7 +2549,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigprivatelinkaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigprivatelinkaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -2576,7 +2568,7 @@ effect only when a new service is being created.
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigpublicaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigpublicaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
 {{% /md %}}</dd><dt class="property-optional"
@@ -2818,7 +2810,7 @@ default for example if using the MySQL Debezium Kafka connector.
 <a href="#migration_nodejs" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigmigration">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigmigration">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}Migrate data from existing server
 {{% /md %}}</dd><dt class="property-optional"
@@ -2827,7 +2819,7 @@ default for example if using the MySQL Debezium Kafka connector.
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigmysql">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigmysql">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
@@ -2846,7 +2838,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigprivateaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigprivateaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
 {{% /md %}}</dd><dt class="property-optional"
@@ -2855,7 +2847,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigprivatelinkaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigprivatelinkaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -2874,7 +2866,7 @@ effect only when a new service is being created.
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigpublicaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigpublicaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
 {{% /md %}}</dd><dt class="property-optional"
@@ -2967,7 +2959,7 @@ default for example if using the MySQL Debezium Kafka connector.
 <a href="#migration_python" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigmigration">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigmigration">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}Migrate data from existing server
 {{% /md %}}</dd><dt class="property-optional"
@@ -2976,7 +2968,7 @@ default for example if using the MySQL Debezium Kafka connector.
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigmysql">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigmysql">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
@@ -2995,7 +2987,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigprivateaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigprivateaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
 {{% /md %}}</dd><dt class="property-optional"
@@ -3004,7 +2996,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigprivatelinkaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigprivatelinkaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -3023,7 +3015,7 @@ effect only when a new service is being created.
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigpublicaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigpublicaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
 {{% /md %}}</dd><dt class="property-optional"

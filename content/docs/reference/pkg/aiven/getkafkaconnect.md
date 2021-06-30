@@ -268,8 +268,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_csharp">
@@ -469,8 +468,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_go">
@@ -670,8 +668,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_nodejs">
@@ -871,8 +868,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_vpc_id_python">
@@ -1146,8 +1142,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectvpcid_csharp">
@@ -1350,8 +1345,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectvpcid_go">
@@ -1554,8 +1548,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectvpcid_nodejs">
@@ -1758,8 +1751,7 @@ plan such as the new plan must have sufficient amount of disk space to store all
 data and switching to a plan with fewer nodes might not be supported. The basic plan
 names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
-and amount of disk space varies but naming is based on memory). The exact options can be
-seen from the Aiven web console's Create Service dialog.
+and amount of disk space varies but naming is based on memory). The available options can be seem from the [Aiven pricing page](https://aiven.io/pricing).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_vpc_id_python">
