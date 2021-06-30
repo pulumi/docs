@@ -22,6 +22,6 @@ Explore the resources and functions of the kubernetes.events/v1beta1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>3.4.1</dd>
+	<dd>3.5.0</dd>
 </dl>
 
