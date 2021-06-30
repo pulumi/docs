@@ -348,7 +348,7 @@ The NotifyList resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifylistnotification">[]Notify<wbr>List<wbr>Notification</a></span>
+        <span class="property-type"><a href="#notifylistnotification">[]Notify<wbr>List<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of notifiers. All notifiers in a notification list will receive notifications whenever an event is send to the list (e.g., when a monitoring job fails). Notifiers are documented below.
 {{% /md %}}</dd></dl>
@@ -618,7 +618,7 @@ The following state arguments are supported:
 <a href="#state_notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifylistnotification">[]Notify<wbr>List<wbr>Notification</a></span>
+        <span class="property-type"><a href="#notifylistnotification">[]Notify<wbr>List<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of notifiers. All notifiers in a notification list will receive notifications whenever an event is send to the list (e.g., when a monitoring job fails). Notifiers are documented below.
 {{% /md %}}</dd></dl>

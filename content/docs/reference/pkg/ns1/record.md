@@ -315,7 +315,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
 <a href="#answers_go" style="color: inherit; text-decoration: inherit;">Answers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordanswer">[]Record<wbr>Answer</a></span>
+        <span class="property-type"><a href="#recordanswer">[]Record<wbr>Answer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
@@ -325,7 +325,7 @@ Answers are documented below.
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordfilter">[]Record<wbr>Filter</a></span>
+        <span class="property-type"><a href="#recordfilter">[]Record<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
@@ -353,7 +353,7 @@ Filters are documented below.
 <a href="#regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordregion">[]Record<wbr>Region</a></span>
+        <span class="property-type"><a href="#recordregion">[]Record<wbr>Region<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more "regions" for the record. These are really
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
@@ -925,7 +925,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
 <a href="#state_answers_go" style="color: inherit; text-decoration: inherit;">Answers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordanswer">[]Record<wbr>Answer</a></span>
+        <span class="property-type"><a href="#recordanswer">[]Record<wbr>Answer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
@@ -945,7 +945,7 @@ dots - see the example above and `FQDN formatting` below.
 <a href="#state_filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordfilter">[]Record<wbr>Filter</a></span>
+        <span class="property-type"><a href="#recordfilter">[]Record<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
@@ -973,7 +973,7 @@ Filters are documented below.
 <a href="#state_regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordregion">[]Record<wbr>Region</a></span>
+        <span class="property-type"><a href="#recordregion">[]Record<wbr>Region<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more "regions" for the record. These are really
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,

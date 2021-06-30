@@ -40,6 +40,10 @@ class MyStack : Stack
         {
             Sourcetype = "nsone_v1",
         });
+        var exampleMonitoring = new Ns1.DataSource("exampleMonitoring", new Ns1.DataSourceArgs
+        {
+            Sourcetype = "nsone_monitoring",
+        });
         var uswestFeed = new Ns1.DataFeed("uswestFeed", new Ns1.DataFeedArgs
         {
             Config = 
@@ -55,6 +59,14 @@ class MyStack : Stack
                 { "label", "useast" },
             },
             SourceId = example.Id,
+        });
+        var useastMonitorFeed = new Ns1.DataFeed("useastMonitorFeed", new Ns1.DataFeedArgs
+        {
+            Config = 
+            {
+                { "jobid", ns1_monitoringjob.Example_job.Id },
+            },
+            SourceId = exampleMonitoring.Id,
         });
     }
 
@@ -83,6 +95,12 @@ func main() {
 		if err != nil {
 			return err
 		}
+		exampleMonitoring, err := ns1.NewDataSource(ctx, "exampleMonitoring", &ns1.DataSourceArgs{
+			Sourcetype: pulumi.String("nsone_monitoring"),
+		})
+		if err != nil {
+			return err
+		}
 		_, err = ns1.NewDataFeed(ctx, "uswestFeed", &ns1.DataFeedArgs{
 			Config: pulumi.StringMap{
 				"label": pulumi.String("uswest"),
@@ -97,6 +115,15 @@ func main() {
 				"label": pulumi.String("useast"),
 			},
 			SourceId: example.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ns1.NewDataFeed(ctx, "useastMonitorFeed", &ns1.DataFeedArgs{
+			Config: pulumi.AnyMap{
+				"jobid": pulumi.Any(ns1_monitoringjob.Example_job.Id),
+			},
+			SourceId: exampleMonitoring.ID(),
 		})
 		if err != nil {
 			return err
@@ -117,6 +144,7 @@ import pulumi
 import pulumi_ns1 as ns1
 
 example = ns1.DataSource("example", sourcetype="nsone_v1")
+example_monitoring = ns1.DataSource("exampleMonitoring", sourcetype="nsone_monitoring")
 uswest_feed = ns1.DataFeed("uswestFeed",
     config={
         "label": "uswest",
@@ -127,6 +155,11 @@ useast_feed = ns1.DataFeed("useastFeed",
         "label": "useast",
     },
     source_id=example.id)
+useast_monitor_feed = ns1.DataFeed("useastMonitorFeed",
+    config={
+        "jobid": ns1_monitoringjob["example_job"]["id"],
+    },
+    source_id=example_monitoring.id)
 ```
 
 
@@ -143,6 +176,9 @@ import * as ns1 from "@pulumi/ns1";
 const example = new ns1.DataSource("example", {
     sourcetype: "nsone_v1",
 });
+const exampleMonitoring = new ns1.DataSource("example_monitoring", {
+    sourcetype: "nsone_monitoring",
+});
 const uswestFeed = new ns1.DataFeed("uswest_feed", {
     config: {
         label: "uswest",
@@ -154,6 +190,12 @@ const useastFeed = new ns1.DataFeed("useast_feed", {
         label: "useast",
     },
     sourceId: example.id,
+});
+const useastMonitorFeed = new ns1.DataFeed("useast_monitor_feed", {
+    config: {
+        jobid: ns1_monitoringjob_example_job.id,
+    },
+    sourceId: exampleMonitoring.id,
 });
 ```
 
@@ -329,7 +371,7 @@ The DataFeed resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The feeds configuration matching the specification in
-`feed_config` from /data/sourcetypes.
+`feed_config` from /data/sourcetypes. `jobid` is required in the `config` for datafeeds connected to NS1 monitoring.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -361,7 +403,7 @@ The DataFeed resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The feeds configuration matching the specification in
-`feed_config` from /data/sourcetypes.
+`feed_config` from /data/sourcetypes. `jobid` is required in the `config` for datafeeds connected to NS1 monitoring.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -393,7 +435,7 @@ The DataFeed resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The feeds configuration matching the specification in
-`feed_config` from /data/sourcetypes.
+`feed_config` from /data/sourcetypes. `jobid` is required in the `config` for datafeeds connected to NS1 monitoring.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -425,7 +467,7 @@ The DataFeed resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The feeds configuration matching the specification in
-`feed_config` from /data/sourcetypes.
+`feed_config` from /data/sourcetypes. `jobid` is required in the `config` for datafeeds connected to NS1 monitoring.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -631,7 +673,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The feeds configuration matching the specification in
-`feed_config` from /data/sourcetypes.
+`feed_config` from /data/sourcetypes. `jobid` is required in the `config` for datafeeds connected to NS1 monitoring.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -663,7 +705,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The feeds configuration matching the specification in
-`feed_config` from /data/sourcetypes.
+`feed_config` from /data/sourcetypes. `jobid` is required in the `config` for datafeeds connected to NS1 monitoring.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -695,7 +737,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The feeds configuration matching the specification in
-`feed_config` from /data/sourcetypes.
+`feed_config` from /data/sourcetypes. `jobid` is required in the `config` for datafeeds connected to NS1 monitoring.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -727,7 +769,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The feeds configuration matching the specification in
-`feed_config` from /data/sourcetypes.
+`feed_config` from /data/sourcetypes. `jobid` is required in the `config` for datafeeds connected to NS1 monitoring.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
