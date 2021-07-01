@@ -509,7 +509,7 @@ is not provided, the provider project is used.
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseiammembercondition">Database<wbr>IAMMember<wbr>Condition</a></span>
+        <span class="property-type"><a href="#databaseiammembercondition">Database<wbr>IAMMember<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -940,7 +940,7 @@ is not provided, the provider project is used.
 <a href="#state_condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseiammembercondition">Database<wbr>IAMMember<wbr>Condition</a></span>
+        <span class="property-type"><a href="#databaseiammembercondition">Database<wbr>IAMMember<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

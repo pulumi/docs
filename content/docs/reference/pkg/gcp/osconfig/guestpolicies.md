@@ -1056,7 +1056,7 @@ Structure is documented below.
 <a href="#assignment_go" style="color: inherit; text-decoration: inherit;">Assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesassignment">Guest<wbr>Policies<wbr>Assignment</a></span>
+        <span class="property-type"><a href="#guestpoliciesassignment">Guest<wbr>Policies<wbr>Assignment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the VM instances that are assigned to this policy. This allows you to target sets
 or groups of VM instances by different parameters such as labels, names, OS, or zones.
@@ -1104,7 +1104,7 @@ Structure is documented below.
 <a href="#packagerepositories_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Repositories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepository">[]Guest<wbr>Policies<wbr>Package<wbr>Repository</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepository">[]Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of package repositories to configure on the VM instance.
 This is done before any other configs are applied so they can use these repos.
@@ -1116,7 +1116,7 @@ Structure is documented below.
 <a href="#packages_go" style="color: inherit; text-decoration: inherit;">Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackage">[]Guest<wbr>Policies<wbr>Package</a></span>
+        <span class="property-type"><a href="#guestpoliciespackage">[]Guest<wbr>Policies<wbr>Package<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The software packages to be managed by this policy.
 Structure is documented below.
@@ -1136,7 +1136,7 @@ If it is not provided, the provider project is used.
 <a href="#recipes_go" style="color: inherit; text-decoration: inherit;">Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipe">[]Guest<wbr>Policies<wbr>Recipe</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipe">[]Guest<wbr>Policies<wbr>Recipe<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of Recipes to install on the VM instance.
 Structure is documented below.
@@ -1783,7 +1783,7 @@ Structure is documented below.
 <a href="#state_assignment_go" style="color: inherit; text-decoration: inherit;">Assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesassignment">Guest<wbr>Policies<wbr>Assignment</a></span>
+        <span class="property-type"><a href="#guestpoliciesassignment">Guest<wbr>Policies<wbr>Assignment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the VM instances that are assigned to this policy. This allows you to target sets
 or groups of VM instances by different parameters such as labels, names, OS, or zones.
@@ -1853,7 +1853,7 @@ could potentially have conflicting assignments.
 <a href="#state_packagerepositories_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Repositories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepository">[]Guest<wbr>Policies<wbr>Package<wbr>Repository</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepository">[]Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of package repositories to configure on the VM instance.
 This is done before any other configs are applied so they can use these repos.
@@ -1865,7 +1865,7 @@ Structure is documented below.
 <a href="#state_packages_go" style="color: inherit; text-decoration: inherit;">Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackage">[]Guest<wbr>Policies<wbr>Package</a></span>
+        <span class="property-type"><a href="#guestpoliciespackage">[]Guest<wbr>Policies<wbr>Package<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The software packages to be managed by this policy.
 Structure is documented below.
@@ -1885,7 +1885,7 @@ If it is not provided, the provider project is used.
 <a href="#state_recipes_go" style="color: inherit; text-decoration: inherit;">Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipe">[]Guest<wbr>Policies<wbr>Recipe</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipe">[]Guest<wbr>Policies<wbr>Recipe<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of Recipes to install on the VM instance.
 Structure is documented below.
@@ -2172,7 +2172,7 @@ Structure is documented below.
 <a href="#grouplabels_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesassignmentgrouplabel">List&lt;Guest<wbr>Policies<wbr>Assignment<wbr>Group<wbr>Label<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#guestpoliciesassignmentgrouplabel">List&lt;Guest<wbr>Policies<wbr>Assignment<wbr>Group<wbr>Label&gt;</a></span>
     </dt>
     <dd>{{% md %}}Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups,
 for example "env=prod or env=staging".
@@ -2208,7 +2208,7 @@ Only supported for project-level policies and must reference instances within th
 <a href="#ostypes_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesassignmentostype">List&lt;Guest<wbr>Policies<wbr>Assignment<wbr>Os<wbr>Type<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#guestpoliciesassignmentostype">List&lt;Guest<wbr>Policies<wbr>Assignment<wbr>Os<wbr>Type&gt;</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching at least one of the following OS types.
 VM instances must match all supplied criteria for a given OsType to be included.
@@ -2294,7 +2294,7 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 <a href="#grouplabels_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesassignmentgrouplabel">Guest<wbr>Policies<wbr>Assignment<wbr>Group<wbr>Label<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#guestpoliciesassignmentgrouplabel">Guest<wbr>Policies<wbr>Assignment<wbr>Group<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups,
 for example "env=prod or env=staging".
@@ -2330,7 +2330,7 @@ Only supported for project-level policies and must reference instances within th
 <a href="#ostypes_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesassignmentostype">Guest<wbr>Policies<wbr>Assignment<wbr>Os<wbr>Type<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#guestpoliciesassignmentostype">Guest<wbr>Policies<wbr>Assignment<wbr>Os<wbr>Type[]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching at least one of the following OS types.
 VM instances must match all supplied criteria for a given OsType to be included.
@@ -2355,7 +2355,7 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 <a href="#group_labels_python" style="color: inherit; text-decoration: inherit;">group_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesassignmentgrouplabel">Sequence[Guest<wbr>Policies<wbr>Assignment<wbr>Group<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesassignmentgrouplabel">Sequence[Guest<wbr>Policies<wbr>Assignment<wbr>Group<wbr>Label]</a></span>
     </dt>
     <dd>{{% md %}}Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups,
 for example "env=prod or env=staging".
@@ -2391,7 +2391,7 @@ Only supported for project-level policies and must reference instances within th
 <a href="#os_types_python" style="color: inherit; text-decoration: inherit;">os_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesassignmentostype">Sequence[Guest<wbr>Policies<wbr>Assignment<wbr>Os<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesassignmentostype">Sequence[Guest<wbr>Policies<wbr>Assignment<wbr>Os<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching at least one of the following OS types.
 VM instances must match all supplied criteria for a given OsType to be included.
@@ -2784,7 +2784,7 @@ Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
 <a href="#apt_csharp" style="color: inherit; text-decoration: inherit;">Apt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositoryapt">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Apt<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositoryapt">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Apt</a></span>
     </dt>
     <dd>{{% md %}}An Apt Repository.
 Structure is documented below.
@@ -2794,7 +2794,7 @@ Structure is documented below.
 <a href="#goo_csharp" style="color: inherit; text-decoration: inherit;">Goo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositorygoo">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Goo<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositorygoo">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Goo</a></span>
     </dt>
     <dd>{{% md %}}A Goo Repository.
 Structure is documented below.
@@ -2804,7 +2804,7 @@ Structure is documented below.
 <a href="#yum_csharp" style="color: inherit; text-decoration: inherit;">Yum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositoryyum">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Yum<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositoryyum">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Yum</a></span>
     </dt>
     <dd>{{% md %}}A Yum Repository.
 Structure is documented below.
@@ -2814,7 +2814,7 @@ Structure is documented below.
 <a href="#zypper_csharp" style="color: inherit; text-decoration: inherit;">Zypper</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositoryzypper">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Zypper<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositoryzypper">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Zypper</a></span>
     </dt>
     <dd>{{% md %}}A Zypper Repository.
 Structure is documented below.
@@ -2872,7 +2872,7 @@ Structure is documented below.
 <a href="#apt_nodejs" style="color: inherit; text-decoration: inherit;">apt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositoryapt">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Apt<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositoryapt">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Apt</a></span>
     </dt>
     <dd>{{% md %}}An Apt Repository.
 Structure is documented below.
@@ -2882,7 +2882,7 @@ Structure is documented below.
 <a href="#goo_nodejs" style="color: inherit; text-decoration: inherit;">goo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositorygoo">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Goo<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositorygoo">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Goo</a></span>
     </dt>
     <dd>{{% md %}}A Goo Repository.
 Structure is documented below.
@@ -2892,7 +2892,7 @@ Structure is documented below.
 <a href="#yum_nodejs" style="color: inherit; text-decoration: inherit;">yum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositoryyum">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Yum<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositoryyum">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Yum</a></span>
     </dt>
     <dd>{{% md %}}A Yum Repository.
 Structure is documented below.
@@ -2902,7 +2902,7 @@ Structure is documented below.
 <a href="#zypper_nodejs" style="color: inherit; text-decoration: inherit;">zypper</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositoryzypper">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Zypper<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositoryzypper">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Zypper</a></span>
     </dt>
     <dd>{{% md %}}A Zypper Repository.
 Structure is documented below.
@@ -2916,7 +2916,7 @@ Structure is documented below.
 <a href="#apt_python" style="color: inherit; text-decoration: inherit;">apt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositoryapt">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Apt<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositoryapt">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Apt</a></span>
     </dt>
     <dd>{{% md %}}An Apt Repository.
 Structure is documented below.
@@ -2926,7 +2926,7 @@ Structure is documented below.
 <a href="#goo_python" style="color: inherit; text-decoration: inherit;">goo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositorygoo">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Goo<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositorygoo">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Goo</a></span>
     </dt>
     <dd>{{% md %}}A Goo Repository.
 Structure is documented below.
@@ -2936,7 +2936,7 @@ Structure is documented below.
 <a href="#yum_python" style="color: inherit; text-decoration: inherit;">yum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositoryyum">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Yum<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositoryyum">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Yum</a></span>
     </dt>
     <dd>{{% md %}}A Yum Repository.
 Structure is documented below.
@@ -2946,7 +2946,7 @@ Structure is documented below.
 <a href="#zypper_python" style="color: inherit; text-decoration: inherit;">zypper</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositoryzypper">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Zypper<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositoryzypper">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Zypper</a></span>
     </dt>
     <dd>{{% md %}}A Zypper Repository.
 Structure is documented below.
@@ -3618,7 +3618,7 @@ could potentially have conflicting assignments.
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeartifact">List&lt;Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeartifact">List&lt;Guest<wbr>Policies<wbr>Recipe<wbr>Artifact&gt;</a></span>
     </dt>
     <dd>{{% md %}}Resources available to be used in the steps in the recipe.
 Structure is documented below.
@@ -3643,7 +3643,7 @@ Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 <a href="#installsteps_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstep">List&lt;Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstep">List&lt;Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step&gt;</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation.
 Any steps taken (including partially completed steps) are not rolled back.
@@ -3654,7 +3654,7 @@ Structure is documented below.
 <a href="#updatesteps_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestep">List&lt;Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestep">List&lt;Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step&gt;</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe.
 Any steps taken (including partially completed steps) are not rolled back.
@@ -3762,7 +3762,7 @@ could potentially have conflicting assignments.
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeartifact">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeartifact">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact[]</a></span>
     </dt>
     <dd>{{% md %}}Resources available to be used in the steps in the recipe.
 Structure is documented below.
@@ -3787,7 +3787,7 @@ Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 <a href="#installsteps_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstep">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstep">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step[]</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation.
 Any steps taken (including partially completed steps) are not rolled back.
@@ -3798,7 +3798,7 @@ Structure is documented below.
 <a href="#updatesteps_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestep">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestep">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step[]</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe.
 Any steps taken (including partially completed steps) are not rolled back.
@@ -3834,7 +3834,7 @@ could potentially have conflicting assignments.
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeartifact">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeartifact">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Artifact]</a></span>
     </dt>
     <dd>{{% md %}}Resources available to be used in the steps in the recipe.
 Structure is documented below.
@@ -3859,7 +3859,7 @@ Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 <a href="#install_steps_python" style="color: inherit; text-decoration: inherit;">install_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstep">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstep">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step]</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation.
 Any steps taken (including partially completed steps) are not rolled back.
@@ -3870,7 +3870,7 @@ Structure is documented below.
 <a href="#update_steps_python" style="color: inherit; text-decoration: inherit;">update_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestep">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestep">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step]</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe.
 Any steps taken (including partially completed steps) are not rolled back.
@@ -3917,7 +3917,7 @@ GCS: An object generation number must be specified.
 <a href="#gcs_csharp" style="color: inherit; text-decoration: inherit;">Gcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeartifactgcs">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Gcs<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeartifactgcs">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Gcs</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage artifact.
 Structure is documented below.
@@ -3927,7 +3927,7 @@ Structure is documented below.
 <a href="#remote_csharp" style="color: inherit; text-decoration: inherit;">Remote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeartifactremote">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Remote<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeartifactremote">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Remote</a></span>
     </dt>
     <dd>{{% md %}}A generic remote artifact.
 Structure is documented below.
@@ -4007,7 +4007,7 @@ GCS: An object generation number must be specified.
 <a href="#gcs_nodejs" style="color: inherit; text-decoration: inherit;">gcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeartifactgcs">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Gcs<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeartifactgcs">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Gcs</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage artifact.
 Structure is documented below.
@@ -4017,7 +4017,7 @@ Structure is documented below.
 <a href="#remote_nodejs" style="color: inherit; text-decoration: inherit;">remote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeartifactremote">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Remote<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeartifactremote">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Remote</a></span>
     </dt>
     <dd>{{% md %}}A generic remote artifact.
 Structure is documented below.
@@ -4052,7 +4052,7 @@ GCS: An object generation number must be specified.
 <a href="#gcs_python" style="color: inherit; text-decoration: inherit;">gcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeartifactgcs">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Gcs<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeartifactgcs">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Gcs</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage artifact.
 Structure is documented below.
@@ -4062,7 +4062,7 @@ Structure is documented below.
 <a href="#remote_python" style="color: inherit; text-decoration: inherit;">remote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeartifactremote">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Remote<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeartifactremote">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Remote</a></span>
     </dt>
     <dd>{{% md %}}A generic remote artifact.
 Structure is documented below.
@@ -4314,7 +4314,7 @@ of the steps.
 <a href="#archiveextraction_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Extraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Archive<wbr>Extraction<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Archive<wbr>Extraction</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.
 Structure is documented below.
@@ -4324,7 +4324,7 @@ Structure is documented below.
 <a href="#dpkginstallation_csharp" style="color: inherit; text-decoration: inherit;">Dpkg<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Dpkg<wbr>Installation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Dpkg<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.
 Structure is documented below.
@@ -4334,7 +4334,7 @@ Structure is documented below.
 <a href="#filecopy_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Copy<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Copy</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.
 Structure is documented below.
@@ -4344,7 +4344,7 @@ Structure is documented below.
 <a href="#fileexec_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Exec<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Exec</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.
 Structure is documented below.
@@ -4354,7 +4354,7 @@ Structure is documented below.
 <a href="#msiinstallation_csharp" style="color: inherit; text-decoration: inherit;">Msi<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Msi<wbr>Installation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Msi<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.
 Structure is documented below.
@@ -4364,7 +4364,7 @@ Structure is documented below.
 <a href="#rpminstallation_csharp" style="color: inherit; text-decoration: inherit;">Rpm<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Rpm<wbr>Installation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Rpm<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.
 Structure is documented below.
@@ -4374,7 +4374,7 @@ Structure is documented below.
 <a href="#scriptrun_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Script<wbr>Run<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Script<wbr>Run</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.
 Structure is documented below.
@@ -4462,7 +4462,7 @@ Structure is documented below.
 <a href="#archiveextraction_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Extraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Archive<wbr>Extraction<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Archive<wbr>Extraction</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.
 Structure is documented below.
@@ -4472,7 +4472,7 @@ Structure is documented below.
 <a href="#dpkginstallation_nodejs" style="color: inherit; text-decoration: inherit;">dpkg<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Dpkg<wbr>Installation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Dpkg<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.
 Structure is documented below.
@@ -4482,7 +4482,7 @@ Structure is documented below.
 <a href="#filecopy_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Copy<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Copy</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.
 Structure is documented below.
@@ -4492,7 +4492,7 @@ Structure is documented below.
 <a href="#fileexec_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Exec<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Exec</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.
 Structure is documented below.
@@ -4502,7 +4502,7 @@ Structure is documented below.
 <a href="#msiinstallation_nodejs" style="color: inherit; text-decoration: inherit;">msi<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Msi<wbr>Installation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Msi<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.
 Structure is documented below.
@@ -4512,7 +4512,7 @@ Structure is documented below.
 <a href="#rpminstallation_nodejs" style="color: inherit; text-decoration: inherit;">rpm<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Rpm<wbr>Installation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Rpm<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.
 Structure is documented below.
@@ -4522,7 +4522,7 @@ Structure is documented below.
 <a href="#scriptrun_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Script<wbr>Run<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Script<wbr>Run</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.
 Structure is documented below.
@@ -4536,7 +4536,7 @@ Structure is documented below.
 <a href="#archive_extraction_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>extraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Archive<wbr>Extraction<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Archive<wbr>Extraction</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.
 Structure is documented below.
@@ -4546,7 +4546,7 @@ Structure is documented below.
 <a href="#dpkg_installation_python" style="color: inherit; text-decoration: inherit;">dpkg_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Dpkg<wbr>Installation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Dpkg<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.
 Structure is documented below.
@@ -4556,7 +4556,7 @@ Structure is documented below.
 <a href="#file_copy_python" style="color: inherit; text-decoration: inherit;">file_<wbr>copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Copy<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Copy</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.
 Structure is documented below.
@@ -4566,7 +4566,7 @@ Structure is documented below.
 <a href="#file_exec_python" style="color: inherit; text-decoration: inherit;">file_<wbr>exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Exec<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Exec</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.
 Structure is documented below.
@@ -4576,7 +4576,7 @@ Structure is documented below.
 <a href="#msi_installation_python" style="color: inherit; text-decoration: inherit;">msi_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Msi<wbr>Installation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Msi<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.
 Structure is documented below.
@@ -4586,7 +4586,7 @@ Structure is documented below.
 <a href="#rpm_installation_python" style="color: inherit; text-decoration: inherit;">rpm_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Rpm<wbr>Installation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Rpm<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.
 Structure is documented below.
@@ -4596,7 +4596,7 @@ Structure is documented below.
 <a href="#script_run_python" style="color: inherit; text-decoration: inherit;">script_<wbr>run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Script<wbr>Run<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Script<wbr>Run</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.
 Structure is documented below.
@@ -5458,7 +5458,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#archiveextraction_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Extraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Archive<wbr>Extraction<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Archive<wbr>Extraction</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.
 Structure is documented below.
@@ -5468,7 +5468,7 @@ Structure is documented below.
 <a href="#dpkginstallation_csharp" style="color: inherit; text-decoration: inherit;">Dpkg<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Dpkg<wbr>Installation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Dpkg<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.
 Structure is documented below.
@@ -5478,7 +5478,7 @@ Structure is documented below.
 <a href="#filecopy_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Copy<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Copy</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.
 Structure is documented below.
@@ -5488,7 +5488,7 @@ Structure is documented below.
 <a href="#fileexec_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Exec<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Exec</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.
 Structure is documented below.
@@ -5498,7 +5498,7 @@ Structure is documented below.
 <a href="#msiinstallation_csharp" style="color: inherit; text-decoration: inherit;">Msi<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Msi<wbr>Installation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Msi<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.
 Structure is documented below.
@@ -5508,7 +5508,7 @@ Structure is documented below.
 <a href="#rpminstallation_csharp" style="color: inherit; text-decoration: inherit;">Rpm<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Rpm<wbr>Installation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Rpm<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.
 Structure is documented below.
@@ -5518,7 +5518,7 @@ Structure is documented below.
 <a href="#scriptrun_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Script<wbr>Run<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Script<wbr>Run</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.
 Structure is documented below.
@@ -5606,7 +5606,7 @@ Structure is documented below.
 <a href="#archiveextraction_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Extraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Archive<wbr>Extraction<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Archive<wbr>Extraction</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.
 Structure is documented below.
@@ -5616,7 +5616,7 @@ Structure is documented below.
 <a href="#dpkginstallation_nodejs" style="color: inherit; text-decoration: inherit;">dpkg<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Dpkg<wbr>Installation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Dpkg<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.
 Structure is documented below.
@@ -5626,7 +5626,7 @@ Structure is documented below.
 <a href="#filecopy_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Copy<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Copy</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.
 Structure is documented below.
@@ -5636,7 +5636,7 @@ Structure is documented below.
 <a href="#fileexec_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Exec<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Exec</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.
 Structure is documented below.
@@ -5646,7 +5646,7 @@ Structure is documented below.
 <a href="#msiinstallation_nodejs" style="color: inherit; text-decoration: inherit;">msi<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Msi<wbr>Installation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Msi<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.
 Structure is documented below.
@@ -5656,7 +5656,7 @@ Structure is documented below.
 <a href="#rpminstallation_nodejs" style="color: inherit; text-decoration: inherit;">rpm<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Rpm<wbr>Installation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Rpm<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.
 Structure is documented below.
@@ -5666,7 +5666,7 @@ Structure is documented below.
 <a href="#scriptrun_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Script<wbr>Run<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Script<wbr>Run</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.
 Structure is documented below.
@@ -5680,7 +5680,7 @@ Structure is documented below.
 <a href="#archive_extraction_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>extraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Archive<wbr>Extraction<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Archive<wbr>Extraction</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.
 Structure is documented below.
@@ -5690,7 +5690,7 @@ Structure is documented below.
 <a href="#dpkg_installation_python" style="color: inherit; text-decoration: inherit;">dpkg_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Dpkg<wbr>Installation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Dpkg<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.
 Structure is documented below.
@@ -5700,7 +5700,7 @@ Structure is documented below.
 <a href="#file_copy_python" style="color: inherit; text-decoration: inherit;">file_<wbr>copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Copy<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Copy</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.
 Structure is documented below.
@@ -5710,7 +5710,7 @@ Structure is documented below.
 <a href="#file_exec_python" style="color: inherit; text-decoration: inherit;">file_<wbr>exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Exec<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Exec</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.
 Structure is documented below.
@@ -5720,7 +5720,7 @@ Structure is documented below.
 <a href="#msi_installation_python" style="color: inherit; text-decoration: inherit;">msi_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Msi<wbr>Installation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Msi<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.
 Structure is documented below.
@@ -5730,7 +5730,7 @@ Structure is documented below.
 <a href="#rpm_installation_python" style="color: inherit; text-decoration: inherit;">rpm_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Rpm<wbr>Installation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Rpm<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.
 Structure is documented below.
@@ -5740,7 +5740,7 @@ Structure is documented below.
 <a href="#script_run_python" style="color: inherit; text-decoration: inherit;">script_<wbr>run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Script<wbr>Run<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Script<wbr>Run</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.
 Structure is documented below.

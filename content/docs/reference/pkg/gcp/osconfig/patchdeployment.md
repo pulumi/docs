@@ -1102,7 +1102,7 @@ Structure is documented below.
 <a href="#instancefilter_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter</a></span>
+        <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
@@ -1145,7 +1145,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#onetimeschedule_go" style="color: inherit; text-decoration: inherit;">One<wbr>Time<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
@@ -1155,7 +1155,7 @@ Structure is documented below.
 <a href="#patchconfig_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
@@ -1175,7 +1175,7 @@ If it is not provided, the provider project is used.
 <a href="#recurringschedule_go" style="color: inherit; text-decoration: inherit;">Recurring<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
@@ -1185,7 +1185,7 @@ Structure is documented below.
 <a href="#rollout_go" style="color: inherit; text-decoration: inherit;">Rollout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout</a></span>
+        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
@@ -1917,7 +1917,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#state_instancefilter_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter</a></span>
+        <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
@@ -1948,7 +1948,7 @@ projects/{project_id}/patchDeployments/{patchDeploymentId}.
 <a href="#state_onetimeschedule_go" style="color: inherit; text-decoration: inherit;">One<wbr>Time<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
@@ -1958,7 +1958,7 @@ Structure is documented below.
 <a href="#state_patchconfig_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
@@ -1992,7 +1992,7 @@ If it is not provided, the provider project is used.
 <a href="#state_recurringschedule_go" style="color: inherit; text-decoration: inherit;">Recurring<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
@@ -2002,7 +2002,7 @@ Structure is documented below.
 <a href="#state_rollout_go" style="color: inherit; text-decoration: inherit;">Rollout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout</a></span>
+        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
@@ -2322,7 +2322,7 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 <a href="#grouplabels_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentinstancefiltergrouplabel">List&lt;Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#patchdeploymentinstancefiltergrouplabel">List&lt;Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label&gt;</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
 Structure is documented below.
@@ -2428,7 +2428,7 @@ VMs when targeting configs, for example prefix="prod-".
 <a href="#grouplabels_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentinstancefiltergrouplabel">Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#patchdeploymentinstancefiltergrouplabel">Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
 Structure is documented below.
@@ -2481,7 +2481,7 @@ VMs when targeting configs, for example prefix="prod-".
 <a href="#group_labels_python" style="color: inherit; text-decoration: inherit;">group_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentinstancefiltergrouplabel">Sequence[Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentinstancefiltergrouplabel">Sequence[Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
 Structure is documented below.
@@ -2639,7 +2639,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 <a href="#apt_csharp" style="color: inherit; text-decoration: inherit;">Apt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigapt">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Apt<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigapt">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Apt</a></span>
     </dt>
     <dd>{{% md %}}Apt update settings. Use this setting to override the default apt patch rules.
 Structure is documented below.
@@ -2649,7 +2649,7 @@ Structure is documented below.
 <a href="#goo_csharp" style="color: inherit; text-decoration: inherit;">Goo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfiggoo">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Goo<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfiggoo">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Goo</a></span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 Structure is documented below.
@@ -2659,7 +2659,7 @@ Structure is documented below.
 <a href="#poststep_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run after the patch update.
 Structure is documented below.
@@ -2669,7 +2669,7 @@ Structure is documented below.
 <a href="#prestep_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigprestep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigprestep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run before the patch update.
 Structure is documented below.
@@ -2689,7 +2689,7 @@ Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
 <a href="#windowsupdate_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigwindowsupdate">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Windows<wbr>Update<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigwindowsupdate">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Windows<wbr>Update</a></span>
     </dt>
     <dd>{{% md %}}Windows update settings. Use this setting to override the default Windows patch rules.
 Structure is documented below.
@@ -2699,7 +2699,7 @@ Structure is documented below.
 <a href="#yum_csharp" style="color: inherit; text-decoration: inherit;">Yum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigyum">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Yum<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigyum">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Yum</a></span>
     </dt>
     <dd>{{% md %}}Yum update settings. Use this setting to override the default yum patch rules.
 Structure is documented below.
@@ -2709,7 +2709,7 @@ Structure is documented below.
 <a href="#zypper_csharp" style="color: inherit; text-decoration: inherit;">Zypper</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigzypper">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Zypper<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigzypper">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Zypper</a></span>
     </dt>
     <dd>{{% md %}}zypper update settings. Use this setting to override the default zypper patch rules.
 Structure is documented below.
@@ -2807,7 +2807,7 @@ Structure is documented below.
 <a href="#apt_nodejs" style="color: inherit; text-decoration: inherit;">apt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigapt">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Apt<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigapt">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Apt</a></span>
     </dt>
     <dd>{{% md %}}Apt update settings. Use this setting to override the default apt patch rules.
 Structure is documented below.
@@ -2817,7 +2817,7 @@ Structure is documented below.
 <a href="#goo_nodejs" style="color: inherit; text-decoration: inherit;">goo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfiggoo">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Goo<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfiggoo">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Goo</a></span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 Structure is documented below.
@@ -2827,7 +2827,7 @@ Structure is documented below.
 <a href="#poststep_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run after the patch update.
 Structure is documented below.
@@ -2837,7 +2837,7 @@ Structure is documented below.
 <a href="#prestep_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigprestep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigprestep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run before the patch update.
 Structure is documented below.
@@ -2857,7 +2857,7 @@ Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
 <a href="#windowsupdate_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigwindowsupdate">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Windows<wbr>Update<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigwindowsupdate">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Windows<wbr>Update</a></span>
     </dt>
     <dd>{{% md %}}Windows update settings. Use this setting to override the default Windows patch rules.
 Structure is documented below.
@@ -2867,7 +2867,7 @@ Structure is documented below.
 <a href="#yum_nodejs" style="color: inherit; text-decoration: inherit;">yum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigyum">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Yum<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigyum">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Yum</a></span>
     </dt>
     <dd>{{% md %}}Yum update settings. Use this setting to override the default yum patch rules.
 Structure is documented below.
@@ -2877,7 +2877,7 @@ Structure is documented below.
 <a href="#zypper_nodejs" style="color: inherit; text-decoration: inherit;">zypper</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigzypper">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Zypper<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigzypper">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Zypper</a></span>
     </dt>
     <dd>{{% md %}}zypper update settings. Use this setting to override the default zypper patch rules.
 Structure is documented below.
@@ -2891,7 +2891,7 @@ Structure is documented below.
 <a href="#apt_python" style="color: inherit; text-decoration: inherit;">apt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigapt">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Apt<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigapt">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Apt</a></span>
     </dt>
     <dd>{{% md %}}Apt update settings. Use this setting to override the default apt patch rules.
 Structure is documented below.
@@ -2901,7 +2901,7 @@ Structure is documented below.
 <a href="#goo_python" style="color: inherit; text-decoration: inherit;">goo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfiggoo">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Goo<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfiggoo">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Goo</a></span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 Structure is documented below.
@@ -2911,7 +2911,7 @@ Structure is documented below.
 <a href="#post_step_python" style="color: inherit; text-decoration: inherit;">post_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run after the patch update.
 Structure is documented below.
@@ -2921,7 +2921,7 @@ Structure is documented below.
 <a href="#pre_step_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigprestep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigprestep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run before the patch update.
 Structure is documented below.
@@ -2941,7 +2941,7 @@ Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
 <a href="#windows_update_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigwindowsupdate">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Windows<wbr>Update<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigwindowsupdate">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Windows<wbr>Update</a></span>
     </dt>
     <dd>{{% md %}}Windows update settings. Use this setting to override the default Windows patch rules.
 Structure is documented below.
@@ -2951,7 +2951,7 @@ Structure is documented below.
 <a href="#yum_python" style="color: inherit; text-decoration: inherit;">yum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigyum">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Yum<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigyum">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Yum</a></span>
     </dt>
     <dd>{{% md %}}Yum update settings. Use this setting to override the default yum patch rules.
 Structure is documented below.
@@ -2961,7 +2961,7 @@ Structure is documented below.
 <a href="#zypper_python" style="color: inherit; text-decoration: inherit;">zypper</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigzypper">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Zypper<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigzypper">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Zypper</a></span>
     </dt>
     <dd>{{% md %}}zypper update settings. Use this setting to override the default zypper patch rules.
 Structure is documented below.
@@ -3169,7 +3169,7 @@ Possible values are `DIST` and `UPGRADE`.
 <a href="#linuxexecstepconfig_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3179,7 +3179,7 @@ Structure is documented below.
 <a href="#windowsexecstepconfig_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3217,7 +3217,7 @@ Structure is documented below.
 <a href="#linuxexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3227,7 +3227,7 @@ Structure is documented below.
 <a href="#windowsexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3241,7 +3241,7 @@ Structure is documented below.
 <a href="#linux_exec_step_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>exec_<wbr>step_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3251,7 +3251,7 @@ Structure is documented below.
 <a href="#windows_exec_step_config_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>exec_<wbr>step_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3276,7 +3276,7 @@ Structure is documented below.
 <a href="#gcsobject_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -3362,7 +3362,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -3405,7 +3405,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcs_object_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -3576,7 +3576,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcsobject_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -3662,7 +3662,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -3705,7 +3705,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcs_object_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -3867,7 +3867,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#linuxexecstepconfig_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3877,7 +3877,7 @@ Structure is documented below.
 <a href="#windowsexecstepconfig_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3915,7 +3915,7 @@ Structure is documented below.
 <a href="#linuxexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3925,7 +3925,7 @@ Structure is documented below.
 <a href="#windowsexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3939,7 +3939,7 @@ Structure is documented below.
 <a href="#linux_exec_step_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>exec_<wbr>step_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3949,7 +3949,7 @@ Structure is documented below.
 <a href="#windows_exec_step_config_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>exec_<wbr>step_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3974,7 +3974,7 @@ Structure is documented below.
 <a href="#gcsobject_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -4060,7 +4060,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -4103,7 +4103,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcs_object_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -4274,7 +4274,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcsobject_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -4360,7 +4360,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -4403,7 +4403,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcs_object_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -5107,7 +5107,7 @@ This field must not be used with other patch configurations.
 <a href="#timeofday_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Of<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimeofday">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Of<wbr>Day<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimeofday">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Of<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}Time of the day to run a recurring deployment.
 Structure is documented below.
@@ -5117,7 +5117,7 @@ Structure is documented below.
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimezone">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Zone<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimezone">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Zone</a></span>
     </dt>
     <dd>{{% md %}}Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
 determined by the chosen time zone.
@@ -5149,7 +5149,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#monthly_csharp" style="color: inherit; text-decoration: inherit;">Monthly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly</a></span>
     </dt>
     <dd>{{% md %}}Schedule with monthly executions.
 Structure is documented below.
@@ -5180,7 +5180,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#weekly_csharp" style="color: inherit; text-decoration: inherit;">Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringscheduleweekly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Weekly<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringscheduleweekly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Weekly</a></span>
     </dt>
     <dd>{{% md %}}Schedule with weekly executions.
 Structure is documented below.
@@ -5281,7 +5281,7 @@ Structure is documented below.
 <a href="#timeofday_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Of<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimeofday">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Of<wbr>Day<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimeofday">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Of<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}Time of the day to run a recurring deployment.
 Structure is documented below.
@@ -5291,7 +5291,7 @@ Structure is documented below.
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimezone">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Zone<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimezone">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Zone</a></span>
     </dt>
     <dd>{{% md %}}Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
 determined by the chosen time zone.
@@ -5323,7 +5323,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#monthly_nodejs" style="color: inherit; text-decoration: inherit;">monthly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly</a></span>
     </dt>
     <dd>{{% md %}}Schedule with monthly executions.
 Structure is documented below.
@@ -5354,7 +5354,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#weekly_nodejs" style="color: inherit; text-decoration: inherit;">weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringscheduleweekly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Weekly<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringscheduleweekly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Weekly</a></span>
     </dt>
     <dd>{{% md %}}Schedule with weekly executions.
 Structure is documented below.
@@ -5368,7 +5368,7 @@ Structure is documented below.
 <a href="#time_of_day_python" style="color: inherit; text-decoration: inherit;">time_<wbr>of_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimeofday">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Of<wbr>Day<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimeofday">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Of<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}Time of the day to run a recurring deployment.
 Structure is documented below.
@@ -5378,7 +5378,7 @@ Structure is documented below.
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimezone">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Zone<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimezone">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Zone</a></span>
     </dt>
     <dd>{{% md %}}Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
 determined by the chosen time zone.
@@ -5410,7 +5410,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#monthly_python" style="color: inherit; text-decoration: inherit;">monthly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly</a></span>
     </dt>
     <dd>{{% md %}}Schedule with monthly executions.
 Structure is documented below.
@@ -5441,7 +5441,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#weekly_python" style="color: inherit; text-decoration: inherit;">weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringscheduleweekly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Weekly<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringscheduleweekly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Weekly</a></span>
     </dt>
     <dd>{{% md %}}Schedule with weekly executions.
 Structure is documented below.
@@ -5468,7 +5468,7 @@ will not run in February, April, June, etc.
 <a href="#weekdayofmonth_csharp" style="color: inherit; text-decoration: inherit;">Week<wbr>Day<wbr>Of<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthlyweekdayofmonth">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Week<wbr>Day<wbr>Of<wbr>Month<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthlyweekdayofmonth">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Week<wbr>Day<wbr>Of<wbr>Month</a></span>
     </dt>
     <dd>{{% md %}}Week day in a month.
 Structure is documented below.
@@ -5518,7 +5518,7 @@ will not run in February, April, June, etc.
 <a href="#weekdayofmonth_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Day<wbr>Of<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthlyweekdayofmonth">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Week<wbr>Day<wbr>Of<wbr>Month<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthlyweekdayofmonth">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Week<wbr>Day<wbr>Of<wbr>Month</a></span>
     </dt>
     <dd>{{% md %}}Week day in a month.
 Structure is documented below.
@@ -5543,7 +5543,7 @@ will not run in February, April, June, etc.
 <a href="#week_day_of_month_python" style="color: inherit; text-decoration: inherit;">week_<wbr>day_<wbr>of_<wbr>month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthlyweekdayofmonth">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Week<wbr>Day<wbr>Of<wbr>Month<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthlyweekdayofmonth">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Week<wbr>Day<wbr>Of<wbr>Month</a></span>
     </dt>
     <dd>{{% md %}}Week day in a month.
 Structure is documented below.
@@ -5967,7 +5967,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 <a href="#disruptionbudget_csharp" style="color: inherit; text-decoration: inherit;">Disruption<wbr>Budget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget</a></span>
     </dt>
     <dd>{{% md %}}The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up.
 During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps.
@@ -6023,7 +6023,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
 <a href="#disruptionbudget_nodejs" style="color: inherit; text-decoration: inherit;">disruption<wbr>Budget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget</a></span>
     </dt>
     <dd>{{% md %}}The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up.
 During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps.
@@ -6051,7 +6051,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
 <a href="#disruption_budget_python" style="color: inherit; text-decoration: inherit;">disruption_<wbr>budget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget</a></span>
     </dt>
     <dd>{{% md %}}The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up.
 During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps.

@@ -446,7 +446,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
 <a href="#arguments_go" style="color: inherit; text-decoration: inherit;">Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routineargument">[]Routine<wbr>Argument</a></span>
+        <span class="property-type"><a href="#routineargument">[]Routine<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input/output argument of a function or a stored procedure.
 Structure is documented below.
@@ -1173,7 +1173,7 @@ Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
 <a href="#state_arguments_go" style="color: inherit; text-decoration: inherit;">Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routineargument">[]Routine<wbr>Argument</a></span>
+        <span class="property-type"><a href="#routineargument">[]Routine<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input/output argument of a function or a stored procedure.
 Structure is documented below.

@@ -350,7 +350,7 @@ Deprecated in favor of `project_id`
 <a href="#enrolledservices_go" style="color: inherit; text-decoration: inherit;">Enrolled<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessapprovalsettingsenrolledservice">[]Access<wbr>Approval<wbr>Settings<wbr>Enrolled<wbr>Service</a></span>
+        <span class="property-type"><a href="#accessapprovalsettingsenrolledservice">[]Access<wbr>Approval<wbr>Settings<wbr>Enrolled<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of Google Cloud Services for which the given resource has Access Approval enrolled.
 Access requests for the resource given by name against any of these services contained here will be required
@@ -833,7 +833,7 @@ of the Project.
 <a href="#state_enrolledservices_go" style="color: inherit; text-decoration: inherit;">Enrolled<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessapprovalsettingsenrolledservice">[]Access<wbr>Approval<wbr>Settings<wbr>Enrolled<wbr>Service</a></span>
+        <span class="property-type"><a href="#accessapprovalsettingsenrolledservice">[]Access<wbr>Approval<wbr>Settings<wbr>Enrolled<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of Google Cloud Services for which the given resource has Access Approval enrolled.
 Access requests for the resource given by name against any of these services contained here will be required

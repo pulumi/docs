@@ -263,7 +263,7 @@ If it is not provided, the provider project is used.
 <a href="#openapidocuments_go" style="color: inherit; text-decoration: inherit;">Openapi<wbr>Documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfigopenapidocument">[]Api<wbr>Config<wbr>Openapi<wbr>Document</a></span>
+        <span class="property-type"><a href="#apiconfigopenapidocument">[]Api<wbr>Config<wbr>Openapi<wbr>Document<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An OpenAPI Specification Document describing an API.
 Structure is documented below.
@@ -301,7 +301,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
 <a href="#gatewayconfig_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfiggatewayconfig">Api<wbr>Config<wbr>Gateway<wbr>Config</a></span>
+        <span class="property-type"><a href="#apiconfiggatewayconfig">Api<wbr>Config<wbr>Gateway<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Immutable. Gateway specific configuration.
 If not specified, backend authentication will be set to use OIDC authentication using the default compute service account
@@ -895,7 +895,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
 <a href="#state_gatewayconfig_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfiggatewayconfig">Api<wbr>Config<wbr>Gateway<wbr>Config</a></span>
+        <span class="property-type"><a href="#apiconfiggatewayconfig">Api<wbr>Config<wbr>Gateway<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Immutable. Gateway specific configuration.
 If not specified, backend authentication will be set to use OIDC authentication using the default compute service account
@@ -924,7 +924,7 @@ Structure is documented below.
 <a href="#state_openapidocuments_go" style="color: inherit; text-decoration: inherit;">Openapi<wbr>Documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfigopenapidocument">[]Api<wbr>Config<wbr>Openapi<wbr>Document</a></span>
+        <span class="property-type"><a href="#apiconfigopenapidocument">[]Api<wbr>Config<wbr>Openapi<wbr>Document<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An OpenAPI Specification Document describing an API.
 Structure is documented below.
@@ -1166,7 +1166,7 @@ If it is not provided, the provider project is used.
 <a href="#backendconfig_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfiggatewayconfigbackendconfig">Api<wbr>Config<wbr>Gateway<wbr>Config<wbr>Backend<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiconfiggatewayconfigbackendconfig">Api<wbr>Config<wbr>Gateway<wbr>Config<wbr>Backend<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Backend settings that are applied to all backends of the Gateway.
 Structure is documented below.
@@ -1194,7 +1194,7 @@ Structure is documented below.
 <a href="#backendconfig_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfiggatewayconfigbackendconfig">Api<wbr>Config<wbr>Gateway<wbr>Config<wbr>Backend<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiconfiggatewayconfigbackendconfig">Api<wbr>Config<wbr>Gateway<wbr>Config<wbr>Backend<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Backend settings that are applied to all backends of the Gateway.
 Structure is documented below.
@@ -1208,7 +1208,7 @@ Structure is documented below.
 <a href="#backend_config_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfiggatewayconfigbackendconfig">Api<wbr>Config<wbr>Gateway<wbr>Config<wbr>Backend<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiconfiggatewayconfigbackendconfig">Api<wbr>Config<wbr>Gateway<wbr>Config<wbr>Backend<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Backend settings that are applied to all backends of the Gateway.
 Structure is documented below.
@@ -1282,7 +1282,7 @@ Structure is documented below.
 <a href="#document_csharp" style="color: inherit; text-decoration: inherit;">Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfigopenapidocumentdocument">Api<wbr>Config<wbr>Openapi<wbr>Document<wbr>Document<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiconfigopenapidocumentdocument">Api<wbr>Config<wbr>Openapi<wbr>Document<wbr>Document</a></span>
     </dt>
     <dd>{{% md %}}The OpenAPI Specification document file.
 Structure is documented below.
@@ -1310,7 +1310,7 @@ Structure is documented below.
 <a href="#document_nodejs" style="color: inherit; text-decoration: inherit;">document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfigopenapidocumentdocument">Api<wbr>Config<wbr>Openapi<wbr>Document<wbr>Document<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiconfigopenapidocumentdocument">Api<wbr>Config<wbr>Openapi<wbr>Document<wbr>Document</a></span>
     </dt>
     <dd>{{% md %}}The OpenAPI Specification document file.
 Structure is documented below.
@@ -1324,7 +1324,7 @@ Structure is documented below.
 <a href="#document_python" style="color: inherit; text-decoration: inherit;">document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfigopenapidocumentdocument">Api<wbr>Config<wbr>Openapi<wbr>Document<wbr>Document<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiconfigopenapidocumentdocument">Api<wbr>Config<wbr>Openapi<wbr>Document<wbr>Document</a></span>
     </dt>
     <dd>{{% md %}}The OpenAPI Specification document file.
 Structure is documented below.

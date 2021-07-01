@@ -550,7 +550,7 @@ If it is not provided, the provider project is used.
 <a href="#speechtotextsettings_go" style="color: inherit; text-decoration: inherit;">Speech<wbr>To<wbr>Text<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cxagentspeechtotextsettings">Cx<wbr>Agent<wbr>Speech<wbr>To<wbr>Text<wbr>Settings</a></span>
+        <span class="property-type"><a href="#cxagentspeechtotextsettings">Cx<wbr>Agent<wbr>Speech<wbr>To<wbr>Text<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings related to speech recognition.
 Structure is documented below.
@@ -1319,7 +1319,7 @@ If it is not provided, the provider project is used.
 <a href="#state_speechtotextsettings_go" style="color: inherit; text-decoration: inherit;">Speech<wbr>To<wbr>Text<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cxagentspeechtotextsettings">Cx<wbr>Agent<wbr>Speech<wbr>To<wbr>Text<wbr>Settings</a></span>
+        <span class="property-type"><a href="#cxagentspeechtotextsettings">Cx<wbr>Agent<wbr>Speech<wbr>To<wbr>Text<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings related to speech recognition.
 Structure is documented below.

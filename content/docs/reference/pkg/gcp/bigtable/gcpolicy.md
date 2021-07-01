@@ -446,7 +446,7 @@ The GCPolicy resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd><dt class="property-optional"
@@ -455,7 +455,7 @@ The GCPolicy resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#maxversions_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxversion">[]GCPolicy<wbr>Max<wbr>Version</a></span>
+        <span class="property-type"><a href="#gcpolicymaxversion">[]GCPolicy<wbr>Max<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all versions of a cell except for the most recent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -892,7 +892,7 @@ The following state arguments are supported:
 <a href="#state_maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd><dt class="property-optional"
@@ -901,7 +901,7 @@ The following state arguments are supported:
 <a href="#state_maxversions_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxversion">[]GCPolicy<wbr>Max<wbr>Version</a></span>
+        <span class="property-type"><a href="#gcpolicymaxversion">[]GCPolicy<wbr>Max<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all versions of a cell except for the most recent.
 {{% /md %}}</dd><dt class="property-optional"

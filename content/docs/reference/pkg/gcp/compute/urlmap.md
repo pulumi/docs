@@ -3190,7 +3190,7 @@ Structure is documented below.
 <a href="#defaultrouteaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
 advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
@@ -3213,7 +3213,7 @@ Structure is documented below.
 <a href="#defaulturlredirect_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaulturlredirect">URLMap<wbr>Default<wbr>Url<wbr>Redirect</a></span>
+        <span class="property-type"><a href="#urlmapdefaulturlredirect">URLMap<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
@@ -3234,7 +3234,7 @@ Structure is documented below.
 <a href="#headeraction_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action</a></span>
+        <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -3247,7 +3247,7 @@ Structure is documented below.
 <a href="#hostrules_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaphostrule">[]URLMap<wbr>Host<wbr>Rule</a></span>
+        <span class="property-type"><a href="#urlmaphostrule">[]URLMap<wbr>Host<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 Structure is documented below.
@@ -3267,7 +3267,7 @@ request, in the absence of which the request match fails.
 <a href="#pathmatchers_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcher">[]URLMap<wbr>Path<wbr>Matcher</a></span>
+        <span class="property-type"><a href="#urlmappathmatcher">[]URLMap<wbr>Path<wbr>Matcher<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
@@ -3287,7 +3287,7 @@ If it is not provided, the provider project is used.
 <a href="#tests_go" style="color: inherit; text-decoration: inherit;">Tests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaptest">[]URLMap<wbr>Test</a></span>
+        <span class="property-type"><a href="#urlmaptest">[]URLMap<wbr>Test<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will
 succeed only if all of the test cases pass. You can specify a maximum of 100
@@ -4025,7 +4025,7 @@ Structure is documented below.
 <a href="#state_defaultrouteaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
 advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
@@ -4048,7 +4048,7 @@ Structure is documented below.
 <a href="#state_defaulturlredirect_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaulturlredirect">URLMap<wbr>Default<wbr>Url<wbr>Redirect</a></span>
+        <span class="property-type"><a href="#urlmapdefaulturlredirect">URLMap<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
@@ -4078,7 +4078,7 @@ Structure is documented below.
 <a href="#state_headeraction_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action</a></span>
+        <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -4091,7 +4091,7 @@ Structure is documented below.
 <a href="#state_hostrules_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaphostrule">[]URLMap<wbr>Host<wbr>Rule</a></span>
+        <span class="property-type"><a href="#urlmaphostrule">[]URLMap<wbr>Host<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 Structure is documented below.
@@ -4120,7 +4120,7 @@ request, in the absence of which the request match fails.
 <a href="#state_pathmatchers_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcher">[]URLMap<wbr>Path<wbr>Matcher</a></span>
+        <span class="property-type"><a href="#urlmappathmatcher">[]URLMap<wbr>Path<wbr>Matcher<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
@@ -4149,7 +4149,7 @@ If it is not provided, the provider project is used.
 <a href="#state_tests_go" style="color: inherit; text-decoration: inherit;">Tests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaptest">[]URLMap<wbr>Test</a></span>
+        <span class="property-type"><a href="#urlmaptest">[]URLMap<wbr>Test<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will
 succeed only if all of the test cases pass. You can specify a maximum of 100
@@ -4474,7 +4474,7 @@ Structure is documented below.
 <a href="#corspolicy_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactioncorspolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactioncorspolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -4485,7 +4485,7 @@ Structure is documented below.
 <a href="#faultinjectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Fault<wbr>Injection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -4499,7 +4499,7 @@ Structure is documented below.
 <a href="#requestmirrorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Mirror<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -4511,7 +4511,7 @@ Structure is documented below.
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -4521,7 +4521,7 @@ Structure is documented below.
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactiontimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactiontimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -4533,7 +4533,7 @@ Structure is documented below.
 <a href="#urlrewrite_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionurlrewrite">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionurlrewrite">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -4543,7 +4543,7 @@ Structure is documented below.
 <a href="#weightedbackendservices_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Backend<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendservice">List&lt;URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendservice">List&lt;URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -4652,7 +4652,7 @@ Structure is documented below.
 <a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactioncorspolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactioncorspolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -4663,7 +4663,7 @@ Structure is documented below.
 <a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -4677,7 +4677,7 @@ Structure is documented below.
 <a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -4689,7 +4689,7 @@ Structure is documented below.
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -4699,7 +4699,7 @@ Structure is documented below.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactiontimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactiontimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -4711,7 +4711,7 @@ Structure is documented below.
 <a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionurlrewrite">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionurlrewrite">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -4721,7 +4721,7 @@ Structure is documented below.
 <a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendservice">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendservice">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -4741,7 +4741,7 @@ Structure is documented below.
 <a href="#cors_policy_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactioncorspolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactioncorspolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -4752,7 +4752,7 @@ Structure is documented below.
 <a href="#fault_injection_policy_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>injection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -4766,7 +4766,7 @@ Structure is documented below.
 <a href="#request_mirror_policy_python" style="color: inherit; text-decoration: inherit;">request_<wbr>mirror_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -4778,7 +4778,7 @@ Structure is documented below.
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -4788,7 +4788,7 @@ Structure is documented below.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactiontimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactiontimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -4800,7 +4800,7 @@ Structure is documented below.
 <a href="#url_rewrite_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionurlrewrite">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionurlrewrite">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -4810,7 +4810,7 @@ Structure is documented below.
 <a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendservice">Sequence[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendservice">Sequence[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -5158,7 +5158,7 @@ This translates to the Access-Control-Max-Age header.
 <a href="#abort_csharp" style="color: inherit; text-decoration: inherit;">Abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -5168,7 +5168,7 @@ Structure is documented below.
 <a href="#delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -5206,7 +5206,7 @@ Structure is documented below.
 <a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -5216,7 +5216,7 @@ Structure is documented below.
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -5230,7 +5230,7 @@ Structure is documented below.
 <a href="#abort_python" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -5240,7 +5240,7 @@ Structure is documented below.
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -5354,7 +5354,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixeddelay_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -5402,7 +5402,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -5426,7 +5426,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixed_delay_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -5613,7 +5613,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#pertrytimeout_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Try<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -5709,7 +5709,7 @@ This reset type indicates that it is safe to retry.
 <a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -5757,7 +5757,7 @@ This reset type indicates that it is safe to retry.
 <a href="#per_try_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>try_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -6109,7 +6109,7 @@ The value must be between 1 and 1024 characters.
 <a href="#headeraction_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -6189,7 +6189,7 @@ The value must be between 0 and 1000
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -6229,7 +6229,7 @@ The value must be between 0 and 1000
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -6262,7 +6262,7 @@ The value must be between 0 and 1000
 <a href="#requestheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add&gt;</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -6282,7 +6282,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add&gt;</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -6350,7 +6350,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -6370,7 +6370,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -6394,7 +6394,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -6414,7 +6414,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -7022,7 +7022,7 @@ the request method will be retained.
 <a href="#requestheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add&gt;</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -7042,7 +7042,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmapheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add&gt;</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -7110,7 +7110,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -7130,7 +7130,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderactionresponseheaderstoadd">URLMap<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmapheaderactionresponseheaderstoadd">URLMap<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -7154,7 +7154,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -7174,7 +7174,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -7608,7 +7608,7 @@ request, in the absence of which the request match fails.
 <a href="#defaultrouteaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
 advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
@@ -7631,7 +7631,7 @@ Structure is documented below.
 <a href="#defaulturlredirect_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaulturlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaulturlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
@@ -7652,7 +7652,7 @@ Structure is documented below.
 <a href="#headeraction_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -7665,7 +7665,7 @@ Structure is documented below.
 <a href="#pathrules_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrule">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrule">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of path rules. Use this list instead of routeRules when routing based
 on simple path matching is all that's required. The order by which path rules
@@ -7680,7 +7680,7 @@ Structure is documented below.
 <a href="#routerules_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterule">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterule">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of ordered HTTP route rules. Use this list instead of pathRules when
 advanced route matching and routing actions are desired. The order of specifying
@@ -7810,7 +7810,7 @@ request, in the absence of which the request match fails.
 <a href="#defaultrouteaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
 advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
@@ -7833,7 +7833,7 @@ Structure is documented below.
 <a href="#defaulturlredirect_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaulturlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaulturlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
@@ -7854,7 +7854,7 @@ Structure is documented below.
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -7867,7 +7867,7 @@ Structure is documented below.
 <a href="#pathrules_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrule">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrule">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The list of path rules. Use this list instead of routeRules when routing based
 on simple path matching is all that's required. The order by which path rules
@@ -7882,7 +7882,7 @@ Structure is documented below.
 <a href="#routerules_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterule">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterule">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The list of ordered HTTP route rules. Use this list instead of pathRules when
 advanced route matching and routing actions are desired. The order of specifying
@@ -7911,7 +7911,7 @@ request, in the absence of which the request match fails.
 <a href="#default_route_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
 advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
@@ -7934,7 +7934,7 @@ Structure is documented below.
 <a href="#default_url_redirect_python" style="color: inherit; text-decoration: inherit;">default_<wbr>url_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaulturlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaulturlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
@@ -7955,7 +7955,7 @@ Structure is documented below.
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -7968,7 +7968,7 @@ Structure is documented below.
 <a href="#path_rules_python" style="color: inherit; text-decoration: inherit;">path_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrule">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrule">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The list of path rules. Use this list instead of routeRules when routing based
 on simple path matching is all that's required. The order by which path rules
@@ -7983,7 +7983,7 @@ Structure is documented below.
 <a href="#route_rules_python" style="color: inherit; text-decoration: inherit;">route_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterule">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterule">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The list of ordered HTTP route rules. Use this list instead of pathRules when
 advanced route matching and routing actions are desired. The order of specifying
@@ -8004,7 +8004,7 @@ Structure is documented below.
 <a href="#corspolicy_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -8015,7 +8015,7 @@ Structure is documented below.
 <a href="#faultinjectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Fault<wbr>Injection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -8029,7 +8029,7 @@ Structure is documented below.
 <a href="#requestmirrorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Mirror<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -8041,7 +8041,7 @@ Structure is documented below.
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -8051,7 +8051,7 @@ Structure is documented below.
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -8063,7 +8063,7 @@ Structure is documented below.
 <a href="#urlrewrite_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -8073,7 +8073,7 @@ Structure is documented below.
 <a href="#weightedbackendservices_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Backend<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendservice">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendservice">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -8182,7 +8182,7 @@ Structure is documented below.
 <a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -8193,7 +8193,7 @@ Structure is documented below.
 <a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -8207,7 +8207,7 @@ Structure is documented below.
 <a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -8219,7 +8219,7 @@ Structure is documented below.
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -8229,7 +8229,7 @@ Structure is documented below.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -8241,7 +8241,7 @@ Structure is documented below.
 <a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -8251,7 +8251,7 @@ Structure is documented below.
 <a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -8271,7 +8271,7 @@ Structure is documented below.
 <a href="#cors_policy_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -8282,7 +8282,7 @@ Structure is documented below.
 <a href="#fault_injection_policy_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>injection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -8296,7 +8296,7 @@ Structure is documented below.
 <a href="#request_mirror_policy_python" style="color: inherit; text-decoration: inherit;">request_<wbr>mirror_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -8308,7 +8308,7 @@ Structure is documented below.
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -8318,7 +8318,7 @@ Structure is documented below.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -8330,7 +8330,7 @@ Structure is documented below.
 <a href="#url_rewrite_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -8340,7 +8340,7 @@ Structure is documented below.
 <a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendservice">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendservice">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -8688,7 +8688,7 @@ This translates to the Access-Control-Max-Age header.
 <a href="#abort_csharp" style="color: inherit; text-decoration: inherit;">Abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -8698,7 +8698,7 @@ Structure is documented below.
 <a href="#delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -8736,7 +8736,7 @@ Structure is documented below.
 <a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -8746,7 +8746,7 @@ Structure is documented below.
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -8760,7 +8760,7 @@ Structure is documented below.
 <a href="#abort_python" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -8770,7 +8770,7 @@ Structure is documented below.
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -8884,7 +8884,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixeddelay_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -8932,7 +8932,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -8956,7 +8956,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixed_delay_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -9143,7 +9143,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#pertrytimeout_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Try<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -9239,7 +9239,7 @@ This reset type indicates that it is safe to retry.
 <a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -9287,7 +9287,7 @@ This reset type indicates that it is safe to retry.
 <a href="#per_try_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>try_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -9639,7 +9639,7 @@ The value must be between 1 and 1024 characters.
 <a href="#headeraction_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -9719,7 +9719,7 @@ The value must be between 0 and 1000
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -9759,7 +9759,7 @@ The value must be between 0 and 1000
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -9792,7 +9792,7 @@ The value must be between 0 and 1000
 <a href="#requestheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add&gt;</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -9812,7 +9812,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add&gt;</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -9880,7 +9880,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -9900,7 +9900,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -9924,7 +9924,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -9944,7 +9944,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -10552,7 +10552,7 @@ the request method will be retained.
 <a href="#requestheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add&gt;</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -10572,7 +10572,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add&gt;</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -10640,7 +10640,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -10660,7 +10660,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -10684,7 +10684,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -10704,7 +10704,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -11002,7 +11002,7 @@ allowed here.
 <a href="#routeaction_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
 actions like URL rewrites, header transformations, etc. prior to forwarding the
@@ -11026,7 +11026,7 @@ Structure is documented below.
 <a href="#urlredirect_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
@@ -11106,7 +11106,7 @@ allowed here.
 <a href="#routeaction_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
 actions like URL rewrites, header transformations, etc. prior to forwarding the
@@ -11130,7 +11130,7 @@ Structure is documented below.
 <a href="#urlredirect_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
@@ -11158,7 +11158,7 @@ allowed here.
 <a href="#route_action_python" style="color: inherit; text-decoration: inherit;">route_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
 actions like URL rewrites, header transformations, etc. prior to forwarding the
@@ -11182,7 +11182,7 @@ Structure is documented below.
 <a href="#url_redirect_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
@@ -11200,7 +11200,7 @@ Structure is documented below.
 <a href="#corspolicy_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -11211,7 +11211,7 @@ Structure is documented below.
 <a href="#faultinjectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Fault<wbr>Injection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -11225,7 +11225,7 @@ Structure is documented below.
 <a href="#requestmirrorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Mirror<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -11237,7 +11237,7 @@ Structure is documented below.
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -11247,7 +11247,7 @@ Structure is documented below.
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -11259,7 +11259,7 @@ Structure is documented below.
 <a href="#urlrewrite_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -11269,7 +11269,7 @@ Structure is documented below.
 <a href="#weightedbackendservices_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Backend<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -11378,7 +11378,7 @@ Structure is documented below.
 <a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -11389,7 +11389,7 @@ Structure is documented below.
 <a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -11403,7 +11403,7 @@ Structure is documented below.
 <a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -11415,7 +11415,7 @@ Structure is documented below.
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -11425,7 +11425,7 @@ Structure is documented below.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -11437,7 +11437,7 @@ Structure is documented below.
 <a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -11447,7 +11447,7 @@ Structure is documented below.
 <a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -11467,7 +11467,7 @@ Structure is documented below.
 <a href="#cors_policy_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -11478,7 +11478,7 @@ Structure is documented below.
 <a href="#fault_injection_policy_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>injection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -11492,7 +11492,7 @@ Structure is documented below.
 <a href="#request_mirror_policy_python" style="color: inherit; text-decoration: inherit;">request_<wbr>mirror_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -11504,7 +11504,7 @@ Structure is documented below.
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -11514,7 +11514,7 @@ Structure is documented below.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -11526,7 +11526,7 @@ Structure is documented below.
 <a href="#url_rewrite_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -11536,7 +11536,7 @@ Structure is documented below.
 <a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -11884,7 +11884,7 @@ This translates to the Access-Control-Max-Age header.
 <a href="#abort_csharp" style="color: inherit; text-decoration: inherit;">Abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -11894,7 +11894,7 @@ Structure is documented below.
 <a href="#delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -11932,7 +11932,7 @@ Structure is documented below.
 <a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -11942,7 +11942,7 @@ Structure is documented below.
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -11956,7 +11956,7 @@ Structure is documented below.
 <a href="#abort_python" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -11966,7 +11966,7 @@ Structure is documented below.
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -12080,7 +12080,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixeddelay_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -12128,7 +12128,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -12152,7 +12152,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixed_delay_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -12339,7 +12339,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#pertrytimeout_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Try<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -12435,7 +12435,7 @@ This reset type indicates that it is safe to retry.
 <a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -12483,7 +12483,7 @@ This reset type indicates that it is safe to retry.
 <a href="#per_try_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>try_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -12849,7 +12849,7 @@ The value must be between 0 and 1000
 <a href="#headeraction_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -12929,7 +12929,7 @@ The value must be between 0 and 1000
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -12969,7 +12969,7 @@ The value must be between 0 and 1000
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -12988,7 +12988,7 @@ Structure is documented below.
 <a href="#requestheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add&gt;</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -13008,7 +13008,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add&gt;</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -13076,7 +13076,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -13096,7 +13096,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -13120,7 +13120,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -13140,7 +13140,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -13769,7 +13769,7 @@ future without any impact on existing rules.
 <a href="#headeraction_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -13782,7 +13782,7 @@ Structure is documented below.
 <a href="#matchrules_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrule">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrule">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The rules for determining a match.
 Structure is documented below.
@@ -13792,7 +13792,7 @@ Structure is documented below.
 <a href="#routeaction_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
 actions like URL rewrites, header transformations, etc. prior to forwarding the
@@ -13816,7 +13816,7 @@ Structure is documented below.
 <a href="#urlredirect_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
@@ -13937,7 +13937,7 @@ future without any impact on existing rules.
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -13950,7 +13950,7 @@ Structure is documented below.
 <a href="#matchrules_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrule">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrule">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The rules for determining a match.
 Structure is documented below.
@@ -13960,7 +13960,7 @@ Structure is documented below.
 <a href="#routeaction_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
 actions like URL rewrites, header transformations, etc. prior to forwarding the
@@ -13984,7 +13984,7 @@ Structure is documented below.
 <a href="#urlredirect_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
@@ -14021,7 +14021,7 @@ future without any impact on existing rules.
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -14034,7 +14034,7 @@ Structure is documented below.
 <a href="#match_rules_python" style="color: inherit; text-decoration: inherit;">match_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrule">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrule">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The rules for determining a match.
 Structure is documented below.
@@ -14044,7 +14044,7 @@ Structure is documented below.
 <a href="#route_action_python" style="color: inherit; text-decoration: inherit;">route_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
 actions like URL rewrites, header transformations, etc. prior to forwarding the
@@ -14068,7 +14068,7 @@ Structure is documented below.
 <a href="#url_redirect_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
@@ -14086,7 +14086,7 @@ Structure is documented below.
 <a href="#requestheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add&gt;</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -14106,7 +14106,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add&gt;</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -14174,7 +14174,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -14194,7 +14194,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -14218,7 +14218,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -14238,7 +14238,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -14537,7 +14537,7 @@ be specified.
 <a href="#headermatches_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatch">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatch">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding
 headers in the request.
@@ -14558,7 +14558,7 @@ Defaults to false.
 <a href="#metadatafilters_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilter">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilter">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to
 a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS
@@ -14589,7 +14589,7 @@ must be set.
 <a href="#queryparametermatches_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameter<wbr>Matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulequeryparametermatch">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulequeryparametermatch">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match
 corresponding query parameters in the request.
@@ -14721,7 +14721,7 @@ be specified.
 <a href="#headermatches_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding
 headers in the request.
@@ -14742,7 +14742,7 @@ Defaults to false.
 <a href="#metadatafilters_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilter">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilter">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to
 a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS
@@ -14773,7 +14773,7 @@ must be set.
 <a href="#queryparametermatches_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameter<wbr>Matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulequeryparametermatch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulequeryparametermatch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match
 corresponding query parameters in the request.
@@ -14813,7 +14813,7 @@ be specified.
 <a href="#header_matches_python" style="color: inherit; text-decoration: inherit;">header_<wbr>matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatch">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatch">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding
 headers in the request.
@@ -14834,7 +14834,7 @@ Defaults to false.
 <a href="#metadata_filters_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilter">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilter">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to
 a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS
@@ -14865,7 +14865,7 @@ must be set.
 <a href="#query_parameter_matches_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameter_<wbr>matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulequeryparametermatch">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulequeryparametermatch">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match
 corresponding query parameters in the request.
@@ -14947,7 +14947,7 @@ presentMatch, exactMatch and regexMatch must be set.
 <a href="#rangematch_csharp" style="color: inherit; text-decoration: inherit;">Range<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatchrangematch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatchrangematch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The header value must be an integer and its value must be in the range specified
 in rangeMatch. If the header does not contain an integer, number or is empty,
@@ -15137,7 +15137,7 @@ presentMatch, exactMatch and regexMatch must be set.
 <a href="#rangematch_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatchrangematch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatchrangematch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The header value must be an integer and its value must be in the range specified
 in rangeMatch. If the header does not contain an integer, number or is empty,
@@ -15232,7 +15232,7 @@ presentMatch, exactMatch and regexMatch must be set.
 <a href="#range_match_python" style="color: inherit; text-decoration: inherit;">range_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatchrangematch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatchrangematch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The header value must be an integer and its value must be in the range specified
 in rangeMatch. If the header does not contain an integer, number or is empty,
@@ -15366,7 +15366,7 @@ must be set.
 <a href="#filterlabels_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata
 based on filterMatchCriteria  This list must not be empty and can have at the
@@ -15428,7 +15428,7 @@ Possible values are `MATCH_ALL` and `MATCH_ANY`.
 <a href="#filterlabels_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata
 based on filterMatchCriteria  This list must not be empty and can have at the
@@ -15459,7 +15459,7 @@ Possible values are `MATCH_ALL` and `MATCH_ANY`.
 <a href="#filter_labels_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label]</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata
 based on filterMatchCriteria  This list must not be empty and can have at the
@@ -15784,7 +15784,7 @@ exactMatch and regexMatch must be set.
 <a href="#corspolicy_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -15795,7 +15795,7 @@ Structure is documented below.
 <a href="#faultinjectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Fault<wbr>Injection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -15809,7 +15809,7 @@ Structure is documented below.
 <a href="#requestmirrorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Mirror<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -15821,7 +15821,7 @@ Structure is documented below.
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -15831,7 +15831,7 @@ Structure is documented below.
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -15843,7 +15843,7 @@ Structure is documented below.
 <a href="#urlrewrite_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -15853,7 +15853,7 @@ Structure is documented below.
 <a href="#weightedbackendservices_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Backend<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -15962,7 +15962,7 @@ Structure is documented below.
 <a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -15973,7 +15973,7 @@ Structure is documented below.
 <a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -15987,7 +15987,7 @@ Structure is documented below.
 <a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -15999,7 +15999,7 @@ Structure is documented below.
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -16009,7 +16009,7 @@ Structure is documented below.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -16021,7 +16021,7 @@ Structure is documented below.
 <a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -16031,7 +16031,7 @@ Structure is documented below.
 <a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -16051,7 +16051,7 @@ Structure is documented below.
 <a href="#cors_policy_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -16062,7 +16062,7 @@ Structure is documented below.
 <a href="#fault_injection_policy_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>injection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -16076,7 +16076,7 @@ Structure is documented below.
 <a href="#request_mirror_policy_python" style="color: inherit; text-decoration: inherit;">request_<wbr>mirror_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -16088,7 +16088,7 @@ Structure is documented below.
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -16098,7 +16098,7 @@ Structure is documented below.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -16110,7 +16110,7 @@ Structure is documented below.
 <a href="#url_rewrite_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -16120,7 +16120,7 @@ Structure is documented below.
 <a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -16468,7 +16468,7 @@ This translates to the Access-Control-Max-Age header.
 <a href="#abort_csharp" style="color: inherit; text-decoration: inherit;">Abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -16478,7 +16478,7 @@ Structure is documented below.
 <a href="#delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -16516,7 +16516,7 @@ Structure is documented below.
 <a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -16526,7 +16526,7 @@ Structure is documented below.
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -16540,7 +16540,7 @@ Structure is documented below.
 <a href="#abort_python" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -16550,7 +16550,7 @@ Structure is documented below.
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -16664,7 +16664,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixeddelay_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -16712,7 +16712,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -16736,7 +16736,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixed_delay_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -16923,7 +16923,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#pertrytimeout_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Try<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -17019,7 +17019,7 @@ This reset type indicates that it is safe to retry.
 <a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -17067,7 +17067,7 @@ This reset type indicates that it is safe to retry.
 <a href="#per_try_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>try_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -17433,7 +17433,7 @@ The value must be between 0 and 1000
 <a href="#headeraction_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -17513,7 +17513,7 @@ The value must be between 0 and 1000
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -17553,7 +17553,7 @@ The value must be between 0 and 1000
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -17572,7 +17572,7 @@ Structure is documented below.
 <a href="#requestheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add&gt;</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -17592,7 +17592,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add&gt;</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -17660,7 +17660,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -17680,7 +17680,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -17704,7 +17704,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -17724,7 +17724,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.

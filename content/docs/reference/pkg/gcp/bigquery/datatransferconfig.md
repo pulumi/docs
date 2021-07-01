@@ -608,7 +608,7 @@ Set the value to 0 to use the default value.
 <a href="#emailpreferences_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferconfigemailpreferences">Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences</a></span>
+        <span class="property-type"><a href="#datatransferconfigemailpreferences">Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Email notifications will be sent according to these preferences to the
 email address of the user who owns this transfer config.
@@ -665,7 +665,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
 <a href="#scheduleoptions_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferconfigscheduleoptions">Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options</a></span>
+        <span class="property-type"><a href="#datatransferconfigscheduleoptions">Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options customizing the data transfer schedule.
 Structure is documented below.
@@ -675,7 +675,7 @@ Structure is documented below.
 <a href="#sensitiveparams_go" style="color: inherit; text-decoration: inherit;">Sensitive<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferconfigsensitiveparams">Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params</a></span>
+        <span class="property-type"><a href="#datatransferconfigsensitiveparams">Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Different parameters are configured primarily using the the `params` field on this
 resource. This block contains the parameters which contain secrets or passwords so that they can be marked
@@ -1469,7 +1469,7 @@ Set the value to 0 to use the default value.
 <a href="#state_emailpreferences_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferconfigemailpreferences">Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences</a></span>
+        <span class="property-type"><a href="#datatransferconfigemailpreferences">Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Email notifications will be sent according to these preferences to the
 email address of the user who owns this transfer config.
@@ -1546,7 +1546,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
 <a href="#state_scheduleoptions_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferconfigscheduleoptions">Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options</a></span>
+        <span class="property-type"><a href="#datatransferconfigscheduleoptions">Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options customizing the data transfer schedule.
 Structure is documented below.
@@ -1556,7 +1556,7 @@ Structure is documented below.
 <a href="#state_sensitiveparams_go" style="color: inherit; text-decoration: inherit;">Sensitive<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferconfigsensitiveparams">Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params</a></span>
+        <span class="property-type"><a href="#datatransferconfigsensitiveparams">Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Different parameters are configured primarily using the the `params` field on this
 resource. This block contains the parameters which contain secrets or passwords so that they can be marked

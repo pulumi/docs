@@ -568,7 +568,7 @@ If it is not provided, the provider project is used.
 <a href="#autoscalingpolicy_go" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupautoscalingpolicy">Node<wbr>Group<wbr>Autoscaling<wbr>Policy</a></span>
+        <span class="property-type"><a href="#nodegroupautoscalingpolicy">Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If you use sole-tenant nodes for your workloads, you can use the node
 group autoscaler to automatically manage the sizes of your node groups.
@@ -606,7 +606,7 @@ Structure is documented below.
 <a href="#maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupmaintenancewindow">Node<wbr>Group<wbr>Maintenance<wbr>Window</a></span>
+        <span class="property-type"><a href="#nodegroupmaintenancewindow">Node<wbr>Group<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}contains properties for the timeframe of maintenance
 Structure is documented below.
@@ -1233,7 +1233,7 @@ If it is not provided, the provider project is used.
 <a href="#state_autoscalingpolicy_go" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupautoscalingpolicy">Node<wbr>Group<wbr>Autoscaling<wbr>Policy</a></span>
+        <span class="property-type"><a href="#nodegroupautoscalingpolicy">Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If you use sole-tenant nodes for your workloads, you can use the node
 group autoscaler to automatically manage the sizes of your node groups.
@@ -1280,7 +1280,7 @@ Structure is documented below.
 <a href="#state_maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupmaintenancewindow">Node<wbr>Group<wbr>Maintenance<wbr>Window</a></span>
+        <span class="property-type"><a href="#nodegroupmaintenancewindow">Node<wbr>Group<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}contains properties for the timeframe of maintenance
 Structure is documented below.

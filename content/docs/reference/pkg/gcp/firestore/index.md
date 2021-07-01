@@ -405,7 +405,7 @@ Possible values are `COLLECTION` and `COLLECTION_GROUP`.
 <a href="#fields_go" style="color: inherit; text-decoration: inherit;">Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexfield">[]Index<wbr>Field</a></span>
+        <span class="property-type"><a href="#indexfield">[]Index<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fields supported by this index. The last field entry is always for
 the field path `__name__`. If, on creation, `__name__` was not
@@ -882,7 +882,7 @@ Possible values are `COLLECTION` and `COLLECTION_GROUP`.
 <a href="#state_fields_go" style="color: inherit; text-decoration: inherit;">Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexfield">[]Index<wbr>Field</a></span>
+        <span class="property-type"><a href="#indexfield">[]Index<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fields supported by this index. The last field entry is always for
 the field path `__name__`. If, on creation, `__name__` was not

@@ -624,7 +624,7 @@ to be met. 0 < goal <= 0.999
 <a href="#basicsli_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli</a></span>
+        <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
 Performance will be computed on the basis of pre-defined metrics.
@@ -669,7 +669,7 @@ If it is not provided, the provider project is used.
 <a href="#requestbasedsli_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Based<wbr>Sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli</a></span>
+        <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A request-based SLI defines a SLI for which atomic units of
 service are counted directly.
@@ -704,7 +704,7 @@ Must be between 1 to 30 days, inclusive.
 <a href="#windowsbasedsli_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Based<wbr>Sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsli">Slo<wbr>Windows<wbr>Based<wbr>Sli</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsli">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A windows-based SLI defines the criteria for time windows.
 good_service is defined based off the count of these time windows
@@ -1326,7 +1326,7 @@ Structure is documented below.
 <a href="#state_basicsli_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli</a></span>
+        <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
 Performance will be computed on the basis of pre-defined metrics.
@@ -1391,7 +1391,7 @@ If it is not provided, the provider project is used.
 <a href="#state_requestbasedsli_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Based<wbr>Sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli</a></span>
+        <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A request-based SLI defines a SLI for which atomic units of
 service are counted directly.
@@ -1435,7 +1435,7 @@ Must be between 1 to 30 days, inclusive.
 <a href="#state_windowsbasedsli_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Based<wbr>Sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsli">Slo<wbr>Windows<wbr>Based<wbr>Sli</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsli">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A windows-based SLI defines the criteria for time windows.
 good_service is defined based off the count of these time windows
@@ -1727,7 +1727,7 @@ Structure is documented below.
 <a href="#availability_csharp" style="color: inherit; text-decoration: inherit;">Availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicsliavailability">Slo<wbr>Basic<wbr>Sli<wbr>Availability<wbr>Args</a></span>
+        <span class="property-type"><a href="#slobasicsliavailability">Slo<wbr>Basic<wbr>Sli<wbr>Availability</a></span>
     </dt>
     <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
 Structure is documented below.
@@ -1737,7 +1737,7 @@ Structure is documented below.
 <a href="#latency_csharp" style="color: inherit; text-decoration: inherit;">Latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency<wbr>Args</a></span>
+        <span class="property-type"><a href="#slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency</a></span>
     </dt>
     <dd>{{% md %}}Parameters for a latency threshold SLI.
 Structure is documented below.
@@ -1859,7 +1859,7 @@ field will result in an error.
 <a href="#availability_nodejs" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicsliavailability">Slo<wbr>Basic<wbr>Sli<wbr>Availability<wbr>Args</a></span>
+        <span class="property-type"><a href="#slobasicsliavailability">Slo<wbr>Basic<wbr>Sli<wbr>Availability</a></span>
     </dt>
     <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
 Structure is documented below.
@@ -1869,7 +1869,7 @@ Structure is documented below.
 <a href="#latency_nodejs" style="color: inherit; text-decoration: inherit;">latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency<wbr>Args</a></span>
+        <span class="property-type"><a href="#slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency</a></span>
     </dt>
     <dd>{{% md %}}Parameters for a latency threshold SLI.
 Structure is documented below.
@@ -1925,7 +1925,7 @@ field will result in an error.
 <a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicsliavailability">Slo<wbr>Basic<wbr>Sli<wbr>Availability<wbr>Args</a></span>
+        <span class="property-type"><a href="#slobasicsliavailability">Slo<wbr>Basic<wbr>Sli<wbr>Availability</a></span>
     </dt>
     <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
 Structure is documented below.
@@ -1935,7 +1935,7 @@ Structure is documented below.
 <a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency<wbr>Args</a></span>
+        <span class="property-type"><a href="#slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency</a></span>
     </dt>
     <dd>{{% md %}}Parameters for a latency threshold SLI.
 Structure is documented below.
@@ -2109,7 +2109,7 @@ this service that return in no more than threshold.
 <a href="#distributioncut_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Cut</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedslidistributioncut">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Args</a></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncut">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut</a></span>
     </dt>
     <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
 Distribution that fall into a good range. The total_service is the
@@ -2123,7 +2123,7 @@ Structure is documented below.
 <a href="#goodtotalratio_csharp" style="color: inherit; text-decoration: inherit;">Good<wbr>Total<wbr>Ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Args</a></span>
+        <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio</a></span>
     </dt>
     <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
@@ -2173,7 +2173,7 @@ Structure is documented below.
 <a href="#distributioncut_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Cut</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedslidistributioncut">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Args</a></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncut">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut</a></span>
     </dt>
     <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
 Distribution that fall into a good range. The total_service is the
@@ -2187,7 +2187,7 @@ Structure is documented below.
 <a href="#goodtotalratio_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Args</a></span>
+        <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio</a></span>
     </dt>
     <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
@@ -2205,7 +2205,7 @@ Structure is documented below.
 <a href="#distribution_cut_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>cut</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedslidistributioncut">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Args</a></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncut">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut</a></span>
     </dt>
     <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
 Distribution that fall into a good range. The total_service is the
@@ -2219,7 +2219,7 @@ Structure is documented below.
 <a href="#good_total_ratio_python" style="color: inherit; text-decoration: inherit;">good_<wbr>total_<wbr>ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Args</a></span>
+        <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio</a></span>
     </dt>
     <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
@@ -2251,7 +2251,7 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
@@ -2313,7 +2313,7 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
@@ -2344,7 +2344,7 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
@@ -2678,7 +2678,7 @@ appear in the window. One of `good_bad_metric_filter`,
 <a href="#goodtotalratiothreshold_csharp" style="color: inherit; text-decoration: inherit;">Good<wbr>Total<wbr>Ratio<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothreshold">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothreshold">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}Criterion that describes a window as good if its performance is
 high enough. One of `good_bad_metric_filter`,
@@ -2691,7 +2691,7 @@ Structure is documented below.
 <a href="#metricmeaninrange_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Mean<wbr>In<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Criterion that describes a window as good if the metric's value
 is in a good range, *averaged* across returned streams.
@@ -2707,7 +2707,7 @@ Structure is documented below.
 <a href="#metricsuminrange_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Sum<wbr>In<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Criterion that describes a window as good if the metric's value
 is in a good range, *summed* across returned streams.
@@ -2824,7 +2824,7 @@ appear in the window. One of `good_bad_metric_filter`,
 <a href="#goodtotalratiothreshold_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothreshold">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothreshold">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}Criterion that describes a window as good if its performance is
 high enough. One of `good_bad_metric_filter`,
@@ -2837,7 +2837,7 @@ Structure is documented below.
 <a href="#metricmeaninrange_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Mean<wbr>In<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Criterion that describes a window as good if the metric's value
 is in a good range, *averaged* across returned streams.
@@ -2853,7 +2853,7 @@ Structure is documented below.
 <a href="#metricsuminrange_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Sum<wbr>In<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Criterion that describes a window as good if the metric's value
 is in a good range, *summed* across returned streams.
@@ -2897,7 +2897,7 @@ appear in the window. One of `good_bad_metric_filter`,
 <a href="#good_total_ratio_threshold_python" style="color: inherit; text-decoration: inherit;">good_<wbr>total_<wbr>ratio_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothreshold">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothreshold">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}Criterion that describes a window as good if its performance is
 high enough. One of `good_bad_metric_filter`,
@@ -2910,7 +2910,7 @@ Structure is documented below.
 <a href="#metric_mean_in_range_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>mean_<wbr>in_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Criterion that describes a window as good if the metric's value
 is in a good range, *averaged* across returned streams.
@@ -2926,7 +2926,7 @@ Structure is documented below.
 <a href="#metric_sum_in_range_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>sum_<wbr>in_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Criterion that describes a window as good if the metric's value
 is in a good range, *summed* across returned streams.
@@ -2959,7 +2959,7 @@ integer fraction of a day and at least 60s.
 <a href="#basicsliperformance_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Sli<wbr>Performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance</a></span>
     </dt>
     <dd>{{% md %}}Basic SLI to evaluate to judge window quality.
 Structure is documented below.
@@ -2969,7 +2969,7 @@ Structure is documented below.
 <a href="#performance_csharp" style="color: inherit; text-decoration: inherit;">Performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance</a></span>
     </dt>
     <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.
 Structure is documented below.
@@ -3029,7 +3029,7 @@ this service that return in no more than threshold.
 <a href="#basicsliperformance_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Sli<wbr>Performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance</a></span>
     </dt>
     <dd>{{% md %}}Basic SLI to evaluate to judge window quality.
 Structure is documented below.
@@ -3039,7 +3039,7 @@ Structure is documented below.
 <a href="#performance_nodejs" style="color: inherit; text-decoration: inherit;">performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance</a></span>
     </dt>
     <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.
 Structure is documented below.
@@ -3064,7 +3064,7 @@ this service that return in no more than threshold.
 <a href="#basic_sli_performance_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>sli_<wbr>performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance</a></span>
     </dt>
     <dd>{{% md %}}Basic SLI to evaluate to judge window quality.
 Structure is documented below.
@@ -3074,7 +3074,7 @@ Structure is documented below.
 <a href="#performance_python" style="color: inherit; text-decoration: inherit;">performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance</a></span>
     </dt>
     <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.
 Structure is documented below.
@@ -3101,7 +3101,7 @@ this service that return in no more than threshold.
 <a href="#availability_csharp" style="color: inherit; text-decoration: inherit;">Availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformanceavailability">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Availability<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformanceavailability">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Availability</a></span>
     </dt>
     <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
 Structure is documented below.
@@ -3111,7 +3111,7 @@ Structure is documented below.
 <a href="#latency_csharp" style="color: inherit; text-decoration: inherit;">Latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency</a></span>
     </dt>
     <dd>{{% md %}}Parameters for a latency threshold SLI.
 Structure is documented below.
@@ -3233,7 +3233,7 @@ field will result in an error.
 <a href="#availability_nodejs" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformanceavailability">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Availability<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformanceavailability">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Availability</a></span>
     </dt>
     <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
 Structure is documented below.
@@ -3243,7 +3243,7 @@ Structure is documented below.
 <a href="#latency_nodejs" style="color: inherit; text-decoration: inherit;">latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency</a></span>
     </dt>
     <dd>{{% md %}}Parameters for a latency threshold SLI.
 Structure is documented below.
@@ -3299,7 +3299,7 @@ field will result in an error.
 <a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformanceavailability">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Availability<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformanceavailability">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Availability</a></span>
     </dt>
     <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
 Structure is documented below.
@@ -3309,7 +3309,7 @@ Structure is documented below.
 <a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency</a></span>
     </dt>
     <dd>{{% md %}}Parameters for a latency threshold SLI.
 Structure is documented below.
@@ -3483,7 +3483,7 @@ this service that return in no more than threshold.
 <a href="#distributioncut_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Cut</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncut">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncut">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut</a></span>
     </dt>
     <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
 Distribution that fall into a good range. The total_service is the
@@ -3497,7 +3497,7 @@ Structure is documented below.
 <a href="#goodtotalratio_csharp" style="color: inherit; text-decoration: inherit;">Good<wbr>Total<wbr>Ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Good<wbr>Total<wbr>Ratio<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Good<wbr>Total<wbr>Ratio</a></span>
     </dt>
     <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
@@ -3547,7 +3547,7 @@ Structure is documented below.
 <a href="#distributioncut_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Cut</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncut">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncut">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut</a></span>
     </dt>
     <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
 Distribution that fall into a good range. The total_service is the
@@ -3561,7 +3561,7 @@ Structure is documented below.
 <a href="#goodtotalratio_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Good<wbr>Total<wbr>Ratio<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Good<wbr>Total<wbr>Ratio</a></span>
     </dt>
     <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
@@ -3579,7 +3579,7 @@ Structure is documented below.
 <a href="#distribution_cut_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>cut</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncut">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncut">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut</a></span>
     </dt>
     <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
 Distribution that fall into a good range. The total_service is the
@@ -3593,7 +3593,7 @@ Structure is documented below.
 <a href="#good_total_ratio_python" style="color: inherit; text-decoration: inherit;">good_<wbr>total_<wbr>ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Good<wbr>Total<wbr>Ratio<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Good<wbr>Total<wbr>Ratio</a></span>
     </dt>
     <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
@@ -3625,7 +3625,7 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
@@ -3687,7 +3687,7 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
@@ -3718,7 +3718,7 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
@@ -4039,7 +4039,7 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
@@ -4107,7 +4107,7 @@ Summed value `X` should satisfy
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
@@ -4141,7 +4141,7 @@ Summed value `X` should satisfy
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
@@ -4283,7 +4283,7 @@ will be set to "-infinity", defining an open range
 <a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
@@ -4351,7 +4351,7 @@ Summed value `X` should satisfy
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
@@ -4385,7 +4385,7 @@ Summed value `X` should satisfy
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such

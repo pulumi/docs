@@ -496,7 +496,7 @@ If it is not provided, the provider project is used.
 <a href="#fields_go" style="color: inherit; text-decoration: inherit;">Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagtemplatefield">[]Tag<wbr>Template<wbr>Field</a></span>
+        <span class="property-type"><a href="#tagtemplatefield">[]Tag<wbr>Template<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.
 Structure is documented below.
@@ -982,7 +982,7 @@ If it is not provided, the provider project is used.
 <a href="#state_fields_go" style="color: inherit; text-decoration: inherit;">Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagtemplatefield">[]Tag<wbr>Template<wbr>Field</a></span>
+        <span class="property-type"><a href="#tagtemplatefield">[]Tag<wbr>Template<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.
 Structure is documented below.
@@ -1203,7 +1203,7 @@ If it is not provided, the provider project is used.
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagtemplatefieldtype">Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#tagtemplatefieldtype">Tag<wbr>Template<wbr>Field<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of value this tag field can contain.
 Structure is documented below.
@@ -1345,7 +1345,7 @@ Multiple fields can have the same order, and field orders within a tag do not ha
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagtemplatefieldtype">Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#tagtemplatefieldtype">Tag<wbr>Template<wbr>Field<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of value this tag field can contain.
 Structure is documented below.
@@ -1416,7 +1416,7 @@ Multiple fields can have the same order, and field orders within a tag do not ha
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagtemplatefieldtype">Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#tagtemplatefieldtype">Tag<wbr>Template<wbr>Field<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of value this tag field can contain.
 Structure is documented below.
@@ -1480,7 +1480,7 @@ Multiple fields can have the same order, and field orders within a tag do not ha
 <a href="#enumtype_csharp" style="color: inherit; text-decoration: inherit;">Enum<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagtemplatefieldtypeenumtype">Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#tagtemplatefieldtypeenumtype">Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Represents an enum type.
 Exactly one of `primitive_type` or `enum_type` must be set
@@ -1532,7 +1532,7 @@ Possible values are `DOUBLE`, `STRING`, `BOOL`, and `TIMESTAMP`.
 <a href="#enumtype_nodejs" style="color: inherit; text-decoration: inherit;">enum<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagtemplatefieldtypeenumtype">Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#tagtemplatefieldtypeenumtype">Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Represents an enum type.
 Exactly one of `primitive_type` or `enum_type` must be set
@@ -1558,7 +1558,7 @@ Possible values are `DOUBLE`, `STRING`, `BOOL`, and `TIMESTAMP`.
 <a href="#enum_type_python" style="color: inherit; text-decoration: inherit;">enum_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagtemplatefieldtypeenumtype">Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#tagtemplatefieldtypeenumtype">Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Represents an enum type.
 Exactly one of `primitive_type` or `enum_type` must be set
@@ -1586,7 +1586,7 @@ Possible values are `DOUBLE`, `STRING`, `BOOL`, and `TIMESTAMP`.
 <a href="#allowedvalues_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagtemplatefieldtypeenumtypeallowedvalue">List&lt;Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type<wbr>Allowed<wbr>Value<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tagtemplatefieldtypeenumtypeallowedvalue">List&lt;Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type<wbr>Allowed<wbr>Value&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of allowed values for this enum. The display names of the
 values must be case-insensitively unique within this set. Currently,
@@ -1622,7 +1622,7 @@ Structure is documented below.
 <a href="#allowedvalues_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagtemplatefieldtypeenumtypeallowedvalue">Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type<wbr>Allowed<wbr>Value<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#tagtemplatefieldtypeenumtypeallowedvalue">Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type<wbr>Allowed<wbr>Value[]</a></span>
     </dt>
     <dd>{{% md %}}The set of allowed values for this enum. The display names of the
 values must be case-insensitively unique within this set. Currently,
@@ -1640,7 +1640,7 @@ Structure is documented below.
 <a href="#allowed_values_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagtemplatefieldtypeenumtypeallowedvalue">Sequence[Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type<wbr>Allowed<wbr>Value<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tagtemplatefieldtypeenumtypeallowedvalue">Sequence[Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type<wbr>Allowed<wbr>Value]</a></span>
     </dt>
     <dd>{{% md %}}The set of allowed values for this enum. The display names of the
 values must be case-insensitively unique within this set. Currently,

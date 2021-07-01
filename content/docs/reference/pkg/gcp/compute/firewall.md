@@ -592,7 +592,7 @@ instances on the specified network.
 <a href="#allows_go" style="color: inherit; text-decoration: inherit;">Allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallallow">[]Firewall<wbr>Allow</a></span>
+        <span class="property-type"><a href="#firewallallow">[]Firewall<wbr>Allow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
@@ -604,7 +604,7 @@ Structure is documented below.
 <a href="#denies_go" style="color: inherit; text-decoration: inherit;">Denies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalldeny">[]Firewall<wbr>Deny</a></span>
+        <span class="property-type"><a href="#firewalldeny">[]Firewall<wbr>Deny<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
 a protocol and port-range tuple that describes a denied connection.
@@ -671,7 +671,7 @@ If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor
 <a href="#logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
 If defined, logging is enabled, and logs will be exported to Cloud Logging.
@@ -1752,7 +1752,7 @@ instances on the specified network.
 <a href="#state_allows_go" style="color: inherit; text-decoration: inherit;">Allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallallow">[]Firewall<wbr>Allow</a></span>
+        <span class="property-type"><a href="#firewallallow">[]Firewall<wbr>Allow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
@@ -1773,7 +1773,7 @@ Structure is documented below.
 <a href="#state_denies_go" style="color: inherit; text-decoration: inherit;">Denies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalldeny">[]Firewall<wbr>Deny</a></span>
+        <span class="property-type"><a href="#firewalldeny">[]Firewall<wbr>Deny<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
 a protocol and port-range tuple that describes a denied connection.
@@ -1840,7 +1840,7 @@ If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor
 <a href="#state_logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
 If defined, logging is enabled, and logs will be exported to Cloud Logging.

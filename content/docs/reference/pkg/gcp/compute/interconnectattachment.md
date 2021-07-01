@@ -2322,7 +2322,7 @@ layer 3 Partner if they configured BGP on behalf of the customer.
 <a href="#state_privateinterconnectinfos_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Interconnect<wbr>Infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">[]Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">[]Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.

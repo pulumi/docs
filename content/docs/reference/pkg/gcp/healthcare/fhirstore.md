@@ -796,7 +796,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 <a href="#notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config</a></span>
+        <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -806,7 +806,7 @@ Structure is documented below.
 <a href="#streamconfigs_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorestreamconfig">[]Fhir<wbr>Store<wbr>Stream<wbr>Config</a></span>
+        <span class="property-type"><a href="#fhirstorestreamconfig">[]Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of streaming configs that configure the destinations of streaming export for every resource mutation in
 this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
@@ -1560,7 +1560,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 <a href="#state_notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config</a></span>
+        <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -1579,7 +1579,7 @@ Structure is documented below.
 <a href="#state_streamconfigs_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorestreamconfig">[]Fhir<wbr>Store<wbr>Stream<wbr>Config</a></span>
+        <span class="property-type"><a href="#fhirstorestreamconfig">[]Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of streaming configs that configure the destinations of streaming export for every resource mutation in
 this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
@@ -1976,7 +1976,7 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 <a href="#bigquerydestination_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestination">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestination">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}The destination BigQuery structure that contains both the dataset location and corresponding schema config.
 The output is organized in one table per resource type. The server reuses the existing tables (if any) that
@@ -2034,7 +2034,7 @@ an empty list as an intent to stream all the supported resource types in this FH
 <a href="#bigquerydestination_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestination">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestination">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}The destination BigQuery structure that contains both the dataset location and corresponding schema config.
 The output is organized in one table per resource type. The server reuses the existing tables (if any) that
@@ -2063,7 +2063,7 @@ an empty list as an intent to stream all the supported resource types in this FH
 <a href="#bigquery_destination_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestination">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestination">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}The destination BigQuery structure that contains both the dataset location and corresponding schema config.
 The output is organized in one table per resource type. The server reuses the existing tables (if any) that
@@ -2103,7 +2103,7 @@ an empty list as an intent to stream all the supported resource types in this FH
 <a href="#schemaconfig_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the exported BigQuery schema.
 Structure is documented below.
@@ -2149,7 +2149,7 @@ Structure is documented below.
 <a href="#schemaconfig_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the exported BigQuery schema.
 Structure is documented below.
@@ -2172,7 +2172,7 @@ Structure is documented below.
 <a href="#schema_config_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the exported BigQuery schema.
 Structure is documented below.

@@ -1086,7 +1086,7 @@ Structure is documented below.
 <a href="#acceleratorconfig_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceacceleratorconfig">Instance<wbr>Accelerator<wbr>Config</a></span>
+        <span class="property-type"><a href="#instanceacceleratorconfig">Instance<wbr>Accelerator<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The hardware accelerator used on this instance. If you use accelerators,
 make sure that your configuration has enough vCPUs and memory to support the
@@ -1119,7 +1119,7 @@ Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BA
 <a href="#containerimage_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancecontainerimage">Instance<wbr>Container<wbr>Image</a></span>
+        <span class="property-type"><a href="#instancecontainerimage">Instance<wbr>Container<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
@@ -1326,7 +1326,7 @@ If not specified, the following scopes are defined:
 <a href="#shieldedinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceshieldedinstanceconfig">Instance<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instanceshieldedinstanceconfig">Instance<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A set of Shielded Instance options. Check [Images using supported Shielded VM features]
 Not all combinations are valid
@@ -1365,7 +1365,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
 <a href="#vmimage_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancevmimage">Instance<wbr>Vm<wbr>Image</a></span>
+        <span class="property-type"><a href="#instancevmimage">Instance<wbr>Vm<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.
@@ -2614,7 +2614,7 @@ Structure is documented below.
 <a href="#state_acceleratorconfig_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceacceleratorconfig">Instance<wbr>Accelerator<wbr>Config</a></span>
+        <span class="property-type"><a href="#instanceacceleratorconfig">Instance<wbr>Accelerator<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The hardware accelerator used on this instance. If you use accelerators,
 make sure that your configuration has enough vCPUs and memory to support the
@@ -2647,7 +2647,7 @@ Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BA
 <a href="#state_containerimage_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancecontainerimage">Instance<wbr>Container<wbr>Image</a></span>
+        <span class="property-type"><a href="#instancecontainerimage">Instance<wbr>Container<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
@@ -2881,7 +2881,7 @@ If not specified, the following scopes are defined:
 <a href="#state_shieldedinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceshieldedinstanceconfig">Instance<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instanceshieldedinstanceconfig">Instance<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A set of Shielded Instance options. Check [Images using supported Shielded VM features]
 Not all combinations are valid
@@ -2929,7 +2929,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
 <a href="#state_vmimage_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancevmimage">Instance<wbr>Vm<wbr>Image</a></span>
+        <span class="property-type"><a href="#instancevmimage">Instance<wbr>Vm<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.

@@ -740,7 +740,7 @@ If it is not provided, the provider project is used.
 <a href="#cloudsql_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Sql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql</a></span>
+        <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud SQL properties.
 Structure is documented below.
@@ -1275,7 +1275,7 @@ If it is not provided, the provider project is used.
 <a href="#state_cloudsql_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Sql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql</a></span>
+        <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud SQL properties.
 Structure is documented below.
@@ -1532,7 +1532,7 @@ If it is not provided, the provider project is used.
 <a href="#credential_csharp" style="color: inherit; text-decoration: inherit;">Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectioncloudsqlcredential">Connection<wbr>Cloud<wbr>Sql<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectioncloudsqlcredential">Connection<wbr>Cloud<wbr>Sql<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}Cloud SQL properties.
 Structure is documented below.
@@ -1616,7 +1616,7 @@ Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
 <a href="#credential_nodejs" style="color: inherit; text-decoration: inherit;">credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectioncloudsqlcredential">Connection<wbr>Cloud<wbr>Sql<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectioncloudsqlcredential">Connection<wbr>Cloud<wbr>Sql<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}Cloud SQL properties.
 Structure is documented below.
@@ -1658,7 +1658,7 @@ Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
 <a href="#credential_python" style="color: inherit; text-decoration: inherit;">credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectioncloudsqlcredential">Connection<wbr>Cloud<wbr>Sql<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectioncloudsqlcredential">Connection<wbr>Cloud<wbr>Sql<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}Cloud SQL properties.
 Structure is documented below.

@@ -1478,7 +1478,7 @@ all entries in that group.
 <a href="#fields_go" style="color: inherit; text-decoration: inherit;">Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfield">[]Tag<wbr>Field</a></span>
+        <span class="property-type"><a href="#tagfield">[]Tag<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
 Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
@@ -1973,7 +1973,7 @@ For attaching a tag to a nested column, use `.` to separate the column names. Ex
 <a href="#state_fields_go" style="color: inherit; text-decoration: inherit;">Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfield">[]Tag<wbr>Field</a></span>
+        <span class="property-type"><a href="#tagfield">[]Tag<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
 Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.

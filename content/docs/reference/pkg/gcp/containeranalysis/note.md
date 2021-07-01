@@ -529,7 +529,7 @@ Structure is documented below.
 <a href="#attestationauthority_go" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority</a></span>
+        <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority".
 For example, an organization might have one AttestationAuthority for
@@ -593,7 +593,7 @@ If it is not provided, the provider project is used.
 <a href="#relatedurls_go" style="color: inherit; text-decoration: inherit;">Related<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noterelatedurl">[]Note<wbr>Related<wbr>Url</a></span>
+        <span class="property-type"><a href="#noterelatedurl">[]Note<wbr>Related<wbr>Url<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}URLs associated with this note and related metadata.
 Structure is documented below.
@@ -1203,7 +1203,7 @@ Structure is documented below.
 <a href="#state_attestationauthority_go" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority</a></span>
+        <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority".
 For example, an organization might have one AttestationAuthority for
@@ -1285,7 +1285,7 @@ If it is not provided, the provider project is used.
 <a href="#state_relatedurls_go" style="color: inherit; text-decoration: inherit;">Related<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noterelatedurl">[]Note<wbr>Related<wbr>Url</a></span>
+        <span class="property-type"><a href="#noterelatedurl">[]Note<wbr>Related<wbr>Url<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}URLs associated with this note and related metadata.
 Structure is documented below.
@@ -1556,7 +1556,7 @@ Structure is documented below.
 <a href="#hint_csharp" style="color: inherit; text-decoration: inherit;">Hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noteattestationauthorityhint">Note<wbr>Attestation<wbr>Authority<wbr>Hint<wbr>Args</a></span>
+        <span class="property-type"><a href="#noteattestationauthorityhint">Note<wbr>Attestation<wbr>Authority<wbr>Hint</a></span>
     </dt>
     <dd>{{% md %}}This submessage provides human-readable hints about the purpose of
 the AttestationAuthority. Because the name of a Note acts as its
@@ -1598,7 +1598,7 @@ Structure is documented below.
 <a href="#hint_nodejs" style="color: inherit; text-decoration: inherit;">hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noteattestationauthorityhint">Note<wbr>Attestation<wbr>Authority<wbr>Hint<wbr>Args</a></span>
+        <span class="property-type"><a href="#noteattestationauthorityhint">Note<wbr>Attestation<wbr>Authority<wbr>Hint</a></span>
     </dt>
     <dd>{{% md %}}This submessage provides human-readable hints about the purpose of
 the AttestationAuthority. Because the name of a Note acts as its
@@ -1619,7 +1619,7 @@ Structure is documented below.
 <a href="#hint_python" style="color: inherit; text-decoration: inherit;">hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noteattestationauthorityhint">Note<wbr>Attestation<wbr>Authority<wbr>Hint<wbr>Args</a></span>
+        <span class="property-type"><a href="#noteattestationauthorityhint">Note<wbr>Attestation<wbr>Authority<wbr>Hint</a></span>
     </dt>
     <dd>{{% md %}}This submessage provides human-readable hints about the purpose of
 the AttestationAuthority. Because the name of a Note acts as its

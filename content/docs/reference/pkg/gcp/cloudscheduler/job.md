@@ -747,7 +747,7 @@ The value of this field must be a time zone name from the tz database.
 <a href="#appenginehttptarget_go" style="color: inherit; text-decoration: inherit;">App<wbr>Engine<wbr>Http<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobappenginehttptarget">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target</a></span>
+        <span class="property-type"><a href="#jobappenginehttptarget">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}App Engine HTTP target.
 If the job providers a App Engine HTTP target the cron will
@@ -785,7 +785,7 @@ This string must not contain more than 500 characters.
 <a href="#httptarget_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptarget">Job<wbr>Http<wbr>Target</a></span>
+        <span class="property-type"><a href="#jobhttptarget">Job<wbr>Http<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HTTP target.
 If the job providers a http_target the cron will
@@ -816,7 +816,7 @@ If it is not provided, the provider project is used.
 <a href="#pubsubtarget_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpubsubtarget">Job<wbr>Pubsub<wbr>Target</a></span>
+        <span class="property-type"><a href="#jobpubsubtarget">Job<wbr>Pubsub<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pub/Sub target
 If the job providers a Pub/Sub target the cron will publish
@@ -837,7 +837,7 @@ Structure is documented below.
 <a href="#retryconfig_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobretryconfig">Job<wbr>Retry<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobretryconfig">Job<wbr>Retry<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}By default, if a job does not complete successfully,
 meaning that an acknowledgement is not received from the handler,
@@ -1438,7 +1438,7 @@ The value of this field must be a time zone name from the tz database.
 <a href="#state_appenginehttptarget_go" style="color: inherit; text-decoration: inherit;">App<wbr>Engine<wbr>Http<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobappenginehttptarget">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target</a></span>
+        <span class="property-type"><a href="#jobappenginehttptarget">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}App Engine HTTP target.
 If the job providers a App Engine HTTP target the cron will
@@ -1476,7 +1476,7 @@ This string must not contain more than 500 characters.
 <a href="#state_httptarget_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptarget">Job<wbr>Http<wbr>Target</a></span>
+        <span class="property-type"><a href="#jobhttptarget">Job<wbr>Http<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HTTP target.
 If the job providers a http_target the cron will
@@ -1507,7 +1507,7 @@ If it is not provided, the provider project is used.
 <a href="#state_pubsubtarget_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpubsubtarget">Job<wbr>Pubsub<wbr>Target</a></span>
+        <span class="property-type"><a href="#jobpubsubtarget">Job<wbr>Pubsub<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pub/Sub target
 If the job providers a Pub/Sub target the cron will publish
@@ -1528,7 +1528,7 @@ Structure is documented below.
 <a href="#state_retryconfig_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobretryconfig">Job<wbr>Retry<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobretryconfig">Job<wbr>Retry<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}By default, if a job does not complete successfully,
 meaning that an acknowledgement is not received from the handler,
@@ -1837,7 +1837,7 @@ No spaces are allowed, and the maximum length allowed is 2083 characters
 <a href="#appenginerouting_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Engine<wbr>Routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobappenginehttptargetappenginerouting">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>App<wbr>Engine<wbr>Routing<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobappenginehttptargetappenginerouting">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>App<wbr>Engine<wbr>Routing</a></span>
     </dt>
     <dd>{{% md %}}App Engine Routing setting for the job.
 Structure is documented below.
@@ -1953,7 +1953,7 @@ No spaces are allowed, and the maximum length allowed is 2083 characters
 <a href="#appenginerouting_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine<wbr>Routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobappenginehttptargetappenginerouting">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>App<wbr>Engine<wbr>Routing<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobappenginehttptargetappenginerouting">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>App<wbr>Engine<wbr>Routing</a></span>
     </dt>
     <dd>{{% md %}}App Engine Routing setting for the job.
 Structure is documented below.
@@ -2011,7 +2011,7 @@ No spaces are allowed, and the maximum length allowed is 2083 characters
 <a href="#app_engine_routing_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine_<wbr>routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobappenginehttptargetappenginerouting">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>App<wbr>Engine<wbr>Routing<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobappenginehttptargetappenginerouting">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>App<wbr>Engine<wbr>Routing</a></span>
     </dt>
     <dd>{{% md %}}App Engine Routing setting for the job.
 Structure is documented below.
@@ -2236,7 +2236,7 @@ Repeated headers are not supported, but a header value can contain commas.
 <a href="#oauthtoken_csharp" style="color: inherit; text-decoration: inherit;">Oauth<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptargetoauthtoken">Job<wbr>Http<wbr>Target<wbr>Oauth<wbr>Token<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobhttptargetoauthtoken">Job<wbr>Http<wbr>Target<wbr>Oauth<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed for generating an OAuth token.
 This type of authorization should be used when sending requests to a GCP endpoint.
@@ -2247,7 +2247,7 @@ Structure is documented below.
 <a href="#oidctoken_csharp" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptargetoidctoken">Job<wbr>Http<wbr>Target<wbr>Oidc<wbr>Token<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobhttptargetoidctoken">Job<wbr>Http<wbr>Target<wbr>Oidc<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed for generating an OpenID Connect token.
 This type of authorization should be used when sending requests to third party endpoints or Cloud Run.
@@ -2368,7 +2368,7 @@ Repeated headers are not supported, but a header value can contain commas.
 <a href="#oauthtoken_nodejs" style="color: inherit; text-decoration: inherit;">oauth<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptargetoauthtoken">Job<wbr>Http<wbr>Target<wbr>Oauth<wbr>Token<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobhttptargetoauthtoken">Job<wbr>Http<wbr>Target<wbr>Oauth<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed for generating an OAuth token.
 This type of authorization should be used when sending requests to a GCP endpoint.
@@ -2379,7 +2379,7 @@ Structure is documented below.
 <a href="#oidctoken_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptargetoidctoken">Job<wbr>Http<wbr>Target<wbr>Oidc<wbr>Token<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobhttptargetoidctoken">Job<wbr>Http<wbr>Target<wbr>Oidc<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed for generating an OpenID Connect token.
 This type of authorization should be used when sending requests to third party endpoints or Cloud Run.
@@ -2434,7 +2434,7 @@ Repeated headers are not supported, but a header value can contain commas.
 <a href="#oauth_token_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptargetoauthtoken">Job<wbr>Http<wbr>Target<wbr>Oauth<wbr>Token<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobhttptargetoauthtoken">Job<wbr>Http<wbr>Target<wbr>Oauth<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed for generating an OAuth token.
 This type of authorization should be used when sending requests to a GCP endpoint.
@@ -2445,7 +2445,7 @@ Structure is documented below.
 <a href="#oidc_token_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptargetoidctoken">Job<wbr>Http<wbr>Target<wbr>Oidc<wbr>Token<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobhttptargetoidctoken">Job<wbr>Http<wbr>Target<wbr>Oidc<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed for generating an OpenID Connect token.
 This type of authorization should be used when sending requests to third party endpoints or Cloud Run.

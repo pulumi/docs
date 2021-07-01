@@ -785,7 +785,7 @@ boundaries.
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectivitytestdestination">Connectivity<wbr>Test<wbr>Destination</a></span>
+        <span class="property-type"><a href="#connectivitytestdestination">Connectivity<wbr>Test<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Destination specification of the Connectivity Test.
 You can use a combination of destination IP address, Compute
@@ -808,7 +808,7 @@ Structure is documented below.
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectivitytestsource">Connectivity<wbr>Test<wbr>Source</a></span>
+        <span class="property-type"><a href="#connectivitytestsource">Connectivity<wbr>Test<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Source specification of the Connectivity Test.
 You can use a combination of source IP address, virtual machine
@@ -1431,7 +1431,7 @@ Maximum of 512 characters.
 <a href="#state_destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectivitytestdestination">Connectivity<wbr>Test<wbr>Destination</a></span>
+        <span class="property-type"><a href="#connectivitytestdestination">Connectivity<wbr>Test<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Destination specification of the Connectivity Test.
 You can use a combination of destination IP address, Compute
@@ -1502,7 +1502,7 @@ boundaries.
 <a href="#state_source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectivitytestsource">Connectivity<wbr>Test<wbr>Source</a></span>
+        <span class="property-type"><a href="#connectivitytestsource">Connectivity<wbr>Test<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Source specification of the Connectivity Test.
 You can use a combination of source IP address, virtual machine

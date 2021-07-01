@@ -726,7 +726,7 @@ Structure is documented below.
 <a href="#bootdisk_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebootdisk">Instance<wbr>Boot<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instancebootdisk">Instance<wbr>Boot<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The boot disk for the instance.
 Structure is documented below.
@@ -745,7 +745,7 @@ Structure is documented below.
 <a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkinterface">[]Instance<wbr>Network<wbr>Interface</a></span>
+        <span class="property-type"><a href="#instancenetworkinterface">[]Instance<wbr>Network<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Networks to attach to the instance. This can
 be specified multiple times. Structure is documented below.
@@ -765,7 +765,7 @@ If you try to update a property that requires stopping the instance without sett
 <a href="#attacheddisks_go" style="color: inherit; text-decoration: inherit;">Attached<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceattacheddisk">[]Instance<wbr>Attached<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instanceattacheddisk">[]Instance<wbr>Attached<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional disks to attach to the instance. Can be repeated multiple times for multiple disks. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -785,7 +785,7 @@ This defaults to false.
 <a href="#confidentialinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd><dt class="property-optional"
@@ -833,7 +833,7 @@ This defaults to false.
 <a href="#guestaccelerators_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceguestaccelerator">[]Instance<wbr>Guest<wbr>Accelerator</a></span>
+        <span class="property-type"><a href="#instanceguestaccelerator">[]Instance<wbr>Guest<wbr>Accelerator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure documented below.
 **Note:** GPU accelerators can only be used with `on_host_maintenance` option set to TERMINATE.
@@ -914,7 +914,7 @@ Changing this forces a new resource to be created.
 <a href="#networkperformanceconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkperformanceconfig">Instance<wbr>Network<wbr>Performance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancenetworkperformanceconfig">Instance<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures network performance settings for the instance. Structure is
 documented below. **Note**: `machine_type` must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
@@ -937,7 +937,7 @@ is not provided, the provider project is used.
 <a href="#reservationaffinity_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity</a></span>
+        <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reservations that this instance can consume from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -955,7 +955,7 @@ is not provided, the provider project is used.
 <a href="#scheduling_go" style="color: inherit; text-decoration: inherit;">Scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancescheduling">Instance<wbr>Scheduling</a></span>
+        <span class="property-type"><a href="#instancescheduling">Instance<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy to use. More details about
 this configuration option are detailed below.
@@ -965,7 +965,7 @@ this configuration option are detailed below.
 <a href="#scratchdisks_go" style="color: inherit; text-decoration: inherit;">Scratch<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancescratchdisk">[]Instance<wbr>Scratch<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instancescratchdisk">[]Instance<wbr>Scratch<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Scratch disks to attach to the instance. This can be
 specified multiple times for multiple scratch disks. Structure is documented below.
@@ -975,7 +975,7 @@ specified multiple times for multiple scratch disks. Structure is documented bel
 <a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceserviceaccount">Instance<wbr>Service<wbr>Account</a></span>
+        <span class="property-type"><a href="#instanceserviceaccount">Instance<wbr>Service<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service account to attach to the instance.
 Structure is documented below.
@@ -986,7 +986,7 @@ Structure is documented below.
 <a href="#shieldedinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceshieldedinstanceconfig">Instance<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instanceshieldedinstanceconfig">Instance<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
@@ -2438,7 +2438,7 @@ If you try to update a property that requires stopping the instance without sett
 <a href="#state_attacheddisks_go" style="color: inherit; text-decoration: inherit;">Attached<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceattacheddisk">[]Instance<wbr>Attached<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instanceattacheddisk">[]Instance<wbr>Attached<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional disks to attach to the instance. Can be repeated multiple times for multiple disks. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2447,7 +2447,7 @@ If you try to update a property that requires stopping the instance without sett
 <a href="#state_bootdisk_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebootdisk">Instance<wbr>Boot<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instancebootdisk">Instance<wbr>Boot<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The boot disk for the instance.
 Structure is documented below.
@@ -2468,7 +2468,7 @@ This defaults to false.
 <a href="#state_confidentialinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2534,7 +2534,7 @@ This defaults to false.
 <a href="#state_guestaccelerators_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceguestaccelerator">[]Instance<wbr>Guest<wbr>Accelerator</a></span>
+        <span class="property-type"><a href="#instanceguestaccelerator">[]Instance<wbr>Guest<wbr>Accelerator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure documented below.
 **Note:** GPU accelerators can only be used with `on_host_maintenance` option set to TERMINATE.
@@ -2651,7 +2651,7 @@ Changing this forces a new resource to be created.
 <a href="#state_networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkinterface">[]Instance<wbr>Network<wbr>Interface</a></span>
+        <span class="property-type"><a href="#instancenetworkinterface">[]Instance<wbr>Network<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Networks to attach to the instance. This can
 be specified multiple times. Structure is documented below.
@@ -2661,7 +2661,7 @@ be specified multiple times. Structure is documented below.
 <a href="#state_networkperformanceconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkperformanceconfig">Instance<wbr>Network<wbr>Performance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancenetworkperformanceconfig">Instance<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures network performance settings for the instance. Structure is
 documented below. **Note**: `machine_type` must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
@@ -2684,7 +2684,7 @@ is not provided, the provider project is used.
 <a href="#state_reservationaffinity_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity</a></span>
+        <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reservations that this instance can consume from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2702,7 +2702,7 @@ is not provided, the provider project is used.
 <a href="#state_scheduling_go" style="color: inherit; text-decoration: inherit;">Scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancescheduling">Instance<wbr>Scheduling</a></span>
+        <span class="property-type"><a href="#instancescheduling">Instance<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy to use. More details about
 this configuration option are detailed below.
@@ -2712,7 +2712,7 @@ this configuration option are detailed below.
 <a href="#state_scratchdisks_go" style="color: inherit; text-decoration: inherit;">Scratch<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancescratchdisk">[]Instance<wbr>Scratch<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instancescratchdisk">[]Instance<wbr>Scratch<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Scratch disks to attach to the instance. This can be
 specified multiple times for multiple scratch disks. Structure is documented below.
@@ -2731,7 +2731,7 @@ specified multiple times for multiple scratch disks. Structure is documented bel
 <a href="#state_serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceserviceaccount">Instance<wbr>Service<wbr>Account</a></span>
+        <span class="property-type"><a href="#instanceserviceaccount">Instance<wbr>Service<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service account to attach to the instance.
 Structure is documented below.
@@ -2742,7 +2742,7 @@ Structure is documented below.
 <a href="#state_shieldedinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceshieldedinstanceconfig">Instance<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instanceshieldedinstanceconfig">Instance<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
@@ -3813,7 +3813,7 @@ to encrypt this disk. Only one of `kms_key_self_link` and `disk_encryption_key_r
 <a href="#initializeparams_csharp" style="color: inherit; text-decoration: inherit;">Initialize<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebootdiskinitializeparams">Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancebootdiskinitializeparams">Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params</a></span>
     </dt>
     <dd>{{% md %}}Parameters for a new disk that will be created
 alongside the new instance. Either `initialize_params` or `source` must be set.
@@ -3987,7 +3987,7 @@ to encrypt this disk. Only one of `kms_key_self_link` and `disk_encryption_key_r
 <a href="#initializeparams_nodejs" style="color: inherit; text-decoration: inherit;">initialize<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebootdiskinitializeparams">Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancebootdiskinitializeparams">Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params</a></span>
     </dt>
     <dd>{{% md %}}Parameters for a new disk that will be created
 alongside the new instance. Either `initialize_params` or `source` must be set.
@@ -4074,7 +4074,7 @@ to encrypt this disk. Only one of `kms_key_self_link` and `disk_encryption_key_r
 <a href="#initialize_params_python" style="color: inherit; text-decoration: inherit;">initialize_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebootdiskinitializeparams">Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancebootdiskinitializeparams">Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params</a></span>
     </dt>
     <dd>{{% md %}}Parameters for a new disk that will be created
 alongside the new instance. Either `initialize_params` or `source` must be set.
@@ -4465,7 +4465,7 @@ will inherit the size of its base image.
 <a href="#accessconfigs_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkinterfaceaccessconfig">List&lt;Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instancenetworkinterfaceaccessconfig">List&lt;Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Omit to ensure that the instance
@@ -4479,7 +4479,7 @@ This block can be repeated multiple times. Structure documented below.
 <a href="#aliasipranges_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkinterfacealiasiprange">List&lt;Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instancenetworkinterfacealiasiprange">List&lt;Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range&gt;</a></span>
     </dt>
     <dd>{{% md %}}An
 array of alias IP ranges for this network interface. Can only be specified for network
@@ -4649,7 +4649,7 @@ field is not provided, the provider project is used.
 <a href="#accessconfigs_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkinterfaceaccessconfig">Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instancenetworkinterfaceaccessconfig">Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Omit to ensure that the instance
@@ -4663,7 +4663,7 @@ This block can be repeated multiple times. Structure documented below.
 <a href="#aliasipranges_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkinterfacealiasiprange">Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instancenetworkinterfacealiasiprange">Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}An
 array of alias IP ranges for this network interface. Can only be specified for network
@@ -4741,7 +4741,7 @@ field is not provided, the provider project is used.
 <a href="#access_configs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkinterfaceaccessconfig">Sequence[Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancenetworkinterfaceaccessconfig">Sequence[Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Omit to ensure that the instance
@@ -4755,7 +4755,7 @@ This block can be repeated multiple times. Structure documented below.
 <a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkinterfacealiasiprange">Sequence[Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancenetworkinterfacealiasiprange">Sequence[Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range]</a></span>
     </dt>
     <dd>{{% md %}}An
 array of alias IP ranges for this network interface. Can only be specified for network
@@ -5162,7 +5162,7 @@ Possible values: TIER_1, DEFAULT
 <a href="#specificreservation_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancereservationaffinityspecificreservation">Instance<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancereservationaffinityspecificreservation">Instance<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5204,7 +5204,7 @@ Possible values: TIER_1, DEFAULT
 <a href="#specificreservation_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancereservationaffinityspecificreservation">Instance<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancereservationaffinityspecificreservation">Instance<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5225,7 +5225,7 @@ Possible values: TIER_1, DEFAULT
 <a href="#specific_reservation_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancereservationaffinityspecificreservation">Instance<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancereservationaffinityspecificreservation">Instance<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5349,7 +5349,7 @@ Defaults to true.
 <a href="#nodeaffinities_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceschedulingnodeaffinity">List&lt;Instance<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceschedulingnodeaffinity">List&lt;Instance<wbr>Scheduling<wbr>Node<wbr>Affinity&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies node affinities or anti-affinities
 to determine which sole-tenant nodes your instances and managed instance
@@ -5467,7 +5467,7 @@ Defaults to true.
 <a href="#nodeaffinities_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceschedulingnodeaffinity">Instance<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instanceschedulingnodeaffinity">Instance<wbr>Scheduling<wbr>Node<wbr>Affinity[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies node affinities or anti-affinities
 to determine which sole-tenant nodes your instances and managed instance
@@ -5526,7 +5526,7 @@ Defaults to true.
 <a href="#node_affinities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceschedulingnodeaffinity">Sequence[Instance<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceschedulingnodeaffinity">Sequence[Instance<wbr>Scheduling<wbr>Node<wbr>Affinity]</a></span>
     </dt>
     <dd>{{% md %}}Specifies node affinities or anti-affinities
 to determine which sole-tenant nodes your instances and managed instance

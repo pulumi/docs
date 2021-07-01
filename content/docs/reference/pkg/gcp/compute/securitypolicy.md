@@ -422,7 +422,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
 <a href="#adaptiveprotectionconfig_go" style="color: inherit; text-decoration: inherit;">Adaptive<wbr>Protection<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config</a></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -459,7 +459,7 @@ is not provided, the provider project is used.
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrule">[]Security<wbr>Policy<wbr>Rule</a></span>
+        <span class="property-type"><a href="#securitypolicyrule">[]Security<wbr>Policy<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of rules that belong to this policy. There must always be a default
 rule (rule with priority 2147483647 and match "\*"). If no rules are provided when creating a
@@ -907,7 +907,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
 <a href="#state_adaptiveprotectionconfig_go" style="color: inherit; text-decoration: inherit;">Adaptive<wbr>Protection<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config</a></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -953,7 +953,7 @@ is not provided, the provider project is used.
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrule">[]Security<wbr>Policy<wbr>Rule</a></span>
+        <span class="property-type"><a href="#securitypolicyrule">[]Security<wbr>Policy<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of rules that belong to this policy. There must always be a default
 rule (rule with priority 2147483647 and match "\*"). If no rules are provided when creating a
@@ -1128,7 +1128,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
 <a href="#layer7ddosdefenseconfig_csharp" style="color: inherit; text-decoration: inherit;">Layer7Ddos<wbr>Defense<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -1154,7 +1154,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
 <a href="#layer7ddosdefenseconfig_nodejs" style="color: inherit; text-decoration: inherit;">layer7Ddos<wbr>Defense<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -1167,7 +1167,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
 <a href="#layer7_ddos_defense_config_python" style="color: inherit; text-decoration: inherit;">layer7_<wbr>ddos_<wbr>defense_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -1283,7 +1283,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematch">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematch">Security<wbr>Policy<wbr>Rule<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against.
 If it evaluates to true, the corresponding `action` is enforced. Structure is documented below.
@@ -1391,7 +1391,7 @@ Stackdriver logs for requests that trigger a preview action are annotated as suc
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematch">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematch">Security<wbr>Policy<wbr>Rule<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against.
 If it evaluates to true, the corresponding `action` is enforced. Structure is documented below.
@@ -1445,7 +1445,7 @@ Stackdriver logs for requests that trigger a preview action are annotated as suc
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematch">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematch">Security<wbr>Policy<wbr>Rule<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against.
 If it evaluates to true, the corresponding `action` is enforced. Structure is documented below.
@@ -1490,7 +1490,7 @@ Stackdriver logs for requests that trigger a preview action are annotated as suc
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematchconfig">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematchconfig">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration options available when specifying `versioned_expr`.
 This field must be specified if `versioned_expr` is specified and cannot be specified if `versioned_expr` is not specified.
@@ -1501,7 +1501,7 @@ Structure is documented below.
 <a href="#expr_csharp" style="color: inherit; text-decoration: inherit;">Expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematchexpr">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Expr<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematchexpr">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Expr</a></span>
     </dt>
     <dd>{{% md %}}User defined CEVAL expression. A CEVAL expression is used to specify match criteria
 such as origin.ip, source.region_code and contents in the request header.
@@ -1564,7 +1564,7 @@ Available options:
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematchconfig">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematchconfig">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration options available when specifying `versioned_expr`.
 This field must be specified if `versioned_expr` is specified and cannot be specified if `versioned_expr` is not specified.
@@ -1575,7 +1575,7 @@ Structure is documented below.
 <a href="#expr_nodejs" style="color: inherit; text-decoration: inherit;">expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematchexpr">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Expr<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematchexpr">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Expr</a></span>
     </dt>
     <dd>{{% md %}}User defined CEVAL expression. A CEVAL expression is used to specify match criteria
 such as origin.ip, source.region_code and contents in the request header.
@@ -1601,7 +1601,7 @@ Available options:
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematchconfig">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematchconfig">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration options available when specifying `versioned_expr`.
 This field must be specified if `versioned_expr` is specified and cannot be specified if `versioned_expr` is not specified.
@@ -1612,7 +1612,7 @@ Structure is documented below.
 <a href="#expr_python" style="color: inherit; text-decoration: inherit;">expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematchexpr">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Expr<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematchexpr">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Expr</a></span>
     </dt>
     <dd>{{% md %}}User defined CEVAL expression. A CEVAL expression is used to specify match criteria
 such as origin.ip, source.region_code and contents in the request header.

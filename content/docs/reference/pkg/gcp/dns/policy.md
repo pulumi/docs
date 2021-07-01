@@ -457,7 +457,7 @@ If it is not provided, the provider project is used.
 <a href="#alternativenameserverconfig_go" style="color: inherit; text-decoration: inherit;">Alternative<wbr>Name<wbr>Server<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyalternativenameserverconfig">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config</a></span>
+        <span class="property-type"><a href="#policyalternativenameserverconfig">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sets an alternative name server for the associated networks.
 When specified, all DNS queries are forwarded to a name server that you choose.
@@ -509,7 +509,7 @@ Defaults to no logging if not set.
 <a href="#networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policynetwork">[]Policy<wbr>Network</a></span>
+        <span class="property-type"><a href="#policynetwork">[]Policy<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
 Structure is documented below.
@@ -948,7 +948,7 @@ If it is not provided, the provider project is used.
 <a href="#state_alternativenameserverconfig_go" style="color: inherit; text-decoration: inherit;">Alternative<wbr>Name<wbr>Server<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyalternativenameserverconfig">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config</a></span>
+        <span class="property-type"><a href="#policyalternativenameserverconfig">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sets an alternative name server for the associated networks.
 When specified, all DNS queries are forwarded to a name server that you choose.
@@ -1000,7 +1000,7 @@ Defaults to no logging if not set.
 <a href="#state_networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policynetwork">[]Policy<wbr>Network</a></span>
+        <span class="property-type"><a href="#policynetwork">[]Policy<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
 Structure is documented below.
@@ -1187,7 +1187,7 @@ If it is not provided, the provider project is used.
 <a href="#targetnameservers_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Name<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyalternativenameserverconfigtargetnameserver">List&lt;Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#policyalternativenameserverconfigtargetnameserver">List&lt;Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified,
 all DNS queries are forwarded to a name server that you choose. Names such as .internal
@@ -1219,7 +1219,7 @@ Structure is documented below.
 <a href="#targetnameservers_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Name<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyalternativenameserverconfigtargetnameserver">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#policyalternativenameserverconfigtargetnameserver">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server[]</a></span>
     </dt>
     <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified,
 all DNS queries are forwarded to a name server that you choose. Names such as .internal
@@ -1235,7 +1235,7 @@ Structure is documented below.
 <a href="#target_name_servers_python" style="color: inherit; text-decoration: inherit;">target_<wbr>name_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyalternativenameserverconfigtargetnameserver">Sequence[Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policyalternativenameserverconfigtargetnameserver">Sequence[Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server]</a></span>
     </dt>
     <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified,
 all DNS queries are forwarded to a name server that you choose. Names such as .internal

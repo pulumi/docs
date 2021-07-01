@@ -609,7 +609,7 @@ If it is not provided, the provider project is used.
 <a href="#fileshares_go" style="color: inherit; text-decoration: inherit;">File<wbr>Shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares</a></span>
+        <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}File system shares on the instance. For this version, only a
 single file share is supported.
@@ -620,7 +620,7 @@ Structure is documented below.
 <a href="#networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">[]Instance<wbr>Network</a></span>
+        <span class="property-type"><a href="#instancenetwork">[]Instance<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
 only a single network is supported.
@@ -1244,7 +1244,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
 <a href="#state_fileshares_go" style="color: inherit; text-decoration: inherit;">File<wbr>Shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares</a></span>
+        <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}File system shares on the instance. For this version, only a
 single file share is supported.
@@ -1273,7 +1273,7 @@ Structure is documented below.
 <a href="#state_networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">[]Instance<wbr>Network</a></span>
+        <span class="property-type"><a href="#instancenetwork">[]Instance<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
 only a single network is supported.
@@ -1547,7 +1547,7 @@ for the standard tier, or 2560 GiB for the premium tier.
 <a href="#nfsexportoptions_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Export<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefilesharesnfsexportoption">List&lt;Instance<wbr>File<wbr>Shares<wbr>Nfs<wbr>Export<wbr>Option<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instancefilesharesnfsexportoption">List&lt;Instance<wbr>File<wbr>Shares<wbr>Nfs<wbr>Export<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}Nfs Export Options. There is a limit of 10 export options per file share.
 Structure is documented below.
@@ -1613,7 +1613,7 @@ for the standard tier, or 2560 GiB for the premium tier.
 <a href="#nfsexportoptions_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Export<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefilesharesnfsexportoption">Instance<wbr>File<wbr>Shares<wbr>Nfs<wbr>Export<wbr>Option<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instancefilesharesnfsexportoption">Instance<wbr>File<wbr>Shares<wbr>Nfs<wbr>Export<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}Nfs Export Options. There is a limit of 10 export options per file share.
 Structure is documented below.
@@ -1646,7 +1646,7 @@ for the standard tier, or 2560 GiB for the premium tier.
 <a href="#nfs_export_options_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>export_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefilesharesnfsexportoption">Sequence[Instance<wbr>File<wbr>Shares<wbr>Nfs<wbr>Export<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefilesharesnfsexportoption">Sequence[Instance<wbr>File<wbr>Shares<wbr>Nfs<wbr>Export<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}Nfs Export Options. There is a limit of 10 export options per file share.
 Structure is documented below.

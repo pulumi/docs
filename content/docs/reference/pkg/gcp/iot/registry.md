@@ -641,7 +641,7 @@ The structure is documented below.
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrycredential">[]Registry<wbr>Credential</a></span>
+        <span class="property-type"><a href="#registrycredential">[]Registry<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
 The structure is documented below.
@@ -651,7 +651,7 @@ The structure is documented below.
 <a href="#eventnotificationconfigs_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Notification<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryeventnotificationconfigitem">[]Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item</a></span>
+        <span class="property-type"><a href="#registryeventnotificationconfigitem">[]Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
 to publish device events to.
@@ -1226,7 +1226,7 @@ The structure is documented below.
 <a href="#state_credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrycredential">[]Registry<wbr>Credential</a></span>
+        <span class="property-type"><a href="#registrycredential">[]Registry<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
 The structure is documented below.
@@ -1236,7 +1236,7 @@ The structure is documented below.
 <a href="#state_eventnotificationconfigs_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Notification<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryeventnotificationconfigitem">[]Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item</a></span>
+        <span class="property-type"><a href="#registryeventnotificationconfigitem">[]Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
 to publish device events to.

@@ -2257,7 +2257,7 @@ network.
 <a href="#state_servercacerts_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Ca<wbr>Certs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceservercacert">[]Instance<wbr>Server<wbr>Ca<wbr>Cert</a></span>
+        <span class="property-type"><a href="#instanceservercacert">[]Instance<wbr>Server<wbr>Ca<wbr>Cert<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of server CA certificates for the instance.
 {{% /md %}}</dd><dt class="property-optional"

@@ -1224,7 +1224,7 @@ func main() {
 <a href="#aws_go" style="color: inherit; text-decoration: inherit;">Aws</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadidentitypoolprovideraws">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Aws</a></span>
+        <span class="property-type"><a href="#workloadidentitypoolprovideraws">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Aws<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider. Not compatible with the property oidc.
 Structure is documented below.
@@ -1262,7 +1262,7 @@ However, existing tokens still grant access.
 <a href="#oidc_go" style="color: inherit; text-decoration: inherit;">Oidc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadidentitypoolprovideroidc">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Oidc</a></span>
+        <span class="property-type"><a href="#workloadidentitypoolprovideroidc">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Oidc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider. Not compatible with the property aws.
 Structure is documented below.
@@ -2460,7 +2460,7 @@ func main() {
 <a href="#state_aws_go" style="color: inherit; text-decoration: inherit;">Aws</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadidentitypoolprovideraws">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Aws</a></span>
+        <span class="property-type"><a href="#workloadidentitypoolprovideraws">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Aws<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider. Not compatible with the property oidc.
 Structure is documented below.
@@ -2508,7 +2508,7 @@ However, existing tokens still grant access.
 <a href="#state_oidc_go" style="color: inherit; text-decoration: inherit;">Oidc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadidentitypoolprovideroidc">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Oidc</a></span>
+        <span class="property-type"><a href="#workloadidentitypoolprovideroidc">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Oidc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider. Not compatible with the property aws.
 Structure is documented below.

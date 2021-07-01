@@ -1046,7 +1046,7 @@ Possible values are `OWNER` and `READER`.
 <a href="#state_projectteams_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectaccesscontrolprojectteam">[]Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</a></span>
+        <span class="property-type"><a href="#objectaccesscontrolprojectteam">[]Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
 {{% /md %}}</dd><dt class="property-optional"

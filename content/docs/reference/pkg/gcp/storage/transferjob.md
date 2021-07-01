@@ -574,7 +574,7 @@ is not provided, the provider project is used.
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -583,7 +583,7 @@ is not provided, the provider project is used.
 <a href="#transferspec_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec</a></span>
+        <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1189,7 +1189,7 @@ is not provided, the provider project is used.
 <a href="#state_schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1207,7 +1207,7 @@ is not provided, the provider project is used.
 <a href="#state_transferspec_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec</a></span>
+        <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification. Structure documented below.
 {{% /md %}}</dd></dl>
@@ -1403,7 +1403,7 @@ is not provided, the provider project is used.
 <a href="#schedulestartdate_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Start<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobscheduleschedulestartdate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>Start<wbr>Date<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobscheduleschedulestartdate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>Start<wbr>Date</a></span>
     </dt>
     <dd>{{% md %}}The first day the recurring transfer is scheduled to run. If `schedule_start_date` is in the past, the transfer will run for the first time on the following day. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1412,7 +1412,7 @@ is not provided, the provider project is used.
 <a href="#scheduleenddate_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>End<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date</a></span>
     </dt>
     <dd>{{% md %}}The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1421,7 +1421,7 @@ is not provided, the provider project is used.
 <a href="#starttimeofday_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time<wbr>Of<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer's start time in a day is specified in your local timezone. Structure documented below.
 {{% /md %}}</dd></dl>
@@ -1465,7 +1465,7 @@ is not provided, the provider project is used.
 <a href="#schedulestartdate_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Start<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobscheduleschedulestartdate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>Start<wbr>Date<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobscheduleschedulestartdate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>Start<wbr>Date</a></span>
     </dt>
     <dd>{{% md %}}The first day the recurring transfer is scheduled to run. If `schedule_start_date` is in the past, the transfer will run for the first time on the following day. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1474,7 +1474,7 @@ is not provided, the provider project is used.
 <a href="#scheduleenddate_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>End<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date</a></span>
     </dt>
     <dd>{{% md %}}The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1483,7 +1483,7 @@ is not provided, the provider project is used.
 <a href="#starttimeofday_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Of<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer's start time in a day is specified in your local timezone. Structure documented below.
 {{% /md %}}</dd></dl>
@@ -1496,7 +1496,7 @@ is not provided, the provider project is used.
 <a href="#schedule_start_date_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>start_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobscheduleschedulestartdate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>Start<wbr>Date<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobscheduleschedulestartdate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>Start<wbr>Date</a></span>
     </dt>
     <dd>{{% md %}}The first day the recurring transfer is scheduled to run. If `schedule_start_date` is in the past, the transfer will run for the first time on the following day. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1505,7 +1505,7 @@ is not provided, the provider project is used.
 <a href="#schedule_end_date_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>end_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date</a></span>
     </dt>
     <dd>{{% md %}}The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1514,7 +1514,7 @@ is not provided, the provider project is used.
 <a href="#start_time_of_day_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>of_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer's start time in a day is specified in your local timezone. Structure documented below.
 {{% /md %}}</dd></dl>
@@ -1943,7 +1943,7 @@ is not provided, the provider project is used.
 <a href="#awss3datasource_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>S3Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}An AWS S3 data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1952,7 +1952,7 @@ is not provided, the provider project is used.
 <a href="#azureblobstoragedatasource_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1961,7 +1961,7 @@ is not provided, the provider project is used.
 <a href="#gcsdatasink_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Data<wbr>Sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data sink. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1970,7 +1970,7 @@ is not provided, the provider project is used.
 <a href="#gcsdatasource_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1979,7 +1979,7 @@ is not provided, the provider project is used.
 <a href="#httpdatasource_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A HTTP URL data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1988,7 +1988,7 @@ is not provided, the provider project is used.
 <a href="#objectconditions_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions</a></span>
     </dt>
     <dd>{{% md %}}Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' `last_modification_time` do not exclude objects in a data sink. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1997,7 +1997,7 @@ is not provided, the provider project is used.
 <a href="#transferoptions_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects' `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
 {{% /md %}}</dd></dl>
@@ -2077,7 +2077,7 @@ is not provided, the provider project is used.
 <a href="#awss3datasource_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>S3Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}An AWS S3 data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2086,7 +2086,7 @@ is not provided, the provider project is used.
 <a href="#azureblobstoragedatasource_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2095,7 +2095,7 @@ is not provided, the provider project is used.
 <a href="#gcsdatasink_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Data<wbr>Sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data sink. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2104,7 +2104,7 @@ is not provided, the provider project is used.
 <a href="#gcsdatasource_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2113,7 +2113,7 @@ is not provided, the provider project is used.
 <a href="#httpdatasource_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A HTTP URL data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2122,7 +2122,7 @@ is not provided, the provider project is used.
 <a href="#objectconditions_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions</a></span>
     </dt>
     <dd>{{% md %}}Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' `last_modification_time` do not exclude objects in a data sink. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2131,7 +2131,7 @@ is not provided, the provider project is used.
 <a href="#transferoptions_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects' `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
 {{% /md %}}</dd></dl>
@@ -2144,7 +2144,7 @@ is not provided, the provider project is used.
 <a href="#aws_s3_data_source_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>s3_<wbr>data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}An AWS S3 data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2153,7 +2153,7 @@ is not provided, the provider project is used.
 <a href="#azure_blob_storage_data_source_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage_<wbr>data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2162,7 +2162,7 @@ is not provided, the provider project is used.
 <a href="#gcs_data_sink_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>data_<wbr>sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data sink. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2171,7 +2171,7 @@ is not provided, the provider project is used.
 <a href="#gcs_data_source_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2180,7 +2180,7 @@ is not provided, the provider project is used.
 <a href="#http_data_source_python" style="color: inherit; text-decoration: inherit;">http_<wbr>data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A HTTP URL data source. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2189,7 +2189,7 @@ is not provided, the provider project is used.
 <a href="#object_conditions_python" style="color: inherit; text-decoration: inherit;">object_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions</a></span>
     </dt>
     <dd>{{% md %}}Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' `last_modification_time` do not exclude objects in a data sink. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2198,7 +2198,7 @@ is not provided, the provider project is used.
 <a href="#transfer_options_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects' `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
 {{% /md %}}</dd></dl>
@@ -2213,7 +2213,7 @@ is not provided, the provider project is used.
 <a href="#awsaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecawss3datasourceawsaccesskey">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Aws<wbr>Access<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecawss3datasourceawsaccesskey">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Aws<wbr>Access<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}AWS credentials block.
 {{% /md %}}</dd><dt class="property-required"
@@ -2257,7 +2257,7 @@ is not provided, the provider project is used.
 <a href="#awsaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecawss3datasourceawsaccesskey">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Aws<wbr>Access<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecawss3datasourceawsaccesskey">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Aws<wbr>Access<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}AWS credentials block.
 {{% /md %}}</dd><dt class="property-required"
@@ -2279,7 +2279,7 @@ is not provided, the provider project is used.
 <a href="#aws_access_key_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecawss3datasourceawsaccesskey">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Aws<wbr>Access<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecawss3datasourceawsaccesskey">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Aws<wbr>Access<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}AWS credentials block.
 {{% /md %}}</dd><dt class="property-required"
@@ -2393,7 +2393,7 @@ is not provided, the provider project is used.
 <a href="#azurecredentials_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasourceazurecredentials">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source<wbr>Azure<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasourceazurecredentials">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source<wbr>Azure<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Credentials used to authenticate API requests to Azure block.
 {{% /md %}}</dd><dt class="property-required"
@@ -2473,7 +2473,7 @@ is not provided, the provider project is used.
 <a href="#azurecredentials_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasourceazurecredentials">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source<wbr>Azure<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasourceazurecredentials">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source<wbr>Azure<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Credentials used to authenticate API requests to Azure block.
 {{% /md %}}</dd><dt class="property-required"
@@ -2513,7 +2513,7 @@ is not provided, the provider project is used.
 <a href="#azure_credentials_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasourceazurecredentials">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source<wbr>Azure<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecazureblobstoragedatasourceazurecredentials">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source<wbr>Azure<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Credentials used to authenticate API requests to Azure block.
 {{% /md %}}</dd><dt class="property-required"

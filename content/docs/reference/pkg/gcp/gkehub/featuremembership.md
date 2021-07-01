@@ -228,7 +228,7 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
 <a href="#configmanagement_go" style="color: inherit; text-decoration: inherit;">Configmanagement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuremembershipconfigmanagement">Feature<wbr>Membership<wbr>Configmanagement</a></span>
+        <span class="property-type"><a href="#featuremembershipconfigmanagement">Feature<wbr>Membership<wbr>Configmanagement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Config Management-specific spec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -609,7 +609,7 @@ The following state arguments are supported:
 <a href="#state_configmanagement_go" style="color: inherit; text-decoration: inherit;">Configmanagement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuremembershipconfigmanagement">Feature<wbr>Membership<wbr>Configmanagement</a></span>
+        <span class="property-type"><a href="#featuremembershipconfigmanagement">Feature<wbr>Membership<wbr>Configmanagement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Config Management-specific spec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -767,7 +767,7 @@ The following state arguments are supported:
 <a href="#binauthz_csharp" style="color: inherit; text-decoration: inherit;">Binauthz</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuremembershipconfigmanagementbinauthz">Feature<wbr>Membership<wbr>Configmanagement<wbr>Binauthz<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuremembershipconfigmanagementbinauthz">Feature<wbr>Membership<wbr>Configmanagement<wbr>Binauthz</a></span>
     </dt>
     <dd>{{% md %}}Binauthz conifguration for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -776,7 +776,7 @@ The following state arguments are supported:
 <a href="#configsync_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsync">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsync">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync</a></span>
     </dt>
     <dd>{{% md %}}Config Sync configuration for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -785,7 +785,7 @@ The following state arguments are supported:
 <a href="#hierarchycontroller_csharp" style="color: inherit; text-decoration: inherit;">Hierarchy<wbr>Controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuremembershipconfigmanagementhierarchycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Hierarchy<wbr>Controller<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuremembershipconfigmanagementhierarchycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Hierarchy<wbr>Controller</a></span>
     </dt>
     <dd>{{% md %}}Hierarchy Controller configuration for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -794,7 +794,7 @@ The following state arguments are supported:
 <a href="#policycontroller_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuremembershipconfigmanagementpolicycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Policy<wbr>Controller<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuremembershipconfigmanagementpolicycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Policy<wbr>Controller</a></span>
     </dt>
     <dd>{{% md %}}Policy Controller configuration for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -865,7 +865,7 @@ The following state arguments are supported:
 <a href="#binauthz_nodejs" style="color: inherit; text-decoration: inherit;">binauthz</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuremembershipconfigmanagementbinauthz">Feature<wbr>Membership<wbr>Configmanagement<wbr>Binauthz<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuremembershipconfigmanagementbinauthz">Feature<wbr>Membership<wbr>Configmanagement<wbr>Binauthz</a></span>
     </dt>
     <dd>{{% md %}}Binauthz conifguration for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -874,7 +874,7 @@ The following state arguments are supported:
 <a href="#configsync_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsync">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsync">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync</a></span>
     </dt>
     <dd>{{% md %}}Config Sync configuration for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -883,7 +883,7 @@ The following state arguments are supported:
 <a href="#hierarchycontroller_nodejs" style="color: inherit; text-decoration: inherit;">hierarchy<wbr>Controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuremembershipconfigmanagementhierarchycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Hierarchy<wbr>Controller<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuremembershipconfigmanagementhierarchycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Hierarchy<wbr>Controller</a></span>
     </dt>
     <dd>{{% md %}}Hierarchy Controller configuration for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -892,7 +892,7 @@ The following state arguments are supported:
 <a href="#policycontroller_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuremembershipconfigmanagementpolicycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Policy<wbr>Controller<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuremembershipconfigmanagementpolicycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Policy<wbr>Controller</a></span>
     </dt>
     <dd>{{% md %}}Policy Controller configuration for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -914,7 +914,7 @@ The following state arguments are supported:
 <a href="#binauthz_python" style="color: inherit; text-decoration: inherit;">binauthz</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuremembershipconfigmanagementbinauthz">Feature<wbr>Membership<wbr>Configmanagement<wbr>Binauthz<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuremembershipconfigmanagementbinauthz">Feature<wbr>Membership<wbr>Configmanagement<wbr>Binauthz</a></span>
     </dt>
     <dd>{{% md %}}Binauthz conifguration for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -923,7 +923,7 @@ The following state arguments are supported:
 <a href="#config_sync_python" style="color: inherit; text-decoration: inherit;">config_<wbr>sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsync">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsync">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync</a></span>
     </dt>
     <dd>{{% md %}}Config Sync configuration for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -932,7 +932,7 @@ The following state arguments are supported:
 <a href="#hierarchy_controller_python" style="color: inherit; text-decoration: inherit;">hierarchy_<wbr>controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuremembershipconfigmanagementhierarchycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Hierarchy<wbr>Controller<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuremembershipconfigmanagementhierarchycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Hierarchy<wbr>Controller</a></span>
     </dt>
     <dd>{{% md %}}Hierarchy Controller configuration for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -941,7 +941,7 @@ The following state arguments are supported:
 <a href="#policy_controller_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuremembershipconfigmanagementpolicycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Policy<wbr>Controller<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuremembershipconfigmanagementpolicycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Policy<wbr>Controller</a></span>
     </dt>
     <dd>{{% md %}}Policy Controller configuration for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1019,7 +1019,7 @@ The following state arguments are supported:
 <a href="#git_csharp" style="color: inherit; text-decoration: inherit;">Git</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsyncgit">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync<wbr>Git<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsyncgit">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync<wbr>Git</a></span>
     </dt>
     <dd>{{% md %}}-
 (Optional)
@@ -1065,7 +1065,7 @@ The following state arguments are supported:
 <a href="#git_nodejs" style="color: inherit; text-decoration: inherit;">git</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsyncgit">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync<wbr>Git<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsyncgit">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync<wbr>Git</a></span>
     </dt>
     <dd>{{% md %}}-
 (Optional)
@@ -1088,7 +1088,7 @@ The following state arguments are supported:
 <a href="#git_python" style="color: inherit; text-decoration: inherit;">git</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsyncgit">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync<wbr>Git<wbr>Args</a></span>
+        <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsyncgit">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync<wbr>Git</a></span>
     </dt>
     <dd>{{% md %}}-
 (Optional)

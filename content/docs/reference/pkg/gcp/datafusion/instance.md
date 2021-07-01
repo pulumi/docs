@@ -651,7 +651,7 @@ such as Compute Engine VMs.
 <a href="#networkconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
 Structure is documented below.
@@ -1664,7 +1664,7 @@ such as Compute Engine VMs.
 <a href="#state_networkconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
 Structure is documented below.

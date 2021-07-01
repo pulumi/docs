@@ -658,7 +658,7 @@ If it is not provided, the provider region is used.
 <a href="#collectorilb_go" style="color: inherit; text-decoration: inherit;">Collector<wbr>Ilb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb</a></span>
+        <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
@@ -671,7 +671,7 @@ Structure is documented below.
 <a href="#mirroredresources_go" style="color: inherit; text-decoration: inherit;">Mirrored<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A means of specifying which resources to mirror.
 Structure is documented below.
@@ -681,7 +681,7 @@ Structure is documented below.
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network</a></span>
+        <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
@@ -702,7 +702,7 @@ Structure is documented below.
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter</a></span>
+        <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
 Structure is documented below.
@@ -1239,7 +1239,7 @@ If it is not provided, the provider region is used.
 <a href="#state_collectorilb_go" style="color: inherit; text-decoration: inherit;">Collector<wbr>Ilb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb</a></span>
+        <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
@@ -1261,7 +1261,7 @@ Structure is documented below.
 <a href="#state_filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter</a></span>
+        <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
 Structure is documented below.
@@ -1271,7 +1271,7 @@ Structure is documented below.
 <a href="#state_mirroredresources_go" style="color: inherit; text-decoration: inherit;">Mirrored<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A means of specifying which resources to mirror.
 Structure is documented below.
@@ -1290,7 +1290,7 @@ Structure is documented below.
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network</a></span>
+        <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
@@ -1740,7 +1740,7 @@ Each value may be one of `tcp`, `udp`, and `icmp`.
 <a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">List&lt;Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">List&lt;Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance&gt;</a></span>
     </dt>
     <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.
 Structure is documented below.
@@ -1750,7 +1750,7 @@ Structure is documented below.
 <a href="#subnetworks_csharp" style="color: inherit; text-decoration: inherit;">Subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">List&lt;Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">List&lt;Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork&gt;</a></span>
     </dt>
     <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.
 Structure is documented below.
@@ -1806,7 +1806,7 @@ Structure is documented below.
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance[]</a></span>
     </dt>
     <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.
 Structure is documented below.
@@ -1816,7 +1816,7 @@ Structure is documented below.
 <a href="#subnetworks_nodejs" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork[]</a></span>
     </dt>
     <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.
 Structure is documented below.
@@ -1839,7 +1839,7 @@ Structure is documented below.
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">Sequence[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance<wbr>Args]</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">Sequence[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance]</a></span>
     </dt>
     <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.
 Structure is documented below.
@@ -1849,7 +1849,7 @@ Structure is documented below.
 <a href="#subnetworks_python" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">Sequence[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork<wbr>Args]</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">Sequence[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork]</a></span>
     </dt>
     <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.
 Structure is documented below.

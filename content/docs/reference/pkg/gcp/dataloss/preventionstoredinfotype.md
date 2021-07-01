@@ -657,7 +657,7 @@ Structure is documented below.
 <a href="#dictionary_go" style="color: inherit; text-decoration: inherit;">Dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypedictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypedictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -676,7 +676,7 @@ Structure is documented below.
 <a href="#largecustomdictionary_go" style="color: inherit; text-decoration: inherit;">Large<wbr>Custom<wbr>Dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -686,7 +686,7 @@ Structure is documented below.
 <a href="#regex_go" style="color: inherit; text-decoration: inherit;">Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotyperegex">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotyperegex">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
@@ -1136,7 +1136,7 @@ Structure is documented below.
 <a href="#state_dictionary_go" style="color: inherit; text-decoration: inherit;">Dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypedictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypedictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -1155,7 +1155,7 @@ Structure is documented below.
 <a href="#state_largecustomdictionary_go" style="color: inherit; text-decoration: inherit;">Large<wbr>Custom<wbr>Dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -1187,7 +1187,7 @@ Structure is documented below.
 <a href="#state_regex_go" style="color: inherit; text-decoration: inherit;">Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotyperegex">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotyperegex">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
@@ -1360,7 +1360,7 @@ Structure is documented below.
 <a href="#cloudstoragepath_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypedictionarycloudstoragepath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypedictionarycloudstoragepath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
@@ -1370,7 +1370,7 @@ Structure is documented below.
 <a href="#wordlist_csharp" style="color: inherit; text-decoration: inherit;">Word<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypedictionarywordlist">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypedictionarywordlist">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
@@ -1408,7 +1408,7 @@ Structure is documented below.
 <a href="#cloudstoragepath_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypedictionarycloudstoragepath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypedictionarycloudstoragepath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
@@ -1418,7 +1418,7 @@ Structure is documented below.
 <a href="#wordlist_nodejs" style="color: inherit; text-decoration: inherit;">word<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypedictionarywordlist">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypedictionarywordlist">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
@@ -1432,7 +1432,7 @@ Structure is documented below.
 <a href="#cloud_storage_path_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypedictionarycloudstoragepath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypedictionarycloudstoragepath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
@@ -1442,7 +1442,7 @@ Structure is documented below.
 <a href="#word_list_python" style="color: inherit; text-decoration: inherit;">word_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypedictionarywordlist">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypedictionarywordlist">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
@@ -1570,7 +1570,7 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 <a href="#outputpath_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionaryoutputpath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Output<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionaryoutputpath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Output<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API.
 If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
@@ -1581,7 +1581,7 @@ Structure is documented below.
 <a href="#bigqueryfield_csharp" style="color: inherit; text-decoration: inherit;">Big<wbr>Query<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.
 Structure is documented below.
@@ -1591,7 +1591,7 @@ Structure is documented below.
 <a href="#cloudstoragefileset_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>File<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarycloudstoragefileset">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>File<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarycloudstoragefileset">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>File<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Set of files containing newline-delimited lists of dictionary phrases.
 Structure is documented below.
@@ -1640,7 +1640,7 @@ Structure is documented below.
 <a href="#outputpath_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionaryoutputpath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Output<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionaryoutputpath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Output<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API.
 If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
@@ -1651,7 +1651,7 @@ Structure is documented below.
 <a href="#bigqueryfield_nodejs" style="color: inherit; text-decoration: inherit;">big<wbr>Query<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.
 Structure is documented below.
@@ -1661,7 +1661,7 @@ Structure is documented below.
 <a href="#cloudstoragefileset_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>File<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarycloudstoragefileset">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>File<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarycloudstoragefileset">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>File<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Set of files containing newline-delimited lists of dictionary phrases.
 Structure is documented below.
@@ -1675,7 +1675,7 @@ Structure is documented below.
 <a href="#output_path_python" style="color: inherit; text-decoration: inherit;">output_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionaryoutputpath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Output<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionaryoutputpath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Output<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API.
 If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
@@ -1686,7 +1686,7 @@ Structure is documented below.
 <a href="#big_query_field_python" style="color: inherit; text-decoration: inherit;">big_<wbr>query_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.
 Structure is documented below.
@@ -1696,7 +1696,7 @@ Structure is documented below.
 <a href="#cloud_storage_file_set_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>file_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarycloudstoragefileset">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>File<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarycloudstoragefileset">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>File<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Set of files containing newline-delimited lists of dictionary phrases.
 Structure is documented below.
@@ -1712,7 +1712,7 @@ Structure is documented below.
 <a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}Designated field in the BigQuery table.
 Structure is documented below.
@@ -1722,7 +1722,7 @@ Structure is documented below.
 <a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldtable">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldtable">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.
 Structure is documented below.
@@ -1760,7 +1760,7 @@ Structure is documented below.
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}Designated field in the BigQuery table.
 Structure is documented below.
@@ -1770,7 +1770,7 @@ Structure is documented below.
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldtable">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldtable">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.
 Structure is documented below.
@@ -1784,7 +1784,7 @@ Structure is documented below.
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}Designated field in the BigQuery table.
 Structure is documented below.
@@ -1794,7 +1794,7 @@ Structure is documented below.
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldtable">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldtable">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.
 Structure is documented below.

@@ -287,7 +287,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 <a href="#devicepolicy_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelconditiondevicepolicy">Access<wbr>Level<wbr>Condition<wbr>Device<wbr>Policy</a></span>
+        <span class="property-type"><a href="#accesslevelconditiondevicepolicy">Access<wbr>Level<wbr>Condition<wbr>Device<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Device specific restrictions, all restrictions must hold for
 the Condition to be true. If not specified, all devices are
@@ -846,7 +846,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 <a href="#state_devicepolicy_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelconditiondevicepolicy">Access<wbr>Level<wbr>Condition<wbr>Device<wbr>Policy</a></span>
+        <span class="property-type"><a href="#accesslevelconditiondevicepolicy">Access<wbr>Level<wbr>Condition<wbr>Device<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Device specific restrictions, all restrictions must hold for
 the Condition to be true. If not specified, all devices are
@@ -1149,7 +1149,7 @@ Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UN
 <a href="#osconstraints_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelconditiondevicepolicyosconstraint">List&lt;Access<wbr>Level<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#accesslevelconditiondevicepolicyosconstraint">List&lt;Access<wbr>Level<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of allowed OS versions.
 An empty list allows all types and all versions.
@@ -1279,7 +1279,7 @@ Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UN
 <a href="#osconstraints_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelconditiondevicepolicyosconstraint">Access<wbr>Level<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#accesslevelconditiondevicepolicyosconstraint">Access<wbr>Level<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint[]</a></span>
     </dt>
     <dd>{{% md %}}A list of allowed OS versions.
 An empty list allows all types and all versions.
@@ -1344,7 +1344,7 @@ Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UN
 <a href="#os_constraints_python" style="color: inherit; text-decoration: inherit;">os_<wbr>constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelconditiondevicepolicyosconstraint">Sequence[Access<wbr>Level<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesslevelconditiondevicepolicyosconstraint">Sequence[Access<wbr>Level<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint]</a></span>
     </dt>
     <dd>{{% md %}}A list of allowed OS versions.
 An empty list allows all types and all versions.

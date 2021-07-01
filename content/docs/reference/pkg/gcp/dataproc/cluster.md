@@ -778,7 +778,7 @@ Defaults to `global`.
 <a href="#clusterconfig_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows you to configure various aspects of the cluster.
 Structure defined below.
@@ -1224,7 +1224,7 @@ Defaults to `global`.
 <a href="#state_clusterconfig_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows you to configure various aspects of the cluster.
 Structure defined below.
@@ -1430,7 +1430,7 @@ Defaults to `global`.
 <a href="#autoscalingconfig_csharp" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The autoscaling policy config associated with the cluster.
 Note that once set, if `autoscaling_config` is the only field set in `cluster_config`, it can
@@ -1450,7 +1450,7 @@ Structure defined below.
 <a href="#encryptionconfig_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigencryptionconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigencryptionconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Customer managed encryption keys settings for the cluster.
 Structure defined below.
@@ -1460,7 +1460,7 @@ Structure defined below.
 <a href="#endpointconfig_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config settings for port access on the cluster.
 Structure defined below.
@@ -1471,7 +1471,7 @@ Structure defined below.
 <a href="#gceclusterconfig_csharp" style="color: inherit; text-decoration: inherit;">Gce<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfiggceclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfiggceclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Common config settings for resources of Google Compute Engine cluster
 instances, applicable to all instances in the cluster. Structure defined below.
@@ -1481,7 +1481,7 @@ instances, applicable to all instances in the cluster. Structure defined below.
 <a href="#initializationactions_csharp" style="color: inherit; text-decoration: inherit;">Initialization<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfiginitializationaction">List&lt;Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusterclusterconfiginitializationaction">List&lt;Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}Commands to execute on each node after config is completed.
 You can specify multiple versions of these. Structure defined below.
@@ -1491,7 +1491,7 @@ You can specify multiple versions of these. Structure defined below.
 <a href="#lifecycleconfig_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The settings for auto deletion cluster schedule.
 Structure defined below.
@@ -1501,7 +1501,7 @@ Structure defined below.
 <a href="#masterconfig_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the master instances
 in a cluster.. Structure defined below.
@@ -1511,7 +1511,7 @@ in a cluster.. Structure defined below.
 <a href="#preemptibleworkerconfig_csharp" style="color: inherit; text-decoration: inherit;">Preemptible<wbr>Worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the additional
 instances in a cluster. Structure defined below.
@@ -1524,7 +1524,7 @@ such for legacy/compatibility reasons.
 <a href="#securityconfig_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigsecurityconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigsecurityconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Security related configuration. Structure defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1533,7 +1533,7 @@ such for legacy/compatibility reasons.
 <a href="#softwareconfig_csharp" style="color: inherit; text-decoration: inherit;">Software<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigsoftwareconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigsoftwareconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config settings for software inside the cluster.
 Structure defined below.
@@ -1569,7 +1569,7 @@ Note: If you don't explicitly specify a `temp_bucket` then GCP will auto create 
 <a href="#workerconfig_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the worker instances
 in a cluster.. Structure defined below.
@@ -1736,7 +1736,7 @@ in a cluster.. Structure defined below.
 <a href="#autoscalingconfig_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The autoscaling policy config associated with the cluster.
 Note that once set, if `autoscaling_config` is the only field set in `cluster_config`, it can
@@ -1756,7 +1756,7 @@ Structure defined below.
 <a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigencryptionconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigencryptionconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Customer managed encryption keys settings for the cluster.
 Structure defined below.
@@ -1766,7 +1766,7 @@ Structure defined below.
 <a href="#endpointconfig_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config settings for port access on the cluster.
 Structure defined below.
@@ -1777,7 +1777,7 @@ Structure defined below.
 <a href="#gceclusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">gce<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfiggceclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfiggceclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Common config settings for resources of Google Compute Engine cluster
 instances, applicable to all instances in the cluster. Structure defined below.
@@ -1787,7 +1787,7 @@ instances, applicable to all instances in the cluster. Structure defined below.
 <a href="#initializationactions_nodejs" style="color: inherit; text-decoration: inherit;">initialization<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfiginitializationaction">Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfiginitializationaction">Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}Commands to execute on each node after config is completed.
 You can specify multiple versions of these. Structure defined below.
@@ -1797,7 +1797,7 @@ You can specify multiple versions of these. Structure defined below.
 <a href="#lifecycleconfig_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The settings for auto deletion cluster schedule.
 Structure defined below.
@@ -1807,7 +1807,7 @@ Structure defined below.
 <a href="#masterconfig_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the master instances
 in a cluster.. Structure defined below.
@@ -1817,7 +1817,7 @@ in a cluster.. Structure defined below.
 <a href="#preemptibleworkerconfig_nodejs" style="color: inherit; text-decoration: inherit;">preemptible<wbr>Worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the additional
 instances in a cluster. Structure defined below.
@@ -1830,7 +1830,7 @@ such for legacy/compatibility reasons.
 <a href="#securityconfig_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigsecurityconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigsecurityconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Security related configuration. Structure defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1839,7 +1839,7 @@ such for legacy/compatibility reasons.
 <a href="#softwareconfig_nodejs" style="color: inherit; text-decoration: inherit;">software<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigsoftwareconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigsoftwareconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config settings for software inside the cluster.
 Structure defined below.
@@ -1875,7 +1875,7 @@ Note: If you don't explicitly specify a `temp_bucket` then GCP will auto create 
 <a href="#workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the worker instances
 in a cluster.. Structure defined below.
@@ -1889,7 +1889,7 @@ in a cluster.. Structure defined below.
 <a href="#autoscaling_config_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The autoscaling policy config associated with the cluster.
 Note that once set, if `autoscaling_config` is the only field set in `cluster_config`, it can
@@ -1909,7 +1909,7 @@ Structure defined below.
 <a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigencryptionconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigencryptionconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Customer managed encryption keys settings for the cluster.
 Structure defined below.
@@ -1919,7 +1919,7 @@ Structure defined below.
 <a href="#endpoint_config_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config settings for port access on the cluster.
 Structure defined below.
@@ -1930,7 +1930,7 @@ Structure defined below.
 <a href="#gce_cluster_config_python" style="color: inherit; text-decoration: inherit;">gce_<wbr>cluster_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfiggceclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfiggceclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Common config settings for resources of Google Compute Engine cluster
 instances, applicable to all instances in the cluster. Structure defined below.
@@ -1940,7 +1940,7 @@ instances, applicable to all instances in the cluster. Structure defined below.
 <a href="#initialization_actions_python" style="color: inherit; text-decoration: inherit;">initialization_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfiginitializationaction">Sequence[Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfiginitializationaction">Sequence[Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}Commands to execute on each node after config is completed.
 You can specify multiple versions of these. Structure defined below.
@@ -1950,7 +1950,7 @@ You can specify multiple versions of these. Structure defined below.
 <a href="#lifecycle_config_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The settings for auto deletion cluster schedule.
 Structure defined below.
@@ -1960,7 +1960,7 @@ Structure defined below.
 <a href="#master_config_python" style="color: inherit; text-decoration: inherit;">master_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the master instances
 in a cluster.. Structure defined below.
@@ -1970,7 +1970,7 @@ in a cluster.. Structure defined below.
 <a href="#preemptible_worker_config_python" style="color: inherit; text-decoration: inherit;">preemptible_<wbr>worker_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the additional
 instances in a cluster. Structure defined below.
@@ -1983,7 +1983,7 @@ such for legacy/compatibility reasons.
 <a href="#security_config_python" style="color: inherit; text-decoration: inherit;">security_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigsecurityconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigsecurityconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Security related configuration. Structure defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1992,7 +1992,7 @@ such for legacy/compatibility reasons.
 <a href="#software_config_python" style="color: inherit; text-decoration: inherit;">software_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigsoftwareconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigsoftwareconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config settings for software inside the cluster.
 Structure defined below.
@@ -2028,7 +2028,7 @@ Note: If you don't explicitly specify a `temp_bucket` then GCP will auto create 
 <a href="#worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the worker instances
 in a cluster.. Structure defined below.
@@ -2303,7 +2303,7 @@ short names are supported. To allow full access to all Cloud APIs, use the
 <a href="#shieldedinstanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfiggceclusterconfigshieldedinstanceconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfiggceclusterconfigshieldedinstanceconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance Config for clusters using [Compute Engine Shielded VMs](https://cloud.google.com/security/shielded-cloud/shielded-vm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2513,7 +2513,7 @@ short names are supported. To allow full access to all Cloud APIs, use the
 <a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfiggceclusterconfigshieldedinstanceconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfiggceclusterconfigshieldedinstanceconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance Config for clusters using [Compute Engine Shielded VMs](https://cloud.google.com/security/shielded-cloud/shielded-vm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2618,7 +2618,7 @@ short names are supported. To allow full access to all Cloud APIs, use the
 <a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfiggceclusterconfigshieldedinstanceconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfiggceclusterconfigshieldedinstanceconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance Config for clusters using [Compute Engine Shielded VMs](https://cloud.google.com/security/shielded-cloud/shielded-vm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3030,7 +3030,7 @@ Example: "2014-10-02T15:01:23.045123456Z".
 <a href="#accelerators_csharp" style="color: inherit; text-decoration: inherit;">Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigmasterconfigaccelerator">List&lt;Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigmasterconfigaccelerator">List&lt;Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3039,7 +3039,7 @@ Example: "2014-10-02T15:01:23.045123456Z".
 <a href="#diskconfig_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigmasterconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigmasterconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd><dt class="property-optional"
@@ -3176,7 +3176,7 @@ Defaults to 0.
 <a href="#accelerators_nodejs" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigmasterconfigaccelerator">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigmasterconfigaccelerator">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3185,7 +3185,7 @@ Defaults to 0.
 <a href="#diskconfig_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigmasterconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigmasterconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd><dt class="property-optional"
@@ -3249,7 +3249,7 @@ Defaults to 0.
 <a href="#accelerators_python" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigmasterconfigaccelerator">Sequence[Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigmasterconfigaccelerator">Sequence[Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator]</a></span>
     </dt>
     <dd>{{% md %}}The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3258,7 +3258,7 @@ Defaults to 0.
 <a href="#disk_config_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigmasterconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigmasterconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd><dt class="property-optional"
@@ -3560,7 +3560,7 @@ attached to each preemptible worker node. Defaults to 0.
 <a href="#diskconfig_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd><dt class="property-optional"
@@ -3622,7 +3622,7 @@ Defaults to 0.
 <a href="#diskconfig_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd><dt class="property-optional"
@@ -3653,7 +3653,7 @@ Defaults to 0.
 <a href="#disk_config_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd><dt class="property-optional"
@@ -3832,7 +3832,7 @@ attached to each preemptible worker node. Defaults to 0.
 <a href="#kerberosconfig_csharp" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigsecurityconfigkerberosconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigsecurityconfigkerberosconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kerberos Configuration
 {{% /md %}}</dd></dl>
@@ -3858,7 +3858,7 @@ attached to each preemptible worker node. Defaults to 0.
 <a href="#kerberosconfig_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigsecurityconfigkerberosconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigsecurityconfigkerberosconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kerberos Configuration
 {{% /md %}}</dd></dl>
@@ -3871,7 +3871,7 @@ attached to each preemptible worker node. Defaults to 0.
 <a href="#kerberos_config_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigsecurityconfigkerberosconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigsecurityconfigkerberosconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kerberos Configuration
 {{% /md %}}</dd></dl>
@@ -4742,7 +4742,7 @@ a cluster. For a list of valid properties please see
 <a href="#accelerators_csharp" style="color: inherit; text-decoration: inherit;">Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigworkerconfigaccelerator">List&lt;Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigworkerconfigaccelerator">List&lt;Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4751,7 +4751,7 @@ a cluster. For a list of valid properties please see
 <a href="#diskconfig_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd><dt class="property-optional"
@@ -4888,7 +4888,7 @@ Defaults to 0.
 <a href="#accelerators_nodejs" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigworkerconfigaccelerator">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigworkerconfigaccelerator">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4897,7 +4897,7 @@ Defaults to 0.
 <a href="#diskconfig_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd><dt class="property-optional"
@@ -4961,7 +4961,7 @@ Defaults to 0.
 <a href="#accelerators_python" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigworkerconfigaccelerator">Sequence[Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigworkerconfigaccelerator">Sequence[Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator]</a></span>
     </dt>
     <dd>{{% md %}}The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4970,7 +4970,7 @@ Defaults to 0.
 <a href="#disk_config_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd><dt class="property-optional"

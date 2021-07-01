@@ -966,7 +966,7 @@ If it is not provided, the provider project is used.
 <a href="#appengine_go" style="color: inherit; text-decoration: inherit;">App<wbr>Engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionnetworkendpointgroupappengine">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>App<wbr>Engine</a></span>
+        <span class="property-type"><a href="#regionnetworkendpointgroupappengine">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>App<wbr>Engine<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
@@ -977,7 +977,7 @@ Structure is documented below.
 <a href="#cloudfunction_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionnetworkendpointgroupcloudfunction">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Function</a></span>
+        <span class="property-type"><a href="#regionnetworkendpointgroupcloudfunction">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Function<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
@@ -988,7 +988,7 @@ Structure is documented below.
 <a href="#cloudrun_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionnetworkendpointgroupcloudrun">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Run</a></span>
+        <span class="property-type"><a href="#regionnetworkendpointgroupcloudrun">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Run<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
@@ -1559,7 +1559,7 @@ If it is not provided, the provider project is used.
 <a href="#state_appengine_go" style="color: inherit; text-decoration: inherit;">App<wbr>Engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionnetworkendpointgroupappengine">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>App<wbr>Engine</a></span>
+        <span class="property-type"><a href="#regionnetworkendpointgroupappengine">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>App<wbr>Engine<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
@@ -1570,7 +1570,7 @@ Structure is documented below.
 <a href="#state_cloudfunction_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionnetworkendpointgroupcloudfunction">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Function</a></span>
+        <span class="property-type"><a href="#regionnetworkendpointgroupcloudfunction">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Function<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
@@ -1581,7 +1581,7 @@ Structure is documented below.
 <a href="#state_cloudrun_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionnetworkendpointgroupcloudrun">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Run</a></span>
+        <span class="property-type"><a href="#regionnetworkendpointgroupcloudrun">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Run<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.

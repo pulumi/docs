@@ -461,7 +461,7 @@ Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
 <a href="#entities_go" style="color: inherit; text-decoration: inherit;">Entities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitytypeentity">[]Entity<wbr>Type<wbr>Entity</a></span>
+        <span class="property-type"><a href="#entitytypeentity">[]Entity<wbr>Type<wbr>Entity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The collection of entity entries associated with the entity type.
 Structure is documented below.
@@ -902,7 +902,7 @@ If it is not provided, the provider project is used.
 <a href="#state_entities_go" style="color: inherit; text-decoration: inherit;">Entities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitytypeentity">[]Entity<wbr>Type<wbr>Entity</a></span>
+        <span class="property-type"><a href="#entitytypeentity">[]Entity<wbr>Type<wbr>Entity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The collection of entity entries associated with the entity type.
 Structure is documented below.

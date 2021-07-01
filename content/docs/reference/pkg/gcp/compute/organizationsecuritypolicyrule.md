@@ -290,7 +290,7 @@ instances that are applied with this rule.
 <a href="#match_go" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationsecuritypolicyrulematch">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match</a></span>
+        <span class="property-type"><a href="#organizationsecuritypolicyrulematch">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
 Structure is documented below.
@@ -930,7 +930,7 @@ configured export destination in Stackdriver.
 <a href="#state_match_go" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationsecuritypolicyrulematch">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match</a></span>
+        <span class="property-type"><a href="#organizationsecuritypolicyrulematch">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
 Structure is documented below.
@@ -1216,7 +1216,7 @@ instances that are applied with this rule.
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfig">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfig">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration options for matching the rule.
 Structure is documented below.
@@ -1286,7 +1286,7 @@ Possible values are `FIREWALL`.
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfig">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfig">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration options for matching the rule.
 Structure is documented below.
@@ -1321,7 +1321,7 @@ Possible values are `FIREWALL`.
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfig">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfig">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration options for matching the rule.
 Structure is documented below.
@@ -1358,7 +1358,7 @@ Possible values are `FIREWALL`.
 <a href="#layer4configs_csharp" style="color: inherit; text-decoration: inherit;">Layer4Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfiglayer4config">List&lt;Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Layer4Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfiglayer4config">List&lt;Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Layer4Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
 Structure is documented below.
@@ -1426,7 +1426,7 @@ INGRESS rules.
 <a href="#layer4configs_nodejs" style="color: inherit; text-decoration: inherit;">layer4Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfiglayer4config">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Layer4Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfiglayer4config">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Layer4Config[]</a></span>
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
 Structure is documented below.
@@ -1460,7 +1460,7 @@ INGRESS rules.
 <a href="#layer4_configs_python" style="color: inherit; text-decoration: inherit;">layer4_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfiglayer4config">Sequence[Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Layer4Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfiglayer4config">Sequence[Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Layer4Config]</a></span>
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
 Structure is documented below.

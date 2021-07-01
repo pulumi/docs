@@ -354,7 +354,7 @@ If it is not provided, the provider project is used.
 <a href="#sslsettings_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingsslsettings">Domain<wbr>Mapping<wbr>Ssl<wbr>Settings</a></span>
+        <span class="property-type"><a href="#domainmappingsslsettings">Domain<wbr>Mapping<wbr>Ssl<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
 Structure is documented below.
@@ -824,7 +824,7 @@ If it is not provided, the provider project is used.
 <a href="#state_resourcerecords_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingresourcerecord">[]Domain<wbr>Mapping<wbr>Resource<wbr>Record</a></span>
+        <span class="property-type"><a href="#domainmappingresourcerecord">[]Domain<wbr>Mapping<wbr>Resource<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource records required to configure this domain mapping. These records must be added to the domain's DNS
 configuration in order to serve the application via this domain mapping.
@@ -834,7 +834,7 @@ configuration in order to serve the application via this domain mapping.
 <a href="#state_sslsettings_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingsslsettings">Domain<wbr>Mapping<wbr>Ssl<wbr>Settings</a></span>
+        <span class="property-type"><a href="#domainmappingsslsettings">Domain<wbr>Mapping<wbr>Ssl<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
 Structure is documented below.

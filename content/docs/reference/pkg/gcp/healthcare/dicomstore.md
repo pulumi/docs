@@ -669,7 +669,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 <a href="#notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dicomstorenotificationconfig">Dicom<wbr>Store<wbr>Notification<wbr>Config</a></span>
+        <span class="property-type"><a href="#dicomstorenotificationconfig">Dicom<wbr>Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -679,7 +679,7 @@ Structure is documented below.
 <a href="#streamconfigs_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dicomstorestreamconfig">[]Dicom<wbr>Store<wbr>Stream<wbr>Config</a></span>
+        <span class="property-type"><a href="#dicomstorestreamconfig">[]Dicom<wbr>Store<wbr>Stream<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store. streamConfigs is an array, so
 you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery
@@ -1144,7 +1144,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 <a href="#state_notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dicomstorenotificationconfig">Dicom<wbr>Store<wbr>Notification<wbr>Config</a></span>
+        <span class="property-type"><a href="#dicomstorenotificationconfig">Dicom<wbr>Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -1163,7 +1163,7 @@ Structure is documented below.
 <a href="#state_streamconfigs_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dicomstorestreamconfig">[]Dicom<wbr>Store<wbr>Stream<wbr>Config</a></span>
+        <span class="property-type"><a href="#dicomstorestreamconfig">[]Dicom<wbr>Store<wbr>Stream<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store. streamConfigs is an array, so
 you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery
@@ -1403,7 +1403,7 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 <a href="#bigquerydestination_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dicomstorestreamconfigbigquerydestination">Dicom<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#dicomstorestreamconfigbigquerydestination">Dicom<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}BigQueryDestination to include a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
 Structure is documented below.
@@ -1431,7 +1431,7 @@ Structure is documented below.
 <a href="#bigquerydestination_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dicomstorestreamconfigbigquerydestination">Dicom<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#dicomstorestreamconfigbigquerydestination">Dicom<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}BigQueryDestination to include a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
 Structure is documented below.
@@ -1445,7 +1445,7 @@ Structure is documented below.
 <a href="#bigquery_destination_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dicomstorestreamconfigbigquerydestination">Dicom<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#dicomstorestreamconfigbigquerydestination">Dicom<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}BigQueryDestination to include a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
 Structure is documented below.

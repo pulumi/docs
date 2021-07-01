@@ -388,7 +388,7 @@ If it is not provided, the provider project is used.
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target</a></span>
+        <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
 configuration and relevant templates.
@@ -439,7 +439,7 @@ Possible values are `ABANDON` and `DELETE`.
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentlabel">[]Deployment<wbr>Label</a></span>
+        <span class="property-type"><a href="#deploymentlabel">[]Deployment<wbr>Label<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key-value pairs to apply to this labels.
 Structure is documented below.
@@ -1167,7 +1167,7 @@ Possible values are `ABANDON` and `DELETE`.
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentlabel">[]Deployment<wbr>Label</a></span>
+        <span class="property-type"><a href="#deploymentlabel">[]Deployment<wbr>Label<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key-value pairs to apply to this labels.
 Structure is documented below.
@@ -1231,7 +1231,7 @@ If it is not provided, the provider project is used.
 <a href="#state_target_go" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target</a></span>
+        <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
 configuration and relevant templates.
@@ -1603,7 +1603,7 @@ Structure is documented below.
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenttargetconfig">Deployment<wbr>Target<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymenttargetconfig">Deployment<wbr>Target<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The root configuration file to use for this deployment.
 Structure is documented below.
@@ -1613,7 +1613,7 @@ Structure is documented below.
 <a href="#imports_csharp" style="color: inherit; text-decoration: inherit;">Imports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenttargetimport">List&lt;Deployment<wbr>Target<wbr>Import<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#deploymenttargetimport">List&lt;Deployment<wbr>Target<wbr>Import&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies import files for this configuration. This can be
 used to import templates or other files. For example, you might
@@ -1655,7 +1655,7 @@ Structure is documented below.
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenttargetconfig">Deployment<wbr>Target<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymenttargetconfig">Deployment<wbr>Target<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The root configuration file to use for this deployment.
 Structure is documented below.
@@ -1665,7 +1665,7 @@ Structure is documented below.
 <a href="#imports_nodejs" style="color: inherit; text-decoration: inherit;">imports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenttargetimport">Deployment<wbr>Target<wbr>Import<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#deploymenttargetimport">Deployment<wbr>Target<wbr>Import[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies import files for this configuration. This can be
 used to import templates or other files. For example, you might
@@ -1681,7 +1681,7 @@ Structure is documented below.
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenttargetconfig">Deployment<wbr>Target<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymenttargetconfig">Deployment<wbr>Target<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The root configuration file to use for this deployment.
 Structure is documented below.
@@ -1691,7 +1691,7 @@ Structure is documented below.
 <a href="#imports_python" style="color: inherit; text-decoration: inherit;">imports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenttargetimport">Sequence[Deployment<wbr>Target<wbr>Import<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymenttargetimport">Sequence[Deployment<wbr>Target<wbr>Import]</a></span>
     </dt>
     <dd>{{% md %}}Specifies import files for this configuration. This can be
 used to import templates or other files. For example, you might

@@ -1331,7 +1331,7 @@ the contexts must be present in the active user session for an event to trigger 
 <a href="#state_followupintentinfos_go" style="color: inherit; text-decoration: inherit;">Followup<wbr>Intent<wbr>Infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowupintentinfo">[]Intent<wbr>Followup<wbr>Intent<wbr>Info</a></span>
+        <span class="property-type"><a href="#intentfollowupintentinfo">[]Intent<wbr>Followup<wbr>Intent<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.

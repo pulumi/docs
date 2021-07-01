@@ -335,7 +335,7 @@ this service attachment.
 <a href="#consumeracceptlists_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Accept<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceattachmentconsumeracceptlist">[]Service<wbr>Attachment<wbr>Consumer<wbr>Accept<wbr>List</a></span>
+        <span class="property-type"><a href="#serviceattachmentconsumeracceptlist">[]Service<wbr>Attachment<wbr>Consumer<wbr>Accept<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of projects that are allowed to connect to this service
 attachment.
@@ -1005,7 +1005,7 @@ this service attachment.
 <a href="#state_connectedendpoints_go" style="color: inherit; text-decoration: inherit;">Connected<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceattachmentconnectedendpoint">[]Service<wbr>Attachment<wbr>Connected<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#serviceattachmentconnectedendpoint">[]Service<wbr>Attachment<wbr>Connected<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of the consumer forwarding rules connected to this service attachment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1024,7 +1024,7 @@ values include "ACCEPT_AUTOMATIC", "ACCEPT_MANUAL".
 <a href="#state_consumeracceptlists_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Accept<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceattachmentconsumeracceptlist">[]Service<wbr>Attachment<wbr>Consumer<wbr>Accept<wbr>List</a></span>
+        <span class="property-type"><a href="#serviceattachmentconsumeracceptlist">[]Service<wbr>Attachment<wbr>Consumer<wbr>Accept<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of projects that are allowed to connect to this service
 attachment.

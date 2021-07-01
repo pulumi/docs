@@ -651,7 +651,7 @@ Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"pyth
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
+    <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Check [ingress documentation](https://cloud.google.com/functions/docs/networking/network-settings#ingress_settings) to see the impact of each settings value. Changes to this field will recreate the cloud function.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
@@ -751,7 +751,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
+    <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `event_trigger`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcconnector_csharp">
@@ -835,7 +835,7 @@ Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"pyth
 <a href="#eventtrigger_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventtrigger">Function<wbr>Event<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#functioneventtrigger">Function<wbr>Event<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -855,7 +855,7 @@ Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"pyth
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
+    <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Check [ingress documentation](https://cloud.google.com/functions/docs/networking/network-settings#ingress_settings) to see the impact of each settings value. Changes to this field will recreate the cloud function.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
@@ -934,7 +934,7 @@ Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"pyth
 <a href="#sourcerepository_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionsourcerepository">Function<wbr>Source<wbr>Repository</a></span>
+        <span class="property-type"><a href="#functionsourcerepository">Function<wbr>Source<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
@@ -955,7 +955,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
+    <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `event_trigger`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcconnector_go">
@@ -1059,7 +1059,7 @@ Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"pyth
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
+    <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Check [ingress documentation](https://cloud.google.com/functions/docs/networking/network-settings#ingress_settings) to see the impact of each settings value. Changes to this field will recreate the cloud function.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
@@ -1159,7 +1159,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
+    <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `event_trigger`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcconnector_nodejs">
@@ -1263,7 +1263,7 @@ Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"pyth
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
+    <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Check [ingress documentation](https://cloud.google.com/functions/docs/networking/network-settings#ingress_settings) to see the impact of each settings value. Changes to this field will recreate the cloud function.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
@@ -1363,7 +1363,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
+    <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `event_trigger`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_connector_python">
@@ -1659,7 +1659,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
+    <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Check [ingress documentation](https://cloud.google.com/functions/docs/networking/network-settings#ingress_settings) to see the impact of each settings value. Changes to this field will recreate the cloud function.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
@@ -1769,7 +1769,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
+    <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `event_trigger`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcconnector_csharp">
@@ -1843,7 +1843,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_eventtrigger_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventtrigger">Function<wbr>Event<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#functioneventtrigger">Function<wbr>Event<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1863,7 +1863,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
+    <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Check [ingress documentation](https://cloud.google.com/functions/docs/networking/network-settings#ingress_settings) to see the impact of each settings value. Changes to this field will recreate the cloud function.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
@@ -1952,7 +1952,7 @@ Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"pyth
 <a href="#state_sourcerepository_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionsourcerepository">Function<wbr>Source<wbr>Repository</a></span>
+        <span class="property-type"><a href="#functionsourcerepository">Function<wbr>Source<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
@@ -1973,7 +1973,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
+    <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `event_trigger`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcconnector_go">
@@ -2067,7 +2067,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
+    <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Check [ingress documentation](https://cloud.google.com/functions/docs/networking/network-settings#ingress_settings) to see the impact of each settings value. Changes to this field will recreate the cloud function.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
@@ -2177,7 +2177,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
+    <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `event_trigger`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcconnector_nodejs">
@@ -2271,7 +2271,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
+    <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Check [ingress documentation](https://cloud.google.com/functions/docs/networking/network-settings#ingress_settings) to see the impact of each settings value. Changes to this field will recreate the cloud function.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
@@ -2381,7 +2381,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
+    <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `event_trigger`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_connector_python">
@@ -2442,7 +2442,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 <a href="#failurepolicy_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventtriggerfailurepolicy">Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#functioneventtriggerfailurepolicy">Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy for failed executions. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -2510,7 +2510,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 <a href="#failurepolicy_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventtriggerfailurepolicy">Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#functioneventtriggerfailurepolicy">Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy for failed executions. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -2544,7 +2544,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 <a href="#failure_policy_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventtriggerfailurepolicy">Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#functioneventtriggerfailurepolicy">Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy for failed executions. Structure is documented below.
 {{% /md %}}</dd></dl>

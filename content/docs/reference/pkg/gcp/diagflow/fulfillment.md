@@ -408,7 +408,7 @@ If it is not provided, the provider project is used.
 <a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fulfillmentfeature">[]Fulfillment<wbr>Feature</a></span>
+        <span class="property-type"><a href="#fulfillmentfeature">[]Fulfillment<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The field defines whether the fulfillment is enabled for certain features.
 Structure is documented below.
@@ -418,7 +418,7 @@ Structure is documented below.
 <a href="#genericwebservice_go" style="color: inherit; text-decoration: inherit;">Generic<wbr>Web<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fulfillmentgenericwebservice">Fulfillment<wbr>Generic<wbr>Web<wbr>Service</a></span>
+        <span class="property-type"><a href="#fulfillmentgenericwebservice">Fulfillment<wbr>Generic<wbr>Web<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents configuration for a generic web service. Dialogflow supports two mechanisms for authentications: - Basic authentication with username and password. - Authentication with additional authentication headers.
 Structure is documented below.
@@ -852,7 +852,7 @@ If it is not provided, the provider project is used.
 <a href="#state_features_go" style="color: inherit; text-decoration: inherit;">Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fulfillmentfeature">[]Fulfillment<wbr>Feature</a></span>
+        <span class="property-type"><a href="#fulfillmentfeature">[]Fulfillment<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The field defines whether the fulfillment is enabled for certain features.
 Structure is documented below.
@@ -862,7 +862,7 @@ Structure is documented below.
 <a href="#state_genericwebservice_go" style="color: inherit; text-decoration: inherit;">Generic<wbr>Web<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fulfillmentgenericwebservice">Fulfillment<wbr>Generic<wbr>Web<wbr>Service</a></span>
+        <span class="property-type"><a href="#fulfillmentgenericwebservice">Fulfillment<wbr>Generic<wbr>Web<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents configuration for a generic web service. Dialogflow supports two mechanisms for authentications: - Basic authentication with username and password. - Authentication with additional authentication headers.
 Structure is documented below.

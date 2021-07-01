@@ -683,7 +683,7 @@ in state, a `=destroy` or `=update` that would delete the instance will fail.
 <a href="#encryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableencryptionconfiguration">Table<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#tableencryptionconfiguration">Table<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the table should be encrypted.
 If left blank, the table will be encrypted with a Google-managed key; that process
@@ -706,7 +706,7 @@ reclaimed.
 <a href="#externaldataconfiguration_go" style="color: inherit; text-decoration: inherit;">External<wbr>Data<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfiguration">Table<wbr>External<wbr>Data<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfiguration">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the data format,
 location, and other properties of a table stored outside of BigQuery.
@@ -736,7 +736,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#materializedview_go" style="color: inherit; text-decoration: inherit;">Materialized<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablematerializedview">Table<wbr>Materialized<wbr>View</a></span>
+        <span class="property-type"><a href="#tablematerializedview">Table<wbr>Materialized<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures this table as a materialized view.
 Structure is documented below.
@@ -756,7 +756,7 @@ is not provided, the provider project is used.
 <a href="#rangepartitioning_go" style="color: inherit; text-decoration: inherit;">Range<wbr>Partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablerangepartitioning">Table<wbr>Range<wbr>Partitioning</a></span>
+        <span class="property-type"><a href="#tablerangepartitioning">Table<wbr>Range<wbr>Partitioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures range-based
 partitioning for this table. Structure is documented below.
@@ -785,7 +785,7 @@ datasource, after creation the computed schema will be stored in
 <a href="#timepartitioning_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tabletimepartitioning">Table<wbr>Time<wbr>Partitioning</a></span>
+        <span class="property-type"><a href="#tabletimepartitioning">Table<wbr>Time<wbr>Partitioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures time-based
 partitioning for this table. Structure is documented below.
@@ -795,7 +795,7 @@ partitioning for this table. Structure is documented below.
 <a href="#view_go" style="color: inherit; text-decoration: inherit;">View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableview">Table<wbr>View</a></span>
+        <span class="property-type"><a href="#tableview">Table<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures this table as a view.
 Structure is documented below.
@@ -2001,7 +2001,7 @@ in state, a `=destroy` or `=update` that would delete the instance will fail.
 <a href="#state_encryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableencryptionconfiguration">Table<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#tableencryptionconfiguration">Table<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the table should be encrypted.
 If left blank, the table will be encrypted with a Google-managed key; that process
@@ -2033,7 +2033,7 @@ reclaimed.
 <a href="#state_externaldataconfiguration_go" style="color: inherit; text-decoration: inherit;">External<wbr>Data<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfiguration">Table<wbr>External<wbr>Data<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfiguration">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the data format,
 location, and other properties of a table stored outside of BigQuery.
@@ -2081,7 +2081,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#state_materializedview_go" style="color: inherit; text-decoration: inherit;">Materialized<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablematerializedview">Table<wbr>Materialized<wbr>View</a></span>
+        <span class="property-type"><a href="#tablematerializedview">Table<wbr>Materialized<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures this table as a materialized view.
 Structure is documented below.
@@ -2128,7 +2128,7 @@ is not provided, the provider project is used.
 <a href="#state_rangepartitioning_go" style="color: inherit; text-decoration: inherit;">Range<wbr>Partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablerangepartitioning">Table<wbr>Range<wbr>Partitioning</a></span>
+        <span class="property-type"><a href="#tablerangepartitioning">Table<wbr>Range<wbr>Partitioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures range-based
 partitioning for this table. Structure is documented below.
@@ -2176,7 +2176,7 @@ Changing this forces a new resource to be created.
 <a href="#state_timepartitioning_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tabletimepartitioning">Table<wbr>Time<wbr>Partitioning</a></span>
+        <span class="property-type"><a href="#tabletimepartitioning">Table<wbr>Time<wbr>Partitioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures time-based
 partitioning for this table. Structure is documented below.
@@ -2196,7 +2196,7 @@ which will generate one partition per day, hour, month, and year, respectively.
 <a href="#state_view_go" style="color: inherit; text-decoration: inherit;">View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableview">Table<wbr>View</a></span>
+        <span class="property-type"><a href="#tableview">Table<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures this table as a view.
 Structure is documented below.
@@ -2850,7 +2850,7 @@ Valid values are "NONE" or "GZIP".
 <a href="#csvoptions_csharp" style="color: inherit; text-decoration: inherit;">Csv<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationcsvoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Csv<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationcsvoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Csv<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Additional properties to set if
 `source_format` is set to "CSV". Structure is documented below.
@@ -2860,7 +2860,7 @@ Valid values are "NONE" or "GZIP".
 <a href="#googlesheetsoptions_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Sheets<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationgooglesheetsoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Google<wbr>Sheets<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationgooglesheetsoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Google<wbr>Sheets<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Additional options if
 `source_format` is set to "GOOGLE_SHEETS". Structure is
@@ -2871,7 +2871,7 @@ documented below.
 <a href="#hivepartitioningoptions_csharp" style="color: inherit; text-decoration: inherit;">Hive<wbr>Partitioning<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationhivepartitioningoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Hive<wbr>Partitioning<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationhivepartitioningoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Hive<wbr>Partitioning<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}When set, configures hive partitioning
 support. Not all storage formats support hive partitioning -- requesting hive
@@ -3096,7 +3096,7 @@ Valid values are "NONE" or "GZIP".
 <a href="#csvoptions_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationcsvoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Csv<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationcsvoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Csv<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Additional properties to set if
 `source_format` is set to "CSV". Structure is documented below.
@@ -3106,7 +3106,7 @@ Valid values are "NONE" or "GZIP".
 <a href="#googlesheetsoptions_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Sheets<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationgooglesheetsoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Google<wbr>Sheets<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationgooglesheetsoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Google<wbr>Sheets<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Additional options if
 `source_format` is set to "GOOGLE_SHEETS". Structure is
@@ -3117,7 +3117,7 @@ documented below.
 <a href="#hivepartitioningoptions_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Partitioning<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationhivepartitioningoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Hive<wbr>Partitioning<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationhivepartitioningoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Hive<wbr>Partitioning<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}When set, configures hive partitioning
 support. Not all storage formats support hive partitioning -- requesting hive
@@ -3219,7 +3219,7 @@ Valid values are "NONE" or "GZIP".
 <a href="#csv_options_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationcsvoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Csv<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationcsvoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Csv<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Additional properties to set if
 `source_format` is set to "CSV". Structure is documented below.
@@ -3229,7 +3229,7 @@ Valid values are "NONE" or "GZIP".
 <a href="#google_sheets_options_python" style="color: inherit; text-decoration: inherit;">google_<wbr>sheets_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationgooglesheetsoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Google<wbr>Sheets<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationgooglesheetsoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Google<wbr>Sheets<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Additional options if
 `source_format` is set to "GOOGLE_SHEETS". Structure is
@@ -3240,7 +3240,7 @@ documented below.
 <a href="#hive_partitioning_options_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>partitioning_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationhivepartitioningoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Hive<wbr>Partitioning<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationhivepartitioningoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Hive<wbr>Partitioning<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}When set, configures hive partitioning
 support. Not all storage formats support hive partitioning -- requesting hive
@@ -4019,7 +4019,7 @@ partition.
 <a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablerangepartitioningrange">Table<wbr>Range<wbr>Partitioning<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablerangepartitioningrange">Table<wbr>Range<wbr>Partitioning<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Information required to partition based on ranges.
 Structure is documented below.
@@ -4067,7 +4067,7 @@ partition.
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablerangepartitioningrange">Table<wbr>Range<wbr>Partitioning<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablerangepartitioningrange">Table<wbr>Range<wbr>Partitioning<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Information required to partition based on ranges.
 Structure is documented below.
@@ -4091,7 +4091,7 @@ partition.
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablerangepartitioningrange">Table<wbr>Range<wbr>Partitioning<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablerangepartitioningrange">Table<wbr>Range<wbr>Partitioning<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Information required to partition based on ranges.
 Structure is documented below.

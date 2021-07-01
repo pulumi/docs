@@ -17,6 +17,7 @@ Explore the resources and functions of the gcp.appengine module.
     <li><a href="enginesplittraffic" title="EngineSplitTraffic"><span class="symbol resource"></span>EngineSplitTraffic</a></li>
     <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
     <li><a href="flexibleappversion" title="FlexibleAppVersion"><span class="symbol resource"></span>FlexibleAppVersion</a></li>
+    <li><a href="servicenetworksettings" title="ServiceNetworkSettings"><span class="symbol resource"></span>ServiceNetworkSettings</a></li>
     <li><a href="standardappversion" title="StandardAppVersion"><span class="symbol resource"></span>StandardAppVersion</a></li>
 </ul>
 
@@ -34,6 +35,6 @@ Explore the resources and functions of the gcp.appengine module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.10.1</dd>
+	<dd>5.11.0</dd>
 </dl>
 

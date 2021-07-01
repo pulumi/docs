@@ -468,7 +468,7 @@ or `projects/{{project}}/locations/{{location}}`
 <a href="#triggers_go" style="color: inherit; text-decoration: inherit;">Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggertrigger">[]Prevention<wbr>Job<wbr>Trigger<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#preventionjobtriggertrigger">[]Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}What event needs to occur for a new job to be started.
 Structure is documented below.
@@ -496,7 +496,7 @@ Structure is documented below.
 <a href="#inspectjob_go" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjob">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjob">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls what and how to inspect for findings.
 Structure is documented below.
@@ -1006,7 +1006,7 @@ Structure is documented below.
 <a href="#state_inspectjob_go" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjob">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjob">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls what and how to inspect for findings.
 Structure is documented below.
@@ -1055,7 +1055,7 @@ Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
 <a href="#state_triggers_go" style="color: inherit; text-decoration: inherit;">Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggertrigger">[]Prevention<wbr>Job<wbr>Trigger<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#preventionjobtriggertrigger">[]Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}What event needs to occur for a new job to be started.
 Structure is documented below.
@@ -1242,7 +1242,7 @@ Structure is documented below.
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobaction">List&lt;Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobaction">List&lt;Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}A task to execute on the completion of a job.
 Structure is documented below.
@@ -1261,7 +1261,7 @@ Structure is documented below.
 <a href="#storageconfig_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
@@ -1308,7 +1308,7 @@ Structure is documented below.
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobaction">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobaction">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A task to execute on the completion of a job.
 Structure is documented below.
@@ -1327,7 +1327,7 @@ Structure is documented below.
 <a href="#storageconfig_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
@@ -1341,7 +1341,7 @@ Structure is documented below.
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobaction">Sequence[Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobaction">Sequence[Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}A task to execute on the completion of a job.
 Structure is documented below.
@@ -1360,7 +1360,7 @@ Structure is documented below.
 <a href="#storage_config_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
@@ -1376,7 +1376,7 @@ Structure is documented below.
 <a href="#savefindings_csharp" style="color: inherit; text-decoration: inherit;">Save<wbr>Findings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindings">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindings">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings</a></span>
     </dt>
     <dd>{{% md %}}Schedule for triggered jobs
 Structure is documented below.
@@ -1404,7 +1404,7 @@ Structure is documented below.
 <a href="#savefindings_nodejs" style="color: inherit; text-decoration: inherit;">save<wbr>Findings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindings">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindings">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings</a></span>
     </dt>
     <dd>{{% md %}}Schedule for triggered jobs
 Structure is documented below.
@@ -1418,7 +1418,7 @@ Structure is documented below.
 <a href="#save_findings_python" style="color: inherit; text-decoration: inherit;">save_<wbr>findings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindings">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindings">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings</a></span>
     </dt>
     <dd>{{% md %}}Schedule for triggered jobs
 Structure is documented below.
@@ -1434,7 +1434,7 @@ Structure is documented below.
 <a href="#outputconfig_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Information on where to store output
 Structure is documented below.
@@ -1462,7 +1462,7 @@ Structure is documented below.
 <a href="#outputconfig_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Information on where to store output
 Structure is documented below.
@@ -1476,7 +1476,7 @@ Structure is documented below.
 <a href="#output_config_python" style="color: inherit; text-decoration: inherit;">output_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Information on where to store output
 Structure is documented below.
@@ -1492,7 +1492,7 @@ Structure is documented below.
 <a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfigtable">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfigtable">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}Information on the location of the target BigQuery Table.
 Structure is documented below.
@@ -1552,7 +1552,7 @@ Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QU
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfigtable">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfigtable">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}Information on the location of the target BigQuery Table.
 Structure is documented below.
@@ -1582,7 +1582,7 @@ Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QU
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfigtable">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfigtable">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}Information on the location of the target BigQuery Table.
 Structure is documented below.
@@ -1744,7 +1744,7 @@ Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QU
 <a href="#bigqueryoptions_csharp" style="color: inherit; text-decoration: inherit;">Big<wbr>Query<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options defining BigQuery table and row identifiers.
 Structure is documented below.
@@ -1754,7 +1754,7 @@ Structure is documented below.
 <a href="#cloudstorageoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options defining a file or a set of files within a Google Cloud Storage bucket.
 Structure is documented below.
@@ -1764,7 +1764,7 @@ Structure is documented below.
 <a href="#datastoreoptions_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options defining a data set within Google Cloud Datastore.
 Structure is documented below.
@@ -1774,7 +1774,7 @@ Structure is documented below.
 <a href="#timespanconfig_csharp" style="color: inherit; text-decoration: inherit;">Timespan<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
@@ -1832,7 +1832,7 @@ Structure is documented below.
 <a href="#bigqueryoptions_nodejs" style="color: inherit; text-decoration: inherit;">big<wbr>Query<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options defining BigQuery table and row identifiers.
 Structure is documented below.
@@ -1842,7 +1842,7 @@ Structure is documented below.
 <a href="#cloudstorageoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options defining a file or a set of files within a Google Cloud Storage bucket.
 Structure is documented below.
@@ -1852,7 +1852,7 @@ Structure is documented below.
 <a href="#datastoreoptions_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options defining a data set within Google Cloud Datastore.
 Structure is documented below.
@@ -1862,7 +1862,7 @@ Structure is documented below.
 <a href="#timespanconfig_nodejs" style="color: inherit; text-decoration: inherit;">timespan<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
@@ -1876,7 +1876,7 @@ Structure is documented below.
 <a href="#big_query_options_python" style="color: inherit; text-decoration: inherit;">big_<wbr>query_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options defining BigQuery table and row identifiers.
 Structure is documented below.
@@ -1886,7 +1886,7 @@ Structure is documented below.
 <a href="#cloud_storage_options_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options defining a file or a set of files within a Google Cloud Storage bucket.
 Structure is documented below.
@@ -1896,7 +1896,7 @@ Structure is documented below.
 <a href="#datastore_options_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options defining a data set within Google Cloud Datastore.
 Structure is documented below.
@@ -1906,7 +1906,7 @@ Structure is documented below.
 <a href="#timespan_config_python" style="color: inherit; text-decoration: inherit;">timespan_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
@@ -1922,7 +1922,7 @@ Structure is documented below.
 <a href="#tablereference_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptionstablereference">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options<wbr>Table<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptionstablereference">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options<wbr>Table<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Set of files to scan.
 Structure is documented below.
@@ -1950,7 +1950,7 @@ Structure is documented below.
 <a href="#tablereference_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptionstablereference">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options<wbr>Table<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptionstablereference">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options<wbr>Table<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Set of files to scan.
 Structure is documented below.
@@ -1964,7 +1964,7 @@ Structure is documented below.
 <a href="#table_reference_python" style="color: inherit; text-decoration: inherit;">table_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptionstablereference">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options<wbr>Table<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptionstablereference">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options<wbr>Table<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Set of files to scan.
 Structure is documented below.
@@ -2110,7 +2110,7 @@ Structure is documented below.
 <a href="#fileset_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Set of files to scan.
 Structure is documented below.
@@ -2244,7 +2244,7 @@ Possible values are `TOP` and `RANDOM_START`.
 <a href="#fileset_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Set of files to scan.
 Structure is documented below.
@@ -2311,7 +2311,7 @@ Possible values are `TOP` and `RANDOM_START`.
 <a href="#file_set_python" style="color: inherit; text-decoration: inherit;">file_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Set of files to scan.
 Structure is documented below.
@@ -2380,7 +2380,7 @@ Possible values are `TOP` and `RANDOM_START`.
 <a href="#regexfileset_csharp" style="color: inherit; text-decoration: inherit;">Regex<wbr>File<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfilesetregexfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set<wbr>Regex<wbr>File<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfilesetregexfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set<wbr>Regex<wbr>File<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}The regex-filtered set of files to scan.
 Structure is documented below.
@@ -2434,7 +2434,7 @@ equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to
 <a href="#regexfileset_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>File<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfilesetregexfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set<wbr>Regex<wbr>File<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfilesetregexfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set<wbr>Regex<wbr>File<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}The regex-filtered set of files to scan.
 Structure is documented below.
@@ -2461,7 +2461,7 @@ equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to
 <a href="#regex_file_set_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>file_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfilesetregexfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set<wbr>Regex<wbr>File<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfilesetregexfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set<wbr>Regex<wbr>File<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}The regex-filtered set of files to scan.
 Structure is documented below.
@@ -2632,7 +2632,7 @@ match all files by default (this is equivalent to including .* in the list)
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionskind">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Kind<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionskind">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}A representation of a Datastore kind.
 Structure is documented below.
@@ -2642,7 +2642,7 @@ Structure is documented below.
 <a href="#partitionid_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionspartitionid">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Partition<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionspartitionid">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Partition<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}Datastore partition ID. A partition ID identifies a grouping of entities. The grouping
 is always by project and namespace, however the namespace ID may be empty.
@@ -2682,7 +2682,7 @@ Structure is documented below.
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionskind">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Kind<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionskind">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}A representation of a Datastore kind.
 Structure is documented below.
@@ -2692,7 +2692,7 @@ Structure is documented below.
 <a href="#partitionid_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionspartitionid">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Partition<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionspartitionid">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Partition<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}Datastore partition ID. A partition ID identifies a grouping of entities. The grouping
 is always by project and namespace, however the namespace ID may be empty.
@@ -2707,7 +2707,7 @@ Structure is documented below.
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionskind">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Kind<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionskind">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}A representation of a Datastore kind.
 Structure is documented below.
@@ -2717,7 +2717,7 @@ Structure is documented below.
 <a href="#partition_id_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionspartitionid">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Partition<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionspartitionid">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Partition<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}Datastore partition ID. A partition ID identifies a grouping of entities. The grouping
 is always by project and namespace, however the namespace ID may be empty.
@@ -2878,7 +2878,7 @@ Structure is documented below.
 <a href="#timestampfield_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfigtimestampfield">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config<wbr>Timestamp<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfigtimestampfield">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config<wbr>Timestamp<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
@@ -2964,7 +2964,7 @@ be based on the time of the execution of the last run of the JobTrigger.
 <a href="#timestampfield_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfigtimestampfield">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config<wbr>Timestamp<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfigtimestampfield">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config<wbr>Timestamp<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
@@ -3007,7 +3007,7 @@ be based on the time of the execution of the last run of the JobTrigger.
 <a href="#timestamp_field_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfigtimestampfield">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config<wbr>Timestamp<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfigtimestampfield">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config<wbr>Timestamp<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
@@ -3106,7 +3106,7 @@ be based on the time of the execution of the last run of the JobTrigger.
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggertriggerschedule">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggertriggerschedule">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule for triggered jobs
 Structure is documented below.
@@ -3134,7 +3134,7 @@ Structure is documented below.
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggertriggerschedule">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggertriggerschedule">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule for triggered jobs
 Structure is documented below.
@@ -3148,7 +3148,7 @@ Structure is documented below.
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggertriggerschedule">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionjobtriggertriggerschedule">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule for triggered jobs
 Structure is documented below.

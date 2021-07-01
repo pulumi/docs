@@ -444,7 +444,7 @@ If it is not provided, the provider project is used.
 <a href="#dispatchrules_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">[]Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule</a></span>
+        <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">[]Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.
 Structure is documented below.
@@ -722,7 +722,7 @@ If it is not provided, the provider project is used.
 <a href="#state_dispatchrules_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">[]Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule</a></span>
+        <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">[]Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.
 Structure is documented below.

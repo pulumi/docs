@@ -417,7 +417,7 @@ If it is not provided, the provider project is used.
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this DomainMapping.
 Structure is documented below.
@@ -427,7 +427,7 @@ Structure is documented below.
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec</a></span>
+        <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The spec for this DomainMapping.
 Structure is documented below.
@@ -856,7 +856,7 @@ Structure is documented below.
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this DomainMapping.
 Structure is documented below.
@@ -885,7 +885,7 @@ If it is not provided, the provider project is used.
 <a href="#state_spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec</a></span>
+        <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The spec for this DomainMapping.
 Structure is documented below.
@@ -895,7 +895,7 @@ Structure is documented below.
 <a href="#state_statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatus">[]Domain<wbr>Mapping<wbr>Status</a></span>
+        <span class="property-type"><a href="#domainmappingstatus">[]Domain<wbr>Mapping<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
 {{% /md %}}</dd></dl>
@@ -1545,7 +1545,7 @@ has given such a warning.
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatuscondition">List&lt;Domain<wbr>Mapping<wbr>Status<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#domainmappingstatuscondition">List&lt;Domain<wbr>Mapping<wbr>Status<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1569,7 +1569,7 @@ has given such a warning.
 <a href="#resourcerecords_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatusresourcerecord">List&lt;Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#domainmappingstatusresourcerecord">List&lt;Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1617,7 +1617,7 @@ has given such a warning.
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatuscondition">Domain<wbr>Mapping<wbr>Status<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#domainmappingstatuscondition">Domain<wbr>Mapping<wbr>Status<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1641,7 +1641,7 @@ has given such a warning.
 <a href="#resourcerecords_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatusresourcerecord">Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#domainmappingstatusresourcerecord">Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1653,7 +1653,7 @@ has given such a warning.
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatuscondition">Sequence[Domain<wbr>Mapping<wbr>Status<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainmappingstatuscondition">Sequence[Domain<wbr>Mapping<wbr>Status<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1677,7 +1677,7 @@ has given such a warning.
 <a href="#resource_records_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatusresourcerecord">Sequence[Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainmappingstatusresourcerecord">Sequence[Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

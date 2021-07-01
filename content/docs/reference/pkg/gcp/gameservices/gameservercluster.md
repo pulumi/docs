@@ -319,7 +319,7 @@ If it is not provided, the provider project is used.
 <a href="#connectioninfo_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info</a></span>
+        <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Game server cluster connection information. This information is used to
 manage game server clusters.
@@ -846,7 +846,7 @@ If it is not provided, the provider project is used.
 <a href="#state_connectioninfo_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info</a></span>
+        <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Game server cluster connection information. This information is used to
 manage game server clusters.
@@ -1094,7 +1094,7 @@ If it is not provided, the provider project is used.
 <a href="#gkeclusterreference_csharp" style="color: inherit; text-decoration: inherit;">Gke<wbr>Cluster<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverclusterconnectioninfogkeclusterreference">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Gke<wbr>Cluster<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#gameserverclusterconnectioninfogkeclusterreference">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Gke<wbr>Cluster<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Reference of the GKE cluster where the game servers are installed.
 Structure is documented below.
@@ -1144,7 +1144,7 @@ during creation.
 <a href="#gkeclusterreference_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverclusterconnectioninfogkeclusterreference">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Gke<wbr>Cluster<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#gameserverclusterconnectioninfogkeclusterreference">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Gke<wbr>Cluster<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Reference of the GKE cluster where the game servers are installed.
 Structure is documented below.
@@ -1169,7 +1169,7 @@ during creation.
 <a href="#gke_cluster_reference_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>cluster_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverclusterconnectioninfogkeclusterreference">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Gke<wbr>Cluster<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#gameserverclusterconnectioninfogkeclusterreference">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Gke<wbr>Cluster<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Reference of the GKE cluster where the game servers are installed.
 Structure is documented below.

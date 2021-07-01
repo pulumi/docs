@@ -466,7 +466,7 @@ Currently only one region per model is supported
 <a href="#defaultversion_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version</a></span>
+        <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default version of the model. This version will be used to handle
 prediction requests that do not specify a version.
@@ -974,7 +974,7 @@ Currently only one region per model is supported
 <a href="#state_defaultversion_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version</a></span>
+        <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default version of the model. This version will be used to handle
 prediction requests that do not specify a version.

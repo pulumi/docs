@@ -1048,7 +1048,7 @@ this configuration option are detailed below.
 <a href="#disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatedisk">[]Instance<wbr>Template<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instancetemplatedisk">[]Instance<wbr>Template<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disks to attach to instances created from this template.
 This can be specified multiple times for multiple disks. Structure is
@@ -1068,7 +1068,7 @@ documented below.
 <a href="#advancedmachinefeatures_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Machine<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features</a></span>
+        <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1087,7 +1087,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#confidentialinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1115,7 +1115,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#guestaccelerators_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateguestaccelerator">[]Instance<wbr>Template<wbr>Guest<wbr>Accelerator</a></span>
+        <span class="property-type"><a href="#instancetemplateguestaccelerator">[]Instance<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1196,7 +1196,7 @@ prefix. Conflicts with `name`.
 <a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterface">[]Instance<wbr>Template<wbr>Network<wbr>Interface</a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterface">[]Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Networks to attach to instances created from
 this template. This can be specified multiple times for multiple networks.
@@ -1207,7 +1207,7 @@ Structure is documented below.
 <a href="#networkperformanceconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkperformanceconfig">Instance<wbr>Template<wbr>Network<wbr>Performance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkperformanceconfig">Instance<wbr>Template<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures network performance settings for the instance created from the
 template. Structure is documented below. **Note**: `machine_type`
@@ -1245,7 +1245,7 @@ Provider if no value is given.
 <a href="#reservationaffinity_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity</a></span>
+        <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reservations that this instance can consume from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1254,7 +1254,7 @@ Provider if no value is given.
 <a href="#scheduling_go" style="color: inherit; text-decoration: inherit;">Scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatescheduling">Instance<wbr>Template<wbr>Scheduling</a></span>
+        <span class="property-type"><a href="#instancetemplatescheduling">Instance<wbr>Template<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy to use. More details about
 this configuration option are detailed below.
@@ -1264,7 +1264,7 @@ this configuration option are detailed below.
 <a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateserviceaccount">Instance<wbr>Template<wbr>Service<wbr>Account</a></span>
+        <span class="property-type"><a href="#instancetemplateserviceaccount">Instance<wbr>Template<wbr>Service<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service account to attach to the instance. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1273,7 +1273,7 @@ this configuration option are detailed below.
 <a href="#shieldedinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateshieldedinstanceconfig">Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancetemplateshieldedinstanceconfig">Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
@@ -2382,7 +2382,7 @@ this configuration option are detailed below.
 <a href="#state_advancedmachinefeatures_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Machine<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features</a></span>
+        <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2401,7 +2401,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#state_confidentialinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2419,7 +2419,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#state_disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatedisk">[]Instance<wbr>Template<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instancetemplatedisk">[]Instance<wbr>Template<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disks to attach to instances created from this template.
 This can be specified multiple times for multiple disks. Structure is
@@ -2440,7 +2440,7 @@ documented below.
 <a href="#state_guestaccelerators_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateguestaccelerator">[]Instance<wbr>Template<wbr>Guest<wbr>Accelerator</a></span>
+        <span class="property-type"><a href="#instancetemplateguestaccelerator">[]Instance<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2539,7 +2539,7 @@ prefix. Conflicts with `name`.
 <a href="#state_networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterface">[]Instance<wbr>Template<wbr>Network<wbr>Interface</a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterface">[]Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Networks to attach to instances created from
 this template. This can be specified multiple times for multiple networks.
@@ -2550,7 +2550,7 @@ Structure is documented below.
 <a href="#state_networkperformanceconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkperformanceconfig">Instance<wbr>Template<wbr>Network<wbr>Performance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkperformanceconfig">Instance<wbr>Template<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures network performance settings for the instance created from the
 template. Structure is documented below. **Note**: `machine_type`
@@ -2588,7 +2588,7 @@ Provider if no value is given.
 <a href="#state_reservationaffinity_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity</a></span>
+        <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reservations that this instance can consume from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2597,7 +2597,7 @@ Provider if no value is given.
 <a href="#state_scheduling_go" style="color: inherit; text-decoration: inherit;">Scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatescheduling">Instance<wbr>Template<wbr>Scheduling</a></span>
+        <span class="property-type"><a href="#instancetemplatescheduling">Instance<wbr>Template<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy to use. More details about
 this configuration option are detailed below.
@@ -2616,7 +2616,7 @@ this configuration option are detailed below.
 <a href="#state_serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateserviceaccount">Instance<wbr>Template<wbr>Service<wbr>Account</a></span>
+        <span class="property-type"><a href="#instancetemplateserviceaccount">Instance<wbr>Template<wbr>Service<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service account to attach to the instance. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2625,7 +2625,7 @@ this configuration option are detailed below.
 <a href="#state_shieldedinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateshieldedinstanceconfig">Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancetemplateshieldedinstanceconfig">Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
@@ -3392,7 +3392,7 @@ specified, the server chooses a default device name to apply to this disk.
 <a href="#diskencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatediskdiskencryptionkey">Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancetemplatediskdiskencryptionkey">Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Encrypts or decrypts a disk using a customer-supplied encryption key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3694,7 +3694,7 @@ specified, the server chooses a default device name to apply to this disk.
 <a href="#diskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatediskdiskencryptionkey">Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancetemplatediskdiskencryptionkey">Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Encrypts or decrypts a disk using a customer-supplied encryption key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3845,7 +3845,7 @@ specified, the server chooses a default device name to apply to this disk.
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatediskdiskencryptionkey">Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancetemplatediskdiskencryptionkey">Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Encrypts or decrypts a disk using a customer-supplied encryption key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4112,7 +4112,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 <a href="#accessconfigs_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterfaceaccessconfig">List&lt;Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterfaceaccessconfig">List&lt;Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Omit to ensure that the instance
@@ -4126,7 +4126,7 @@ on that network). This block can be repeated multiple times. Structure documente
 <a href="#aliasipranges_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterfacealiasiprange">List&lt;Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterfacealiasiprange">List&lt;Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range&gt;</a></span>
     </dt>
     <dd>{{% md %}}An
 array of alias IP ranges for this network interface. Can only be specified for network
@@ -4292,7 +4292,7 @@ If it is not provided, the provider project is used.
 <a href="#accessconfigs_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterfaceaccessconfig">Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterfaceaccessconfig">Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Omit to ensure that the instance
@@ -4306,7 +4306,7 @@ on that network). This block can be repeated multiple times. Structure documente
 <a href="#aliasipranges_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterfacealiasiprange">Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterfacealiasiprange">Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}An
 array of alias IP ranges for this network interface. Can only be specified for network
@@ -4382,7 +4382,7 @@ If it is not provided, the provider project is used.
 <a href="#access_configs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterfaceaccessconfig">Sequence[Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterfaceaccessconfig">Sequence[Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Omit to ensure that the instance
@@ -4396,7 +4396,7 @@ on that network). This block can be repeated multiple times. Structure documente
 <a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterfacealiasiprange">Sequence[Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterfacealiasiprange">Sequence[Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range]</a></span>
     </dt>
     <dd>{{% md %}}An
 array of alias IP ranges for this network interface. Can only be specified for network
@@ -4785,7 +4785,7 @@ range. If left unspecified, the primary range of the subnetwork will be used.
 <a href="#specificreservation_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatereservationaffinityspecificreservation">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancetemplatereservationaffinityspecificreservation">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4827,7 +4827,7 @@ range. If left unspecified, the primary range of the subnetwork will be used.
 <a href="#specificreservation_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatereservationaffinityspecificreservation">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancetemplatereservationaffinityspecificreservation">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4848,7 +4848,7 @@ range. If left unspecified, the primary range of the subnetwork will be used.
 <a href="#specific_reservation_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatereservationaffinityspecificreservation">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancetemplatereservationaffinityspecificreservation">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4967,7 +4967,7 @@ terminated by a user). This defaults to true.
 <a href="#nodeaffinities_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateschedulingnodeaffinity">List&lt;Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instancetemplateschedulingnodeaffinity">List&lt;Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies node affinities or anti-affinities
 to determine which sole-tenant nodes your instances and managed instance
@@ -5081,7 +5081,7 @@ terminated by a user). This defaults to true.
 <a href="#nodeaffinities_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateschedulingnodeaffinity">Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instancetemplateschedulingnodeaffinity">Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies node affinities or anti-affinities
 to determine which sole-tenant nodes your instances and managed instance
@@ -5138,7 +5138,7 @@ terminated by a user). This defaults to true.
 <a href="#node_affinities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateschedulingnodeaffinity">Sequence[Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancetemplateschedulingnodeaffinity">Sequence[Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity]</a></span>
     </dt>
     <dd>{{% md %}}Specifies node affinities or anti-affinities
 to determine which sole-tenant nodes your instances and managed instance

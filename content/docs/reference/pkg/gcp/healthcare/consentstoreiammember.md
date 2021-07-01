@@ -499,7 +499,7 @@ Used to find the parent resource to bind the IAM policy to
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consentstoreiammembercondition">Consent<wbr>Store<wbr>Iam<wbr>Member<wbr>Condition</a></span>
+        <span class="property-type"><a href="#consentstoreiammembercondition">Consent<wbr>Store<wbr>Iam<wbr>Member<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -895,7 +895,7 @@ Used to find the parent resource to bind the IAM policy to
 <a href="#state_condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consentstoreiammembercondition">Consent<wbr>Store<wbr>Iam<wbr>Member<wbr>Condition</a></span>
+        <span class="property-type"><a href="#consentstoreiammembercondition">Consent<wbr>Store<wbr>Iam<wbr>Member<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

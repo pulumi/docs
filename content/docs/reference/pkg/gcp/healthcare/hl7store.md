@@ -927,7 +927,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 <a href="#notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7storenotificationconfig">Hl7Store<wbr>Notification<wbr>Config</a></span>
+        <span class="property-type"><a href="#hl7storenotificationconfig">Hl7Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -939,7 +939,7 @@ Structure is documented below.
 <a href="#notificationconfigs_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7storenotificationconfigs">[]Hl7Store<wbr>Notification<wbr>Configs</a></span>
+        <span class="property-type"><a href="#hl7storenotificationconfigs">[]Hl7Store<wbr>Notification<wbr>Configs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of notification configs. Each configuration uses a filter to determine whether to publish a
 message (both Ingest & Create) on the corresponding notification destination. Only the message name
@@ -951,7 +951,7 @@ Structure is documented below.
 <a href="#parserconfig_go" style="color: inherit; text-decoration: inherit;">Parser<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7storeparserconfig">Hl7Store<wbr>Parser<wbr>Config</a></span>
+        <span class="property-type"><a href="#hl7storeparserconfig">Hl7Store<wbr>Parser<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -1455,7 +1455,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 <a href="#state_notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7storenotificationconfig">Hl7Store<wbr>Notification<wbr>Config</a></span>
+        <span class="property-type"><a href="#hl7storenotificationconfig">Hl7Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -1467,7 +1467,7 @@ Structure is documented below.
 <a href="#state_notificationconfigs_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7storenotificationconfigs">[]Hl7Store<wbr>Notification<wbr>Configs</a></span>
+        <span class="property-type"><a href="#hl7storenotificationconfigs">[]Hl7Store<wbr>Notification<wbr>Configs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of notification configs. Each configuration uses a filter to determine whether to publish a
 message (both Ingest & Create) on the corresponding notification destination. Only the message name
@@ -1479,7 +1479,7 @@ Structure is documented below.
 <a href="#state_parserconfig_go" style="color: inherit; text-decoration: inherit;">Parser<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7storeparserconfig">Hl7Store<wbr>Parser<wbr>Config</a></span>
+        <span class="property-type"><a href="#hl7storeparserconfig">Hl7Store<wbr>Parser<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.

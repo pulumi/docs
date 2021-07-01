@@ -439,7 +439,7 @@ Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, 
 <a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthentication">Security<wbr>Scan<wbr>Config<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthentication">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration.
 If specified, service will use the authentication configuration during scanning.
@@ -491,7 +491,7 @@ If it is not provided, the provider project is used.
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigschedule">Security<wbr>Scan<wbr>Config<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#securityscanconfigschedule">Security<wbr>Scan<wbr>Config<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The schedule of the ScanConfig
 Structure is documented below.
@@ -1077,7 +1077,7 @@ Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, 
 <a href="#state_authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthentication">Security<wbr>Scan<wbr>Config<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthentication">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration.
 If specified, service will use the authentication configuration during scanning.
@@ -1147,7 +1147,7 @@ If it is not provided, the provider project is used.
 <a href="#state_schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigschedule">Security<wbr>Scan<wbr>Config<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#securityscanconfigschedule">Security<wbr>Scan<wbr>Config<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The schedule of the ScanConfig
 Structure is documented below.
@@ -1430,7 +1430,7 @@ Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, 
 <a href="#customaccount_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthenticationcustomaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Custom<wbr>Account<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthenticationcustomaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Custom<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}Describes authentication configuration that uses a custom account.
 Structure is documented below.
@@ -1440,7 +1440,7 @@ Structure is documented below.
 <a href="#googleaccount_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthenticationgoogleaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Google<wbr>Account<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthenticationgoogleaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Google<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}Describes authentication configuration that uses a Google account.
 Structure is documented below.
@@ -1478,7 +1478,7 @@ Structure is documented below.
 <a href="#customaccount_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthenticationcustomaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Custom<wbr>Account<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthenticationcustomaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Custom<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}Describes authentication configuration that uses a custom account.
 Structure is documented below.
@@ -1488,7 +1488,7 @@ Structure is documented below.
 <a href="#googleaccount_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthenticationgoogleaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Google<wbr>Account<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthenticationgoogleaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Google<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}Describes authentication configuration that uses a Google account.
 Structure is documented below.
@@ -1502,7 +1502,7 @@ Structure is documented below.
 <a href="#custom_account_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthenticationcustomaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Custom<wbr>Account<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthenticationcustomaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Custom<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}Describes authentication configuration that uses a custom account.
 Structure is documented below.
@@ -1512,7 +1512,7 @@ Structure is documented below.
 <a href="#google_account_python" style="color: inherit; text-decoration: inherit;">google_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthenticationgoogleaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Google<wbr>Account<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthenticationgoogleaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Google<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}Describes authentication configuration that uses a Google account.
 Structure is documented below.

@@ -1233,7 +1233,7 @@ Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 <a href="#metadatafilters_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalforwardingrulemetadatafilter">[]Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter</a></span>
+        <span class="property-type"><a href="#globalforwardingrulemetadatafilter">[]Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing
 configuration to a limited set xDS compliant clients. In their xDS
@@ -2224,7 +2224,7 @@ Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 <a href="#state_metadatafilters_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalforwardingrulemetadatafilter">[]Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter</a></span>
+        <span class="property-type"><a href="#globalforwardingrulemetadatafilter">[]Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing
 configuration to a limited set xDS compliant clients. In their xDS
@@ -2734,7 +2734,7 @@ addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
 <a href="#filterlabels_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalforwardingrulemetadatafilterfilterlabel">List&lt;Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#globalforwardingrulemetadatafilterfilterlabel">List&lt;Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the
 provided metadata based on filterMatchCriteria
@@ -2796,7 +2796,7 @@ Possible values are `MATCH_ANY` and `MATCH_ALL`.
 <a href="#filterlabels_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalforwardingrulemetadatafilterfilterlabel">Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#globalforwardingrulemetadatafilterfilterlabel">Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the
 provided metadata based on filterMatchCriteria
@@ -2827,7 +2827,7 @@ Possible values are `MATCH_ANY` and `MATCH_ALL`.
 <a href="#filter_labels_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalforwardingrulemetadatafilterfilterlabel">Sequence[Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#globalforwardingrulemetadatafilterfilterlabel">Sequence[Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label]</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the
 provided metadata based on filterMatchCriteria

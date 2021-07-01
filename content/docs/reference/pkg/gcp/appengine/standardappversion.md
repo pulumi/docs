@@ -724,7 +724,7 @@ Structure is documented below.
 <a href="#deployment_go" style="color: inherit; text-decoration: inherit;">Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment</a></span>
+        <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Code and application artifacts that make up this version.
 Structure is documented below.
@@ -752,7 +752,7 @@ Structure is documented below.
 <a href="#automaticscaling_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionautomaticscaling">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</a></span>
+        <span class="property-type"><a href="#standardappversionautomaticscaling">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
 Structure is documented below.
@@ -762,7 +762,7 @@ Structure is documented below.
 <a href="#basicscaling_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionbasicscaling">Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling</a></span>
+        <span class="property-type"><a href="#standardappversionbasicscaling">Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
 Structure is documented below.
@@ -781,7 +781,7 @@ Structure is documented below.
 <a href="#entrypoint_go" style="color: inherit; text-decoration: inherit;">Entrypoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionentrypoint">Standard<wbr>App<wbr>Version<wbr>Entrypoint</a></span>
+        <span class="property-type"><a href="#standardappversionentrypoint">Standard<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The entrypoint for the application.
 Structure is documented below.
@@ -800,7 +800,7 @@ Structure is documented below.
 <a href="#handlers_go" style="color: inherit; text-decoration: inherit;">Handlers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandler">[]Standard<wbr>App<wbr>Version<wbr>Handler</a></span>
+        <span class="property-type"><a href="#standardappversionhandler">[]Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
 The first matching URL handles the request and other request handlers are not attempted.
@@ -833,7 +833,7 @@ Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. I
 <a href="#libraries_go" style="color: inherit; text-decoration: inherit;">Libraries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionlibrary">[]Standard<wbr>App<wbr>Version<wbr>Library</a></span>
+        <span class="property-type"><a href="#standardappversionlibrary">[]Standard<wbr>App<wbr>Version<wbr>Library<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.
 Structure is documented below.
@@ -843,7 +843,7 @@ Structure is documented below.
 <a href="#manualscaling_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionmanualscaling">Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</a></span>
+        <span class="property-type"><a href="#standardappversionmanualscaling">Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
 Structure is documented below.
@@ -900,7 +900,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 <a href="#vpcaccessconnector_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Access<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionvpcaccessconnector">Standard<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector</a></span>
+        <span class="property-type"><a href="#standardappversionvpcaccessconnector">Standard<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enables VPC connectivity for standard apps.
 Structure is documented below.
@@ -1729,7 +1729,7 @@ Structure is documented below.
 <a href="#state_automaticscaling_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionautomaticscaling">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</a></span>
+        <span class="property-type"><a href="#standardappversionautomaticscaling">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
 Structure is documented below.
@@ -1739,7 +1739,7 @@ Structure is documented below.
 <a href="#state_basicscaling_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionbasicscaling">Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling</a></span>
+        <span class="property-type"><a href="#standardappversionbasicscaling">Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
 Structure is documented below.
@@ -1758,7 +1758,7 @@ Structure is documented below.
 <a href="#state_deployment_go" style="color: inherit; text-decoration: inherit;">Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment</a></span>
+        <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Code and application artifacts that make up this version.
 Structure is documented below.
@@ -1768,7 +1768,7 @@ Structure is documented below.
 <a href="#state_entrypoint_go" style="color: inherit; text-decoration: inherit;">Entrypoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionentrypoint">Standard<wbr>App<wbr>Version<wbr>Entrypoint</a></span>
+        <span class="property-type"><a href="#standardappversionentrypoint">Standard<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The entrypoint for the application.
 Structure is documented below.
@@ -1787,7 +1787,7 @@ Structure is documented below.
 <a href="#state_handlers_go" style="color: inherit; text-decoration: inherit;">Handlers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandler">[]Standard<wbr>App<wbr>Version<wbr>Handler</a></span>
+        <span class="property-type"><a href="#standardappversionhandler">[]Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
 The first matching URL handles the request and other request handlers are not attempted.
@@ -1820,7 +1820,7 @@ Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. I
 <a href="#state_libraries_go" style="color: inherit; text-decoration: inherit;">Libraries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionlibrary">[]Standard<wbr>App<wbr>Version<wbr>Library</a></span>
+        <span class="property-type"><a href="#standardappversionlibrary">[]Standard<wbr>App<wbr>Version<wbr>Library<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.
 Structure is documented below.
@@ -1830,7 +1830,7 @@ Structure is documented below.
 <a href="#state_manualscaling_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionmanualscaling">Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</a></span>
+        <span class="property-type"><a href="#standardappversionmanualscaling">Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
 Structure is documented below.
@@ -1914,7 +1914,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 <a href="#state_vpcaccessconnector_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Access<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionvpcaccessconnector">Standard<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector</a></span>
+        <span class="property-type"><a href="#standardappversionvpcaccessconnector">Standard<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enables VPC connectivity for standard apps.
 Structure is documented below.
@@ -2385,7 +2385,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#standardschedulersettings_csharp" style="color: inherit; text-decoration: inherit;">Standard<wbr>Scheduler<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionautomaticscalingstandardschedulersettings">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Standard<wbr>Scheduler<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#standardappversionautomaticscalingstandardschedulersettings">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Standard<wbr>Scheduler<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Scheduler settings for standard environment.
 Structure is documented below.
@@ -2509,7 +2509,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#standardschedulersettings_nodejs" style="color: inherit; text-decoration: inherit;">standard<wbr>Scheduler<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionautomaticscalingstandardschedulersettings">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Standard<wbr>Scheduler<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#standardappversionautomaticscalingstandardschedulersettings">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Standard<wbr>Scheduler<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Scheduler settings for standard environment.
 Structure is documented below.
@@ -2571,7 +2571,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#standard_scheduler_settings_python" style="color: inherit; text-decoration: inherit;">standard_<wbr>scheduler_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionautomaticscalingstandardschedulersettings">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Standard<wbr>Scheduler<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#standardappversionautomaticscalingstandardschedulersettings">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Standard<wbr>Scheduler<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Scheduler settings for standard environment.
 Structure is documented below.
@@ -2843,7 +2843,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#files_csharp" style="color: inherit; text-decoration: inherit;">Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeploymentfile">List&lt;Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#standardappversiondeploymentfile">List&lt;Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>File&gt;</a></span>
     </dt>
     <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
 All files must be readable using the credentials supplied with this call.
@@ -2854,7 +2854,7 @@ Structure is documented below.
 <a href="#zip_csharp" style="color: inherit; text-decoration: inherit;">Zip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeploymentzip">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip<wbr>Args</a></span>
+        <span class="property-type"><a href="#standardappversiondeploymentzip">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip</a></span>
     </dt>
     <dd>{{% md %}}Zip File
 Structure is documented below.
@@ -2893,7 +2893,7 @@ Structure is documented below.
 <a href="#files_nodejs" style="color: inherit; text-decoration: inherit;">files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeploymentfile">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#standardappversiondeploymentfile">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>File[]</a></span>
     </dt>
     <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
 All files must be readable using the credentials supplied with this call.
@@ -2904,7 +2904,7 @@ Structure is documented below.
 <a href="#zip_nodejs" style="color: inherit; text-decoration: inherit;">zip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeploymentzip">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip<wbr>Args</a></span>
+        <span class="property-type"><a href="#standardappversiondeploymentzip">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip</a></span>
     </dt>
     <dd>{{% md %}}Zip File
 Structure is documented below.
@@ -2918,7 +2918,7 @@ Structure is documented below.
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeploymentfile">Sequence[Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversiondeploymentfile">Sequence[Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>File]</a></span>
     </dt>
     <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
 All files must be readable using the credentials supplied with this call.
@@ -2929,7 +2929,7 @@ Structure is documented below.
 <a href="#zip_python" style="color: inherit; text-decoration: inherit;">zip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeploymentzip">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip<wbr>Args</a></span>
+        <span class="property-type"><a href="#standardappversiondeploymentzip">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip</a></span>
     </dt>
     <dd>{{% md %}}Zip File
 Structure is documented below.
@@ -3245,7 +3245,7 @@ Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_C
 <a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandlerscript">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Script<wbr>Args</a></span>
+        <span class="property-type"><a href="#standardappversionhandlerscript">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Script</a></span>
     </dt>
     <dd>{{% md %}}Executes a script to handle the requests that match this URL pattern.
 Only the auto value is supported for Node.js in the App Engine standard environment, for example "script:" "auto".
@@ -3266,7 +3266,7 @@ Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SE
 <a href="#staticfiles_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandlerstaticfiles">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files<wbr>Args</a></span>
+        <span class="property-type"><a href="#standardappversionhandlerstaticfiles">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files</a></span>
     </dt>
     <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them.
 Structure is documented below.
@@ -3395,7 +3395,7 @@ Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_C
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandlerscript">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Script<wbr>Args</a></span>
+        <span class="property-type"><a href="#standardappversionhandlerscript">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Script</a></span>
     </dt>
     <dd>{{% md %}}Executes a script to handle the requests that match this URL pattern.
 Only the auto value is supported for Node.js in the App Engine standard environment, for example "script:" "auto".
@@ -3416,7 +3416,7 @@ Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SE
 <a href="#staticfiles_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandlerstaticfiles">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files<wbr>Args</a></span>
+        <span class="property-type"><a href="#standardappversionhandlerstaticfiles">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files</a></span>
     </dt>
     <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them.
 Structure is documented below.
@@ -3470,7 +3470,7 @@ Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_C
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandlerscript">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Script<wbr>Args</a></span>
+        <span class="property-type"><a href="#standardappversionhandlerscript">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Script</a></span>
     </dt>
     <dd>{{% md %}}Executes a script to handle the requests that match this URL pattern.
 Only the auto value is supported for Node.js in the App Engine standard environment, for example "script:" "auto".
@@ -3491,7 +3491,7 @@ Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SE
 <a href="#static_files_python" style="color: inherit; text-decoration: inherit;">static_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandlerstaticfiles">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files<wbr>Args</a></span>
+        <span class="property-type"><a href="#standardappversionhandlerstaticfiles">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files</a></span>
     </dt>
     <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them.
 Structure is documented below.

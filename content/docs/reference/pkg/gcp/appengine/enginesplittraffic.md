@@ -462,7 +462,7 @@ If it is not provided, the provider project is used.
 <a href="#split_go" style="color: inherit; text-decoration: inherit;">Split</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split</a></span>
+        <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
 Structure is documented below.
@@ -833,7 +833,7 @@ If it is not provided, the provider project is used.
 <a href="#state_split_go" style="color: inherit; text-decoration: inherit;">Split</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split</a></span>
+        <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
 Structure is documented below.

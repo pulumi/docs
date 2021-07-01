@@ -357,7 +357,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#booleanpolicy_go" style="color: inherit; text-decoration: inherit;">Boolean<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy</a></span>
+        <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -366,7 +366,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#listpolicy_go" style="color: inherit; text-decoration: inherit;">List<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policylistpolicy">Policy<wbr>List<wbr>Policy</a></span>
+        <span class="property-type"><a href="#policylistpolicy">Policy<wbr>List<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -375,7 +375,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#restorepolicy_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyrestorepolicy">Policy<wbr>Restore<wbr>Policy</a></span>
+        <span class="property-type"><a href="#policyrestorepolicy">Policy<wbr>Restore<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -849,7 +849,7 @@ The following state arguments are supported:
 <a href="#state_booleanpolicy_go" style="color: inherit; text-decoration: inherit;">Boolean<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy</a></span>
+        <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -876,7 +876,7 @@ The following state arguments are supported:
 <a href="#state_listpolicy_go" style="color: inherit; text-decoration: inherit;">List<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policylistpolicy">Policy<wbr>List<wbr>Policy</a></span>
+        <span class="property-type"><a href="#policylistpolicy">Policy<wbr>List<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -894,7 +894,7 @@ The following state arguments are supported:
 <a href="#state_restorepolicy_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyrestorepolicy">Policy<wbr>Restore<wbr>Policy</a></span>
+        <span class="property-type"><a href="#policyrestorepolicy">Policy<wbr>Restore<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1142,7 +1142,7 @@ The following state arguments are supported:
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policylistpolicyallow">Policy<wbr>List<wbr>Policy<wbr>Allow<wbr>Args</a></span>
+        <span class="property-type"><a href="#policylistpolicyallow">Policy<wbr>List<wbr>Policy<wbr>Allow</a></span>
     </dt>
     <dd>{{% md %}}or `deny` - (Optional) One or the other must be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1151,7 +1151,7 @@ The following state arguments are supported:
 <a href="#deny_csharp" style="color: inherit; text-decoration: inherit;">Deny</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policylistpolicydeny">Policy<wbr>List<wbr>Policy<wbr>Deny<wbr>Args</a></span>
+        <span class="property-type"><a href="#policylistpolicydeny">Policy<wbr>List<wbr>Policy<wbr>Deny</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1222,7 +1222,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policylistpolicyallow">Policy<wbr>List<wbr>Policy<wbr>Allow<wbr>Args</a></span>
+        <span class="property-type"><a href="#policylistpolicyallow">Policy<wbr>List<wbr>Policy<wbr>Allow</a></span>
     </dt>
     <dd>{{% md %}}or `deny` - (Optional) One or the other must be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1231,7 +1231,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#deny_nodejs" style="color: inherit; text-decoration: inherit;">deny</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policylistpolicydeny">Policy<wbr>List<wbr>Policy<wbr>Deny<wbr>Args</a></span>
+        <span class="property-type"><a href="#policylistpolicydeny">Policy<wbr>List<wbr>Policy<wbr>Deny</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1262,7 +1262,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policylistpolicyallow">Policy<wbr>List<wbr>Policy<wbr>Allow<wbr>Args</a></span>
+        <span class="property-type"><a href="#policylistpolicyallow">Policy<wbr>List<wbr>Policy<wbr>Allow</a></span>
     </dt>
     <dd>{{% md %}}or `deny` - (Optional) One or the other must be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1271,7 +1271,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#deny_python" style="color: inherit; text-decoration: inherit;">deny</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policylistpolicydeny">Policy<wbr>List<wbr>Policy<wbr>Deny<wbr>Args</a></span>
+        <span class="property-type"><a href="#policylistpolicydeny">Policy<wbr>List<wbr>Policy<wbr>Deny</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

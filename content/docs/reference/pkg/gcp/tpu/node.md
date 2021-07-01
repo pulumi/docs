@@ -492,7 +492,7 @@ If it is not provided, the provider project is used.
 <a href="#schedulingconfig_go" style="color: inherit; text-decoration: inherit;">Scheduling<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this TPU instance.
 Structure is documented below.
@@ -1238,7 +1238,7 @@ used.
 <a href="#state_networkendpoints_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodenetworkendpoint">[]Node<wbr>Network<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#nodenetworkendpoint">[]Node<wbr>Network<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of the
 node first reach out to the first (index 0) entry.
@@ -1258,7 +1258,7 @@ If it is not provided, the provider project is used.
 <a href="#state_schedulingconfig_go" style="color: inherit; text-decoration: inherit;">Scheduling<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this TPU instance.
 Structure is documented below.

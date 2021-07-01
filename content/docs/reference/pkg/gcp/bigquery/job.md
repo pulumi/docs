@@ -1166,7 +1166,7 @@ Structure is documented below.
 <a href="#copy_go" style="color: inherit; text-decoration: inherit;">Copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopy">Job<wbr>Copy</a></span>
+        <span class="property-type"><a href="#jobcopy">Job<wbr>Copy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copies a table.
 Structure is documented below.
@@ -1176,7 +1176,7 @@ Structure is documented below.
 <a href="#extract_go" style="color: inherit; text-decoration: inherit;">Extract</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextract">Job<wbr>Extract</a></span>
+        <span class="property-type"><a href="#jobextract">Job<wbr>Extract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures an extract job.
 Structure is documented below.
@@ -1204,7 +1204,7 @@ Structure is documented below.
 <a href="#load_go" style="color: inherit; text-decoration: inherit;">Load</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobload">Job<wbr>Load</a></span>
+        <span class="property-type"><a href="#jobload">Job<wbr>Load<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures a load job.
 Structure is documented below.
@@ -1233,7 +1233,7 @@ If it is not provided, the provider project is used.
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquery">Job<wbr>Query</a></span>
+        <span class="property-type"><a href="#jobquery">Job<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures a query job.
 Structure is documented below.
@@ -1844,7 +1844,7 @@ Structure is documented below.
 <a href="#state_copy_go" style="color: inherit; text-decoration: inherit;">Copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopy">Job<wbr>Copy</a></span>
+        <span class="property-type"><a href="#jobcopy">Job<wbr>Copy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copies a table.
 Structure is documented below.
@@ -1854,7 +1854,7 @@ Structure is documented below.
 <a href="#state_extract_go" style="color: inherit; text-decoration: inherit;">Extract</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextract">Job<wbr>Extract</a></span>
+        <span class="property-type"><a href="#jobextract">Job<wbr>Extract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures an extract job.
 Structure is documented below.
@@ -1900,7 +1900,7 @@ Structure is documented below.
 <a href="#state_load_go" style="color: inherit; text-decoration: inherit;">Load</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobload">Job<wbr>Load</a></span>
+        <span class="property-type"><a href="#jobload">Job<wbr>Load<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures a load job.
 Structure is documented below.
@@ -1929,7 +1929,7 @@ If it is not provided, the provider project is used.
 <a href="#state_query_go" style="color: inherit; text-decoration: inherit;">Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquery">Job<wbr>Query</a></span>
+        <span class="property-type"><a href="#jobquery">Job<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures a query job.
 Structure is documented below.
@@ -1939,7 +1939,7 @@ Structure is documented below.
 <a href="#state_statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatus">[]Job<wbr>Status</a></span>
+        <span class="property-type"><a href="#jobstatus">[]Job<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2206,7 +2206,7 @@ Structure is documented below.
 <a href="#sourcetables_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopysourcetable">List&lt;Job<wbr>Copy<wbr>Source<wbr>Table<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jobcopysourcetable">List&lt;Job<wbr>Copy<wbr>Source<wbr>Table&gt;</a></span>
     </dt>
     <dd>{{% md %}}Source tables to copy.
 Structure is documented below.
@@ -2230,7 +2230,7 @@ Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 <a href="#destinationencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
 Structure is documented below.
@@ -2240,7 +2240,7 @@ Structure is documented below.
 <a href="#destinationtable_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopydestinationtable">Job<wbr>Copy<wbr>Destination<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobcopydestinationtable">Job<wbr>Copy<wbr>Destination<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}The destination table.
 Structure is documented below.
@@ -2334,7 +2334,7 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 <a href="#sourcetables_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopysourcetable">Job<wbr>Copy<wbr>Source<wbr>Table<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jobcopysourcetable">Job<wbr>Copy<wbr>Source<wbr>Table[]</a></span>
     </dt>
     <dd>{{% md %}}Source tables to copy.
 Structure is documented below.
@@ -2358,7 +2358,7 @@ Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 <a href="#destinationencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
 Structure is documented below.
@@ -2368,7 +2368,7 @@ Structure is documented below.
 <a href="#destinationtable_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopydestinationtable">Job<wbr>Copy<wbr>Destination<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobcopydestinationtable">Job<wbr>Copy<wbr>Destination<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}The destination table.
 Structure is documented below.
@@ -2398,7 +2398,7 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 <a href="#source_tables_python" style="color: inherit; text-decoration: inherit;">source_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopysourcetable">Sequence[Job<wbr>Copy<wbr>Source<wbr>Table<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobcopysourcetable">Sequence[Job<wbr>Copy<wbr>Source<wbr>Table]</a></span>
     </dt>
     <dd>{{% md %}}Source tables to copy.
 Structure is documented below.
@@ -2422,7 +2422,7 @@ Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 <a href="#destination_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
 Structure is documented below.
@@ -2432,7 +2432,7 @@ Structure is documented below.
 <a href="#destination_table_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopydestinationtable">Job<wbr>Copy<wbr>Destination<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobcopydestinationtable">Job<wbr>Copy<wbr>Destination<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}The destination table.
 Structure is documented below.
@@ -2831,7 +2831,7 @@ Default is ','
 <a href="#sourcemodel_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextractsourcemodel">Job<wbr>Extract<wbr>Source<wbr>Model<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobextractsourcemodel">Job<wbr>Extract<wbr>Source<wbr>Model</a></span>
     </dt>
     <dd>{{% md %}}A reference to the model being exported.
 Structure is documented below.
@@ -2841,7 +2841,7 @@ Structure is documented below.
 <a href="#sourcetable_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextractsourcetable">Job<wbr>Extract<wbr>Source<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobextractsourcetable">Job<wbr>Extract<wbr>Source<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}A reference to the table being exported.
 Structure is documented below.
@@ -2995,7 +2995,7 @@ Default is ','
 <a href="#sourcemodel_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextractsourcemodel">Job<wbr>Extract<wbr>Source<wbr>Model<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobextractsourcemodel">Job<wbr>Extract<wbr>Source<wbr>Model</a></span>
     </dt>
     <dd>{{% md %}}A reference to the model being exported.
 Structure is documented below.
@@ -3005,7 +3005,7 @@ Structure is documented below.
 <a href="#sourcetable_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextractsourcetable">Job<wbr>Extract<wbr>Source<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobextractsourcetable">Job<wbr>Extract<wbr>Source<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}A reference to the table being exported.
 Structure is documented below.
@@ -3077,7 +3077,7 @@ Default is ','
 <a href="#source_model_python" style="color: inherit; text-decoration: inherit;">source_<wbr>model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextractsourcemodel">Job<wbr>Extract<wbr>Source<wbr>Model<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobextractsourcemodel">Job<wbr>Extract<wbr>Source<wbr>Model</a></span>
     </dt>
     <dd>{{% md %}}A reference to the model being exported.
 Structure is documented below.
@@ -3087,7 +3087,7 @@ Structure is documented below.
 <a href="#source_table_python" style="color: inherit; text-decoration: inherit;">source_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextractsourcetable">Job<wbr>Extract<wbr>Source<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobextractsourcetable">Job<wbr>Extract<wbr>Source<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}A reference to the table being exported.
 Structure is documented below.
@@ -3368,7 +3368,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#destinationtable_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloaddestinationtable">Job<wbr>Load<wbr>Destination<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobloaddestinationtable">Job<wbr>Load<wbr>Destination<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}The destination table.
 Structure is documented below.
@@ -3436,7 +3436,7 @@ Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 <a href="#destinationencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
 Structure is documented below.
@@ -3568,7 +3568,7 @@ The default value is CSV.
 <a href="#timepartitioning_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloadtimepartitioning">Job<wbr>Load<wbr>Time<wbr>Partitioning<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobloadtimepartitioning">Job<wbr>Load<wbr>Time<wbr>Partitioning</a></span>
     </dt>
     <dd>{{% md %}}Time-based partitioning specification for the destination table.
 Structure is documented below.
@@ -3828,7 +3828,7 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 <a href="#destinationtable_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloaddestinationtable">Job<wbr>Load<wbr>Destination<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobloaddestinationtable">Job<wbr>Load<wbr>Destination<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}The destination table.
 Structure is documented below.
@@ -3896,7 +3896,7 @@ Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 <a href="#destinationencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
 Structure is documented below.
@@ -4028,7 +4028,7 @@ The default value is CSV.
 <a href="#timepartitioning_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloadtimepartitioning">Job<wbr>Load<wbr>Time<wbr>Partitioning<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobloadtimepartitioning">Job<wbr>Load<wbr>Time<wbr>Partitioning</a></span>
     </dt>
     <dd>{{% md %}}Time-based partitioning specification for the destination table.
 Structure is documented below.
@@ -4058,7 +4058,7 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 <a href="#destination_table_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloaddestinationtable">Job<wbr>Load<wbr>Destination<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobloaddestinationtable">Job<wbr>Load<wbr>Destination<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}The destination table.
 Structure is documented below.
@@ -4126,7 +4126,7 @@ Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 <a href="#destination_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
 Structure is documented below.
@@ -4258,7 +4258,7 @@ The default value is CSV.
 <a href="#time_partitioning_python" style="color: inherit; text-decoration: inherit;">time_<wbr>partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloadtimepartitioning">Job<wbr>Load<wbr>Time<wbr>Partitioning<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobloadtimepartitioning">Job<wbr>Load<wbr>Time<wbr>Partitioning</a></span>
     </dt>
     <dd>{{% md %}}Time-based partitioning specification for the destination table.
 Structure is documented below.
@@ -4651,7 +4651,7 @@ Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 <a href="#defaultdataset_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydefaultdataset">Job<wbr>Query<wbr>Default<wbr>Dataset<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobquerydefaultdataset">Job<wbr>Query<wbr>Default<wbr>Dataset</a></span>
     </dt>
     <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
 Structure is documented below.
@@ -4661,7 +4661,7 @@ Structure is documented below.
 <a href="#destinationencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
 Structure is documented below.
@@ -4671,7 +4671,7 @@ Structure is documented below.
 <a href="#destinationtable_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydestinationtable">Job<wbr>Query<wbr>Destination<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobquerydestinationtable">Job<wbr>Query<wbr>Destination<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}The destination table.
 Structure is documented below.
@@ -4745,7 +4745,7 @@ ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema t
 <a href="#scriptoptions_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobqueryscriptoptions">Job<wbr>Query<wbr>Script<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobqueryscriptoptions">Job<wbr>Query<wbr>Script<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options controlling the execution of scripts.
 Structure is documented below.
@@ -4776,7 +4776,7 @@ The default value is true.
 <a href="#userdefinedfunctionresources_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Function<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">List&lt;Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">List&lt;Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes user-defined function resources used in the query.
 Structure is documented below.
@@ -5031,7 +5031,7 @@ Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 <a href="#defaultdataset_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydefaultdataset">Job<wbr>Query<wbr>Default<wbr>Dataset<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobquerydefaultdataset">Job<wbr>Query<wbr>Default<wbr>Dataset</a></span>
     </dt>
     <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
 Structure is documented below.
@@ -5041,7 +5041,7 @@ Structure is documented below.
 <a href="#destinationencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
 Structure is documented below.
@@ -5051,7 +5051,7 @@ Structure is documented below.
 <a href="#destinationtable_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydestinationtable">Job<wbr>Query<wbr>Destination<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobquerydestinationtable">Job<wbr>Query<wbr>Destination<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}The destination table.
 Structure is documented below.
@@ -5125,7 +5125,7 @@ ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema t
 <a href="#scriptoptions_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobqueryscriptoptions">Job<wbr>Query<wbr>Script<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobqueryscriptoptions">Job<wbr>Query<wbr>Script<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options controlling the execution of scripts.
 Structure is documented below.
@@ -5156,7 +5156,7 @@ The default value is true.
 <a href="#userdefinedfunctionresources_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Function<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource[]</a></span>
     </dt>
     <dd>{{% md %}}Describes user-defined function resources used in the query.
 Structure is documented below.
@@ -5221,7 +5221,7 @@ Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 <a href="#default_dataset_python" style="color: inherit; text-decoration: inherit;">default_<wbr>dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydefaultdataset">Job<wbr>Query<wbr>Default<wbr>Dataset<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobquerydefaultdataset">Job<wbr>Query<wbr>Default<wbr>Dataset</a></span>
     </dt>
     <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
 Structure is documented below.
@@ -5231,7 +5231,7 @@ Structure is documented below.
 <a href="#destination_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
 Structure is documented below.
@@ -5241,7 +5241,7 @@ Structure is documented below.
 <a href="#destination_table_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydestinationtable">Job<wbr>Query<wbr>Destination<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobquerydestinationtable">Job<wbr>Query<wbr>Destination<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}The destination table.
 Structure is documented below.
@@ -5315,7 +5315,7 @@ ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema t
 <a href="#script_options_python" style="color: inherit; text-decoration: inherit;">script_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobqueryscriptoptions">Job<wbr>Query<wbr>Script<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobqueryscriptoptions">Job<wbr>Query<wbr>Script<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options controlling the execution of scripts.
 Structure is documented below.
@@ -5346,7 +5346,7 @@ The default value is true.
 <a href="#user_defined_function_resources_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>function_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">Sequence[Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">Sequence[Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource]</a></span>
     </dt>
     <dd>{{% md %}}Describes user-defined function resources used in the query.
 Structure is documented below.
@@ -5884,7 +5884,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#errorresults_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatuserrorresult">List&lt;Job<wbr>Status<wbr>Error<wbr>Result<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jobstatuserrorresult">List&lt;Job<wbr>Status<wbr>Error<wbr>Result&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5892,7 +5892,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatuserror">List&lt;Job<wbr>Status<wbr>Error<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jobstatuserror">List&lt;Job<wbr>Status<wbr>Error&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5940,7 +5940,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#errorresults_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatuserrorresult">Job<wbr>Status<wbr>Error<wbr>Result<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jobstatuserrorresult">Job<wbr>Status<wbr>Error<wbr>Result[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5948,7 +5948,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatuserror">Job<wbr>Status<wbr>Error<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jobstatuserror">Job<wbr>Status<wbr>Error[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5968,7 +5968,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#error_results_python" style="color: inherit; text-decoration: inherit;">error_<wbr>results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatuserrorresult">Sequence[Job<wbr>Status<wbr>Error<wbr>Result<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobstatuserrorresult">Sequence[Job<wbr>Status<wbr>Error<wbr>Result]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5976,7 +5976,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatuserror">Sequence[Job<wbr>Status<wbr>Error<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobstatuserror">Sequence[Job<wbr>Status<wbr>Error]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -1392,7 +1392,7 @@ If it is not provided, the provider project is used.
 <a href="#vpninterfaces_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#havpngatewayvpninterface">[]Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface</a></span>
+        <span class="property-type"><a href="#havpngatewayvpninterface">[]Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of interfaces on this VPN gateway.
 Structure is documented below.
@@ -1897,7 +1897,7 @@ If it is not provided, the provider project is used.
 <a href="#state_vpninterfaces_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#havpngatewayvpninterface">[]Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface</a></span>
+        <span class="property-type"><a href="#havpngatewayvpninterface">[]Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of interfaces on this VPN gateway.
 Structure is documented below.

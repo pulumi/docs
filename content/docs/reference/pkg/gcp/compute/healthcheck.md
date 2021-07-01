@@ -1879,7 +1879,7 @@ you create the resource.
 <a href="#grpchealthcheck_go" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckgrpchealthcheck">Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#healthcheckgrpchealthcheck">Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -1899,7 +1899,7 @@ consecutive successes. The default value is 2.
 <a href="#http2healthcheck_go" style="color: inherit; text-decoration: inherit;">Http2Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -1909,7 +1909,7 @@ Structure is documented below.
 <a href="#httphealthcheck_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -1919,7 +1919,7 @@ Structure is documented below.
 <a href="#httpshealthcheck_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -1929,7 +1929,7 @@ Structure is documented below.
 <a href="#logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this health check.
 Structure is documented below.
@@ -1964,7 +1964,7 @@ If it is not provided, the provider project is used.
 <a href="#sslhealthcheck_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -1974,7 +1974,7 @@ Structure is documented below.
 <a href="#tcphealthcheck_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2820,7 +2820,7 @@ you create the resource.
 <a href="#state_grpchealthcheck_go" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckgrpchealthcheck">Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#healthcheckgrpchealthcheck">Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2840,7 +2840,7 @@ consecutive successes. The default value is 2.
 <a href="#state_http2healthcheck_go" style="color: inherit; text-decoration: inherit;">Http2Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2850,7 +2850,7 @@ Structure is documented below.
 <a href="#state_httphealthcheck_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2860,7 +2860,7 @@ Structure is documented below.
 <a href="#state_httpshealthcheck_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2870,7 +2870,7 @@ Structure is documented below.
 <a href="#state_logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this health check.
 Structure is documented below.
@@ -2914,7 +2914,7 @@ If it is not provided, the provider project is used.
 <a href="#state_sslhealthcheck_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2924,7 +2924,7 @@ Structure is documented below.
 <a href="#state_tcphealthcheck_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.

@@ -255,7 +255,7 @@ enabling INFO logging will also enable ERROR logging. Default value: "NONE" Poss
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrycredential">[]Registry<wbr>Credential</a></span>
+        <span class="property-type"><a href="#registrycredential">[]Registry<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
 {{% /md %}}</dd><dt class="property-optional"
@@ -264,7 +264,7 @@ enabling INFO logging will also enable ERROR logging. Default value: "NONE" Poss
 <a href="#eventnotificationconfigs_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Notification<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryeventnotificationconfigitem">[]Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item</a></span>
+        <span class="property-type"><a href="#registryeventnotificationconfigitem">[]Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics to publish device events to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -792,7 +792,7 @@ enabling INFO logging will also enable ERROR logging. Default value: "NONE" Poss
 <a href="#state_credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrycredential">[]Registry<wbr>Credential</a></span>
+        <span class="property-type"><a href="#registrycredential">[]Registry<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
 {{% /md %}}</dd><dt class="property-optional"
@@ -801,7 +801,7 @@ enabling INFO logging will also enable ERROR logging. Default value: "NONE" Poss
 <a href="#state_eventnotificationconfigs_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Notification<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryeventnotificationconfigitem">[]Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item</a></span>
+        <span class="property-type"><a href="#registryeventnotificationconfigitem">[]Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics to publish device events to.
 {{% /md %}}</dd><dt class="property-optional"

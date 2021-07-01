@@ -338,7 +338,7 @@ The writer associated with the sink must have access to write to the above resou
 <a href="#bigqueryoptions_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsinkbigqueryoptions">Project<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
+        <span class="property-type"><a href="#projectsinkbigqueryoptions">Project<wbr>Sink<wbr>Bigquery<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -365,7 +365,7 @@ The writer associated with the sink must have access to write to the above resou
 <a href="#exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsinkexclusion">[]Project<wbr>Sink<wbr>Exclusion</a></span>
+        <span class="property-type"><a href="#projectsinkexclusion">[]Project<wbr>Sink<wbr>Exclusion<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion_filters it will not be exported.  Can be repeated multiple times for multiple exclusions. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1025,7 +1025,7 @@ configured `destination`.
 <a href="#state_bigqueryoptions_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsinkbigqueryoptions">Project<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
+        <span class="property-type"><a href="#projectsinkbigqueryoptions">Project<wbr>Sink<wbr>Bigquery<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1093,7 +1093,7 @@ The writer associated with the sink must have access to write to the above resou
 <a href="#state_exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsinkexclusion">[]Project<wbr>Sink<wbr>Exclusion</a></span>
+        <span class="property-type"><a href="#projectsinkexclusion">[]Project<wbr>Sink<wbr>Exclusion<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion_filters it will not be exported.  Can be repeated multiple times for multiple exclusions. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"

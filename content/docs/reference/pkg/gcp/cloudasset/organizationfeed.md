@@ -285,7 +285,7 @@ enablement check, quota, and billing.
 <a href="#feedoutputconfig_go" style="color: inherit; text-decoration: inherit;">Feed<wbr>Output<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationfeedfeedoutputconfig">Organization<wbr>Feed<wbr>Feed<wbr>Output<wbr>Config</a></span>
+        <span class="property-type"><a href="#organizationfeedfeedoutputconfig">Organization<wbr>Feed<wbr>Feed<wbr>Output<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Output configuration for asset feed destination.
 Structure is documented below.
@@ -329,7 +329,7 @@ supported asset types.
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationfeedcondition">Organization<wbr>Feed<wbr>Condition</a></span>
+        <span class="property-type"><a href="#organizationfeedcondition">Organization<wbr>Feed<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition which determines whether an asset update should be published. If specified, an asset
 will be returned only when the expression evaluates to true. When set, expression field
@@ -903,7 +903,7 @@ enablement check, quota, and billing.
 <a href="#state_condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationfeedcondition">Organization<wbr>Feed<wbr>Condition</a></span>
+        <span class="property-type"><a href="#organizationfeedcondition">Organization<wbr>Feed<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition which determines whether an asset update should be published. If specified, an asset
 will be returned only when the expression evaluates to true. When set, expression field
@@ -936,7 +936,7 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
 <a href="#state_feedoutputconfig_go" style="color: inherit; text-decoration: inherit;">Feed<wbr>Output<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationfeedfeedoutputconfig">Organization<wbr>Feed<wbr>Feed<wbr>Output<wbr>Config</a></span>
+        <span class="property-type"><a href="#organizationfeedfeedoutputconfig">Organization<wbr>Feed<wbr>Feed<wbr>Output<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Output configuration for asset feed destination.
 Structure is documented below.
@@ -1355,7 +1355,7 @@ This can be used e.g. in UIs which allow to enter the expression.
 <a href="#pubsubdestination_csharp" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationfeedfeedoutputconfigpubsubdestination">Organization<wbr>Feed<wbr>Feed<wbr>Output<wbr>Config<wbr>Pubsub<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#organizationfeedfeedoutputconfigpubsubdestination">Organization<wbr>Feed<wbr>Feed<wbr>Output<wbr>Config<wbr>Pubsub<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Destination on Cloud Pubsub.
 Structure is documented below.
@@ -1383,7 +1383,7 @@ Structure is documented below.
 <a href="#pubsubdestination_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationfeedfeedoutputconfigpubsubdestination">Organization<wbr>Feed<wbr>Feed<wbr>Output<wbr>Config<wbr>Pubsub<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#organizationfeedfeedoutputconfigpubsubdestination">Organization<wbr>Feed<wbr>Feed<wbr>Output<wbr>Config<wbr>Pubsub<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Destination on Cloud Pubsub.
 Structure is documented below.
@@ -1397,7 +1397,7 @@ Structure is documented below.
 <a href="#pubsub_destination_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationfeedfeedoutputconfigpubsubdestination">Organization<wbr>Feed<wbr>Feed<wbr>Output<wbr>Config<wbr>Pubsub<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#organizationfeedfeedoutputconfigpubsubdestination">Organization<wbr>Feed<wbr>Feed<wbr>Output<wbr>Config<wbr>Pubsub<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Destination on Cloud Pubsub.
 Structure is documented below.

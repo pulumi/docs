@@ -656,7 +656,7 @@ name.
 <a href="#versions_go" style="color: inherit; text-decoration: inherit;">Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerversion">[]Instance<wbr>Group<wbr>Manager<wbr>Version</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerversion">[]Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
@@ -667,7 +667,7 @@ Structure is documented below.
 <a href="#autohealingpolicies_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerautohealingpolicies">Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policies</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerautohealingpolicies">Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
@@ -696,7 +696,7 @@ group manager.
 <a href="#namedports_go" style="color: inherit; text-decoration: inherit;">Named<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagernamedport">[]Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port</a></span>
+        <span class="property-type"><a href="#instancegroupmanagernamedport">[]Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
 for details on configuration.
@@ -716,7 +716,7 @@ is not provided, the provider project is used.
 <a href="#statefuldisks_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">[]Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">[]Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
 {{% /md %}}</dd><dt class="property-optional"
@@ -745,7 +745,7 @@ not affect existing instances.
 <a href="#updatepolicy_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/instanceGroupManagers/patch)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1657,7 +1657,7 @@ in.
 <a href="#state_autohealingpolicies_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerautohealingpolicies">Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policies</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerautohealingpolicies">Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
@@ -1718,7 +1718,7 @@ group manager.
 <a href="#state_namedports_go" style="color: inherit; text-decoration: inherit;">Named<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagernamedport">[]Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port</a></span>
+        <span class="property-type"><a href="#instancegroupmanagernamedport">[]Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
 for details on configuration.
@@ -1755,7 +1755,7 @@ is not provided, the provider project is used.
 <a href="#state_statefuldisks_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">[]Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">[]Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1764,7 +1764,7 @@ is not provided, the provider project is used.
 <a href="#state_statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatus">[]Instance<wbr>Group<wbr>Manager<wbr>Status</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatus">[]Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The status of this managed instance group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1793,7 +1793,7 @@ not affect existing instances.
 <a href="#state_updatepolicy_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/instanceGroupManagers/patch)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1802,7 +1802,7 @@ not affect existing instances.
 <a href="#state_versions_go" style="color: inherit; text-decoration: inherit;">Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerversion">[]Instance<wbr>Group<wbr>Manager<wbr>Version</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerversion">[]Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
@@ -2534,7 +2534,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#statefuls_csharp" style="color: inherit; text-decoration: inherit;">Statefuls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusstateful">List&lt;Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusstateful">List&lt;Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful&gt;</a></span>
     </dt>
     <dd>{{% md %}}Stateful status of the given Instance Group Manager.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2543,7 +2543,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#versiontargets_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusversiontarget">List&lt;Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Version<wbr>Target<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusversiontarget">List&lt;Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Version<wbr>Target&gt;</a></span>
     </dt>
     <dd>{{% md %}}A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.
 {{% /md %}}</dd></dl>
@@ -2596,7 +2596,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#statefuls_nodejs" style="color: inherit; text-decoration: inherit;">statefuls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusstateful">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusstateful">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful[]</a></span>
     </dt>
     <dd>{{% md %}}Stateful status of the given Instance Group Manager.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2605,7 +2605,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#versiontargets_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusversiontarget">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Version<wbr>Target<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusversiontarget">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Version<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.
 {{% /md %}}</dd></dl>
@@ -2627,7 +2627,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#statefuls_python" style="color: inherit; text-decoration: inherit;">statefuls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusstateful">Sequence[Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusstateful">Sequence[Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful]</a></span>
     </dt>
     <dd>{{% md %}}Stateful status of the given Instance Group Manager.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2636,7 +2636,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#version_targets_python" style="color: inherit; text-decoration: inherit;">version_<wbr>targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusversiontarget">Sequence[Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Version<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusversiontarget">Sequence[Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Version<wbr>Target]</a></span>
     </dt>
     <dd>{{% md %}}A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.
 {{% /md %}}</dd></dl>
@@ -2660,7 +2660,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#perinstanceconfigs_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Instance<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusstatefulperinstanceconfig">List&lt;Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Per<wbr>Instance<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusstatefulperinstanceconfig">List&lt;Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Per<wbr>Instance<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Status of per-instance configs on the instance.
 {{% /md %}}</dd></dl>
@@ -2704,7 +2704,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#perinstanceconfigs_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Instance<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusstatefulperinstanceconfig">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Per<wbr>Instance<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusstatefulperinstanceconfig">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Per<wbr>Instance<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Status of per-instance configs on the instance.
 {{% /md %}}</dd></dl>
@@ -2726,7 +2726,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#per_instance_configs_python" style="color: inherit; text-decoration: inherit;">per_<wbr>instance_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusstatefulperinstanceconfig">Sequence[Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Per<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusstatefulperinstanceconfig">Sequence[Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Per<wbr>Instance<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Status of per-instance configs on the instance.
 {{% /md %}}</dd></dl>
@@ -3173,7 +3173,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#targetsize_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerversiontargetsize">Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Target<wbr>Size<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerversiontargetsize">Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Target<wbr>Size</a></span>
     </dt>
     <dd>{{% md %}}- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -3235,7 +3235,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#targetsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerversiontargetsize">Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Target<wbr>Size<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerversiontargetsize">Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Target<wbr>Size</a></span>
     </dt>
     <dd>{{% md %}}- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -3266,7 +3266,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#target_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerversiontargetsize">Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Target<wbr>Size<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerversiontargetsize">Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Target<wbr>Size</a></span>
     </dt>
     <dd>{{% md %}}- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
 {{% /md %}}</dd></dl>

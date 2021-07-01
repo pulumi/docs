@@ -827,7 +827,7 @@ Structure is documented below.
 <a href="#build_go" style="color: inherit; text-decoration: inherit;">Build</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build</a></span>
+        <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
 Structure is documented below.
@@ -864,7 +864,7 @@ Structure is documented below.
 <a href="#github_go" style="color: inherit; text-decoration: inherit;">Github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github</a></span>
+        <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
 One of `trigger_template` or `github` must be provided.
@@ -946,7 +946,7 @@ If it is not provided, the provider project is used.
 <a href="#triggertemplate_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template</a></span>
+        <span class="property-type"><a href="#triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template describing the types of source changes to trigger a build.
 Branch and tag names in trigger templates are interpreted as regular
@@ -1659,7 +1659,7 @@ Structure is documented below.
 <a href="#state_build_go" style="color: inherit; text-decoration: inherit;">Build</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build</a></span>
+        <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
 Structure is documented below.
@@ -1705,7 +1705,7 @@ Structure is documented below.
 <a href="#state_github_go" style="color: inherit; text-decoration: inherit;">Github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github</a></span>
+        <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
 One of `trigger_template` or `github` must be provided.
@@ -1796,7 +1796,7 @@ If it is not provided, the provider project is used.
 <a href="#state_triggertemplate_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template</a></span>
+        <span class="property-type"><a href="#triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template describing the types of source changes to trigger a build.
 Branch and tag names in trigger templates are interpreted as regular
@@ -2135,7 +2135,7 @@ Structure is documented below.
 <a href="#steps_csharp" style="color: inherit; text-decoration: inherit;">Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildstep">List&lt;Trigger<wbr>Build<wbr>Step<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerbuildstep">List&lt;Trigger<wbr>Build<wbr>Step&gt;</a></span>
     </dt>
     <dd>{{% md %}}The operations to be performed on the workspace.
 Structure is documented below.
@@ -2145,7 +2145,7 @@ Structure is documented below.
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildartifacts">Trigger<wbr>Build<wbr>Artifacts<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildartifacts">Trigger<wbr>Build<wbr>Artifacts</a></span>
     </dt>
     <dd>{{% md %}}Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
 Structure is documented below.
@@ -2177,7 +2177,7 @@ Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildoptions">Trigger<wbr>Build<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildoptions">Trigger<wbr>Build<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Special options for this build.
 Structure is documented below.
@@ -2199,7 +2199,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsecret">List&lt;Trigger<wbr>Build<wbr>Secret<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerbuildsecret">List&lt;Trigger<wbr>Build<wbr>Secret&gt;</a></span>
     </dt>
     <dd>{{% md %}}Secrets to decrypt using Cloud Key Management Service.
 Structure is documented below.
@@ -2209,7 +2209,7 @@ Structure is documented below.
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsource">Trigger<wbr>Build<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildsource">Trigger<wbr>Build<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The location of the source files to build.
 One of `storageSource` or `repoSource` must be provided.
@@ -2373,7 +2373,7 @@ completes or the build itself times out.
 <a href="#steps_nodejs" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildstep">Trigger<wbr>Build<wbr>Step<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#triggerbuildstep">Trigger<wbr>Build<wbr>Step[]</a></span>
     </dt>
     <dd>{{% md %}}The operations to be performed on the workspace.
 Structure is documented below.
@@ -2383,7 +2383,7 @@ Structure is documented below.
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildartifacts">Trigger<wbr>Build<wbr>Artifacts<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildartifacts">Trigger<wbr>Build<wbr>Artifacts</a></span>
     </dt>
     <dd>{{% md %}}Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
 Structure is documented below.
@@ -2415,7 +2415,7 @@ Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildoptions">Trigger<wbr>Build<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildoptions">Trigger<wbr>Build<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Special options for this build.
 Structure is documented below.
@@ -2437,7 +2437,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsecret">Trigger<wbr>Build<wbr>Secret<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#triggerbuildsecret">Trigger<wbr>Build<wbr>Secret[]</a></span>
     </dt>
     <dd>{{% md %}}Secrets to decrypt using Cloud Key Management Service.
 Structure is documented below.
@@ -2447,7 +2447,7 @@ Structure is documented below.
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsource">Trigger<wbr>Build<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildsource">Trigger<wbr>Build<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The location of the source files to build.
 One of `storageSource` or `repoSource` must be provided.
@@ -2492,7 +2492,7 @@ completes or the build itself times out.
 <a href="#steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildstep">Sequence[Trigger<wbr>Build<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerbuildstep">Sequence[Trigger<wbr>Build<wbr>Step]</a></span>
     </dt>
     <dd>{{% md %}}The operations to be performed on the workspace.
 Structure is documented below.
@@ -2502,7 +2502,7 @@ Structure is documented below.
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildartifacts">Trigger<wbr>Build<wbr>Artifacts<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildartifacts">Trigger<wbr>Build<wbr>Artifacts</a></span>
     </dt>
     <dd>{{% md %}}Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
 Structure is documented below.
@@ -2534,7 +2534,7 @@ Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildoptions">Trigger<wbr>Build<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildoptions">Trigger<wbr>Build<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Special options for this build.
 Structure is documented below.
@@ -2556,7 +2556,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsecret">Sequence[Trigger<wbr>Build<wbr>Secret<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerbuildsecret">Sequence[Trigger<wbr>Build<wbr>Secret]</a></span>
     </dt>
     <dd>{{% md %}}Secrets to decrypt using Cloud Key Management Service.
 Structure is documented below.
@@ -2566,7 +2566,7 @@ Structure is documented below.
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsource">Trigger<wbr>Build<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildsource">Trigger<wbr>Build<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The location of the source files to build.
 One of `storageSource` or `repoSource` must be provided.
@@ -2625,7 +2625,7 @@ If any of the images fail to be pushed, the build is marked FAILURE.
 <a href="#objects_csharp" style="color: inherit; text-decoration: inherit;">Objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildartifactsobjects">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjects">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects</a></span>
     </dt>
     <dd>{{% md %}}A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.
 Files in the workspace matching specified paths globs will be uploaded to the
@@ -2685,7 +2685,7 @@ If any of the images fail to be pushed, the build is marked FAILURE.
 <a href="#objects_nodejs" style="color: inherit; text-decoration: inherit;">objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildartifactsobjects">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjects">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects</a></span>
     </dt>
     <dd>{{% md %}}A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.
 Files in the workspace matching specified paths globs will be uploaded to the
@@ -2715,7 +2715,7 @@ If any of the images fail to be pushed, the build is marked FAILURE.
 <a href="#objects_python" style="color: inherit; text-decoration: inherit;">objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildartifactsobjects">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjects">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects</a></span>
     </dt>
     <dd>{{% md %}}A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.
 Files in the workspace matching specified paths globs will be uploaded to the
@@ -2755,7 +2755,7 @@ this location as a prefix.
 <a href="#timings_csharp" style="color: inherit; text-decoration: inherit;">Timings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">List&lt;Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">List&lt;Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing&gt;</a></span>
     </dt>
     <dd>{{% md %}}-
 Output only. Stores timing information for pushing all artifact objects.
@@ -2825,7 +2825,7 @@ this location as a prefix.
 <a href="#timings_nodejs" style="color: inherit; text-decoration: inherit;">timings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing[]</a></span>
     </dt>
     <dd>{{% md %}}-
 Output only. Stores timing information for pushing all artifact objects.
@@ -2860,7 +2860,7 @@ this location as a prefix.
 <a href="#timings_python" style="color: inherit; text-decoration: inherit;">timings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">Sequence[Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">Sequence[Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing]</a></span>
     </dt>
     <dd>{{% md %}}-
 Output only. Stores timing information for pushing all artifact objects.
@@ -3091,7 +3091,7 @@ Possible values are `MUST_MATCH` and `ALLOW_LOOSE`.
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildoptionsvolume">List&lt;Trigger<wbr>Build<wbr>Options<wbr>Volume<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerbuildoptionsvolume">List&lt;Trigger<wbr>Build<wbr>Options<wbr>Volume&gt;</a></span>
     </dt>
     <dd>{{% md %}}Global list of volumes to mount for ALL build steps
 Each volume is created as an empty volume prior to starting the build process.
@@ -3365,7 +3365,7 @@ Possible values are `MUST_MATCH` and `ALLOW_LOOSE`.
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildoptionsvolume">Trigger<wbr>Build<wbr>Options<wbr>Volume<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#triggerbuildoptionsvolume">Trigger<wbr>Build<wbr>Options<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}Global list of volumes to mount for ALL build steps
 Each volume is created as an empty volume prior to starting the build process.
@@ -3502,7 +3502,7 @@ Possible values are `MUST_MATCH` and `ALLOW_LOOSE`.
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildoptionsvolume">Sequence[Trigger<wbr>Build<wbr>Options<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerbuildoptionsvolume">Sequence[Trigger<wbr>Build<wbr>Options<wbr>Volume]</a></span>
     </dt>
     <dd>{{% md %}}Global list of volumes to mount for ALL build steps
 Each volume is created as an empty volume prior to starting the build process.
@@ -3737,7 +3737,7 @@ will be available to all build steps in this build.
 <a href="#reposource_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsourcereposource">Trigger<wbr>Build<wbr>Source<wbr>Repo<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildsourcereposource">Trigger<wbr>Build<wbr>Source<wbr>Repo<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Location of the source in a Google Cloud Source Repository.
 Structure is documented below.
@@ -3747,7 +3747,7 @@ Structure is documented below.
 <a href="#storagesource_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsourcestoragesource">Trigger<wbr>Build<wbr>Source<wbr>Storage<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildsourcestoragesource">Trigger<wbr>Build<wbr>Source<wbr>Storage<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Location of the source in an archive file in Google Cloud Storage.
 Structure is documented below.
@@ -3785,7 +3785,7 @@ Structure is documented below.
 <a href="#reposource_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsourcereposource">Trigger<wbr>Build<wbr>Source<wbr>Repo<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildsourcereposource">Trigger<wbr>Build<wbr>Source<wbr>Repo<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Location of the source in a Google Cloud Source Repository.
 Structure is documented below.
@@ -3795,7 +3795,7 @@ Structure is documented below.
 <a href="#storagesource_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsourcestoragesource">Trigger<wbr>Build<wbr>Source<wbr>Storage<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildsourcestoragesource">Trigger<wbr>Build<wbr>Source<wbr>Storage<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Location of the source in an archive file in Google Cloud Storage.
 Structure is documented below.
@@ -3809,7 +3809,7 @@ Structure is documented below.
 <a href="#repo_source_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsourcereposource">Trigger<wbr>Build<wbr>Source<wbr>Repo<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildsourcereposource">Trigger<wbr>Build<wbr>Source<wbr>Repo<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Location of the source in a Google Cloud Source Repository.
 Structure is documented below.
@@ -3819,7 +3819,7 @@ Structure is documented below.
 <a href="#storage_source_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsourcestoragesource">Trigger<wbr>Build<wbr>Source<wbr>Storage<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerbuildsourcestoragesource">Trigger<wbr>Build<wbr>Source<wbr>Storage<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Location of the source in an archive file in Google Cloud Storage.
 Structure is documented below.
@@ -4435,7 +4435,7 @@ Structure is documented below.
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildstepvolume">List&lt;Trigger<wbr>Build<wbr>Step<wbr>Volume<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerbuildstepvolume">List&lt;Trigger<wbr>Build<wbr>Step<wbr>Volume&gt;</a></span>
     </dt>
     <dd>{{% md %}}Global list of volumes to mount for ALL build steps
 Each volume is created as an empty volume prior to starting the build process.
@@ -4715,7 +4715,7 @@ Structure is documented below.
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildstepvolume">Trigger<wbr>Build<wbr>Step<wbr>Volume<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#triggerbuildstepvolume">Trigger<wbr>Build<wbr>Step<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}Global list of volumes to mount for ALL build steps
 Each volume is created as an empty volume prior to starting the build process.
@@ -4855,7 +4855,7 @@ Structure is documented below.
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildstepvolume">Sequence[Trigger<wbr>Build<wbr>Step<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerbuildstepvolume">Sequence[Trigger<wbr>Build<wbr>Step<wbr>Volume]</a></span>
     </dt>
     <dd>{{% md %}}Global list of volumes to mount for ALL build steps
 Each volume is created as an empty volume prior to starting the build process.
@@ -5016,7 +5016,7 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
 <a href="#pullrequest_csharp" style="color: inherit; text-decoration: inherit;">Pull<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithubpullrequest">Trigger<wbr>Github<wbr>Pull<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggergithubpullrequest">Trigger<wbr>Github<wbr>Pull<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}filter to match changes in pull requests.  Specify only one of pullRequest or push.
 Structure is documented below.
@@ -5026,7 +5026,7 @@ Structure is documented below.
 <a href="#push_csharp" style="color: inherit; text-decoration: inherit;">Push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithubpush">Trigger<wbr>Github<wbr>Push<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggergithubpush">Trigger<wbr>Github<wbr>Push</a></span>
     </dt>
     <dd>{{% md %}}filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.
 Structure is documented below.
@@ -5106,7 +5106,7 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
 <a href="#pullrequest_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithubpullrequest">Trigger<wbr>Github<wbr>Pull<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggergithubpullrequest">Trigger<wbr>Github<wbr>Pull<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}filter to match changes in pull requests.  Specify only one of pullRequest or push.
 Structure is documented below.
@@ -5116,7 +5116,7 @@ Structure is documented below.
 <a href="#push_nodejs" style="color: inherit; text-decoration: inherit;">push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithubpush">Trigger<wbr>Github<wbr>Push<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggergithubpush">Trigger<wbr>Github<wbr>Push</a></span>
     </dt>
     <dd>{{% md %}}filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.
 Structure is documented below.
@@ -5151,7 +5151,7 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
 <a href="#pull_request_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithubpullrequest">Trigger<wbr>Github<wbr>Pull<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggergithubpullrequest">Trigger<wbr>Github<wbr>Pull<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}filter to match changes in pull requests.  Specify only one of pullRequest or push.
 Structure is documented below.
@@ -5161,7 +5161,7 @@ Structure is documented below.
 <a href="#push_python" style="color: inherit; text-decoration: inherit;">push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithubpush">Trigger<wbr>Github<wbr>Push<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggergithubpush">Trigger<wbr>Github<wbr>Push</a></span>
     </dt>
     <dd>{{% md %}}filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.
 Structure is documented below.

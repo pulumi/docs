@@ -378,7 +378,7 @@ Possible values are `INITIAL_GROUP_CONFIG_UNSPECIFIED`, `WITH_INITIAL_OWNER`, an
 <a href="#groupkey_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupgroupkey">Group<wbr>Group<wbr>Key</a></span>
+        <span class="property-type"><a href="#groupgroupkey">Group<wbr>Group<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the Group.
 Structure is documented below.
@@ -1014,7 +1014,7 @@ Must not be longer than 4,096 characters.
 <a href="#state_groupkey_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupgroupkey">Group<wbr>Group<wbr>Key</a></span>
+        <span class="property-type"><a href="#groupgroupkey">Group<wbr>Group<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the Group.
 Structure is documented below.

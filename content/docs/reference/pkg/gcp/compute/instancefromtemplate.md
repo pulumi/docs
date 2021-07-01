@@ -687,7 +687,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#attacheddisks_go" style="color: inherit; text-decoration: inherit;">Attached<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateattacheddisk">[]Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instancefromtemplateattacheddisk">[]Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of disks attached to the instance
 {{% /md %}}</dd><dt class="property-optional"
@@ -696,7 +696,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#bootdisk_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatebootdisk">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instancefromtemplatebootdisk">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The boot disk for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -714,7 +714,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#confidentialinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateconfidentialinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancefromtemplateconfidentialinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
 to create.
@@ -760,7 +760,7 @@ to create.
 <a href="#guestaccelerators_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateguestaccelerator">[]Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator</a></span>
+        <span class="property-type"><a href="#instancefromtemplateguestaccelerator">[]Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -835,7 +835,7 @@ Changing this forces a new resource to be created.
 <a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterface">[]Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface</a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterface">[]Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -844,7 +844,7 @@ Changing this forces a new resource to be created.
 <a href="#networkperformanceconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkperformanceconfig">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Performance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkperformanceconfig">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures network performance settings for the instance. If not specified, the instance will be created with its
 default network performance configuration.
@@ -864,7 +864,7 @@ self_link nor project are provided, the provider project is used.
 <a href="#reservationaffinity_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatereservationaffinity">Instance<wbr>From<wbr>Template<wbr>Reservation<wbr>Affinity</a></span>
+        <span class="property-type"><a href="#instancefromtemplatereservationaffinity">Instance<wbr>From<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reservations that this instance can consume from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -883,7 +883,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#scheduling_go" style="color: inherit; text-decoration: inherit;">Scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatescheduling">Instance<wbr>From<wbr>Template<wbr>Scheduling</a></span>
+        <span class="property-type"><a href="#instancefromtemplatescheduling">Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy being used by the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -892,7 +892,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#scratchdisks_go" style="color: inherit; text-decoration: inherit;">Scratch<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatescratchdisk">[]Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instancefromtemplatescratchdisk">[]Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scratch disks attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -901,7 +901,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateserviceaccount">Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account</a></span>
+        <span class="property-type"><a href="#instancefromtemplateserviceaccount">Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service account to attach to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -910,7 +910,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#shieldedinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The shielded vm config being used by the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2308,7 +2308,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#state_attacheddisks_go" style="color: inherit; text-decoration: inherit;">Attached<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateattacheddisk">[]Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instancefromtemplateattacheddisk">[]Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of disks attached to the instance
 {{% /md %}}</dd><dt class="property-optional"
@@ -2317,7 +2317,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#state_bootdisk_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatebootdisk">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instancefromtemplatebootdisk">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The boot disk for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2335,7 +2335,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#state_confidentialinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateconfidentialinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancefromtemplateconfidentialinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
 to create.
@@ -2399,7 +2399,7 @@ to create.
 <a href="#state_guestaccelerators_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateguestaccelerator">[]Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator</a></span>
+        <span class="property-type"><a href="#instancefromtemplateguestaccelerator">[]Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2501,7 +2501,7 @@ Changing this forces a new resource to be created.
 <a href="#state_networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterface">[]Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface</a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterface">[]Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2510,7 +2510,7 @@ Changing this forces a new resource to be created.
 <a href="#state_networkperformanceconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkperformanceconfig">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Performance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkperformanceconfig">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures network performance settings for the instance. If not specified, the instance will be created with its
 default network performance configuration.
@@ -2530,7 +2530,7 @@ self_link nor project are provided, the provider project is used.
 <a href="#state_reservationaffinity_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatereservationaffinity">Instance<wbr>From<wbr>Template<wbr>Reservation<wbr>Affinity</a></span>
+        <span class="property-type"><a href="#instancefromtemplatereservationaffinity">Instance<wbr>From<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reservations that this instance can consume from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2549,7 +2549,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_scheduling_go" style="color: inherit; text-decoration: inherit;">Scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatescheduling">Instance<wbr>From<wbr>Template<wbr>Scheduling</a></span>
+        <span class="property-type"><a href="#instancefromtemplatescheduling">Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy being used by the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2558,7 +2558,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_scratchdisks_go" style="color: inherit; text-decoration: inherit;">Scratch<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatescratchdisk">[]Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instancefromtemplatescratchdisk">[]Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scratch disks attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2576,7 +2576,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateserviceaccount">Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account</a></span>
+        <span class="property-type"><a href="#instancefromtemplateserviceaccount">Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service account to attach to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2585,7 +2585,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_shieldedinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The shielded vm config being used by the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3565,7 +3565,7 @@ set, the provider zone is used.
 <a href="#initializeparams_csharp" style="color: inherit; text-decoration: inherit;">Initialize<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatebootdiskinitializeparams">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancefromtemplatebootdiskinitializeparams">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3701,7 +3701,7 @@ set, the provider zone is used.
 <a href="#initializeparams_nodejs" style="color: inherit; text-decoration: inherit;">initialize<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatebootdiskinitializeparams">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancefromtemplatebootdiskinitializeparams">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3769,7 +3769,7 @@ set, the provider zone is used.
 <a href="#initialize_params_python" style="color: inherit; text-decoration: inherit;">initialize_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatebootdiskinitializeparams">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancefromtemplatebootdiskinitializeparams">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4085,7 +4085,7 @@ set, the provider zone is used.
 <a href="#accessconfigs_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterfaceaccessconfig">List&lt;Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterfaceaccessconfig">List&lt;Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4093,7 +4093,7 @@ set, the provider zone is used.
 <a href="#aliasipranges_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterfacealiasiprange">List&lt;Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterfacealiasiprange">List&lt;Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4225,7 +4225,7 @@ Changing this forces a new resource to be created.
 <a href="#accessconfigs_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterfaceaccessconfig">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterfaceaccessconfig">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4233,7 +4233,7 @@ Changing this forces a new resource to be created.
 <a href="#aliasipranges_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterfacealiasiprange">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterfacealiasiprange">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4295,7 +4295,7 @@ Changing this forces a new resource to be created.
 <a href="#access_configs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterfaceaccessconfig">Sequence[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterfaceaccessconfig">Sequence[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4303,7 +4303,7 @@ Changing this forces a new resource to be created.
 <a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterfacealiasiprange">Sequence[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterfacealiasiprange">Sequence[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4621,7 +4621,7 @@ Changing this forces a new resource to be created.
 <a href="#specificreservation_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatereservationaffinityspecificreservation">Instance<wbr>From<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancefromtemplatereservationaffinityspecificreservation">Instance<wbr>From<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4661,7 +4661,7 @@ Changing this forces a new resource to be created.
 <a href="#specificreservation_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatereservationaffinityspecificreservation">Instance<wbr>From<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancefromtemplatereservationaffinityspecificreservation">Instance<wbr>From<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4681,7 +4681,7 @@ Changing this forces a new resource to be created.
 <a href="#specific_reservation_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatereservationaffinityspecificreservation">Instance<wbr>From<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancefromtemplatereservationaffinityspecificreservation">Instance<wbr>From<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4793,7 +4793,7 @@ Changing this forces a new resource to be created.
 <a href="#nodeaffinities_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateschedulingnodeaffinity">List&lt;Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instancefromtemplateschedulingnodeaffinity">List&lt;Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4881,7 +4881,7 @@ Changing this forces a new resource to be created.
 <a href="#nodeaffinities_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateschedulingnodeaffinity">Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instancefromtemplateschedulingnodeaffinity">Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4925,7 +4925,7 @@ Changing this forces a new resource to be created.
 <a href="#node_affinities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateschedulingnodeaffinity">Sequence[Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplateschedulingnodeaffinity">Sequence[Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

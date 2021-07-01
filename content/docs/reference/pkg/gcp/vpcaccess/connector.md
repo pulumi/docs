@@ -623,7 +623,7 @@ If it is not provided, the provider project is used.
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet</a></span>
+        <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The subnet in which to house the connector
 {{% /md %}}</dd></dl>
@@ -1340,7 +1340,7 @@ If it is not provided, the provider project is used.
 <a href="#state_subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet</a></span>
+        <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The subnet in which to house the connector
 {{% /md %}}</dd></dl>

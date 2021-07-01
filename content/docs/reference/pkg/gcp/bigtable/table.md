@@ -382,7 +382,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
 <a href="#columnfamilies_go" style="color: inherit; text-decoration: inherit;">Column<wbr>Families</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablecolumnfamily">[]Table<wbr>Column<wbr>Family</a></span>
+        <span class="property-type"><a href="#tablecolumnfamily">[]Table<wbr>Column<wbr>Family<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -766,7 +766,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
 <a href="#state_columnfamilies_go" style="color: inherit; text-decoration: inherit;">Column<wbr>Families</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablecolumnfamily">[]Table<wbr>Column<wbr>Family</a></span>
+        <span class="property-type"><a href="#tablecolumnfamily">[]Table<wbr>Column<wbr>Family<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"

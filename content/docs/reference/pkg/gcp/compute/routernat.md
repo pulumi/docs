@@ -827,7 +827,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
 <a href="#logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for logging on NAT
 Structure is documented below.
@@ -884,7 +884,7 @@ If it is not provided, the provider project is used.
 <a href="#subnetworks_go" style="color: inherit; text-decoration: inherit;">Subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatsubnetwork">[]Router<wbr>Nat<wbr>Subnetwork</a></span>
+        <span class="property-type"><a href="#routernatsubnetwork">[]Router<wbr>Nat<wbr>Subnetwork<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
 `source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`
@@ -1663,7 +1663,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
 <a href="#state_logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for logging on NAT
 Structure is documented below.
@@ -1760,7 +1760,7 @@ Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMAR
 <a href="#state_subnetworks_go" style="color: inherit; text-decoration: inherit;">Subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatsubnetwork">[]Router<wbr>Nat<wbr>Subnetwork</a></span>
+        <span class="property-type"><a href="#routernatsubnetwork">[]Router<wbr>Nat<wbr>Subnetwork<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
 `source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`

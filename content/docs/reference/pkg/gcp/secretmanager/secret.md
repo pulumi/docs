@@ -192,10 +192,14 @@ const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">expire_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[SecretReplicationArgs]</span> = None<span class="p">,</span>
-           <span class="nx">secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+           <span class="nx">rotation</span><span class="p">:</span> <span class="nx">Optional[SecretRotationArgs]</span> = None<span class="p">,</span>
+           <span class="nx">secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecretTopicArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretArgs</a></span><span class="p">,</span>
@@ -345,6 +349,16 @@ Structure is documented below.
     <dd>{{% md %}}This must be unique within the project.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiretime_csharp">
+<a href="#expiretime_csharp" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
@@ -369,6 +383,36 @@ An object containing a list of "key": value pairs. Example:
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rotation_csharp">
+<a href="#rotation_csharp" style="color: inherit; text-decoration: inherit;">Rotation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretrotation">Secret<wbr>Rotation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The rotation time and period for a Secret. At `next_rotation_time`, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. `topics` must be set to configure rotation.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="topics_csharp">
+<a href="#topics_csharp" style="color: inherit; text-decoration: inherit;">Topics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secrettopic">List&lt;Secret<wbr>Topic<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_csharp">
+<a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TTL for the Secret.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -379,7 +423,7 @@ If it is not provided, the provider project is used.
 <a href="#replication_go" style="color: inherit; text-decoration: inherit;">Replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreplication">Secret<wbr>Replication</a></span>
+        <span class="property-type"><a href="#secretreplication">Secret<wbr>Replication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed
 after the Secret has been created.
@@ -393,6 +437,16 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This must be unique within the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expiretime_go">
+<a href="#expiretime_go" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
@@ -419,6 +473,36 @@ An object containing a list of "key": value pairs. Example:
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rotation_go">
+<a href="#rotation_go" style="color: inherit; text-decoration: inherit;">Rotation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretrotation">Secret<wbr>Rotation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The rotation time and period for a Secret. At `next_rotation_time`, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. `topics` must be set to configure rotation.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="topics_go">
+<a href="#topics_go" style="color: inherit; text-decoration: inherit;">Topics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secrettopic">[]Secret<wbr>Topic<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_go">
+<a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TTL for the Secret.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -445,6 +529,16 @@ Structure is documented below.
     <dd>{{% md %}}This must be unique within the project.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expiretime_nodejs">
+<a href="#expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
@@ -469,6 +563,36 @@ An object containing a list of "key": value pairs. Example:
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rotation_nodejs">
+<a href="#rotation_nodejs" style="color: inherit; text-decoration: inherit;">rotation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretrotation">Secret<wbr>Rotation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The rotation time and period for a Secret. At `next_rotation_time`, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. `topics` must be set to configure rotation.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="topics_nodejs">
+<a href="#topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secrettopic">Secret<wbr>Topic<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_nodejs">
+<a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TTL for the Secret.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -495,6 +619,16 @@ Structure is documented below.
     <dd>{{% md %}}This must be unique within the project.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expire_time_python">
+<a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
@@ -519,6 +653,36 @@ An object containing a list of "key": value pairs. Example:
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rotation_python">
+<a href="#rotation_python" style="color: inherit; text-decoration: inherit;">rotation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretrotation">Secret<wbr>Rotation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The rotation time and period for a Secret. At `next_rotation_time`, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. `topics` must be set to configure rotation.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="topics_python">
+<a href="#topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secrettopic">Sequence[Secret<wbr>Topic<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ttl_python">
+<a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The TTL for the Secret.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -555,7 +719,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the Secret. Format: 'projects/{{project}}/secrets/{{secret_id}}'
+    <dd>{{% md %}}The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*/topics/*.
+For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -585,7 +750,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the Secret. Format: 'projects/{{project}}/secrets/{{secret_id}}'
+    <dd>{{% md %}}The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*/topics/*.
+For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -615,7 +781,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the Secret. Format: 'projects/{{project}}/secrets/{{secret_id}}'
+    <dd>{{% md %}}The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*/topics/*.
+For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -645,7 +812,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name of the Secret. Format: 'projects/{{project}}/secrets/{{secret_id}}'
+    <dd>{{% md %}}The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*/topics/*.
+For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -666,11 +834,15 @@ Get an existing Secret resource's state with the given name, ID, and optional ex
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">expire_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[SecretReplicationArgs]</span> = None<span class="p">,</span>
-        <span class="nx">secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Secret</code></pre></div>
+        <span class="nx">rotation</span><span class="p">:</span> <span class="nx">Optional[SecretRotationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecretTopicArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Secret</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -792,6 +964,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The time at which the Secret was created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_expiretime_csharp">
+<a href="#state_expiretime_csharp" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
@@ -814,7 +996,8 @@ An object containing a list of "key": value pairs. Example:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the Secret. Format: 'projects/{{project}}/secrets/{{secret_id}}'
+    <dd>{{% md %}}The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*/topics/*.
+For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
@@ -838,6 +1021,16 @@ after the Secret has been created.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_rotation_csharp">
+<a href="#state_rotation_csharp" style="color: inherit; text-decoration: inherit;">Rotation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretrotation">Secret<wbr>Rotation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The rotation time and period for a Secret. At `next_rotation_time`, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. `topics` must be set to configure rotation.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_secretid_csharp">
 <a href="#state_secretid_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
 </span>
@@ -845,6 +1038,26 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This must be unique within the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_topics_csharp">
+<a href="#state_topics_csharp" style="color: inherit; text-decoration: inherit;">Topics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secrettopic">List&lt;Secret<wbr>Topic<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ttl_csharp">
+<a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TTL for the Secret.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -858,6 +1071,16 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the Secret was created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_expiretime_go">
+<a href="#state_expiretime_go" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
@@ -882,7 +1105,8 @@ An object containing a list of "key": value pairs. Example:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the Secret. Format: 'projects/{{project}}/secrets/{{secret_id}}'
+    <dd>{{% md %}}The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*/topics/*.
+For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
@@ -899,10 +1123,20 @@ If it is not provided, the provider project is used.
 <a href="#state_replication_go" style="color: inherit; text-decoration: inherit;">Replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreplication">Secret<wbr>Replication</a></span>
+        <span class="property-type"><a href="#secretreplication">Secret<wbr>Replication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed
 after the Secret has been created.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_rotation_go">
+<a href="#state_rotation_go" style="color: inherit; text-decoration: inherit;">Rotation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretrotation">Secret<wbr>Rotation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The rotation time and period for a Secret. At `next_rotation_time`, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. `topics` must be set to configure rotation.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -913,6 +1147,26 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This must be unique within the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_topics_go">
+<a href="#state_topics_go" style="color: inherit; text-decoration: inherit;">Topics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secrettopic">[]Secret<wbr>Topic<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ttl_go">
+<a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TTL for the Secret.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -926,6 +1180,16 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the Secret was created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_expiretime_nodejs">
+<a href="#state_expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
@@ -950,7 +1214,8 @@ An object containing a list of "key": value pairs. Example:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the Secret. Format: 'projects/{{project}}/secrets/{{secret_id}}'
+    <dd>{{% md %}}The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*/topics/*.
+For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
@@ -974,6 +1239,16 @@ after the Secret has been created.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_rotation_nodejs">
+<a href="#state_rotation_nodejs" style="color: inherit; text-decoration: inherit;">rotation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretrotation">Secret<wbr>Rotation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The rotation time and period for a Secret. At `next_rotation_time`, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. `topics` must be set to configure rotation.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_secretid_nodejs">
 <a href="#state_secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
 </span>
@@ -981,6 +1256,26 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This must be unique within the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_topics_nodejs">
+<a href="#state_topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secrettopic">Secret<wbr>Topic<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ttl_nodejs">
+<a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TTL for the Secret.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -994,6 +1289,16 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the Secret was created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_expire_time_python">
+<a href="#state_expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
@@ -1018,7 +1323,8 @@ An object containing a list of "key": value pairs. Example:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name of the Secret. Format: 'projects/{{project}}/secrets/{{secret_id}}'
+    <dd>{{% md %}}The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*/topics/*.
+For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
@@ -1042,6 +1348,16 @@ after the Secret has been created.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_rotation_python">
+<a href="#state_rotation_python" style="color: inherit; text-decoration: inherit;">rotation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretrotation">Secret<wbr>Rotation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The rotation time and period for a Secret. At `next_rotation_time`, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. `topics` must be set to configure rotation.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_secret_id_python">
 <a href="#state_secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
 </span>
@@ -1049,6 +1365,26 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This must be unique within the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_topics_python">
+<a href="#state_topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secrettopic">Sequence[Secret<wbr>Topic<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ttl_python">
+<a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The TTL for the Secret.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1079,7 +1415,7 @@ Structure is documented below.
 <a href="#usermanaged_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Managed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreplicationusermanaged">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretreplicationusermanaged">Secret<wbr>Replication<wbr>User<wbr>Managed</a></span>
     </dt>
     <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.
 Structure is documented below.
@@ -1125,7 +1461,7 @@ Structure is documented below.
 <a href="#usermanaged_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Managed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreplicationusermanaged">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretreplicationusermanaged">Secret<wbr>Replication<wbr>User<wbr>Managed</a></span>
     </dt>
     <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.
 Structure is documented below.
@@ -1148,7 +1484,7 @@ Structure is documented below.
 <a href="#user_managed_python" style="color: inherit; text-decoration: inherit;">user_<wbr>managed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreplicationusermanaged">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretreplicationusermanaged">Secret<wbr>Replication<wbr>User<wbr>Managed</a></span>
     </dt>
     <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.
 Structure is documented below.
@@ -1164,7 +1500,7 @@ Structure is documented below.
 <a href="#replicas_csharp" style="color: inherit; text-decoration: inherit;">Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreplicationusermanagedreplica">List&lt;Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#secretreplicationusermanagedreplica">List&lt;Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Replicas for this Secret. Cannot be empty.
 Structure is documented below.
@@ -1192,7 +1528,7 @@ Structure is documented below.
 <a href="#replicas_nodejs" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreplicationusermanagedreplica">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#secretreplicationusermanagedreplica">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Replicas for this Secret. Cannot be empty.
 Structure is documented below.
@@ -1206,7 +1542,7 @@ Structure is documented below.
 <a href="#replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreplicationusermanagedreplica">Sequence[Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretreplicationusermanagedreplica">Sequence[Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica]</a></span>
     </dt>
     <dd>{{% md %}}The list of Replicas for this Secret. Cannot be empty.
 Structure is documented below.
@@ -1231,7 +1567,7 @@ Structure is documented below.
 <a href="#customermanagedencryption_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreplicationusermanagedreplicacustomermanagedencryption">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica<wbr>Customer<wbr>Managed<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretreplicationusermanagedreplicacustomermanagedencryption">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica<wbr>Customer<wbr>Managed<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Encryption for the secret.
 Structure is documented below.
@@ -1277,7 +1613,7 @@ Structure is documented below.
 <a href="#customermanagedencryption_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Managed<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreplicationusermanagedreplicacustomermanagedencryption">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica<wbr>Customer<wbr>Managed<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretreplicationusermanagedreplicacustomermanagedencryption">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica<wbr>Customer<wbr>Managed<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Encryption for the secret.
 Structure is documented below.
@@ -1300,7 +1636,7 @@ Structure is documented below.
 <a href="#customer_managed_encryption_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>managed_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreplicationusermanagedreplicacustomermanagedencryption">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica<wbr>Customer<wbr>Managed<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretreplicationusermanagedreplicacustomermanagedencryption">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica<wbr>Customer<wbr>Managed<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Encryption for the secret.
 Structure is documented below.
@@ -1358,6 +1694,162 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination secret.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="secretrotation">Secret<wbr>Rotation</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="nextrotationtime_csharp">
+<a href="#nextrotationtime_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Rotation<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp in UTC at which the Secret is scheduled to rotate.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rotationperiod_csharp">
+<a href="#rotationperiod_csharp" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Duration between rotation notifications. Must be in seconds and at least 3600s (1h) and at most 3153600000s (100 years).
+If rotationPeriod is set, `next_rotation_time` must be set. `next_rotation_time` will be advanced by this period when the service automatically sends rotation notifications.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="nextrotationtime_go">
+<a href="#nextrotationtime_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Rotation<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp in UTC at which the Secret is scheduled to rotate.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rotationperiod_go">
+<a href="#rotationperiod_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Duration between rotation notifications. Must be in seconds and at least 3600s (1h) and at most 3153600000s (100 years).
+If rotationPeriod is set, `next_rotation_time` must be set. `next_rotation_time` will be advanced by this period when the service automatically sends rotation notifications.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="nextrotationtime_nodejs">
+<a href="#nextrotationtime_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Rotation<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp in UTC at which the Secret is scheduled to rotate.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rotationperiod_nodejs">
+<a href="#rotationperiod_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Duration between rotation notifications. Must be in seconds and at least 3600s (1h) and at most 3153600000s (100 years).
+If rotationPeriod is set, `next_rotation_time` must be set. `next_rotation_time` will be advanced by this period when the service automatically sends rotation notifications.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="next_rotation_time_python">
+<a href="#next_rotation_time_python" style="color: inherit; text-decoration: inherit;">next_<wbr>rotation_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Timestamp in UTC at which the Secret is scheduled to rotate.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rotation_period_python">
+<a href="#rotation_period_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Duration between rotation notifications. Must be in seconds and at least 3600s (1h) and at most 3153600000s (100 years).
+If rotationPeriod is set, `next_rotation_time` must be set. `next_rotation_time` will be advanced by this period when the service automatically sends rotation notifications.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="secrettopic">Secret<wbr>Topic</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*/topics/*.
+For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*/topics/*.
+For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*/topics/*.
+For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*/topics/*.
+For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

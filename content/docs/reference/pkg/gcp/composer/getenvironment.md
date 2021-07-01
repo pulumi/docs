@@ -918,6 +918,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="maxpodspernode_csharp">
+<a href="#maxpodspernode_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Pods<wbr>Per<wbr>Node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
@@ -991,6 +999,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maxpodspernode_go">
+<a href="#maxpodspernode_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Pods<wbr>Per<wbr>Node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1070,6 +1086,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="maxpodspernode_nodejs">
+<a href="#maxpodspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pods<wbr>Per<wbr>Node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
@@ -1143,6 +1167,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="max_pods_per_node_python">
+<a href="#max_pods_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods_<wbr>per_<wbr>node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
